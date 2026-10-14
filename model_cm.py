@@ -38,7 +38,7 @@ class FocalLoss(nn.Module):
         seq_length = logits.size(0)
 
         new_label = labels.unsqueeze(1)
-        label_onehot = torch.zeros([seq_length, labels_length]).cuda().scatter_(1, new_label, 1)
+        label_onehot = logits.new_zeros(seq_length, labels_length).scatter_(1, new_label, 1)
 
         log_p = F.log_softmax(logits,-1)
         pt = label_onehot * log_p
@@ -535,16 +535,42 @@ class MMGatedAttention(nn.Module):
             return torch.cat([h_av, h_al, h_vl],dim=-1)
 
 
+def _validate_causal_batch(features, qmask, umask, lengths):
+    """Causal encoders accept nonempty dialogues with contiguous right padding."""
+    seq_len, batch, _ = features.shape
+    if len(lengths) != batch or any(n <= 0 or n > seq_len for n in lengths):
+        raise ValueError('causal dialogue lengths must be positive and fit the padded batch')
+    expected = torch.arange(seq_len, device=umask.device).unsqueeze(0) < torch.as_tensor(
+        lengths, device=umask.device).unsqueeze(1)
+    if umask.shape != expected.shape or not torch.equal(umask, expected.to(umask.dtype)):
+        raise ValueError('causal umask must match lengths with contiguous right padding')
+    if qmask.shape[:2] != (seq_len, batch):
+        raise ValueError('causal qmask must align with sequence and batch dimensions')
+
+
+def _transformer_encode(layer, features, umask, causal):
+    if not causal:
+        return layer(features)
+    size = features.size(0)
+    future = torch.ones(size, size, device=features.device, dtype=torch.bool).triu(1)
+    return layer(features, src_mask=future, src_key_padding_mask=~umask.bool())
+
+
 class Model(nn.Module):
 
     def __init__(self, base_model, D_m, D_g, D_p, D_e, D_h, D_a, graph_hidden_size, n_speakers, max_seq_len, window_past, window_future, 
                  n_classes=7, listener_state=False, context_attention='simple', dropout_rec=0.5, dropout=0.5, nodal_attention=True, avec=False, 
                  no_cuda=False, graph_type='relation', use_topic=False, alpha=0.2, multiheads=6, graph_construct='direct', use_GCN=False,use_residue=True,
                  dynamic_edge_w=False,D_m_v=512,D_m_a=100,modals='avl',att_type='gated',av_using_lstm=False,Deep_GCN_nlayers = 64, dataset='IEMOCAP',
-                 use_speaker=True, use_modal=False, norm='LN2', num_L = 3, num_K = 4):
+                 use_speaker=True, use_modal=False, norm='LN2', num_L = 3, num_K = 4, causal=False):
         
         super(Model, self).__init__()
 
+        self.causal = causal
+        if causal and (graph_type != 'hyper' or att_type != 'concat_DHT'
+                       or len(modals) != 3 or set(modals) != set('avl')
+                       or base_model not in ('GRU', 'LSTM', 'Transformer')):
+            raise ValueError('causal CMERC requires hyper/concat_DHT, avl, and GRU/LSTM/Transformer')
         self.base_model = base_model
         self.avec = avec
         self.no_cuda = no_cuda
@@ -571,7 +597,7 @@ class Model(nn.Module):
         self.normLNb = nn.LayerNorm(1024, elementwise_affine=True)
         self.normLNc = nn.LayerNorm(1024, elementwise_affine=True)
         self.normLNd = nn.LayerNorm(1024, elementwise_affine=True)
-        self.norm_strategy = norm
+        self.norm_strategy = 'LN' if causal else norm
         if self.att_type == 'gated' or self.att_type == 'concat_subsequently' or self.att_type == 'concat_DHT':
             self.multi_modal = True
             self.av_using_lstm = av_using_lstm
@@ -597,19 +623,19 @@ class Model(nn.Module):
                     hidden_a = D_g
                     self.linear_a = nn.Linear(D_m_a, hidden_a)
                     if self.av_using_lstm:
-                        self.lstm_a = nn.LSTM(input_size=hidden_a, hidden_size=D_g//2, num_layers=2, bidirectional=True, dropout=dropout)
+                        self.lstm_a = nn.LSTM(input_size=hidden_a, hidden_size=D_g if causal else D_g//2, num_layers=2, bidirectional=not causal, dropout=dropout)
                 if 'v' in self.modals:
                     hidden_v = D_g
                     self.linear_v = nn.Linear(D_m_v, hidden_v)
                     if self.av_using_lstm:
-                        self.lstm_v = nn.LSTM(input_size=hidden_v, hidden_size=D_g//2, num_layers=2, bidirectional=True, dropout=dropout)
+                        self.lstm_v = nn.LSTM(input_size=hidden_v, hidden_size=D_g if causal else D_g//2, num_layers=2, bidirectional=not causal, dropout=dropout)
                 if 'l' in self.modals:
                     hidden_l = D_g
                     if self.use_bert_seq:
                         self.txtCNN = TextCNN(input_dim=D_m, emb_size=hidden_l)
                     else:
                         self.linear_l = nn.Linear(D_m, hidden_l)
-                    self.lstm_l = nn.LSTM(input_size=hidden_l, hidden_size=D_g//2, num_layers=2, bidirectional=True, dropout=dropout)
+                    self.lstm_l = nn.LSTM(input_size=hidden_l, hidden_size=D_g if causal else D_g//2, num_layers=2, bidirectional=not causal, dropout=dropout)
 
         elif self.base_model == 'GRU':
             #self.gru = nn.GRU(input_size=D_m, hidden_size=D_e, num_layers=2, bidirectional=True, dropout=dropout)
@@ -617,35 +643,35 @@ class Model(nn.Module):
                 hidden_a = D_g
                 self.linear_a = nn.Linear(D_m_a, hidden_a)
                 if self.av_using_lstm:
-                    self.gru_a = nn.GRU(input_size=hidden_a, hidden_size=D_g//2, num_layers=2, bidirectional=True, dropout=dropout)
+                    self.gru_a = nn.GRU(input_size=hidden_a, hidden_size=D_g if causal else D_g//2, num_layers=2, bidirectional=not causal, dropout=dropout)
             if 'v' in self.modals:
                 hidden_v = D_g
                 self.linear_v = nn.Linear(D_m_v, hidden_v)
                 if self.av_using_lstm:
-                    self.gru_v = nn.GRU(input_size=hidden_v, hidden_size=D_g//2, num_layers=2, bidirectional=True, dropout=dropout)
+                    self.gru_v = nn.GRU(input_size=hidden_v, hidden_size=D_g if causal else D_g//2, num_layers=2, bidirectional=not causal, dropout=dropout)
             if 'l' in self.modals:
                 hidden_l = D_g
                 if self.use_bert_seq:
                     self.txtCNN = TextCNN(input_dim=D_m, emb_size=hidden_l)
                 else:
                     self.linear_l = nn.Linear(D_m, hidden_l)
-                self.gru_l = nn.GRU(input_size=hidden_l, hidden_size=D_g//2, num_layers=2, bidirectional=True, dropout=dropout)
+                self.gru_l = nn.GRU(input_size=hidden_l, hidden_size=D_g if causal else D_g//2, num_layers=2, bidirectional=not causal, dropout=dropout)
         elif self.base_model == 'Transformer':
             if 'a' in self.modals:
                 hidden_a = D_g
                 self.linear_a = nn.Linear(D_m_a, hidden_a)
-                self.trans_a = nn.TransformerEncoderLayer(d_model=hidden_a, nhead=4)
+                self.trans_a = nn.TransformerEncoderLayer(d_model=hidden_a, nhead=4, dropout=dropout if causal else 0.1)
             if 'v' in self.modals:
                 hidden_v = D_g
                 self.linear_v = nn.Linear(D_m_v, hidden_v)
-                self.trans_v = nn.TransformerEncoderLayer(d_model=hidden_v, nhead=4)
+                self.trans_v = nn.TransformerEncoderLayer(d_model=hidden_v, nhead=4, dropout=dropout if causal else 0.1)
             if 'l' in self.modals:
                 hidden_l = D_g
                 if self.use_bert_seq:
                     self.txtCNN = TextCNN(input_dim=D_m, emb_size=hidden_l)
                 else:
                     self.linear_l = nn.Linear(D_m, hidden_l)
-                self.trans_l = nn.TransformerEncoderLayer(d_model=hidden_l, nhead=4)
+                self.trans_l = nn.TransformerEncoderLayer(d_model=hidden_l, nhead=4, dropout=dropout if causal else 0.1)
 
 
         elif self.base_model == 'None':
@@ -659,7 +685,7 @@ class Model(nn.Module):
 
         if self.graph_type=='hyper':
             self.graph_model = HyperGCN(a_dim=D_g, v_dim=D_g, l_dim=D_g, n_dim=D_g, nlayers=64, nhidden=graph_hidden_size, nclass=n_classes, 
-                                        dropout=self.dropout, lamda=0.5, alpha=0.1, variant=True, return_feature=self.return_feature, use_residue=self.use_residue, n_speakers=n_speakers, modals=self.modals, use_speaker=self.use_speaker, use_modal=self.use_modal, num_L=num_L, num_K=num_K)
+                                        dropout=self.dropout, lamda=0.5, alpha=0.1, variant=True, return_feature=self.return_feature, use_residue=self.use_residue, n_speakers=n_speakers, modals=self.modals, use_speaker=self.use_speaker, use_modal=self.use_modal, num_L=num_L, num_K=num_K, causal=causal)
             print("construct "+self.graph_type)
         elif self.graph_type=='None':
             if not self.multi_modal:
@@ -719,6 +745,8 @@ class Model(nn.Module):
 
     def forward(self, U, qmask, umask, seq_lengths, U_a=None, U_v=None, epoch=None):
 
+        if self.causal:
+            _validate_causal_batch(U[0], qmask, umask, seq_lengths)
         #=============roberta features
         [r1,r2,r3,r4]=U
         seq_len, _, feature_dim = r1.size()
@@ -788,7 +816,7 @@ class Model(nn.Module):
                     U_ = U.reshape(-1,U.shape[-2],U.shape[-1])
                     U = self.txtCNN(U_).reshape(U.shape[0],U.shape[1],-1)
                 else:
-                    if self.dataset=='MELD':
+                    if self.dataset=='MELD' and not self.causal:
                         pass
                     else:
                         U = self.linear_l(U)
@@ -799,13 +827,13 @@ class Model(nn.Module):
             if 'a' in self.modals:
                 U_a = self.linear_a(U_a)
                 if self.av_using_lstm:
-                    emotions_a = self.trans_a(U_a)
+                    emotions_a = _transformer_encode(self.trans_a, U_a, umask, self.causal)
                 else:
                     emotions_a = U_a
             if 'v' in self.modals:
                 U_v = self.linear_v(U_v)
                 if self.av_using_lstm:
-                    emotions_v = self.trans_v(U_v)
+                    emotions_v = _transformer_encode(self.trans_v, U_v, umask, self.causal)
                 else:
                     emotions_v = U_v
             if 'l' in self.modals:
@@ -814,7 +842,7 @@ class Model(nn.Module):
                     U = self.txtCNN(U_).reshape(U.shape[0],U.shape[1],-1)
                 else:
                     U = self.linear_l(U)
-                emotions_l = self.trans_l(U)
+                emotions_l = _transformer_encode(self.trans_l, U, umask, self.causal)
         elif self.base_model == 'None':
             emotions = self.base_linear(U)
 
@@ -880,10 +908,15 @@ class Model_Intra(nn.Module):
                  n_classes=7, listener_state=False, context_attention='simple', dropout_rec=0.5, dropout=0.5, nodal_attention=True, avec=False, 
                  no_cuda=False, graph_type='relation', use_topic=False, alpha=0.2, multiheads=6, graph_construct='direct', use_GCN=False,use_residue=True,
                  dynamic_edge_w=False,D_m_v=512,D_m_a=100,modals='avl',att_type='gated',av_using_lstm=False,Deep_GCN_nlayers = 64, dataset='IEMOCAP',
-                 use_speaker=True, use_modal=False, norm='LN2', num_L = 3, num_K = 4):
+                 use_speaker=True, use_modal=False, norm='LN2', num_L = 3, num_K = 4, causal=False):
         
         super(Model_Intra, self).__init__()
 
+        self.causal = causal
+        if causal and (graph_type != 'hyper' or att_type != 'concat_DHT'
+                       or len(modals) != 3 or set(modals) != set('avl')
+                       or base_model not in ('GRU', 'LSTM', 'Transformer')):
+            raise ValueError('causal CMERC requires hyper/concat_DHT, avl, and GRU/LSTM/Transformer')
         self.base_model = base_model
         self.avec = avec
         self.no_cuda = no_cuda
@@ -910,7 +943,7 @@ class Model_Intra(nn.Module):
         self.normLNb = nn.LayerNorm(1024, elementwise_affine=True)
         self.normLNc = nn.LayerNorm(1024, elementwise_affine=True)
         self.normLNd = nn.LayerNorm(1024, elementwise_affine=True)
-        self.norm_strategy = norm
+        self.norm_strategy = 'LN' if causal else norm
         if self.att_type == 'gated' or self.att_type == 'concat_subsequently' or self.att_type == 'concat_DHT':
             self.multi_modal = True
             self.av_using_lstm = av_using_lstm
@@ -936,19 +969,19 @@ class Model_Intra(nn.Module):
                     hidden_a = D_g
                     self.linear_a = nn.Linear(D_m_a, hidden_a)
                     if self.av_using_lstm:
-                        self.lstm_a = nn.LSTM(input_size=hidden_a, hidden_size=D_g//2, num_layers=2, bidirectional=True, dropout=dropout)
+                        self.lstm_a = nn.LSTM(input_size=hidden_a, hidden_size=D_g if causal else D_g//2, num_layers=2, bidirectional=not causal, dropout=dropout)
                 if 'v' in self.modals:
                     hidden_v = D_g
                     self.linear_v = nn.Linear(D_m_v, hidden_v)
                     if self.av_using_lstm:
-                        self.lstm_v = nn.LSTM(input_size=hidden_v, hidden_size=D_g//2, num_layers=2, bidirectional=True, dropout=dropout)
+                        self.lstm_v = nn.LSTM(input_size=hidden_v, hidden_size=D_g if causal else D_g//2, num_layers=2, bidirectional=not causal, dropout=dropout)
                 if 'l' in self.modals:
                     hidden_l = D_g
                     if self.use_bert_seq:
                         self.txtCNN = TextCNN(input_dim=D_m, emb_size=hidden_l)
                     else:
                         self.linear_l = nn.Linear(D_m, hidden_l)
-                    self.lstm_l = nn.LSTM(input_size=hidden_l, hidden_size=D_g//2, num_layers=2, bidirectional=True, dropout=dropout)
+                    self.lstm_l = nn.LSTM(input_size=hidden_l, hidden_size=D_g if causal else D_g//2, num_layers=2, bidirectional=not causal, dropout=dropout)
 
         elif self.base_model == 'GRU':
             #self.gru = nn.GRU(input_size=D_m, hidden_size=D_e, num_layers=2, bidirectional=True, dropout=dropout)
@@ -956,35 +989,35 @@ class Model_Intra(nn.Module):
                 hidden_a = D_g
                 self.linear_a = nn.Linear(D_m_a, hidden_a)
                 if self.av_using_lstm:
-                    self.gru_a = nn.GRU(input_size=hidden_a, hidden_size=D_g//2, num_layers=2, bidirectional=True, dropout=dropout)
+                    self.gru_a = nn.GRU(input_size=hidden_a, hidden_size=D_g if causal else D_g//2, num_layers=2, bidirectional=not causal, dropout=dropout)
             if 'v' in self.modals:
                 hidden_v = D_g
                 self.linear_v = nn.Linear(D_m_v, hidden_v)
                 if self.av_using_lstm:
-                    self.gru_v = nn.GRU(input_size=hidden_v, hidden_size=D_g//2, num_layers=2, bidirectional=True, dropout=dropout)
+                    self.gru_v = nn.GRU(input_size=hidden_v, hidden_size=D_g if causal else D_g//2, num_layers=2, bidirectional=not causal, dropout=dropout)
             if 'l' in self.modals:
                 hidden_l = D_g
                 if self.use_bert_seq:
                     self.txtCNN = TextCNN(input_dim=D_m, emb_size=hidden_l)
                 else:
                     self.linear_l = nn.Linear(D_m, hidden_l)
-                self.gru_l = nn.GRU(input_size=hidden_l, hidden_size=D_g//2, num_layers=2, bidirectional=True, dropout=dropout)
+                self.gru_l = nn.GRU(input_size=hidden_l, hidden_size=D_g if causal else D_g//2, num_layers=2, bidirectional=not causal, dropout=dropout)
         elif self.base_model == 'Transformer':
             if 'a' in self.modals:
                 hidden_a = D_g
                 self.linear_a = nn.Linear(D_m_a, hidden_a)
-                self.trans_a = nn.TransformerEncoderLayer(d_model=hidden_a, nhead=4)
+                self.trans_a = nn.TransformerEncoderLayer(d_model=hidden_a, nhead=4, dropout=dropout if causal else 0.1)
             if 'v' in self.modals:
                 hidden_v = D_g
                 self.linear_v = nn.Linear(D_m_v, hidden_v)
-                self.trans_v = nn.TransformerEncoderLayer(d_model=hidden_v, nhead=4)
+                self.trans_v = nn.TransformerEncoderLayer(d_model=hidden_v, nhead=4, dropout=dropout if causal else 0.1)
             if 'l' in self.modals:
                 hidden_l = D_g
                 if self.use_bert_seq:
                     self.txtCNN = TextCNN(input_dim=D_m, emb_size=hidden_l)
                 else:
                     self.linear_l = nn.Linear(D_m, hidden_l)
-                self.trans_l = nn.TransformerEncoderLayer(d_model=hidden_l, nhead=4)
+                self.trans_l = nn.TransformerEncoderLayer(d_model=hidden_l, nhead=4, dropout=dropout if causal else 0.1)
 
 
         elif self.base_model == 'None':
@@ -998,7 +1031,7 @@ class Model_Intra(nn.Module):
 
         if self.graph_type=='hyper':
             self.graph_model = HyperGCN(a_dim=D_g, v_dim=D_g, l_dim=D_g, n_dim=D_g, nlayers=64, nhidden=graph_hidden_size, nclass=n_classes, 
-                                        dropout=self.dropout, lamda=0.5, alpha=0.1, variant=True, return_feature=self.return_feature, use_residue=self.use_residue, n_speakers=n_speakers, modals=self.modals, use_speaker=self.use_speaker, use_modal=self.use_modal, num_L=num_L, num_K=num_K)
+                                        dropout=self.dropout, lamda=0.5, alpha=0.1, variant=True, return_feature=self.return_feature, use_residue=self.use_residue, n_speakers=n_speakers, modals=self.modals, use_speaker=self.use_speaker, use_modal=self.use_modal, num_L=num_L, num_K=num_K, causal=causal)
             print("construct "+self.graph_type)
         elif self.graph_type=='None':
             if not self.multi_modal:
@@ -1058,6 +1091,8 @@ class Model_Intra(nn.Module):
 
     def forward(self, U, qmask, umask, seq_lengths, U_a=None, U_v=None, epoch=None):
 
+        if self.causal:
+            _validate_causal_batch(U[0], qmask, umask, seq_lengths)
         #=============roberta features
         [r1,r2,r3,r4]=U
         seq_len, _, feature_dim = r1.size()
@@ -1127,7 +1162,7 @@ class Model_Intra(nn.Module):
                     U_ = U.reshape(-1,U.shape[-2],U.shape[-1])
                     U = self.txtCNN(U_).reshape(U.shape[0],U.shape[1],-1)
                 else:
-                    if self.dataset=='MELD':
+                    if self.dataset=='MELD' and not self.causal:
                         pass
                     else:
                         U = self.linear_l(U)
@@ -1138,13 +1173,13 @@ class Model_Intra(nn.Module):
             if 'a' in self.modals:
                 U_a = self.linear_a(U_a)
                 if self.av_using_lstm:
-                    emotions_a = self.trans_a(U_a)
+                    emotions_a = _transformer_encode(self.trans_a, U_a, umask, self.causal)
                 else:
                     emotions_a = U_a
             if 'v' in self.modals:
                 U_v = self.linear_v(U_v)
                 if self.av_using_lstm:
-                    emotions_v = self.trans_v(U_v)
+                    emotions_v = _transformer_encode(self.trans_v, U_v, umask, self.causal)
                 else:
                     emotions_v = U_v
             if 'l' in self.modals:
@@ -1153,7 +1188,7 @@ class Model_Intra(nn.Module):
                     U = self.txtCNN(U_).reshape(U.shape[0],U.shape[1],-1)
                 else:
                     U = self.linear_l(U)
-                emotions_l = self.trans_l(U)
+                emotions_l = _transformer_encode(self.trans_l, U, umask, self.causal)
         elif self.base_model == 'None':
             emotions = self.base_linear(U)
 
@@ -1228,10 +1263,15 @@ class Model_Inter(nn.Module):
                  n_classes=7, listener_state=False, context_attention='simple', dropout_rec=0.5, dropout=0.5, nodal_attention=True, avec=False, 
                  no_cuda=False, graph_type='relation', use_topic=False, alpha=0.2, multiheads=6, graph_construct='direct', use_GCN=False,use_residue=True,
                  dynamic_edge_w=False,D_m_v=512,D_m_a=100,modals='avl',att_type='gated',av_using_lstm=False,Deep_GCN_nlayers = 64, dataset='IEMOCAP',
-                 use_speaker=True, use_modal=False, norm='LN2', num_L = 3, num_K = 4):
+                 use_speaker=True, use_modal=False, norm='LN2', num_L = 3, num_K = 4, causal=False):
         
         super(Model_Inter, self).__init__()
 
+        self.causal = causal
+        if causal and (graph_type != 'hyper' or att_type != 'concat_DHT'
+                       or len(modals) != 3 or set(modals) != set('avl')
+                       or base_model not in ('GRU', 'LSTM', 'Transformer')):
+            raise ValueError('causal CMERC requires hyper/concat_DHT, avl, and GRU/LSTM/Transformer')
         self.base_model = base_model
         self.avec = avec
         self.no_cuda = no_cuda
@@ -1258,7 +1298,7 @@ class Model_Inter(nn.Module):
         self.normLNb = nn.LayerNorm(1024, elementwise_affine=True)
         self.normLNc = nn.LayerNorm(1024, elementwise_affine=True)
         self.normLNd = nn.LayerNorm(1024, elementwise_affine=True)
-        self.norm_strategy = norm
+        self.norm_strategy = 'LN' if causal else norm
         if self.att_type == 'gated' or self.att_type == 'concat_subsequently' or self.att_type == 'concat_DHT':
             self.multi_modal = True
             self.av_using_lstm = av_using_lstm
@@ -1284,19 +1324,19 @@ class Model_Inter(nn.Module):
                     hidden_a = D_g
                     self.linear_a = nn.Linear(D_m_a, hidden_a)
                     if self.av_using_lstm:
-                        self.lstm_a = nn.LSTM(input_size=hidden_a, hidden_size=D_g//2, num_layers=2, bidirectional=True, dropout=dropout)
+                        self.lstm_a = nn.LSTM(input_size=hidden_a, hidden_size=D_g if causal else D_g//2, num_layers=2, bidirectional=not causal, dropout=dropout)
                 if 'v' in self.modals:
                     hidden_v = D_g
                     self.linear_v = nn.Linear(D_m_v, hidden_v)
                     if self.av_using_lstm:
-                        self.lstm_v = nn.LSTM(input_size=hidden_v, hidden_size=D_g//2, num_layers=2, bidirectional=True, dropout=dropout)
+                        self.lstm_v = nn.LSTM(input_size=hidden_v, hidden_size=D_g if causal else D_g//2, num_layers=2, bidirectional=not causal, dropout=dropout)
                 if 'l' in self.modals:
                     hidden_l = D_g
                     if self.use_bert_seq:
                         self.txtCNN = TextCNN(input_dim=D_m, emb_size=hidden_l)
                     else:
                         self.linear_l = nn.Linear(D_m, hidden_l)
-                    self.lstm_l = nn.LSTM(input_size=hidden_l, hidden_size=D_g//2, num_layers=2, bidirectional=True, dropout=dropout)
+                    self.lstm_l = nn.LSTM(input_size=hidden_l, hidden_size=D_g if causal else D_g//2, num_layers=2, bidirectional=not causal, dropout=dropout)
 
         elif self.base_model == 'GRU':
             #self.gru = nn.GRU(input_size=D_m, hidden_size=D_e, num_layers=2, bidirectional=True, dropout=dropout)
@@ -1304,35 +1344,35 @@ class Model_Inter(nn.Module):
                 hidden_a = D_g
                 self.linear_a = nn.Linear(D_m_a, hidden_a)
                 if self.av_using_lstm:
-                    self.gru_a = nn.GRU(input_size=hidden_a, hidden_size=D_g//2, num_layers=2, bidirectional=True, dropout=dropout)
+                    self.gru_a = nn.GRU(input_size=hidden_a, hidden_size=D_g if causal else D_g//2, num_layers=2, bidirectional=not causal, dropout=dropout)
             if 'v' in self.modals:
                 hidden_v = D_g
                 self.linear_v = nn.Linear(D_m_v, hidden_v)
                 if self.av_using_lstm:
-                    self.gru_v = nn.GRU(input_size=hidden_v, hidden_size=D_g//2, num_layers=2, bidirectional=True, dropout=dropout)
+                    self.gru_v = nn.GRU(input_size=hidden_v, hidden_size=D_g if causal else D_g//2, num_layers=2, bidirectional=not causal, dropout=dropout)
             if 'l' in self.modals:
                 hidden_l = D_g
                 if self.use_bert_seq:
                     self.txtCNN = TextCNN(input_dim=D_m, emb_size=hidden_l)
                 else:
                     self.linear_l = nn.Linear(D_m, hidden_l)
-                self.gru_l = nn.GRU(input_size=hidden_l, hidden_size=D_g//2, num_layers=2, bidirectional=True, dropout=dropout)
+                self.gru_l = nn.GRU(input_size=hidden_l, hidden_size=D_g if causal else D_g//2, num_layers=2, bidirectional=not causal, dropout=dropout)
         elif self.base_model == 'Transformer':
             if 'a' in self.modals:
                 hidden_a = D_g
                 self.linear_a = nn.Linear(D_m_a, hidden_a)
-                self.trans_a = nn.TransformerEncoderLayer(d_model=hidden_a, nhead=4)
+                self.trans_a = nn.TransformerEncoderLayer(d_model=hidden_a, nhead=4, dropout=dropout if causal else 0.1)
             if 'v' in self.modals:
                 hidden_v = D_g
                 self.linear_v = nn.Linear(D_m_v, hidden_v)
-                self.trans_v = nn.TransformerEncoderLayer(d_model=hidden_v, nhead=4)
+                self.trans_v = nn.TransformerEncoderLayer(d_model=hidden_v, nhead=4, dropout=dropout if causal else 0.1)
             if 'l' in self.modals:
                 hidden_l = D_g
                 if self.use_bert_seq:
                     self.txtCNN = TextCNN(input_dim=D_m, emb_size=hidden_l)
                 else:
                     self.linear_l = nn.Linear(D_m, hidden_l)
-                self.trans_l = nn.TransformerEncoderLayer(d_model=hidden_l, nhead=4)
+                self.trans_l = nn.TransformerEncoderLayer(d_model=hidden_l, nhead=4, dropout=dropout if causal else 0.1)
 
 
         elif self.base_model == 'None':
@@ -1346,7 +1386,7 @@ class Model_Inter(nn.Module):
 
         if self.graph_type=='hyper':
             self.graph_model = HyperGCN(a_dim=D_g, v_dim=D_g, l_dim=D_g, n_dim=D_g, nlayers=64, nhidden=graph_hidden_size, nclass=n_classes, 
-                                        dropout=self.dropout, lamda=0.5, alpha=0.1, variant=True, return_feature=self.return_feature, use_residue=self.use_residue, n_speakers=n_speakers, modals=self.modals, use_speaker=self.use_speaker, use_modal=self.use_modal, num_L=num_L, num_K=num_K)
+                                        dropout=self.dropout, lamda=0.5, alpha=0.1, variant=True, return_feature=self.return_feature, use_residue=self.use_residue, n_speakers=n_speakers, modals=self.modals, use_speaker=self.use_speaker, use_modal=self.use_modal, num_L=num_L, num_K=num_K, causal=causal)
             print("construct "+self.graph_type)
         elif self.graph_type=='None':
             if not self.multi_modal:
@@ -1406,6 +1446,8 @@ class Model_Inter(nn.Module):
 
     def forward(self, U, qmask, umask, seq_lengths, U_a=None, U_v=None, epoch=None):
 
+        if self.causal:
+            _validate_causal_batch(U[0], qmask, umask, seq_lengths)
         #=============roberta features
         [r1,r2,r3,r4]=U
         seq_len, _, feature_dim = r1.size()
@@ -1475,7 +1517,7 @@ class Model_Inter(nn.Module):
                     U_ = U.reshape(-1,U.shape[-2],U.shape[-1])
                     U = self.txtCNN(U_).reshape(U.shape[0],U.shape[1],-1)
                 else:
-                    if self.dataset=='MELD':
+                    if self.dataset=='MELD' and not self.causal:
                         pass
                     else:
                         U = self.linear_l(U)
@@ -1486,13 +1528,13 @@ class Model_Inter(nn.Module):
             if 'a' in self.modals:
                 U_a = self.linear_a(U_a)
                 if self.av_using_lstm:
-                    emotions_a = self.trans_a(U_a)
+                    emotions_a = _transformer_encode(self.trans_a, U_a, umask, self.causal)
                 else:
                     emotions_a = U_a
             if 'v' in self.modals:
                 U_v = self.linear_v(U_v)
                 if self.av_using_lstm:
-                    emotions_v = self.trans_v(U_v)
+                    emotions_v = _transformer_encode(self.trans_v, U_v, umask, self.causal)
                 else:
                     emotions_v = U_v
             if 'l' in self.modals:
@@ -1501,7 +1543,7 @@ class Model_Inter(nn.Module):
                     U = self.txtCNN(U_).reshape(U.shape[0],U.shape[1],-1)
                 else:
                     U = self.linear_l(U)
-                emotions_l = self.trans_l(U)
+                emotions_l = _transformer_encode(self.trans_l, U, umask, self.causal)
         elif self.base_model == 'None':
             emotions = self.base_linear(U)
 

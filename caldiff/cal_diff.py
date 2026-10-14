@@ -39,13 +39,101 @@ def create_class_weight_SCL(label):
             weights.append(total/labels_dict[i])
     return weights
 
+
+def _positive_true_class_gaps(full_scores, removed_scores, labels):
+    """Return the positive score increase caused by one information removal."""
+    if full_scores.shape != removed_scores.shape:
+        raise ValueError(
+            "full and information-removed scores must have identical shapes; "
+            f"got {tuple(full_scores.shape)} and {tuple(removed_scores.shape)}"
+        )
+    if full_scores.ndim != 2 or labels.ndim != 1 or len(full_scores) != len(labels):
+        raise ValueError("scores must be [utterances, classes] with one label per utterance")
+    row = torch.arange(len(labels), device=labels.device)
+    return torch.clamp(
+        removed_scores[row, labels] - full_scores[row, labels], min=0
+    )
+
+
+def compute_dialogue_difficulties(
+    full_scores,
+    modality_removed_scores,
+    context_removed_scores,
+    labels,
+    lengths,
+    qmask,
+    video_ids,
+):
+    """Compute one official difficulty value per dialogue in a padded batch.
+
+    Graph outputs are flattened dialogue-by-dialogue by ``simple_batch_graphify``.
+    Slicing by ``lengths`` therefore preserves the official batch-size-one formula
+    while preventing a whole batch's rank loss from being assigned to one ID.
+    """
+    if len(modality_removed_scores) != 3 or len(context_removed_scores) != 2:
+        raise ValueError("difficulty calculation requires 3 modality and 2 context removals")
+    if len(lengths) != len(video_ids):
+        raise ValueError(
+            "difficulty calculation requires one video ID per dialogue; "
+            f"got {len(video_ids)} IDs for {len(lengths)} dialogues"
+        )
+    if len(set(video_ids)) != len(video_ids):
+        raise ValueError("video IDs must be unique within a difficulty batch")
+    if any(length <= 0 for length in lengths):
+        raise ValueError("dialogue lengths must all be positive")
+    if sum(lengths) != len(labels) or len(full_scores) != len(labels):
+        raise ValueError(
+            "flattened scores/labels do not match the sum of dialogue lengths"
+        )
+    if qmask.ndim != 3 or qmask.size(1) < len(lengths):
+        raise ValueError("qmask must have shape [sequence, batch, speakers]")
+
+    removals = list(modality_removed_scores) + list(context_removed_scores)
+    penalties = sum(
+        (_positive_true_class_gaps(full_scores, scores, labels) for scores in removals),
+        torch.zeros(len(labels), device=full_scores.device, dtype=full_scores.dtype),
+    )
+
+    difficulties = {}
+    offset = 0
+    for batch_index, (length, video_id) in enumerate(zip(lengths, video_ids)):
+        active_speakers = torch.nonzero(
+            qmask[:length, batch_index, :], as_tuple=False
+        )
+        if active_speakers.numel() == 0:
+            raise ValueError(f"dialogue {video_id!r} has no active speaker entries in qmask")
+
+        # Keep the author's batch-size-one term exactly: max speaker index + 1.
+        speaker_term = active_speakers[:, 1].max().to(full_scores.dtype) + 1
+        rank_term = penalties[offset : offset + length].sum()
+        difficulty = (rank_term + speaker_term) / (length + speaker_term)
+        difficulties[video_id] = float(difficulty.detach().cpu())
+        offset += length
+
+    return difficulties
+
+
+def load_checkpoint(model, checkpoint_path, device, expected_args=None):
+    """Load official/wrapped weights, checking the requested temporal protocol."""
+    checkpoint = torch.load(checkpoint_path, map_location=device)
+    causal = getattr(model, 'causal', False)
+    if expected_args is not None:
+        causal = expected_args.get('causal', False) if isinstance(expected_args, dict) else expected_args.causal
+    if causal or expected_args is not None or 'model_state_dict' in checkpoint or 'args' in checkpoint:
+        from dataloader import validate_checkpoint_protocol
+        validate_checkpoint_protocol(checkpoint, causal=causal, expected_args=expected_args)
+    state_dict = checkpoint.get('model_state_dict', checkpoint)
+    model.load_state_dict(state_dict)
+    return model
+
 # seed = 1475 # We use seed = 1475 on IEMOCAP and seed = 67137 on MELD
 def seed_everything(seed):
     random.seed(seed)
     np.random.seed(seed)
     torch.manual_seed(seed)
-    torch.cuda.manual_seed(seed)
-    torch.cuda.manual_seed_all(seed)
+    if torch.cuda.is_available():
+        torch.cuda.manual_seed(seed)
+        torch.cuda.manual_seed_all(seed)
     torch.backends.cudnn.benchmark = False
     torch.backends.cudnn.deterministic = True
 
@@ -129,11 +217,12 @@ def train_or_eval_model(model, loss_function, dataloader, epoch, optimizer=None,
         model.eval()
 
     seed_everything(args.seed)
+    device = torch.device('cuda' if cuda else 'cpu')
     for data in dataloader:
         if train:
             optimizer.zero_grad()
         
-        textf, visuf, acouf, qmask, umask, label = [d.cuda() for d in data[:-1]] if cuda else data[:-1]        
+        textf, visuf, acouf, qmask, umask, label = [d.to(device) for d in data[:-1]]
 
         max_sequence_len.append(textf.size(0))
         
@@ -183,8 +272,8 @@ def train_or_eval_graph_model(model, model_mm, model_intra, model_inter, loss_fu
 
     ei, et, en, el = torch.empty(0).type(torch.LongTensor), torch.empty(0).type(torch.LongTensor), torch.empty(0), []
 
-    if cuda:
-        ei, et, en = ei.cuda(), et.cuda(), en.cuda()
+    device = torch.device('cuda' if cuda else 'cpu')
+    ei, et, en = ei.to(device), et.to(device), en.to(device)
 
     assert not train or optimizer!=None
 
@@ -201,7 +290,7 @@ def train_or_eval_graph_model(model, model_mm, model_intra, model_inter, loss_fu
         if train:
             optimizer.zero_grad()
         
-        textf1,textf2,textf3,textf4, visuf, acouf, qmask, umask, label = [d.cuda() for d in data[:-1]] if cuda else data[:-1]
+        textf1,textf2,textf3,textf4, visuf, acouf, qmask, umask, label = [d.to(device) for d in data[:-1]]
         if args.multi_modal:
             if args.mm_fusion_mthd=='concat':
                 if modals == 'avl':
@@ -238,13 +327,15 @@ def train_or_eval_graph_model(model, model_mm, model_intra, model_inter, loss_fu
         label = torch.cat([label[j][:lengths[j]] for j in range(len(label))])
         with torch.no_grad():
             ft_scl = hidden
-            mask_textf1 = torch.mean(textf1, dim=0).repeat(textf1.shape[0], 1, 1)
-            mask_textf2 = torch.mean(textf2, dim=0).repeat(textf2.shape[0], 1, 1)
-            mask_textf3 = torch.mean(textf3, dim=0).repeat(textf3.shape[0], 1, 1)
-            mask_textf4 = torch.mean(textf4, dim=0).repeat(textf4.shape[0], 1, 1)
+            from dataloader import causal_mean_replacement
+            mask_features = lambda feature: causal_mean_replacement(feature, umask) if args.causal else feature.mean(dim=0).repeat(feature.shape[0], 1, 1)
+            mask_textf1 = mask_features(textf1)
+            mask_textf2 = mask_features(textf2)
+            mask_textf3 = mask_features(textf3)
+            mask_textf4 = mask_features(textf4)
 
-            mask_acouf = torch.mean(acouf, dim=0).repeat(acouf.shape[0], 1, 1)
-            mask_visuf = torch.mean(visuf, dim=0).repeat(visuf.shape[0], 1, 1)
+            mask_acouf = mask_features(acouf)
+            mask_visuf = mask_features(visuf)
             
             # mask multimodal data
             log_prob2t, e_i, e_n, e_t, e_l, hiddent = model_mm([mask_textf1, mask_textf2, mask_textf3, mask_textf4], qmask, umask, lengths, acouf, visuf, epoch)
@@ -267,29 +358,24 @@ def train_or_eval_graph_model(model, model_mm, model_intra, model_inter, loss_fu
         lp_ = log_prob 
         pred_ = torch.argmax(lp_,1) # batch*seq_len
 
-        rank_lossm = 0
-        for i in range(len(log_prob)):
-            num = labels_[i]
-            if lp_[i][num] <= log_prob2t[i][num]:
-                rank_lossm += (torch.sub(log_prob2t[i][num], lp_[i][num]))
-            if lp_[i][num] <= log_prob2a[i][num]:
-                rank_lossm += (torch.sub(log_prob2a[i][num], lp_[i][num]))
-            if lp_[i][num] <= log_prob2v[i][num]:
-                rank_lossm += (torch.sub(log_prob2v[i][num], lp_[i][num]))
-
-        rank_lossc = 0 
-        for i in range(len(log_prob)):
-            num = labels_[i]
-            if lp_[i][num] <= log_prob2intra[i][num]:
-                rank_lossc += (torch.sub(log_prob2intra[i][num], lp_[i][num]))
-            if lp_[i][num] <= log_prob2inter[i][num]:
-                rank_lossc += (torch.sub(log_prob2inter[i][num], lp_[i][num]))
+        modality_removed_scores = [log_prob2t, log_prob2a, log_prob2v]
+        context_removed_scores = [log_prob2intra, log_prob2inter]
+        rank_lossm = sum(
+            (_positive_true_class_gaps(lp_, scores, labels_).sum()
+             for scores in modality_removed_scores),
+            torch.zeros((), device=lp_.device, dtype=lp_.dtype),
+        )
+        rank_lossc = sum(
+            (_positive_true_class_gaps(lp_, scores, labels_).sum()
+             for scores in context_removed_scores),
+            torch.zeros((), device=lp_.device, dtype=lp_.dtype),
+        )
 
         rank_loss = rank_lossm + rank_lossc
 
-        Mscl_pred_t = torch.zeros_like(pred_).cuda()
-        Mscl_pred_v = torch.zeros_like(pred_).cuda()
-        Mscl_pred_a = torch.zeros_like(pred_).cuda()
+        Mscl_pred_t = torch.zeros_like(pred_)
+        Mscl_pred_v = torch.zeros_like(pred_)
+        Mscl_pred_a = torch.zeros_like(pred_)
         for index, x in enumerate(Mscl_pred_t):
             if pred_[index] != labels_[index] and pred2t_[index] == labels_[index]:
                 Mscl_pred_t[index] = 0
@@ -321,8 +407,8 @@ def train_or_eval_graph_model(model, model_mm, model_intra, model_inter, loss_fu
                 if lp_[index][labels_[index]] > log_prob2v[index][labels_[index]]:
                     Mscl_pred_v[index] = 1
 
-        Cscl_pred_intra = torch.zeros_like(pred_).cuda()
-        Cscl_pred_inter = torch.zeros_like(pred_).cuda()
+        Cscl_pred_intra = torch.zeros_like(pred_)
+        Cscl_pred_inter = torch.zeros_like(pred_)
         for index, x in enumerate(Cscl_pred_intra):
             if pred_[index] != labels_[index] and pred2c_intra[index] == labels_[index]:
                 Cscl_pred_intra[index] = 0
@@ -355,9 +441,24 @@ def train_or_eval_graph_model(model, model_mm, model_intra, model_inter, loss_fu
         print('Mscl_tav: ', float(Mscl_tav))
         print('Cscl_c: ', float(Cscl_c))
         print('rank_loss: ', float(rank_loss))
-        diff_loss = float(rank_lossm) + float(rank_lossc)
-        Difficulties[data[-1][0]] = float((diff_loss + torch.max(torch.nonzero(qmask[:,0,:])[:,1]) + 1) / (torch.max(torch.nonzero(qmask[:,0,:])[:,1]) + 1 + qmask.shape[0]))
-    pickle.dump(Difficulties, open('caldiff/{}_diff.pkl'.format(args.Dataset), 'wb'))
+        Difficulties.update(
+            compute_dialogue_difficulties(
+                lp_,
+                modality_removed_scores,
+                context_removed_scores,
+                labels_,
+                lengths,
+                qmask,
+                data[-1],
+            )
+        )
+    suffix = '_causal_diff.pkl' if args.causal else '_diff.pkl'
+    output_path = 'caldiff/{}{}'.format(args.Dataset, suffix)
+    payload = {'causal': True, 'dataset': args.Dataset, 'difficulties': Difficulties,
+               'checkpoint': args.ckpt_path, 'args': vars(args).copy()} if args.causal else Difficulties
+    with open(output_path, 'wb') as handle:
+        pickle.dump(payload, handle)
+    print('saved difficulties to {}'.format(output_path))
 
 
 
@@ -372,6 +473,7 @@ if __name__ == '__main__':
 
     parser = argparse.ArgumentParser()
 
+    parser.add_argument('--causal', action='store_true', help='use only history and current utterances')
     parser.add_argument('--no-cuda', action='store_true', default=False, help='does not use GPU')
 
     parser.add_argument('--base-model', default='LSTM', help='base recurrent model, must be one of DialogRNN/LSTM/GRU')
@@ -445,6 +547,11 @@ if __name__ == '__main__':
     parser.add_argument('--ckpt_path', type=str)
 
     args = parser.parse_args()
+    if args.causal:
+        args.norm = 'LN'
+        if not args.graph_model or not args.multi_modal or args.mm_fusion_mthd != 'concat_DHT' or args.graph_type != 'hyper':
+            parser.error('--causal requires --multi_modal --mm_fusion_mthd concat_DHT --graph_type hyper')
+    print('TEMPORAL PROTOCOL: {}; effective norm={}'.format('causal (history + current)' if args.causal else 'bidirectional', args.norm))
     today = datetime.datetime.now()
     print(args)
     if args.av_using_lstm:
@@ -468,6 +575,7 @@ if __name__ == '__main__':
         writer = SummaryWriter()
 
     cuda       = args.cuda
+    device     = torch.device('cuda' if cuda else 'cpu')
     n_epochs   = args.epochs
     batch_size = args.batch_size
     modals = args.modals
@@ -541,7 +649,8 @@ if __name__ == '__main__':
                                  use_modal=args.use_modal,
                                  norm = args.norm,
                                  num_L = args.num_L,
-                                 num_K = args.num_K)
+                                 num_K = args.num_K,
+                                 causal = args.causal)
         model_mm = Model(args.base_model,
                                  D_m, D_g, D_p, D_e, D_h, D_a, graph_h,
                                  n_speakers=n_speakers,
@@ -572,7 +681,8 @@ if __name__ == '__main__':
                                  use_modal=args.use_modal,
                                  norm = args.norm,
                                  num_L = args.num_L,
-                                 num_K = args.num_K)
+                                 num_K = args.num_K,
+                                 causal = args.causal)
         model_intra = Model_Intra(args.base_model,
                                  D_m, D_g, D_p, D_e, D_h, D_a, graph_h,
                                  n_speakers=n_speakers,
@@ -603,7 +713,8 @@ if __name__ == '__main__':
                                  use_modal=args.use_modal,
                                  norm = args.norm,
                                  num_L = args.num_L,
-                                 num_K = args.num_K)
+                                 num_K = args.num_K,
+                                 causal = args.causal)
         model_inter = Model_Inter(args.base_model,
                                  D_m, D_g, D_p, D_e, D_h, D_a, graph_h,
                                  n_speakers=n_speakers,
@@ -634,7 +745,8 @@ if __name__ == '__main__':
                                  use_modal=args.use_modal,
                                  norm = args.norm,
                                  num_L = args.num_L,
-                                 num_K = args.num_K)
+                                 num_K = args.num_K,
+                                 causal = args.causal)
         print ('Graph NN with', args.base_model, 'as base model.')
         name = 'Graph'
 
@@ -660,13 +772,12 @@ if __name__ == '__main__':
 
         name = 'Base'
 
-    if cuda:
-        model.cuda()
-        model_mm.cuda()
-        model_intra.cuda()
-        model_inter.cuda()
+    model.to(device)
+    model_mm.to(device)
+    model_intra.to(device)
+    model_inter.to(device)
 
-    model.load_state_dict(torch.load(args.ckpt_path))
+    load_checkpoint(model, args.ckpt_path, device, expected_args=args)
     if args.Dataset == 'IEMOCAP':
         loss_weights = torch.FloatTensor([1/0.086747,
                                         1/0.144406,
@@ -681,9 +792,9 @@ if __name__ == '__main__':
         if args.class_weight:
             if args.graph_model:
                 #loss_function = FocalLoss()
-                loss_function  = nn.NLLLoss(loss_weights.cuda() if cuda else loss_weights)
+                loss_function  = nn.NLLLoss(loss_weights.to(device))
             else:
-                loss_function  = MaskedNLLLoss(loss_weights.cuda() if cuda else loss_weights)
+                loss_function  = MaskedNLLLoss(loss_weights.to(device))
         else:
             if args.graph_model:
                 loss_function = nn.NLLLoss()
@@ -715,7 +826,3 @@ if __name__ == '__main__':
         print("There is no such dataset")
     
     train_or_eval_graph_model(model, model_mm, model_intra, model_inter, loss_function, train_loader, 0, cuda, args.modals, optimizer, False, dataset=args.Dataset)
-            
-            
-    
-    

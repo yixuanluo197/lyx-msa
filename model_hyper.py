@@ -13,12 +13,12 @@ import ipdb
 from HypergraphConv import HypergraphConv
 from torch_geometric.nn import GCNConv
 from itertools import permutations
-from torch_geometric.nn.pool.topk_pool import topk
 from torch_geometric.nn import global_mean_pool as gap, global_max_pool as gmp, global_add_pool as gsp
 from torch_geometric.nn.inits import glorot
 from torch_geometric.nn.conv.gcn_conv import gcn_norm
 from torch_geometric.utils import add_self_loops
 from high_fre_conv import highConv
+from causal_graph import CausalHypergraphConv, CausalHighConv, build_causal_indices
 class STEFunction(torch.autograd.Function):
     @staticmethod
     def forward(ctx, input):
@@ -88,8 +88,9 @@ class PositionalEncoding(nn.Module):
 
 class HyperGCN(nn.Module):
     def __init__(self, a_dim, v_dim, l_dim, n_dim, nlayers, nhidden, nclass, dropout, lamda, alpha, variant, return_feature, use_residue, 
-                new_graph='full',n_speakers=2, modals=['a','v','l'], use_speaker=True, use_modal=False, num_L=3, num_K=4):
+                new_graph='full',n_speakers=2, modals=['a','v','l'], use_speaker=True, use_modal=False, num_L=3, num_K=4, causal=False):
         super(HyperGCN, self).__init__()
+        self.causal = causal
         self.return_feature = return_feature  #True
         self.use_residue = use_residue
         self.new_graph = new_graph
@@ -112,6 +113,14 @@ class HyperGCN(nn.Module):
         #self.fc2 = nn.Linear(n_dim, nhidden)     
         self.num_L =  num_L
         self.num_K =  num_K
+        if self.causal:
+            if len(self.modals) != 3 or set(self.modals) != {'a', 'v', 'l'}:
+                raise ValueError("causal HyperGCN requires all three modalities: avl")
+            self.causal_hyperconvs = nn.ModuleList(
+                [CausalHypergraphConv(nhidden) for _ in range(num_L)])
+            self.causal_convs = nn.ModuleList(
+                [CausalHighConv(nhidden) for _ in range(num_K)])
+            return
         for ll in range(num_L):
             setattr(self,'hyperconv%d' %(ll+1), HypergraphConv(nhidden, nhidden))
         self.act_fn = nn.ReLU()
@@ -125,6 +134,8 @@ class HyperGCN(nn.Module):
         #self.conv = highConv(nhidden, nhidden)
 
     def forward(self, a, v, l, dia_len, qmask, epoch, mask_context=None):
+        if self.causal:
+            return self._forward_causal(a, v, l, dia_len, qmask, mask_context)
         qmask = torch.cat([qmask[:x,i,:] for i,x in enumerate(dia_len)],dim=0)
         spk_idx = torch.argmax(qmask, dim=-1)
         spk_emb_vector = self.speaker_embeddings(spk_idx)
@@ -177,6 +188,49 @@ class HyperGCN(nn.Module):
         return out1
         
 
+
+    def _forward_causal(self, a, v, l, dia_len, qmask, mask_context):
+        lengths = [int(length) for length in dia_len]
+        if not lengths or any(length <= 0 for length in lengths):
+            raise ValueError("causal HyperGCN requires positive dialogue lengths")
+        if any(x.ndim != 2 or x.shape != l.shape for x in (a, v, l)):
+            raise ValueError("causal graph inputs must share [sum(dialogue lengths), n_dim]")
+        if l.size(0) != sum(lengths):
+            raise ValueError("dialogue lengths do not match flattened graph inputs")
+        if (qmask.ndim != 3 or qmask.size(1) != len(lengths) or
+                qmask.size(0) < max(lengths)):
+            raise ValueError("speaker mask must have shape [time, batch, speakers]")
+        speakers = torch.cat([qmask[:length, i].argmax(dim=-1)
+                              for i, length in enumerate(lengths)])
+        if self.use_speaker:
+            l = l + self.speaker_embeddings(speakers)
+        if self.use_modal:
+            modal_vectors = self.modal_embeddings(torch.arange(3, device=l.device))
+            a = a + modal_vectors[0]
+            v = v + modal_vectors[1]
+            l = l + modal_vectors[2]
+        # Preserve dialogue-major l/a/v layout and never mutate caller inputs.
+        feature_blocks = []
+        offset = 0
+        for length in lengths:
+            feature_blocks.append(torch.cat([l[offset:offset + length],
+                                             a[offset:offset + length],
+                                             v[offset:offset + length]], dim=0))
+            offset += length
+        features = torch.cat(feature_blocks, dim=0)
+        source, target, edge_types, gnn_edges = build_causal_indices(
+            lengths, speakers, features.device, mask_context)
+        hidden = self.fc1(features)
+        hyper_out = hidden
+        for layer in self.causal_hyperconvs:
+            hyper_out = layer(hyper_out, source, target, edge_types)
+        gnn_out = hidden
+        for layer in self.causal_convs:
+            gnn_out = gnn_out + layer(gnn_out, gnn_edges)
+        output = torch.cat([hyper_out, gnn_out], dim=1)
+        if self.use_residue:
+            output = torch.cat([features, output], dim=1)
+        return self.reverse_features(lengths, output)
 
     def create_hyper_index(self, a, v, l, dia_len, modals):
         self_loop = False

@@ -1,11 +1,14 @@
 import os
+import json
 import numpy as np, argparse, time, pickle, random
+from pathlib import Path
 import torch
 import torch.nn as nn
 import torch.optim as optim
 from torch.utils.data import DataLoader
 from torch.utils.data.sampler import SubsetRandomSampler, WeightedRandomSampler
-from dataloader import IEMOCAPDataset, MELDDataset
+from dataloader import (IEMOCAPDataset, MELDDataset, split_iemocap_dialogues,
+                        causal_mean_replacement, validate_checkpoint_protocol)
 from model_cm import MaskedNLLLoss, LSTMModel, GRUModel, Model, MaskedMSELoss, FocalLoss, Model_Inter, Model_Intra
 from sklearn.metrics import f1_score, confusion_matrix, accuracy_score, classification_report, precision_recall_fscore_support
 import pandas as pd
@@ -16,6 +19,133 @@ from clloss import CKSCL_context, CKSCL_tav
 from tqdm import tqdm
 CKSCL_m = CKSCL_tav()
 CKSCL_c = CKSCL_context()
+
+
+def _rng_state():
+    state = {
+        'python': random.getstate(),
+        'numpy': np.random.get_state(),
+        'torch': torch.get_rng_state(),
+    }
+    if torch.cuda.is_available():
+        state['cuda'] = torch.cuda.get_rng_state_all()
+    return state
+
+
+def _restore_rng_state(state):
+    random.setstate(state['python'])
+    np.random.set_state(state['numpy'])
+    torch.set_rng_state(state['torch'])
+    if 'cuda' in state and torch.cuda.is_available():
+        torch.cuda.set_rng_state_all(state['cuda'])
+
+
+def save_training_checkpoint(path, model, optimizer, epoch, args, best_metric, best_epoch):
+    """Atomically save all state required to resume at the next epoch."""
+    path = Path(path)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    payload = {
+        'model_state_dict': model.state_dict(),
+        'optimizer_state_dict': optimizer.state_dict(),
+        'epoch': epoch,
+        'args': dict(args) if isinstance(args, dict) else vars(args).copy(),
+        'causal': args.get('causal', False) if isinstance(args, dict) else getattr(args, 'causal', False),
+        'rng_state': _rng_state(),
+        'best_metric': best_metric,
+        'best_epoch': best_epoch,
+    }
+    temporary_path = path.with_suffix(path.suffix + '.tmp')
+    torch.save(payload, temporary_path)
+    os.replace(temporary_path, path)
+
+
+def load_training_checkpoint(path, model, optimizer, map_location=None, expected_args=None):
+    checkpoint = torch.load(path, map_location=map_location)
+    causal = getattr(model, 'causal', False)
+    if expected_args is not None:
+        causal = expected_args.get('causal', False) if isinstance(expected_args, dict) else expected_args.causal
+    validate_checkpoint_protocol(checkpoint, causal=causal, expected_args=expected_args)
+    if causal and expected_args is not None:
+        requested = expected_args if isinstance(expected_args, dict) else vars(expected_args)
+        saved = checkpoint['args']
+        # Epoch budget may be extended; data split, stochastic training, loss
+        # and curriculum settings must still describe the resumed experiment.
+        protocol_keys = (
+            'seed', 'dropout', 'rec_dropout', 'batch_size', 'lr', 'l2',
+            'calibrate', 'rank_coff', 'contrastlearning', 'mscl_coff', 'cscl_coff',
+            'courselearning', 'epoch_ratio', 'scheduler_steps',
+        )
+        for key in protocol_keys:
+            if key in requested and (key not in saved or saved[key] != requested[key]):
+                raise ValueError('causal resume {} does not match the saved training protocol'.format(key))
+    model.load_state_dict(checkpoint['model_state_dict'])
+    optimizer.load_state_dict(checkpoint['optimizer_state_dict'])
+    parameter_device = next(model.parameters()).device
+    for optimizer_state in optimizer.state.values():
+        for key, value in optimizer_state.items():
+            if torch.is_tensor(value):
+                optimizer_state[key] = value.to(parameter_device)
+    _restore_rng_state(checkpoint['rng_state'])
+    return {
+        'start_epoch': checkpoint['epoch'] + 1,
+        'best_metric': checkpoint.get('best_metric'),
+        'best_epoch': checkpoint.get('best_epoch'),
+        'args': checkpoint.get('args', {}),
+    }
+
+
+def write_jsonl_record(path, record):
+    def json_safe(value):
+        if isinstance(value, float) and not np.isfinite(value):
+            return None
+        if isinstance(value, dict):
+            return {key: json_safe(item) for key, item in value.items()}
+        if isinstance(value, (list, tuple)):
+            return [json_safe(item) for item in value]
+        return value
+
+    path = Path(path)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with path.open('a', encoding='utf-8') as handle:
+        json.dump(json_safe(record), handle, ensure_ascii=False, sort_keys=True,
+                  allow_nan=False)
+        handle.write('\n')
+
+
+def combine_training_losses(classification_loss, cc_loss=0.0, mscl_loss=0.0,
+                            cscl_loss=0.0, calibrate=False,
+                            contrastlearning=False, rank_coff=0.0,
+                            mscl_coff=0.0, cscl_coff=0.0):
+    """Apply the official CMERC coefficients and expose raw loss components."""
+    def as_tensor(value):
+        if torch.is_tensor(value):
+            return value
+        return classification_loss.new_tensor(value)
+
+    cc_loss = as_tensor(cc_loss)
+    mscl_loss = as_tensor(mscl_loss)
+    cscl_loss = as_tensor(cscl_loss)
+    total_loss = classification_loss
+    if calibrate:
+        total_loss = total_loss + rank_coff * cc_loss
+    if contrastlearning:
+        total_loss = total_loss + mscl_coff * mscl_loss + cscl_coff * cscl_loss
+    components = {
+        'classification_loss': classification_loss.detach().item(),
+        'cc_loss': cc_loss.detach().item(),
+        'mscl_loss': mscl_loss.detach().item(),
+        'cscl_loss': cscl_loss.detach().item(),
+        'total_loss': total_loss.detach().item(),
+    }
+    return total_loss, components
+
+
+def choose_selection_metrics(protocol, valid_loss, valid_f1, test_loss, test_f1):
+    if protocol == 'official_test':
+        return 'test', test_loss, test_f1
+    if protocol == 'validation':
+        return 'validation', valid_loss, valid_f1
+    raise ValueError('selection protocol must be official_test or validation')
 
 
 def create_class_weight_SCL(label):
@@ -53,8 +183,37 @@ def get_train_valid_sampler(trainset, valid=0.1, dataset='IEMOCAP'):
     return SubsetRandomSampler(idx[split:]), SubsetRandomSampler(idx[:split])
 
 
-def get_MELD_loaders(batch_size=32, valid=0.1, num_workers=0, pin_memory=False, epoch_ratio=-1):
-    trainset = MELDDataset('data/MELD_features_raw1.pkl', epoch_ratio=epoch_ratio)
+def get_MELD_loaders(batch_size=32, valid=0.1, num_workers=0, pin_memory=False,
+                     epoch_ratio=-1, selection_protocol='official_test', seed=None, causal=False):
+    dataset_kwargs = {'causal': True} if causal else {}
+    if selection_protocol == 'validation':
+        trainset = MELDDataset('data/MELD_features_raw1.pkl', split='train', epoch_ratio=epoch_ratio, **dataset_kwargs)
+        validset = MELDDataset('data/MELD_features_raw1.pkl', split='validation', **dataset_kwargs)
+        testset = MELDDataset('data/MELD_features_raw1.pkl', split='test', **dataset_kwargs)
+        generator = torch.Generator()
+        generator.manual_seed(0 if seed is None else seed)
+        train_loader = DataLoader(trainset,
+                                  batch_size=batch_size,
+                                  shuffle=True,
+                                  generator=generator,
+                                  collate_fn=trainset.collate_fn,
+                                  num_workers=num_workers,
+                                  pin_memory=pin_memory)
+        valid_loader = DataLoader(validset,
+                                  batch_size=batch_size,
+                                  collate_fn=validset.collate_fn,
+                                  num_workers=num_workers,
+                                  pin_memory=pin_memory)
+        test_loader = DataLoader(testset,
+                                 batch_size=batch_size,
+                                 collate_fn=testset.collate_fn,
+                                 num_workers=num_workers,
+                                 pin_memory=pin_memory)
+        return train_loader, valid_loader, test_loader
+    if selection_protocol != 'official_test':
+        raise ValueError('selection_protocol must be official_test or validation')
+
+    trainset = MELDDataset('data/MELD_features_raw1.pkl', epoch_ratio=epoch_ratio, **dataset_kwargs)
     train_sampler, valid_sampler = get_train_valid_sampler(trainset, valid, 'MELD')
 
     train_loader = DataLoader(trainset,
@@ -71,7 +230,7 @@ def get_MELD_loaders(batch_size=32, valid=0.1, num_workers=0, pin_memory=False, 
                               num_workers=num_workers,
                               pin_memory=pin_memory)
 
-    testset = MELDDataset('data/MELD_features_raw1.pkl', train=False)
+    testset = MELDDataset('data/MELD_features_raw1.pkl', train=False, **dataset_kwargs)
     test_loader = DataLoader(testset,
                              batch_size=batch_size,
                              collate_fn=testset.collate_fn,
@@ -81,8 +240,43 @@ def get_MELD_loaders(batch_size=32, valid=0.1, num_workers=0, pin_memory=False, 
     return train_loader, valid_loader, test_loader
 
 
-def get_IEMOCAP_loaders(batch_size=32, valid=0.1, num_workers=0, pin_memory=False, epoch_ratio=-1):
-    trainset = IEMOCAPDataset(epoch_ratio=epoch_ratio)
+def get_IEMOCAP_loaders(batch_size=32, valid=0.1, num_workers=0, pin_memory=False,
+                        epoch_ratio=-1, selection_protocol='official_test', seed=None, causal=False):
+    dataset_kwargs = {'causal': True} if causal else {}
+    if selection_protocol == 'validation':
+        full_trainset = IEMOCAPDataset(**dataset_kwargs)
+        train_keys, validation_keys = split_iemocap_dialogues(
+            full_trainset.keys, seed=0 if seed is None else seed, valid_fraction=valid
+        )
+        trainset = IEMOCAPDataset(epoch_ratio=epoch_ratio, keys=train_keys, **dataset_kwargs)
+        validset = IEMOCAPDataset(keys=validation_keys, **dataset_kwargs)
+        testset = IEMOCAPDataset(train=False, **dataset_kwargs)
+        generator = torch.Generator()
+        generator.manual_seed(0 if seed is None else seed)
+        train_loader = DataLoader(trainset,
+                                  batch_size=batch_size,
+                                  shuffle=True,
+                                  generator=generator,
+                                  collate_fn=trainset.collate_fn,
+                                  num_workers=num_workers,
+                                  pin_memory=pin_memory,
+                                  worker_init_fn=_init_fn)
+        valid_loader = DataLoader(validset,
+                                  batch_size=batch_size,
+                                  collate_fn=validset.collate_fn,
+                                  num_workers=num_workers,
+                                  pin_memory=pin_memory)
+        test_loader = DataLoader(testset,
+                                 batch_size=batch_size,
+                                 collate_fn=testset.collate_fn,
+                                 num_workers=num_workers,
+                                 pin_memory=pin_memory,
+                                 worker_init_fn=_init_fn)
+        return train_loader, valid_loader, test_loader
+    if selection_protocol != 'official_test':
+        raise ValueError('selection_protocol must be official_test or validation')
+
+    trainset = IEMOCAPDataset(epoch_ratio=epoch_ratio, **dataset_kwargs)
     train_sampler, valid_sampler = get_train_valid_sampler(trainset, valid)
 
     train_loader = DataLoader(trainset,
@@ -98,7 +292,7 @@ def get_IEMOCAP_loaders(batch_size=32, valid=0.1, num_workers=0, pin_memory=Fals
                               num_workers=num_workers,
                               pin_memory=pin_memory)
 
-    testset = IEMOCAPDataset(train=False)
+    testset = IEMOCAPDataset(train=False, **dataset_kwargs)
     test_loader = DataLoader(testset,
                              batch_size=batch_size,
                              collate_fn=testset.collate_fn,
@@ -168,8 +362,9 @@ def train_or_eval_model(model, loss_function, dataloader, epoch, optimizer=None,
     return avg_loss, avg_accuracy, labels, preds, masks, avg_fscore, [alphas, alphas_f, alphas_b, vids]
 
 
-def train_or_eval_graph_model(model, model_mm, model_intra, model_inter, loss_function, dataloader, epoch, cuda, modals, optimizer=None, train=False, dataset='IEMOCAP'):
+def train_or_eval_graph_model(model, model_mm, model_intra, model_inter, loss_function, dataloader, epoch, cuda, modals, optimizer=None, train=False, dataset='IEMOCAP', return_components=False):
     losses, preds, labels = [], [], []
+    loss_components = []
     scores, vids = [], []
 
     ei, et, en, el = torch.empty(0).type(torch.LongTensor), torch.empty(0).type(torch.LongTensor), torch.empty(0), []
@@ -232,13 +427,14 @@ def train_or_eval_graph_model(model, model_mm, model_intra, model_inter, loss_fu
         if args.contrastlearning or args.calibrate:
             with torch.no_grad():
                 ft_scl = hidden
-                mask_textf1 = torch.mean(textf1, dim=0).repeat(textf1.shape[0], 1, 1)
-                mask_textf2 = torch.mean(textf2, dim=0).repeat(textf2.shape[0], 1, 1)
-                mask_textf3 = torch.mean(textf3, dim=0).repeat(textf3.shape[0], 1, 1)
-                mask_textf4 = torch.mean(textf4, dim=0).repeat(textf4.shape[0], 1, 1)
+                mask_features = lambda feature: causal_mean_replacement(feature, umask) if getattr(args, 'causal', False) else feature.mean(dim=0).repeat(feature.shape[0], 1, 1)
+                mask_textf1 = mask_features(textf1)
+                mask_textf2 = mask_features(textf2)
+                mask_textf3 = mask_features(textf3)
+                mask_textf4 = mask_features(textf4)
 
-                mask_acouf = torch.mean(acouf, dim=0).repeat(acouf.shape[0], 1, 1)
-                mask_visuf = torch.mean(visuf, dim=0).repeat(visuf.shape[0], 1, 1)
+                mask_acouf = mask_features(acouf)
+                mask_visuf = mask_features(visuf)
                 
                 # mask multimodal data
                 log_prob2t, e_i, e_n, e_t, e_l, hiddent = model_mm([mask_textf1, mask_textf2, mask_textf3, mask_textf4], qmask, umask, lengths, acouf, visuf, epoch)
@@ -283,9 +479,9 @@ def train_or_eval_graph_model(model, model_mm, model_intra, model_inter, loss_fu
             # 2. for SCL label ##########################################################
             # 0: confidence up 
             # 1: confidence drop
-            Mscl_pred_t = torch.zeros_like(pred_).cuda()
-            Mscl_pred_v = torch.zeros_like(pred_).cuda()
-            Mscl_pred_a = torch.zeros_like(pred_).cuda()
+            Mscl_pred_t = torch.zeros_like(pred_)
+            Mscl_pred_v = torch.zeros_like(pred_)
+            Mscl_pred_a = torch.zeros_like(pred_)
             for index, x in enumerate(Mscl_pred_t):
                 if pred_[index] != labels_[index] and pred2t_[index] == labels_[index]:
                     Mscl_pred_t[index] = 0
@@ -317,8 +513,8 @@ def train_or_eval_graph_model(model, model_mm, model_intra, model_inter, loss_fu
                     if lp_[index][labels_[index]] > log_prob2v[index][labels_[index]]:
                         Mscl_pred_v[index] = 1
 
-            Cscl_pred_intra = torch.zeros_like(pred_).cuda()
-            Cscl_pred_inter = torch.zeros_like(pred_).cuda()
+            Cscl_pred_intra = torch.zeros_like(pred_)
+            Cscl_pred_inter = torch.zeros_like(pred_)
             for index, x in enumerate(Cscl_pred_intra):
                 if pred_[index] != labels_[index] and pred2c_intra[index] == labels_[index]:
                     Cscl_pred_intra[index] = 0
@@ -345,16 +541,24 @@ def train_or_eval_graph_model(model, model_mm, model_intra, model_inter, loss_fu
             Mscl_tav = CKSCL_m(ft_scl, labels1=Mscl_pred_t, labels2=Mscl_pred_a, labels3=Mscl_pred_v, weight1=create_class_weight_SCL(Mscl_pred_t), weight2=create_class_weight_SCL(Mscl_pred_a), weight3=create_class_weight_SCL(Mscl_pred_v))
             Cscl_c = CKSCL_c(ft_scl, labels1=Cscl_pred_intra, labels2=Cscl_pred_inter, weight1=create_class_weight_SCL(Cscl_pred_intra), weight2=create_class_weight_SCL(Cscl_pred_inter))
 
-        loss = loss_function(log_prob, label)
+        classification_loss = loss_function(log_prob, label)
         preds.append(torch.argmax(log_prob, 1).cpu().numpy())
         labels.append(label.cpu().numpy())
-        losses.append(loss.item())
+        losses.append(classification_loss.item())
+        total_loss, components = combine_training_losses(
+            classification_loss,
+            cc_loss=rank_loss if (args.contrastlearning or args.calibrate) else 0.0,
+            mscl_loss=Mscl_tav if (args.contrastlearning or args.calibrate) else 0.0,
+            cscl_loss=Cscl_c if (args.contrastlearning or args.calibrate) else 0.0,
+            calibrate=args.calibrate,
+            contrastlearning=args.contrastlearning,
+            rank_coff=args.rank_coff,
+            mscl_coff=args.mscl_coff,
+            cscl_coff=args.cscl_coff,
+        )
+        loss_components.append(components)
         if train:
-            if args.calibrate:
-                loss = loss + args.rank_coff * rank_loss
-            if args.contrastlearning:
-                loss = loss + args.mscl_coff * Mscl_tav + args.cscl_coff * Cscl_c
-            loss.backward()
+            total_loss.backward()
             optimizer.step()
             
 
@@ -362,7 +566,16 @@ def train_or_eval_graph_model(model, model_mm, model_intra, model_inter, loss_fu
         preds  = np.concatenate(preds)
         labels = np.concatenate(labels)
     else:
-        return float('nan'), float('nan'), [], [], float('nan'), [], [], [], [], []
+        empty_result = (float('nan'), float('nan'), [], [], float('nan'), [], [], [], [], [])
+        if return_components:
+            return empty_result + ({
+                'classification_loss': float('nan'),
+                'cc_loss': float('nan'),
+                'mscl_loss': float('nan'),
+                'cscl_loss': float('nan'),
+                'total_loss': float('nan'),
+            },)
+        return empty_result
 
     vids += data[-1]
     ei = ei.data.cpu().numpy()
@@ -377,7 +590,14 @@ def train_or_eval_graph_model(model, model_mm, model_intra, model_inter, loss_fu
     avg_accuracy = round(accuracy_score(labels, preds)*100, 2)
     avg_fscore = round(f1_score(labels,preds, average='weighted')*100, 2)
 
-    return avg_loss, avg_accuracy, labels, preds, avg_fscore, vids, ei, et, en, el
+    result = (avg_loss, avg_accuracy, labels, preds, avg_fscore, vids, ei, et, en, el)
+    if return_components:
+        averaged_components = {
+            key: float(np.mean([component[key] for component in loss_components]))
+            for key in loss_components[0]
+        }
+        return result + (averaged_components,)
+    return result
 
 
 if __name__ == '__main__':
@@ -385,6 +605,7 @@ if __name__ == '__main__':
 
     parser = argparse.ArgumentParser()
 
+    parser.add_argument('--causal', action='store_true', help='use only history and current utterances')
     parser.add_argument('--no-cuda', action='store_true', default=False, help='does not use GPU')
 
     parser.add_argument('--base-model', default='LSTM', help='base recurrent model, must be one of DialogRNN/LSTM/GRU')
@@ -464,8 +685,22 @@ if __name__ == '__main__':
     parser.add_argument('--courselearning', default=False, action='store_true')
     parser.add_argument('--epoch_ratio', type=float, default=0)
     parser.add_argument('--scheduler_steps', type=int, default=0)
+    parser.add_argument('--selection-protocol', choices=['official_test', 'validation'],
+                        default='official_test',
+                        help='official_test faithfully selects on test W-F1; validation selects on a held-out validation split')
+    parser.add_argument('--output-dir', default='runs/train_cm',
+                        help='root directory for JSONL logs and latest/best checkpoints')
+    parser.add_argument('--resume', default=None,
+                        help='resume a full training checkpoint created by this script')
+    parser.add_argument('--num-workers', type=int, default=2,
+                        help='DataLoader worker count')
 
     args = parser.parse_args()
+    if args.causal:
+        args.norm = 'LN'
+        if not args.graph_model or not args.multi_modal or args.mm_fusion_mthd != 'concat_DHT' or args.graph_type != 'hyper':
+            parser.error('--causal requires --multi_modal --mm_fusion_mthd concat_DHT --graph_type hyper')
+    print('TEMPORAL PROTOCOL: {}; effective norm={}'.format('causal (history + current)' if args.causal else 'bidirectional', args.norm))
     today = datetime.datetime.now()
     print(args)
     if args.av_using_lstm:
@@ -562,7 +797,8 @@ if __name__ == '__main__':
                                  use_modal=args.use_modal,
                                  norm = args.norm,
                                  num_L = args.num_L,
-                                 num_K = args.num_K)
+                                 num_K = args.num_K,
+                                 causal = args.causal)
         model_mm = Model(args.base_model,
                                  D_m, D_g, D_p, D_e, D_h, D_a, graph_h,
                                  n_speakers=n_speakers,
@@ -593,7 +829,8 @@ if __name__ == '__main__':
                                  use_modal=args.use_modal,
                                  norm = args.norm,
                                  num_L = args.num_L,
-                                 num_K = args.num_K)
+                                 num_K = args.num_K,
+                                 causal = args.causal)
         model_intra = Model_Intra(args.base_model,
                                  D_m, D_g, D_p, D_e, D_h, D_a, graph_h,
                                  n_speakers=n_speakers,
@@ -624,7 +861,8 @@ if __name__ == '__main__':
                                  use_modal=args.use_modal,
                                  norm = args.norm,
                                  num_L = args.num_L,
-                                 num_K = args.num_K)
+                                 num_K = args.num_K,
+                                 causal = args.causal)
         model_inter = Model_Inter(args.base_model,
                                  D_m, D_g, D_p, D_e, D_h, D_a, graph_h,
                                  n_speakers=n_speakers,
@@ -655,7 +893,8 @@ if __name__ == '__main__':
                                  use_modal=args.use_modal,
                                  norm = args.norm,
                                  num_L = args.num_L,
-                                 num_K = args.num_K)
+                                 num_K = args.num_K,
+                                 causal = args.causal)
         print ('Graph NN with', args.base_model, 'as base model.')
         name = 'Graph'
 
@@ -715,9 +954,34 @@ if __name__ == '__main__':
     lr = args.lr
 
     best_fscore, best_loss, best_label, best_pred, best_mask = None, None, None, None, None
+    best_epoch = None
     all_fscore, all_acc, all_loss = [], [], []
+    start_epoch = 0
+    run_dir = Path(args.output_dir) / '{}_{}_seed{}'.format(
+        args.Dataset, args.selection_protocol, args.seed
+    )
+    if args.causal:
+        run_dir = run_dir.with_name(run_dir.name + '_causal')
+    metrics_path = run_dir / 'metrics.jsonl'
+    latest_checkpoint_path = run_dir / 'latest.pt'
+    best_checkpoint_path = run_dir / 'best.pt'
+    if args.selection_protocol == 'official_test':
+        print('SELECTION PROTOCOL: official_test (faithful official behavior; TEST W-F1 selects best checkpoint)')
+    else:
+        print('SELECTION PROTOCOL: validation (test metrics do not select checkpoints)')
+    if args.resume:
+        resume_metadata = load_training_checkpoint(
+            args.resume, model, optimizer,
+            map_location='cpu', expected_args=args
+        )
+        start_epoch = resume_metadata['start_epoch']
+        best_fscore = resume_metadata['best_metric']
+        best_epoch = resume_metadata['best_epoch']
+        print('resumed from {} at epoch {}'.format(args.resume, start_epoch + 1))
 
     if args.testing:
+        if args.causal:
+            raise ValueError('use scripts/evaluate_checkpoint.py --causal with a causal checkpoint')
         if args.Dataset == 'MELD':
             train_loader, valid_loader, test_loader = get_MELD_loaders(valid=0.0,
                                                                         batch_size=batch_size,
@@ -734,43 +998,74 @@ if __name__ == '__main__':
         test_loss, test_acc, test_label, test_pred, test_fscore, _, _, _, _, _ = train_or_eval_graph_model(model, loss_function, test_loader, 0, cuda, args.modals, dataset=args.Dataset)
         print('test_acc:',test_acc,'test_fscore:',test_fscore)
 
-    for e in range(n_epochs):
+    for e in range(start_epoch, n_epochs):
         if args.courselearning:
             epoch_ratio = min(1, round(args.epoch_ratio*int(e/args.scheduler_steps+1),2))
         else:
             epoch_ratio = -1
         print("current ratio = ", epoch_ratio)
         start_time = time.time()
+        if cuda:
+            torch.cuda.reset_peak_memory_stats()
+
+        validation_fraction = 0.1 if args.selection_protocol == 'validation' else 0.0
 
         if args.Dataset == 'MELD':
-            train_loader, valid_loader, test_loader = get_MELD_loaders(valid=0.0,
+            train_loader, valid_loader, test_loader = get_MELD_loaders(valid=validation_fraction,
                                                                         batch_size=batch_size,
-                                                                        num_workers=2,
-                                                                        epoch_ratio=epoch_ratio)
+                                                                        num_workers=args.num_workers,
+                                                                        epoch_ratio=epoch_ratio,
+                                                                        selection_protocol=args.selection_protocol,
+                                                                        seed=args.seed, causal=args.causal)
         elif args.Dataset == 'IEMOCAP':
-            train_loader, valid_loader, test_loader = get_IEMOCAP_loaders(valid=0.0,
+            train_loader, valid_loader, test_loader = get_IEMOCAP_loaders(valid=validation_fraction,
                                                                         batch_size=batch_size,
-                                                                        num_workers=2,
-                                                                        epoch_ratio=epoch_ratio)
+                                                                        num_workers=args.num_workers,
+                                                                        epoch_ratio=epoch_ratio,
+                                                                        selection_protocol=args.selection_protocol,
+                                                                        seed=args.seed, causal=args.causal)
         else:
             print("There is no such dataset")
         if args.graph_model:
-            train_loss, train_acc, _, _, train_fscore, _, _, _, _, _ = train_or_eval_graph_model(model, model_mm, model_intra, model_inter, loss_function, train_loader, e, cuda, args.modals, optimizer, True, dataset=args.Dataset)
+            train_loss, train_acc, _, _, train_fscore, _, _, _, _, _, train_components = train_or_eval_graph_model(model, model_mm, model_intra, model_inter, loss_function, train_loader, e, cuda, args.modals, optimizer, True, dataset=args.Dataset, return_components=True)
             valid_loss, valid_acc, _, _, valid_fscore, _, _, _, _, _ = train_or_eval_graph_model(model, model_mm, model_intra, model_inter,loss_function, valid_loader, e, cuda, args.modals, dataset=args.Dataset)
-            test_loss, test_acc, test_label, test_pred, test_fscore, _, _, _, _, _ = train_or_eval_graph_model(model, model_mm, model_intra, model_inter,loss_function, test_loader, e, cuda, args.modals, dataset=args.Dataset)
-            all_fscore.append(test_fscore)
+            if args.selection_protocol == 'official_test':
+                test_loss, test_acc, test_label, test_pred, test_fscore, _, _, _, _, _ = train_or_eval_graph_model(model, model_mm, model_intra, model_inter,loss_function, test_loader, e, cuda, args.modals, dataset=args.Dataset)
+                all_fscore.append(test_fscore)
+            else:
+                test_loss = test_acc = test_fscore = float('nan')
+                test_label = test_pred = None
         else:
             train_loss, train_acc, _, _, _, train_fscore, _ = train_or_eval_model(model, loss_function, train_loader, e, optimizer, True)
             valid_loss, valid_acc, _, _, _, valid_fscore, _ = train_or_eval_model(model, loss_function, valid_loader, e)
-            test_loss, test_acc, test_label, test_pred, test_mask, test_fscore, attentions = train_or_eval_model(model, loss_function, test_loader, e)
-            all_fscore.append(test_fscore)
+            if args.selection_protocol == 'official_test':
+                test_loss, test_acc, test_label, test_pred, test_mask, test_fscore, attentions = train_or_eval_model(model, loss_function, test_loader, e)
+                all_fscore.append(test_fscore)
+            else:
+                test_loss = test_acc = test_fscore = float('nan')
+                test_label = test_pred = None
 
-        if best_loss == None or best_loss > test_loss:
-            best_loss, best_label, best_pred = test_loss, test_label, test_pred
+            train_components = {
+                'classification_loss': train_loss,
+                'cc_loss': 0.0,
+                'mscl_loss': 0.0,
+                'cscl_loss': 0.0,
+                'total_loss': train_loss,
+            }
 
-        if best_fscore == None or best_fscore < test_fscore:
-            best_fscore = test_fscore
-            best_label, best_pred = test_label, test_pred
+        selection_split, selection_loss, selection_fscore = choose_selection_metrics(
+            args.selection_protocol, valid_loss, valid_fscore, test_loss, test_fscore
+        )
+
+        if best_loss == None or best_loss > selection_loss:
+            best_loss = selection_loss
+
+        improved = best_fscore is None or best_fscore < selection_fscore
+        if improved:
+            best_fscore = selection_fscore
+            best_epoch = e
+            if args.selection_protocol == 'official_test':
+                best_label, best_pred = test_label, test_pred
 
         if args.tensorboard:
             writer.add_scalar('test: accuracy', test_acc, e)
@@ -778,9 +1073,74 @@ if __name__ == '__main__':
             writer.add_scalar('train: accuracy', train_acc, e)
             writer.add_scalar('train: fscore', train_fscore, e)
 
-        print('epoch: {}, train_loss: {}, train_acc: {}, train_fscore: {}, test_loss: {}, test_acc: {}, test_fscore: {}, time: {} sec'.\
-                format(e+1, train_loss, train_acc, train_fscore, test_loss, test_acc, test_fscore, round(time.time()-start_time, 2)))
+        elapsed_seconds = round(time.time()-start_time, 2)
+        max_gpu_memory_mb = (
+            round(torch.cuda.max_memory_allocated() / (1024 ** 2), 2) if cuda else 0.0
+        )
+        epoch_record = {
+            'epoch': e + 1,
+            'selection_protocol': args.selection_protocol,
+            'causal': args.causal,
+            'effective_norm': args.norm,
+            'selection_split': selection_split,
+            'selection_weighted_f1': selection_fscore,
+            'classification_loss': train_components['classification_loss'],
+            'cc_loss': train_components['cc_loss'],
+            'mscl_loss': train_components['mscl_loss'],
+            'cscl_loss': train_components['cscl_loss'],
+            'total_loss': train_components['total_loss'],
+            'train_accuracy': train_acc,
+            'train_weighted_f1': train_fscore,
+            'validation_accuracy': valid_acc,
+            'validation_weighted_f1': valid_fscore,
+            'test_accuracy': test_acc,
+            'test_weighted_f1': test_fscore,
+            'elapsed_seconds': elapsed_seconds,
+            'sample_ratio': 1.0 if epoch_ratio == -1 else epoch_ratio,
+            'train_dialogues': len(train_loader.dataset),
+            'max_gpu_memory_mb': max_gpu_memory_mb,
+        }
+        write_jsonl_record(metrics_path, epoch_record)
+        save_training_checkpoint(
+            latest_checkpoint_path, model, optimizer, e, args, best_fscore, best_epoch
+        )
+        if improved:
+            save_training_checkpoint(
+                best_checkpoint_path, model, optimizer, e, args, best_fscore, best_epoch
+            )
+
+        print('epoch: {}, train_loss: {}, train_acc: {}, train_fscore: {}, valid_loss: {}, valid_acc: {}, valid_fscore: {}, test_loss: {}, test_acc: {}, test_fscore: {}, time: {} sec'.\
+                format(e+1, train_loss, train_acc, train_fscore, valid_loss, valid_acc, valid_fscore, test_loss, test_acc, test_fscore, elapsed_seconds))
         if (e+1)%10 == 0:
-            print ('----------best F-Score:', max(all_fscore))
-            print(classification_report(best_label, best_pred, sample_weight=best_mask,digits=4))
-            print(confusion_matrix(best_label,best_pred,sample_weight=best_mask))
+            print ('----------best {} F-Score: {}'.format(selection_split, best_fscore))
+            if best_label is not None:
+                print(classification_report(best_label, best_pred, sample_weight=best_mask,digits=4))
+                print(confusion_matrix(best_label,best_pred,sample_weight=best_mask))
+
+    if args.selection_protocol == 'validation' and best_checkpoint_path.exists():
+        best_checkpoint = torch.load(best_checkpoint_path, map_location='cpu')
+        model.load_state_dict(best_checkpoint['model_state_dict'])
+        if cuda:
+            model.cuda()
+        if args.graph_model:
+            final_test_loss, final_test_acc, _, _, final_test_fscore, _, _, _, _, _ = train_or_eval_graph_model(
+                model, model_mm, model_intra, model_inter, loss_function, test_loader,
+                best_epoch, cuda, args.modals, dataset=args.Dataset
+            )
+        else:
+            final_test_loss, final_test_acc, _, _, _, final_test_fscore, _ = train_or_eval_model(
+                model, loss_function, test_loader, best_epoch
+            )
+        final_test_record = {
+            'selection_protocol': args.selection_protocol,
+            'selected_epoch': best_epoch + 1,
+            'selection_weighted_f1': best_fscore,
+            'test_loss': final_test_loss,
+            'test_accuracy': final_test_acc,
+            'test_weighted_f1': final_test_fscore,
+        }
+        with (run_dir / 'final_test.json').open('w', encoding='utf-8') as handle:
+            json.dump(final_test_record, handle, ensure_ascii=False, indent=2, allow_nan=False)
+        print('final test from validation-selected epoch {}: accuracy {}, weighted F1 {}'.format(
+            best_epoch + 1, final_test_acc, final_test_fscore
+        ))

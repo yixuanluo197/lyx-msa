@@ -27,11 +27,9 @@ class ESCL(nn.Module):
         https://arxiv.org/pdf/2002.05709.pdf
         """
 
-        device = (torch.device('cuda')
-                  if features.is_cuda
-                  else torch.device('cpu'))
+        device = features.device
         if self.weight is not None:
-            weight_scl = torch.tensor([self.weight[int(i)] for i in labels]).cuda()
+            weight_scl = torch.tensor([self.weight[int(i)] for i in labels]).to(features.device)
         if len(features.shape) < 2:
             raise ValueError('`features` needs to be [bsz, n_views, ...],'
                              'at least 3 dimensions are required')
@@ -115,11 +113,9 @@ class CKSCL(nn.Module):
         https://arxiv.org/pdf/2002.05709.pdf
         """
 
-        device = (torch.device('cuda')
-                  if features.is_cuda
-                  else torch.device('cpu'))
+        device = features.device
         if weight is not None:
-            weight_scl = torch.tensor([weight[int(i)] for i in labels]).cuda()
+            weight_scl = torch.tensor([weight[int(i)] for i in labels]).to(features.device)
         if len(features.shape) < 2:
             raise ValueError('`features` needs to be [bsz, n_views, ...],'
                              'at least 3 dimensions are required')
@@ -205,11 +201,9 @@ class CKSCL_base(nn.Module):
         https://arxiv.org/pdf/2002.05709.pdf
         """
 
-        device = (torch.device('cuda')
-                  if features.is_cuda
-                  else torch.device('cpu'))
+        device = features.device
         if weight is not None:
-            weight_scl = torch.tensor([weight[int(i)] for i in labels]).cuda()
+            weight_scl = torch.tensor([weight[int(i)] for i in labels]).to(features.device)
         if len(features.shape) < 2:
             raise ValueError('`features` needs to be [bsz, n_views, ...],'
                              'at least 3 dimensions are required')
@@ -296,19 +290,19 @@ class CKSCL_tav(nn.Module):
             logits3 = None
 
         if logits1 != None and logits2 != None and logits3 != None:
-            logits = torch.tensor([weight1[int(i)] for i in labels1]).cuda() * logits1 + torch.tensor([weight2[int(i)] for i in labels2]).cuda() * logits2 + torch.tensor([weight3[int(i)] for i in labels3]).cuda() * logits3
+            logits = torch.tensor([weight1[int(i)] for i in labels1]).to(features.device) * logits1 + torch.tensor([weight2[int(i)] for i in labels2]).to(features.device) * logits2 + torch.tensor([weight3[int(i)] for i in labels3]).to(features.device) * logits3
         elif logits1 != None and logits2 != None and logits3 == None:
-            logits = torch.tensor([weight1[int(i)] for i in labels1]).cuda() * logits1 + torch.tensor([weight2[int(i)] for i in labels2]).cuda() * logits2
+            logits = torch.tensor([weight1[int(i)] for i in labels1]).to(features.device) * logits1 + torch.tensor([weight2[int(i)] for i in labels2]).to(features.device) * logits2
         elif logits1 != None and logits2 == None and logits3 != None:
-            logits = torch.tensor([weight1[int(i)] for i in labels1]).cuda() * logits1 + torch.tensor([weight3[int(i)] for i in labels3]).cuda() * logits3
+            logits = torch.tensor([weight1[int(i)] for i in labels1]).to(features.device) * logits1 + torch.tensor([weight3[int(i)] for i in labels3]).to(features.device) * logits3
         elif logits1 == None and logits2 != None and logits3 != None:
-            logits = torch.tensor([weight2[int(i)] for i in labels2]).cuda() * logits2 + torch.tensor([weight3[int(i)] for i in labels3]).cuda() * logits3
+            logits = torch.tensor([weight2[int(i)] for i in labels2]).to(features.device) * logits2 + torch.tensor([weight3[int(i)] for i in labels3]).to(features.device) * logits3
         elif logits1 != None and logits2 == None and logits3 == None:
-            logits = torch.tensor([weight1[int(i)] for i in labels1]).cuda() * logits1
+            logits = torch.tensor([weight1[int(i)] for i in labels1]).to(features.device) * logits1
         elif logits1 == None and logits2 != None and logits3 == None:
-            logits = torch.tensor([weight2[int(i)] for i in labels2]).cuda() * logits2
+            logits = torch.tensor([weight2[int(i)] for i in labels2]).to(features.device) * logits2
         elif logits1 == None and logits2 == None and logits3 != None:
-            logits = torch.tensor([weight3[int(i)] for i in labels3]).cuda() * logits3
+            logits = torch.tensor([weight3[int(i)] for i in labels3]).to(features.device) * logits3
 
         loss = -(torch.mean(logits))
         if torch.isinf(loss) or torch.isnan(loss):
@@ -341,11 +335,11 @@ class CKSCL_context(nn.Module):
             logits2 = None
         
         if logits1 != None and logits2 != None:
-            logits = torch.tensor([weight1[int(i)] for i in labels1]).cuda() * logits1 + torch.tensor([weight2[int(i)] for i in labels2]).cuda() * logits2
+            logits = torch.tensor([weight1[int(i)] for i in labels1]).to(features.device) * logits1 + torch.tensor([weight2[int(i)] for i in labels2]).to(features.device) * logits2
         elif logits1 != None and logits2 == None:
-            logits = torch.tensor([weight1[int(i)] for i in labels1]).cuda() * logits1
+            logits = torch.tensor([weight1[int(i)] for i in labels1]).to(features.device) * logits1
         elif logits1 == None and logits2 != None:
-            logits = torch.tensor([weight2[int(i)] for i in labels2]).cuda() * logits2
+            logits = torch.tensor([weight2[int(i)] for i in labels2]).to(features.device) * logits2
         elif logits1 == None and logits2 == None:
             logits = None
         

@@ -148,7 +148,7 @@ class HypergraphConv(MessagePassing):
                              size=(num_nodes, num_edges))                   #num_edges,1,100
         self.flow = 'target_to_source'
         out = self.propagate(hyperedge_index, x=out, norm=D, alpha=alpha,
-                             size=(num_edges, num_nodes))                   #num_nodes,1,100
+                             size=(num_nodes, num_edges))                   #num_nodes,1,100
         if self.concat is True and out.size(1) == 1:
             out = out.view(-1, self.heads * self.out_channels)
         else:
