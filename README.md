@@ -6,6 +6,7 @@ CMERC 多模态对话情绪识别代码、复现工程与时间因果变体，�
 
 ## 阅读入口
 
+- [最近三组实验档案](experiment_records/README.md)：原版 V100 复现、XP 多 seed、V100 多 seed V2 的代码版本、配置、逐轮指标和最终结果；V1 失败诊断单独保留。
 - [GPT / 人工代码审查指南](docs/GPT_REVIEW_GUIDE.md)：建议阅读顺序、重点文件和可复制的审查提示词。
 - [复现运行指南](REPRODUCTION_GUIDE.md)：环境、数据准备、训练、评测和断点恢复。
 - [时间因果变体说明](CAUSAL_README.md)：历史与当前话语的可见性约束、实现范围和验证边界。
@@ -62,7 +63,7 @@ CMERC_PYTHON="$HOME/conda-envs/cmerc-repro/bin/python" \
 
 ## 数据、权重与结果
 
-公开仓库包含源码、测试、脚本、依赖快照和复现报告。数据特征、checkpoint、预测明细、原始运行日志及运行目录由 `.gitignore` 排除，仍保留在原服务器。
+公开仓库包含源码、测试、脚本、依赖快照和复现报告。[实验档案](experiment_records/README.md)另保留经过筛选的运行配置、逐轮指标、聚合评测与结果图。数据特征、checkpoint、逐样本预测和原始运行日志仍保留在实验服务器，原始运行目录由 `.gitignore` 排除。
 
 从 [原始 README](docs/UPSTREAM_README.md) 的作者链接获取特征和官方 checkpoint，放入根目录的 `data/`、`checkpoints/`。文件清单与校验值见 [数据审计](reports/03_DATA_AUDIT.md)。`caldiff/IEMOCAP_diff.pkl` 和 `caldiff/MELD_diff.pkl` 是上游已跟踪的小型课程难度文件，继续保留。
 

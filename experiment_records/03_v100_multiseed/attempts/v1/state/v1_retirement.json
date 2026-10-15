@@ -1,0 +1,25 @@
+{
+  "retired_at": "2026-10-14T17:43:39.304746+00:00",
+  "reason": "unconstrained shuffle can exceed original fixed 1000 hyperedge weight capacity; all v1 diagnostics retained, unified safe batch policy will run in v2",
+  "stopped_own_jobs": [
+    {
+      "id": "IEMOCAP_cmerc_validation_seed1475",
+      "pid": 1512177,
+      "host_gpu_index": 2,
+      "epochs_saved": 23
+    },
+    {
+      "id": "MELD_cmerc_validation_seed1475",
+      "pid": 1512591,
+      "host_gpu_index": 5,
+      "epochs_saved": 18
+    },
+    {
+      "id": "IEMOCAP_cmerc_validation_seed67137",
+      "pid": 1560267,
+      "host_gpu_index": 3,
+      "epochs_saved": 10
+    }
+  ],
+  "original_CMERC_single_seed_untouched": true
+}

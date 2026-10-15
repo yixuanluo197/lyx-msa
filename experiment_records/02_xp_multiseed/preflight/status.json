@@ -1,0 +1,163 @@
+{
+  "status": "passed",
+  "events": [
+    {
+      "name": "tests",
+      "command": [
+        "bash",
+        "scripts/with_cmerc_env.sh",
+        "/data2/yb/conda_envs/cmerc-xp-repro/bin/python",
+        "-m",
+        "pytest",
+        "-q",
+        "tests"
+      ],
+      "gpu_uuid": "GPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456",
+      "exit_code": 0,
+      "elapsed_seconds": 10.111416578292847
+    },
+    {
+      "name": "official_MELD",
+      "command": [
+        "bash",
+        "scripts/with_cmerc_env.sh",
+        "/data2/yb/conda_envs/cmerc-xp-repro/bin/python",
+        "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_multiseed/20261014T1627Z/profile_run.py",
+        "scripts/evaluate_checkpoint.py",
+        "--dataset",
+        "MELD",
+        "--checkpoint",
+        "checkpoints/MELD_checkpoint.pkl",
+        "--output-dir",
+        "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_multiseed/20261014T1627Z/preflight/official_checkpoint/MELD",
+        "--device",
+        "cuda:0",
+        "--batch-size",
+        "16",
+        "--num-workers",
+        "0"
+      ],
+      "gpu_uuid": "GPU-eed2f34f-b4c0-7b7a-498e-71a026e30c5a",
+      "exit_code": 0,
+      "elapsed_seconds": 10.116502285003662
+    },
+    {
+      "name": "official_IEMOCAP",
+      "command": [
+        "bash",
+        "scripts/with_cmerc_env.sh",
+        "/data2/yb/conda_envs/cmerc-xp-repro/bin/python",
+        "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_multiseed/20261014T1627Z/profile_run.py",
+        "scripts/evaluate_checkpoint.py",
+        "--dataset",
+        "IEMOCAP",
+        "--checkpoint",
+        "checkpoints/IEMOCAP_checkpoint.pkl",
+        "--output-dir",
+        "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_multiseed/20261014T1627Z/preflight/official_checkpoint/IEMOCAP",
+        "--device",
+        "cuda:0",
+        "--batch-size",
+        "16",
+        "--num-workers",
+        "0"
+      ],
+      "gpu_uuid": "GPU-7ff18ebb-100e-98fe-038b-a98bd4f94248",
+      "exit_code": 0,
+      "elapsed_seconds": 15.179592847824097
+    },
+    {
+      "name": "cuda_extensions",
+      "command": [
+        "bash",
+        "scripts/with_cmerc_env.sh",
+        "/data2/yb/conda_envs/cmerc-xp-repro/bin/python",
+        "-c",
+        "import torch,torch_geometric,torch_scatter,torch_sparse,json; from torch_geometric.nn import GraphConv; from HypergraphConv import HypergraphConv; x=torch.randn(3,4,device=\"cuda\",requires_grad=True); edge=torch.tensor([[0,1,1,2],[0,0,1,1]],device=\"cuda\"); m=HypergraphConv(4,4).cuda(); y=m(x,edge); y.square().mean().backward(); assert torch.isfinite(y).all() and torch.isfinite(x.grad).all(); z=GraphConv(4,3).cuda()(x,edge); z.sum().backward(); assert torch.isfinite(z).all(); print(json.dumps({\"torch\":torch.__version__,\"cuda\":torch.version.cuda, \"pyg\":torch_geometric.__version__,\"scatter\":torch_scatter.__version__, \"sparse\":torch_sparse.__version__,\"gpu\":torch.cuda.get_device_name(0),\"passed\":True}))"
+      ],
+      "gpu_uuid": "GPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456",
+      "exit_code": 0,
+      "elapsed_seconds": 5.055200576782227
+    },
+    {
+      "name": "smoke_IEMOCAP",
+      "command": [
+        "bash",
+        "scripts/with_cmerc_env.sh",
+        "/data2/yb/conda_envs/cmerc-xp-repro/bin/python",
+        "scripts/smoke_test.py",
+        "--dataset",
+        "IEMOCAP",
+        "--device",
+        "cuda:0",
+        "--batch-size",
+        "16",
+        "--output-dir",
+        "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_multiseed/20261014T1627Z/preflight/smoke/IEMOCAP"
+      ],
+      "gpu_uuid": "GPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456",
+      "exit_code": 0,
+      "elapsed_seconds": 10.104695081710815
+    },
+    {
+      "name": "smoke_MELD",
+      "command": [
+        "bash",
+        "scripts/with_cmerc_env.sh",
+        "/data2/yb/conda_envs/cmerc-xp-repro/bin/python",
+        "scripts/smoke_test.py",
+        "--dataset",
+        "MELD",
+        "--device",
+        "cuda:0",
+        "--batch-size",
+        "16",
+        "--output-dir",
+        "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_multiseed/20261014T1627Z/preflight/smoke/MELD"
+      ],
+      "gpu_uuid": "GPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456",
+      "exit_code": 0,
+      "elapsed_seconds": 5.049564599990845
+    },
+    {
+      "name": "profile_MELD",
+      "command": [
+        "bash",
+        "scripts/with_cmerc_env.sh",
+        "bash",
+        "scripts/run_training.sh",
+        "MELD",
+        "cmerc",
+        "official_test",
+        "--num-workers",
+        "0",
+        "--epochs",
+        "3"
+      ],
+      "gpu_uuid": "GPU-eed2f34f-b4c0-7b7a-498e-71a026e30c5a",
+      "exit_code": 0,
+      "elapsed_seconds": 126.27794432640076
+    },
+    {
+      "name": "profile_IEMOCAP",
+      "command": [
+        "bash",
+        "scripts/with_cmerc_env.sh",
+        "bash",
+        "scripts/run_training.sh",
+        "IEMOCAP",
+        "cmerc",
+        "official_test",
+        "--num-workers",
+        "0",
+        "--epochs",
+        "7"
+      ],
+      "gpu_uuid": "GPU-7ff18ebb-100e-98fe-038b-a98bd4f94248",
+      "exit_code": 0,
+      "elapsed_seconds": 257.5711097717285
+    }
+  ],
+  "w_f1_tolerance_pp": 0.05,
+  "cel_tolerance_absolute": 0.1
+}

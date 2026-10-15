@@ -1,0 +1,198 @@
+{
+  "batch_id": "20261014T1627Z",
+  "created_at": "2026-10-14T16:35:58.716454+00:00",
+  "server": "local user23",
+  "code_root": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_multiseed/20261014T1627Z/code",
+  "env_prefix": "/data2/yb/conda_envs/cmerc-xp-repro",
+  "training_python": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_multiseed/20261014T1627Z/profile_python",
+  "require_preflight": "preflight/status.json",
+  "observer_sha256": {
+    "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_multiseed/20261014T1627Z/profile_python": "7eabc6f6ef6d7e8fd6f5a50b1d18e8beb8fb4fee06b3b9254737f731b290e92b",
+    "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_multiseed/20261014T1627Z/profile_run.py": "632223f4517e43e7a7c552ccadd37292d33e3736bfd1e915a06e14930774f179"
+  },
+  "commit": "91a1bffa763d57015896dee1014f0d11c5d09029",
+  "file_sha256": {
+    "HypergraphConv.py": "9297a572e1763a74c7984eb75dfb15fa8143bf131a44cf50433c307ef7f3b5d2",
+    "caldiff/cal_diff.py": "71ee8a3fa506ee2a90a1f4ee671fbfcd3e2511e0b75e60249b57869ccd048c78",
+    "causal_graph.py": "3dd761b05cca95afa7b2f7b70e4640ee3ccfbb5726c3d705c0808468f7181da3",
+    "clloss.py": "012c5d08f51eaaa99bdbd10d61e3d108275bf3dd44e42767b2e186e5be72ec3f",
+    "dataloader.py": "337a7dc92d9e69e4f8854a8031197085ffca84cdc08b070b6ef5b05ebb6f3390",
+    "evaluation_metrics.py": "ed831a1f38d5706d6d47d7310d03e8b35f6eb4573623c9650934c638d65835c8",
+    "high_fre_conv.py": "f4414c019ca7f656a662698bb9615bf15ac6325a73caa06ff487e158f58f39df",
+    "model.py": "ee84329b800e37a8ac652b58aa6f0fc3dee47cb2cf38feda14f5c0de26ec9a82",
+    "model_GCN.py": "830d401ff3e4b30298199b927a0bad3a9056400429506abcc2d66a7db8b76f9f",
+    "model_cm.py": "94acf11e2e9edd1bcd98049eb12d85b3604f8d71d46f64f0c3b8b9837fa12625",
+    "model_hyper.py": "fb9ef2ee268afa697474c9199d2136a7519b5226adb4abeec4a9cf1aea678aba",
+    "scripts/bootstrap_environment.sh": "4f748b8cb18963337cb143a72d4f7f72a4cd14cba9c94ad648a3e5af132439b6",
+    "scripts/evaluate_checkpoint.py": "980c2fbc40c77f6d246e5f471820712a77c0ef62bb6b0c29538e2aaa15589e00",
+    "scripts/evaluate_training_matrix.sh": "6849027caf7ddf11361f09101e3ff1bbfacaf79449e963a00677487220821c85",
+    "scripts/run_job_queue.sh": "63fd0e4f9f083da860a384621f3e212ecc8235233606d3c897af7e07c53bb249",
+    "scripts/run_training.sh": "3b18b42762a5012610e4c90d95c991223342db12a7c45bd2a60cd025e9a24459",
+    "scripts/schedule_meld_cmerc.sh": "19aff5849b02a5ec061b060e6fc806dcb1e9533875a5df662149a83f4d1d67dd",
+    "scripts/smoke_test.py": "0906f0464f68436348c772099949fad22a1783377cdefaf5a2bb3c55319fc4bc",
+    "scripts/summarize_results.py": "65503e564fcf3ebc445c3e903810862604d245e0191a04b59d12dc36913f3cec",
+    "scripts/wait_then_evaluate_all.sh": "acf586bbea02cf752da714363abdafc071a9dde66b7a28e163c5ce51753d0f28",
+    "scripts/with_cmerc_env.sh": "1aa59fda5752ac6d62b2ce01cafac78bc161d00d386cc4d85065a268dfbfe0a2",
+    "scripts/xp_multiseed.py": "28967314efc9dee78b8809ff28573b690106a24d6d0de8dc398fc0aba5f286bd",
+    "train.py": "35a18a2bf33d8e3e0d8459955b1f0ce525d4f28970f9af801fb27087bcf02ad7",
+    "train_cm.py": "4436841d8725f67992aceb2626279ff5e2875fdc64c3d2595e4408926b105064",
+    "data/IEMOCAP_features.pkl": "ceb5cc9a45d1792998438e27f86a12642320aa6315546e4425316140ea503fb3",
+    "data/MELD_features_raw1.pkl": "d043b3ec1813c8917e2067af01e933ff0892d33d19d93595098aaf88c4b200b0",
+    "data/iemocap_features_roberta.pkl": "4bd60c581a5b7c70e217e18439f741b191605fbd6f2cf4dc1a6dcb7fcaa18f06",
+    "data/meld_features_roberta.pkl": "58b2bdadc2eaec6abb40ac0cb3ffa3f31e929d636ece8197aecf1ca373a92951",
+    "caldiff/IEMOCAP_diff.pkl": "db4c7b96f169948a3615a62b29d2a793bd64cccd8a0387b1de9d7ceab348a150",
+    "caldiff/MELD_diff.pkl": "db005ceb0e4847caffc8571eaa94ab7c5b4a310abd615b12c995c9a22ff060e0",
+    "checkpoints/IEMOCAP_checkpoint.pkl": "f3098fed2734c18171c02a59d014ee27320d845bc1ad5dfa17162b8dcfb49925",
+    "checkpoints/MELD_checkpoint.pkl": "1c72e29c173b749675885bdd4f477bd5d3702ab7cca7eb03cb145850bf0beba7",
+    "scripts/fix_torch_uuid_count.py": "7ad0c8431348d5d87ac249f498d5bdc35e1335d23418f4730babe4c5e5c113a2"
+  },
+  "gpu_candidates": {
+    "0": "GPU-7ff18ebb-100e-98fe-038b-a98bd4f94248",
+    "1": "GPU-eed2f34f-b4c0-7b7a-498e-71a026e30c5a",
+    "3": "GPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456"
+  },
+  "tasks": [
+    {
+      "id": "IEMOCAP_cmerc_official_test_seed1475",
+      "dataset": "IEMOCAP",
+      "variant": "cmerc",
+      "seed": 1475,
+      "protocol": "official_test",
+      "epochs": 80,
+      "causal": false
+    },
+    {
+      "id": "MELD_cmerc_official_test_seed67137",
+      "dataset": "MELD",
+      "variant": "cmerc",
+      "seed": 67137,
+      "protocol": "official_test",
+      "epochs": 40,
+      "causal": false
+    },
+    {
+      "id": "IEMOCAP_baseline_official_test_seed1475",
+      "dataset": "IEMOCAP",
+      "variant": "baseline",
+      "seed": 1475,
+      "protocol": "official_test",
+      "epochs": 80,
+      "causal": false
+    },
+    {
+      "id": "MELD_baseline_official_test_seed67137",
+      "dataset": "MELD",
+      "variant": "baseline",
+      "seed": 67137,
+      "protocol": "official_test",
+      "epochs": 40,
+      "causal": false
+    },
+    {
+      "id": "IEMOCAP_cmerc_official_test_seed42",
+      "dataset": "IEMOCAP",
+      "variant": "cmerc",
+      "seed": 42,
+      "protocol": "official_test",
+      "epochs": 80,
+      "causal": false
+    },
+    {
+      "id": "MELD_cmerc_official_test_seed42",
+      "dataset": "MELD",
+      "variant": "cmerc",
+      "seed": 42,
+      "protocol": "official_test",
+      "epochs": 40,
+      "causal": false
+    },
+    {
+      "id": "IEMOCAP_cmerc_official_test_seed3407",
+      "dataset": "IEMOCAP",
+      "variant": "cmerc",
+      "seed": 3407,
+      "protocol": "official_test",
+      "epochs": 80,
+      "causal": false
+    },
+    {
+      "id": "MELD_cmerc_official_test_seed3407",
+      "dataset": "MELD",
+      "variant": "cmerc",
+      "seed": 3407,
+      "protocol": "official_test",
+      "epochs": 40,
+      "causal": false
+    },
+    {
+      "id": "IEMOCAP_cmerc_official_test_seed2025",
+      "dataset": "IEMOCAP",
+      "variant": "cmerc",
+      "seed": 2025,
+      "protocol": "official_test",
+      "epochs": 80,
+      "causal": false
+    },
+    {
+      "id": "MELD_cmerc_official_test_seed2025",
+      "dataset": "MELD",
+      "variant": "cmerc",
+      "seed": 2025,
+      "protocol": "official_test",
+      "epochs": 40,
+      "causal": false
+    },
+    {
+      "id": "IEMOCAP_cmerc_official_test_seed2026",
+      "dataset": "IEMOCAP",
+      "variant": "cmerc",
+      "seed": 2026,
+      "protocol": "official_test",
+      "epochs": 80,
+      "causal": false
+    },
+    {
+      "id": "MELD_cmerc_official_test_seed2026",
+      "dataset": "MELD",
+      "variant": "cmerc",
+      "seed": 2026,
+      "protocol": "official_test",
+      "epochs": 40,
+      "causal": false
+    }
+  ],
+  "seeds_origin": "first public README seed; four predeclared reproduction seeds",
+  "selection_bias": "official_test selects the best checkpoint using test W-F1 each epoch",
+  "curriculum": "fixed author difficulty files shared across seeds",
+  "historical_reference": {
+    "IEMOCAP": {
+      "v100_cmerc_official_test": 70.3753,
+      "official_checkpoint": 71.9838
+    },
+    "MELD": {
+      "v100_cmerc_official_test": 66.1767,
+      "official_checkpoint": 66.8484
+    }
+  },
+  "paper_weighted_f1": {
+    "IEMOCAP": 71.98,
+    "MELD": 66.85
+  },
+  "threshold_points": 0.5,
+  "sample_std_ddof": 1,
+  "preflight_scheduler_revision": "MELD concurrency capability added before any formal run; matrix and model algorithms unchanged",
+  "environment_patch": {
+    "path": "/data2/yb/conda_envs/cmerc-xp-repro/lib/python3.10/site-packages/torch/cuda/__init__.py",
+    "before_sha256": "2f359b138403461d8df4a824d887ad39786ca44757d309ee6946f95380957f18",
+    "after_sha256": "9fc9a69023b066410892c1480dc1ef0e0573e96ab187e713c2770c504f5855bb",
+    "scope": "only UUID NVML enumeration; existing CUDA runtime fallback; no model/RNG change",
+    "source": "https://github.com/pytorch/pytorch/blob/v1.13.1/torch/cuda/__init__.py"
+  },
+  "runtime_environment": {
+    "PYTORCH_CUDA_ALLOC_CONF": "garbage_collection_threshold:0.8"
+  },
+  "allocator_initialization": {
+    "per_process_memory_fraction": 1.0,
+    "reason": "torch1.13 GC gate, original full capacity preserved"
+  }
+}

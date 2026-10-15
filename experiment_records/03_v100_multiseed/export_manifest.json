@@ -1,0 +1,1438 @@
+{
+  "schema_version": 1,
+  "exported_at_utc": "2026-10-15T09:03:06.659948+00:00",
+  "source_root": "/data2/yb/paper/lyx-msa/CMERC（seed）",
+  "server": "biggpu",
+  "remote_root": "/data2/yb/paper/cmerc_seed_v2_20261014",
+  "frozen_source_members_verified": 31,
+  "v2_completed_runs": 20,
+  "filter_rules": {
+    "include": [
+      "frozen verified source",
+      "configs",
+      "aggregate reports and metrics",
+      "all 20 V2 run manifests, epoch metrics and final test",
+      "own V2 queue",
+      "V1 retirement diagnostics",
+      "environment and provenance",
+      "small official-checkpoint and resume verification JSON",
+      "current tests explicitly outside freeze"
+    ],
+    "exclude": [
+      "data and features",
+      "all checkpoints and model weights",
+      "per-sample predictions",
+      "NPZ",
+      "raw logs",
+      "caches",
+      "credentials",
+      "other tasks process information"
+    ],
+    "archive_safety": "All 31 members are regular files with relative paths, no parent traversal or links; each member hash verified before write.",
+    "manifest_self_hash": "excluded to avoid self-reference"
+  },
+  "files": [
+    {
+      "path": "provenance/AGENTS.source.md",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/snapshots/code_snapshot.tar.gz::AGENTS.md",
+      "source_sha256": "b648f22f8da2b21ccba76996729b0f938398fc6fa3faa5f9866a9e1ff336055d",
+      "target_sha256": "b648f22f8da2b21ccba76996729b0f938398fc6fa3faa5f9866a9e1ff336055d",
+      "size_bytes": 1499,
+      "transformation": "renamed AGENTS.md to passive provenance"
+    },
+    {
+      "path": "code/HypergraphConv.py",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/snapshots/code_snapshot.tar.gz::HypergraphConv.py",
+      "source_sha256": "9297a572e1763a74c7984eb75dfb15fa8143bf131a44cf50433c307ef7f3b5d2",
+      "target_sha256": "9297a572e1763a74c7984eb75dfb15fa8143bf131a44cf50433c307ef7f3b5d2",
+      "size_bytes": 7795,
+      "transformation": "verified tar member extracted as regular file"
+    },
+    {
+      "path": "code/MULTISEED_PLAN.md",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/snapshots/code_snapshot.tar.gz::MULTISEED_PLAN.md",
+      "source_sha256": "2fa1d370217ba0beb174fbb2de8c6710a44d4c6748b41ef503ad865f35e8040e",
+      "target_sha256": "2fa1d370217ba0beb174fbb2de8c6710a44d4c6748b41ef503ad865f35e8040e",
+      "size_bytes": 3229,
+      "transformation": "verified tar member extracted as regular file"
+    },
+    {
+      "path": "code/causal_graph.py",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/snapshots/code_snapshot.tar.gz::causal_graph.py",
+      "source_sha256": "3dd761b05cca95afa7b2f7b70e4640ee3ccfbb5726c3d705c0808468f7181da3",
+      "target_sha256": "3dd761b05cca95afa7b2f7b70e4640ee3ccfbb5726c3d705c0808468f7181da3",
+      "size_bytes": 5367,
+      "transformation": "verified tar member extracted as regular file"
+    },
+    {
+      "path": "code/clloss.py",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/snapshots/code_snapshot.tar.gz::clloss.py",
+      "source_sha256": "012c5d08f51eaaa99bdbd10d61e3d108275bf3dd44e42767b2e186e5be72ec3f",
+      "target_sha256": "012c5d08f51eaaa99bdbd10d61e3d108275bf3dd44e42767b2e186e5be72ec3f",
+      "size_bytes": 14384,
+      "transformation": "verified tar member extracted as regular file"
+    },
+    {
+      "path": "code/configs/multiseed_validation.json",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/snapshots/code_snapshot.tar.gz::configs/multiseed_validation.json",
+      "source_sha256": "96e628f6e5e29c914e61d048b0b543ef6343f839be92c077546acbabe95e3624",
+      "target_sha256": "96e628f6e5e29c914e61d048b0b543ef6343f839be92c077546acbabe95e3624",
+      "size_bytes": 594,
+      "transformation": "verified tar member extracted as regular file"
+    },
+    {
+      "path": "code/configs/requirements-lock.txt",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/snapshots/code_snapshot.tar.gz::configs/requirements-lock.txt",
+      "source_sha256": "801b164209063f0de0729041ee5577561e6e9a44d564604c26d7c0723a7dc6a9",
+      "target_sha256": "801b164209063f0de0729041ee5577561e6e9a44d564604c26d7c0723a7dc6a9",
+      "size_bytes": 965,
+      "transformation": "verified tar member extracted as regular file"
+    },
+    {
+      "path": "code/dataloader.py",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/snapshots/code_snapshot.tar.gz::dataloader.py",
+      "source_sha256": "337a7dc92d9e69e4f8854a8031197085ffca84cdc08b070b6ef5b05ebb6f3390",
+      "target_sha256": "337a7dc92d9e69e4f8854a8031197085ffca84cdc08b070b6ef5b05ebb6f3390",
+      "size_bytes": 10492,
+      "transformation": "verified tar member extracted as regular file"
+    },
+    {
+      "path": "code/evaluation_metrics.py",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/snapshots/code_snapshot.tar.gz::evaluation_metrics.py",
+      "source_sha256": "ed831a1f38d5706d6d47d7310d03e8b35f6eb4573623c9650934c638d65835c8",
+      "target_sha256": "ed831a1f38d5706d6d47d7310d03e8b35f6eb4573623c9650934c638d65835c8",
+      "size_bytes": 3954,
+      "transformation": "verified tar member extracted as regular file"
+    },
+    {
+      "path": "code/high_fre_conv.py",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/snapshots/code_snapshot.tar.gz::high_fre_conv.py",
+      "source_sha256": "f4414c019ca7f656a662698bb9615bf15ac6325a73caa06ff487e158f58f39df",
+      "target_sha256": "f4414c019ca7f656a662698bb9615bf15ac6325a73caa06ff487e158f58f39df",
+      "size_bytes": 1526,
+      "transformation": "verified tar member extracted as regular file"
+    },
+    {
+      "path": "code/model.py",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/snapshots/code_snapshot.tar.gz::model.py",
+      "source_sha256": "ee84329b800e37a8ac652b58aa6f0fc3dee47cb2cf38feda14f5c0de26ec9a82",
+      "target_sha256": "ee84329b800e37a8ac652b58aa6f0fc3dee47cb2cf38feda14f5c0de26ec9a82",
+      "size_bytes": 37617,
+      "transformation": "verified tar member extracted as regular file"
+    },
+    {
+      "path": "code/model_GCN.py",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/snapshots/code_snapshot.tar.gz::model_GCN.py",
+      "source_sha256": "830d401ff3e4b30298199b927a0bad3a9056400429506abcc2d66a7db8b76f9f",
+      "target_sha256": "830d401ff3e4b30298199b927a0bad3a9056400429506abcc2d66a7db8b76f9f",
+      "size_bytes": 22167,
+      "transformation": "verified tar member extracted as regular file"
+    },
+    {
+      "path": "code/model_cm.py",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/snapshots/code_snapshot.tar.gz::model_cm.py",
+      "source_sha256": "94acf11e2e9edd1bcd98049eb12d85b3604f8d71d46f64f0c3b8b9837fa12625",
+      "target_sha256": "94acf11e2e9edd1bcd98049eb12d85b3604f8d71d46f64f0c3b8b9837fa12625",
+      "size_bytes": 75667,
+      "transformation": "verified tar member extracted as regular file"
+    },
+    {
+      "path": "code/model_hyper.py",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/snapshots/code_snapshot.tar.gz::model_hyper.py",
+      "source_sha256": "fb9ef2ee268afa697474c9199d2136a7519b5226adb4abeec4a9cf1aea678aba",
+      "target_sha256": "fb9ef2ee268afa697474c9199d2136a7519b5226adb4abeec4a9cf1aea678aba",
+      "size_bytes": 17571,
+      "transformation": "verified tar member extracted as regular file"
+    },
+    {
+      "path": "code/scripts/audit_batch_capacity.py",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/snapshots/code_snapshot.tar.gz::scripts/audit_batch_capacity.py",
+      "source_sha256": "b8ed6af45e074b5dbcfc0a1d2fe1d81bfb969b1d8e3fc2569125b52eeaf53ae0",
+      "target_sha256": "b8ed6af45e074b5dbcfc0a1d2fe1d81bfb969b1d8e3fc2569125b52eeaf53ae0",
+      "size_bytes": 9728,
+      "transformation": "verified tar member extracted as regular file"
+    },
+    {
+      "path": "code/scripts/bootstrap_environment.sh",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/snapshots/code_snapshot.tar.gz::scripts/bootstrap_environment.sh",
+      "source_sha256": "4f748b8cb18963337cb143a72d4f7f72a4cd14cba9c94ad648a3e5af132439b6",
+      "target_sha256": "4f748b8cb18963337cb143a72d4f7f72a4cd14cba9c94ad648a3e5af132439b6",
+      "size_bytes": 1115,
+      "transformation": "verified tar member extracted as regular file"
+    },
+    {
+      "path": "code/scripts/evaluate_checkpoint.py",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/snapshots/code_snapshot.tar.gz::scripts/evaluate_checkpoint.py",
+      "source_sha256": "a2e4b3fda1f71fa57fcdd90f4c6b7fd96f9d7c0cf75225bd84e800284c5bf956",
+      "target_sha256": "a2e4b3fda1f71fa57fcdd90f4c6b7fd96f9d7c0cf75225bd84e800284c5bf956",
+      "size_bytes": 21421,
+      "transformation": "verified tar member extracted as regular file"
+    },
+    {
+      "path": "code/scripts/evaluate_training_matrix.sh",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/snapshots/code_snapshot.tar.gz::scripts/evaluate_training_matrix.sh",
+      "source_sha256": "9f545da7a428e1fd856dff44313cb4ea0863f0c0467d62b159939a97333fe72a",
+      "target_sha256": "9f545da7a428e1fd856dff44313cb4ea0863f0c0467d62b159939a97333fe72a",
+      "size_bytes": 2380,
+      "transformation": "verified tar member extracted as regular file"
+    },
+    {
+      "path": "code/scripts/freeze_experiment.py",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/snapshots/code_snapshot.tar.gz::scripts/freeze_experiment.py",
+      "source_sha256": "f8015ed615edd7afd7c2e4f4fb03006901bbba88b19e7da614503b3f10dcb4b1",
+      "target_sha256": "f8015ed615edd7afd7c2e4f4fb03006901bbba88b19e7da614503b3f10dcb4b1",
+      "size_bytes": 2673,
+      "transformation": "verified tar member extracted as regular file"
+    },
+    {
+      "path": "code/scripts/multiseed_scheduler.py",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/snapshots/code_snapshot.tar.gz::scripts/multiseed_scheduler.py",
+      "source_sha256": "1ff51520491137cd1132984723c9415519768695af65855135a0d74fc4eadd83",
+      "target_sha256": "1ff51520491137cd1132984723c9415519768695af65855135a0d74fc4eadd83",
+      "size_bytes": 38339,
+      "transformation": "verified tar member extracted as regular file"
+    },
+    {
+      "path": "code/scripts/resume_preflight.py",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/snapshots/code_snapshot.tar.gz::scripts/resume_preflight.py",
+      "source_sha256": "c6de35bfc22c736e55f27282a2950f82902368b175fe4f3cad6e1575ca34eeb6",
+      "target_sha256": "c6de35bfc22c736e55f27282a2950f82902368b175fe4f3cad6e1575ca34eeb6",
+      "size_bytes": 5231,
+      "transformation": "verified tar member extracted as regular file"
+    },
+    {
+      "path": "code/scripts/run_job_queue.sh",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/snapshots/code_snapshot.tar.gz::scripts/run_job_queue.sh",
+      "source_sha256": "696b1d6011a35a7e2f41e33a33286010cdce77b91167c02c0ff44eed944b2d66",
+      "target_sha256": "696b1d6011a35a7e2f41e33a33286010cdce77b91167c02c0ff44eed944b2d66",
+      "size_bytes": 2236,
+      "transformation": "verified tar member extracted as regular file"
+    },
+    {
+      "path": "code/scripts/run_training.sh",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/snapshots/code_snapshot.tar.gz::scripts/run_training.sh",
+      "source_sha256": "13b96e7bf5d7b732a555c8097d0872911fbc1d0d7ca6417cb25eef451f94fcde",
+      "target_sha256": "13b96e7bf5d7b732a555c8097d0872911fbc1d0d7ca6417cb25eef451f94fcde",
+      "size_bytes": 2960,
+      "transformation": "verified tar member extracted as regular file"
+    },
+    {
+      "path": "code/scripts/schedule_meld_cmerc.sh",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/snapshots/code_snapshot.tar.gz::scripts/schedule_meld_cmerc.sh",
+      "source_sha256": "19aff5849b02a5ec061b060e6fc806dcb1e9533875a5df662149a83f4d1d67dd",
+      "target_sha256": "19aff5849b02a5ec061b060e6fc806dcb1e9533875a5df662149a83f4d1d67dd",
+      "size_bytes": 3555,
+      "transformation": "verified tar member extracted as regular file"
+    },
+    {
+      "path": "code/scripts/smoke_test.py",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/snapshots/code_snapshot.tar.gz::scripts/smoke_test.py",
+      "source_sha256": "0906f0464f68436348c772099949fad22a1783377cdefaf5a2bb3c55319fc4bc",
+      "target_sha256": "0906f0464f68436348c772099949fad22a1783377cdefaf5a2bb3c55319fc4bc",
+      "size_bytes": 17303,
+      "transformation": "verified tar member extracted as regular file"
+    },
+    {
+      "path": "code/scripts/summarize_results.py",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/snapshots/code_snapshot.tar.gz::scripts/summarize_results.py",
+      "source_sha256": "5f3142d3af5015da8f9f9ddac190afaa4af1f9336ca884c7da1ccace880eb61b",
+      "target_sha256": "5f3142d3af5015da8f9f9ddac190afaa4af1f9336ca884c7da1ccace880eb61b",
+      "size_bytes": 39443,
+      "transformation": "verified tar member extracted as regular file"
+    },
+    {
+      "path": "code/scripts/wait_then_evaluate_all.sh",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/snapshots/code_snapshot.tar.gz::scripts/wait_then_evaluate_all.sh",
+      "source_sha256": "acf586bbea02cf752da714363abdafc071a9dde66b7a28e163c5ce51753d0f28",
+      "target_sha256": "acf586bbea02cf752da714363abdafc071a9dde66b7a28e163c5ce51753d0f28",
+      "size_bytes": 1662,
+      "transformation": "verified tar member extracted as regular file"
+    },
+    {
+      "path": "code/scripts/with_cmerc_env.sh",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/snapshots/code_snapshot.tar.gz::scripts/with_cmerc_env.sh",
+      "source_sha256": "1aa59fda5752ac6d62b2ce01cafac78bc161d00d386cc4d85065a268dfbfe0a2",
+      "target_sha256": "1aa59fda5752ac6d62b2ce01cafac78bc161d00d386cc4d85065a268dfbfe0a2",
+      "size_bytes": 561,
+      "transformation": "verified tar member extracted as regular file"
+    },
+    {
+      "path": "code/source_origin.json",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/snapshots/code_snapshot.tar.gz::source_origin.json",
+      "source_sha256": "4208682f1802f0cde47819eff360868358d55b4c21f4f9b039d854181eb05163",
+      "target_sha256": "4208682f1802f0cde47819eff360868358d55b4c21f4f9b039d854181eb05163",
+      "size_bytes": 310,
+      "transformation": "verified tar member extracted as regular file"
+    },
+    {
+      "path": "code/train.py",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/snapshots/code_snapshot.tar.gz::train.py",
+      "source_sha256": "35a18a2bf33d8e3e0d8459955b1f0ce525d4f28970f9af801fb27087bcf02ad7",
+      "target_sha256": "35a18a2bf33d8e3e0d8459955b1f0ce525d4f28970f9af801fb27087bcf02ad7",
+      "size_bytes": 24415,
+      "transformation": "verified tar member extracted as regular file"
+    },
+    {
+      "path": "code/train_cm.py",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/snapshots/code_snapshot.tar.gz::train_cm.py",
+      "source_sha256": "67fa7e48a3ecfda9f011d1df3344b68cc9eaa3fdb105a23a117684b1a669a3a0",
+      "target_sha256": "67fa7e48a3ecfda9f011d1df3344b68cc9eaa3fdb105a23a117684b1a669a3a0",
+      "size_bytes": 74480,
+      "transformation": "verified tar member extracted as regular file"
+    },
+    {
+      "path": "provenance/source_origin.json",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/source_origin.json",
+      "source_sha256": "4208682f1802f0cde47819eff360868358d55b4c21f4f9b039d854181eb05163",
+      "target_sha256": "4208682f1802f0cde47819eff360868358d55b4c21f4f9b039d854181eb05163",
+      "size_bytes": 310,
+      "transformation": "identity"
+    },
+    {
+      "path": "provenance/source_snapshot.json",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/snapshots/source_snapshot.json",
+      "source_sha256": "55dda69c119d86886f25773071c175e50af472c70f1765626831f757094a896d",
+      "target_sha256": "55dda69c119d86886f25773071c175e50af472c70f1765626831f757094a896d",
+      "size_bytes": 3501,
+      "transformation": "identity"
+    },
+    {
+      "path": "provenance/environment.json",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/snapshots/environment.json",
+      "source_sha256": "14f4b091c45046cd1de0daba8c5f78350a5446d08062dc3c94f945d10bcd26fa",
+      "target_sha256": "14f4b091c45046cd1de0daba8c5f78350a5446d08062dc3c94f945d10bcd26fa",
+      "size_bytes": 1426,
+      "transformation": "identity"
+    },
+    {
+      "path": "provenance/AGENTS.current.source.md",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/AGENTS.md",
+      "source_sha256": "b648f22f8da2b21ccba76996729b0f938398fc6fa3faa5f9866a9e1ff336055d",
+      "target_sha256": "b648f22f8da2b21ccba76996729b0f938398fc6fa3faa5f9866a9e1ff336055d",
+      "size_bytes": 1499,
+      "transformation": "identity"
+    },
+    {
+      "path": "configs/multiseed_validation.json",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/configs/multiseed_validation.json",
+      "source_sha256": "96e628f6e5e29c914e61d048b0b543ef6343f839be92c077546acbabe95e3624",
+      "target_sha256": "96e628f6e5e29c914e61d048b0b543ef6343f839be92c077546acbabe95e3624",
+      "size_bytes": 594,
+      "transformation": "identity"
+    },
+    {
+      "path": "configs/requirements-lock.txt",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/configs/requirements-lock.txt",
+      "source_sha256": "801b164209063f0de0729041ee5577561e6e9a44d564604c26d7c0723a7dc6a9",
+      "target_sha256": "801b164209063f0de0729041ee5577561e6e9a44d564604c26d7c0723a7dc6a9",
+      "size_bytes": 965,
+      "transformation": "identity"
+    },
+    {
+      "path": "protocol/MULTISEED_GUIDE.md",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/MULTISEED_GUIDE.md",
+      "source_sha256": "a0bd03e11a4548a3ef97d761e30337a72700a17db95394cf32449518c50daac4",
+      "target_sha256": "a0bd03e11a4548a3ef97d761e30337a72700a17db95394cf32449518c50daac4",
+      "size_bytes": 5309,
+      "transformation": "identity"
+    },
+    {
+      "path": "protocol/MULTISEED_PLAN.md",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/MULTISEED_PLAN.md",
+      "source_sha256": "2fa1d370217ba0beb174fbb2de8c6710a44d4c6748b41ef503ad865f35e8040e",
+      "target_sha256": "2fa1d370217ba0beb174fbb2de8c6710a44d4c6748b41ef503ad865f35e8040e",
+      "size_bytes": 3229,
+      "transformation": "identity"
+    },
+    {
+      "path": "protocol/REPRODUCTION_GUIDE.md",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/REPRODUCTION_GUIDE.md",
+      "source_sha256": "50e64fe45c4d12a933de217657dc970c4a96fd98b3ab5afbeea82025c6b32536",
+      "target_sha256": "50e64fe45c4d12a933de217657dc970c4a96fd98b3ab5afbeea82025c6b32536",
+      "size_bytes": 6350,
+      "transformation": "identity"
+    },
+    {
+      "path": "reports/01_CODE_AUDIT.md",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/reports/01_CODE_AUDIT.md",
+      "source_sha256": "cff4eea1592efbd91582f27bf9951379faa026173c9dcc0d6745df1a029cedd3",
+      "target_sha256": "cff4eea1592efbd91582f27bf9951379faa026173c9dcc0d6745df1a029cedd3",
+      "size_bytes": 3340,
+      "transformation": "identity"
+    },
+    {
+      "path": "reports/10_MULTI_SEED_REPRODUCTION.md",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/reports/10_MULTI_SEED_REPRODUCTION.md",
+      "source_sha256": "cb451a0afe26528b8494321f24026c76f36c7875ca147be9d8165a151596322f",
+      "target_sha256": "cb451a0afe26528b8494321f24026c76f36c7875ca147be9d8165a151596322f",
+      "size_bytes": 9493,
+      "transformation": "identity"
+    },
+    {
+      "path": "reports/10_MULTI_SEED_REPRODUCTION_ERRATA.md",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/reports/10_MULTI_SEED_REPRODUCTION_ERRATA.md",
+      "source_sha256": "f6f244e4c9143ffe8cf9f68b7620ed21018243809a6a80a9239bb9afddb61e2c",
+      "target_sha256": "f6f244e4c9143ffe8cf9f68b7620ed21018243809a6a80a9239bb9afddb61e2c",
+      "size_bytes": 633,
+      "transformation": "identity"
+    },
+    {
+      "path": "reports/10_MULTI_SEED_REPRODUCTION_FIRST3.md",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/reports/10_MULTI_SEED_REPRODUCTION_FIRST3.md",
+      "source_sha256": "49bc6724dcecf9bfe13648e1ad0078b1b828e3833db57b70090aa77ae6fbf4da",
+      "target_sha256": "49bc6724dcecf9bfe13648e1ad0078b1b828e3833db57b70090aa77ae6fbf4da",
+      "size_bytes": 8240,
+      "transformation": "identity"
+    },
+    {
+      "path": "reports/PROTOCOL_AND_RESOURCE_AUDIT.md",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/reports/PROTOCOL_AND_RESOURCE_AUDIT.md",
+      "source_sha256": "59851df285e0e9002401447dbc1f1ceed639214ed44184f011613c72c08c1541",
+      "target_sha256": "59851df285e0e9002401447dbc1f1ceed639214ed44184f011613c72c08c1541",
+      "size_bytes": 10718,
+      "transformation": "identity"
+    },
+    {
+      "path": "reports/reference_single_seed/00_TASK_STATUS.md",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/reports/reference_single_seed/00_TASK_STATUS.md",
+      "source_sha256": "f678ad8f5c610b54d4b1bd0bf9300d70c7f3201f59207b8d05839651e4b0bc25",
+      "target_sha256": "f678ad8f5c610b54d4b1bd0bf9300d70c7f3201f59207b8d05839651e4b0bc25",
+      "size_bytes": 2660,
+      "transformation": "identity"
+    },
+    {
+      "path": "reports/reference_single_seed/01_CODE_AUDIT.md",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/reports/reference_single_seed/01_CODE_AUDIT.md",
+      "source_sha256": "ecd4f31026579da9af4904e1aab735d4d02b278e0f5094943cddd8a37330bd05",
+      "target_sha256": "ecd4f31026579da9af4904e1aab735d4d02b278e0f5094943cddd8a37330bd05",
+      "size_bytes": 10057,
+      "transformation": "identity"
+    },
+    {
+      "path": "reports/reference_single_seed/02_ENVIRONMENT.md",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/reports/reference_single_seed/02_ENVIRONMENT.md",
+      "source_sha256": "8d690a944d5bbec57bdde5dd7c83c0bed4b9984ce4e53f8ee078aab070accbb2",
+      "target_sha256": "8d690a944d5bbec57bdde5dd7c83c0bed4b9984ce4e53f8ee078aab070accbb2",
+      "size_bytes": 3056,
+      "transformation": "identity"
+    },
+    {
+      "path": "reports/reference_single_seed/03_DATA_AUDIT.md",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/reports/reference_single_seed/03_DATA_AUDIT.md",
+      "source_sha256": "9556d8822ac767858518d35241c3902a0aea14d9cc09e1b1a3d6156201896eae",
+      "target_sha256": "9556d8822ac767858518d35241c3902a0aea14d9cc09e1b1a3d6156201896eae",
+      "size_bytes": 4255,
+      "transformation": "identity"
+    },
+    {
+      "path": "reports/reference_single_seed/04_SMOKE_TEST.md",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/reports/reference_single_seed/04_SMOKE_TEST.md",
+      "source_sha256": "43f850c2429581a1e680356ac49c1688db99797a6ca2a364c00262d80b104844",
+      "target_sha256": "43f850c2429581a1e680356ac49c1688db99797a6ca2a364c00262d80b104844",
+      "size_bytes": 2117,
+      "transformation": "identity"
+    },
+    {
+      "path": "reports/reference_single_seed/05_TRAINING_REPORT.md",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/reports/reference_single_seed/05_TRAINING_REPORT.md",
+      "source_sha256": "51bd240d7ce4b4dce3bb4ecc389d246baa6976c4ee1ec9c6a7ab4a1f4ac3bb85",
+      "target_sha256": "51bd240d7ce4b4dce3bb4ecc389d246baa6976c4ee1ec9c6a7ab4a1f4ac3bb85",
+      "size_bytes": 5746,
+      "transformation": "identity"
+    },
+    {
+      "path": "reports/reference_single_seed/06_EVALUATION_REPORT.md",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/reports/reference_single_seed/06_EVALUATION_REPORT.md",
+      "source_sha256": "0a86fe7e5422a0eee9414b3ea2f5720329bff0001b0483e72432a4aed0a7874a",
+      "target_sha256": "0a86fe7e5422a0eee9414b3ea2f5720329bff0001b0483e72432a4aed0a7874a",
+      "size_bytes": 6434,
+      "transformation": "identity"
+    },
+    {
+      "path": "reports/reference_single_seed/07_REPRODUCTION_COMPARISON.md",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/reports/reference_single_seed/07_REPRODUCTION_COMPARISON.md",
+      "source_sha256": "8ee30492ff2a4e96944f6270da4a68ea5132610165ff12e19172d89da2a69463",
+      "target_sha256": "8ee30492ff2a4e96944f6270da4a68ea5132610165ff12e19172d89da2a69463",
+      "size_bytes": 3363,
+      "transformation": "identity"
+    },
+    {
+      "path": "reports/reference_single_seed/08_FINAL_SUMMARY.md",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/reports/reference_single_seed/08_FINAL_SUMMARY.md",
+      "source_sha256": "5707730f79ddf67a31b0f8911a41a281e8baf3ddbdf4ff810172f447a0f47982",
+      "target_sha256": "5707730f79ddf67a31b0f8911a41a281e8baf3ddbdf4ff810172f447a0f47982",
+      "size_bytes": 3221,
+      "transformation": "identity"
+    },
+    {
+      "path": "reports/reference_single_seed/09_PUBLICATION_CHECK.md",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/reports/reference_single_seed/09_PUBLICATION_CHECK.md",
+      "source_sha256": "f7ca5d32f8ca806238c3384cdf96b2a9014835723b01ba885cab8391f32c3790",
+      "target_sha256": "f7ca5d32f8ca806238c3384cdf96b2a9014835723b01ba885cab8391f32c3790",
+      "size_bytes": 2522,
+      "transformation": "identity"
+    },
+    {
+      "path": "reports/reference_single_seed/summary.json",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/reports/reference_single_seed/summary.json",
+      "source_sha256": "96ef5da50de60ef7878e262e4f9fc93130124567fa74b51570cbc6d76396d94b",
+      "target_sha256": "96ef5da50de60ef7878e262e4f9fc93130124567fa74b51570cbc6d76396d94b",
+      "size_bytes": 30648,
+      "transformation": "identity"
+    },
+    {
+      "path": "runs/multiseed_validation_v2/baseline/IEMOCAP_validation_seed1475/run_manifest.json",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/runs/multiseed_validation_v2/baseline/IEMOCAP_validation_seed1475/run_manifest.json",
+      "source_sha256": "164171c191158b76fcdaf69f377a578b804c7c160cfbdd9576d58b26968eee57",
+      "target_sha256": "164171c191158b76fcdaf69f377a578b804c7c160cfbdd9576d58b26968eee57",
+      "size_bytes": 18952,
+      "transformation": "identity"
+    },
+    {
+      "path": "runs/multiseed_validation_v2/baseline/IEMOCAP_validation_seed2024/run_manifest.json",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/runs/multiseed_validation_v2/baseline/IEMOCAP_validation_seed2024/run_manifest.json",
+      "source_sha256": "bee2e59d50f42b219bee3c2e2a60c9aaf9505c89fd06fb25a556c5e29429aec3",
+      "target_sha256": "bee2e59d50f42b219bee3c2e2a60c9aaf9505c89fd06fb25a556c5e29429aec3",
+      "size_bytes": 18952,
+      "transformation": "identity"
+    },
+    {
+      "path": "runs/multiseed_validation_v2/baseline/IEMOCAP_validation_seed3407/run_manifest.json",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/runs/multiseed_validation_v2/baseline/IEMOCAP_validation_seed3407/run_manifest.json",
+      "source_sha256": "b1f37093f191c15e222e2647a88daf87191f98664eb3540b95654217e9104123",
+      "target_sha256": "b1f37093f191c15e222e2647a88daf87191f98664eb3540b95654217e9104123",
+      "size_bytes": 18952,
+      "transformation": "identity"
+    },
+    {
+      "path": "runs/multiseed_validation_v2/baseline/IEMOCAP_validation_seed42/run_manifest.json",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/runs/multiseed_validation_v2/baseline/IEMOCAP_validation_seed42/run_manifest.json",
+      "source_sha256": "5ac66d1c97eb326eadc572e4f24471446d1a3ce5b3479b41a5f587ec6315eff8",
+      "target_sha256": "5ac66d1c97eb326eadc572e4f24471446d1a3ce5b3479b41a5f587ec6315eff8",
+      "size_bytes": 18950,
+      "transformation": "identity"
+    },
+    {
+      "path": "runs/multiseed_validation_v2/baseline/IEMOCAP_validation_seed67137/run_manifest.json",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/runs/multiseed_validation_v2/baseline/IEMOCAP_validation_seed67137/run_manifest.json",
+      "source_sha256": "de2c82876b3081b0ce3f819c587a2b497c35d0a0dfb330bac71ebc8ec22326ff",
+      "target_sha256": "de2c82876b3081b0ce3f819c587a2b497c35d0a0dfb330bac71ebc8ec22326ff",
+      "size_bytes": 18953,
+      "transformation": "identity"
+    },
+    {
+      "path": "runs/multiseed_validation_v2/baseline/MELD_validation_seed1475/run_manifest.json",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/runs/multiseed_validation_v2/baseline/MELD_validation_seed1475/run_manifest.json",
+      "source_sha256": "7acdbafd61131f2ae82696b95d1d8036d341b2d7ed64746ce1aa61b316a2327e",
+      "target_sha256": "7acdbafd61131f2ae82696b95d1d8036d341b2d7ed64746ce1aa61b316a2327e",
+      "size_bytes": 63334,
+      "transformation": "identity"
+    },
+    {
+      "path": "runs/multiseed_validation_v2/baseline/MELD_validation_seed2024/run_manifest.json",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/runs/multiseed_validation_v2/baseline/MELD_validation_seed2024/run_manifest.json",
+      "source_sha256": "21c7d661b01e5dc166e5e8dac4b6d80ebcd5ebfc8d09b55665a08c1c78788ab0",
+      "target_sha256": "21c7d661b01e5dc166e5e8dac4b6d80ebcd5ebfc8d09b55665a08c1c78788ab0",
+      "size_bytes": 63334,
+      "transformation": "identity"
+    },
+    {
+      "path": "runs/multiseed_validation_v2/baseline/MELD_validation_seed3407/run_manifest.json",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/runs/multiseed_validation_v2/baseline/MELD_validation_seed3407/run_manifest.json",
+      "source_sha256": "78c7490c31afeac612103afd9fc2992cdaedfc1317386b48c8ece831069182d8",
+      "target_sha256": "78c7490c31afeac612103afd9fc2992cdaedfc1317386b48c8ece831069182d8",
+      "size_bytes": 63334,
+      "transformation": "identity"
+    },
+    {
+      "path": "runs/multiseed_validation_v2/baseline/MELD_validation_seed42/run_manifest.json",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/runs/multiseed_validation_v2/baseline/MELD_validation_seed42/run_manifest.json",
+      "source_sha256": "baf148909cbe51abc4afed0e8a9fef18b6b1e354dd46d87a3916e09617c7ce1a",
+      "target_sha256": "baf148909cbe51abc4afed0e8a9fef18b6b1e354dd46d87a3916e09617c7ce1a",
+      "size_bytes": 63332,
+      "transformation": "identity"
+    },
+    {
+      "path": "runs/multiseed_validation_v2/baseline/MELD_validation_seed67137/run_manifest.json",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/runs/multiseed_validation_v2/baseline/MELD_validation_seed67137/run_manifest.json",
+      "source_sha256": "64f3af0a7ec44a49c6e65ddcf56868301a0289a1234f3f583269d5fb81d67a05",
+      "target_sha256": "64f3af0a7ec44a49c6e65ddcf56868301a0289a1234f3f583269d5fb81d67a05",
+      "size_bytes": 63335,
+      "transformation": "identity"
+    },
+    {
+      "path": "runs/multiseed_validation_v2/cmerc/IEMOCAP_validation_seed1475/run_manifest.json",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/runs/multiseed_validation_v2/cmerc/IEMOCAP_validation_seed1475/run_manifest.json",
+      "source_sha256": "498c3a424385e6762d604747ae5ab15cce913e14cf05ad41f5f08e03aeaf7e32",
+      "target_sha256": "498c3a424385e6762d604747ae5ab15cce913e14cf05ad41f5f08e03aeaf7e32",
+      "size_bytes": 19265,
+      "transformation": "identity"
+    },
+    {
+      "path": "runs/multiseed_validation_v2/cmerc/IEMOCAP_validation_seed2024/run_manifest.json",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/runs/multiseed_validation_v2/cmerc/IEMOCAP_validation_seed2024/run_manifest.json",
+      "source_sha256": "cb9e6224d840b4cb81117a3cd16dffb371a160d024785e4ac75e9ec574286615",
+      "target_sha256": "cb9e6224d840b4cb81117a3cd16dffb371a160d024785e4ac75e9ec574286615",
+      "size_bytes": 19265,
+      "transformation": "identity"
+    },
+    {
+      "path": "runs/multiseed_validation_v2/cmerc/IEMOCAP_validation_seed3407/run_manifest.json",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/runs/multiseed_validation_v2/cmerc/IEMOCAP_validation_seed3407/run_manifest.json",
+      "source_sha256": "984c5a8ec1c346cf2da01d2f33a704d72fa5f45205f5948fc74d53e61d3743a4",
+      "target_sha256": "984c5a8ec1c346cf2da01d2f33a704d72fa5f45205f5948fc74d53e61d3743a4",
+      "size_bytes": 19265,
+      "transformation": "identity"
+    },
+    {
+      "path": "runs/multiseed_validation_v2/cmerc/IEMOCAP_validation_seed42/run_manifest.json",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/runs/multiseed_validation_v2/cmerc/IEMOCAP_validation_seed42/run_manifest.json",
+      "source_sha256": "d0c3cbf64c4872e598e9430c248f4817c566832ca22b04f088e8911f509ca6cf",
+      "target_sha256": "d0c3cbf64c4872e598e9430c248f4817c566832ca22b04f088e8911f509ca6cf",
+      "size_bytes": 19263,
+      "transformation": "identity"
+    },
+    {
+      "path": "runs/multiseed_validation_v2/cmerc/IEMOCAP_validation_seed67137/run_manifest.json",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/runs/multiseed_validation_v2/cmerc/IEMOCAP_validation_seed67137/run_manifest.json",
+      "source_sha256": "f2c5980a66e04e580a1c052d72c4bb07d320c4fc6df82981d26f01afbf6a0025",
+      "target_sha256": "f2c5980a66e04e580a1c052d72c4bb07d320c4fc6df82981d26f01afbf6a0025",
+      "size_bytes": 19266,
+      "transformation": "identity"
+    },
+    {
+      "path": "runs/multiseed_validation_v2/cmerc/MELD_validation_seed1475/run_manifest.json",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/runs/multiseed_validation_v2/cmerc/MELD_validation_seed1475/run_manifest.json",
+      "source_sha256": "713c919bb24244d5e8ee05663a1b8dfcdb1da6d03a358d2c64df72788acbb226",
+      "target_sha256": "713c919bb24244d5e8ee05663a1b8dfcdb1da6d03a358d2c64df72788acbb226",
+      "size_bytes": 63637,
+      "transformation": "identity"
+    },
+    {
+      "path": "runs/multiseed_validation_v2/cmerc/MELD_validation_seed2024/run_manifest.json",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/runs/multiseed_validation_v2/cmerc/MELD_validation_seed2024/run_manifest.json",
+      "source_sha256": "00ba59bfc5a0e73514259840a104ef8ac894847ddb97cf5afc5a5d4d5a9cdc82",
+      "target_sha256": "00ba59bfc5a0e73514259840a104ef8ac894847ddb97cf5afc5a5d4d5a9cdc82",
+      "size_bytes": 63637,
+      "transformation": "identity"
+    },
+    {
+      "path": "runs/multiseed_validation_v2/cmerc/MELD_validation_seed3407/run_manifest.json",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/runs/multiseed_validation_v2/cmerc/MELD_validation_seed3407/run_manifest.json",
+      "source_sha256": "ea22619bcb449e68349d10ba9ca5187c3c32fbb547a0d860bcd56a5f4f93502a",
+      "target_sha256": "ea22619bcb449e68349d10ba9ca5187c3c32fbb547a0d860bcd56a5f4f93502a",
+      "size_bytes": 63637,
+      "transformation": "identity"
+    },
+    {
+      "path": "runs/multiseed_validation_v2/cmerc/MELD_validation_seed42/run_manifest.json",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/runs/multiseed_validation_v2/cmerc/MELD_validation_seed42/run_manifest.json",
+      "source_sha256": "7bbfe2ebae69ced4276e2f344a133da74f46fc9d08abef10df91ac228a69a7f2",
+      "target_sha256": "7bbfe2ebae69ced4276e2f344a133da74f46fc9d08abef10df91ac228a69a7f2",
+      "size_bytes": 63635,
+      "transformation": "identity"
+    },
+    {
+      "path": "runs/multiseed_validation_v2/cmerc/MELD_validation_seed67137/run_manifest.json",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/runs/multiseed_validation_v2/cmerc/MELD_validation_seed67137/run_manifest.json",
+      "source_sha256": "96abe65d5d8229a73526ab4da3c02195d1eb39237684c32d1bb9ad3695e6d3b3",
+      "target_sha256": "96abe65d5d8229a73526ab4da3c02195d1eb39237684c32d1bb9ad3695e6d3b3",
+      "size_bytes": 63638,
+      "transformation": "identity"
+    },
+    {
+      "path": "runs/multiseed_validation_v2/baseline/IEMOCAP_validation_seed1475/metrics.jsonl",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/runs/multiseed_validation_v2/baseline/IEMOCAP_validation_seed1475/metrics.jsonl",
+      "source_sha256": "5f4512d3acbfeb4d89165e8d3673afb5f86a33062e2501d93e12dde5c823d33a",
+      "target_sha256": "5f4512d3acbfeb4d89165e8d3673afb5f86a33062e2501d93e12dde5c823d33a",
+      "size_bytes": 67728,
+      "transformation": "identity"
+    },
+    {
+      "path": "runs/multiseed_validation_v2/baseline/IEMOCAP_validation_seed2024/metrics.jsonl",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/runs/multiseed_validation_v2/baseline/IEMOCAP_validation_seed2024/metrics.jsonl",
+      "source_sha256": "4ca7b9311b969b9ad7ceaec44a855b18c46a4e253e6bca73e4e108a614a0b9ed",
+      "target_sha256": "4ca7b9311b969b9ad7ceaec44a855b18c46a4e253e6bca73e4e108a614a0b9ed",
+      "size_bytes": 67720,
+      "transformation": "identity"
+    },
+    {
+      "path": "runs/multiseed_validation_v2/baseline/IEMOCAP_validation_seed3407/metrics.jsonl",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/runs/multiseed_validation_v2/baseline/IEMOCAP_validation_seed3407/metrics.jsonl",
+      "source_sha256": "1a16f6ebac00112b4bd63fff099e1ec223036b0739a40f2fae6d643f33f174cf",
+      "target_sha256": "1a16f6ebac00112b4bd63fff099e1ec223036b0739a40f2fae6d643f33f174cf",
+      "size_bytes": 67692,
+      "transformation": "identity"
+    },
+    {
+      "path": "runs/multiseed_validation_v2/baseline/IEMOCAP_validation_seed42/metrics.jsonl",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/runs/multiseed_validation_v2/baseline/IEMOCAP_validation_seed42/metrics.jsonl",
+      "source_sha256": "35b45745597b8b7e5cbcebea36a1e73184909ee43a81c526967ae2ecd02f448d",
+      "target_sha256": "35b45745597b8b7e5cbcebea36a1e73184909ee43a81c526967ae2ecd02f448d",
+      "size_bytes": 67543,
+      "transformation": "identity"
+    },
+    {
+      "path": "runs/multiseed_validation_v2/baseline/IEMOCAP_validation_seed67137/metrics.jsonl",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/runs/multiseed_validation_v2/baseline/IEMOCAP_validation_seed67137/metrics.jsonl",
+      "source_sha256": "b0d072bd849947b8a6e5a9d95e912ff96c815b2f4db7eec138d51dc0846cdb14",
+      "target_sha256": "b0d072bd849947b8a6e5a9d95e912ff96c815b2f4db7eec138d51dc0846cdb14",
+      "size_bytes": 67776,
+      "transformation": "identity"
+    },
+    {
+      "path": "runs/multiseed_validation_v2/baseline/MELD_validation_seed1475/metrics.jsonl",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/runs/multiseed_validation_v2/baseline/MELD_validation_seed1475/metrics.jsonl",
+      "source_sha256": "3c7dcfc86300e388d15c5d1467a0219303d0418ceee046687e3884b223107d6a",
+      "target_sha256": "3c7dcfc86300e388d15c5d1467a0219303d0418ceee046687e3884b223107d6a",
+      "size_bytes": 33813,
+      "transformation": "identity"
+    },
+    {
+      "path": "runs/multiseed_validation_v2/baseline/MELD_validation_seed2024/metrics.jsonl",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/runs/multiseed_validation_v2/baseline/MELD_validation_seed2024/metrics.jsonl",
+      "source_sha256": "5acc097303f3ad78aac0cf84b788c8f238ecf7e9a97b9928f5fe2a644aaeca39",
+      "target_sha256": "5acc097303f3ad78aac0cf84b788c8f238ecf7e9a97b9928f5fe2a644aaeca39",
+      "size_bytes": 33783,
+      "transformation": "identity"
+    },
+    {
+      "path": "runs/multiseed_validation_v2/baseline/MELD_validation_seed3407/metrics.jsonl",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/runs/multiseed_validation_v2/baseline/MELD_validation_seed3407/metrics.jsonl",
+      "source_sha256": "f76066cc774b26ef76a3e2308a07d648ac29cdad26c6bf3b8381b37e950578ff",
+      "target_sha256": "f76066cc774b26ef76a3e2308a07d648ac29cdad26c6bf3b8381b37e950578ff",
+      "size_bytes": 33792,
+      "transformation": "identity"
+    },
+    {
+      "path": "runs/multiseed_validation_v2/baseline/MELD_validation_seed42/metrics.jsonl",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/runs/multiseed_validation_v2/baseline/MELD_validation_seed42/metrics.jsonl",
+      "source_sha256": "e5f6befa641dbeed645b13cede3626e96bb21fce71d89d7c8116187142a30240",
+      "target_sha256": "e5f6befa641dbeed645b13cede3626e96bb21fce71d89d7c8116187142a30240",
+      "size_bytes": 33728,
+      "transformation": "identity"
+    },
+    {
+      "path": "runs/multiseed_validation_v2/baseline/MELD_validation_seed67137/metrics.jsonl",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/runs/multiseed_validation_v2/baseline/MELD_validation_seed67137/metrics.jsonl",
+      "source_sha256": "1bac68bf326a47ca4e3c3340473c97a8b8a6c4a9a726f8b07ef172383c7cbfbd",
+      "target_sha256": "1bac68bf326a47ca4e3c3340473c97a8b8a6c4a9a726f8b07ef172383c7cbfbd",
+      "size_bytes": 33816,
+      "transformation": "identity"
+    },
+    {
+      "path": "runs/multiseed_validation_v2/cmerc/IEMOCAP_validation_seed1475/metrics.jsonl",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/runs/multiseed_validation_v2/cmerc/IEMOCAP_validation_seed1475/metrics.jsonl",
+      "source_sha256": "a9f804ccf902553393e8c61febdd382698dd894490f7fa70febaae733d37dbd1",
+      "target_sha256": "a9f804ccf902553393e8c61febdd382698dd894490f7fa70febaae733d37dbd1",
+      "size_bytes": 71056,
+      "transformation": "identity"
+    },
+    {
+      "path": "runs/multiseed_validation_v2/cmerc/IEMOCAP_validation_seed2024/metrics.jsonl",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/runs/multiseed_validation_v2/cmerc/IEMOCAP_validation_seed2024/metrics.jsonl",
+      "source_sha256": "e2161e488181fae3fe5c9128223af2bf078ad65f4472ec9d178db3936ae1d8f1",
+      "target_sha256": "e2161e488181fae3fe5c9128223af2bf078ad65f4472ec9d178db3936ae1d8f1",
+      "size_bytes": 71072,
+      "transformation": "identity"
+    },
+    {
+      "path": "runs/multiseed_validation_v2/cmerc/IEMOCAP_validation_seed3407/metrics.jsonl",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/runs/multiseed_validation_v2/cmerc/IEMOCAP_validation_seed3407/metrics.jsonl",
+      "source_sha256": "45d6ad4035405eadc4e586ec02b156e31642a4bc63a0c763311e166ea268e338",
+      "target_sha256": "45d6ad4035405eadc4e586ec02b156e31642a4bc63a0c763311e166ea268e338",
+      "size_bytes": 71051,
+      "transformation": "identity"
+    },
+    {
+      "path": "runs/multiseed_validation_v2/cmerc/IEMOCAP_validation_seed42/metrics.jsonl",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/runs/multiseed_validation_v2/cmerc/IEMOCAP_validation_seed42/metrics.jsonl",
+      "source_sha256": "f8222dbe5dd3652e062319d62b74e4fc3891636c9b413d5c0551f1f0d0ebe2d2",
+      "target_sha256": "f8222dbe5dd3652e062319d62b74e4fc3891636c9b413d5c0551f1f0d0ebe2d2",
+      "size_bytes": 70886,
+      "transformation": "identity"
+    },
+    {
+      "path": "runs/multiseed_validation_v2/cmerc/IEMOCAP_validation_seed67137/metrics.jsonl",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/runs/multiseed_validation_v2/cmerc/IEMOCAP_validation_seed67137/metrics.jsonl",
+      "source_sha256": "0351691328cc36e9c7fea63ef5cd5823ee912895d8e5f792eecc6b67adab735e",
+      "target_sha256": "0351691328cc36e9c7fea63ef5cd5823ee912895d8e5f792eecc6b67adab735e",
+      "size_bytes": 71091,
+      "transformation": "identity"
+    },
+    {
+      "path": "runs/multiseed_validation_v2/cmerc/MELD_validation_seed1475/metrics.jsonl",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/runs/multiseed_validation_v2/cmerc/MELD_validation_seed1475/metrics.jsonl",
+      "source_sha256": "1dda330bf4a15a418306c1bd2f61cfdd3660d2eefb3b4a26bc022a5791fb744c",
+      "target_sha256": "1dda330bf4a15a418306c1bd2f61cfdd3660d2eefb3b4a26bc022a5791fb744c",
+      "size_bytes": 35405,
+      "transformation": "identity"
+    },
+    {
+      "path": "runs/multiseed_validation_v2/cmerc/MELD_validation_seed2024/metrics.jsonl",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/runs/multiseed_validation_v2/cmerc/MELD_validation_seed2024/metrics.jsonl",
+      "source_sha256": "fc0513d30ccbc9f6f3ca16d72135b79dba2c48c59aeea8500d2779691789b70f",
+      "target_sha256": "fc0513d30ccbc9f6f3ca16d72135b79dba2c48c59aeea8500d2779691789b70f",
+      "size_bytes": 35416,
+      "transformation": "identity"
+    },
+    {
+      "path": "runs/multiseed_validation_v2/cmerc/MELD_validation_seed3407/metrics.jsonl",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/runs/multiseed_validation_v2/cmerc/MELD_validation_seed3407/metrics.jsonl",
+      "source_sha256": "92b815f5c18aafa321462e0cb33381abe67101914f9855cfcc39047959876e6b",
+      "target_sha256": "92b815f5c18aafa321462e0cb33381abe67101914f9855cfcc39047959876e6b",
+      "size_bytes": 35392,
+      "transformation": "identity"
+    },
+    {
+      "path": "runs/multiseed_validation_v2/cmerc/MELD_validation_seed42/metrics.jsonl",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/runs/multiseed_validation_v2/cmerc/MELD_validation_seed42/metrics.jsonl",
+      "source_sha256": "f716273e9aca60cdfcbb50a36d79070a9037c469c757fd25256b967df7fdeca6",
+      "target_sha256": "f716273e9aca60cdfcbb50a36d79070a9037c469c757fd25256b967df7fdeca6",
+      "size_bytes": 35272,
+      "transformation": "identity"
+    },
+    {
+      "path": "runs/multiseed_validation_v2/cmerc/MELD_validation_seed67137/metrics.jsonl",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/runs/multiseed_validation_v2/cmerc/MELD_validation_seed67137/metrics.jsonl",
+      "source_sha256": "ba97eb282dd284a11b9f91518413f3cfc27dc653e7c3466c8f91ca2dbd5c2131",
+      "target_sha256": "ba97eb282dd284a11b9f91518413f3cfc27dc653e7c3466c8f91ca2dbd5c2131",
+      "size_bytes": 35449,
+      "transformation": "identity"
+    },
+    {
+      "path": "runs/multiseed_validation_v2/baseline/IEMOCAP_validation_seed1475/final_test.json",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/runs/multiseed_validation_v2/baseline/IEMOCAP_validation_seed1475/final_test.json",
+      "source_sha256": "2f2a9d9c89b3a325d8ec259fdaf5e9a1b25688d482d5aed14c734d7d8fe1d5fa",
+      "target_sha256": "2f2a9d9c89b3a325d8ec259fdaf5e9a1b25688d482d5aed14c734d7d8fe1d5fa",
+      "size_bytes": 372,
+      "transformation": "identity"
+    },
+    {
+      "path": "runs/multiseed_validation_v2/baseline/IEMOCAP_validation_seed2024/final_test.json",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/runs/multiseed_validation_v2/baseline/IEMOCAP_validation_seed2024/final_test.json",
+      "source_sha256": "082a267f3b44e638df3718e02cae29050dc480c447972f04322753c0aef20bd5",
+      "target_sha256": "082a267f3b44e638df3718e02cae29050dc480c447972f04322753c0aef20bd5",
+      "size_bytes": 373,
+      "transformation": "identity"
+    },
+    {
+      "path": "runs/multiseed_validation_v2/baseline/IEMOCAP_validation_seed3407/final_test.json",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/runs/multiseed_validation_v2/baseline/IEMOCAP_validation_seed3407/final_test.json",
+      "source_sha256": "f013f0b66871db3ff804fe93f93a8df851c3078e1198224798b9d3eff5b0d44d",
+      "target_sha256": "f013f0b66871db3ff804fe93f93a8df851c3078e1198224798b9d3eff5b0d44d",
+      "size_bytes": 371,
+      "transformation": "identity"
+    },
+    {
+      "path": "runs/multiseed_validation_v2/baseline/IEMOCAP_validation_seed42/final_test.json",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/runs/multiseed_validation_v2/baseline/IEMOCAP_validation_seed42/final_test.json",
+      "source_sha256": "9addb1a3d90177a0c35260302a90706832e6f264769f513d8125de9572298982",
+      "target_sha256": "9addb1a3d90177a0c35260302a90706832e6f264769f513d8125de9572298982",
+      "size_bytes": 371,
+      "transformation": "identity"
+    },
+    {
+      "path": "runs/multiseed_validation_v2/baseline/IEMOCAP_validation_seed67137/final_test.json",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/runs/multiseed_validation_v2/baseline/IEMOCAP_validation_seed67137/final_test.json",
+      "source_sha256": "05e6cf5f9f3a77c3afea4332d4d0c22db885ff321695ee4947536d9d2714d253",
+      "target_sha256": "05e6cf5f9f3a77c3afea4332d4d0c22db885ff321695ee4947536d9d2714d253",
+      "size_bytes": 374,
+      "transformation": "identity"
+    },
+    {
+      "path": "runs/multiseed_validation_v2/baseline/MELD_validation_seed1475/final_test.json",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/runs/multiseed_validation_v2/baseline/MELD_validation_seed1475/final_test.json",
+      "source_sha256": "e9607646d73c74388084e58721317c9b38e6a2aacaf6b4a9c02aea44463a8c2b",
+      "target_sha256": "e9607646d73c74388084e58721317c9b38e6a2aacaf6b4a9c02aea44463a8c2b",
+      "size_bytes": 372,
+      "transformation": "identity"
+    },
+    {
+      "path": "runs/multiseed_validation_v2/baseline/MELD_validation_seed2024/final_test.json",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/runs/multiseed_validation_v2/baseline/MELD_validation_seed2024/final_test.json",
+      "source_sha256": "4f7c9ff34d546555ff45480bafb0307b172dcd69609e55b137a96f82d6646c03",
+      "target_sha256": "4f7c9ff34d546555ff45480bafb0307b172dcd69609e55b137a96f82d6646c03",
+      "size_bytes": 372,
+      "transformation": "identity"
+    },
+    {
+      "path": "runs/multiseed_validation_v2/baseline/MELD_validation_seed3407/final_test.json",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/runs/multiseed_validation_v2/baseline/MELD_validation_seed3407/final_test.json",
+      "source_sha256": "adc28f1df3d30e42507d66c382b881f0ff31fe6c1e696896c2823699b9fc2844",
+      "target_sha256": "adc28f1df3d30e42507d66c382b881f0ff31fe6c1e696896c2823699b9fc2844",
+      "size_bytes": 372,
+      "transformation": "identity"
+    },
+    {
+      "path": "runs/multiseed_validation_v2/baseline/MELD_validation_seed42/final_test.json",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/runs/multiseed_validation_v2/baseline/MELD_validation_seed42/final_test.json",
+      "source_sha256": "6e172f10110d963d7d1a2f9683b7ebe37e9d6c9a5bf04fff9d129ffec2c0d510",
+      "target_sha256": "6e172f10110d963d7d1a2f9683b7ebe37e9d6c9a5bf04fff9d129ffec2c0d510",
+      "size_bytes": 370,
+      "transformation": "identity"
+    },
+    {
+      "path": "runs/multiseed_validation_v2/baseline/MELD_validation_seed67137/final_test.json",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/runs/multiseed_validation_v2/baseline/MELD_validation_seed67137/final_test.json",
+      "source_sha256": "2612655fb899ce2f2194dd24988955831efd542ab21463c0a27581dd6c28a52c",
+      "target_sha256": "2612655fb899ce2f2194dd24988955831efd542ab21463c0a27581dd6c28a52c",
+      "size_bytes": 372,
+      "transformation": "identity"
+    },
+    {
+      "path": "runs/multiseed_validation_v2/cmerc/IEMOCAP_validation_seed1475/final_test.json",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/runs/multiseed_validation_v2/cmerc/IEMOCAP_validation_seed1475/final_test.json",
+      "source_sha256": "ddc1e88132361b104bf3cd0a5b92c7fa4b776a492414ab362948d28222e65540",
+      "target_sha256": "ddc1e88132361b104bf3cd0a5b92c7fa4b776a492414ab362948d28222e65540",
+      "size_bytes": 372,
+      "transformation": "identity"
+    },
+    {
+      "path": "runs/multiseed_validation_v2/cmerc/IEMOCAP_validation_seed2024/final_test.json",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/runs/multiseed_validation_v2/cmerc/IEMOCAP_validation_seed2024/final_test.json",
+      "source_sha256": "1318c13480a3f6e70e36e929a68d5d229acf58791599366d7162e9993cdbd9a7",
+      "target_sha256": "1318c13480a3f6e70e36e929a68d5d229acf58791599366d7162e9993cdbd9a7",
+      "size_bytes": 372,
+      "transformation": "identity"
+    },
+    {
+      "path": "runs/multiseed_validation_v2/cmerc/IEMOCAP_validation_seed3407/final_test.json",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/runs/multiseed_validation_v2/cmerc/IEMOCAP_validation_seed3407/final_test.json",
+      "source_sha256": "2f64fb8b0269710b3ab9c57a2ba9d45fba5d597c303f5f06018411e1e673971e",
+      "target_sha256": "2f64fb8b0269710b3ab9c57a2ba9d45fba5d597c303f5f06018411e1e673971e",
+      "size_bytes": 373,
+      "transformation": "identity"
+    },
+    {
+      "path": "runs/multiseed_validation_v2/cmerc/IEMOCAP_validation_seed42/final_test.json",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/runs/multiseed_validation_v2/cmerc/IEMOCAP_validation_seed42/final_test.json",
+      "source_sha256": "5842dcd8505941ac9db68bbdf5c29a4ca5cb3f75029f063a51eaedd86c7f8044",
+      "target_sha256": "5842dcd8505941ac9db68bbdf5c29a4ca5cb3f75029f063a51eaedd86c7f8044",
+      "size_bytes": 371,
+      "transformation": "identity"
+    },
+    {
+      "path": "runs/multiseed_validation_v2/cmerc/IEMOCAP_validation_seed67137/final_test.json",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/runs/multiseed_validation_v2/cmerc/IEMOCAP_validation_seed67137/final_test.json",
+      "source_sha256": "3304e28e0a8e8811d782fff82a5edea26980b922a0b2b72591bfaea0f6569d41",
+      "target_sha256": "3304e28e0a8e8811d782fff82a5edea26980b922a0b2b72591bfaea0f6569d41",
+      "size_bytes": 373,
+      "transformation": "identity"
+    },
+    {
+      "path": "runs/multiseed_validation_v2/cmerc/MELD_validation_seed1475/final_test.json",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/runs/multiseed_validation_v2/cmerc/MELD_validation_seed1475/final_test.json",
+      "source_sha256": "978c97a164fb366404e54e7e5aa3018b35416133987373e272f7d2dd99378ff2",
+      "target_sha256": "978c97a164fb366404e54e7e5aa3018b35416133987373e272f7d2dd99378ff2",
+      "size_bytes": 372,
+      "transformation": "identity"
+    },
+    {
+      "path": "runs/multiseed_validation_v2/cmerc/MELD_validation_seed2024/final_test.json",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/runs/multiseed_validation_v2/cmerc/MELD_validation_seed2024/final_test.json",
+      "source_sha256": "d8e50253e914701f178ae4693fec533f56a6b48739f216e1f11d9073f8c08332",
+      "target_sha256": "d8e50253e914701f178ae4693fec533f56a6b48739f216e1f11d9073f8c08332",
+      "size_bytes": 373,
+      "transformation": "identity"
+    },
+    {
+      "path": "runs/multiseed_validation_v2/cmerc/MELD_validation_seed3407/final_test.json",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/runs/multiseed_validation_v2/cmerc/MELD_validation_seed3407/final_test.json",
+      "source_sha256": "644d2dd506499c05d186c4bdb14d7644165b2ee09876884859441bdd670d9f3c",
+      "target_sha256": "644d2dd506499c05d186c4bdb14d7644165b2ee09876884859441bdd670d9f3c",
+      "size_bytes": 372,
+      "transformation": "identity"
+    },
+    {
+      "path": "runs/multiseed_validation_v2/cmerc/MELD_validation_seed42/final_test.json",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/runs/multiseed_validation_v2/cmerc/MELD_validation_seed42/final_test.json",
+      "source_sha256": "c6efa9d399e101076d00cd1b41068adce7fbeda8f85c07437cdda8df33a83da5",
+      "target_sha256": "c6efa9d399e101076d00cd1b41068adce7fbeda8f85c07437cdda8df33a83da5",
+      "size_bytes": 370,
+      "transformation": "identity"
+    },
+    {
+      "path": "runs/multiseed_validation_v2/cmerc/MELD_validation_seed67137/final_test.json",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/runs/multiseed_validation_v2/cmerc/MELD_validation_seed67137/final_test.json",
+      "source_sha256": "2509c8710be1de4c232ca01a25a36f43287dc76baa5e177bba51342ff8016777",
+      "target_sha256": "2509c8710be1de4c232ca01a25a36f43287dc76baa5e177bba51342ff8016777",
+      "size_bytes": 373,
+      "transformation": "identity"
+    },
+    {
+      "path": "results/multiseed_validation_v2/aggregate.csv",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/results/multiseed_validation_v2/aggregate.csv",
+      "source_sha256": "fd222fcc7fa1f2c396e6864bb7b650fd88be61dbf5976b12f39504c0358d4852",
+      "target_sha256": "fd222fcc7fa1f2c396e6864bb7b650fd88be61dbf5976b12f39504c0358d4852",
+      "size_bytes": 2053,
+      "transformation": "identity"
+    },
+    {
+      "path": "results/multiseed_validation_v2/baseline/IEMOCAP/validation/seed1475/metrics.json",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/results/multiseed_validation_v2/baseline/IEMOCAP/validation/seed1475/metrics.json",
+      "source_sha256": "322e6bc31b4f3b2ddcf96bddfc21a52c5d3824eae3c7307f5e8a721ecedbbcdc",
+      "target_sha256": "322e6bc31b4f3b2ddcf96bddfc21a52c5d3824eae3c7307f5e8a721ecedbbcdc",
+      "size_bytes": 18975,
+      "transformation": "identity"
+    },
+    {
+      "path": "results/multiseed_validation_v2/baseline/IEMOCAP/validation/seed2024/metrics.json",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/results/multiseed_validation_v2/baseline/IEMOCAP/validation/seed2024/metrics.json",
+      "source_sha256": "542d428b7a4a19f216f5b086c65a554993c68188078e9b6bca02d62e779d190e",
+      "target_sha256": "542d428b7a4a19f216f5b086c65a554993c68188078e9b6bca02d62e779d190e",
+      "size_bytes": 18999,
+      "transformation": "identity"
+    },
+    {
+      "path": "results/multiseed_validation_v2/baseline/IEMOCAP/validation/seed3407/metrics.json",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/results/multiseed_validation_v2/baseline/IEMOCAP/validation/seed3407/metrics.json",
+      "source_sha256": "aeb53b24c1403f2cc79b35276b5899da11d66993ddb865cedca21d22fb08fa53",
+      "target_sha256": "aeb53b24c1403f2cc79b35276b5899da11d66993ddb865cedca21d22fb08fa53",
+      "size_bytes": 19190,
+      "transformation": "identity"
+    },
+    {
+      "path": "results/multiseed_validation_v2/baseline/IEMOCAP/validation/seed42/metrics.json",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/results/multiseed_validation_v2/baseline/IEMOCAP/validation/seed42/metrics.json",
+      "source_sha256": "e593ac40b061143dd27f5ec762a2d416ddd5d6f3875a2d08ff101328bedd5b86",
+      "target_sha256": "e593ac40b061143dd27f5ec762a2d416ddd5d6f3875a2d08ff101328bedd5b86",
+      "size_bytes": 19159,
+      "transformation": "identity"
+    },
+    {
+      "path": "results/multiseed_validation_v2/baseline/IEMOCAP/validation/seed67137/metrics.json",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/results/multiseed_validation_v2/baseline/IEMOCAP/validation/seed67137/metrics.json",
+      "source_sha256": "606ec557412abba08d92f4af465c04262a701f8faf24b1192c16377ffa0ce4ba",
+      "target_sha256": "606ec557412abba08d92f4af465c04262a701f8faf24b1192c16377ffa0ce4ba",
+      "size_bytes": 18958,
+      "transformation": "identity"
+    },
+    {
+      "path": "results/multiseed_validation_v2/baseline/MELD/validation/seed1475/metrics.json",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/results/multiseed_validation_v2/baseline/MELD/validation/seed1475/metrics.json",
+      "source_sha256": "3ced893e553223ef7a7cfb79df77388d95ec696dbfc0aba1af122115a8f8392e",
+      "target_sha256": "3ced893e553223ef7a7cfb79df77388d95ec696dbfc0aba1af122115a8f8392e",
+      "size_bytes": 50935,
+      "transformation": "identity"
+    },
+    {
+      "path": "results/multiseed_validation_v2/baseline/MELD/validation/seed2024/metrics.json",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/results/multiseed_validation_v2/baseline/MELD/validation/seed2024/metrics.json",
+      "source_sha256": "131c8a5884f496ac7199e96bb2f2194fcf383a4d4dbe29e5857eac8df81281ad",
+      "target_sha256": "131c8a5884f496ac7199e96bb2f2194fcf383a4d4dbe29e5857eac8df81281ad",
+      "size_bytes": 51171,
+      "transformation": "identity"
+    },
+    {
+      "path": "results/multiseed_validation_v2/baseline/MELD/validation/seed3407/metrics.json",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/results/multiseed_validation_v2/baseline/MELD/validation/seed3407/metrics.json",
+      "source_sha256": "3c81dec0eed88f06011cd887ead43974053d49393a8bc54165f0ff8a940a5984",
+      "target_sha256": "3c81dec0eed88f06011cd887ead43974053d49393a8bc54165f0ff8a940a5984",
+      "size_bytes": 51156,
+      "transformation": "identity"
+    },
+    {
+      "path": "results/multiseed_validation_v2/baseline/MELD/validation/seed42/metrics.json",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/results/multiseed_validation_v2/baseline/MELD/validation/seed42/metrics.json",
+      "source_sha256": "8945048fe618f3f682d650cc39491c33d7f6f85c06c66c8521099b922962402f",
+      "target_sha256": "8945048fe618f3f682d650cc39491c33d7f6f85c06c66c8521099b922962402f",
+      "size_bytes": 50927,
+      "transformation": "identity"
+    },
+    {
+      "path": "results/multiseed_validation_v2/baseline/MELD/validation/seed67137/metrics.json",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/results/multiseed_validation_v2/baseline/MELD/validation/seed67137/metrics.json",
+      "source_sha256": "62f7c9f3cfbf34cd8d7164bb887e69615b90b6b4d377759affa1872b69f20b4a",
+      "target_sha256": "62f7c9f3cfbf34cd8d7164bb887e69615b90b6b4d377759affa1872b69f20b4a",
+      "size_bytes": 50924,
+      "transformation": "identity"
+    },
+    {
+      "path": "results/multiseed_validation_v2/cmerc/IEMOCAP/validation/seed1475/metrics.json",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/results/multiseed_validation_v2/cmerc/IEMOCAP/validation/seed1475/metrics.json",
+      "source_sha256": "f42fc83fe72be3d70a3b7ae6fcd796e9956f8adc87dc7d9e786c4dd0457aa6f0",
+      "target_sha256": "f42fc83fe72be3d70a3b7ae6fcd796e9956f8adc87dc7d9e786c4dd0457aa6f0",
+      "size_bytes": 19151,
+      "transformation": "identity"
+    },
+    {
+      "path": "results/multiseed_validation_v2/cmerc/IEMOCAP/validation/seed2024/metrics.json",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/results/multiseed_validation_v2/cmerc/IEMOCAP/validation/seed2024/metrics.json",
+      "source_sha256": "1ed0c2a29acbaabcf0be8354cf82579e4e593b93b6e5294cf20c85d6d5fe4e6b",
+      "target_sha256": "1ed0c2a29acbaabcf0be8354cf82579e4e593b93b6e5294cf20c85d6d5fe4e6b",
+      "size_bytes": 19218,
+      "transformation": "identity"
+    },
+    {
+      "path": "results/multiseed_validation_v2/cmerc/IEMOCAP/validation/seed3407/metrics.json",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/results/multiseed_validation_v2/cmerc/IEMOCAP/validation/seed3407/metrics.json",
+      "source_sha256": "03471260627b8b62be22e2b791bc71cc7bdad056206f8b91c4b7581bb017d784",
+      "target_sha256": "03471260627b8b62be22e2b791bc71cc7bdad056206f8b91c4b7581bb017d784",
+      "size_bytes": 19395,
+      "transformation": "identity"
+    },
+    {
+      "path": "results/multiseed_validation_v2/cmerc/IEMOCAP/validation/seed42/metrics.json",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/results/multiseed_validation_v2/cmerc/IEMOCAP/validation/seed42/metrics.json",
+      "source_sha256": "c630b23f0057f02c549c0d9b68170c208f4ed4f7864e018ddf3a6755984c64fc",
+      "target_sha256": "c630b23f0057f02c549c0d9b68170c208f4ed4f7864e018ddf3a6755984c64fc",
+      "size_bytes": 19148,
+      "transformation": "identity"
+    },
+    {
+      "path": "results/multiseed_validation_v2/cmerc/IEMOCAP/validation/seed67137/metrics.json",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/results/multiseed_validation_v2/cmerc/IEMOCAP/validation/seed67137/metrics.json",
+      "source_sha256": "5c3a9657be0c000a5d523b0302e9d8a8d9f451e244e3d855fb6449b35d6b68f7",
+      "target_sha256": "5c3a9657be0c000a5d523b0302e9d8a8d9f451e244e3d855fb6449b35d6b68f7",
+      "size_bytes": 19201,
+      "transformation": "identity"
+    },
+    {
+      "path": "results/multiseed_validation_v2/cmerc/MELD/validation/seed1475/metrics.json",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/results/multiseed_validation_v2/cmerc/MELD/validation/seed1475/metrics.json",
+      "source_sha256": "6940a6c095504adab678a62672b7b078d32a6286160f6abd0b6c6419c5bb9cd0",
+      "target_sha256": "6940a6c095504adab678a62672b7b078d32a6286160f6abd0b6c6419c5bb9cd0",
+      "size_bytes": 51643,
+      "transformation": "identity"
+    },
+    {
+      "path": "results/multiseed_validation_v2/cmerc/MELD/validation/seed2024/metrics.json",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/results/multiseed_validation_v2/cmerc/MELD/validation/seed2024/metrics.json",
+      "source_sha256": "fcfbdf4732997a5d3c4b98086669139fab56bfa91310e2b19c08545cf27aa7b5",
+      "target_sha256": "fcfbdf4732997a5d3c4b98086669139fab56bfa91310e2b19c08545cf27aa7b5",
+      "size_bytes": 51602,
+      "transformation": "identity"
+    },
+    {
+      "path": "results/multiseed_validation_v2/cmerc/MELD/validation/seed3407/metrics.json",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/results/multiseed_validation_v2/cmerc/MELD/validation/seed3407/metrics.json",
+      "source_sha256": "9da15d5b848fb002c798fbb25c79fa18fcc29b714685d117d2f6ad4ddb8e4327",
+      "target_sha256": "9da15d5b848fb002c798fbb25c79fa18fcc29b714685d117d2f6ad4ddb8e4327",
+      "size_bytes": 51608,
+      "transformation": "identity"
+    },
+    {
+      "path": "results/multiseed_validation_v2/cmerc/MELD/validation/seed42/metrics.json",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/results/multiseed_validation_v2/cmerc/MELD/validation/seed42/metrics.json",
+      "source_sha256": "4c38c96cd34dcec157e6205663eea5261ca454329f61ce5d5a63c44af9485d0a",
+      "target_sha256": "4c38c96cd34dcec157e6205663eea5261ca454329f61ce5d5a63c44af9485d0a",
+      "size_bytes": 51389,
+      "transformation": "identity"
+    },
+    {
+      "path": "results/multiseed_validation_v2/cmerc/MELD/validation/seed67137/metrics.json",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/results/multiseed_validation_v2/cmerc/MELD/validation/seed67137/metrics.json",
+      "source_sha256": "71aa2c5b7831b10bdadc8692b8177712962b473c6c920fa7e356668f2dcc0a38",
+      "target_sha256": "71aa2c5b7831b10bdadc8692b8177712962b473c6c920fa7e356668f2dcc0a38",
+      "size_bytes": 51397,
+      "transformation": "identity"
+    },
+    {
+      "path": "results/multiseed_validation_v2/figures/IEMOCAP_convergence.svg",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/results/multiseed_validation_v2/figures/IEMOCAP_convergence.svg",
+      "source_sha256": "01ed2afee8dd98079879ace8f8e90702c2d3f5e4bb8fe492bbc50fde41fde6cd",
+      "target_sha256": "01ed2afee8dd98079879ace8f8e90702c2d3f5e4bb8fe492bbc50fde41fde6cd",
+      "size_bytes": 75901,
+      "transformation": "identity"
+    },
+    {
+      "path": "results/multiseed_validation_v2/figures/MELD_convergence.svg",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/results/multiseed_validation_v2/figures/MELD_convergence.svg",
+      "source_sha256": "195cbea1c93f597f77d766d72bf47994bc4cf1984942a0278ed8baeae7504870",
+      "target_sha256": "195cbea1c93f597f77d766d72bf47994bc4cf1984942a0278ed8baeae7504870",
+      "size_bytes": 46888,
+      "transformation": "identity"
+    },
+    {
+      "path": "results/multiseed_validation_v2/figures/selected_epochs.svg",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/results/multiseed_validation_v2/figures/selected_epochs.svg",
+      "source_sha256": "aaea523fa5ce21fb19545e581f62bbac40f9b159cfceb4de33ba120628c2d453",
+      "target_sha256": "aaea523fa5ce21fb19545e581f62bbac40f9b159cfceb4de33ba120628c2d453",
+      "size_bytes": 3761,
+      "transformation": "identity"
+    },
+    {
+      "path": "results/multiseed_validation_v2/paired.csv",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/results/multiseed_validation_v2/paired.csv",
+      "source_sha256": "01417cc8a3694deb593ac4cf21c015f184a16677a22642d2ff2b06c8b83763ac",
+      "target_sha256": "01417cc8a3694deb593ac4cf21c015f184a16677a22642d2ff2b06c8b83763ac",
+      "size_bytes": 1221,
+      "transformation": "identity"
+    },
+    {
+      "path": "results/multiseed_validation_v2/per_seed.csv",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/results/multiseed_validation_v2/per_seed.csv",
+      "source_sha256": "b63172d00f185172af2e6f2c6b559f9cc551724818a64e0124cf13a9af1d0718",
+      "target_sha256": "b63172d00f185172af2e6f2c6b559f9cc551724818a64e0124cf13a9af1d0718",
+      "size_bytes": 6242,
+      "transformation": "identity"
+    },
+    {
+      "path": "results/multiseed_validation_v2/registry.csv",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/results/multiseed_validation_v2/registry.csv",
+      "source_sha256": "b63172d00f185172af2e6f2c6b559f9cc551724818a64e0124cf13a9af1d0718",
+      "target_sha256": "b63172d00f185172af2e6f2c6b559f9cc551724818a64e0124cf13a9af1d0718",
+      "size_bytes": 6242,
+      "transformation": "identity"
+    },
+    {
+      "path": "results/multiseed_validation_v2/summary.json",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/results/multiseed_validation_v2/summary.json",
+      "source_sha256": "165dd070b18d778da6f445fd76c36be765e7a13bb505ebdb031c1fe35b74652c",
+      "target_sha256": "165dd070b18d778da6f445fd76c36be765e7a13bb505ebdb031c1fe35b74652c",
+      "size_bytes": 757267,
+      "transformation": "identity"
+    },
+    {
+      "path": "results/multiseed_validation_v2/summary_first3.json",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/results/multiseed_validation_v2/summary_first3.json",
+      "source_sha256": "c2483d707920abee27dcdd3338a508d276576fc4a845e83dfe88efcd6b4ad1ea",
+      "target_sha256": "c2483d707920abee27dcdd3338a508d276576fc4a845e83dfe88efcd6b4ad1ea",
+      "size_bytes": 470006,
+      "transformation": "identity"
+    },
+    {
+      "path": "state/multiseed_validation_v2_queue.json",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/state/multiseed_validation_v2_queue.json",
+      "source_sha256": "5bdb8f5cb627508b0ccd6d77b73922701c8f5f766402e5d31c5220f355992bd5",
+      "target_sha256": "5bdb8f5cb627508b0ccd6d77b73922701c8f5f766402e5d31c5220f355992bd5",
+      "size_bytes": 49172,
+      "transformation": "identity"
+    },
+    {
+      "path": "results/preflight_official/IEMOCAP/metrics.json",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/results/preflight_official/IEMOCAP/metrics.json",
+      "source_sha256": "be0bc320ab84efb244e52a663a705af2602d17ece92c32ba6cbf6f8447cf462e",
+      "target_sha256": "be0bc320ab84efb244e52a663a705af2602d17ece92c32ba6cbf6f8447cf462e",
+      "size_bytes": 5064,
+      "transformation": "identity"
+    },
+    {
+      "path": "results/preflight_official/MELD/metrics.json",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/results/preflight_official/MELD/metrics.json",
+      "source_sha256": "6f6c67faf95ef1512f074813a31a70d62b4e58e18457fe7d5cbe609365ce4dab",
+      "target_sha256": "6f6c67faf95ef1512f074813a31a70d62b4e58e18457fe7d5cbe609365ce4dab",
+      "size_bytes": 5322,
+      "transformation": "identity"
+    },
+    {
+      "path": "results/preflight_v2/batch_capacity_audit.json",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/results/preflight_v2/batch_capacity_audit.json",
+      "source_sha256": "c3dd23a0973cdecf0053b58a1df89a5227b24494cb243e95bfd02b5a18658d68",
+      "target_sha256": "c3dd23a0973cdecf0053b58a1df89a5227b24494cb243e95bfd02b5a18658d68",
+      "size_bytes": 660301,
+      "transformation": "identity"
+    },
+    {
+      "path": "runs/preflight_resume_aten/verification.json",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/runs/preflight_resume_aten/verification.json",
+      "source_sha256": "43f3d08ff53b7c707e493665ef3cce696a4506edf5d01a9c3a357e693ef76112",
+      "target_sha256": "43f3d08ff53b7c707e493665ef3cce696a4506edf5d01a9c3a357e693ef76112",
+      "size_bytes": 438,
+      "transformation": "identity"
+    },
+    {
+      "path": "runs/preflight_resume_capacity_v2/verification.json",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/runs/preflight_resume_capacity_v2/verification.json",
+      "source_sha256": "d11238f1103fa38f74216b142e721f7947bb25f00b30dae46a49707d8445fdc8",
+      "target_sha256": "d11238f1103fa38f74216b142e721f7947bb25f00b30dae46a49707d8445fdc8",
+      "size_bytes": 552,
+      "transformation": "identity"
+    },
+    {
+      "path": "attempts/v1/10_MULTI_SEED_REPRODUCTION.md",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/attempts/v1/10_MULTI_SEED_REPRODUCTION.md",
+      "source_sha256": "e9c03fa2023727ffe2d268fd0b81fb94d7fa25bf6f70fe314cbdbc8b2a2c9411",
+      "target_sha256": "e9c03fa2023727ffe2d268fd0b81fb94d7fa25bf6f70fe314cbdbc8b2a2c9411",
+      "size_bytes": 6328,
+      "transformation": "identity"
+    },
+    {
+      "path": "attempts/v1/state/v1_retirement.json",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/attempts/v1/state/v1_retirement.json",
+      "source_sha256": "5b945abeacbd8cb0d533f573fb62535f0df89e547ee5b6ac61cebf1beef32612",
+      "target_sha256": "5b945abeacbd8cb0d533f573fb62535f0df89e547ee5b6ac61cebf1beef32612",
+      "size_bytes": 702,
+      "transformation": "identity"
+    },
+    {
+      "path": "attempts/v1/state/multiseed_validation_queue.json",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/attempts/v1/state/multiseed_validation_queue.json",
+      "source_sha256": "9f4a7116e193c0f7661e0139036afcfd94b2c883e2b3ddeaf4107bfc34fca1f0",
+      "target_sha256": "9f4a7116e193c0f7661e0139036afcfd94b2c883e2b3ddeaf4107bfc34fca1f0",
+      "size_bytes": 23433,
+      "transformation": "identity"
+    },
+    {
+      "path": "attempts/v1/snapshots/source_snapshot.json",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/attempts/v1/snapshots/source_snapshot.json",
+      "source_sha256": "a9979bba5fa24125692715ecdb2145746b55df2ea708a2151ea57e2731166d3f",
+      "target_sha256": "a9979bba5fa24125692715ecdb2145746b55df2ea708a2151ea57e2731166d3f",
+      "size_bytes": 3394,
+      "transformation": "identity"
+    },
+    {
+      "path": "attempts/v1/snapshots/environment.json",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/attempts/v1/snapshots/environment.json",
+      "source_sha256": "ff96b238374181c22a2e51791965c93f0d054b934dcfaf0f927866fed68f4d9d",
+      "target_sha256": "ff96b238374181c22a2e51791965c93f0d054b934dcfaf0f927866fed68f4d9d",
+      "size_bytes": 1426,
+      "transformation": "identity"
+    },
+    {
+      "path": "tools/current_tests/test_caldiff_batching.py",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/tests/test_caldiff_batching.py",
+      "source_sha256": "c5b762d08fa2d62be78b6704f254101af4eef990b1f8e477a15672f09408e747",
+      "target_sha256": "c5b762d08fa2d62be78b6704f254101af4eef990b1f8e477a15672f09408e747",
+      "size_bytes": 3892,
+      "transformation": "identity"
+    },
+    {
+      "path": "tools/current_tests/test_causal_graph.py",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/tests/test_causal_graph.py",
+      "source_sha256": "f462a1bd0b063af28e757574367fffae06643821f59d6d89ec87277205cb04c5",
+      "target_sha256": "f462a1bd0b063af28e757574367fffae06643821f59d6d89ec87277205cb04c5",
+      "size_bytes": 7648,
+      "transformation": "identity"
+    },
+    {
+      "path": "tools/current_tests/test_causal_losses.py",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/tests/test_causal_losses.py",
+      "source_sha256": "2bf6300f8642057c2454111ec7b4002a06400ce1ee6327e052b950ea86115f00",
+      "target_sha256": "2bf6300f8642057c2454111ec7b4002a06400ce1ee6327e052b950ea86115f00",
+      "size_bytes": 2600,
+      "transformation": "identity"
+    },
+    {
+      "path": "tools/current_tests/test_causal_model.py",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/tests/test_causal_model.py",
+      "source_sha256": "98a6787daf664950cd752ed533d42dffac746269633226a5e59af8f3a7964de1",
+      "target_sha256": "98a6787daf664950cd752ed533d42dffac746269633226a5e59af8f3a7964de1",
+      "size_bytes": 5470,
+      "transformation": "identity"
+    },
+    {
+      "path": "tools/current_tests/test_causal_protocol.py",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/tests/test_causal_protocol.py",
+      "source_sha256": "94f480b63603d4f49b4044f6669832d32de273671b0597168e7bbb0f54ef8bd4",
+      "target_sha256": "94f480b63603d4f49b4044f6669832d32de273671b0597168e7bbb0f54ef8bd4",
+      "size_bytes": 8093,
+      "transformation": "identity"
+    },
+    {
+      "path": "tools/current_tests/test_evaluate_checkpoint.py",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/tests/test_evaluate_checkpoint.py",
+      "source_sha256": "02bc9cec32e914a7871926d96e23fa90cee19fa481933593566bdb3477732143",
+      "target_sha256": "02bc9cec32e914a7871926d96e23fa90cee19fa481933593566bdb3477732143",
+      "size_bytes": 2224,
+      "transformation": "identity"
+    },
+    {
+      "path": "tools/current_tests/test_evaluation_metrics.py",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/tests/test_evaluation_metrics.py",
+      "source_sha256": "a035b362e4d3c5c30acd8a90335b6b71854039e0e2a8030bb0d4a15e0ae6e4ed",
+      "target_sha256": "a035b362e4d3c5c30acd8a90335b6b71854039e0e2a8030bb0d4a15e0ae6e4ed",
+      "size_bytes": 1380,
+      "transformation": "identity"
+    },
+    {
+      "path": "tools/current_tests/test_hypergraphconv_compat.py",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/tests/test_hypergraphconv_compat.py",
+      "source_sha256": "5c448b2531dec33b8bb3f14a0de38e2dd3e193d69b4ffe0bcb7f6dbcc9bc784b",
+      "target_sha256": "5c448b2531dec33b8bb3f14a0de38e2dd3e193d69b4ffe0bcb7f6dbcc9bc784b",
+      "size_bytes": 726,
+      "transformation": "identity"
+    },
+    {
+      "path": "tools/current_tests/test_imports.py",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/tests/test_imports.py",
+      "source_sha256": "dc6954747958975edba80f3f3ce051ddefc5b4a7134e7c2ab9f0eb8717b00835",
+      "target_sha256": "dc6954747958975edba80f3f3ce051ddefc5b4a7134e7c2ab9f0eb8717b00835",
+      "size_bytes": 323,
+      "transformation": "identity"
+    },
+    {
+      "path": "tools/current_tests/test_multiseed_scheduler.py",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/tests/test_multiseed_scheduler.py",
+      "source_sha256": "19df834bf3433a4ca6b76f9e0879f10fa946107574888805ebe9f386a23a0450",
+      "target_sha256": "19df834bf3433a4ca6b76f9e0879f10fa946107574888805ebe9f386a23a0450",
+      "size_bytes": 13419,
+      "transformation": "identity"
+    },
+    {
+      "path": "tools/current_tests/test_multiseed_summary.py",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/tests/test_multiseed_summary.py",
+      "source_sha256": "5ec939f1f18b0b615259127b2cd220ad58d5286ab98d7a2204caa5b1ad016f7e",
+      "target_sha256": "5ec939f1f18b0b615259127b2cd220ad58d5286ab98d7a2204caa5b1ad016f7e",
+      "size_bytes": 14859,
+      "transformation": "identity"
+    },
+    {
+      "path": "tools/current_tests/test_multiseed_training.py",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/tests/test_multiseed_training.py",
+      "source_sha256": "9e8227c98c4cb9ce4b8d1c2281efa7ffbaaffa574ffe2f45c10dae3653d84da7",
+      "target_sha256": "9e8227c98c4cb9ce4b8d1c2281efa7ffbaaffa574ffe2f45c10dae3653d84da7",
+      "size_bytes": 17319,
+      "transformation": "identity"
+    },
+    {
+      "path": "tools/current_tests/test_smoke_helpers.py",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/tests/test_smoke_helpers.py",
+      "source_sha256": "a3401d02932ea031525fae6c6e72023de1f74e4fb3cdda978a524d095f10e850",
+      "target_sha256": "a3401d02932ea031525fae6c6e72023de1f74e4fb3cdda978a524d095f10e850",
+      "size_bytes": 3013,
+      "transformation": "identity"
+    },
+    {
+      "path": "tools/current_tests/test_summarize_results.py",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/tests/test_summarize_results.py",
+      "source_sha256": "bf5419653bd75104c1b1d561312bff44bee487acb8876d24cbc3ce9f2275d92c",
+      "target_sha256": "bf5419653bd75104c1b1d561312bff44bee487acb8876d24cbc3ce9f2275d92c",
+      "size_bytes": 1272,
+      "transformation": "identity"
+    },
+    {
+      "path": "tools/current_tests/test_training_protocol.py",
+      "source": "/data2/yb/paper/lyx-msa/CMERC（seed）/tests/test_training_protocol.py",
+      "source_sha256": "b6c3e770e0356165000acca9502050793b514e67a2c829608f337b24da3139c7",
+      "target_sha256": "b6c3e770e0356165000acca9502050793b514e67a2c829608f337b24da3139c7",
+      "size_bytes": 10653,
+      "transformation": "identity"
+    },
+    {
+      "path": "tools/README.md",
+      "source": "generated by export; no source artifact",
+      "source_sha256": "066276556df3f7793a8a61ad4072a055759e53c086960fc018b654f8e39aa657",
+      "target_sha256": "066276556df3f7793a8a61ad4072a055759e53c086960fc018b654f8e39aa657",
+      "size_bytes": 437,
+      "transformation": "generated documentation"
+    },
+    {
+      "path": "attempts/v1/README.md",
+      "source": "generated by export; no source artifact",
+      "source_sha256": "ed512a96e98cadb201b527644b0dbf5de25dfce7a179a8274eaa9029aa077434",
+      "target_sha256": "ed512a96e98cadb201b527644b0dbf5de25dfce7a179a8274eaa9029aa077434",
+      "size_bytes": 436,
+      "transformation": "generated documentation"
+    },
+    {
+      "path": "README.md",
+      "source": "generated by export; no source artifact",
+      "source_sha256": "f73ca1f48b208b378dd54a9752d719360f59609e8ca0c2f9328def9c11035d84",
+      "target_sha256": "f73ca1f48b208b378dd54a9752d719360f59609e8ca0c2f9328def9c11035d84",
+      "size_bytes": 4410,
+      "transformation": "generated documentation"
+    },
+    {
+      "path": "verification.json",
+      "source": "generated from export validation and CPU pytest command output",
+      "source_sha256": "63cec53f86d69c66ace331f0148d6e699c40d9683edc0f4268843309c391689d",
+      "target_sha256": "63cec53f86d69c66ace331f0148d6e699c40d9683edc0f4268843309c391689d",
+      "size_bytes": 1622,
+      "transformation": "generated verification record"
+    }
+  ],
+  "batch_completed_at": "2026-10-14T21:34:23.462602+00:00",
+  "last_run_completed_at": "2026-10-14T21:34:19.370437+00:00"
+}

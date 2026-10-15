@@ -1,0 +1,44 @@
+{
+  "cmerc_task_gpu_hours_estimate": 7.982083333333334,
+  "three_card_cmerc_only_ideal_wall_hours": 2.6606944444444447,
+  "baseline_hours_not_yet_measured": false,
+  "wall_time_note": "Add baseline/queue/startup and CPU contention; shared-GPU task-hour sum is not physical GPU occupancy hours",
+  "profiles": {
+    "IEMOCAP": {
+      "dataset": "IEMOCAP",
+      "engineering_only": true,
+      "full_curriculum_epoch_seconds": 49.46,
+      "cuda_allocator_conf": "garbage_collection_threshold:0.8",
+      "peak_allocated_mb": 8978.22021484375,
+      "peak_reserved_mb": 10186.0,
+      "estimated_seconds_per_run": 3857.06,
+      "estimated_five_run_gpu_hours": 5.357027777777778,
+      "official_test_validation_loader_empty": true
+    },
+    "MELD": {
+      "dataset": "MELD",
+      "engineering_only": true,
+      "full_curriculum_epoch_seconds": 47.93,
+      "cuda_allocator_conf": "garbage_collection_threshold:0.8",
+      "peak_allocated_mb": 901.2646484375,
+      "peak_reserved_mb": 1266.0,
+      "estimated_seconds_per_run": 1890.04,
+      "estimated_five_run_gpu_hours": 2.625055555555556,
+      "official_test_validation_loader_empty": true
+    }
+  },
+  "baseline_in_progress_estimates": {
+    "IEMOCAP": {
+      "observed_epochs": 25,
+      "average_epoch_seconds": 11.6976,
+      "projected_total_task_hours": 0.25994666666666666
+    },
+    "MELD": {
+      "observed_epochs": 26,
+      "average_epoch_seconds": 10.582307692307692,
+      "projected_total_task_hours": 0.11758119658119659
+    }
+  },
+  "total_task_gpu_hours_estimate": 8.359611196581197,
+  "three_card_ideal_wall_hours_with_baselines": 2.7865370655270656
+}

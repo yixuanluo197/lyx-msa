@@ -1,0 +1,45 @@
+{
+  "terminal_runs": 12,
+  "successful_runs": 12,
+  "failed_runs": [],
+  "epoch_checks": {
+    "IEMOCAP_cmerc_official_test_seed1475": 80,
+    "MELD_cmerc_official_test_seed67137": 40,
+    "IEMOCAP_baseline_official_test_seed1475": 80,
+    "MELD_baseline_official_test_seed67137": 40,
+    "IEMOCAP_cmerc_official_test_seed42": 80,
+    "MELD_cmerc_official_test_seed42": 40,
+    "IEMOCAP_cmerc_official_test_seed3407": 80,
+    "MELD_cmerc_official_test_seed3407": 40,
+    "IEMOCAP_cmerc_official_test_seed2025": 80,
+    "MELD_cmerc_official_test_seed2025": 40,
+    "IEMOCAP_cmerc_official_test_seed2026": 80,
+    "MELD_cmerc_official_test_seed2026": 40
+  },
+  "official_checkpoint": {
+    "IEMOCAP": {
+      "weighted_f1": 71.98379358245155,
+      "cel": 1143.4927208050954
+    },
+    "MELD": {
+      "weighted_f1": 66.8483922007087,
+      "cel": 605.0502918511629
+    }
+  },
+  "baseline_diagnostics": {
+    "IEMOCAP": {
+      "xp": 70.18083106859027,
+      "v100": 69.6256,
+      "xp_minus_v100": 0.5552310685902597
+    },
+    "MELD": {
+      "xp": 66.13651086419453,
+      "v100": 66.0644,
+      "xp_minus_v100": 0.07211086419452784
+    }
+  },
+  "cm_baseline_gains": {
+    "IEMOCAP": 0.17807700424563677,
+    "MELD": 0.07066778162545972
+  }
+}

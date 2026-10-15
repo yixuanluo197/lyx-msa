@@ -1,0 +1,29 @@
+{
+  "single": {
+    "count": 1,
+    "elapsed_seconds": 43.22103859856725,
+    "dialogs_per_second": 26.653686198975056,
+    "exit_codes": [
+      0
+    ]
+  },
+  "paired": {
+    "count": 2,
+    "elapsed_seconds": 64.36931765265763,
+    "dialogs_per_second": 35.79345073117882,
+    "exit_codes": [
+      0,
+      0
+    ]
+  },
+  "throughput_ratio": 1.342908086482808,
+  "single_task_throughput": 26.653686198975056,
+  "dual_task_total_throughput": 35.79345073117882,
+  "enabled": true,
+  "threshold": 1.1,
+  "gpu_uuid": "GPU-eed2f34f-b4c0-7b7a-498e-71a026e30c5a",
+  "engineering_only": true,
+  "batch_size": 16,
+  "precision": "float32",
+  "note": "fresh 1-epoch full-curriculum throughput probe; never included in formal scores"
+}

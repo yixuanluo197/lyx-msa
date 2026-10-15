@@ -1,0 +1,33 @@
+{
+  "verified_at_utc": "2026-10-15T09:04:06.462149+00:00",
+  "training_started": false,
+  "environment": "/data2/yb/conda_envs/cmerc-xp-repro",
+  "cwd": "code/",
+  "cpu_pytest": {
+    "command": "CUDA_VISIBLE_DEVICES='' PYTHONDONTWRITEBYTECODE=1 CMERC_ENV_PREFIX=/data2/yb/conda_envs/cmerc-xp-repro PYTHONPATH=\"$PWD:$PWD/../tools/current_tests\" bash /data2/yb/paper/lyx-msa/CMERC/scripts/with_cmerc_env.sh python -m pytest ../tools/current_tests/test_multiseed_training.py ../tools/current_tests/test_training_protocol.py ../tools/current_tests/test_multiseed_summary.py -k 'not shell_seed_output_paths' -p no:cacheprovider -q",
+    "passed": 51,
+    "skipped": 3,
+    "deselected": 1,
+    "exit_code": 0,
+    "skip_reasons": [
+      "Two tests need external IEMOCAP/MELD data not included in this public package.",
+      "One test requires CUDA; GPUs were explicitly hidden."
+    ],
+    "deselection_reason": "Shell path-layout test assumes original tests/ placement; tools/current_tests is explicitly separate from the frozen code.",
+    "warnings": [
+      "Existing HypergraphConv.py:97 has invalid escape sequence \\m in a docstring; frozen source left unchanged."
+    ]
+  },
+  "frozen_source_members_sha256_verified": 31,
+  "v2_runs_completed": 20,
+  "v2_per_run_artifacts": {
+    "run_manifest.json": 20,
+    "metrics.jsonl": 20,
+    "final_test.json": 20,
+    "independent_metrics.json": 20
+  },
+  "limitations": [
+    "No new GPU runs, full training, benchmark, or data/checkpoint score reevaluation performed.",
+    "Current tests are supplementary and not part of the frozen execution source snapshot."
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "pid": 1318772,
+  "server": "user23",
+  "started_at": 1791997842.2440083,
+  "phases": {
+    "formal": {
+      "command": [
+        "/data2/yb/conda_envs/cmerc-xp-repro/bin/python",
+        "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_multiseed/20261014T1627Z/code/scripts/xp_multiseed.py",
+        "run",
+        "--batch-root",
+        "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_multiseed/20261014T1627Z"
+      ],
+      "pid": 1318774,
+      "started_at": 1791997842.244918,
+      "status": "completed",
+      "exit_code": 0,
+      "finished_at": 1792009485.829579
+    },
+    "summary": {
+      "command": [
+        "/data2/yb/conda_envs/cmerc-xp-repro/bin/python",
+        "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_multiseed/20261014T1627Z/code/scripts/xp_multiseed.py",
+        "summarize",
+        "--batch-root",
+        "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_multiseed/20261014T1627Z"
+      ],
+      "pid": 1529781,
+      "started_at": 1792009485.8309264,
+      "status": "completed",
+      "exit_code": 0,
+      "finished_at": 1792009485.949537
+    },
+    "finalize": {
+      "command": [
+        "/data2/yb/conda_envs/cmerc-xp-repro/bin/python",
+        "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_multiseed/20261014T1627Z/finalize.py"
+      ],
+      "pid": 1529782,
+      "started_at": 1792009485.9508274,
+      "status": "completed",
+      "exit_code": 0,
+      "finished_at": 1792009487.7825253
+    }
+  },
+  "phase": "finalize",
+  "status": "terminal",
+  "finished_at": 1792009487.7832386
+}

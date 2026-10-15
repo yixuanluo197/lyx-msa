@@ -2,6 +2,8 @@
 
 ## 建议阅读顺序
 
+审查最近三组复现实验时，先读取 [实验档案入口](../experiment_records/README.md)，再使用各组 `code/` 和对应配置、指标。原版 V100、XP 与 V100 多 seed V2 的协议和代码版本有差异，不应只用根目录当前源码解释所有历史结果。
+
 1. 根目录 `README.md`：确认仓库来源、目录与公开范围。
 2. `CAUSAL_README.md`：确认时间因果约束和已验证边界。
 3. `REPRODUCTION_GUIDE.md`：确认数据划分、选模和恢复协议。

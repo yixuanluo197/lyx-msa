@@ -1,0 +1,154 @@
+{
+  "status": "passed",
+  "successful_runs": 12,
+  "cuda_used_by_verifier": false,
+  "runs": {
+    "IEMOCAP_cmerc_official_test_seed1475": {
+      "epochs": 80,
+      "selected_epoch": 79,
+      "samples": 1623,
+      "weighted_f1": 70.3589080728359,
+      "cel": 1334.9748147656467,
+      "checkpoint_rng_optimizer_finite": true,
+      "predictions_metrics_recomputed": true
+    },
+    "MELD_cmerc_official_test_seed67137": {
+      "epochs": 40,
+      "selected_epoch": 5,
+      "samples": 2610,
+      "weighted_f1": 66.20717864582,
+      "cel": 589.0241216868162,
+      "checkpoint_rng_optimizer_finite": true,
+      "predictions_metrics_recomputed": true
+    },
+    "IEMOCAP_baseline_official_test_seed1475": {
+      "epochs": 80,
+      "selected_epoch": 50,
+      "samples": 1623,
+      "weighted_f1": 70.18083106859027,
+      "cel": 1297.465245942321,
+      "checkpoint_rng_optimizer_finite": true,
+      "predictions_metrics_recomputed": true
+    },
+    "MELD_baseline_official_test_seed67137": {
+      "epochs": 40,
+      "selected_epoch": 5,
+      "samples": 2610,
+      "weighted_f1": 66.13651086419453,
+      "cel": 502.94241024553776,
+      "checkpoint_rng_optimizer_finite": true,
+      "predictions_metrics_recomputed": true
+    },
+    "IEMOCAP_cmerc_official_test_seed42": {
+      "epochs": 80,
+      "selected_epoch": 64,
+      "samples": 1623,
+      "weighted_f1": 69.7569155467484,
+      "cel": 1088.2655793043775,
+      "checkpoint_rng_optimizer_finite": true,
+      "predictions_metrics_recomputed": true
+    },
+    "MELD_cmerc_official_test_seed42": {
+      "epochs": 40,
+      "selected_epoch": 3,
+      "samples": 2610,
+      "weighted_f1": 65.72305012416732,
+      "cel": 568.7217516452074,
+      "checkpoint_rng_optimizer_finite": true,
+      "predictions_metrics_recomputed": true
+    },
+    "IEMOCAP_cmerc_official_test_seed3407": {
+      "epochs": 80,
+      "selected_epoch": 59,
+      "samples": 1623,
+      "weighted_f1": 69.75509048096818,
+      "cel": 1156.572736727778,
+      "checkpoint_rng_optimizer_finite": true,
+      "predictions_metrics_recomputed": true
+    },
+    "MELD_cmerc_official_test_seed3407": {
+      "epochs": 40,
+      "selected_epoch": 8,
+      "samples": 2610,
+      "weighted_f1": 65.23668956622815,
+      "cel": 705.9671475812793,
+      "checkpoint_rng_optimizer_finite": true,
+      "predictions_metrics_recomputed": true
+    },
+    "IEMOCAP_cmerc_official_test_seed2025": {
+      "epochs": 80,
+      "selected_epoch": 76,
+      "samples": 1623,
+      "weighted_f1": 69.99812168148547,
+      "cel": 1378.489269289872,
+      "checkpoint_rng_optimizer_finite": true,
+      "predictions_metrics_recomputed": true
+    },
+    "MELD_cmerc_official_test_seed2025": {
+      "epochs": 40,
+      "selected_epoch": 9,
+      "samples": 2610,
+      "weighted_f1": 65.35305072916398,
+      "cel": 725.5199669972062,
+      "checkpoint_rng_optimizer_finite": true,
+      "predictions_metrics_recomputed": true
+    },
+    "IEMOCAP_cmerc_official_test_seed2026": {
+      "epochs": 80,
+      "selected_epoch": 74,
+      "samples": 1623,
+      "weighted_f1": 68.20608879424337,
+      "cel": 1377.910922649325,
+      "checkpoint_rng_optimizer_finite": true,
+      "predictions_metrics_recomputed": true
+    },
+    "MELD_cmerc_official_test_seed2026": {
+      "epochs": 40,
+      "selected_epoch": 9,
+      "samples": 2610,
+      "weighted_f1": 65.1065113889392,
+      "cel": 642.3670629262924,
+      "checkpoint_rng_optimizer_finite": true,
+      "predictions_metrics_recomputed": true
+    }
+  },
+  "groups_recomputed": {
+    "IEMOCAP": {
+      "planned_n": 5,
+      "completed_n": 5,
+      "seeds": [
+        1475,
+        42,
+        3407,
+        2025,
+        2026
+      ],
+      "paper_weighted_f1": 71.98,
+      "mean": 69.61502491525627,
+      "sample_std": 0.825375307288179,
+      "minimum": 68.20608879424337,
+      "maximum": 70.3589080728359,
+      "difference_points": -2.364975084743733,
+      "within_half_point": false
+    },
+    "MELD": {
+      "planned_n": 5,
+      "completed_n": 5,
+      "seeds": [
+        67137,
+        42,
+        3407,
+        2025,
+        2026
+      ],
+      "paper_weighted_f1": 66.85,
+      "mean": 65.52529609086373,
+      "sample_std": 0.4450879951472636,
+      "minimum": 65.1065113889392,
+      "maximum": 66.20717864582,
+      "difference_points": -1.324703909136261,
+      "within_half_point": false
+    }
+  },
+  "frozen_file_and_runtime_hashes": "passed"
+}

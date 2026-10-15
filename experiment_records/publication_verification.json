@@ -1,0 +1,37 @@
+{
+  "verified_at": "2026-10-15T09:07:09.185207+00:00",
+  "checks": {
+    "verified_export_manifest_files": {
+      "01_v100_single_seed": 68,
+      "02_xp_multiseed": 126,
+      "03_v100_multiseed": 175
+    },
+    "original_v100_verified_runs": 8,
+    "xp_verified_summary": "two groups of five seeds; aggregate mean/std recomputed from independent metrics",
+    "v100_v2_verified_runs": 20,
+    "archive_files_checked": 376,
+    "archive_bytes_checked": 7475210,
+    "python_syntax_files": 96,
+    "shell_syntax_files": 22,
+    "json_files": 142,
+    "jsonl_files": 40,
+    "entry_document_local_links": "passed",
+    "credential_patterns": "no matches",
+    "weights_data_predictions_caches_raw_logs": "excluded",
+    "root_cpu_tests": {
+      "passed": 153,
+      "warnings": 0
+    },
+    "v100_frozen_cpu_tests": {
+      "passed": 51,
+      "skipped": 3,
+      "deselected": 1
+    },
+    "new_training_started": false
+  },
+  "limits": [
+    "No GPU training or full prediction/checkpoint recomputation for this publication.",
+    "V100 frozen tests skipped external data/CUDA and deselected one test requiring original tests directory layout.",
+    "Original V100 retained workspace has no startup-time frozen source hashes."
+  ]
+}

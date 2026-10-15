@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "dataset": "IEMOCAP",
+  "variant": "cmerc",
+  "epochs": 2,
+  "seed": 2024,
+  "split_seed": 1475,
+  "causal": false,
+  "rng_policy": "continuous",
+  "host_gpus": [
+    1,
+    2
+  ],
+  "batch_policy": "capacity_safe",
+  "edge_capacity": 1000,
+  "node_capacity": 5200,
+  "batch_max_retries": 10000,
+  "max_parameter_difference": 8.778180927038193e-06,
+  "tolerance": {
+    "rtol": 0.001,
+    "atol": 0.0001
+  },
+  "rng_states_equal": true,
+  "note": "Smoke verification only. CUDA atomic reductions need not be bit-identical."
+}

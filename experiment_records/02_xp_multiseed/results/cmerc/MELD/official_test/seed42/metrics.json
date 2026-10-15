@@ -1,0 +1,244 @@
+{
+  "dataset": "MELD",
+  "checkpoint": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_multiseed/20261014T1627Z/runs/cmerc/MELD_official_test_seed42/best.pt",
+  "causal": false,
+  "effective_norm": "BN",
+  "num_samples": 2610,
+  "accuracy": 66.93486590038314,
+  "weighted_f1": 65.72305012416732,
+  "macro_f1": 45.66000598833983,
+  "per_class": [
+    {
+      "class_id": 0,
+      "class_name": "neutral",
+      "precision": 77.73584905660378,
+      "recall": 82.00636942675159,
+      "f1": 79.81402557148392,
+      "support": 1256
+    },
+    {
+      "class_id": 1,
+      "class_name": "surprise",
+      "precision": 59.450171821305844,
+      "recall": 61.56583629893239,
+      "f1": 60.48951048951049,
+      "support": 281
+    },
+    {
+      "class_id": 2,
+      "class_name": "fear",
+      "precision": 22.22222222222222,
+      "recall": 4.0,
+      "f1": 6.779661016949154,
+      "support": 50
+    },
+    {
+      "class_id": 3,
+      "class_name": "sadness",
+      "precision": 47.30538922155689,
+      "recall": 37.980769230769226,
+      "f1": 42.133333333333326,
+      "support": 208
+    },
+    {
+      "class_id": 4,
+      "class_name": "joy",
+      "precision": 66.2269129287599,
+      "recall": 62.43781094527363,
+      "f1": 64.27656850192062,
+      "support": 402
+    },
+    {
+      "class_id": 5,
+      "class_name": "disgust",
+      "precision": 41.66666666666667,
+      "recall": 7.352941176470589,
+      "f1": 12.5,
+      "support": 68
+    },
+    {
+      "class_id": 6,
+      "class_name": "anger",
+      "precision": 48.47775175644028,
+      "recall": 60.0,
+      "f1": 53.62694300518134,
+      "support": 345
+    }
+  ],
+  "confusion_matrix": [
+    [
+      1030,
+      38,
+      3,
+      42,
+      72,
+      0,
+      71
+    ],
+    [
+      33,
+      173,
+      1,
+      6,
+      25,
+      0,
+      43
+    ],
+    [
+      19,
+      4,
+      2,
+      9,
+      4,
+      1,
+      11
+    ],
+    [
+      70,
+      12,
+      2,
+      79,
+      10,
+      0,
+      35
+    ],
+    [
+      82,
+      27,
+      0,
+      9,
+      251,
+      1,
+      32
+    ],
+    [
+      22,
+      5,
+      0,
+      5,
+      3,
+      5,
+      28
+    ],
+    [
+      69,
+      32,
+      1,
+      17,
+      14,
+      5,
+      207
+    ]
+  ],
+  "calibration": {
+    "n_bins": 15,
+    "ece": 26.415282057391,
+    "mce": 35.366613394336,
+    "rmsce": 27.566266623439,
+    "auroc_success": 74.257641472453,
+    "auprc_success": 84.99875621248,
+    "bins": [
+      {
+        "index": 2,
+        "lower": 0.13333333333333333,
+        "upper": 0.2,
+        "count": 15,
+        "accuracy": 0.06666666666666667,
+        "confidence": 0.1857490658760071,
+        "gap": 0.11908239920934043
+      },
+      {
+        "index": 3,
+        "lower": 0.2,
+        "upper": 0.26666666666666666,
+        "count": 287,
+        "accuracy": 0.34146341463414637,
+        "confidence": 0.24067478707443132,
+        "gap": 0.10078862755971504
+      },
+      {
+        "index": 4,
+        "lower": 0.26666666666666666,
+        "upper": 0.3333333333333333,
+        "count": 496,
+        "accuracy": 0.5100806451612904,
+        "confidence": 0.2994783464819193,
+        "gap": 0.21060229867937108
+      },
+      {
+        "index": 5,
+        "lower": 0.3333333333333333,
+        "upper": 0.4,
+        "count": 500,
+        "accuracy": 0.604,
+        "confidence": 0.36591541159152985,
+        "gap": 0.23808458840847013
+      },
+      {
+        "index": 6,
+        "lower": 0.4,
+        "upper": 0.4666666666666667,
+        "count": 463,
+        "accuracy": 0.7473002159827213,
+        "confidence": 0.4336060301660204,
+        "gap": 0.31369418581670094
+      },
+      {
+        "index": 7,
+        "lower": 0.4666666666666667,
+        "upper": 0.5333333333333333,
+        "count": 475,
+        "accuracy": 0.8526315789473684,
+        "confidence": 0.49896544500401147,
+        "gap": 0.35366613394335694
+      },
+      {
+        "index": 8,
+        "lower": 0.5333333333333333,
+        "upper": 0.6,
+        "count": 263,
+        "accuracy": 0.8973384030418251,
+        "confidence": 0.5630061383936342,
+        "gap": 0.3343322646481909
+      },
+      {
+        "index": 9,
+        "lower": 0.6,
+        "upper": 0.6666666666666666,
+        "count": 83,
+        "accuracy": 0.9397590361445783,
+        "confidence": 0.625921454774328,
+        "gap": 0.3138375813702503
+      },
+      {
+        "index": 10,
+        "lower": 0.6666666666666666,
+        "upper": 0.7333333333333333,
+        "count": 18,
+        "accuracy": 1.0,
+        "confidence": 0.6923988031016456,
+        "gap": 0.3076011968983544
+      },
+      {
+        "index": 11,
+        "lower": 0.7333333333333333,
+        "upper": 0.8,
+        "count": 10,
+        "accuracy": 1.0,
+        "confidence": 0.7521292805671692,
+        "gap": 0.2478707194328308
+      }
+    ]
+  },
+  "cel": {
+    "total": 568.7217516452074,
+    "by_removal": {
+      "text": 199.50452768802643,
+      "audio": 31.226105272769928,
+      "visual": 9.830821573734283,
+      "intra_context": 227.49852664768696,
+      "inter_context": 100.66177046298981
+    },
+    "scale": "sum of positive true-class log-probability differences"
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "batch_id": "20261014T1627Z",
+  "updated_at": "2026-10-14T20:24:45.999041+00:00",
+  "groups": {
+    "IEMOCAP": {
+      "planned_n": 5,
+      "completed_n": 5,
+      "seeds": [
+        1475,
+        42,
+        3407,
+        2025,
+        2026
+      ],
+      "paper_weighted_f1": 71.98,
+      "mean": 69.61502491525627,
+      "sample_std": 0.825375307288179,
+      "minimum": 68.20608879424337,
+      "maximum": 70.3589080728359,
+      "difference_points": -2.364975084743733,
+      "within_half_point": false
+    },
+    "MELD": {
+      "planned_n": 5,
+      "completed_n": 5,
+      "seeds": [
+        67137,
+        42,
+        3407,
+        2025,
+        2026
+      ],
+      "paper_weighted_f1": 66.85,
+      "mean": 65.52529609086373,
+      "sample_std": 0.4450879951472636,
+      "minimum": 65.1065113889392,
+      "maximum": 66.20717864582,
+      "difference_points": -1.324703909136261,
+      "within_half_point": false
+    }
+  },
+  "scheduling_policy": {
+    "max_meld_per_gpu": 2,
+    "minimum_free_mib": 2290,
+    "reason": "measured dual MELD total throughput improved by at least 10%",
+    "throughput_improvement_fraction": 0.342908086482808,
+    "evidence_sha256": "39b83f4b3cee217c79217947661c454bdf5b382769fff9f0896fe0457ce418f7",
+    "profile_sha256": "4787547c5e4e6c3773953f3d083643f1966d3d6d83af9d42d77e6f9fc80d836e"
+  },
+  "historical_reference_separate": {
+    "IEMOCAP": {
+      "v100_cmerc_official_test": 70.3753,
+      "official_checkpoint": 71.9838
+    },
+    "MELD": {
+      "v100_cmerc_official_test": 66.1767,
+      "official_checkpoint": 66.8484
+    }
+  },
+  "all_tasks_terminal": true,
+  "both_datasets_within_half_point": false
+}
