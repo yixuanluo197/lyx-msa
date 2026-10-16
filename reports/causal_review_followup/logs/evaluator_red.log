@@ -1,0 +1,390 @@
+FFFFFFFFFFFFFFFFFFFFFFFFFs                                               [100%]
+=================================== FAILURES ===================================
+_____________ test_cuda_device_resolution_public_api[cuda-cuda:2] ______________
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x76cd11bb6ad0>
+raw = 'cuda', expected = 'cuda:2'
+
+    @pytest.mark.parametrize('raw,expected', [('cuda', 'cuda:2'), ('cuda:0', 'cuda:0'), ('cuda:1', 'cuda:1')])
+    def test_cuda_device_resolution_public_api(monkeypatch, raw, expected):
+        monkeypatch.setattr(torch.cuda, 'is_available', lambda: True)
+        monkeypatch.setattr(torch.cuda, 'device_count', lambda: 3)
+        monkeypatch.setattr(torch.cuda, 'current_device', lambda: 2)
+>       assert str(E.resolve_device(raw, causal=True)) == expected
+E       AttributeError: module 'followup_evaluator' has no attribute 'resolve_device'
+
+tests/test_followup_evaluator.py:38: AttributeError
+____________ test_cuda_device_resolution_public_api[cuda:0-cuda:0] _____________
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x76cd11bed360>
+raw = 'cuda:0', expected = 'cuda:0'
+
+    @pytest.mark.parametrize('raw,expected', [('cuda', 'cuda:2'), ('cuda:0', 'cuda:0'), ('cuda:1', 'cuda:1')])
+    def test_cuda_device_resolution_public_api(monkeypatch, raw, expected):
+        monkeypatch.setattr(torch.cuda, 'is_available', lambda: True)
+        monkeypatch.setattr(torch.cuda, 'device_count', lambda: 3)
+        monkeypatch.setattr(torch.cuda, 'current_device', lambda: 2)
+>       assert str(E.resolve_device(raw, causal=True)) == expected
+E       AttributeError: module 'followup_evaluator' has no attribute 'resolve_device'
+
+tests/test_followup_evaluator.py:38: AttributeError
+____________ test_cuda_device_resolution_public_api[cuda:1-cuda:1] _____________
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x76cd0f105f30>
+raw = 'cuda:1', expected = 'cuda:1'
+
+    @pytest.mark.parametrize('raw,expected', [('cuda', 'cuda:2'), ('cuda:0', 'cuda:0'), ('cuda:1', 'cuda:1')])
+    def test_cuda_device_resolution_public_api(monkeypatch, raw, expected):
+        monkeypatch.setattr(torch.cuda, 'is_available', lambda: True)
+        monkeypatch.setattr(torch.cuda, 'device_count', lambda: 3)
+        monkeypatch.setattr(torch.cuda, 'current_device', lambda: 2)
+>       assert str(E.resolve_device(raw, causal=True)) == expected
+E       AttributeError: module 'followup_evaluator' has no attribute 'resolve_device'
+
+tests/test_followup_evaluator.py:38: AttributeError
+_________________________ test_cpu_and_invalid_devices _________________________
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x76cd0f101ea0>
+
+    def test_cpu_and_invalid_devices(monkeypatch):
+>       assert E.resolve_device('cpu', causal=True) == torch.device('cpu')
+E       AttributeError: module 'followup_evaluator' has no attribute 'resolve_device'
+
+tests/test_followup_evaluator.py:42: AttributeError
+____ test_architecture_roundtrip_uses_strict_real_networks[False-False-GRU] ____
+
+tmp_path = PosixPath('/tmp/pytest-of-yangbin/pytest-678/test_architecture_roundtrip_us0')
+base = 'GRU', residue = False, av = False
+
+    @pytest.mark.parametrize('base', ['GRU', 'LSTM', 'Transformer'])
+    @pytest.mark.parametrize('residue', [False, True])
+    @pytest.mark.parametrize('av', [False, True])
+    def test_architecture_roundtrip_uses_strict_real_networks(tmp_path, base, residue, av):
+        torch.manual_seed(91)
+        config = E.dataset_config('IEMOCAP')
+        checkpoint = {'args': checkpoint_args(base, residue, av)}
+>       source = E.build_models(config, torch.device('cpu'), causal=True, checkpoint=checkpoint)
+E       TypeError: build_models() got an unexpected keyword argument 'checkpoint'
+
+tests/test_followup_evaluator.py:63: TypeError
+___ test_architecture_roundtrip_uses_strict_real_networks[False-False-LSTM] ____
+
+tmp_path = PosixPath('/tmp/pytest-of-yangbin/pytest-678/test_architecture_roundtrip_us1')
+base = 'LSTM', residue = False, av = False
+
+    @pytest.mark.parametrize('base', ['GRU', 'LSTM', 'Transformer'])
+    @pytest.mark.parametrize('residue', [False, True])
+    @pytest.mark.parametrize('av', [False, True])
+    def test_architecture_roundtrip_uses_strict_real_networks(tmp_path, base, residue, av):
+        torch.manual_seed(91)
+        config = E.dataset_config('IEMOCAP')
+        checkpoint = {'args': checkpoint_args(base, residue, av)}
+>       source = E.build_models(config, torch.device('cpu'), causal=True, checkpoint=checkpoint)
+E       TypeError: build_models() got an unexpected keyword argument 'checkpoint'
+
+tests/test_followup_evaluator.py:63: TypeError
+_ test_architecture_roundtrip_uses_strict_real_networks[False-False-Transformer] _
+
+tmp_path = PosixPath('/tmp/pytest-of-yangbin/pytest-678/test_architecture_roundtrip_us2')
+base = 'Transformer', residue = False, av = False
+
+    @pytest.mark.parametrize('base', ['GRU', 'LSTM', 'Transformer'])
+    @pytest.mark.parametrize('residue', [False, True])
+    @pytest.mark.parametrize('av', [False, True])
+    def test_architecture_roundtrip_uses_strict_real_networks(tmp_path, base, residue, av):
+        torch.manual_seed(91)
+        config = E.dataset_config('IEMOCAP')
+        checkpoint = {'args': checkpoint_args(base, residue, av)}
+>       source = E.build_models(config, torch.device('cpu'), causal=True, checkpoint=checkpoint)
+E       TypeError: build_models() got an unexpected keyword argument 'checkpoint'
+
+tests/test_followup_evaluator.py:63: TypeError
+____ test_architecture_roundtrip_uses_strict_real_networks[False-True-GRU] _____
+
+tmp_path = PosixPath('/tmp/pytest-of-yangbin/pytest-678/test_architecture_roundtrip_us3')
+base = 'GRU', residue = True, av = False
+
+    @pytest.mark.parametrize('base', ['GRU', 'LSTM', 'Transformer'])
+    @pytest.mark.parametrize('residue', [False, True])
+    @pytest.mark.parametrize('av', [False, True])
+    def test_architecture_roundtrip_uses_strict_real_networks(tmp_path, base, residue, av):
+        torch.manual_seed(91)
+        config = E.dataset_config('IEMOCAP')
+        checkpoint = {'args': checkpoint_args(base, residue, av)}
+>       source = E.build_models(config, torch.device('cpu'), causal=True, checkpoint=checkpoint)
+E       TypeError: build_models() got an unexpected keyword argument 'checkpoint'
+
+tests/test_followup_evaluator.py:63: TypeError
+____ test_architecture_roundtrip_uses_strict_real_networks[False-True-LSTM] ____
+
+tmp_path = PosixPath('/tmp/pytest-of-yangbin/pytest-678/test_architecture_roundtrip_us4')
+base = 'LSTM', residue = True, av = False
+
+    @pytest.mark.parametrize('base', ['GRU', 'LSTM', 'Transformer'])
+    @pytest.mark.parametrize('residue', [False, True])
+    @pytest.mark.parametrize('av', [False, True])
+    def test_architecture_roundtrip_uses_strict_real_networks(tmp_path, base, residue, av):
+        torch.manual_seed(91)
+        config = E.dataset_config('IEMOCAP')
+        checkpoint = {'args': checkpoint_args(base, residue, av)}
+>       source = E.build_models(config, torch.device('cpu'), causal=True, checkpoint=checkpoint)
+E       TypeError: build_models() got an unexpected keyword argument 'checkpoint'
+
+tests/test_followup_evaluator.py:63: TypeError
+_ test_architecture_roundtrip_uses_strict_real_networks[False-True-Transformer] _
+
+tmp_path = PosixPath('/tmp/pytest-of-yangbin/pytest-678/test_architecture_roundtrip_us5')
+base = 'Transformer', residue = True, av = False
+
+    @pytest.mark.parametrize('base', ['GRU', 'LSTM', 'Transformer'])
+    @pytest.mark.parametrize('residue', [False, True])
+    @pytest.mark.parametrize('av', [False, True])
+    def test_architecture_roundtrip_uses_strict_real_networks(tmp_path, base, residue, av):
+        torch.manual_seed(91)
+        config = E.dataset_config('IEMOCAP')
+        checkpoint = {'args': checkpoint_args(base, residue, av)}
+>       source = E.build_models(config, torch.device('cpu'), causal=True, checkpoint=checkpoint)
+E       TypeError: build_models() got an unexpected keyword argument 'checkpoint'
+
+tests/test_followup_evaluator.py:63: TypeError
+____ test_architecture_roundtrip_uses_strict_real_networks[True-False-GRU] _____
+
+tmp_path = PosixPath('/tmp/pytest-of-yangbin/pytest-678/test_architecture_roundtrip_us6')
+base = 'GRU', residue = False, av = True
+
+    @pytest.mark.parametrize('base', ['GRU', 'LSTM', 'Transformer'])
+    @pytest.mark.parametrize('residue', [False, True])
+    @pytest.mark.parametrize('av', [False, True])
+    def test_architecture_roundtrip_uses_strict_real_networks(tmp_path, base, residue, av):
+        torch.manual_seed(91)
+        config = E.dataset_config('IEMOCAP')
+        checkpoint = {'args': checkpoint_args(base, residue, av)}
+>       source = E.build_models(config, torch.device('cpu'), causal=True, checkpoint=checkpoint)
+E       TypeError: build_models() got an unexpected keyword argument 'checkpoint'
+
+tests/test_followup_evaluator.py:63: TypeError
+____ test_architecture_roundtrip_uses_strict_real_networks[True-False-LSTM] ____
+
+tmp_path = PosixPath('/tmp/pytest-of-yangbin/pytest-678/test_architecture_roundtrip_us7')
+base = 'LSTM', residue = False, av = True
+
+    @pytest.mark.parametrize('base', ['GRU', 'LSTM', 'Transformer'])
+    @pytest.mark.parametrize('residue', [False, True])
+    @pytest.mark.parametrize('av', [False, True])
+    def test_architecture_roundtrip_uses_strict_real_networks(tmp_path, base, residue, av):
+        torch.manual_seed(91)
+        config = E.dataset_config('IEMOCAP')
+        checkpoint = {'args': checkpoint_args(base, residue, av)}
+>       source = E.build_models(config, torch.device('cpu'), causal=True, checkpoint=checkpoint)
+E       TypeError: build_models() got an unexpected keyword argument 'checkpoint'
+
+tests/test_followup_evaluator.py:63: TypeError
+_ test_architecture_roundtrip_uses_strict_real_networks[True-False-Transformer] _
+
+tmp_path = PosixPath('/tmp/pytest-of-yangbin/pytest-678/test_architecture_roundtrip_us8')
+base = 'Transformer', residue = False, av = True
+
+    @pytest.mark.parametrize('base', ['GRU', 'LSTM', 'Transformer'])
+    @pytest.mark.parametrize('residue', [False, True])
+    @pytest.mark.parametrize('av', [False, True])
+    def test_architecture_roundtrip_uses_strict_real_networks(tmp_path, base, residue, av):
+        torch.manual_seed(91)
+        config = E.dataset_config('IEMOCAP')
+        checkpoint = {'args': checkpoint_args(base, residue, av)}
+>       source = E.build_models(config, torch.device('cpu'), causal=True, checkpoint=checkpoint)
+E       TypeError: build_models() got an unexpected keyword argument 'checkpoint'
+
+tests/test_followup_evaluator.py:63: TypeError
+_____ test_architecture_roundtrip_uses_strict_real_networks[True-True-GRU] _____
+
+tmp_path = PosixPath('/tmp/pytest-of-yangbin/pytest-678/test_architecture_roundtrip_us9')
+base = 'GRU', residue = True, av = True
+
+    @pytest.mark.parametrize('base', ['GRU', 'LSTM', 'Transformer'])
+    @pytest.mark.parametrize('residue', [False, True])
+    @pytest.mark.parametrize('av', [False, True])
+    def test_architecture_roundtrip_uses_strict_real_networks(tmp_path, base, residue, av):
+        torch.manual_seed(91)
+        config = E.dataset_config('IEMOCAP')
+        checkpoint = {'args': checkpoint_args(base, residue, av)}
+>       source = E.build_models(config, torch.device('cpu'), causal=True, checkpoint=checkpoint)
+E       TypeError: build_models() got an unexpected keyword argument 'checkpoint'
+
+tests/test_followup_evaluator.py:63: TypeError
+____ test_architecture_roundtrip_uses_strict_real_networks[True-True-LSTM] _____
+
+tmp_path = PosixPath('/tmp/pytest-of-yangbin/pytest-678/test_architecture_roundtrip_us10')
+base = 'LSTM', residue = True, av = True
+
+    @pytest.mark.parametrize('base', ['GRU', 'LSTM', 'Transformer'])
+    @pytest.mark.parametrize('residue', [False, True])
+    @pytest.mark.parametrize('av', [False, True])
+    def test_architecture_roundtrip_uses_strict_real_networks(tmp_path, base, residue, av):
+        torch.manual_seed(91)
+        config = E.dataset_config('IEMOCAP')
+        checkpoint = {'args': checkpoint_args(base, residue, av)}
+>       source = E.build_models(config, torch.device('cpu'), causal=True, checkpoint=checkpoint)
+E       TypeError: build_models() got an unexpected keyword argument 'checkpoint'
+
+tests/test_followup_evaluator.py:63: TypeError
+_ test_architecture_roundtrip_uses_strict_real_networks[True-True-Transformer] _
+
+tmp_path = PosixPath('/tmp/pytest-of-yangbin/pytest-678/test_architecture_roundtrip_us11')
+base = 'Transformer', residue = True, av = True
+
+    @pytest.mark.parametrize('base', ['GRU', 'LSTM', 'Transformer'])
+    @pytest.mark.parametrize('residue', [False, True])
+    @pytest.mark.parametrize('av', [False, True])
+    def test_architecture_roundtrip_uses_strict_real_networks(tmp_path, base, residue, av):
+        torch.manual_seed(91)
+        config = E.dataset_config('IEMOCAP')
+        checkpoint = {'args': checkpoint_args(base, residue, av)}
+>       source = E.build_models(config, torch.device('cpu'), causal=True, checkpoint=checkpoint)
+E       TypeError: build_models() got an unexpected keyword argument 'checkpoint'
+
+tests/test_followup_evaluator.py:63: TypeError
+_____________ test_invalid_architecture_rejected[base_model-BERT] ______________
+
+key = 'base_model', value = 'BERT'
+
+    @pytest.mark.parametrize('key,value', [('base_model','BERT'), ('num_L',True), ('num_K',0), ('use_residue','true'), ('norm','BN'), ('graph_type','GCN3'), ('replacement_policy','zero')])
+    def test_invalid_architecture_rejected(key, value):
+        args = checkpoint_args()
+        args[key] = value
+        with pytest.raises(ValueError, match=key):
+>           E.causal_model_arguments(E.dataset_config('IEMOCAP'), torch.device('cpu'), {'args': args})
+E           AttributeError: module 'followup_evaluator' has no attribute 'causal_model_arguments'. Did you mean: '_model_arguments'?
+
+tests/test_followup_evaluator.py:87: AttributeError
+________________ test_invalid_architecture_rejected[num_L-True] ________________
+
+key = 'num_L', value = True
+
+    @pytest.mark.parametrize('key,value', [('base_model','BERT'), ('num_L',True), ('num_K',0), ('use_residue','true'), ('norm','BN'), ('graph_type','GCN3'), ('replacement_policy','zero')])
+    def test_invalid_architecture_rejected(key, value):
+        args = checkpoint_args()
+        args[key] = value
+        with pytest.raises(ValueError, match=key):
+>           E.causal_model_arguments(E.dataset_config('IEMOCAP'), torch.device('cpu'), {'args': args})
+E           AttributeError: module 'followup_evaluator' has no attribute 'causal_model_arguments'. Did you mean: '_model_arguments'?
+
+tests/test_followup_evaluator.py:87: AttributeError
+_________________ test_invalid_architecture_rejected[num_K-0] __________________
+
+key = 'num_K', value = 0
+
+    @pytest.mark.parametrize('key,value', [('base_model','BERT'), ('num_L',True), ('num_K',0), ('use_residue','true'), ('norm','BN'), ('graph_type','GCN3'), ('replacement_policy','zero')])
+    def test_invalid_architecture_rejected(key, value):
+        args = checkpoint_args()
+        args[key] = value
+        with pytest.raises(ValueError, match=key):
+>           E.causal_model_arguments(E.dataset_config('IEMOCAP'), torch.device('cpu'), {'args': args})
+E           AttributeError: module 'followup_evaluator' has no attribute 'causal_model_arguments'. Did you mean: '_model_arguments'?
+
+tests/test_followup_evaluator.py:87: AttributeError
+_____________ test_invalid_architecture_rejected[use_residue-true] _____________
+
+key = 'use_residue', value = 'true'
+
+    @pytest.mark.parametrize('key,value', [('base_model','BERT'), ('num_L',True), ('num_K',0), ('use_residue','true'), ('norm','BN'), ('graph_type','GCN3'), ('replacement_policy','zero')])
+    def test_invalid_architecture_rejected(key, value):
+        args = checkpoint_args()
+        args[key] = value
+        with pytest.raises(ValueError, match=key):
+>           E.causal_model_arguments(E.dataset_config('IEMOCAP'), torch.device('cpu'), {'args': args})
+E           AttributeError: module 'followup_evaluator' has no attribute 'causal_model_arguments'. Did you mean: '_model_arguments'?
+
+tests/test_followup_evaluator.py:87: AttributeError
+_________________ test_invalid_architecture_rejected[norm-BN] __________________
+
+key = 'norm', value = 'BN'
+
+    @pytest.mark.parametrize('key,value', [('base_model','BERT'), ('num_L',True), ('num_K',0), ('use_residue','true'), ('norm','BN'), ('graph_type','GCN3'), ('replacement_policy','zero')])
+    def test_invalid_architecture_rejected(key, value):
+        args = checkpoint_args()
+        args[key] = value
+        with pytest.raises(ValueError, match=key):
+>           E.causal_model_arguments(E.dataset_config('IEMOCAP'), torch.device('cpu'), {'args': args})
+E           AttributeError: module 'followup_evaluator' has no attribute 'causal_model_arguments'. Did you mean: '_model_arguments'?
+
+tests/test_followup_evaluator.py:87: AttributeError
+_____________ test_invalid_architecture_rejected[graph_type-GCN3] ______________
+
+key = 'graph_type', value = 'GCN3'
+
+    @pytest.mark.parametrize('key,value', [('base_model','BERT'), ('num_L',True), ('num_K',0), ('use_residue','true'), ('norm','BN'), ('graph_type','GCN3'), ('replacement_policy','zero')])
+    def test_invalid_architecture_rejected(key, value):
+        args = checkpoint_args()
+        args[key] = value
+        with pytest.raises(ValueError, match=key):
+>           E.causal_model_arguments(E.dataset_config('IEMOCAP'), torch.device('cpu'), {'args': args})
+E           AttributeError: module 'followup_evaluator' has no attribute 'causal_model_arguments'. Did you mean: '_model_arguments'?
+
+tests/test_followup_evaluator.py:87: AttributeError
+_________ test_invalid_architecture_rejected[replacement_policy-zero] __________
+
+key = 'replacement_policy', value = 'zero'
+
+    @pytest.mark.parametrize('key,value', [('base_model','BERT'), ('num_L',True), ('num_K',0), ('use_residue','true'), ('norm','BN'), ('graph_type','GCN3'), ('replacement_policy','zero')])
+    def test_invalid_architecture_rejected(key, value):
+        args = checkpoint_args()
+        args[key] = value
+        with pytest.raises(ValueError, match=key):
+>           E.causal_model_arguments(E.dataset_config('IEMOCAP'), torch.device('cpu'), {'args': args})
+E           AttributeError: module 'followup_evaluator' has no attribute 'causal_model_arguments'. Did you mean: '_model_arguments'?
+
+tests/test_followup_evaluator.py:87: AttributeError
+_________________ test_missing_or_unsafe_architecture_rejected _________________
+
+    def test_missing_or_unsafe_architecture_rejected():
+        for args in ({'causal': True}, {**checkpoint_args(), 'architecture': {'__class__': 'something'}},
+                     {**checkpoint_args(), 'architecture': {'D_g': -1}},
+                     {**checkpoint_args('Transformer'), 'architecture': {'D_g': 10}}):
+            with pytest.raises(ValueError):
+>               E.causal_model_arguments(E.dataset_config('IEMOCAP'), torch.device('cpu'), {'args': args})
+E               AttributeError: module 'followup_evaluator' has no attribute 'causal_model_arguments'. Did you mean: '_model_arguments'?
+
+tests/test_followup_evaluator.py:95: AttributeError
+_______ test_real_main_entrypoint_with_synthetic_validation_loader[cpu] ________
+
+tmp_path = PosixPath('/tmp/pytest-of-yangbin/pytest-678/test_real_main_entrypoint_with0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x76ce0faf4bb0>
+device = 'cpu'
+
+    @pytest.mark.parametrize('device', ['cpu', 'cuda'])
+    def test_real_main_entrypoint_with_synthetic_validation_loader(tmp_path, monkeypatch, device):
+        if device == 'cuda' and not torch.cuda.is_available():
+            pytest.skip('CUDA unavailable; no CUDA main execution claimed')
+        config = E.dataset_config('IEMOCAP')
+        checkpoint = {'args': checkpoint_args('LSTM', True, True)}
+>       models = E.build_models(config, torch.device('cpu'), causal=True, checkpoint=checkpoint)
+E       TypeError: build_models() got an unexpected keyword argument 'checkpoint'
+
+tests/test_followup_evaluator.py:104: TypeError
+=========================== short test summary info ============================
+FAILED tests/test_followup_evaluator.py::test_cuda_device_resolution_public_api[cuda-cuda:2]
+FAILED tests/test_followup_evaluator.py::test_cuda_device_resolution_public_api[cuda:0-cuda:0]
+FAILED tests/test_followup_evaluator.py::test_cuda_device_resolution_public_api[cuda:1-cuda:1]
+FAILED tests/test_followup_evaluator.py::test_cpu_and_invalid_devices - Attri...
+FAILED tests/test_followup_evaluator.py::test_architecture_roundtrip_uses_strict_real_networks[False-False-GRU]
+FAILED tests/test_followup_evaluator.py::test_architecture_roundtrip_uses_strict_real_networks[False-False-LSTM]
+FAILED tests/test_followup_evaluator.py::test_architecture_roundtrip_uses_strict_real_networks[False-False-Transformer]
+FAILED tests/test_followup_evaluator.py::test_architecture_roundtrip_uses_strict_real_networks[False-True-GRU]
+FAILED tests/test_followup_evaluator.py::test_architecture_roundtrip_uses_strict_real_networks[False-True-LSTM]
+FAILED tests/test_followup_evaluator.py::test_architecture_roundtrip_uses_strict_real_networks[False-True-Transformer]
+FAILED tests/test_followup_evaluator.py::test_architecture_roundtrip_uses_strict_real_networks[True-False-GRU]
+FAILED tests/test_followup_evaluator.py::test_architecture_roundtrip_uses_strict_real_networks[True-False-LSTM]
+FAILED tests/test_followup_evaluator.py::test_architecture_roundtrip_uses_strict_real_networks[True-False-Transformer]
+FAILED tests/test_followup_evaluator.py::test_architecture_roundtrip_uses_strict_real_networks[True-True-GRU]
+FAILED tests/test_followup_evaluator.py::test_architecture_roundtrip_uses_strict_real_networks[True-True-LSTM]
+FAILED tests/test_followup_evaluator.py::test_architecture_roundtrip_uses_strict_real_networks[True-True-Transformer]
+FAILED tests/test_followup_evaluator.py::test_invalid_architecture_rejected[base_model-BERT]
+FAILED tests/test_followup_evaluator.py::test_invalid_architecture_rejected[num_L-True]
+FAILED tests/test_followup_evaluator.py::test_invalid_architecture_rejected[num_K-0]
+FAILED tests/test_followup_evaluator.py::test_invalid_architecture_rejected[use_residue-true]
+FAILED tests/test_followup_evaluator.py::test_invalid_architecture_rejected[norm-BN]
+FAILED tests/test_followup_evaluator.py::test_invalid_architecture_rejected[graph_type-GCN3]
+FAILED tests/test_followup_evaluator.py::test_invalid_architecture_rejected[replacement_policy-zero]
+FAILED tests/test_followup_evaluator.py::test_missing_or_unsafe_architecture_rejected
+FAILED tests/test_followup_evaluator.py::test_real_main_entrypoint_with_synthetic_validation_loader[cpu]
+25 failed, 1 skipped in 1.50s

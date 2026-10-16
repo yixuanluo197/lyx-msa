@@ -69,21 +69,18 @@ def test_legacy_baseline_state_dict_remains_accepted():
 
 
 def test_curriculum_files_are_separate_and_causal_wrapper_is_required(tmp_path, monkeypatch):
+    # The reviewed wrapper was insufficient provenance; causal callers must now
+    # supply an explicit immutable artifact and data manifest.
     monkeypatch.chdir(tmp_path)
     (tmp_path / 'caldiff').mkdir()
     baseline = {'dialogue-a': 0.1}
-    causal = {'dialogue-a': 0.7}
     with open('caldiff/IEMOCAP_diff.pkl', 'wb') as handle:
         pickle.dump(baseline, handle)
-    with pytest.raises(FileNotFoundError):
-        load_curriculum_difficulties('IEMOCAP', causal=True)
     with open('caldiff/IEMOCAP_causal_diff.pkl', 'wb') as handle:
-        pickle.dump({'causal': True, 'dataset': 'IEMOCAP', 'difficulties': causal}, handle)
-    assert load_curriculum_difficulties('IEMOCAP', causal=True) == causal
+        pickle.dump({'causal': True, 'dataset': 'IEMOCAP',
+                     'difficulties': {'dialogue-a': 0.7}}, handle)
     assert load_curriculum_difficulties('IEMOCAP') == baseline
-    with open('caldiff/IEMOCAP_causal_diff.pkl', 'wb') as handle:
-        pickle.dump(baseline, handle)
-    with pytest.raises(ValueError, match='causal difficulty wrapper'):
+    with pytest.raises(ValueError, match='explicit difficulty path'):
         load_curriculum_difficulties('IEMOCAP', causal=True)
 
 

@@ -1,0 +1,9 @@
+Original evaluator model factory base_model: GRU
+Legal causal training checkpoint base_model: LSTM
+CONFIRMED FIXED-FACTORY REJECTION: checkpoint base_model='LSTM' does not match requested 'GRU'
+Traceback (most recent call last):
+  File "<stdin>", line 13, in <module>
+  File "/data2/yb/paper/lyx-msa/CMERC/dataloader.py", line 82, in validate_checkpoint_protocol
+    raise ValueError('checkpoint {}={!r} does not match requested {!r}'.format(
+ValueError: checkpoint base_model='LSTM' does not match requested 'GRU'
+No dataset or trained weights were loaded; this is the minimal architecture admission counterexample.

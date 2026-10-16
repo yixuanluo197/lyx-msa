@@ -1,0 +1,26 @@
+construct hyper
+construct hyper
+construct hyper
+construct hyper
+  0%|          | 0/2 [00:00<?, ?it/s] 50%|█████     | 1/2 [00:00<00:00,  2.43it/s]100%|██████████| 2/2 [00:00<00:00,  4.26it/s]
+construct hyper
+construct hyper
+construct hyper
+construct hyper
+  0%|          | 0/2 [00:00<?, ?it/s]  0%|          | 0/2 [00:00<?, ?it/s]
+Traceback (most recent call last):
+  File "/data2/yb/paper/lyx-msa/CMERC/scripts/verify_training_integration.py", line 275, in <module>
+    main()
+  File "/data2/yb/paper/lyx-msa/CMERC/scripts/verify_training_integration.py", line 265, in main
+    report = audit(device)
+  File "/data2/yb/paper/lyx-msa/CMERC/scripts/verify_training_integration.py", line 228, in audit
+    components = run_epoch(current, optimizer, batch_data, 0, device, records)
+  File "/data2/yb/paper/lyx-msa/CMERC/scripts/verify_training_integration.py", line 62, in run_epoch
+    return training.train_or_eval_graph_model(*models, torch.nn.NLLLoss(),
+  File "/data2/yb/paper/lyx-msa/CMERC/train_cm.py", line 505, in train_or_eval_graph_model
+    mask_textf1 = mask_features(textf1)
+  File "/data2/yb/paper/lyx-msa/CMERC/train_cm.py", line 504, in <lambda>
+    mask_features = lambda feature: causal_mean_replacement(feature, umask) if getattr(args, 'causal', False) else feature.mean(dim=0).repeat(feature.shape[0], 1, 1)
+  File "/data2/yb/paper/lyx-msa/CMERC/dataloader.py", line 52, in causal_mean_replacement
+    sums = (features * valid).cumsum(dim=0)
+RuntimeError: cumsum_cuda_kernel does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True)'. You can turn off determinism just for this operation, or you can use the 'warn_only=True' option, if that's acceptable for your application. You can also file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation.

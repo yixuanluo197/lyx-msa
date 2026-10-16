@@ -1,0 +1,201 @@
+{
+  "root_baseline_checkpoints": [
+    {
+      "path": "runs/formal/baseline/IEMOCAP_official_test_seed1475/best.pt",
+      "causal": false,
+      "selection_protocol": "official_test",
+      "seed": 1475,
+      "has_data_provenance": false,
+      "usable_causal_teacher": false
+    },
+    {
+      "path": "runs/formal/baseline/IEMOCAP_validation_seed1475/best.pt",
+      "causal": false,
+      "selection_protocol": "validation",
+      "seed": 1475,
+      "has_data_provenance": false,
+      "usable_causal_teacher": false
+    },
+    {
+      "path": "runs/formal/baseline/MELD_official_test_seed67137/best.pt",
+      "causal": false,
+      "selection_protocol": "official_test",
+      "seed": 67137,
+      "has_data_provenance": false,
+      "usable_causal_teacher": false
+    },
+    {
+      "path": "runs/formal/baseline/MELD_validation_seed67137/best.pt",
+      "causal": false,
+      "selection_protocol": "validation",
+      "seed": 67137,
+      "has_data_provenance": false,
+      "usable_causal_teacher": false
+    }
+  ],
+  "experiment_configuration_files": [
+    {
+      "path": "experiments/xp_mainline_validation/20261016T050823Z/provenance/effective_config.json",
+      "contains_causal_true": false
+    },
+    {
+      "path": "experiments/xp_multiseed/20261014T1627Z/runs/baseline/IEMOCAP_official_test_seed1475/effective_config.json",
+      "contains_causal_true": false
+    },
+    {
+      "path": "experiments/xp_multiseed/20261014T1627Z/runs/baseline/MELD_official_test_seed67137/effective_config.json",
+      "contains_causal_true": false
+    },
+    {
+      "path": "experiments/xp_multiseed/20261014T1627Z/runs/cmerc/MELD_official_test_seed3407/effective_config.json",
+      "contains_causal_true": false
+    },
+    {
+      "path": "experiments/xp_multiseed/20261014T1627Z/runs/cmerc/MELD_official_test_seed2026/effective_config.json",
+      "contains_causal_true": false
+    },
+    {
+      "path": "experiments/xp_multiseed/20261014T1627Z/runs/cmerc/IEMOCAP_official_test_seed3407/effective_config.json",
+      "contains_causal_true": false
+    },
+    {
+      "path": "experiments/xp_multiseed/20261014T1627Z/runs/cmerc/IEMOCAP_official_test_seed1475/effective_config.json",
+      "contains_causal_true": false
+    },
+    {
+      "path": "experiments/xp_multiseed/20261014T1627Z/runs/cmerc/IEMOCAP_official_test_seed42/effective_config.json",
+      "contains_causal_true": false
+    },
+    {
+      "path": "experiments/xp_multiseed/20261014T1627Z/runs/cmerc/IEMOCAP_official_test_seed2026/effective_config.json",
+      "contains_causal_true": false
+    },
+    {
+      "path": "experiments/xp_multiseed/20261014T1627Z/runs/cmerc/MELD_official_test_seed2025/effective_config.json",
+      "contains_causal_true": false
+    },
+    {
+      "path": "experiments/xp_multiseed/20261014T1627Z/runs/cmerc/IEMOCAP_official_test_seed2025/effective_config.json",
+      "contains_causal_true": false
+    },
+    {
+      "path": "experiments/xp_multiseed/20261014T1627Z/runs/cmerc/MELD_official_test_seed67137/effective_config.json",
+      "contains_causal_true": false
+    },
+    {
+      "path": "experiments/xp_multiseed/20261014T1627Z/runs/cmerc/MELD_official_test_seed42/effective_config.json",
+      "contains_causal_true": false
+    },
+    {
+      "path": "experiments/xp_mainline_validation/20261016T050823Z/attempts/MELD_cmerc_validation_seed3407/2026-10-16T082751.934532_0000/run_dir/run_manifest.json",
+      "contains_causal_true": false
+    },
+    {
+      "path": "experiments/xp_mainline_validation/20261016T050823Z/runs/baseline/IEMOCAP_validation_seed67137/run_manifest.json",
+      "contains_causal_true": false
+    },
+    {
+      "path": "experiments/xp_mainline_validation/20261016T050823Z/runs/baseline/MELD_validation_seed2024/run_manifest.json",
+      "contains_causal_true": false
+    },
+    {
+      "path": "experiments/xp_mainline_validation/20261016T050823Z/runs/baseline/IEMOCAP_validation_seed3407/run_manifest.json",
+      "contains_causal_true": false
+    },
+    {
+      "path": "experiments/xp_mainline_validation/20261016T050823Z/runs/baseline/MELD_validation_seed42/run_manifest.json",
+      "contains_causal_true": false
+    },
+    {
+      "path": "experiments/xp_mainline_validation/20261016T050823Z/runs/baseline/IEMOCAP_validation_seed1475/run_manifest.json",
+      "contains_causal_true": false
+    },
+    {
+      "path": "experiments/xp_mainline_validation/20261016T050823Z/runs/baseline/IEMOCAP_validation_seed2024/run_manifest.json",
+      "contains_causal_true": false
+    },
+    {
+      "path": "experiments/xp_mainline_validation/20261016T050823Z/runs/baseline/MELD_validation_seed1475/run_manifest.json",
+      "contains_causal_true": false
+    },
+    {
+      "path": "experiments/xp_mainline_validation/20261016T050823Z/runs/baseline/MELD_validation_seed3407/run_manifest.json",
+      "contains_causal_true": false
+    },
+    {
+      "path": "experiments/xp_mainline_validation/20261016T050823Z/runs/baseline/MELD_validation_seed67137/run_manifest.json",
+      "contains_causal_true": false
+    },
+    {
+      "path": "experiments/xp_mainline_validation/20261016T050823Z/runs/baseline/IEMOCAP_validation_seed42/run_manifest.json",
+      "contains_causal_true": false
+    },
+    {
+      "path": "experiments/xp_mainline_validation/20261016T050823Z/runs/cmerc/IEMOCAP_validation_seed67137/run_manifest.json",
+      "contains_causal_true": false
+    },
+    {
+      "path": "experiments/xp_mainline_validation/20261016T050823Z/runs/cmerc/MELD_validation_seed2024/run_manifest.json",
+      "contains_causal_true": false
+    },
+    {
+      "path": "experiments/xp_mainline_validation/20261016T050823Z/runs/cmerc/IEMOCAP_validation_seed3407/run_manifest.json",
+      "contains_causal_true": false
+    },
+    {
+      "path": "experiments/xp_mainline_validation/20261016T050823Z/runs/cmerc/MELD_validation_seed42/run_manifest.json",
+      "contains_causal_true": false
+    },
+    {
+      "path": "experiments/xp_mainline_validation/20261016T050823Z/runs/cmerc/IEMOCAP_validation_seed1475/run_manifest.json",
+      "contains_causal_true": false
+    },
+    {
+      "path": "experiments/xp_mainline_validation/20261016T050823Z/runs/cmerc/IEMOCAP_validation_seed2024/run_manifest.json",
+      "contains_causal_true": false
+    },
+    {
+      "path": "experiments/xp_mainline_validation/20261016T050823Z/runs/cmerc/MELD_validation_seed1475/run_manifest.json",
+      "contains_causal_true": false
+    },
+    {
+      "path": "experiments/xp_mainline_validation/20261016T050823Z/runs/cmerc/MELD_validation_seed3407/run_manifest.json",
+      "contains_causal_true": false
+    },
+    {
+      "path": "experiments/xp_mainline_validation/20261016T050823Z/runs/cmerc/MELD_validation_seed67137/run_manifest.json",
+      "contains_causal_true": false
+    },
+    {
+      "path": "experiments/xp_mainline_validation/20261016T050823Z/runs/cmerc/IEMOCAP_validation_seed42/run_manifest.json",
+      "contains_causal_true": false
+    },
+    {
+      "path": "experiments/xp_mainline_validation/20261016T050823Z/preflight/gpu3_IEMOCAP/profile/baseline/IEMOCAP_validation_seed1475/run_manifest.json",
+      "contains_causal_true": false
+    },
+    {
+      "path": "experiments/xp_mainline_validation/20261016T050823Z/preflight/gpu3_IEMOCAP/profile/cmerc/IEMOCAP_validation_seed1475/run_manifest.json",
+      "contains_causal_true": false
+    },
+    {
+      "path": "experiments/xp_mainline_validation/20261016T050823Z/preflight/gpu3_MELD/profile/baseline/MELD_validation_seed67137/run_manifest.json",
+      "contains_causal_true": false
+    },
+    {
+      "path": "experiments/xp_mainline_validation/20261016T050823Z/preflight/gpu3_MELD/profile/cmerc/MELD_validation_seed67137/run_manifest.json",
+      "contains_causal_true": false
+    },
+    {
+      "path": "experiments/xp_mainline_validation/20261016T050823Z/preflight/gpu3_MELD/resume/full/cmerc/IEMOCAP_validation_seed2024/run_manifest.json",
+      "contains_causal_true": false
+    },
+    {
+      "path": "experiments/xp_mainline_validation/20261016T050823Z/preflight/gpu3_MELD/resume/resumed/cmerc/IEMOCAP_validation_seed2024/run_manifest.json",
+      "contains_causal_true": false
+    }
+  ],
+  "causal_configuration_count": 0,
+  "formal_causal_difficulty_status": "blocked_no_valid_causal_baseline_with_required_provenance",
+  "note": "Original public checkpoints and noncausal difficulties are not admissible causal teachers. Diagnostic random models are not formal inputs."
+}

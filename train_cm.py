@@ -2,6 +2,7 @@ import os
 import json
 import numpy as np, argparse, time, pickle, random
 from pathlib import Path
+from contextlib import nullcontext
 import torch
 import torch.nn as nn
 import torch.optim as optim
@@ -17,6 +18,7 @@ import datetime
 import ipdb
 from clloss import CKSCL_context, CKSCL_tav
 from tqdm import tqdm
+from causal_run import prepare_run, sha256
 CKSCL_m = CKSCL_tav()
 CKSCL_c = CKSCL_context()
 
@@ -54,6 +56,21 @@ def save_training_checkpoint(path, model, optimizer, epoch, args, best_metric, b
         'best_metric': best_metric,
         'best_epoch': best_epoch,
     }
+    saved_args = payload['args']
+    payload['difficulty_sha256'] = (saved_args.get('difficulty_artifact') or {}).get('sha256')
+    run_manifest = saved_args.get('run_manifest')
+    if run_manifest:
+        payload['run_manifest_sha256'] = run_manifest['sha256']
+    payload['curriculum'] = {
+        'completed_epoch': epoch,
+        'next_epoch_ratio': (min(1., round(saved_args['epoch_ratio'] *
+            int((epoch + 1) / saved_args['scheduler_steps'] + 1), 2))
+            if saved_args.get('courselearning') and saved_args.get('scheduler_steps', 0) > 0 and 'epoch_ratio' in saved_args else -1),
+    }
+    best_path = path.parent / 'best.pt'
+    if path.name != 'best.pt' and best_path.exists():
+        payload['best_checkpoint'] = {'path': str(best_path.resolve()),
+                                      'sha256': sha256(best_path), 'epoch': best_epoch}
     temporary_path = path.with_suffix(path.suffix + '.tmp')
     torch.save(payload, temporary_path)
     os.replace(temporary_path, path)
@@ -73,12 +90,40 @@ def load_training_checkpoint(path, model, optimizer, map_location=None, expected
         protocol_keys = (
             'seed', 'dropout', 'rec_dropout', 'batch_size', 'lr', 'l2',
             'calibrate', 'rank_coff', 'contrastlearning', 'mscl_coff', 'cscl_coff',
-            'courselearning', 'epoch_ratio', 'scheduler_steps',
+            'courselearning', 'epoch_ratio', 'scheduler_steps', 'split_seed',
+            'auxiliary_policy', 'replacement_policy', 'data_provenance',
         )
         for key in protocol_keys:
             if key in requested and (key not in saved or saved[key] != requested[key]):
                 raise ValueError('causal resume {} does not match the saved training protocol'.format(key))
-    model.load_state_dict(checkpoint['model_state_dict'])
+    if expected_args is not None:
+        requested = expected_args if isinstance(expected_args, dict) else vars(expected_args)
+        expected_difficulty = (requested.get('difficulty_artifact') or {}).get('sha256')
+        if checkpoint.get('difficulty_sha256') != expected_difficulty:
+            raise ValueError('resume difficulty hash does not match the saved checkpoint')
+        if requested.get('difficulty_artifact'):
+            artifact = requested['difficulty_artifact']
+            if 'path' in artifact and sha256(artifact['path']) != expected_difficulty:
+                raise ValueError('resume difficulty file content differs from pinned SHA256')
+        if requested.get('run_manifest'):
+            from causal_run import run_config_digest
+            manifest = requested['run_manifest']
+            manifest_path = Path(manifest['path'])
+            if not manifest_path.is_file() or sha256(manifest_path) != manifest['sha256']:
+                raise ValueError('resume run manifest file hash mismatch')
+            manifest_data = json.loads(manifest_path.read_text())
+            if manifest_data.get('config_sha256') != run_config_digest(requested):
+                raise ValueError('resume configuration does not match run manifest')
+            # Best-checkpoint branches intentionally have a new run manifest;
+            # their parent hash must identify the exact resumed checkpoint.
+            if checkpoint.get('run_manifest_sha256') != manifest['sha256']:
+                parent = manifest_data.get('parent_checkpoint') or {}
+                if parent.get('sha256') != sha256(path):
+                    raise ValueError('resume checkpoint run manifest hash mismatch')
+    if expected_args is not None:
+        from causal_run import validate_epoch_budget
+        validate_epoch_budget(expected_args, checkpoint)
+    model.load_state_dict(checkpoint['model_state_dict'], strict=True)
     optimizer.load_state_dict(checkpoint['optimizer_state_dict'])
     parameter_device = next(model.parameters()).device
     for optimizer_state in optimizer.state.values():
@@ -91,6 +136,8 @@ def load_training_checkpoint(path, model, optimizer, map_location=None, expected
         'best_metric': checkpoint.get('best_metric'),
         'best_epoch': checkpoint.get('best_epoch'),
         'args': checkpoint.get('args', {}),
+        'curriculum': checkpoint.get('curriculum'),
+        'best_checkpoint': checkpoint.get('best_checkpoint'),
     }
 
 
@@ -184,8 +231,11 @@ def get_train_valid_sampler(trainset, valid=0.1, dataset='IEMOCAP'):
 
 
 def get_MELD_loaders(batch_size=32, valid=0.1, num_workers=0, pin_memory=False,
-                     epoch_ratio=-1, selection_protocol='official_test', seed=None, causal=False):
+                     epoch_ratio=-1, selection_protocol='official_test', seed=None, causal=False, split_seed=None, difficulty_path=None, data_provenance=None, difficulty_sha256=None, difficulty_architecture=None):
     dataset_kwargs = {'causal': True} if causal else {}
+    if causal and epoch_ratio != -1:
+        dataset_kwargs.update(difficulty_path=difficulty_path, data_provenance=data_provenance,
+                              difficulty_sha256=difficulty_sha256, difficulty_architecture=difficulty_architecture)
     if selection_protocol == 'validation':
         trainset = MELDDataset('data/MELD_features_raw1.pkl', split='train', epoch_ratio=epoch_ratio, **dataset_kwargs)
         validset = MELDDataset('data/MELD_features_raw1.pkl', split='validation', **dataset_kwargs)
@@ -241,12 +291,15 @@ def get_MELD_loaders(batch_size=32, valid=0.1, num_workers=0, pin_memory=False,
 
 
 def get_IEMOCAP_loaders(batch_size=32, valid=0.1, num_workers=0, pin_memory=False,
-                        epoch_ratio=-1, selection_protocol='official_test', seed=None, causal=False):
+                        epoch_ratio=-1, selection_protocol='official_test', seed=None, causal=False, split_seed=None, difficulty_path=None, data_provenance=None, difficulty_sha256=None, difficulty_architecture=None):
     dataset_kwargs = {'causal': True} if causal else {}
+    if causal and epoch_ratio != -1:
+        dataset_kwargs.update(difficulty_path=difficulty_path, data_provenance=data_provenance,
+                              difficulty_sha256=difficulty_sha256, difficulty_architecture=difficulty_architecture)
     if selection_protocol == 'validation':
         full_trainset = IEMOCAPDataset(**dataset_kwargs)
         train_keys, validation_keys = split_iemocap_dialogues(
-            full_trainset.keys, seed=0 if seed is None else seed, valid_fraction=valid
+            full_trainset.keys, seed=(0 if seed is None else seed) if split_seed is None else split_seed, valid_fraction=valid
         )
         trainset = IEMOCAPDataset(epoch_ratio=epoch_ratio, keys=train_keys, **dataset_kwargs)
         validset = IEMOCAPDataset(keys=validation_keys, **dataset_kwargs)
@@ -362,7 +415,7 @@ def train_or_eval_model(model, loss_function, dataloader, epoch, optimizer=None,
     return avg_loss, avg_accuracy, labels, preds, masks, avg_fscore, [alphas, alphas_f, alphas_b, vids]
 
 
-def train_or_eval_graph_model(model, model_mm, model_intra, model_inter, loss_function, dataloader, epoch, cuda, modals, optimizer=None, train=False, dataset='IEMOCAP', return_components=False):
+def train_or_eval_graph_model(model, model_mm, model_intra, model_inter, loss_function, dataloader, epoch, cuda, modals, optimizer=None, train=False, dataset='IEMOCAP', return_components=False, diagnostic_callback=None):
     losses, preds, labels = [], [], []
     loss_components = []
     scores, vids = [], []
@@ -384,8 +437,27 @@ def train_or_eval_graph_model(model, model_mm, model_intra, model_inter, loss_fu
     model_inter.load_state_dict(model.state_dict())
     model_inter.eval()
 
+    auxiliary_policy = getattr(args, 'auxiliary_policy', 'legacy_epoch_snapshot')
+    if auxiliary_policy not in ('legacy_epoch_snapshot', 'same_step_same_mode'):
+        raise ValueError('unknown auxiliary_policy: {}'.format(auxiliary_policy))
     seed_everything(args.seed)
-    for data in tqdm(dataloader):
+    for batch_index, data in enumerate(tqdm(dataloader)):
+        if auxiliary_policy == 'same_step_same_mode':
+            for auxiliary in (model_mm, model_intra, model_inter):
+                auxiliary.load_state_dict(model.state_dict(), strict=True)
+                auxiliary.eval()
+        diagnostic = None
+        if diagnostic_callback is not None:
+            diagnostic = {'epoch': epoch, 'batch': batch_index, 'auxiliary_policy': auxiliary_policy,
+                'main_training': model.training, 'aux_training': model_mm.training,
+                'main_aux_max_abs_diff': max((p.detach() - q.detach()).abs().max().item()
+                    for p, q in zip(model.parameters(), model_mm.parameters())),
+                'hscl_labels': {}, 'cc_per_view': {}, 'gradient_norms': {},
+                'aux_modes': {name: m.training for name,m in zip(('mm','intra','inter'), (model_mm,model_intra,model_inter))},
+                'confidence_backend': 'ATen' if auxiliary_policy == 'same_step_same_mode' else 'default',
+                'confidence_reference_training': False if auxiliary_policy == 'same_step_same_mode' else model.training}
+            parameters_before_step = {name: p.detach().clone() for name,p in model.named_parameters()}
+
         if train:
             optimizer.zero_grad()
         
@@ -425,7 +497,11 @@ def train_or_eval_graph_model(model, model_mm, model_intra, model_inter, loss_fu
             log_prob, e_i, e_n, e_t, e_l, hidden = model(textf, qmask, umask, lengths)
         label = torch.cat([label[j][:lengths[j]] for j in range(len(label))])
         if args.contrastlearning or args.calibrate:
-            with torch.no_grad():
+            # A same-step comparison uses the same backend for the full
+            # reference and every removed view (ATen supports eval backward).
+            confidence_backend = (torch.backends.cudnn.flags(enabled=False)
+                                  if auxiliary_policy == 'same_step_same_mode' else nullcontext())
+            with torch.no_grad(), confidence_backend:
                 ft_scl = hidden
                 mask_features = lambda feature: causal_mean_replacement(feature, umask) if getattr(args, 'causal', False) else feature.mean(dim=0).repeat(feature.shape[0], 1, 1)
                 mask_textf1 = mask_features(textf1)
@@ -436,6 +512,25 @@ def train_or_eval_graph_model(model, model_mm, model_intra, model_inter, loss_fu
                 mask_acouf = mask_features(acouf)
                 mask_visuf = mask_features(visuf)
                 
+                # Explicit policy: shared current weights, all confidence comparisons
+                # in eval. Classification/HSCL use the normal train pass. Removed
+                # views and HSCL labels are read-only; full CC reference has gradient.
+                # This does not change legacy_epoch_snapshot's original behavior.
+                if auxiliary_policy == 'same_step_same_mode':
+                    was_training = model.training
+                    model.eval()
+                    try:
+                        # cuDNN eval RNN does not retain backward state. The
+                        # confidence reference needs gradients for CC, so use
+                        # ATen RNN for this pass only, retaining eval semantics.
+                        with torch.set_grad_enabled(train):
+                            confidence_log_prob = model([textf1,textf2,textf3,textf4], qmask,
+                                umask, lengths, acouf, visuf, epoch)[0]
+                    finally:
+                        model.train(was_training)
+                else:
+                    confidence_log_prob = log_prob
+
                 # mask multimodal data
                 log_prob2t, e_i, e_n, e_t, e_l, hiddent = model_mm([mask_textf1, mask_textf2, mask_textf3, mask_textf4], qmask, umask, lengths, acouf, visuf, epoch)
                 log_prob2a, e_i, e_n, e_t, e_l, hiddena = model_mm([textf1,textf2,textf3,textf4], qmask, umask, lengths, mask_acouf, visuf, epoch)
@@ -455,7 +550,7 @@ def train_or_eval_graph_model(model, model_mm, model_intra, model_inter, loss_fu
                 pred2c_inter = torch.argmax(log_prob2inter, 1)
 
             # 2. rank loss, indicate cf
-            lp_ = log_prob
+            lp_ = confidence_log_prob
             pred_ = torch.argmax(lp_,1)
             rank_loss = 0
             for i in range(len(log_prob)):
@@ -475,6 +570,11 @@ def train_or_eval_graph_model(model, model_mm, model_intra, model_inter, loss_fu
                 if lp_[i][num] <= log_prob2inter[i][num]:
                     rank_lossc += (torch.sub(log_prob2inter[i][num], lp_[i][num]))
 
+            if diagnostic is not None:
+                rows = torch.arange(len(label), device=label.device)
+                diagnostic['cc_per_view'] = {name: torch.relu(view[rows,label] - lp_[rows,label]).sum().item()
+                    for name, view in zip(('text','audio','visual','intra','inter'),
+                        (log_prob2t,log_prob2a,log_prob2v,log_prob2intra,log_prob2inter))}
             rank_loss = rank_loss + rank_lossc
             # 2. for SCL label ##########################################################
             # 0: confidence up 
@@ -541,6 +641,11 @@ def train_or_eval_graph_model(model, model_mm, model_intra, model_inter, loss_fu
             Mscl_tav = CKSCL_m(ft_scl, labels1=Mscl_pred_t, labels2=Mscl_pred_a, labels3=Mscl_pred_v, weight1=create_class_weight_SCL(Mscl_pred_t), weight2=create_class_weight_SCL(Mscl_pred_a), weight3=create_class_weight_SCL(Mscl_pred_v))
             Cscl_c = CKSCL_c(ft_scl, labels1=Cscl_pred_intra, labels2=Cscl_pred_inter, weight1=create_class_weight_SCL(Cscl_pred_intra), weight2=create_class_weight_SCL(Cscl_pred_inter))
 
+            if diagnostic is not None:
+                diagnostic['hscl_labels'] = {name: value.detach().cpu().tolist()
+                    for name,value in zip(('text','audio','visual','intra','inter'),
+                        (Mscl_pred_t,Mscl_pred_a,Mscl_pred_v,Cscl_pred_intra,Cscl_pred_inter))}
+
         classification_loss = loss_function(log_prob, label)
         preds.append(torch.argmax(log_prob, 1).cpu().numpy())
         labels.append(label.cpu().numpy())
@@ -557,10 +662,42 @@ def train_or_eval_graph_model(model, model_mm, model_intra, model_inter, loss_fu
             cscl_coff=args.cscl_coff,
         )
         loss_components.append(components)
+        if diagnostic is not None:
+            diagnostic['losses'] = components
+            diagnostic['gradient_coefficients'] = {'classification_loss': 1.,
+                'cc_loss': args.rank_coff if args.calibrate else 0.,
+                'mscl_loss': args.mscl_coff if args.contrastlearning else 0.,
+                'cscl_loss': args.cscl_coff if args.contrastlearning else 0.}
+            component_tensors = {'classification_loss': classification_loss}
+            if args.calibrate:
+                component_tensors['cc_loss'] = rank_loss
+            if args.contrastlearning:
+                component_tensors.update(mscl_loss=Mscl_tav, cscl_loss=Cscl_c)
+            used_parameters = tuple(p for p in model.parameters() if p.requires_grad)
+            for name, value in component_tensors.items():
+                if train and torch.is_tensor(value) and value.requires_grad:
+                    gradients = torch.autograd.grad(value, used_parameters,
+                        retain_graph=True, allow_unused=True)
+                    diagnostic['gradient_norms'][name] = sum(float(g.detach().square().sum())
+                        for g in gradients if g is not None) ** .5
+                else:
+                    diagnostic['gradient_norms'][name] = 0.
+        if diagnostic is not None:
+            diagnostic['weighted_gradient_norms'] = {name: norm * abs(diagnostic['gradient_coefficients'][name])
+                for name,norm in diagnostic['gradient_norms'].items()}
         if train:
             total_loss.backward()
+            if diagnostic is not None:
+                diagnostic['finite_gradients'] = all(torch.isfinite(p.grad).all().item()
+                    for p in model.parameters() if p.grad is not None)
+                diagnostic['active_gradient_parameters'] = [name for name,p in model.named_parameters()
+                    if p.grad is not None]
+
             optimizer.step()
-            
+        if diagnostic_callback is not None:
+            diagnostic['parameter_update_norms'] = {name: float((p.detach() - parameters_before_step[name]).norm())
+                for name,p in model.named_parameters() if p.grad is not None} if train else {}
+            diagnostic_callback(diagnostic)
 
     if preds!=[]:
         preds  = np.concatenate(preds)
@@ -605,6 +742,10 @@ if __name__ == '__main__':
 
     parser = argparse.ArgumentParser()
 
+    parser.add_argument('--difficulty-path', default=None, help='explicit immutable causal difficulty artifact')
+    parser.add_argument('--split-seed', type=int, default=None, help='split seed (legacy default: training seed)')
+    parser.add_argument('--auxiliary-policy', choices=['legacy_epoch_snapshot', 'same_step_same_mode'], default='legacy_epoch_snapshot')
+    parser.add_argument('--replacement-policy', choices=['prefix_mean_v1'], default='prefix_mean_v1')
     parser.add_argument('--causal', action='store_true', help='use only history and current utterances')
     parser.add_argument('--no-cuda', action='store_true', default=False, help='does not use GPU')
 
@@ -696,6 +837,7 @@ if __name__ == '__main__':
                         help='DataLoader worker count')
 
     args = parser.parse_args()
+    args.split_seed = args.seed if args.split_seed is None else args.split_seed
     if args.causal:
         args.norm = 'LN'
         if not args.graph_model or not args.multi_modal or args.mm_fusion_mthd != 'concat_DHT' or args.graph_type != 'hyper':
@@ -957,11 +1099,22 @@ if __name__ == '__main__':
     best_epoch = None
     all_fscore, all_acc, all_loss = [], [], []
     start_epoch = 0
-    run_dir = Path(args.output_dir) / '{}_{}_seed{}'.format(
-        args.Dataset, args.selection_protocol, args.seed
-    )
     if args.causal:
-        run_dir = run_dir.with_name(run_dir.name + '_causal')
+        from causal_provenance import data_provenance_from_files, architecture_from_args, resolve_causal_difficulty
+        args.data_provenance = data_provenance_from_files(args.Dataset, args.split_seed,
+            valid_fraction=.1 if args.selection_protocol == 'validation' else 0.,
+            selection_protocol=args.selection_protocol)
+        # Official-test remains an explicitly named legacy protocol, never a valid
+        # teacher for strict causal curriculum under the validation protocol.
+        args.data_provenance['selection_protocol'] = args.selection_protocol
+        args.difficulty_artifact = None
+        if args.courselearning:
+            if not args.difficulty_path:
+                raise ValueError('--causal --courselearning requires --difficulty-path')
+            _, args.difficulty_artifact = resolve_causal_difficulty(args.difficulty_path,
+                args.Dataset, args.data_provenance, architecture_from_args(args),
+                replacement_policy=args.replacement_policy, expected_teacher_seed=args.seed)
+    run_dir = prepare_run(args)
     metrics_path = run_dir / 'metrics.jsonl'
     latest_checkpoint_path = run_dir / 'latest.pt'
     best_checkpoint_path = run_dir / 'best.pt'
@@ -1016,14 +1169,22 @@ if __name__ == '__main__':
                                                                         num_workers=args.num_workers,
                                                                         epoch_ratio=epoch_ratio,
                                                                         selection_protocol=args.selection_protocol,
-                                                                        seed=args.seed, causal=args.causal)
+                                                                        seed=args.seed, causal=args.causal, split_seed=args.split_seed,
+                                                                        difficulty_path=args.difficulty_path,
+                                                                        data_provenance=getattr(args, 'data_provenance', None),
+                                                                        difficulty_sha256=(getattr(args, 'difficulty_artifact', None) or {}).get('sha256'),
+                                                                        difficulty_architecture=architecture_from_args(args) if args.causal else None)
         elif args.Dataset == 'IEMOCAP':
             train_loader, valid_loader, test_loader = get_IEMOCAP_loaders(valid=validation_fraction,
                                                                         batch_size=batch_size,
                                                                         num_workers=args.num_workers,
                                                                         epoch_ratio=epoch_ratio,
                                                                         selection_protocol=args.selection_protocol,
-                                                                        seed=args.seed, causal=args.causal)
+                                                                        seed=args.seed, causal=args.causal, split_seed=args.split_seed,
+                                                                        difficulty_path=args.difficulty_path,
+                                                                        data_provenance=getattr(args, 'data_provenance', None),
+                                                                        difficulty_sha256=(getattr(args, 'difficulty_artifact', None) or {}).get('sha256'),
+                                                                        difficulty_architecture=architecture_from_args(args) if args.causal else None)
         else:
             print("There is no such dataset")
         if args.graph_model:
@@ -1101,13 +1262,13 @@ if __name__ == '__main__':
             'max_gpu_memory_mb': max_gpu_memory_mb,
         }
         write_jsonl_record(metrics_path, epoch_record)
-        save_training_checkpoint(
-            latest_checkpoint_path, model, optimizer, e, args, best_fscore, best_epoch
-        )
         if improved:
             save_training_checkpoint(
                 best_checkpoint_path, model, optimizer, e, args, best_fscore, best_epoch
             )
+        save_training_checkpoint(
+            latest_checkpoint_path, model, optimizer, e, args, best_fscore, best_epoch
+        )
 
         print('epoch: {}, train_loss: {}, train_acc: {}, train_fscore: {}, valid_loss: {}, valid_acc: {}, valid_fscore: {}, test_loss: {}, test_acc: {}, test_fscore: {}, time: {} sec'.\
                 format(e+1, train_loss, train_acc, train_fscore, valid_loss, valid_acc, valid_fscore, test_loss, test_acc, test_fscore, elapsed_seconds))

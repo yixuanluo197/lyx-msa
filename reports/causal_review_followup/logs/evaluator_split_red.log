@@ -1,0 +1,64 @@
+FFFFF                                                                    [100%]
+=================================== FAILURES ===================================
+__________________ test_split_seed_default_is_not_silent_zero __________________
+
+    def test_split_seed_default_is_not_silent_zero():
+        args = E.parse_args(['--dataset', 'IEMOCAP', '--causal', '--checkpoint', 'x', '--output-dir', 'y'])
+>       assert args.split_seed is None
+E       AssertionError: assert 0 is None
+E        +  where 0 = Namespace(dataset='IEMOCAP', causal=True, checkpoint=PosixPath('x'), output_dir=PosixPath('y'), device='cuda', batch_size=16, num_workers=0, n_bins=15, split='test', split_seed=0, valid_fraction=0.1, max_dialogues=None).split_seed
+
+tests/test_followup_evaluator.py:143: AssertionError
+__ test_checkpoint_split_seed_is_inherited_and_conflicting_override_rejected ___
+
+    def test_checkpoint_split_seed_is_inherited_and_conflicting_override_rejected():
+        config = E.dataset_config('IEMOCAP')
+        checkpoint = {'args': {**checkpoint_args(), 'split_seed': 1475}}
+>       resolved = E.resolve_evaluation_data(config, checkpoint, 'validation',
+                                             diagnostic_data_reason='synthetic loader fixture')
+E       AttributeError: module 'followup_evaluator' has no attribute 'resolve_evaluation_data'
+
+tests/test_followup_evaluator.py:149: AttributeError
+_____ test_missing_split_source_requires_explicit_diagnostic_configuration _____
+
+    def test_missing_split_source_requires_explicit_diagnostic_configuration():
+        config = E.dataset_config('IEMOCAP')
+        checkpoint = {'args': checkpoint_args()}
+        with pytest.raises(ValueError, match='split.seed'):
+>           E.resolve_evaluation_data(config, checkpoint, 'validation')
+E           AttributeError: module 'followup_evaluator' has no attribute 'resolve_evaluation_data'
+
+tests/test_followup_evaluator.py:162: AttributeError
+___________ test_checkpoint_provenance_is_verified_before_any_subset ___________
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x7002ca30f9d0>
+
+    def test_checkpoint_provenance_is_verified_before_any_subset(monkeypatch):
+        import causal_provenance as P
+        config = E.dataset_config('IEMOCAP')
+        data = {'dataset': 'IEMOCAP', 'selection_protocol': 'validation', 'split_seed': 1475,
+                'feature_files': {'real.pkl': 'a' * 64}, 'train_ids_sha256': 'b' * 64,
+                'validation_ids_sha256': 'c' * 64, 'train_count': 10, 'validation_count': 1,
+                'schema_version': 1}
+        checkpoint = {'args': checkpoint_args(), 'data_provenance': data}
+>       resolved = E.resolve_evaluation_data(config, checkpoint, 'validation')
+E       AttributeError: module 'followup_evaluator' has no attribute 'resolve_evaluation_data'
+
+tests/test_followup_evaluator.py:179: AttributeError
+_______________ test_legacy_split_seed_is_explicitly_identified ________________
+
+    def test_legacy_split_seed_is_explicitly_identified():
+        config = E.dataset_config('IEMOCAP')
+        checkpoint = {'args': {**checkpoint_args(), 'seed': 1475, 'selection_protocol': 'validation'}}
+>       resolved = E.resolve_evaluation_data(config, checkpoint, 'validation',
+                                             diagnostic_data_reason='legacy metadata audit')
+E       AttributeError: module 'followup_evaluator' has no attribute 'resolve_evaluation_data'
+
+tests/test_followup_evaluator.py:204: AttributeError
+=========================== short test summary info ============================
+FAILED tests/test_followup_evaluator.py::test_split_seed_default_is_not_silent_zero
+FAILED tests/test_followup_evaluator.py::test_checkpoint_split_seed_is_inherited_and_conflicting_override_rejected
+FAILED tests/test_followup_evaluator.py::test_missing_split_source_requires_explicit_diagnostic_configuration
+FAILED tests/test_followup_evaluator.py::test_checkpoint_provenance_is_verified_before_any_subset
+FAILED tests/test_followup_evaluator.py::test_legacy_split_seed_is_explicitly_identified
+5 failed, 26 deselected in 1.49s

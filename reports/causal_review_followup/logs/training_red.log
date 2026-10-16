@@ -1,0 +1,145 @@
+FFFFFFF                                                                  [100%]
+=================================== FAILURES ===================================
+_________ test_existing_run_refused_and_config_id_separates_ablations __________
+
+tmp_path = PosixPath('/tmp/pytest-of-yangbin/pytest-679/test_existing_run_refused_and_0')
+
+    def test_existing_run_refused_and_config_id_separates_ablations(tmp_path):
+>       from causal_run import prepare_run, run_config_digest
+E       ModuleNotFoundError: No module named 'causal_run'
+
+tests/test_followup_training.py:44: ModuleNotFoundError
+____________ test_resume_pins_difficulty_before_loading_parameters _____________
+
+tmp_path = PosixPath('/tmp/pytest-of-yangbin/pytest-679/test_resume_pins_difficulty_be0')
+
+    def test_resume_pins_difficulty_before_loading_parameters(tmp_path):
+        a = config(difficulty_artifact={'sha256': 'a'*64})
+        full, *_ = models()
+        opt = torch.optim.Adam(full.parameters())
+        path = tmp_path / 'test.pt'
+        train_cm.save_training_checkpoint(path, full, opt, 0, a, None, None)
+        b = config(difficulty_artifact={'sha256': 'b'*64})
+>       with pytest.raises(ValueError, match='difficulty'):
+E       Failed: DID NOT RAISE <class 'ValueError'>
+
+tests/test_followup_training.py:65: Failed
+----------------------------- Captured stdout call -----------------------------
+construct hyper
+construct hyper
+construct hyper
+construct hyper
+_____ test_real_training_two_steps_and_read_only_auxiliaries[False-False] ______
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x7148fdf829b0>
+cc = False, hscl = False
+
+    @pytest.mark.parametrize('cc,hscl', [(False, False), (True, False), (False, True), (True, True)])
+    def test_real_training_two_steps_and_read_only_auxiliaries(monkeypatch, cc, hscl):
+        train_cm.seed_everything(25)
+        monkeypatch.setattr(train_cm, 'args', config(calibrate=cc, contrastlearning=hscl), raising=False)
+        full, mm, intra, inter = models(dropout=.15)
+        opt = torch.optim.Adam(full.parameters(), lr=.001)
+        before = full.gru_l.weight_ih_l0.detach().clone()
+        records = []
+>       result = train_cm.train_or_eval_graph_model(full, mm, intra, inter,
+            torch.nn.NLLLoss(), batches(), 0, False, 'avl', opt, True,
+            return_components=True, diagnostic_callback=records.append)
+E       TypeError: train_or_eval_graph_model() got an unexpected keyword argument 'diagnostic_callback'
+
+tests/test_followup_training.py:77: TypeError
+----------------------------- Captured stdout call -----------------------------
+construct hyper
+construct hyper
+construct hyper
+construct hyper
+______ test_real_training_two_steps_and_read_only_auxiliaries[True-False] ______
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x7148fe19ac80>
+cc = True, hscl = False
+
+    @pytest.mark.parametrize('cc,hscl', [(False, False), (True, False), (False, True), (True, True)])
+    def test_real_training_two_steps_and_read_only_auxiliaries(monkeypatch, cc, hscl):
+        train_cm.seed_everything(25)
+        monkeypatch.setattr(train_cm, 'args', config(calibrate=cc, contrastlearning=hscl), raising=False)
+        full, mm, intra, inter = models(dropout=.15)
+        opt = torch.optim.Adam(full.parameters(), lr=.001)
+        before = full.gru_l.weight_ih_l0.detach().clone()
+        records = []
+>       result = train_cm.train_or_eval_graph_model(full, mm, intra, inter,
+            torch.nn.NLLLoss(), batches(), 0, False, 'avl', opt, True,
+            return_components=True, diagnostic_callback=records.append)
+E       TypeError: train_or_eval_graph_model() got an unexpected keyword argument 'diagnostic_callback'
+
+tests/test_followup_training.py:77: TypeError
+----------------------------- Captured stdout call -----------------------------
+construct hyper
+construct hyper
+construct hyper
+construct hyper
+______ test_real_training_two_steps_and_read_only_auxiliaries[False-True] ______
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x7148fdf808e0>
+cc = False, hscl = True
+
+    @pytest.mark.parametrize('cc,hscl', [(False, False), (True, False), (False, True), (True, True)])
+    def test_real_training_two_steps_and_read_only_auxiliaries(monkeypatch, cc, hscl):
+        train_cm.seed_everything(25)
+        monkeypatch.setattr(train_cm, 'args', config(calibrate=cc, contrastlearning=hscl), raising=False)
+        full, mm, intra, inter = models(dropout=.15)
+        opt = torch.optim.Adam(full.parameters(), lr=.001)
+        before = full.gru_l.weight_ih_l0.detach().clone()
+        records = []
+>       result = train_cm.train_or_eval_graph_model(full, mm, intra, inter,
+            torch.nn.NLLLoss(), batches(), 0, False, 'avl', opt, True,
+            return_components=True, diagnostic_callback=records.append)
+E       TypeError: train_or_eval_graph_model() got an unexpected keyword argument 'diagnostic_callback'
+
+tests/test_followup_training.py:77: TypeError
+----------------------------- Captured stdout call -----------------------------
+construct hyper
+construct hyper
+construct hyper
+construct hyper
+______ test_real_training_two_steps_and_read_only_auxiliaries[True-True] _______
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x7148fe19a020>
+cc = True, hscl = True
+
+    @pytest.mark.parametrize('cc,hscl', [(False, False), (True, False), (False, True), (True, True)])
+    def test_real_training_two_steps_and_read_only_auxiliaries(monkeypatch, cc, hscl):
+        train_cm.seed_everything(25)
+        monkeypatch.setattr(train_cm, 'args', config(calibrate=cc, contrastlearning=hscl), raising=False)
+        full, mm, intra, inter = models(dropout=.15)
+        opt = torch.optim.Adam(full.parameters(), lr=.001)
+        before = full.gru_l.weight_ih_l0.detach().clone()
+        records = []
+>       result = train_cm.train_or_eval_graph_model(full, mm, intra, inter,
+            torch.nn.NLLLoss(), batches(), 0, False, 'avl', opt, True,
+            return_components=True, diagnostic_callback=records.append)
+E       TypeError: train_or_eval_graph_model() got an unexpected keyword argument 'diagnostic_callback'
+
+tests/test_followup_training.py:77: TypeError
+----------------------------- Captured stdout call -----------------------------
+construct hyper
+construct hyper
+construct hyper
+construct hyper
+_________ test_resume_run_requires_available_matching_historical_best __________
+
+tmp_path = PosixPath('/tmp/pytest-of-yangbin/pytest-679/test_resume_run_requires_avail0')
+
+    def test_resume_run_requires_available_matching_historical_best(tmp_path):
+>       from causal_run import prepare_run
+E       ModuleNotFoundError: No module named 'causal_run'
+
+tests/test_followup_training.py:94: ModuleNotFoundError
+=========================== short test summary info ============================
+FAILED tests/test_followup_training.py::test_existing_run_refused_and_config_id_separates_ablations
+FAILED tests/test_followup_training.py::test_resume_pins_difficulty_before_loading_parameters
+FAILED tests/test_followup_training.py::test_real_training_two_steps_and_read_only_auxiliaries[False-False]
+FAILED tests/test_followup_training.py::test_real_training_two_steps_and_read_only_auxiliaries[True-False]
+FAILED tests/test_followup_training.py::test_real_training_two_steps_and_read_only_auxiliaries[False-True]
+FAILED tests/test_followup_training.py::test_real_training_two_steps_and_read_only_auxiliaries[True-True]
+FAILED tests/test_followup_training.py::test_resume_run_requires_available_matching_historical_best
+7 failed in 4.13s

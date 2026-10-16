@@ -452,13 +452,17 @@ def train_or_eval_graph_model(model, model_mm, model_intra, model_inter, loss_fu
                 data[-1],
             )
         )
-    suffix = '_causal_diff.pkl' if args.causal else '_diff.pkl'
-    output_path = 'caldiff/{}{}'.format(args.Dataset, suffix)
-    payload = {'causal': True, 'dataset': args.Dataset, 'difficulties': Difficulties,
-               'checkpoint': args.ckpt_path, 'args': vars(args).copy()} if args.causal else Difficulties
-    with open(output_path, 'wb') as handle:
-        pickle.dump(payload, handle)
+    if args.causal:
+        from causal_provenance import write_causal_difficulty
+        output_path = write_causal_difficulty(
+            Difficulties, args.difficulty_manifest,
+            output_path=args.difficulty_output)
+    else:
+        output_path = 'caldiff/{}_diff.pkl'.format(args.Dataset)
+        with open(output_path, 'wb') as handle:
+            pickle.dump(Difficulties, handle)
     print('saved difficulties to {}'.format(output_path))
+    return Difficulties
 
 
 
@@ -473,6 +477,11 @@ if __name__ == '__main__':
 
     parser = argparse.ArgumentParser()
 
+    parser.add_argument('--difficulty-output', default=None,
+                        help='new immutable difficulty artifact path; default uses SHA256 filename')
+    parser.add_argument('--split-seed', type=int, default=None,
+                        help='data partition seed; defaults to recorded teacher split seed')
+    parser.add_argument('--replacement-policy', choices=['prefix_mean_v1'], default='prefix_mean_v1')
     parser.add_argument('--causal', action='store_true', help='use only history and current utterances')
     parser.add_argument('--no-cuda', action='store_true', default=False, help='does not use GPU')
 
@@ -551,6 +560,24 @@ if __name__ == '__main__':
         args.norm = 'LN'
         if not args.graph_model or not args.multi_modal or args.mm_fusion_mthd != 'concat_DHT' or args.graph_type != 'hyper':
             parser.error('--causal requires --multi_modal --mm_fusion_mthd concat_DHT --graph_type hyper')
+    if args.causal:
+        # Fail before model inference if the teacher lacks auditable training and
+        # validation-selection provenance. Never substitute random/noncausal weights.
+        from causal_provenance import (architecture_from_args, data_provenance_from_files,
+                                       create_difficulty_manifest)
+        source_checkpoint = torch.load(args.ckpt_path, map_location='cpu')
+        source_args = source_checkpoint.get('args', {})
+        if args.split_seed is None:
+            args.split_seed = source_args.get('split_seed')
+        if args.split_seed is None:
+            parser.error('causal difficulty requires source checkpoint split_seed provenance')
+        if args.seed is None:
+            args.seed = source_args.get('seed')
+        args.data_provenance = data_provenance_from_files(args.Dataset, args.split_seed)
+        args.difficulty_manifest = create_difficulty_manifest(
+            args.ckpt_path, source_checkpoint, args.data_provenance,
+            architecture_from_args(args), args.replacement_policy)
+        args.difficulty_manifest['generation_seed'] = args.seed
     print('TEMPORAL PROTOCOL: {}; effective norm={}'.format('causal (history + current)' if args.causal else 'bidirectional', args.norm))
     today = datetime.datetime.now()
     print(args)
@@ -812,7 +839,22 @@ if __name__ == '__main__':
 
 
 
-    if args.Dataset == 'MELD':
+    if args.causal:
+        # Generate values only for the exact teacher training IDs. A train-only
+        # output is insufficient on its own: create_difficulty_manifest also
+        # checks the teacher's actual training split and selection provenance.
+        if args.Dataset == 'IEMOCAP':
+            from dataloader import split_iemocap_dialogues
+            original = IEMOCAPDataset(causal=True)
+            train_keys, _ = split_iemocap_dialogues(original.keys, args.split_seed)
+            trainset = IEMOCAPDataset(keys=train_keys, causal=True)
+        elif args.Dataset == 'MELD':
+            trainset = MELDDataset('data/MELD_features_raw1.pkl', split='train', causal=True)
+        else:
+            raise ValueError('unsupported causal difficulty dataset')
+        train_loader = DataLoader(trainset, batch_size=batch_size, shuffle=False,
+                                  collate_fn=trainset.collate_fn, num_workers=0)
+    elif args.Dataset == 'MELD':
         train_loader, valid_loader, test_loader = get_MELD_loaders(valid=0.0,
                                                                     batch_size=batch_size,
                                                                     num_workers=2,

@@ -1,0 +1,12 @@
+BASELINE DEVICE REPRODUCTION: ValueError Expected a torch.device with a specified index or an integer, but got:cuda
+Traceback (most recent call last):
+  File "<stdin>", line 7, in <module>
+  File "/data2/yb/paper/lyx-msa/CMERC/scripts/evaluate_checkpoint.py", line 448, in main
+    torch.cuda.set_device(device)
+  File "/home/yangbin/miniconda3/envs/multimodalerc310/lib/python3.10/site-packages/torch/cuda/__init__.py", line 406, in set_device
+    device = _get_device_index(device)
+  File "/home/yangbin/miniconda3/envs/multimodalerc310/lib/python3.10/site-packages/torch/cuda/_utils.py", line 38, in _get_device_index
+    return _torch_get_device_index(device, optional, allow_cpu)
+  File "/home/yangbin/miniconda3/envs/multimodalerc310/lib/python3.10/site-packages/torch/_utils.py", line 815, in _get_device_index
+    raise ValueError(
+ValueError: Expected a torch.device with a specified index or an integer, but got:cuda

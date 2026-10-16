@@ -1,0 +1,30 @@
+{
+  "source": "91a1bff train_cm.py run_dir expression; no training and no directory mutation",
+  "cases": [
+    {
+      "config": {
+        "Dataset": "IEMOCAP",
+        "selection_protocol": "validation",
+        "seed": 1937,
+        "calibrate": false,
+        "contrastlearning": false,
+        "num_L": 3,
+        "num_K": 4
+      },
+      "baseline_run_directory": "runs/train_cm/IEMOCAP_validation_seed1937_causal"
+    },
+    {
+      "config": {
+        "Dataset": "IEMOCAP",
+        "selection_protocol": "validation",
+        "seed": 1937,
+        "calibrate": true,
+        "contrastlearning": true,
+        "num_L": 4,
+        "num_K": 2
+      },
+      "baseline_run_directory": "runs/train_cm/IEMOCAP_validation_seed1937_causal"
+    }
+  ],
+  "collision": true
+}

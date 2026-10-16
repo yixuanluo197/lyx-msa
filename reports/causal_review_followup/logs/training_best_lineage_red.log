@@ -1,0 +1,46 @@
+FF                                                                       [100%]
+=================================== FAILURES ===================================
+_ test_repeated_best_resume_rebinds_imported_best_without_changing_training_state _
+
+tmp_path = PosixPath('/tmp/pytest-of-yangbin/pytest-701/test_repeated_best_resume_rebi0')
+
+    def test_repeated_best_resume_rebinds_imported_best_without_changing_training_state(tmp_path):
+        from causal_run import prepare_run
+        a = config(output_dir=str(tmp_path), resume=None, epochs=4)
+        run = prepare_run(a)
+        full, *_ = models(); opt = torch.optim.Adam(full.parameters())
+        train_cm.save_training_checkpoint(run/'best.pt', full, opt, 0, a, .7, 0)
+        train_cm.save_training_checkpoint(run/'latest.pt', full, opt, 1, a, .7, 0)
+        (run/'metrics.jsonl').write_text('{"epoch":1}\n{"epoch":2}\n')
+        original = torch.load(run/'best.pt', map_location='cpu')
+        first = copy.deepcopy(a); first.resume=str(run/'best.pt')
+        branch = prepare_run(first)
+        imported = torch.load(branch/'best.pt', map_location='cpu')
+>       assert imported['run_manifest_sha256'] == first.run_manifest['sha256']
+E       AssertionError: assert '69ca8e055743...8cfb821685709' == '399c5bf7e249...f7115a8854d86'
+E         
+E         - 399c5bf7e24929eff30ddec2982ad3884dfa3811d2ffdfba5b3f7115a8854d86
+E         + 69ca8e05574352ede1db13e4d84bc3bf8d572e962d29c315ff88cfb821685709
+
+tests/test_followup_training.py:225: AssertionError
+----------------------------- Captured stdout call -----------------------------
+construct hyper
+construct hyper
+construct hyper
+construct hyper
+_____ test_noncausal_run_keeps_legacy_automation_path_and_exclusive_create _____
+
+tmp_path = PosixPath('/tmp/pytest-of-yangbin/pytest-701/test_noncausal_run_keeps_legac0')
+
+    def test_noncausal_run_keeps_legacy_automation_path_and_exclusive_create(tmp_path):
+        from causal_run import prepare_run
+        a = config(causal=False, output_dir=str(tmp_path), resume=None)
+>       assert prepare_run(a) == tmp_path/'IEMOCAP_validation_seed25'
+E       AssertionError: assert PosixPath('/tmp/pytest-of-yangbin/pytest-701/test_noncausal_run_keeps_legac0/IEMOCAP_validation_seed25_noncausal_52cef67650197a7a') == (PosixPath('/tmp/pytest-of-yangbin/pytest-701/test_noncausal_run_keeps_legac0') / 'IEMOCAP_validation_seed25')
+E        +  where PosixPath('/tmp/pytest-of-yangbin/pytest-701/test_noncausal_run_keeps_legac0/IEMOCAP_validation_seed25_noncausal_52cef67650197a7a') = <function prepare_run at 0x7ab16a111cf0>(namespace(causal=False, norm='LN', Dataset='IEMOCAP', base_model='GRU', num_L=2, num_K=2, av_using_lstm=True, use_resi...d5771e87ae341411e0304b3e249ec89', 'config_sha256': '52cef67650197a7a1d0a87d45abe218913fc7c89117bd555da926f9a5b154fda'}))
+
+tests/test_followup_training.py:241: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_followup_training.py::test_repeated_best_resume_rebinds_imported_best_without_changing_training_state
+FAILED tests/test_followup_training.py::test_noncausal_run_keeps_legacy_automation_path_and_exclusive_create
+2 failed, 19 deselected in 4.63s

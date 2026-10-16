@@ -1,0 +1,193 @@
+{
+  "scope": "real train_or_eval_graph_model with synthetic features; not formal model training",
+  "reports": {
+    "cpu": {
+      "artifact": "TRAINING_INTEGRATION_cpu.json",
+      "sha256": "c54e2ef20266936e2246661a9e38b114735ac73b4e3831368c34ec89b9019de4",
+      "cases_passed": 16,
+      "cases_total": 16,
+      "backend": {
+        "deterministic_algorithms": false,
+        "deterministic_warn_only": false,
+        "cudnn_deterministic": true,
+        "cudnn_benchmark": false,
+        "cublas_workspace_config": ":4096:8",
+        "classification": "default cuDNN train on GPU",
+        "same_step_confidence": "ATen eval, full reference gradient only"
+      },
+      "recovery": {
+        "status": "passed",
+        "epochs": 2,
+        "batches_per_epoch": [
+          2,
+          4
+        ],
+        "comparisons": {
+          "weights": {
+            "max_abs_diff": 0.0,
+            "max_rel_diff": 0.0,
+            "atol": 2e-05,
+            "rtol": 1e-05,
+            "within_tolerance": true,
+            "semantic_equal": true,
+            "exact": true
+          },
+          "optimizer": {
+            "max_abs_diff": 0.0,
+            "max_rel_diff": 0.0,
+            "atol": 2e-05,
+            "rtol": 1e-05,
+            "within_tolerance": true,
+            "semantic_equal": true,
+            "exact": true
+          },
+          "epoch_logs": {
+            "max_abs_diff": 0.0,
+            "max_rel_diff": 0.0,
+            "atol": 2e-05,
+            "rtol": 1e-05,
+            "within_tolerance": true,
+            "semantic_equal": true,
+            "exact": true
+          },
+          "batch_diagnostics": {
+            "max_abs_diff": 0.0,
+            "max_rel_diff": 0.0,
+            "atol": 2e-05,
+            "rtol": 1e-05,
+            "within_tolerance": true,
+            "semantic_equal": true,
+            "exact": true
+          },
+          "next_step_loss": {
+            "max_abs_diff": 0.0,
+            "max_rel_diff": 0.0,
+            "atol": 2e-05,
+            "rtol": 1e-05,
+            "within_tolerance": true,
+            "semantic_equal": true,
+            "exact": true
+          },
+          "next_step_diagnostics": {
+            "max_abs_diff": 0.0,
+            "max_rel_diff": 0.0,
+            "atol": 2e-05,
+            "rtol": 1e-05,
+            "within_tolerance": true,
+            "semantic_equal": true,
+            "exact": true
+          }
+        },
+        "rng_checks": {
+          "python": true,
+          "numpy": true,
+          "torch_cpu": true,
+          "torch_cuda": "skipped: CUDA unavailable"
+        },
+        "teacher_status": "synthetic fixture only; NOT a real trained teacher"
+      }
+    },
+    "cuda": {
+      "artifact": "TRAINING_INTEGRATION_cuda.json",
+      "sha256": "09879f80f682fa7392904521bf4f68b84d5562bd1b14d9c1e00212c036b903b6",
+      "cases_passed": 16,
+      "cases_total": 16,
+      "backend": {
+        "deterministic_algorithms": true,
+        "deterministic_warn_only": true,
+        "cudnn_deterministic": true,
+        "cudnn_benchmark": false,
+        "cublas_workspace_config": ":4096:8",
+        "classification": "default cuDNN train on GPU",
+        "same_step_confidence": "ATen eval, full reference gradient only"
+      },
+      "recovery": {
+        "status": "passed",
+        "epochs": 2,
+        "batches_per_epoch": [
+          2,
+          4
+        ],
+        "comparisons": {
+          "weights": {
+            "max_abs_diff": 0.0,
+            "max_rel_diff": 0.0,
+            "atol": 2e-05,
+            "rtol": 1e-05,
+            "within_tolerance": true,
+            "semantic_equal": true,
+            "exact": true
+          },
+          "optimizer": {
+            "max_abs_diff": 0.0,
+            "max_rel_diff": 0.0,
+            "atol": 2e-05,
+            "rtol": 1e-05,
+            "within_tolerance": true,
+            "semantic_equal": true,
+            "exact": true
+          },
+          "epoch_logs": {
+            "max_abs_diff": 0.0,
+            "max_rel_diff": 0.0,
+            "atol": 2e-05,
+            "rtol": 1e-05,
+            "within_tolerance": true,
+            "semantic_equal": true,
+            "exact": true
+          },
+          "batch_diagnostics": {
+            "max_abs_diff": 0.0,
+            "max_rel_diff": 0.0,
+            "atol": 2e-05,
+            "rtol": 1e-05,
+            "within_tolerance": true,
+            "semantic_equal": true,
+            "exact": true
+          },
+          "next_step_loss": {
+            "max_abs_diff": 0.0,
+            "max_rel_diff": 0.0,
+            "atol": 2e-05,
+            "rtol": 1e-05,
+            "within_tolerance": true,
+            "semantic_equal": true,
+            "exact": true
+          },
+          "next_step_diagnostics": {
+            "max_abs_diff": 0.0,
+            "max_rel_diff": 0.0,
+            "atol": 2e-05,
+            "rtol": 1e-05,
+            "within_tolerance": true,
+            "semantic_equal": true,
+            "exact": true
+          }
+        },
+        "rng_checks": {
+          "python": true,
+          "numpy": true,
+          "torch_cpu": true,
+          "torch_cuda": true
+        },
+        "teacher_status": "synthetic fixture only; NOT a real trained teacher"
+      }
+    }
+  },
+  "real_CL_status": "blocked: no validated trained causal baseline teacher/difficulty",
+  "formal_training_started": false,
+  "raw_failure_logs_preserved": [
+    "logs/training_red.log",
+    "logs/training_resume_review_red.log",
+    "logs/training_best_lineage_red.log",
+    "logs/training_gpu_same_step_red.log",
+    "logs/training_integration_gpu.log",
+    "logs/training_integration_gpu_deterministic.log"
+  ],
+  "final_raw_artifacts": {
+    "TRAINING_INTEGRATION_cpu.json": "c54e2ef20266936e2246661a9e38b114735ac73b4e3831368c34ec89b9019de4",
+    "TRAINING_INTEGRATION_cuda.json": "09879f80f682fa7392904521bf4f68b84d5562bd1b14d9c1e00212c036b903b6",
+    "REAL_FEATURE_CPU_FINAL.json": "bf1c5b6b92dc5744826389ce7c053720c30884ab800a0f47b089d817c7b4e496",
+    "REAL_FEATURE_GPU_FINAL.json": "ea1cffd64759a4d3df802c626bc16a1093d9b0b2e82b360c3c861cce88a2512c"
+  }
+}

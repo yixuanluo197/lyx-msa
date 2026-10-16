@@ -1,0 +1,80 @@
+usage: cal_diff.py [-h] [--difficulty-output DIFFICULTY_OUTPUT]
+                   [--split-seed SPLIT_SEED]
+                   [--replacement-policy {prefix_mean_v1}] [--causal]
+                   [--no-cuda] [--base-model BASE_MODEL] [--graph-model]
+                   [--nodal-attention] [--windowp WINDOWP] [--windowf WINDOWF]
+                   [--lr LR] [--l2 L2] [--rec-dropout rec_dropout]
+                   [--dropout dropout] [--batch-size BS] [--epochs E]
+                   [--class-weight] [--active-listener]
+                   [--attention ATTENTION] [--tensorboard]
+                   [--graph_type GRAPH_TYPE] [--use_topic] [--alpha ALPHA]
+                   [--multiheads MULTIHEADS]
+                   [--graph_construct GRAPH_CONSTRUCT] [--use_gcn]
+                   [--use_residue] [--multi_modal]
+                   [--mm_fusion_mthd MM_FUSION_MTHD] [--modals MODALS]
+                   [--av_using_lstm] [--Deep_GCN_nlayers DEEP_GCN_NLAYERS]
+                   [--Dataset DATASET] [--use_speaker] [--use_modal]
+                   [--norm NORM] [--testing] [--num_L NUM_L] [--num_K NUM_K]
+                   [--seed SEED] [--ckpt_path CKPT_PATH]
+
+options:
+  -h, --help            show this help message and exit
+  --difficulty-output DIFFICULTY_OUTPUT
+                        new immutable difficulty artifact path; default uses
+                        SHA256 filename
+  --split-seed SPLIT_SEED
+                        data partition seed; defaults to recorded teacher
+                        split seed
+  --replacement-policy {prefix_mean_v1}
+  --causal              use only history and current utterances
+  --no-cuda             does not use GPU
+  --base-model BASE_MODEL
+                        base recurrent model, must be one of
+                        DialogRNN/LSTM/GRU
+  --graph-model         whether to use graph model after recurrent encoding
+  --nodal-attention     whether to use nodal attention in graph model:
+                        Equation 4,5,6 in Paper
+  --windowp WINDOWP     context window size for constructing edges in graph
+                        model for past utterances
+  --windowf WINDOWF     context window size for constructing edges in graph
+                        model for future utterances
+  --lr LR               learning rate
+  --l2 L2               L2 regularization weight
+  --rec-dropout rec_dropout
+                        rec_dropout rate
+  --dropout dropout     dropout rate
+  --batch-size BS       batch size
+  --epochs E            number of epochs
+  --class-weight        use class weights
+  --active-listener     active listener
+  --attention ATTENTION
+                        Attention type in DialogRNN model
+  --tensorboard         Enables tensorboard log
+  --graph_type GRAPH_TYPE
+                        relation/GCN3/DeepGCN/MMGCN/MMGCN2
+  --use_topic           whether to use topic information
+  --alpha ALPHA         alpha
+  --multiheads MULTIHEADS
+                        multiheads
+  --graph_construct GRAPH_CONSTRUCT
+                        single/window/fc for MMGCN2; direct/full for others
+  --use_gcn             whether to combine spectral and none-spectral methods
+                        or not
+  --use_residue         whether to use residue information or not
+  --multi_modal         whether to use multimodal information
+  --mm_fusion_mthd MM_FUSION_MTHD
+                        method to use multimodal information: concat, gated,
+                        concat_subsequently
+  --modals MODALS       modals to fusion
+  --av_using_lstm       whether to use lstm in acoustic and visual modality
+  --Deep_GCN_nlayers DEEP_GCN_NLAYERS
+                        Deep_GCN_nlayers
+  --Dataset DATASET     dataset to train and test
+  --use_speaker         whether to use speaker embedding
+  --use_modal           whether to use modal embedding
+  --norm NORM           NORM type
+  --testing             testing
+  --num_L NUM_L         num_hyperconvs
+  --num_K NUM_K         num_convs
+  --seed SEED
+  --ckpt_path CKPT_PATH

@@ -1,0 +1,15 @@
+
+==================================== ERRORS ====================================
+______________ ERROR collecting tests/test_followup_provenance.py ______________
+ImportError while importing test module '/data2/yb/paper/lyx-msa/CMERC/tests/test_followup_provenance.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/home/yangbin/miniconda3/envs/multimodalerc310/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/test_followup_provenance.py:9: in <module>
+    from causal_provenance import (architecture_from_args, build_data_provenance,
+E   ModuleNotFoundError: No module named 'causal_provenance'
+=========================== short test summary info ============================
+ERROR tests/test_followup_provenance.py
+!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+1 error in 0.13s

@@ -1,0 +1,160 @@
+FF.FFFF                                                                  [100%]
+=================================== FAILURES ===================================
+___ test_latest_resume_rejects_missing_empty_or_noncontiguous_metrics[None] ____
+
+tmp_path = PosixPath('/tmp/pytest-of-yangbin/pytest-696/test_latest_resume_rejects_mis0')
+history = None
+
+    @pytest.mark.parametrize('history', [None, '', '{"epoch":1}\n{"epoch":3}\n',
+                                         '{"epoch":1}\n{"epoch":1}\n{"epoch":2}\n'])
+    def test_latest_resume_rejects_missing_empty_or_noncontiguous_metrics(tmp_path, history):
+        from causal_run import prepare_run
+        a = config(output_dir=str(tmp_path), resume=None, epochs=4)
+        run = prepare_run(a)
+        full, *_ = models(); opt = torch.optim.Adam(full.parameters())
+        train_cm.save_training_checkpoint(run/'best.pt', full, opt, 0, a, .7, 0)
+        train_cm.save_training_checkpoint(run/'latest.pt', full, opt, 1, a, .7, 0)
+        if history is not None:
+            (run/'metrics.jsonl').write_text(history)
+        a.resume = str(run/'latest.pt')
+>       with pytest.raises(ValueError, match='metrics'):
+E       Failed: DID NOT RAISE <class 'ValueError'>
+
+tests/test_followup_training.py:195: Failed
+----------------------------- Captured stdout call -----------------------------
+construct hyper
+construct hyper
+construct hyper
+construct hyper
+_____ test_latest_resume_rejects_missing_empty_or_noncontiguous_metrics[] ______
+
+tmp_path = PosixPath('/tmp/pytest-of-yangbin/pytest-696/test_latest_resume_rejects_mis1')
+history = ''
+
+    @pytest.mark.parametrize('history', [None, '', '{"epoch":1}\n{"epoch":3}\n',
+                                         '{"epoch":1}\n{"epoch":1}\n{"epoch":2}\n'])
+    def test_latest_resume_rejects_missing_empty_or_noncontiguous_metrics(tmp_path, history):
+        from causal_run import prepare_run
+        a = config(output_dir=str(tmp_path), resume=None, epochs=4)
+        run = prepare_run(a)
+        full, *_ = models(); opt = torch.optim.Adam(full.parameters())
+        train_cm.save_training_checkpoint(run/'best.pt', full, opt, 0, a, .7, 0)
+        train_cm.save_training_checkpoint(run/'latest.pt', full, opt, 1, a, .7, 0)
+        if history is not None:
+            (run/'metrics.jsonl').write_text(history)
+        a.resume = str(run/'latest.pt')
+>       with pytest.raises(ValueError, match='metrics'):
+E       Failed: DID NOT RAISE <class 'ValueError'>
+
+tests/test_followup_training.py:195: Failed
+----------------------------- Captured stdout call -----------------------------
+construct hyper
+construct hyper
+construct hyper
+construct hyper
+_ test_latest_resume_rejects_missing_empty_or_noncontiguous_metrics[{"epoch":1}\n{"epoch":1}\n{"epoch":2}\n] _
+
+tmp_path = PosixPath('/tmp/pytest-of-yangbin/pytest-696/test_latest_resume_rejects_mis3')
+history = '{"epoch":1}\n{"epoch":1}\n{"epoch":2}\n'
+
+    @pytest.mark.parametrize('history', [None, '', '{"epoch":1}\n{"epoch":3}\n',
+                                         '{"epoch":1}\n{"epoch":1}\n{"epoch":2}\n'])
+    def test_latest_resume_rejects_missing_empty_or_noncontiguous_metrics(tmp_path, history):
+        from causal_run import prepare_run
+        a = config(output_dir=str(tmp_path), resume=None, epochs=4)
+        run = prepare_run(a)
+        full, *_ = models(); opt = torch.optim.Adam(full.parameters())
+        train_cm.save_training_checkpoint(run/'best.pt', full, opt, 0, a, .7, 0)
+        train_cm.save_training_checkpoint(run/'latest.pt', full, opt, 1, a, .7, 0)
+        if history is not None:
+            (run/'metrics.jsonl').write_text(history)
+        a.resume = str(run/'latest.pt')
+>       with pytest.raises(ValueError, match='metrics'):
+E       Failed: DID NOT RAISE <class 'ValueError'>
+
+tests/test_followup_training.py:195: Failed
+----------------------------- Captured stdout call -----------------------------
+construct hyper
+construct hyper
+construct hyper
+construct hyper
+_________ test_resume_rejects_empty_loop_or_shortened_epoch_budget[1] __________
+
+tmp_path = PosixPath('/tmp/pytest-of-yangbin/pytest-696/test_resume_rejects_empty_loop0')
+requested_epochs = 1
+
+    @pytest.mark.parametrize('requested_epochs', [1, 2, 3])
+    def test_resume_rejects_empty_loop_or_shortened_epoch_budget(tmp_path, requested_epochs):
+        from causal_run import prepare_run
+        a = config(output_dir=str(tmp_path), resume=None, epochs=4)
+        run = prepare_run(a)
+        full, *_ = models(); opt = torch.optim.Adam(full.parameters())
+        train_cm.save_training_checkpoint(run/'best.pt', full, opt, 0, a, .7, 0)
+        train_cm.save_training_checkpoint(run/'latest.pt', full, opt, 1, a, .7, 0)
+        (run/'metrics.jsonl').write_text('{"epoch":1}\n{"epoch":2}\n')
+        a.resume = str(run/'latest.pt'); a.epochs=requested_epochs
+>       with pytest.raises(ValueError, match='epoch'):
+E       Failed: DID NOT RAISE <class 'ValueError'>
+
+tests/test_followup_training.py:209: Failed
+----------------------------- Captured stdout call -----------------------------
+construct hyper
+construct hyper
+construct hyper
+construct hyper
+_________ test_resume_rejects_empty_loop_or_shortened_epoch_budget[2] __________
+
+tmp_path = PosixPath('/tmp/pytest-of-yangbin/pytest-696/test_resume_rejects_empty_loop1')
+requested_epochs = 2
+
+    @pytest.mark.parametrize('requested_epochs', [1, 2, 3])
+    def test_resume_rejects_empty_loop_or_shortened_epoch_budget(tmp_path, requested_epochs):
+        from causal_run import prepare_run
+        a = config(output_dir=str(tmp_path), resume=None, epochs=4)
+        run = prepare_run(a)
+        full, *_ = models(); opt = torch.optim.Adam(full.parameters())
+        train_cm.save_training_checkpoint(run/'best.pt', full, opt, 0, a, .7, 0)
+        train_cm.save_training_checkpoint(run/'latest.pt', full, opt, 1, a, .7, 0)
+        (run/'metrics.jsonl').write_text('{"epoch":1}\n{"epoch":2}\n')
+        a.resume = str(run/'latest.pt'); a.epochs=requested_epochs
+>       with pytest.raises(ValueError, match='epoch'):
+E       Failed: DID NOT RAISE <class 'ValueError'>
+
+tests/test_followup_training.py:209: Failed
+----------------------------- Captured stdout call -----------------------------
+construct hyper
+construct hyper
+construct hyper
+construct hyper
+_________ test_resume_rejects_empty_loop_or_shortened_epoch_budget[3] __________
+
+tmp_path = PosixPath('/tmp/pytest-of-yangbin/pytest-696/test_resume_rejects_empty_loop2')
+requested_epochs = 3
+
+    @pytest.mark.parametrize('requested_epochs', [1, 2, 3])
+    def test_resume_rejects_empty_loop_or_shortened_epoch_budget(tmp_path, requested_epochs):
+        from causal_run import prepare_run
+        a = config(output_dir=str(tmp_path), resume=None, epochs=4)
+        run = prepare_run(a)
+        full, *_ = models(); opt = torch.optim.Adam(full.parameters())
+        train_cm.save_training_checkpoint(run/'best.pt', full, opt, 0, a, .7, 0)
+        train_cm.save_training_checkpoint(run/'latest.pt', full, opt, 1, a, .7, 0)
+        (run/'metrics.jsonl').write_text('{"epoch":1}\n{"epoch":2}\n')
+        a.resume = str(run/'latest.pt'); a.epochs=requested_epochs
+>       with pytest.raises(ValueError, match='epoch'):
+E       Failed: DID NOT RAISE <class 'ValueError'>
+
+tests/test_followup_training.py:209: Failed
+----------------------------- Captured stdout call -----------------------------
+construct hyper
+construct hyper
+construct hyper
+construct hyper
+=========================== short test summary info ============================
+FAILED tests/test_followup_training.py::test_latest_resume_rejects_missing_empty_or_noncontiguous_metrics[None]
+FAILED tests/test_followup_training.py::test_latest_resume_rejects_missing_empty_or_noncontiguous_metrics[]
+FAILED tests/test_followup_training.py::test_latest_resume_rejects_missing_empty_or_noncontiguous_metrics[{"epoch":1}\n{"epoch":1}\n{"epoch":2}\n]
+FAILED tests/test_followup_training.py::test_resume_rejects_empty_loop_or_shortened_epoch_budget[1]
+FAILED tests/test_followup_training.py::test_resume_rejects_empty_loop_or_shortened_epoch_budget[2]
+FAILED tests/test_followup_training.py::test_resume_rejects_empty_loop_or_shortened_epoch_budget[3]
+6 failed, 1 passed, 12 deselected in 4.46s

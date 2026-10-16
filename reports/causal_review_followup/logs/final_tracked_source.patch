@@ -1,0 +1,1035 @@
+diff --git a/CAUSAL_README.md b/CAUSAL_README.md
+index 064a1bc..e1278c5 100644
+--- a/CAUSAL_README.md
++++ b/CAUSAL_README.md
+@@ -1,83 +1,70 @@
+ # CMERC 时间因果版
+ 
+-本次实现沿用之前 SDT 的定义：位置 `t` 只能读取同一对话的 `1..t`，包括当前完整话语及其三模态特征、speaker。模型不读取未来话语，也不将标签作为前向输入。这是时间信息可见性约束，不是因果效应识别。
++位置 `t` 的预测及辅助视图只能读取同一对话 `1..t` 的完整话语特征和 speaker。约束作用于预提取、按话语对齐的特征；原始特征提取链未审计。它不是因果效应识别，也不是要求离线训练总损失对所有未来训练样本梯度为零。
+ 
+-## 实现方案与验收
++2026-10-16 审查后验证、修复证据和原始失败日志见 [reports/causal_review_followup](reports/causal_review_followup/IMPLEMENTATION_FIXES.md)。原 2026-10-14 的 138 项 CPU 检查是历史证据，本轮初始全套测试为 153 项；后续数值、真实特征、GPU 和恢复状态分别记录，不能互相替代。
+ 
+-保留默认非因果路径；使用 `--causal` 显式启用因果版，不覆盖原 SDT 因果代码或已有 CMERC 结果。
++## 模型与视图
+ 
+-1. 主模型与模态／上下文移除分支使用同一因果配置。
+-2. 双向 GRU/LSTM 改为单向编码，维持输出宽度；Transformer 加上未来和 padding mask。
+-3. 文本统一使用逐话语特征维 LayerNorm，避免 BN 与跨时间 LN2 的未来统计。
+-4. 同模态超边改为历史前缀收集、只向当前节点投递；跨模态超边限于同一话语。不能把前缀超边回传所有历史成员。
+-5. 图边只允许历史源节点向当前目标节点传递；同一时刻跨模态边保留。图归一化只使用当前目标的入边，避免未来出度改变历史输出。
+-6. 模态移除的整段均值改为有效历史前缀均值；校准与对比损失组成保留。课程学习难度文件、checkpoint 与输出目录区分因果／原版协议。
+-7. 只用 CPU 合成输入检查未来扰动、前缀截断、padding、批次独立性、梯度与参数可训练性。此次不启动模型训练、真实数据评测或性能实验。
++使用 `--causal` 或 `Model(..., causal=True)` 启用；默认非因果路径保留。支持 `hyper/concat_DHT/avl` 的 GRU、LSTM、Transformer，av_encoder 与 residue 开关、多层图、非空对话和右 padding。
+ 
+-不采用整段模型逐前缀重跑：虽能隔离未来，但重复计算代价更大；不采用只删未来图边：双向编码、超边和归一化仍会泄漏。
++- GRU/LSTM 使用单向编码；Transformer 同时屏蔽未来和 padding keys。
++- 文本实际执行逐话语、仅跨特征维的 LayerNorm。
++- 同模态前缀超边分别定义 source membership 与 target delivery，只向当前节点投递；跨模态超边仅覆盖同一时间。GNN 仅使用过去到当前的时序边和同时间跨模态边，归一化不依赖未来出度。
++- `Model_Intra/Inter` 是 **GNN-edge ablation**，分别删除同/异 speaker 的 GNN 时间边；编码器和超图仍可保留对应历史，不能称为完全删除某类上下文。
++- `prefix_mean_v1` 为 `m_t=(x_1+...+x_t)/t`。完整均值序列可由 `x_t=t*m_t-(t-1)*m_(t-1)` 还原，因此它是前缀平滑视图，不等同于模态完全缺失。没有偷偷改成零值替换。
++- 在同权重同 eval 模式下，首句的三种均值替换和两种 GNN 边删除均为 no-op。训练时的 dropout/辅助权重滞后可使置信度比较出现差异，须单独解释。
+ 
+-## 范围与边界
++## 辅助训练策略
+ 
+-- 支持论文使用的 `graph_type=hyper`、`mm_fusion_mthd=concat_DHT`、`modals=avl`，基础编码器为 GRU/LSTM/Transformer，非空对话与右侧 padding。
+-- 因果版新增有向超图层及共享类型权重，不再使用原图的固定容量、批内位置权重。它是原方法的时间因果变体，参数结构与原官方 checkpoint 不兼容，不能把原权重直接当作因果模型或完整续训。
+-- `Model_Intra` 继续表示移除同 speaker 时序图边；`Model_Inter` 表示移除异 speaker 时序图边，沿用原论文上下文移除口径。超图分支在三种模型中均保留，但均满足因果约束。
+-- 离线训练仍可使用所有训练标签、跨样本对比损失及整段训练对话难度排序；这些不作为单次预测的未来输入，不能据此宣称在线学习。
+-- 保证限于已经提取、按话语对齐的输入特征。原始文本／音频／视觉提取链是否使用未来片段或整段统计尚未核实；本次不宣称原始流端到端因果性。
+-- 当前未训练因果版，不能声称效果提升或获得论文性能。
++`--auxiliary-policy legacy_epoch_snapshot` 保留原实现：每次训练函数开始复制主模型到辅助模型；主模型 train、辅助 eval，后续 batch 的辅助权重滞后。
+ 
+-## 使用入口（仅示例，本次未执行实验）
++`--auxiliary-policy same_step_same_mode` 是另一项显式实验配置：每 batch 同步辅助；分类 pass 为正常 train/dropout 且保留梯度，置信度 full reference 与五视图均用当前权重、eval 模式、同一 ATen 后端。full reference 为 CC 保留梯度，移除视图和 HSCL 标签只读，HSCL 特征仍取分类训练 pass。GPU 中 cuDNN eval RNN 不允许 backward，所以该参考路径局部禁用 cuDNN；默认分类训练及 legacy 策略不受此局部设置影响。两种策略不可混为同一实验。
+ 
+-Python 接口：`Model(..., causal=True)`，`Model_Intra`、`Model_Inter` 同样支持该参数。指定 `BN` 或 `LN2` 时，因果模型实际使用 `LN`；训练入口会打印并记录有效配置。
++## 不可变 difficulty 与恢复
+ 
+-训练包装脚本已有参数可直接追加 `--causal`。例如后续需要训练因果 backbone 时：
++因果课程必须显式提供 `--difficulty-path`。旧 `*_causal_diff.pkl` 包装即使包含 `causal=True` 也不是来源证明，缺完整 provenance 一律拒绝。
++
++生成器读取可信 checkpoint 后，先检查 causal/LN、validation 选模协议、实际训练/验证 ID 和特征哈希、训练与划分种子、架构、replacement policy 及训练进度。输出为新的 `Dataset_causal_diff_<SHA256>.pkl` 和 `.manifest.json`，或 `--difficulty-output` 指定的新路径；已存在文件安全拒绝。训练固定保存 artifact SHA，读取/恢复时重新校验实际 difficulty 和源 checkpoint 文件。`official_test`、不同划分、缺来源、文件被替换等默认拒绝，不提供未记录的绕过开关。教师 `epoch/best_epoch` 逐项记录；正式计划指定 `best.pt`，不能把任意 latest snapshot 称为最佳教师。
++
++因果 run 目录带配置哈希，包含 baseline/full/消融和图深度等身份。非 resume 已有目录拒绝混写。`--resume` 校验 run manifest、difficulty、配置、历史日志、epoch 预算和 best 状态；只允许延长预算，best/旧 checkpoint 恢复建立有 lineage 的新分支。旧非因果 run 保持原命名但同样拒绝新任务覆盖。缺新 manifest 的历史 run 不会自动补签为本轮已验证恢复对象。
++
++## 后续正式运行命令（本轮未启动）
++
++固定划分种子和配对训练种子；完整研究计划见 [FORMAL_EXPERIMENT_PLAN.md](reports/causal_review_followup/FORMAL_EXPERIMENT_PLAN.md)。先训练关闭 CL/HSCL/CC 的因果 backbone：
+ 
+ ```bash
+-bash scripts/run_training.sh IEMOCAP baseline validation --causal
++bash scripts/run_training.sh IEMOCAP baseline validation \
++  --causal --split-seed 1475 --seed 1937 \
++  --replacement-policy prefix_mean_v1 \
++  --auxiliary-policy legacy_epoch_snapshot
+ ```
+ 
+-该例结果放在 `runs/train_cm/baseline/IEMOCAP_validation_seed1475_causal/`，不覆盖原版 run。完整 CMERC 的课程学习必须先使用因果 backbone 的 checkpoint 生成因果难度文件：
++从实际输出目录选择对应 `best.pt`。使用同一架构、划分与配对种子生成 difficulty（这里的两个路径须替换成真实已验证产物）：
+ 
+ ```bash
+ python caldiff/cal_diff.py --causal --base-model GRU \
+   --dropout 0.5 --batch-size 16 --graph_type hyper \
+   --graph_construct direct --multi_modal --mm_fusion_mthd concat_DHT \
+   --modals avl --Dataset IEMOCAP --norm LN --num_L 3 --num_K 4 \
+-  --seed 1475 \
+-  --ckpt_path runs/train_cm/baseline/IEMOCAP_validation_seed1475_causal/best.pt
+-
+-bash scripts/run_training.sh IEMOCAP cmerc validation --causal
++  --seed 1937 --split-seed 1475 --replacement-policy prefix_mean_v1 \
++  --ckpt_path /path/to/verified-causal-baseline/best.pt
++
++bash scripts/run_training.sh IEMOCAP cmerc validation \
++  --causal --split-seed 1475 --seed 1937 \
++  --replacement-policy prefix_mean_v1 \
++  --auxiliary-policy legacy_epoch_snapshot \
++  --difficulty-path /path/to/immutable-causal-difficulty.pkl
+ ```
+ 
+-难度生成只写 `caldiff/IEMOCAP_causal_diff.pkl` 的因果元数据封装，不改 `IEMOCAP_diff.pkl`。MELD 使用对应数据集、`dropout=0.4`、`num_K=3`、`seed=67137`。未生成因果难度时，课程学习会明确报错，不退回原文件。
+-
+-评测入口支持 `scripts/evaluate_checkpoint.py --causal`，并检查 checkpoint 协议。它仍按论文默认 GRU 配置构建模型；自定义 LSTM/Transformer、残差或其他结构配置须使用一致的 Python 构建参数，不能直接交给这个固定配置评测器。
+-
+-## 验证与环境
+-
+-新增 `tests/test_causal_model.py`、`test_causal_graph.py`、`test_causal_protocol.py`、`test_causal_losses.py`。这些仅使用随机／手工构造的 CPU 输入，不读取数据集或官方模型权重。图层参数更新检查使用合成损失做一次 SGD 更新，属于可训练性单元检查。
+-
+-当前机器没有复现指南所列的 `/data2/yb/conda_envs/cmerc-repro` 环境。本次复用现有 `multimodalerc310`（PyTorch 2.2.2+cu121、PyG 2.4.0），并从已有 `msa_extract` 环境借用 pytest 9.0.2，没有安装依赖：
+-
+-```bash
+-CUDA_VISIBLE_DEVICES='' /home/yangbin/miniconda3/envs/multimodalerc310/bin/python -c \
+-  'import sys; sys.path.append("/home/yangbin/miniconda3/envs/msa_extract/lib/python3.10/site-packages"); import pytest; raise SystemExit(pytest.main(["-q", "tests"]))'
+-```
++MELD 对应 `dropout=.4, num_K=3`。不同训练 seed 的教师不被静默混用；原始非因果 difficulty 和随机权重均不是正式因果输入。目前没有满足新 provenance 的真实因果 baseline，故真实 difficulty/full CL 尚未具备启动条件。
+ 
+-损失中的辅助张量改为跟随输入设备，保留原数学公式，使 CPU 检查可覆盖分类、校准和三模态／上下文对比损失。尚未验证 GPU 执行、原 PyTorch 1.13.1 环境、真实特征或训练后 checkpoint 的因果性；图构造仍为平方复杂度，没有实现流式缓存。
++## 评测与验证
+ 
+-2026-10-14 最终验证：全部现有及新增测试 **138 passed（5.60 秒）**；上述运行源文件 `py_compile` 与识别原 CRLF 的 `git diff --check` 通过。三个入口的 `--help` 通过。独立代码审查未发现新增前向未来泄漏；审查发现的续训协议缺口已修复并以 13 项参数化回归测试覆盖。因果完整续训会拒绝种子、dropout、batch size、优化器超参数、损失与课程设置变化，允许延长总 epoch 数。
++评测器从可信 causal checkpoint 的白名单架构字段构建模型，支持 GRU/LSTM/Transformer、非默认图深度、residue、av_encoder，并严格加载权重；原官方权重与因果结构不兼容，禁止 `strict=False` 掩盖问题。`cuda` 解析为明确逻辑设备索引。
+ 
+-本次文件范围：
++`--split train/validation` 继承 checkpoint 的 split seed；有 provenance 时重算全量特征/ID 哈希后才取 `--max-dialogues` 子集。缺来源的合成或旧版诊断必须给出 `--diagnostic-data-reason` 并标记未验证，不能当作正式结果。已知 `official_test` 来源不能冒充 held-out validation。`--split test` 仅用于冻结方案之后的最终评测，本轮未调用正式测试集。
+ 
+-| 文件 | 改动 |
+-| --- | --- |
+-| `model_cm.py` | 三类模型的因果编码器、归一化、mask；FocalLoss 设备处理 |
+-| `model_hyper.py`、新增 `causal_graph.py` | 因果图分支；去除因果路径固定容量与位置权重 |
+-| `dataloader.py` | 复用前缀均值与协议检查；隔离因果课程难度 |
+-| `train_cm.py`、`caldiff/cal_diff.py` | 因果入口、信息移除、产物隔离与续训约束 |
+-| `scripts/evaluate_checkpoint.py` | 因果 checkpoint 与 CPU 推理入口 |
+-| `clloss.py` | 辅助张量跟随输入设备，不改损失公式 |
+-| 新增四份 `tests/test_causal*.py` | 模型、图、协议与完整损失合成检查 |
+-| `CAUSAL_README.md`、`REPRODUCTION_GUIDE.md` | 因果定义、命令、验证证据与限制 |
++数值回归、原始日志和可重跑命令见 [COMMANDS.md](reports/causal_review_followup/COMMANDS.md)。本机复用 `multimodalerc310`（PyTorch 2.2.2、PyG 2.4.0）和已有 pytest，无依赖升级；GPU 使用本地宿主机 3，进程内 `cuda:0`。CPU/GPU 归一化和 mask、未来梯度、负对照、实际训练函数和生产维度真实特征小检查均有各自证据；GPU 恢复的确定性限制单独报告。
+ 
+-其他原有未提交复现修改保留；本次没有提交或推送代码。
++尚未完成正式因果训练/性能比较，未验证原 PyTorch 1.13.1 环境或原始流特征提取链。图构造仍为平方复杂度，没有流式缓存。旧固定路径批量自动化不是新的因果 config-hash run 发现器，应使用 manifest 中的实际路径。
+diff --git a/caldiff/cal_diff.py b/caldiff/cal_diff.py
+index 0b9ed6e..c37d5ca 100644
+--- a/caldiff/cal_diff.py
++++ b/caldiff/cal_diff.py
+@@ -452,13 +452,17 @@ def train_or_eval_graph_model(model, model_mm, model_intra, model_inter, loss_fu
+                 data[-1],
+             )
+         )
+-    suffix = '_causal_diff.pkl' if args.causal else '_diff.pkl'
+-    output_path = 'caldiff/{}{}'.format(args.Dataset, suffix)
+-    payload = {'causal': True, 'dataset': args.Dataset, 'difficulties': Difficulties,
+-               'checkpoint': args.ckpt_path, 'args': vars(args).copy()} if args.causal else Difficulties
+-    with open(output_path, 'wb') as handle:
+-        pickle.dump(payload, handle)
++    if args.causal:
++        from causal_provenance import write_causal_difficulty
++        output_path = write_causal_difficulty(
++            Difficulties, args.difficulty_manifest,
++            output_path=args.difficulty_output)
++    else:
++        output_path = 'caldiff/{}_diff.pkl'.format(args.Dataset)
++        with open(output_path, 'wb') as handle:
++            pickle.dump(Difficulties, handle)
+     print('saved difficulties to {}'.format(output_path))
++    return Difficulties
+ 
+ 
+ 
+@@ -473,6 +477,11 @@ if __name__ == '__main__':
+ 
+     parser = argparse.ArgumentParser()
+ 
++    parser.add_argument('--difficulty-output', default=None,
++                        help='new immutable difficulty artifact path; default uses SHA256 filename')
++    parser.add_argument('--split-seed', type=int, default=None,
++                        help='data partition seed; defaults to recorded teacher split seed')
++    parser.add_argument('--replacement-policy', choices=['prefix_mean_v1'], default='prefix_mean_v1')
+     parser.add_argument('--causal', action='store_true', help='use only history and current utterances')
+     parser.add_argument('--no-cuda', action='store_true', default=False, help='does not use GPU')
+ 
+@@ -551,6 +560,24 @@ if __name__ == '__main__':
+         args.norm = 'LN'
+         if not args.graph_model or not args.multi_modal or args.mm_fusion_mthd != 'concat_DHT' or args.graph_type != 'hyper':
+             parser.error('--causal requires --multi_modal --mm_fusion_mthd concat_DHT --graph_type hyper')
++    if args.causal:
++        # Fail before model inference if the teacher lacks auditable training and
++        # validation-selection provenance. Never substitute random/noncausal weights.
++        from causal_provenance import (architecture_from_args, data_provenance_from_files,
++                                       create_difficulty_manifest)
++        source_checkpoint = torch.load(args.ckpt_path, map_location='cpu')
++        source_args = source_checkpoint.get('args', {})
++        if args.split_seed is None:
++            args.split_seed = source_args.get('split_seed')
++        if args.split_seed is None:
++            parser.error('causal difficulty requires source checkpoint split_seed provenance')
++        if args.seed is None:
++            args.seed = source_args.get('seed')
++        args.data_provenance = data_provenance_from_files(args.Dataset, args.split_seed)
++        args.difficulty_manifest = create_difficulty_manifest(
++            args.ckpt_path, source_checkpoint, args.data_provenance,
++            architecture_from_args(args), args.replacement_policy)
++        args.difficulty_manifest['generation_seed'] = args.seed
+     print('TEMPORAL PROTOCOL: {}; effective norm={}'.format('causal (history + current)' if args.causal else 'bidirectional', args.norm))
+     today = datetime.datetime.now()
+     print(args)
+@@ -812,7 +839,22 @@ if __name__ == '__main__':
+ 
+ 
+ 
+-    if args.Dataset == 'MELD':
++    if args.causal:
++        # Generate values only for the exact teacher training IDs. A train-only
++        # output is insufficient on its own: create_difficulty_manifest also
++        # checks the teacher's actual training split and selection provenance.
++        if args.Dataset == 'IEMOCAP':
++            from dataloader import split_iemocap_dialogues
++            original = IEMOCAPDataset(causal=True)
++            train_keys, _ = split_iemocap_dialogues(original.keys, args.split_seed)
++            trainset = IEMOCAPDataset(keys=train_keys, causal=True)
++        elif args.Dataset == 'MELD':
++            trainset = MELDDataset('data/MELD_features_raw1.pkl', split='train', causal=True)
++        else:
++            raise ValueError('unsupported causal difficulty dataset')
++        train_loader = DataLoader(trainset, batch_size=batch_size, shuffle=False,
++                                  collate_fn=trainset.collate_fn, num_workers=0)
++    elif args.Dataset == 'MELD':
+         train_loader, valid_loader, test_loader = get_MELD_loaders(valid=0.0,
+                                                                     batch_size=batch_size,
+                                                                     num_workers=2,
+diff --git a/dataloader.py b/dataloader.py
+index db5af57..3f390af 100644
+--- a/dataloader.py
++++ b/dataloader.py
+@@ -85,23 +85,29 @@ def validate_checkpoint_protocol(checkpoint, causal=False, expected_args=None):
+         raise ValueError('causal checkpoint must record effective norm=LN')
+ 
+ 
+-def load_curriculum_difficulties(dataset, causal=False):
+-    suffix = '_causal_diff.pkl' if causal else '_diff.pkl'
+-    path = 'caldiff/{}{}'.format(dataset, suffix)
++def load_curriculum_difficulties(dataset, causal=False, path=None,
++                                 expected_data_provenance=None, expected_architecture=None,
++                                 expected_sha256=None, replacement_policy='prefix_mean_v1'):
++    # Every causal caller requires provenance, including direct low-level calls.
++    if causal:
++        from causal_provenance import resolve_causal_difficulty
++        difficulties, _ = resolve_causal_difficulty(
++            path, dataset, expected_data_provenance, expected_architecture,
++            replacement_policy=replacement_policy, expected_sha256=expected_sha256)
++        return difficulties
++    path = path or 'caldiff/{}_diff.pkl'.format(dataset)
+     with open(path, 'rb') as handle:
+         payload = pickle.load(handle)
+-    if not causal:
+-        return payload
+-    if not isinstance(payload, dict) or payload.get('causal') is not True:
+-        raise ValueError('causal curriculum requires a causal difficulty wrapper: {}'.format(path))
+-    if payload.get('dataset') != dataset or not isinstance(payload.get('difficulties'), dict):
+-        raise ValueError('invalid causal difficulty dataset or values: {}'.format(path))
+-    return payload['difficulties']
++    return payload
+ 
+ 
+ class IEMOCAPDataset(Dataset):
+ 
+-    def __init__(self, train=True, epoch_ratio=-1, keys=None, causal=False):
++    def __init__(self, train=True, epoch_ratio=-1, keys=None, causal=False,
++                 difficulty_path=None, data_provenance=None, difficulty_sha256=None,
++                 difficulty_architecture=None):
++        if causal and epoch_ratio != -1 and not difficulty_path:
++            raise ValueError('causal curriculum requires an explicit difficulty path')
+         explicit_keys = keys is not None
+         self.videoIDs, self.videoSpeakers, self.videoLabels, self.videoText,\
+         self.videoAudio, self.videoVisual, self.videoSentence, self.trainVid,\
+@@ -118,7 +124,11 @@ class IEMOCAPDataset(Dataset):
+ 
+         if epoch_ratio != -1:
+             assert epoch_ratio > 0 and epoch_ratio <= 1
+-            self.diff = load_curriculum_difficulties('IEMOCAP', causal=causal)
++            self.diff = load_curriculum_difficulties(
++                'IEMOCAP', causal=causal, path=difficulty_path,
++                expected_data_provenance=data_provenance,
++                expected_architecture=difficulty_architecture,
++                expected_sha256=difficulty_sha256)
+             if explicit_keys:
+                 self.keys = select_curriculum_keys(self.keys, self.diff, epoch_ratio)
+             else:
+@@ -152,7 +162,11 @@ class IEMOCAPDataset(Dataset):
+ 
+ class MELDDataset(Dataset):
+ 
+-    def __init__(self, path, train=True, epoch_ratio=-1, split=None, keys=None, causal=False):
++    def __init__(self, path, train=True, epoch_ratio=-1, split=None, keys=None, causal=False,
++                 difficulty_path=None, data_provenance=None, difficulty_sha256=None,
++                 difficulty_architecture=None):
++        if causal and epoch_ratio != -1 and not difficulty_path:
++            raise ValueError('causal curriculum requires an explicit difficulty path')
+         explicit_split = keys is not None or split is not None
+         self.videoIDs, self.videoSpeakers, self.videoLabels, self.videoText,\
+         self.videoAudio, self.videoVisual, self.videoSentence, self.trainVid,\
+@@ -173,7 +187,11 @@ class MELDDataset(Dataset):
+         self.len = len(self.keys)
+         if epoch_ratio != -1:
+             assert epoch_ratio > 0 and epoch_ratio <= 1
+-            self.diff = load_curriculum_difficulties('MELD', causal=causal)
++            self.diff = load_curriculum_difficulties(
++                'MELD', causal=causal, path=difficulty_path,
++                expected_data_provenance=data_provenance,
++                expected_architecture=difficulty_architecture,
++                expected_sha256=difficulty_sha256)
+             if explicit_split:
+                 self.keys = select_curriculum_keys(self.keys, self.diff, epoch_ratio)
+             else:
+diff --git a/scripts/evaluate_checkpoint.py b/scripts/evaluate_checkpoint.py
+index ffbef23..6336286 100644
+--- a/scripts/evaluate_checkpoint.py
++++ b/scripts/evaluate_checkpoint.py
+@@ -223,10 +223,87 @@ def _model_arguments(config: DatasetConfig, device: Any, causal=False) -> dict[s
+     return arguments
+ 
+ 
+-def build_models(config: DatasetConfig, device: Any, causal=False):
++def resolve_device(value: str, causal=False):
++    """Resolve CUDA logical indices using public APIs (after CUDA_VISIBLE_DEVICES)."""
++    import torch
++
++    device = torch.device(value)
++    if device.type not in ("cpu", "cuda"):
++        raise ValueError("device must be cpu, cuda, or cuda:N")
++    if device.type == "cpu":
++        if not causal:
++            raise RuntimeError("the official hypergraph implementation requires CUDA")
++        return torch.device("cpu")
++    if not torch.cuda.is_available():
++        raise RuntimeError("CUDA was requested but torch.cuda.is_available() is false")
++    index = torch.cuda.current_device() if device.index is None else device.index
++    if not 0 <= index < torch.cuda.device_count():
++        raise ValueError(f"CUDA logical index {index} is outside visible devices")
++    return torch.device("cuda", index)
++
++
++def causal_model_arguments(config: DatasetConfig, device: Any,
++                           checkpoint: Mapping[str, Any]) -> dict[str, Any]:
++    """Read a bounded architecture schema from a trusted training checkpoint.
++
++    Loading PyTorch pickle still requires a trusted input. This whitelist limits
++    model construction; it does not make arbitrary pickle files safe to load.
++    Omitted dimensions mean the production train_cm dimensions for the dataset.
++    An explicit architecture mapping supports reproducible small diagnostic nets.
++    """
++    from dataloader import validate_checkpoint_protocol
++
++    saved = checkpoint.get("args")
++    if not isinstance(saved, dict):
++        raise ValueError("causal checkpoint args must be a dictionary")
++    arguments = _model_arguments(config, device, causal=True)
++    constants = {"Dataset": config.name, "norm": "LN", "graph_type": "hyper",
++                 "modals": "avl", "mm_fusion_mthd": "concat_DHT",
++                 "use_gcn": False, "multi_modal": True}
++    for key, expected in constants.items():
++        if key not in saved or type(saved[key]) is not type(expected) or saved[key] != expected:
++            raise ValueError(f"unsupported or missing {key}: expected {expected!r}")
++    if saved.get("base_model") not in ("GRU", "LSTM", "Transformer"):
++        raise ValueError("base_model must be GRU, LSTM, or Transformer")
++    arguments["base_model"] = saved["base_model"]
++    for key in ("av_using_lstm", "use_residue", "use_speaker", "use_modal"):
++        if type(saved.get(key)) is not bool:
++            raise ValueError(f"{key} must be a boolean")
++        arguments[key] = saved[key]
++    for key in ("num_L", "num_K", "Deep_GCN_nlayers"):
++        if type(saved.get(key)) is not int or not 1 <= saved[key] <= 128:
++            raise ValueError(f"{key} must be an integer in [1, 128]")
++        arguments[key] = saved[key]
++    dropout = saved.get("dropout", config.dropout)
++    if type(dropout) not in (int, float) or not math.isfinite(dropout) or not 0 <= dropout < 1:
++        raise ValueError("dropout must be finite and in [0, 1)")
++    arguments["dropout"] = float(dropout)
++    dimensions = saved.get("architecture", {})
++    allowed_dimensions = {"D_g", "graph_hidden_size", "D_m_a", "D_m_v", "n_speakers"}
++    if not isinstance(dimensions, dict) or set(dimensions) - allowed_dimensions:
++        raise ValueError("architecture contains unsupported dimension fields")
++    for key, value in dimensions.items():
++        if type(value) is not int or not 1 <= value <= 4096:
++            raise ValueError(f"architecture {key} must be an integer in [1, 4096]")
++        arguments[key] = value
++    if arguments["base_model"] == "Transformer" and arguments["D_g"] % 4:
++        raise ValueError("Transformer architecture D_g must be divisible by four heads")
++    policy = saved.get("replacement_policy", "prefix_mean_v1")
++    if policy != "prefix_mean_v1":
++        raise ValueError("replacement_policy must be prefix_mean_v1 for this evaluator")
++    validate_checkpoint_protocol(checkpoint, causal=True, expected_args={
++        **constants, **{key: saved[key] for key in (
++            "base_model", "av_using_lstm", "use_residue", "use_speaker", "use_modal",
++            "num_L", "num_K", "Deep_GCN_nlayers")},
++    })
++    return arguments
++
++
++def build_models(config: DatasetConfig, device: Any, causal=False, checkpoint=None):
+     """Construct the official full, intra-removed and inter-removed networks."""
+     _, _, Model, Model_Intra, Model_Inter = _import_official_modules(causal=causal)
+-    arguments = _model_arguments(config, device, causal=causal)
++    arguments = (causal_model_arguments(config, device, checkpoint)
++                 if causal and checkpoint is not None else _model_arguments(config, device, causal=causal))
+     return (
+         Model(**arguments).to(device),
+         Model_Intra(**arguments).to(device),
+@@ -234,19 +311,110 @@ def build_models(config: DatasetConfig, device: Any, causal=False):
+     )
+ 
+ 
+-def build_test_loader(config: DatasetConfig, batch_size: int, num_workers: int):
++def resolve_evaluation_data(config: DatasetConfig, checkpoint: Mapping[str, Any],
++                            split: str, split_seed=None, valid_fraction=None,
++                            diagnostic_data_reason=None) -> dict[str, Any]:
++    """Bind causal train/validation diagnostics to the checkpoint's actual split.
++
++    Legacy checkpoints may document the old seed==split-seed convention but
++    lack feature provenance. Such diagnostics require a recorded reason and
++    never acquire a verified provenance status merely by supplying a seed.
++    """
++    saved = checkpoint.get("args", {})
++    provenance = checkpoint.get("data_provenance", saved.get("data_provenance"))
++    if ("data_provenance" in checkpoint and "data_provenance" in saved
++            and checkpoint["data_provenance"] != saved["data_provenance"]):
++        raise ValueError("checkpoint data_provenance metadata is inconsistent")
++    if provenance is not None and not isinstance(provenance, dict):
++        raise ValueError("checkpoint data_provenance must be a dictionary")
++    if diagnostic_data_reason is not None and not diagnostic_data_reason.strip():
++        raise ValueError("diagnostic-data-reason cannot be empty")
++    candidates = []
++    if saved.get("split_seed") is not None:
++        candidates.append((saved["split_seed"], "checkpoint.args.split_seed"))
++    if provenance is not None and provenance.get("split_seed") is not None:
++        candidates.append((provenance["split_seed"], "checkpoint.data_provenance.split_seed"))
++    if not candidates and saved.get("selection_protocol") == "validation" and saved.get("seed") is not None:
++        candidates.append((saved["seed"], "legacy_checkpoint.args.seed"))
++    for value, _ in candidates:
++        if type(value) is not int:
++            raise ValueError("checkpoint split_seed must be an integer")
++    if candidates and any(value != candidates[0][0] for value, _ in candidates):
++        raise ValueError("checkpoint split_seed metadata is inconsistent")
++    declared_seed = candidates[0][0] if candidates else None
++    if split_seed is not None and declared_seed is not None and split_seed != declared_seed:
++        raise ValueError("requested split_seed conflicts with checkpoint split_seed")
++    effective_seed = declared_seed if split_seed is None else split_seed
++    if split in ("train", "validation"):
++        declared_protocols = [saved.get("selection_protocol")]
++        if provenance is not None:
++            declared_protocols.append(provenance.get("selection_protocol"))
++        if any(value is not None and value != "validation" for value in declared_protocols):
++            raise ValueError("checkpoint selection_protocol does not describe this held-out validation split")
++        if effective_seed is None:
++            raise ValueError("causal train/validation requires checkpoint split_seed or explicit diagnostic split_seed")
++        if provenance is None and not diagnostic_data_reason:
++            raise ValueError("checkpoint lacks data provenance; explicit --diagnostic-data-reason is required")
++    if effective_seed is None:
++        effective_seed = 0  # Test membership does not use a random split.
++    if type(effective_seed) is not int:
++        raise ValueError("split_seed must be an integer")
++    fraction = saved.get("valid_fraction", .1) if valid_fraction is None else valid_fraction
++    if not isinstance(fraction, (int, float)) or isinstance(fraction, bool) or not 0 <= fraction < 1:
++        raise ValueError("valid_fraction must be in [0, 1)")
++    if valid_fraction is not None and "valid_fraction" in saved and valid_fraction != saved["valid_fraction"]:
++        raise ValueError("requested valid_fraction conflicts with checkpoint")
++    return {"split": split, "split_seed": effective_seed, "valid_fraction": fraction,
++            "split_seed_source": candidates[0][1] if candidates else ("explicit_diagnostic" if split_seed is not None else "unused_for_test"),
++            "source_data_provenance": provenance,
++            "verification": "pending" if provenance is not None and split != "test" else (
++                "diagnostic_unverified" if split != "test" else "official_test_membership"),
++            "diagnostic_data_reason": diagnostic_data_reason}
++
++
++def verify_evaluation_data(config: DatasetConfig, resolved: Mapping[str, Any]) -> dict[str, Any]:
++    """Verify the entire source split and feature files before any subset is taken."""
++    result = dict(resolved)
++    expected = result["source_data_provenance"]
++    if expected is not None and result["split"] in ("train", "validation"):
++        from causal_provenance import data_provenance_from_files
++        actual = data_provenance_from_files(config.name, result["split_seed"],
++                                            valid_fraction=result["valid_fraction"],
++                                            selection_protocol="validation")
++        if actual != expected:
++            raise ValueError("evaluation data provenance differs from checkpoint (features or train/validation IDs)")
++        result["verification"] = "checkpoint_provenance_verified"
++    return result
++
++
++def build_test_loader(config: DatasetConfig, batch_size: int, num_workers: int,
++                      split="test", split_seed=0, valid_fraction=0.1, max_dialogues=None):
+     import torch
+ 
+     IEMOCAPDataset, MELDDataset, _, _, _ = _import_official_modules()
++    if split not in ("train", "validation", "test"):
++        raise ValueError("split must be train, validation, or test")
+     if config.name == "IEMOCAP":
+-        dataset = IEMOCAPDataset(train=False)
++        if split == "test":
++            dataset = IEMOCAPDataset(train=False)
++        else:
++            from dataloader import split_iemocap_dialogues
++            source = IEMOCAPDataset(train=True)
++            train_ids, valid_ids = split_iemocap_dialogues(source.keys, split_seed, valid_fraction)
++            dataset = IEMOCAPDataset(keys=train_ids if split == "train" else valid_ids)
+     else:
+-        dataset = MELDDataset("data/MELD_features_raw1.pkl", train=False)
++        dataset = (MELDDataset("data/MELD_features_raw1.pkl", train=False) if split == "test"
++                   else MELDDataset("data/MELD_features_raw1.pkl", split=split))
++    collate_fn = dataset.collate_fn
++    if max_dialogues is not None:
++        if max_dialogues <= 0:
++            raise ValueError("max-dialogues must be positive")
++        dataset = torch.utils.data.Subset(dataset, range(min(max_dialogues, len(dataset))))
+     return torch.utils.data.DataLoader(
+         dataset,
+         batch_size=batch_size,
+         shuffle=False,
+-        collate_fn=dataset.collate_fn,
++        collate_fn=collate_fn,
+         num_workers=num_workers,
+         pin_memory=True,
+     )
+@@ -274,7 +442,7 @@ def _forward_log_prob(model, text, qmask, umask, lengths, audio, visual):
+ 
+ 
+ def run_inference(models, dataloader, device: Any) -> dict[str, Any]:
+-    """Run full and five information-removal passes over the real test set."""
++    """Run full and five auxiliary-view passes over the supplied split."""
+     import torch
+ 
+     model, model_intra, model_inter = models
+@@ -372,6 +540,11 @@ def save_outputs(
+     inference: Mapping[str, Any],
+     metrics: Mapping[str, Any],
+     causal=False,
++    architecture=None,
++    split="test",
++    split_seed=0,
++    valid_fraction=0.1,
++    evaluation_data=None,
+ ) -> None:
+     output_dir.mkdir(parents=True, exist_ok=True)
+     log_probabilities = np.asarray(inference["log_probabilities"])
+@@ -406,6 +579,12 @@ def save_outputs(
+         "checkpoint": str(checkpoint_path.resolve()),
+         "causal": causal,
+         "effective_norm": "LN" if causal else "BN",
++        "replacement_policy": "prefix_mean_v1" if causal else "padded_batch_mean_legacy",
++        "architecture": architecture,
++        "split": split,
++        "split_seed": split_seed,
++        "valid_fraction": valid_fraction,
++        "evaluation_data": evaluation_data,
+         **metrics,
+     }
+     with (output_dir / "metrics.json").open("w", encoding="utf-8") as handle:
+@@ -423,6 +602,14 @@ def parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
+     parser.add_argument("--batch-size", type=int, default=16)
+     parser.add_argument("--num-workers", type=int, default=0)
+     parser.add_argument("--n-bins", type=int, default=15)
++    parser.add_argument("--split", choices=("train", "validation", "test"), default="test")
++    parser.add_argument("--split-seed", type=int, default=None,
++                        help="inherit checkpoint split seed; explicit conflicting values are rejected")
++    parser.add_argument("--valid-fraction", type=float, default=None)
++    parser.add_argument("--diagnostic-data-reason", default=None,
++                        help="record why a synthetic/legacy diagnostic lacks checkpoint data provenance")
++    parser.add_argument("--max-dialogues", type=int, default=None,
++                        help="optional leading dialogue subset for diagnostics")
+     return parser.parse_args(argv)
+ 
+ 
+@@ -430,21 +617,18 @@ def main(argv: Sequence[str] | None = None) -> int:
+     args = parse_args(argv)
+     if args.batch_size <= 0 or args.num_workers < 0 or args.n_bins <= 0:
+         raise ValueError("batch-size and n-bins must be positive; num-workers cannot be negative")
++    if args.valid_fraction is not None and not 0 <= args.valid_fraction < 1:
++        raise ValueError("valid-fraction must be in [0, 1)")
++    if args.max_dialogues is not None and args.max_dialogues <= 0:
++        raise ValueError("max-dialogues must be positive")
+ 
+     import torch
+ 
+     from evaluation_metrics import calibration_metrics, confidence_enhancement_level
+ 
+     config = dataset_config(args.dataset)
+-    device = torch.device(args.device)
+-    if device.type != "cuda" and not args.causal:
+-        raise RuntimeError(
+-            "the unmodified official hypergraph implementation contains unconditional .cuda() calls; "
+-            "use --device cuda[:N]"
+-        )
++    device = resolve_device(args.device, causal=args.causal)
+     if device.type == "cuda":
+-        if not torch.cuda.is_available():
+-            raise RuntimeError("CUDA was requested but torch.cuda.is_available() is false")
+         torch.cuda.set_device(device)
+     checkpoint_path = args.checkpoint.resolve()
+     if not checkpoint_path.is_file():
+@@ -453,13 +637,14 @@ def main(argv: Sequence[str] | None = None) -> int:
+     original_cwd = Path.cwd()
+     try:
+         os.chdir(PROJECT_ROOT)
+-        models = build_models(config, device, causal=args.causal)
+         try:
+             raw_checkpoint = torch.load(checkpoint_path, map_location=device, weights_only=False)
+         except TypeError:  # PyTorch 1.13 does not expose weights_only.
+             raw_checkpoint = torch.load(checkpoint_path, map_location=device)
+         from dataloader import validate_checkpoint_protocol
+-        arguments = _model_arguments(config, device, causal=args.causal)
++        arguments = (causal_model_arguments(config, device, raw_checkpoint) if args.causal
++                     else _model_arguments(config, device, causal=False))
++        models = build_models(config, device, causal=args.causal, checkpoint=raw_checkpoint)
+         expected_args = {
+             "causal": args.causal, "Dataset": config.name,
+             **{name: arguments[name] for name in (
+@@ -471,9 +656,18 @@ def main(argv: Sequence[str] | None = None) -> int:
+             "multi_modal": True,
+         }
+         validate_checkpoint_protocol(raw_checkpoint, causal=args.causal, expected_args=expected_args)
++        evaluation_data = (resolve_evaluation_data(config, raw_checkpoint, args.split,
++            split_seed=args.split_seed, valid_fraction=args.valid_fraction,
++            diagnostic_data_reason=args.diagnostic_data_reason) if args.causal else {
++                "split": args.split, "split_seed": 0 if args.split_seed is None else args.split_seed,
++                "valid_fraction": .1 if args.valid_fraction is None else args.valid_fraction,
++                "verification": "legacy_noncausal", "source_data_provenance": None})
++        evaluation_data = verify_evaluation_data(config, evaluation_data)
+         state = extract_state_dict(raw_checkpoint)
+         models[0].load_state_dict(state, strict=True)
+-        loader = build_test_loader(config, args.batch_size, args.num_workers)
++        loader = build_test_loader(config, args.batch_size, args.num_workers,
++                                   split=args.split, split_seed=evaluation_data["split_seed"],
++                                   valid_fraction=evaluation_data["valid_fraction"], max_dialogues=args.max_dialogues)
+         inference = run_inference(models, loader, device)
+     finally:
+         os.chdir(original_cwd)
+@@ -488,7 +682,10 @@ def main(argv: Sequence[str] | None = None) -> int:
+     metrics["cel"] = confidence_enhancement_level(
+         labels, log_probabilities, inference["removed_log_probabilities"]
+     )
+-    save_outputs(args.output_dir, config, checkpoint_path, inference, metrics, causal=args.causal)
++    save_outputs(args.output_dir, config, checkpoint_path, inference, metrics, causal=args.causal,
++                 architecture={key: value for key, value in arguments.items() if key != "no_cuda"},
++                 split=args.split, split_seed=evaluation_data["split_seed"],
++                 valid_fraction=evaluation_data["valid_fraction"], evaluation_data=evaluation_data)
+     print(json.dumps(_json_safe(metrics), indent=2, ensure_ascii=False, allow_nan=False))
+     print(f"saved evaluation artifacts to {args.output_dir.resolve()}")
+     return 0
+diff --git a/tests/test_causal_protocol.py b/tests/test_causal_protocol.py
+index 977d4ac..bc8812e 100644
+--- a/tests/test_causal_protocol.py
++++ b/tests/test_causal_protocol.py
+@@ -69,21 +69,18 @@ def test_legacy_baseline_state_dict_remains_accepted():
+ 
+ 
+ def test_curriculum_files_are_separate_and_causal_wrapper_is_required(tmp_path, monkeypatch):
++    # The reviewed wrapper was insufficient provenance; causal callers must now
++    # supply an explicit immutable artifact and data manifest.
+     monkeypatch.chdir(tmp_path)
+     (tmp_path / 'caldiff').mkdir()
+     baseline = {'dialogue-a': 0.1}
+-    causal = {'dialogue-a': 0.7}
+     with open('caldiff/IEMOCAP_diff.pkl', 'wb') as handle:
+         pickle.dump(baseline, handle)
+-    with pytest.raises(FileNotFoundError):
+-        load_curriculum_difficulties('IEMOCAP', causal=True)
+     with open('caldiff/IEMOCAP_causal_diff.pkl', 'wb') as handle:
+-        pickle.dump({'causal': True, 'dataset': 'IEMOCAP', 'difficulties': causal}, handle)
+-    assert load_curriculum_difficulties('IEMOCAP', causal=True) == causal
++        pickle.dump({'causal': True, 'dataset': 'IEMOCAP',
++                     'difficulties': {'dialogue-a': 0.7}}, handle)
+     assert load_curriculum_difficulties('IEMOCAP') == baseline
+-    with open('caldiff/IEMOCAP_causal_diff.pkl', 'wb') as handle:
+-        pickle.dump(baseline, handle)
+-    with pytest.raises(ValueError, match='causal difficulty wrapper'):
++    with pytest.raises(ValueError, match='explicit difficulty path'):
+         load_curriculum_difficulties('IEMOCAP', causal=True)
+ 
+ 
+diff --git a/train_cm.py b/train_cm.py
+index 025040b..fa75ce1 100644
+--- a/train_cm.py
++++ b/train_cm.py
+@@ -2,6 +2,7 @@ import os
+ import json
+ import numpy as np, argparse, time, pickle, random
+ from pathlib import Path
++from contextlib import nullcontext
+ import torch
+ import torch.nn as nn
+ import torch.optim as optim
+@@ -17,6 +18,7 @@ import datetime
+ import ipdb
+ from clloss import CKSCL_context, CKSCL_tav
+ from tqdm import tqdm
++from causal_run import prepare_run, sha256
+ CKSCL_m = CKSCL_tav()
+ CKSCL_c = CKSCL_context()
+ 
+@@ -54,6 +56,21 @@ def save_training_checkpoint(path, model, optimizer, epoch, args, best_metric, b
+         'best_metric': best_metric,
+         'best_epoch': best_epoch,
+     }
++    saved_args = payload['args']
++    payload['difficulty_sha256'] = (saved_args.get('difficulty_artifact') or {}).get('sha256')
++    run_manifest = saved_args.get('run_manifest')
++    if run_manifest:
++        payload['run_manifest_sha256'] = run_manifest['sha256']
++    payload['curriculum'] = {
++        'completed_epoch': epoch,
++        'next_epoch_ratio': (min(1., round(saved_args['epoch_ratio'] *
++            int((epoch + 1) / saved_args['scheduler_steps'] + 1), 2))
++            if saved_args.get('courselearning') and saved_args.get('scheduler_steps', 0) > 0 and 'epoch_ratio' in saved_args else -1),
++    }
++    best_path = path.parent / 'best.pt'
++    if path.name != 'best.pt' and best_path.exists():
++        payload['best_checkpoint'] = {'path': str(best_path.resolve()),
++                                      'sha256': sha256(best_path), 'epoch': best_epoch}
+     temporary_path = path.with_suffix(path.suffix + '.tmp')
+     torch.save(payload, temporary_path)
+     os.replace(temporary_path, path)
+@@ -73,12 +90,40 @@ def load_training_checkpoint(path, model, optimizer, map_location=None, expected
+         protocol_keys = (
+             'seed', 'dropout', 'rec_dropout', 'batch_size', 'lr', 'l2',
+             'calibrate', 'rank_coff', 'contrastlearning', 'mscl_coff', 'cscl_coff',
+-            'courselearning', 'epoch_ratio', 'scheduler_steps',
++            'courselearning', 'epoch_ratio', 'scheduler_steps', 'split_seed',
++            'auxiliary_policy', 'replacement_policy', 'data_provenance',
+         )
+         for key in protocol_keys:
+             if key in requested and (key not in saved or saved[key] != requested[key]):
+                 raise ValueError('causal resume {} does not match the saved training protocol'.format(key))
+-    model.load_state_dict(checkpoint['model_state_dict'])
++    if expected_args is not None:
++        requested = expected_args if isinstance(expected_args, dict) else vars(expected_args)
++        expected_difficulty = (requested.get('difficulty_artifact') or {}).get('sha256')
++        if checkpoint.get('difficulty_sha256') != expected_difficulty:
++            raise ValueError('resume difficulty hash does not match the saved checkpoint')
++        if requested.get('difficulty_artifact'):
++            artifact = requested['difficulty_artifact']
++            if 'path' in artifact and sha256(artifact['path']) != expected_difficulty:
++                raise ValueError('resume difficulty file content differs from pinned SHA256')
++        if requested.get('run_manifest'):
++            from causal_run import run_config_digest
++            manifest = requested['run_manifest']
++            manifest_path = Path(manifest['path'])
++            if not manifest_path.is_file() or sha256(manifest_path) != manifest['sha256']:
++                raise ValueError('resume run manifest file hash mismatch')
++            manifest_data = json.loads(manifest_path.read_text())
++            if manifest_data.get('config_sha256') != run_config_digest(requested):
++                raise ValueError('resume configuration does not match run manifest')
++            # Best-checkpoint branches intentionally have a new run manifest;
++            # their parent hash must identify the exact resumed checkpoint.
++            if checkpoint.get('run_manifest_sha256') != manifest['sha256']:
++                parent = manifest_data.get('parent_checkpoint') or {}
++                if parent.get('sha256') != sha256(path):
++                    raise ValueError('resume checkpoint run manifest hash mismatch')
++    if expected_args is not None:
++        from causal_run import validate_epoch_budget
++        validate_epoch_budget(expected_args, checkpoint)
++    model.load_state_dict(checkpoint['model_state_dict'], strict=True)
+     optimizer.load_state_dict(checkpoint['optimizer_state_dict'])
+     parameter_device = next(model.parameters()).device
+     for optimizer_state in optimizer.state.values():
+@@ -91,6 +136,8 @@ def load_training_checkpoint(path, model, optimizer, map_location=None, expected
+         'best_metric': checkpoint.get('best_metric'),
+         'best_epoch': checkpoint.get('best_epoch'),
+         'args': checkpoint.get('args', {}),
++        'curriculum': checkpoint.get('curriculum'),
++        'best_checkpoint': checkpoint.get('best_checkpoint'),
+     }
+ 
+ 
+@@ -184,8 +231,11 @@ def get_train_valid_sampler(trainset, valid=0.1, dataset='IEMOCAP'):
+ 
+ 
+ def get_MELD_loaders(batch_size=32, valid=0.1, num_workers=0, pin_memory=False,
+-                     epoch_ratio=-1, selection_protocol='official_test', seed=None, causal=False):
++                     epoch_ratio=-1, selection_protocol='official_test', seed=None, causal=False, split_seed=None, difficulty_path=None, data_provenance=None, difficulty_sha256=None, difficulty_architecture=None):
+     dataset_kwargs = {'causal': True} if causal else {}
++    if causal and epoch_ratio != -1:
++        dataset_kwargs.update(difficulty_path=difficulty_path, data_provenance=data_provenance,
++                              difficulty_sha256=difficulty_sha256, difficulty_architecture=difficulty_architecture)
+     if selection_protocol == 'validation':
+         trainset = MELDDataset('data/MELD_features_raw1.pkl', split='train', epoch_ratio=epoch_ratio, **dataset_kwargs)
+         validset = MELDDataset('data/MELD_features_raw1.pkl', split='validation', **dataset_kwargs)
+@@ -241,12 +291,15 @@ def get_MELD_loaders(batch_size=32, valid=0.1, num_workers=0, pin_memory=False,
+ 
+ 
+ def get_IEMOCAP_loaders(batch_size=32, valid=0.1, num_workers=0, pin_memory=False,
+-                        epoch_ratio=-1, selection_protocol='official_test', seed=None, causal=False):
++                        epoch_ratio=-1, selection_protocol='official_test', seed=None, causal=False, split_seed=None, difficulty_path=None, data_provenance=None, difficulty_sha256=None, difficulty_architecture=None):
+     dataset_kwargs = {'causal': True} if causal else {}
++    if causal and epoch_ratio != -1:
++        dataset_kwargs.update(difficulty_path=difficulty_path, data_provenance=data_provenance,
++                              difficulty_sha256=difficulty_sha256, difficulty_architecture=difficulty_architecture)
+     if selection_protocol == 'validation':
+         full_trainset = IEMOCAPDataset(**dataset_kwargs)
+         train_keys, validation_keys = split_iemocap_dialogues(
+-            full_trainset.keys, seed=0 if seed is None else seed, valid_fraction=valid
++            full_trainset.keys, seed=(0 if seed is None else seed) if split_seed is None else split_seed, valid_fraction=valid
+         )
+         trainset = IEMOCAPDataset(epoch_ratio=epoch_ratio, keys=train_keys, **dataset_kwargs)
+         validset = IEMOCAPDataset(keys=validation_keys, **dataset_kwargs)
+@@ -362,7 +415,7 @@ def train_or_eval_model(model, loss_function, dataloader, epoch, optimizer=None,
+     return avg_loss, avg_accuracy, labels, preds, masks, avg_fscore, [alphas, alphas_f, alphas_b, vids]
+ 
+ 
+-def train_or_eval_graph_model(model, model_mm, model_intra, model_inter, loss_function, dataloader, epoch, cuda, modals, optimizer=None, train=False, dataset='IEMOCAP', return_components=False):
++def train_or_eval_graph_model(model, model_mm, model_intra, model_inter, loss_function, dataloader, epoch, cuda, modals, optimizer=None, train=False, dataset='IEMOCAP', return_components=False, diagnostic_callback=None):
+     losses, preds, labels = [], [], []
+     loss_components = []
+     scores, vids = [], []
+@@ -384,8 +437,27 @@ def train_or_eval_graph_model(model, model_mm, model_intra, model_inter, loss_fu
+     model_inter.load_state_dict(model.state_dict())
+     model_inter.eval()
+ 
++    auxiliary_policy = getattr(args, 'auxiliary_policy', 'legacy_epoch_snapshot')
++    if auxiliary_policy not in ('legacy_epoch_snapshot', 'same_step_same_mode'):
++        raise ValueError('unknown auxiliary_policy: {}'.format(auxiliary_policy))
+     seed_everything(args.seed)
+-    for data in tqdm(dataloader):
++    for batch_index, data in enumerate(tqdm(dataloader)):
++        if auxiliary_policy == 'same_step_same_mode':
++            for auxiliary in (model_mm, model_intra, model_inter):
++                auxiliary.load_state_dict(model.state_dict(), strict=True)
++                auxiliary.eval()
++        diagnostic = None
++        if diagnostic_callback is not None:
++            diagnostic = {'epoch': epoch, 'batch': batch_index, 'auxiliary_policy': auxiliary_policy,
++                'main_training': model.training, 'aux_training': model_mm.training,
++                'main_aux_max_abs_diff': max((p.detach() - q.detach()).abs().max().item()
++                    for p, q in zip(model.parameters(), model_mm.parameters())),
++                'hscl_labels': {}, 'cc_per_view': {}, 'gradient_norms': {},
++                'aux_modes': {name: m.training for name,m in zip(('mm','intra','inter'), (model_mm,model_intra,model_inter))},
++                'confidence_backend': 'ATen' if auxiliary_policy == 'same_step_same_mode' else 'default',
++                'confidence_reference_training': False if auxiliary_policy == 'same_step_same_mode' else model.training}
++            parameters_before_step = {name: p.detach().clone() for name,p in model.named_parameters()}
++
+         if train:
+             optimizer.zero_grad()
+         
+@@ -425,7 +497,11 @@ def train_or_eval_graph_model(model, model_mm, model_intra, model_inter, loss_fu
+             log_prob, e_i, e_n, e_t, e_l, hidden = model(textf, qmask, umask, lengths)
+         label = torch.cat([label[j][:lengths[j]] for j in range(len(label))])
+         if args.contrastlearning or args.calibrate:
+-            with torch.no_grad():
++            # A same-step comparison uses the same backend for the full
++            # reference and every removed view (ATen supports eval backward).
++            confidence_backend = (torch.backends.cudnn.flags(enabled=False)
++                                  if auxiliary_policy == 'same_step_same_mode' else nullcontext())
++            with torch.no_grad(), confidence_backend:
+                 ft_scl = hidden
+                 mask_features = lambda feature: causal_mean_replacement(feature, umask) if getattr(args, 'causal', False) else feature.mean(dim=0).repeat(feature.shape[0], 1, 1)
+                 mask_textf1 = mask_features(textf1)
+@@ -436,6 +512,25 @@ def train_or_eval_graph_model(model, model_mm, model_intra, model_inter, loss_fu
+                 mask_acouf = mask_features(acouf)
+                 mask_visuf = mask_features(visuf)
+                 
++                # Explicit policy: shared current weights, all confidence comparisons
++                # in eval. Classification/HSCL use the normal train pass. Removed
++                # views and HSCL labels are read-only; full CC reference has gradient.
++                # This does not change legacy_epoch_snapshot's original behavior.
++                if auxiliary_policy == 'same_step_same_mode':
++                    was_training = model.training
++                    model.eval()
++                    try:
++                        # cuDNN eval RNN does not retain backward state. The
++                        # confidence reference needs gradients for CC, so use
++                        # ATen RNN for this pass only, retaining eval semantics.
++                        with torch.set_grad_enabled(train):
++                            confidence_log_prob = model([textf1,textf2,textf3,textf4], qmask,
++                                umask, lengths, acouf, visuf, epoch)[0]
++                    finally:
++                        model.train(was_training)
++                else:
++                    confidence_log_prob = log_prob
++
+                 # mask multimodal data
+                 log_prob2t, e_i, e_n, e_t, e_l, hiddent = model_mm([mask_textf1, mask_textf2, mask_textf3, mask_textf4], qmask, umask, lengths, acouf, visuf, epoch)
+                 log_prob2a, e_i, e_n, e_t, e_l, hiddena = model_mm([textf1,textf2,textf3,textf4], qmask, umask, lengths, mask_acouf, visuf, epoch)
+@@ -455,7 +550,7 @@ def train_or_eval_graph_model(model, model_mm, model_intra, model_inter, loss_fu
+                 pred2c_inter = torch.argmax(log_prob2inter, 1)
+ 
+             # 2. rank loss, indicate cf
+-            lp_ = log_prob
++            lp_ = confidence_log_prob
+             pred_ = torch.argmax(lp_,1)
+             rank_loss = 0
+             for i in range(len(log_prob)):
+@@ -475,6 +570,11 @@ def train_or_eval_graph_model(model, model_mm, model_intra, model_inter, loss_fu
+                 if lp_[i][num] <= log_prob2inter[i][num]:
+                     rank_lossc += (torch.sub(log_prob2inter[i][num], lp_[i][num]))
+ 
++            if diagnostic is not None:
++                rows = torch.arange(len(label), device=label.device)
++                diagnostic['cc_per_view'] = {name: torch.relu(view[rows,label] - lp_[rows,label]).sum().item()
++                    for name, view in zip(('text','audio','visual','intra','inter'),
++                        (log_prob2t,log_prob2a,log_prob2v,log_prob2intra,log_prob2inter))}
+             rank_loss = rank_loss + rank_lossc
+             # 2. for SCL label ##########################################################
+             # 0: confidence up 
+@@ -541,6 +641,11 @@ def train_or_eval_graph_model(model, model_mm, model_intra, model_inter, loss_fu
+             Mscl_tav = CKSCL_m(ft_scl, labels1=Mscl_pred_t, labels2=Mscl_pred_a, labels3=Mscl_pred_v, weight1=create_class_weight_SCL(Mscl_pred_t), weight2=create_class_weight_SCL(Mscl_pred_a), weight3=create_class_weight_SCL(Mscl_pred_v))
+             Cscl_c = CKSCL_c(ft_scl, labels1=Cscl_pred_intra, labels2=Cscl_pred_inter, weight1=create_class_weight_SCL(Cscl_pred_intra), weight2=create_class_weight_SCL(Cscl_pred_inter))
+ 
++            if diagnostic is not None:
++                diagnostic['hscl_labels'] = {name: value.detach().cpu().tolist()
++                    for name,value in zip(('text','audio','visual','intra','inter'),
++                        (Mscl_pred_t,Mscl_pred_a,Mscl_pred_v,Cscl_pred_intra,Cscl_pred_inter))}
++
+         classification_loss = loss_function(log_prob, label)
+         preds.append(torch.argmax(log_prob, 1).cpu().numpy())
+         labels.append(label.cpu().numpy())
+@@ -557,10 +662,42 @@ def train_or_eval_graph_model(model, model_mm, model_intra, model_inter, loss_fu
+             cscl_coff=args.cscl_coff,
+         )
+         loss_components.append(components)
++        if diagnostic is not None:
++            diagnostic['losses'] = components
++            diagnostic['gradient_coefficients'] = {'classification_loss': 1.,
++                'cc_loss': args.rank_coff if args.calibrate else 0.,
++                'mscl_loss': args.mscl_coff if args.contrastlearning else 0.,
++                'cscl_loss': args.cscl_coff if args.contrastlearning else 0.}
++            component_tensors = {'classification_loss': classification_loss}
++            if args.calibrate:
++                component_tensors['cc_loss'] = rank_loss
++            if args.contrastlearning:
++                component_tensors.update(mscl_loss=Mscl_tav, cscl_loss=Cscl_c)
++            used_parameters = tuple(p for p in model.parameters() if p.requires_grad)
++            for name, value in component_tensors.items():
++                if train and torch.is_tensor(value) and value.requires_grad:
++                    gradients = torch.autograd.grad(value, used_parameters,
++                        retain_graph=True, allow_unused=True)
++                    diagnostic['gradient_norms'][name] = sum(float(g.detach().square().sum())
++                        for g in gradients if g is not None) ** .5
++                else:
++                    diagnostic['gradient_norms'][name] = 0.
++        if diagnostic is not None:
++            diagnostic['weighted_gradient_norms'] = {name: norm * abs(diagnostic['gradient_coefficients'][name])
++                for name,norm in diagnostic['gradient_norms'].items()}
+         if train:
+             total_loss.backward()
++            if diagnostic is not None:
++                diagnostic['finite_gradients'] = all(torch.isfinite(p.grad).all().item()
++                    for p in model.parameters() if p.grad is not None)
++                diagnostic['active_gradient_parameters'] = [name for name,p in model.named_parameters()
++                    if p.grad is not None]
++
+             optimizer.step()
+-            
++        if diagnostic_callback is not None:
++            diagnostic['parameter_update_norms'] = {name: float((p.detach() - parameters_before_step[name]).norm())
++                for name,p in model.named_parameters() if p.grad is not None} if train else {}
++            diagnostic_callback(diagnostic)
+ 
+     if preds!=[]:
+         preds  = np.concatenate(preds)
+@@ -605,6 +742,10 @@ if __name__ == '__main__':
+ 
+     parser = argparse.ArgumentParser()
+ 
++    parser.add_argument('--difficulty-path', default=None, help='explicit immutable causal difficulty artifact')
++    parser.add_argument('--split-seed', type=int, default=None, help='split seed (legacy default: training seed)')
++    parser.add_argument('--auxiliary-policy', choices=['legacy_epoch_snapshot', 'same_step_same_mode'], default='legacy_epoch_snapshot')
++    parser.add_argument('--replacement-policy', choices=['prefix_mean_v1'], default='prefix_mean_v1')
+     parser.add_argument('--causal', action='store_true', help='use only history and current utterances')
+     parser.add_argument('--no-cuda', action='store_true', default=False, help='does not use GPU')
+ 
+@@ -696,6 +837,7 @@ if __name__ == '__main__':
+                         help='DataLoader worker count')
+ 
+     args = parser.parse_args()
++    args.split_seed = args.seed if args.split_seed is None else args.split_seed
+     if args.causal:
+         args.norm = 'LN'
+         if not args.graph_model or not args.multi_modal or args.mm_fusion_mthd != 'concat_DHT' or args.graph_type != 'hyper':
+@@ -957,11 +1099,22 @@ if __name__ == '__main__':
+     best_epoch = None
+     all_fscore, all_acc, all_loss = [], [], []
+     start_epoch = 0
+-    run_dir = Path(args.output_dir) / '{}_{}_seed{}'.format(
+-        args.Dataset, args.selection_protocol, args.seed
+-    )
+     if args.causal:
+-        run_dir = run_dir.with_name(run_dir.name + '_causal')
++        from causal_provenance import data_provenance_from_files, architecture_from_args, resolve_causal_difficulty
++        args.data_provenance = data_provenance_from_files(args.Dataset, args.split_seed,
++            valid_fraction=.1 if args.selection_protocol == 'validation' else 0.,
++            selection_protocol=args.selection_protocol)
++        # Official-test remains an explicitly named legacy protocol, never a valid
++        # teacher for strict causal curriculum under the validation protocol.
++        args.data_provenance['selection_protocol'] = args.selection_protocol
++        args.difficulty_artifact = None
++        if args.courselearning:
++            if not args.difficulty_path:
++                raise ValueError('--causal --courselearning requires --difficulty-path')
++            _, args.difficulty_artifact = resolve_causal_difficulty(args.difficulty_path,
++                args.Dataset, args.data_provenance, architecture_from_args(args),
++                replacement_policy=args.replacement_policy, expected_teacher_seed=args.seed)
++    run_dir = prepare_run(args)
+     metrics_path = run_dir / 'metrics.jsonl'
+     latest_checkpoint_path = run_dir / 'latest.pt'
+     best_checkpoint_path = run_dir / 'best.pt'
+@@ -1016,14 +1169,22 @@ if __name__ == '__main__':
+                                                                         num_workers=args.num_workers,
+                                                                         epoch_ratio=epoch_ratio,
+                                                                         selection_protocol=args.selection_protocol,
+-                                                                        seed=args.seed, causal=args.causal)
++                                                                        seed=args.seed, causal=args.causal, split_seed=args.split_seed,
++                                                                        difficulty_path=args.difficulty_path,
++                                                                        data_provenance=getattr(args, 'data_provenance', None),
++                                                                        difficulty_sha256=(getattr(args, 'difficulty_artifact', None) or {}).get('sha256'),
++                                                                        difficulty_architecture=architecture_from_args(args) if args.causal else None)
+         elif args.Dataset == 'IEMOCAP':
+             train_loader, valid_loader, test_loader = get_IEMOCAP_loaders(valid=validation_fraction,
+                                                                         batch_size=batch_size,
+                                                                         num_workers=args.num_workers,
+                                                                         epoch_ratio=epoch_ratio,
+                                                                         selection_protocol=args.selection_protocol,
+-                                                                        seed=args.seed, causal=args.causal)
++                                                                        seed=args.seed, causal=args.causal, split_seed=args.split_seed,
++                                                                        difficulty_path=args.difficulty_path,
++                                                                        data_provenance=getattr(args, 'data_provenance', None),
++                                                                        difficulty_sha256=(getattr(args, 'difficulty_artifact', None) or {}).get('sha256'),
++                                                                        difficulty_architecture=architecture_from_args(args) if args.causal else None)
+         else:
+             print("There is no such dataset")
+         if args.graph_model:
+@@ -1101,13 +1262,13 @@ if __name__ == '__main__':
+             'max_gpu_memory_mb': max_gpu_memory_mb,
+         }
+         write_jsonl_record(metrics_path, epoch_record)
+-        save_training_checkpoint(
+-            latest_checkpoint_path, model, optimizer, e, args, best_fscore, best_epoch
+-        )
+         if improved:
+             save_training_checkpoint(
+                 best_checkpoint_path, model, optimizer, e, args, best_fscore, best_epoch
+             )
++        save_training_checkpoint(
++            latest_checkpoint_path, model, optimizer, e, args, best_fscore, best_epoch
++        )
+ 
+         print('epoch: {}, train_loss: {}, train_acc: {}, train_fscore: {}, valid_loss: {}, valid_acc: {}, valid_fscore: {}, test_loss: {}, test_acc: {}, test_fscore: {}, time: {} sec'.\
+                 format(e+1, train_loss, train_acc, train_fscore, valid_loss, valid_acc, valid_fscore, test_loss, test_acc, test_fscore, elapsed_seconds))

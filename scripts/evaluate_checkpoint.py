@@ -223,10 +223,87 @@ def _model_arguments(config: DatasetConfig, device: Any, causal=False) -> dict[s
     return arguments
 
 
-def build_models(config: DatasetConfig, device: Any, causal=False):
+def resolve_device(value: str, causal=False):
+    """Resolve CUDA logical indices using public APIs (after CUDA_VISIBLE_DEVICES)."""
+    import torch
+
+    device = torch.device(value)
+    if device.type not in ("cpu", "cuda"):
+        raise ValueError("device must be cpu, cuda, or cuda:N")
+    if device.type == "cpu":
+        if not causal:
+            raise RuntimeError("the official hypergraph implementation requires CUDA")
+        return torch.device("cpu")
+    if not torch.cuda.is_available():
+        raise RuntimeError("CUDA was requested but torch.cuda.is_available() is false")
+    index = torch.cuda.current_device() if device.index is None else device.index
+    if not 0 <= index < torch.cuda.device_count():
+        raise ValueError(f"CUDA logical index {index} is outside visible devices")
+    return torch.device("cuda", index)
+
+
+def causal_model_arguments(config: DatasetConfig, device: Any,
+                           checkpoint: Mapping[str, Any]) -> dict[str, Any]:
+    """Read a bounded architecture schema from a trusted training checkpoint.
+
+    Loading PyTorch pickle still requires a trusted input. This whitelist limits
+    model construction; it does not make arbitrary pickle files safe to load.
+    Omitted dimensions mean the production train_cm dimensions for the dataset.
+    An explicit architecture mapping supports reproducible small diagnostic nets.
+    """
+    from dataloader import validate_checkpoint_protocol
+
+    saved = checkpoint.get("args")
+    if not isinstance(saved, dict):
+        raise ValueError("causal checkpoint args must be a dictionary")
+    arguments = _model_arguments(config, device, causal=True)
+    constants = {"Dataset": config.name, "norm": "LN", "graph_type": "hyper",
+                 "modals": "avl", "mm_fusion_mthd": "concat_DHT",
+                 "use_gcn": False, "multi_modal": True}
+    for key, expected in constants.items():
+        if key not in saved or type(saved[key]) is not type(expected) or saved[key] != expected:
+            raise ValueError(f"unsupported or missing {key}: expected {expected!r}")
+    if saved.get("base_model") not in ("GRU", "LSTM", "Transformer"):
+        raise ValueError("base_model must be GRU, LSTM, or Transformer")
+    arguments["base_model"] = saved["base_model"]
+    for key in ("av_using_lstm", "use_residue", "use_speaker", "use_modal"):
+        if type(saved.get(key)) is not bool:
+            raise ValueError(f"{key} must be a boolean")
+        arguments[key] = saved[key]
+    for key in ("num_L", "num_K", "Deep_GCN_nlayers"):
+        if type(saved.get(key)) is not int or not 1 <= saved[key] <= 128:
+            raise ValueError(f"{key} must be an integer in [1, 128]")
+        arguments[key] = saved[key]
+    dropout = saved.get("dropout", config.dropout)
+    if type(dropout) not in (int, float) or not math.isfinite(dropout) or not 0 <= dropout < 1:
+        raise ValueError("dropout must be finite and in [0, 1)")
+    arguments["dropout"] = float(dropout)
+    dimensions = saved.get("architecture", {})
+    allowed_dimensions = {"D_g", "graph_hidden_size", "D_m_a", "D_m_v", "n_speakers"}
+    if not isinstance(dimensions, dict) or set(dimensions) - allowed_dimensions:
+        raise ValueError("architecture contains unsupported dimension fields")
+    for key, value in dimensions.items():
+        if type(value) is not int or not 1 <= value <= 4096:
+            raise ValueError(f"architecture {key} must be an integer in [1, 4096]")
+        arguments[key] = value
+    if arguments["base_model"] == "Transformer" and arguments["D_g"] % 4:
+        raise ValueError("Transformer architecture D_g must be divisible by four heads")
+    policy = saved.get("replacement_policy", "prefix_mean_v1")
+    if policy != "prefix_mean_v1":
+        raise ValueError("replacement_policy must be prefix_mean_v1 for this evaluator")
+    validate_checkpoint_protocol(checkpoint, causal=True, expected_args={
+        **constants, **{key: saved[key] for key in (
+            "base_model", "av_using_lstm", "use_residue", "use_speaker", "use_modal",
+            "num_L", "num_K", "Deep_GCN_nlayers")},
+    })
+    return arguments
+
+
+def build_models(config: DatasetConfig, device: Any, causal=False, checkpoint=None):
     """Construct the official full, intra-removed and inter-removed networks."""
     _, _, Model, Model_Intra, Model_Inter = _import_official_modules(causal=causal)
-    arguments = _model_arguments(config, device, causal=causal)
+    arguments = (causal_model_arguments(config, device, checkpoint)
+                 if causal and checkpoint is not None else _model_arguments(config, device, causal=causal))
     return (
         Model(**arguments).to(device),
         Model_Intra(**arguments).to(device),
@@ -234,19 +311,110 @@ def build_models(config: DatasetConfig, device: Any, causal=False):
     )
 
 
-def build_test_loader(config: DatasetConfig, batch_size: int, num_workers: int):
+def resolve_evaluation_data(config: DatasetConfig, checkpoint: Mapping[str, Any],
+                            split: str, split_seed=None, valid_fraction=None,
+                            diagnostic_data_reason=None) -> dict[str, Any]:
+    """Bind causal train/validation diagnostics to the checkpoint's actual split.
+
+    Legacy checkpoints may document the old seed==split-seed convention but
+    lack feature provenance. Such diagnostics require a recorded reason and
+    never acquire a verified provenance status merely by supplying a seed.
+    """
+    saved = checkpoint.get("args", {})
+    provenance = checkpoint.get("data_provenance", saved.get("data_provenance"))
+    if ("data_provenance" in checkpoint and "data_provenance" in saved
+            and checkpoint["data_provenance"] != saved["data_provenance"]):
+        raise ValueError("checkpoint data_provenance metadata is inconsistent")
+    if provenance is not None and not isinstance(provenance, dict):
+        raise ValueError("checkpoint data_provenance must be a dictionary")
+    if diagnostic_data_reason is not None and not diagnostic_data_reason.strip():
+        raise ValueError("diagnostic-data-reason cannot be empty")
+    candidates = []
+    if saved.get("split_seed") is not None:
+        candidates.append((saved["split_seed"], "checkpoint.args.split_seed"))
+    if provenance is not None and provenance.get("split_seed") is not None:
+        candidates.append((provenance["split_seed"], "checkpoint.data_provenance.split_seed"))
+    if not candidates and saved.get("selection_protocol") == "validation" and saved.get("seed") is not None:
+        candidates.append((saved["seed"], "legacy_checkpoint.args.seed"))
+    for value, _ in candidates:
+        if type(value) is not int:
+            raise ValueError("checkpoint split_seed must be an integer")
+    if candidates and any(value != candidates[0][0] for value, _ in candidates):
+        raise ValueError("checkpoint split_seed metadata is inconsistent")
+    declared_seed = candidates[0][0] if candidates else None
+    if split_seed is not None and declared_seed is not None and split_seed != declared_seed:
+        raise ValueError("requested split_seed conflicts with checkpoint split_seed")
+    effective_seed = declared_seed if split_seed is None else split_seed
+    if split in ("train", "validation"):
+        declared_protocols = [saved.get("selection_protocol")]
+        if provenance is not None:
+            declared_protocols.append(provenance.get("selection_protocol"))
+        if any(value is not None and value != "validation" for value in declared_protocols):
+            raise ValueError("checkpoint selection_protocol does not describe this held-out validation split")
+        if effective_seed is None:
+            raise ValueError("causal train/validation requires checkpoint split_seed or explicit diagnostic split_seed")
+        if provenance is None and not diagnostic_data_reason:
+            raise ValueError("checkpoint lacks data provenance; explicit --diagnostic-data-reason is required")
+    if effective_seed is None:
+        effective_seed = 0  # Test membership does not use a random split.
+    if type(effective_seed) is not int:
+        raise ValueError("split_seed must be an integer")
+    fraction = saved.get("valid_fraction", .1) if valid_fraction is None else valid_fraction
+    if not isinstance(fraction, (int, float)) or isinstance(fraction, bool) or not 0 <= fraction < 1:
+        raise ValueError("valid_fraction must be in [0, 1)")
+    if valid_fraction is not None and "valid_fraction" in saved and valid_fraction != saved["valid_fraction"]:
+        raise ValueError("requested valid_fraction conflicts with checkpoint")
+    return {"split": split, "split_seed": effective_seed, "valid_fraction": fraction,
+            "split_seed_source": candidates[0][1] if candidates else ("explicit_diagnostic" if split_seed is not None else "unused_for_test"),
+            "source_data_provenance": provenance,
+            "verification": "pending" if provenance is not None and split != "test" else (
+                "diagnostic_unverified" if split != "test" else "official_test_membership"),
+            "diagnostic_data_reason": diagnostic_data_reason}
+
+
+def verify_evaluation_data(config: DatasetConfig, resolved: Mapping[str, Any]) -> dict[str, Any]:
+    """Verify the entire source split and feature files before any subset is taken."""
+    result = dict(resolved)
+    expected = result["source_data_provenance"]
+    if expected is not None and result["split"] in ("train", "validation"):
+        from causal_provenance import data_provenance_from_files
+        actual = data_provenance_from_files(config.name, result["split_seed"],
+                                            valid_fraction=result["valid_fraction"],
+                                            selection_protocol="validation")
+        if actual != expected:
+            raise ValueError("evaluation data provenance differs from checkpoint (features or train/validation IDs)")
+        result["verification"] = "checkpoint_provenance_verified"
+    return result
+
+
+def build_test_loader(config: DatasetConfig, batch_size: int, num_workers: int,
+                      split="test", split_seed=0, valid_fraction=0.1, max_dialogues=None):
     import torch
 
     IEMOCAPDataset, MELDDataset, _, _, _ = _import_official_modules()
+    if split not in ("train", "validation", "test"):
+        raise ValueError("split must be train, validation, or test")
     if config.name == "IEMOCAP":
-        dataset = IEMOCAPDataset(train=False)
+        if split == "test":
+            dataset = IEMOCAPDataset(train=False)
+        else:
+            from dataloader import split_iemocap_dialogues
+            source = IEMOCAPDataset(train=True)
+            train_ids, valid_ids = split_iemocap_dialogues(source.keys, split_seed, valid_fraction)
+            dataset = IEMOCAPDataset(keys=train_ids if split == "train" else valid_ids)
     else:
-        dataset = MELDDataset("data/MELD_features_raw1.pkl", train=False)
+        dataset = (MELDDataset("data/MELD_features_raw1.pkl", train=False) if split == "test"
+                   else MELDDataset("data/MELD_features_raw1.pkl", split=split))
+    collate_fn = dataset.collate_fn
+    if max_dialogues is not None:
+        if max_dialogues <= 0:
+            raise ValueError("max-dialogues must be positive")
+        dataset = torch.utils.data.Subset(dataset, range(min(max_dialogues, len(dataset))))
     return torch.utils.data.DataLoader(
         dataset,
         batch_size=batch_size,
         shuffle=False,
-        collate_fn=dataset.collate_fn,
+        collate_fn=collate_fn,
         num_workers=num_workers,
         pin_memory=True,
     )
@@ -274,7 +442,7 @@ def _forward_log_prob(model, text, qmask, umask, lengths, audio, visual):
 
 
 def run_inference(models, dataloader, device: Any) -> dict[str, Any]:
-    """Run full and five information-removal passes over the real test set."""
+    """Run full and five auxiliary-view passes over the supplied split."""
     import torch
 
     model, model_intra, model_inter = models
@@ -372,6 +540,11 @@ def save_outputs(
     inference: Mapping[str, Any],
     metrics: Mapping[str, Any],
     causal=False,
+    architecture=None,
+    split="test",
+    split_seed=0,
+    valid_fraction=0.1,
+    evaluation_data=None,
 ) -> None:
     output_dir.mkdir(parents=True, exist_ok=True)
     log_probabilities = np.asarray(inference["log_probabilities"])
@@ -406,6 +579,12 @@ def save_outputs(
         "checkpoint": str(checkpoint_path.resolve()),
         "causal": causal,
         "effective_norm": "LN" if causal else "BN",
+        "replacement_policy": "prefix_mean_v1" if causal else "padded_batch_mean_legacy",
+        "architecture": architecture,
+        "split": split,
+        "split_seed": split_seed,
+        "valid_fraction": valid_fraction,
+        "evaluation_data": evaluation_data,
         **metrics,
     }
     with (output_dir / "metrics.json").open("w", encoding="utf-8") as handle:
@@ -423,6 +602,14 @@ def parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
     parser.add_argument("--batch-size", type=int, default=16)
     parser.add_argument("--num-workers", type=int, default=0)
     parser.add_argument("--n-bins", type=int, default=15)
+    parser.add_argument("--split", choices=("train", "validation", "test"), default="test")
+    parser.add_argument("--split-seed", type=int, default=None,
+                        help="inherit checkpoint split seed; explicit conflicting values are rejected")
+    parser.add_argument("--valid-fraction", type=float, default=None)
+    parser.add_argument("--diagnostic-data-reason", default=None,
+                        help="record why a synthetic/legacy diagnostic lacks checkpoint data provenance")
+    parser.add_argument("--max-dialogues", type=int, default=None,
+                        help="optional leading dialogue subset for diagnostics")
     return parser.parse_args(argv)
 
 
@@ -430,21 +617,18 @@ def main(argv: Sequence[str] | None = None) -> int:
     args = parse_args(argv)
     if args.batch_size <= 0 or args.num_workers < 0 or args.n_bins <= 0:
         raise ValueError("batch-size and n-bins must be positive; num-workers cannot be negative")
+    if args.valid_fraction is not None and not 0 <= args.valid_fraction < 1:
+        raise ValueError("valid-fraction must be in [0, 1)")
+    if args.max_dialogues is not None and args.max_dialogues <= 0:
+        raise ValueError("max-dialogues must be positive")
 
     import torch
 
     from evaluation_metrics import calibration_metrics, confidence_enhancement_level
 
     config = dataset_config(args.dataset)
-    device = torch.device(args.device)
-    if device.type != "cuda" and not args.causal:
-        raise RuntimeError(
-            "the unmodified official hypergraph implementation contains unconditional .cuda() calls; "
-            "use --device cuda[:N]"
-        )
+    device = resolve_device(args.device, causal=args.causal)
     if device.type == "cuda":
-        if not torch.cuda.is_available():
-            raise RuntimeError("CUDA was requested but torch.cuda.is_available() is false")
         torch.cuda.set_device(device)
     checkpoint_path = args.checkpoint.resolve()
     if not checkpoint_path.is_file():
@@ -453,13 +637,14 @@ def main(argv: Sequence[str] | None = None) -> int:
     original_cwd = Path.cwd()
     try:
         os.chdir(PROJECT_ROOT)
-        models = build_models(config, device, causal=args.causal)
         try:
             raw_checkpoint = torch.load(checkpoint_path, map_location=device, weights_only=False)
         except TypeError:  # PyTorch 1.13 does not expose weights_only.
             raw_checkpoint = torch.load(checkpoint_path, map_location=device)
         from dataloader import validate_checkpoint_protocol
-        arguments = _model_arguments(config, device, causal=args.causal)
+        arguments = (causal_model_arguments(config, device, raw_checkpoint) if args.causal
+                     else _model_arguments(config, device, causal=False))
+        models = build_models(config, device, causal=args.causal, checkpoint=raw_checkpoint)
         expected_args = {
             "causal": args.causal, "Dataset": config.name,
             **{name: arguments[name] for name in (
@@ -471,9 +656,18 @@ def main(argv: Sequence[str] | None = None) -> int:
             "multi_modal": True,
         }
         validate_checkpoint_protocol(raw_checkpoint, causal=args.causal, expected_args=expected_args)
+        evaluation_data = (resolve_evaluation_data(config, raw_checkpoint, args.split,
+            split_seed=args.split_seed, valid_fraction=args.valid_fraction,
+            diagnostic_data_reason=args.diagnostic_data_reason) if args.causal else {
+                "split": args.split, "split_seed": 0 if args.split_seed is None else args.split_seed,
+                "valid_fraction": .1 if args.valid_fraction is None else args.valid_fraction,
+                "verification": "legacy_noncausal", "source_data_provenance": None})
+        evaluation_data = verify_evaluation_data(config, evaluation_data)
         state = extract_state_dict(raw_checkpoint)
         models[0].load_state_dict(state, strict=True)
-        loader = build_test_loader(config, args.batch_size, args.num_workers)
+        loader = build_test_loader(config, args.batch_size, args.num_workers,
+                                   split=args.split, split_seed=evaluation_data["split_seed"],
+                                   valid_fraction=evaluation_data["valid_fraction"], max_dialogues=args.max_dialogues)
         inference = run_inference(models, loader, device)
     finally:
         os.chdir(original_cwd)
@@ -488,7 +682,10 @@ def main(argv: Sequence[str] | None = None) -> int:
     metrics["cel"] = confidence_enhancement_level(
         labels, log_probabilities, inference["removed_log_probabilities"]
     )
-    save_outputs(args.output_dir, config, checkpoint_path, inference, metrics, causal=args.causal)
+    save_outputs(args.output_dir, config, checkpoint_path, inference, metrics, causal=args.causal,
+                 architecture={key: value for key, value in arguments.items() if key != "no_cuda"},
+                 split=args.split, split_seed=evaluation_data["split_seed"],
+                 valid_fraction=evaluation_data["valid_fraction"], evaluation_data=evaluation_data)
     print(json.dumps(_json_safe(metrics), indent=2, ensure_ascii=False, allow_nan=False))
     print(f"saved evaluation artifacts to {args.output_dir.resolve()}")
     return 0

@@ -85,23 +85,29 @@ def validate_checkpoint_protocol(checkpoint, causal=False, expected_args=None):
         raise ValueError('causal checkpoint must record effective norm=LN')
 
 
-def load_curriculum_difficulties(dataset, causal=False):
-    suffix = '_causal_diff.pkl' if causal else '_diff.pkl'
-    path = 'caldiff/{}{}'.format(dataset, suffix)
+def load_curriculum_difficulties(dataset, causal=False, path=None,
+                                 expected_data_provenance=None, expected_architecture=None,
+                                 expected_sha256=None, replacement_policy='prefix_mean_v1'):
+    # Every causal caller requires provenance, including direct low-level calls.
+    if causal:
+        from causal_provenance import resolve_causal_difficulty
+        difficulties, _ = resolve_causal_difficulty(
+            path, dataset, expected_data_provenance, expected_architecture,
+            replacement_policy=replacement_policy, expected_sha256=expected_sha256)
+        return difficulties
+    path = path or 'caldiff/{}_diff.pkl'.format(dataset)
     with open(path, 'rb') as handle:
         payload = pickle.load(handle)
-    if not causal:
-        return payload
-    if not isinstance(payload, dict) or payload.get('causal') is not True:
-        raise ValueError('causal curriculum requires a causal difficulty wrapper: {}'.format(path))
-    if payload.get('dataset') != dataset or not isinstance(payload.get('difficulties'), dict):
-        raise ValueError('invalid causal difficulty dataset or values: {}'.format(path))
-    return payload['difficulties']
+    return payload
 
 
 class IEMOCAPDataset(Dataset):
 
-    def __init__(self, train=True, epoch_ratio=-1, keys=None, causal=False):
+    def __init__(self, train=True, epoch_ratio=-1, keys=None, causal=False,
+                 difficulty_path=None, data_provenance=None, difficulty_sha256=None,
+                 difficulty_architecture=None):
+        if causal and epoch_ratio != -1 and not difficulty_path:
+            raise ValueError('causal curriculum requires an explicit difficulty path')
         explicit_keys = keys is not None
         self.videoIDs, self.videoSpeakers, self.videoLabels, self.videoText,\
         self.videoAudio, self.videoVisual, self.videoSentence, self.trainVid,\
@@ -118,7 +124,11 @@ class IEMOCAPDataset(Dataset):
 
         if epoch_ratio != -1:
             assert epoch_ratio > 0 and epoch_ratio <= 1
-            self.diff = load_curriculum_difficulties('IEMOCAP', causal=causal)
+            self.diff = load_curriculum_difficulties(
+                'IEMOCAP', causal=causal, path=difficulty_path,
+                expected_data_provenance=data_provenance,
+                expected_architecture=difficulty_architecture,
+                expected_sha256=difficulty_sha256)
             if explicit_keys:
                 self.keys = select_curriculum_keys(self.keys, self.diff, epoch_ratio)
             else:
@@ -152,7 +162,11 @@ class IEMOCAPDataset(Dataset):
 
 class MELDDataset(Dataset):
 
-    def __init__(self, path, train=True, epoch_ratio=-1, split=None, keys=None, causal=False):
+    def __init__(self, path, train=True, epoch_ratio=-1, split=None, keys=None, causal=False,
+                 difficulty_path=None, data_provenance=None, difficulty_sha256=None,
+                 difficulty_architecture=None):
+        if causal and epoch_ratio != -1 and not difficulty_path:
+            raise ValueError('causal curriculum requires an explicit difficulty path')
         explicit_split = keys is not None or split is not None
         self.videoIDs, self.videoSpeakers, self.videoLabels, self.videoText,\
         self.videoAudio, self.videoVisual, self.videoSentence, self.trainVid,\
@@ -173,7 +187,11 @@ class MELDDataset(Dataset):
         self.len = len(self.keys)
         if epoch_ratio != -1:
             assert epoch_ratio > 0 and epoch_ratio <= 1
-            self.diff = load_curriculum_difficulties('MELD', causal=causal)
+            self.diff = load_curriculum_difficulties(
+                'MELD', causal=causal, path=difficulty_path,
+                expected_data_provenance=data_provenance,
+                expected_architecture=difficulty_architecture,
+                expected_sha256=difficulty_sha256)
             if explicit_split:
                 self.keys = select_curriculum_keys(self.keys, self.diff, epoch_ratio)
             else:

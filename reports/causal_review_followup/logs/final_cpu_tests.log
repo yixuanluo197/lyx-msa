@@ -1,0 +1,11 @@
+........................................................................ [ 19%]
+........................................................................ [ 38%]
+........................................................................ [ 57%]
+...........................................ss.........................s. [ 76%]
+....................................s................................... [ 95%]
+..................                                                       [100%]
+=========================== short test summary info ============================
+SKIPPED [2] tests/test_followup_causality.py:410: CUDA and cuDNN required to reproduce eval RNN backend limitation
+SKIPPED [1] tests/test_followup_evaluator.py:105: CUDA unavailable; no CUDA main execution claimed
+SKIPPED [1] tests/test_followup_training.py:159: CUDA device unavailable
+374 passed, 4 skipped in 21.12s
