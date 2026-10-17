@@ -12,33 +12,36 @@ from causal_run import prepare_run
 from train_cm import model_state_sha256, save_training_checkpoint
 
 
-def fixture_run(tmp_path, variant='baseline', paired=None, difficulty=None, overrides=None):
+def fixture_run(tmp_path, variant='baseline', paired=None, difficulty=None, overrides=None,
+                dataset='IEMOCAP', seed=1937):
+    settings = dict(dropout=.5, num_K=4, rank=.005, mscl=.05, cscl=.05, ratio=.15) if dataset == 'IEMOCAP' \
+        else dict(dropout=.4, num_K=3, rank=.002, mscl=.15, cscl=.15, ratio=.4)
     feature = tmp_path / 'fixture_feature'
     feature.write_text('synthetic verifier fixture, not real features')
-    data = build_data_provenance('IEMOCAP', ['train-a', 'train-b'], ['validation-a'],
+    data = build_data_provenance(dataset, ['train-a', 'train-b'], ['validation-a'],
                                  {'feature': feature}, 1475)
     expected = tmp_path / 'DATA_ENVIRONMENT.json'
     expected.write_text(json.dumps({'data_provenance': data, 'train_ids': ['private-id']}))
-    torch.manual_seed(1937)
+    torch.manual_seed(seed)
     model = torch.nn.Linear(2, 2)
-    args = SimpleNamespace(Dataset='IEMOCAP', causal=True, norm='LN', base_model='GRU',
+    args = SimpleNamespace(Dataset=dataset, causal=True, norm='LN', base_model='GRU',
         graph_type='hyper', mm_fusion_mthd='concat_DHT', modals='avl', multi_modal=True,
-        selection_protocol='validation', seed=1937, split_seed=1475, batch_size=16,
-        epochs=2, lr=.0001, dropout=.5, num_L=3, num_K=4,
+        selection_protocol='validation', seed=seed, split_seed=1475, batch_size=16,
+        epochs=2, lr=.0001, dropout=settings['dropout'], num_L=3, num_K=settings['num_K'],
         auxiliary_policy='legacy_epoch_snapshot', replacement_policy='prefix_mean_v1',
         graph_construct='direct', use_residue=False, av_using_lstm=False,
         use_speaker=True, use_modal=False, l2=.00003, fail_on_nonfinite=True,
         defer_final_test=True,
         calibrate=variant == 'cmerc', contrastlearning=variant == 'cmerc',
-        courselearning=variant == 'cmerc', rank_coff=.005 if variant == 'cmerc' else 0.,
-        mscl_coff=.05 if variant == 'cmerc' else 0., cscl_coff=.05 if variant == 'cmerc' else 0.,
-        epoch_ratio=.15 if variant == 'cmerc' else 0., scheduler_steps=1 if variant == 'cmerc' else 0,
+        courselearning=variant == 'cmerc', rank_coff=settings['rank'] if variant == 'cmerc' else 0.,
+        mscl_coff=settings['mscl'] if variant == 'cmerc' else 0., cscl_coff=settings['cscl'] if variant == 'cmerc' else 0.,
+        epoch_ratio=settings['ratio'] if variant == 'cmerc' else 0., scheduler_steps=1 if variant == 'cmerc' else 0,
         data_provenance=data, difficulty_artifact=None, output_dir=str(tmp_path / variant), resume=None)
     for key, value in (overrides or {}).items():
         setattr(args, key, value)
     if difficulty:
         from causal_provenance import resolve_causal_difficulty
-        _, args.difficulty_artifact = resolve_causal_difficulty(difficulty, 'IEMOCAP', data)
+        _, args.difficulty_artifact = resolve_causal_difficulty(difficulty, dataset, data)
     args.initial_model_sha256 = model_state_sha256(model)
     run = prepare_run(args)
     (run / 'initial_state.json').write_text(json.dumps({'model_state_sha256': args.initial_model_sha256}))
@@ -61,8 +64,8 @@ def fixture_run(tmp_path, variant='baseline', paired=None, difficulty=None, over
             selection_split='validation', selection_weighted_f1=60., validation_weighted_f1=60.,
             validation_accuracy=61., train_accuracy=62., train_weighted_f1=63.,
             test_accuracy=None, test_weighted_f1=None, elapsed_seconds=1.,
-            sample_ratio=round(.15 * (epoch + 1), 2) if variant == 'cmerc' else 1.,
-            train_dialogues=int(round(.15 * (epoch + 1), 2) * data['train_count'])
+            sample_ratio=min(1., round(settings['ratio'] * (epoch + 1), 2)) if variant == 'cmerc' else 1.,
+            train_dialogues=int(min(1., round(settings['ratio'] * (epoch + 1), 2)) * data['train_count'])
                 if variant == 'cmerc' else data['train_count'],
             max_gpu_memory_mb=32., **losses)
         with (run / 'metrics.jsonl').open('a') as handle:
@@ -153,6 +156,26 @@ def test_full_pair_requires_actual_pinned_validation_teacher(tmp_path):
     result = verify(full, expected, variant='cmerc', paired_run=baseline, difficulty=difficulty)
     assert result['paired_initialization_verified'] is True
     assert result['difficulty']['teacher_best_sha256'] == result['paired_best_sha256']
+    with pytest.raises(ValueError, match='expected difficulty SHA256'):
+        verify(full, expected, variant='cmerc', paired_run=baseline, difficulty=difficulty,
+               expected_difficulty_sha256='0' * 64)
     Path(difficulty).write_bytes(b'replaced')
     with pytest.raises(ValueError, match='SHA256'):
         verify(full, expected, variant='cmerc', paired_run=baseline, difficulty=difficulty)
+
+
+def test_meld_other_seed_pair_and_wrong_seed_rejection(tmp_path):
+    baseline, expected, args = fixture_run(tmp_path, dataset='MELD', seed=2025)
+    result = verify(baseline, expected, variant='baseline', dataset='MELD', seed=2025)
+    assert result['status'] == 'passed' and result['dataset'] == 'MELD'
+    with pytest.raises(ValueError, match='seed'):
+        verify(baseline, expected, variant='baseline', dataset='MELD', seed=1937)
+    source = torch.load(baseline / 'best.pt', map_location='cpu')
+    manifest = create_difficulty_manifest(baseline / 'best.pt', source,
+        args.data_provenance, architecture_from_args(args))
+    difficulty = write_causal_difficulty({'train-a': .2, 'train-b': .3}, manifest,
+                                        output_dir=tmp_path / 'difficulty')
+    full, _, _ = fixture_run(tmp_path, 'cmerc', difficulty=difficulty, dataset='MELD', seed=2025)
+    result = verify(full, expected, variant='cmerc', paired_run=baseline, difficulty=difficulty,
+                    dataset='MELD', seed=2025)
+    assert result['paired_initialization_verified']

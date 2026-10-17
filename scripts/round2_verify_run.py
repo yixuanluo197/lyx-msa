@@ -21,6 +21,10 @@ from train_cm import model_state_sha256
 
 
 LOSSES = ('classification_loss', 'cc_loss', 'mscl_loss', 'cscl_loss', 'total_loss')
+OFFICIAL = {
+    'IEMOCAP': dict(dropout=.5, num_K=4, rank_coff=.005, mscl_coff=.05, cscl_coff=.05, epoch_ratio=.15),
+    'MELD': dict(dropout=.4, num_K=3, rank_coff=.002, mscl_coff=.15, cscl_coff=.15, epoch_ratio=.4),
+}
 PROTOCOL = dict(Dataset='IEMOCAP', causal=True, selection_protocol='validation',
     seed=1937, split_seed=1475, base_model='GRU', batch_size=16, lr=.0001,
     dropout=.5, num_L=3, num_K=4, norm='LN', graph_type='hyper',
@@ -49,9 +53,11 @@ def state_hash(state):
     return model_state_sha256(SimpleNamespace(state_dict=lambda: state))
 
 
-def verify_run(run_dir, expected_provenance, variant, epochs=80, paired_run=None, difficulty=None):
+def verify_run(run_dir, expected_provenance, variant, epochs=80, paired_run=None, difficulty=None,
+               dataset='IEMOCAP', seed=1937, split_seed=1475, expected_difficulty_sha256=None):
     """Verify a completed run; raise ValueError for incomplete/inconsistent evidence."""
     require(variant in ('baseline', 'cmerc'), 'unknown experiment variant')
+    require(dataset in OFFICIAL, 'unsupported dataset')
     require(isinstance(epochs, int) and epochs > 0, 'epoch count must be positive')
     run = Path(run_dir)
     expected = json.loads(Path(expected_provenance).read_text())
@@ -82,15 +88,17 @@ def verify_run(run_dir, expected_provenance, variant, epochs=80, paired_run=None
                    for name in ('best', 'latest')}
     for name, checkpoint in checkpoints.items():
         saved = checkpoint.get('args', {})
-        for key, value in {**PROTOCOL, 'epochs': epochs}.items():
+        protocol = {**PROTOCOL, 'Dataset': dataset, 'seed': seed, 'split_seed': split_seed,
+                    'dropout': OFFICIAL[dataset]['dropout'], 'num_K': OFFICIAL[dataset]['num_K'], 'epochs': epochs}
+        for key, value in protocol.items():
             require(saved.get(key) == value, 'checkpoint protocol mismatch: ' + key)
         require(checkpoint.get('causal') is True, 'checkpoint temporal protocol is not causal')
         require(saved.get('data_provenance') == expected, 'checkpoint data provenance mismatch')
         require(all(saved.get(key) is (variant == 'cmerc') for key in
                     ('calibrate', 'contrastlearning', 'courselearning')), 'component flags mismatch')
         if variant == 'cmerc':
-            for key, value in dict(rank_coff=.005, mscl_coff=.05, cscl_coff=.05,
-                                   epoch_ratio=.15, scheduler_steps=1).items():
+            for key in ('rank_coff', 'mscl_coff', 'cscl_coff', 'epoch_ratio', 'scheduler_steps'):
+                value = 1 if key == 'scheduler_steps' else OFFICIAL[dataset][key]
                 require(saved.get(key) == value, 'full CMERC coefficient mismatch: ' + key)
         require(checkpoint.get('epoch') == (best_index if name == 'best' else epochs - 1),
                 'checkpoint completed epoch disagrees with metrics/best selection')
@@ -171,7 +179,8 @@ def verify_run(run_dir, expected_provenance, variant, epochs=80, paired_run=None
         updates = diagnostic.get('parameter_update_norms', {})
         require(updates and all(finite(value) and value >= 0 for value in updates.values())
                 and any(value > 0 for value in updates.values()), 'no finite actual parameter update')
-    result = dict(status='passed', variant=variant, completed_epochs=epochs, best_epoch=best_index + 1,
+    result = dict(status='passed', variant=variant, dataset=dataset, training_seed=seed,
+        split_seed=split_seed, completed_epochs=epochs, best_epoch=best_index + 1,
         best_validation_weighted_f1=best_metric, best_sha256=best_sha,
         latest_sha256=sha256(run / 'latest.pt'), run_manifest_sha256=manifest_sha,
         config_sha256=manifest['config_sha256'], initial_model_sha256=initial,
@@ -187,7 +196,8 @@ def verify_run(run_dir, expected_provenance, variant, epochs=80, paired_run=None
             raw_gradient_norm_ranges={key: dict(min=min(values), max=max(values)) for key, values in raw_norms.items()},
             weighted_gradient_norm_ranges={key: dict(min=min(values), max=max(values)) for key, values in weighted_norms.items()}))
     if paired_run:
-        paired = verify_run(paired_run, expected_provenance, 'baseline', epochs=epochs)
+        paired = verify_run(paired_run, expected_provenance, 'baseline', epochs=epochs,
+                            dataset=dataset, seed=seed, split_seed=split_seed)
         paired_checkpoint = torch.load(Path(paired_run) / 'best.pt', map_location='cpu')
         require(initial == paired['initial_model_sha256'], 'paired initial model weights differ')
         require(architecture_from_args(saved) == architecture_from_args(paired_checkpoint['args']),
@@ -197,15 +207,20 @@ def verify_run(run_dir, expected_provenance, variant, epochs=80, paired_run=None
         require(paired_run is not None, 'full CMERC verification requires the paired baseline run')
         require(difficulty is not None, 'full CMERC verification requires an explicit difficulty artifact')
         pinned = (saved.get('difficulty_artifact') or {}).get('sha256')
+        if expected_difficulty_sha256 is not None:
+            require(pinned == expected_difficulty_sha256,
+                    'expected difficulty SHA256 from stage B differs from the trained artifact')
         require(pinned and all(checkpoint.get('difficulty_sha256') == pinned for checkpoint in checkpoints.values()),
                 'checkpoint difficulty SHA256 mismatch or missing')
-        _, artifact = resolve_causal_difficulty(difficulty, 'IEMOCAP', expected,
-            architecture_from_args(saved), expected_sha256=pinned, expected_teacher_seed=1937)
+        _, artifact = resolve_causal_difficulty(difficulty, dataset, expected,
+            architecture_from_args(saved), expected_sha256=pinned, expected_teacher_seed=seed)
         teacher = artifact['manifest']['source_checkpoint']
         require(teacher['epoch'] == teacher['best_epoch'] and teacher['sha256'] == result['paired_best_sha256'],
                 'difficulty teacher must be the exact paired validation-selected baseline best')
         result['difficulty'] = dict(sha256=artifact['sha256'], teacher_best_sha256=teacher['sha256'],
                                     replacement_policy=artifact['manifest']['replacement_policy'])
+        if expected_difficulty_sha256 is not None:
+            result['difficulty']['expected_stage_b_sha256'] = expected_difficulty_sha256
     else:
         require(all(checkpoint.get('difficulty_sha256') is None and not checkpoint['args'].get('difficulty_artifact')
                     for checkpoint in checkpoints.values()), 'baseline unexpectedly bound to a difficulty artifact')
@@ -217,13 +232,18 @@ def main():
     parser.add_argument('--run-dir', type=Path, required=True)
     parser.add_argument('--expected-provenance', type=Path, required=True)
     parser.add_argument('--variant', choices=('baseline', 'cmerc'), required=True)
+    parser.add_argument('--dataset', choices=tuple(OFFICIAL), default='IEMOCAP')
+    parser.add_argument('--seed', type=int, default=1937)
+    parser.add_argument('--split-seed', type=int, default=1475)
     parser.add_argument('--epochs', type=int, default=80)
     parser.add_argument('--paired-run', type=Path)
     parser.add_argument('--difficulty', type=Path)
+    parser.add_argument('--expected-difficulty-sha256', help='immutable difficulty SHA256 admitted by stage B')
     parser.add_argument('--output', type=Path, required=True)
     args = parser.parse_args()
     result = verify_run(args.run_dir, args.expected_provenance, args.variant, args.epochs,
-                        args.paired_run, args.difficulty)
+                        args.paired_run, args.difficulty, args.dataset, args.seed, args.split_seed,
+                        args.expected_difficulty_sha256)
     args.output.parent.mkdir(parents=True, exist_ok=True)
     with args.output.open('x') as handle:
         json.dump(result, handle, indent=2, sort_keys=True, allow_nan=False)
