@@ -29,15 +29,18 @@
 
 因果 run 目录带配置哈希，包含 baseline/full/消融和图深度等身份。非 resume 已有目录拒绝混写。`--resume` 校验 run manifest、difficulty、配置、历史日志、epoch 预算和 best 状态；只允许延长预算，best/旧 checkpoint 恢复建立有 lineage 的新分支。旧非因果 run 保持原命名但同样拒绝新任务覆盖。缺新 manifest 的历史 run 不会自动补签为本轮已验证恢复对象。
 
-## 后续正式运行命令（本轮未启动）
+## 正式配对运行与第二轮状态
 
-固定划分种子和配对训练种子；完整研究计划见 [FORMAL_EXPERIMENT_PLAN.md](reports/causal_review_followup/FORMAL_EXPERIMENT_PLAN.md)。先训练关闭 CL/HSCL/CC 的因果 backbone：
+2026-10-17 第二轮已完成 IEMOCAP 单种子 Baseline 80轮 → 真实 difficulty → 完整 CMERC 80轮，validation 比较冻结后各 best 一次正式测试。[结果与证据](reports/causal_formal_round2/20261017T_round2_1937/README.md)保留全部指标及科学边界；第一轮 [FORMAL_EXPERIMENT_PLAN.md](reports/causal_review_followup/FORMAL_EXPERIMENT_PLAN.md)是当时的历史计划。MELD、多种子和消融仅准备，未启动。
+
+固定划分种子和配对训练种子。使用独立输出目录；先训练关闭 CL/HSCL/CC 的因果 backbone，并显式延后测试：
 
 ```bash
 bash scripts/run_training.sh IEMOCAP baseline validation \
   --causal --split-seed 1475 --seed 1937 \
   --replacement-policy prefix_mean_v1 \
-  --auxiliary-policy legacy_epoch_snapshot
+  --auxiliary-policy legacy_epoch_snapshot \
+  --defer-final-test --fail-on-nonfinite --diagnostic-batches 1
 ```
 
 从实际输出目录选择对应 `best.pt`。使用同一架构、划分与配对种子生成 difficulty（这里的两个路径须替换成真实已验证产物）：
@@ -54,17 +57,18 @@ bash scripts/run_training.sh IEMOCAP cmerc validation \
   --causal --split-seed 1475 --seed 1937 \
   --replacement-policy prefix_mean_v1 \
   --auxiliary-policy legacy_epoch_snapshot \
-  --difficulty-path /path/to/immutable-causal-difficulty.pkl
+  --difficulty-path /path/to/immutable-causal-difficulty.pkl \
+  --defer-final-test --fail-on-nonfinite --diagnostic-batches 1
 ```
 
-MELD 对应 `dropout=.4, num_K=3`。不同训练 seed 的教师不被静默混用；原始非因果 difficulty 和随机权重均不是正式因果输入。目前没有满足新 provenance 的真实因果 baseline，故真实 difficulty/full CL 尚未具备启动条件。
+MELD 对应 `dropout=.4, num_K=3`。不同训练 seed 的教师不被静默混用；原始非因果 difficulty 和随机权重均不是正式因果输入。IEMOCAP/1937 已有本批合规真实教师和不可变 difficulty；其他数据集/seed 必须由对应配对 Baseline 生成，不能静默复用。初始化 state_dict 的真实 SHA256、难度哈希和完整 checkpoint 均须验收。后续直接可执行的教师/难度/配对验收、比较冻结和测试命令见[后续方案](reports/causal_formal_round2/20261017T_round2_1937/FUTURE_EXPERIMENTS.md)。
 
 ## 评测与验证
 
 评测器从可信 causal checkpoint 的白名单架构字段构建模型，支持 GRU/LSTM/Transformer、非默认图深度、residue、av_encoder，并严格加载权重；原官方权重与因果结构不兼容，禁止 `strict=False` 掩盖问题。`cuda` 解析为明确逻辑设备索引。
 
-`--split train/validation` 继承 checkpoint 的 split seed；有 provenance 时重算全量特征/ID 哈希后才取 `--max-dialogues` 子集。缺来源的合成或旧版诊断必须给出 `--diagnostic-data-reason` 并标记未验证，不能当作正式结果。已知 `official_test` 来源不能冒充 held-out validation。`--split test` 仅用于冻结方案之后的最终评测，本轮未调用正式测试集。
+`--split train/validation` 继承 checkpoint 的 split seed；有 provenance 时重算全量特征/ID 哈希后才取 `--max-dialogues` 子集。缺来源的合成或旧版诊断必须给出 `--diagnostic-data-reason` 并标记未验证，不能当作正式结果。已知 `official_test` 来源不能冒充 held-out validation。`--split test` 仅用于冻结方案之后的最终评测。第一轮审查未调用正式测试；第二轮已在 validation 比较冻结后对两个所选 best 各评估一次。`--defer-final-test` 保持训练期间及结束时不自动测试，默认旧行为仍保留。
 
-数值回归、原始日志和可重跑命令见 [COMMANDS.md](reports/causal_review_followup/COMMANDS.md)。本机复用 `multimodalerc310`（PyTorch 2.2.2、PyG 2.4.0）和已有 pytest，无依赖升级；GPU 使用本地宿主机 3，进程内 `cuda:0`。CPU/GPU 归一化和 mask、未来梯度、负对照、实际训练函数和生产维度真实特征小检查均有各自证据；GPU 恢复的确定性限制单独报告。
+数值回归、原始日志和可重跑命令见 [COMMANDS.md](reports/causal_review_followup/COMMANDS.md)。本机复用 `multimodalerc310`（PyTorch 2.2.2、PyG 2.4.0）和已有 pytest，无依赖升级；当时核实的 GPU 为本地宿主机 3，进程内 `cuda:0`；后续启动须重新核对健康设备 UUID 与资源，不能沿用旧编号。CPU/GPU 归一化和 mask、未来梯度、负对照、实际训练函数和生产维度真实特征小检查均有各自证据；GPU 恢复的确定性限制单独报告。
 
-尚未完成正式因果训练/性能比较，未验证原 PyTorch 1.13.1 环境或原始流特征提取链。图构造仍为平方复杂度，没有流式缓存。旧固定路径批量自动化不是新的因果 config-hash run 发现器，应使用 manifest 中的实际路径。
+第二轮已完成 IEMOCAP 配对单 seed 正式训练/性能比较；单 seed 不支持跨 seed 显著性结论。原 PyTorch 1.13.1 环境和原始流特征提取链仍未验证。图构造仍为平方复杂度，没有流式缓存。旧固定路径批量自动化不是新的因果 config-hash run 发现器，应使用 manifest 中的实际路径。

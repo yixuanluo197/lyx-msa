@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "backend": "Python/matplotlib",
+  "archetype": "quantitative grid",
+  "claim": "Describe the observed single-seed training trajectories and preregistered validation differences without inferring statistical significance.",
+  "seed_count": 1,
+  "training_seed": 1937,
+  "split_seed": 1475,
+  "error_bars": "none; one paired seed, no uncertainty estimate",
+  "selection": "validation W-F1; earliest epoch on ties",
+  "test_data_read": false,
+  "smoothing": "none",
+  "position_rule": {
+    "relative_position": "(zero_based_utterance_index + 0.5) / dialogue_length",
+    "early": "[0, 1/3)",
+    "middle": "[1/3, 2/3)",
+    "late": "[2/3, 1]",
+    "length_one": "middle"
+  },
+  "weighted_losses": {
+    "cc_loss": 0.005,
+    "classification_loss": 1.0,
+    "cscl_loss": 0.05,
+    "mscl_loss": 0.05
+  },
+  "loss_semantics": "epoch means multiplied by actual coefficients; magnitudes are not gradient contributions",
+  "input_sha256": {
+    "verification": "8d3ac317c77d92114999990e1e575e4531f459afcba76f75eaa420f7cd806db4",
+    "validation_comparison": "54fbd2494312d004c803bd0a0906b98edcbeb58ebb8a142e11a448ac8b17d47c",
+    "baseline_metrics": "9db835d4631002503c9573d2eb20ab6afc98516233efaea3e78c9ad782a2916e",
+    "cmerc_metrics": "3cc1fde35146d65a3165ee4df818fd0efd7e196d0d48062f206f03a591db76f4"
+  },
+  "figures": {
+    "convergence": {
+      "width_inches": 7.2,
+      "formats": [
+        "svg",
+        "pdf",
+        "png"
+      ]
+    },
+    "weighted_losses": {
+      "width_inches": 7.2,
+      "formats": [
+        "svg",
+        "pdf",
+        "png"
+      ]
+    },
+    "validation_position_differences": {
+      "width_inches": 7.2,
+      "formats": [
+        "svg",
+        "pdf",
+        "png"
+      ]
+    }
+  }
+}

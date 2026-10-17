@@ -1,0 +1,28 @@
+{
+  "status": "passed",
+  "model_inference_repeated": false,
+  "runs": {
+    "baseline": {
+      "epochs": 80,
+      "expected_and_actual_optimizer_steps": 560,
+      "optimizer_parameters_with_state": 41,
+      "optimizer_tensors_finite": true,
+      "cuda_rng_states": 1,
+      "training_final_test_absent": true,
+      "single_formal_test_started_utc": "2026-10-17T17:12:33.976203+00:00"
+    },
+    "cmerc": {
+      "epochs": 80,
+      "expected_and_actual_optimizer_steps": 541,
+      "optimizer_parameters_with_state": 41,
+      "optimizer_tensors_finite": true,
+      "cuda_rng_states": 1,
+      "training_final_test_absent": true,
+      "single_formal_test_started_utc": "2026-10-17T17:12:42.487902+00:00"
+    }
+  },
+  "frozen_files": 175,
+  "validation_frozen_utc": "2026-10-17T17:12:33.258411+00:00",
+  "pipeline_started_utc": "2026-10-17T16:44:19.245554+00:00",
+  "pipeline_completed_utc": "2026-10-17T17:12:54.422654+00:00"
+}

@@ -146,3 +146,11 @@ python scripts/summarize_results.py \
 - 从头训练已分别完成官方测试集选模与规范验证集选模；真实结果见 `reports/07_REPRODUCTION_COMPARISON.md`。
 - 五随机种子与消融未在本轮执行；缩小 epoch、修改 batch size 或 Smoke Test 不能标记为其替代结果。
 - 论文没有充分公开 AUROC/AUPRC 的正类与聚合定义，因此当前实现明确标记评估假设，不声称严格复现论文 Table 5。
+
+## 8. 因果正式配对实验
+
+2026-10-17 的 [IEMOCAP 第二轮归档](reports/causal_formal_round2/20261017T_round2_1937/README.md)完成了训练 seed1937、split seed1475 的 Causal Baseline 80轮 → 真实 Causal Difficulty → Causal CMERC 80轮，按 validation W-F1 选模，并在主要比较冻结后各 best 一次正式测试。单 seed 不作统计显著性声明；验证 MCE 变差和固定位置分段的负向结果一并报告。
+
+因果配对训练需显式 `--causal --split-seed 1475 --seed 1937 --defer-final-test --fail-on-nonfinite --diagnostic-batches 1`。`--defer-final-test` 避免训练结束时提前看到测试结果；默认旧自动最终测试行为仍保留。完整模型还需要对应真实教师生成并严格验收的 `--difficulty-path`，不能使用第2节的旧非因果 difficulty。
+
+参见 [CAUSAL_README.md](CAUSAL_README.md)及[完整冻结/验收/后续命令](reports/causal_formal_round2/20261017T_round2_1937/FUTURE_EXPERIMENTS.md)。MELD、其他配对种子、组件消融和辅助策略对照未在第二轮自动启动。权重、特征、真实ID/预测和原始训练日志留服务器，GitHub仅保存公开安全的报告、配置、聚合结果与曲线。

@@ -1,0 +1,66 @@
+{
+  "best_epoch": 57,
+  "best_sha256": "1d9bbae19f0e4f8bd976bc3e4285f93c14f114cc54e6d28afcc76be8f90dd3bc",
+  "best_validation_weighted_f1": 62.91,
+  "completed_epochs": 80,
+  "config_sha256": "69e0c5a5153159249c8b1f58c3f716d316f6edc5115a5cc1dadc27efc88b5dc3",
+  "data_provenance": {
+    "dataset": "IEMOCAP",
+    "feature_files": {
+      "IEMOCAP_features.pkl": "ceb5cc9a45d1792998438e27f86a12642320aa6315546e4425316140ea503fb3",
+      "iemocap_features_roberta.pkl": "4bd60c581a5b7c70e217e18439f741b191605fbd6f2cf4dc1a6dcb7fcaa18f06"
+    },
+    "schema_version": 1,
+    "selection_protocol": "validation",
+    "split_seed": 1475,
+    "train_count": 108,
+    "train_ids_sha256": "6bf578ff93a22b88d822615c3cbe1a6f68f17fb1e59a0e117a953e758f1ac305",
+    "validation_count": 12,
+    "validation_ids_sha256": "ddff5c281d25175c218b0c968af6fcd46280c59cde22bef96bff585491c7f7f6"
+  },
+  "diagnostics": {
+    "batches_verified": 80,
+    "epochs_verified": 80,
+    "raw_gradient_norm_ranges": {
+      "classification_loss": {
+        "max": 16.633850119475387,
+        "min": 0.36334289219264504
+      }
+    },
+    "weighted_gradient_norm_ranges": {
+      "classification_loss": {
+        "max": 16.633850119475387,
+        "min": 0.36334289219264504
+      }
+    }
+  },
+  "final_model_state_sha256": "850e11a00619799b59b8203268fd42a060da5539edc1528261c9c262cecf1a79",
+  "gradient_coefficients": {
+    "cc_loss": 0.0,
+    "classification_loss": 1.0,
+    "cscl_loss": 0.0,
+    "mscl_loss": 0.0
+  },
+  "initial_model_sha256": "de943257bf89c6aa53abc205c794f22f17e79aa40ed0a1701a08b1cd6aa0752f",
+  "latest_sha256": "43f074746530571c614f281c56217dbb622ca400acdbaad7f439d72fa9a93c47",
+  "paired_initialization_verified": false,
+  "peak_gpu_memory_mb": 3424.01,
+  "raw_loss_epoch_means": {
+    "cc_loss": 0.0,
+    "classification_loss": 0.3593804869567975,
+    "cscl_loss": 0.0,
+    "mscl_loss": 0.0,
+    "total_loss": 0.3593804869567975
+  },
+  "run_manifest_sha256": "739fc0c39b430d9ebf0490049e6e810a477d91c2e9928bfd7b6804318dc58ec7",
+  "status": "passed",
+  "test_evaluation_performed": false,
+  "total_elapsed_seconds": 215.8300000000001,
+  "variant": "baseline",
+  "weighted_loss_epoch_means": {
+    "cc_loss": 0.0,
+    "classification_loss": 0.3593804869567975,
+    "cscl_loss": 0.0,
+    "mscl_loss": 0.0
+  }
+}

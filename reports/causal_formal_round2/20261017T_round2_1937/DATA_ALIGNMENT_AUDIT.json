@@ -1,0 +1,45 @@
+{
+  "status": "passed",
+  "scope": "train/validation only",
+  "test_inference": false,
+  "raw_feature_extraction": "not audited",
+  "chronology_evidence": "stored utterance IDs and sentence order agree across raw/roberta packs; original timestamp/extractor pipeline not audited",
+  "splits": {
+    "train": {
+      "dialogues": 108,
+      "utterances": 5283,
+      "min_length": 8,
+      "max_length": 110,
+      "class_counts": {
+        "4": 684,
+        "0": 423,
+        "2": 1201,
+        "5": 1399,
+        "1": 773,
+        "3": 803
+      },
+      "nonmonotonic_per_speaker_dialogue_sequences": 0,
+      "raw_roberta_speaker_label_sentence_row_alignment": true,
+      "utterance_id_speaker_consistency": true,
+      "duplicate_utterance_ids_within_dialogue": false
+    },
+    "validation": {
+      "dialogues": 12,
+      "utterances": 527,
+      "min_length": 18,
+      "max_length": 94,
+      "class_counts": {
+        "2": 123,
+        "1": 66,
+        "4": 58,
+        "0": 81,
+        "5": 69,
+        "3": 130
+      },
+      "nonmonotonic_per_speaker_dialogue_sequences": 0,
+      "raw_roberta_speaker_label_sentence_row_alignment": true,
+      "utterance_id_speaker_consistency": true,
+      "duplicate_utterance_ids_within_dialogue": false
+    }
+  }
+}
