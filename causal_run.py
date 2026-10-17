@@ -8,7 +8,9 @@ import torch
 
 # These controls may change without changing the completed training prefix.
 _RUNTIME_KEYS = {'epochs', 'output_dir', 'resume', 'num_workers', 'cuda', 'no_cuda',
-                 'testing', 'tensorboard', 'run_manifest', 'run_dir'}
+                 'testing', 'tensorboard', 'run_manifest', 'run_dir',
+                 'defer_final_test', 'diagnostic_batches', 'initial_model_sha256',
+                 'fail_on_nonfinite'}
 
 
 def _values(args):

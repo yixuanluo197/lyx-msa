@@ -1,5 +1,6 @@
 import os
 import json
+import hashlib
 import numpy as np, argparse, time, pickle, random
 from pathlib import Path
 from contextlib import nullcontext
@@ -21,6 +22,19 @@ from tqdm import tqdm
 from causal_run import prepare_run, sha256
 CKSCL_m = CKSCL_tav()
 CKSCL_c = CKSCL_context()
+
+
+def model_state_sha256(model):
+    """Hash actual parameter/buffer content, independent of torch.save metadata."""
+    digest = hashlib.sha256()
+    for name, value in sorted(model.state_dict().items()):
+        tensor = value.detach().cpu().contiguous()
+        header = json.dumps([name, str(tensor.dtype), list(tensor.shape)],
+                            separators=(',', ':')).encode()
+        digest.update(len(header).to_bytes(8, 'big'))
+        digest.update(header)
+        digest.update(tensor.reshape(-1).view(torch.uint8).numpy().tobytes())
+    return digest.hexdigest()
 
 
 def _rng_state():
@@ -415,7 +429,7 @@ def train_or_eval_model(model, loss_function, dataloader, epoch, optimizer=None,
     return avg_loss, avg_accuracy, labels, preds, masks, avg_fscore, [alphas, alphas_f, alphas_b, vids]
 
 
-def train_or_eval_graph_model(model, model_mm, model_intra, model_inter, loss_function, dataloader, epoch, cuda, modals, optimizer=None, train=False, dataset='IEMOCAP', return_components=False, diagnostic_callback=None):
+def train_or_eval_graph_model(model, model_mm, model_intra, model_inter, loss_function, dataloader, epoch, cuda, modals, optimizer=None, train=False, dataset='IEMOCAP', return_components=False, diagnostic_callback=None, diagnostic_batches=None):
     losses, preds, labels = [], [], []
     loss_components = []
     scores, vids = [], []
@@ -447,7 +461,7 @@ def train_or_eval_graph_model(model, model_mm, model_intra, model_inter, loss_fu
                 auxiliary.load_state_dict(model.state_dict(), strict=True)
                 auxiliary.eval()
         diagnostic = None
-        if diagnostic_callback is not None:
+        if diagnostic_callback is not None and (diagnostic_batches is None or batch_index < diagnostic_batches):
             diagnostic = {'epoch': epoch, 'batch': batch_index, 'auxiliary_policy': auxiliary_policy,
                 'main_training': model.training, 'aux_training': model_mm.training,
                 'main_aux_max_abs_diff': max((p.detach() - q.detach()).abs().max().item()
@@ -661,9 +675,12 @@ def train_or_eval_graph_model(model, model_mm, model_intra, model_inter, loss_fu
             mscl_coff=args.mscl_coff,
             cscl_coff=args.cscl_coff,
         )
+        if train and getattr(args, 'fail_on_nonfinite', False) and not torch.isfinite(total_loss).all().item():
+            raise FloatingPointError('nonfinite total loss at epoch {} batch {}'.format(epoch + 1, batch_index))
         loss_components.append(components)
         if diagnostic is not None:
             diagnostic['losses'] = components
+            diagnostic['finite_losses'] = all(np.isfinite(value) for value in components.values())
             diagnostic['gradient_coefficients'] = {'classification_loss': 1.,
                 'cc_loss': args.rank_coff if args.calibrate else 0.,
                 'mscl_loss': args.mscl_coff if args.contrastlearning else 0.,
@@ -687,6 +704,10 @@ def train_or_eval_graph_model(model, model_mm, model_intra, model_inter, loss_fu
                 for name,norm in diagnostic['gradient_norms'].items()}
         if train:
             total_loss.backward()
+            if getattr(args, 'fail_on_nonfinite', False):
+                checks = [torch.isfinite(p.grad).all() for p in model.parameters() if p.grad is not None]
+                if checks and not torch.stack(checks).all().item():
+                    raise FloatingPointError('nonfinite gradient at epoch {} batch {}'.format(epoch + 1, batch_index))
             if diagnostic is not None:
                 diagnostic['finite_gradients'] = all(torch.isfinite(p.grad).all().item()
                     for p in model.parameters() if p.grad is not None)
@@ -694,7 +715,7 @@ def train_or_eval_graph_model(model, model_mm, model_intra, model_inter, loss_fu
                     if p.grad is not None]
 
             optimizer.step()
-        if diagnostic_callback is not None:
+        if diagnostic is not None:
             diagnostic['parameter_update_norms'] = {name: float((p.detach() - parameters_before_step[name]).norm())
                 for name,p in model.named_parameters() if p.grad is not None} if train else {}
             diagnostic_callback(diagnostic)
@@ -829,6 +850,12 @@ if __name__ == '__main__':
     parser.add_argument('--selection-protocol', choices=['official_test', 'validation'],
                         default='official_test',
                         help='official_test faithfully selects on test W-F1; validation selects on a held-out validation split')
+    parser.add_argument('--defer-final-test', action='store_true',
+                        help='leave test evaluation to the separately frozen analysis stage')
+    parser.add_argument('--fail-on-nonfinite', action='store_true',
+                        help='abort before optimizer updates if a training loss or active gradient is nonfinite')
+    parser.add_argument('--diagnostic-batches', type=int, default=0,
+                        help='record gradient/update diagnostics for the first N training batches per epoch')
     parser.add_argument('--output-dir', default='runs/train_cm',
                         help='root directory for JSONL logs and latest/best checkpoints')
     parser.add_argument('--resume', default=None,
@@ -837,6 +864,10 @@ if __name__ == '__main__':
                         help='DataLoader worker count')
 
     args = parser.parse_args()
+    if args.diagnostic_batches < 0:
+        parser.error('--diagnostic-batches must be nonnegative')
+    if args.defer_final_test and args.selection_protocol != 'validation':
+        parser.error('--defer-final-test requires --selection-protocol validation')
     args.split_seed = args.seed if args.split_seed is None else args.split_seed
     if args.causal:
         args.norm = 'LN'
@@ -1114,7 +1145,14 @@ if __name__ == '__main__':
             _, args.difficulty_artifact = resolve_causal_difficulty(args.difficulty_path,
                 args.Dataset, args.data_provenance, architecture_from_args(args),
                 replacement_policy=args.replacement_policy, expected_teacher_seed=args.seed)
+    args.initial_model_sha256 = model_state_sha256(model)
     run_dir = prepare_run(args)
+    if not args.resume:
+        (run_dir / 'initial_state.json').write_text(json.dumps({
+            'model_state_sha256': args.initial_model_sha256,
+            'training_seed': args.seed,
+            'parameter_count': sum(p.numel() for p in model.parameters()),
+        }, sort_keys=True, indent=2) + '\n')
     metrics_path = run_dir / 'metrics.jsonl'
     latest_checkpoint_path = run_dir / 'latest.pt'
     best_checkpoint_path = run_dir / 'best.pt'
@@ -1188,7 +1226,10 @@ if __name__ == '__main__':
         else:
             print("There is no such dataset")
         if args.graph_model:
-            train_loss, train_acc, _, _, train_fscore, _, _, _, _, _, train_components = train_or_eval_graph_model(model, model_mm, model_intra, model_inter, loss_function, train_loader, e, cuda, args.modals, optimizer, True, dataset=args.Dataset, return_components=True)
+            train_loss, train_acc, _, _, train_fscore, _, _, _, _, _, train_components = train_or_eval_graph_model(model, model_mm, model_intra, model_inter, loss_function, train_loader, e, cuda, args.modals, optimizer, True, dataset=args.Dataset, return_components=True,
+                diagnostic_callback=(lambda record: write_jsonl_record(run_dir / 'training_diagnostics.jsonl', record))
+                    if args.diagnostic_batches else None,
+                diagnostic_batches=args.diagnostic_batches)
             valid_loss, valid_acc, _, _, valid_fscore, _, _, _, _, _ = train_or_eval_graph_model(model, model_mm, model_intra, model_inter,loss_function, valid_loader, e, cuda, args.modals, dataset=args.Dataset)
             if args.selection_protocol == 'official_test':
                 test_loss, test_acc, test_label, test_pred, test_fscore, _, _, _, _, _ = train_or_eval_graph_model(model, model_mm, model_intra, model_inter,loss_function, test_loader, e, cuda, args.modals, dataset=args.Dataset)
@@ -1278,7 +1319,8 @@ if __name__ == '__main__':
                 print(classification_report(best_label, best_pred, sample_weight=best_mask,digits=4))
                 print(confusion_matrix(best_label,best_pred,sample_weight=best_mask))
 
-    if args.selection_protocol == 'validation' and best_checkpoint_path.exists():
+    if (args.selection_protocol == 'validation' and not args.defer_final_test
+            and best_checkpoint_path.exists()):
         best_checkpoint = torch.load(best_checkpoint_path, map_location='cpu')
         model.load_state_dict(best_checkpoint['model_state_dict'])
         if cuda:
