@@ -1,0 +1,87 @@
+{
+  "status": "passed",
+  "profile_scope": "actual XP full curricula + fixed batch16 validation/test + five information removals + forward/backward/optimizer/resume",
+  "profiles": {
+    "IEMOCAP": {
+      "baseline": {
+        "measured_epoch_seconds": [
+          7.88
+        ],
+        "profile_epochs": 1,
+        "full_pool_dialogues": 108,
+        "full_epoch_seconds": 7.88,
+        "estimated_formal_epoch_seconds": 630.4,
+        "five_seeds_gpu_hours": 0.8755555555555555
+      },
+      "cmerc": {
+        "measured_epoch_seconds": [
+          11.05,
+          15.36,
+          19.82,
+          24.93,
+          30.31,
+          38.06,
+          39.78
+        ],
+        "profile_epochs": 7,
+        "full_pool_dialogues": 108,
+        "full_epoch_seconds": 39.78,
+        "estimated_formal_epoch_seconds": 3083.25,
+        "five_seeds_gpu_hours": 4.282291666666667
+      }
+    },
+    "MELD": {
+      "baseline": {
+        "measured_epoch_seconds": [
+          6.69
+        ],
+        "profile_epochs": 1,
+        "full_pool_dialogues": 1038,
+        "full_epoch_seconds": 6.69,
+        "estimated_formal_epoch_seconds": 267.6,
+        "five_seeds_gpu_hours": 0.37166666666666665
+      },
+      "cmerc": {
+        "measured_epoch_seconds": [
+          24.07,
+          33.62,
+          35.42
+        ],
+        "profile_epochs": 3,
+        "full_pool_dialogues": 1038,
+        "full_epoch_seconds": 35.42,
+        "estimated_formal_epoch_seconds": 1403.6499999999999,
+        "five_seeds_gpu_hours": 1.9495138888888885
+      }
+    }
+  },
+  "measured_max_allocated_mib": 9104.62646484375,
+  "measured_max_reserved_mib": 10532.0,
+  "measured_max_whole_device_used_mib": 10867.0,
+  "context_margin_mib": 300,
+  "minimum_free_gpu_mb": 11500,
+  "preexisting_compute_processes_allowed": 0,
+  "maximum_tasks_per_gpu": 1,
+  "maximum_idle_utilization": 10,
+  "observed_empty_gpu_free_mib": 12179,
+  "estimated_epoch_workload_gpu_hours": 7.479027777777778,
+  "estimated_total_gpu_hours_range": [
+    7.852979166666667,
+    8.974833333333333
+  ],
+  "conditional_wall_hours_range": {
+    "1": [
+      7.852979166666667,
+      8.974833333333333
+    ],
+    "2": [
+      3.9264895833333333,
+      4.487416666666666
+    ],
+    "3": [
+      2.617659722222222,
+      2.9916111111111108
+    ]
+  },
+  "limitations": "One full-pool epoch measured per dataset/variant, additional seeds may vary; excludes unknown queue wait, assumes sustained measured throughput. Actual available card count must be queried; no completion guarantee based on old XP12-run batch."
+}

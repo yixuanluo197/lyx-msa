@@ -1,0 +1,30 @@
+{
+  "stages": {
+    "fixed_checkpoint_evaluation": {
+      "status": "completed",
+      "task": "IEMOCAP_cmerc_validation_seed2024",
+      "best_sha256_unchanged": "80ee239060ae1afa3f8c49d7c99d38db8e91fb1d706c7f95087b9e6c025ebf96",
+      "evaluation_pid": 3807686,
+      "evaluation_exit_code": 0
+    },
+    "invalid_attempt_preservation": {
+      "destination": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/attempts/MELD_cmerc_validation_seed3407/2026-10-16T082751.934532_0000",
+      "moves": [
+        {
+          "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/cmerc/MELD_validation_seed3407",
+          "preserved_as": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/attempts/MELD_cmerc_validation_seed3407/2026-10-16T082751.934532_0000/run_dir"
+        },
+        {
+          "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/logs/cmerc/MELD/validation/seed3407.train.log",
+          "preserved_as": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/attempts/MELD_cmerc_validation_seed3407/2026-10-16T082751.934532_0000/train_log"
+        },
+        {
+          "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/logs/cmerc/MELD/validation/seed3407.train.log.memory.jsonl",
+          "preserved_as": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/attempts/MELD_cmerc_validation_seed3407/2026-10-16T082751.934532_0000/train_log_memory"
+        }
+      ],
+      "status": "completed"
+    }
+  },
+  "status": "completed"
+}

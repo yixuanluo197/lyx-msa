@@ -1,0 +1,33 @@
+{
+  "batch_capacity_epoch_permutations": 1200,
+  "batch_capacity_runs": 20,
+  "capacity_command": [
+    "env",
+    "CUDA_VISIBLE_DEVICES=",
+    "OMP_NUM_THREADS=1",
+    "MKL_NUM_THREADS=1",
+    "OPENBLAS_NUM_THREADS=1",
+    "NUMEXPR_NUM_THREADS=1",
+    "PYTHONDONTWRITEBYTECODE=1",
+    "/data2/yb/conda_envs/cmerc-xp-repro/bin/python",
+    "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/code/scripts/audit_batch_capacity.py",
+    "--output",
+    "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/preflight/data_and_capacity/batch_capacity_audit.json"
+  ],
+  "capacity_exit_code": 0,
+  "capacity_stderr_warning": "torch_geometric/typing.py:101: An issue occurred while importing 'torch-sparse'. Disabling its usage. Stacktrace: libcusparse.so.11: cannot open shared object file: No such file or directory",
+  "cuda_visible_devices": "",
+  "independently_rerun_for_this_batch": true,
+  "input_audit_exit_code": 0,
+  "input_sha_matches_all_20_v2_run_manifests": true,
+  "outputs_sha256": {
+    "batch_capacity_audit.json": "c3dd23a0973cdecf0053b58a1df89a5227b24494cb243e95bfd02b5a18658d68",
+    "input_audit.json": "0085329db5ce0f6a416ff148f1a4de24c9107967f81801b09eafe13cabce665a"
+  },
+  "sampler_epoch_records_identical_to_v2_archive": true,
+  "split_matches_all_20_v2_run_manifests": true,
+  "status": "passed",
+  "threads": 1,
+  "v2_capacity_archive": "/data2/yb/paper/lyx-msa/CMERC/experiment_records/03_v100_multiseed/results/preflight_v2/batch_capacity_audit.json",
+  "warning_interpretation": "First CPU capacity invocation omitted with_cmerc_env.sh, so optional sparse extension import failed; this audit used CPU samplers and completed. Input audit used the project wrapper. GPU extension validation belongs to the leader GPU environment probe; this CPU audit does not establish GPU extension availability."
+}

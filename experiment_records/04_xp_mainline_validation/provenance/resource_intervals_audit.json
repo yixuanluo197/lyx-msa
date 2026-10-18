@@ -1,0 +1,857 @@
+{
+  "batch": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z",
+  "candidates": [
+    {
+      "candidate_id": "baseline2024_admission_rejected",
+      "classification": "foreign_pre_training_admission_rejection",
+      "determination": "Foreign child process overlapped the training process for two seconds, but its archived failure occurred at the admission guard before model construction/training. No additional model-compute overlap is established.",
+      "evidence": [
+        {
+          "mtime_ns": 1792132785096176829,
+          "mtime_utc": "2026-10-16T06:39:45.096177+00:00",
+          "path": "/data2/yb/paper/runs/baseline_5models_local_20261015/MELD/SDR-GNN/released_compatible/seed_68/mr_0.2/fold_0/attempt_history/resource_guard_20261016T063947Z/child.json",
+          "role": "foreign child.json",
+          "sha256": "b35f05413fc6d4c2daffdc8b50149e592ce4f4d44f0cc8686cb9394a7f5d251a",
+          "size_bytes": 148
+        },
+        {
+          "mtime_ns": 1792132785049177210,
+          "mtime_utc": "2026-10-16T06:39:45.049177+00:00",
+          "path": "/data2/yb/paper/runs/baseline_5models_local_20261015/MELD/SDR-GNN/released_compatible/seed_68/mr_0.2/fold_0/attempt_history/resource_guard_20261016T063947Z/supervisor.json",
+          "role": "foreign supervisor.json",
+          "sha256": "cccaf81316e4ce3bafc65d0b130eb75264d20744a18cd5157e8d36c8950d1c09",
+          "size_bytes": 1004
+        },
+        {
+          "mtime_ns": 1792132785048177218,
+          "mtime_utc": "2026-10-16T06:39:45.048177+00:00",
+          "path": "/data2/yb/paper/runs/baseline_5models_local_20261015/MELD/SDR-GNN/released_compatible/seed_68/mr_0.2/fold_0/attempt_history/resource_guard_20261016T063947Z/launch.json",
+          "role": "foreign launch.json",
+          "sha256": "e0c9dbb9ec0e0fad814b7bbcd14c0d9367fac962b613408b12f32de257171139",
+          "size_bytes": 1888
+        },
+        {
+          "mtime_ns": 1792132787030161161,
+          "mtime_utc": "2026-10-16T06:39:47.030161+00:00",
+          "path": "/data2/yb/paper/runs/baseline_5models_local_20261015/MELD/SDR-GNN/released_compatible/seed_68/mr_0.2/fold_0/attempt_history/resource_guard_20261016T063947Z/exit.json",
+          "role": "foreign exit.json",
+          "sha256": "0a2f6fd4d9215215cbbf7d59d2b51f840271e9b7be734f24836f47fce377562b",
+          "size_bytes": 71
+        },
+        {
+          "mtime_ns": 1792132787030161161,
+          "mtime_utc": "2026-10-16T06:39:47.030161+00:00",
+          "path": "/data2/yb/paper/runs/baseline_5models_local_20261015/MELD/SDR-GNN/released_compatible/seed_68/mr_0.2/fold_0/attempt_history/resource_guard_20261016T063947Z/status.json",
+          "role": "foreign status.json",
+          "sha256": "4137635b5712600092ee0d25a801360cd9eac5453e4c44eb3b1949099a3823c2",
+          "size_bytes": 213
+        },
+        {
+          "mtime_ns": 1792132786771163258,
+          "mtime_utc": "2026-10-16T06:39:46.771163+00:00",
+          "path": "/data2/yb/paper/runs/baseline_5models_local_20261015/MELD/SDR-GNN/released_compatible/seed_68/mr_0.2/fold_0/attempt_history/resource_guard_20261016T063947Z/failure.json",
+          "role": "foreign failure.json",
+          "sha256": "1adba65ac2337d56a1a5f72e917b7edaaa7abcadb75fac46babe732d678e85c0",
+          "size_bytes": 682
+        },
+        {
+          "mtime_ns": 1792054986669603774,
+          "mtime_utc": "2026-10-15T09:03:06.669604+00:00",
+          "path": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/code/scripts/evaluate_checkpoint.py",
+          "role": "local evaluation phase semantics",
+          "sha256": "a2e4b3fda1f71fa57fcdd90f4c6b7fd96f9d7c0cf75225bd84e800284c5bf956",
+          "size_bytes": 21421
+        },
+        {
+          "mtime_ns": 1792121299776386075,
+          "mtime_utc": "2026-10-16T03:28:19.776386+00:00",
+          "path": "/data2/yb/paper/runs/baseline_5models_local_20261015/code_snapshots/79692f948c9d0b22e9c7083e6790f0691f1f4d37bc08faaffaa5fe3988555537/train_one.py",
+          "role": "executed foreign snapshot: admission guard precedes model construction",
+          "sha256": "2d92cf0515d9c5b75b8488334422c4de6e547d05c47a8e3ea8849b02c09917c6",
+          "size_bytes": 21264
+        }
+      ],
+      "foreign": {
+        "child_ended_at": "2026-10-16T06:39:47+00:00",
+        "child_started_at": "2026-10-16T06:39:45Z",
+        "end_basis": "exit.json.at",
+        "failure_error": "Requires exactly one local whitelisted GPU UUID",
+        "gpu_uuid": "GPU-7ff18ebb-100e-98fe-038b-a98bd4f94248",
+        "host_gpu_index": 0,
+        "manifest_pid": null,
+        "manifest_started_at": null,
+        "resume_events": [],
+        "run_dir": "/data2/yb/paper/runs/baseline_5models_local_20261015/MELD/SDR-GNN/released_compatible/seed_68/mr_0.2/fold_0/attempt_history/resource_guard_20261016T063947Z",
+        "supervisor_pid": 3701456,
+        "timestamp_resolution_seconds": 1,
+        "training_pid": 3701459
+      },
+      "gpu_kernel_concurrency_established": false,
+      "own_phase": {
+        "ended_at": "2026-10-16T06:49:54.156972+00:00",
+        "exit_code": 0,
+        "gpu_uuid": "GPU-7ff18ebb-100e-98fe-038b-a98bd4f94248",
+        "host_gpu_index": 0,
+        "job_id": "IEMOCAP_baseline_validation_seed2024",
+        "job_status_in_queue_snapshot": "completed",
+        "phase": "training",
+        "pid": 3701445,
+        "started_at": "2026-10-16T06:39:44.607909+00:00"
+      },
+      "process_interval_intersection": {
+        "duration_seconds": 2.0,
+        "ended_at": "2026-10-16T06:39:47+00:00",
+        "started_at": "2026-10-16T06:39:45+00:00"
+      }
+    },
+    {
+      "artifact_latest_mtime_utc": "2026-10-16T07:26:21.155560+00:00",
+      "candidate_id": "iemocap_cmerc67137_evaluation_process_tail",
+      "classification": "process_tail_after_evaluation_artifacts",
+      "determination": "All local evaluation artifacts were written before the foreign child started. Frozen evaluation code performs only CPU formatting/output and process exit after artifact creation. Process overlap is established, additional inference-compute overlap is not.",
+      "evidence": [
+        {
+          "mtime_ns": 1792135590904567626,
+          "mtime_utc": "2026-10-16T07:26:30.904568+00:00",
+          "path": "/data2/yb/paper/runs/baseline_5models_local_20261015/MELD/SDR-GNN/released_compatible/seed_68/mr_0.2/fold_0/child.json",
+          "role": "foreign child.json",
+          "sha256": "6795dcf41db92fd7bd05624b58993d760655a6b3ed271702e207d093749ca882",
+          "size_bytes": 148
+        },
+        {
+          "mtime_ns": 1792135590845567581,
+          "mtime_utc": "2026-10-16T07:26:30.845567+00:00",
+          "path": "/data2/yb/paper/runs/baseline_5models_local_20261015/MELD/SDR-GNN/released_compatible/seed_68/mr_0.2/fold_0/supervisor.json",
+          "role": "foreign supervisor.json",
+          "sha256": "b60d8763b240dcb664e041e064e2021f865e5c5f09b230fef1d6324fb3b57e64",
+          "size_bytes": 1004
+        },
+        {
+          "mtime_ns": 1792135590844567580,
+          "mtime_utc": "2026-10-16T07:26:30.844568+00:00",
+          "path": "/data2/yb/paper/runs/baseline_5models_local_20261015/MELD/SDR-GNN/released_compatible/seed_68/mr_0.2/fold_0/launch.json",
+          "role": "foreign launch.json",
+          "sha256": "2a6244144d4ffaf56e2d2b85e82f68d2aa24b75329c74f1dc116364cdd55772b",
+          "size_bytes": 1888
+        },
+        {
+          "mtime_ns": 1792136287189584623,
+          "mtime_utc": "2026-10-16T07:38:07.189585+00:00",
+          "path": "/data2/yb/paper/runs/baseline_5models_local_20261015/MELD/SDR-GNN/released_compatible/seed_68/mr_0.2/fold_0/exit.json",
+          "role": "foreign exit.json",
+          "sha256": "d7ecac716a2afbb3c0e8794244e2de50c3878b6e4bb0c5cdcdd3231adda5e48c",
+          "size_bytes": 71
+        },
+        {
+          "mtime_ns": 1792136285495650654,
+          "mtime_utc": "2026-10-16T07:38:05.495651+00:00",
+          "path": "/data2/yb/paper/runs/baseline_5models_local_20261015/MELD/SDR-GNN/released_compatible/seed_68/mr_0.2/fold_0/status.json",
+          "role": "foreign status.json",
+          "sha256": "181a77ac80f03eaba8fb84ba716fa27808933f28f420b232f1ddd04e26eded4f",
+          "size_bytes": 207
+        },
+        {
+          "mtime_ns": 1792135593166569382,
+          "mtime_utc": "2026-10-16T07:26:33.166569+00:00",
+          "path": "/data2/yb/paper/runs/baseline_5models_local_20261015/MELD/SDR-GNN/released_compatible/seed_68/mr_0.2/fold_0/manifest.json",
+          "role": "foreign manifest.json",
+          "sha256": "5b2a8d8b85a97d48154e18788ea8645f95cd3544105b101c25251c57b4b4fd9a",
+          "size_bytes": 99996
+        },
+        {
+          "mtime_ns": 1792136284441691826,
+          "mtime_utc": "2026-10-16T07:38:04.441692+00:00",
+          "path": "/data2/yb/paper/runs/baseline_5models_local_20261015/MELD/SDR-GNN/released_compatible/seed_68/mr_0.2/fold_0/history.jsonl",
+          "role": "foreign history.jsonl",
+          "sha256": "c4b67b98eac52b71b15b89f8299ea788e6a1914ce9f6ff36ba267c1bdfffd598",
+          "size_bytes": 25827
+        },
+        {
+          "mtime_ns": 1792135581150559934,
+          "mtime_utc": "2026-10-16T07:26:21.150560+00:00",
+          "path": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/results/cmerc/IEMOCAP/validation/seed67137/predictions.npz",
+          "role": "local evaluation artifact written after all inference results copied to CPU",
+          "sha256": "641514df3c0762e2b6697b335b447dfdf374a1cd399c4fd56d3a3650427294e4",
+          "size_bytes": 252408
+        },
+        {
+          "mtime_ns": 1792135581153559936,
+          "mtime_utc": "2026-10-16T07:26:21.153560+00:00",
+          "path": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/results/cmerc/IEMOCAP/validation/seed67137/predictions.csv",
+          "role": "local evaluation artifact written after all inference results copied to CPU",
+          "sha256": "cc2344cff2fdc30530e46aaa604564ad6b0d9b68eb02f9691505ff907ba5a60c",
+          "size_bytes": 56045
+        },
+        {
+          "mtime_ns": 1792135581155559938,
+          "mtime_utc": "2026-10-16T07:26:21.155560+00:00",
+          "path": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/results/cmerc/IEMOCAP/validation/seed67137/metrics.json",
+          "role": "local evaluation artifact written after all inference results copied to CPU",
+          "sha256": "4dbe191ce77f26d74e7ad5e3a1985fad40b76c6cbfdcd050deccc76f5e32a23e",
+          "size_bytes": 19227
+        }
+      ],
+      "foreign": {
+        "child_ended_at": "2026-10-16T07:38:07+00:00",
+        "child_started_at": "2026-10-16T07:26:30Z",
+        "end_basis": "exit.json.at",
+        "failure_error": null,
+        "gpu_uuid": "GPU-eed2f34f-b4c0-7b7a-498e-71a026e30c5a",
+        "host_gpu_index": 1,
+        "manifest_pid": 3747323,
+        "manifest_started_at": "2026-10-16T07:26:32Z",
+        "resume_events": [],
+        "run_dir": "/data2/yb/paper/runs/baseline_5models_local_20261015/MELD/SDR-GNN/released_compatible/seed_68/mr_0.2/fold_0",
+        "supervisor_pid": 3747322,
+        "timestamp_resolution_seconds": 1,
+        "training_pid": 3747323
+      },
+      "gpu_kernel_concurrency_established": false,
+      "own_phase": {
+        "ended_at": "2026-10-16T07:26:35.356019+00:00",
+        "exit_code": 0,
+        "gpu_uuid": "GPU-eed2f34f-b4c0-7b7a-498e-71a026e30c5a",
+        "host_gpu_index": 1,
+        "job_id": "IEMOCAP_cmerc_validation_seed67137",
+        "job_status_in_queue_snapshot": "completed",
+        "phase": "evaluation",
+        "pid": 3746804,
+        "started_at": "2026-10-16T07:26:04.856047+00:00"
+      },
+      "process_interval_intersection": {
+        "duration_seconds": 5.356019,
+        "ended_at": "2026-10-16T07:26:35.356019+00:00",
+        "started_at": "2026-10-16T07:26:30+00:00"
+      }
+    },
+    {
+      "artifact_latest_mtime_utc": "2026-10-16T07:42:49.994644+00:00",
+      "candidate_id": "iemocap_cmerc2024_training_process_tail",
+      "classification": "foreign_launch_after_final_test_before_training_process_exit",
+      "determination": "Foreign child started AFTER local final_test.json was written and BEFORE the local training process exited. This is not described as an already-exited training process. The separate evaluation phase never started; the queue marks this run failed for resource waiting.",
+      "evidence": [
+        {
+          "mtime_ns": 1792136575443505081,
+          "mtime_utc": "2026-10-16T07:42:55.443505+00:00",
+          "path": "/data2/yb/paper/runs/baseline_5models_local_20261015/MELD/SDR-GNN/released_compatible/seed_68/mr_0.4/fold_0/child.json",
+          "role": "foreign child.json",
+          "sha256": "21d985da78ff284ef9f41fbd6692b15d248c730b24d23f26e6fb089bb5449fc4",
+          "size_bytes": 148
+        },
+        {
+          "mtime_ns": 1792136575384506576,
+          "mtime_utc": "2026-10-16T07:42:55.384506+00:00",
+          "path": "/data2/yb/paper/runs/baseline_5models_local_20261015/MELD/SDR-GNN/released_compatible/seed_68/mr_0.4/fold_0/supervisor.json",
+          "role": "foreign supervisor.json",
+          "sha256": "eb18ff6397f1c945340bc91284ea06302ab17af62a48ba921b59e1e71ef38995",
+          "size_bytes": 1004
+        },
+        {
+          "mtime_ns": 1792136575382506627,
+          "mtime_utc": "2026-10-16T07:42:55.382507+00:00",
+          "path": "/data2/yb/paper/runs/baseline_5models_local_20261015/MELD/SDR-GNN/released_compatible/seed_68/mr_0.4/fold_0/launch.json",
+          "role": "foreign launch.json",
+          "sha256": "5f4033931a1b675d72ad774068ce057d544ba4d0a5dda684e5ad8d137a8a724f",
+          "size_bytes": 1888
+        },
+        {
+          "mtime_ns": 1792137373748353137,
+          "mtime_utc": "2026-10-16T07:56:13.748353+00:00",
+          "path": "/data2/yb/paper/runs/baseline_5models_local_20261015/MELD/SDR-GNN/released_compatible/seed_68/mr_0.4/fold_0/exit.json",
+          "role": "foreign exit.json",
+          "sha256": "0b11f2fd920df481b59a642bb4db112488f4fcea71e9239c947bcce52c3cfc53",
+          "size_bytes": 71
+        },
+        {
+          "mtime_ns": 1792137372046372137,
+          "mtime_utc": "2026-10-16T07:56:12.046372+00:00",
+          "path": "/data2/yb/paper/runs/baseline_5models_local_20261015/MELD/SDR-GNN/released_compatible/seed_68/mr_0.4/fold_0/status.json",
+          "role": "foreign status.json",
+          "sha256": "2821286f8edd8db7e0379ded8db609758d41f6518403cc249add5bfd91814e03",
+          "size_bytes": 207
+        },
+        {
+          "mtime_ns": 1792136577815445075,
+          "mtime_utc": "2026-10-16T07:42:57.815445+00:00",
+          "path": "/data2/yb/paper/runs/baseline_5models_local_20261015/MELD/SDR-GNN/released_compatible/seed_68/mr_0.4/fold_0/manifest.json",
+          "role": "foreign manifest.json",
+          "sha256": "7f0d76b23acddf6642acc0052b0a4f06bbf517c3daa8a021d06210f80b8ba26e",
+          "size_bytes": 99996
+        },
+        {
+          "mtime_ns": 1792137367835419241,
+          "mtime_utc": "2026-10-16T07:56:07.835419+00:00",
+          "path": "/data2/yb/paper/runs/baseline_5models_local_20261015/MELD/SDR-GNN/released_compatible/seed_68/mr_0.4/fold_0/history.jsonl",
+          "role": "foreign history.jsonl",
+          "sha256": "e17644415de603990f37f297ac60bccb69d56719026a4462fceb8bd7a1c55f2c",
+          "size_bytes": 25787
+        },
+        {
+          "mtime_ns": 1792136569994643671,
+          "mtime_utc": "2026-10-16T07:42:49.994644+00:00",
+          "path": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/cmerc/IEMOCAP_validation_seed2024/final_test.json",
+          "role": "local final test completed and recorded before foreign child launch",
+          "sha256": "191b5b9ff2461147cda6c59fd39e6f25fbe2e52cc336f0fa5841ec7a65ba1c45",
+          "size_bytes": 373
+        }
+      ],
+      "foreign": {
+        "child_ended_at": "2026-10-16T07:56:13+00:00",
+        "child_started_at": "2026-10-16T07:42:55Z",
+        "end_basis": "exit.json.at",
+        "failure_error": null,
+        "gpu_uuid": "GPU-7ff18ebb-100e-98fe-038b-a98bd4f94248",
+        "host_gpu_index": 0,
+        "manifest_pid": 3763549,
+        "manifest_started_at": "2026-10-16T07:42:57Z",
+        "resume_events": [],
+        "run_dir": "/data2/yb/paper/runs/baseline_5models_local_20261015/MELD/SDR-GNN/released_compatible/seed_68/mr_0.4/fold_0",
+        "supervisor_pid": 3763546,
+        "timestamp_resolution_seconds": 1,
+        "training_pid": 3763549
+      },
+      "gpu_kernel_concurrency_established": false,
+      "own_phase": {
+        "ended_at": "2026-10-16T07:43:03.498145+00:00",
+        "exit_code": 0,
+        "gpu_uuid": "GPU-7ff18ebb-100e-98fe-038b-a98bd4f94248",
+        "host_gpu_index": 0,
+        "job_id": "IEMOCAP_cmerc_validation_seed2024",
+        "job_status_in_queue_snapshot": "failed",
+        "phase": "training",
+        "pid": 3711685,
+        "started_at": "2026-10-16T06:50:14.155701+00:00"
+      },
+      "process_interval_intersection": {
+        "duration_seconds": 8.498145,
+        "ended_at": "2026-10-16T07:43:03.498145+00:00",
+        "started_at": "2026-10-16T07:42:55+00:00"
+      }
+    },
+    {
+      "attempt_valid_for_formal_results": false,
+      "candidate_id": "meld_cmerc3407_invalidated_attempt",
+      "classification": "known_invalidated_resource_contention_attempt",
+      "determination": "Known same-GPU contention attempt: both projects progressed through real GPU model training. Local process was terminated with exit code -15 and the queue marks this attempt failed. Do not treat its partial artifacts as a completed formal result.",
+      "evidence": [
+        {
+          "mtime_ns": 1792136637646994107,
+          "mtime_utc": "2026-10-16T07:43:57.646994+00:00",
+          "path": "/data2/yb/paper/runs/baseline_5models_local_20261015/MELD/SDR-GNN/released_compatible/seed_68/mr_0.5/fold_0/child.json",
+          "role": "foreign child.json",
+          "sha256": "4c942e751203e7d043d46fbd968021b7dbb75b67f90f13bad5feb8a99d788dcf",
+          "size_bytes": 148
+        },
+        {
+          "mtime_ns": 1792136637598995225,
+          "mtime_utc": "2026-10-16T07:43:57.598995+00:00",
+          "path": "/data2/yb/paper/runs/baseline_5models_local_20261015/MELD/SDR-GNN/released_compatible/seed_68/mr_0.5/fold_0/supervisor.json",
+          "role": "foreign supervisor.json",
+          "sha256": "2a623ebd421bed41bc93eb600d0137db2d27de03829dead60cd51eb9a8e8c24c",
+          "size_bytes": 1004
+        },
+        {
+          "mtime_ns": 1792136637596995272,
+          "mtime_utc": "2026-10-16T07:43:57.596995+00:00",
+          "path": "/data2/yb/paper/runs/baseline_5models_local_20261015/MELD/SDR-GNN/released_compatible/seed_68/mr_0.5/fold_0/launch.json",
+          "role": "foreign launch.json",
+          "sha256": "7201af907b370b6c8580688cad9b9f3f98e1ab8524b9da98f0c8f32e3dfbadd0",
+          "size_bytes": 1888
+        },
+        {
+          "mtime_ns": 1792137447134553245,
+          "mtime_utc": "2026-10-16T07:57:27.134553+00:00",
+          "path": "/data2/yb/paper/runs/baseline_5models_local_20261015/MELD/SDR-GNN/released_compatible/seed_68/mr_0.5/fold_0/exit.json",
+          "role": "foreign exit.json",
+          "sha256": "ad7f3650d02f68fbfbcf79d5f86c768ba5b0a9e8d06014557da1d642aa936de2",
+          "size_bytes": 71
+        },
+        {
+          "mtime_ns": 1792137445359572166,
+          "mtime_utc": "2026-10-16T07:57:25.359572+00:00",
+          "path": "/data2/yb/paper/runs/baseline_5models_local_20261015/MELD/SDR-GNN/released_compatible/seed_68/mr_0.5/fold_0/status.json",
+          "role": "foreign status.json",
+          "sha256": "cc66f9df649b622bf820a15512ebc5eed34646ffe2ab43259495565b1aa13a2c",
+          "size_bytes": 207
+        },
+        {
+          "mtime_ns": 1792136639581949112,
+          "mtime_utc": "2026-10-16T07:43:59.581949+00:00",
+          "path": "/data2/yb/paper/runs/baseline_5models_local_20261015/MELD/SDR-GNN/released_compatible/seed_68/mr_0.5/fold_0/manifest.json",
+          "role": "foreign manifest.json",
+          "sha256": "e413b506d60528172e01b7112d947110bc100032d8afa44078398ddff9863b64",
+          "size_bytes": 99996
+        },
+        {
+          "mtime_ns": 1792137436694664821,
+          "mtime_utc": "2026-10-16T07:57:16.694665+00:00",
+          "path": "/data2/yb/paper/runs/baseline_5models_local_20261015/MELD/SDR-GNN/released_compatible/seed_68/mr_0.5/fold_0/history.jsonl",
+          "role": "foreign history.jsonl",
+          "sha256": "2af6178e249c311328f8cf63ccb64c65fc2d2c2b79fef4fb063f77d3da8f8427",
+          "size_bytes": 25760
+        },
+        {
+          "mtime_ns": 1792136755122457743,
+          "mtime_utc": "2026-10-16T07:45:55.122458+00:00",
+          "path": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/logs/cmerc/MELD/validation/seed3407.train.log",
+          "role": "local invalidated attempt: real training epoch progress before termination",
+          "sha256": "3940939f9df0c3f3ee2f9ca05c5670cd860442cffa81fda0264ef8fc60ee6dbb",
+          "size_bytes": 10534
+        }
+      ],
+      "foreign": {
+        "child_ended_at": "2026-10-16T07:57:27+00:00",
+        "child_started_at": "2026-10-16T07:43:57Z",
+        "end_basis": "exit.json.at",
+        "failure_error": null,
+        "gpu_uuid": "GPU-eed2f34f-b4c0-7b7a-498e-71a026e30c5a",
+        "host_gpu_index": 1,
+        "manifest_pid": 3764660,
+        "manifest_started_at": "2026-10-16T07:43:59Z",
+        "resume_events": [],
+        "run_dir": "/data2/yb/paper/runs/baseline_5models_local_20261015/MELD/SDR-GNN/released_compatible/seed_68/mr_0.5/fold_0",
+        "supervisor_pid": 3764659,
+        "timestamp_resolution_seconds": 1,
+        "training_pid": 3764660
+      },
+      "gpu_kernel_concurrency_established": "same-GPU real-training coexistence supported by both run histories; exact kernel scheduling is unrecorded",
+      "own_phase": {
+        "ended_at": "2026-10-16T07:46:00.415635+00:00",
+        "exit_code": -15,
+        "gpu_uuid": "GPU-eed2f34f-b4c0-7b7a-498e-71a026e30c5a",
+        "host_gpu_index": 1,
+        "job_id": "MELD_cmerc_validation_seed3407",
+        "job_status_in_queue_snapshot": "failed",
+        "phase": "training",
+        "pid": 3764688,
+        "started_at": "2026-10-16T07:43:58.487692+00:00"
+      },
+      "process_interval_intersection": {
+        "duration_seconds": 121.927943,
+        "ended_at": "2026-10-16T07:46:00.415635+00:00",
+        "started_at": "2026-10-16T07:43:58.487692+00:00"
+      }
+    }
+  ],
+  "conclusion": {
+    "completed_13_additional_clear_model_compute_overlap_found": false,
+    "completed_13_process_overlap_candidates": 2,
+    "full_duration_nvml_monitored_exclusivity_established": false,
+    "iemocap2024_required_wording": "final_test.json written before foreign child launch, while local training process had not yet exited",
+    "meld3407_attempt": "invalidated resource-contention attempt; not a completed formal result",
+    "text": "Among the 13 completed jobs, no additional clear GPU model-compute overlap with the named foreign project is established. This does not prove continuous GPU exclusivity, absence of retained CUDA allocations, or exclusivity against unexamined projects."
+  },
+  "created_at_utc": "2026-10-16T08:23:30.467403+00:00",
+  "foreign_project": "/data2/yb/paper/experiments/baseline_5models_local_20261015",
+  "foreign_run_root": "/data2/yb/paper/runs/baseline_5models_local_20261015",
+  "kind": "read_only_historical_resource_interval_audit_not_training",
+  "method": {
+    "foreign_intervals": "Actual child.json process start through matching exit.json/status completion. Includes archived attempt_history. Supervisor reservation and registry RUNNING alone do not prove GPU computation.",
+    "gpu_identity": "Match UUID; local host_gpu_index identifies physical GPU. Foreign timestamps have second resolution.",
+    "granularity": "Process and artifact timestamps, source control flow, and training histories; no retrospective continuous NVML trace, per-kernel timeline, or CUDA-context release timestamp.",
+    "own_intervals": "Separate training/evaluation actual started_at and ended_at; never whole-job started_at-to-ended_at. Open phase intervals are clipped at audit time."
+  },
+  "non_actions": [
+    "No GPU query or GPU execution during materialization",
+    "No queue/code/protocol changes",
+    "No other project modifications",
+    "Only the two requested audit artifacts were created"
+  ],
+  "own_phase_snapshot": [
+    {
+      "ended_at": "2026-10-16T05:40:00.246113+00:00",
+      "exit_code": 0,
+      "gpu_uuid": "GPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456",
+      "host_gpu_index": 3,
+      "job_id": "IEMOCAP_baseline_validation_seed1475",
+      "job_status_in_queue_snapshot": "completed",
+      "phase": "training",
+      "pid": 3632193,
+      "started_at": "2026-10-16T05:29:22.600935+00:00"
+    },
+    {
+      "ended_at": "2026-10-16T05:40:17.607679+00:00",
+      "exit_code": 0,
+      "gpu_uuid": "GPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456",
+      "host_gpu_index": 3,
+      "job_id": "IEMOCAP_baseline_validation_seed1475",
+      "job_status_in_queue_snapshot": "completed",
+      "phase": "evaluation",
+      "pid": 3642719,
+      "started_at": "2026-10-16T05:40:02.502281+00:00"
+    },
+    {
+      "ended_at": "2026-10-16T06:27:53.683356+00:00",
+      "exit_code": 0,
+      "gpu_uuid": "GPU-eed2f34f-b4c0-7b7a-498e-71a026e30c5a",
+      "host_gpu_index": 1,
+      "job_id": "IEMOCAP_cmerc_validation_seed1475",
+      "job_status_in_queue_snapshot": "completed",
+      "phase": "training",
+      "pid": 3635853,
+      "started_at": "2026-10-16T05:33:14.001184+00:00"
+    },
+    {
+      "ended_at": "2026-10-16T06:28:11.665596+00:00",
+      "exit_code": 0,
+      "gpu_uuid": "GPU-eed2f34f-b4c0-7b7a-498e-71a026e30c5a",
+      "host_gpu_index": 1,
+      "job_id": "IEMOCAP_cmerc_validation_seed1475",
+      "job_status_in_queue_snapshot": "completed",
+      "phase": "evaluation",
+      "pid": 3689619,
+      "started_at": "2026-10-16T06:27:55.775695+00:00"
+    },
+    {
+      "ended_at": "2026-10-16T05:38:52.647380+00:00",
+      "exit_code": 0,
+      "gpu_uuid": "GPU-7ff18ebb-100e-98fe-038b-a98bd4f94248",
+      "host_gpu_index": 0,
+      "job_id": "MELD_baseline_validation_seed67137",
+      "job_status_in_queue_snapshot": "completed",
+      "phase": "training",
+      "pid": 3636188,
+      "started_at": "2026-10-16T05:33:32.585071+00:00"
+    },
+    {
+      "ended_at": "2026-10-16T05:39:12.679958+00:00",
+      "exit_code": 0,
+      "gpu_uuid": "GPU-7ff18ebb-100e-98fe-038b-a98bd4f94248",
+      "host_gpu_index": 0,
+      "job_id": "MELD_baseline_validation_seed67137",
+      "job_status_in_queue_snapshot": "completed",
+      "phase": "evaluation",
+      "pid": 3641686,
+      "started_at": "2026-10-16T05:38:57.141695+00:00"
+    },
+    {
+      "ended_at": "2026-10-16T06:03:04.176598+00:00",
+      "exit_code": 0,
+      "gpu_uuid": "GPU-7ff18ebb-100e-98fe-038b-a98bd4f94248",
+      "host_gpu_index": 0,
+      "job_id": "MELD_cmerc_validation_seed67137",
+      "job_status_in_queue_snapshot": "completed",
+      "phase": "training",
+      "pid": 3641974,
+      "started_at": "2026-10-16T05:39:15.160546+00:00"
+    },
+    {
+      "ended_at": "2026-10-16T06:03:21.692726+00:00",
+      "exit_code": 0,
+      "gpu_uuid": "GPU-7ff18ebb-100e-98fe-038b-a98bd4f94248",
+      "host_gpu_index": 0,
+      "job_id": "MELD_cmerc_validation_seed67137",
+      "job_status_in_queue_snapshot": "completed",
+      "phase": "evaluation",
+      "pid": 3664366,
+      "started_at": "2026-10-16T06:03:06.453460+00:00"
+    },
+    {
+      "ended_at": "2026-10-16T06:33:28.740917+00:00",
+      "exit_code": 0,
+      "gpu_uuid": "GPU-eed2f34f-b4c0-7b7a-498e-71a026e30c5a",
+      "host_gpu_index": 1,
+      "job_id": "MELD_baseline_validation_seed1475",
+      "job_status_in_queue_snapshot": "completed",
+      "phase": "training",
+      "pid": 3689972,
+      "started_at": "2026-10-16T06:28:17.813388+00:00"
+    },
+    {
+      "ended_at": "2026-10-16T06:33:46.496474+00:00",
+      "exit_code": 0,
+      "gpu_uuid": "GPU-eed2f34f-b4c0-7b7a-498e-71a026e30c5a",
+      "host_gpu_index": 1,
+      "job_id": "MELD_baseline_validation_seed1475",
+      "job_status_in_queue_snapshot": "completed",
+      "phase": "evaluation",
+      "pid": 3695162,
+      "started_at": "2026-10-16T06:33:31.146506+00:00"
+    },
+    {
+      "ended_at": "2026-10-16T06:53:47.519586+00:00",
+      "exit_code": 0,
+      "gpu_uuid": "GPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456",
+      "host_gpu_index": 3,
+      "job_id": "MELD_cmerc_validation_seed1475",
+      "job_status_in_queue_snapshot": "completed",
+      "phase": "training",
+      "pid": 3690041,
+      "started_at": "2026-10-16T06:28:19.975830+00:00"
+    },
+    {
+      "ended_at": "2026-10-16T06:54:05.022714+00:00",
+      "exit_code": 0,
+      "gpu_uuid": "GPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456",
+      "host_gpu_index": 3,
+      "job_id": "MELD_cmerc_validation_seed1475",
+      "job_status_in_queue_snapshot": "completed",
+      "phase": "evaluation",
+      "pid": 3715128,
+      "started_at": "2026-10-16T06:53:49.720873+00:00"
+    },
+    {
+      "ended_at": "2026-10-16T06:39:24.665026+00:00",
+      "exit_code": 0,
+      "gpu_uuid": "GPU-7ff18ebb-100e-98fe-038b-a98bd4f94248",
+      "host_gpu_index": 0,
+      "job_id": "IEMOCAP_baseline_validation_seed67137",
+      "job_status_in_queue_snapshot": "completed",
+      "phase": "training",
+      "pid": 3690580,
+      "started_at": "2026-10-16T06:28:54.351921+00:00"
+    },
+    {
+      "ended_at": "2026-10-16T06:39:42.012402+00:00",
+      "exit_code": 0,
+      "gpu_uuid": "GPU-7ff18ebb-100e-98fe-038b-a98bd4f94248",
+      "host_gpu_index": 0,
+      "job_id": "IEMOCAP_baseline_validation_seed67137",
+      "job_status_in_queue_snapshot": "completed",
+      "phase": "evaluation",
+      "pid": 3701113,
+      "started_at": "2026-10-16T06:39:26.765936+00:00"
+    },
+    {
+      "ended_at": "2026-10-16T07:26:02.151123+00:00",
+      "exit_code": 0,
+      "gpu_uuid": "GPU-eed2f34f-b4c0-7b7a-498e-71a026e30c5a",
+      "host_gpu_index": 1,
+      "job_id": "IEMOCAP_cmerc_validation_seed67137",
+      "job_status_in_queue_snapshot": "completed",
+      "phase": "training",
+      "pid": 3695486,
+      "started_at": "2026-10-16T06:33:49.338198+00:00"
+    },
+    {
+      "ended_at": "2026-10-16T07:26:35.356019+00:00",
+      "exit_code": 0,
+      "gpu_uuid": "GPU-eed2f34f-b4c0-7b7a-498e-71a026e30c5a",
+      "host_gpu_index": 1,
+      "job_id": "IEMOCAP_cmerc_validation_seed67137",
+      "job_status_in_queue_snapshot": "completed",
+      "phase": "evaluation",
+      "pid": 3746804,
+      "started_at": "2026-10-16T07:26:04.856047+00:00"
+    },
+    {
+      "ended_at": "2026-10-16T06:49:54.156972+00:00",
+      "exit_code": 0,
+      "gpu_uuid": "GPU-7ff18ebb-100e-98fe-038b-a98bd4f94248",
+      "host_gpu_index": 0,
+      "job_id": "IEMOCAP_baseline_validation_seed2024",
+      "job_status_in_queue_snapshot": "completed",
+      "phase": "training",
+      "pid": 3701445,
+      "started_at": "2026-10-16T06:39:44.607909+00:00"
+    },
+    {
+      "ended_at": "2026-10-16T06:50:11.590534+00:00",
+      "exit_code": 0,
+      "gpu_uuid": "GPU-7ff18ebb-100e-98fe-038b-a98bd4f94248",
+      "host_gpu_index": 0,
+      "job_id": "IEMOCAP_baseline_validation_seed2024",
+      "job_status_in_queue_snapshot": "completed",
+      "phase": "evaluation",
+      "pid": 3711358,
+      "started_at": "2026-10-16T06:49:56.290255+00:00"
+    },
+    {
+      "ended_at": "2026-10-16T07:43:03.498145+00:00",
+      "exit_code": 0,
+      "gpu_uuid": "GPU-7ff18ebb-100e-98fe-038b-a98bd4f94248",
+      "host_gpu_index": 0,
+      "job_id": "IEMOCAP_cmerc_validation_seed2024",
+      "job_status_in_queue_snapshot": "failed",
+      "phase": "training",
+      "pid": 3711685,
+      "started_at": "2026-10-16T06:50:14.155701+00:00"
+    },
+    {
+      "ended_at": "2026-10-16T06:59:12.156976+00:00",
+      "exit_code": 0,
+      "gpu_uuid": "GPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456",
+      "host_gpu_index": 3,
+      "job_id": "MELD_baseline_validation_seed2024",
+      "job_status_in_queue_snapshot": "completed",
+      "phase": "training",
+      "pid": 3715434,
+      "started_at": "2026-10-16T06:54:07.381303+00:00"
+    },
+    {
+      "ended_at": "2026-10-16T06:59:29.750497+00:00",
+      "exit_code": 0,
+      "gpu_uuid": "GPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456",
+      "host_gpu_index": 3,
+      "job_id": "MELD_baseline_validation_seed2024",
+      "job_status_in_queue_snapshot": "completed",
+      "phase": "evaluation",
+      "pid": 3720411,
+      "started_at": "2026-10-16T06:59:14.425787+00:00"
+    },
+    {
+      "ended_at": "2026-10-16T07:25:11.075039+00:00",
+      "exit_code": 0,
+      "gpu_uuid": "GPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456",
+      "host_gpu_index": 3,
+      "job_id": "MELD_cmerc_validation_seed2024",
+      "job_status_in_queue_snapshot": "completed",
+      "phase": "training",
+      "pid": 3720721,
+      "started_at": "2026-10-16T06:59:32.303788+00:00"
+    },
+    {
+      "ended_at": "2026-10-16T07:25:28.956549+00:00",
+      "exit_code": 0,
+      "gpu_uuid": "GPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456",
+      "host_gpu_index": 3,
+      "job_id": "MELD_cmerc_validation_seed2024",
+      "job_status_in_queue_snapshot": "completed",
+      "phase": "evaluation",
+      "pid": 3745982,
+      "started_at": "2026-10-16T07:25:13.570047+00:00"
+    },
+    {
+      "ended_at": "2026-10-16T07:35:29.169083+00:00",
+      "exit_code": 0,
+      "gpu_uuid": "GPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456",
+      "host_gpu_index": 3,
+      "job_id": "IEMOCAP_baseline_validation_seed3407",
+      "job_status_in_queue_snapshot": "completed",
+      "phase": "training",
+      "pid": 3746277,
+      "started_at": "2026-10-16T07:25:31.606383+00:00"
+    },
+    {
+      "ended_at": "2026-10-16T07:36:07.294577+00:00",
+      "exit_code": 0,
+      "gpu_uuid": "GPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456",
+      "host_gpu_index": 3,
+      "job_id": "IEMOCAP_baseline_validation_seed3407",
+      "job_status_in_queue_snapshot": "completed",
+      "phase": "evaluation",
+      "pid": 3756432,
+      "started_at": "2026-10-16T07:35:36.732300+00:00"
+    },
+    {
+      "ended_at": null,
+      "exit_code": null,
+      "gpu_uuid": "GPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456",
+      "host_gpu_index": 3,
+      "job_id": "IEMOCAP_cmerc_validation_seed3407",
+      "job_status_in_queue_snapshot": "running_training",
+      "phase": "training",
+      "pid": 3756983,
+      "started_at": "2026-10-16T07:36:09.892704+00:00"
+    },
+    {
+      "ended_at": "2026-10-16T07:43:37.884200+00:00",
+      "exit_code": 0,
+      "gpu_uuid": "GPU-eed2f34f-b4c0-7b7a-498e-71a026e30c5a",
+      "host_gpu_index": 1,
+      "job_id": "MELD_baseline_validation_seed3407",
+      "job_status_in_queue_snapshot": "completed",
+      "phase": "training",
+      "pid": 3758953,
+      "started_at": "2026-10-16T07:38:13.937531+00:00"
+    },
+    {
+      "ended_at": "2026-10-16T07:43:56.019460+00:00",
+      "exit_code": 0,
+      "gpu_uuid": "GPU-eed2f34f-b4c0-7b7a-498e-71a026e30c5a",
+      "host_gpu_index": 1,
+      "job_id": "MELD_baseline_validation_seed3407",
+      "job_status_in_queue_snapshot": "completed",
+      "phase": "evaluation",
+      "pid": 3764388,
+      "started_at": "2026-10-16T07:43:40.754055+00:00"
+    },
+    {
+      "ended_at": "2026-10-16T07:46:00.415635+00:00",
+      "exit_code": -15,
+      "gpu_uuid": "GPU-eed2f34f-b4c0-7b7a-498e-71a026e30c5a",
+      "host_gpu_index": 1,
+      "job_id": "MELD_cmerc_validation_seed3407",
+      "job_status_in_queue_snapshot": "failed",
+      "phase": "training",
+      "pid": 3764688,
+      "started_at": "2026-10-16T07:43:58.487692+00:00"
+    }
+  ],
+  "queue_updated_at": "2026-10-16T07:46:00.738825+00:00",
+  "schema_version": 1,
+  "scope": {
+    "comparison_limited_to_named_foreign_project": true,
+    "completed_job_ids": [
+      "IEMOCAP_baseline_validation_seed1475",
+      "IEMOCAP_cmerc_validation_seed1475",
+      "MELD_baseline_validation_seed67137",
+      "MELD_cmerc_validation_seed67137",
+      "MELD_baseline_validation_seed1475",
+      "MELD_cmerc_validation_seed1475",
+      "IEMOCAP_baseline_validation_seed67137",
+      "IEMOCAP_cmerc_validation_seed67137",
+      "IEMOCAP_baseline_validation_seed2024",
+      "MELD_baseline_validation_seed2024",
+      "MELD_cmerc_validation_seed2024",
+      "IEMOCAP_baseline_validation_seed3407",
+      "MELD_baseline_validation_seed3407"
+    ],
+    "completed_jobs_at_queue_snapshot": 13,
+    "foreign_child_records_scanned": 293,
+    "foreign_unresolved_intervals": [],
+    "own_started_phases": 29,
+    "process_overlap_candidates": 4
+  },
+  "shared_evidence": [
+    {
+      "mtime_ns": 1792136760744345572,
+      "mtime_utc": "2026-10-16T07:46:00.744346+00:00",
+      "path": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/state/queue.json",
+      "role": "local phase timing and status snapshot",
+      "sha256": "5f32b2b184736d6c1007ad5055213bf98e47dd25b3528387c7243a468e8319b3",
+      "size_bytes": 59407
+    },
+    {
+      "mtime_ns": 1792138971439427446,
+      "mtime_utc": "2026-10-16T08:22:51.439427+00:00",
+      "path": "/data2/yb/paper/experiments/baseline_5models_local_20261015/experiment_registry.json",
+      "role": "foreign registry scope at materialization time",
+      "sha256": "ba65b1c2bb53251522a3f18daf8dde591f23e5b1ce6012e70695b9fcb72d3cb0",
+      "size_bytes": 3344579
+    },
+    {
+      "mtime_ns": 1792138971459427313,
+      "mtime_utc": "2026-10-16T08:22:51.459427+00:00",
+      "path": "/data2/yb/paper/runs/baseline_5models_local_20261015/dispatcher.json",
+      "role": "foreign durable dispatcher snapshot at materialization time",
+      "sha256": "d88eab6e4fc7bdfab66b4b90110206a3487035468ca9cc200cfdc4d48a2b806f",
+      "size_bytes": 2707
+    },
+    {
+      "mtime_ns": 1792054986669603774,
+      "mtime_utc": "2026-10-15T09:03:06.669604+00:00",
+      "path": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/code/scripts/evaluate_checkpoint.py",
+      "role": "local frozen evaluation: CPU copies then artifact writes then output/exit",
+      "sha256": "a2e4b3fda1f71fa57fcdd90f4c6b7fd96f9d7c0cf75225bd84e800284c5bf956",
+      "size_bytes": 21421
+    },
+    {
+      "mtime_ns": 1792054986673603748,
+      "mtime_utc": "2026-10-15T09:03:06.673604+00:00",
+      "path": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/code/train_cm.py",
+      "role": "local frozen training: final_test.json written after final GPU evaluation; only print follows",
+      "sha256": "67fa7e48a3ecfda9f011d1df3344b68cc9eaa3fdb105a23a117684b1a669a3a0",
+      "size_bytes": 74480
+    },
+    {
+      "mtime_ns": 1792057313284935972,
+      "mtime_utc": "2026-10-15T09:41:53.284936+00:00",
+      "path": "/data2/yb/paper/experiments/baseline_5models_local_20261015/supervise.py",
+      "role": "foreign child start/exit record semantics",
+      "sha256": "0712aca591fbae64d029007a4b5a5a0643de3b44e844e01f9fb4c318b59b4023",
+      "size_bytes": 1326
+    }
+  ],
+  "status": "audit_completed_with_evidence_limits"
+}

@@ -1,0 +1,2452 @@
+{
+  "acceptance_sha256": "87e78b95652dcd8149e2552e6fdff639fa6d758e3f81fc34d23207ad95750bf1",
+  "backup_file_count": 251,
+  "backup_root": "/data2/yb/paper/experiment_backups/CMERC/04_xp_mainline_validation/20261016T050823Z",
+  "batch": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z",
+  "excluded_regular_files": [
+    "code/snapshots/code_snapshot.tar.gz",
+    "preflight/gpu3_IEMOCAP/gradient_components.jsonl",
+    "preflight/gpu3_IEMOCAP/official/predictions.csv",
+    "preflight/gpu3_IEMOCAP/official/predictions.npz",
+    "preflight/gpu3_IEMOCAP/profile/baseline/IEMOCAP_validation_seed1475/.training.lock",
+    "preflight/gpu3_IEMOCAP/profile/baseline/IEMOCAP_validation_seed1475/best.pt",
+    "preflight/gpu3_IEMOCAP/profile/baseline/IEMOCAP_validation_seed1475/latest.pt",
+    "preflight/gpu3_IEMOCAP/profile/baseline/IEMOCAP_validation_seed1475/metrics.jsonl",
+    "preflight/gpu3_IEMOCAP/profile/cmerc/IEMOCAP_validation_seed1475/.training.lock",
+    "preflight/gpu3_IEMOCAP/profile/cmerc/IEMOCAP_validation_seed1475/best.pt",
+    "preflight/gpu3_IEMOCAP/profile/cmerc/IEMOCAP_validation_seed1475/latest.pt",
+    "preflight/gpu3_IEMOCAP/profile/cmerc/IEMOCAP_validation_seed1475/metrics.jsonl",
+    "preflight/gpu3_IEMOCAP/profile_evaluation/baseline/predictions.csv",
+    "preflight/gpu3_IEMOCAP/profile_evaluation/baseline/predictions.npz",
+    "preflight/gpu3_IEMOCAP/profile_evaluation/cmerc/predictions.csv",
+    "preflight/gpu3_IEMOCAP/profile_evaluation/cmerc/predictions.npz",
+    "preflight/gpu3_IEMOCAP/smoke/iemocap_smoke_checkpoint.pt",
+    "preflight/gpu3_MELD/gradient_components.jsonl",
+    "preflight/gpu3_MELD/official/predictions.csv",
+    "preflight/gpu3_MELD/official/predictions.npz",
+    "preflight/gpu3_MELD/profile/baseline/MELD_validation_seed67137/.training.lock",
+    "preflight/gpu3_MELD/profile/baseline/MELD_validation_seed67137/best.pt",
+    "preflight/gpu3_MELD/profile/baseline/MELD_validation_seed67137/latest.pt",
+    "preflight/gpu3_MELD/profile/baseline/MELD_validation_seed67137/metrics.jsonl",
+    "preflight/gpu3_MELD/profile/cmerc/MELD_validation_seed67137/.training.lock",
+    "preflight/gpu3_MELD/profile/cmerc/MELD_validation_seed67137/best.pt",
+    "preflight/gpu3_MELD/profile/cmerc/MELD_validation_seed67137/latest.pt",
+    "preflight/gpu3_MELD/profile/cmerc/MELD_validation_seed67137/metrics.jsonl",
+    "preflight/gpu3_MELD/profile_evaluation/baseline/predictions.csv",
+    "preflight/gpu3_MELD/profile_evaluation/baseline/predictions.npz",
+    "preflight/gpu3_MELD/profile_evaluation/cmerc/predictions.csv",
+    "preflight/gpu3_MELD/profile_evaluation/cmerc/predictions.npz",
+    "preflight/gpu3_MELD/resume/full/cmerc/IEMOCAP_validation_seed2024/.training.lock",
+    "preflight/gpu3_MELD/resume/full/cmerc/IEMOCAP_validation_seed2024/best.pt",
+    "preflight/gpu3_MELD/resume/full/cmerc/IEMOCAP_validation_seed2024/latest.pt",
+    "preflight/gpu3_MELD/resume/full/cmerc/IEMOCAP_validation_seed2024/metrics.jsonl",
+    "preflight/gpu3_MELD/resume/resumed/cmerc/IEMOCAP_validation_seed2024/.training.lock",
+    "preflight/gpu3_MELD/resume/resumed/cmerc/IEMOCAP_validation_seed2024/best.pt",
+    "preflight/gpu3_MELD/resume/resumed/cmerc/IEMOCAP_validation_seed2024/latest.pt",
+    "preflight/gpu3_MELD/resume/resumed/cmerc/IEMOCAP_validation_seed2024/metrics.jsonl",
+    "preflight/gpu3_MELD/smoke/meld_smoke_checkpoint.pt",
+    "provenance/export_mainline.lock",
+    "results/baseline/IEMOCAP/validation/seed1475/predictions.csv",
+    "results/baseline/IEMOCAP/validation/seed1475/predictions.npz",
+    "results/baseline/IEMOCAP/validation/seed2024/predictions.csv",
+    "results/baseline/IEMOCAP/validation/seed2024/predictions.npz",
+    "results/baseline/IEMOCAP/validation/seed3407/predictions.csv",
+    "results/baseline/IEMOCAP/validation/seed3407/predictions.npz",
+    "results/baseline/IEMOCAP/validation/seed42/predictions.csv",
+    "results/baseline/IEMOCAP/validation/seed42/predictions.npz",
+    "results/baseline/IEMOCAP/validation/seed67137/predictions.csv",
+    "results/baseline/IEMOCAP/validation/seed67137/predictions.npz",
+    "results/baseline/MELD/validation/seed1475/predictions.csv",
+    "results/baseline/MELD/validation/seed1475/predictions.npz",
+    "results/baseline/MELD/validation/seed2024/predictions.csv",
+    "results/baseline/MELD/validation/seed2024/predictions.npz",
+    "results/baseline/MELD/validation/seed3407/predictions.csv",
+    "results/baseline/MELD/validation/seed3407/predictions.npz",
+    "results/baseline/MELD/validation/seed42/predictions.csv",
+    "results/baseline/MELD/validation/seed42/predictions.npz",
+    "results/baseline/MELD/validation/seed67137/predictions.csv",
+    "results/baseline/MELD/validation/seed67137/predictions.npz",
+    "results/cmerc/IEMOCAP/validation/seed1475/predictions.csv",
+    "results/cmerc/IEMOCAP/validation/seed1475/predictions.npz",
+    "results/cmerc/IEMOCAP/validation/seed2024/predictions.csv",
+    "results/cmerc/IEMOCAP/validation/seed2024/predictions.npz",
+    "results/cmerc/IEMOCAP/validation/seed3407/predictions.csv",
+    "results/cmerc/IEMOCAP/validation/seed3407/predictions.npz",
+    "results/cmerc/IEMOCAP/validation/seed42/predictions.csv",
+    "results/cmerc/IEMOCAP/validation/seed42/predictions.npz",
+    "results/cmerc/IEMOCAP/validation/seed67137/predictions.csv",
+    "results/cmerc/IEMOCAP/validation/seed67137/predictions.npz",
+    "results/cmerc/MELD/validation/seed1475/predictions.csv",
+    "results/cmerc/MELD/validation/seed1475/predictions.npz",
+    "results/cmerc/MELD/validation/seed2024/predictions.csv",
+    "results/cmerc/MELD/validation/seed2024/predictions.npz",
+    "results/cmerc/MELD/validation/seed3407/predictions.csv",
+    "results/cmerc/MELD/validation/seed3407/predictions.npz",
+    "results/cmerc/MELD/validation/seed42/predictions.csv",
+    "results/cmerc/MELD/validation/seed42/predictions.npz",
+    "results/cmerc/MELD/validation/seed67137/predictions.csv",
+    "results/cmerc/MELD/validation/seed67137/predictions.npz"
+  ],
+  "exported_at_utc": "2026-10-16T10:31:51.372267+00:00",
+  "files": [
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "BASELINE_REGISTRY.md",
+      "size_bytes": 1073,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/BASELINE_REGISTRY.md",
+      "source_sha256": "b8f9b3e7ce451dd104996fdc94650270913f34b4904eabe5f2a1e4fe4ef8ebfd",
+      "target_sha256": "b8f9b3e7ce451dd104996fdc94650270913f34b4904eabe5f2a1e4fe4ef8ebfd"
+    },
+    {
+      "path": "README.md",
+      "size_bytes": 2432,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/state/recovery/postrun_delivery.py::generated README",
+      "source_sha256": "515b9ef57da33a4d1125c07b93b9b0810d89bf401b0454c0124504f97d3bd61d",
+      "target_sha256": "eb937a9f14c41543be2013f215842006681e331e8148330690c25ec96768bef3",
+      "transformation": "generated export documentation"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "batch_manifest.json",
+      "size_bytes": 10885,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/batch_manifest.json",
+      "source_sha256": "9157de9466a59ed42ee866fc32dcc88ad1b35745e3f3fc3934ba187a1d89bf80",
+      "target_sha256": "9157de9466a59ed42ee866fc32dcc88ad1b35745e3f3fc3934ba187a1d89bf80"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "code/HypergraphConv.py",
+      "size_bytes": 7795,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/code/HypergraphConv.py",
+      "source_sha256": "9297a572e1763a74c7984eb75dfb15fa8143bf131a44cf50433c307ef7f3b5d2",
+      "target_sha256": "9297a572e1763a74c7984eb75dfb15fa8143bf131a44cf50433c307ef7f3b5d2"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "code/MULTISEED_PLAN.md",
+      "size_bytes": 3229,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/code/MULTISEED_PLAN.md",
+      "source_sha256": "2fa1d370217ba0beb174fbb2de8c6710a44d4c6748b41ef503ad865f35e8040e",
+      "target_sha256": "2fa1d370217ba0beb174fbb2de8c6710a44d4c6748b41ef503ad865f35e8040e"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "code/causal_graph.py",
+      "size_bytes": 5367,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/code/causal_graph.py",
+      "source_sha256": "3dd761b05cca95afa7b2f7b70e4640ee3ccfbb5726c3d705c0808468f7181da3",
+      "target_sha256": "3dd761b05cca95afa7b2f7b70e4640ee3ccfbb5726c3d705c0808468f7181da3"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "code/clloss.py",
+      "size_bytes": 14384,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/code/clloss.py",
+      "source_sha256": "012c5d08f51eaaa99bdbd10d61e3d108275bf3dd44e42767b2e186e5be72ec3f",
+      "target_sha256": "012c5d08f51eaaa99bdbd10d61e3d108275bf3dd44e42767b2e186e5be72ec3f"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "code/configs/multiseed_validation.json",
+      "size_bytes": 594,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/code/configs/multiseed_validation.json",
+      "source_sha256": "96e628f6e5e29c914e61d048b0b543ef6343f839be92c077546acbabe95e3624",
+      "target_sha256": "96e628f6e5e29c914e61d048b0b543ef6343f839be92c077546acbabe95e3624"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "code/configs/requirements-lock.txt",
+      "size_bytes": 965,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/code/configs/requirements-lock.txt",
+      "source_sha256": "801b164209063f0de0729041ee5577561e6e9a44d564604c26d7c0723a7dc6a9",
+      "target_sha256": "801b164209063f0de0729041ee5577561e6e9a44d564604c26d7c0723a7dc6a9"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "code/dataloader.py",
+      "size_bytes": 10492,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/code/dataloader.py",
+      "source_sha256": "337a7dc92d9e69e4f8854a8031197085ffca84cdc08b070b6ef5b05ebb6f3390",
+      "target_sha256": "337a7dc92d9e69e4f8854a8031197085ffca84cdc08b070b6ef5b05ebb6f3390"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "code/evaluation_metrics.py",
+      "size_bytes": 3954,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/code/evaluation_metrics.py",
+      "source_sha256": "ed831a1f38d5706d6d47d7310d03e8b35f6eb4573623c9650934c638d65835c8",
+      "target_sha256": "ed831a1f38d5706d6d47d7310d03e8b35f6eb4573623c9650934c638d65835c8"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "code/high_fre_conv.py",
+      "size_bytes": 1526,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/code/high_fre_conv.py",
+      "source_sha256": "f4414c019ca7f656a662698bb9615bf15ac6325a73caa06ff487e158f58f39df",
+      "target_sha256": "f4414c019ca7f656a662698bb9615bf15ac6325a73caa06ff487e158f58f39df"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "code/model.py",
+      "size_bytes": 37617,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/code/model.py",
+      "source_sha256": "ee84329b800e37a8ac652b58aa6f0fc3dee47cb2cf38feda14f5c0de26ec9a82",
+      "target_sha256": "ee84329b800e37a8ac652b58aa6f0fc3dee47cb2cf38feda14f5c0de26ec9a82"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "code/model_GCN.py",
+      "size_bytes": 22167,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/code/model_GCN.py",
+      "source_sha256": "830d401ff3e4b30298199b927a0bad3a9056400429506abcc2d66a7db8b76f9f",
+      "target_sha256": "830d401ff3e4b30298199b927a0bad3a9056400429506abcc2d66a7db8b76f9f"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "code/model_cm.py",
+      "size_bytes": 75667,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/code/model_cm.py",
+      "source_sha256": "94acf11e2e9edd1bcd98049eb12d85b3604f8d71d46f64f0c3b8b9837fa12625",
+      "target_sha256": "94acf11e2e9edd1bcd98049eb12d85b3604f8d71d46f64f0c3b8b9837fa12625"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "code/model_hyper.py",
+      "size_bytes": 17571,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/code/model_hyper.py",
+      "source_sha256": "fb9ef2ee268afa697474c9199d2136a7519b5226adb4abeec4a9cf1aea678aba",
+      "target_sha256": "fb9ef2ee268afa697474c9199d2136a7519b5226adb4abeec4a9cf1aea678aba"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "code/scripts/audit_batch_capacity.py",
+      "size_bytes": 9728,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/code/scripts/audit_batch_capacity.py",
+      "source_sha256": "b8ed6af45e074b5dbcfc0a1d2fe1d81bfb969b1d8e3fc2569125b52eeaf53ae0",
+      "target_sha256": "b8ed6af45e074b5dbcfc0a1d2fe1d81bfb969b1d8e3fc2569125b52eeaf53ae0"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "code/scripts/bootstrap_environment.sh",
+      "size_bytes": 1115,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/code/scripts/bootstrap_environment.sh",
+      "source_sha256": "4f748b8cb18963337cb143a72d4f7f72a4cd14cba9c94ad648a3e5af132439b6",
+      "target_sha256": "4f748b8cb18963337cb143a72d4f7f72a4cd14cba9c94ad648a3e5af132439b6"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "code/scripts/evaluate_checkpoint.py",
+      "size_bytes": 21421,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/code/scripts/evaluate_checkpoint.py",
+      "source_sha256": "a2e4b3fda1f71fa57fcdd90f4c6b7fd96f9d7c0cf75225bd84e800284c5bf956",
+      "target_sha256": "a2e4b3fda1f71fa57fcdd90f4c6b7fd96f9d7c0cf75225bd84e800284c5bf956"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "code/scripts/evaluate_training_matrix.sh",
+      "size_bytes": 2380,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/code/scripts/evaluate_training_matrix.sh",
+      "source_sha256": "9f545da7a428e1fd856dff44313cb4ea0863f0c0467d62b159939a97333fe72a",
+      "target_sha256": "9f545da7a428e1fd856dff44313cb4ea0863f0c0467d62b159939a97333fe72a"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "code/scripts/freeze_experiment.py",
+      "size_bytes": 2673,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/code/scripts/freeze_experiment.py",
+      "source_sha256": "f8015ed615edd7afd7c2e4f4fb03006901bbba88b19e7da614503b3f10dcb4b1",
+      "target_sha256": "f8015ed615edd7afd7c2e4f4fb03006901bbba88b19e7da614503b3f10dcb4b1"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "code/scripts/multiseed_scheduler.py",
+      "size_bytes": 43746,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/code/scripts/multiseed_scheduler.py",
+      "source_sha256": "ca85f940763515d52d767eede25858381a147259f019aa642a3e0ffdf951c1ba",
+      "target_sha256": "ca85f940763515d52d767eede25858381a147259f019aa642a3e0ffdf951c1ba"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "code/scripts/resume_preflight.py",
+      "size_bytes": 5231,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/code/scripts/resume_preflight.py",
+      "source_sha256": "c6de35bfc22c736e55f27282a2950f82902368b175fe4f3cad6e1575ca34eeb6",
+      "target_sha256": "c6de35bfc22c736e55f27282a2950f82902368b175fe4f3cad6e1575ca34eeb6"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "code/scripts/run_job_queue.sh",
+      "size_bytes": 2236,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/code/scripts/run_job_queue.sh",
+      "source_sha256": "696b1d6011a35a7e2f41e33a33286010cdce77b91167c02c0ff44eed944b2d66",
+      "target_sha256": "696b1d6011a35a7e2f41e33a33286010cdce77b91167c02c0ff44eed944b2d66"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "code/scripts/run_training.sh",
+      "size_bytes": 2960,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/code/scripts/run_training.sh",
+      "source_sha256": "13b96e7bf5d7b732a555c8097d0872911fbc1d0d7ca6417cb25eef451f94fcde",
+      "target_sha256": "13b96e7bf5d7b732a555c8097d0872911fbc1d0d7ca6417cb25eef451f94fcde"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "code/scripts/schedule_meld_cmerc.sh",
+      "size_bytes": 3555,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/code/scripts/schedule_meld_cmerc.sh",
+      "source_sha256": "19aff5849b02a5ec061b060e6fc806dcb1e9533875a5df662149a83f4d1d67dd",
+      "target_sha256": "19aff5849b02a5ec061b060e6fc806dcb1e9533875a5df662149a83f4d1d67dd"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "code/scripts/smoke_test.py",
+      "size_bytes": 17303,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/code/scripts/smoke_test.py",
+      "source_sha256": "0906f0464f68436348c772099949fad22a1783377cdefaf5a2bb3c55319fc4bc",
+      "target_sha256": "0906f0464f68436348c772099949fad22a1783377cdefaf5a2bb3c55319fc4bc"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "code/scripts/summarize_results.py",
+      "size_bytes": 39443,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/code/scripts/summarize_results.py",
+      "source_sha256": "5f3142d3af5015da8f9f9ddac190afaa4af1f9336ca884c7da1ccace880eb61b",
+      "target_sha256": "5f3142d3af5015da8f9f9ddac190afaa4af1f9336ca884c7da1ccace880eb61b"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "code/scripts/wait_then_evaluate_all.sh",
+      "size_bytes": 1662,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/code/scripts/wait_then_evaluate_all.sh",
+      "source_sha256": "acf586bbea02cf752da714363abdafc071a9dde66b7a28e163c5ce51753d0f28",
+      "target_sha256": "acf586bbea02cf752da714363abdafc071a9dde66b7a28e163c5ce51753d0f28"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "code/scripts/with_cmerc_env.sh",
+      "size_bytes": 561,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/code/scripts/with_cmerc_env.sh",
+      "source_sha256": "1aa59fda5752ac6d62b2ce01cafac78bc161d00d386cc4d85065a268dfbfe0a2",
+      "target_sha256": "1aa59fda5752ac6d62b2ce01cafac78bc161d00d386cc4d85065a268dfbfe0a2"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "code/snapshots/environment.json",
+      "size_bytes": 1053,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/code/snapshots/environment.json",
+      "source_sha256": "382ed9f5229e03458e79c7410033c8cc46fc938af0ea64146ee1e0618ec0242b",
+      "target_sha256": "382ed9f5229e03458e79c7410033c8cc46fc938af0ea64146ee1e0618ec0242b"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "code/snapshots/source_snapshot.json",
+      "size_bytes": 3416,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/code/snapshots/source_snapshot.json",
+      "source_sha256": "c186163751f4f6970ff39068e417734ce68231a2c7fd6951117a104bbf402da1",
+      "target_sha256": "c186163751f4f6970ff39068e417734ce68231a2c7fd6951117a104bbf402da1"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "code/source_origin.json",
+      "size_bytes": 310,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/code/source_origin.json",
+      "source_sha256": "4208682f1802f0cde47819eff360868358d55b4c21f4f9b039d854181eb05163",
+      "target_sha256": "4208682f1802f0cde47819eff360868358d55b4c21f4f9b039d854181eb05163"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "code/tests/test_caldiff_batching.py",
+      "size_bytes": 3892,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/code/tests/test_caldiff_batching.py",
+      "source_sha256": "c5b762d08fa2d62be78b6704f254101af4eef990b1f8e477a15672f09408e747",
+      "target_sha256": "c5b762d08fa2d62be78b6704f254101af4eef990b1f8e477a15672f09408e747"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "code/tests/test_causal_graph.py",
+      "size_bytes": 7648,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/code/tests/test_causal_graph.py",
+      "source_sha256": "f462a1bd0b063af28e757574367fffae06643821f59d6d89ec87277205cb04c5",
+      "target_sha256": "f462a1bd0b063af28e757574367fffae06643821f59d6d89ec87277205cb04c5"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "code/tests/test_causal_losses.py",
+      "size_bytes": 2600,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/code/tests/test_causal_losses.py",
+      "source_sha256": "2bf6300f8642057c2454111ec7b4002a06400ce1ee6327e052b950ea86115f00",
+      "target_sha256": "2bf6300f8642057c2454111ec7b4002a06400ce1ee6327e052b950ea86115f00"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "code/tests/test_causal_model.py",
+      "size_bytes": 5470,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/code/tests/test_causal_model.py",
+      "source_sha256": "98a6787daf664950cd752ed533d42dffac746269633226a5e59af8f3a7964de1",
+      "target_sha256": "98a6787daf664950cd752ed533d42dffac746269633226a5e59af8f3a7964de1"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "code/tests/test_causal_protocol.py",
+      "size_bytes": 8093,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/code/tests/test_causal_protocol.py",
+      "source_sha256": "94f480b63603d4f49b4044f6669832d32de273671b0597168e7bbb0f54ef8bd4",
+      "target_sha256": "94f480b63603d4f49b4044f6669832d32de273671b0597168e7bbb0f54ef8bd4"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "code/tests/test_evaluate_checkpoint.py",
+      "size_bytes": 2224,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/code/tests/test_evaluate_checkpoint.py",
+      "source_sha256": "02bc9cec32e914a7871926d96e23fa90cee19fa481933593566bdb3477732143",
+      "target_sha256": "02bc9cec32e914a7871926d96e23fa90cee19fa481933593566bdb3477732143"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "code/tests/test_evaluation_metrics.py",
+      "size_bytes": 1380,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/code/tests/test_evaluation_metrics.py",
+      "source_sha256": "a035b362e4d3c5c30acd8a90335b6b71854039e0e2a8030bb0d4a15e0ae6e4ed",
+      "target_sha256": "a035b362e4d3c5c30acd8a90335b6b71854039e0e2a8030bb0d4a15e0ae6e4ed"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "code/tests/test_hypergraphconv_compat.py",
+      "size_bytes": 726,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/code/tests/test_hypergraphconv_compat.py",
+      "source_sha256": "5c448b2531dec33b8bb3f14a0de38e2dd3e193d69b4ffe0bcb7f6dbcc9bc784b",
+      "target_sha256": "5c448b2531dec33b8bb3f14a0de38e2dd3e193d69b4ffe0bcb7f6dbcc9bc784b"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "code/tests/test_imports.py",
+      "size_bytes": 323,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/code/tests/test_imports.py",
+      "source_sha256": "dc6954747958975edba80f3f3ce051ddefc5b4a7134e7c2ab9f0eb8717b00835",
+      "target_sha256": "dc6954747958975edba80f3f3ce051ddefc5b4a7134e7c2ab9f0eb8717b00835"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "code/tests/test_multiseed_scheduler.py",
+      "size_bytes": 13419,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/code/tests/test_multiseed_scheduler.py",
+      "source_sha256": "19df834bf3433a4ca6b76f9e0879f10fa946107574888805ebe9f386a23a0450",
+      "target_sha256": "19df834bf3433a4ca6b76f9e0879f10fa946107574888805ebe9f386a23a0450"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "code/tests/test_multiseed_summary.py",
+      "size_bytes": 14859,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/code/tests/test_multiseed_summary.py",
+      "source_sha256": "5ec939f1f18b0b615259127b2cd220ad58d5286ab98d7a2204caa5b1ad016f7e",
+      "target_sha256": "5ec939f1f18b0b615259127b2cd220ad58d5286ab98d7a2204caa5b1ad016f7e"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "code/tests/test_multiseed_training.py",
+      "size_bytes": 17319,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/code/tests/test_multiseed_training.py",
+      "source_sha256": "9e8227c98c4cb9ce4b8d1c2281efa7ffbaaffa574ffe2f45c10dae3653d84da7",
+      "target_sha256": "9e8227c98c4cb9ce4b8d1c2281efa7ffbaaffa574ffe2f45c10dae3653d84da7"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "code/tests/test_smoke_helpers.py",
+      "size_bytes": 3013,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/code/tests/test_smoke_helpers.py",
+      "source_sha256": "a3401d02932ea031525fae6c6e72023de1f74e4fb3cdda978a524d095f10e850",
+      "target_sha256": "a3401d02932ea031525fae6c6e72023de1f74e4fb3cdda978a524d095f10e850"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "code/tests/test_summarize_results.py",
+      "size_bytes": 1272,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/code/tests/test_summarize_results.py",
+      "source_sha256": "bf5419653bd75104c1b1d561312bff44bee487acb8876d24cbc3ce9f2275d92c",
+      "target_sha256": "bf5419653bd75104c1b1d561312bff44bee487acb8876d24cbc3ce9f2275d92c"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "code/tests/test_training_protocol.py",
+      "size_bytes": 10653,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/code/tests/test_training_protocol.py",
+      "source_sha256": "b6c3e770e0356165000acca9502050793b514e67a2c829608f337b24da3139c7",
+      "target_sha256": "b6c3e770e0356165000acca9502050793b514e67a2c829608f337b24da3139c7"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "code/tests/test_xp_scheduler.py",
+      "size_bytes": 19421,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/code/tests/test_xp_scheduler.py",
+      "source_sha256": "5a8eef39e4de2584a2be570d9a1cd700eacc0f9ddfdf913069e233f881aa0ded",
+      "target_sha256": "5a8eef39e4de2584a2be570d9a1cd700eacc0f9ddfdf913069e233f881aa0ded"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "code/train.py",
+      "size_bytes": 24415,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/code/train.py",
+      "source_sha256": "35a18a2bf33d8e3e0d8459955b1f0ce525d4f28970f9af801fb27087bcf02ad7",
+      "target_sha256": "35a18a2bf33d8e3e0d8459955b1f0ce525d4f28970f9af801fb27087bcf02ad7"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "code/train_cm.py",
+      "size_bytes": 74480,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/code/train_cm.py",
+      "source_sha256": "67fa7e48a3ecfda9f011d1df3344b68cc9eaa3fdb105a23a117684b1a669a3a0",
+      "target_sha256": "67fa7e48a3ecfda9f011d1df3344b68cc9eaa3fdb105a23a117684b1a669a3a0"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "configs/effective/IEMOCAP_baseline_validation_seed1475.json",
+      "size_bytes": 7216,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/configs/effective/IEMOCAP_baseline_validation_seed1475.json",
+      "source_sha256": "a4f00224ded9928028277d1ddcda43083c8e934b6b14006fd0c681212fab9b03",
+      "target_sha256": "a4f00224ded9928028277d1ddcda43083c8e934b6b14006fd0c681212fab9b03"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "configs/effective/IEMOCAP_baseline_validation_seed2024.json",
+      "size_bytes": 7216,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/configs/effective/IEMOCAP_baseline_validation_seed2024.json",
+      "source_sha256": "d0306055394ee173f78ea66c841fd887a71ffe44b4c4cb7b67ab30092bdf492f",
+      "target_sha256": "d0306055394ee173f78ea66c841fd887a71ffe44b4c4cb7b67ab30092bdf492f"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "configs/effective/IEMOCAP_baseline_validation_seed3407.json",
+      "size_bytes": 7216,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/configs/effective/IEMOCAP_baseline_validation_seed3407.json",
+      "source_sha256": "69e3231968466e8a9e1d2a046be34352b4cc3a8425ab276911aa1e0c2205a68d",
+      "target_sha256": "69e3231968466e8a9e1d2a046be34352b4cc3a8425ab276911aa1e0c2205a68d"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "configs/effective/IEMOCAP_baseline_validation_seed42.json",
+      "size_bytes": 7214,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/configs/effective/IEMOCAP_baseline_validation_seed42.json",
+      "source_sha256": "a3188fd997cd284bc19d249a830f27facc4e05448affb38b2f597c7a12b20199",
+      "target_sha256": "a3188fd997cd284bc19d249a830f27facc4e05448affb38b2f597c7a12b20199"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "configs/effective/IEMOCAP_baseline_validation_seed67137.json",
+      "size_bytes": 7217,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/configs/effective/IEMOCAP_baseline_validation_seed67137.json",
+      "source_sha256": "dc09e69bc09a9d193dcee23533007b1fb7a6cb64a2969c78f6a7d662f3ed5f62",
+      "target_sha256": "dc09e69bc09a9d193dcee23533007b1fb7a6cb64a2969c78f6a7d662f3ed5f62"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "configs/effective/IEMOCAP_cmerc_validation_seed1475.json",
+      "size_bytes": 7325,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/configs/effective/IEMOCAP_cmerc_validation_seed1475.json",
+      "source_sha256": "59e40ae7b7d63bb5f56806eedefb2f70c6797095455f63c083917b1141275369",
+      "target_sha256": "59e40ae7b7d63bb5f56806eedefb2f70c6797095455f63c083917b1141275369"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "configs/effective/IEMOCAP_cmerc_validation_seed2024.json",
+      "size_bytes": 7325,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/configs/effective/IEMOCAP_cmerc_validation_seed2024.json",
+      "source_sha256": "a70ed73a14ced6c5cd45dc95bc87be92631aeefa948d4caa5e9ec2b1127aa125",
+      "target_sha256": "a70ed73a14ced6c5cd45dc95bc87be92631aeefa948d4caa5e9ec2b1127aa125"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "configs/effective/IEMOCAP_cmerc_validation_seed3407.json",
+      "size_bytes": 7325,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/configs/effective/IEMOCAP_cmerc_validation_seed3407.json",
+      "source_sha256": "57764f41f3a3031124ed0c75c510491515b53c1cc7ebcd4991d7ba50c11a9e43",
+      "target_sha256": "57764f41f3a3031124ed0c75c510491515b53c1cc7ebcd4991d7ba50c11a9e43"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "configs/effective/IEMOCAP_cmerc_validation_seed42.json",
+      "size_bytes": 7323,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/configs/effective/IEMOCAP_cmerc_validation_seed42.json",
+      "source_sha256": "6cf89869a93abb726ea5d9ce49954f6fb7c18836d3e2f91a6b75ebff46dfe2cc",
+      "target_sha256": "6cf89869a93abb726ea5d9ce49954f6fb7c18836d3e2f91a6b75ebff46dfe2cc"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "configs/effective/IEMOCAP_cmerc_validation_seed67137.json",
+      "size_bytes": 7326,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/configs/effective/IEMOCAP_cmerc_validation_seed67137.json",
+      "source_sha256": "91d1b4e22f1c126227bb42698bc60294bfb24813078f7e8ddf1cdb5548ad7369",
+      "target_sha256": "91d1b4e22f1c126227bb42698bc60294bfb24813078f7e8ddf1cdb5548ad7369"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "configs/effective/MELD_baseline_validation_seed1475.json",
+      "size_bytes": 22008,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/configs/effective/MELD_baseline_validation_seed1475.json",
+      "source_sha256": "4517026cc034c850cef5effa6df07e56fe53901252efd53cd27f5d205346af08",
+      "target_sha256": "4517026cc034c850cef5effa6df07e56fe53901252efd53cd27f5d205346af08"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "configs/effective/MELD_baseline_validation_seed2024.json",
+      "size_bytes": 22008,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/configs/effective/MELD_baseline_validation_seed2024.json",
+      "source_sha256": "bf7fc040c6da1a7005e0bbf6dd376b03ca81dff1fcf280817d3bfadf4d198ade",
+      "target_sha256": "bf7fc040c6da1a7005e0bbf6dd376b03ca81dff1fcf280817d3bfadf4d198ade"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "configs/effective/MELD_baseline_validation_seed3407.json",
+      "size_bytes": 22008,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/configs/effective/MELD_baseline_validation_seed3407.json",
+      "source_sha256": "bda3bc206f8da18e80d936a4db5755961a64a034001eb0c378ce200d426f69ca",
+      "target_sha256": "bda3bc206f8da18e80d936a4db5755961a64a034001eb0c378ce200d426f69ca"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "configs/effective/MELD_baseline_validation_seed42.json",
+      "size_bytes": 22006,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/configs/effective/MELD_baseline_validation_seed42.json",
+      "source_sha256": "a7f648a5f0e4d63efa1e82a56e52069c08588069142372ae96d798366d581855",
+      "target_sha256": "a7f648a5f0e4d63efa1e82a56e52069c08588069142372ae96d798366d581855"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "configs/effective/MELD_baseline_validation_seed67137.json",
+      "size_bytes": 22009,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/configs/effective/MELD_baseline_validation_seed67137.json",
+      "source_sha256": "e3073a750021ae72a3a210a72df414027187be233189374866933de3b605a450",
+      "target_sha256": "e3073a750021ae72a3a210a72df414027187be233189374866933de3b605a450"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "configs/effective/MELD_cmerc_validation_seed1475.json",
+      "size_bytes": 22113,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/configs/effective/MELD_cmerc_validation_seed1475.json",
+      "source_sha256": "b6ec1c938e509d6904013f0906614549ce1e7d802169d2b5bebecb9d5f7743b3",
+      "target_sha256": "b6ec1c938e509d6904013f0906614549ce1e7d802169d2b5bebecb9d5f7743b3"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "configs/effective/MELD_cmerc_validation_seed2024.json",
+      "size_bytes": 22113,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/configs/effective/MELD_cmerc_validation_seed2024.json",
+      "source_sha256": "056859618e2d253ce71710f41c6dae24bd7e50c1b7455669efd9f0a8dc3d0888",
+      "target_sha256": "056859618e2d253ce71710f41c6dae24bd7e50c1b7455669efd9f0a8dc3d0888"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "configs/effective/MELD_cmerc_validation_seed3407.json",
+      "size_bytes": 22113,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/configs/effective/MELD_cmerc_validation_seed3407.json",
+      "source_sha256": "1c1cb29154c0161052979841f461679f413e186ac94ab671c19bab9ca8a92b28",
+      "target_sha256": "1c1cb29154c0161052979841f461679f413e186ac94ab671c19bab9ca8a92b28"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "configs/effective/MELD_cmerc_validation_seed42.json",
+      "size_bytes": 22111,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/configs/effective/MELD_cmerc_validation_seed42.json",
+      "source_sha256": "51ba3651770dbd2375b8c0df87c88c80fbdb109e4811145c49702752d49c3852",
+      "target_sha256": "51ba3651770dbd2375b8c0df87c88c80fbdb109e4811145c49702752d49c3852"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "configs/effective/MELD_cmerc_validation_seed67137.json",
+      "size_bytes": 22114,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/configs/effective/MELD_cmerc_validation_seed67137.json",
+      "source_sha256": "5d6271460c882dc34bf55bbcdec96afd09bb6b963c238745e04a54fb20515f68",
+      "target_sha256": "5d6271460c882dc34bf55bbcdec96afd09bb6b963c238745e04a54fb20515f68"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "configs/task_registry.json",
+      "size_bytes": 73400,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/configs/task_registry.json",
+      "source_sha256": "505de9a8a73b57b28bb3dbc9024d1d389751619c33205331a077cdd6ba281e61",
+      "target_sha256": "505de9a8a73b57b28bb3dbc9024d1d389751619c33205331a077cdd6ba281e61"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "configs/xp_mainline_validation.draft.json",
+      "size_bytes": 1567,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/configs/xp_mainline_validation.draft.json",
+      "source_sha256": "af6378b2b20e1c6d912fcbfd2a8555a334bd1615464aa336941389c6b214db24",
+      "target_sha256": "af6378b2b20e1c6d912fcbfd2a8555a334bd1615464aa336941389c6b214db24"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "configs/xp_mainline_validation.json",
+      "size_bytes": 1624,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/configs/xp_mainline_validation.json",
+      "source_sha256": "53167d2779e986ae253508ca0ebb10e9b7e7105b1473775b2e9c9af80cfc3e76",
+      "target_sha256": "53167d2779e986ae253508ca0ebb10e9b7e7105b1473775b2e9c9af80cfc3e76"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "preflight/acceptance_schema_smoke.json",
+      "size_bytes": 962,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/preflight/acceptance_schema_smoke.json",
+      "source_sha256": "ca8c470b3bd2ceb770b024ffd342a94bb8bf3f4d6b837106af227d50f303fb4d",
+      "target_sha256": "ca8c470b3bd2ceb770b024ffd342a94bb8bf3f4d6b837106af227d50f303fb4d"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "preflight/data_and_capacity/README.md",
+      "size_bytes": 3627,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/preflight/data_and_capacity/README.md",
+      "source_sha256": "01092f75254c3dc8860cbd6b83dbbf7e89f0dbd78eb4cc46b2d243466cd35a2e",
+      "target_sha256": "01092f75254c3dc8860cbd6b83dbbf7e89f0dbd78eb4cc46b2d243466cd35a2e"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "preflight/data_and_capacity/batch_capacity_audit.json",
+      "size_bytes": 660301,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/preflight/data_and_capacity/batch_capacity_audit.json",
+      "source_sha256": "c3dd23a0973cdecf0053b58a1df89a5227b24494cb243e95bfd02b5a18658d68",
+      "target_sha256": "c3dd23a0973cdecf0053b58a1df89a5227b24494cb243e95bfd02b5a18658d68"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "preflight/data_and_capacity/input_audit.json",
+      "size_bytes": 40515,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/preflight/data_and_capacity/input_audit.json",
+      "source_sha256": "0085329db5ce0f6a416ff148f1a4de24c9107967f81801b09eafe13cabce665a",
+      "target_sha256": "0085329db5ce0f6a416ff148f1a4de24c9107967f81801b09eafe13cabce665a"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "preflight/data_and_capacity/verification_summary.json",
+      "size_bytes": 1886,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/preflight/data_and_capacity/verification_summary.json",
+      "source_sha256": "10264dc3fdda61589e58e38b552dd044276ab61d13f8280ded9d9d4221e1b45b",
+      "target_sha256": "10264dc3fdda61589e58e38b552dd044276ab61d13f8280ded9d9d4221e1b45b"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "preflight/environment.json",
+      "size_bytes": 1897,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/preflight/environment.json",
+      "source_sha256": "2c95e0a43f38037d13969548a8ccaf2aec2ee9d8e38f60f8cc8f02cd3dda8bf1",
+      "target_sha256": "2c95e0a43f38037d13969548a8ccaf2aec2ee9d8e38f60f8cc8f02cd3dda8bf1"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "preflight/gpu3_IEMOCAP/gpu_probe.json",
+      "size_bytes": 296,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/preflight/gpu3_IEMOCAP/gpu_probe.json",
+      "source_sha256": "96975a4dc9062f5ecac574b110bffc652cc5dcdf51648f5ee27b2badea012b55",
+      "target_sha256": "96975a4dc9062f5ecac574b110bffc652cc5dcdf51648f5ee27b2badea012b55"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "preflight/gpu3_IEMOCAP/official/metrics.json",
+      "size_bytes": 5057,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/preflight/gpu3_IEMOCAP/official/metrics.json",
+      "source_sha256": "27bf24e4e65027ce0a26b9d577753e778b2e902bb1ada5d72d5de8acf7b1216b",
+      "target_sha256": "27bf24e4e65027ce0a26b9d577753e778b2e902bb1ada5d72d5de8acf7b1216b"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "preflight/gpu3_IEMOCAP/profile/baseline/IEMOCAP_validation_seed1475/final_test.json",
+      "size_bytes": 372,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/preflight/gpu3_IEMOCAP/profile/baseline/IEMOCAP_validation_seed1475/final_test.json",
+      "source_sha256": "6ffce671127207599c5c71cf7fec65a6f04a61eb54ed1b6d7d9ddf6141e316f6",
+      "target_sha256": "6ffce671127207599c5c71cf7fec65a6f04a61eb54ed1b6d7d9ddf6141e316f6"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "preflight/gpu3_IEMOCAP/profile/baseline/IEMOCAP_validation_seed1475/run_manifest.json",
+      "size_bytes": 18996,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/preflight/gpu3_IEMOCAP/profile/baseline/IEMOCAP_validation_seed1475/run_manifest.json",
+      "source_sha256": "1eba6d023566ee71cb961544e24e83417c8a7a48b35752aa2e9188fa7360691f",
+      "target_sha256": "1eba6d023566ee71cb961544e24e83417c8a7a48b35752aa2e9188fa7360691f"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "preflight/gpu3_IEMOCAP/profile/cmerc/IEMOCAP_validation_seed1475/final_test.json",
+      "size_bytes": 372,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/preflight/gpu3_IEMOCAP/profile/cmerc/IEMOCAP_validation_seed1475/final_test.json",
+      "source_sha256": "5c19f30104bd49d2c8e6ef19f7efa45e55138b5c4b3c3755b5e49d350edb4c82",
+      "target_sha256": "5c19f30104bd49d2c8e6ef19f7efa45e55138b5c4b3c3755b5e49d350edb4c82"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "preflight/gpu3_IEMOCAP/profile/cmerc/IEMOCAP_validation_seed1475/run_manifest.json",
+      "size_bytes": 19309,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/preflight/gpu3_IEMOCAP/profile/cmerc/IEMOCAP_validation_seed1475/run_manifest.json",
+      "source_sha256": "e2c97efeb6cd6dda4b643981ba719b5af69c2294ab19116c5c12ee0f34d9a33e",
+      "target_sha256": "e2c97efeb6cd6dda4b643981ba719b5af69c2294ab19116c5c12ee0f34d9a33e"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "preflight/gpu3_IEMOCAP/profile_evaluation/baseline/metrics.json",
+      "size_bytes": 19063,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/preflight/gpu3_IEMOCAP/profile_evaluation/baseline/metrics.json",
+      "source_sha256": "a711f12ad2f257c8c288a331c8c27c0cee7737d7b5253d566aca57b104cda536",
+      "target_sha256": "a711f12ad2f257c8c288a331c8c27c0cee7737d7b5253d566aca57b104cda536"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "preflight/gpu3_IEMOCAP/profile_evaluation/cmerc/metrics.json",
+      "size_bytes": 19193,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/preflight/gpu3_IEMOCAP/profile_evaluation/cmerc/metrics.json",
+      "source_sha256": "fc6e0e5095709af7a53010abb102be2e6092b3edc6f9bdb56763dbb0e0a9580f",
+      "target_sha256": "fc6e0e5095709af7a53010abb102be2e6092b3edc6f9bdb56763dbb0e0a9580f"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "preflight/gpu3_IEMOCAP/smoke/iemocap_smoke.json",
+      "size_bytes": 2741,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/preflight/gpu3_IEMOCAP/smoke/iemocap_smoke.json",
+      "source_sha256": "715eaf86125c032ce599ffcbf634f894f61fcc0f37569484c3421b8254a0dbc9",
+      "target_sha256": "715eaf86125c032ce599ffcbf634f894f61fcc0f37569484c3421b8254a0dbc9"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "preflight/gpu3_MELD/gpu_probe.json",
+      "size_bytes": 296,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/preflight/gpu3_MELD/gpu_probe.json",
+      "source_sha256": "96975a4dc9062f5ecac574b110bffc652cc5dcdf51648f5ee27b2badea012b55",
+      "target_sha256": "96975a4dc9062f5ecac574b110bffc652cc5dcdf51648f5ee27b2badea012b55"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "preflight/gpu3_MELD/official/metrics.json",
+      "size_bytes": 5308,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/preflight/gpu3_MELD/official/metrics.json",
+      "source_sha256": "f9e04b3a2f268dd2eab0b68be9795327d406e74990db3c9e85cda647bb079b65",
+      "target_sha256": "f9e04b3a2f268dd2eab0b68be9795327d406e74990db3c9e85cda647bb079b65"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "preflight/gpu3_MELD/profile/baseline/MELD_validation_seed67137/final_test.json",
+      "size_bytes": 373,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/preflight/gpu3_MELD/profile/baseline/MELD_validation_seed67137/final_test.json",
+      "source_sha256": "e9410debac580e10960d22f818d2a34c8d84e34e492ed0a1d458c28bc4e4365e",
+      "target_sha256": "e9410debac580e10960d22f818d2a34c8d84e34e492ed0a1d458c28bc4e4365e"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "preflight/gpu3_MELD/profile/baseline/MELD_validation_seed67137/run_manifest.json",
+      "size_bytes": 63376,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/preflight/gpu3_MELD/profile/baseline/MELD_validation_seed67137/run_manifest.json",
+      "source_sha256": "b47e4e4218f858e773c9439e0739bf0c6f3f98c4285ce5af523570a9dc979492",
+      "target_sha256": "b47e4e4218f858e773c9439e0739bf0c6f3f98c4285ce5af523570a9dc979492"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "preflight/gpu3_MELD/profile/cmerc/MELD_validation_seed67137/final_test.json",
+      "size_bytes": 372,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/preflight/gpu3_MELD/profile/cmerc/MELD_validation_seed67137/final_test.json",
+      "source_sha256": "fc0e1ac79e22042573808929898a2cf7430680ec7a5582be01de37921cc4928f",
+      "target_sha256": "fc0e1ac79e22042573808929898a2cf7430680ec7a5582be01de37921cc4928f"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "preflight/gpu3_MELD/profile/cmerc/MELD_validation_seed67137/run_manifest.json",
+      "size_bytes": 63679,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/preflight/gpu3_MELD/profile/cmerc/MELD_validation_seed67137/run_manifest.json",
+      "source_sha256": "4a64c6e807fd2023d467b5d43774dd78ce737b3edcf2ba3c9afb4f73501d304f",
+      "target_sha256": "4a64c6e807fd2023d467b5d43774dd78ce737b3edcf2ba3c9afb4f73501d304f"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "preflight/gpu3_MELD/profile_evaluation/baseline/metrics.json",
+      "size_bytes": 50734,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/preflight/gpu3_MELD/profile_evaluation/baseline/metrics.json",
+      "source_sha256": "61f5c9984d199c4bb4d174ae470fd9e12e895b1b5e21aa3d97d94e453e968f5d",
+      "target_sha256": "61f5c9984d199c4bb4d174ae470fd9e12e895b1b5e21aa3d97d94e453e968f5d"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "preflight/gpu3_MELD/profile_evaluation/cmerc/metrics.json",
+      "size_bytes": 51209,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/preflight/gpu3_MELD/profile_evaluation/cmerc/metrics.json",
+      "source_sha256": "0f2b77b36dd3956d53a064835f5cea02302cb883fccffbf8837757d396164f4e",
+      "target_sha256": "0f2b77b36dd3956d53a064835f5cea02302cb883fccffbf8837757d396164f4e"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "preflight/gpu3_MELD/resume/full/cmerc/IEMOCAP_validation_seed2024/final_test.json",
+      "size_bytes": 372,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/preflight/gpu3_MELD/resume/full/cmerc/IEMOCAP_validation_seed2024/final_test.json",
+      "source_sha256": "059f67f24a93024160806461074f7560dd075d5df02d207dd6a508c6f4a4f128",
+      "target_sha256": "059f67f24a93024160806461074f7560dd075d5df02d207dd6a508c6f4a4f128"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "preflight/gpu3_MELD/resume/full/cmerc/IEMOCAP_validation_seed2024/run_manifest.json",
+      "size_bytes": 19310,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/preflight/gpu3_MELD/resume/full/cmerc/IEMOCAP_validation_seed2024/run_manifest.json",
+      "source_sha256": "e443d57da357703cfe6c2c06e8b632a86fb9ac76045c066a1b0360caf4547178",
+      "target_sha256": "e443d57da357703cfe6c2c06e8b632a86fb9ac76045c066a1b0360caf4547178"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "preflight/gpu3_MELD/resume/resumed/cmerc/IEMOCAP_validation_seed2024/final_test.json",
+      "size_bytes": 372,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/preflight/gpu3_MELD/resume/resumed/cmerc/IEMOCAP_validation_seed2024/final_test.json",
+      "source_sha256": "059f67f24a93024160806461074f7560dd075d5df02d207dd6a508c6f4a4f128",
+      "target_sha256": "059f67f24a93024160806461074f7560dd075d5df02d207dd6a508c6f4a4f128"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "preflight/gpu3_MELD/resume/resumed/cmerc/IEMOCAP_validation_seed2024/run_manifest.json",
+      "size_bytes": 19313,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/preflight/gpu3_MELD/resume/resumed/cmerc/IEMOCAP_validation_seed2024/run_manifest.json",
+      "source_sha256": "3018f75bf496a4ba1aeee868bf0739b5c3fdb2df4063ed9e74d9b9a4f6b80b53",
+      "target_sha256": "3018f75bf496a4ba1aeee868bf0739b5c3fdb2df4063ed9e74d9b9a4f6b80b53"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "preflight/gpu3_MELD/resume/verification.json",
+      "size_bytes": 345,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/preflight/gpu3_MELD/resume/verification.json",
+      "source_sha256": "dad4ef2e796f74c7bb1d8152f1bb128c523ac50db7b8f1b3887e2d20892edda7",
+      "target_sha256": "dad4ef2e796f74c7bb1d8152f1bb128c523ac50db7b8f1b3887e2d20892edda7"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "preflight/gpu3_MELD/smoke/meld_smoke.json",
+      "size_bytes": 2459,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/preflight/gpu3_MELD/smoke/meld_smoke.json",
+      "source_sha256": "6a653db780c07a942964bfb213801e3616d6b6106b09133620a27be1791f6550",
+      "target_sha256": "6a653db780c07a942964bfb213801e3616d6b6106b09133620a27be1791f6550"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "preflight/incomplete_acceptance_guard.json",
+      "size_bytes": 258,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/preflight/incomplete_acceptance_guard.json",
+      "source_sha256": "ac7d2ba3149ed99574005c89ebbeffeb3e8b3221aeb0f4c6e4b1c4d8fb65f0d6",
+      "target_sha256": "ac7d2ba3149ed99574005c89ebbeffeb3e8b3221aeb0f4c6e4b1c4d8fb65f0d6"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "preflight/requirements-actual.txt",
+      "size_bytes": 1036,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/preflight/requirements-actual.txt",
+      "source_sha256": "59462e6a46cdf845c3ebd536283def0f59d31aaa5552826f44f7426b987128c3",
+      "target_sha256": "59462e6a46cdf845c3ebd536283def0f59d31aaa5552826f44f7426b987128c3"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "preflight/resource_budget.json",
+      "size_bytes": 2554,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/preflight/resource_budget.json",
+      "source_sha256": "0850a18176522cbfb4717620ca4a062eb1cba7ad2d341f746f8a3a5ed75806a2",
+      "target_sha256": "0850a18176522cbfb4717620ca4a062eb1cba7ad2d341f746f8a3a5ed75806a2"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "preflight/retry_sandbox.json",
+      "size_bytes": 282,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/preflight/retry_sandbox.json",
+      "source_sha256": "57020f1513708f5002f9dcee48922aa846bbb97bd5c40a46858084f886dd2657",
+      "target_sha256": "57020f1513708f5002f9dcee48922aa846bbb97bd5c40a46858084f886dd2657"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "preflight/scheduler_dry_run.json",
+      "size_bytes": 65933,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/preflight/scheduler_dry_run.json",
+      "source_sha256": "45a5ff21e4da6b0a266075d5b45b8c194124714f503bfdea26b9f5e849038efd",
+      "target_sha256": "45a5ff21e4da6b0a266075d5b45b8c194124714f503bfdea26b9f5e849038efd"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "preflight/source_diff_audit.json",
+      "size_bytes": 429,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/preflight/source_diff_audit.json",
+      "source_sha256": "06a43f7b6a4cc81fbcf8a67f1796c2fc51f12c47acc2f8f486121f1ac8b542f5",
+      "target_sha256": "06a43f7b6a4cc81fbcf8a67f1796c2fc51f12c47acc2f8f486121f1ac8b542f5"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "preflight/status.json",
+      "size_bytes": 1395,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/preflight/status.json",
+      "source_sha256": "f5de778c07da525f33a1972c918d464f74fa536b93b1310d24abdfb0ef2c478e",
+      "target_sha256": "f5de778c07da525f33a1972c918d464f74fa536b93b1310d24abdfb0ef2c478e"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "preflight/test_scope.json",
+      "size_bytes": 752,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/preflight/test_scope.json",
+      "source_sha256": "15ff1ab29b2870bf58931c2fd541de8829aa37c6d18511f29efb92ed5cd0feb3",
+      "target_sha256": "15ff1ab29b2870bf58931c2fd541de8829aa37c6d18511f29efb92ed5cd0feb3"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "provenance/effective_config.json",
+      "size_bytes": 1624,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/provenance/effective_config.json",
+      "source_sha256": "052460f92b1634dd81988bed83f3e4b60a95f5a7406e6146f6751a99e24942a1",
+      "target_sha256": "052460f92b1634dd81988bed83f3e4b60a95f5a7406e6146f6751a99e24942a1"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "provenance/history_trees.json",
+      "size_bytes": 45368,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/provenance/history_trees.json",
+      "source_sha256": "577c38114290554d1c349eb2466425afd4a2b1eb5e797deaad8796a045596bd1",
+      "target_sha256": "577c38114290554d1c349eb2466425afd4a2b1eb5e797deaad8796a045596bd1"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "provenance/immutable_inputs.json",
+      "size_bytes": 10106,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/provenance/immutable_inputs.json",
+      "source_sha256": "f35c00f2200653950323423fe365445b03ed22c1dad895dafb58582405cdc371",
+      "target_sha256": "f35c00f2200653950323423fe365445b03ed22c1dad895dafb58582405cdc371"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "provenance/inherited_environment_patch/torch_cuda_uuid_original.py",
+      "size_bytes": 31308,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/provenance/inherited_environment_patch/torch_cuda_uuid_original.py",
+      "source_sha256": "2f359b138403461d8df4a824d887ad39786ca44757d309ee6946f95380957f18",
+      "target_sha256": "2f359b138403461d8df4a824d887ad39786ca44757d309ee6946f95380957f18"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "provenance/inherited_environment_patch/torch_uuid.patch",
+      "size_bytes": 742,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/provenance/inherited_environment_patch/torch_uuid.patch",
+      "source_sha256": "46db94b10bc7a4901adbb055927ea2106a13a5c782a28c120f3a5c2686244f8a",
+      "target_sha256": "46db94b10bc7a4901adbb055927ea2106a13a5c782a28c120f3a5c2686244f8a"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "provenance/inherited_environment_patch/torch_uuid_patch.json",
+      "size_bytes": 457,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/provenance/inherited_environment_patch/torch_uuid_patch.json",
+      "source_sha256": "f153404f53c994681a7d306f3ad2aa4666ca370ee9661ccf191a379aefa3db50",
+      "target_sha256": "f153404f53c994681a7d306f3ad2aa4666ca370ee9661ccf191a379aefa3db50"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "provenance/large_artifact_backup.json",
+      "size_bytes": 170836,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/provenance/large_artifact_backup.json",
+      "source_sha256": "43836551e2ceace34d5c27bddfec08af92af86b0362ae960794a1c1906d85ce3",
+      "target_sha256": "43836551e2ceace34d5c27bddfec08af92af86b0362ae960794a1c1906d85ce3"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "provenance/origin.json",
+      "size_bytes": 3420,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/provenance/origin.json",
+      "source_sha256": "9308ab6b98dfaef1ef55fde027b0caea4de215701676430f7e2f097ddca3d96b",
+      "target_sha256": "9308ab6b98dfaef1ef55fde027b0caea4de215701676430f7e2f097ddca3d96b"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "provenance/postrun_delivery.py",
+      "size_bytes": 35266,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/state/recovery/postrun_delivery.py",
+      "source_sha256": "515b9ef57da33a4d1125c07b93b9b0810d89bf401b0454c0124504f97d3bd61d",
+      "target_sha256": "515b9ef57da33a4d1125c07b93b9b0810d89bf401b0454c0124504f97d3bd61d"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "provenance/resource_intervals_audit.json",
+      "size_bytes": 39287,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/provenance/resource_intervals_audit.json",
+      "source_sha256": "983f315700adfe45d6ad778d7e7d71e6af00f78402523cf30af653df03946520",
+      "target_sha256": "983f315700adfe45d6ad778d7e7d71e6af00f78402523cf30af653df03946520"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "provenance/resource_outcome.json",
+      "size_bytes": 45457,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/provenance/resource_outcome.json",
+      "source_sha256": "fc63347eebbab09e7a57bd762edf298e9e76de436a388ea402bb630d20388299",
+      "target_sha256": "fc63347eebbab09e7a57bd762edf298e9e76de436a388ea402bb630d20388299"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "provenance/resource_recovery.json",
+      "size_bytes": 2506,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/provenance/resource_recovery.json",
+      "source_sha256": "1476663deef4766c63ccee593690909625bf0441ef8cc72f38e36a31c0b1f6cb",
+      "target_sha256": "1476663deef4766c63ccee593690909625bf0441ef8cc72f38e36a31c0b1f6cb"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "provenance/run_supplements/IEMOCAP_baseline_validation_seed1475.json",
+      "size_bytes": 20491,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/provenance/run_supplements/IEMOCAP_baseline_validation_seed1475.json",
+      "source_sha256": "46870dfb42f199863c374b7c8b64e38c192797441104ec5001b535c8b88bd2f7",
+      "target_sha256": "46870dfb42f199863c374b7c8b64e38c192797441104ec5001b535c8b88bd2f7"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "provenance/run_supplements/IEMOCAP_baseline_validation_seed2024.json",
+      "size_bytes": 20501,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/provenance/run_supplements/IEMOCAP_baseline_validation_seed2024.json",
+      "source_sha256": "52ce0d8aa6647f952155629d09c16296497ab476caed595013380bfa14390c23",
+      "target_sha256": "52ce0d8aa6647f952155629d09c16296497ab476caed595013380bfa14390c23"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "provenance/run_supplements/IEMOCAP_baseline_validation_seed3407.json",
+      "size_bytes": 20499,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/provenance/run_supplements/IEMOCAP_baseline_validation_seed3407.json",
+      "source_sha256": "fccccea896a59b3deca0ed9c6cd794e8977c51fb37f9337e5e0492e85930ac65",
+      "target_sha256": "fccccea896a59b3deca0ed9c6cd794e8977c51fb37f9337e5e0492e85930ac65"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "provenance/run_supplements/IEMOCAP_baseline_validation_seed42.json",
+      "size_bytes": 20465,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/provenance/run_supplements/IEMOCAP_baseline_validation_seed42.json",
+      "source_sha256": "6ecdca7d9c8d03f9633432127585f509e298fd6d776aa16ebb4fc1ed22b9f7f5",
+      "target_sha256": "6ecdca7d9c8d03f9633432127585f509e298fd6d776aa16ebb4fc1ed22b9f7f5"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "provenance/run_supplements/IEMOCAP_baseline_validation_seed67137.json",
+      "size_bytes": 20510,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/provenance/run_supplements/IEMOCAP_baseline_validation_seed67137.json",
+      "source_sha256": "3f208362709bc205455a0716580b460675e9044ab1b798ba2bc930acae183cff",
+      "target_sha256": "3f208362709bc205455a0716580b460675e9044ab1b798ba2bc930acae183cff"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "provenance/run_supplements/IEMOCAP_cmerc_validation_seed1475.json",
+      "size_bytes": 20666,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/provenance/run_supplements/IEMOCAP_cmerc_validation_seed1475.json",
+      "source_sha256": "35c6a31e974d485e5f0d8f538626b895ee75d41d43e9e5788e8c9aaebff628ce",
+      "target_sha256": "35c6a31e974d485e5f0d8f538626b895ee75d41d43e9e5788e8c9aaebff628ce"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "provenance/run_supplements/IEMOCAP_cmerc_validation_seed2024.json",
+      "size_bytes": 20668,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/provenance/run_supplements/IEMOCAP_cmerc_validation_seed2024.json",
+      "source_sha256": "8b3bcf4a5a86aa3f55263b2393eb198243dea0bec930fef2a473cae1374328f0",
+      "target_sha256": "8b3bcf4a5a86aa3f55263b2393eb198243dea0bec930fef2a473cae1374328f0"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "provenance/run_supplements/IEMOCAP_cmerc_validation_seed3407.json",
+      "size_bytes": 20670,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/provenance/run_supplements/IEMOCAP_cmerc_validation_seed3407.json",
+      "source_sha256": "cb3f19828405b860a37db6d009adc826e03c0661e4dd38f71c4ece9850db30c1",
+      "target_sha256": "cb3f19828405b860a37db6d009adc826e03c0661e4dd38f71c4ece9850db30c1"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "provenance/run_supplements/IEMOCAP_cmerc_validation_seed42.json",
+      "size_bytes": 20651,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/provenance/run_supplements/IEMOCAP_cmerc_validation_seed42.json",
+      "source_sha256": "0c99276c470b2fa79aafddd187a7d558f959c5cbbc425853331dcf418ff8f1eb",
+      "target_sha256": "0c99276c470b2fa79aafddd187a7d558f959c5cbbc425853331dcf418ff8f1eb"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "provenance/run_supplements/IEMOCAP_cmerc_validation_seed67137.json",
+      "size_bytes": 20686,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/provenance/run_supplements/IEMOCAP_cmerc_validation_seed67137.json",
+      "source_sha256": "c1e8ec9d631a0bef968b0907fc4d095376eaa78271c15e0ccaa7eb7b7da72caf",
+      "target_sha256": "c1e8ec9d631a0bef968b0907fc4d095376eaa78271c15e0ccaa7eb7b7da72caf"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "provenance/run_supplements/MELD_baseline_validation_seed1475.json",
+      "size_bytes": 52605,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/provenance/run_supplements/MELD_baseline_validation_seed1475.json",
+      "source_sha256": "a3ba1a0d9381a21ebdd93fb7c263a49ed8a157841f0f4fe6edf04e0cbb01a468",
+      "target_sha256": "a3ba1a0d9381a21ebdd93fb7c263a49ed8a157841f0f4fe6edf04e0cbb01a468"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "provenance/run_supplements/MELD_baseline_validation_seed2024.json",
+      "size_bytes": 52597,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/provenance/run_supplements/MELD_baseline_validation_seed2024.json",
+      "source_sha256": "fa71cb5de243d031f358bac45d4e20759ae4bbe6bcd26df9d40888dd420456aa",
+      "target_sha256": "fa71cb5de243d031f358bac45d4e20759ae4bbe6bcd26df9d40888dd420456aa"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "provenance/run_supplements/MELD_baseline_validation_seed3407.json",
+      "size_bytes": 52601,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/provenance/run_supplements/MELD_baseline_validation_seed3407.json",
+      "source_sha256": "67d0f5b133e91e1ff887c1798af8120d7004e6d3d7dfc85159b91e459d595b69",
+      "target_sha256": "67d0f5b133e91e1ff887c1798af8120d7004e6d3d7dfc85159b91e459d595b69"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "provenance/run_supplements/MELD_baseline_validation_seed42.json",
+      "size_bytes": 52575,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/provenance/run_supplements/MELD_baseline_validation_seed42.json",
+      "source_sha256": "11fed03f508c54946ee1784770dc8f00f4fd38898c022e818e8a1ddd07ac3fe0",
+      "target_sha256": "11fed03f508c54946ee1784770dc8f00f4fd38898c022e818e8a1ddd07ac3fe0"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "provenance/run_supplements/MELD_baseline_validation_seed67137.json",
+      "size_bytes": 52613,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/provenance/run_supplements/MELD_baseline_validation_seed67137.json",
+      "source_sha256": "5e3061233ea2b1660a83cf22b8c7e70441c06ae0fedd50f68c5f4108842cdf5c",
+      "target_sha256": "5e3061233ea2b1660a83cf22b8c7e70441c06ae0fedd50f68c5f4108842cdf5c"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "provenance/run_supplements/MELD_cmerc_validation_seed1475.json",
+      "size_bytes": 52776,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/provenance/run_supplements/MELD_cmerc_validation_seed1475.json",
+      "source_sha256": "a3d07425eb6bcf5c0f6418de0179b180d500b721dd1b09111737e8055fd05b81",
+      "target_sha256": "a3d07425eb6bcf5c0f6418de0179b180d500b721dd1b09111737e8055fd05b81"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "provenance/run_supplements/MELD_cmerc_validation_seed2024.json",
+      "size_bytes": 52772,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/provenance/run_supplements/MELD_cmerc_validation_seed2024.json",
+      "source_sha256": "87b5ace66998f921521a8fe8ef117c0c62372171ab84348cc50aec11a41b5356",
+      "target_sha256": "87b5ace66998f921521a8fe8ef117c0c62372171ab84348cc50aec11a41b5356"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "provenance/run_supplements/MELD_cmerc_validation_seed3407.json",
+      "size_bytes": 53153,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/provenance/run_supplements/MELD_cmerc_validation_seed3407.json",
+      "source_sha256": "3775f345dc6370ee8e9460ebdcf7b125e25be5a81557f5a6d36c9e7fa4c9cf94",
+      "target_sha256": "3775f345dc6370ee8e9460ebdcf7b125e25be5a81557f5a6d36c9e7fa4c9cf94"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "provenance/run_supplements/MELD_cmerc_validation_seed42.json",
+      "size_bytes": 52734,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/provenance/run_supplements/MELD_cmerc_validation_seed42.json",
+      "source_sha256": "7bcb07ca48b78d3f6bd0cf66ac1a0541219e929f7235351dd957413872eddcb1",
+      "target_sha256": "7bcb07ca48b78d3f6bd0cf66ac1a0541219e929f7235351dd957413872eddcb1"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "provenance/run_supplements/MELD_cmerc_validation_seed67137.json",
+      "size_bytes": 52773,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/provenance/run_supplements/MELD_cmerc_validation_seed67137.json",
+      "source_sha256": "2ef20ffd9ea1d48c91998e5bace4d31b5f3743d4a9f8e49e4460ba4b97d70e7c",
+      "target_sha256": "2ef20ffd9ea1d48c91998e5bace4d31b5f3743d4a9f8e49e4460ba4b97d70e7c"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "provenance/runtime_recovery_v2/acceptance_gate_correction.diff",
+      "size_bytes": 866,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/provenance/runtime_recovery_v2/acceptance_gate_correction.diff",
+      "source_sha256": "7b4a88cec581d2da1837ff28f53db550aeed36a8ea2a13fbc16937e0414ab581",
+      "target_sha256": "7b4a88cec581d2da1837ff28f53db550aeed36a8ea2a13fbc16937e0414ab581"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "provenance/runtime_recovery_v2/checks.json",
+      "size_bytes": 337,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/provenance/runtime_recovery_v2/checks.json",
+      "source_sha256": "e4bf2d322f9adffdc9d21778fb2a6e2a56642f647e6c111db1dea25e957b1470",
+      "target_sha256": "e4bf2d322f9adffdc9d21778fb2a6e2a56642f647e6c111db1dea25e957b1470"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "provenance/runtime_recovery_v2/continue_pipeline.py",
+      "size_bytes": 4067,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/provenance/runtime_recovery_v2/continue_pipeline.py",
+      "source_sha256": "28403ae636b049e38717f9adcc49b1f9c026d6622c9cf09c346b4d8beb10a999",
+      "target_sha256": "28403ae636b049e38717f9adcc49b1f9c026d6622c9cf09c346b4d8beb10a999"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "provenance/runtime_recovery_v2/finalize_mainline_v2.py",
+      "size_bytes": 40371,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/provenance/runtime_recovery_v2/finalize_mainline_v2.py",
+      "source_sha256": "2dd1d68e4047c88d392142d6eb38802045aee33ed3a0c9278bae9b9004de73f3",
+      "target_sha256": "2dd1d68e4047c88d392142d6eb38802045aee33ed3a0c9278bae9b9004de73f3"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "provenance/runtime_recovery_v2/initial/continue_pipeline.py",
+      "size_bytes": 4055,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/provenance/runtime_recovery_v2/initial/continue_pipeline.py",
+      "source_sha256": "91ca7af406fc0a001bd7248713a4fe1bcdda690ca1ac3a0c7ab0171c9e3ba9c2",
+      "target_sha256": "91ca7af406fc0a001bd7248713a4fe1bcdda690ca1ac3a0c7ab0171c9e3ba9c2"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "provenance/runtime_recovery_v2/initial/recover_failed_tasks.py",
+      "size_bytes": 6192,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/provenance/runtime_recovery_v2/initial/recover_failed_tasks.py",
+      "source_sha256": "f4286092514c023d513c45d666ab30210f7c9640226ccb1bd9884882e8af019b",
+      "target_sha256": "f4286092514c023d513c45d666ab30210f7c9640226ccb1bd9884882e8af019b"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "provenance/runtime_recovery_v2/initial/recovery_manager.py",
+      "size_bytes": 3188,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/provenance/runtime_recovery_v2/initial/recovery_manager.py",
+      "source_sha256": "2fc73549fcf5c00bebfa98e3b42566ad8bae704983164dc18395721660dce17e",
+      "target_sha256": "2fc73549fcf5c00bebfa98e3b42566ad8bae704983164dc18395721660dce17e"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "provenance/runtime_recovery_v2/initial/resource_guard.py",
+      "size_bytes": 1339,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/provenance/runtime_recovery_v2/initial/resource_guard.py",
+      "source_sha256": "6f0e0ac6fd1d7a8388aff88e76f491882f7e470c570bbb5b96de4cfedbc0ec15",
+      "target_sha256": "6f0e0ac6fd1d7a8388aff88e76f491882f7e470c570bbb5b96de4cfedbc0ec15"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "provenance/runtime_recovery_v2/initial/xp3_scheduler.py",
+      "size_bytes": 799,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/provenance/runtime_recovery_v2/initial/xp3_scheduler.py",
+      "source_sha256": "2c9ddc6d9bf99995d041af70fbd85afb4d9f3070760a7edf9cf6b93f9e375d6f",
+      "target_sha256": "2c9ddc6d9bf99995d041af70fbd85afb4d9f3070760a7edf9cf6b93f9e375d6f"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "provenance/runtime_recovery_v2/manifest.json",
+      "size_bytes": 3705,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/provenance/runtime_recovery_v2/manifest.json",
+      "source_sha256": "5ca811708ad71fe8774c066dc09c15c06be6ed593d4df47a2e2f0920a3fd504c",
+      "target_sha256": "5ca811708ad71fe8774c066dc09c15c06be6ed593d4df47a2e2f0920a3fd504c"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "provenance/runtime_recovery_v2/manifest_initial.json",
+      "size_bytes": 3131,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/provenance/runtime_recovery_v2/manifest_initial.json",
+      "source_sha256": "f0d1035f7da1f27b739bee09cd26ec8bdb6e8b98f5e5fabaca8e45a41747007e",
+      "target_sha256": "f0d1035f7da1f27b739bee09cd26ec8bdb6e8b98f5e5fabaca8e45a41747007e"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "provenance/runtime_recovery_v2/postrun_delivery.py",
+      "size_bytes": 35266,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/provenance/runtime_recovery_v2/postrun_delivery.py",
+      "source_sha256": "515b9ef57da33a4d1125c07b93b9b0810d89bf401b0454c0124504f97d3bd61d",
+      "target_sha256": "515b9ef57da33a4d1125c07b93b9b0810d89bf401b0454c0124504f97d3bd61d"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "provenance/runtime_recovery_v2/postrun_helper_review.json",
+      "size_bytes": 297,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/provenance/runtime_recovery_v2/postrun_helper_review.json",
+      "source_sha256": "17cff0ee8627aef98c541b9217aac2ecb9ce3fabe04038786b052b9be0267bf9",
+      "target_sha256": "17cff0ee8627aef98c541b9217aac2ecb9ce3fabe04038786b052b9be0267bf9"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "provenance/runtime_recovery_v2/recover_failed_tasks.py",
+      "size_bytes": 6192,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/provenance/runtime_recovery_v2/recover_failed_tasks.py",
+      "source_sha256": "f4286092514c023d513c45d666ab30210f7c9640226ccb1bd9884882e8af019b",
+      "target_sha256": "f4286092514c023d513c45d666ab30210f7c9640226ccb1bd9884882e8af019b"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "provenance/runtime_recovery_v2/recovery_manager.py",
+      "size_bytes": 3188,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/provenance/runtime_recovery_v2/recovery_manager.py",
+      "source_sha256": "2fc73549fcf5c00bebfa98e3b42566ad8bae704983164dc18395721660dce17e",
+      "target_sha256": "2fc73549fcf5c00bebfa98e3b42566ad8bae704983164dc18395721660dce17e"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "provenance/runtime_recovery_v2/resource_guard.py",
+      "size_bytes": 1339,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/provenance/runtime_recovery_v2/resource_guard.py",
+      "source_sha256": "6f0e0ac6fd1d7a8388aff88e76f491882f7e470c570bbb5b96de4cfedbc0ec15",
+      "target_sha256": "6f0e0ac6fd1d7a8388aff88e76f491882f7e470c570bbb5b96de4cfedbc0ec15"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "provenance/runtime_recovery_v2/resource_helper_review.json",
+      "size_bytes": 134,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/provenance/runtime_recovery_v2/resource_helper_review.json",
+      "source_sha256": "a04a9b03797f6e7c62b1b1088062c8f43da781c897c65c29d21796b3548f61bd",
+      "target_sha256": "a04a9b03797f6e7c62b1b1088062c8f43da781c897c65c29d21796b3548f61bd"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "provenance/runtime_recovery_v2/resource_observer.py",
+      "size_bytes": 2693,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/provenance/runtime_recovery_v2/resource_observer.py",
+      "source_sha256": "a3a4cf8c221689fcd952411425f4a45e50051be6af22992ccd07f12e819ea684",
+      "target_sha256": "a3a4cf8c221689fcd952411425f4a45e50051be6af22992ccd07f12e819ea684"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "provenance/runtime_recovery_v2/summarize_resources.py",
+      "size_bytes": 27094,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/provenance/runtime_recovery_v2/summarize_resources.py",
+      "source_sha256": "7320bffef3078ed31d33f56c0c10dbbb5d04cc6f2215d1ba48f1994ae8bb002b",
+      "target_sha256": "7320bffef3078ed31d33f56c0c10dbbb5d04cc6f2215d1ba48f1994ae8bb002b"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "provenance/runtime_recovery_v2/xp3_scheduler.py",
+      "size_bytes": 799,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/provenance/runtime_recovery_v2/xp3_scheduler.py",
+      "source_sha256": "2c9ddc6d9bf99995d041af70fbd85afb4d9f3070760a7edf9cf6b93f9e375d6f",
+      "target_sha256": "2c9ddc6d9bf99995d041af70fbd85afb4d9f3070760a7edf9cf6b93f9e375d6f"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "provenance/xp_scheduler.patch",
+      "size_bytes": 23192,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/provenance/xp_scheduler.patch",
+      "source_sha256": "1113bf7144f845cf8ab9dc470d07d2e430d3f1d3887a100a5fbc261ffc3fcb7a",
+      "target_sha256": "1113bf7144f845cf8ab9dc470d07d2e430d3f1d3887a100a5fbc261ffc3fcb7a"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "reports/EXECUTION_PLAN.md",
+      "size_bytes": 3161,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/reports/EXECUTION_PLAN.md",
+      "source_sha256": "21830f3cde64927b9c1a0d18c16cc845658358192b2668227c6d940c5880eba5",
+      "target_sha256": "21830f3cde64927b9c1a0d18c16cc845658358192b2668227c6d940c5880eba5"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "reports/POSTRUN_VERIFICATION_PLAN.md",
+      "size_bytes": 4697,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/reports/POSTRUN_VERIFICATION_PLAN.md",
+      "source_sha256": "67bb2812939012bc36e3975681a34e47018665c5d5fa95bbf99b4a584b94d2bb",
+      "target_sha256": "67bb2812939012bc36e3975681a34e47018665c5d5fa95bbf99b4a584b94d2bb"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "reports/PROTOCOL_SOURCE_AUDIT.md",
+      "size_bytes": 11483,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/reports/PROTOCOL_SOURCE_AUDIT.md",
+      "source_sha256": "64f9b0d640c1e8695a48040ac325a364d7173b224916203b99644c435b03098e",
+      "target_sha256": "64f9b0d640c1e8695a48040ac325a364d7173b224916203b99644c435b03098e"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "reports/REGISTERED_COMMANDS.md",
+      "size_bytes": 41350,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/reports/REGISTERED_COMMANDS.md",
+      "source_sha256": "a06333617b25517236ea08afae712f92ea6f0f6c464c344f86b770d329305763",
+      "target_sha256": "a06333617b25517236ea08afae712f92ea6f0f6c464c344f86b770d329305763"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "reports/RESOURCE_INTERVAL_AUDIT.md",
+      "size_bytes": 4465,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/reports/RESOURCE_INTERVAL_AUDIT.md",
+      "source_sha256": "d9ce0bfa544356c45572fc57b10a836f0ff875bcdadbc4685f85af601dd11c3f",
+      "target_sha256": "d9ce0bfa544356c45572fc57b10a836f0ff875bcdadbc4685f85af601dd11c3f"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "reports/RESOURCE_RECOVERY.md",
+      "size_bytes": 4487,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/reports/RESOURCE_RECOVERY.md",
+      "source_sha256": "c8e923d32d1ba2ec648f2e9b8965ddddb40e4f24bef852812ef9be14e77d1988",
+      "target_sha256": "c8e923d32d1ba2ec648f2e9b8965ddddb40e4f24bef852812ef9be14e77d1988"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "reports/XP_MAINLINE_ACCEPTANCE.md",
+      "size_bytes": 930,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/reports/XP_MAINLINE_ACCEPTANCE.md",
+      "source_sha256": "731a62d57787c2053d3730fd0778df836a1d749221535235ad1c4613f734ff67",
+      "target_sha256": "731a62d57787c2053d3730fd0778df836a1d749221535235ad1c4613f734ff67"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "reports/XP_MAINLINE_PREFLIGHT.md",
+      "size_bytes": 3439,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/reports/XP_MAINLINE_PREFLIGHT.md",
+      "source_sha256": "bb4acba57c95e1b7eaa80877ca8ed43df710d2f7917cc3829346c0dfa48adbad",
+      "target_sha256": "bb4acba57c95e1b7eaa80877ca8ed43df710d2f7917cc3829346c0dfa48adbad"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "reports/XP_MAINLINE_REPRODUCTION.md",
+      "size_bytes": 10559,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/reports/XP_MAINLINE_REPRODUCTION.md",
+      "source_sha256": "33a3db687b164f65e7a25f3aad5ebce6de433f88db3234e00b04af848756cfc9",
+      "target_sha256": "33a3db687b164f65e7a25f3aad5ebce6de433f88db3234e00b04af848756cfc9"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "reports/XP_RESOURCE_OUTCOME.md",
+      "size_bytes": 3252,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/reports/XP_RESOURCE_OUTCOME.md",
+      "source_sha256": "171772c634428b85b71584bdef1d9c27dc5f09439a8638145ea494a189affdcc",
+      "target_sha256": "171772c634428b85b71584bdef1d9c27dc5f09439a8638145ea494a189affdcc"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "results/acceptance.json",
+      "size_bytes": 909093,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/results/acceptance.json",
+      "source_sha256": "87e78b95652dcd8149e2552e6fdff639fa6d758e3f81fc34d23207ad95750bf1",
+      "target_sha256": "87e78b95652dcd8149e2552e6fdff639fa6d758e3f81fc34d23207ad95750bf1"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "results/aggregate.csv",
+      "size_bytes": 2042,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/results/aggregate.csv",
+      "source_sha256": "364ce2db945cf7822a9b956fc50ea8e2491b42bb5fcfc15c4f203b8fb745bf07",
+      "target_sha256": "364ce2db945cf7822a9b956fc50ea8e2491b42bb5fcfc15c4f203b8fb745bf07"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "results/baseline/IEMOCAP/validation/seed1475/metrics.json",
+      "size_bytes": 19026,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/results/baseline/IEMOCAP/validation/seed1475/metrics.json",
+      "source_sha256": "a93c41fdbb545aad0c71f8f7827d0c9ac2f56e736ca42dc770b9fb0dcb5937e1",
+      "target_sha256": "a93c41fdbb545aad0c71f8f7827d0c9ac2f56e736ca42dc770b9fb0dcb5937e1"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "results/baseline/IEMOCAP/validation/seed2024/metrics.json",
+      "size_bytes": 19201,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/results/baseline/IEMOCAP/validation/seed2024/metrics.json",
+      "source_sha256": "2a65bc1ffaf4d6e084b553aea5ecef874e74b6ab1e66f4d88d65c171258f035e",
+      "target_sha256": "2a65bc1ffaf4d6e084b553aea5ecef874e74b6ab1e66f4d88d65c171258f035e"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "results/baseline/IEMOCAP/validation/seed3407/metrics.json",
+      "size_bytes": 19240,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/results/baseline/IEMOCAP/validation/seed3407/metrics.json",
+      "source_sha256": "b4650bbea4a56d10d2cb0af70620230890ae946787aa372434130bab592bcf27",
+      "target_sha256": "b4650bbea4a56d10d2cb0af70620230890ae946787aa372434130bab592bcf27"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "results/baseline/IEMOCAP/validation/seed42/metrics.json",
+      "size_bytes": 19009,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/results/baseline/IEMOCAP/validation/seed42/metrics.json",
+      "source_sha256": "cc900bb12e1235747cbc571cc7f31c812f6e8b63bc4ed01b8966a036b747dcbd",
+      "target_sha256": "cc900bb12e1235747cbc571cc7f31c812f6e8b63bc4ed01b8966a036b747dcbd"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "results/baseline/IEMOCAP/validation/seed67137/metrics.json",
+      "size_bytes": 18790,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/results/baseline/IEMOCAP/validation/seed67137/metrics.json",
+      "source_sha256": "46550d91b158ce55f053a70082ff3c1eb0cc2083cb00eac43b8af255584fba49",
+      "target_sha256": "46550d91b158ce55f053a70082ff3c1eb0cc2083cb00eac43b8af255584fba49"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "results/baseline/MELD/validation/seed1475/metrics.json",
+      "size_bytes": 51010,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/results/baseline/MELD/validation/seed1475/metrics.json",
+      "source_sha256": "18b7508b9bdd3d12a23de8d03d588b10bdd5fe70112f2f85bfff137c6634e4cd",
+      "target_sha256": "18b7508b9bdd3d12a23de8d03d588b10bdd5fe70112f2f85bfff137c6634e4cd"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "results/baseline/MELD/validation/seed2024/metrics.json",
+      "size_bytes": 50974,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/results/baseline/MELD/validation/seed2024/metrics.json",
+      "source_sha256": "a0b614fc745a6676944da03e5e6e1be432067e4af3417814c3fbd8f5547d523b",
+      "target_sha256": "a0b614fc745a6676944da03e5e6e1be432067e4af3417814c3fbd8f5547d523b"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "results/baseline/MELD/validation/seed3407/metrics.json",
+      "size_bytes": 50975,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/results/baseline/MELD/validation/seed3407/metrics.json",
+      "source_sha256": "e453ed58a5b9a3a6aed57c0222e4dc7b4ec0f145ca77a237b844760ba05e3982",
+      "target_sha256": "e453ed58a5b9a3a6aed57c0222e4dc7b4ec0f145ca77a237b844760ba05e3982"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "results/baseline/MELD/validation/seed42/metrics.json",
+      "size_bytes": 51220,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/results/baseline/MELD/validation/seed42/metrics.json",
+      "source_sha256": "e5b67f61deac99789db1daf6ef27509c04f523c86b0b1e413af71bd20d0fc0bc",
+      "target_sha256": "e5b67f61deac99789db1daf6ef27509c04f523c86b0b1e413af71bd20d0fc0bc"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "results/baseline/MELD/validation/seed67137/metrics.json",
+      "size_bytes": 50988,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/results/baseline/MELD/validation/seed67137/metrics.json",
+      "source_sha256": "73a0c689b0360ddede378ccee0cf3013c9d9fe8084c9a9c1fd9a21eedab84099",
+      "target_sha256": "73a0c689b0360ddede378ccee0cf3013c9d9fe8084c9a9c1fd9a21eedab84099"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "results/cmerc/IEMOCAP/validation/seed1475/metrics.json",
+      "size_bytes": 19466,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/results/cmerc/IEMOCAP/validation/seed1475/metrics.json",
+      "source_sha256": "7a7a4029cff4cbacdfbfcbbde8e5b0415519521196ebeb357bd47156a356fb89",
+      "target_sha256": "7a7a4029cff4cbacdfbfcbbde8e5b0415519521196ebeb357bd47156a356fb89"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "results/cmerc/IEMOCAP/validation/seed2024/metrics.json",
+      "size_bytes": 19231,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/results/cmerc/IEMOCAP/validation/seed2024/metrics.json",
+      "source_sha256": "8bb80b4c876400a6c586c7d40b2d21923c6f8c4dcf1f5b69917e8cac5a8fdd45",
+      "target_sha256": "8bb80b4c876400a6c586c7d40b2d21923c6f8c4dcf1f5b69917e8cac5a8fdd45"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "results/cmerc/IEMOCAP/validation/seed3407/metrics.json",
+      "size_bytes": 19443,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/results/cmerc/IEMOCAP/validation/seed3407/metrics.json",
+      "source_sha256": "0634b355656fa1e9c588754651f26df40fd90b0889de128452c6134d9aed97db",
+      "target_sha256": "0634b355656fa1e9c588754651f26df40fd90b0889de128452c6134d9aed97db"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "results/cmerc/IEMOCAP/validation/seed42/metrics.json",
+      "size_bytes": 19465,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/results/cmerc/IEMOCAP/validation/seed42/metrics.json",
+      "source_sha256": "f8fcd2d2a66a57c8ffa630446d28d26d6d6de7fd13c5b93795350371e8d2f06d",
+      "target_sha256": "f8fcd2d2a66a57c8ffa630446d28d26d6d6de7fd13c5b93795350371e8d2f06d"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "results/cmerc/IEMOCAP/validation/seed67137/metrics.json",
+      "size_bytes": 19227,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/results/cmerc/IEMOCAP/validation/seed67137/metrics.json",
+      "source_sha256": "4dbe191ce77f26d74e7ad5e3a1985fad40b76c6cbfdcd050deccc76f5e32a23e",
+      "target_sha256": "4dbe191ce77f26d74e7ad5e3a1985fad40b76c6cbfdcd050deccc76f5e32a23e"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "results/cmerc/MELD/validation/seed1475/metrics.json",
+      "size_bytes": 51652,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/results/cmerc/MELD/validation/seed1475/metrics.json",
+      "source_sha256": "55dd72cd7f34a072ae81f49f99e462a04788fbc8ba0ed88b385079b6558be4a2",
+      "target_sha256": "55dd72cd7f34a072ae81f49f99e462a04788fbc8ba0ed88b385079b6558be4a2"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "results/cmerc/MELD/validation/seed2024/metrics.json",
+      "size_bytes": 51650,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/results/cmerc/MELD/validation/seed2024/metrics.json",
+      "source_sha256": "25f38b217e1db6055b5ac8da050b4ba812b9ff014cb06aa23ce0eb5800ecc26f",
+      "target_sha256": "25f38b217e1db6055b5ac8da050b4ba812b9ff014cb06aa23ce0eb5800ecc26f"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "results/cmerc/MELD/validation/seed3407/metrics.json",
+      "size_bytes": 51664,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/results/cmerc/MELD/validation/seed3407/metrics.json",
+      "source_sha256": "a847ff6d4fb696d9f231ce6d2e113ab4eb2202d4b0c86fe453fd45dfa73eacf4",
+      "target_sha256": "a847ff6d4fb696d9f231ce6d2e113ab4eb2202d4b0c86fe453fd45dfa73eacf4"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "results/cmerc/MELD/validation/seed42/metrics.json",
+      "size_bytes": 51422,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/results/cmerc/MELD/validation/seed42/metrics.json",
+      "source_sha256": "50d9003842410017501f7570baeb8fcfd7084f796f43aafc22d35e8eb5ede414",
+      "target_sha256": "50d9003842410017501f7570baeb8fcfd7084f796f43aafc22d35e8eb5ede414"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "results/cmerc/MELD/validation/seed67137/metrics.json",
+      "size_bytes": 51646,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/results/cmerc/MELD/validation/seed67137/metrics.json",
+      "source_sha256": "5efbca8b759f766645a565c28d89f3791753a164c25742c12120a3cfe746a3fb",
+      "target_sha256": "5efbca8b759f766645a565c28d89f3791753a164c25742c12120a3cfe746a3fb"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "results/figures/IEMOCAP_convergence.svg",
+      "size_bytes": 75865,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/results/figures/IEMOCAP_convergence.svg",
+      "source_sha256": "7fb1fd2b88719f5909996c4b3946de44a379585b0c3741a07a152f321285b6bd",
+      "target_sha256": "7fb1fd2b88719f5909996c4b3946de44a379585b0c3741a07a152f321285b6bd"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "results/figures/MELD_convergence.svg",
+      "size_bytes": 46858,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/results/figures/MELD_convergence.svg",
+      "source_sha256": "97f7928c0d6f7ded3fee01053302c88dbdb03fe03fb89bc0ffc227acde7da925",
+      "target_sha256": "97f7928c0d6f7ded3fee01053302c88dbdb03fe03fb89bc0ffc227acde7da925"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "results/figures/selected_epochs.svg",
+      "size_bytes": 3839,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/results/figures/selected_epochs.svg",
+      "source_sha256": "b3458cbda3c621e79741d64ce63f1d72fd496d519e15ffdf5064f57366eafb53",
+      "target_sha256": "b3458cbda3c621e79741d64ce63f1d72fd496d519e15ffdf5064f57366eafb53"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "results/paired.csv",
+      "size_bytes": 1216,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/results/paired.csv",
+      "source_sha256": "61dbff9dd0dc3e773f614685a11fbb3f8ef83d3baf83d7ac43f1a5fb4a02207c",
+      "target_sha256": "61dbff9dd0dc3e773f614685a11fbb3f8ef83d3baf83d7ac43f1a5fb4a02207c"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "results/per_seed.csv",
+      "size_bytes": 6244,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/results/per_seed.csv",
+      "source_sha256": "54b533e9c403b3a87e6e3fc1f81042754b81c1f964d67fbd1b798284353ae562",
+      "target_sha256": "54b533e9c403b3a87e6e3fc1f81042754b81c1f964d67fbd1b798284353ae562"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "results/registry.csv",
+      "size_bytes": 6244,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/results/registry.csv",
+      "source_sha256": "54b533e9c403b3a87e6e3fc1f81042754b81c1f964d67fbd1b798284353ae562",
+      "target_sha256": "54b533e9c403b3a87e6e3fc1f81042754b81c1f964d67fbd1b798284353ae562"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "results/summary.json",
+      "size_bytes": 726242,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/results/summary.json",
+      "source_sha256": "0a9c7736efc25ac4df932d0000eff7779d5e85d816cada5e04db99c79cb942a5",
+      "target_sha256": "0a9c7736efc25ac4df932d0000eff7779d5e85d816cada5e04db99c79cb942a5"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "runs/baseline/IEMOCAP_validation_seed1475/final_test.json",
+      "size_bytes": 373,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/baseline/IEMOCAP_validation_seed1475/final_test.json",
+      "source_sha256": "b54c6de2c525a4371bf88b40b970e697edaf0ef9c18f69415d4ee7ef497597e9",
+      "target_sha256": "b54c6de2c525a4371bf88b40b970e697edaf0ef9c18f69415d4ee7ef497597e9"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "runs/baseline/IEMOCAP_validation_seed1475/metrics.jsonl",
+      "size_bytes": 67713,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/baseline/IEMOCAP_validation_seed1475/metrics.jsonl",
+      "source_sha256": "7410ce15ac2775fcf95d9b6b4655c3f77907539ba937a2d745fded2d96121406",
+      "target_sha256": "7410ce15ac2775fcf95d9b6b4655c3f77907539ba937a2d745fded2d96121406"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "runs/baseline/IEMOCAP_validation_seed1475/run_manifest.json",
+      "size_bytes": 18971,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/baseline/IEMOCAP_validation_seed1475/run_manifest.json",
+      "source_sha256": "fd42136846c98c23200c62ba19b11a83013099e47f257081a9350557f004f8af",
+      "target_sha256": "fd42136846c98c23200c62ba19b11a83013099e47f257081a9350557f004f8af"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "runs/baseline/IEMOCAP_validation_seed2024/final_test.json",
+      "size_bytes": 372,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/baseline/IEMOCAP_validation_seed2024/final_test.json",
+      "source_sha256": "abf556cc5d74f4d4d01dde6858b0c2d44090fe65928ddbd030dc27b00635adf7",
+      "target_sha256": "abf556cc5d74f4d4d01dde6858b0c2d44090fe65928ddbd030dc27b00635adf7"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "runs/baseline/IEMOCAP_validation_seed2024/metrics.jsonl",
+      "size_bytes": 67699,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/baseline/IEMOCAP_validation_seed2024/metrics.jsonl",
+      "source_sha256": "12b6840a255bf27999cc87720fa2921fe72437399a246530fe6293edc1304217",
+      "target_sha256": "12b6840a255bf27999cc87720fa2921fe72437399a246530fe6293edc1304217"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "runs/baseline/IEMOCAP_validation_seed2024/run_manifest.json",
+      "size_bytes": 18971,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/baseline/IEMOCAP_validation_seed2024/run_manifest.json",
+      "source_sha256": "d3a21e7b54a8c6bd8cff95b0e21df8b0868790b3da1977406495f59a9fd8212b",
+      "target_sha256": "d3a21e7b54a8c6bd8cff95b0e21df8b0868790b3da1977406495f59a9fd8212b"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "runs/baseline/IEMOCAP_validation_seed3407/final_test.json",
+      "size_bytes": 373,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/baseline/IEMOCAP_validation_seed3407/final_test.json",
+      "source_sha256": "7ab12ba84ec1c2b020cdea8f11d5e09ad2e4ee00467cf062a06deebf46afe6b0",
+      "target_sha256": "7ab12ba84ec1c2b020cdea8f11d5e09ad2e4ee00467cf062a06deebf46afe6b0"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "runs/baseline/IEMOCAP_validation_seed3407/metrics.jsonl",
+      "size_bytes": 67701,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/baseline/IEMOCAP_validation_seed3407/metrics.jsonl",
+      "source_sha256": "a396db5821e514798d6f1db9baadf0b0af51855201b88cf04f8552425d6b2155",
+      "target_sha256": "a396db5821e514798d6f1db9baadf0b0af51855201b88cf04f8552425d6b2155"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "runs/baseline/IEMOCAP_validation_seed3407/run_manifest.json",
+      "size_bytes": 18971,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/baseline/IEMOCAP_validation_seed3407/run_manifest.json",
+      "source_sha256": "4b1c194de59e9152e3fabd6428718567621bf250c0f8bf72d2fb2ae641500eec",
+      "target_sha256": "4b1c194de59e9152e3fabd6428718567621bf250c0f8bf72d2fb2ae641500eec"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "runs/baseline/IEMOCAP_validation_seed42/final_test.json",
+      "size_bytes": 371,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/baseline/IEMOCAP_validation_seed42/final_test.json",
+      "source_sha256": "cac22bbb5aa63cca0f0d90ccd98bda9062eb1e267b546bc2e174c86658a0e87b",
+      "target_sha256": "cac22bbb5aa63cca0f0d90ccd98bda9062eb1e267b546bc2e174c86658a0e87b"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "runs/baseline/IEMOCAP_validation_seed42/metrics.jsonl",
+      "size_bytes": 67567,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/baseline/IEMOCAP_validation_seed42/metrics.jsonl",
+      "source_sha256": "0c28aafc5c49e38709f9b1f70db088f53dd23c0bbf77eee6e395091a62f4a0f5",
+      "target_sha256": "0c28aafc5c49e38709f9b1f70db088f53dd23c0bbf77eee6e395091a62f4a0f5"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "runs/baseline/IEMOCAP_validation_seed42/run_manifest.json",
+      "size_bytes": 18969,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/baseline/IEMOCAP_validation_seed42/run_manifest.json",
+      "source_sha256": "8830a3e0c3d25423f42dd89c1307ad413e395b18a4fa139166a23e842c39dada",
+      "target_sha256": "8830a3e0c3d25423f42dd89c1307ad413e395b18a4fa139166a23e842c39dada"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "runs/baseline/IEMOCAP_validation_seed67137/final_test.json",
+      "size_bytes": 373,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/baseline/IEMOCAP_validation_seed67137/final_test.json",
+      "source_sha256": "762d9162c9a51c7291666c5d2232b5e2588f2f6e1bfbad3c7474f7dbd121a3ad",
+      "target_sha256": "762d9162c9a51c7291666c5d2232b5e2588f2f6e1bfbad3c7474f7dbd121a3ad"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "runs/baseline/IEMOCAP_validation_seed67137/metrics.jsonl",
+      "size_bytes": 67807,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/baseline/IEMOCAP_validation_seed67137/metrics.jsonl",
+      "source_sha256": "08ed8193b284085b685d6ae1f374acdc954e9f762e2c5e8d22db481769e00ba1",
+      "target_sha256": "08ed8193b284085b685d6ae1f374acdc954e9f762e2c5e8d22db481769e00ba1"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "runs/baseline/IEMOCAP_validation_seed67137/run_manifest.json",
+      "size_bytes": 18972,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/baseline/IEMOCAP_validation_seed67137/run_manifest.json",
+      "source_sha256": "d5810ba28205f4092be294162ebfa39c19013b083b914832b3af74fda621727d",
+      "target_sha256": "d5810ba28205f4092be294162ebfa39c19013b083b914832b3af74fda621727d"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "runs/baseline/MELD_validation_seed1475/final_test.json",
+      "size_bytes": 373,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/baseline/MELD_validation_seed1475/final_test.json",
+      "source_sha256": "12d0cca9adb8e8170bcc268f5d6e5606269a65f9b805ad269adc3ae2fe671d3b",
+      "target_sha256": "12d0cca9adb8e8170bcc268f5d6e5606269a65f9b805ad269adc3ae2fe671d3b"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "runs/baseline/MELD_validation_seed1475/metrics.jsonl",
+      "size_bytes": 33763,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/baseline/MELD_validation_seed1475/metrics.jsonl",
+      "source_sha256": "358244a39f86e54789c97f45d0095b30b210b6320e9a61a04da28a8a7f205344",
+      "target_sha256": "358244a39f86e54789c97f45d0095b30b210b6320e9a61a04da28a8a7f205344"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "runs/baseline/MELD_validation_seed1475/run_manifest.json",
+      "size_bytes": 63353,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/baseline/MELD_validation_seed1475/run_manifest.json",
+      "source_sha256": "672a1d66ef261e83fe48437231799295acc615f62c663906a2fbddd2b40711d8",
+      "target_sha256": "672a1d66ef261e83fe48437231799295acc615f62c663906a2fbddd2b40711d8"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "runs/baseline/MELD_validation_seed2024/final_test.json",
+      "size_bytes": 371,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/baseline/MELD_validation_seed2024/final_test.json",
+      "source_sha256": "c4595c520460d2567e27af56254b40e51812dd7df8fd411ffbc1ea1c0be2e18b",
+      "target_sha256": "c4595c520460d2567e27af56254b40e51812dd7df8fd411ffbc1ea1c0be2e18b"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "runs/baseline/MELD_validation_seed2024/metrics.jsonl",
+      "size_bytes": 33771,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/baseline/MELD_validation_seed2024/metrics.jsonl",
+      "source_sha256": "98e7859cafa331001f7d607891c9e83ca2451dce51faf780105d6be3a29a4460",
+      "target_sha256": "98e7859cafa331001f7d607891c9e83ca2451dce51faf780105d6be3a29a4460"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "runs/baseline/MELD_validation_seed2024/run_manifest.json",
+      "size_bytes": 63353,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/baseline/MELD_validation_seed2024/run_manifest.json",
+      "source_sha256": "d698f63ca68547fba930ac0812f4ae748670fd7ce98cf4b5805328be27a5c583",
+      "target_sha256": "d698f63ca68547fba930ac0812f4ae748670fd7ce98cf4b5805328be27a5c583"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "runs/baseline/MELD_validation_seed3407/final_test.json",
+      "size_bytes": 372,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/baseline/MELD_validation_seed3407/final_test.json",
+      "source_sha256": "e4f6f170d7098e4ab2944cb6c57df3d1a80d609fa06fd84fa1481238218d77b9",
+      "target_sha256": "e4f6f170d7098e4ab2944cb6c57df3d1a80d609fa06fd84fa1481238218d77b9"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "runs/baseline/MELD_validation_seed3407/metrics.jsonl",
+      "size_bytes": 33767,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/baseline/MELD_validation_seed3407/metrics.jsonl",
+      "source_sha256": "ece08f3fa41b4021124ee9d546751c502c8fed716cc64469fcef3fcb65996224",
+      "target_sha256": "ece08f3fa41b4021124ee9d546751c502c8fed716cc64469fcef3fcb65996224"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "runs/baseline/MELD_validation_seed3407/run_manifest.json",
+      "size_bytes": 63353,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/baseline/MELD_validation_seed3407/run_manifest.json",
+      "source_sha256": "88a45398a00c597175077e19305d3edf7ed1552903009d73cc0c6616b9cf6993",
+      "target_sha256": "88a45398a00c597175077e19305d3edf7ed1552903009d73cc0c6616b9cf6993"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "runs/baseline/MELD_validation_seed42/final_test.json",
+      "size_bytes": 371,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/baseline/MELD_validation_seed42/final_test.json",
+      "source_sha256": "507ea6be3e574e4750e2cf5640e2537202488972732a870087bbae39987a9d81",
+      "target_sha256": "507ea6be3e574e4750e2cf5640e2537202488972732a870087bbae39987a9d81"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "runs/baseline/MELD_validation_seed42/metrics.jsonl",
+      "size_bytes": 33686,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/baseline/MELD_validation_seed42/metrics.jsonl",
+      "source_sha256": "8f08d33d3dcff3a73e60f84c4728e2c21ca584da3fda2841c8b9c5d8743bec86",
+      "target_sha256": "8f08d33d3dcff3a73e60f84c4728e2c21ca584da3fda2841c8b9c5d8743bec86"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "runs/baseline/MELD_validation_seed42/run_manifest.json",
+      "size_bytes": 63351,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/baseline/MELD_validation_seed42/run_manifest.json",
+      "source_sha256": "e5af84ff2bf030e736b0a9622da68dad585d716f9ee40615c6f80a11aada5900",
+      "target_sha256": "e5af84ff2bf030e736b0a9622da68dad585d716f9ee40615c6f80a11aada5900"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "runs/baseline/MELD_validation_seed67137/final_test.json",
+      "size_bytes": 373,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/baseline/MELD_validation_seed67137/final_test.json",
+      "source_sha256": "dbbf3596d9c2acac184fd49eef881d5d321941bc5aa025ace1f9e34199113ce9",
+      "target_sha256": "dbbf3596d9c2acac184fd49eef881d5d321941bc5aa025ace1f9e34199113ce9"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "runs/baseline/MELD_validation_seed67137/metrics.jsonl",
+      "size_bytes": 33815,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/baseline/MELD_validation_seed67137/metrics.jsonl",
+      "source_sha256": "12a449c74e3c03f59f8851c93bfcdd97442144120b28cacab1a14c849e46180c",
+      "target_sha256": "12a449c74e3c03f59f8851c93bfcdd97442144120b28cacab1a14c849e46180c"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "runs/baseline/MELD_validation_seed67137/run_manifest.json",
+      "size_bytes": 63354,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/baseline/MELD_validation_seed67137/run_manifest.json",
+      "source_sha256": "a105f5236109bde7dc815c44b096d592739bc38f4b316e5d81518b833725e8be",
+      "target_sha256": "a105f5236109bde7dc815c44b096d592739bc38f4b316e5d81518b833725e8be"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "runs/cmerc/IEMOCAP_validation_seed1475/final_test.json",
+      "size_bytes": 371,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/cmerc/IEMOCAP_validation_seed1475/final_test.json",
+      "source_sha256": "ee5c7447106511247a7bb6f4952470e5064c47b0753c1e2cbc9b5053fd26df22",
+      "target_sha256": "ee5c7447106511247a7bb6f4952470e5064c47b0753c1e2cbc9b5053fd26df22"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "runs/cmerc/IEMOCAP_validation_seed1475/metrics.jsonl",
+      "size_bytes": 71060,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/cmerc/IEMOCAP_validation_seed1475/metrics.jsonl",
+      "source_sha256": "49e113acdf129f113c0a93e7643215f7b07cbb8266cc458f33293bd0e51ead7b",
+      "target_sha256": "49e113acdf129f113c0a93e7643215f7b07cbb8266cc458f33293bd0e51ead7b"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "runs/cmerc/IEMOCAP_validation_seed1475/run_manifest.json",
+      "size_bytes": 19284,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/cmerc/IEMOCAP_validation_seed1475/run_manifest.json",
+      "source_sha256": "fd143793ddfad93c9a0add9fcf453cf533bfe371c94de734d29e8957a369a441",
+      "target_sha256": "fd143793ddfad93c9a0add9fcf453cf533bfe371c94de734d29e8957a369a441"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "runs/cmerc/IEMOCAP_validation_seed2024/final_test.json",
+      "size_bytes": 373,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/cmerc/IEMOCAP_validation_seed2024/final_test.json",
+      "source_sha256": "191b5b9ff2461147cda6c59fd39e6f25fbe2e52cc336f0fa5841ec7a65ba1c45",
+      "target_sha256": "191b5b9ff2461147cda6c59fd39e6f25fbe2e52cc336f0fa5841ec7a65ba1c45"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "runs/cmerc/IEMOCAP_validation_seed2024/metrics.jsonl",
+      "size_bytes": 71063,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/cmerc/IEMOCAP_validation_seed2024/metrics.jsonl",
+      "source_sha256": "350d7ef184b7accdda61dd377a0aa2c127be8f56736de2e959136cfe8165e3ee",
+      "target_sha256": "350d7ef184b7accdda61dd377a0aa2c127be8f56736de2e959136cfe8165e3ee"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "runs/cmerc/IEMOCAP_validation_seed2024/run_manifest.json",
+      "size_bytes": 19284,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/cmerc/IEMOCAP_validation_seed2024/run_manifest.json",
+      "source_sha256": "ae910a07049a630c618bece87514afbcbac15297517c95186d7e2be35d3f8377",
+      "target_sha256": "ae910a07049a630c618bece87514afbcbac15297517c95186d7e2be35d3f8377"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "runs/cmerc/IEMOCAP_validation_seed3407/final_test.json",
+      "size_bytes": 373,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/cmerc/IEMOCAP_validation_seed3407/final_test.json",
+      "source_sha256": "ea2f9b98c46eee3518eebdf84a940a8a4ac8a32f51a6a08708b6bd9531ba2c4a",
+      "target_sha256": "ea2f9b98c46eee3518eebdf84a940a8a4ac8a32f51a6a08708b6bd9531ba2c4a"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "runs/cmerc/IEMOCAP_validation_seed3407/metrics.jsonl",
+      "size_bytes": 71033,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/cmerc/IEMOCAP_validation_seed3407/metrics.jsonl",
+      "source_sha256": "9499ea3680245e43c865e440924f658338b1b5f2de10d6f69a71dfab70fafc74",
+      "target_sha256": "9499ea3680245e43c865e440924f658338b1b5f2de10d6f69a71dfab70fafc74"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "runs/cmerc/IEMOCAP_validation_seed3407/run_manifest.json",
+      "size_bytes": 19284,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/cmerc/IEMOCAP_validation_seed3407/run_manifest.json",
+      "source_sha256": "040a76729795bf4aee797c9561341c03ef469cc3bbceb31bc2d90197f0889ccb",
+      "target_sha256": "040a76729795bf4aee797c9561341c03ef469cc3bbceb31bc2d90197f0889ccb"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "runs/cmerc/IEMOCAP_validation_seed42/final_test.json",
+      "size_bytes": 370,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/cmerc/IEMOCAP_validation_seed42/final_test.json",
+      "source_sha256": "e321d5ddf423aac4b0f3bfa431f50b79a965d49ca228d125348495458a83e078",
+      "target_sha256": "e321d5ddf423aac4b0f3bfa431f50b79a965d49ca228d125348495458a83e078"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "runs/cmerc/IEMOCAP_validation_seed42/metrics.jsonl",
+      "size_bytes": 70882,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/cmerc/IEMOCAP_validation_seed42/metrics.jsonl",
+      "source_sha256": "73ddb5217678ebee4ace661044a4e53f94171502d4820eff08277cb073374f6f",
+      "target_sha256": "73ddb5217678ebee4ace661044a4e53f94171502d4820eff08277cb073374f6f"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "runs/cmerc/IEMOCAP_validation_seed42/run_manifest.json",
+      "size_bytes": 19282,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/cmerc/IEMOCAP_validation_seed42/run_manifest.json",
+      "source_sha256": "01cb8d62db77473c206540cff47002758468a10d64b87511fda09fd3f14cd4c0",
+      "target_sha256": "01cb8d62db77473c206540cff47002758468a10d64b87511fda09fd3f14cd4c0"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "runs/cmerc/IEMOCAP_validation_seed67137/final_test.json",
+      "size_bytes": 373,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/cmerc/IEMOCAP_validation_seed67137/final_test.json",
+      "source_sha256": "2f9a22151e6e754f16de498ebafcc5948bd85e6e1d86a2cbdc4ac0e5a95e3d02",
+      "target_sha256": "2f9a22151e6e754f16de498ebafcc5948bd85e6e1d86a2cbdc4ac0e5a95e3d02"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "runs/cmerc/IEMOCAP_validation_seed67137/metrics.jsonl",
+      "size_bytes": 71112,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/cmerc/IEMOCAP_validation_seed67137/metrics.jsonl",
+      "source_sha256": "5b23324f75455ee77e21d7cf5e014f8f0a242ea1d85cb14002b4b3059160e2a6",
+      "target_sha256": "5b23324f75455ee77e21d7cf5e014f8f0a242ea1d85cb14002b4b3059160e2a6"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "runs/cmerc/IEMOCAP_validation_seed67137/run_manifest.json",
+      "size_bytes": 19285,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/cmerc/IEMOCAP_validation_seed67137/run_manifest.json",
+      "source_sha256": "46ac3204625c349d3a76793ddc13385948d270631903f8a0fdc0cfe8ca248bf5",
+      "target_sha256": "46ac3204625c349d3a76793ddc13385948d270631903f8a0fdc0cfe8ca248bf5"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "runs/cmerc/MELD_validation_seed1475/final_test.json",
+      "size_bytes": 371,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/cmerc/MELD_validation_seed1475/final_test.json",
+      "source_sha256": "df981aa978c6ac862143265659627d0ce6a6a30a8bd4b1e7b4d385f2e1f0ce59",
+      "target_sha256": "df981aa978c6ac862143265659627d0ce6a6a30a8bd4b1e7b4d385f2e1f0ce59"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "runs/cmerc/MELD_validation_seed1475/metrics.jsonl",
+      "size_bytes": 35374,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/cmerc/MELD_validation_seed1475/metrics.jsonl",
+      "source_sha256": "5e3c7feb06bc1150c35c0febc27fbe8a493c1382f0eccb06f3e86d6aeebceb83",
+      "target_sha256": "5e3c7feb06bc1150c35c0febc27fbe8a493c1382f0eccb06f3e86d6aeebceb83"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "runs/cmerc/MELD_validation_seed1475/run_manifest.json",
+      "size_bytes": 63656,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/cmerc/MELD_validation_seed1475/run_manifest.json",
+      "source_sha256": "b79829eb61f904e86a49d62cdf6ce16d2f6ee6f5f6d161948a892753f3b200c9",
+      "target_sha256": "b79829eb61f904e86a49d62cdf6ce16d2f6ee6f5f6d161948a892753f3b200c9"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "runs/cmerc/MELD_validation_seed2024/final_test.json",
+      "size_bytes": 372,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/cmerc/MELD_validation_seed2024/final_test.json",
+      "source_sha256": "069b2b541f37b6575e9fb108d05ad53cf1ecae440d468eb308b45ccd75fcd80e",
+      "target_sha256": "069b2b541f37b6575e9fb108d05ad53cf1ecae440d468eb308b45ccd75fcd80e"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "runs/cmerc/MELD_validation_seed2024/metrics.jsonl",
+      "size_bytes": 35393,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/cmerc/MELD_validation_seed2024/metrics.jsonl",
+      "source_sha256": "2fd751c0e6054e45455eea64d4c091788b786f03547bcfa6eccce24627f68bee",
+      "target_sha256": "2fd751c0e6054e45455eea64d4c091788b786f03547bcfa6eccce24627f68bee"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "runs/cmerc/MELD_validation_seed2024/run_manifest.json",
+      "size_bytes": 63656,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/cmerc/MELD_validation_seed2024/run_manifest.json",
+      "source_sha256": "750546d26aa8347ab3fc3a61bb25e87987326858c04e0a36d6308ff55b50516d",
+      "target_sha256": "750546d26aa8347ab3fc3a61bb25e87987326858c04e0a36d6308ff55b50516d"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "runs/cmerc/MELD_validation_seed3407/final_test.json",
+      "size_bytes": 373,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/cmerc/MELD_validation_seed3407/final_test.json",
+      "source_sha256": "caad42a91bf33d9143c1988c4c878f729979ca0f8dbd44a0fdce8e98ba3902dd",
+      "target_sha256": "caad42a91bf33d9143c1988c4c878f729979ca0f8dbd44a0fdce8e98ba3902dd"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "runs/cmerc/MELD_validation_seed3407/metrics.jsonl",
+      "size_bytes": 35395,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/cmerc/MELD_validation_seed3407/metrics.jsonl",
+      "source_sha256": "c143672a93e4c6f882e9cd574010dea210c15b9ffd958df823278fabb70c756d",
+      "target_sha256": "c143672a93e4c6f882e9cd574010dea210c15b9ffd958df823278fabb70c756d"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "runs/cmerc/MELD_validation_seed3407/run_manifest.json",
+      "size_bytes": 63656,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/cmerc/MELD_validation_seed3407/run_manifest.json",
+      "source_sha256": "ab347863919746476a330deda1285dd1f839faf3f06788e278774e68227551fc",
+      "target_sha256": "ab347863919746476a330deda1285dd1f839faf3f06788e278774e68227551fc"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "runs/cmerc/MELD_validation_seed42/final_test.json",
+      "size_bytes": 370,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/cmerc/MELD_validation_seed42/final_test.json",
+      "source_sha256": "f40cdb41182a4978aa1e91fa967e0208caaff9ce4651223c9b0694b566ebbd0d",
+      "target_sha256": "f40cdb41182a4978aa1e91fa967e0208caaff9ce4651223c9b0694b566ebbd0d"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "runs/cmerc/MELD_validation_seed42/metrics.jsonl",
+      "size_bytes": 35292,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/cmerc/MELD_validation_seed42/metrics.jsonl",
+      "source_sha256": "f7efeaea9d7d7368d9e1ef5020c01c2183c6c9d801f47dc979f6f3710f3c345e",
+      "target_sha256": "f7efeaea9d7d7368d9e1ef5020c01c2183c6c9d801f47dc979f6f3710f3c345e"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "runs/cmerc/MELD_validation_seed42/run_manifest.json",
+      "size_bytes": 63654,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/cmerc/MELD_validation_seed42/run_manifest.json",
+      "source_sha256": "8849ffd52885148bb397a6e6f3ccbfc9495bf1c28c99f8403127f55041eef606",
+      "target_sha256": "8849ffd52885148bb397a6e6f3ccbfc9495bf1c28c99f8403127f55041eef606"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "runs/cmerc/MELD_validation_seed67137/final_test.json",
+      "size_bytes": 372,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/cmerc/MELD_validation_seed67137/final_test.json",
+      "source_sha256": "0f8638d2acd66bd0dfc574d6b654c151462f27cdc3c5ce2c1a63e64201cc2de5",
+      "target_sha256": "0f8638d2acd66bd0dfc574d6b654c151462f27cdc3c5ce2c1a63e64201cc2de5"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "runs/cmerc/MELD_validation_seed67137/metrics.jsonl",
+      "size_bytes": 35449,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/cmerc/MELD_validation_seed67137/metrics.jsonl",
+      "source_sha256": "768759caab16432f3f8cb41f4cca67b4ba32582f18920a5cb260f7b48e48fea7",
+      "target_sha256": "768759caab16432f3f8cb41f4cca67b4ba32582f18920a5cb260f7b48e48fea7"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "runs/cmerc/MELD_validation_seed67137/run_manifest.json",
+      "size_bytes": 63657,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/cmerc/MELD_validation_seed67137/run_manifest.json",
+      "source_sha256": "ebfe1b0c27b5c7066d4c5a11f24db2839c79ff966ef760a4f3539d789cc578ec",
+      "target_sha256": "ebfe1b0c27b5c7066d4c5a11f24db2839c79ff966ef760a4f3539d789cc578ec"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "state/pipeline.json",
+      "size_bytes": 2765,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/state/pipeline.json",
+      "source_sha256": "effb467581dd66cd74b844e20ab8c1a139630a69ac4fdf4243844d060d2bdb71",
+      "target_sha256": "effb467581dd66cd74b844e20ab8c1a139630a69ac4fdf4243844d060d2bdb71"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "state/queue.json",
+      "size_bytes": 74310,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/state/queue.json",
+      "source_sha256": "46f256f6cf15e0136b44f9550fcbf16449945bc972a2e061d40d0fac3d590797",
+      "target_sha256": "46f256f6cf15e0136b44f9550fcbf16449945bc972a2e061d40d0fac3d590797"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "state/recovery/iemocap2024_original_resource_failure.json",
+      "size_bytes": 2934,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/state/recovery/iemocap2024_original_resource_failure.json",
+      "source_sha256": "89e4d55216176543a98a66de42ef979c39d01c7aad05804237993e457749d3b3",
+      "target_sha256": "89e4d55216176543a98a66de42ef979c39d01c7aad05804237993e457749d3b3"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "state/recovery/iemocap2024_training_verified.json",
+      "size_bytes": 586,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/state/recovery/iemocap2024_training_verified.json",
+      "source_sha256": "5010bfe4219619e7c884c912d4064a7ddad46ffc4e0aade77e18a23821908b65",
+      "target_sha256": "5010bfe4219619e7c884c912d4064a7ddad46ffc4e0aade77e18a23821908b65"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "state/recovery/manager.json",
+      "size_bytes": 442,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/state/recovery/manager.json",
+      "source_sha256": "f8be75a372dd3e222501aa326c7c7b4b6c701922987c055d5b8a533577ad5490",
+      "target_sha256": "f8be75a372dd3e222501aa326c7c7b4b6c701922987c055d5b8a533577ad5490"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "state/recovery/pipeline_v1.json",
+      "size_bytes": 1479,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/state/recovery/pipeline_v1.json",
+      "source_sha256": "1d5edecb585dbcda81959304b0facafdc075069b4914b7f389927142a9762cb3",
+      "target_sha256": "1d5edecb585dbcda81959304b0facafdc075069b4914b7f389927142a9762cb3"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "state/recovery/queue_before_recovery.json",
+      "size_bytes": 60449,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/state/recovery/queue_before_recovery.json",
+      "source_sha256": "717aa784d2a868abaf790c8fae20ea1efebad20960640c4473730e906c45602e",
+      "target_sha256": "717aa784d2a868abaf790c8fae20ea1efebad20960640c4473730e906c45602e"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "state/recovery/recovery_journal.json",
+      "size_bytes": 1702,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/state/recovery/recovery_journal.json",
+      "source_sha256": "c4d95e7590591504260f91ae7a07479a8ee881e7910e939e219559cf049a2577",
+      "target_sha256": "c4d95e7590591504260f91ae7a07479a8ee881e7910e939e219559cf049a2577"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "state/recovery/resource_observer.json",
+      "size_bytes": 493,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/state/recovery/resource_observer.json",
+      "source_sha256": "a5ed2bb5b974f5deccac9fd8c4b4a7796302c41e16ceb77e46557bdf6c8637a7",
+      "target_sha256": "a5ed2bb5b974f5deccac9fd8c4b4a7796302c41e16ceb77e46557bdf6c8637a7"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "state/resource_guard.json",
+      "size_bytes": 239,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/state/resource_guard.json",
+      "source_sha256": "c08bfa57f3be11bb2233ff9cb679526069b6638409505c43485faf1df3183ede",
+      "target_sha256": "c08bfa57f3be11bb2233ff9cb679526069b6638409505c43485faf1df3183ede"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "tools/aten_smoke.py",
+      "size_bytes": 405,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/tools/aten_smoke.py",
+      "source_sha256": "d4015593e1c78cddf81538382a2ee0c57a901c3967327ab2316a3df638d08129",
+      "target_sha256": "d4015593e1c78cddf81538382a2ee0c57a901c3967327ab2316a3df638d08129"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "tools/audit_inputs.py",
+      "size_bytes": 11161,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/tools/audit_inputs.py",
+      "source_sha256": "dc4cde9bf2c3db1b3722aec0436fd51384f84013f91cea60086fe258732f5939",
+      "target_sha256": "dc4cde9bf2c3db1b3722aec0436fd51384f84013f91cea60086fe258732f5939"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "tools/export_mainline.py",
+      "size_bytes": 17220,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/tools/export_mainline.py",
+      "source_sha256": "d42683d4ec08ec912200946b400db7550e71cf970bd55d6da05356485ffa8088",
+      "target_sha256": "d42683d4ec08ec912200946b400db7550e71cf970bd55d6da05356485ffa8088"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "tools/finalize_mainline.py",
+      "size_bytes": 40371,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/tools/finalize_mainline.py",
+      "source_sha256": "6fb9fd4ba64899bf3ee560ce8c1ddefd9a14c38a3dd86ca7b6e3475add6fbad1",
+      "target_sha256": "6fb9fd4ba64899bf3ee560ce8c1ddefd9a14c38a3dd86ca7b6e3475add6fbad1"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "tools/formal_pipeline.py",
+      "size_bytes": 3949,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/tools/formal_pipeline.py",
+      "source_sha256": "ea7a8723fd5dc20db87e9b03e2e4d361759ba22b03e2332a2c2fdeb93c2b9966",
+      "target_sha256": "ea7a8723fd5dc20db87e9b03e2e4d361759ba22b03e2332a2c2fdeb93c2b9966"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "tools/gpu_preflight.py",
+      "size_bytes": 6819,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/tools/gpu_preflight.py",
+      "source_sha256": "7fd4adbafcbb92479d02e0ad8790e85a62edbcba3a0ccd1de476246833666206",
+      "target_sha256": "7fd4adbafcbb92479d02e0ad8790e85a62edbcba3a0ccd1de476246833666206"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "tools/gpu_preflight_iemocap.py",
+      "size_bytes": 6840,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/tools/gpu_preflight_iemocap.py",
+      "source_sha256": "bbc8e3e47d624d910ecbc3c9fe502753c9a00c4e48ef1b79a32b24d8fdd3cada",
+      "target_sha256": "bbc8e3e47d624d910ecbc3c9fe502753c9a00c4e48ef1b79a32b24d8fdd3cada"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "tools/gpu_probe.py",
+      "size_bytes": 1426,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/tools/gpu_probe.py",
+      "source_sha256": "13e8e64908dd115c2671c7ff47cade373c442195a2bdff0057adb7cbab423269",
+      "target_sha256": "13e8e64908dd115c2671c7ff47cade373c442195a2bdff0057adb7cbab423269"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "tools/gradient_observer.py",
+      "size_bytes": 7309,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/tools/gradient_observer.py",
+      "source_sha256": "0139d1843b63c3abcdf494584fffe7240b0c913af39695f86c8aef059eac1cd3",
+      "target_sha256": "0139d1843b63c3abcdf494584fffe7240b0c913af39695f86c8aef059eac1cd3"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "tools/memory_observer.py",
+      "size_bytes": 2793,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/tools/memory_observer.py",
+      "source_sha256": "eda9ebfe3c82eb0fcac02fd26f86b5b1c53e7d83ce43cc27d1fce402a849a524",
+      "target_sha256": "eda9ebfe3c82eb0fcac02fd26f86b5b1c53e7d83ce43cc27d1fce402a849a524"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "tools/resume_verify.py",
+      "size_bytes": 2214,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/tools/resume_verify.py",
+      "source_sha256": "cf2f717d358ad57db4a4d3551d61fd9c21b585920b04d0cc72e960498827ba67",
+      "target_sha256": "cf2f717d358ad57db4a4d3551d61fd9c21b585920b04d0cc72e960498827ba67"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "tools/retry_task.py",
+      "size_bytes": 2958,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/tools/retry_task.py",
+      "source_sha256": "a711ae8bd7136cb38d57d5368571ab7881d20bbba4beb28d3cdb769b7ef95b73",
+      "target_sha256": "a711ae8bd7136cb38d57d5368571ab7881d20bbba4beb28d3cdb769b7ef95b73"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "tools/run_cpu_tests.sh",
+      "size_bytes": 568,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/tools/run_cpu_tests.sh",
+      "source_sha256": "33146dcdb4c50880055cb40a9915f5601cf90f3e9417a23084d3ef27617bb98e",
+      "target_sha256": "33146dcdb4c50880055cb40a9915f5601cf90f3e9417a23084d3ef27617bb98e"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "tools/status_line.py",
+      "size_bytes": 788,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/tools/status_line.py",
+      "source_sha256": "9675d36549309ae4b195da1488e9a4b9cf8fa4a2a5be2882143d9fc1dafd1983",
+      "target_sha256": "9675d36549309ae4b195da1488e9a4b9cf8fa4a2a5be2882143d9fc1dafd1983"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "tools/test_retry_sandbox.py",
+      "size_bytes": 2602,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/tools/test_retry_sandbox.py",
+      "source_sha256": "b51864d4a45502bea879b9c7567101f7216356ef98605be849053122ccef4251",
+      "target_sha256": "b51864d4a45502bea879b9c7567101f7216356ef98605be849053122ccef4251"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "tools/xp_python",
+      "size_bytes": 247,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/tools/xp_python",
+      "source_sha256": "2c100e8751683a48c9fa29f3152125965862f9149075b5b04c1cdadf29f5d234",
+      "target_sha256": "2c100e8751683a48c9fa29f3152125965862f9149075b5b04c1cdadf29f5d234"
+    }
+  ],
+  "filter_policy": {
+    "manifest_self_hash": "excluded to avoid self-reference",
+    "max_public_file_bytes": 33554432,
+    "no_checkpoints_or_predictions_or_raw_logs": true,
+    "no_symlinks": true,
+    "preflight_and_reports_extensions": [
+      ".json",
+      ".md",
+      ".txt"
+    ]
+  },
+  "formal_runs": [
+    "runs/baseline/IEMOCAP_validation_seed1475",
+    "runs/baseline/IEMOCAP_validation_seed2024",
+    "runs/baseline/IEMOCAP_validation_seed3407",
+    "runs/baseline/IEMOCAP_validation_seed42",
+    "runs/baseline/IEMOCAP_validation_seed67137",
+    "runs/baseline/MELD_validation_seed1475",
+    "runs/baseline/MELD_validation_seed2024",
+    "runs/baseline/MELD_validation_seed3407",
+    "runs/baseline/MELD_validation_seed42",
+    "runs/baseline/MELD_validation_seed67137",
+    "runs/cmerc/IEMOCAP_validation_seed1475",
+    "runs/cmerc/IEMOCAP_validation_seed2024",
+    "runs/cmerc/IEMOCAP_validation_seed3407",
+    "runs/cmerc/IEMOCAP_validation_seed42",
+    "runs/cmerc/IEMOCAP_validation_seed67137",
+    "runs/cmerc/MELD_validation_seed1475",
+    "runs/cmerc/MELD_validation_seed2024",
+    "runs/cmerc/MELD_validation_seed3407",
+    "runs/cmerc/MELD_validation_seed42",
+    "runs/cmerc/MELD_validation_seed67137"
+  ],
+  "postrun_supplement": {
+    "acceptance_adapter": "provenance/runtime_recovery_v2/finalize_mainline_v2.py",
+    "approved_scheduler": "provenance/runtime_recovery_v2/xp3_scheduler.py",
+    "final_verification_record": "reports/POSTRUN_VERIFICATION_PLAN.md",
+    "historical_tree_files_verified": {
+      "01_v100_single_seed": 71,
+      "02_xp_multiseed": 128,
+      "03_v100_multiseed": 176
+    },
+    "terminal_control_metadata": true
+  },
+  "schema_version": 1,
+  "source_root": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z",
+  "status": "exported"
+}

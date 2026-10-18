@@ -1,0 +1,63 @@
+{
+  "status": "completed",
+  "pid": 3807999,
+  "started_at": 1792139274.8754063,
+  "phases": {
+    "formal": {
+      "command": [
+        "/data2/yb/conda_envs/cmerc-xp-repro/bin/python",
+        "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/state/recovery/xp3_scheduler.py",
+        "--config",
+        "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/configs/xp_mainline_validation.json",
+        "--run-root",
+        "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs",
+        "--log-root",
+        "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/logs",
+        "--result-root",
+        "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/results",
+        "--state",
+        "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/state/queue.json"
+      ],
+      "started_at": 1792139274.8755925,
+      "status": "completed",
+      "pid": 3808000,
+      "log": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/logs/formal_resource_v2_supervisor.log",
+      "exit_code": 0,
+      "finished_at": 1792146645.5692801
+    },
+    "acceptance": {
+      "command": [
+        "/data2/yb/conda_envs/cmerc-xp-repro/bin/python",
+        "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/state/recovery/finalize_mainline_v2.py"
+      ],
+      "started_at": 1792146645.5699708,
+      "status": "completed",
+      "pid": 3934806,
+      "log": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/logs/acceptance_resource_v2_supervisor.log",
+      "exit_code": 0,
+      "finished_at": 1792146669.3551211
+    },
+    "backup_export": {
+      "command": [
+        "/data2/yb/conda_envs/cmerc-xp-repro/bin/python",
+        "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/tools/export_mainline.py"
+      ],
+      "started_at": 1792146669.355966,
+      "status": "completed",
+      "pid": 3935231,
+      "log": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/logs/backup_export_resource_v2_supervisor.log",
+      "exit_code": 0,
+      "finished_at": 1792146711.4303987
+    }
+  },
+  "controller_revision": "resource_exclusion_v2",
+  "prior_pipeline": "state/recovery/pipeline_v1.json",
+  "phase": "completed",
+  "registration": {
+    "status": "completed",
+    "root_registry": "/data2/yb/paper/lyx-msa/CMERC/BASELINE_REGISTRY.md",
+    "public_archive": "/data2/yb/paper/lyx-msa/CMERC/experiment_records/04_xp_mainline_validation",
+    "completed_at": 1792146712.0774055
+  },
+  "finished_at": 1792146712.091736
+}

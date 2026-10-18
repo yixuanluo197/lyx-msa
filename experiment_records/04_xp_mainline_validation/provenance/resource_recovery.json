@@ -1,0 +1,42 @@
+{
+  "controller_revision": "resource_exclusion_v2",
+  "science_source_snapshot_unchanged": "fafddfee606270f5626a01e3611ecebcdc8ce2af72536ada3508fe31316481a9",
+  "effective_future_gpu_indices": [
+    3
+  ],
+  "enforced_by": "state/recovery/xp3_scheduler.py allocation overlay, independent of guard liveness",
+  "reason": "Exclude0/1 from our queue; no external process altered",
+  "recovered_evaluation": {
+    "status": "completed",
+    "task": "IEMOCAP_cmerc_validation_seed2024",
+    "best_sha256_unchanged": "80ee239060ae1afa3f8c49d7c99d38db8e91fb1d706c7f95087b9e6c025ebf96",
+    "evaluation_pid": 3807686,
+    "evaluation_exit_code": 0
+  },
+  "invalid_partial_retry": {
+    "registered_task": "MELD_cmerc_validation_seed3407",
+    "checkpoint_assessment": "Partial checkpoint exists but attempt ran concurrently with a foreign GPU1 task, violating registered exclusivity; it is not an eligible continuation. Preserve it and restart identical seed/config from scratch on exclusive XP3.",
+    "score_used_to_decide_retry": false,
+    "model_or_scientific_protocol_changes": false,
+    "reason": "TOCTOU race between separate project GPU launchers"
+  },
+  "attempt_preservation": {
+    "destination": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/attempts/MELD_cmerc_validation_seed3407/2026-10-16T082751.934532_0000",
+    "moves": [
+      {
+        "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/cmerc/MELD_validation_seed3407",
+        "preserved_as": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/attempts/MELD_cmerc_validation_seed3407/2026-10-16T082751.934532_0000/run_dir"
+      },
+      {
+        "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/logs/cmerc/MELD/validation/seed3407.train.log",
+        "preserved_as": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/attempts/MELD_cmerc_validation_seed3407/2026-10-16T082751.934532_0000/train_log"
+      },
+      {
+        "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/logs/cmerc/MELD/validation/seed3407.train.log.memory.jsonl",
+        "preserved_as": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/attempts/MELD_cmerc_validation_seed3407/2026-10-16T082751.934532_0000/train_log_memory"
+      }
+    ],
+    "status": "completed"
+  },
+  "registered_tasks": 20
+}

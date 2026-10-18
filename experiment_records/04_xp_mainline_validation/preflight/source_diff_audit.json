@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "changed_inherited_files": [
+    "scripts/multiseed_scheduler.py"
+  ],
+  "allowed_reason": "XP host/UUID/actual-free-memory scheduling, external paths and four-anchor gate only",
+  "scientific_model_training_loss_evaluation_and_summary_files_identical_to_v2": true,
+  "added_tests": [
+    "code/tests/test_xp_scheduler.py"
+  ],
+  "added_engineering_tools": "batch tools/ outside inherited model code"
+}

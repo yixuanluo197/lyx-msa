@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+set -euo pipefail
+if [[ "${1:-}" == "-u" ]]; then shift; fi
+exec /data2/yb/conda_envs/cmerc-xp-repro/bin/python -u /data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/tools/memory_observer.py "$@"

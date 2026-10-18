@@ -1,0 +1,32 @@
+{
+  "status": "failed",
+  "pid": 3632115,
+  "started_at": 1792128559.0616987,
+  "phases": {
+    "formal": {
+      "command": [
+        "/data2/yb/conda_envs/cmerc-xp-repro/bin/python",
+        "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/code/scripts/multiseed_scheduler.py",
+        "--config",
+        "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/configs/xp_mainline_validation.json",
+        "--run-root",
+        "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs",
+        "--log-root",
+        "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/logs",
+        "--result-root",
+        "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/results",
+        "--state",
+        "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/state/queue.json"
+      ],
+      "started_at": 1792128559.0618258,
+      "status": "failed",
+      "pid": 3632120,
+      "log": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/logs/formal_supervisor.log",
+      "exit_code": 130,
+      "finished_at": 1792139248.5049067
+    }
+  },
+  "phase": "formal",
+  "error": "RuntimeError('formal failed exit130; see /data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/logs/formal_supervisor.log')",
+  "finished_at": 1792139248.5055482
+}

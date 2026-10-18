@@ -1,0 +1,1061 @@
+{
+  "batch": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z",
+  "counts": {
+    "archived_invalid_partial_training_starts": 1,
+    "independent_evaluation_starts": 20,
+    "memory_profile_files": 40,
+    "original_iemocap2024_blocked_evaluation_starts": 0,
+    "registered_valid_runs": 20,
+    "total_formal_training_starts": 21,
+    "valid_epoch_records": 1200,
+    "valid_training_starts": 20
+  },
+  "duration_limitations": [
+    "Epoch elapsed_seconds is the rounded training JSONL timing, including loader/train/validation work inside its timer; checkpoint saving and final standalone evaluation are outside that epoch timer.",
+    "Phase wall times include process initialization, IO, and scheduler poll-tail delay; summed concurrent process wall times are not batch wall time or GPU-kernel hours.",
+    "Allocated/reserved peaks are process allocator measurements; whole-card used/free includes contexts and other allocations and is a separate discrete observation."
+  ],
+  "formal_batch_wall": {
+    "end_basis": "continuation pipeline formal phase finished_at",
+    "end_utc": "2026-10-16T10:30:45.569280+00:00",
+    "includes": "initialization, IO, queue/resource waits, drain/recovery and controller polling; excludes preflight and final acceptance/export",
+    "start_basis": "original pipeline started_at (after preflight)",
+    "start_utc": "2026-10-16T05:29:19.061699+00:00",
+    "total_seconds": 18086.507581472397
+  },
+  "groups": [
+    {
+      "dataset": "IEMOCAP",
+      "epoch_time": {
+        "count": 400,
+        "maximum_seconds": 8.37,
+        "mean_seconds": 6.957325,
+        "minimum_seconds": 6.4,
+        "total_seconds": 2782.93
+      },
+      "phases": {
+        "evaluation": {
+          "peak_allocated_mib": 2135.18359375,
+          "peak_reserved_mib": 2452.0,
+          "process_wall_time": {
+            "count": 5,
+            "maximum_seconds": 30.56227684020996,
+            "mean_seconds": 18.33940577507019,
+            "minimum_seconds": 15.105397939682007,
+            "total_seconds": 91.69702887535095
+          }
+        },
+        "training": {
+          "peak_allocated_mib": 8148.0859375,
+          "peak_reserved_mib": 10440.0,
+          "process_wall_time": {
+            "count": 5,
+            "maximum_seconds": 637.6451780796051,
+            "mean_seconds": 616.9417252063752,
+            "minimum_seconds": 597.5627000331879,
+            "total_seconds": 3084.7086260318756
+          }
+        }
+      },
+      "runs": 5,
+      "variant": "baseline"
+    },
+    {
+      "dataset": "IEMOCAP",
+      "epoch_time": {
+        "count": 400,
+        "maximum_seconds": 46.11,
+        "mean_seconds": 38.879025,
+        "minimum_seconds": 9.42,
+        "total_seconds": 15551.61
+      },
+      "phases": {
+        "evaluation": {
+          "peak_allocated_mib": 2135.18359375,
+          "peak_reserved_mib": 2452.0,
+          "process_wall_time": {
+            "count": 5,
+            "maximum_seconds": 30.621639013290405,
+            "mean_seconds": 24.536027574539183,
+            "minimum_seconds": 15.152209997177124,
+            "total_seconds": 122.68013787269592
+          }
+        },
+        "training": {
+          "peak_allocated_mib": 9105.1875,
+          "peak_reserved_mib": 11210.0,
+          "process_wall_time": {
+            "count": 5,
+            "maximum_seconds": 3292.325343847275,
+            "mean_seconds": 3180.758976459503,
+            "minimum_seconds": 3029.6319971084595,
+            "total_seconds": 15903.794882297516
+          }
+        }
+      },
+      "runs": 5,
+      "variant": "cmerc"
+    },
+    {
+      "dataset": "MELD",
+      "epoch_time": {
+        "count": 200,
+        "maximum_seconds": 9.02,
+        "mean_seconds": 6.29255,
+        "minimum_seconds": 5.8,
+        "total_seconds": 1258.51
+      },
+      "phases": {
+        "evaluation": {
+          "peak_allocated_mib": 467.42578125,
+          "peak_reserved_mib": 612.0,
+          "process_wall_time": {
+            "count": 5,
+            "maximum_seconds": 31.640307188034058,
+            "mean_seconds": 18.623730659484863,
+            "minimum_seconds": 15.26540493965149,
+            "total_seconds": 93.11865329742432
+          }
+        },
+        "training": {
+          "peak_allocated_mib": 854.17578125,
+          "peak_reserved_mib": 1862.0,
+          "process_wall_time": {
+            "count": 5,
+            "maximum_seconds": 335.27096009254456,
+            "mean_seconds": 318.99662799835204,
+            "minimum_seconds": 304.77567291259766,
+            "total_seconds": 1594.9831399917603
+          }
+        }
+      },
+      "runs": 5,
+      "variant": "baseline"
+    },
+    {
+      "dataset": "MELD",
+      "epoch_time": {
+        "count": 200,
+        "maximum_seconds": 41.43,
+        "mean_seconds": 35.30075,
+        "minimum_seconds": 17.91,
+        "total_seconds": 7060.15
+      },
+      "phases": {
+        "evaluation": {
+          "peak_allocated_mib": 467.42578125,
+          "peak_reserved_mib": 612.0,
+          "process_wall_time": {
+            "count": 5,
+            "maximum_seconds": 15.386502027511597,
+            "mean_seconds": 15.263668107986451,
+            "minimum_seconds": 15.118197917938232,
+            "total_seconds": 76.31834053993225
+          }
+        },
+        "training": {
+          "peak_allocated_mib": 952.0302734375,
+          "peak_reserved_mib": 1738.0,
+          "process_wall_time": {
+            "count": 5,
+            "maximum_seconds": 1538.771250963211,
+            "mean_seconds": 1488.867768573761,
+            "minimum_seconds": 1429.0160520076752,
+            "total_seconds": 7444.338842868805
+          }
+        }
+      },
+      "runs": 5,
+      "variant": "cmerc"
+    }
+  ],
+  "observer": {
+    "actual_sample_gap_seconds": {
+      "count": 1238,
+      "maximum_seconds": 6.114134073257446,
+      "mean_seconds": 5.096843248807941,
+      "minimum_seconds": 5.051678895950317,
+      "total_seconds": 6309.891942024231
+    },
+    "coverage_end_utc": "2026-10-16T10:31:56.567573+00:00",
+    "coverage_start_utc": "2026-10-16T08:46:46.675631+00:00",
+    "coverage_window_seconds": 6309.891942024231,
+    "errors": [],
+    "exclusivity_limitation": "No unexpected PID in sampled records does not prove exclusive CUDA contexts for the entire run; processes can start/end between samples or outside this coverage.",
+    "formal_wall_window_overlap_fraction": 0.34494739357488263,
+    "formal_wall_window_overlap_seconds": 6238.893649101257,
+    "gpu_csv_parse_error_count": 0,
+    "interval_seconds_requested": 5,
+    "maximum_sampled_utilization_percent": 81.0,
+    "observer_ended_at_utc": "2026-10-16T10:31:56.624513+00:00",
+    "recorded_samples": 1239,
+    "sampling_error_count": 0,
+    "scope": "XP3 only, observer-start onward; discrete samples over a partial batch interval",
+    "status": "completed",
+    "unexpected_pid_details": [],
+    "unexpected_pid_samples": 0,
+    "usable_gpu_samples": 1239,
+    "whole_card_maximum_free_mib": 12179.0,
+    "whole_card_minimum_free_mib": 1225.0,
+    "whole_card_peak_used_mib": 10959.0
+  },
+  "purpose": "Terminal resource accounting only; this does not rerun or replace scientific acceptance",
+  "recovery_accounting": {
+    "iemocap2024_recovery": "Existing valid 80-epoch training retained; its fixed validation-selected best was independently evaluated once on exclusive XP3.",
+    "invalid_partial_excluded_from_valid_epoch_and_phase_totals": true,
+    "invalid_partial_exit_code": -15,
+    "invalid_partial_process_wall_seconds": 121.92794299125671,
+    "invalid_partial_task": "MELD_cmerc_validation_seed3407",
+    "invalid_partial_training_ended_at": "2026-10-16T07:46:00.415635+00:00",
+    "invalid_partial_training_started_at": "2026-10-16T07:43:58.487692+00:00",
+    "old_pipeline_formal_exit_code": 130,
+    "old_pipeline_status": "failed",
+    "retry_basis": "Partial checkpoint exists but attempt ran concurrently with a foreign GPU1 task, violating registered exclusivity; it is not an eligible continuation. Preserve it and restart identical seed/config from scratch on exclusive XP3.",
+    "score_used_to_decide_retry": false
+  },
+  "runs": [
+    {
+      "dataset": "IEMOCAP",
+      "epoch_time": {
+        "count": 80,
+        "maximum_seconds": 8.26,
+        "mean_seconds": 7.19125,
+        "minimum_seconds": 6.59,
+        "total_seconds": 575.3
+      },
+      "id": "IEMOCAP_baseline_validation_seed1475",
+      "phases": {
+        "evaluation": {
+          "ended_at_utc": "2026-10-16T05:40:17.607679+00:00",
+          "gpu_uuid": "GPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456",
+          "memory_profile": "logs/baseline/IEMOCAP/validation/seed1475.evaluation.log.memory.jsonl",
+          "peak_allocated_mib": 2135.18359375,
+          "peak_reserved_mib": 2452.0,
+          "pid": 3642719,
+          "samples": 1,
+          "started_at_utc": "2026-10-16T05:40:02.502281+00:00",
+          "wall_seconds": 15.105397939682007
+        },
+        "training": {
+          "ended_at_utc": "2026-10-16T05:40:00.246113+00:00",
+          "gpu_uuid": "GPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456",
+          "memory_profile": "logs/baseline/IEMOCAP/validation/seed1475.train.log.memory.jsonl",
+          "peak_allocated_mib": 8142.06591796875,
+          "peak_reserved_mib": 10410.0,
+          "pid": 3632193,
+          "samples": 81,
+          "started_at_utc": "2026-10-16T05:29:22.600935+00:00",
+          "wall_seconds": 637.6451780796051
+        }
+      },
+      "seed": 1475,
+      "variant": "baseline"
+    },
+    {
+      "dataset": "IEMOCAP",
+      "epoch_time": {
+        "count": 80,
+        "maximum_seconds": 43.67,
+        "mean_seconds": 40.086875,
+        "minimum_seconds": 10.22,
+        "total_seconds": 3206.95
+      },
+      "id": "IEMOCAP_cmerc_validation_seed1475",
+      "phases": {
+        "evaluation": {
+          "ended_at_utc": "2026-10-16T06:28:11.665596+00:00",
+          "gpu_uuid": "GPU-eed2f34f-b4c0-7b7a-498e-71a026e30c5a",
+          "memory_profile": "logs/cmerc/IEMOCAP/validation/seed1475.evaluation.log.memory.jsonl",
+          "peak_allocated_mib": 2135.18359375,
+          "peak_reserved_mib": 2452.0,
+          "pid": 3689619,
+          "samples": 1,
+          "started_at_utc": "2026-10-16T06:27:55.775695+00:00",
+          "wall_seconds": 15.889900922775269
+        },
+        "training": {
+          "ended_at_utc": "2026-10-16T06:27:53.683356+00:00",
+          "gpu_uuid": "GPU-eed2f34f-b4c0-7b7a-498e-71a026e30c5a",
+          "memory_profile": "logs/cmerc/IEMOCAP/validation/seed1475.train.log.memory.jsonl",
+          "peak_allocated_mib": 9103.54443359375,
+          "peak_reserved_mib": 10486.0,
+          "pid": 3635853,
+          "samples": 81,
+          "started_at_utc": "2026-10-16T05:33:14.001184+00:00",
+          "wall_seconds": 3279.682172060013
+        }
+      },
+      "seed": 1475,
+      "variant": "cmerc"
+    },
+    {
+      "dataset": "MELD",
+      "epoch_time": {
+        "count": 40,
+        "maximum_seconds": 9.02,
+        "mean_seconds": 6.3145,
+        "minimum_seconds": 5.8,
+        "total_seconds": 252.58
+      },
+      "id": "MELD_baseline_validation_seed67137",
+      "phases": {
+        "evaluation": {
+          "ended_at_utc": "2026-10-16T05:39:12.679958+00:00",
+          "gpu_uuid": "GPU-7ff18ebb-100e-98fe-038b-a98bd4f94248",
+          "memory_profile": "logs/baseline/MELD/validation/seed67137.evaluation.log.memory.jsonl",
+          "peak_allocated_mib": 467.42578125,
+          "peak_reserved_mib": 612.0,
+          "pid": 3641686,
+          "samples": 1,
+          "started_at_utc": "2026-10-16T05:38:57.141695+00:00",
+          "wall_seconds": 15.538263082504272
+        },
+        "training": {
+          "ended_at_utc": "2026-10-16T05:38:52.647380+00:00",
+          "gpu_uuid": "GPU-7ff18ebb-100e-98fe-038b-a98bd4f94248",
+          "memory_profile": "logs/baseline/MELD/validation/seed67137.train.log.memory.jsonl",
+          "peak_allocated_mib": 849.56396484375,
+          "peak_reserved_mib": 1768.0,
+          "pid": 3636188,
+          "samples": 41,
+          "started_at_utc": "2026-10-16T05:33:32.585071+00:00",
+          "wall_seconds": 320.06230902671814
+        }
+      },
+      "seed": 67137,
+      "variant": "baseline"
+    },
+    {
+      "dataset": "MELD",
+      "epoch_time": {
+        "count": 40,
+        "maximum_seconds": 37.12,
+        "mean_seconds": 34.092999999999996,
+        "minimum_seconds": 17.91,
+        "total_seconds": 1363.72
+      },
+      "id": "MELD_cmerc_validation_seed67137",
+      "phases": {
+        "evaluation": {
+          "ended_at_utc": "2026-10-16T06:03:21.692726+00:00",
+          "gpu_uuid": "GPU-7ff18ebb-100e-98fe-038b-a98bd4f94248",
+          "memory_profile": "logs/cmerc/MELD/validation/seed67137.evaluation.log.memory.jsonl",
+          "peak_allocated_mib": 467.42578125,
+          "peak_reserved_mib": 612.0,
+          "pid": 3664366,
+          "samples": 1,
+          "started_at_utc": "2026-10-16T06:03:06.453460+00:00",
+          "wall_seconds": 15.23926591873169
+        },
+        "training": {
+          "ended_at_utc": "2026-10-16T06:03:04.176598+00:00",
+          "gpu_uuid": "GPU-7ff18ebb-100e-98fe-038b-a98bd4f94248",
+          "memory_profile": "logs/cmerc/MELD/validation/seed67137.train.log.memory.jsonl",
+          "peak_allocated_mib": 948.9462890625,
+          "peak_reserved_mib": 1738.0,
+          "pid": 3641974,
+          "samples": 41,
+          "started_at_utc": "2026-10-16T05:39:15.160546+00:00",
+          "wall_seconds": 1429.0160520076752
+        }
+      },
+      "seed": 67137,
+      "variant": "cmerc"
+    },
+    {
+      "dataset": "MELD",
+      "epoch_time": {
+        "count": 40,
+        "maximum_seconds": 8.86,
+        "mean_seconds": 6.20175,
+        "minimum_seconds": 5.8,
+        "total_seconds": 248.07
+      },
+      "id": "MELD_baseline_validation_seed1475",
+      "phases": {
+        "evaluation": {
+          "ended_at_utc": "2026-10-16T06:33:46.496474+00:00",
+          "gpu_uuid": "GPU-eed2f34f-b4c0-7b7a-498e-71a026e30c5a",
+          "memory_profile": "logs/baseline/MELD/validation/seed1475.evaluation.log.memory.jsonl",
+          "peak_allocated_mib": 467.42578125,
+          "peak_reserved_mib": 612.0,
+          "pid": 3695162,
+          "samples": 1,
+          "started_at_utc": "2026-10-16T06:33:31.146506+00:00",
+          "wall_seconds": 15.349967956542969
+        },
+        "training": {
+          "ended_at_utc": "2026-10-16T06:33:28.740917+00:00",
+          "gpu_uuid": "GPU-eed2f34f-b4c0-7b7a-498e-71a026e30c5a",
+          "memory_profile": "logs/baseline/MELD/validation/seed1475.train.log.memory.jsonl",
+          "peak_allocated_mib": 848.369140625,
+          "peak_reserved_mib": 1580.0,
+          "pid": 3689972,
+          "samples": 41,
+          "started_at_utc": "2026-10-16T06:28:17.813388+00:00",
+          "wall_seconds": 310.9275288581848
+        }
+      },
+      "seed": 1475,
+      "variant": "baseline"
+    },
+    {
+      "dataset": "MELD",
+      "epoch_time": {
+        "count": 40,
+        "maximum_seconds": 39.43,
+        "mean_seconds": 36.4565,
+        "minimum_seconds": 18.85,
+        "total_seconds": 1458.26
+      },
+      "id": "MELD_cmerc_validation_seed1475",
+      "phases": {
+        "evaluation": {
+          "ended_at_utc": "2026-10-16T06:54:05.022714+00:00",
+          "gpu_uuid": "GPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456",
+          "memory_profile": "logs/cmerc/MELD/validation/seed1475.evaluation.log.memory.jsonl",
+          "peak_allocated_mib": 467.42578125,
+          "peak_reserved_mib": 612.0,
+          "pid": 3715128,
+          "samples": 1,
+          "started_at_utc": "2026-10-16T06:53:49.720873+00:00",
+          "wall_seconds": 15.301840782165527
+        },
+        "training": {
+          "ended_at_utc": "2026-10-16T06:53:47.519586+00:00",
+          "gpu_uuid": "GPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456",
+          "memory_profile": "logs/cmerc/MELD/validation/seed1475.train.log.memory.jsonl",
+          "peak_allocated_mib": 947.6318359375,
+          "peak_reserved_mib": 1736.0,
+          "pid": 3690041,
+          "samples": 41,
+          "started_at_utc": "2026-10-16T06:28:19.975830+00:00",
+          "wall_seconds": 1527.5437560081482
+        }
+      },
+      "seed": 1475,
+      "variant": "cmerc"
+    },
+    {
+      "dataset": "IEMOCAP",
+      "epoch_time": {
+        "count": 80,
+        "maximum_seconds": 7.68,
+        "mean_seconds": 7.07525,
+        "minimum_seconds": 6.58,
+        "total_seconds": 566.02
+      },
+      "id": "IEMOCAP_baseline_validation_seed67137",
+      "phases": {
+        "evaluation": {
+          "ended_at_utc": "2026-10-16T06:39:42.012402+00:00",
+          "gpu_uuid": "GPU-7ff18ebb-100e-98fe-038b-a98bd4f94248",
+          "memory_profile": "logs/baseline/IEMOCAP/validation/seed67137.evaluation.log.memory.jsonl",
+          "peak_allocated_mib": 2135.18359375,
+          "peak_reserved_mib": 2452.0,
+          "pid": 3701113,
+          "samples": 1,
+          "started_at_utc": "2026-10-16T06:39:26.765936+00:00",
+          "wall_seconds": 15.246466159820557
+        },
+        "training": {
+          "ended_at_utc": "2026-10-16T06:39:24.665026+00:00",
+          "gpu_uuid": "GPU-7ff18ebb-100e-98fe-038b-a98bd4f94248",
+          "memory_profile": "logs/baseline/IEMOCAP/validation/seed67137.train.log.memory.jsonl",
+          "peak_allocated_mib": 8148.0859375,
+          "peak_reserved_mib": 10368.0,
+          "pid": 3690580,
+          "samples": 81,
+          "started_at_utc": "2026-10-16T06:28:54.351921+00:00",
+          "wall_seconds": 630.3131048679352
+        }
+      },
+      "seed": 67137,
+      "variant": "baseline"
+    },
+    {
+      "dataset": "IEMOCAP",
+      "epoch_time": {
+        "count": 80,
+        "maximum_seconds": 41.24,
+        "mean_seconds": 38.369875,
+        "minimum_seconds": 10.22,
+        "total_seconds": 3069.59
+      },
+      "id": "IEMOCAP_cmerc_validation_seed67137",
+      "phases": {
+        "evaluation": {
+          "ended_at_utc": "2026-10-16T07:26:35.356019+00:00",
+          "gpu_uuid": "GPU-eed2f34f-b4c0-7b7a-498e-71a026e30c5a",
+          "memory_profile": "logs/cmerc/IEMOCAP/validation/seed67137.evaluation.log.memory.jsonl",
+          "peak_allocated_mib": 2135.18359375,
+          "peak_reserved_mib": 2452.0,
+          "pid": 3746804,
+          "samples": 1,
+          "started_at_utc": "2026-10-16T07:26:04.856047+00:00",
+          "wall_seconds": 30.499972105026245
+        },
+        "training": {
+          "ended_at_utc": "2026-10-16T07:26:02.151123+00:00",
+          "gpu_uuid": "GPU-eed2f34f-b4c0-7b7a-498e-71a026e30c5a",
+          "memory_profile": "logs/cmerc/IEMOCAP/validation/seed67137.train.log.memory.jsonl",
+          "peak_allocated_mib": 9103.28125,
+          "peak_reserved_mib": 11210.0,
+          "pid": 3695486,
+          "samples": 81,
+          "started_at_utc": "2026-10-16T06:33:49.338198+00:00",
+          "wall_seconds": 3132.8129251003265
+        }
+      },
+      "seed": 67137,
+      "variant": "cmerc"
+    },
+    {
+      "dataset": "IEMOCAP",
+      "epoch_time": {
+        "count": 80,
+        "maximum_seconds": 7.66,
+        "mean_seconds": 6.92425,
+        "minimum_seconds": 6.55,
+        "total_seconds": 553.94
+      },
+      "id": "IEMOCAP_baseline_validation_seed2024",
+      "phases": {
+        "evaluation": {
+          "ended_at_utc": "2026-10-16T06:50:11.590534+00:00",
+          "gpu_uuid": "GPU-7ff18ebb-100e-98fe-038b-a98bd4f94248",
+          "memory_profile": "logs/baseline/IEMOCAP/validation/seed2024.evaluation.log.memory.jsonl",
+          "peak_allocated_mib": 2135.18359375,
+          "peak_reserved_mib": 2452.0,
+          "pid": 3711358,
+          "samples": 1,
+          "started_at_utc": "2026-10-16T06:49:56.290255+00:00",
+          "wall_seconds": 15.300278902053833
+        },
+        "training": {
+          "ended_at_utc": "2026-10-16T06:49:54.156972+00:00",
+          "gpu_uuid": "GPU-7ff18ebb-100e-98fe-038b-a98bd4f94248",
+          "memory_profile": "logs/baseline/IEMOCAP/validation/seed2024.train.log.memory.jsonl",
+          "peak_allocated_mib": 8141.90673828125,
+          "peak_reserved_mib": 10428.0,
+          "pid": 3701445,
+          "samples": 81,
+          "started_at_utc": "2026-10-16T06:39:44.607909+00:00",
+          "wall_seconds": 609.5490629673004
+        }
+      },
+      "seed": 2024,
+      "variant": "baseline"
+    },
+    {
+      "dataset": "IEMOCAP",
+      "epoch_time": {
+        "count": 80,
+        "maximum_seconds": 43.06,
+        "mean_seconds": 38.689,
+        "minimum_seconds": 9.55,
+        "total_seconds": 3095.12
+      },
+      "id": "IEMOCAP_cmerc_validation_seed2024",
+      "phases": {
+        "evaluation": {
+          "ended_at_utc": "2026-10-16T08:27:49.671070+00:00",
+          "gpu_uuid": "GPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456",
+          "memory_profile": "logs/cmerc/IEMOCAP/validation/seed2024.evaluation.log.memory.jsonl",
+          "peak_allocated_mib": 2135.18359375,
+          "peak_reserved_mib": 2452.0,
+          "pid": 3807686,
+          "samples": 1,
+          "started_at_utc": "2026-10-16T08:27:34.518860+00:00",
+          "wall_seconds": 15.152209997177124
+        },
+        "training": {
+          "ended_at_utc": "2026-10-16T07:43:03.498145+00:00",
+          "gpu_uuid": "GPU-7ff18ebb-100e-98fe-038b-a98bd4f94248",
+          "memory_profile": "logs/cmerc/IEMOCAP/validation/seed2024.train.log.memory.jsonl",
+          "peak_allocated_mib": 9100.609375,
+          "peak_reserved_mib": 10362.0,
+          "pid": 3711685,
+          "samples": 81,
+          "started_at_utc": "2026-10-16T06:50:14.155701+00:00",
+          "wall_seconds": 3169.3424441814423
+        }
+      },
+      "seed": 2024,
+      "variant": "cmerc"
+    },
+    {
+      "dataset": "MELD",
+      "epoch_time": {
+        "count": 40,
+        "maximum_seconds": 6.84,
+        "mean_seconds": 6.27725,
+        "minimum_seconds": 5.9,
+        "total_seconds": 251.09
+      },
+      "id": "MELD_baseline_validation_seed2024",
+      "phases": {
+        "evaluation": {
+          "ended_at_utc": "2026-10-16T06:59:29.750497+00:00",
+          "gpu_uuid": "GPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456",
+          "memory_profile": "logs/baseline/MELD/validation/seed2024.evaluation.log.memory.jsonl",
+          "peak_allocated_mib": 467.42578125,
+          "peak_reserved_mib": 612.0,
+          "pid": 3720411,
+          "samples": 1,
+          "started_at_utc": "2026-10-16T06:59:14.425787+00:00",
+          "wall_seconds": 15.324710130691528
+        },
+        "training": {
+          "ended_at_utc": "2026-10-16T06:59:12.156976+00:00",
+          "gpu_uuid": "GPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456",
+          "memory_profile": "logs/baseline/MELD/validation/seed2024.train.log.memory.jsonl",
+          "peak_allocated_mib": 851.92578125,
+          "peak_reserved_mib": 1862.0,
+          "pid": 3715434,
+          "samples": 41,
+          "started_at_utc": "2026-10-16T06:54:07.381303+00:00",
+          "wall_seconds": 304.77567291259766
+        }
+      },
+      "seed": 2024,
+      "variant": "baseline"
+    },
+    {
+      "dataset": "MELD",
+      "epoch_time": {
+        "count": 40,
+        "maximum_seconds": 39.8,
+        "mean_seconds": 36.73425,
+        "minimum_seconds": 18.25,
+        "total_seconds": 1469.37
+      },
+      "id": "MELD_cmerc_validation_seed2024",
+      "phases": {
+        "evaluation": {
+          "ended_at_utc": "2026-10-16T07:25:28.956549+00:00",
+          "gpu_uuid": "GPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456",
+          "memory_profile": "logs/cmerc/MELD/validation/seed2024.evaluation.log.memory.jsonl",
+          "peak_allocated_mib": 467.42578125,
+          "peak_reserved_mib": 612.0,
+          "pid": 3745982,
+          "samples": 1,
+          "started_at_utc": "2026-10-16T07:25:13.570047+00:00",
+          "wall_seconds": 15.386502027511597
+        },
+        "training": {
+          "ended_at_utc": "2026-10-16T07:25:11.075039+00:00",
+          "gpu_uuid": "GPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456",
+          "memory_profile": "logs/cmerc/MELD/validation/seed2024.train.log.memory.jsonl",
+          "peak_allocated_mib": 949.6611328125,
+          "peak_reserved_mib": 1638.0,
+          "pid": 3720721,
+          "samples": 41,
+          "started_at_utc": "2026-10-16T06:59:32.303788+00:00",
+          "wall_seconds": 1538.771250963211
+        }
+      },
+      "seed": 2024,
+      "variant": "cmerc"
+    },
+    {
+      "dataset": "IEMOCAP",
+      "epoch_time": {
+        "count": 80,
+        "maximum_seconds": 8.37,
+        "mean_seconds": 6.734375,
+        "minimum_seconds": 6.44,
+        "total_seconds": 538.75
+      },
+      "id": "IEMOCAP_baseline_validation_seed3407",
+      "phases": {
+        "evaluation": {
+          "ended_at_utc": "2026-10-16T07:36:07.294577+00:00",
+          "gpu_uuid": "GPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456",
+          "memory_profile": "logs/baseline/IEMOCAP/validation/seed3407.evaluation.log.memory.jsonl",
+          "peak_allocated_mib": 2135.18359375,
+          "peak_reserved_mib": 2452.0,
+          "pid": 3756432,
+          "samples": 1,
+          "started_at_utc": "2026-10-16T07:35:36.732300+00:00",
+          "wall_seconds": 30.56227684020996
+        },
+        "training": {
+          "ended_at_utc": "2026-10-16T07:35:29.169083+00:00",
+          "gpu_uuid": "GPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456",
+          "memory_profile": "logs/baseline/IEMOCAP/validation/seed3407.train.log.memory.jsonl",
+          "peak_allocated_mib": 8139.25927734375,
+          "peak_reserved_mib": 10440.0,
+          "pid": 3746277,
+          "samples": 81,
+          "started_at_utc": "2026-10-16T07:25:31.606383+00:00",
+          "wall_seconds": 597.5627000331879
+        }
+      },
+      "seed": 3407,
+      "variant": "baseline"
+    },
+    {
+      "dataset": "IEMOCAP",
+      "epoch_time": {
+        "count": 80,
+        "maximum_seconds": 40.83,
+        "mean_seconds": 36.88725,
+        "minimum_seconds": 9.42,
+        "total_seconds": 2950.98
+      },
+      "id": "IEMOCAP_cmerc_validation_seed3407",
+      "phases": {
+        "evaluation": {
+          "ended_at_utc": "2026-10-16T08:27:12.283769+00:00",
+          "gpu_uuid": "GPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456",
+          "memory_profile": "logs/cmerc/IEMOCAP/validation/seed3407.evaluation.log.memory.jsonl",
+          "peak_allocated_mib": 2135.18359375,
+          "peak_reserved_mib": 2452.0,
+          "pid": 3806839,
+          "samples": 1,
+          "started_at_utc": "2026-10-16T08:26:41.767353+00:00",
+          "wall_seconds": 30.51641583442688
+        },
+        "training": {
+          "ended_at_utc": "2026-10-16T08:26:39.524701+00:00",
+          "gpu_uuid": "GPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456",
+          "memory_profile": "logs/cmerc/IEMOCAP/validation/seed3407.train.log.memory.jsonl",
+          "peak_allocated_mib": 9105.1875,
+          "peak_reserved_mib": 10716.0,
+          "pid": 3756983,
+          "samples": 81,
+          "started_at_utc": "2026-10-16T07:36:09.892704+00:00",
+          "wall_seconds": 3029.6319971084595
+        }
+      },
+      "seed": 3407,
+      "variant": "cmerc"
+    },
+    {
+      "dataset": "MELD",
+      "epoch_time": {
+        "count": 40,
+        "maximum_seconds": 7.09,
+        "mean_seconds": 6.52725,
+        "minimum_seconds": 6.21,
+        "total_seconds": 261.09
+      },
+      "id": "MELD_baseline_validation_seed3407",
+      "phases": {
+        "evaluation": {
+          "ended_at_utc": "2026-10-16T07:43:56.019460+00:00",
+          "gpu_uuid": "GPU-eed2f34f-b4c0-7b7a-498e-71a026e30c5a",
+          "memory_profile": "logs/baseline/MELD/validation/seed3407.evaluation.log.memory.jsonl",
+          "peak_allocated_mib": 467.42578125,
+          "peak_reserved_mib": 612.0,
+          "pid": 3764388,
+          "samples": 1,
+          "started_at_utc": "2026-10-16T07:43:40.754055+00:00",
+          "wall_seconds": 15.26540493965149
+        },
+        "training": {
+          "ended_at_utc": "2026-10-16T07:43:37.884200+00:00",
+          "gpu_uuid": "GPU-eed2f34f-b4c0-7b7a-498e-71a026e30c5a",
+          "memory_profile": "logs/baseline/MELD/validation/seed3407.train.log.memory.jsonl",
+          "peak_allocated_mib": 846.185546875,
+          "peak_reserved_mib": 1428.0,
+          "pid": 3758953,
+          "samples": 41,
+          "started_at_utc": "2026-10-16T07:38:13.937531+00:00",
+          "wall_seconds": 323.9466691017151
+        }
+      },
+      "seed": 3407,
+      "variant": "baseline"
+    },
+    {
+      "dataset": "MELD",
+      "epoch_time": {
+        "count": 40,
+        "maximum_seconds": 41.43,
+        "mean_seconds": 34.28625,
+        "minimum_seconds": 18.41,
+        "total_seconds": 1371.45
+      },
+      "id": "MELD_cmerc_validation_seed3407",
+      "phases": {
+        "evaluation": {
+          "ended_at_utc": "2026-10-16T08:52:39.753013+00:00",
+          "gpu_uuid": "GPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456",
+          "memory_profile": "logs/cmerc/MELD/validation/seed3407.evaluation.log.memory.jsonl",
+          "peak_allocated_mib": 467.42578125,
+          "peak_reserved_mib": 612.0,
+          "pid": 3832665,
+          "samples": 1,
+          "started_at_utc": "2026-10-16T08:52:24.480479+00:00",
+          "wall_seconds": 15.272533893585205
+        },
+        "training": {
+          "ended_at_utc": "2026-10-16T08:52:21.146576+00:00",
+          "gpu_uuid": "GPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456",
+          "memory_profile": "logs/cmerc/MELD/validation/seed3407.train.log.memory.jsonl",
+          "peak_allocated_mib": 950.1474609375,
+          "peak_reserved_mib": 1708.0,
+          "pid": 3808068,
+          "samples": 41,
+          "started_at_utc": "2026-10-16T08:27:58.618427+00:00",
+          "wall_seconds": 1462.5281488895416
+        }
+      },
+      "seed": 3407,
+      "variant": "cmerc"
+    },
+    {
+      "dataset": "IEMOCAP",
+      "epoch_time": {
+        "count": 80,
+        "maximum_seconds": 7.41,
+        "mean_seconds": 6.8615,
+        "minimum_seconds": 6.4,
+        "total_seconds": 548.92
+      },
+      "id": "IEMOCAP_baseline_validation_seed42",
+      "phases": {
+        "evaluation": {
+          "ended_at_utc": "2026-10-16T09:03:10.296988+00:00",
+          "gpu_uuid": "GPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456",
+          "memory_profile": "logs/baseline/IEMOCAP/validation/seed42.evaluation.log.memory.jsonl",
+          "peak_allocated_mib": 2135.18359375,
+          "peak_reserved_mib": 2452.0,
+          "pid": 3843795,
+          "samples": 1,
+          "started_at_utc": "2026-10-16T09:02:54.814379+00:00",
+          "wall_seconds": 15.482609033584595
+        },
+        "training": {
+          "ended_at_utc": "2026-10-16T09:02:51.873219+00:00",
+          "gpu_uuid": "GPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456",
+          "memory_profile": "logs/baseline/IEMOCAP/validation/seed42.train.log.memory.jsonl",
+          "peak_allocated_mib": 8143.11279296875,
+          "peak_reserved_mib": 10326.0,
+          "pid": 3832965,
+          "samples": 81,
+          "started_at_utc": "2026-10-16T08:52:42.234639+00:00",
+          "wall_seconds": 609.638580083847
+        }
+      },
+      "seed": 42,
+      "variant": "baseline"
+    },
+    {
+      "dataset": "IEMOCAP",
+      "epoch_time": {
+        "count": 80,
+        "maximum_seconds": 46.11,
+        "mean_seconds": 40.362125,
+        "minimum_seconds": 10.07,
+        "total_seconds": 3228.97
+      },
+      "id": "IEMOCAP_cmerc_validation_seed42",
+      "phases": {
+        "evaluation": {
+          "ended_at_utc": "2026-10-16T09:58:42.618197+00:00",
+          "gpu_uuid": "GPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456",
+          "memory_profile": "logs/cmerc/IEMOCAP/validation/seed42.evaluation.log.memory.jsonl",
+          "peak_allocated_mib": 2135.18359375,
+          "peak_reserved_mib": 2452.0,
+          "pid": 3902034,
+          "samples": 1,
+          "started_at_utc": "2026-10-16T09:58:11.996558+00:00",
+          "wall_seconds": 30.621639013290405
+        },
+        "training": {
+          "ended_at_utc": "2026-10-16T09:58:05.997877+00:00",
+          "gpu_uuid": "GPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456",
+          "memory_profile": "logs/cmerc/IEMOCAP/validation/seed42.train.log.memory.jsonl",
+          "peak_allocated_mib": 9104.67724609375,
+          "peak_reserved_mib": 10624.0,
+          "pid": 3844124,
+          "samples": 81,
+          "started_at_utc": "2026-10-16T09:03:13.672533+00:00",
+          "wall_seconds": 3292.325343847275
+        }
+      },
+      "seed": 42,
+      "variant": "cmerc"
+    },
+    {
+      "dataset": "MELD",
+      "epoch_time": {
+        "count": 40,
+        "maximum_seconds": 6.67,
+        "mean_seconds": 6.142,
+        "minimum_seconds": 5.87,
+        "total_seconds": 245.68
+      },
+      "id": "MELD_baseline_validation_seed42",
+      "phases": {
+        "evaluation": {
+          "ended_at_utc": "2026-10-16T10:04:55.360685+00:00",
+          "gpu_uuid": "GPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456",
+          "memory_profile": "logs/baseline/MELD/validation/seed42.evaluation.log.memory.jsonl",
+          "peak_allocated_mib": 467.42578125,
+          "peak_reserved_mib": 612.0,
+          "pid": 3908445,
+          "samples": 1,
+          "started_at_utc": "2026-10-16T10:04:23.720378+00:00",
+          "wall_seconds": 31.640307188034058
+        },
+        "training": {
+          "ended_at_utc": "2026-10-16T10:04:21.279798+00:00",
+          "gpu_uuid": "GPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456",
+          "memory_profile": "logs/baseline/MELD/validation/seed42.train.log.memory.jsonl",
+          "peak_allocated_mib": 854.17578125,
+          "peak_reserved_mib": 1514.0,
+          "pid": 3902601,
+          "samples": 41,
+          "started_at_utc": "2026-10-16T09:58:46.008838+00:00",
+          "wall_seconds": 335.27096009254456
+        }
+      },
+      "seed": 42,
+      "variant": "baseline"
+    },
+    {
+      "dataset": "MELD",
+      "epoch_time": {
+        "count": 40,
+        "maximum_seconds": 38.32,
+        "mean_seconds": 34.933749999999996,
+        "minimum_seconds": 19.26,
+        "total_seconds": 1397.35
+      },
+      "id": "MELD_cmerc_validation_seed42",
+      "phases": {
+        "evaluation": {
+          "ended_at_utc": "2026-10-16T10:30:08.473366+00:00",
+          "gpu_uuid": "GPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456",
+          "memory_profile": "logs/cmerc/MELD/validation/seed42.evaluation.log.memory.jsonl",
+          "peak_allocated_mib": 467.42578125,
+          "peak_reserved_mib": 612.0,
+          "pid": 3933940,
+          "samples": 1,
+          "started_at_utc": "2026-10-16T10:29:53.355168+00:00",
+          "wall_seconds": 15.118197917938232
+        },
+        "training": {
+          "ended_at_utc": "2026-10-16T10:29:45.409136+00:00",
+          "gpu_uuid": "GPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456",
+          "memory_profile": "logs/cmerc/MELD/validation/seed42.train.log.memory.jsonl",
+          "peak_allocated_mib": 952.0302734375,
+          "peak_reserved_mib": 1634.0,
+          "pid": 3909057,
+          "samples": 41,
+          "started_at_utc": "2026-10-16T10:04:58.929501+00:00",
+          "wall_seconds": 1486.4796350002289
+        }
+      },
+      "seed": 42,
+      "variant": "cmerc"
+    }
+  ],
+  "schema_version": 1,
+  "scientific_source_snapshot_sha256_unchanged": "fafddfee606270f5626a01e3611ecebcdc8ce2af72536ada3508fe31316481a9",
+  "source_files_sha256": {
+    "attempts/MELD_cmerc_validation_seed3407/2026-10-16T082751.934532_0000/failed_task.json": "c6f020e5723915bd7a62279cff8c5e80bb99e0740166c6d134e1732548068bf0",
+    "attempts/MELD_cmerc_validation_seed3407/2026-10-16T082751.934532_0000/retry_assessment.json": "d34f396734b20a1256d82a4350d6de19fd382bbdc2da64130f48c2e4f6de6403",
+    "logs/baseline/IEMOCAP/validation/seed1475.evaluation.log.memory.jsonl": "c41e89d7352102f203fe705775a2ac860a11108b76da4784439c923d809ee7da",
+    "logs/baseline/IEMOCAP/validation/seed1475.train.log.memory.jsonl": "32b31bb99e7a2fce337fe2be7b590210c8291de292e5da024e4206088dc2d77c",
+    "logs/baseline/IEMOCAP/validation/seed2024.evaluation.log.memory.jsonl": "66faf212c1de7483a73c21cdca7427a79ec496a8a07cb4216b571a06de9c581d",
+    "logs/baseline/IEMOCAP/validation/seed2024.train.log.memory.jsonl": "75bcddb9d9202f9f8992c0863b61bbcc4dce0d1fd4ce5b219b6c0dddf74e1021",
+    "logs/baseline/IEMOCAP/validation/seed3407.evaluation.log.memory.jsonl": "fcaebd0b1c8eb28cd268f1b979f06e967d9964fcd7ab6a2570a0af58c6a47226",
+    "logs/baseline/IEMOCAP/validation/seed3407.train.log.memory.jsonl": "75f4b5c5e008bc1aed40ca454c56dd569cd4f7a98f00e1a7aea6f05aa34845e6",
+    "logs/baseline/IEMOCAP/validation/seed42.evaluation.log.memory.jsonl": "8dfe7f870fba2c74896e2a9be76dbbf30d1a26f6e133b28e8e61403e7aac1dce",
+    "logs/baseline/IEMOCAP/validation/seed42.train.log.memory.jsonl": "85c35f698a6e65c769d6244debf7696e52c7202554de92872960d07b90b4f76e",
+    "logs/baseline/IEMOCAP/validation/seed67137.evaluation.log.memory.jsonl": "97d12ded855bcac71688c5f603cad1750b148506479245d8c4f8cfdd885f63b5",
+    "logs/baseline/IEMOCAP/validation/seed67137.train.log.memory.jsonl": "814fda37e43a817bd51e9e74e5bdc5e933881a193788f3b31431354602cc2952",
+    "logs/baseline/MELD/validation/seed1475.evaluation.log.memory.jsonl": "e9c5f3d5c3a2668327a5c8ae7245bc58e232d200979e903cc66c20bc720e789a",
+    "logs/baseline/MELD/validation/seed1475.train.log.memory.jsonl": "dd018ee6c6b425cb1ebaf038ce540cb1a4793d594cb16b8646d1bc775f984c2e",
+    "logs/baseline/MELD/validation/seed2024.evaluation.log.memory.jsonl": "02b9712f2377eb5fa0760647127f029f14ea027a6347fd3d858f95b516d8b0a0",
+    "logs/baseline/MELD/validation/seed2024.train.log.memory.jsonl": "5680b7de1d172fb231978799f46453aeb882aed75db909a8efcf01fa7fec359e",
+    "logs/baseline/MELD/validation/seed3407.evaluation.log.memory.jsonl": "ad6c839430b6640ac1ba20d39d31e5da4e74a7fdbc16aa9cf75e37a258aa4f7c",
+    "logs/baseline/MELD/validation/seed3407.train.log.memory.jsonl": "c4b7062aa46cfbc5eb846e8a01d8ff3f2bf54653f1ad1bdeea3590c07001df8f",
+    "logs/baseline/MELD/validation/seed42.evaluation.log.memory.jsonl": "9b029d3530c6ac0b92df6f9217355ff6e540384a1f1583d76af5c2b67eeb2d4e",
+    "logs/baseline/MELD/validation/seed42.train.log.memory.jsonl": "2c4ab90b071b96543d882bbab05f44ad52b1851dbc5bd819d396a6fe35b0ef1a",
+    "logs/baseline/MELD/validation/seed67137.evaluation.log.memory.jsonl": "d3d583f8394e3cb633935b115f5057c2b5fcfa7790deb5df2211dcee7ce423f3",
+    "logs/baseline/MELD/validation/seed67137.train.log.memory.jsonl": "5f7343a22d3b8b1cbb4455477d0282be2a467b6170dd176ddfdea0deb115d9cd",
+    "logs/cmerc/IEMOCAP/validation/seed1475.evaluation.log.memory.jsonl": "3669934ca9ac18e884301cce2e8b816124112a7f9c471a270a3624b08849e87b",
+    "logs/cmerc/IEMOCAP/validation/seed1475.train.log.memory.jsonl": "cf2546a0d2ff1212d912db6562c7d0b8db543a7e6228b9a390021463cccf14e0",
+    "logs/cmerc/IEMOCAP/validation/seed2024.evaluation.log.memory.jsonl": "a4a1baf88d1eb4d4abf12f4ae32b341c490b437ab8971308dd62ffe4ea8a0ee5",
+    "logs/cmerc/IEMOCAP/validation/seed2024.train.log.memory.jsonl": "7eb13e8414bd6151fd5666d502dc782b103494e3c2b49a033b7149799b8d173e",
+    "logs/cmerc/IEMOCAP/validation/seed3407.evaluation.log.memory.jsonl": "629d188866ac867d55a9611098f39447d39888d3147d55fbdf46ecc5508622a9",
+    "logs/cmerc/IEMOCAP/validation/seed3407.train.log.memory.jsonl": "bdaf1ab3226e9928f0e2fb768031765d8990acf72d306c116eb6d3760ad34133",
+    "logs/cmerc/IEMOCAP/validation/seed42.evaluation.log.memory.jsonl": "d831e8d0a501fc1b58de69f4c5a108d38dbace651ae7843bde6e80623d5832bd",
+    "logs/cmerc/IEMOCAP/validation/seed42.train.log.memory.jsonl": "3478b920148a9e290df8e5119f11776f9f1f99c44fc0c11abcbc257f717e6a24",
+    "logs/cmerc/IEMOCAP/validation/seed67137.evaluation.log.memory.jsonl": "6e2b2c3443cc1afd37c15c53e216197d6f191bda9da1c1649cb79df7b2fc4364",
+    "logs/cmerc/IEMOCAP/validation/seed67137.train.log.memory.jsonl": "bd7c2c1c9e114681876a1016a3c774adb0324e388bd0646ded8f6faca83feb0f",
+    "logs/cmerc/MELD/validation/seed1475.evaluation.log.memory.jsonl": "a59c1e95b77f72a5f035452719e31ee43afcc7993045f40cf1323024ef604d0e",
+    "logs/cmerc/MELD/validation/seed1475.train.log.memory.jsonl": "cba5a6766d26c0a38f6595c097402405ebc00ee0945b608c5e0289f310fbc808",
+    "logs/cmerc/MELD/validation/seed2024.evaluation.log.memory.jsonl": "1dbdbe4ffef83ec2ad711163868eee473e12fb6242533107f155745a3c7bd897",
+    "logs/cmerc/MELD/validation/seed2024.train.log.memory.jsonl": "82836e240a27a91ab3b5b71b6fb386df5d6724acd22737ebe019100e862641f6",
+    "logs/cmerc/MELD/validation/seed3407.evaluation.log.memory.jsonl": "375be37744cab91da0cfb2a3a2b35da8df45ffecee3625340eca10f4e8cfb95d",
+    "logs/cmerc/MELD/validation/seed3407.train.log.memory.jsonl": "7d6961b3829d937e336a74d593a766ae00e3d796cfa12b0da6af8765bb20550d",
+    "logs/cmerc/MELD/validation/seed42.evaluation.log.memory.jsonl": "884927c4337647858024ba4c8ae08db5dc76a182bc04ff094ca30a1be2db738b",
+    "logs/cmerc/MELD/validation/seed42.train.log.memory.jsonl": "00ff48ef5174a29b772d032cf1da9d2f05fe965ba54643a2164d9a6f4d598316",
+    "logs/cmerc/MELD/validation/seed67137.evaluation.log.memory.jsonl": "49b0ecb12932b82b3645fda2e9c7ead0126675aa49ff5d4dca7461ec775f8f40",
+    "logs/cmerc/MELD/validation/seed67137.train.log.memory.jsonl": "e3a69ab403cf9815bf94bb73f05cd567354ee06c7b87f6f0ff202f3bd872d6aa",
+    "logs/xp3_resource_observer.jsonl": "30ecd49126d510f04f4c7c3a1f90809f63595c9128fbf6fee26436a675413b21",
+    "results/acceptance.json": "87e78b95652dcd8149e2552e6fdff639fa6d758e3f81fc34d23207ad95750bf1",
+    "runs/baseline/IEMOCAP_validation_seed1475/metrics.jsonl": "7410ce15ac2775fcf95d9b6b4655c3f77907539ba937a2d745fded2d96121406",
+    "runs/baseline/IEMOCAP_validation_seed2024/metrics.jsonl": "12b6840a255bf27999cc87720fa2921fe72437399a246530fe6293edc1304217",
+    "runs/baseline/IEMOCAP_validation_seed3407/metrics.jsonl": "a396db5821e514798d6f1db9baadf0b0af51855201b88cf04f8552425d6b2155",
+    "runs/baseline/IEMOCAP_validation_seed42/metrics.jsonl": "0c28aafc5c49e38709f9b1f70db088f53dd23c0bbf77eee6e395091a62f4a0f5",
+    "runs/baseline/IEMOCAP_validation_seed67137/metrics.jsonl": "08ed8193b284085b685d6ae1f374acdc954e9f762e2c5e8d22db481769e00ba1",
+    "runs/baseline/MELD_validation_seed1475/metrics.jsonl": "358244a39f86e54789c97f45d0095b30b210b6320e9a61a04da28a8a7f205344",
+    "runs/baseline/MELD_validation_seed2024/metrics.jsonl": "98e7859cafa331001f7d607891c9e83ca2451dce51faf780105d6be3a29a4460",
+    "runs/baseline/MELD_validation_seed3407/metrics.jsonl": "ece08f3fa41b4021124ee9d546751c502c8fed716cc64469fcef3fcb65996224",
+    "runs/baseline/MELD_validation_seed42/metrics.jsonl": "8f08d33d3dcff3a73e60f84c4728e2c21ca584da3fda2841c8b9c5d8743bec86",
+    "runs/baseline/MELD_validation_seed67137/metrics.jsonl": "12a449c74e3c03f59f8851c93bfcdd97442144120b28cacab1a14c849e46180c",
+    "runs/cmerc/IEMOCAP_validation_seed1475/metrics.jsonl": "49e113acdf129f113c0a93e7643215f7b07cbb8266cc458f33293bd0e51ead7b",
+    "runs/cmerc/IEMOCAP_validation_seed2024/metrics.jsonl": "350d7ef184b7accdda61dd377a0aa2c127be8f56736de2e959136cfe8165e3ee",
+    "runs/cmerc/IEMOCAP_validation_seed3407/metrics.jsonl": "9499ea3680245e43c865e440924f658338b1b5f2de10d6f69a71dfab70fafc74",
+    "runs/cmerc/IEMOCAP_validation_seed42/metrics.jsonl": "73ddb5217678ebee4ace661044a4e53f94171502d4820eff08277cb073374f6f",
+    "runs/cmerc/IEMOCAP_validation_seed67137/metrics.jsonl": "5b23324f75455ee77e21d7cf5e014f8f0a242ea1d85cb14002b4b3059160e2a6",
+    "runs/cmerc/MELD_validation_seed1475/metrics.jsonl": "5e3c7feb06bc1150c35c0febc27fbe8a493c1382f0eccb06f3e86d6aeebceb83",
+    "runs/cmerc/MELD_validation_seed2024/metrics.jsonl": "2fd751c0e6054e45455eea64d4c091788b786f03547bcfa6eccce24627f68bee",
+    "runs/cmerc/MELD_validation_seed3407/metrics.jsonl": "c143672a93e4c6f882e9cd574010dea210c15b9ffd958df823278fabb70c756d",
+    "runs/cmerc/MELD_validation_seed42/metrics.jsonl": "f7efeaea9d7d7368d9e1ef5020c01c2183c6c9d801f47dc979f6f3710f3c345e",
+    "runs/cmerc/MELD_validation_seed67137/metrics.jsonl": "768759caab16432f3f8cb41f4cca67b4ba32582f18920a5cb260f7b48e48fea7",
+    "state/pipeline.json": "effb467581dd66cd74b844e20ab8c1a139630a69ac4fdf4243844d060d2bdb71",
+    "state/queue.json": "46f256f6cf15e0136b44f9550fcbf16449945bc972a2e061d40d0fac3d590797",
+    "state/recovery/iemocap2024_original_resource_failure.json": "89e4d55216176543a98a66de42ef979c39d01c7aad05804237993e457749d3b3",
+    "state/recovery/pipeline_v1.json": "1d5edecb585dbcda81959304b0facafdc075069b4914b7f389927142a9762cb3",
+    "state/recovery/resource_observer.json": "a5ed2bb5b974f5deccac9fd8c4b4a7796302c41e16ceb77e46557bdf6c8637a7",
+    "state/recovery/summarize_resources.py": "7320bffef3078ed31d33f56c0c10dbbb5d04cc6f2215d1ba48f1994ae8bb002b"
+  },
+  "status": "completed",
+  "units": {
+    "duration": "seconds",
+    "memory": "MiB (2**20 bytes)",
+    "utilization": "percent"
+  },
+  "valid_epoch_time": {
+    "count": 1200,
+    "maximum_seconds": 46.11,
+    "mean_seconds": 22.211,
+    "minimum_seconds": 5.8,
+    "total_seconds": 26653.2
+  },
+  "valid_phase_wall_time": {
+    "evaluation": {
+      "count": 20,
+      "maximum_seconds": 31.640307188034058,
+      "mean_seconds": 19.190708029270173,
+      "minimum_seconds": 15.105397939682007,
+      "total_seconds": 383.81416058540344
+    },
+    "training": {
+      "count": 20,
+      "maximum_seconds": 3292.325343847275,
+      "mean_seconds": 1401.3912745594978,
+      "minimum_seconds": 304.77567291259766,
+      "total_seconds": 28027.825491189957
+    }
+  }
+}

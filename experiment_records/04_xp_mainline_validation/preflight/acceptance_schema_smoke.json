@@ -1,0 +1,35 @@
+{
+  "status": "passed",
+  "scope": "four completed anchors only; NOT full batch acceptance or registration",
+  "checks": [
+    {
+      "id": "IEMOCAP_baseline_validation_seed1475",
+      "selected_epoch": 70,
+      "weighted_f1": 66.93611646448124,
+      "cel": 1520.0234629347167,
+      "capacity_epochs_verified": 80
+    },
+    {
+      "id": "IEMOCAP_cmerc_validation_seed1475",
+      "selected_epoch": 43,
+      "weighted_f1": 68.2801529351637,
+      "cel": 683.0297031317823,
+      "capacity_epochs_verified": 80
+    },
+    {
+      "id": "MELD_baseline_validation_seed67137",
+      "selected_epoch": 5,
+      "weighted_f1": 65.43860835141255,
+      "cel": 503.9678897559643,
+      "capacity_epochs_verified": 40
+    },
+    {
+      "id": "MELD_cmerc_validation_seed67137",
+      "selected_epoch": 8,
+      "weighted_f1": 65.74612650106948,
+      "cel": 644.5383834540844,
+      "capacity_epochs_verified": 40
+    }
+  ],
+  "checked_unix": 1792140005.3827128
+}

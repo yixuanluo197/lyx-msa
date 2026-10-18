@@ -1,0 +1,130 @@
+{
+  "status": "passed",
+  "scope": "single-real-batch engineering smoke test; not a paper result",
+  "dataset": "IEMOCAP",
+  "device": "cuda:0",
+  "gpu_name": "NVIDIA TITAN Xp",
+  "config": {
+    "dataset": "IEMOCAP",
+    "audio_dim": 1582,
+    "visual_dim": 342,
+    "text_dim": 1024,
+    "n_speakers": 2,
+    "n_classes": 6,
+    "dropout": 0.5,
+    "num_L": 3,
+    "num_K": 4,
+    "seed": 1475
+  },
+  "source": {
+    "conversation_ids": [
+      "Ses02F_script01_3",
+      "Ses03F_script03_1",
+      "Ses01M_impro03",
+      "Ses02M_impro07",
+      "Ses02M_impro08",
+      "Ses02F_script01_1",
+      "Ses02M_script02_2",
+      "Ses03M_impro05b",
+      "Ses01M_script02_2",
+      "Ses04F_impro07",
+      "Ses02M_impro02",
+      "Ses04F_script01_1",
+      "Ses02M_impro05",
+      "Ses03M_impro07",
+      "Ses03M_script02_2",
+      "Ses04M_script03_1"
+    ],
+    "batch_size": 16,
+    "valid_utterances": 869
+  },
+  "shapes": {
+    "text_layers": [
+      [
+        110,
+        16,
+        1024
+      ],
+      [
+        110,
+        16,
+        1024
+      ],
+      [
+        110,
+        16,
+        1024
+      ],
+      [
+        110,
+        16,
+        1024
+      ]
+    ],
+    "visual": [
+      110,
+      16,
+      342
+    ],
+    "audio": [
+      110,
+      16,
+      1582
+    ],
+    "speaker_mask": [
+      110,
+      16,
+      2
+    ],
+    "utterance_mask": [
+      16,
+      110
+    ],
+    "labels": [
+      16,
+      110
+    ],
+    "log_prob": [
+      869,
+      6
+    ]
+  },
+  "checks": {
+    "inputs_finite": true,
+    "forward_finite": true,
+    "classification_loss_finite": true,
+    "backward_finite": true,
+    "optimizer_step": true,
+    "expected_parameters_have_gradients": true,
+    "expected_parameters_updated": true,
+    "checkpoint_strict_load": true,
+    "checkpoint_state_tensors_exact": true,
+    "checkpoint_optimizer_load": true,
+    "checkpoint_output_max_abs_diff": 2.384185791015625e-07,
+    "checkpoint_output_allclose_rtol": 1e-05,
+    "checkpoint_output_allclose_atol": 1e-07
+  },
+  "classification_loss": {
+    "name": "NLLLoss",
+    "value": 1.7958728075027466
+  },
+  "parameters": {
+    "trainable_parameter_tensors": 73,
+    "finite_gradient_tensors": 48,
+    "updated_parameter_tensors": 48,
+    "max_abs_update": 0.00010001659393310547,
+    "explicitly_checked": [
+      "graph_model.fc1.weight",
+      "gru_l.weight_ih_l0",
+      "linear_a.weight",
+      "linear_v.weight",
+      "smax_fc.weight"
+    ]
+  },
+  "memory": {
+    "peak_allocated_bytes": 5562688000,
+    "peak_reserved_bytes": 6304038912
+  },
+  "checkpoint": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/preflight/gpu3_IEMOCAP/smoke/iemocap_smoke_checkpoint.pt",
+  "elapsed_seconds": 4.090819135308266
+}

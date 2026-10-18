@@ -1,0 +1,13 @@
+--- /data2/yb/conda_envs/cmerc-xp-repro/lib/python3.10/site-packages/torch/cuda/__init__.py
++++ /data2/yb/conda_envs/cmerc-xp-repro/lib/python3.10/site-packages/torch/cuda/__init__.py
+@@ -507,6 +507,10 @@
+ def _device_count_nvml() -> int:
+     """Return number of devices as reported by NVML taking CUDA_VISIBLE_DEVICES into account.
+     Negative value is returned if NVML discovery or initialization has failed."""
++    # CMERC XP: torch 1.13 NVML parser only accepts integer IDs.
++    # Returning -1 selects the existing CUDA-runtime fallback.
++    if os.environ.get("CUDA_VISIBLE_DEVICES", "").startswith(("GPU-", "MIG-")):
++        return -1
+     visible_devices = _parse_visible_devices()
+     if not visible_devices:
+         return 0

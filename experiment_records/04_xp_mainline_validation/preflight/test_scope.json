@@ -1,0 +1,12 @@
+{
+  "training_source": "V100 V2 frozen code",
+  "excluded_test_modules": {
+    "test_multiseed_scheduler.py": "Historical biggpu GPU rules replaced by test_xp_scheduler.py in this batch",
+    "test_caldiff_batching.py": "Frozen V2 export does not contain caldiff/cal_diff.py generation helper; fixed_author uses existing difficulty and does not generate new scores"
+  },
+  "initial_collection_error_retained": "logs/cpu_tests_missing_caldiff_collection.log",
+  "xp_scheduler_tests": "Separately executed by scheduler author then root verification",
+  "excluded_cases": {
+    "test_causal_checkpoint_roundtrip_and_architecture_rejection": "Also imports absent caldiff/cal_diff.py; causal generation helper is outside noncausal fixed_author batch"
+  }
+}

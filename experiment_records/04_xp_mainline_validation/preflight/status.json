@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "verified_at_unix": 1792128424.8493626,
+  "checks": {
+    "source_semantics": "passed",
+    "input_and_1200_sampler_plans": "passed",
+    "cpu_tests": "172 passed, 1 skipped, 1 deselected; missing optional caldiff generation source exclusions documented",
+    "actual_gpu_ops_optimizer_and_parameter_updates": "passed on physical XP3",
+    "actual_component_gradients": "passed both datasets",
+    "official_checkpoint_regression": "passed",
+    "same_gpu_epoch_boundary_model_optimizer_rng_sampling_selection_resume": "passed",
+    "rnn_fresh_process_exact_resume_unit": "passed",
+    "full_course_train_valid_test_and_five_removal_memory": "passed",
+    "scheduler_tests": "18 passed; actual name/free-memory, UUID/PID/lock, stale-utilization handoff and no-overwrite cases",
+    "dry_run_and_isolated_paths": "20 unique tasks",
+    "technical_failure_exit_and_retry_preservation": "passed"
+  },
+  "scope_exclusions": "No formal scores included. Causal-only path not trained. Difficulty generation helper absent from V2 export and not used by fixed_author.",
+  "gpu_preflight_resource_reroute": "GPU1 busy: remaining IEMOCAP preflight serialized on XP3; completed MELD and resume evidence retained",
+  "resource_threshold_frozen_mib": 11500,
+  "budget_gpu_hours_range": [
+    7.852979166666667,
+    8.974833333333333
+  ],
+  "formal_training_started_at_gate": false
+}

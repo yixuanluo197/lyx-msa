@@ -1,0 +1,20 @@
+--- frozen tools/finalize_mainline.py
++++ recovery/finalize_mainline_v2.py
+@@ -23,7 +23,7 @@
+ import sys
+ import tempfile
+ 
+-BATCH = Path(__file__).resolve().parents[1]
++BATCH = Path(__file__).resolve().parents[2]
+ CMERC = BATCH.parents[2]
+ SEEDS = [1475, 67137, 2024, 3407, 42]
+ DATASETS = ("IEMOCAP", "MELD")
+@@ -540,7 +540,7 @@
+     stages = {}
+     for stage in (1, 2):
+         subset = [job for job in jobs if job["stage"] == stage]
+-        require(len(subset) == (12 if stage == 1 else 8), "incorrect stage matrix")
++        require(len(subset) == (4 if stage == 1 else 16), "incorrect stage matrix")
+         stages[str(stage)] = scheduler.validate_stage(subset, inspect_checkpoints=False)
+     # Full matrix validation also compares source/data/split identities across stages.
+     stages["all"] = scheduler.validate_stage(jobs, inspect_checkpoints=False)

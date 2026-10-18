@@ -1,0 +1,37 @@
+{
+  "resource_only": true,
+  "science_snapshot_unchanged": true,
+  "files": [
+    {
+      "path": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/state/recovery/recovery_manager.py",
+      "audit_copy": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/provenance/runtime_recovery_v2/initial/recovery_manager.py",
+      "sha256": "2fc73549fcf5c00bebfa98e3b42566ad8bae704983164dc18395721660dce17e",
+      "original_audit_copy_path": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/provenance/runtime_recovery_v2/recovery_manager.py"
+    },
+    {
+      "path": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/state/recovery/xp3_scheduler.py",
+      "audit_copy": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/provenance/runtime_recovery_v2/initial/xp3_scheduler.py",
+      "sha256": "2c9ddc6d9bf99995d041af70fbd85afb4d9f3070760a7edf9cf6b93f9e375d6f",
+      "original_audit_copy_path": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/provenance/runtime_recovery_v2/xp3_scheduler.py"
+    },
+    {
+      "path": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/state/recovery/recover_failed_tasks.py",
+      "audit_copy": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/provenance/runtime_recovery_v2/initial/recover_failed_tasks.py",
+      "sha256": "f4286092514c023d513c45d666ab30210f7c9640226ccb1bd9884882e8af019b",
+      "original_audit_copy_path": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/provenance/runtime_recovery_v2/recover_failed_tasks.py"
+    },
+    {
+      "path": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/state/recovery/continue_pipeline.py",
+      "audit_copy": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/provenance/runtime_recovery_v2/initial/continue_pipeline.py",
+      "sha256": "91ca7af406fc0a001bd7248713a4fe1bcdda690ca1ac3a0c7ab0171c9e3ba9c2",
+      "original_audit_copy_path": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/provenance/runtime_recovery_v2/continue_pipeline.py"
+    },
+    {
+      "path": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/state/recovery/resource_guard.py",
+      "audit_copy": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/provenance/runtime_recovery_v2/initial/resource_guard.py",
+      "sha256": "6f0e0ac6fd1d7a8388aff88e76f491882f7e470c570bbb5b96de4cfedbc0ec15",
+      "original_audit_copy_path": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/provenance/runtime_recovery_v2/resource_guard.py"
+    }
+  ],
+  "historical_capture_note": "Initial controller bytes preserved in initial/. The later acceptance-stage-count fix has separate current copies and diff; source path denotes its location at original capture, not current bytes."
+}

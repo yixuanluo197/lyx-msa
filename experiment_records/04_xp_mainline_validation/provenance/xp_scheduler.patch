@@ -1,0 +1,385 @@
+--- V100_V2/scripts/multiseed_scheduler.py
++++ XP_mainline/scripts/multiseed_scheduler.py
+@@ -1,7 +1,7 @@
+ #!/usr/bin/env python3
+ """Persistent original CMERC queue: one experiment per idle healthy host GPU.
+ 
+-Run under scripts/with_cmerc_env.sh on biggpu. The scheduler can be restarted:
++Run under scripts/with_cmerc_env.sh on local user23. The scheduler can be restarted:
+ live children are attached by PID/start-time/output path, never submitted twice.
+ GPU flock descriptors are inherited by children so a scheduler interruption does
+ not release a still-running experiment's reservation. Failed runs stay failed;
+@@ -28,11 +28,16 @@
+ from pathlib import Path
+ 
+ ROOT = Path(__file__).resolve().parents[1]
+-FORBIDDEN_GPU = 4
++REQUIRED_HOSTNAME = "user23"
++GPU_UUIDS = {
++    0: "GPU-7ff18ebb-100e-98fe-038b-a98bd4f94248",
++    1: "GPU-eed2f34f-b4c0-7b7a-498e-71a026e30c5a",
++    3: "GPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456",
++}
++SEEDS = [1475, 67137, 2024, 3407, 42]
++XP_GPU_NAMES = {"TITAN Xp", "NVIDIA TITAN Xp"}
+ GPU_FIELDS = (
+-    "index", "uuid", "memory.total", "memory.used", "utilization.gpu",
+-    "ecc.errors.uncorrected.volatile.total", "ecc.errors.uncorrected.aggregate.total",
+-    "retired_pages.pending",
++    "index", "uuid", "memory.total", "memory.used", "utilization.gpu", "name", "memory.free",
+ )
+ 
+ 
+@@ -57,6 +62,18 @@
+             raise ValueError("Source snapshot path escapes experiment root")
+         if hashlib.sha256(path.read_bytes()).hexdigest() != expected:
+             raise ValueError(f"Executable source changed after freeze: {name}")
++    immutable_manifest = root.parent / "provenance/immutable_inputs.json"
++    if immutable_manifest.is_file():
++        for name, expected in read_json(immutable_manifest).items():
++            path = Path(name)
++            if not path.is_absolute():
++                path = root.parent / path
++            digest = hashlib.sha256()
++            with path.open("rb") as handle:
++                for block in iter(lambda: handle.read(1024 * 1024), b""):
++                    digest.update(block)
++            if digest.hexdigest() != expected:
++                raise ValueError(f"Immutable input/tool changed after freeze: {name}")
+     return snapshot["sha256"]
+ 
+ 
+@@ -92,22 +109,18 @@
+     total_mb: int
+     used_mb: int
+     utilization: int
+-    volatile_ecc: str
+-    aggregate_ecc: str
+-    retired_pending: str
+     pids: tuple[int, ...] = ()
+-
+-    def idle_healthy(self, allowed, minimum_free_mb=12000, maximum_utilization=10):
+-        def no_errors(value):
+-            # Consumer devices may report N/A for unsupported ECC. A positive
+-            # count, pending retirement, unknown state, or any process blocks use.
+-            return value.strip().lower() in {"0", "no", "disabled", "n/a", "[n/a]"}
++    name: str = "TITAN Xp"
++    free_mb: int | None = None
++
++    def idle_healthy(self, allowed, minimum_free_mb=12000, maximum_utilization=10, allowed_uuids=None):
++        uuids = GPU_UUIDS if allowed_uuids is None else {int(index): uuid for index, uuid in allowed_uuids.items()}
+         return (
+-            self.index != FORBIDDEN_GPU and self.index in allowed and not self.pids
+-            and self.total_mb - self.used_mb >= minimum_free_mb
++            self.index in allowed and self.index in GPU_UUIDS and not self.pids
++            and self.uuid == GPU_UUIDS[self.index] == uuids.get(self.index)
++            and self.name.strip() in XP_GPU_NAMES
++            and (self.free_mb if self.free_mb is not None else self.total_mb - self.used_mb) >= minimum_free_mb
+             and self.utilization <= maximum_utilization
+-            and all(no_errors(value) for value in (
+-                self.volatile_ecc, self.aggregate_ecc, self.retired_pending))
+         )
+ 
+ 
+@@ -128,8 +141,7 @@
+         if len(row) != len(GPU_FIELDS):
+             raise RuntimeError("Unrecognized nvidia-smi GPU health row")
+         devices.append(GPU(int(row[0]), row[1].strip(), int(row[2]), int(row[3]),
+-                           int(row[4]), row[5], row[6], row[7],
+-                           tuple(pids.get(row[1].strip(), []))))
++                           int(row[4]), tuple(pids.get(row[1].strip(), [])), row[5].strip(), int(row[6])))
+     if not devices:
+         raise RuntimeError("nvidia-smi returned no GPUs")
+     return devices
+@@ -139,6 +151,8 @@
+     seeds = config["first_seeds"] + config["additional_seeds"]
+     if not seeds or len(set(seeds)) != len(seeds) or any(type(seed) is not int or seed < 0 for seed in seeds):
+         raise ValueError("Seeds must be unique pre-registered nonnegative integers")
++    if seeds != SEEDS:
++        raise ValueError(f"XP validation requires the fixed five seeds {SEEDS}")
+     if config.get("causal") is not False or config["selection_protocol"] != "validation":
+         raise ValueError("This queue requires causal=false and validation selection")
+     if config["rng_policy"] != "continuous":
+@@ -154,17 +168,28 @@
+         raise ValueError("Paired matrix must include both datasets and both variants")
+     if config["epochs"] != {"IEMOCAP": 80, "MELD": 40}:
+         raise ValueError("Formal epoch budget must remain 80/40")
+-    if FORBIDDEN_GPU in config["allowed_gpu_indices"]:
+-        raise ValueError("Host GPU 4 is forbidden")
+-    if not set(config["allowed_gpu_indices"]).issubset({1, 2, 3, 5}):
+-        raise ValueError("GPU whitelist must be within approved healthy host indices 1/2/3/5")
++    if config["allowed_gpu_indices"] != [0, 1, 3]:
++        raise ValueError("XP GPU whitelist must be exactly host indices 0/1/3")
++    if {int(index): uuid for index, uuid in config.get("allowed_gpu_uuids", {}).items()} != GPU_UUIDS:
++        raise ValueError("XP GPU UUID whitelist differs from the approved local devices")
++    if type(config["minimum_free_gpu_mb"]) not in (int, float) or not 0 < config["minimum_free_gpu_mb"] <= 12180:
++        raise ValueError("minimum_free_gpu_mb must be positive and <=12180 MiB")
++    environment = config.get("runtime_environment", {})
++    if not all(environment.get(key) and Path(environment[key]).is_absolute()
++               for key in ("CMERC_ENV_PREFIX", "CMERC_PYTHON")):
++        raise ValueError("runtime_environment requires absolute CMERC_ENV_PREFIX and CMERC_PYTHON")
++    if any(key.startswith("CUDA_VISIBLE_DEVICES") for key in environment):
++        raise ValueError("GPU visibility is owned by the scheduler")
+ 
+ 
+ def build_jobs(config, run_root, log_root, result_root, smoke=False):
+     jobs = []
+-    for stage, seeds in ((1, config["first_seeds"]), (2, config["additional_seeds"])):
+-        for seed in seeds:
++    anchors = {("IEMOCAP", 1475), ("MELD", 67137)}
++    for stage in (1, 2):
++        for seed in config["first_seeds"] + config["additional_seeds"]:
+             for dataset in config["datasets"]:
++                if (stage == 1) != ((dataset, seed) in anchors):
++                    continue
+                 for variant in config["variants"]:
+                     job_id = f"{dataset}_{variant}_validation_seed{seed}"
+                     logs = Path(log_root) / variant / dataset / "validation"
+@@ -195,8 +220,8 @@
+             "--num-workers", "0", "--require-noncausal", "--output-dir", str(Path(job["run_dir"]).parent)]
+ 
+ 
+-def evaluation_command(job):
+-    return ["bash", str(ROOT / "scripts/with_cmerc_env.sh"), "python", "-u",
++def evaluation_command(job, python=None):
++    return ["bash", str(ROOT / "scripts/with_cmerc_env.sh"), python or os.environ.get("CMERC_PYTHON", sys.executable), "-u",
+             str(ROOT / "scripts/evaluate_checkpoint.py"), "--dataset", job["dataset"],
+             "--checkpoint", str(Path(job["run_dir"]) / "best.pt"),
+             "--output-dir", job["result_dir"], "--device", "cuda:0",
+@@ -207,6 +232,13 @@
+     for name in ("run_dir", "result_dir", "train_log", "evaluation_log"):
+         if os.path.lexists(job[name]):
+             raise FileExistsError(f"Refusing to overwrite {name}: {job[name]}")
++    for name in ("train_log", "evaluation_log"):
++        if os.path.lexists(memory_profile_path(job[name])):
++            raise FileExistsError(f"Refusing to overwrite memory profile: {memory_profile_path(job[name])}")
++
++
++def memory_profile_path(log_path):
++    return Path(str(log_path) + ".memory.jsonl")
+ 
+ 
+ def pid_identity(pid):
+@@ -418,6 +450,8 @@
+ 
+ class Scheduler:
+     def __init__(self, config, jobs, state_path, gpu_lock_root, smoke=False):
++        if socket.gethostname() != REQUIRED_HOSTNAME:
++            raise ValueError("XP queue must run on local user23; do not migrate to a different server")
+         self.config = config
+         self.state_path = Path(state_path)
+         self.gpu_lock_root = Path(gpu_lock_root)
+@@ -446,13 +480,15 @@
+             return
+         run_root = Path(self.state["jobs"][0]["run_dir"]).parent.parent
+         result_root = Path(self.state["jobs"][0]["result_dir"]).parents[3]
+-        output = result_root / ("summary_first3.json" if first_stage else "summary.json")
+-        report = ROOT / "reports" / ("10_MULTI_SEED_REPRODUCTION_FIRST3.md" if first_stage else "10_MULTI_SEED_REPRODUCTION.md")
++        output = Path(self.config.get("statistics_root", result_root)) / "summary.json"
++        report = Path(self.config.get("summary_report", ROOT.parent / "reports/XP_MAINLINE_REPRODUCTION.md"))
+         command = [sys.executable, str(ROOT / "scripts/summarize_results.py"), "--multiseed",
+-                   "--seeds", ",".join(str(seed) for seed in seeds),
++                   "--seeds", ",".join(str(seed) for seed in SEEDS),
+                    "--run-root", str(run_root), "--result-root", str(result_root),
+-                   "--output", str(output), "--report", str(report),
+-                   "--historical", str(ROOT / "reports/reference_single_seed/summary.json")]
++                   "--output", str(output), "--report", str(report)]
++        historical = self.config.get("historical_reference")
++        if historical and Path(historical).is_file():
++            command += ["--historical", str(historical)]
+         process = subprocess.run(command, cwd=ROOT, text=True, capture_output=True)
+         summary_record = {"command": command, "updated_at": utc_now(), "exit_code": process.returncode,
+                           "stdout": process.stdout[-4000:], "stderr": process.stderr[-4000:],
+@@ -475,7 +511,7 @@
+         for gpu in query_gpus():
+             if gpu.index in excluded or not gpu.idle_healthy(
+                     self.config["allowed_gpu_indices"], self.config["minimum_free_gpu_mb"],
+-                    self.config["maximum_idle_utilization"]):
++                    self.config["maximum_idle_utilization"], self.config["allowed_gpu_uuids"]):
+                 continue
+             lock = acquire_lock(self.gpu_lock_root / f"cmerc-{gpu.uuid}.lock")
+             if lock is None:
+@@ -484,7 +520,7 @@
+             refreshed = next((item for item in query_gpus() if item.uuid == gpu.uuid), None)
+             if refreshed and refreshed.index == gpu.index and refreshed.idle_healthy(
+                     self.config["allowed_gpu_indices"], self.config["minimum_free_gpu_mb"],
+-                    self.config["maximum_idle_utilization"]):
++                    self.config["maximum_idle_utilization"], self.config["allowed_gpu_uuids"]):
+                 return refreshed, lock
+             lock.close()
+         return None
+@@ -495,15 +531,23 @@
+         if phase == "training":
+             output_guard(job)
+         else:
+-            if Path(job["result_dir"]).exists() or Path(job["evaluation_log"]).exists():
++            if any(os.path.lexists(path) for path in (
++                    job["result_dir"], job["evaluation_log"], memory_profile_path(job["evaluation_log"]))):
+                 raise FileExistsError(f"Evaluation output already exists: {job['id']}")
+-        command = training_command(job) if phase == "training" else evaluation_command(job)
++        command = training_command(job) if phase == "training" else evaluation_command(job, self.config["runtime_environment"]["CMERC_PYTHON"])
+         log_path = Path(job["train_log" if phase == "training" else "evaluation_log"])
+         log_path.parent.mkdir(parents=True, exist_ok=True)
+         env = os.environ.copy()
+-        env["CUDA_VISIBLE_DEVICES"] = str(gpu.index)
++        env.update(self.config["runtime_environment"])
++        env["CUDA_VISIBLE_DEVICES"] = gpu.uuid
+         env["CMERC_HOST_GPU_INDEX"] = str(gpu.index)
+         env["CMERC_HOST_GPU_UUID"] = gpu.uuid
++        env["CMERC_PROFILE_OUTPUT"] = str(memory_profile_path(log_path))
++        refreshed = next((device for device in query_gpus() if device.uuid == gpu.uuid), None)
++        if refreshed is None or not refreshed.idle_healthy(
++                self.config["allowed_gpu_indices"], self.config["minimum_free_gpu_mb"],
++                self.config["maximum_idle_utilization"], self.config["allowed_gpu_uuids"]):
++            raise RuntimeError("GPU became busy or failed identity/resource checks before launch")
+         with log_path.open("x", encoding="utf-8") as output:
+             process = subprocess.Popen(command, cwd=ROOT, env=env, stdout=output, stderr=subprocess.STDOUT,
+                                        start_new_session=True, pass_fds=(lock.fileno(),))
+@@ -513,6 +557,9 @@
+         job.update({"status": f"running_{phase}", "phase": phase, "pid": process.pid,
+                     "pid_start_ticks": identity["start_ticks"] if identity else None,
+                     "command": command, "host_gpu_index": gpu.index, "gpu_uuid": gpu.uuid,
++                    f"{phase}_pid": process.pid, f"{phase}_gpu_uuid": gpu.uuid,
++                    f"{phase}_host_gpu_index": gpu.index,
++                    f"{phase}_gpu_free_mb_at_launch": refreshed.free_mb,
+                     "server": socket.gethostname(), f"{phase}_started_at": utc_now()})
+         job.setdefault("started_at", job[f"{phase}_started_at"])
+         self.save()
+@@ -528,20 +575,27 @@
+             raise RuntimeError("Recorded PID identity does not match live process")
+         try:
+             env = dict(item.split("=", 1) for item in (Path("/proc") / str(pid) / "environ").read_bytes().decode().split("\0") if "=" in item)
+-            index = int(env["CUDA_VISIBLE_DEVICES"])
++            visible = env["CUDA_VISIBLE_DEVICES"]
++            devices = query_gpus()
++            gpu = next((device for device in devices if device.uuid == visible
++                        or (visible.isdigit() and device.index == int(visible))), None)
++            if gpu is None:
++                raise ValueError("visible GPU is absent from the local inventory")
++            index = gpu.index
+         except (OSError, KeyError, ValueError) as error:
+             raise RuntimeError("Cannot identify attached process's host GPU") from error
+-        if index == FORBIDDEN_GPU or index not in self.config["allowed_gpu_indices"]:
++        if (index not in self.config["allowed_gpu_indices"] or GPU_UUIDS.get(index) != gpu.uuid
++                or self.config["allowed_gpu_uuids"].get(str(index), self.config["allowed_gpu_uuids"].get(index)) != gpu.uuid
++                or gpu.name.strip() not in XP_GPU_NAMES):
+             raise RuntimeError("Live run is on an unapproved GPU")
+-        gpu = next(device for device in query_gpus() if device.index == index)
+-        if pid not in gpu.pids:
+-            # Process may be before CUDA initialization; exact output-path/PID
+-            # identity is still sufficient to attach and reserve this host index.
+-            if gpu.pids:
+-                raise RuntimeError("Attached pre-CUDA process conflicts with another GPU task")
++        if set(gpu.pids) - {pid}:
++            raise RuntimeError("Attached process conflicts with another GPU task")
++        if job.get("gpu_uuid") and job["gpu_uuid"] != gpu.uuid:
++            raise RuntimeError("Attached GPU UUID differs from the recorded run")
+         job.update({"status": f"running_{phase}", "phase": phase, "pid": pid,
+                     "pid_start_ticks": identity["start_ticks"], "command": identity["command"],
+                     "host_gpu_index": index, "gpu_uuid": gpu.uuid, "server": socket.gethostname(),
++                    f"{phase}_pid": pid, f"{phase}_gpu_uuid": gpu.uuid, f"{phase}_host_gpu_index": index,
+                     "attached_at": utc_now()})
+         self.save()
+         print(f"Attached {job['id']} {phase}: host GPU {index}, PID {pid}", flush=True)
+@@ -559,6 +613,26 @@
+         self.save()
+         print(f"Failed {job['id']}: {error}; artifacts retained, no automatic retry", flush=True)
+         self.summarize(self.config["first_seeds"] + self.config["additional_seeds"])
++
++    def wait_for_evaluation_gpu(self, job, attempts=15, poll_seconds=1):
++        """Keep the lease while the last training utilization sample expires."""
++        uuid, index = job["gpu_uuid"], job["host_gpu_index"]
++        for attempt in range(1, attempts + 1):
++            device = next((gpu for gpu in query_gpus() if gpu.uuid == uuid), None)
++            if device is None or device.index != index or GPU_UUIDS.get(index) != uuid:
++                raise RuntimeError("Reserved GPU UUID/index changed before independent evaluation")
++            passed = device.idle_healthy(
++                self.config["allowed_gpu_indices"], self.config["minimum_free_gpu_mb"],
++                self.config["maximum_idle_utilization"], self.config["allowed_gpu_uuids"])
++            job["evaluation_idle_wait"] = {"attempts": attempt, "passed": passed,
++                                            "checked_at": utc_now(), "last_gpu": device.__dict__}
++            self.save()
++            if passed:
++                return device
++            if attempt < attempts:
++                time.sleep(poll_seconds)
++        raise RuntimeError(f"GPU remained blocked before evaluation after {attempts} checks: "
++                           f"{job['evaluation_idle_wait']['last_gpu']}")
+ 
+     def refresh(self, job):
+         process = self.processes.get(job["id"])
+@@ -583,14 +657,13 @@
+             if phase == "training":
+                 validate_training(job)
+                 # Retain same-GPU reservation for independent evaluation.
+-                gpu = next(device for device in query_gpus() if device.uuid == job["gpu_uuid"])
+-                if gpu.pids:
+-                    raise RuntimeError("GPU has an unexpected process after training")
+                 lock = self.gpu_locks.get(job["id"])
+                 if lock is None:
+-                    lock = acquire_lock(self.gpu_lock_root / f"cmerc-{gpu.uuid}.lock")
++                    lock = acquire_lock(self.gpu_lock_root / f"cmerc-{job['gpu_uuid']}.lock")
+                     if lock is None:
+                         raise RuntimeError("Cannot reserve attached run GPU for evaluation")
++                    self.gpu_locks[job["id"]] = lock
++                gpu = self.wait_for_evaluation_gpu(job)
+                 self.start(job, "evaluation", gpu, lock)
+             else:
+                 validate_evaluation(job)
+@@ -623,8 +696,8 @@
+                 if not self.smoke and "first_seed_gate" not in self.state:
+                     try:
+                         gate = validate_stage(stage_one)
+-                        self.summarize(self.config["first_seeds"], first_stage=True, require_complete=True)
+                         self.state["first_seed_gate"] = gate
++                        self.summarize(SEEDS)
+                     except Exception as error:
+                         self.state.update({"phase": "first_seed_gate_failed", "gate_error": str(error)})
+                         self.save()
+@@ -686,29 +759,37 @@
+ def main(argv=None):
+     parser = argparse.ArgumentParser(description=__doc__)
+     parser.add_argument("--config", type=Path, default=ROOT / "configs/multiseed_validation.json")
+-    parser.add_argument("--run-root", type=Path, default=ROOT / "runs/multiseed_validation_v2")
+-    parser.add_argument("--log-root", type=Path, default=ROOT / "logs/multiseed_validation_v2")
+-    parser.add_argument("--result-root", type=Path, default=ROOT / "results/multiseed_validation_v2")
+-    parser.add_argument("--state", type=Path, default=ROOT / "state/multiseed_validation_v2_queue.json")
++    parser.add_argument("--run-root", type=Path, default=ROOT.parent / "runs")
++    parser.add_argument("--log-root", type=Path, default=ROOT.parent / "logs")
++    parser.add_argument("--result-root", type=Path, default=ROOT.parent / "results")
++    parser.add_argument("--state", type=Path, default=ROOT.parent / "state/queue.json")
++    parser.add_argument("--report", type=Path, help="default: batch/reports/XP_MAINLINE_REPRODUCTION.md")
++    parser.add_argument("--statistics-root", type=Path, help="summary output directory; default: result-root")
++    parser.add_argument("--historical", type=Path, help="optional existing historical summary")
+     parser.add_argument("--gpu-lock-root", type=Path, default=Path("/tmp/cmerc-gpu-locks"))
+     parser.add_argument("--dry-run", action="store_true")
+     parser.add_argument("--smoke", action="store_true", help="four paired dataset/variant runs, one real epoch each, isolated outputs")
+     parser.add_argument("--smoke-id", default="scheduler_validation_v2")
+     args = parser.parse_args(argv)
+     config = read_json(args.config)
++    for name, value in (("summary_report", args.report), ("statistics_root", args.statistics_root),
++                        ("historical_reference", args.historical)):
++        if value is not None:
++            config[name] = str(value.resolve())
+     validate_config(config)
+     if args.smoke:
+         if Path(args.smoke_id).name != args.smoke_id or args.smoke_id in (".", ".."):
+             raise ValueError("smoke-id must be a single path component")
+-        args.run_root = ROOT / "runs/scheduler_smoke" / args.smoke_id
+-        args.log_root = ROOT / "logs/scheduler_smoke" / args.smoke_id
+-        args.result_root = ROOT / "results/scheduler_smoke" / args.smoke_id
+-        args.state = ROOT / "state" / f"smoke_{args.smoke_id}.json"
++        args.run_root = args.run_root / "scheduler_smoke" / args.smoke_id
++        args.log_root = args.log_root / "scheduler_smoke" / args.smoke_id
++        args.result_root = args.result_root / "scheduler_smoke" / args.smoke_id
++        args.state = args.state.parent / f"smoke_{args.smoke_id}.json"
+     jobs = build_jobs(config, args.run_root.resolve(), args.log_root.resolve(), args.result_root.resolve(), args.smoke)
+     if args.dry_run:
+         for job in jobs:
+             job["training_command"] = training_command(job)
+-            job["evaluation_command"] = evaluation_command(job)
++            job["evaluation_command"] = evaluation_command(job, config["runtime_environment"]["CMERC_PYTHON"])
++            job["memory_profiles"] = [str(memory_profile_path(job[key])) for key in ("train_log", "evaluation_log")]
+         print(json.dumps({"config": config, "jobs": jobs, "gpus": [gpu.__dict__ for gpu in query_gpus()],
+                           "free_disk_gib": shutil.disk_usage(ROOT).free / 1024 ** 3}, indent=2, ensure_ascii=False))
+         return 0

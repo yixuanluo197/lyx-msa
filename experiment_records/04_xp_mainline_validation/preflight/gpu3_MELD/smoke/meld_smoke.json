@@ -1,0 +1,130 @@
+{
+  "status": "passed",
+  "scope": "single-real-batch engineering smoke test; not a paper result",
+  "dataset": "MELD",
+  "device": "cuda:0",
+  "gpu_name": "NVIDIA TITAN Xp",
+  "config": {
+    "dataset": "MELD",
+    "audio_dim": 300,
+    "visual_dim": 342,
+    "text_dim": 1024,
+    "n_speakers": 9,
+    "n_classes": 7,
+    "dropout": 0.4,
+    "num_L": 3,
+    "num_K": 3,
+    "seed": 67137
+  },
+  "source": {
+    "conversation_ids": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "batch_size": 16,
+    "valid_utterances": 168
+  },
+  "shapes": {
+    "text_layers": [
+      [
+        23,
+        16,
+        1024
+      ],
+      [
+        23,
+        16,
+        1024
+      ],
+      [
+        23,
+        16,
+        1024
+      ],
+      [
+        23,
+        16,
+        1024
+      ]
+    ],
+    "visual": [
+      23,
+      16,
+      342
+    ],
+    "audio": [
+      23,
+      16,
+      300
+    ],
+    "speaker_mask": [
+      23,
+      16,
+      9
+    ],
+    "utterance_mask": [
+      16,
+      23
+    ],
+    "labels": [
+      16,
+      23
+    ],
+    "log_prob": [
+      168,
+      7
+    ]
+  },
+  "checks": {
+    "inputs_finite": true,
+    "forward_finite": true,
+    "classification_loss_finite": true,
+    "backward_finite": true,
+    "optimizer_step": true,
+    "expected_parameters_have_gradients": true,
+    "expected_parameters_updated": true,
+    "checkpoint_strict_load": true,
+    "checkpoint_state_tensors_exact": true,
+    "checkpoint_optimizer_load": true,
+    "checkpoint_output_max_abs_diff": 2.384185791015625e-07,
+    "checkpoint_output_allclose_rtol": 1e-05,
+    "checkpoint_output_allclose_atol": 1e-07
+  },
+  "classification_loss": {
+    "name": "FocalLoss",
+    "value": 5.998749256134033
+  },
+  "parameters": {
+    "trainable_parameter_tensors": 71,
+    "finite_gradient_tensors": 44,
+    "updated_parameter_tensors": 44,
+    "max_abs_update": 0.00010001659393310547,
+    "explicitly_checked": [
+      "graph_model.fc1.weight",
+      "gru_l.weight_ih_l0",
+      "linear_a.weight",
+      "linear_v.weight",
+      "smax_fc.weight"
+    ]
+  },
+  "memory": {
+    "peak_allocated_bytes": 663955456,
+    "peak_reserved_bytes": 704643072
+  },
+  "checkpoint": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/preflight/gpu3_MELD/smoke/meld_smoke_checkpoint.pt",
+  "elapsed_seconds": 6.473193142563105
+}
