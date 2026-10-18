@@ -1,0 +1,8042 @@
+[
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "overall",
+    "metric": "accuracy",
+    "baseline": 62.99810246679317,
+    "cmerc": 63.18785578747628,
+    "delta": 0.1897533206831099
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "overall",
+    "metric": "weighted_f1",
+    "baseline": 62.90547361544125,
+    "cmerc": 63.39351880512003,
+    "delta": 0.48804518967877897
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "overall",
+    "metric": "macro_f1",
+    "baseline": 61.46931604101603,
+    "cmerc": 62.70667886694874,
+    "delta": 1.2373628259327134
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "overall",
+    "metric": "f1.happy",
+    "baseline": 58.57142857142858,
+    "cmerc": 64.19753086419753,
+    "delta": 5.626102292768955
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "overall",
+    "metric": "f1.sad",
+    "baseline": 74.66666666666666,
+    "cmerc": 74.50980392156865,
+    "delta": -0.15686274509801024
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "overall",
+    "metric": "f1.neutral",
+    "baseline": 56.76855895196506,
+    "cmerc": 53.266331658291456,
+    "delta": -3.502227293673606
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "overall",
+    "metric": "f1.angry",
+    "baseline": 78.26086956521739,
+    "cmerc": 76.3157894736842,
+    "delta": -1.9450800915331854
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "overall",
+    "metric": "f1.excited",
+    "baseline": 55.94405594405594,
+    "cmerc": 57.333333333333336,
+    "delta": 1.389277389277396
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "overall",
+    "metric": "f1.frustrated",
+    "baseline": 44.60431654676259,
+    "cmerc": 50.617283950617285,
+    "delta": 6.012967403854695
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "overall",
+    "metric": "ece",
+    "baseline": 21.367331971706,
+    "cmerc": 15.216119409286,
+    "delta": -6.151212562420001
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "overall",
+    "metric": "mce",
+    "baseline": 28.359296917915,
+    "cmerc": 73.7882822752,
+    "delta": 45.428985357285
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "overall",
+    "metric": "rmsce",
+    "baseline": 22.212391274415,
+    "cmerc": 17.222624775007,
+    "delta": -4.989766499408002
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "overall",
+    "metric": "cel.total",
+    "baseline": 489.96175628657807,
+    "cmerc": 318.7261030073205,
+    "delta": -171.23565327925758
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "overall",
+    "metric": "cel.text",
+    "baseline": 96.63818972409379,
+    "cmerc": 75.30672271263029,
+    "delta": -21.331467011463502
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "overall",
+    "metric": "cel.audio",
+    "baseline": 117.8236225328028,
+    "cmerc": 122.47572020371445,
+    "delta": 4.652097670911644
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "overall",
+    "metric": "cel.visual",
+    "baseline": 6.192529503892729,
+    "cmerc": 2.1177598364884034,
+    "delta": -4.0747696674043254
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "overall",
+    "metric": "cel.intra_context",
+    "baseline": 122.15120389434372,
+    "cmerc": 39.130804774787975,
+    "delta": -83.02039911955575
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "overall",
+    "metric": "cel.inter_context",
+    "baseline": 147.156210631445,
+    "cmerc": 79.69509547969938,
+    "delta": -67.46111515174562
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "overall",
+    "metric": "auroc_success",
+    "baseline": 64.133456904541,
+    "cmerc": 62.069285780626,
+    "delta": -2.06417112391501
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "overall",
+    "metric": "auprc_success",
+    "baseline": 73.17142490316,
+    "cmerc": 70.309298855919,
+    "delta": -2.8621260472410057
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "early",
+    "metric": "accuracy",
+    "baseline": 51.9774011299435,
+    "cmerc": 56.49717514124294,
+    "delta": 4.51977401129944
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "early",
+    "metric": "weighted_f1",
+    "baseline": 52.12457504830385,
+    "cmerc": 56.63433940602436,
+    "delta": 4.509764357720506
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "early",
+    "metric": "macro_f1",
+    "baseline": 51.91618566618567,
+    "cmerc": 55.15300059417707,
+    "delta": 3.2368149279914036
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "early",
+    "metric": "f1.happy",
+    "baseline": 61.81818181818181,
+    "cmerc": 75.0,
+    "delta": 13.181818181818187
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "early",
+    "metric": "f1.sad",
+    "baseline": 70.0,
+    "cmerc": 60.0,
+    "delta": -10.0
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "early",
+    "metric": "f1.neutral",
+    "baseline": 50.90909090909091,
+    "cmerc": 60.0,
+    "delta": 9.090909090909093
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "early",
+    "metric": "f1.angry",
+    "baseline": 60.71428571428571,
+    "cmerc": 50.0,
+    "delta": -10.714285714285708
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "early",
+    "metric": "f1.excited",
+    "baseline": 45.83333333333333,
+    "cmerc": 54.545454545454554,
+    "delta": 8.712121212121225
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "early",
+    "metric": "f1.frustrated",
+    "baseline": 22.222222222222225,
+    "cmerc": 31.372549019607842,
+    "delta": 9.150326797385617
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "early",
+    "metric": "ece",
+    "baseline": 28.806971981701,
+    "cmerc": 18.918251300936,
+    "delta": -9.888720680765001
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "early",
+    "metric": "mce",
+    "baseline": 40.423716740175,
+    "cmerc": 73.7882822752,
+    "delta": 33.364565535025
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "early",
+    "metric": "rmsce",
+    "baseline": 30.3007189529,
+    "cmerc": 21.386577083501,
+    "delta": -8.914141869399
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "early",
+    "metric": "auroc_success",
+    "baseline": 61.035805626598,
+    "cmerc": 61.701298701299,
+    "delta": 0.6654930747010042
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "early",
+    "metric": "auprc_success",
+    "baseline": 57.13951078875,
+    "cmerc": 63.918579770597,
+    "delta": 6.779068981846997
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "middle",
+    "metric": "accuracy",
+    "baseline": 64.16184971098265,
+    "cmerc": 63.58381502890174,
+    "delta": -0.5780346820809115
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "middle",
+    "metric": "weighted_f1",
+    "baseline": 63.58959916947465,
+    "cmerc": 63.23319956086198,
+    "delta": -0.3563996086126693
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "middle",
+    "metric": "macro_f1",
+    "baseline": 63.00510207030056,
+    "cmerc": 62.21860489947035,
+    "delta": -0.7864971708302093
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "middle",
+    "metric": "f1.happy",
+    "baseline": 58.823529411764696,
+    "cmerc": 51.28205128205129,
+    "delta": -7.541478129713404
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "middle",
+    "metric": "f1.sad",
+    "baseline": 79.3103448275862,
+    "cmerc": 83.33333333333334,
+    "delta": 4.022988505747136
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "middle",
+    "metric": "f1.neutral",
+    "baseline": 61.53846153846154,
+    "cmerc": 51.85185185185185,
+    "delta": -9.686609686609692
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "middle",
+    "metric": "f1.angry",
+    "baseline": 68.88888888888887,
+    "cmerc": 71.42857142857143,
+    "delta": 2.539682539682559
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "middle",
+    "metric": "f1.excited",
+    "baseline": 73.46938775510205,
+    "cmerc": 70.58823529411764,
+    "delta": -2.88115246098441
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "middle",
+    "metric": "f1.frustrated",
+    "baseline": 35.99999999999999,
+    "cmerc": 44.827586206896555,
+    "delta": 8.827586206896562
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "middle",
+    "metric": "ece",
+    "baseline": 18.833274148792,
+    "cmerc": 15.71717465544,
+    "delta": -3.116099493352001
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "middle",
+    "metric": "mce",
+    "baseline": 25.491245587667,
+    "cmerc": 30.952605605125,
+    "delta": 5.461360017458002
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "middle",
+    "metric": "rmsce",
+    "baseline": 20.515495499534,
+    "cmerc": 18.637628877839,
+    "delta": -1.8778666216950022
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "middle",
+    "metric": "auroc_success",
+    "baseline": 61.62452775356,
+    "cmerc": 59.82683982684,
+    "delta": -1.7976879267200019
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "middle",
+    "metric": "auprc_success",
+    "baseline": 71.404248263949,
+    "cmerc": 67.472669347149,
+    "delta": -3.9315789168000066
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "late",
+    "metric": "accuracy",
+    "baseline": 72.88135593220339,
+    "cmerc": 69.49152542372882,
+    "delta": -3.3898305084745743
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "late",
+    "metric": "weighted_f1",
+    "baseline": 72.86397574863075,
+    "cmerc": 68.68118540754358,
+    "delta": -4.18279034108717
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "late",
+    "metric": "macro_f1",
+    "baseline": 68.56129397619785,
+    "cmerc": 64.90248180558382,
+    "delta": -3.658812170614027
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "late",
+    "metric": "f1.happy",
+    "baseline": 54.90196078431372,
+    "cmerc": 61.016949152542374,
+    "delta": 6.114988368228651
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "late",
+    "metric": "f1.sad",
+    "baseline": 73.07692307692307,
+    "cmerc": 75.47169811320754,
+    "delta": 2.3947750362844715
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "late",
+    "metric": "f1.neutral",
+    "baseline": 62.96296296296296,
+    "cmerc": 40.0,
+    "delta": -22.962962962962962
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "late",
+    "metric": "f1.angry",
+    "baseline": 95.32710280373831,
+    "cmerc": 92.0,
+    "delta": -3.3271028037383132
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "late",
+    "metric": "f1.excited",
+    "baseline": 47.826086956521735,
+    "cmerc": 45.45454545454545,
+    "delta": -2.3715415019762816
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "late",
+    "metric": "f1.frustrated",
+    "baseline": 77.27272727272727,
+    "cmerc": 75.47169811320754,
+    "delta": -1.8010291595197288
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "late",
+    "metric": "ece",
+    "baseline": 18.390917845365,
+    "cmerc": 14.81095402591,
+    "delta": -3.579963819454999
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "late",
+    "metric": "mce",
+    "baseline": 60.792952775955,
+    "cmerc": 23.268767197927,
+    "delta": -37.524185578027996
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "late",
+    "metric": "rmsce",
+    "baseline": 19.998343913469,
+    "cmerc": 16.444992042464,
+    "delta": -3.553351871004999
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "late",
+    "metric": "auroc_success",
+    "baseline": 65.77842377261,
+    "cmerc": 61.547726588377,
+    "delta": -4.230697184232994
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "late",
+    "metric": "auprc_success",
+    "baseline": 82.973509514032,
+    "cmerc": 75.891444334895,
+    "delta": -7.082065179137004
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "training",
+    "metric": "elapsed_seconds",
+    "baseline": 215.8300000000001,
+    "cmerc": 1502.7799999999997,
+    "delta": 1286.9499999999996
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "training",
+    "metric": "max_gpu_memory_mb",
+    "baseline": 3424.01,
+    "cmerc": 4065.14,
+    "delta": 641.1299999999997
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "training",
+    "metric": "optimizer_steps",
+    "baseline": 560,
+    "cmerc": 541,
+    "delta": -19
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1937,
+    "split": "test",
+    "segment": "overall",
+    "metric": "accuracy",
+    "baseline": 64.51016635859519,
+    "cmerc": 65.24953789279112,
+    "delta": 0.7393715341959393
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1937,
+    "split": "test",
+    "segment": "overall",
+    "metric": "weighted_f1",
+    "baseline": 63.95818049019739,
+    "cmerc": 65.05928861700178,
+    "delta": 1.101108126804391
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1937,
+    "split": "test",
+    "segment": "overall",
+    "metric": "macro_f1",
+    "baseline": 62.1504836456957,
+    "cmerc": 63.06510067233675,
+    "delta": 0.9146170266410465
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1937,
+    "split": "test",
+    "segment": "overall",
+    "metric": "f1.happy",
+    "baseline": 40.36697247706422,
+    "cmerc": 45.32374100719424,
+    "delta": 4.95676853013002
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1937,
+    "split": "test",
+    "segment": "overall",
+    "metric": "f1.sad",
+    "baseline": 68.83720930232559,
+    "cmerc": 75.31914893617022,
+    "delta": 6.4819396338446325
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1937,
+    "split": "test",
+    "segment": "overall",
+    "metric": "f1.neutral",
+    "baseline": 64.6778042959427,
+    "cmerc": 63.19895968790637,
+    "delta": -1.47884460803634
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1937,
+    "split": "test",
+    "segment": "overall",
+    "metric": "f1.angry",
+    "baseline": 63.84180790960451,
+    "cmerc": 55.762081784386616,
+    "delta": -8.079726125217896
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1937,
+    "split": "test",
+    "segment": "overall",
+    "metric": "f1.excited",
+    "baseline": 73.98119122257054,
+    "cmerc": 73.34465195246179,
+    "delta": -0.6365392701087558
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1937,
+    "split": "test",
+    "segment": "overall",
+    "metric": "f1.frustrated",
+    "baseline": 61.197916666666664,
+    "cmerc": 65.44202066590125,
+    "delta": 4.244103999234589
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1937,
+    "split": "test",
+    "segment": "overall",
+    "metric": "ece",
+    "baseline": 18.520026932656,
+    "cmerc": 14.550467020042,
+    "delta": -3.969559912613999
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1937,
+    "split": "test",
+    "segment": "overall",
+    "metric": "mce",
+    "baseline": 33.974854151408,
+    "cmerc": 24.41650191322,
+    "delta": -9.558352238188004
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1937,
+    "split": "test",
+    "segment": "overall",
+    "metric": "rmsce",
+    "baseline": 19.257725545256,
+    "cmerc": 15.614315329792,
+    "delta": -3.6434102154640016
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1937,
+    "split": "test",
+    "segment": "overall",
+    "metric": "cel.total",
+    "baseline": 1489.3325813596284,
+    "cmerc": 966.6487201155651,
+    "delta": -522.6838612440633
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1937,
+    "split": "test",
+    "segment": "overall",
+    "metric": "cel.text",
+    "baseline": 269.8518470794876,
+    "cmerc": 261.8558532361785,
+    "delta": -7.995993843309066
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1937,
+    "split": "test",
+    "segment": "overall",
+    "metric": "cel.audio",
+    "baseline": 453.7355044013784,
+    "cmerc": 284.52604629890993,
+    "delta": -169.2094581024685
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1937,
+    "split": "test",
+    "segment": "overall",
+    "metric": "cel.visual",
+    "baseline": 16.826483944524398,
+    "cmerc": 7.724921133194584,
+    "delta": -9.101562811329813
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1937,
+    "split": "test",
+    "segment": "overall",
+    "metric": "cel.intra_context",
+    "baseline": 335.0225036607085,
+    "cmerc": 180.3156536766328,
+    "delta": -154.7068499840757
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1937,
+    "split": "test",
+    "segment": "overall",
+    "metric": "cel.inter_context",
+    "baseline": 413.8962422735294,
+    "cmerc": 232.22624577064926,
+    "delta": -181.66999650288017
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1937,
+    "split": "test",
+    "segment": "overall",
+    "metric": "auroc_success",
+    "baseline": 67.208061392338,
+    "cmerc": 67.06464013287,
+    "delta": -0.1434212594679991
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1937,
+    "split": "test",
+    "segment": "overall",
+    "metric": "auprc_success",
+    "baseline": 78.989155872929,
+    "cmerc": 79.212894915394,
+    "delta": 0.22373904246499876
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1937,
+    "split": "test",
+    "segment": "early",
+    "metric": "accuracy",
+    "baseline": 62.22222222222222,
+    "cmerc": 61.111111111111114,
+    "delta": -1.1111111111111072
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1937,
+    "split": "test",
+    "segment": "early",
+    "metric": "weighted_f1",
+    "baseline": 61.34127344982988,
+    "cmerc": 60.41281944139817,
+    "delta": -0.9284540084317072
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1937,
+    "split": "test",
+    "segment": "early",
+    "metric": "macro_f1",
+    "baseline": 53.80373023579432,
+    "cmerc": 51.064509051618025,
+    "delta": -2.7392211841762943
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1937,
+    "split": "test",
+    "segment": "early",
+    "metric": "f1.happy",
+    "baseline": 16.666666666666664,
+    "cmerc": 27.027027027027028,
+    "delta": 10.360360360360364
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1937,
+    "split": "test",
+    "segment": "early",
+    "metric": "f1.sad",
+    "baseline": 57.14285714285714,
+    "cmerc": 63.235294117647065,
+    "delta": 6.092436974789926
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1937,
+    "split": "test",
+    "segment": "early",
+    "metric": "f1.neutral",
+    "baseline": 61.3095238095238,
+    "cmerc": 58.19397993311037,
+    "delta": -3.115543876413433
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1937,
+    "split": "test",
+    "segment": "early",
+    "metric": "f1.angry",
+    "baseline": 46.666666666666664,
+    "cmerc": 17.142857142857142,
+    "delta": -29.523809523809522
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1937,
+    "split": "test",
+    "segment": "early",
+    "metric": "f1.excited",
+    "baseline": 77.36625514403293,
+    "cmerc": 74.33628318584071,
+    "delta": -3.0299719581922204
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1937,
+    "split": "test",
+    "segment": "early",
+    "metric": "f1.frustrated",
+    "baseline": 63.670411985018724,
+    "cmerc": 66.4516129032258,
+    "delta": 2.7812009182070696
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1937,
+    "split": "test",
+    "segment": "early",
+    "metric": "ece",
+    "baseline": 20.460855646266,
+    "cmerc": 17.498728450802,
+    "delta": -2.962127195464003
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1937,
+    "split": "test",
+    "segment": "early",
+    "metric": "mce",
+    "baseline": 66.902366280556,
+    "cmerc": 31.365658342838,
+    "delta": -35.53670793771799
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1937,
+    "split": "test",
+    "segment": "early",
+    "metric": "rmsce",
+    "baseline": 21.814851012757,
+    "cmerc": 18.626812753796,
+    "delta": -3.188038258961001
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1937,
+    "split": "test",
+    "segment": "early",
+    "metric": "auroc_success",
+    "baseline": 67.041608309991,
+    "cmerc": 68.94227994228,
+    "delta": 1.90067163228899
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1937,
+    "split": "test",
+    "segment": "early",
+    "metric": "auprc_success",
+    "baseline": 76.402023433911,
+    "cmerc": 78.220530738739,
+    "delta": 1.8185073048280032
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1937,
+    "split": "test",
+    "segment": "middle",
+    "metric": "accuracy",
+    "baseline": 66.29834254143645,
+    "cmerc": 67.40331491712708,
+    "delta": 1.1049723756906218
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1937,
+    "split": "test",
+    "segment": "middle",
+    "metric": "weighted_f1",
+    "baseline": 66.20075144299021,
+    "cmerc": 67.54955277088163,
+    "delta": 1.3488013278914224
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1937,
+    "split": "test",
+    "segment": "middle",
+    "metric": "macro_f1",
+    "baseline": 64.22602085939576,
+    "cmerc": 64.51200330810917,
+    "delta": 0.28598244871341194
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1937,
+    "split": "test",
+    "segment": "middle",
+    "metric": "f1.happy",
+    "baseline": 46.42857142857142,
+    "cmerc": 45.94594594594595,
+    "delta": -0.48262548262547256
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1937,
+    "split": "test",
+    "segment": "middle",
+    "metric": "f1.sad",
+    "baseline": 72.992700729927,
+    "cmerc": 80.26315789473685,
+    "delta": 7.270457164809855
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1937,
+    "split": "test",
+    "segment": "middle",
+    "metric": "f1.neutral",
+    "baseline": 70.25089605734766,
+    "cmerc": 67.93893129770991,
+    "delta": -2.311964759637746
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1937,
+    "split": "test",
+    "segment": "middle",
+    "metric": "f1.angry",
+    "baseline": 61.904761904761905,
+    "cmerc": 52.083333333333336,
+    "delta": -9.82142857142857
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1937,
+    "split": "test",
+    "segment": "middle",
+    "metric": "f1.excited",
+    "baseline": 75.1219512195122,
+    "cmerc": 74.59459459459458,
+    "delta": -0.5273566249176156
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1937,
+    "split": "test",
+    "segment": "middle",
+    "metric": "f1.frustrated",
+    "baseline": 58.657243816254415,
+    "cmerc": 66.24605678233439,
+    "delta": 7.588812966079978
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1937,
+    "split": "test",
+    "segment": "middle",
+    "metric": "ece",
+    "baseline": 16.690405061671,
+    "cmerc": 13.442743142885,
+    "delta": -3.247661918786001
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1937,
+    "split": "test",
+    "segment": "middle",
+    "metric": "mce",
+    "baseline": 67.169710993767,
+    "cmerc": 68.458299338818,
+    "delta": 1.2885883450509965
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1937,
+    "split": "test",
+    "segment": "middle",
+    "metric": "rmsce",
+    "baseline": 18.01421335762,
+    "cmerc": 15.964130744533,
+    "delta": -2.0500826130870013
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1937,
+    "split": "test",
+    "segment": "middle",
+    "metric": "auroc_success",
+    "baseline": 64.998482088646,
+    "cmerc": 65.547528634497,
+    "delta": 0.5490465458509988
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1937,
+    "split": "test",
+    "segment": "middle",
+    "metric": "auprc_success",
+    "baseline": 78.327374595971,
+    "cmerc": 79.850397775661,
+    "delta": 1.52302317969
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1937,
+    "split": "test",
+    "segment": "late",
+    "metric": "accuracy",
+    "baseline": 65.0,
+    "cmerc": 67.22222222222223,
+    "delta": 2.2222222222222285
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1937,
+    "split": "test",
+    "segment": "late",
+    "metric": "weighted_f1",
+    "baseline": 64.43181846217429,
+    "cmerc": 67.06779301590947,
+    "delta": 2.6359745537351813
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1937,
+    "split": "test",
+    "segment": "late",
+    "metric": "macro_f1",
+    "baseline": 64.28628351422047,
+    "cmerc": 67.00744758479188,
+    "delta": 2.7211640705714046
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1937,
+    "split": "test",
+    "segment": "late",
+    "metric": "f1.happy",
+    "baseline": 47.36842105263158,
+    "cmerc": 55.3846153846154,
+    "delta": 8.016194331983819
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1937,
+    "split": "test",
+    "segment": "late",
+    "metric": "f1.sad",
+    "baseline": 74.25149700598803,
+    "cmerc": 80.21978021978022,
+    "delta": 5.968283213792191
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1937,
+    "split": "test",
+    "segment": "late",
+    "metric": "f1.neutral",
+    "baseline": 62.78026905829597,
+    "cmerc": 64.42307692307693,
+    "delta": 1.6428078647809627
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1937,
+    "split": "test",
+    "segment": "late",
+    "metric": "f1.angry",
+    "baseline": 71.42857142857143,
+    "cmerc": 68.11594202898551,
+    "delta": -3.3126293995859157
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1937,
+    "split": "test",
+    "segment": "late",
+    "metric": "f1.excited",
+    "baseline": 68.42105263157895,
+    "cmerc": 70.78651685393258,
+    "delta": 2.365464222353637
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1937,
+    "split": "test",
+    "segment": "late",
+    "metric": "f1.frustrated",
+    "baseline": 61.46788990825688,
+    "cmerc": 63.11475409836065,
+    "delta": 1.64686419010377
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1937,
+    "split": "test",
+    "segment": "late",
+    "metric": "ece",
+    "baseline": 19.239080283377,
+    "cmerc": 12.948421697926,
+    "delta": -6.290658585451
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1937,
+    "split": "test",
+    "segment": "late",
+    "metric": "mce",
+    "baseline": 32.147514820099,
+    "cmerc": 20.296182371166,
+    "delta": -11.851332448932997
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1937,
+    "split": "test",
+    "segment": "late",
+    "metric": "rmsce",
+    "baseline": 19.858144776272,
+    "cmerc": 14.625342301211,
+    "delta": -5.232802475060998
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1937,
+    "split": "test",
+    "segment": "late",
+    "metric": "auroc_success",
+    "baseline": 69.704095630022,
+    "cmerc": 66.156168775583,
+    "delta": -3.547926854438998
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1937,
+    "split": "test",
+    "segment": "late",
+    "metric": "auprc_success",
+    "baseline": 81.830586732648,
+    "cmerc": 80.162105989652,
+    "delta": -1.668480742995996
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1937,
+    "split": "test",
+    "segment": "training",
+    "metric": "elapsed_seconds",
+    "baseline": 215.8300000000001,
+    "cmerc": 1502.7799999999997,
+    "delta": 1286.9499999999996
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1937,
+    "split": "test",
+    "segment": "training",
+    "metric": "max_gpu_memory_mb",
+    "baseline": 3424.01,
+    "cmerc": 4065.14,
+    "delta": 641.1299999999997
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1937,
+    "split": "test",
+    "segment": "training",
+    "metric": "optimizer_steps",
+    "baseline": 560,
+    "cmerc": 541,
+    "delta": -19
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "overall",
+    "metric": "accuracy",
+    "baseline": 59.20303605313093,
+    "cmerc": 59.01328273244781,
+    "delta": -0.189753320683117
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "overall",
+    "metric": "weighted_f1",
+    "baseline": 59.34949473908831,
+    "cmerc": 59.44017159239142,
+    "delta": 0.09067685330311548
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "overall",
+    "metric": "macro_f1",
+    "baseline": 58.71432718409554,
+    "cmerc": 58.66921400929891,
+    "delta": -0.0451131747966258
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "overall",
+    "metric": "f1.happy",
+    "baseline": 60.13986013986015,
+    "cmerc": 61.07784431137725,
+    "delta": 0.9379841715171011
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "overall",
+    "metric": "f1.sad",
+    "baseline": 71.72413793103448,
+    "cmerc": 75.81699346405229,
+    "delta": 4.092855533017811
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "overall",
+    "metric": "f1.neutral",
+    "baseline": 49.21875000000001,
+    "cmerc": 49.54954954954955,
+    "delta": 0.33079954954954616
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "overall",
+    "metric": "f1.angry",
+    "baseline": 72.64957264957265,
+    "cmerc": 71.88940092165898,
+    "delta": -0.7601717279136722
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "overall",
+    "metric": "f1.excited",
+    "baseline": 56.95364238410596,
+    "cmerc": 48.226950354609926,
+    "delta": -8.726692029496036
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "overall",
+    "metric": "f1.frustrated",
+    "baseline": 41.6,
+    "cmerc": 45.45454545454545,
+    "delta": 3.854545454545452
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "overall",
+    "metric": "ece",
+    "baseline": 25.104900832647,
+    "cmerc": 17.040716097522,
+    "delta": -8.064184735125
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "overall",
+    "metric": "mce",
+    "baseline": 72.381660342216,
+    "cmerc": 35.558849573135,
+    "delta": -36.822810769080995
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "overall",
+    "metric": "rmsce",
+    "baseline": 26.61943208221,
+    "cmerc": 18.676317536423,
+    "delta": -7.943114545787001
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "overall",
+    "metric": "cel.total",
+    "baseline": 720.6661311971894,
+    "cmerc": 383.40087173585425,
+    "delta": -337.2652594613352
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "overall",
+    "metric": "cel.text",
+    "baseline": 133.29010683656927,
+    "cmerc": 75.44765801567519,
+    "delta": -57.84244882089408
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "overall",
+    "metric": "cel.audio",
+    "baseline": 197.7746824732385,
+    "cmerc": 116.79407379645272,
+    "delta": -80.98060867678578
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "overall",
+    "metric": "cel.visual",
+    "baseline": 5.957948067057259,
+    "cmerc": 3.3506717719283188,
+    "delta": -2.6072762951289405
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "overall",
+    "metric": "cel.intra_context",
+    "baseline": 134.5618925052442,
+    "cmerc": 69.96219788091184,
+    "delta": -64.59969462433236
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "overall",
+    "metric": "cel.inter_context",
+    "baseline": 249.08150131508017,
+    "cmerc": 117.84627027088618,
+    "delta": -131.235231044194
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "overall",
+    "metric": "auroc_success",
+    "baseline": 59.945587358378,
+    "cmerc": 63.3038585209,
+    "delta": 3.3582711625220014
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "overall",
+    "metric": "auprc_success",
+    "baseline": 68.38218838322,
+    "cmerc": 69.069599755508,
+    "delta": 0.6874113722879969
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "early",
+    "metric": "accuracy",
+    "baseline": 50.847457627118644,
+    "cmerc": 50.282485875706215,
+    "delta": -0.5649717514124291
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "early",
+    "metric": "weighted_f1",
+    "baseline": 50.58842176937992,
+    "cmerc": 49.91823084678717,
+    "delta": -0.6701909225927523
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "early",
+    "metric": "macro_f1",
+    "baseline": 50.57676783425777,
+    "cmerc": 48.18622658399028,
+    "delta": -2.390541250267489
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "early",
+    "metric": "f1.happy",
+    "baseline": 62.06896551724138,
+    "cmerc": 65.57377049180327,
+    "delta": 3.5048049745618925
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "early",
+    "metric": "f1.sad",
+    "baseline": 66.66666666666666,
+    "cmerc": 63.41463414634146,
+    "delta": -3.2520325203251943
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "early",
+    "metric": "f1.neutral",
+    "baseline": 49.12280701754386,
+    "cmerc": 56.14035087719299,
+    "delta": 7.01754385964913
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "early",
+    "metric": "f1.angry",
+    "baseline": 55.319148936170215,
+    "cmerc": 41.02564102564102,
+    "delta": -14.293507910529193
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "early",
+    "metric": "f1.excited",
+    "baseline": 45.28301886792453,
+    "cmerc": 40.74074074074073,
+    "delta": -4.542278127183799
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "early",
+    "metric": "f1.frustrated",
+    "baseline": 25.0,
+    "cmerc": 22.222222222222225,
+    "delta": -2.777777777777775
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "early",
+    "metric": "ece",
+    "baseline": 32.906396897499,
+    "cmerc": 24.461327316397,
+    "delta": -8.445069581102
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "early",
+    "metric": "mce",
+    "baseline": 72.381660342216,
+    "cmerc": 70.311424136162,
+    "delta": -2.070236206053991
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "early",
+    "metric": "rmsce",
+    "baseline": 35.579753758724,
+    "cmerc": 28.109276503596,
+    "delta": -7.470477255128003
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "early",
+    "metric": "auroc_success",
+    "baseline": 56.538952745849,
+    "cmerc": 58.273748723187,
+    "delta": 1.7347959773379955
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "early",
+    "metric": "auprc_success",
+    "baseline": 56.391895611191,
+    "cmerc": 55.684779731551,
+    "delta": -0.707115879640007
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "middle",
+    "metric": "accuracy",
+    "baseline": 57.22543352601156,
+    "cmerc": 57.22543352601156,
+    "delta": 0.0
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "middle",
+    "metric": "weighted_f1",
+    "baseline": 56.9414936584665,
+    "cmerc": 57.216631601010384,
+    "delta": 0.27513794254388557
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "middle",
+    "metric": "macro_f1",
+    "baseline": 57.5732974225803,
+    "cmerc": 56.81650881969619,
+    "delta": -0.7567886028841144
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "middle",
+    "metric": "f1.happy",
+    "baseline": 62.857142857142854,
+    "cmerc": 48.888888888888886,
+    "delta": -13.968253968253968
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "middle",
+    "metric": "f1.sad",
+    "baseline": 74.07407407407408,
+    "cmerc": 83.33333333333334,
+    "delta": 9.259259259259267
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "middle",
+    "metric": "f1.neutral",
+    "baseline": 46.51162790697675,
+    "cmerc": 45.90163934426229,
+    "delta": -0.6099885627144559
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "middle",
+    "metric": "f1.angry",
+    "baseline": 59.25925925925925,
+    "cmerc": 60.526315789473685,
+    "delta": 1.2670565302144325
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "middle",
+    "metric": "f1.excited",
+    "baseline": 73.46938775510205,
+    "cmerc": 60.86956521739131,
+    "delta": -12.599822537710736
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "middle",
+    "metric": "f1.frustrated",
+    "baseline": 29.268292682926834,
+    "cmerc": 41.37931034482759,
+    "delta": 12.111017661900753
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "middle",
+    "metric": "ece",
+    "baseline": 25.893720364295,
+    "cmerc": 15.645891445221,
+    "delta": -10.247828919074
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "middle",
+    "metric": "mce",
+    "baseline": 63.359802961349,
+    "cmerc": 36.234180629253,
+    "delta": -27.125622332096
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "middle",
+    "metric": "rmsce",
+    "baseline": 27.738266302516,
+    "cmerc": 17.076124331804,
+    "delta": -10.662141970712
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "middle",
+    "metric": "auroc_success",
+    "baseline": 59.077259077259,
+    "cmerc": 66.475566475566,
+    "delta": 7.398307398306997
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "middle",
+    "metric": "auprc_success",
+    "baseline": 64.588955163501,
+    "cmerc": 68.666694767163,
+    "delta": 4.077739603661996
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "late",
+    "metric": "accuracy",
+    "baseline": 69.49152542372882,
+    "cmerc": 69.49152542372882,
+    "delta": 0.0
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "late",
+    "metric": "weighted_f1",
+    "baseline": 69.33102732618471,
+    "cmerc": 68.6773683010737,
+    "delta": -0.6536590251110113
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "late",
+    "metric": "macro_f1",
+    "baseline": 65.8083161223323,
+    "cmerc": 64.57370946981861,
+    "delta": -1.2346066525136905
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "late",
+    "metric": "f1.happy",
+    "baseline": 56.00000000000001,
+    "cmerc": 65.57377049180329,
+    "delta": 9.57377049180328
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "late",
+    "metric": "f1.sad",
+    "baseline": 73.46938775510203,
+    "cmerc": 76.92307692307692,
+    "delta": 3.4536891679748862
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "late",
+    "metric": "f1.neutral",
+    "baseline": 53.57142857142857,
+    "cmerc": 38.297872340425535,
+    "delta": -15.273556231003035
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "late",
+    "metric": "f1.angry",
+    "baseline": 90.56603773584906,
+    "cmerc": 92.15686274509804,
+    "delta": 1.5908250092489737
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "late",
+    "metric": "f1.excited",
+    "baseline": 53.06122448979591,
+    "cmerc": 43.90243902439025,
+    "delta": -9.158785465405664
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "late",
+    "metric": "f1.frustrated",
+    "baseline": 68.18181818181817,
+    "cmerc": 70.58823529411765,
+    "delta": 2.4064171122994793
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "late",
+    "metric": "ece",
+    "baseline": 18.334338405712,
+    "cmerc": 15.949631444478,
+    "delta": -2.3847069612340004
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "late",
+    "metric": "mce",
+    "baseline": 44.218093156815,
+    "cmerc": 60.825783014297,
+    "delta": 16.607689857482
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "late",
+    "metric": "rmsce",
+    "baseline": 20.0355706206,
+    "cmerc": 17.694387010897,
+    "delta": -2.341183609703002
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "late",
+    "metric": "auroc_success",
+    "baseline": 61.781090033123,
+    "cmerc": 62.19512195122,
+    "delta": 0.41403191809700246
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "late",
+    "metric": "auprc_success",
+    "baseline": 78.632584923602,
+    "cmerc": 77.639469196366,
+    "delta": -0.9931157272360025
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "training",
+    "metric": "elapsed_seconds",
+    "baseline": 199.3599999999999,
+    "cmerc": 1364.5599999999995,
+    "delta": 1165.1999999999996
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "training",
+    "metric": "max_gpu_memory_mb",
+    "baseline": 3658.01,
+    "cmerc": 4319.25,
+    "delta": 661.2399999999998
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "training",
+    "metric": "optimizer_steps",
+    "baseline": 560,
+    "cmerc": 541,
+    "delta": -19
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2025,
+    "split": "test",
+    "segment": "overall",
+    "metric": "accuracy",
+    "baseline": 63.89402341343191,
+    "cmerc": 65.80406654343808,
+    "delta": 1.9100431300061729
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2025,
+    "split": "test",
+    "segment": "overall",
+    "metric": "weighted_f1",
+    "baseline": 63.327134071010825,
+    "cmerc": 65.80745286167794,
+    "delta": 2.48031879066712
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2025,
+    "split": "test",
+    "segment": "overall",
+    "metric": "macro_f1",
+    "baseline": 61.04797260010103,
+    "cmerc": 64.26164325959557,
+    "delta": 3.2136706594945394
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2025,
+    "split": "test",
+    "segment": "overall",
+    "metric": "f1.happy",
+    "baseline": 34.977578475336315,
+    "cmerc": 49.006622516556284,
+    "delta": 14.029044041219969
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2025,
+    "split": "test",
+    "segment": "overall",
+    "metric": "f1.sad",
+    "baseline": 70.30878859857482,
+    "cmerc": 75.15923566878982,
+    "delta": 4.850447070214997
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2025,
+    "split": "test",
+    "segment": "overall",
+    "metric": "f1.neutral",
+    "baseline": 63.42648845686513,
+    "cmerc": 61.94225721784776,
+    "delta": -1.4842312390173689
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2025,
+    "split": "test",
+    "segment": "overall",
+    "metric": "f1.angry",
+    "baseline": 61.261261261261254,
+    "cmerc": 58.867924528301884,
+    "delta": -2.3933367329593693
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2025,
+    "split": "test",
+    "segment": "overall",
+    "metric": "f1.excited",
+    "baseline": 75.46583850931677,
+    "cmerc": 73.47670250896057,
+    "delta": -1.989136000356197
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2025,
+    "split": "test",
+    "segment": "overall",
+    "metric": "f1.frustrated",
+    "baseline": 60.84788029925187,
+    "cmerc": 67.11711711711712,
+    "delta": 6.269236817865249
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2025,
+    "split": "test",
+    "segment": "overall",
+    "metric": "ece",
+    "baseline": 21.962086927061,
+    "cmerc": 12.713291462527,
+    "delta": -9.248795464534002
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2025,
+    "split": "test",
+    "segment": "overall",
+    "metric": "mce",
+    "baseline": 34.381593899293,
+    "cmerc": 19.665141480629,
+    "delta": -14.716452418664002
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2025,
+    "split": "test",
+    "segment": "overall",
+    "metric": "rmsce",
+    "baseline": 22.751154983819,
+    "cmerc": 13.886603016048,
+    "delta": -8.864551967771
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2025,
+    "split": "test",
+    "segment": "overall",
+    "metric": "cel.total",
+    "baseline": 1834.2318310751698,
+    "cmerc": 970.241801365201,
+    "delta": -863.9900297099688
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2025,
+    "split": "test",
+    "segment": "overall",
+    "metric": "cel.text",
+    "baseline": 363.3461769499222,
+    "cmerc": 227.38603624651228,
+    "delta": -135.96014070340993
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2025,
+    "split": "test",
+    "segment": "overall",
+    "metric": "cel.audio",
+    "baseline": 553.0265600258155,
+    "cmerc": 252.41037354589878,
+    "delta": -300.6161864799167
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2025,
+    "split": "test",
+    "segment": "overall",
+    "metric": "cel.visual",
+    "baseline": 18.164352635945022,
+    "cmerc": 9.171644505251606,
+    "delta": -8.992708130693416
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2025,
+    "split": "test",
+    "segment": "overall",
+    "metric": "cel.intra_context",
+    "baseline": 424.7011504859842,
+    "cmerc": 216.02472367835435,
+    "delta": -208.67642680762987
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2025,
+    "split": "test",
+    "segment": "overall",
+    "metric": "cel.inter_context",
+    "baseline": 474.9935909775029,
+    "cmerc": 265.249023389184,
+    "delta": -209.7445675883189
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2025,
+    "split": "test",
+    "segment": "overall",
+    "metric": "auroc_success",
+    "baseline": 67.536968348577,
+    "cmerc": 66.472315011641,
+    "delta": -1.0646533369360043
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2025,
+    "split": "test",
+    "segment": "overall",
+    "metric": "auprc_success",
+    "baseline": 79.279013534596,
+    "cmerc": 79.341324729405,
+    "delta": 0.062311194808998493
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2025,
+    "split": "test",
+    "segment": "early",
+    "metric": "accuracy",
+    "baseline": 63.14814814814815,
+    "cmerc": 63.14814814814815,
+    "delta": 0.0
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2025,
+    "split": "test",
+    "segment": "early",
+    "metric": "weighted_f1",
+    "baseline": 62.675967326664605,
+    "cmerc": 62.34962461072102,
+    "delta": -0.3263427159435821
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2025,
+    "split": "test",
+    "segment": "early",
+    "metric": "macro_f1",
+    "baseline": 56.38328548953198,
+    "cmerc": 53.33668195665033,
+    "delta": -3.0466035328816474
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2025,
+    "split": "test",
+    "segment": "early",
+    "metric": "f1.happy",
+    "baseline": 31.57894736842105,
+    "cmerc": 32.87671232876713,
+    "delta": 1.2977649603460755
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2025,
+    "split": "test",
+    "segment": "early",
+    "metric": "f1.sad",
+    "baseline": 66.66666666666667,
+    "cmerc": 64.78873239436619,
+    "delta": -1.8779342723004788
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2025,
+    "split": "test",
+    "segment": "early",
+    "metric": "f1.neutral",
+    "baseline": 58.252427184466015,
+    "cmerc": 60.86956521739131,
+    "delta": 2.617138032925297
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2025,
+    "split": "test",
+    "segment": "early",
+    "metric": "f1.angry",
+    "baseline": 39.21568627450981,
+    "cmerc": 18.181818181818183,
+    "delta": -21.033868092691623
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2025,
+    "split": "test",
+    "segment": "early",
+    "metric": "f1.excited",
+    "baseline": 77.55102040816325,
+    "cmerc": 76.85589519650654,
+    "delta": -0.6951252116567161
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2025,
+    "split": "test",
+    "segment": "early",
+    "metric": "f1.frustrated",
+    "baseline": 65.03496503496503,
+    "cmerc": 66.44736842105264,
+    "delta": 1.4124033860876182
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2025,
+    "split": "test",
+    "segment": "early",
+    "metric": "ece",
+    "baseline": 24.096958355771,
+    "cmerc": 14.793629414505,
+    "delta": -9.303328941266
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2025,
+    "split": "test",
+    "segment": "early",
+    "metric": "mce",
+    "baseline": 45.106720924377,
+    "cmerc": 30.841091275215,
+    "delta": -14.265629649162001
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2025,
+    "split": "test",
+    "segment": "early",
+    "metric": "rmsce",
+    "baseline": 25.73813596456,
+    "cmerc": 15.760495011726,
+    "delta": -9.977640952834001
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2025,
+    "split": "test",
+    "segment": "early",
+    "metric": "auroc_success",
+    "baseline": 61.079591505917,
+    "cmerc": 68.794117213634,
+    "delta": 7.714525707716994
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2025,
+    "split": "test",
+    "segment": "early",
+    "metric": "auprc_success",
+    "baseline": 74.069936426107,
+    "cmerc": 78.725144285689,
+    "delta": 4.655207859581992
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2025,
+    "split": "test",
+    "segment": "middle",
+    "metric": "accuracy",
+    "baseline": 65.56169429097606,
+    "cmerc": 66.48250460405156,
+    "delta": 0.9208103130754921
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2025,
+    "split": "test",
+    "segment": "middle",
+    "metric": "weighted_f1",
+    "baseline": 65.27156372131539,
+    "cmerc": 66.89104708789317,
+    "delta": 1.6194833665777821
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2025,
+    "split": "test",
+    "segment": "middle",
+    "metric": "macro_f1",
+    "baseline": 60.78695652882152,
+    "cmerc": 63.783840284764935,
+    "delta": 2.996883755943415
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2025,
+    "split": "test",
+    "segment": "middle",
+    "metric": "f1.happy",
+    "baseline": 29.09090909090909,
+    "cmerc": 43.373493975903614,
+    "delta": 14.282584884994524
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2025,
+    "split": "test",
+    "segment": "middle",
+    "metric": "f1.sad",
+    "baseline": 69.6969696969697,
+    "cmerc": 77.02702702702703,
+    "delta": 7.330057330057329
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2025,
+    "split": "test",
+    "segment": "middle",
+    "metric": "f1.neutral",
+    "baseline": 69.71830985915494,
+    "cmerc": 65.15151515151516,
+    "delta": -4.566794707639787
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2025,
+    "split": "test",
+    "segment": "middle",
+    "metric": "f1.angry",
+    "baseline": 56.896551724137936,
+    "cmerc": 56.25,
+    "delta": -0.6465517241379359
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2025,
+    "split": "test",
+    "segment": "middle",
+    "metric": "f1.excited",
+    "baseline": 77.83251231527093,
+    "cmerc": 72.18934911242604,
+    "delta": -5.643163202844889
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2025,
+    "split": "test",
+    "segment": "middle",
+    "metric": "f1.frustrated",
+    "baseline": 61.48648648648649,
+    "cmerc": 68.71165644171779,
+    "delta": 7.225169955231301
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2025,
+    "split": "test",
+    "segment": "middle",
+    "metric": "ece",
+    "baseline": 20.466707007442,
+    "cmerc": 13.4847371014,
+    "delta": -6.981969906042
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2025,
+    "split": "test",
+    "segment": "middle",
+    "metric": "mce",
+    "baseline": 67.914721369743,
+    "cmerc": 32.592552900314,
+    "delta": -35.32216846942901
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2025,
+    "split": "test",
+    "segment": "middle",
+    "metric": "rmsce",
+    "baseline": 21.562270377674,
+    "cmerc": 14.445424347175,
+    "delta": -7.1168460304989996
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2025,
+    "split": "test",
+    "segment": "middle",
+    "metric": "auroc_success",
+    "baseline": 67.040197079853,
+    "cmerc": 64.539892240723,
+    "delta": -2.5003048391299956
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2025,
+    "split": "test",
+    "segment": "middle",
+    "metric": "auprc_success",
+    "baseline": 79.972827994435,
+    "cmerc": 78.778007107601,
+    "delta": -1.1948208868339947
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2025,
+    "split": "test",
+    "segment": "late",
+    "metric": "accuracy",
+    "baseline": 62.96296296296296,
+    "cmerc": 67.77777777777779,
+    "delta": 4.814814814814824
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2025,
+    "split": "test",
+    "segment": "late",
+    "metric": "weighted_f1",
+    "baseline": 62.113816373639295,
+    "cmerc": 67.93128010861042,
+    "delta": 5.817463734971128
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2025,
+    "split": "test",
+    "segment": "late",
+    "metric": "macro_f1",
+    "baseline": 62.02860679507385,
+    "cmerc": 67.9696864963733,
+    "delta": 5.941079701299451
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2025,
+    "split": "test",
+    "segment": "late",
+    "metric": "f1.happy",
+    "baseline": 39.63963963963964,
+    "cmerc": 60.273972602739725,
+    "delta": 20.634332963100086
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2025,
+    "split": "test",
+    "segment": "late",
+    "metric": "f1.sad",
+    "baseline": 73.88535031847132,
+    "cmerc": 81.76795580110496,
+    "delta": 7.882605482633636
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2025,
+    "split": "test",
+    "segment": "late",
+    "metric": "f1.neutral",
+    "baseline": 62.60869565217392,
+    "cmerc": 59.2964824120603,
+    "delta": -3.3122132401136213
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2025,
+    "split": "test",
+    "segment": "late",
+    "metric": "f1.angry",
+    "baseline": 71.0843373493976,
+    "cmerc": 70.58823529411765,
+    "delta": -0.4961020552799482
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2025,
+    "split": "test",
+    "segment": "late",
+    "metric": "f1.excited",
+    "baseline": 70.40816326530611,
+    "cmerc": 70.0,
+    "delta": -0.4081632653061149
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2025,
+    "split": "test",
+    "segment": "late",
+    "metric": "f1.frustrated",
+    "baseline": 54.54545454545454,
+    "cmerc": 65.89147286821706,
+    "delta": 11.346018322762525
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2025,
+    "split": "test",
+    "segment": "late",
+    "metric": "ece",
+    "baseline": 21.917090570485,
+    "cmerc": 12.997069138068,
+    "delta": -8.920021432417002
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2025,
+    "split": "test",
+    "segment": "late",
+    "metric": "mce",
+    "baseline": 42.18045771122,
+    "cmerc": 29.480251073837,
+    "delta": -12.700206637383001
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2025,
+    "split": "test",
+    "segment": "late",
+    "metric": "rmsce",
+    "baseline": 22.836867455647,
+    "cmerc": 13.748413512764,
+    "delta": -9.088453942883
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2025,
+    "split": "test",
+    "segment": "late",
+    "metric": "auroc_success",
+    "baseline": 74.064705882353,
+    "cmerc": 65.934928710508,
+    "delta": -8.129777171844992
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2025,
+    "split": "test",
+    "segment": "late",
+    "metric": "auprc_success",
+    "baseline": 84.045775509481,
+    "cmerc": 80.820755462595,
+    "delta": -3.2250200468860015
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2025,
+    "split": "test",
+    "segment": "training",
+    "metric": "elapsed_seconds",
+    "baseline": 199.3599999999999,
+    "cmerc": 1364.5599999999995,
+    "delta": 1165.1999999999996
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2025,
+    "split": "test",
+    "segment": "training",
+    "metric": "max_gpu_memory_mb",
+    "baseline": 3658.01,
+    "cmerc": 4319.25,
+    "delta": 661.2399999999998
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2025,
+    "split": "test",
+    "segment": "training",
+    "metric": "optimizer_steps",
+    "baseline": 560,
+    "cmerc": 541,
+    "delta": -19
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "overall",
+    "metric": "accuracy",
+    "baseline": 63.18785578747628,
+    "cmerc": 62.99810246679317,
+    "delta": -0.1897533206831099
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "overall",
+    "metric": "weighted_f1",
+    "baseline": 63.02762281698803,
+    "cmerc": 63.28060090699028,
+    "delta": 0.2529780900022516
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "overall",
+    "metric": "macro_f1",
+    "baseline": 62.605710728856266,
+    "cmerc": 63.006095480646586,
+    "delta": 0.4003847517903196
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "overall",
+    "metric": "f1.happy",
+    "baseline": 66.2420382165605,
+    "cmerc": 60.689655172413794,
+    "delta": -5.552383044146708
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "overall",
+    "metric": "f1.sad",
+    "baseline": 74.83870967741937,
+    "cmerc": 75.67567567567566,
+    "delta": 0.8369659982562894
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "overall",
+    "metric": "f1.neutral",
+    "baseline": 51.06382978723404,
+    "cmerc": 55.50239234449761,
+    "delta": 4.438562557263566
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "overall",
+    "metric": "f1.angry",
+    "baseline": 75.51867219917013,
+    "cmerc": 72.39819004524888,
+    "delta": -3.1204821539212446
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "overall",
+    "metric": "f1.excited",
+    "baseline": 57.971014492753625,
+    "cmerc": 59.11949685534591,
+    "delta": 1.1484823625922829
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "overall",
+    "metric": "f1.frustrated",
+    "baseline": 50.0,
+    "cmerc": 54.65116279069767,
+    "delta": 4.6511627906976685
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "overall",
+    "metric": "ece",
+    "baseline": 19.405296326136,
+    "cmerc": 17.884411983743,
+    "delta": -1.5208843423929999
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "overall",
+    "metric": "mce",
+    "baseline": 25.911030132477,
+    "cmerc": 35.436281432276,
+    "delta": 9.525251299798999
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "overall",
+    "metric": "rmsce",
+    "baseline": 20.61616721869,
+    "cmerc": 21.17404519838,
+    "delta": 0.5578779796900015
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "overall",
+    "metric": "cel.total",
+    "baseline": 475.61341537868304,
+    "cmerc": 391.568220389358,
+    "delta": -84.04519498932507
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "overall",
+    "metric": "cel.text",
+    "baseline": 68.70158002573123,
+    "cmerc": 108.73942451941844,
+    "delta": 40.0378444936872
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "overall",
+    "metric": "cel.audio",
+    "baseline": 191.20562072014582,
+    "cmerc": 140.3276545033441,
+    "delta": -50.877966216801724
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "overall",
+    "metric": "cel.visual",
+    "baseline": 5.891667546484314,
+    "cmerc": 4.6665911450836575,
+    "delta": -1.2250764014006563
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "overall",
+    "metric": "cel.intra_context",
+    "baseline": 69.4235672525217,
+    "cmerc": 74.51221356563838,
+    "delta": 5.088646313116669
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "overall",
+    "metric": "cel.inter_context",
+    "baseline": 140.39097983379997,
+    "cmerc": 63.322336655873414,
+    "delta": -77.06864317792656
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "overall",
+    "metric": "auroc_success",
+    "baseline": 63.400513915978,
+    "cmerc": 62.678405931418,
+    "delta": -0.7221079845600045
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "overall",
+    "metric": "auprc_success",
+    "baseline": 73.434823204994,
+    "cmerc": 70.663730920957,
+    "delta": -2.7710922840370102
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "early",
+    "metric": "accuracy",
+    "baseline": 56.49717514124294,
+    "cmerc": 54.80225988700565,
+    "delta": -1.6949152542372943
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "early",
+    "metric": "weighted_f1",
+    "baseline": 55.77438478699,
+    "cmerc": 54.60640503220081,
+    "delta": -1.1679797547891866
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "early",
+    "metric": "macro_f1",
+    "baseline": 54.91408876458457,
+    "cmerc": 54.18044015604991,
+    "delta": -0.7336486085346579
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "early",
+    "metric": "f1.happy",
+    "baseline": 73.6842105263158,
+    "cmerc": 65.38461538461539,
+    "delta": -8.299595141700408
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "early",
+    "metric": "f1.sad",
+    "baseline": 66.66666666666666,
+    "cmerc": 68.29268292682927,
+    "delta": 1.626016260162615
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "early",
+    "metric": "f1.neutral",
+    "baseline": 55.65217391304348,
+    "cmerc": 59.04761904761905,
+    "delta": 3.3954451345755743
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "early",
+    "metric": "f1.angry",
+    "baseline": 59.25925925925925,
+    "cmerc": 39.02439024390244,
+    "delta": -20.234869015356814
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "early",
+    "metric": "f1.excited",
+    "baseline": 52.0,
+    "cmerc": 53.333333333333336,
+    "delta": 1.3333333333333357
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "early",
+    "metric": "f1.frustrated",
+    "baseline": 22.22222222222222,
+    "cmerc": 40.0,
+    "delta": 17.77777777777778
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "early",
+    "metric": "ece",
+    "baseline": 23.542997005296,
+    "cmerc": 24.594170764341,
+    "delta": 1.0511737590449997
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "early",
+    "metric": "mce",
+    "baseline": 41.409111874444,
+    "cmerc": 56.967259080786,
+    "delta": 15.558147206342
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "early",
+    "metric": "rmsce",
+    "baseline": 26.134164155571,
+    "cmerc": 29.471482061963,
+    "delta": 3.3373179063919984
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "early",
+    "metric": "auroc_success",
+    "baseline": 60.571428571429,
+    "cmerc": 63.079896907217,
+    "delta": 2.5084683357879953
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "early",
+    "metric": "auprc_success",
+    "baseline": 63.251927292824,
+    "cmerc": 63.492475854551,
+    "delta": 0.24054856172700312
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "middle",
+    "metric": "accuracy",
+    "baseline": 64.73988439306359,
+    "cmerc": 61.27167630057804,
+    "delta": -3.468208092485554
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "middle",
+    "metric": "weighted_f1",
+    "baseline": 64.36305248758161,
+    "cmerc": 61.25262973385419,
+    "delta": -3.11042275372742
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "middle",
+    "metric": "macro_f1",
+    "baseline": 64.71630168706872,
+    "cmerc": 61.21605742691686,
+    "delta": -3.5002442601518595
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "middle",
+    "metric": "f1.happy",
+    "baseline": 65.00000000000001,
+    "cmerc": 52.63157894736842,
+    "delta": -12.368421052631597
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "middle",
+    "metric": "f1.sad",
+    "baseline": 83.33333333333334,
+    "cmerc": 78.57142857142857,
+    "delta": -4.761904761904773
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "middle",
+    "metric": "f1.neutral",
+    "baseline": 46.15384615384615,
+    "cmerc": 53.57142857142857,
+    "delta": 7.417582417582416
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "middle",
+    "metric": "f1.angry",
+    "baseline": 68.23529411764706,
+    "cmerc": 63.291139240506325,
+    "delta": -4.944154877140733
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "middle",
+    "metric": "f1.excited",
+    "baseline": 76.59574468085107,
+    "cmerc": 73.07692307692307,
+    "delta": -3.5188216039280036
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "middle",
+    "metric": "f1.frustrated",
+    "baseline": 48.97959183673469,
+    "cmerc": 46.15384615384615,
+    "delta": -2.825745682888538
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "middle",
+    "metric": "ece",
+    "baseline": 17.852474361486,
+    "cmerc": 19.152642192179,
+    "delta": 1.3001678306930025
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "middle",
+    "metric": "mce",
+    "baseline": 26.415161683526,
+    "cmerc": 30.981008562387,
+    "delta": 4.565846878860999
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "middle",
+    "metric": "rmsce",
+    "baseline": 20.057411549807,
+    "cmerc": 21.22778366608,
+    "delta": 1.1703721162730005
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "middle",
+    "metric": "auroc_success",
+    "baseline": 61.504683840749,
+    "cmerc": 62.728808786257,
+    "delta": 1.2241249455079952
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "middle",
+    "metric": "auprc_success",
+    "baseline": 71.926572618635,
+    "cmerc": 68.791173463452,
+    "delta": -3.135399155183009
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "late",
+    "metric": "accuracy",
+    "baseline": 68.36158192090396,
+    "cmerc": 72.88135593220339,
+    "delta": 4.5197740112994325
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "late",
+    "metric": "weighted_f1",
+    "baseline": 68.53178670549086,
+    "cmerc": 72.48751206274464,
+    "delta": 3.955725357253783
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "late",
+    "metric": "macro_f1",
+    "baseline": 64.58132709786668,
+    "cmerc": 69.19198697572654,
+    "delta": 4.6106598778598595
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "late",
+    "metric": "f1.happy",
+    "baseline": 60.00000000000001,
+    "cmerc": 61.81818181818181,
+    "delta": 1.818181818181806
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "late",
+    "metric": "f1.sad",
+    "baseline": 71.69811320754717,
+    "cmerc": 78.43137254901961,
+    "delta": 6.733259341472447
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "late",
+    "metric": "f1.neutral",
+    "baseline": 47.27272727272727,
+    "cmerc": 50.0,
+    "delta": 2.7272727272727266
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "late",
+    "metric": "f1.angry",
+    "baseline": 90.19607843137256,
+    "cmerc": 93.06930693069307,
+    "delta": 2.8732284993205184
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "late",
+    "metric": "f1.excited",
+    "baseline": 43.90243902439025,
+    "cmerc": 51.06382978723403,
+    "delta": 7.16139076284378
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "late",
+    "metric": "f1.frustrated",
+    "baseline": 74.4186046511628,
+    "cmerc": 80.76923076923077,
+    "delta": 6.350626118067979
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "late",
+    "metric": "ece",
+    "baseline": 19.328578195329,
+    "cmerc": 17.714311780229,
+    "delta": -1.6142664151000012
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "late",
+    "metric": "mce",
+    "baseline": 35.993873221534,
+    "cmerc": 43.883776664734,
+    "delta": 7.889903443199998
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "late",
+    "metric": "rmsce",
+    "baseline": 20.510685996723,
+    "cmerc": 19.200194545002,
+    "delta": -1.3104914517210027
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "late",
+    "metric": "auroc_success",
+    "baseline": 65.923848878394,
+    "cmerc": 58.397932816537,
+    "delta": -7.5259160618569965
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "late",
+    "metric": "auprc_success",
+    "baseline": 80.747443886944,
+    "cmerc": 76.543462177205,
+    "delta": -4.203981709738997
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "training",
+    "metric": "elapsed_seconds",
+    "baseline": 198.94000000000005,
+    "cmerc": 1448.9999999999998,
+    "delta": 1250.0599999999997
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "training",
+    "metric": "max_gpu_memory_mb",
+    "baseline": 4189.34,
+    "cmerc": 4900.42,
+    "delta": 711.0799999999999
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "training",
+    "metric": "optimizer_steps",
+    "baseline": 560,
+    "cmerc": 541,
+    "delta": -19
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "split": "test",
+    "segment": "overall",
+    "metric": "accuracy",
+    "baseline": 66.11213801601971,
+    "cmerc": 65.00308071472581,
+    "delta": -1.1090573012939018
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "split": "test",
+    "segment": "overall",
+    "metric": "weighted_f1",
+    "baseline": 66.27733638391751,
+    "cmerc": 64.65686895759724,
+    "delta": -1.6204674263202747
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "split": "test",
+    "segment": "overall",
+    "metric": "macro_f1",
+    "baseline": 65.0187677614951,
+    "cmerc": 62.375740979868745,
+    "delta": -2.6430267816263537
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "split": "test",
+    "segment": "overall",
+    "metric": "f1.happy",
+    "baseline": 49.006622516556284,
+    "cmerc": 42.18749999999999,
+    "delta": -6.819122516556291
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "split": "test",
+    "segment": "overall",
+    "metric": "f1.sad",
+    "baseline": 75.31380753138075,
+    "cmerc": 75.22123893805309,
+    "delta": -0.09256859332765544
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "split": "test",
+    "segment": "overall",
+    "metric": "f1.neutral",
+    "baseline": 63.13065976714102,
+    "cmerc": 63.65914786967419,
+    "delta": 0.5284881025331742
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "split": "test",
+    "segment": "overall",
+    "metric": "f1.angry",
+    "baseline": 63.19218241042345,
+    "cmerc": 55.30303030303031,
+    "delta": -7.889152107393137
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "split": "test",
+    "segment": "overall",
+    "metric": "f1.excited",
+    "baseline": 73.94366197183099,
+    "cmerc": 72.51655629139073,
+    "delta": -1.4271056804402633
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "split": "test",
+    "segment": "overall",
+    "metric": "f1.frustrated",
+    "baseline": 65.52567237163814,
+    "cmerc": 65.36697247706421,
+    "delta": -0.1586998945739282
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "split": "test",
+    "segment": "overall",
+    "metric": "ece",
+    "baseline": 14.071656230123,
+    "cmerc": 19.248737388383,
+    "delta": 5.177081158259998
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "split": "test",
+    "segment": "overall",
+    "metric": "mce",
+    "baseline": 27.69942253828,
+    "cmerc": 28.275760969049,
+    "delta": 0.5763384307689989
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "split": "test",
+    "segment": "overall",
+    "metric": "rmsce",
+    "baseline": 15.86724162299,
+    "cmerc": 20.1173473109,
+    "delta": 4.2501056879100005
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "split": "test",
+    "segment": "overall",
+    "metric": "cel.total",
+    "baseline": 1256.588389958299,
+    "cmerc": 1087.897522604681,
+    "delta": -168.69086735361816
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "split": "test",
+    "segment": "overall",
+    "metric": "cel.text",
+    "baseline": 220.6462860225788,
+    "cmerc": 360.0115893678221,
+    "delta": 139.36530334524332
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "split": "test",
+    "segment": "overall",
+    "metric": "cel.audio",
+    "baseline": 394.34452503104694,
+    "cmerc": 320.56568298286584,
+    "delta": -73.7788420481811
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "split": "test",
+    "segment": "overall",
+    "metric": "cel.visual",
+    "baseline": 14.354663916376012,
+    "cmerc": 16.80045647861516,
+    "delta": 2.4457925622391485
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "split": "test",
+    "segment": "overall",
+    "metric": "cel.intra_context",
+    "baseline": 262.02333125852783,
+    "cmerc": 177.7028094854868,
+    "delta": -84.32052177304104
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "split": "test",
+    "segment": "overall",
+    "metric": "cel.inter_context",
+    "baseline": 365.2195837297695,
+    "cmerc": 212.8169842898911,
+    "delta": -152.4025994398784
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "split": "test",
+    "segment": "overall",
+    "metric": "auroc_success",
+    "baseline": 65.213928662205,
+    "cmerc": 67.762832921701,
+    "delta": 2.5489042594959983
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "split": "test",
+    "segment": "overall",
+    "metric": "auprc_success",
+    "baseline": 78.939522482369,
+    "cmerc": 79.421352405322,
+    "delta": 0.481829922952997
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "split": "test",
+    "segment": "early",
+    "metric": "accuracy",
+    "baseline": 63.51851851851852,
+    "cmerc": 62.40740740740741,
+    "delta": -1.1111111111111072
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "split": "test",
+    "segment": "early",
+    "metric": "weighted_f1",
+    "baseline": 63.553332841400945,
+    "cmerc": 61.5422931763316,
+    "delta": -2.0110396650693474
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "split": "test",
+    "segment": "early",
+    "metric": "macro_f1",
+    "baseline": 57.36285105320298,
+    "cmerc": 52.95028719121472,
+    "delta": -4.412563861988261
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "split": "test",
+    "segment": "early",
+    "metric": "f1.happy",
+    "baseline": 35.61643835616437,
+    "cmerc": 27.69230769230769,
+    "delta": -7.924130663856683
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "split": "test",
+    "segment": "early",
+    "metric": "f1.sad",
+    "baseline": 67.15328467153284,
+    "cmerc": 67.17557251908397,
+    "delta": 0.02228784755112656
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "split": "test",
+    "segment": "early",
+    "metric": "f1.neutral",
+    "baseline": 58.74587458745876,
+    "cmerc": 58.63192182410424,
+    "delta": -0.11395276335451854
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "split": "test",
+    "segment": "early",
+    "metric": "f1.angry",
+    "baseline": 38.297872340425535,
+    "cmerc": 22.857142857142858,
+    "delta": -15.440729483282677
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "split": "test",
+    "segment": "early",
+    "metric": "f1.excited",
+    "baseline": 76.36363636363636,
+    "cmerc": 74.67811158798284,
+    "delta": -1.6855247756535192
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "split": "test",
+    "segment": "early",
+    "metric": "f1.frustrated",
+    "baseline": 68.0,
+    "cmerc": 66.66666666666667,
+    "delta": -1.3333333333333286
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "split": "test",
+    "segment": "early",
+    "metric": "ece",
+    "baseline": 17.307641611055,
+    "cmerc": 21.600751071065,
+    "delta": 4.293109460010001
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "split": "test",
+    "segment": "early",
+    "metric": "mce",
+    "baseline": 32.620011766752,
+    "cmerc": 72.363632917404,
+    "delta": 39.743621150652004
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "split": "test",
+    "segment": "early",
+    "metric": "rmsce",
+    "baseline": 19.357851414452,
+    "cmerc": 23.525251231182,
+    "delta": 4.167399816730001
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "split": "test",
+    "segment": "early",
+    "metric": "auroc_success",
+    "baseline": 64.006748457178,
+    "cmerc": 70.11445527766,
+    "delta": 6.107706820481994
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "split": "test",
+    "segment": "early",
+    "metric": "auprc_success",
+    "baseline": 75.570084938432,
+    "cmerc": 79.59992437905,
+    "delta": 4.029839440617991
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "split": "test",
+    "segment": "middle",
+    "metric": "accuracy",
+    "baseline": 66.66666666666666,
+    "cmerc": 64.27255985267035,
+    "delta": -2.394106813996302
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "split": "test",
+    "segment": "middle",
+    "metric": "weighted_f1",
+    "baseline": 67.35635801264011,
+    "cmerc": 64.14499006248985,
+    "delta": -3.2113679501502617
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "split": "test",
+    "segment": "middle",
+    "metric": "macro_f1",
+    "baseline": 65.04325430650678,
+    "cmerc": 59.24442828967118,
+    "delta": -5.798826016835605
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "split": "test",
+    "segment": "middle",
+    "metric": "f1.happy",
+    "baseline": 46.66666666666667,
+    "cmerc": 30.303030303030305,
+    "delta": -16.363636363636367
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "split": "test",
+    "segment": "middle",
+    "metric": "f1.sad",
+    "baseline": 78.91156462585033,
+    "cmerc": 73.75886524822694,
+    "delta": -5.152699377623392
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "split": "test",
+    "segment": "middle",
+    "metric": "f1.neutral",
+    "baseline": 67.16981132075472,
+    "cmerc": 67.6470588235294,
+    "delta": 0.47724750277468786
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "split": "test",
+    "segment": "middle",
+    "metric": "f1.angry",
+    "baseline": 59.25925925925925,
+    "cmerc": 47.82608695652174,
+    "delta": -11.43317230273751
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "split": "test",
+    "segment": "middle",
+    "metric": "f1.excited",
+    "baseline": 73.62637362637362,
+    "cmerc": 71.13402061855669,
+    "delta": -2.4923530078169307
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "split": "test",
+    "segment": "middle",
+    "metric": "f1.frustrated",
+    "baseline": 64.62585034013605,
+    "cmerc": 64.797507788162,
+    "delta": 0.17165744802593963
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "split": "test",
+    "segment": "middle",
+    "metric": "ece",
+    "baseline": 13.416499239744,
+    "cmerc": 20.040806205892,
+    "delta": 6.624306966148
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "split": "test",
+    "segment": "middle",
+    "metric": "mce",
+    "baseline": 37.048178911209,
+    "cmerc": 29.13898602128,
+    "delta": -7.909192889928999
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "split": "test",
+    "segment": "middle",
+    "metric": "rmsce",
+    "baseline": 15.499761662812,
+    "cmerc": 21.007989712436,
+    "delta": 5.508228049624
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "split": "test",
+    "segment": "middle",
+    "metric": "auroc_success",
+    "baseline": 66.48453954397,
+    "cmerc": 67.886154845952,
+    "delta": 1.4016153019820052
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "split": "test",
+    "segment": "middle",
+    "metric": "auprc_success",
+    "baseline": 78.790546625806,
+    "cmerc": 79.018550201165,
+    "delta": 0.22800357535899707
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "split": "test",
+    "segment": "late",
+    "metric": "accuracy",
+    "baseline": 68.14814814814815,
+    "cmerc": 68.33333333333333,
+    "delta": 0.18518518518517624
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "split": "test",
+    "segment": "late",
+    "metric": "weighted_f1",
+    "baseline": 68.04059453781107,
+    "cmerc": 68.13609411095872,
+    "delta": 0.09549957314764868
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "split": "test",
+    "segment": "late",
+    "metric": "macro_f1",
+    "baseline": 68.07602020324323,
+    "cmerc": 68.0396726935349,
+    "delta": -0.036347509708335224
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "split": "test",
+    "segment": "late",
+    "metric": "f1.happy",
+    "baseline": 57.553956834532386,
+    "cmerc": 55.99999999999999,
+    "delta": -1.5539568345323929
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "split": "test",
+    "segment": "late",
+    "metric": "f1.sad",
+    "baseline": 78.35051546391753,
+    "cmerc": 82.22222222222223,
+    "delta": 3.871706758304697
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "split": "test",
+    "segment": "late",
+    "metric": "f1.neutral",
+    "baseline": 64.39024390243902,
+    "cmerc": 65.75342465753424,
+    "delta": 1.3631807550952146
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "split": "test",
+    "segment": "late",
+    "metric": "f1.angry",
+    "baseline": 73.68421052631578,
+    "cmerc": 68.61313868613139,
+    "delta": -5.071071840184388
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "split": "test",
+    "segment": "late",
+    "metric": "f1.excited",
+    "baseline": 71.08433734939759,
+    "cmerc": 71.18644067796612,
+    "delta": 0.10210332856853199
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "split": "test",
+    "segment": "late",
+    "metric": "f1.frustrated",
+    "baseline": 63.39285714285715,
+    "cmerc": 64.46280991735537,
+    "delta": 1.0699527744982191
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "split": "test",
+    "segment": "late",
+    "metric": "ece",
+    "baseline": 13.780557049645,
+    "cmerc": 16.929056550618,
+    "delta": 3.148499500973001
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "split": "test",
+    "segment": "late",
+    "metric": "mce",
+    "baseline": 67.305612564087,
+    "cmerc": 32.848954200745,
+    "delta": -34.456658363342
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "split": "test",
+    "segment": "late",
+    "metric": "rmsce",
+    "baseline": 15.529532948599,
+    "cmerc": 18.524339953076,
+    "delta": 2.9948070044770017
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "split": "test",
+    "segment": "late",
+    "metric": "auroc_success",
+    "baseline": 65.388018200202,
+    "cmerc": 65.175359355933,
+    "delta": -0.21265884426900072
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "split": "test",
+    "segment": "late",
+    "metric": "auprc_success",
+    "baseline": 81.871202455143,
+    "cmerc": 80.050470127928,
+    "delta": -1.820732327215012
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "split": "test",
+    "segment": "training",
+    "metric": "elapsed_seconds",
+    "baseline": 198.94000000000005,
+    "cmerc": 1448.9999999999998,
+    "delta": 1250.0599999999997
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "split": "test",
+    "segment": "training",
+    "metric": "max_gpu_memory_mb",
+    "baseline": 4189.34,
+    "cmerc": 4900.42,
+    "delta": 711.0799999999999
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "split": "test",
+    "segment": "training",
+    "metric": "optimizer_steps",
+    "baseline": 560,
+    "cmerc": 541,
+    "delta": -19
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "overall",
+    "metric": "accuracy",
+    "baseline": 65.4643823264202,
+    "cmerc": 65.37421100090171,
+    "delta": -0.09017132551849727
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "overall",
+    "metric": "weighted_f1",
+    "baseline": 63.980092515446884,
+    "cmerc": 64.07341632325517,
+    "delta": 0.09332380780828942
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "overall",
+    "metric": "macro_f1",
+    "baseline": 51.15701738769703,
+    "cmerc": 50.98850703387032,
+    "delta": -0.16851035382671142
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "overall",
+    "metric": "f1.neutral",
+    "baseline": 78.2439024390244,
+    "cmerc": 77.51479289940828,
+    "delta": -0.7291095396161182
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "overall",
+    "metric": "f1.surprise",
+    "baseline": 65.34653465346535,
+    "cmerc": 64.68646864686468,
+    "delta": -0.6600660066006725
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "overall",
+    "metric": "f1.fear",
+    "baseline": 36.0655737704918,
+    "cmerc": 33.89830508474576,
+    "delta": -2.167268685746045
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "overall",
+    "metric": "f1.sadness",
+    "baseline": 40.43715846994536,
+    "cmerc": 45.026178010471206,
+    "delta": 4.589019540525847
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "overall",
+    "metric": "f1.joy",
+    "baseline": 60.62499999999999,
+    "cmerc": 59.93485342019543,
+    "delta": -0.6901465798045621
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "overall",
+    "metric": "f1.disgust",
+    "baseline": 25.000000000000007,
+    "cmerc": 21.428571428571427,
+    "delta": -3.57142857142858
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "overall",
+    "metric": "f1.anger",
+    "baseline": 52.38095238095237,
+    "cmerc": 54.43037974683544,
+    "delta": 2.0494273658830693
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "overall",
+    "metric": "ece",
+    "baseline": 20.542450392966,
+    "cmerc": 19.125483365775,
+    "delta": -1.4169670271909993
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "overall",
+    "metric": "mce",
+    "baseline": 26.844390782348,
+    "cmerc": 26.707613097571,
+    "delta": -0.1367776847770017
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "overall",
+    "metric": "rmsce",
+    "baseline": 21.658764083164,
+    "cmerc": 19.935583171244,
+    "delta": -1.7231809119200001
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "overall",
+    "metric": "cel.total",
+    "baseline": 304.32937386631966,
+    "cmerc": 261.31790105998516,
+    "delta": -43.011472806334496
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "overall",
+    "metric": "cel.text",
+    "baseline": 120.21161884069443,
+    "cmerc": 120.06619766354561,
+    "delta": -0.14542117714881897
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "overall",
+    "metric": "cel.audio",
+    "baseline": 14.899596154689789,
+    "cmerc": 14.034321278333664,
+    "delta": -0.8652748763561249
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "overall",
+    "metric": "cel.visual",
+    "baseline": 6.303065329790115,
+    "cmerc": 7.305895060300827,
+    "delta": 1.0028297305107117
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "overall",
+    "metric": "cel.intra_context",
+    "baseline": 70.40286019444466,
+    "cmerc": 42.3637620806694,
+    "delta": -28.039098113775253
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "overall",
+    "metric": "cel.inter_context",
+    "baseline": 92.51223334670067,
+    "cmerc": 77.54772497713566,
+    "delta": -14.96450836956501
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "overall",
+    "metric": "auroc_success",
+    "baseline": 70.762934351826,
+    "cmerc": 70.619252873563,
+    "delta": -0.14368147826300515
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "overall",
+    "metric": "auprc_success",
+    "baseline": 79.373920813943,
+    "cmerc": 80.664448131612,
+    "delta": 1.290527317669003
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "early",
+    "metric": "accuracy",
+    "baseline": 69.43699731903486,
+    "cmerc": 68.90080428954424,
+    "delta": -0.5361930294906188
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "early",
+    "metric": "weighted_f1",
+    "baseline": 68.4685279089703,
+    "cmerc": 67.80314511265841,
+    "delta": -0.6653827963118886
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "early",
+    "metric": "macro_f1",
+    "baseline": 53.347539533135865,
+    "cmerc": 50.40766096391588,
+    "delta": -2.939878569219985
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "early",
+    "metric": "f1.neutral",
+    "baseline": 80.86253369272237,
+    "cmerc": 80.75880758807588,
+    "delta": -0.10372610464648346
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "early",
+    "metric": "f1.surprise",
+    "baseline": 65.9090909090909,
+    "cmerc": 61.36363636363637,
+    "delta": -4.54545454545454
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "early",
+    "metric": "f1.fear",
+    "baseline": 42.10526315789474,
+    "cmerc": 50.0,
+    "delta": 7.89473684210526
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "early",
+    "metric": "f1.sadness",
+    "baseline": 36.00000000000001,
+    "cmerc": 36.00000000000001,
+    "delta": 0.0
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "early",
+    "metric": "f1.joy",
+    "baseline": 67.74193548387096,
+    "cmerc": 66.66666666666666,
+    "delta": -1.0752688172043037
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "early",
+    "metric": "f1.disgust",
+    "baseline": 25.0,
+    "cmerc": 0.0,
+    "delta": -25.0
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "early",
+    "metric": "f1.anger",
+    "baseline": 55.81395348837208,
+    "cmerc": 58.06451612903225,
+    "delta": 2.2505626406601706
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "early",
+    "metric": "ece",
+    "baseline": 23.919185832263,
+    "cmerc": 22.654973877339,
+    "delta": -1.2642119549240007
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "early",
+    "metric": "mce",
+    "baseline": 29.991687210493,
+    "cmerc": 34.112903289497,
+    "delta": 4.121216079003997
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "early",
+    "metric": "rmsce",
+    "baseline": 24.940375865704,
+    "cmerc": 23.607417866326,
+    "delta": -1.3329579993779994
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "early",
+    "metric": "auroc_success",
+    "baseline": 71.364221364221,
+    "cmerc": 72.014624983228,
+    "delta": 0.6504036190070082
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "early",
+    "metric": "auprc_success",
+    "baseline": 82.420335074174,
+    "cmerc": 83.561282975112,
+    "delta": 1.140947900937988
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "middle",
+    "metric": "accuracy",
+    "baseline": 63.91184573002755,
+    "cmerc": 63.36088154269972,
+    "delta": -0.5509641873278284
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "middle",
+    "metric": "weighted_f1",
+    "baseline": 61.82032856574477,
+    "cmerc": 61.417610756026754,
+    "delta": -0.40271780971801263
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "middle",
+    "metric": "macro_f1",
+    "baseline": 49.61127134311913,
+    "cmerc": 49.35286729082482,
+    "delta": -0.25840405229430985
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "middle",
+    "metric": "f1.neutral",
+    "baseline": 77.9874213836478,
+    "cmerc": 75.55555555555556,
+    "delta": -2.431865828092242
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "middle",
+    "metric": "f1.surprise",
+    "baseline": 69.84126984126983,
+    "cmerc": 72.44094488188976,
+    "delta": 2.5996750406199283
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "middle",
+    "metric": "f1.fear",
+    "baseline": 46.15384615384615,
+    "cmerc": 33.33333333333333,
+    "delta": -12.820512820512825
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "middle",
+    "metric": "f1.sadness",
+    "baseline": 32.14285714285714,
+    "cmerc": 37.931034482758626,
+    "delta": 5.7881773399014875
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "middle",
+    "metric": "f1.joy",
+    "baseline": 52.17391304347826,
+    "cmerc": 51.685393258426956,
+    "delta": -0.48851978505130234
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "middle",
+    "metric": "f1.disgust",
+    "baseline": 20.000000000000004,
+    "cmerc": 25.0,
+    "delta": 4.9999999999999964
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "middle",
+    "metric": "f1.anger",
+    "baseline": 48.97959183673469,
+    "cmerc": 49.523809523809526,
+    "delta": 0.5442176870748341
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "middle",
+    "metric": "ece",
+    "baseline": 19.378940773404,
+    "cmerc": 16.975484874623,
+    "delta": -2.403455898781001
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "middle",
+    "metric": "mce",
+    "baseline": 32.959616184235,
+    "cmerc": 31.257584194342,
+    "delta": -1.7020319898930012
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "middle",
+    "metric": "rmsce",
+    "baseline": 21.460301453678,
+    "cmerc": 19.45085125846,
+    "delta": -2.009450195218001
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "middle",
+    "metric": "auroc_success",
+    "baseline": 72.686891287181,
+    "cmerc": 75.116050997058,
+    "delta": 2.4291597098769984
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "middle",
+    "metric": "auprc_success",
+    "baseline": 83.325986317812,
+    "cmerc": 85.082252105436,
+    "delta": 1.7562657876240024
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "late",
+    "metric": "accuracy",
+    "baseline": 63.00268096514745,
+    "cmerc": 63.806970509383376,
+    "delta": 0.8042895442359281
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "late",
+    "metric": "weighted_f1",
+    "baseline": 61.372167359304754,
+    "cmerc": 62.433953117928496,
+    "delta": 1.061785758623742
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "late",
+    "metric": "macro_f1",
+    "baseline": 48.11241995030117,
+    "cmerc": 49.28829758381796,
+    "delta": 1.1758776335167909
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "late",
+    "metric": "f1.neutral",
+    "baseline": 75.59523809523809,
+    "cmerc": 75.75757575757576,
+    "delta": 0.1623376623376771
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "late",
+    "metric": "f1.surprise",
+    "baseline": 58.42696629213482,
+    "cmerc": 56.818181818181834,
+    "delta": -1.608784473952987
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "late",
+    "metric": "f1.fear",
+    "baseline": 12.5,
+    "cmerc": 13.333333333333334,
+    "delta": 0.8333333333333339
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "late",
+    "metric": "f1.sadness",
+    "baseline": 49.35064935064935,
+    "cmerc": 55.421686746987966,
+    "delta": 6.0710373963386175
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "late",
+    "metric": "f1.joy",
+    "baseline": 59.61538461538461,
+    "cmerc": 59.18367346938776,
+    "delta": -0.4317111459968501
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "late",
+    "metric": "f1.disgust",
+    "baseline": 28.571428571428577,
+    "cmerc": 28.571428571428577,
+    "delta": 0.0
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "late",
+    "metric": "f1.anger",
+    "baseline": 52.72727272727272,
+    "cmerc": 55.93220338983049,
+    "delta": 3.2049306625577714
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "late",
+    "metric": "ece",
+    "baseline": 18.474758450371,
+    "cmerc": 17.8167903671,
+    "delta": -0.6579680832709975
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "late",
+    "metric": "mce",
+    "baseline": 29.47596887479,
+    "cmerc": 25.75360010652,
+    "delta": -3.722368768269998
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "late",
+    "metric": "rmsce",
+    "baseline": 20.094569493144,
+    "cmerc": 18.666779983483,
+    "delta": -1.4277895096610003
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "late",
+    "metric": "auroc_success",
+    "baseline": 68.251618871415,
+    "cmerc": 64.721444133209,
+    "delta": -3.530174738206
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "late",
+    "metric": "auprc_success",
+    "baseline": 73.382286878494,
+    "cmerc": 73.694201144773,
+    "delta": 0.311914266279004
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "training",
+    "metric": "elapsed_seconds",
+    "baseline": 200.95999999999998,
+    "cmerc": 1316.0200000000002,
+    "delta": 1115.0600000000002
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "training",
+    "metric": "max_gpu_memory_mb",
+    "baseline": 798.71,
+    "cmerc": 895.63,
+    "delta": 96.91999999999996
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "validation",
+    "segment": "training",
+    "metric": "optimizer_steps",
+    "baseline": 2600,
+    "cmerc": 2548,
+    "delta": -52
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "test",
+    "segment": "overall",
+    "metric": "accuracy",
+    "baseline": 65.0191570881226,
+    "cmerc": 65.93869731800767,
+    "delta": 0.9195402298850723
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "test",
+    "segment": "overall",
+    "metric": "weighted_f1",
+    "baseline": 63.68336543649307,
+    "cmerc": 64.83082698437889,
+    "delta": 1.1474615478858183
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "test",
+    "segment": "overall",
+    "metric": "macro_f1",
+    "baseline": 47.176699243715255,
+    "cmerc": 47.42903301895433,
+    "delta": 0.2523337752390731
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "test",
+    "segment": "overall",
+    "metric": "f1.neutral",
+    "baseline": 78.3652043494563,
+    "cmerc": 79.04328018223234,
+    "delta": 0.678075832776031
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "test",
+    "segment": "overall",
+    "metric": "f1.surprise",
+    "baseline": 57.48709122203098,
+    "cmerc": 57.43589743589743,
+    "delta": -0.05119378613355252
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "test",
+    "segment": "overall",
+    "metric": "f1.fear",
+    "baseline": 24.691358024691358,
+    "cmerc": 17.72151898734177,
+    "delta": -6.969839037349587
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "test",
+    "segment": "overall",
+    "metric": "f1.sadness",
+    "baseline": 34.104046242774565,
+    "cmerc": 38.01652892561984,
+    "delta": 3.9124826828452726
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "test",
+    "segment": "overall",
+    "metric": "f1.joy",
+    "baseline": 61.83206106870228,
+    "cmerc": 62.14099216710183,
+    "delta": 0.30893109839954747
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "test",
+    "segment": "overall",
+    "metric": "f1.disgust",
+    "baseline": 25.263157894736842,
+    "cmerc": 24.444444444444446,
+    "delta": -0.8187134502923961
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "test",
+    "segment": "overall",
+    "metric": "f1.anger",
+    "baseline": 48.493975903614455,
+    "cmerc": 53.20056899004268,
+    "delta": 4.706593086428228
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "test",
+    "segment": "overall",
+    "metric": "ece",
+    "baseline": 19.883207008528,
+    "cmerc": 19.185048184176,
+    "delta": -0.6981588243519994
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "test",
+    "segment": "overall",
+    "metric": "mce",
+    "baseline": 81.752169132233,
+    "cmerc": 26.78219974041,
+    "delta": -54.96996939182301
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "test",
+    "segment": "overall",
+    "metric": "rmsce",
+    "baseline": 22.121569642153,
+    "cmerc": 20.69954550294,
+    "delta": -1.422024139212997
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "test",
+    "segment": "overall",
+    "metric": "cel.total",
+    "baseline": 794.3094165176153,
+    "cmerc": 677.225481197238,
+    "delta": -117.08393532037735
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "test",
+    "segment": "overall",
+    "metric": "cel.text",
+    "baseline": 333.1345008611679,
+    "cmerc": 325.80895541608334,
+    "delta": -7.325545445084572
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "test",
+    "segment": "overall",
+    "metric": "cel.audio",
+    "baseline": 31.041133284568787,
+    "cmerc": 27.57767340540886,
+    "delta": -3.4634598791599274
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "test",
+    "segment": "overall",
+    "metric": "cel.visual",
+    "baseline": 12.207420200109482,
+    "cmerc": 14.130955934524536,
+    "delta": 1.9235357344150543
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "test",
+    "segment": "overall",
+    "metric": "cel.intra_context",
+    "baseline": 182.15861812233925,
+    "cmerc": 104.79934861883521,
+    "delta": -77.35926950350404
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "test",
+    "segment": "overall",
+    "metric": "cel.inter_context",
+    "baseline": 235.7677440494299,
+    "cmerc": 204.90854782238603,
+    "delta": -30.859196227043867
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "test",
+    "segment": "overall",
+    "metric": "auroc_success",
+    "baseline": 75.684104608287,
+    "cmerc": 73.822606863276,
+    "delta": -1.8614977450110075
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "test",
+    "segment": "overall",
+    "metric": "auprc_success",
+    "baseline": 83.422704407196,
+    "cmerc": 83.07403662253,
+    "delta": -0.3486677846659916
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "test",
+    "segment": "early",
+    "metric": "accuracy",
+    "baseline": 65.60000000000001,
+    "cmerc": 68.8,
+    "delta": 3.1999999999999886
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "test",
+    "segment": "early",
+    "metric": "weighted_f1",
+    "baseline": 64.49244876614229,
+    "cmerc": 67.78330082065052,
+    "delta": 3.2908520545082354
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "test",
+    "segment": "early",
+    "metric": "macro_f1",
+    "baseline": 46.76291731423402,
+    "cmerc": 49.141943807121976,
+    "delta": 2.3790264928879523
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "test",
+    "segment": "early",
+    "metric": "f1.neutral",
+    "baseline": 79.51807228915662,
+    "cmerc": 81.71806167400881,
+    "delta": 2.199989384852188
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "test",
+    "segment": "early",
+    "metric": "f1.surprise",
+    "baseline": 48.044692737430175,
+    "cmerc": 51.11111111111111,
+    "delta": 3.066418373680932
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "test",
+    "segment": "early",
+    "metric": "f1.fear",
+    "baseline": 26.08695652173913,
+    "cmerc": 24.000000000000004,
+    "delta": -2.0869565217391255
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "test",
+    "segment": "early",
+    "metric": "f1.sadness",
+    "baseline": 36.89320388349515,
+    "cmerc": 41.904761904761905,
+    "delta": 5.011558021266758
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "test",
+    "segment": "early",
+    "metric": "f1.joy",
+    "baseline": 62.40601503759399,
+    "cmerc": 65.64885496183206,
+    "delta": 3.242839924238069
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "test",
+    "segment": "early",
+    "metric": "f1.disgust",
+    "baseline": 23.52941176470588,
+    "cmerc": 20.689655172413794,
+    "delta": -2.839756592292087
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "test",
+    "segment": "early",
+    "metric": "f1.anger",
+    "baseline": 50.86206896551724,
+    "cmerc": 58.921161825726145,
+    "delta": 8.059092860208906
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "test",
+    "segment": "early",
+    "metric": "ece",
+    "baseline": 20.885164170606,
+    "cmerc": 22.253107186726,
+    "delta": 1.3679430161200017
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "test",
+    "segment": "early",
+    "metric": "mce",
+    "baseline": 66.992610692978,
+    "cmerc": 29.549681940335,
+    "delta": -37.442928752643006
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "test",
+    "segment": "early",
+    "metric": "rmsce",
+    "baseline": 23.573155409931,
+    "cmerc": 23.523044564937,
+    "delta": -0.05011084499400198
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "test",
+    "segment": "early",
+    "metric": "auroc_success",
+    "baseline": 76.474469538241,
+    "cmerc": 71.884925705524,
+    "delta": -4.589543832716998
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "test",
+    "segment": "early",
+    "metric": "auprc_success",
+    "baseline": 83.008843688178,
+    "cmerc": 82.657219137415,
+    "delta": -0.351624550763006
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "test",
+    "segment": "middle",
+    "metric": "accuracy",
+    "baseline": 64.18604651162791,
+    "cmerc": 64.53488372093024,
+    "delta": 0.34883720930233153
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "test",
+    "segment": "middle",
+    "metric": "weighted_f1",
+    "baseline": 62.51033491865261,
+    "cmerc": 63.11762368291388,
+    "delta": 0.6072887642612699
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "test",
+    "segment": "middle",
+    "metric": "macro_f1",
+    "baseline": 45.82773006798754,
+    "cmerc": 46.149353909761416,
+    "delta": 0.3216238417738779
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "test",
+    "segment": "middle",
+    "metric": "f1.neutral",
+    "baseline": 77.59815242494226,
+    "cmerc": 77.69953051643192,
+    "delta": 0.10137809148966426
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "test",
+    "segment": "middle",
+    "metric": "f1.surprise",
+    "baseline": 60.09389671361502,
+    "cmerc": 58.98617511520739,
+    "delta": -1.107721598407629
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "test",
+    "segment": "middle",
+    "metric": "f1.fear",
+    "baseline": 23.52941176470588,
+    "cmerc": 18.181818181818183,
+    "delta": -5.347593582887697
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "test",
+    "segment": "middle",
+    "metric": "f1.sadness",
+    "baseline": 36.92307692307692,
+    "cmerc": 42.64705882352941,
+    "delta": 5.723981900452493
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "test",
+    "segment": "middle",
+    "metric": "f1.joy",
+    "baseline": 61.53846153846154,
+    "cmerc": 59.3886462882096,
+    "delta": -2.1498152502519403
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "test",
+    "segment": "middle",
+    "metric": "f1.disgust",
+    "baseline": 14.814814814814813,
+    "cmerc": 14.814814814814813,
+    "delta": 0.0
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "test",
+    "segment": "middle",
+    "metric": "f1.anger",
+    "baseline": 46.2962962962963,
+    "cmerc": 51.32743362831859,
+    "delta": 5.03113733202229
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "test",
+    "segment": "middle",
+    "metric": "ece",
+    "baseline": 19.046124284004,
+    "cmerc": 18.097461697667,
+    "delta": -0.9486625863370008
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "test",
+    "segment": "middle",
+    "metric": "mce",
+    "baseline": 32.053614514215,
+    "cmerc": 27.572462682066,
+    "delta": -4.481151832148999
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "test",
+    "segment": "middle",
+    "metric": "rmsce",
+    "baseline": 21.013059448442,
+    "cmerc": 20.236616625879,
+    "delta": -0.7764428225629985
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "test",
+    "segment": "middle",
+    "metric": "auroc_success",
+    "baseline": 75.112930547713,
+    "cmerc": 76.48737261852,
+    "delta": 1.3744420708069924
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "test",
+    "segment": "middle",
+    "metric": "auprc_success",
+    "baseline": 83.414226857193,
+    "cmerc": 84.302050798447,
+    "delta": 0.8878239412539983
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "test",
+    "segment": "late",
+    "metric": "accuracy",
+    "baseline": 65.25714285714285,
+    "cmerc": 64.45714285714286,
+    "delta": -0.7999999999999972
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "test",
+    "segment": "late",
+    "metric": "weighted_f1",
+    "baseline": 64.01529794131862,
+    "cmerc": 63.56060253096821,
+    "delta": -0.4546954103504106
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "test",
+    "segment": "late",
+    "metric": "macro_f1",
+    "baseline": 48.53132897492234,
+    "cmerc": 46.26372481784669,
+    "delta": -2.2676041570756453
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "test",
+    "segment": "late",
+    "metric": "f1.neutral",
+    "baseline": 77.92792792792793,
+    "cmerc": 77.57437070938215,
+    "delta": -0.3535572185457738
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "test",
+    "segment": "late",
+    "metric": "f1.surprise",
+    "baseline": 63.49206349206349,
+    "cmerc": 61.702127659574465,
+    "delta": -1.7899358324890215
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "test",
+    "segment": "late",
+    "metric": "f1.fear",
+    "baseline": 25.0,
+    "cmerc": 9.523809523809524,
+    "delta": -15.476190476190476
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "test",
+    "segment": "late",
+    "metric": "f1.sadness",
+    "baseline": 28.31858407079646,
+    "cmerc": 29.508196721311474,
+    "delta": 1.1896126505150129
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "test",
+    "segment": "late",
+    "metric": "f1.joy",
+    "baseline": 61.53846153846153,
+    "cmerc": 61.090909090909086,
+    "delta": -0.4475524475524466
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "test",
+    "segment": "late",
+    "metric": "f1.disgust",
+    "baseline": 35.29411764705882,
+    "cmerc": 35.29411764705882,
+    "delta": 0.0
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "test",
+    "segment": "late",
+    "metric": "f1.anger",
+    "baseline": 48.14814814814815,
+    "cmerc": 49.152542372881356,
+    "delta": 1.004394224733204
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "test",
+    "segment": "late",
+    "metric": "ece",
+    "baseline": 20.192077275685,
+    "cmerc": 17.796780654362,
+    "delta": -2.395296621323002
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "test",
+    "segment": "late",
+    "metric": "mce",
+    "baseline": 81.752169132233,
+    "cmerc": 31.443039292381,
+    "delta": -50.309129839852005
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "test",
+    "segment": "late",
+    "metric": "rmsce",
+    "baseline": 22.443764070041,
+    "cmerc": 19.451244423777,
+    "delta": -2.9925196462640002
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "test",
+    "segment": "late",
+    "metric": "auroc_success",
+    "baseline": 75.467785049313,
+    "cmerc": 73.183051697795,
+    "delta": -2.2847333515179997
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "test",
+    "segment": "late",
+    "metric": "auprc_success",
+    "baseline": 83.701070596788,
+    "cmerc": 82.554680294776,
+    "delta": -1.1463903020119943
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "test",
+    "segment": "training",
+    "metric": "elapsed_seconds",
+    "baseline": 200.95999999999998,
+    "cmerc": 1316.0200000000002,
+    "delta": 1115.0600000000002
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "test",
+    "segment": "training",
+    "metric": "max_gpu_memory_mb",
+    "baseline": 798.71,
+    "cmerc": 895.63,
+    "delta": 96.91999999999996
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1937,
+    "split": "test",
+    "segment": "training",
+    "metric": "optimizer_steps",
+    "baseline": 2600,
+    "cmerc": 2548,
+    "delta": -52
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "overall",
+    "metric": "accuracy",
+    "baseline": 66.36609558160504,
+    "cmerc": 66.90712353471596,
+    "delta": 0.5410279531109268
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "overall",
+    "metric": "weighted_f1",
+    "baseline": 64.68125867327777,
+    "cmerc": 65.69910484382069,
+    "delta": 1.0178461705429243
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "overall",
+    "metric": "macro_f1",
+    "baseline": 51.28186702611147,
+    "cmerc": 53.79908230402592,
+    "delta": 2.5172152779144525
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "overall",
+    "metric": "f1.neutral",
+    "baseline": 78.40466926070039,
+    "cmerc": 79.60396039603961,
+    "delta": 1.199291135339223
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "overall",
+    "metric": "f1.surprise",
+    "baseline": 65.55183946488293,
+    "cmerc": 66.01941747572816,
+    "delta": 0.4675780108452301
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "overall",
+    "metric": "f1.fear",
+    "baseline": 31.578947368421055,
+    "cmerc": 33.33333333333333,
+    "delta": 1.7543859649122737
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "overall",
+    "metric": "f1.sadness",
+    "baseline": 38.372093023255815,
+    "cmerc": 40.22988505747127,
+    "delta": 1.857792034215457
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "overall",
+    "metric": "f1.joy",
+    "baseline": 60.60606060606061,
+    "cmerc": 60.48109965635739,
+    "delta": -0.12496094970322247
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "overall",
+    "metric": "f1.disgust",
+    "baseline": 25.000000000000007,
+    "cmerc": 37.73584905660377,
+    "delta": 12.735849056603762
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "overall",
+    "metric": "f1.anger",
+    "baseline": 59.45945945945946,
+    "cmerc": 59.19003115264797,
+    "delta": -0.2694283068114913
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "overall",
+    "metric": "ece",
+    "baseline": 20.799505279288,
+    "cmerc": 20.975420118131,
+    "delta": 0.17591483884300274
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "overall",
+    "metric": "mce",
+    "baseline": 31.543480356534,
+    "cmerc": 31.334585696459,
+    "delta": -0.2088946600749999
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "overall",
+    "metric": "rmsce",
+    "baseline": 21.517264619305,
+    "cmerc": 21.855833505469,
+    "delta": 0.33856888616400127
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "overall",
+    "metric": "cel.total",
+    "baseline": 249.92203319072723,
+    "cmerc": 283.1307799369097,
+    "delta": 33.20874674618244
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "overall",
+    "metric": "cel.text",
+    "baseline": 119.1821828186512,
+    "cmerc": 129.33875885605812,
+    "delta": 10.156576037406921
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "overall",
+    "metric": "cel.audio",
+    "baseline": 14.685511469841003,
+    "cmerc": 13.489572286605835,
+    "delta": -1.1959391832351685
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "overall",
+    "metric": "cel.visual",
+    "baseline": 6.933739870786667,
+    "cmerc": 7.344718009233475,
+    "delta": 0.41097813844680786
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "overall",
+    "metric": "cel.intra_context",
+    "baseline": 37.9251483976841,
+    "cmerc": 59.04729160666466,
+    "delta": 21.12214320898056
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "overall",
+    "metric": "cel.inter_context",
+    "baseline": 71.19545063376427,
+    "cmerc": 73.91043917834759,
+    "delta": 2.7149885445833206
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "overall",
+    "metric": "auroc_success",
+    "baseline": 71.488154213778,
+    "cmerc": 71.47337265069,
+    "delta": -0.014781563088007488
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "overall",
+    "metric": "auprc_success",
+    "baseline": 82.360419850385,
+    "cmerc": 82.728840033205,
+    "delta": 0.3684201828200031
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "early",
+    "metric": "accuracy",
+    "baseline": 69.97319034852548,
+    "cmerc": 70.77747989276139,
+    "delta": 0.8042895442359139
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "early",
+    "metric": "weighted_f1",
+    "baseline": 68.75434130621981,
+    "cmerc": 70.16703338785425,
+    "delta": 1.4126920816344324
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "early",
+    "metric": "macro_f1",
+    "baseline": 53.375483340654604,
+    "cmerc": 56.7662316886441,
+    "delta": 3.3907483479894935
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "early",
+    "metric": "f1.neutral",
+    "baseline": 81.40161725067385,
+    "cmerc": 82.41758241758241,
+    "delta": 1.0159651669085576
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "early",
+    "metric": "f1.surprise",
+    "baseline": 62.92134831460675,
+    "cmerc": 64.44444444444444,
+    "delta": 1.5230961298376897
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "early",
+    "metric": "f1.fear",
+    "baseline": 37.49999999999999,
+    "cmerc": 42.10526315789474,
+    "delta": 4.605263157894747
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "early",
+    "metric": "f1.sadness",
+    "baseline": 34.78260869565217,
+    "cmerc": 33.33333333333333,
+    "delta": -1.4492753623188435
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "early",
+    "metric": "f1.joy",
+    "baseline": 67.22689075630252,
+    "cmerc": 68.37606837606837,
+    "delta": 1.149177619765851
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "early",
+    "metric": "f1.disgust",
+    "baseline": 28.57142857142857,
+    "cmerc": 42.857142857142854,
+    "delta": 14.285714285714285
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "early",
+    "metric": "f1.anger",
+    "baseline": 61.22448979591836,
+    "cmerc": 63.829787234042556,
+    "delta": 2.6052974381241967
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "early",
+    "metric": "ece",
+    "baseline": 23.682480079719,
+    "cmerc": 22.839526560447,
+    "delta": -0.842953519272001
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "early",
+    "metric": "mce",
+    "baseline": 31.464062134425,
+    "cmerc": 31.157171221103,
+    "delta": -0.30689091332200036
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "early",
+    "metric": "rmsce",
+    "baseline": 24.431761691934,
+    "cmerc": 23.930575653227,
+    "delta": -0.5011860387070008
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "early",
+    "metric": "auroc_success",
+    "baseline": 73.915571975917,
+    "cmerc": 72.765499026967,
+    "delta": -1.1500729489499975
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "early",
+    "metric": "auprc_success",
+    "baseline": 86.223864477662,
+    "cmerc": 85.963151758768,
+    "delta": -0.2607127188939984
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "middle",
+    "metric": "accuracy",
+    "baseline": 66.39118457300276,
+    "cmerc": 66.94214876033058,
+    "delta": 0.5509641873278213
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "middle",
+    "metric": "weighted_f1",
+    "baseline": 64.41016795031588,
+    "cmerc": 64.87149385531306,
+    "delta": 0.4613259049971816
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "middle",
+    "metric": "macro_f1",
+    "baseline": 51.37003671087551,
+    "cmerc": 53.44702764943493,
+    "delta": 2.076990938559419
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "middle",
+    "metric": "f1.neutral",
+    "baseline": 78.0952380952381,
+    "cmerc": 79.11392405063292,
+    "delta": 1.0186859553948153
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "middle",
+    "metric": "f1.surprise",
+    "baseline": 74.19354838709677,
+    "cmerc": 74.4186046511628,
+    "delta": 0.2250562640660263
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "middle",
+    "metric": "f1.fear",
+    "baseline": 38.46153846153846,
+    "cmerc": 38.46153846153846,
+    "delta": 0.0
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "middle",
+    "metric": "f1.sadness",
+    "baseline": 33.9622641509434,
+    "cmerc": 37.73584905660377,
+    "delta": 3.773584905660371
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "middle",
+    "metric": "f1.joy",
+    "baseline": 56.470588235294116,
+    "cmerc": 53.65853658536586,
+    "delta": -2.8120516499282573
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "middle",
+    "metric": "f1.disgust",
+    "baseline": 20.000000000000004,
+    "cmerc": 33.33333333333333,
+    "delta": 13.333333333333325
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "middle",
+    "metric": "f1.anger",
+    "baseline": 58.40707964601771,
+    "cmerc": 57.407407407407405,
+    "delta": -0.9996722386103087
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "middle",
+    "metric": "ece",
+    "baseline": 20.907826766823,
+    "cmerc": 21.510761988557,
+    "delta": 0.6029352217340005
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "middle",
+    "metric": "mce",
+    "baseline": 37.49096509887,
+    "cmerc": 34.202626111015,
+    "delta": -3.288338987854999
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "middle",
+    "metric": "rmsce",
+    "baseline": 22.058800762997,
+    "cmerc": 23.512314704455,
+    "delta": 1.4535139414580023
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "middle",
+    "metric": "auroc_success",
+    "baseline": 71.95428882389,
+    "cmerc": 72.846364883402,
+    "delta": 0.8920760595120072
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "middle",
+    "metric": "auprc_success",
+    "baseline": 84.069979843756,
+    "cmerc": 83.502326804505,
+    "delta": -0.5676530392509989
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "late",
+    "metric": "accuracy",
+    "baseline": 62.73458445040214,
+    "cmerc": 63.00268096514745,
+    "delta": 0.2680965147453094
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "late",
+    "metric": "weighted_f1",
+    "baseline": 60.73974489870187,
+    "cmerc": 61.78190475970816,
+    "delta": 1.04215986100629
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "late",
+    "metric": "macro_f1",
+    "baseline": 47.14550547931471,
+    "cmerc": 49.019365947809746,
+    "delta": 1.8738604684950388
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "late",
+    "metric": "f1.neutral",
+    "baseline": 75.43859649122807,
+    "cmerc": 76.96969696969698,
+    "delta": 1.5311004784689146
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "late",
+    "metric": "f1.surprise",
+    "baseline": 55.81395348837209,
+    "cmerc": 55.55555555555555,
+    "delta": -0.25839793281654266
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "late",
+    "metric": "f1.fear",
+    "baseline": 13.333333333333334,
+    "cmerc": 13.333333333333334,
+    "delta": 0.0
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "late",
+    "metric": "f1.sadness",
+    "baseline": 43.83561643835616,
+    "cmerc": 46.57534246575342,
+    "delta": 2.7397260273972606
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "late",
+    "metric": "f1.joy",
+    "baseline": 55.91397849462365,
+    "cmerc": 56.52173913043479,
+    "delta": 0.6077606358111396
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "late",
+    "metric": "f1.disgust",
+    "baseline": 26.666666666666668,
+    "cmerc": 37.03703703703703,
+    "delta": 10.370370370370363
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "late",
+    "metric": "f1.anger",
+    "baseline": 59.01639344262296,
+    "cmerc": 57.14285714285714,
+    "delta": -1.8735362997658243
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "late",
+    "metric": "ece",
+    "baseline": 18.148051158353,
+    "cmerc": 18.65684393264,
+    "delta": 0.5087927742870022
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "late",
+    "metric": "mce",
+    "baseline": 31.393179297447,
+    "cmerc": 82.159268856049,
+    "delta": 50.766089558602
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "late",
+    "metric": "rmsce",
+    "baseline": 19.367724880222,
+    "cmerc": 19.797925872832,
+    "delta": 0.43020099261000055
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "late",
+    "metric": "auroc_success",
+    "baseline": 68.7941954129,
+    "cmerc": 68.513721862473,
+    "delta": -0.28047355042698996
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "late",
+    "metric": "auprc_success",
+    "baseline": 76.730722337052,
+    "cmerc": 77.727425780509,
+    "delta": 0.9967034434569939
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "training",
+    "metric": "elapsed_seconds",
+    "baseline": 237.29000000000002,
+    "cmerc": 1940.0400000000002,
+    "delta": 1702.7500000000002
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "training",
+    "metric": "max_gpu_memory_mb",
+    "baseline": 801.34,
+    "cmerc": 896.06,
+    "delta": 94.71999999999991
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "validation",
+    "segment": "training",
+    "metric": "optimizer_steps",
+    "baseline": 2600,
+    "cmerc": 2548,
+    "delta": -52
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "test",
+    "segment": "overall",
+    "metric": "accuracy",
+    "baseline": 66.0919540229885,
+    "cmerc": 64.98084291187739,
+    "delta": -1.1111111111111143
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "test",
+    "segment": "overall",
+    "metric": "weighted_f1",
+    "baseline": 64.86202992658924,
+    "cmerc": 64.39086271666623,
+    "delta": -0.47116720992301
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "test",
+    "segment": "overall",
+    "metric": "macro_f1",
+    "baseline": 47.45598334802535,
+    "cmerc": 48.12212859955293,
+    "delta": 0.6661452515275812
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "test",
+    "segment": "overall",
+    "metric": "f1.neutral",
+    "baseline": 79.63594994311718,
+    "cmerc": 79.15057915057915,
+    "delta": -0.48537079253803483
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "test",
+    "segment": "overall",
+    "metric": "f1.surprise",
+    "baseline": 56.38474295190713,
+    "cmerc": 55.93495934959349,
+    "delta": -0.44978360231363723
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "test",
+    "segment": "overall",
+    "metric": "f1.fear",
+    "baseline": 16.216216216216218,
+    "cmerc": 25.287356321839077,
+    "delta": 9.07114010562286
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "test",
+    "segment": "overall",
+    "metric": "f1.sadness",
+    "baseline": 35.59870550161813,
+    "cmerc": 38.509316770186345,
+    "delta": 2.9106112685682177
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "test",
+    "segment": "overall",
+    "metric": "f1.joy",
+    "baseline": 62.312925170068034,
+    "cmerc": 59.91678224687933,
+    "delta": -2.3961429231887053
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "test",
+    "segment": "overall",
+    "metric": "f1.disgust",
+    "baseline": 29.411764705882355,
+    "cmerc": 26.573426573426573,
+    "delta": -2.8383381324557817
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "test",
+    "segment": "overall",
+    "metric": "f1.anger",
+    "baseline": 52.63157894736842,
+    "cmerc": 51.48247978436656,
+    "delta": -1.149099163001857
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "test",
+    "segment": "overall",
+    "metric": "ece",
+    "baseline": 19.794714542184,
+    "cmerc": 18.400302740578,
+    "delta": -1.394411801606001
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "test",
+    "segment": "overall",
+    "metric": "mce",
+    "baseline": 31.384727042892,
+    "cmerc": 30.690924078226,
+    "delta": -0.6938029646659984
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "test",
+    "segment": "overall",
+    "metric": "rmsce",
+    "baseline": 21.552970060321,
+    "cmerc": 19.913380291846,
+    "delta": -1.6395897684750018
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "test",
+    "segment": "overall",
+    "metric": "cel.total",
+    "baseline": 642.2878249585629,
+    "cmerc": 754.6554335430264,
+    "delta": 112.3676085844636
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "test",
+    "segment": "overall",
+    "metric": "cel.text",
+    "baseline": 323.9683473110199,
+    "cmerc": 362.72988906502724,
+    "delta": 38.76154175400734
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "test",
+    "segment": "overall",
+    "metric": "cel.audio",
+    "baseline": 28.63021394610405,
+    "cmerc": 25.524401664733887,
+    "delta": -3.105812281370163
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "test",
+    "segment": "overall",
+    "metric": "cel.visual",
+    "baseline": 13.752591848373413,
+    "cmerc": 13.963619723916054,
+    "delta": 0.21102787554264069
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "test",
+    "segment": "overall",
+    "metric": "cel.intra_context",
+    "baseline": 101.82224252820015,
+    "cmerc": 159.46057079732418,
+    "delta": 57.63832826912403
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "test",
+    "segment": "overall",
+    "metric": "cel.inter_context",
+    "baseline": 174.11442932486534,
+    "cmerc": 192.9769522920251,
+    "delta": 18.862522967159748
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "test",
+    "segment": "overall",
+    "metric": "auroc_success",
+    "baseline": 74.98986326046,
+    "cmerc": 74.926200404608,
+    "delta": -0.0636628558520016
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "test",
+    "segment": "overall",
+    "metric": "auprc_success",
+    "baseline": 84.132991820484,
+    "cmerc": 84.343819691923,
+    "delta": 0.21082787143900816
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "test",
+    "segment": "early",
+    "metric": "accuracy",
+    "baseline": 67.65714285714286,
+    "cmerc": 66.4,
+    "delta": -1.2571428571428527
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "test",
+    "segment": "early",
+    "metric": "weighted_f1",
+    "baseline": 66.65616322223266,
+    "cmerc": 65.96633075559623,
+    "delta": -0.6898324666364317
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "test",
+    "segment": "early",
+    "metric": "macro_f1",
+    "baseline": 47.249819392828044,
+    "cmerc": 46.977842005701,
+    "delta": -0.2719773871270448
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "test",
+    "segment": "early",
+    "metric": "f1.neutral",
+    "baseline": 81.42380422691879,
+    "cmerc": 80.8080808080808,
+    "delta": -0.6157234188379874
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "test",
+    "segment": "early",
+    "metric": "f1.surprise",
+    "baseline": 50.26737967914438,
+    "cmerc": 49.18032786885246,
+    "delta": -1.0870518102919249
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "test",
+    "segment": "early",
+    "metric": "f1.fear",
+    "baseline": 25.0,
+    "cmerc": 22.222222222222225,
+    "delta": -2.777777777777775
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "test",
+    "segment": "early",
+    "metric": "f1.sadness",
+    "baseline": 33.33333333333333,
+    "cmerc": 34.95145631067961,
+    "delta": 1.6181229773462817
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "test",
+    "segment": "early",
+    "metric": "f1.joy",
+    "baseline": 65.36964980544747,
+    "cmerc": 63.49206349206349,
+    "delta": -1.8775863133839792
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "test",
+    "segment": "early",
+    "metric": "f1.disgust",
+    "baseline": 17.64705882352941,
+    "cmerc": 21.73913043478261,
+    "delta": 4.0920716112532
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "test",
+    "segment": "early",
+    "metric": "f1.anger",
+    "baseline": 57.707509881422915,
+    "cmerc": 56.451612903225815,
+    "delta": -1.2558969781971001
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "test",
+    "segment": "early",
+    "metric": "ece",
+    "baseline": 21.499791332654,
+    "cmerc": 18.254795132365,
+    "delta": -3.2449962002889983
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "test",
+    "segment": "early",
+    "metric": "mce",
+    "baseline": 31.863488753637,
+    "cmerc": 80.495573580265,
+    "delta": 48.632084826628
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "test",
+    "segment": "early",
+    "metric": "rmsce",
+    "baseline": 23.11452053356,
+    "cmerc": 20.251266186675,
+    "delta": -2.8632543468850002
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "test",
+    "segment": "early",
+    "metric": "auroc_success",
+    "baseline": 76.884968006876,
+    "cmerc": 76.693947802873,
+    "delta": -0.1910202040029958
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "test",
+    "segment": "early",
+    "metric": "auprc_success",
+    "baseline": 86.420630711898,
+    "cmerc": 86.929497275913,
+    "delta": 0.5088665640149941
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "test",
+    "segment": "middle",
+    "metric": "accuracy",
+    "baseline": 65.34883720930232,
+    "cmerc": 64.30232558139535,
+    "delta": -1.0465116279069662
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "test",
+    "segment": "middle",
+    "metric": "weighted_f1",
+    "baseline": 63.76691292307477,
+    "cmerc": 63.733541049099266,
+    "delta": -0.03337187397550423
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "test",
+    "segment": "middle",
+    "metric": "macro_f1",
+    "baseline": 46.92508007772668,
+    "cmerc": 47.93012131114893,
+    "delta": 1.0050412334222472
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "test",
+    "segment": "middle",
+    "metric": "f1.neutral",
+    "baseline": 79.3465577596266,
+    "cmerc": 79.09199522102747,
+    "delta": -0.25456253859913147
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "test",
+    "segment": "middle",
+    "metric": "f1.surprise",
+    "baseline": 58.03571428571429,
+    "cmerc": 57.89473684210527,
+    "delta": -0.14097744360902453
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "test",
+    "segment": "middle",
+    "metric": "f1.fear",
+    "baseline": 13.333333333333334,
+    "cmerc": 26.31578947368421,
+    "delta": 12.982456140350875
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "test",
+    "segment": "middle",
+    "metric": "f1.sadness",
+    "baseline": 41.81818181818181,
+    "cmerc": 50.0,
+    "delta": 8.181818181818187
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "test",
+    "segment": "middle",
+    "metric": "f1.joy",
+    "baseline": 59.154929577464785,
+    "cmerc": 56.872037914691944,
+    "delta": -2.2828916627728404
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "test",
+    "segment": "middle",
+    "metric": "f1.disgust",
+    "baseline": 25.80645161290322,
+    "cmerc": 18.181818181818183,
+    "delta": -7.624633431085037
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "test",
+    "segment": "middle",
+    "metric": "f1.anger",
+    "baseline": 50.98039215686274,
+    "cmerc": 47.15447154471545,
+    "delta": -3.825920612147293
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "test",
+    "segment": "middle",
+    "metric": "ece",
+    "baseline": 19.27821872366,
+    "cmerc": 18.08222759775,
+    "delta": -1.1959911259100018
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "test",
+    "segment": "middle",
+    "metric": "mce",
+    "baseline": 31.755997813665,
+    "cmerc": 28.11261167381,
+    "delta": -3.643386139855
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "test",
+    "segment": "middle",
+    "metric": "rmsce",
+    "baseline": 21.105909669717,
+    "cmerc": 19.848804327988,
+    "delta": -1.2571053417290017
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "test",
+    "segment": "middle",
+    "metric": "auroc_success",
+    "baseline": 73.758628101937,
+    "cmerc": 75.041084755347,
+    "delta": 1.2824566534099944
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "test",
+    "segment": "middle",
+    "metric": "auprc_success",
+    "baseline": 82.495749138872,
+    "cmerc": 83.64035893832,
+    "delta": 1.1446097994480056
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "test",
+    "segment": "late",
+    "metric": "accuracy",
+    "baseline": 65.25714285714285,
+    "cmerc": 64.22857142857143,
+    "delta": -1.028571428571425
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "test",
+    "segment": "late",
+    "metric": "weighted_f1",
+    "baseline": 64.15934643555781,
+    "cmerc": 63.48625799147308,
+    "delta": -0.6730884440847262
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "test",
+    "segment": "late",
+    "metric": "macro_f1",
+    "baseline": 47.70201268344016,
+    "cmerc": 48.73629876017545,
+    "delta": 1.0342860767352917
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "test",
+    "segment": "late",
+    "metric": "f1.neutral",
+    "baseline": 78.09307604994325,
+    "cmerc": 77.49419953596288,
+    "delta": -0.5988765139803718
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "test",
+    "segment": "late",
+    "metric": "f1.surprise",
+    "baseline": 60.416666666666664,
+    "cmerc": 59.80392156862745,
+    "delta": -0.6127450980392126
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "test",
+    "segment": "late",
+    "metric": "f1.fear",
+    "baseline": 10.0,
+    "cmerc": 27.27272727272727,
+    "delta": 17.27272727272727
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "test",
+    "segment": "late",
+    "metric": "f1.sadness",
+    "baseline": 31.06796116504854,
+    "cmerc": 29.126213592233015,
+    "delta": -1.941747572815526
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "test",
+    "segment": "late",
+    "metric": "f1.joy",
+    "baseline": 61.88679245283018,
+    "cmerc": 58.914728682170534,
+    "delta": -2.972063770659645
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "test",
+    "segment": "late",
+    "metric": "f1.disgust",
+    "baseline": 43.24324324324324,
+    "cmerc": 37.73584905660377,
+    "delta": -5.507394186639473
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "test",
+    "segment": "late",
+    "metric": "f1.anger",
+    "baseline": 49.2063492063492,
+    "cmerc": 50.80645161290322,
+    "delta": 1.600102406554015
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "test",
+    "segment": "late",
+    "metric": "ece",
+    "baseline": 19.348197059972,
+    "cmerc": 18.902121290139,
+    "delta": -0.44607576983300135
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "test",
+    "segment": "late",
+    "metric": "mce",
+    "baseline": 31.037863446863,
+    "cmerc": 31.903135031462,
+    "delta": 0.8652715845990002
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "test",
+    "segment": "late",
+    "metric": "rmsce",
+    "baseline": 21.158380005189,
+    "cmerc": 20.279988223678,
+    "delta": -0.8783917815109987
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "test",
+    "segment": "late",
+    "metric": "auroc_success",
+    "baseline": 74.240137339847,
+    "cmerc": 73.070844655668,
+    "delta": -1.1692926841789983
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "test",
+    "segment": "late",
+    "metric": "auprc_success",
+    "baseline": 83.731644602428,
+    "cmerc": 81.877887489543,
+    "delta": -1.853757112885006
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "test",
+    "segment": "training",
+    "metric": "elapsed_seconds",
+    "baseline": 237.29000000000002,
+    "cmerc": 1940.0400000000002,
+    "delta": 1702.7500000000002
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "test",
+    "segment": "training",
+    "metric": "max_gpu_memory_mb",
+    "baseline": 801.34,
+    "cmerc": 896.06,
+    "delta": 94.71999999999991
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2025,
+    "split": "test",
+    "segment": "training",
+    "metric": "optimizer_steps",
+    "baseline": 2600,
+    "cmerc": 2548,
+    "delta": -52
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "overall",
+    "metric": "accuracy",
+    "baseline": 66.0054102795311,
+    "cmerc": 65.28403967538323,
+    "delta": -0.7213706041478787
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "overall",
+    "metric": "weighted_f1",
+    "baseline": 64.42225246754165,
+    "cmerc": 64.11360802068519,
+    "delta": -0.3086444468564622
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "overall",
+    "metric": "macro_f1",
+    "baseline": 51.09353283484527,
+    "cmerc": 51.361376308918395,
+    "delta": 0.2678434740731248
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "overall",
+    "metric": "f1.neutral",
+    "baseline": 78.32031249999999,
+    "cmerc": 77.61485826001956,
+    "delta": -0.7054542399804262
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "overall",
+    "metric": "f1.surprise",
+    "baseline": 67.28971962616822,
+    "cmerc": 67.31391585760518,
+    "delta": 0.024196231436960147
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "overall",
+    "metric": "f1.fear",
+    "baseline": 36.36363636363637,
+    "cmerc": 34.78260869565217,
+    "delta": -1.5810276679841948
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "overall",
+    "metric": "f1.sadness",
+    "baseline": 39.285714285714285,
+    "cmerc": 42.708333333333336,
+    "delta": 3.422619047619051
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "overall",
+    "metric": "f1.joy",
+    "baseline": 61.44200626959246,
+    "cmerc": 61.12956810631229,
+    "delta": -0.31243816328017004
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "overall",
+    "metric": "f1.disgust",
+    "baseline": 21.05263157894737,
+    "cmerc": 24.390243902439025,
+    "delta": 3.337612323491655
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "overall",
+    "metric": "f1.anger",
+    "baseline": 53.90070921985816,
+    "cmerc": 51.59010600706713,
+    "delta": -2.3106032127910296
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "overall",
+    "metric": "ece",
+    "baseline": 25.008241000532,
+    "cmerc": 15.967027509771,
+    "delta": -9.041213490760999
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "overall",
+    "metric": "mce",
+    "baseline": 35.728990303146,
+    "cmerc": 21.498943458904,
+    "delta": -14.230046844241997
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "overall",
+    "metric": "rmsce",
+    "baseline": 26.296412380603,
+    "cmerc": 16.540430905006,
+    "delta": -9.755981475597
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "overall",
+    "metric": "cel.total",
+    "baseline": 231.82111966609955,
+    "cmerc": 271.9578229635954,
+    "delta": 40.13670329749584
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "overall",
+    "metric": "cel.text",
+    "baseline": 100.93254137039185,
+    "cmerc": 141.21276825666428,
+    "delta": 40.28022688627243
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "overall",
+    "metric": "cel.audio",
+    "baseline": 12.596930474042892,
+    "cmerc": 15.194956362247467,
+    "delta": 2.5980258882045746
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "overall",
+    "metric": "cel.visual",
+    "baseline": 5.737240374088287,
+    "cmerc": 7.3994928896427155,
+    "delta": 1.662252515554428
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "overall",
+    "metric": "cel.intra_context",
+    "baseline": 39.40471589565277,
+    "cmerc": 38.513795867562294,
+    "delta": -0.890920028090477
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "overall",
+    "metric": "cel.inter_context",
+    "baseline": 73.14969155192375,
+    "cmerc": 69.63680958747864,
+    "delta": -3.512881964445114
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "overall",
+    "metric": "auroc_success",
+    "baseline": 71.954675247496,
+    "cmerc": 71.94123556002,
+    "delta": -0.013439687475994333
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "overall",
+    "metric": "auprc_success",
+    "baseline": 82.069319956035,
+    "cmerc": 81.618303283693,
+    "delta": -0.45101667234200704
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "early",
+    "metric": "accuracy",
+    "baseline": 69.16890080428955,
+    "cmerc": 69.16890080428955,
+    "delta": 0.0
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "early",
+    "metric": "weighted_f1",
+    "baseline": 68.01041603354791,
+    "cmerc": 68.51320689257955,
+    "delta": 0.5027908590316343
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "early",
+    "metric": "macro_f1",
+    "baseline": 52.13692136444915,
+    "cmerc": 56.00260285876556,
+    "delta": 3.865681494316412
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "early",
+    "metric": "f1.neutral",
+    "baseline": 80.86253369272237,
+    "cmerc": 80.3234501347709,
+    "delta": -0.5390835579514714
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "early",
+    "metric": "f1.surprise",
+    "baseline": 64.51612903225806,
+    "cmerc": 64.44444444444444,
+    "delta": -0.07168458781362119
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "early",
+    "metric": "f1.fear",
+    "baseline": 40.0,
+    "cmerc": 47.61904761904761,
+    "delta": 7.619047619047613
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "early",
+    "metric": "f1.sadness",
+    "baseline": 34.78260869565217,
+    "cmerc": 36.36363636363637,
+    "delta": 1.5810276679841948
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "early",
+    "metric": "f1.joy",
+    "baseline": 68.25396825396825,
+    "cmerc": 69.42148760330578,
+    "delta": 1.1675193493375247
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "early",
+    "metric": "f1.disgust",
+    "baseline": 22.22222222222222,
+    "cmerc": 40.0,
+    "delta": 17.77777777777778
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "early",
+    "metric": "f1.anger",
+    "baseline": 54.32098765432099,
+    "cmerc": 53.84615384615385,
+    "delta": -0.4748338081671406
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "early",
+    "metric": "ece",
+    "baseline": 27.023400294397,
+    "cmerc": 18.453869159675,
+    "delta": -8.569531134721998
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "early",
+    "metric": "mce",
+    "baseline": 41.18093609074,
+    "cmerc": 26.446278849427,
+    "delta": -14.734657241312998
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "early",
+    "metric": "rmsce",
+    "baseline": 28.72445729878,
+    "cmerc": 19.212438507391,
+    "delta": -9.512018791389
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "early",
+    "metric": "auroc_success",
+    "baseline": 75.055611729019,
+    "cmerc": 74.529828109201,
+    "delta": -0.5257836198180001
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "early",
+    "metric": "auprc_success",
+    "baseline": 86.43342268862,
+    "cmerc": 85.990182155664,
+    "delta": -0.44324053295599697
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "middle",
+    "metric": "accuracy",
+    "baseline": 66.66666666666666,
+    "cmerc": 66.39118457300276,
+    "delta": -0.2754820936638964
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "middle",
+    "metric": "weighted_f1",
+    "baseline": 64.86661164642774,
+    "cmerc": 64.7001906103887,
+    "delta": -0.1664210360390399
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "middle",
+    "metric": "macro_f1",
+    "baseline": 52.80993912711479,
+    "cmerc": 52.41697856844373,
+    "delta": -0.3929605586710565
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "middle",
+    "metric": "f1.neutral",
+    "baseline": 77.70700636942675,
+    "cmerc": 77.25856697819316,
+    "delta": -0.4484393912335918
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "middle",
+    "metric": "f1.surprise",
+    "baseline": 76.47058823529412,
+    "cmerc": 76.56250000000001,
+    "delta": 0.09191176470589824
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "middle",
+    "metric": "f1.fear",
+    "baseline": 48.275862068965516,
+    "cmerc": 41.37931034482759,
+    "delta": -6.896551724137929
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "middle",
+    "metric": "f1.sadness",
+    "baseline": 44.44444444444445,
+    "cmerc": 47.45762711864407,
+    "delta": 3.0131826741996193
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "middle",
+    "metric": "f1.joy",
+    "baseline": 55.55555555555556,
+    "cmerc": 57.14285714285713,
+    "delta": 1.5873015873015746
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "middle",
+    "metric": "f1.disgust",
+    "baseline": 16.666666666666664,
+    "cmerc": 18.18181818181818,
+    "delta": 1.5151515151515156
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "middle",
+    "metric": "f1.anger",
+    "baseline": 50.54945054945055,
+    "cmerc": 48.93617021276596,
+    "delta": -1.6132803366845891
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "middle",
+    "metric": "ece",
+    "baseline": 25.918952073933,
+    "cmerc": 17.212403965883,
+    "delta": -8.70654810805
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "middle",
+    "metric": "mce",
+    "baseline": 41.095494839453,
+    "cmerc": 35.336398879687,
+    "delta": -5.759095959766
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "middle",
+    "metric": "rmsce",
+    "baseline": 27.031816251097,
+    "cmerc": 18.798152412446,
+    "delta": -8.233663838650997
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "middle",
+    "metric": "auroc_success",
+    "baseline": 69.855201147463,
+    "cmerc": 70.576831508061,
+    "delta": 0.7216303605979988
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "middle",
+    "metric": "auprc_success",
+    "baseline": 82.040443319014,
+    "cmerc": 83.60488702435,
+    "delta": 1.5644437053360036
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "late",
+    "metric": "accuracy",
+    "baseline": 62.19839142091153,
+    "cmerc": 60.32171581769437,
+    "delta": -1.8766756032171585
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "late",
+    "metric": "weighted_f1",
+    "baseline": 60.20607734627229,
+    "cmerc": 59.10498252281023,
+    "delta": -1.1010948234620557
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "late",
+    "metric": "macro_f1",
+    "baseline": 45.824772733358365,
+    "cmerc": 44.657472391441004,
+    "delta": -1.167300341917361
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "late",
+    "metric": "f1.neutral",
+    "baseline": 76.10619469026548,
+    "cmerc": 74.92447129909365,
+    "delta": -1.181723391171829
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "late",
+    "metric": "f1.surprise",
+    "baseline": 56.52173913043479,
+    "cmerc": 57.14285714285714,
+    "delta": 0.6211180124223503
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "late",
+    "metric": "f1.fear",
+    "baseline": 11.76470588235294,
+    "cmerc": 10.526315789473685,
+    "delta": -1.2383900928792553
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "late",
+    "metric": "f1.sadness",
+    "baseline": 38.23529411764706,
+    "cmerc": 43.58974358974359,
+    "delta": 5.354449472096533
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "late",
+    "metric": "f1.joy",
+    "baseline": 58.252427184466015,
+    "cmerc": 54.16666666666667,
+    "delta": -4.0857605177993435
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "late",
+    "metric": "f1.disgust",
+    "baseline": 23.529411764705884,
+    "cmerc": 20.0,
+    "delta": -3.529411764705884
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "late",
+    "metric": "f1.anger",
+    "baseline": 56.36363636363636,
+    "cmerc": 52.25225225225225,
+    "delta": -4.111384111384112
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "late",
+    "metric": "ece",
+    "baseline": 22.106786479739,
+    "cmerc": 14.047853029445,
+    "delta": -8.058933450294
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "late",
+    "metric": "mce",
+    "baseline": 31.500661500863,
+    "cmerc": 25.687989775951,
+    "delta": -5.812671724912001
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "late",
+    "metric": "rmsce",
+    "baseline": 24.053581690727,
+    "cmerc": 15.874683730238,
+    "delta": -8.178897960489
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "late",
+    "metric": "auroc_success",
+    "baseline": 70.530692100758,
+    "cmerc": 70.399399399399,
+    "delta": -0.13129270135900128
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "late",
+    "metric": "auprc_success",
+    "baseline": 77.297253245888,
+    "cmerc": 74.560356328827,
+    "delta": -2.736896917061003
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "training",
+    "metric": "elapsed_seconds",
+    "baseline": 242.58000000000007,
+    "cmerc": 2094.1399999999994,
+    "delta": 1851.5599999999993
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "training",
+    "metric": "max_gpu_memory_mb",
+    "baseline": 800.05,
+    "cmerc": 895.49,
+    "delta": 95.44000000000005
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "validation",
+    "segment": "training",
+    "metric": "optimizer_steps",
+    "baseline": 2600,
+    "cmerc": 2548,
+    "delta": -52
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "test",
+    "segment": "overall",
+    "metric": "accuracy",
+    "baseline": 66.3984674329502,
+    "cmerc": 66.36015325670498,
+    "delta": -0.0383141762452226
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "test",
+    "segment": "overall",
+    "metric": "weighted_f1",
+    "baseline": 65.24728245872019,
+    "cmerc": 65.34485918554032,
+    "delta": 0.09757672682012242
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "test",
+    "segment": "overall",
+    "metric": "macro_f1",
+    "baseline": 49.15171048507992,
+    "cmerc": 49.12269022543094,
+    "delta": -0.029020259648980584
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "test",
+    "segment": "overall",
+    "metric": "f1.neutral",
+    "baseline": 79.21092564491653,
+    "cmerc": 79.09774436090227,
+    "delta": -0.11318128401426009
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "test",
+    "segment": "overall",
+    "metric": "f1.surprise",
+    "baseline": 57.04918032786887,
+    "cmerc": 58.17555938037865,
+    "delta": 1.1263790525097832
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "test",
+    "segment": "overall",
+    "metric": "f1.fear",
+    "baseline": 23.80952380952381,
+    "cmerc": 26.8041237113402,
+    "delta": 2.9945999018163896
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "test",
+    "segment": "overall",
+    "metric": "f1.sadness",
+    "baseline": 38.41463414634146,
+    "cmerc": 40.88397790055249,
+    "delta": 2.4693437542110246
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "test",
+    "segment": "overall",
+    "metric": "f1.joy",
+    "baseline": 64.11837237977807,
+    "cmerc": 62.222222222222214,
+    "delta": -1.8961501575558515
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "test",
+    "segment": "overall",
+    "metric": "f1.disgust",
+    "baseline": 29.906542056074763,
+    "cmerc": 23.300970873786408,
+    "delta": -6.6055711822883545
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "test",
+    "segment": "overall",
+    "metric": "f1.anger",
+    "baseline": 51.5527950310559,
+    "cmerc": 53.37423312883436,
+    "delta": 1.8214380977784614
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "test",
+    "segment": "overall",
+    "metric": "ece",
+    "baseline": 25.013815403213,
+    "cmerc": 16.231510824171,
+    "delta": -8.782304579041998
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "test",
+    "segment": "overall",
+    "metric": "mce",
+    "baseline": 36.590477150597,
+    "cmerc": 80.765527486801,
+    "delta": 44.175050336204
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "test",
+    "segment": "overall",
+    "metric": "rmsce",
+    "baseline": 26.961842139101,
+    "cmerc": 17.070389315173,
+    "delta": -9.891452823928002
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "test",
+    "segment": "overall",
+    "metric": "cel.total",
+    "baseline": 593.7159561663866,
+    "cmerc": 679.0043925866485,
+    "delta": 85.28843642026186
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "test",
+    "segment": "overall",
+    "metric": "cel.text",
+    "baseline": 273.87773221731186,
+    "cmerc": 371.65161541104317,
+    "delta": 97.77388319373131
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "test",
+    "segment": "overall",
+    "metric": "cel.audio",
+    "baseline": 25.983658224344254,
+    "cmerc": 29.838571846485138,
+    "delta": 3.8549136221408844
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "test",
+    "segment": "overall",
+    "metric": "cel.visual",
+    "baseline": 10.699122726917267,
+    "cmerc": 14.000072255730629,
+    "delta": 3.300949528813362
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "test",
+    "segment": "overall",
+    "metric": "cel.intra_context",
+    "baseline": 101.13265708088875,
+    "cmerc": 93.07299533486366,
+    "delta": -8.059661746025085
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "test",
+    "segment": "overall",
+    "metric": "cel.inter_context",
+    "baseline": 182.02278591692448,
+    "cmerc": 170.44113773852587,
+    "delta": -11.58164817839861
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "test",
+    "segment": "overall",
+    "metric": "auroc_success",
+    "baseline": 75.090683828111,
+    "cmerc": 74.278290993072,
+    "delta": -0.8123928350389917
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "test",
+    "segment": "overall",
+    "metric": "auprc_success",
+    "baseline": 84.950117262667,
+    "cmerc": 84.176727342091,
+    "delta": -0.7733899205760082
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "test",
+    "segment": "early",
+    "metric": "accuracy",
+    "baseline": 67.88571428571429,
+    "cmerc": 68.22857142857143,
+    "delta": 0.34285714285714164
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "test",
+    "segment": "early",
+    "metric": "weighted_f1",
+    "baseline": 66.87277442165218,
+    "cmerc": 67.41664510078283,
+    "delta": 0.5438706791306487
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "test",
+    "segment": "early",
+    "metric": "macro_f1",
+    "baseline": 47.93133568932505,
+    "cmerc": 49.84974035375518,
+    "delta": 1.9184046644301276
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "test",
+    "segment": "early",
+    "metric": "f1.neutral",
+    "baseline": 81.36714443219405,
+    "cmerc": 80.96280087527353,
+    "delta": -0.40434355692052293
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "test",
+    "segment": "early",
+    "metric": "f1.surprise",
+    "baseline": 50.8108108108108,
+    "cmerc": 52.513966480446925,
+    "delta": 1.703155669636125
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "test",
+    "segment": "early",
+    "metric": "f1.fear",
+    "baseline": 23.076923076923077,
+    "cmerc": 27.586206896551722,
+    "delta": 4.509283819628646
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "test",
+    "segment": "early",
+    "metric": "f1.sadness",
+    "baseline": 36.36363636363637,
+    "cmerc": 43.24324324324324,
+    "delta": 6.879606879606875
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "test",
+    "segment": "early",
+    "metric": "f1.joy",
+    "baseline": 66.42335766423358,
+    "cmerc": 64.8854961832061,
+    "delta": -1.5378614810274769
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "test",
+    "segment": "early",
+    "metric": "f1.disgust",
+    "baseline": 21.62162162162162,
+    "cmerc": 22.22222222222222,
+    "delta": 0.6006006006006004
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "test",
+    "segment": "early",
+    "metric": "f1.anger",
+    "baseline": 55.855855855855864,
+    "cmerc": 57.53424657534247,
+    "delta": 1.6783907194866075
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "test",
+    "segment": "early",
+    "metric": "ece",
+    "baseline": 25.761393507889,
+    "cmerc": 16.556223067216,
+    "delta": -9.205170440673001
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "test",
+    "segment": "early",
+    "metric": "mce",
+    "baseline": 40.117679151797,
+    "cmerc": 80.765527486801,
+    "delta": 40.64784833500401
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "test",
+    "segment": "early",
+    "metric": "rmsce",
+    "baseline": 27.474711563676,
+    "cmerc": 17.44539880491,
+    "delta": -10.029312758766
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "test",
+    "segment": "early",
+    "metric": "auroc_success",
+    "baseline": 75.510742058785,
+    "cmerc": 74.014557198462,
+    "delta": -1.4961848603229981
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "test",
+    "segment": "early",
+    "metric": "auprc_success",
+    "baseline": 86.425976086626,
+    "cmerc": 84.795136318195,
+    "delta": -1.630839768430988
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "test",
+    "segment": "middle",
+    "metric": "accuracy",
+    "baseline": 65.81395348837209,
+    "cmerc": 65.23255813953487,
+    "delta": -0.5813953488372192
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "test",
+    "segment": "middle",
+    "metric": "weighted_f1",
+    "baseline": 64.52077824751633,
+    "cmerc": 63.958699145881226,
+    "delta": -0.5620791016351063
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "test",
+    "segment": "middle",
+    "metric": "macro_f1",
+    "baseline": 49.78010269101497,
+    "cmerc": 48.15363351585233,
+    "delta": -1.6264691751626401
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "test",
+    "segment": "middle",
+    "metric": "f1.neutral",
+    "baseline": 78.83040935672516,
+    "cmerc": 78.11059907834101,
+    "delta": -0.7198102783841449
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "test",
+    "segment": "middle",
+    "metric": "f1.surprise",
+    "baseline": 58.40707964601769,
+    "cmerc": 58.21596244131455,
+    "delta": -0.19111720470313998
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "test",
+    "segment": "middle",
+    "metric": "f1.fear",
+    "baseline": 23.52941176470588,
+    "cmerc": 29.268292682926827,
+    "delta": 5.738880918220946
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "test",
+    "segment": "middle",
+    "metric": "f1.sadness",
+    "baseline": 46.28099173553719,
+    "cmerc": 48.854961832061065,
+    "delta": 2.5739700965238725
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "test",
+    "segment": "middle",
+    "metric": "f1.joy",
+    "baseline": 61.34453781512605,
+    "cmerc": 60.36036036036037,
+    "delta": -0.9841774547656854
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "test",
+    "segment": "middle",
+    "metric": "f1.disgust",
+    "baseline": 30.303030303030305,
+    "cmerc": 12.500000000000004,
+    "delta": -17.8030303030303
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "test",
+    "segment": "middle",
+    "metric": "f1.anger",
+    "baseline": 49.76525821596245,
+    "cmerc": 49.76525821596245,
+    "delta": 0.0
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "test",
+    "segment": "middle",
+    "metric": "ece",
+    "baseline": 24.611102725531,
+    "cmerc": 15.634242608104,
+    "delta": -8.976860117427002
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "test",
+    "segment": "middle",
+    "metric": "mce",
+    "baseline": 34.250376250718,
+    "cmerc": 24.072833089378,
+    "delta": -10.177543161339997
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "test",
+    "segment": "middle",
+    "metric": "rmsce",
+    "baseline": 26.854390135365,
+    "cmerc": 17.124222081128,
+    "delta": -9.730168054237001
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "test",
+    "segment": "middle",
+    "metric": "auroc_success",
+    "baseline": 74.905050359366,
+    "cmerc": 76.124216789178,
+    "delta": 1.219166429812006
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "test",
+    "segment": "middle",
+    "metric": "auprc_success",
+    "baseline": 84.095148457218,
+    "cmerc": 84.435578631793,
+    "delta": 0.3404301745750047
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "test",
+    "segment": "late",
+    "metric": "accuracy",
+    "baseline": 65.48571428571428,
+    "cmerc": 65.60000000000001,
+    "delta": 0.11428571428572809
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "test",
+    "segment": "late",
+    "metric": "weighted_f1",
+    "baseline": 64.36938110852303,
+    "cmerc": 64.70260917580792,
+    "delta": 0.3332280672848924
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "test",
+    "segment": "late",
+    "metric": "macro_f1",
+    "baseline": 49.42703775914452,
+    "cmerc": 48.867050798729885,
+    "delta": -0.5599869604146335
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "test",
+    "segment": "late",
+    "metric": "f1.neutral",
+    "baseline": 77.34553775743707,
+    "cmerc": 78.13211845102505,
+    "delta": 0.7865806935879789
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "test",
+    "segment": "late",
+    "metric": "f1.surprise",
+    "baseline": 61.30653266331658,
+    "cmerc": 63.49206349206349,
+    "delta": 2.1855308287469057
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "test",
+    "segment": "late",
+    "metric": "f1.fear",
+    "baseline": 25.0,
+    "cmerc": 22.222222222222225,
+    "delta": -2.777777777777775
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "test",
+    "segment": "late",
+    "metric": "f1.sadness",
+    "baseline": 31.481481481481477,
+    "cmerc": 29.999999999999993,
+    "delta": -1.4814814814814845
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "test",
+    "segment": "late",
+    "metric": "f1.joy",
+    "baseline": 64.21404682274246,
+    "cmerc": 61.20996441281139,
+    "delta": -3.0040824099310726
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "test",
+    "segment": "late",
+    "metric": "f1.disgust",
+    "baseline": 37.83783783783784,
+    "cmerc": 34.28571428571428,
+    "delta": -3.552123552123561
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "test",
+    "segment": "late",
+    "metric": "f1.anger",
+    "baseline": 48.803827751196174,
+    "cmerc": 52.72727272727272,
+    "delta": 3.9234449760765457
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "test",
+    "segment": "late",
+    "metric": "ece",
+    "baseline": 24.662046330316,
+    "cmerc": 16.802747922284,
+    "delta": -7.859298408032
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "test",
+    "segment": "late",
+    "metric": "mce",
+    "baseline": 37.742053610938,
+    "cmerc": 80.298787355423,
+    "delta": 42.556733744485
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "test",
+    "segment": "late",
+    "metric": "rmsce",
+    "baseline": 26.788454442886,
+    "cmerc": 18.172867651787,
+    "delta": -8.615586791098998
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "test",
+    "segment": "late",
+    "metric": "auroc_success",
+    "baseline": 74.951746934341,
+    "cmerc": 72.565895331473,
+    "delta": -2.3858516028680015
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "test",
+    "segment": "late",
+    "metric": "auprc_success",
+    "baseline": 84.485742949141,
+    "cmerc": 83.542370283121,
+    "delta": -0.9433726660199966
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "test",
+    "segment": "training",
+    "metric": "elapsed_seconds",
+    "baseline": 242.58000000000007,
+    "cmerc": 2094.1399999999994,
+    "delta": 1851.5599999999993
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "test",
+    "segment": "training",
+    "metric": "max_gpu_memory_mb",
+    "baseline": 800.05,
+    "cmerc": 895.49,
+    "delta": 95.44000000000005
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "split": "test",
+    "segment": "training",
+    "metric": "optimizer_steps",
+    "baseline": 2600,
+    "cmerc": 2548,
+    "delta": -52
+  }
+]

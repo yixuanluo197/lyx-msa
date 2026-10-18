@@ -1,0 +1,72 @@
+{
+  "private_original_sha256": "3526d2919b08984311b8e2934bc87da5d108f6829f23cd7976854efab0d8521d",
+  "publication_redactor_sha256": "126ea50cb44bf1ad92befa0bdd25b03f14ae1e3eb7a75a198554a02604f91f3e",
+  "evidence": {
+    "status": "passed",
+    "blockers": [],
+    "scope": "Final read-only numerical, interpretation and public-artifact privacy review. No inference, training, repository edits, or mutable report-manifest validation.",
+    "statistics_sha256": "8d2b27e6e4734520f6387141c0f0fd8db2f5527452b69952984fe1b176c4e840",
+    "numeric_checks": {
+      "statistic_rows_recomputed": 268,
+      "per_seed_metric_rows_checked": 804,
+      "delta_mean_sample_sd_interval_p_errors": 0,
+      "primary_families": 2,
+      "hypotheses_per_family": 6,
+      "all_12_holm_adjusted_p": 1.0,
+      "all_12_primary_t_intervals_include_zero": true
+    },
+    "execution_checks": {
+      "new_pairs": 5,
+      "new_runs": 10,
+      "new_epochs": 560,
+      "reused_round2_runs": 2,
+      "epochs_including_reuse": 720,
+      "recorded_new_stage_attempts": 55,
+      "noncompleted_stage_attempts": 0,
+      "all_new_states": "completed"
+    },
+    "favorable_seed_counts_out_of_three": {
+      "IEMOCAP/validation": {
+        "weighted_f1": 3,
+        "ece": 3,
+        "cel.total": 3
+      },
+      "IEMOCAP/test": {
+        "weighted_f1": 2,
+        "ece": 2,
+        "cel.total": 3
+      },
+      "MELD/validation": {
+        "weighted_f1": 2,
+        "ece": 2,
+        "cel.total": 1
+      },
+      "MELD/test": {
+        "weighted_f1": 2,
+        "ece": 3,
+        "cel.total": 1
+      }
+    },
+    "interpretation": {
+      "iemocap_angry": "Declines in all three seeds in BOTH validation and test; observed trade-off, no mechanism established.",
+      "context_cel": "Not universally majority: IEMOCAP2025 test 48.428915%; IEMOCAP3407 test 140.329542% because other views worsen. Reports retain these and explain ratios are not attribution.",
+      "meld_cel": "Only seed1937 improves on validation and test. The two other seeds worsen; mean CEL worsens on both splits. No stable cross-dataset CEL benefit.",
+      "ece_auroc": "All three MELD test ECE improve while all three AUROC-Success decrease. IEMOCAP has mixed AUROC behavior; calibration is distinct from correctness ranking.",
+      "robustness": "Average W-F1 gains are small with mixed test-seed signs, all primary descriptive intervals cross zero, n3 exact p cannot establish conventional significance.",
+      "research_limits": "Fixed split/session uncertainty, known IEM1937 and pilot test exposure, prefix smoothing invertibility, GNN-edge ablation scope, first-batch gradient sampling, upstream feature extraction not audited all disclosed."
+    },
+    "privacy_checks": {
+      "public_text_files_scanned_at_review": 17,
+      "known_private_IEMOCAP_train_validation_ID_strings_checked": 120,
+      "absolute_private_path_hits": 0,
+      "true_ID_string_hits": 0,
+      "raw_ID_label_probability_array_key_hits": 0,
+      "svg_absolute_private_path_hits": 0,
+      "prediction_files_uploaded": false,
+      "checkpoint_files_uploaded": false,
+      "feature_files_uploaded": false,
+      "limits": "Figures being finalized by leader; current SVG text scanned, no visual-content re-analysis or final mutable REPORT_MANIFEST hash race. Safe feature filenames and SHA256 entries are identifiers, not raw features."
+    },
+    "report_completeness": "All eight required reports exist. Supplemental CEL per utterance, n2 new-seed sensitivity, actual Adam audits, full-config consistency, near-zero CEL ratio guard and full attempt ledger are now present. No actionable blocker found."
+  }
+}
