@@ -1,0 +1,281 @@
+{
+  "status": "completed",
+  "source_protocol": "XP04 validation-selected, noncausal, fixed_author",
+  "variant": "cmerc",
+  "training_or_inference_executed": false,
+  "definition": "strict removed true-class log-probability > full true-class log-probability; OR within category",
+  "modality_removals": [
+    "text",
+    "audio",
+    "visual"
+  ],
+  "context_removals": [
+    "intra_context",
+    "inter_context"
+  ],
+  "epsilon": 0.0,
+  "denominator": "all test utterances, including both correct and incorrect predictions",
+  "aggregation": "unweighted mean of five per-seed percentages; sample std ddof=1",
+  "acceptance_path": "/data2/yb/paper/lyx-msa/CMERC/experiment_records/04_xp_mainline_validation/results/acceptance.json",
+  "acceptance_sha256": "87e78b95652dcd8149e2552e6fdff639fa6d758e3f81fc34d23207ad95750bf1",
+  "script_sha256": "9c8f6d277c06d563ac8849167b1259b198f0ce293beefb4dc1775c438af3ee13",
+  "numpy_version": "1.26.4",
+  "per_seed": [
+    {
+      "dataset": "IEMOCAP",
+      "seed": 1475,
+      "variant": "cmerc",
+      "n_samples": 1623,
+      "modality_count": 1326,
+      "context_count": 1138,
+      "modality_percentage": 81.70055452865064,
+      "context_percentage": 70.11706715958103,
+      "individual_removal_counts": {
+        "text": 588,
+        "audio": 562,
+        "visual": 881,
+        "intra_context": 642,
+        "inter_context": 670
+      },
+      "selected_epoch": 43,
+      "split_hash": "d1ae10a27d20d9ee0bf81b9c884073d037a4362e2ba8b9f3f6720902d2502d62",
+      "prediction_path": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/results/cmerc/IEMOCAP/validation/seed1475/predictions.npz",
+      "prediction_sha256": "90c94a4a7f274008345e47bade62b5f92417341873f4ad883ed49442db336814",
+      "metrics_sha256": "7a7a4029cff4cbacdfbfcbbde8e5b0415519521196ebeb357bd47156a356fb89",
+      "checkpoint_path": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/cmerc/IEMOCAP_validation_seed1475/best.pt",
+      "checkpoint_sha256_at_acceptance": "2c0d1a7a39627e12d1244d23a225ad3da03bbce071a118909921a547a2bfd106"
+    },
+    {
+      "dataset": "IEMOCAP",
+      "seed": 67137,
+      "variant": "cmerc",
+      "n_samples": 1623,
+      "modality_count": 1299,
+      "context_count": 1301,
+      "modality_percentage": 80.0369685767098,
+      "context_percentage": 80.16019716574245,
+      "individual_removal_counts": {
+        "text": 621,
+        "audio": 546,
+        "visual": 851,
+        "intra_context": 781,
+        "inter_context": 888
+      },
+      "selected_epoch": 34,
+      "split_hash": "d1ae10a27d20d9ee0bf81b9c884073d037a4362e2ba8b9f3f6720902d2502d62",
+      "prediction_path": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/results/cmerc/IEMOCAP/validation/seed67137/predictions.npz",
+      "prediction_sha256": "641514df3c0762e2b6697b335b447dfdf374a1cd399c4fd56d3a3650427294e4",
+      "metrics_sha256": "4dbe191ce77f26d74e7ad5e3a1985fad40b76c6cbfdcd050deccc76f5e32a23e",
+      "checkpoint_path": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/cmerc/IEMOCAP_validation_seed67137/best.pt",
+      "checkpoint_sha256_at_acceptance": "1b4b91bc683de99264a7b446b84187bae3b982f1ff7c73b552e3c8e3f82eedf3"
+    },
+    {
+      "dataset": "IEMOCAP",
+      "seed": 2024,
+      "variant": "cmerc",
+      "n_samples": 1623,
+      "modality_count": 1309,
+      "context_count": 1019,
+      "modality_percentage": 80.65311152187307,
+      "context_percentage": 62.784966112138015,
+      "individual_removal_counts": {
+        "text": 593,
+        "audio": 561,
+        "visual": 793,
+        "intra_context": 562,
+        "inter_context": 605
+      },
+      "selected_epoch": 71,
+      "split_hash": "d1ae10a27d20d9ee0bf81b9c884073d037a4362e2ba8b9f3f6720902d2502d62",
+      "prediction_path": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/results/cmerc/IEMOCAP/validation/seed2024/predictions.npz",
+      "prediction_sha256": "8b758190e3f6682ad2b650ebe01c12d3467a68e325c0dfb994b1fab8f599e241",
+      "metrics_sha256": "8bb80b4c876400a6c586c7d40b2d21923c6f8c4dcf1f5b69917e8cac5a8fdd45",
+      "checkpoint_path": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/cmerc/IEMOCAP_validation_seed2024/best.pt",
+      "checkpoint_sha256_at_acceptance": "80ee239060ae1afa3f8c49d7c99d38db8e91fb1d706c7f95087b9e6c025ebf96"
+    },
+    {
+      "dataset": "IEMOCAP",
+      "seed": 3407,
+      "variant": "cmerc",
+      "n_samples": 1623,
+      "modality_count": 1287,
+      "context_count": 1212,
+      "modality_percentage": 79.29759704251386,
+      "context_percentage": 74.67652495378928,
+      "individual_removal_counts": {
+        "text": 580,
+        "audio": 585,
+        "visual": 839,
+        "intra_context": 773,
+        "inter_context": 629
+      },
+      "selected_epoch": 75,
+      "split_hash": "d1ae10a27d20d9ee0bf81b9c884073d037a4362e2ba8b9f3f6720902d2502d62",
+      "prediction_path": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/results/cmerc/IEMOCAP/validation/seed3407/predictions.npz",
+      "prediction_sha256": "00ef11d9e7344bab9cbb0f672c90ad2d98235ec7f275beba118bc86803a3fd74",
+      "metrics_sha256": "0634b355656fa1e9c588754651f26df40fd90b0889de128452c6134d9aed97db",
+      "checkpoint_path": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/cmerc/IEMOCAP_validation_seed3407/best.pt",
+      "checkpoint_sha256_at_acceptance": "e4978c68e4119309d371152aeec469149c3fdd8989078182fb348c6db7e4f0ed"
+    },
+    {
+      "dataset": "IEMOCAP",
+      "seed": 42,
+      "variant": "cmerc",
+      "n_samples": 1623,
+      "modality_count": 1268,
+      "context_count": 1334,
+      "modality_percentage": 78.12692544670364,
+      "context_percentage": 82.19346888478127,
+      "individual_removal_counts": {
+        "text": 550,
+        "audio": 548,
+        "visual": 784,
+        "intra_context": 844,
+        "inter_context": 837
+      },
+      "selected_epoch": 24,
+      "split_hash": "d1ae10a27d20d9ee0bf81b9c884073d037a4362e2ba8b9f3f6720902d2502d62",
+      "prediction_path": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/results/cmerc/IEMOCAP/validation/seed42/predictions.npz",
+      "prediction_sha256": "dda65178c775a6cb9c099ba24429dfd73680252828f39ff136bb26b2d9781936",
+      "metrics_sha256": "f8fcd2d2a66a57c8ffa630446d28d26d6d6de7fd13c5b93795350371e8d2f06d",
+      "checkpoint_path": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/cmerc/IEMOCAP_validation_seed42/best.pt",
+      "checkpoint_sha256_at_acceptance": "f896b657e62110dcb7b5de033df8f81f485ec037e922cca8ad8ebc48d74b43fa"
+    },
+    {
+      "dataset": "MELD",
+      "seed": 1475,
+      "variant": "cmerc",
+      "n_samples": 2610,
+      "modality_count": 1766,
+      "context_count": 2204,
+      "modality_percentage": 67.66283524904215,
+      "context_percentage": 84.44444444444444,
+      "individual_removal_counts": {
+        "text": 672,
+        "audio": 804,
+        "visual": 1062,
+        "intra_context": 1534,
+        "inter_context": 1275
+      },
+      "selected_epoch": 11,
+      "split_hash": "5317189c62939f28801eadf558763bd901cae04544ae829ebd45d1dd057055b8",
+      "prediction_path": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/results/cmerc/MELD/validation/seed1475/predictions.npz",
+      "prediction_sha256": "b5b3f12f5d9fa9ea8e81301dc36568c7413e829b4fb52510a933567d3048a3fc",
+      "metrics_sha256": "55dd72cd7f34a072ae81f49f99e462a04788fbc8ba0ed88b385079b6558be4a2",
+      "checkpoint_path": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/cmerc/MELD_validation_seed1475/best.pt",
+      "checkpoint_sha256_at_acceptance": "263145b6a2057624e55791eb8c68c6d3de8a353af46a2b2f234e977588655601"
+    },
+    {
+      "dataset": "MELD",
+      "seed": 67137,
+      "variant": "cmerc",
+      "n_samples": 2610,
+      "modality_count": 1772,
+      "context_count": 2193,
+      "modality_percentage": 67.89272030651341,
+      "context_percentage": 84.02298850574712,
+      "individual_removal_counts": {
+        "text": 711,
+        "audio": 802,
+        "visual": 1030,
+        "intra_context": 1647,
+        "inter_context": 1262
+      },
+      "selected_epoch": 8,
+      "split_hash": "5317189c62939f28801eadf558763bd901cae04544ae829ebd45d1dd057055b8",
+      "prediction_path": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/results/cmerc/MELD/validation/seed67137/predictions.npz",
+      "prediction_sha256": "95d18a386f425afcb522405dc381a64d42f5f4304da5d39d517706428ca9e6b1",
+      "metrics_sha256": "5efbca8b759f766645a565c28d89f3791753a164c25742c12120a3cfe746a3fb",
+      "checkpoint_path": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/cmerc/MELD_validation_seed67137/best.pt",
+      "checkpoint_sha256_at_acceptance": "3f79f9eb3547e35ac15ad7ff4345d9b873d0c884a6f3a1ce60a7a7e47077e701"
+    },
+    {
+      "dataset": "MELD",
+      "seed": 2024,
+      "variant": "cmerc",
+      "n_samples": 2610,
+      "modality_count": 1635,
+      "context_count": 2298,
+      "modality_percentage": 62.64367816091954,
+      "context_percentage": 88.04597701149426,
+      "individual_removal_counts": {
+        "text": 671,
+        "audio": 765,
+        "visual": 905,
+        "intra_context": 1522,
+        "inter_context": 1391
+      },
+      "selected_epoch": 9,
+      "split_hash": "5317189c62939f28801eadf558763bd901cae04544ae829ebd45d1dd057055b8",
+      "prediction_path": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/results/cmerc/MELD/validation/seed2024/predictions.npz",
+      "prediction_sha256": "898aeec4bc9dd1871341dc50a38b8f911d062c84c68ddcc96ed01c8f7ce409a1",
+      "metrics_sha256": "25f38b217e1db6055b5ac8da050b4ba812b9ff014cb06aa23ce0eb5800ecc26f",
+      "checkpoint_path": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/cmerc/MELD_validation_seed2024/best.pt",
+      "checkpoint_sha256_at_acceptance": "59c6f3fa544b59bcdc79d14bbe8ee17772a4900b15f4d32ef088971e59c9d0df"
+    },
+    {
+      "dataset": "MELD",
+      "seed": 3407,
+      "variant": "cmerc",
+      "n_samples": 2610,
+      "modality_count": 1773,
+      "context_count": 2307,
+      "modality_percentage": 67.93103448275862,
+      "context_percentage": 88.39080459770115,
+      "individual_removal_counts": {
+        "text": 689,
+        "audio": 837,
+        "visual": 1073,
+        "intra_context": 1644,
+        "inter_context": 1252
+      },
+      "selected_epoch": 14,
+      "split_hash": "5317189c62939f28801eadf558763bd901cae04544ae829ebd45d1dd057055b8",
+      "prediction_path": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/results/cmerc/MELD/validation/seed3407/predictions.npz",
+      "prediction_sha256": "2351a24c747201efd9f7b60a2859769799f6bd28b63011da07f2475200318d29",
+      "metrics_sha256": "a847ff6d4fb696d9f231ce6d2e113ab4eb2202d4b0c86fe453fd45dfa73eacf4",
+      "checkpoint_path": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/cmerc/MELD_validation_seed3407/best.pt",
+      "checkpoint_sha256_at_acceptance": "0c0ccae216958f22d6c58d8d4d5a566ef61e22a81a29c0f815d7b7e180404562"
+    },
+    {
+      "dataset": "MELD",
+      "seed": 42,
+      "variant": "cmerc",
+      "n_samples": 2610,
+      "modality_count": 1593,
+      "context_count": 2342,
+      "modality_percentage": 61.03448275862069,
+      "context_percentage": 89.73180076628353,
+      "individual_removal_counts": {
+        "text": 622,
+        "audio": 847,
+        "visual": 886,
+        "intra_context": 1635,
+        "inter_context": 1198
+      },
+      "selected_epoch": 5,
+      "split_hash": "5317189c62939f28801eadf558763bd901cae04544ae829ebd45d1dd057055b8",
+      "prediction_path": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/results/cmerc/MELD/validation/seed42/predictions.npz",
+      "prediction_sha256": "0799538c96b3f8342184e0ebb24ad863fa8f0c9f7f3cea4bf59ecf1cdf2d3132",
+      "metrics_sha256": "50d9003842410017501f7570baeb8fcfd7084f796f43aafc22d35e8eb5ede414",
+      "checkpoint_path": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/cmerc/MELD_validation_seed42/best.pt",
+      "checkpoint_sha256_at_acceptance": "e14f4c855e277cca5d256f0e2a3e4048b0a407035be9c28a5de0a3451721026b"
+    }
+  ],
+  "summary": [
+    {
+      "dataset": "IEMOCAP",
+      "modality_mean": 79.9630314232902,
+      "modality_std": 1.3522898967264214,
+      "context_mean": 73.9864448552064,
+      "context_std": 7.848437445427348
+    },
+    {
+      "dataset": "MELD",
+      "modality_mean": 65.43295019157088,
+      "modality_std": 3.3312848772460995,
+      "context_mean": 86.9272030651341,
+      "context_std": 2.542543285277738
+    }
+  ]
+}

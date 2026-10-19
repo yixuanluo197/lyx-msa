@@ -3,6 +3,19 @@
   "backup_file_count": 251,
   "backup_root": "/data2/yb/paper/experiment_backups/CMERC/04_xp_mainline_validation/20261016T050823Z",
   "batch": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z",
+  "derived_analyses": {
+    "uncertain_sample_percentage": {
+      "comparison_epsilon": 0.0,
+      "ddof": 1,
+      "input_acceptance_sha256": "87e78b95652dcd8149e2552e6fdff639fa6d758e3f81fc34d23207ad95750bf1",
+      "provenance": "provenance/uncertain_percentage_analysis.json",
+      "report": "reports/UNCERTAIN_SAMPLE_PERCENTAGE.md",
+      "source_script_sha256": "9c8f6d277c06d563ac8849167b1259b198f0ce293beefb4dc1775c438af3ee13",
+      "summary": "results/uncertain_percentage_summary.csv",
+      "training_or_inference_executed": false,
+      "variant": "cmerc"
+    }
+  },
   "excluded_regular_files": [
     "code/snapshots/code_snapshot.tar.gz",
     "preflight/gpu3_IEMOCAP/gradient_components.jsonl",
@@ -1395,6 +1408,15 @@
     },
     {
       "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "provenance/uncertain_percentage_analysis.json",
+      "role": "post-acceptance derived analysis; not a frozen training input",
+      "size_bytes": 13074,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/analyses/uncertain_percentage/provenance/uncertain_percentage_analysis.json",
+      "source_sha256": "32f408d31b8049339e7b098ee17c8ad407a8efb468c390c0c2d5285ffc5d0c0b",
+      "target_sha256": "32f408d31b8049339e7b098ee17c8ad407a8efb468c390c0c2d5285ffc5d0c0b"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
       "path": "provenance/xp_scheduler.patch",
       "size_bytes": 23192,
       "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/provenance/xp_scheduler.patch",
@@ -1448,6 +1470,15 @@
       "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/reports/RESOURCE_RECOVERY.md",
       "source_sha256": "c8e923d32d1ba2ec648f2e9b8965ddddb40e4f24bef852812ef9be14e77d1988",
       "target_sha256": "c8e923d32d1ba2ec648f2e9b8965ddddb40e4f24bef852812ef9be14e77d1988"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "reports/UNCERTAIN_SAMPLE_PERCENTAGE.md",
+      "role": "post-acceptance derived analysis; not a frozen training input",
+      "size_bytes": 4027,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/analyses/uncertain_percentage/reports/UNCERTAIN_SAMPLE_PERCENTAGE.md",
+      "source_sha256": "befdf8c28cb1ace7d712f0e3e2003f0a317d067e72ef03eeb2d41328a5d04dcb",
+      "target_sha256": "befdf8c28cb1ace7d712f0e3e2003f0a317d067e72ef03eeb2d41328a5d04dcb"
     },
     {
       "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
@@ -1712,6 +1743,15 @@
       "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/results/summary.json",
       "source_sha256": "0a9c7736efc25ac4df932d0000eff7779d5e85d816cada5e04db99c79cb942a5",
       "target_sha256": "0a9c7736efc25ac4df932d0000eff7779d5e85d816cada5e04db99c79cb942a5"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "results/uncertain_percentage_summary.csv",
+      "role": "post-acceptance derived analysis; not a frozen training input",
+      "size_bytes": 213,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/analyses/uncertain_percentage/results/uncertain_percentage_summary.csv",
+      "source_sha256": "4e3c351e3d9313abfdc246f1d66c5914742f4b2aebf077ce914f9fe130ae0a83",
+      "target_sha256": "4e3c351e3d9313abfdc246f1d66c5914742f4b2aebf077ce914f9fe130ae0a83"
     },
     {
       "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
@@ -2288,6 +2328,15 @@
       "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/tools/audit_inputs.py",
       "source_sha256": "dc4cde9bf2c3db1b3722aec0436fd51384f84013f91cea60086fe258732f5939",
       "target_sha256": "dc4cde9bf2c3db1b3722aec0436fd51384f84013f91cea60086fe258732f5939"
+    },
+    {
+      "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
+      "path": "tools/compute_uncertain_percentage.py",
+      "role": "post-acceptance derived analysis; not a frozen training input",
+      "size_bytes": 12090,
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/analyses/uncertain_percentage/compute_uncertain_percentage.py",
+      "source_sha256": "9c8f6d277c06d563ac8849167b1259b198f0ce293beefb4dc1775c438af3ee13",
+      "target_sha256": "9c8f6d277c06d563ac8849167b1259b198f0ce293beefb4dc1775c438af3ee13"
     },
     {
       "copy_method": "shutil.copy2 (independent inode, SHA-256 verified)",
