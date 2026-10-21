@@ -1,0 +1,143 @@
+{
+  "run_id": "MELD_cmerc_seed67137",
+  "checkpoint_sha256": "7263ca6c5c698d7f4760816ae9a52a549aa2c119e3b352744b09c77d5ff0cd8d",
+  "selected_epoch": 8,
+  "batch_size": 16,
+  "curriculum_fraction": 1,
+  "scope": "diagnostic at fixed checkpoint, first current training batch; no optimization or config/epoch selection",
+  "auxiliary_snapshot": "copied from fixed main checkpoint at diagnostic function entry; not historical epoch-start auxiliaries",
+  "training_mode": true,
+  "test_data_used": false,
+  "optimizer_steps": 0,
+  "ids": [
+    275,
+    83,
+    225,
+    916,
+    296,
+    948,
+    803,
+    249,
+    769,
+    152,
+    117,
+    956,
+    975,
+    43,
+    1,
+    140
+  ],
+  "lengths": [
+    17,
+    4,
+    12,
+    14,
+    21,
+    16,
+    7,
+    13,
+    3,
+    10,
+    4,
+    17,
+    7,
+    7,
+    7,
+    3
+  ],
+  "components": {
+    "classification": {
+      "value": 3.1425092220306396,
+      "requires_grad": true,
+      "coefficient": 1,
+      "gradient_l2": 4.695271238263851,
+      "weighted_gradient_l2": 4.695271238263851,
+      "all_gradients_finite": true,
+      "parameter_tensors_with_gradient": 44
+    },
+    "cc": {
+      "value": 50.16688919067383,
+      "requires_grad": true,
+      "coefficient": 0.002,
+      "gradient_l2": 2647.4919233945434,
+      "weighted_gradient_l2": 5.294983846789087,
+      "all_gradients_finite": true,
+      "parameter_tensors_with_gradient": 44,
+      "cosine_with_classification": -0.3688396694378534
+    },
+    "mscl": {
+      "value": 4.2535624504089355,
+      "requires_grad": true,
+      "coefficient": 0.15,
+      "gradient_l2": 3.52053113909049,
+      "weighted_gradient_l2": 0.5280796708635734,
+      "all_gradients_finite": true,
+      "parameter_tensors_with_gradient": 42,
+      "cosine_with_classification": 0.15279741342496214
+    },
+    "cscl": {
+      "value": 3.2534217834472656,
+      "requires_grad": true,
+      "coefficient": 0.15,
+      "gradient_l2": 3.445962601172738,
+      "weighted_gradient_l2": 0.5168943901759107,
+      "all_gradients_finite": true,
+      "parameter_tensors_with_gradient": 42,
+      "cosine_with_classification": -0.1543230182649851
+    }
+  },
+  "pseudo_labels": {
+    "Mscl_pred_t": {
+      "counts_0_1": [
+        49,
+        113
+      ],
+      "positive_fraction": 0.6975308641975309,
+      "same_label_pair_count": 15008,
+      "interpretation": "constructed target distribution, not independently measured label quality"
+    },
+    "Mscl_pred_a": {
+      "counts_0_1": [
+        86,
+        76
+      ],
+      "positive_fraction": 0.4691358024691358,
+      "same_label_pair_count": 13010,
+      "interpretation": "constructed target distribution, not independently measured label quality"
+    },
+    "Mscl_pred_v": {
+      "counts_0_1": [
+        106,
+        56
+      ],
+      "positive_fraction": 0.345679012345679,
+      "same_label_pair_count": 14210,
+      "interpretation": "constructed target distribution, not independently measured label quality"
+    },
+    "Cscl_pred_intra": {
+      "counts_0_1": [
+        129,
+        33
+      ],
+      "positive_fraction": 0.2037037037037037,
+      "same_label_pair_count": 17568,
+      "interpretation": "constructed target distribution, not independently measured label quality"
+    },
+    "Cscl_pred_inter": {
+      "counts_0_1": [
+        106,
+        56
+      ],
+      "positive_fraction": 0.345679012345679,
+      "same_label_pair_count": 14210,
+      "interpretation": "constructed target distribution, not independently measured label quality"
+    }
+  },
+  "main_train_accuracy_percent": 81.48148345947266,
+  "model_parameters_unchanged": true,
+  "limitations": [
+    "single training batch; not a longitudinal gradient study",
+    "BatchNorm running buffers may update in train mode in this throwaway process; saved checkpoint is unchanged",
+    "pseudo-label balance is not an oracle estimate of counterfactual calibration target quality"
+  ]
+}

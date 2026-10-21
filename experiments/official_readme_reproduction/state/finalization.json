@@ -1,0 +1,162 @@
+{
+  "active": false,
+  "phase": "completed",
+  "pid": 3064903,
+  "commands": [
+    {
+      "argv": [
+        "/data2/yb/conda_envs/cmerc-xp-repro/bin/python",
+        "-u",
+        "/data2/yb/paper/lyx-msa/CMERC/experiments/official_readme_reproduction/scripts/evaluate_saved.py",
+        "--run-id",
+        "IEMOCAP_baseline_seed1475"
+      ],
+      "started_at_unix": 1792591099.2536397,
+      "log": "IEMOCAP_baseline_seed1475_checkpoint_replay.log",
+      "environment": {
+        "CUDA_VISIBLE_DEVICES": "GPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456",
+        "LD_LIBRARY_PATH": "/data2/yb/conda_envs/cmerc-xp-repro/lib/python3.10/site-packages/nvidia/cusparse/lib",
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1"
+      },
+      "script_sha256": "196beb49f94d20815b13378581a46ff5a097787da61e4810a164c32788c5a29f",
+      "pid": 3195729,
+      "returncode": 0,
+      "finished_at_unix": 1792591118.366795
+    },
+    {
+      "argv": [
+        "/data2/yb/conda_envs/cmerc-xp-repro/bin/python",
+        "-u",
+        "/data2/yb/paper/lyx-msa/CMERC/experiments/official_readme_reproduction/scripts/evaluate_saved.py",
+        "--run-id",
+        "MELD_baseline_seed67137"
+      ],
+      "started_at_unix": 1792591118.4709654,
+      "log": "MELD_baseline_seed67137_checkpoint_replay.log",
+      "environment": {
+        "CUDA_VISIBLE_DEVICES": "GPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456",
+        "LD_LIBRARY_PATH": "/data2/yb/conda_envs/cmerc-xp-repro/lib/python3.10/site-packages/nvidia/cusparse/lib",
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1"
+      },
+      "script_sha256": "196beb49f94d20815b13378581a46ff5a097787da61e4810a164c32788c5a29f",
+      "pid": 3196700,
+      "returncode": 0,
+      "finished_at_unix": 1792591132.1475778
+    },
+    {
+      "argv": [
+        "/data2/yb/conda_envs/cmerc-xp-repro/bin/python",
+        "-u",
+        "/data2/yb/paper/lyx-msa/CMERC/experiments/official_readme_reproduction/scripts/evaluate_saved.py",
+        "--run-id",
+        "MELD_cmerc_seed67137"
+      ],
+      "started_at_unix": 1792591132.2348933,
+      "log": "MELD_cmerc_seed67137_checkpoint_replay.log",
+      "environment": {
+        "CUDA_VISIBLE_DEVICES": "GPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456",
+        "LD_LIBRARY_PATH": "/data2/yb/conda_envs/cmerc-xp-repro/lib/python3.10/site-packages/nvidia/cusparse/lib",
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1"
+      },
+      "script_sha256": "196beb49f94d20815b13378581a46ff5a097787da61e4810a164c32788c5a29f",
+      "pid": 3197389,
+      "returncode": 0,
+      "finished_at_unix": 1792591146.322282
+    },
+    {
+      "argv": [
+        "/data2/yb/conda_envs/cmerc-xp-repro/bin/python",
+        "-u",
+        "/data2/yb/paper/lyx-msa/CMERC/experiments/official_readme_reproduction/scripts/diagnose_losses.py",
+        "--run-id",
+        "MELD_cmerc_seed67137"
+      ],
+      "started_at_unix": 1792591146.3240304,
+      "log": "MELD_cmerc_seed67137_gradient_diagnostic.log",
+      "environment": {
+        "CUDA_VISIBLE_DEVICES": "GPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456",
+        "LD_LIBRARY_PATH": "/data2/yb/conda_envs/cmerc-xp-repro/lib/python3.10/site-packages/nvidia/cusparse/lib",
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1"
+      },
+      "script_sha256": "960564590d6ba85a6935c5e05e4b5df20188b53f63c9f804e2efa39c5e9f1655",
+      "pid": 3198073,
+      "returncode": 0,
+      "finished_at_unix": 1792591155.4663901
+    },
+    {
+      "argv": [
+        "/data2/yb/conda_envs/cmerc-xp-repro/bin/python",
+        "-u",
+        "/data2/yb/paper/lyx-msa/CMERC/experiments/official_readme_reproduction/scripts/evaluate_saved.py",
+        "--run-id",
+        "IEMOCAP_cmerc_seed1475"
+      ],
+      "started_at_unix": 1792591165.6619668,
+      "log": "IEMOCAP_cmerc_seed1475_checkpoint_replay.log",
+      "environment": {
+        "CUDA_VISIBLE_DEVICES": "GPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456",
+        "LD_LIBRARY_PATH": "/data2/yb/conda_envs/cmerc-xp-repro/lib/python3.10/site-packages/nvidia/cusparse/lib",
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1"
+      },
+      "script_sha256": "196beb49f94d20815b13378581a46ff5a097787da61e4810a164c32788c5a29f",
+      "pid": 3198982,
+      "returncode": 0,
+      "finished_at_unix": 1792591184.6395965
+    },
+    {
+      "argv": [
+        "/data2/yb/conda_envs/cmerc-xp-repro/bin/python",
+        "-u",
+        "/data2/yb/paper/lyx-msa/CMERC/experiments/official_readme_reproduction/scripts/diagnose_losses.py",
+        "--run-id",
+        "IEMOCAP_cmerc_seed1475"
+      ],
+      "started_at_unix": 1792591184.6413655,
+      "log": "IEMOCAP_cmerc_seed1475_gradient_diagnostic.log",
+      "environment": {
+        "CUDA_VISIBLE_DEVICES": "GPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456",
+        "LD_LIBRARY_PATH": "/data2/yb/conda_envs/cmerc-xp-repro/lib/python3.10/site-packages/nvidia/cusparse/lib",
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1"
+      },
+      "script_sha256": "960564590d6ba85a6935c5e05e4b5df20188b53f63c9f804e2efa39c5e9f1655",
+      "pid": 3199909,
+      "returncode": 0,
+      "finished_at_unix": 1792591199.3396912
+    },
+    {
+      "argv": [
+        "/data2/yb/conda_envs/cmerc-xp-repro/bin/python",
+        "-u",
+        "/data2/yb/paper/lyx-msa/CMERC/experiments/official_readme_reproduction/scripts/summarize.py"
+      ],
+      "started_at_unix": 1792591199.3552272,
+      "log": "final_summary_validation.log",
+      "environment": {
+        "CUDA_VISIBLE_DEVICES": "GPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456",
+        "LD_LIBRARY_PATH": "/data2/yb/conda_envs/cmerc-xp-repro/lib/python3.10/site-packages/nvidia/cusparse/lib",
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1"
+      },
+      "script_sha256": "586b35029f5e178449320dd045f8fe44af6975cbebc7f6157813a2b23f83ad80",
+      "pid": 3200621,
+      "returncode": 0,
+      "finished_at_unix": 1792591199.854488
+    }
+  ],
+  "started_at_unix": 1792586474.7685595,
+  "run_id": "IEMOCAP_cmerc_seed1475",
+  "completed_at_unix": 1792591199.8552852
+}

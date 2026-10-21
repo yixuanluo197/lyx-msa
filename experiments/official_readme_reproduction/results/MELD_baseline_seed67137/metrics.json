@@ -1,0 +1,130 @@
+{
+  "run_id": "MELD_baseline_seed67137",
+  "dataset": "MELD",
+  "model": "baseline",
+  "seed": 67137,
+  "selection_protocol": "official_test_selection",
+  "selected_epoch_1based": 5,
+  "independent_checkpoint_replay": true,
+  "independent_of_test_selection": false,
+  "accuracy_percent": 67.5478927203065,
+  "weighted_f1_percent": 66.2256923329111,
+  "macro_f1_percent": 50.118559002878236,
+  "official_wf1_percent": 66.23,
+  "official_classification_loss": 3.8812,
+  "num_test_utterances": 2610,
+  "calibration": {
+    "n_bins": 15,
+    "ece": 24.777473853718,
+    "mce": 33.375731615318,
+    "rmsce": 25.912052487386,
+    "auroc_success": 74.309246675564,
+    "auprc_success": 84.9364568845,
+    "bins": [
+      {
+        "index": 2,
+        "lower": 0.13333333333333333,
+        "upper": 0.2,
+        "count": 7,
+        "accuracy": 0.14285714285714285,
+        "confidence": 0.19407402379761632,
+        "gap": 0.05121688094047347
+      },
+      {
+        "index": 3,
+        "lower": 0.2,
+        "upper": 0.26666666666666666,
+        "count": 213,
+        "accuracy": 0.38967136150234744,
+        "confidence": 0.2406177815476019,
+        "gap": 0.14905357995474552
+      },
+      {
+        "index": 4,
+        "lower": 0.26666666666666666,
+        "upper": 0.3333333333333333,
+        "count": 412,
+        "accuracy": 0.4441747572815534,
+        "confidence": 0.30047849472642346,
+        "gap": 0.14369626255512996
+      },
+      {
+        "index": 5,
+        "lower": 0.3333333333333333,
+        "upper": 0.4,
+        "count": 482,
+        "accuracy": 0.5622406639004149,
+        "confidence": 0.3668887704029438,
+        "gap": 0.19535189349747112
+      },
+      {
+        "index": 6,
+        "lower": 0.4,
+        "upper": 0.4666666666666667,
+        "count": 442,
+        "accuracy": 0.6968325791855203,
+        "confidence": 0.43495151746928934,
+        "gap": 0.261881061716231
+      },
+      {
+        "index": 7,
+        "lower": 0.4666666666666667,
+        "upper": 0.5333333333333333,
+        "count": 513,
+        "accuracy": 0.834307992202729,
+        "confidence": 0.5005506760495535,
+        "gap": 0.3337573161531755
+      },
+      {
+        "index": 8,
+        "lower": 0.5333333333333333,
+        "upper": 0.6,
+        "count": 382,
+        "accuracy": 0.887434554973822,
+        "confidence": 0.562901937738384,
+        "gap": 0.3245326172354379
+      },
+      {
+        "index": 9,
+        "lower": 0.6,
+        "upper": 0.6666666666666666,
+        "count": 149,
+        "accuracy": 0.9395973154362416,
+        "confidence": 0.6234947527796324,
+        "gap": 0.3161025626566092
+      },
+      {
+        "index": 10,
+        "lower": 0.6666666666666666,
+        "upper": 0.7333333333333333,
+        "count": 10,
+        "accuracy": 1.0,
+        "confidence": 0.6817010038317586,
+        "gap": 0.3182989961682414
+      }
+    ]
+  },
+  "cel": {
+    "total": 509.60762655735016,
+    "by_removal": {
+      "text": 192.39420476555824,
+      "audio": 35.546479135751724,
+      "visual": 15.93864130973816,
+      "intra_context": 165.3798960596323,
+      "inter_context": 100.34840528666973
+    },
+    "scale": "sum of positive true-class log-probability differences"
+  },
+  "checkpoint_sha256": "a6ab85cb6c0c12054dade9c6bcdf01cfaa6abc417625059a927de5ba386d3738",
+  "evaluation_metric_source": "/data2/yb/paper/lyx-msa/CMERC/experiment_records/04_xp_mainline_validation/code/evaluation_metrics.py",
+  "evaluation_metric_source_sha256": "ed831a1f38d5706d6d47d7310d03e8b35f6eb4573623c9650934c638d65835c8",
+  "evaluation_protocol": "same frozen model and official test batches; no_grad; diagnostic removals enabled only after training",
+  "elapsed_seconds": 6.591862201690674,
+  "peak_allocated_mib": 398.6767578125,
+  "peak_reserved_mib": 456.0,
+  "replay_matches_training_test_wf1": true,
+  "replay_labels_identical": true,
+  "replay_predictions_identical": true,
+  "replay_probabilities_close": true,
+  "replay_max_probability_difference": 1.5030085587230957e-07
+}

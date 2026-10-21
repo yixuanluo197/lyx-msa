@@ -1,0 +1,23 @@
+{
+  "active": false,
+  "phase": "completed",
+  "completed_at_utc": "2026-10-21T14:10:11.196921+00:00",
+  "formal_runs_started": 4,
+  "formal_runs_completed": 4,
+  "checkpoint_replays_completed": 4,
+  "gradient_diagnostics_completed": 2,
+  "reports_completed": 6,
+  "figures_png_svg": 16,
+  "script_ast_checks": 11,
+  "verification": "provenance/final_verification.json",
+  "artifact_manifest": "provenance/delivery_manifest.json",
+  "gpu_released": true,
+  "selection_protocol": "official_test_selection",
+  "execution_class": "compatibility_patched_with_external_observer",
+  "limits": [
+    "single preregistered seed per dataset",
+    "test-selected checkpoints are not unbiased independent tests",
+    "author difficulty generation history unknown",
+    "single-batch diagnostic gradients do not establish training-wide causality"
+  ]
+}

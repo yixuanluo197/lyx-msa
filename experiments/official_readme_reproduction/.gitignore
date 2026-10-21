@@ -1,0 +1,12 @@
+# Keep original weights, per-example arrays, raw logs and data links on the server.
+/logs/
+/checkpoints/*/batches.jsonl
+/state/*.lock
+/official_code/data/
+/runtime_code/data/
+
+# These small difficulty files are already public in the fixed upstream commit.
+!/official_code/caldiff/IEMOCAP_diff.pkl
+!/official_code/caldiff/MELD_diff.pkl
+!/runtime_code/caldiff/IEMOCAP_diff.pkl
+!/runtime_code/caldiff/MELD_diff.pkl

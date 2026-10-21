@@ -1,0 +1,148 @@
+{
+  "run_id": "IEMOCAP_cmerc_seed1475",
+  "dataset": "IEMOCAP",
+  "model": "cmerc",
+  "seed": 1475,
+  "selection_protocol": "official_test_selection",
+  "selected_epoch_1based": 79,
+  "independent_checkpoint_replay": true,
+  "independent_of_test_selection": false,
+  "accuracy_percent": 70.30191004313001,
+  "weighted_f1_percent": 70.51077550130417,
+  "macro_f1_percent": 69.98274092600191,
+  "official_wf1_percent": 70.51,
+  "official_classification_loss": 0.9564,
+  "num_test_utterances": 1623,
+  "calibration": {
+    "n_bins": 15,
+    "ece": 15.109333152222,
+    "mce": 22.557418370422,
+    "rmsce": 16.142326196063,
+    "auroc_success": 70.597786756176,
+    "auprc_success": 85.597584242027,
+    "bins": [
+      {
+        "index": 4,
+        "lower": 0.26666666666666666,
+        "upper": 0.3333333333333333,
+        "count": 3,
+        "accuracy": 0.3333333333333333,
+        "confidence": 0.33011187408100556,
+        "gap": 0.003221459252327752
+      },
+      {
+        "index": 5,
+        "lower": 0.3333333333333333,
+        "upper": 0.4,
+        "count": 15,
+        "accuracy": 0.26666666666666666,
+        "confidence": 0.37024915196912983,
+        "gap": 0.10358248530246317
+      },
+      {
+        "index": 6,
+        "lower": 0.4,
+        "upper": 0.4666666666666667,
+        "count": 28,
+        "accuracy": 0.39285714285714285,
+        "confidence": 0.4385984177175456,
+        "gap": 0.04574127486040275
+      },
+      {
+        "index": 7,
+        "lower": 0.4666666666666667,
+        "upper": 0.5333333333333333,
+        "count": 68,
+        "accuracy": 0.4852941176470588,
+        "confidence": 0.5031078655528302,
+        "gap": 0.017813747905771338
+      },
+      {
+        "index": 8,
+        "lower": 0.5333333333333333,
+        "upper": 0.6,
+        "count": 69,
+        "accuracy": 0.5652173913043478,
+        "confidence": 0.566797972592308,
+        "gap": 0.0015805812879602366
+      },
+      {
+        "index": 9,
+        "lower": 0.6,
+        "upper": 0.6666666666666666,
+        "count": 105,
+        "accuracy": 0.5428571428571428,
+        "confidence": 0.6297128214129921,
+        "gap": 0.0868556785558493
+      },
+      {
+        "index": 10,
+        "lower": 0.6666666666666666,
+        "upper": 0.7333333333333333,
+        "count": 97,
+        "accuracy": 0.5154639175257731,
+        "confidence": 0.7014536686929342,
+        "gap": 0.1859897511671611
+      },
+      {
+        "index": 11,
+        "lower": 0.7333333333333333,
+        "upper": 0.8,
+        "count": 105,
+        "accuracy": 0.6476190476190476,
+        "confidence": 0.7679516258931328,
+        "gap": 0.12033257827408517
+      },
+      {
+        "index": 12,
+        "lower": 0.8,
+        "upper": 0.8666666666666667,
+        "count": 140,
+        "accuracy": 0.6071428571428571,
+        "confidence": 0.8327170408470815,
+        "gap": 0.22557418370422444
+      },
+      {
+        "index": 13,
+        "lower": 0.8666666666666667,
+        "upper": 0.9333333333333333,
+        "count": 186,
+        "accuracy": 0.6989247311827957,
+        "confidence": 0.9036875006778925,
+        "gap": 0.20476276949509675
+      },
+      {
+        "index": 14,
+        "lower": 0.9333333333333333,
+        "upper": 1.0,
+        "count": 807,
+        "accuracy": 0.8215613382899628,
+        "confidence": 0.9846318352734504,
+        "gap": 0.16307049698348763
+      }
+    ]
+  },
+  "cel": {
+    "total": 1449.1723092981233,
+    "by_removal": {
+      "text": 389.09465055226883,
+      "audio": 382.61016234096314,
+      "visual": 89.10153919172703,
+      "intra_context": 316.0608618811777,
+      "inter_context": 272.30509533198654
+    },
+    "scale": "sum of positive true-class log-probability differences"
+  },
+  "checkpoint_sha256": "b391ddc08c3bc5261a99ecdbd1bd01352ed6f24d374704ec6e7a120ce87b3399",
+  "evaluation_metric_source": "/data2/yb/paper/lyx-msa/CMERC/experiment_records/04_xp_mainline_validation/code/evaluation_metrics.py",
+  "evaluation_metric_source_sha256": "ed831a1f38d5706d6d47d7310d03e8b35f6eb4573623c9650934c638d65835c8",
+  "evaluation_protocol": "same frozen model and official test batches; no_grad; diagnostic removals enabled only after training",
+  "elapsed_seconds": 13.188146591186523,
+  "peak_allocated_mib": 2133.39990234375,
+  "peak_reserved_mib": 2438.0,
+  "replay_matches_training_test_wf1": true,
+  "replay_labels_identical": true,
+  "replay_predictions_identical": true,
+  "replay_probabilities_close": true,
+  "replay_max_probability_difference": 4.747587669662323e-07
+}

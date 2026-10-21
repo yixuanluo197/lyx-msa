@@ -1,0 +1,139 @@
+{
+  "run_id": "MELD_cmerc_seed67137",
+  "dataset": "MELD",
+  "model": "cmerc",
+  "seed": 67137,
+  "selection_protocol": "official_test_selection",
+  "selected_epoch_1based": 8,
+  "independent_checkpoint_replay": true,
+  "independent_of_test_selection": false,
+  "accuracy_percent": 67.24137931034483,
+  "weighted_f1_percent": 66.13011165927637,
+  "macro_f1_percent": 50.380627838545664,
+  "official_wf1_percent": 66.13,
+  "official_classification_loss": 4.121,
+  "num_test_utterances": 2610,
+  "calibration": {
+    "n_bins": 15,
+    "ece": 18.717075500931,
+    "mce": 26.112287326098,
+    "rmsce": 19.364232893936,
+    "auroc_success": 73.44849302744,
+    "auprc_success": 84.243460130658,
+    "bins": [
+      {
+        "index": 3,
+        "lower": 0.2,
+        "upper": 0.26666666666666666,
+        "count": 136,
+        "accuracy": 0.36764705882352944,
+        "confidence": 0.24258766846489088,
+        "gap": 0.12505939035863856
+      },
+      {
+        "index": 4,
+        "lower": 0.26666666666666666,
+        "upper": 0.3333333333333333,
+        "count": 310,
+        "accuracy": 0.4129032258064516,
+        "confidence": 0.30126263731323666,
+        "gap": 0.11164058849321495
+      },
+      {
+        "index": 5,
+        "lower": 0.3333333333333333,
+        "upper": 0.4,
+        "count": 359,
+        "accuracy": 0.5153203342618384,
+        "confidence": 0.3674977068159459,
+        "gap": 0.14782262744589253
+      },
+      {
+        "index": 6,
+        "lower": 0.4,
+        "upper": 0.4666666666666667,
+        "count": 354,
+        "accuracy": 0.6016949152542372,
+        "confidence": 0.43436026472706746,
+        "gap": 0.16733465052716978
+      },
+      {
+        "index": 7,
+        "lower": 0.4666666666666667,
+        "upper": 0.5333333333333333,
+        "count": 403,
+        "accuracy": 0.684863523573201,
+        "confidence": 0.5010560680461836,
+        "gap": 0.18380745552701738
+      },
+      {
+        "index": 8,
+        "lower": 0.5333333333333333,
+        "upper": 0.6,
+        "count": 437,
+        "accuracy": 0.8260869565217391,
+        "confidence": 0.5649640832607608,
+        "gap": 0.2611228732609784
+      },
+      {
+        "index": 9,
+        "lower": 0.6,
+        "upper": 0.6666666666666666,
+        "count": 362,
+        "accuracy": 0.8701657458563536,
+        "confidence": 0.630806667298848,
+        "gap": 0.2393590785575056
+      },
+      {
+        "index": 10,
+        "lower": 0.6666666666666666,
+        "upper": 0.7333333333333333,
+        "count": 189,
+        "accuracy": 0.8994708994708994,
+        "confidence": 0.6941806175665032,
+        "gap": 0.20529028190439624
+      },
+      {
+        "index": 11,
+        "lower": 0.7333333333333333,
+        "upper": 0.8,
+        "count": 50,
+        "accuracy": 0.94,
+        "confidence": 0.7582852634410936,
+        "gap": 0.18171473655890635
+      },
+      {
+        "index": 12,
+        "lower": 0.8,
+        "upper": 0.8666666666666667,
+        "count": 10,
+        "accuracy": 1.0,
+        "confidence": 0.812446522520356,
+        "gap": 0.18755347747964402
+      }
+    ]
+  },
+  "cel": {
+    "total": 657.3487829789519,
+    "by_removal": {
+      "text": 279.4447204172611,
+      "audio": 44.651016876101494,
+      "visual": 22.639370247721672,
+      "intra_context": 182.36813168227673,
+      "inter_context": 128.24554375559092
+    },
+    "scale": "sum of positive true-class log-probability differences"
+  },
+  "checkpoint_sha256": "7263ca6c5c698d7f4760816ae9a52a549aa2c119e3b352744b09c77d5ff0cd8d",
+  "evaluation_metric_source": "/data2/yb/paper/lyx-msa/CMERC/experiment_records/04_xp_mainline_validation/code/evaluation_metrics.py",
+  "evaluation_metric_source_sha256": "ed831a1f38d5706d6d47d7310d03e8b35f6eb4573623c9650934c638d65835c8",
+  "evaluation_protocol": "same frozen model and official test batches; no_grad; diagnostic removals enabled only after training",
+  "elapsed_seconds": 7.058123350143433,
+  "peak_allocated_mib": 398.6767578125,
+  "peak_reserved_mib": 456.0,
+  "replay_matches_training_test_wf1": true,
+  "replay_labels_identical": true,
+  "replay_predictions_identical": true,
+  "replay_probabilities_close": true,
+  "replay_max_probability_difference": 1.757582969164062e-07
+}

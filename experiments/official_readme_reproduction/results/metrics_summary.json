@@ -1,0 +1,1508 @@
+{
+  "created_at_utc": "2026-10-21T14:06:43.520933+00:00",
+  "status": "completed",
+  "official_commit": "815c7c060914f5b55db816c0ba3662b11d08552f",
+  "source_manifest": "provenance/official_source.json",
+  "input_manifest": "provenance/inputs.json",
+  "environment_manifest": "provenance/environment.json",
+  "compatibility_diff": "provenance/compatibility.patch",
+  "xp04_reference": "provenance/xp04_verified_metrics.json",
+  "formal_runs_started": 4,
+  "formal_runs_completed": 4,
+  "single_seed_per_dataset": true,
+  "statistical_significance_test": "not applicable: one preregistered seed per dataset",
+  "run_class": "compatibility_patched_with_external_observer",
+  "selection_protocol": "official_test_selection",
+  "independent_of_test_selection": false,
+  "runs": [
+    {
+      "run_id": "IEMOCAP_baseline_seed1475",
+      "dataset": "IEMOCAP",
+      "model": "baseline",
+      "seed": 1475,
+      "status": "completed",
+      "selection_protocol": "official_test_selection",
+      "host": "user23",
+      "gpu_uuid": "GPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456",
+      "pid": 3016478,
+      "run_class": "compatibility_patched_with_external_observer",
+      "epochs_planned": 80,
+      "epochs_completed": 80,
+      "train_dialogues_full": 120,
+      "weighted_f1_percent": 70.04315465666103,
+      "official_wf1_rounded_percent": 70.04,
+      "accuracy_percent": 70.11706715958103,
+      "macro_f1_percent": 69.22566838910393,
+      "ece_15_percent": 15.809420818794,
+      "cel_sum": 1733.051271914044,
+      "best_epoch": 72,
+      "final_epoch_wf1_percent": 67.69374817962404,
+      "metrics_source": "results/IEMOCAP_baseline_seed1475/metrics.json",
+      "selected_train_classification_loss": 0.10340219968929887,
+      "selected_train_rank_loss": 0.0,
+      "selected_train_Mscl_tav": 0.0,
+      "selected_train_Cscl_c": 0.0,
+      "selected_train_total_loss": 0.10340219968929887,
+      "peak_allocated_mib": 8018.41796875,
+      "peak_reserved_mib": 8648.0,
+      "elapsed_seconds": 808.5728497505188
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_seed1475",
+      "dataset": "IEMOCAP",
+      "model": "cmerc",
+      "seed": 1475,
+      "status": "completed",
+      "selection_protocol": "official_test_selection",
+      "host": "user23",
+      "gpu_uuid": "GPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456",
+      "pid": 3060577,
+      "run_class": "compatibility_patched_with_external_observer",
+      "epochs_planned": 80,
+      "epochs_completed": 80,
+      "train_dialogues_full": 120,
+      "weighted_f1_percent": 70.51077550130417,
+      "official_wf1_rounded_percent": 70.51,
+      "accuracy_percent": 70.30191004313001,
+      "macro_f1_percent": 69.98274092600191,
+      "ece_15_percent": 15.109333152222,
+      "cel_sum": 1449.1723092981233,
+      "best_epoch": 79,
+      "final_epoch_wf1_percent": 70.05242137188084,
+      "metrics_source": "results/IEMOCAP_cmerc_seed1475/metrics.json",
+      "selected_train_classification_loss": 0.22264369577169418,
+      "selected_train_rank_loss": 51.61685848236084,
+      "selected_train_Mscl_tav": 3.7390482425689697,
+      "selected_train_Cscl_c": 2.4744119942188263,
+      "selected_train_total_loss": 0.7914010100066662,
+      "peak_allocated_mib": 8979.2724609375,
+      "peak_reserved_mib": 10110.0,
+      "elapsed_seconds": 4766.757045507431
+    },
+    {
+      "run_id": "MELD_baseline_seed67137",
+      "dataset": "MELD",
+      "model": "baseline",
+      "seed": 67137,
+      "status": "completed",
+      "selection_protocol": "official_test_selection",
+      "host": "user23",
+      "gpu_uuid": "GPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456",
+      "pid": 3017219,
+      "run_class": "compatibility_patched_with_external_observer",
+      "epochs_planned": 40,
+      "epochs_completed": 40,
+      "train_dialogues_full": 1152,
+      "weighted_f1_percent": 66.2256923329111,
+      "official_wf1_rounded_percent": 66.23,
+      "accuracy_percent": 67.5478927203065,
+      "macro_f1_percent": 50.118559002878236,
+      "ece_15_percent": 24.777473853718,
+      "cel_sum": 509.60762655735016,
+      "best_epoch": 5,
+      "final_epoch_wf1_percent": 63.094669629095776,
+      "metrics_source": "results/MELD_baseline_seed67137/metrics.json",
+      "selected_train_classification_loss": 3.3054883182048798,
+      "selected_train_rank_loss": 0.0,
+      "selected_train_Mscl_tav": 0.0,
+      "selected_train_Cscl_c": 0.0,
+      "selected_train_total_loss": 3.3054883182048798,
+      "peak_allocated_mib": 778.232421875,
+      "peak_reserved_mib": 1094.0,
+      "elapsed_seconds": 431.1533567905426
+    },
+    {
+      "run_id": "MELD_cmerc_seed67137",
+      "dataset": "MELD",
+      "model": "cmerc",
+      "seed": 67137,
+      "status": "completed",
+      "selection_protocol": "official_test_selection",
+      "host": "user23",
+      "gpu_uuid": "GPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456",
+      "pid": 3044302,
+      "run_class": "compatibility_patched_with_external_observer",
+      "epochs_planned": 40,
+      "epochs_completed": 40,
+      "train_dialogues_full": 1152,
+      "weighted_f1_percent": 66.13011165927637,
+      "official_wf1_rounded_percent": 66.13,
+      "accuracy_percent": 67.24137931034483,
+      "macro_f1_percent": 50.380627838545664,
+      "ece_15_percent": 18.717075500931,
+      "cel_sum": 657.3487829789519,
+      "best_epoch": 8,
+      "final_epoch_wf1_percent": 63.81892019116212,
+      "metrics_source": "results/MELD_cmerc_seed67137/metrics.json",
+      "selected_train_classification_loss": 3.1674624847041235,
+      "selected_train_rank_loss": 49.26123446888394,
+      "selected_train_Mscl_tav": 4.090339461962382,
+      "selected_train_Cscl_c": 2.803517755534914,
+      "selected_train_total_loss": 4.300063583585951,
+      "peak_allocated_mib": 897.8974609375,
+      "peak_reserved_mib": 1234.0,
+      "elapsed_seconds": 2402.3917803764343
+    }
+  ],
+  "comparison": [
+    {
+      "dataset": "IEMOCAP",
+      "model": "baseline",
+      "seed": 1475,
+      "readme_selection": "official_test_selection",
+      "xp04_selection": "validation",
+      "readme_wf1_percent": 70.04315465666103,
+      "xp04_wf1_percent": 66.93611646448124,
+      "paper_wf1_percent": 69.61,
+      "readme_minus_xp04_pp": 3.107038192179786,
+      "readme_minus_paper_pp": 0.43315465666103137,
+      "readme_accuracy_percent": 70.11706715958103,
+      "xp04_accuracy_percent": 66.85150955021565,
+      "readme_macro_f1_percent": 69.22566838910393,
+      "xp04_macro_f1_percent": 66.40313088574604,
+      "readme_cel_sum": 1733.051271914044,
+      "xp04_cel_sum": 1520.0234629347167,
+      "readme_ece_15_percent": 15.809420818794,
+      "xp04_ece_15_percent": 16.45600689427,
+      "readme_best_epoch": 72,
+      "xp04_best_epoch": 70
+    },
+    {
+      "dataset": "IEMOCAP",
+      "model": "cmerc",
+      "seed": 1475,
+      "readme_selection": "official_test_selection",
+      "xp04_selection": "validation",
+      "readme_wf1_percent": 70.51077550130417,
+      "xp04_wf1_percent": 68.2801529351637,
+      "paper_wf1_percent": 71.98,
+      "readme_minus_xp04_pp": 2.230622566140468,
+      "readme_minus_paper_pp": -1.4692244986958372,
+      "readme_accuracy_percent": 70.30191004313001,
+      "xp04_accuracy_percent": 68.0837954405422,
+      "readme_macro_f1_percent": 69.98274092600191,
+      "xp04_macro_f1_percent": 67.54733566984851,
+      "readme_cel_sum": 1449.1723092981233,
+      "xp04_cel_sum": 683.0297031317823,
+      "readme_ece_15_percent": 15.109333152222,
+      "xp04_ece_15_percent": 3.977466349387,
+      "readme_best_epoch": 79,
+      "xp04_best_epoch": 43
+    },
+    {
+      "dataset": "MELD",
+      "model": "baseline",
+      "seed": 67137,
+      "readme_selection": "official_test_selection",
+      "xp04_selection": "validation",
+      "readme_wf1_percent": 66.2256923329111,
+      "xp04_wf1_percent": 65.43860835141255,
+      "paper_wf1_percent": 65.37,
+      "readme_minus_xp04_pp": 0.7870839814985402,
+      "readme_minus_paper_pp": 0.8556923329110901,
+      "readme_accuracy_percent": 67.5478927203065,
+      "xp04_accuracy_percent": 66.51340996168582,
+      "readme_macro_f1_percent": 50.118559002878236,
+      "xp04_macro_f1_percent": 48.91235680739477,
+      "readme_cel_sum": 509.60762655735016,
+      "xp04_cel_sum": 503.9678897559643,
+      "readme_ece_15_percent": 24.777473853718,
+      "xp04_ece_15_percent": 26.312079577496,
+      "readme_best_epoch": 5,
+      "xp04_best_epoch": 5
+    },
+    {
+      "dataset": "MELD",
+      "model": "cmerc",
+      "seed": 67137,
+      "readme_selection": "official_test_selection",
+      "xp04_selection": "validation",
+      "readme_wf1_percent": 66.13011165927637,
+      "xp04_wf1_percent": 65.74612650106948,
+      "paper_wf1_percent": 66.85,
+      "readme_minus_xp04_pp": 0.38398515820688317,
+      "readme_minus_paper_pp": -0.7198883407236281,
+      "readme_accuracy_percent": 67.24137931034483,
+      "xp04_accuracy_percent": 66.70498084291188,
+      "readme_macro_f1_percent": 50.380627838545664,
+      "xp04_macro_f1_percent": 49.267839049020274,
+      "readme_cel_sum": 657.3487829789519,
+      "xp04_cel_sum": 644.5383834540844,
+      "readme_ece_15_percent": 18.717075500931,
+      "xp04_ece_15_percent": 19.066607506225,
+      "readme_best_epoch": 8,
+      "xp04_best_epoch": 8
+    }
+  ],
+  "validation": {
+    "IEMOCAP_baseline_seed1475": {
+      "status": "completed",
+      "completed_epochs": 80,
+      "checks": {
+        "complete_epochs": true,
+        "first_best_rounded_test_selection": true,
+        "best_and_final_present": true,
+        "finite_losses_and_gradients": true,
+        "exact_train_curriculum_coverage_every_epoch": true,
+        "fixed_complete_test_order_every_epoch": true,
+        "independent_checkpoint_replay_matches": true
+      },
+      "curriculum_coverage": [
+        {
+          "epoch": 1,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 2,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 3,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 4,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 5,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 6,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 7,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 8,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 9,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 10,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 11,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 12,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 13,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 14,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 15,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 16,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 17,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 18,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 19,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 20,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 21,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 22,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 23,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 24,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 25,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 26,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 27,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 28,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 29,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 30,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 31,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 32,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 33,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 34,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 35,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 36,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 37,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 38,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 39,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 40,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 41,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 42,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 43,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 44,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 45,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 46,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 47,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 48,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 49,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 50,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 51,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 52,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 53,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 54,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 55,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 56,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 57,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 58,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 59,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 60,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 61,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 62,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 63,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 64,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 65,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 66,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 67,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 68,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 69,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 70,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 71,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 72,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 73,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 74,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 75,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 76,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 77,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 78,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 79,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 80,
+          "fraction": 1,
+          "dialogues": 120
+        }
+      ]
+    },
+    "IEMOCAP_cmerc_seed1475": {
+      "status": "completed",
+      "completed_epochs": 80,
+      "checks": {
+        "complete_epochs": true,
+        "first_best_rounded_test_selection": true,
+        "best_and_final_present": true,
+        "finite_losses_and_gradients": true,
+        "exact_train_curriculum_coverage_every_epoch": true,
+        "fixed_complete_test_order_every_epoch": true,
+        "independent_checkpoint_replay_matches": true
+      },
+      "curriculum_coverage": [
+        {
+          "epoch": 1,
+          "fraction": 0.15,
+          "dialogues": 18
+        },
+        {
+          "epoch": 2,
+          "fraction": 0.3,
+          "dialogues": 36
+        },
+        {
+          "epoch": 3,
+          "fraction": 0.45,
+          "dialogues": 54
+        },
+        {
+          "epoch": 4,
+          "fraction": 0.6,
+          "dialogues": 72
+        },
+        {
+          "epoch": 5,
+          "fraction": 0.75,
+          "dialogues": 90
+        },
+        {
+          "epoch": 6,
+          "fraction": 0.9,
+          "dialogues": 108
+        },
+        {
+          "epoch": 7,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 8,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 9,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 10,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 11,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 12,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 13,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 14,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 15,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 16,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 17,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 18,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 19,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 20,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 21,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 22,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 23,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 24,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 25,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 26,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 27,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 28,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 29,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 30,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 31,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 32,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 33,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 34,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 35,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 36,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 37,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 38,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 39,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 40,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 41,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 42,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 43,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 44,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 45,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 46,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 47,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 48,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 49,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 50,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 51,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 52,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 53,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 54,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 55,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 56,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 57,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 58,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 59,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 60,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 61,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 62,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 63,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 64,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 65,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 66,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 67,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 68,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 69,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 70,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 71,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 72,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 73,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 74,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 75,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 76,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 77,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 78,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 79,
+          "fraction": 1,
+          "dialogues": 120
+        },
+        {
+          "epoch": 80,
+          "fraction": 1,
+          "dialogues": 120
+        }
+      ]
+    },
+    "MELD_baseline_seed67137": {
+      "status": "completed",
+      "completed_epochs": 40,
+      "checks": {
+        "complete_epochs": true,
+        "first_best_rounded_test_selection": true,
+        "best_and_final_present": true,
+        "finite_losses_and_gradients": true,
+        "exact_train_curriculum_coverage_every_epoch": true,
+        "fixed_complete_test_order_every_epoch": true,
+        "independent_checkpoint_replay_matches": true
+      },
+      "curriculum_coverage": [
+        {
+          "epoch": 1,
+          "fraction": 1,
+          "dialogues": 1152
+        },
+        {
+          "epoch": 2,
+          "fraction": 1,
+          "dialogues": 1152
+        },
+        {
+          "epoch": 3,
+          "fraction": 1,
+          "dialogues": 1152
+        },
+        {
+          "epoch": 4,
+          "fraction": 1,
+          "dialogues": 1152
+        },
+        {
+          "epoch": 5,
+          "fraction": 1,
+          "dialogues": 1152
+        },
+        {
+          "epoch": 6,
+          "fraction": 1,
+          "dialogues": 1152
+        },
+        {
+          "epoch": 7,
+          "fraction": 1,
+          "dialogues": 1152
+        },
+        {
+          "epoch": 8,
+          "fraction": 1,
+          "dialogues": 1152
+        },
+        {
+          "epoch": 9,
+          "fraction": 1,
+          "dialogues": 1152
+        },
+        {
+          "epoch": 10,
+          "fraction": 1,
+          "dialogues": 1152
+        },
+        {
+          "epoch": 11,
+          "fraction": 1,
+          "dialogues": 1152
+        },
+        {
+          "epoch": 12,
+          "fraction": 1,
+          "dialogues": 1152
+        },
+        {
+          "epoch": 13,
+          "fraction": 1,
+          "dialogues": 1152
+        },
+        {
+          "epoch": 14,
+          "fraction": 1,
+          "dialogues": 1152
+        },
+        {
+          "epoch": 15,
+          "fraction": 1,
+          "dialogues": 1152
+        },
+        {
+          "epoch": 16,
+          "fraction": 1,
+          "dialogues": 1152
+        },
+        {
+          "epoch": 17,
+          "fraction": 1,
+          "dialogues": 1152
+        },
+        {
+          "epoch": 18,
+          "fraction": 1,
+          "dialogues": 1152
+        },
+        {
+          "epoch": 19,
+          "fraction": 1,
+          "dialogues": 1152
+        },
+        {
+          "epoch": 20,
+          "fraction": 1,
+          "dialogues": 1152
+        },
+        {
+          "epoch": 21,
+          "fraction": 1,
+          "dialogues": 1152
+        },
+        {
+          "epoch": 22,
+          "fraction": 1,
+          "dialogues": 1152
+        },
+        {
+          "epoch": 23,
+          "fraction": 1,
+          "dialogues": 1152
+        },
+        {
+          "epoch": 24,
+          "fraction": 1,
+          "dialogues": 1152
+        },
+        {
+          "epoch": 25,
+          "fraction": 1,
+          "dialogues": 1152
+        },
+        {
+          "epoch": 26,
+          "fraction": 1,
+          "dialogues": 1152
+        },
+        {
+          "epoch": 27,
+          "fraction": 1,
+          "dialogues": 1152
+        },
+        {
+          "epoch": 28,
+          "fraction": 1,
+          "dialogues": 1152
+        },
+        {
+          "epoch": 29,
+          "fraction": 1,
+          "dialogues": 1152
+        },
+        {
+          "epoch": 30,
+          "fraction": 1,
+          "dialogues": 1152
+        },
+        {
+          "epoch": 31,
+          "fraction": 1,
+          "dialogues": 1152
+        },
+        {
+          "epoch": 32,
+          "fraction": 1,
+          "dialogues": 1152
+        },
+        {
+          "epoch": 33,
+          "fraction": 1,
+          "dialogues": 1152
+        },
+        {
+          "epoch": 34,
+          "fraction": 1,
+          "dialogues": 1152
+        },
+        {
+          "epoch": 35,
+          "fraction": 1,
+          "dialogues": 1152
+        },
+        {
+          "epoch": 36,
+          "fraction": 1,
+          "dialogues": 1152
+        },
+        {
+          "epoch": 37,
+          "fraction": 1,
+          "dialogues": 1152
+        },
+        {
+          "epoch": 38,
+          "fraction": 1,
+          "dialogues": 1152
+        },
+        {
+          "epoch": 39,
+          "fraction": 1,
+          "dialogues": 1152
+        },
+        {
+          "epoch": 40,
+          "fraction": 1,
+          "dialogues": 1152
+        }
+      ]
+    },
+    "MELD_cmerc_seed67137": {
+      "status": "completed",
+      "completed_epochs": 40,
+      "checks": {
+        "complete_epochs": true,
+        "first_best_rounded_test_selection": true,
+        "best_and_final_present": true,
+        "finite_losses_and_gradients": true,
+        "exact_train_curriculum_coverage_every_epoch": true,
+        "fixed_complete_test_order_every_epoch": true,
+        "independent_checkpoint_replay_matches": true
+      },
+      "curriculum_coverage": [
+        {
+          "epoch": 1,
+          "fraction": 0.4,
+          "dialogues": 460
+        },
+        {
+          "epoch": 2,
+          "fraction": 0.8,
+          "dialogues": 921
+        },
+        {
+          "epoch": 3,
+          "fraction": 1,
+          "dialogues": 1152
+        },
+        {
+          "epoch": 4,
+          "fraction": 1,
+          "dialogues": 1152
+        },
+        {
+          "epoch": 5,
+          "fraction": 1,
+          "dialogues": 1152
+        },
+        {
+          "epoch": 6,
+          "fraction": 1,
+          "dialogues": 1152
+        },
+        {
+          "epoch": 7,
+          "fraction": 1,
+          "dialogues": 1152
+        },
+        {
+          "epoch": 8,
+          "fraction": 1,
+          "dialogues": 1152
+        },
+        {
+          "epoch": 9,
+          "fraction": 1,
+          "dialogues": 1152
+        },
+        {
+          "epoch": 10,
+          "fraction": 1,
+          "dialogues": 1152
+        },
+        {
+          "epoch": 11,
+          "fraction": 1,
+          "dialogues": 1152
+        },
+        {
+          "epoch": 12,
+          "fraction": 1,
+          "dialogues": 1152
+        },
+        {
+          "epoch": 13,
+          "fraction": 1,
+          "dialogues": 1152
+        },
+        {
+          "epoch": 14,
+          "fraction": 1,
+          "dialogues": 1152
+        },
+        {
+          "epoch": 15,
+          "fraction": 1,
+          "dialogues": 1152
+        },
+        {
+          "epoch": 16,
+          "fraction": 1,
+          "dialogues": 1152
+        },
+        {
+          "epoch": 17,
+          "fraction": 1,
+          "dialogues": 1152
+        },
+        {
+          "epoch": 18,
+          "fraction": 1,
+          "dialogues": 1152
+        },
+        {
+          "epoch": 19,
+          "fraction": 1,
+          "dialogues": 1152
+        },
+        {
+          "epoch": 20,
+          "fraction": 1,
+          "dialogues": 1152
+        },
+        {
+          "epoch": 21,
+          "fraction": 1,
+          "dialogues": 1152
+        },
+        {
+          "epoch": 22,
+          "fraction": 1,
+          "dialogues": 1152
+        },
+        {
+          "epoch": 23,
+          "fraction": 1,
+          "dialogues": 1152
+        },
+        {
+          "epoch": 24,
+          "fraction": 1,
+          "dialogues": 1152
+        },
+        {
+          "epoch": 25,
+          "fraction": 1,
+          "dialogues": 1152
+        },
+        {
+          "epoch": 26,
+          "fraction": 1,
+          "dialogues": 1152
+        },
+        {
+          "epoch": 27,
+          "fraction": 1,
+          "dialogues": 1152
+        },
+        {
+          "epoch": 28,
+          "fraction": 1,
+          "dialogues": 1152
+        },
+        {
+          "epoch": 29,
+          "fraction": 1,
+          "dialogues": 1152
+        },
+        {
+          "epoch": 30,
+          "fraction": 1,
+          "dialogues": 1152
+        },
+        {
+          "epoch": 31,
+          "fraction": 1,
+          "dialogues": 1152
+        },
+        {
+          "epoch": 32,
+          "fraction": 1,
+          "dialogues": 1152
+        },
+        {
+          "epoch": 33,
+          "fraction": 1,
+          "dialogues": 1152
+        },
+        {
+          "epoch": 34,
+          "fraction": 1,
+          "dialogues": 1152
+        },
+        {
+          "epoch": 35,
+          "fraction": 1,
+          "dialogues": 1152
+        },
+        {
+          "epoch": 36,
+          "fraction": 1,
+          "dialogues": 1152
+        },
+        {
+          "epoch": 37,
+          "fraction": 1,
+          "dialogues": 1152
+        },
+        {
+          "epoch": 38,
+          "fraction": 1,
+          "dialogues": 1152
+        },
+        {
+          "epoch": 39,
+          "fraction": 1,
+          "dialogues": 1152
+        },
+        {
+          "epoch": 40,
+          "fraction": 1,
+          "dialogues": 1152
+        }
+      ]
+    }
+  },
+  "resource_snapshots": 554,
+  "snapshots_with_external_gpu_process": 0,
+  "limitations": [
+    "different train pools and model selection from XP04; descriptive differences only",
+    "author difficulty generation history unknown",
+    "torch-sparse differs from README",
+    "GPU concurrency affects runtime; GPU resources sampled at 10s intervals",
+    "cuDNN internal dropout state not covered by general RNG snapshots"
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "preflight_compat_IEMOCAP_baseline": {
+    "status": "preflight_passed",
+    "error": null,
+    "formal": false,
+    "pid": 3011240,
+    "config": "IEMOCAP_baseline_seed1475",
+    "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/official_readme_reproduction/runtime_code",
+    "cuda_visible_devices": "GPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456",
+    "peak_allocated_mib": 5314.77734375,
+    "peak_reserved_mib": 6356.0,
+    "effective_args_file": "experiments/official_readme_reproduction/logs/preflight_compat_IEMOCAP_baseline/effective_args.json"
+  },
+  "preflight_importfix_IEMOCAP_baseline": {
+    "status": "failed",
+    "error": "ValueError('Encountered tensor with size 2607 in dimension 0, but expected size 917.')",
+    "formal": false,
+    "pid": 3010359,
+    "config": "IEMOCAP_baseline_seed1475",
+    "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/official_readme_reproduction/runtime_code",
+    "cuda_visible_devices": "GPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456",
+    "peak_allocated_mib": 326.173828125,
+    "peak_reserved_mib": 368.0,
+    "effective_args_file": "experiments/official_readme_reproduction/logs/preflight_importfix_IEMOCAP_baseline/effective_args.json"
+  },
+  "preflight_compat_IEMOCAP_cmerc_seed1475": {
+    "status": "preflight_passed",
+    "error": null,
+    "formal": false,
+    "pid": 3013183,
+    "config": "IEMOCAP_cmerc_seed1475",
+    "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/official_readme_reproduction/runtime_code",
+    "cuda_visible_devices": "GPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456",
+    "peak_allocated_mib": 5273.044921875,
+    "peak_reserved_mib": 5504.0,
+    "effective_args_file": "experiments/official_readme_reproduction/logs/preflight_compat_IEMOCAP_cmerc_seed1475/effective_args.json"
+  },
+  "preflight_compat_MELD_cmerc_seed67137": {
+    "status": "preflight_passed",
+    "error": null,
+    "formal": false,
+    "pid": 3013741,
+    "config": "MELD_cmerc_seed67137",
+    "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/official_readme_reproduction/runtime_code",
+    "cuda_visible_devices": "GPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456",
+    "peak_allocated_mib": 628.62548828125,
+    "peak_reserved_mib": 674.0,
+    "effective_args_file": "experiments/official_readme_reproduction/logs/preflight_compat_MELD_cmerc_seed67137/effective_args.json"
+  },
+  "preflight_original_IEMOCAP_baseline": {
+    "status": "failed",
+    "error": "ImportError(\"cannot import name 'topk' from 'torch_geometric.nn.pool.topk_pool' (/data2/yb/conda_envs/cmerc-xp-repro/lib/python3.10/site-packages/torch_geometric/nn/pool/topk_pool.py)\")",
+    "formal": false,
+    "pid": 3009448,
+    "config": "IEMOCAP_baseline_seed1475",
+    "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/official_readme_reproduction/official_code",
+    "cuda_visible_devices": "GPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456",
+    "peak_allocated_mib": null,
+    "peak_reserved_mib": null,
+    "effective_args_file": null
+  },
+  "preflight_compat_MELD_baseline_seed67137": {
+    "status": "preflight_passed",
+    "error": null,
+    "formal": false,
+    "pid": 3013446,
+    "config": "MELD_baseline_seed67137",
+    "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/official_readme_reproduction/runtime_code",
+    "cuda_visible_devices": "GPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456",
+    "peak_allocated_mib": 449.73779296875,
+    "peak_reserved_mib": 580.0,
+    "effective_args_file": "experiments/official_readme_reproduction/logs/preflight_compat_MELD_baseline_seed67137/effective_args.json"
+  }
+}

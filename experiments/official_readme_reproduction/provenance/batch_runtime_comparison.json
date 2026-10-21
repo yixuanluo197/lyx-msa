@@ -1,0 +1,1271 @@
+{
+  "created_at_utc": "2026-10-21T13:59:14.721984+00:00",
+  "xp04": {
+    "IEMOCAP_baseline_seed1475": {
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiment_records/04_xp_mainline_validation/runs/baseline/IEMOCAP_validation_seed1475/metrics.jsonl",
+      "source_sha256": "7410ce15ac2775fcf95d9b6b4655c3f77907539ba937a2d745fded2d96121406",
+      "epochs": 80,
+      "total_sampler_retries": 0,
+      "epochs_with_sampler_retries": 0,
+      "max_sampler_retries": 0
+    },
+    "IEMOCAP_cmerc_seed1475": {
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiment_records/04_xp_mainline_validation/runs/cmerc/IEMOCAP_validation_seed1475/metrics.jsonl",
+      "source_sha256": "49e113acdf129f113c0a93e7643215f7b07cbb8266cc458f33293bd0e51ead7b",
+      "epochs": 80,
+      "total_sampler_retries": 0,
+      "epochs_with_sampler_retries": 0,
+      "max_sampler_retries": 0
+    },
+    "MELD_baseline_seed67137": {
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiment_records/04_xp_mainline_validation/runs/baseline/MELD_validation_seed67137/metrics.jsonl",
+      "source_sha256": "12a449c74e3c03f59f8851c93bfcdd97442144120b28cacab1a14c849e46180c",
+      "epochs": 40,
+      "total_sampler_retries": 0,
+      "epochs_with_sampler_retries": 0,
+      "max_sampler_retries": 0
+    },
+    "MELD_cmerc_seed67137": {
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiment_records/04_xp_mainline_validation/runs/cmerc/MELD_validation_seed67137/metrics.jsonl",
+      "source_sha256": "768759caab16432f3f8cb41f4cca67b4ba32582f18920a5cb260f7b48e48fea7",
+      "epochs": 40,
+      "total_sampler_retries": 0,
+      "epochs_with_sampler_retries": 0,
+      "max_sampler_retries": 0
+    }
+  },
+  "readme_completed_runs": {
+    "IEMOCAP_baseline_seed1475": {
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/official_readme_reproduction/checkpoints/IEMOCAP_baseline_seed1475/batches.jsonl",
+      "source_sha256": "c13ac6bb541475e899d777d5caa751a5b3b3f29fd077be9520eb8855421b6e6f",
+      "full_pool_epochs": 80,
+      "distinct_full_pool_order_hashes": 1,
+      "orders": [
+        {
+          "epoch": 1,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 2,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 3,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 4,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 5,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 6,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 7,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 8,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 9,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 10,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 11,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 12,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 13,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 14,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 15,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 16,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 17,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 18,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 19,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 20,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 21,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 22,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 23,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 24,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 25,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 26,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 27,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 28,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 29,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 30,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 31,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 32,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 33,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 34,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 35,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 36,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 37,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 38,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 39,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 40,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 41,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 42,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 43,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 44,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 45,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 46,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 47,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 48,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 49,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 50,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 51,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 52,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 53,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 54,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 55,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 56,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 57,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 58,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 59,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 60,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 61,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 62,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 63,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 64,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 65,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 66,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 67,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 68,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 69,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 70,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 71,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 72,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 73,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 74,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 75,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 76,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 77,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 78,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 79,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 80,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        }
+      ]
+    },
+    "IEMOCAP_cmerc_seed1475": {
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/official_readme_reproduction/checkpoints/IEMOCAP_cmerc_seed1475/batches.jsonl",
+      "source_sha256": "619d07638ae250d37438d406e5dd5861be3ab431a97042ac80ef1d8d7bdd98ed",
+      "full_pool_epochs": 74,
+      "distinct_full_pool_order_hashes": 1,
+      "orders": [
+        {
+          "epoch": 1,
+          "dialogues": 18,
+          "order_sha256": "fbc75d907d913fce0ed332b005115a99f4c5dcb848f5d7a891426d8fe79599e0"
+        },
+        {
+          "epoch": 2,
+          "dialogues": 36,
+          "order_sha256": "968b8c0c6512393f196e1901bd578373328f07660637cd3c1d4c9b9b9082c507"
+        },
+        {
+          "epoch": 3,
+          "dialogues": 54,
+          "order_sha256": "8f8ead74726e81e0d32df9e2609d5a78fdd8bdd09d65efca721982fa7a78856b"
+        },
+        {
+          "epoch": 4,
+          "dialogues": 72,
+          "order_sha256": "3d5669bdb1885c90235c50a10faf0771c3f951923f31f03ce2d7014c4a7b7089"
+        },
+        {
+          "epoch": 5,
+          "dialogues": 90,
+          "order_sha256": "cc5badccf484dc317377ae26d00a56a782cb243c225f6c783116b6f78caf3111"
+        },
+        {
+          "epoch": 6,
+          "dialogues": 108,
+          "order_sha256": "eec24d33cbfa720b2dd20841d293acd2f591e417b4d4716b26ac36d60037c9f6"
+        },
+        {
+          "epoch": 7,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 8,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 9,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 10,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 11,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 12,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 13,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 14,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 15,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 16,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 17,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 18,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 19,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 20,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 21,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 22,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 23,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 24,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 25,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 26,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 27,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 28,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 29,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 30,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 31,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 32,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 33,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 34,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 35,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 36,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 37,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 38,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 39,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 40,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 41,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 42,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 43,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 44,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 45,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 46,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 47,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 48,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 49,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 50,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 51,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 52,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 53,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 54,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 55,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 56,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 57,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 58,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 59,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 60,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 61,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 62,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 63,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 64,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 65,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 66,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 67,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 68,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 69,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 70,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 71,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 72,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 73,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 74,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 75,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 76,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 77,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 78,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 79,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        },
+        {
+          "epoch": 80,
+          "dialogues": 120,
+          "order_sha256": "75af0659d109728b9961e18348950f90a66c6c094afdd17779acfdf518affec3"
+        }
+      ]
+    },
+    "MELD_baseline_seed67137": {
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/official_readme_reproduction/checkpoints/MELD_baseline_seed67137/batches.jsonl",
+      "source_sha256": "03de81a93905d5b19cdf46926f7a95ec9d776c66d44a01e715bb5a90201b554d",
+      "full_pool_epochs": 40,
+      "distinct_full_pool_order_hashes": 1,
+      "orders": [
+        {
+          "epoch": 1,
+          "dialogues": 1152,
+          "order_sha256": "df6647ad9fbb7eb168989551b4b5ea8d6aac814ecc8e031ac4f2b34136474ba4"
+        },
+        {
+          "epoch": 2,
+          "dialogues": 1152,
+          "order_sha256": "df6647ad9fbb7eb168989551b4b5ea8d6aac814ecc8e031ac4f2b34136474ba4"
+        },
+        {
+          "epoch": 3,
+          "dialogues": 1152,
+          "order_sha256": "df6647ad9fbb7eb168989551b4b5ea8d6aac814ecc8e031ac4f2b34136474ba4"
+        },
+        {
+          "epoch": 4,
+          "dialogues": 1152,
+          "order_sha256": "df6647ad9fbb7eb168989551b4b5ea8d6aac814ecc8e031ac4f2b34136474ba4"
+        },
+        {
+          "epoch": 5,
+          "dialogues": 1152,
+          "order_sha256": "df6647ad9fbb7eb168989551b4b5ea8d6aac814ecc8e031ac4f2b34136474ba4"
+        },
+        {
+          "epoch": 6,
+          "dialogues": 1152,
+          "order_sha256": "df6647ad9fbb7eb168989551b4b5ea8d6aac814ecc8e031ac4f2b34136474ba4"
+        },
+        {
+          "epoch": 7,
+          "dialogues": 1152,
+          "order_sha256": "df6647ad9fbb7eb168989551b4b5ea8d6aac814ecc8e031ac4f2b34136474ba4"
+        },
+        {
+          "epoch": 8,
+          "dialogues": 1152,
+          "order_sha256": "df6647ad9fbb7eb168989551b4b5ea8d6aac814ecc8e031ac4f2b34136474ba4"
+        },
+        {
+          "epoch": 9,
+          "dialogues": 1152,
+          "order_sha256": "df6647ad9fbb7eb168989551b4b5ea8d6aac814ecc8e031ac4f2b34136474ba4"
+        },
+        {
+          "epoch": 10,
+          "dialogues": 1152,
+          "order_sha256": "df6647ad9fbb7eb168989551b4b5ea8d6aac814ecc8e031ac4f2b34136474ba4"
+        },
+        {
+          "epoch": 11,
+          "dialogues": 1152,
+          "order_sha256": "df6647ad9fbb7eb168989551b4b5ea8d6aac814ecc8e031ac4f2b34136474ba4"
+        },
+        {
+          "epoch": 12,
+          "dialogues": 1152,
+          "order_sha256": "df6647ad9fbb7eb168989551b4b5ea8d6aac814ecc8e031ac4f2b34136474ba4"
+        },
+        {
+          "epoch": 13,
+          "dialogues": 1152,
+          "order_sha256": "df6647ad9fbb7eb168989551b4b5ea8d6aac814ecc8e031ac4f2b34136474ba4"
+        },
+        {
+          "epoch": 14,
+          "dialogues": 1152,
+          "order_sha256": "df6647ad9fbb7eb168989551b4b5ea8d6aac814ecc8e031ac4f2b34136474ba4"
+        },
+        {
+          "epoch": 15,
+          "dialogues": 1152,
+          "order_sha256": "df6647ad9fbb7eb168989551b4b5ea8d6aac814ecc8e031ac4f2b34136474ba4"
+        },
+        {
+          "epoch": 16,
+          "dialogues": 1152,
+          "order_sha256": "df6647ad9fbb7eb168989551b4b5ea8d6aac814ecc8e031ac4f2b34136474ba4"
+        },
+        {
+          "epoch": 17,
+          "dialogues": 1152,
+          "order_sha256": "df6647ad9fbb7eb168989551b4b5ea8d6aac814ecc8e031ac4f2b34136474ba4"
+        },
+        {
+          "epoch": 18,
+          "dialogues": 1152,
+          "order_sha256": "df6647ad9fbb7eb168989551b4b5ea8d6aac814ecc8e031ac4f2b34136474ba4"
+        },
+        {
+          "epoch": 19,
+          "dialogues": 1152,
+          "order_sha256": "df6647ad9fbb7eb168989551b4b5ea8d6aac814ecc8e031ac4f2b34136474ba4"
+        },
+        {
+          "epoch": 20,
+          "dialogues": 1152,
+          "order_sha256": "df6647ad9fbb7eb168989551b4b5ea8d6aac814ecc8e031ac4f2b34136474ba4"
+        },
+        {
+          "epoch": 21,
+          "dialogues": 1152,
+          "order_sha256": "df6647ad9fbb7eb168989551b4b5ea8d6aac814ecc8e031ac4f2b34136474ba4"
+        },
+        {
+          "epoch": 22,
+          "dialogues": 1152,
+          "order_sha256": "df6647ad9fbb7eb168989551b4b5ea8d6aac814ecc8e031ac4f2b34136474ba4"
+        },
+        {
+          "epoch": 23,
+          "dialogues": 1152,
+          "order_sha256": "df6647ad9fbb7eb168989551b4b5ea8d6aac814ecc8e031ac4f2b34136474ba4"
+        },
+        {
+          "epoch": 24,
+          "dialogues": 1152,
+          "order_sha256": "df6647ad9fbb7eb168989551b4b5ea8d6aac814ecc8e031ac4f2b34136474ba4"
+        },
+        {
+          "epoch": 25,
+          "dialogues": 1152,
+          "order_sha256": "df6647ad9fbb7eb168989551b4b5ea8d6aac814ecc8e031ac4f2b34136474ba4"
+        },
+        {
+          "epoch": 26,
+          "dialogues": 1152,
+          "order_sha256": "df6647ad9fbb7eb168989551b4b5ea8d6aac814ecc8e031ac4f2b34136474ba4"
+        },
+        {
+          "epoch": 27,
+          "dialogues": 1152,
+          "order_sha256": "df6647ad9fbb7eb168989551b4b5ea8d6aac814ecc8e031ac4f2b34136474ba4"
+        },
+        {
+          "epoch": 28,
+          "dialogues": 1152,
+          "order_sha256": "df6647ad9fbb7eb168989551b4b5ea8d6aac814ecc8e031ac4f2b34136474ba4"
+        },
+        {
+          "epoch": 29,
+          "dialogues": 1152,
+          "order_sha256": "df6647ad9fbb7eb168989551b4b5ea8d6aac814ecc8e031ac4f2b34136474ba4"
+        },
+        {
+          "epoch": 30,
+          "dialogues": 1152,
+          "order_sha256": "df6647ad9fbb7eb168989551b4b5ea8d6aac814ecc8e031ac4f2b34136474ba4"
+        },
+        {
+          "epoch": 31,
+          "dialogues": 1152,
+          "order_sha256": "df6647ad9fbb7eb168989551b4b5ea8d6aac814ecc8e031ac4f2b34136474ba4"
+        },
+        {
+          "epoch": 32,
+          "dialogues": 1152,
+          "order_sha256": "df6647ad9fbb7eb168989551b4b5ea8d6aac814ecc8e031ac4f2b34136474ba4"
+        },
+        {
+          "epoch": 33,
+          "dialogues": 1152,
+          "order_sha256": "df6647ad9fbb7eb168989551b4b5ea8d6aac814ecc8e031ac4f2b34136474ba4"
+        },
+        {
+          "epoch": 34,
+          "dialogues": 1152,
+          "order_sha256": "df6647ad9fbb7eb168989551b4b5ea8d6aac814ecc8e031ac4f2b34136474ba4"
+        },
+        {
+          "epoch": 35,
+          "dialogues": 1152,
+          "order_sha256": "df6647ad9fbb7eb168989551b4b5ea8d6aac814ecc8e031ac4f2b34136474ba4"
+        },
+        {
+          "epoch": 36,
+          "dialogues": 1152,
+          "order_sha256": "df6647ad9fbb7eb168989551b4b5ea8d6aac814ecc8e031ac4f2b34136474ba4"
+        },
+        {
+          "epoch": 37,
+          "dialogues": 1152,
+          "order_sha256": "df6647ad9fbb7eb168989551b4b5ea8d6aac814ecc8e031ac4f2b34136474ba4"
+        },
+        {
+          "epoch": 38,
+          "dialogues": 1152,
+          "order_sha256": "df6647ad9fbb7eb168989551b4b5ea8d6aac814ecc8e031ac4f2b34136474ba4"
+        },
+        {
+          "epoch": 39,
+          "dialogues": 1152,
+          "order_sha256": "df6647ad9fbb7eb168989551b4b5ea8d6aac814ecc8e031ac4f2b34136474ba4"
+        },
+        {
+          "epoch": 40,
+          "dialogues": 1152,
+          "order_sha256": "df6647ad9fbb7eb168989551b4b5ea8d6aac814ecc8e031ac4f2b34136474ba4"
+        }
+      ]
+    },
+    "MELD_cmerc_seed67137": {
+      "source": "/data2/yb/paper/lyx-msa/CMERC/experiments/official_readme_reproduction/checkpoints/MELD_cmerc_seed67137/batches.jsonl",
+      "source_sha256": "7a550764bfadd1ac225e9f36b2d1c784a582d3c96cfc60a2c8c55575e8cb12bb",
+      "full_pool_epochs": 38,
+      "distinct_full_pool_order_hashes": 1,
+      "orders": [
+        {
+          "epoch": 1,
+          "dialogues": 460,
+          "order_sha256": "3d8a3793508f5a288663c71b40613653e0602ab2dc83ada45533d44b354156a7"
+        },
+        {
+          "epoch": 2,
+          "dialogues": 921,
+          "order_sha256": "4dd65f23f4d79897d590754678e9307db3e6da240065241e07c25d7e5500959b"
+        },
+        {
+          "epoch": 3,
+          "dialogues": 1152,
+          "order_sha256": "df6647ad9fbb7eb168989551b4b5ea8d6aac814ecc8e031ac4f2b34136474ba4"
+        },
+        {
+          "epoch": 4,
+          "dialogues": 1152,
+          "order_sha256": "df6647ad9fbb7eb168989551b4b5ea8d6aac814ecc8e031ac4f2b34136474ba4"
+        },
+        {
+          "epoch": 5,
+          "dialogues": 1152,
+          "order_sha256": "df6647ad9fbb7eb168989551b4b5ea8d6aac814ecc8e031ac4f2b34136474ba4"
+        },
+        {
+          "epoch": 6,
+          "dialogues": 1152,
+          "order_sha256": "df6647ad9fbb7eb168989551b4b5ea8d6aac814ecc8e031ac4f2b34136474ba4"
+        },
+        {
+          "epoch": 7,
+          "dialogues": 1152,
+          "order_sha256": "df6647ad9fbb7eb168989551b4b5ea8d6aac814ecc8e031ac4f2b34136474ba4"
+        },
+        {
+          "epoch": 8,
+          "dialogues": 1152,
+          "order_sha256": "df6647ad9fbb7eb168989551b4b5ea8d6aac814ecc8e031ac4f2b34136474ba4"
+        },
+        {
+          "epoch": 9,
+          "dialogues": 1152,
+          "order_sha256": "df6647ad9fbb7eb168989551b4b5ea8d6aac814ecc8e031ac4f2b34136474ba4"
+        },
+        {
+          "epoch": 10,
+          "dialogues": 1152,
+          "order_sha256": "df6647ad9fbb7eb168989551b4b5ea8d6aac814ecc8e031ac4f2b34136474ba4"
+        },
+        {
+          "epoch": 11,
+          "dialogues": 1152,
+          "order_sha256": "df6647ad9fbb7eb168989551b4b5ea8d6aac814ecc8e031ac4f2b34136474ba4"
+        },
+        {
+          "epoch": 12,
+          "dialogues": 1152,
+          "order_sha256": "df6647ad9fbb7eb168989551b4b5ea8d6aac814ecc8e031ac4f2b34136474ba4"
+        },
+        {
+          "epoch": 13,
+          "dialogues": 1152,
+          "order_sha256": "df6647ad9fbb7eb168989551b4b5ea8d6aac814ecc8e031ac4f2b34136474ba4"
+        },
+        {
+          "epoch": 14,
+          "dialogues": 1152,
+          "order_sha256": "df6647ad9fbb7eb168989551b4b5ea8d6aac814ecc8e031ac4f2b34136474ba4"
+        },
+        {
+          "epoch": 15,
+          "dialogues": 1152,
+          "order_sha256": "df6647ad9fbb7eb168989551b4b5ea8d6aac814ecc8e031ac4f2b34136474ba4"
+        },
+        {
+          "epoch": 16,
+          "dialogues": 1152,
+          "order_sha256": "df6647ad9fbb7eb168989551b4b5ea8d6aac814ecc8e031ac4f2b34136474ba4"
+        },
+        {
+          "epoch": 17,
+          "dialogues": 1152,
+          "order_sha256": "df6647ad9fbb7eb168989551b4b5ea8d6aac814ecc8e031ac4f2b34136474ba4"
+        },
+        {
+          "epoch": 18,
+          "dialogues": 1152,
+          "order_sha256": "df6647ad9fbb7eb168989551b4b5ea8d6aac814ecc8e031ac4f2b34136474ba4"
+        },
+        {
+          "epoch": 19,
+          "dialogues": 1152,
+          "order_sha256": "df6647ad9fbb7eb168989551b4b5ea8d6aac814ecc8e031ac4f2b34136474ba4"
+        },
+        {
+          "epoch": 20,
+          "dialogues": 1152,
+          "order_sha256": "df6647ad9fbb7eb168989551b4b5ea8d6aac814ecc8e031ac4f2b34136474ba4"
+        },
+        {
+          "epoch": 21,
+          "dialogues": 1152,
+          "order_sha256": "df6647ad9fbb7eb168989551b4b5ea8d6aac814ecc8e031ac4f2b34136474ba4"
+        },
+        {
+          "epoch": 22,
+          "dialogues": 1152,
+          "order_sha256": "df6647ad9fbb7eb168989551b4b5ea8d6aac814ecc8e031ac4f2b34136474ba4"
+        },
+        {
+          "epoch": 23,
+          "dialogues": 1152,
+          "order_sha256": "df6647ad9fbb7eb168989551b4b5ea8d6aac814ecc8e031ac4f2b34136474ba4"
+        },
+        {
+          "epoch": 24,
+          "dialogues": 1152,
+          "order_sha256": "df6647ad9fbb7eb168989551b4b5ea8d6aac814ecc8e031ac4f2b34136474ba4"
+        },
+        {
+          "epoch": 25,
+          "dialogues": 1152,
+          "order_sha256": "df6647ad9fbb7eb168989551b4b5ea8d6aac814ecc8e031ac4f2b34136474ba4"
+        },
+        {
+          "epoch": 26,
+          "dialogues": 1152,
+          "order_sha256": "df6647ad9fbb7eb168989551b4b5ea8d6aac814ecc8e031ac4f2b34136474ba4"
+        },
+        {
+          "epoch": 27,
+          "dialogues": 1152,
+          "order_sha256": "df6647ad9fbb7eb168989551b4b5ea8d6aac814ecc8e031ac4f2b34136474ba4"
+        },
+        {
+          "epoch": 28,
+          "dialogues": 1152,
+          "order_sha256": "df6647ad9fbb7eb168989551b4b5ea8d6aac814ecc8e031ac4f2b34136474ba4"
+        },
+        {
+          "epoch": 29,
+          "dialogues": 1152,
+          "order_sha256": "df6647ad9fbb7eb168989551b4b5ea8d6aac814ecc8e031ac4f2b34136474ba4"
+        },
+        {
+          "epoch": 30,
+          "dialogues": 1152,
+          "order_sha256": "df6647ad9fbb7eb168989551b4b5ea8d6aac814ecc8e031ac4f2b34136474ba4"
+        },
+        {
+          "epoch": 31,
+          "dialogues": 1152,
+          "order_sha256": "df6647ad9fbb7eb168989551b4b5ea8d6aac814ecc8e031ac4f2b34136474ba4"
+        },
+        {
+          "epoch": 32,
+          "dialogues": 1152,
+          "order_sha256": "df6647ad9fbb7eb168989551b4b5ea8d6aac814ecc8e031ac4f2b34136474ba4"
+        },
+        {
+          "epoch": 33,
+          "dialogues": 1152,
+          "order_sha256": "df6647ad9fbb7eb168989551b4b5ea8d6aac814ecc8e031ac4f2b34136474ba4"
+        },
+        {
+          "epoch": 34,
+          "dialogues": 1152,
+          "order_sha256": "df6647ad9fbb7eb168989551b4b5ea8d6aac814ecc8e031ac4f2b34136474ba4"
+        },
+        {
+          "epoch": 35,
+          "dialogues": 1152,
+          "order_sha256": "df6647ad9fbb7eb168989551b4b5ea8d6aac814ecc8e031ac4f2b34136474ba4"
+        },
+        {
+          "epoch": 36,
+          "dialogues": 1152,
+          "order_sha256": "df6647ad9fbb7eb168989551b4b5ea8d6aac814ecc8e031ac4f2b34136474ba4"
+        },
+        {
+          "epoch": 37,
+          "dialogues": 1152,
+          "order_sha256": "df6647ad9fbb7eb168989551b4b5ea8d6aac814ecc8e031ac4f2b34136474ba4"
+        },
+        {
+          "epoch": 38,
+          "dialogues": 1152,
+          "order_sha256": "df6647ad9fbb7eb168989551b4b5ea8d6aac814ecc8e031ac4f2b34136474ba4"
+        },
+        {
+          "epoch": 39,
+          "dialogues": 1152,
+          "order_sha256": "df6647ad9fbb7eb168989551b4b5ea8d6aac814ecc8e031ac4f2b34136474ba4"
+        },
+        {
+          "epoch": 40,
+          "dialogues": 1152,
+          "order_sha256": "df6647ad9fbb7eb168989551b4b5ea8d6aac814ecc8e031ac4f2b34136474ba4"
+        }
+      ]
+    }
+  }
+}

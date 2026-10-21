@@ -1,0 +1,849 @@
+{
+  "created_at_utc": "2026-10-21T12:21:37.056816+00:00",
+  "audit_mode": "read-only CPU extraction; no GPU execution; no new experiment results",
+  "official_commit": "815c7c060914f5b55db816c0ba3662b11d08552f",
+  "xp04_archive": "/data2/yb/paper/lyx-msa/CMERC/experiment_records/04_xp_mainline_validation",
+  "metric_units": {
+    "weighted_f1": "percent",
+    "accuracy": "percent",
+    "macro_f1": "percent",
+    "ece": "percent, 15 equal-width confidence bins",
+    "cel": "sum of positive removed-minus-original true-class log-probability differences over five removals"
+  },
+  "runs": [
+    {
+      "dataset": "IEMOCAP",
+      "model": "baseline",
+      "seed": 1475,
+      "selection_protocol": "validation",
+      "selected_epoch_1based": 70,
+      "weighted_f1_percent": 66.93611646448124,
+      "accuracy_percent": 66.85150955021565,
+      "macro_f1_percent": 66.40313088574604,
+      "num_test_utterances": 1623,
+      "cel": {
+        "total": 1520.0234629347167,
+        "by_removal": {
+          "text": 379.74788568279564,
+          "audio": 524.3634050009423,
+          "visual": 34.570605030538786,
+          "intra_context": 314.80367044506136,
+          "inter_context": 266.5378967753786
+        },
+        "scale": "sum of positive true-class log-probability differences"
+      },
+      "calibration": {
+        "n_bins": 15,
+        "ece": 16.45600689427,
+        "mce": 27.461631139119,
+        "rmsce": 17.071434317249,
+        "auroc_success": 72.210097133949,
+        "auprc_success": 84.150486544895
+      },
+      "selected_epoch_training": {
+        "batch_policy": "capacity_safe",
+        "causal": false,
+        "cc_loss": 0.0,
+        "classification_loss": 0.26414545093263897,
+        "cscl_loss": 0.0,
+        "effective_norm": "BN",
+        "elapsed_seconds": 7.21,
+        "epoch": 70,
+        "max_batch_edges": 951,
+        "max_batch_nodes": 2709,
+        "max_gpu_memory_mb": 5304.52,
+        "mscl_loss": 0.0,
+        "rng_policy": "continuous",
+        "sample_ratio": 1.0,
+        "sampler_retries": 0,
+        "seed": 1475,
+        "selection_protocol": "validation",
+        "selection_split": "validation",
+        "selection_weighted_f1": 66.45,
+        "split_hash": "d1ae10a27d20d9ee0bf81b9c884073d037a4362e2ba8b9f3f6720902d2502d62",
+        "split_seed": 1475,
+        "test_accuracy": null,
+        "test_weighted_f1": null,
+        "total_loss": 0.26414545093263897,
+        "train_accuracy": 88.87,
+        "train_dialogues": 108,
+        "train_loss": 0.2641,
+        "train_weighted_f1": 88.79,
+        "validation_accuracy": 67.17,
+        "validation_loss": 1.204,
+        "validation_weighted_f1": 66.45
+      },
+      "curriculum_first_epochs": [
+        {
+          "epoch": 1,
+          "sample_ratio": 1.0,
+          "train_dialogues": 108
+        },
+        {
+          "epoch": 2,
+          "sample_ratio": 1.0,
+          "train_dialogues": 108
+        },
+        {
+          "epoch": 3,
+          "sample_ratio": 1.0,
+          "train_dialogues": 108
+        },
+        {
+          "epoch": 4,
+          "sample_ratio": 1.0,
+          "train_dialogues": 108
+        },
+        {
+          "epoch": 5,
+          "sample_ratio": 1.0,
+          "train_dialogues": 108
+        },
+        {
+          "epoch": 6,
+          "sample_ratio": 1.0,
+          "train_dialogues": 108
+        },
+        {
+          "epoch": 7,
+          "sample_ratio": 1.0,
+          "train_dialogues": 108
+        }
+      ],
+      "epoch_count": 80,
+      "split_dialogue_counts": {
+        "test_ids": 31,
+        "train_ids": 108,
+        "validation_ids": 12
+      },
+      "split_hash": "d1ae10a27d20d9ee0bf81b9c884073d037a4362e2ba8b9f3f6720902d2502d62",
+      "training_args": {
+        "Dataset": "IEMOCAP",
+        "Deep_GCN_nlayers": 4,
+        "active_listener": false,
+        "alpha": 0.2,
+        "attention": "general",
+        "av_using_lstm": false,
+        "base_model": "GRU",
+        "batch_max_retries": 10000,
+        "batch_policy": "capacity_safe",
+        "batch_size": 16,
+        "calibrate": false,
+        "causal": false,
+        "class_weight": true,
+        "contrastlearning": false,
+        "courselearning": false,
+        "cscl_coff": 0,
+        "cuda": true,
+        "dropout": 0.5,
+        "edge_capacity": 1000,
+        "epoch_ratio": 0,
+        "epochs": 80,
+        "graph_construct": "direct",
+        "graph_model": true,
+        "graph_type": "hyper",
+        "l2": 3e-05,
+        "lr": 0.0001,
+        "mm_fusion_mthd": "concat_DHT",
+        "modals": "avl",
+        "mscl_coff": 0,
+        "multi_modal": true,
+        "multiheads": 6,
+        "no_cuda": false,
+        "nodal_attention": true,
+        "node_capacity": 5200,
+        "norm": "BN",
+        "num_K": 4,
+        "num_L": 3,
+        "num_workers": 0,
+        "output_dir": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/baseline",
+        "rank_coff": 0,
+        "rec_dropout": 0.1,
+        "require_noncausal": true,
+        "resume": null,
+        "rng_policy": "continuous",
+        "rnn_backend": "aten",
+        "scheduler_steps": 0,
+        "seed": 1475,
+        "selection_protocol": "validation",
+        "split_seed": 1475,
+        "tensorboard": false,
+        "testing": false,
+        "use_gcn": false,
+        "use_modal": false,
+        "use_residue": false,
+        "use_speaker": true,
+        "use_topic": false,
+        "windowf": 10,
+        "windowp": 10
+      },
+      "sources": {
+        "experiment_records/04_xp_mainline_validation/results/baseline/IEMOCAP/validation/seed1475/metrics.json": {
+          "sha256": "a93c41fdbb545aad0c71f8f7827d0c9ac2f56e736ca42dc770b9fb0dcb5937e1"
+        },
+        "experiment_records/04_xp_mainline_validation/runs/baseline/IEMOCAP_validation_seed1475/final_test.json": {
+          "sha256": "b54c6de2c525a4371bf88b40b970e697edaf0ef9c18f69415d4ee7ef497597e9"
+        },
+        "experiment_records/04_xp_mainline_validation/runs/baseline/IEMOCAP_validation_seed1475/run_manifest.json": {
+          "sha256": "fd42136846c98c23200c62ba19b11a83013099e47f257081a9350557f004f8af"
+        },
+        "experiment_records/04_xp_mainline_validation/runs/baseline/IEMOCAP_validation_seed1475/metrics.jsonl": {
+          "sha256": "7410ce15ac2775fcf95d9b6b4655c3f77907539ba937a2d745fded2d96121406"
+        }
+      },
+      "final_test_record": {
+        "seed": 1475,
+        "split_seed": 1475,
+        "split_hash": "d1ae10a27d20d9ee0bf81b9c884073d037a4362e2ba8b9f3f6720902d2502d62",
+        "rng_policy": "continuous",
+        "causal": false,
+        "effective_norm": "BN",
+        "selection_protocol": "validation",
+        "selected_epoch": 70,
+        "selection_weighted_f1": 66.45,
+        "test_loss": 0.9862,
+        "test_accuracy": 66.85,
+        "test_weighted_f1": 66.94
+      }
+    },
+    {
+      "dataset": "IEMOCAP",
+      "model": "cmerc",
+      "seed": 1475,
+      "selection_protocol": "validation",
+      "selected_epoch_1based": 43,
+      "weighted_f1_percent": 68.2801529351637,
+      "accuracy_percent": 68.0837954405422,
+      "macro_f1_percent": 67.54733566984851,
+      "num_test_utterances": 1623,
+      "cel": {
+        "total": 683.0297031317823,
+        "by_removal": {
+          "text": 198.39027573281783,
+          "audio": 214.5998701248318,
+          "visual": 11.773522522227722,
+          "intra_context": 140.11275772960653,
+          "inter_context": 118.15327702229843
+        },
+        "scale": "sum of positive true-class log-probability differences"
+      },
+      "calibration": {
+        "n_bins": 15,
+        "ece": 3.977466349387,
+        "mce": 25.299906730652,
+        "rmsce": 4.666289478564,
+        "auroc_success": 72.891385244326,
+        "auprc_success": 84.424622630069
+      },
+      "selected_epoch_training": {
+        "batch_policy": "capacity_safe",
+        "causal": false,
+        "cc_loss": 280.86370849609375,
+        "classification_loss": 0.5217724442481995,
+        "cscl_loss": 2.3783957958221436,
+        "effective_norm": "BN",
+        "elapsed_seconds": 41.3,
+        "epoch": 43,
+        "max_batch_edges": 919,
+        "max_batch_nodes": 2613,
+        "max_gpu_memory_mb": 6268.51,
+        "mscl_loss": 3.8165691239493236,
+        "rng_policy": "continuous",
+        "sample_ratio": 1,
+        "sampler_retries": 0,
+        "seed": 1475,
+        "selection_protocol": "validation",
+        "selection_split": "validation",
+        "selection_weighted_f1": 65.02,
+        "split_hash": "d1ae10a27d20d9ee0bf81b9c884073d037a4362e2ba8b9f3f6720902d2502d62",
+        "split_seed": 1475,
+        "test_accuracy": null,
+        "test_weighted_f1": null,
+        "total_loss": 2.2358391966138567,
+        "train_accuracy": 79.69,
+        "train_dialogues": 108,
+        "train_loss": 0.5218,
+        "train_weighted_f1": 79.73,
+        "validation_accuracy": 66.03,
+        "validation_loss": 0.8503,
+        "validation_weighted_f1": 65.02
+      },
+      "curriculum_first_epochs": [
+        {
+          "epoch": 1,
+          "sample_ratio": 0.15,
+          "train_dialogues": 16
+        },
+        {
+          "epoch": 2,
+          "sample_ratio": 0.3,
+          "train_dialogues": 32
+        },
+        {
+          "epoch": 3,
+          "sample_ratio": 0.45,
+          "train_dialogues": 48
+        },
+        {
+          "epoch": 4,
+          "sample_ratio": 0.6,
+          "train_dialogues": 64
+        },
+        {
+          "epoch": 5,
+          "sample_ratio": 0.75,
+          "train_dialogues": 81
+        },
+        {
+          "epoch": 6,
+          "sample_ratio": 0.9,
+          "train_dialogues": 97
+        },
+        {
+          "epoch": 7,
+          "sample_ratio": 1,
+          "train_dialogues": 108
+        }
+      ],
+      "epoch_count": 80,
+      "split_dialogue_counts": {
+        "test_ids": 31,
+        "train_ids": 108,
+        "validation_ids": 12
+      },
+      "split_hash": "d1ae10a27d20d9ee0bf81b9c884073d037a4362e2ba8b9f3f6720902d2502d62",
+      "training_args": {
+        "Dataset": "IEMOCAP",
+        "Deep_GCN_nlayers": 4,
+        "active_listener": false,
+        "alpha": 0.2,
+        "attention": "general",
+        "av_using_lstm": false,
+        "base_model": "GRU",
+        "batch_max_retries": 10000,
+        "batch_policy": "capacity_safe",
+        "batch_size": 16,
+        "calibrate": true,
+        "causal": false,
+        "class_weight": true,
+        "contrastlearning": true,
+        "courselearning": true,
+        "cscl_coff": 0.05,
+        "cuda": true,
+        "dropout": 0.5,
+        "edge_capacity": 1000,
+        "epoch_ratio": 0.15,
+        "epochs": 80,
+        "graph_construct": "direct",
+        "graph_model": true,
+        "graph_type": "hyper",
+        "l2": 3e-05,
+        "lr": 0.0001,
+        "mm_fusion_mthd": "concat_DHT",
+        "modals": "avl",
+        "mscl_coff": 0.05,
+        "multi_modal": true,
+        "multiheads": 6,
+        "no_cuda": false,
+        "nodal_attention": true,
+        "node_capacity": 5200,
+        "norm": "BN",
+        "num_K": 4,
+        "num_L": 3,
+        "num_workers": 0,
+        "output_dir": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/cmerc",
+        "rank_coff": 0.005,
+        "rec_dropout": 0.1,
+        "require_noncausal": true,
+        "resume": null,
+        "rng_policy": "continuous",
+        "rnn_backend": "aten",
+        "scheduler_steps": 1,
+        "seed": 1475,
+        "selection_protocol": "validation",
+        "split_seed": 1475,
+        "tensorboard": false,
+        "testing": false,
+        "use_gcn": false,
+        "use_modal": false,
+        "use_residue": false,
+        "use_speaker": true,
+        "use_topic": false,
+        "windowf": 10,
+        "windowp": 10
+      },
+      "sources": {
+        "experiment_records/04_xp_mainline_validation/results/cmerc/IEMOCAP/validation/seed1475/metrics.json": {
+          "sha256": "7a7a4029cff4cbacdfbfcbbde8e5b0415519521196ebeb357bd47156a356fb89"
+        },
+        "experiment_records/04_xp_mainline_validation/runs/cmerc/IEMOCAP_validation_seed1475/final_test.json": {
+          "sha256": "ee5c7447106511247a7bb6f4952470e5064c47b0753c1e2cbc9b5053fd26df22"
+        },
+        "experiment_records/04_xp_mainline_validation/runs/cmerc/IEMOCAP_validation_seed1475/run_manifest.json": {
+          "sha256": "fd143793ddfad93c9a0add9fcf453cf533bfe371c94de734d29e8957a369a441"
+        },
+        "experiment_records/04_xp_mainline_validation/runs/cmerc/IEMOCAP_validation_seed1475/metrics.jsonl": {
+          "sha256": "49e113acdf129f113c0a93e7643215f7b07cbb8266cc458f33293bd0e51ead7b"
+        }
+      },
+      "final_test_record": {
+        "seed": 1475,
+        "split_seed": 1475,
+        "split_hash": "d1ae10a27d20d9ee0bf81b9c884073d037a4362e2ba8b9f3f6720902d2502d62",
+        "rng_policy": "continuous",
+        "causal": false,
+        "effective_norm": "BN",
+        "selection_protocol": "validation",
+        "selected_epoch": 43,
+        "selection_weighted_f1": 65.02,
+        "test_loss": 0.77,
+        "test_accuracy": 68.08,
+        "test_weighted_f1": 68.28
+      }
+    },
+    {
+      "dataset": "MELD",
+      "model": "baseline",
+      "seed": 67137,
+      "selection_protocol": "validation",
+      "selected_epoch_1based": 5,
+      "weighted_f1_percent": 65.43860835141255,
+      "accuracy_percent": 66.51340996168582,
+      "macro_f1_percent": 48.91235680739477,
+      "num_test_utterances": 2610,
+      "cel": {
+        "total": 503.9678897559643,
+        "by_removal": {
+          "text": 187.2497255206108,
+          "audio": 30.27557748556137,
+          "visual": 12.105819016695023,
+          "intra_context": 194.7160620689392,
+          "inter_context": 79.62070566415787
+        },
+        "scale": "sum of positive true-class log-probability differences"
+      },
+      "calibration": {
+        "n_bins": 15,
+        "ece": 26.312079577496,
+        "mce": 38.788039689739,
+        "rmsce": 28.111328939423,
+        "auroc_success": 75.096687194845,
+        "auprc_success": 84.915014939783
+      },
+      "selected_epoch_training": {
+        "batch_policy": "capacity_safe",
+        "causal": false,
+        "cc_loss": 0.0,
+        "classification_loss": 3.4549507287832406,
+        "cscl_loss": 0.0,
+        "effective_norm": "BN",
+        "elapsed_seconds": 6.09,
+        "epoch": 5,
+        "max_batch_edges": 259,
+        "max_batch_nodes": 633,
+        "max_gpu_memory_mb": 849.56,
+        "mscl_loss": 0.0,
+        "rng_policy": "continuous",
+        "sample_ratio": 1.0,
+        "sampler_retries": 0,
+        "seed": 67137,
+        "selection_protocol": "validation",
+        "selection_split": "validation",
+        "selection_weighted_f1": 65.75,
+        "split_hash": "5317189c62939f28801eadf558763bd901cae04544ae829ebd45d1dd057055b8",
+        "split_seed": 1475,
+        "test_accuracy": null,
+        "test_weighted_f1": null,
+        "total_loss": 3.4549507287832406,
+        "train_accuracy": 75.49,
+        "train_dialogues": 1038,
+        "train_loss": 3.455,
+        "train_weighted_f1": 74.59,
+        "validation_accuracy": 67.09,
+        "validation_loss": 3.9301,
+        "validation_weighted_f1": 65.75
+      },
+      "curriculum_first_epochs": [
+        {
+          "epoch": 1,
+          "sample_ratio": 1.0,
+          "train_dialogues": 1038
+        },
+        {
+          "epoch": 2,
+          "sample_ratio": 1.0,
+          "train_dialogues": 1038
+        },
+        {
+          "epoch": 3,
+          "sample_ratio": 1.0,
+          "train_dialogues": 1038
+        },
+        {
+          "epoch": 4,
+          "sample_ratio": 1.0,
+          "train_dialogues": 1038
+        },
+        {
+          "epoch": 5,
+          "sample_ratio": 1.0,
+          "train_dialogues": 1038
+        },
+        {
+          "epoch": 6,
+          "sample_ratio": 1.0,
+          "train_dialogues": 1038
+        },
+        {
+          "epoch": 7,
+          "sample_ratio": 1.0,
+          "train_dialogues": 1038
+        }
+      ],
+      "epoch_count": 40,
+      "split_dialogue_counts": {
+        "test_ids": 280,
+        "train_ids": 1038,
+        "validation_ids": 114
+      },
+      "split_hash": "5317189c62939f28801eadf558763bd901cae04544ae829ebd45d1dd057055b8",
+      "training_args": {
+        "Dataset": "MELD",
+        "Deep_GCN_nlayers": 4,
+        "active_listener": false,
+        "alpha": 0.2,
+        "attention": "general",
+        "av_using_lstm": false,
+        "base_model": "GRU",
+        "batch_max_retries": 10000,
+        "batch_policy": "capacity_safe",
+        "batch_size": 16,
+        "calibrate": false,
+        "causal": false,
+        "class_weight": true,
+        "contrastlearning": false,
+        "courselearning": false,
+        "cscl_coff": 0,
+        "cuda": true,
+        "dropout": 0.4,
+        "edge_capacity": 1000,
+        "epoch_ratio": 0,
+        "epochs": 40,
+        "graph_construct": "direct",
+        "graph_model": true,
+        "graph_type": "hyper",
+        "l2": 3e-05,
+        "lr": 0.0001,
+        "mm_fusion_mthd": "concat_DHT",
+        "modals": "avl",
+        "mscl_coff": 0,
+        "multi_modal": true,
+        "multiheads": 6,
+        "no_cuda": false,
+        "nodal_attention": true,
+        "node_capacity": 5200,
+        "norm": "BN",
+        "num_K": 3,
+        "num_L": 3,
+        "num_workers": 0,
+        "output_dir": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/baseline",
+        "rank_coff": 0,
+        "rec_dropout": 0.1,
+        "require_noncausal": true,
+        "resume": null,
+        "rng_policy": "continuous",
+        "rnn_backend": "aten",
+        "scheduler_steps": 0,
+        "seed": 67137,
+        "selection_protocol": "validation",
+        "split_seed": 1475,
+        "tensorboard": false,
+        "testing": false,
+        "use_gcn": false,
+        "use_modal": false,
+        "use_residue": false,
+        "use_speaker": true,
+        "use_topic": false,
+        "windowf": 10,
+        "windowp": 10
+      },
+      "sources": {
+        "experiment_records/04_xp_mainline_validation/results/baseline/MELD/validation/seed67137/metrics.json": {
+          "sha256": "73a0c689b0360ddede378ccee0cf3013c9d9fe8084c9a9c1fd9a21eedab84099"
+        },
+        "experiment_records/04_xp_mainline_validation/runs/baseline/MELD_validation_seed67137/final_test.json": {
+          "sha256": "dbbf3596d9c2acac184fd49eef881d5d321941bc5aa025ace1f9e34199113ce9"
+        },
+        "experiment_records/04_xp_mainline_validation/runs/baseline/MELD_validation_seed67137/run_manifest.json": {
+          "sha256": "a105f5236109bde7dc815c44b096d592739bc38f4b316e5d81518b833725e8be"
+        },
+        "experiment_records/04_xp_mainline_validation/runs/baseline/MELD_validation_seed67137/metrics.jsonl": {
+          "sha256": "12a449c74e3c03f59f8851c93bfcdd97442144120b28cacab1a14c849e46180c"
+        }
+      },
+      "final_test_record": {
+        "seed": 67137,
+        "split_seed": 1475,
+        "split_hash": "5317189c62939f28801eadf558763bd901cae04544ae829ebd45d1dd057055b8",
+        "rng_policy": "continuous",
+        "causal": false,
+        "effective_norm": "BN",
+        "selection_protocol": "validation",
+        "selected_epoch": 5,
+        "selection_weighted_f1": 65.75,
+        "test_loss": 3.8542,
+        "test_accuracy": 66.51,
+        "test_weighted_f1": 65.44
+      }
+    },
+    {
+      "dataset": "MELD",
+      "model": "cmerc",
+      "seed": 67137,
+      "selection_protocol": "validation",
+      "selected_epoch_1based": 8,
+      "weighted_f1_percent": 65.74612650106948,
+      "accuracy_percent": 66.70498084291188,
+      "macro_f1_percent": 49.267839049020274,
+      "num_test_utterances": 2610,
+      "cel": {
+        "total": 644.5383834540844,
+        "by_removal": {
+          "text": 280.0270970463753,
+          "audio": 41.79847098886967,
+          "visual": 16.215151697397232,
+          "intra_context": 148.29602517187595,
+          "inter_context": 158.20163854956627
+        },
+        "scale": "sum of positive true-class log-probability differences"
+      },
+      "calibration": {
+        "n_bins": 15,
+        "ece": 19.066607506225,
+        "mce": 25.951538271591,
+        "rmsce": 19.777056861629,
+        "auroc_success": 73.068101675624,
+        "auprc_success": 83.902064670322
+      },
+      "selected_epoch_training": {
+        "batch_policy": "capacity_safe",
+        "causal": false,
+        "cc_loss": 60.87134009141188,
+        "classification_loss": 3.3452713012695314,
+        "cscl_loss": 3.2040927410125732,
+        "effective_norm": "BN",
+        "elapsed_seconds": 32.97,
+        "epoch": 8,
+        "max_batch_edges": 266,
+        "max_batch_nodes": 654,
+        "max_gpu_memory_mb": 939.54,
+        "mscl_loss": 4.038730742381169,
+        "rng_policy": "continuous",
+        "sample_ratio": 1,
+        "sampler_retries": 0,
+        "seed": 67137,
+        "selection_protocol": "validation",
+        "selection_split": "validation",
+        "selection_weighted_f1": 65.24,
+        "split_hash": "5317189c62939f28801eadf558763bd901cae04544ae829ebd45d1dd057055b8",
+        "split_seed": 1475,
+        "test_accuracy": null,
+        "test_weighted_f1": null,
+        "total_loss": 4.553437533745399,
+        "train_accuracy": 77.54,
+        "train_dialogues": 1038,
+        "train_loss": 3.3453,
+        "train_weighted_f1": 76.88,
+        "validation_accuracy": 66.28,
+        "validation_loss": 4.1291,
+        "validation_weighted_f1": 65.24
+      },
+      "curriculum_first_epochs": [
+        {
+          "epoch": 1,
+          "sample_ratio": 0.4,
+          "train_dialogues": 415
+        },
+        {
+          "epoch": 2,
+          "sample_ratio": 0.8,
+          "train_dialogues": 830
+        },
+        {
+          "epoch": 3,
+          "sample_ratio": 1,
+          "train_dialogues": 1038
+        },
+        {
+          "epoch": 4,
+          "sample_ratio": 1,
+          "train_dialogues": 1038
+        },
+        {
+          "epoch": 5,
+          "sample_ratio": 1,
+          "train_dialogues": 1038
+        },
+        {
+          "epoch": 6,
+          "sample_ratio": 1,
+          "train_dialogues": 1038
+        },
+        {
+          "epoch": 7,
+          "sample_ratio": 1,
+          "train_dialogues": 1038
+        }
+      ],
+      "epoch_count": 40,
+      "split_dialogue_counts": {
+        "test_ids": 280,
+        "train_ids": 1038,
+        "validation_ids": 114
+      },
+      "split_hash": "5317189c62939f28801eadf558763bd901cae04544ae829ebd45d1dd057055b8",
+      "training_args": {
+        "Dataset": "MELD",
+        "Deep_GCN_nlayers": 4,
+        "active_listener": false,
+        "alpha": 0.2,
+        "attention": "general",
+        "av_using_lstm": false,
+        "base_model": "GRU",
+        "batch_max_retries": 10000,
+        "batch_policy": "capacity_safe",
+        "batch_size": 16,
+        "calibrate": true,
+        "causal": false,
+        "class_weight": true,
+        "contrastlearning": true,
+        "courselearning": true,
+        "cscl_coff": 0.15,
+        "cuda": true,
+        "dropout": 0.4,
+        "edge_capacity": 1000,
+        "epoch_ratio": 0.4,
+        "epochs": 40,
+        "graph_construct": "direct",
+        "graph_model": true,
+        "graph_type": "hyper",
+        "l2": 3e-05,
+        "lr": 0.0001,
+        "mm_fusion_mthd": "concat_DHT",
+        "modals": "avl",
+        "mscl_coff": 0.15,
+        "multi_modal": true,
+        "multiheads": 6,
+        "no_cuda": false,
+        "nodal_attention": true,
+        "node_capacity": 5200,
+        "norm": "BN",
+        "num_K": 3,
+        "num_L": 3,
+        "num_workers": 0,
+        "output_dir": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/cmerc",
+        "rank_coff": 0.002,
+        "rec_dropout": 0.1,
+        "require_noncausal": true,
+        "resume": null,
+        "rng_policy": "continuous",
+        "rnn_backend": "aten",
+        "scheduler_steps": 1,
+        "seed": 67137,
+        "selection_protocol": "validation",
+        "split_seed": 1475,
+        "tensorboard": false,
+        "testing": false,
+        "use_gcn": false,
+        "use_modal": false,
+        "use_residue": false,
+        "use_speaker": true,
+        "use_topic": false,
+        "windowf": 10,
+        "windowp": 10
+      },
+      "sources": {
+        "experiment_records/04_xp_mainline_validation/results/cmerc/MELD/validation/seed67137/metrics.json": {
+          "sha256": "5efbca8b759f766645a565c28d89f3791753a164c25742c12120a3cfe746a3fb"
+        },
+        "experiment_records/04_xp_mainline_validation/runs/cmerc/MELD_validation_seed67137/final_test.json": {
+          "sha256": "0f8638d2acd66bd0dfc574d6b654c151462f27cdc3c5ce2c1a63e64201cc2de5"
+        },
+        "experiment_records/04_xp_mainline_validation/runs/cmerc/MELD_validation_seed67137/run_manifest.json": {
+          "sha256": "ebfe1b0c27b5c7066d4c5a11f24db2839c79ff966ef760a4f3539d789cc578ec"
+        },
+        "experiment_records/04_xp_mainline_validation/runs/cmerc/MELD_validation_seed67137/metrics.jsonl": {
+          "sha256": "768759caab16432f3f8cb41f4cca67b4ba32582f18920a5cb260f7b48e48fea7"
+        }
+      },
+      "final_test_record": {
+        "seed": 67137,
+        "split_seed": 1475,
+        "split_hash": "5317189c62939f28801eadf558763bd901cae04544ae829ebd45d1dd057055b8",
+        "rng_policy": "continuous",
+        "causal": false,
+        "effective_norm": "BN",
+        "selection_protocol": "validation",
+        "selected_epoch": 8,
+        "selection_weighted_f1": 65.24,
+        "test_loss": 4.1184,
+        "test_accuracy": 66.7,
+        "test_weighted_f1": 65.75
+      }
+    }
+  ],
+  "difficulty_verification": [
+    {
+      "dataset": "IEMOCAP",
+      "source": "author_provided_fixed_file",
+      "actual_path": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/code/caldiff/IEMOCAP_diff.pkl",
+      "official_git_path": "caldiff/IEMOCAP_diff.pkl",
+      "sha256": "db4c7b96f169948a3615a62b29d2a793bd64cccd8a0387b1de9d7ceab348a150",
+      "byte_identical_to_official_commit": true,
+      "entries": 120,
+      "coverage": {
+        "test_ids": 0,
+        "train_ids": 108,
+        "validation_ids": 12
+      },
+      "all_values_finite": true,
+      "generation_checkpoint_and_history_known": false
+    },
+    {
+      "dataset": "MELD",
+      "source": "author_provided_fixed_file",
+      "actual_path": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/code/caldiff/MELD_diff.pkl",
+      "official_git_path": "caldiff/MELD_diff.pkl",
+      "sha256": "db005ceb0e4847caffc8571eaa94ab7c5b4a310abd615b12c995c9a22ff060e0",
+      "byte_identical_to_official_commit": true,
+      "entries": 1152,
+      "coverage": {
+        "test_ids": 0,
+        "train_ids": 1038,
+        "validation_ids": 114
+      },
+      "all_values_finite": true,
+      "generation_checkpoint_and_history_known": false
+    }
+  ],
+  "source_hashes": {
+    "experiment_records/04_xp_mainline_validation/code/HypergraphConv.py": "9297a572e1763a74c7984eb75dfb15fa8143bf131a44cf50433c307ef7f3b5d2",
+    "experiment_records/04_xp_mainline_validation/code/causal_graph.py": "3dd761b05cca95afa7b2f7b70e4640ee3ccfbb5726c3d705c0808468f7181da3",
+    "experiment_records/04_xp_mainline_validation/code/clloss.py": "012c5d08f51eaaa99bdbd10d61e3d108275bf3dd44e42767b2e186e5be72ec3f",
+    "experiment_records/04_xp_mainline_validation/code/dataloader.py": "337a7dc92d9e69e4f8854a8031197085ffca84cdc08b070b6ef5b05ebb6f3390",
+    "experiment_records/04_xp_mainline_validation/code/evaluation_metrics.py": "ed831a1f38d5706d6d47d7310d03e8b35f6eb4573623c9650934c638d65835c8",
+    "experiment_records/04_xp_mainline_validation/code/high_fre_conv.py": "f4414c019ca7f656a662698bb9615bf15ac6325a73caa06ff487e158f58f39df",
+    "experiment_records/04_xp_mainline_validation/code/model.py": "ee84329b800e37a8ac652b58aa6f0fc3dee47cb2cf38feda14f5c0de26ec9a82",
+    "experiment_records/04_xp_mainline_validation/code/model_GCN.py": "830d401ff3e4b30298199b927a0bad3a9056400429506abcc2d66a7db8b76f9f",
+    "experiment_records/04_xp_mainline_validation/code/model_cm.py": "94acf11e2e9edd1bcd98049eb12d85b3604f8d71d46f64f0c3b8b9837fa12625",
+    "experiment_records/04_xp_mainline_validation/code/model_hyper.py": "fb9ef2ee268afa697474c9199d2136a7519b5226adb4abeec4a9cf1aea678aba",
+    "experiment_records/04_xp_mainline_validation/code/train.py": "35a18a2bf33d8e3e0d8459955b1f0ce525d4f28970f9af801fb27087bcf02ad7",
+    "experiment_records/04_xp_mainline_validation/code/train_cm.py": "67fa7e48a3ecfda9f011d1df3344b68cc9eaa3fdb105a23a117684b1a669a3a0"
+  },
+  "limitations": [
+    "单Seed不代表五Seed平均。",
+    "官方test选模与XP04validation选模不是同一协议。",
+    "作者难度文件没有test IDs，不等于已知生成checkpoint无测试选择依赖。",
+    "未运行本次正式训练，不能据此进行新实验结果归因。"
+  ]
+}

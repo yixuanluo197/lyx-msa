@@ -1,0 +1,33 @@
+{
+  "purpose": "diagnostic single-panel curves, not a publication style workflow",
+  "python": "3.10.20 (main, Mar 11 2026, 17:46:40) [GCC 14.3.0]",
+  "executable": "/home/yangbin/miniconda3/envs/multimodalerc310/bin/python",
+  "matplotlib": "3.10.9",
+  "host": "user23",
+  "formal_training_complete": true,
+  "inputs": {
+    "epoch_curves.csv": "9d50eff85de9d3b27840972594c8842ebf9ab59c9bc397571204d8efb24bb4d5",
+    "epoch_loss_curves.csv": "ab0563ed54ce698fee66ebfa577e0a29609fe47884f0d0103ddc72da1026d965",
+    "xp04_epoch_curves.csv": "77a9a300ab8cd42b3e3e85de3ffadf0f85496374cf522a4cab02fcfe4163c960",
+    "metrics_summary.json": "c3f246ed34e4715a9c589363cbd9894158ebc303aaf488414ff847ab12689391"
+  },
+  "files": {
+    "results/figures/IEMOCAP_baseline_seed1475_wf1.png": "6b56debd540c18ebe45cbd1d06eceb0d38f0beca9ac22c0f3677ab910d492ad1",
+    "results/figures/IEMOCAP_baseline_seed1475_wf1.svg": "91781a8a4b9c3adc7e59673bfd2740d3e70b43ea21b43002dfe4917d9ddee291",
+    "results/figures/IEMOCAP_baseline_seed1475_loss.png": "d8b4bd779ff3100832e3429059a527b4c87db2e98aaca2b22a46997a6c0faedb",
+    "results/figures/IEMOCAP_baseline_seed1475_loss.svg": "19107159c8af7011fc9344e05d14a3bcce62a10ad28da2e97a80cad92a233f56",
+    "results/figures/IEMOCAP_cmerc_seed1475_wf1.png": "8955c50a1115c5a26676044b0fbcc33d3b831958577a12498f40094cf3e96e9f",
+    "results/figures/IEMOCAP_cmerc_seed1475_wf1.svg": "3e2aa594c35a387f1f6ca01ed3269524fa643862fbd068502fb962a64a8780c3",
+    "results/figures/IEMOCAP_cmerc_seed1475_loss.png": "fa0f8045c73fcf27bf05c9df5b2dcb05f26403c544cb5f048d631bca4be72c2e",
+    "results/figures/IEMOCAP_cmerc_seed1475_loss.svg": "08e0937bb63f7d52bdaed24abe778742f67e926898b77ee65f222f45313be9bf",
+    "results/figures/MELD_baseline_seed67137_wf1.png": "a24e1300c59381372d1b7ee84f39c61f95003038a8552e87f71cb2b6eaef04c5",
+    "results/figures/MELD_baseline_seed67137_wf1.svg": "01255b8bf628e1d3c63fe35a7fca78e8c17ee2d4394aecbe1b1eaa6cdc01e10b",
+    "results/figures/MELD_baseline_seed67137_loss.png": "8b9a321e813ab396cbdeefc8f8bcf9c7acdc400f904812392ad97d571d5206ee",
+    "results/figures/MELD_baseline_seed67137_loss.svg": "d2b3b9a68846857e97ff8b96b83633b72534f3871242275d3bf7c339dab481cb",
+    "results/figures/MELD_cmerc_seed67137_wf1.png": "a7a997138b491088efe4f169644a16dd371671bf83cf2f2c7f5e2ce0a5def6fa",
+    "results/figures/MELD_cmerc_seed67137_wf1.svg": "a334a1fc1147d1c1bef8b80b2ae921e9d554844173c2b08bdfb094e9468a4546",
+    "results/figures/MELD_cmerc_seed67137_loss.png": "0547eca1c19e3547589b636640e9020a5abb6b14c4aec50b7249618b774ae2f9",
+    "results/figures/MELD_cmerc_seed67137_loss.svg": "2205e81425152d7ad860920085b77f3577fad5d4b86e102fc349967f1d68f4f5"
+  },
+  "scientific_caveat": "README test-selected full-train protocol and XP04 validation-selected held-out protocol differ"
+}

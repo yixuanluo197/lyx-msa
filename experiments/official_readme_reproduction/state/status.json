@@ -1,0 +1,133 @@
+{
+  "active": false,
+  "phase": "completed",
+  "started_at_unix": 1792585506.5207844,
+  "host": "user23",
+  "gpu_uuid": "GPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456",
+  "supervisor_pid": 3016461,
+  "runs": {
+    "IEMOCAP_baseline_seed1475": {
+      "status": "completed",
+      "pid": 3016478,
+      "argv": [
+        "/data2/yb/conda_envs/cmerc-xp-repro/bin/python",
+        "-u",
+        "/data2/yb/paper/lyx-msa/CMERC/experiments/official_readme_reproduction/scripts/observe_run.py",
+        "--config",
+        "/data2/yb/paper/lyx-msa/CMERC/experiments/official_readme_reproduction/configs/IEMOCAP_baseline_seed1475.json",
+        "--code",
+        "/data2/yb/paper/lyx-msa/CMERC/experiments/official_readme_reproduction/runtime_code",
+        "--output",
+        "/data2/yb/paper/lyx-msa/CMERC/experiments/official_readme_reproduction/checkpoints/IEMOCAP_baseline_seed1475"
+      ],
+      "environment": {
+        "CUDA_VISIBLE_DEVICES": "GPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456",
+        "LD_LIBRARY_PATH": "/data2/yb/conda_envs/cmerc-xp-repro/lib/python3.10/site-packages/nvidia/cusparse/lib",
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1"
+      },
+      "started_at_unix": 1792585506.609146,
+      "gpu_before_start": "3, GPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456, 12179, 0",
+      "reserved_admission_mib": 8000,
+      "returncode": 0,
+      "finished_at_unix": 1792586325.4855378,
+      "completed_test_epochs": 80,
+      "error": null
+    },
+    "MELD_baseline_seed67137": {
+      "status": "completed",
+      "pid": 3017219,
+      "argv": [
+        "/data2/yb/conda_envs/cmerc-xp-repro/bin/python",
+        "-u",
+        "/data2/yb/paper/lyx-msa/CMERC/experiments/official_readme_reproduction/scripts/observe_run.py",
+        "--config",
+        "/data2/yb/paper/lyx-msa/CMERC/experiments/official_readme_reproduction/configs/MELD_baseline_seed67137.json",
+        "--code",
+        "/data2/yb/paper/lyx-msa/CMERC/experiments/official_readme_reproduction/runtime_code",
+        "--output",
+        "/data2/yb/paper/lyx-msa/CMERC/experiments/official_readme_reproduction/checkpoints/MELD_baseline_seed67137"
+      ],
+      "environment": {
+        "CUDA_VISIBLE_DEVICES": "GPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456",
+        "LD_LIBRARY_PATH": "/data2/yb/conda_envs/cmerc-xp-repro/lib/python3.10/site-packages/nvidia/cusparse/lib",
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1"
+      },
+      "started_at_unix": 1792585526.82079,
+      "gpu_before_start": "3, GPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456, 3191, 0",
+      "reserved_admission_mib": 2500,
+      "returncode": 0,
+      "finished_at_unix": 1792585961.7630272,
+      "completed_test_epochs": 40,
+      "error": null
+    },
+    "MELD_cmerc_seed67137": {
+      "status": "completed",
+      "pid": 3044302,
+      "argv": [
+        "/data2/yb/conda_envs/cmerc-xp-repro/bin/python",
+        "-u",
+        "/data2/yb/paper/lyx-msa/CMERC/experiments/official_readme_reproduction/scripts/observe_run.py",
+        "--config",
+        "/data2/yb/paper/lyx-msa/CMERC/experiments/official_readme_reproduction/configs/MELD_cmerc_seed67137.json",
+        "--code",
+        "/data2/yb/paper/lyx-msa/CMERC/experiments/official_readme_reproduction/runtime_code",
+        "--output",
+        "/data2/yb/paper/lyx-msa/CMERC/experiments/official_readme_reproduction/checkpoints/MELD_cmerc_seed67137"
+      ],
+      "environment": {
+        "CUDA_VISIBLE_DEVICES": "GPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456",
+        "LD_LIBRARY_PATH": "/data2/yb/conda_envs/cmerc-xp-repro/lib/python3.10/site-packages/nvidia/cusparse/lib",
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1"
+      },
+      "started_at_unix": 1792585961.8653235,
+      "gpu_before_start": "3, GPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456, 3191, 57",
+      "reserved_admission_mib": 2500,
+      "returncode": 0,
+      "finished_at_unix": 1792588376.7900996,
+      "completed_test_epochs": 40,
+      "error": null
+    },
+    "IEMOCAP_cmerc_seed1475": {
+      "status": "completed",
+      "pid": 3060577,
+      "argv": [
+        "/data2/yb/conda_envs/cmerc-xp-repro/bin/python",
+        "-u",
+        "/data2/yb/paper/lyx-msa/CMERC/experiments/official_readme_reproduction/scripts/observe_run.py",
+        "--config",
+        "/data2/yb/paper/lyx-msa/CMERC/experiments/official_readme_reproduction/configs/IEMOCAP_cmerc_seed1475.json",
+        "--code",
+        "/data2/yb/paper/lyx-msa/CMERC/experiments/official_readme_reproduction/runtime_code",
+        "--output",
+        "/data2/yb/paper/lyx-msa/CMERC/experiments/official_readme_reproduction/checkpoints/IEMOCAP_cmerc_seed1475"
+      ],
+      "environment": {
+        "CUDA_VISIBLE_DEVICES": "GPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456",
+        "LD_LIBRARY_PATH": "/data2/yb/conda_envs/cmerc-xp-repro/lib/python3.10/site-packages/nvidia/cusparse/lib",
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1"
+      },
+      "started_at_unix": 1792586325.5767395,
+      "gpu_before_start": "3, GPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456, 10605, 22",
+      "reserved_admission_mib": 9500,
+      "returncode": 0,
+      "finished_at_unix": 1792591095.7720678,
+      "completed_test_epochs": 80,
+      "error": null
+    }
+  },
+  "automatic_retraining": false,
+  "selection_protocol": "official_test_selection",
+  "last_gpu": "3, GPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456, 12179, 0",
+  "unknown_gpu_processes": [],
+  "formal_runs_started": 4,
+  "formal_runs_completed": 4,
+  "completed_at_unix": 1792591095.859691
+}

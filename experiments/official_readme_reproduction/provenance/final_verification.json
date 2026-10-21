@@ -1,0 +1,72 @@
+{
+  "status": "passed",
+  "all_four_formal_runs": true,
+  "data_hashes_unchanged": true,
+  "runs": {
+    "IEMOCAP_baseline_seed1475": {
+      "raw_stdout_matches_epoch_metrics": true,
+      "weighted_loss_identity_every_training_batch": true,
+      "best_epoch_matches": true,
+      "latest_equals_final_model": true,
+      "exact_replay_labels_predictions": true,
+      "checkpoint_hashes": {
+        "best.pt": "39d2338cb074786405f9b82fabf29cc10fdebdd2342ff66ae21afc8773ea58d8",
+        "latest.pt": "1381d366128c0b0be65d51cbeb9abdb8d29b678a72829600a02b2ae5e2df9b5d",
+        "final.pt": "25498a86d80ec242ee07716f93e7ef8270e7920484bb0bf35dc000e0db1f7bea"
+      },
+      "training_batch_count": 640,
+      "mscl_zero_batches": 640,
+      "cscl_zero_batches": 640
+    },
+    "IEMOCAP_cmerc_seed1475": {
+      "raw_stdout_matches_epoch_metrics": true,
+      "weighted_loss_identity_every_training_batch": true,
+      "best_epoch_matches": true,
+      "latest_equals_final_model": true,
+      "exact_replay_labels_predictions": true,
+      "checkpoint_hashes": {
+        "best.pt": "b391ddc08c3bc5261a99ecdbd1bd01352ed6f24d374704ec6e7a120ce87b3399",
+        "latest.pt": "0f2ee0047e047095e4c4b927c16940720843799ec06bab8bd4f876598ae6f41d",
+        "final.pt": "5c31088e7848767dd3b649f2525abfe75f13802442aa6b333ad8bfaf15745d15"
+      },
+      "training_batch_count": 619,
+      "mscl_zero_batches": 0,
+      "cscl_zero_batches": 0
+    },
+    "MELD_baseline_seed67137": {
+      "raw_stdout_matches_epoch_metrics": true,
+      "weighted_loss_identity_every_training_batch": true,
+      "best_epoch_matches": true,
+      "latest_equals_final_model": true,
+      "exact_replay_labels_predictions": true,
+      "checkpoint_hashes": {
+        "best.pt": "a6ab85cb6c0c12054dade9c6bcdf01cfaa6abc417625059a927de5ba386d3738",
+        "latest.pt": "edfd2f541463cdbbb3ff8e4c91ec4c36ad7374173d28b17dde08ed94e435d005",
+        "final.pt": "cbc8330902edbba7921b994c9b374076004e7ea7218294312e98215e41449d51"
+      },
+      "training_batch_count": 2880,
+      "mscl_zero_batches": 2880,
+      "cscl_zero_batches": 2880
+    },
+    "MELD_cmerc_seed67137": {
+      "raw_stdout_matches_epoch_metrics": true,
+      "weighted_loss_identity_every_training_batch": true,
+      "best_epoch_matches": true,
+      "latest_equals_final_model": true,
+      "exact_replay_labels_predictions": true,
+      "checkpoint_hashes": {
+        "best.pt": "7263ca6c5c698d7f4760816ae9a52a549aa2c119e3b352744b09c77d5ff0cd8d",
+        "latest.pt": "47e6950f4a3c56be9b15860075943cd13a07cd3d256419ba34cc905e14313c34",
+        "final.pt": "77bf9e80e78038012d05b17c6863e1a00d22b97ef6d7384cdd215daf4d7e3ce9"
+      },
+      "training_batch_count": 2823,
+      "mscl_zero_batches": 0,
+      "cscl_zero_batches": 0
+    }
+  },
+  "limits": [
+    "does not make test-selected results unbiased",
+    "single seed per dataset",
+    "diagnostic gradients are a single batch"
+  ]
+}

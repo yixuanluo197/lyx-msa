@@ -6,7 +6,8 @@ CMERC 多模态对话情绪识别代码、复现工程与时间因果变体，�
 
 ## 阅读入口
 
-- [最近三组实验档案](experiment_records/README.md)：原版 V100 复现、XP 多 seed、V100 多 seed V2 的代码版本、配置、逐轮指标和最终结果；V1 失败诊断单独保留。
+- [实验档案总览](experiment_records/README.md)：历史复现、XP04 五 seed 主线，以及本次官方 README 单 Seed 对照的代码版本、配置、逐轮指标和最终结果。
+- [官方 README 四组对照实验](experiment_records/05_official_readme_reproduction/README.md)：IEMOCAP seed1475、MELD seed67137 的 Baseline/CMERC 实测、源码协议审计和与 XP04 的对照；保留官方测试集选模。
 - [GPT / 人工代码审查指南](docs/GPT_REVIEW_GUIDE.md)：建议阅读顺序、重点文件和可复制的审查提示词。
 - [复现运行指南](REPRODUCTION_GUIDE.md)：环境、数据准备、训练、评测和断点恢复。
 - [时间因果变体说明](CAUSAL_README.md)：历史与当前话语的可见性约束、实现范围和验证边界。

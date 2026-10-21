@@ -1,0 +1,17 @@
+{
+  "run_class": "compatibility_patched_with_external_observer",
+  "changes": [
+    {
+      "file": "model_hyper.py",
+      "reason": "Remove unused topk import removed from PyG2.4.0; actual ImportError preserved"
+    },
+    {
+      "file": "HypergraphConv.py",
+      "reason": "Keep index-axis size=(num_nodes,num_edges) when target_to_source; actual shape exception preserved; matches PyG2.4 source semantics"
+    }
+  ],
+  "training_math_changed": false,
+  "protocol_changed": false,
+  "instrumentation": "scripts/observe_run.py; detached reads and post-epoch checkpoint writes; official rounded-test-F1 selection retained",
+  "limits": "Compatibility fix defines runnable interpretation; byte-identical official has failed, so no numerical equivalence claim."
+}
