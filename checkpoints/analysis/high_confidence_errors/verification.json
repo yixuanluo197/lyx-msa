@@ -1,0 +1,130 @@
+{
+  "datasets": {
+    "IEMOCAP": {
+      "raw_test_dialogues": 31,
+      "expected_test_utterances": 1623
+    },
+    "MELD": {
+      "raw_test_dialogues": 280,
+      "expected_test_utterances": 2610
+    }
+  },
+  "models": {
+    "IEMOCAP/baseline": {
+      "utterances": 1623,
+      "errors": 538,
+      "thresholds": {
+        "0.8": {
+          "high_predictions": 1051,
+          "high_errors": 242
+        },
+        "0.9": {
+          "high_predictions": 808,
+          "high_errors": 154
+        }
+      },
+      "raw_label_text_id_roundtrip": "passed",
+      "raw_text_rows_with_7f_9f_controls_preserved": 0
+    },
+    "IEMOCAP/cmerc": {
+      "utterances": 1623,
+      "errors": 518,
+      "thresholds": {
+        "0.8": {
+          "high_predictions": 634,
+          "high_errors": 91
+        },
+        "0.9": {
+          "high_predictions": 362,
+          "high_errors": 37
+        }
+      },
+      "raw_label_text_id_roundtrip": "passed",
+      "raw_text_rows_with_7f_9f_controls_preserved": 0
+    },
+    "MELD/baseline": {
+      "utterances": 2610,
+      "errors": 874,
+      "thresholds": {
+        "0.8": {
+          "high_predictions": 0,
+          "high_errors": 0
+        },
+        "0.9": {
+          "high_predictions": 0,
+          "high_errors": 0
+        }
+      },
+      "raw_label_text_id_roundtrip": "passed",
+      "raw_text_rows_with_7f_9f_controls_preserved": 742
+    },
+    "MELD/cmerc": {
+      "utterances": 2610,
+      "errors": 869,
+      "thresholds": {
+        "0.8": {
+          "high_predictions": 4,
+          "high_errors": 0
+        },
+        "0.9": {
+          "high_predictions": 0,
+          "high_errors": 0
+        }
+      },
+      "raw_label_text_id_roundtrip": "passed",
+      "raw_text_rows_with_7f_9f_controls_preserved": 742
+    }
+  },
+  "comparisons": {
+    "IEMOCAP": {
+      "matched_utterances": 1623,
+      "wrong_union": 627,
+      "transitions": {
+        "both_correct": 996,
+        "both_wrong": 429,
+        "baseline_correct_cmerc_wrong": 89,
+        "baseline_wrong_cmerc_correct": 109
+      }
+    },
+    "MELD": {
+      "matched_utterances": 2610,
+      "wrong_union": 950,
+      "transitions": {
+        "both_wrong": 793,
+        "both_correct": 1660,
+        "baseline_correct_cmerc_wrong": 76,
+        "baseline_wrong_cmerc_correct": 81
+      }
+    }
+  },
+  "verified_at": "2026-10-21T16:35:32.834794+00:00",
+  "status": "passed",
+  "inference_rerun": false,
+  "original_input_and_checkpoint_hashes": "unchanged",
+  "csv_sha256": {
+    "MELD/baseline_vs_cmerc_errors_union.csv": "9aaeff4f1a73c3a36ce7b4d6c76d0f8bdbfc77cc7372e5a7066194eb3ab299d4",
+    "MELD/baseline_vs_cmerc_all.csv": "8ab3ac6766fc19c8b7b838a73daa2463b56f136498a7307885214f87d31a7cd5",
+    "MELD/baseline/all_predictions.csv": "8aee8c18705874597bf7dc64fab930be4ce6620ac1fe6a852755f018f30e725d",
+    "MELD/baseline/errors_all.csv": "fa5a508e0f4d2c80dc813dd1cfd361c26efcfe7f7bc8404e67d45015bae7ca81",
+    "MELD/baseline/errors_ge_0p9.csv": "49e987c591ce13bfc8876b2e5a4816689b60385ff317d3deb1f174220b6c69c5",
+    "MELD/baseline/class_error_distribution.csv": "77132fc44159cb9fd37551a7426b61d9fb5ae872b850d05e3c5a140cc57d4e2a",
+    "MELD/baseline/errors_ge_0p8.csv": "49e987c591ce13bfc8876b2e5a4816689b60385ff317d3deb1f174220b6c69c5",
+    "MELD/cmerc/all_predictions.csv": "ca6da8e1493c71983461a89a0cc108988c98bbca6ae61ef5446c8693cc91c365",
+    "MELD/cmerc/errors_all.csv": "d2398c40e4e1958227c8aa2d0e27263e7f5d4c30f1edf97faadab1d68f88a5b0",
+    "MELD/cmerc/errors_ge_0p9.csv": "49e987c591ce13bfc8876b2e5a4816689b60385ff317d3deb1f174220b6c69c5",
+    "MELD/cmerc/class_error_distribution.csv": "6cd71008be3dd125917ff3948d73b150c1db091a9a21656ad1bb246aebb33cf5",
+    "MELD/cmerc/errors_ge_0p8.csv": "49e987c591ce13bfc8876b2e5a4816689b60385ff317d3deb1f174220b6c69c5",
+    "IEMOCAP/baseline_vs_cmerc_errors_union.csv": "346ccfa03a5672c21799f10b369db63ed50672ff0acb8e471fc762c3f0bd99b2",
+    "IEMOCAP/baseline_vs_cmerc_all.csv": "7675b5688f675467bb836d7912b9a66708d956a5ac73605fdeb48dae5fbaa7be",
+    "IEMOCAP/baseline/all_predictions.csv": "9f39337bc4ddb5ab53c4a10d70a522201c3af83d61aa5dbc4f460f2b5850bcab",
+    "IEMOCAP/baseline/errors_all.csv": "98b5c84172592df46c5fe0c7872843f22db7ae7f6c5cdf46c7d1ce48a3d26526",
+    "IEMOCAP/baseline/errors_ge_0p9.csv": "0c5b4e8478b1027bee90bcdf0a2a560430654e7d0724eb652b6294b088e58223",
+    "IEMOCAP/baseline/class_error_distribution.csv": "b94c9157ae52f3b69d2eaf82a2b0079564e7b6e170c9b5c133ad7b04e62e261d",
+    "IEMOCAP/baseline/errors_ge_0p8.csv": "dfeb17f0681fbdde7f86c7d8b81b6d4c651e53b7906e1386b656027adb3fa7d6",
+    "IEMOCAP/cmerc/all_predictions.csv": "956c300090bc82711ede01a4244e04b379bb29efbe84d7b282e6c9a3dd77885b",
+    "IEMOCAP/cmerc/errors_all.csv": "2adc54bc22e10c9e8d294a8ae5f03cfb427dc9341bf9576031ec281cd89c7760",
+    "IEMOCAP/cmerc/errors_ge_0p9.csv": "3ae54aed535ebe01e8d6c2f417dc6545f825c28ceba70b166ae11ca6f6058357",
+    "IEMOCAP/cmerc/class_error_distribution.csv": "5a72e03309a4113001467697c92c57d334a4b70a9faf5308d3f83b8f33f818e8",
+    "IEMOCAP/cmerc/errors_ge_0p8.csv": "972f98180439df95878810c933eb4513e8afc64b95a24e8f6938a8ac3f26a053"
+  }
+}

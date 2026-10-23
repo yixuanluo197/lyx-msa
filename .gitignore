@@ -1,6 +1,9 @@
 # Local datasets and experiment artifacts
 /data/
-/checkpoints/
+/checkpoints/*
+!/checkpoints/analysis/
+/checkpoints/analysis/*
+!/checkpoints/analysis/high_confidence_errors/
 /logs/
 /results/
 /runs/

@@ -1,0 +1,187 @@
+{
+  "created_at": "2026-10-21T16:37:00.746387+00:00",
+  "status": "completed",
+  "models": 4,
+  "test_utterances_per_dataset": {
+    "IEMOCAP": 1623,
+    "MELD": 2610
+  },
+  "related_cpu_tests_passed": 38,
+  "full_input_inference": true,
+  "modality_removal": false,
+  "training": false,
+  "independent_csv_verification": "passed",
+  "original_inputs_unchanged": true,
+  "files": [
+    {
+      "path": "IEMOCAP/baseline/all_predictions.csv",
+      "size": 509633,
+      "sha256": "9f39337bc4ddb5ab53c4a10d70a522201c3af83d61aa5dbc4f460f2b5850bcab"
+    },
+    {
+      "path": "IEMOCAP/baseline/class_error_distribution.csv",
+      "size": 520,
+      "sha256": "b94c9157ae52f3b69d2eaf82a2b0079564e7b6e170c9b5c133ad7b04e62e261d"
+    },
+    {
+      "path": "IEMOCAP/baseline/errors_all.csv",
+      "size": 166482,
+      "sha256": "98b5c84172592df46c5fe0c7872843f22db7ae7f6c5cdf46c7d1ce48a3d26526"
+    },
+    {
+      "path": "IEMOCAP/baseline/errors_ge_0p8.csv",
+      "size": 74930,
+      "sha256": "dfeb17f0681fbdde7f86c7d8b81b6d4c651e53b7906e1386b656027adb3fa7d6"
+    },
+    {
+      "path": "IEMOCAP/baseline/errors_ge_0p9.csv",
+      "size": 47567,
+      "sha256": "0c5b4e8478b1027bee90bcdf0a2a560430654e7d0724eb652b6294b088e58223"
+    },
+    {
+      "path": "IEMOCAP/baseline/statistics.json",
+      "size": 18134,
+      "sha256": "2aa7226dad2fb12ddccbc24cfb0c2b3ba08b06e862897b75bfb008c2833a827f"
+    },
+    {
+      "path": "IEMOCAP/baseline_vs_cmerc_all.csv",
+      "size": 829959,
+      "sha256": "7675b5688f675467bb836d7912b9a66708d956a5ac73605fdeb48dae5fbaa7be"
+    },
+    {
+      "path": "IEMOCAP/baseline_vs_cmerc_errors_union.csv",
+      "size": 318267,
+      "sha256": "346ccfa03a5672c21799f10b369db63ed50672ff0acb8e471fc762c3f0bd99b2"
+    },
+    {
+      "path": "IEMOCAP/cmerc/all_predictions.csv",
+      "size": 499886,
+      "sha256": "956c300090bc82711ede01a4244e04b379bb29efbe84d7b282e6c9a3dd77885b"
+    },
+    {
+      "path": "IEMOCAP/cmerc/class_error_distribution.csv",
+      "size": 500,
+      "sha256": "5a72e03309a4113001467697c92c57d334a4b70a9faf5308d3f83b8f33f818e8"
+    },
+    {
+      "path": "IEMOCAP/cmerc/errors_all.csv",
+      "size": 156628,
+      "sha256": "2adc54bc22e10c9e8d294a8ae5f03cfb427dc9341bf9576031ec281cd89c7760"
+    },
+    {
+      "path": "IEMOCAP/cmerc/errors_ge_0p8.csv",
+      "size": 28683,
+      "sha256": "972f98180439df95878810c933eb4513e8afc64b95a24e8f6938a8ac3f26a053"
+    },
+    {
+      "path": "IEMOCAP/cmerc/errors_ge_0p9.csv",
+      "size": 11663,
+      "sha256": "3ae54aed535ebe01e8d6c2f417dc6545f825c28ceba70b166ae11ca6f6058357"
+    },
+    {
+      "path": "IEMOCAP/cmerc/statistics.json",
+      "size": 17676,
+      "sha256": "e272cfc3acdf46ab7e086655267e766c3da5a533a925a64898f2a6be21bdb0ae"
+    },
+    {
+      "path": "MELD/baseline/all_predictions.csv",
+      "size": 705553,
+      "sha256": "8aee8c18705874597bf7dc64fab930be4ce6620ac1fe6a852755f018f30e725d"
+    },
+    {
+      "path": "MELD/baseline/class_error_distribution.csv",
+      "size": 539,
+      "sha256": "77132fc44159cb9fd37551a7426b61d9fb5ae872b850d05e3c5a140cc57d4e2a"
+    },
+    {
+      "path": "MELD/baseline/errors_all.csv",
+      "size": 240908,
+      "sha256": "fa5a508e0f4d2c80dc813dd1cfd361c26efcfe7f7bc8404e67d45015bae7ca81"
+    },
+    {
+      "path": "MELD/baseline/errors_ge_0p8.csv",
+      "size": 309,
+      "sha256": "49e987c591ce13bfc8876b2e5a4816689b60385ff317d3deb1f174220b6c69c5"
+    },
+    {
+      "path": "MELD/baseline/errors_ge_0p9.csv",
+      "size": 309,
+      "sha256": "49e987c591ce13bfc8876b2e5a4816689b60385ff317d3deb1f174220b6c69c5"
+    },
+    {
+      "path": "MELD/baseline/statistics.json",
+      "size": 48307,
+      "sha256": "fa3fbf86e9a0196e95230d07ff5614d47a430a8e7e5f15379db0e4b15dbb526d"
+    },
+    {
+      "path": "MELD/baseline_vs_cmerc_all.csv",
+      "size": 1258868,
+      "sha256": "8ab3ac6766fc19c8b7b838a73daa2463b56f136498a7307885214f87d31a7cd5"
+    },
+    {
+      "path": "MELD/baseline_vs_cmerc_errors_union.csv",
+      "size": 463442,
+      "sha256": "9aaeff4f1a73c3a36ce7b4d6c76d0f8bdbfc77cc7372e5a7066194eb3ab299d4"
+    },
+    {
+      "path": "MELD/cmerc/all_predictions.csv",
+      "size": 698292,
+      "sha256": "ca6da8e1493c71983461a89a0cc108988c98bbca6ae61ef5446c8693cc91c365"
+    },
+    {
+      "path": "MELD/cmerc/class_error_distribution.csv",
+      "size": 555,
+      "sha256": "6cd71008be3dd125917ff3948d73b150c1db091a9a21656ad1bb246aebb33cf5"
+    },
+    {
+      "path": "MELD/cmerc/errors_all.csv",
+      "size": 236820,
+      "sha256": "d2398c40e4e1958227c8aa2d0e27263e7f5d4c30f1edf97faadab1d68f88a5b0"
+    },
+    {
+      "path": "MELD/cmerc/errors_ge_0p8.csv",
+      "size": 309,
+      "sha256": "49e987c591ce13bfc8876b2e5a4816689b60385ff317d3deb1f174220b6c69c5"
+    },
+    {
+      "path": "MELD/cmerc/errors_ge_0p9.csv",
+      "size": 309,
+      "sha256": "49e987c591ce13bfc8876b2e5a4816689b60385ff317d3deb1f174220b6c69c5"
+    },
+    {
+      "path": "MELD/cmerc/statistics.json",
+      "size": 48533,
+      "sha256": "b499e92de75deb1a7ab5bb4b5b0fff9a51faf3ba8e900ce563baa11860fdc7b3"
+    },
+    {
+      "path": "README.md",
+      "size": 5499,
+      "sha256": "54b6f2c1599d1178fec7e074b469fc9f09358144d4ceaed05f3bb15d228de3f4"
+    },
+    {
+      "path": "SUMMARY.md",
+      "size": 9499,
+      "sha256": "af0fcdf0d28a90b2d4ae88eafed3b04c9bee7069327f6357eb0ed984fb3900d4"
+    },
+    {
+      "path": "checkpoint_inventory.json",
+      "size": 35241,
+      "sha256": "3cdce44b88bad1d25f87caba9d64955bc55bed327bb893a040d630c5d6988345"
+    },
+    {
+      "path": "run_manifest.json",
+      "size": 169506,
+      "sha256": "10c2a8192f7b6de4feed417a1fdded58c65b548e8a59cbb50eba5fd0de3c555a"
+    },
+    {
+      "path": "verification.json",
+      "size": 5134,
+      "sha256": "8bce1558d46962f374c9ace66a06cb54b4151cc3f4cb7b15a077b33e0ceedbe7"
+    },
+    {
+      "path": "verify_outputs.py",
+      "size": 7992,
+      "sha256": "071602d7cee92e075643756687910ef8a4721b66c63d5b4bb33f7919d2f5a8fd"
+    }
+  ]
+}

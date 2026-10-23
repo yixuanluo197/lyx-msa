@@ -1,0 +1,931 @@
+{
+  "schema_version": 1,
+  "project_root": "/data2/yb/paper/lyx-msa/CMERC",
+  "inspection_scope": "18 actual checkpoints inspected on CPU: 4 selected XP validation, 8 historical formal best.pt, 4 official README reproduction best.pt, 2 plain official pkl.",
+  "limitations": [
+    "Bounded inventory, not a full filesystem audit.",
+    "Other seeds, failed attempts, preflight runs, latest.pt and final.pt were not independently inspected.",
+    "Identities derive from actual training metadata, never filename alone.",
+    "No seed or checkpoint chosen by comparing test scores.",
+    "No GPU execution or training performed for this inventory.",
+    "Historical checkpoints lacking causal/backend metadata require frozen historical-code evidence, not assumptions from absent flags."
+  ],
+  "selection_rationale": "Pre-existing published seeds IEMOCAP1475 and MELD67137 from one completed local XP validation batch; validation-selected best only.",
+  "selected": [
+    "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/baseline/IEMOCAP_validation_seed1475/best.pt",
+    "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/baseline/MELD_validation_seed67137/best.pt",
+    "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/cmerc/IEMOCAP_validation_seed1475/best.pt",
+    "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/cmerc/MELD_validation_seed67137/best.pt"
+  ],
+  "replay_conditions": {
+    "batch_size": 16,
+    "modals": "avl",
+    "causal": false,
+    "rnn_backend": "aten",
+    "frozen_code_root": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/code",
+    "backend_function": "code/scripts/evaluate_checkpoint.py:configure_evaluation_backend; train_cm.configure_recurrent_backend",
+    "note": "Restore aten recurrent backend; preserve fixed test batching/dialogue order; full-input probabilities only, not removed_* arrays.",
+    "source_hash_checks": "Selected run manifest SHA256 matches frozen model.py, model_cm.py, model_hyper.py, dataloader.py, train_cm.py; current main-tree model files match, current dataloader.py/train_cm.py differ."
+  },
+  "test_selection_evidence": [
+    "/data2/yb/paper/lyx-msa/CMERC/experiments/official_readme_reproduction/scripts/summarize.py:179",
+    "/data2/yb/paper/lyx-msa/CMERC/experiments/official_readme_reproduction/official_code/train.py:507",
+    "/data2/yb/paper/lyx-msa/CMERC/experiments/official_readme_reproduction/official_code/train_cm.py:768"
+  ],
+  "entries": [
+    {
+      "path": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/baseline/IEMOCAP_validation_seed1475/best.pt",
+      "family": "xp_mainline_validation",
+      "identity": "baseline",
+      "selected": true,
+      "identity_evidence": {
+        "method": "Actual trusted checkpoint loaded on CPU; internal args inspected",
+        "training_flags": {
+          "calibrate": false,
+          "contrastlearning": false,
+          "courselearning": false
+        },
+        "checkpoint_keys": [
+          "model_state_dict",
+          "optimizer_state_dict",
+          "epoch",
+          "args",
+          "causal",
+          "rng_state",
+          "best_metric",
+          "best_epoch",
+          "provenance",
+          "sampling_metadata"
+        ]
+      },
+      "checkpoint_args": {
+        "Dataset": "IEMOCAP",
+        "seed": 1475,
+        "selection_protocol": "validation",
+        "causal": false,
+        "modals": "avl",
+        "multi_modal": true,
+        "batch_size": 16,
+        "norm": "BN",
+        "rng_policy": "continuous",
+        "rnn_backend": "aten",
+        "rank_coff": 0,
+        "mscl_coff": 0,
+        "cscl_coff": 0
+      },
+      "selection_protocol": "validation",
+      "server_ownership": {
+        "server": "local",
+        "host": "user23",
+        "gpu_family": "TITAN Xp",
+        "evidence": [
+          "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/provenance/origin.json",
+          "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/provenance/effective_config.json"
+        ]
+      },
+      "exclusion_reason": null,
+      "sha256": "bef27e03c3e72ba32036de0ae425b03a5826b27181d0812f4028c8cb062b0c31",
+      "size_bytes": 59760273,
+      "selected_epoch_1based": 70,
+      "split_hash": "d1ae10a27d20d9ee0bf81b9c884073d037a4362e2ba8b9f3f6720902d2502d62",
+      "run_manifest": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/baseline/IEMOCAP_validation_seed1475/run_manifest.json",
+      "frozen_code_root": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/code",
+      "reference_predictions": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/results/baseline/IEMOCAP/validation/seed1475/predictions.npz"
+    },
+    {
+      "path": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/baseline/MELD_validation_seed67137/best.pt",
+      "family": "xp_mainline_validation",
+      "identity": "baseline",
+      "selected": true,
+      "identity_evidence": {
+        "method": "Actual trusted checkpoint loaded on CPU; internal args inspected",
+        "training_flags": {
+          "calibrate": false,
+          "contrastlearning": false,
+          "courselearning": false
+        },
+        "checkpoint_keys": [
+          "model_state_dict",
+          "optimizer_state_dict",
+          "epoch",
+          "args",
+          "causal",
+          "rng_state",
+          "best_metric",
+          "best_epoch",
+          "provenance",
+          "sampling_metadata"
+        ]
+      },
+      "checkpoint_args": {
+        "Dataset": "MELD",
+        "seed": 67137,
+        "selection_protocol": "validation",
+        "causal": false,
+        "modals": "avl",
+        "multi_modal": true,
+        "batch_size": 16,
+        "norm": "BN",
+        "rng_policy": "continuous",
+        "rnn_backend": "aten",
+        "rank_coff": 0,
+        "mscl_coff": 0,
+        "cscl_coff": 0
+      },
+      "selection_protocol": "validation",
+      "server_ownership": {
+        "server": "local",
+        "host": "user23",
+        "gpu_family": "TITAN Xp",
+        "evidence": [
+          "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/provenance/origin.json",
+          "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/provenance/effective_config.json"
+        ]
+      },
+      "exclusion_reason": null,
+      "sha256": "22a44516e58fc6f613879085d902cfb7e572c05fb2b50c06d16f4f1cf20bb96e",
+      "size_bytes": 142022381,
+      "selected_epoch_1based": 5,
+      "split_hash": "5317189c62939f28801eadf558763bd901cae04544ae829ebd45d1dd057055b8",
+      "run_manifest": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/baseline/MELD_validation_seed67137/run_manifest.json",
+      "frozen_code_root": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/code",
+      "reference_predictions": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/results/baseline/MELD/validation/seed67137/predictions.npz"
+    },
+    {
+      "path": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/cmerc/IEMOCAP_validation_seed1475/best.pt",
+      "family": "xp_mainline_validation",
+      "identity": "cmerc",
+      "selected": true,
+      "identity_evidence": {
+        "method": "Actual trusted checkpoint loaded on CPU; internal args inspected",
+        "training_flags": {
+          "calibrate": true,
+          "contrastlearning": true,
+          "courselearning": true
+        },
+        "checkpoint_keys": [
+          "model_state_dict",
+          "optimizer_state_dict",
+          "epoch",
+          "args",
+          "causal",
+          "rng_state",
+          "best_metric",
+          "best_epoch",
+          "provenance",
+          "sampling_metadata"
+        ]
+      },
+      "checkpoint_args": {
+        "Dataset": "IEMOCAP",
+        "seed": 1475,
+        "selection_protocol": "validation",
+        "causal": false,
+        "modals": "avl",
+        "multi_modal": true,
+        "batch_size": 16,
+        "norm": "BN",
+        "rng_policy": "continuous",
+        "rnn_backend": "aten",
+        "rank_coff": 0.005,
+        "mscl_coff": 0.05,
+        "cscl_coff": 0.05
+      },
+      "selection_protocol": "validation",
+      "server_ownership": {
+        "server": "local",
+        "host": "user23",
+        "gpu_family": "TITAN Xp",
+        "evidence": [
+          "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/provenance/origin.json",
+          "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/provenance/effective_config.json"
+        ]
+      },
+      "exclusion_reason": null,
+      "sha256": "2c0d1a7a39627e12d1244d23a225ad3da03bbce071a118909921a547a2bfd106",
+      "size_bytes": 59760401,
+      "selected_epoch_1based": 43,
+      "split_hash": "d1ae10a27d20d9ee0bf81b9c884073d037a4362e2ba8b9f3f6720902d2502d62",
+      "run_manifest": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/cmerc/IEMOCAP_validation_seed1475/run_manifest.json",
+      "frozen_code_root": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/code",
+      "reference_predictions": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/results/cmerc/IEMOCAP/validation/seed1475/predictions.npz"
+    },
+    {
+      "path": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/cmerc/MELD_validation_seed67137/best.pt",
+      "family": "xp_mainline_validation",
+      "identity": "cmerc",
+      "selected": true,
+      "identity_evidence": {
+        "method": "Actual trusted checkpoint loaded on CPU; internal args inspected",
+        "training_flags": {
+          "calibrate": true,
+          "contrastlearning": true,
+          "courselearning": true
+        },
+        "checkpoint_keys": [
+          "model_state_dict",
+          "optimizer_state_dict",
+          "epoch",
+          "args",
+          "causal",
+          "rng_state",
+          "best_metric",
+          "best_epoch",
+          "provenance",
+          "sampling_metadata"
+        ]
+      },
+      "checkpoint_args": {
+        "Dataset": "MELD",
+        "seed": 67137,
+        "selection_protocol": "validation",
+        "causal": false,
+        "modals": "avl",
+        "multi_modal": true,
+        "batch_size": 16,
+        "norm": "BN",
+        "rng_policy": "continuous",
+        "rnn_backend": "aten",
+        "rank_coff": 0.002,
+        "mscl_coff": 0.15,
+        "cscl_coff": 0.15
+      },
+      "selection_protocol": "validation",
+      "server_ownership": {
+        "server": "local",
+        "host": "user23",
+        "gpu_family": "TITAN Xp",
+        "evidence": [
+          "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/provenance/origin.json",
+          "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/provenance/effective_config.json"
+        ]
+      },
+      "exclusion_reason": null,
+      "sha256": "3f79f9eb3547e35ac15ad7ff4345d9b873d0c884a6f3a1ce60a7a7e47077e701",
+      "size_bytes": 142022509,
+      "selected_epoch_1based": 8,
+      "split_hash": "5317189c62939f28801eadf558763bd901cae04544ae829ebd45d1dd057055b8",
+      "run_manifest": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/cmerc/MELD_validation_seed67137/run_manifest.json",
+      "frozen_code_root": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/code",
+      "reference_predictions": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/results/cmerc/MELD/validation/seed67137/predictions.npz"
+    },
+    {
+      "path": "/data2/yb/paper/lyx-msa/CMERC/runs/formal/baseline/IEMOCAP_official_test_seed1475/best.pt",
+      "family": "historical_formal",
+      "identity": "baseline",
+      "selected": false,
+      "identity_evidence": {
+        "method": "Actual trusted checkpoint loaded on CPU; internal args inspected",
+        "training_flags": {
+          "calibrate": false,
+          "contrastlearning": false,
+          "courselearning": false
+        },
+        "checkpoint_keys": [
+          "model_state_dict",
+          "optimizer_state_dict",
+          "epoch",
+          "args",
+          "rng_state",
+          "best_metric",
+          "best_epoch"
+        ]
+      },
+      "checkpoint_args": {
+        "Dataset": "IEMOCAP",
+        "seed": 1475,
+        "selection_protocol": "official_test",
+        "causal": null,
+        "modals": "avl",
+        "multi_modal": true,
+        "batch_size": 16,
+        "norm": "BN",
+        "rng_policy": null,
+        "rnn_backend": null,
+        "rank_coff": 0,
+        "mscl_coff": 0,
+        "cscl_coff": 0
+      },
+      "selection_protocol": "official_test",
+      "server_ownership": {
+        "server": "biggpu",
+        "gpu_family": "V100",
+        "evidence": [
+          "/data2/yb/paper/lyx-msa/CMERC/experiment_records/01_v100_single_seed/provenance/checkpoint_configuration.json"
+        ],
+        "note": "Historical weights locally mirrored; source output_dir is cmerc_reproduction_20261013."
+      },
+      "exclusion_reason": "Primary analysis preselects one matched XP validation batch; this historical official_test run additionally has test-selection bias.",
+      "sha256": "df67ac80ae51be37e0e36d1fac6e5cc71af21033191275d727a51ba821a6988a",
+      "size_bytes": 59754193,
+      "selected_epoch_1based": 48
+    },
+    {
+      "path": "/data2/yb/paper/lyx-msa/CMERC/runs/formal/baseline/IEMOCAP_validation_seed1475/best.pt",
+      "family": "historical_formal",
+      "identity": "baseline",
+      "selected": false,
+      "identity_evidence": {
+        "method": "Actual trusted checkpoint loaded on CPU; internal args inspected",
+        "training_flags": {
+          "calibrate": false,
+          "contrastlearning": false,
+          "courselearning": false
+        },
+        "checkpoint_keys": [
+          "model_state_dict",
+          "optimizer_state_dict",
+          "epoch",
+          "args",
+          "rng_state",
+          "best_metric",
+          "best_epoch"
+        ]
+      },
+      "checkpoint_args": {
+        "Dataset": "IEMOCAP",
+        "seed": 1475,
+        "selection_protocol": "validation",
+        "causal": null,
+        "modals": "avl",
+        "multi_modal": true,
+        "batch_size": 16,
+        "norm": "BN",
+        "rng_policy": null,
+        "rnn_backend": null,
+        "rank_coff": 0,
+        "mscl_coff": 0,
+        "cscl_coff": 0
+      },
+      "selection_protocol": "validation",
+      "server_ownership": {
+        "server": "biggpu",
+        "gpu_family": "V100",
+        "evidence": [
+          "/data2/yb/paper/lyx-msa/CMERC/experiment_records/01_v100_single_seed/provenance/checkpoint_configuration.json"
+        ],
+        "note": "Historical weights locally mirrored; source output_dir is cmerc_reproduction_20261013."
+      },
+      "exclusion_reason": "Historical validation-selected alternative; primary analysis preselects one matched XP validation batch without test-score comparison.",
+      "sha256": "6d83f492dbcc0a2063d7eb146da865c9d155afe0dbcd053d86b31b61ed1decfe",
+      "size_bytes": 59754193,
+      "selected_epoch_1based": 77
+    },
+    {
+      "path": "/data2/yb/paper/lyx-msa/CMERC/runs/formal/baseline/MELD_official_test_seed67137/best.pt",
+      "family": "historical_formal",
+      "identity": "baseline",
+      "selected": false,
+      "identity_evidence": {
+        "method": "Actual trusted checkpoint loaded on CPU; internal args inspected",
+        "training_flags": {
+          "calibrate": false,
+          "contrastlearning": false,
+          "courselearning": false
+        },
+        "checkpoint_keys": [
+          "model_state_dict",
+          "optimizer_state_dict",
+          "epoch",
+          "args",
+          "rng_state",
+          "best_metric",
+          "best_epoch"
+        ]
+      },
+      "checkpoint_args": {
+        "Dataset": "MELD",
+        "seed": 67137,
+        "selection_protocol": "official_test",
+        "causal": null,
+        "modals": "avl",
+        "multi_modal": true,
+        "batch_size": 16,
+        "norm": "BN",
+        "rng_policy": null,
+        "rnn_backend": null,
+        "rank_coff": 0,
+        "mscl_coff": 0,
+        "cscl_coff": 0
+      },
+      "selection_protocol": "official_test",
+      "server_ownership": {
+        "server": "biggpu",
+        "gpu_family": "V100",
+        "evidence": [
+          "/data2/yb/paper/lyx-msa/CMERC/experiment_records/01_v100_single_seed/provenance/checkpoint_configuration.json"
+        ],
+        "note": "Historical weights locally mirrored; source output_dir is cmerc_reproduction_20261013."
+      },
+      "exclusion_reason": "Primary analysis preselects one matched XP validation batch; this historical official_test run additionally has test-selection bias.",
+      "sha256": "c458dbb7b51d9c9294c2abb0b1c7a1dbea117375b04acbaaf360c5b3ca9e7db0",
+      "size_bytes": 142016173,
+      "selected_epoch_1based": 4
+    },
+    {
+      "path": "/data2/yb/paper/lyx-msa/CMERC/runs/formal/baseline/MELD_validation_seed67137/best.pt",
+      "family": "historical_formal",
+      "identity": "baseline",
+      "selected": false,
+      "identity_evidence": {
+        "method": "Actual trusted checkpoint loaded on CPU; internal args inspected",
+        "training_flags": {
+          "calibrate": false,
+          "contrastlearning": false,
+          "courselearning": false
+        },
+        "checkpoint_keys": [
+          "model_state_dict",
+          "optimizer_state_dict",
+          "epoch",
+          "args",
+          "rng_state",
+          "best_metric",
+          "best_epoch"
+        ]
+      },
+      "checkpoint_args": {
+        "Dataset": "MELD",
+        "seed": 67137,
+        "selection_protocol": "validation",
+        "causal": null,
+        "modals": "avl",
+        "multi_modal": true,
+        "batch_size": 16,
+        "norm": "BN",
+        "rng_policy": null,
+        "rnn_backend": null,
+        "rank_coff": 0,
+        "mscl_coff": 0,
+        "cscl_coff": 0
+      },
+      "selection_protocol": "validation",
+      "server_ownership": {
+        "server": "biggpu",
+        "gpu_family": "V100",
+        "evidence": [
+          "/data2/yb/paper/lyx-msa/CMERC/experiment_records/01_v100_single_seed/provenance/checkpoint_configuration.json"
+        ],
+        "note": "Historical weights locally mirrored; source output_dir is cmerc_reproduction_20261013."
+      },
+      "exclusion_reason": "Historical validation-selected alternative; primary analysis preselects one matched XP validation batch without test-score comparison.",
+      "sha256": "c9cc2eb7578b38e279d6e73d391494eb498edb2ddff9cba3d5a3886ab48af86e",
+      "size_bytes": 142016109,
+      "selected_epoch_1based": 6
+    },
+    {
+      "path": "/data2/yb/paper/lyx-msa/CMERC/runs/formal/cmerc/IEMOCAP_official_test_seed1475/best.pt",
+      "family": "historical_formal",
+      "identity": "cmerc",
+      "selected": false,
+      "identity_evidence": {
+        "method": "Actual trusted checkpoint loaded on CPU; internal args inspected",
+        "training_flags": {
+          "calibrate": true,
+          "contrastlearning": true,
+          "courselearning": true
+        },
+        "checkpoint_keys": [
+          "model_state_dict",
+          "optimizer_state_dict",
+          "epoch",
+          "args",
+          "rng_state",
+          "best_metric",
+          "best_epoch"
+        ]
+      },
+      "checkpoint_args": {
+        "Dataset": "IEMOCAP",
+        "seed": 1475,
+        "selection_protocol": "official_test",
+        "causal": null,
+        "modals": "avl",
+        "multi_modal": true,
+        "batch_size": 16,
+        "norm": "BN",
+        "rng_policy": null,
+        "rnn_backend": null,
+        "rank_coff": 0.005,
+        "mscl_coff": 0.05,
+        "cscl_coff": 0.05
+      },
+      "selection_protocol": "official_test",
+      "server_ownership": {
+        "server": "biggpu",
+        "gpu_family": "V100",
+        "evidence": [
+          "/data2/yb/paper/lyx-msa/CMERC/experiment_records/01_v100_single_seed/provenance/checkpoint_configuration.json"
+        ],
+        "note": "Historical weights locally mirrored; source output_dir is cmerc_reproduction_20261013."
+      },
+      "exclusion_reason": "Primary analysis preselects one matched XP validation batch; this historical official_test run additionally has test-selection bias.",
+      "sha256": "91e30c970c6aa230183084e23c65ab5c7064ff1a13270dd17bce957bd5c60a3e",
+      "size_bytes": 59754257,
+      "selected_epoch_1based": 55
+    },
+    {
+      "path": "/data2/yb/paper/lyx-msa/CMERC/runs/formal/cmerc/IEMOCAP_validation_seed1475/best.pt",
+      "family": "historical_formal",
+      "identity": "cmerc",
+      "selected": false,
+      "identity_evidence": {
+        "method": "Actual trusted checkpoint loaded on CPU; internal args inspected",
+        "training_flags": {
+          "calibrate": true,
+          "contrastlearning": true,
+          "courselearning": true
+        },
+        "checkpoint_keys": [
+          "model_state_dict",
+          "optimizer_state_dict",
+          "epoch",
+          "args",
+          "rng_state",
+          "best_metric",
+          "best_epoch"
+        ]
+      },
+      "checkpoint_args": {
+        "Dataset": "IEMOCAP",
+        "seed": 1475,
+        "selection_protocol": "validation",
+        "causal": null,
+        "modals": "avl",
+        "multi_modal": true,
+        "batch_size": 16,
+        "norm": "BN",
+        "rng_policy": null,
+        "rnn_backend": null,
+        "rank_coff": 0.005,
+        "mscl_coff": 0.05,
+        "cscl_coff": 0.05
+      },
+      "selection_protocol": "validation",
+      "server_ownership": {
+        "server": "biggpu",
+        "gpu_family": "V100",
+        "evidence": [
+          "/data2/yb/paper/lyx-msa/CMERC/experiment_records/01_v100_single_seed/provenance/checkpoint_configuration.json"
+        ],
+        "note": "Historical weights locally mirrored; source output_dir is cmerc_reproduction_20261013."
+      },
+      "exclusion_reason": "Historical validation-selected alternative; primary analysis preselects one matched XP validation batch without test-score comparison.",
+      "sha256": "668966ebd2d60161a6058c4459d2bb1d613a97a365ea44ba90066f5487182227",
+      "size_bytes": 59754257,
+      "selected_epoch_1based": 79
+    },
+    {
+      "path": "/data2/yb/paper/lyx-msa/CMERC/runs/formal/cmerc/MELD_official_test_seed67137/best.pt",
+      "family": "historical_formal",
+      "identity": "cmerc",
+      "selected": false,
+      "identity_evidence": {
+        "method": "Actual trusted checkpoint loaded on CPU; internal args inspected",
+        "training_flags": {
+          "calibrate": true,
+          "contrastlearning": true,
+          "courselearning": true
+        },
+        "checkpoint_keys": [
+          "model_state_dict",
+          "optimizer_state_dict",
+          "epoch",
+          "args",
+          "rng_state",
+          "best_metric",
+          "best_epoch"
+        ]
+      },
+      "checkpoint_args": {
+        "Dataset": "MELD",
+        "seed": 67137,
+        "selection_protocol": "official_test",
+        "causal": null,
+        "modals": "avl",
+        "multi_modal": true,
+        "batch_size": 16,
+        "norm": "BN",
+        "rng_policy": null,
+        "rnn_backend": null,
+        "rank_coff": 0.002,
+        "mscl_coff": 0.15,
+        "cscl_coff": 0.15
+      },
+      "selection_protocol": "official_test",
+      "server_ownership": {
+        "server": "biggpu",
+        "gpu_family": "V100",
+        "evidence": [
+          "/data2/yb/paper/lyx-msa/CMERC/experiment_records/01_v100_single_seed/provenance/checkpoint_configuration.json"
+        ],
+        "note": "Historical weights locally mirrored; source output_dir is cmerc_reproduction_20261013."
+      },
+      "exclusion_reason": "Primary analysis preselects one matched XP validation batch; this historical official_test run additionally has test-selection bias.",
+      "sha256": "4efa4116fc9fbb56afc199d961de2426f6fc1f1e8af78f3b4811f5b3e73a976a",
+      "size_bytes": 142016173,
+      "selected_epoch_1based": 5
+    },
+    {
+      "path": "/data2/yb/paper/lyx-msa/CMERC/runs/formal/cmerc/MELD_validation_seed67137/best.pt",
+      "family": "historical_formal",
+      "identity": "cmerc",
+      "selected": false,
+      "identity_evidence": {
+        "method": "Actual trusted checkpoint loaded on CPU; internal args inspected",
+        "training_flags": {
+          "calibrate": true,
+          "contrastlearning": true,
+          "courselearning": true
+        },
+        "checkpoint_keys": [
+          "model_state_dict",
+          "optimizer_state_dict",
+          "epoch",
+          "args",
+          "rng_state",
+          "best_metric",
+          "best_epoch"
+        ]
+      },
+      "checkpoint_args": {
+        "Dataset": "MELD",
+        "seed": 67137,
+        "selection_protocol": "validation",
+        "causal": null,
+        "modals": "avl",
+        "multi_modal": true,
+        "batch_size": 16,
+        "norm": "BN",
+        "rng_policy": null,
+        "rnn_backend": null,
+        "rank_coff": 0.002,
+        "mscl_coff": 0.15,
+        "cscl_coff": 0.15
+      },
+      "selection_protocol": "validation",
+      "server_ownership": {
+        "server": "biggpu",
+        "gpu_family": "V100",
+        "evidence": [
+          "/data2/yb/paper/lyx-msa/CMERC/experiment_records/01_v100_single_seed/provenance/checkpoint_configuration.json"
+        ],
+        "note": "Historical weights locally mirrored; source output_dir is cmerc_reproduction_20261013."
+      },
+      "exclusion_reason": "Historical validation-selected alternative; primary analysis preselects one matched XP validation batch without test-score comparison.",
+      "sha256": "974645809b851ad516fe0d294113f0fcd3cdcc59a272af864358311a47d51d86",
+      "size_bytes": 142016173,
+      "selected_epoch_1based": 16
+    },
+    {
+      "path": "/data2/yb/paper/lyx-msa/CMERC/experiments/official_readme_reproduction/checkpoints/IEMOCAP_baseline_seed1475/best.pt",
+      "family": "official_readme_reproduction",
+      "identity": "baseline",
+      "selected": false,
+      "identity_evidence": {
+        "method": "Actual trusted checkpoint loaded on CPU; internal args inspected",
+        "training_flags": {
+          "calibrate": false,
+          "contrastlearning": false,
+          "courselearning": false
+        },
+        "checkpoint_keys": [
+          "model",
+          "optimizer",
+          "epoch",
+          "args",
+          "python_rng",
+          "numpy_rng",
+          "torch_rng",
+          "cuda_rng",
+          "selection_protocol"
+        ]
+      },
+      "checkpoint_args": {
+        "Dataset": "IEMOCAP",
+        "seed": 1475,
+        "selection_protocol": null,
+        "causal": null,
+        "modals": "avl",
+        "multi_modal": true,
+        "batch_size": 16,
+        "norm": "BN",
+        "rng_policy": null,
+        "rnn_backend": null,
+        "rank_coff": 0,
+        "mscl_coff": 0,
+        "cscl_coff": 0
+      },
+      "selection_protocol": "official_test_selection",
+      "server_ownership": {
+        "server": "local",
+        "gpu_family": "TITAN Xp",
+        "evidence": [
+          "/data2/yb/paper/lyx-msa/CMERC/experiments/official_readme_reproduction/checkpoints/IEMOCAP_baseline_seed1475/status.json"
+        ]
+      },
+      "exclusion_reason": "official_test_selection: first maximum rounded test W-F1 checkpoint; test-selected and excluded from primary held-out analysis.",
+      "sha256": "39d2338cb074786405f9b82fabf29cc10fdebdd2342ff66ae21afc8773ea58d8",
+      "size_bytes": 59744323,
+      "selected_epoch_1based": 72
+    },
+    {
+      "path": "/data2/yb/paper/lyx-msa/CMERC/experiments/official_readme_reproduction/checkpoints/IEMOCAP_cmerc_seed1475/best.pt",
+      "family": "official_readme_reproduction",
+      "identity": "cmerc",
+      "selected": false,
+      "identity_evidence": {
+        "method": "Actual trusted checkpoint loaded on CPU; internal args inspected",
+        "training_flags": {
+          "calibrate": true,
+          "contrastlearning": true,
+          "courselearning": true
+        },
+        "checkpoint_keys": [
+          "model",
+          "optimizer",
+          "epoch",
+          "args",
+          "python_rng",
+          "numpy_rng",
+          "torch_rng",
+          "cuda_rng",
+          "selection_protocol"
+        ]
+      },
+      "checkpoint_args": {
+        "Dataset": "IEMOCAP",
+        "seed": 1475,
+        "selection_protocol": null,
+        "causal": null,
+        "modals": "avl",
+        "multi_modal": true,
+        "batch_size": 16,
+        "norm": "BN",
+        "rng_policy": null,
+        "rnn_backend": null,
+        "rank_coff": 0.005,
+        "mscl_coff": 0.05,
+        "cscl_coff": 0.05
+      },
+      "selection_protocol": "official_test_selection",
+      "server_ownership": {
+        "server": "local",
+        "gpu_family": "TITAN Xp",
+        "evidence": [
+          "/data2/yb/paper/lyx-msa/CMERC/experiments/official_readme_reproduction/checkpoints/IEMOCAP_cmerc_seed1475/status.json"
+        ]
+      },
+      "exclusion_reason": "official_test_selection: first maximum rounded test W-F1 checkpoint; test-selected and excluded from primary held-out analysis.",
+      "sha256": "b391ddc08c3bc5261a99ecdbd1bd01352ed6f24d374704ec6e7a120ce87b3399",
+      "size_bytes": 59744323,
+      "selected_epoch_1based": 79
+    },
+    {
+      "path": "/data2/yb/paper/lyx-msa/CMERC/experiments/official_readme_reproduction/checkpoints/MELD_baseline_seed67137/best.pt",
+      "family": "official_readme_reproduction",
+      "identity": "baseline",
+      "selected": false,
+      "identity_evidence": {
+        "method": "Actual trusted checkpoint loaded on CPU; internal args inspected",
+        "training_flags": {
+          "calibrate": false,
+          "contrastlearning": false,
+          "courselearning": false
+        },
+        "checkpoint_keys": [
+          "model",
+          "optimizer",
+          "epoch",
+          "args",
+          "python_rng",
+          "numpy_rng",
+          "torch_rng",
+          "cuda_rng",
+          "selection_protocol"
+        ]
+      },
+      "checkpoint_args": {
+        "Dataset": "MELD",
+        "seed": 67137,
+        "selection_protocol": null,
+        "causal": null,
+        "modals": "avl",
+        "multi_modal": true,
+        "batch_size": 16,
+        "norm": "BN",
+        "rng_policy": null,
+        "rnn_backend": null,
+        "rank_coff": 0,
+        "mscl_coff": 0,
+        "cscl_coff": 0
+      },
+      "selection_protocol": "official_test_selection",
+      "server_ownership": {
+        "server": "local",
+        "gpu_family": "TITAN Xp",
+        "evidence": [
+          "/data2/yb/paper/lyx-msa/CMERC/experiments/official_readme_reproduction/checkpoints/MELD_baseline_seed67137/status.json"
+        ]
+      },
+      "exclusion_reason": "official_test_selection: first maximum rounded test W-F1 checkpoint; test-selected and excluded from primary held-out analysis.",
+      "sha256": "a6ab85cb6c0c12054dade9c6bcdf01cfaa6abc417625059a927de5ba386d3738",
+      "size_bytes": 142006793,
+      "selected_epoch_1based": 5
+    },
+    {
+      "path": "/data2/yb/paper/lyx-msa/CMERC/experiments/official_readme_reproduction/checkpoints/MELD_cmerc_seed67137/best.pt",
+      "family": "official_readme_reproduction",
+      "identity": "cmerc",
+      "selected": false,
+      "identity_evidence": {
+        "method": "Actual trusted checkpoint loaded on CPU; internal args inspected",
+        "training_flags": {
+          "calibrate": true,
+          "contrastlearning": true,
+          "courselearning": true
+        },
+        "checkpoint_keys": [
+          "model",
+          "optimizer",
+          "epoch",
+          "args",
+          "python_rng",
+          "numpy_rng",
+          "torch_rng",
+          "cuda_rng",
+          "selection_protocol"
+        ]
+      },
+      "checkpoint_args": {
+        "Dataset": "MELD",
+        "seed": 67137,
+        "selection_protocol": null,
+        "causal": null,
+        "modals": "avl",
+        "multi_modal": true,
+        "batch_size": 16,
+        "norm": "BN",
+        "rng_policy": null,
+        "rnn_backend": null,
+        "rank_coff": 0.002,
+        "mscl_coff": 0.15,
+        "cscl_coff": 0.15
+      },
+      "selection_protocol": "official_test_selection",
+      "server_ownership": {
+        "server": "local",
+        "gpu_family": "TITAN Xp",
+        "evidence": [
+          "/data2/yb/paper/lyx-msa/CMERC/experiments/official_readme_reproduction/checkpoints/MELD_cmerc_seed67137/status.json"
+        ]
+      },
+      "exclusion_reason": "official_test_selection: first maximum rounded test W-F1 checkpoint; test-selected and excluded from primary held-out analysis.",
+      "sha256": "7263ca6c5c698d7f4760816ae9a52a549aa2c119e3b352744b09c77d5ff0cd8d",
+      "size_bytes": 142006857,
+      "selected_epoch_1based": 8
+    },
+    {
+      "path": "/data2/yb/paper/lyx-msa/CMERC/checkpoints/IEMOCAP_checkpoint.pkl",
+      "family": "official_plain_state_dict",
+      "identity": "pending_confirmation",
+      "selected": false,
+      "identity_evidence": {
+        "method": "Actual trusted checkpoint loaded on CPU",
+        "object_type": "OrderedDict",
+        "tensor_key_count": 85,
+        "metadata_present": false,
+        "note": "Plain state_dict has no args/training flags/provenance; baseline and CMERC share inference architecture."
+      },
+      "selection_protocol": "unknown",
+      "server_ownership": {
+        "server": "unknown",
+        "note": "Local copy location does not establish training server."
+      },
+      "exclusion_reason": "Cannot establish baseline versus CMERC or checkpoint selection protocol from plain weights.",
+      "sha256": "f3098fed2734c18171c02a59d014ee27320d845bc1ad5dfa17162b8dcfb49925",
+      "size_bytes": 26278739
+    },
+    {
+      "path": "/data2/yb/paper/lyx-msa/CMERC/checkpoints/MELD_checkpoint.pkl",
+      "family": "official_plain_state_dict",
+      "identity": "pending_confirmation",
+      "selected": false,
+      "identity_evidence": {
+        "method": "Actual trusted checkpoint loaded on CPU",
+        "object_type": "OrderedDict",
+        "tensor_key_count": 83,
+        "metadata_present": false,
+        "note": "Plain state_dict has no args/training flags/provenance; baseline and CMERC share inference architecture."
+      },
+      "selection_protocol": "unknown",
+      "server_ownership": {
+        "server": "unknown",
+        "note": "Local copy location does not establish training server."
+      },
+      "exclusion_reason": "Cannot establish baseline versus CMERC or checkpoint selection protocol from plain weights.",
+      "sha256": "1c72e29c173b749675885bdd4f477bd5d3702ab7cca7eb03cb145850bf0beba7",
+      "size_bytes": 56500755
+    }
+  ]
+}

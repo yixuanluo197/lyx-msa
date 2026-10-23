@@ -1,0 +1,42 @@
+{
+  "status": "passed",
+  "valid_utterances_per_model": {
+    "IEMOCAP": 1623,
+    "MELD": 2610
+  },
+  "full_prediction_rows": 8466,
+  "masked_prediction_rows": 25398,
+  "masked_forward_calls": 120,
+  "original_hashes_verified": 55,
+  "full_probabilities_reused_exactly": true,
+  "exp4_independent_recalculation": true,
+  "exp235_independent_recalculation": true,
+  "original_summary_prefix_unchanged": true,
+  "excel_sheets_verified": 26,
+  "word_tables_verified": 30,
+  "excel_cells_equal_csv": true,
+  "word_summary_cells_equal_csv": true,
+  "original_word_template_found": false,
+  "verified_at": "2026-10-22T08:21:14.780621+00:00",
+  "tests": [
+    {
+      "command": "CMERC_ENV_PREFIX=/data2/yb/conda_envs/cmerc-xp-repro CUDA_VISIBLE_DEVICES='' PYTHONDONTWRITEBYTECODE=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 bash scripts/with_cmerc_env.sh python -m pytest -q -p no:cacheprovider tests/test_high_confidence_analysis.py tests/test_high_confidence_followup_stats.py tests/test_high_confidence_followup_inference.py",
+      "passed": 60,
+      "failed": 0
+    },
+    {
+      "command": "/home/yangbin/miniconda3/bin/python -m pytest -q -p no:cacheprovider tests/test_high_confidence_followup_reports.py",
+      "passed": 7,
+      "failed": 0
+    }
+  ],
+  "additional_read_only_audit": {
+    "experiments": [
+      2,
+      3,
+      5
+    ],
+    "numeric_checks": 8439,
+    "method": "independent standard-library recalculation from original CSVs; no statistics implementation imported"
+  }
+}
