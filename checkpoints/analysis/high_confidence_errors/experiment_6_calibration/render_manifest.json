@@ -1,0 +1,1386 @@
+{
+  "schema_version": 1,
+  "mother_document": {
+    "path": "/data2/yb/paper/lyx-msa/CMERC/checkpoints/analysis/high_confidence_errors/experiments_2_to_5/CMERC_高置信度错误诊断报告_完整版.docx",
+    "sha256": "3e8d3d3e8e4858639898ea2d1f9393adc9cc700ee9cc37cb5ffd83948cedb5c3",
+    "body_prefix_preserved": true,
+    "body_element_count": 263,
+    "body_sha256": "9a8003da4485610063452dc1d151df97bcb82071042c0f90a56a65a83f2e0344"
+  },
+  "word_tables": [
+    {
+      "kind": "overall",
+      "dataset": null,
+      "model": null,
+      "source_csv": "/data2/yb/paper/lyx-msa/CMERC/checkpoints/analysis/high_confidence_errors/experiment_6_calibration/exp6_overall_summary.csv",
+      "source_row_indices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "source_columns": [
+        "dataset",
+        "model",
+        "ece",
+        "mce",
+        "brier_score",
+        "nll"
+      ],
+      "document_table_index": 39,
+      "headers": [
+        "Dataset",
+        "Model",
+        "ECE (%)",
+        "MCE (%)",
+        "Brier",
+        "NLL"
+      ],
+      "columns": [
+        "Dataset",
+        "Model",
+        "ECE (%)",
+        "MCE (%)",
+        "Brier",
+        "NLL"
+      ],
+      "row_count": 4,
+      "rendered_rows": [
+        [
+          "IEMOCAP",
+          "Baseline",
+          "16.4949",
+          "22.2157",
+          "0.492018",
+          "0.980448"
+        ],
+        [
+          "IEMOCAP",
+          "CMERC",
+          "3.7122",
+          "5.9533",
+          "0.430165",
+          "0.778995"
+        ],
+        [
+          "MELD",
+          "Baseline",
+          "26.3121",
+          "38.9407",
+          "0.562259",
+          "1.206667"
+        ],
+        [
+          "MELD",
+          "CMERC",
+          "19.0666",
+          "25.5616",
+          "0.520741",
+          "1.118705"
+        ]
+      ],
+      "rendered_rows_sha256": "fc050254fbca7525753c6959d4244cbf560a695debf99f2df48742128d0463ba",
+      "display_rule": "model mapped Baseline/CMERC; ece and mce multiplied by 100, 4 decimals; Brier/NLL 6 decimals; positive infinity written +∞",
+      "cells_sha256": "1ae006fe8bbb6f32ad36ac2ac9629e49262fada1e952fdd0709c999ebaf26e6e"
+    },
+    {
+      "kind": "bins",
+      "dataset": "IEMOCAP",
+      "model": "baseline",
+      "source_csv": "/data2/yb/paper/lyx-msa/CMERC/checkpoints/analysis/high_confidence_errors/experiment_6_calibration/exp6_confidence_bins.csv",
+      "source_row_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "source_columns": [
+        "lower_bound",
+        "upper_bound",
+        "count",
+        "mean_confidence",
+        "accuracy",
+        "signed_gap"
+      ],
+      "document_table_index": 40,
+      "headers": [
+        "Confidence interval",
+        "Count",
+        "Mean confidence (%)",
+        "Accuracy (%)",
+        "Signed gap (pp)"
+      ],
+      "columns": [
+        "Confidence interval",
+        "Count",
+        "Mean confidence (%)",
+        "Accuracy (%)",
+        "Signed gap (pp)"
+      ],
+      "row_count": 10,
+      "rendered_rows": [
+        [
+          "[0.0, 0.1)",
+          "0",
+          "N/A",
+          "N/A",
+          "N/A"
+        ],
+        [
+          "[0.1, 0.2)",
+          "0",
+          "N/A",
+          "N/A",
+          "N/A"
+        ],
+        [
+          "[0.2, 0.3)",
+          "2",
+          "27.7843",
+          "50.0000",
+          "-22.215720"
+        ],
+        [
+          "[0.3, 0.4)",
+          "14",
+          "37.4819",
+          "21.4286",
+          "+16.053289"
+        ],
+        [
+          "[0.4, 0.5)",
+          "67",
+          "46.2563",
+          "34.3284",
+          "+11.927929"
+        ],
+        [
+          "[0.5, 0.6)",
+          "149",
+          "55.4068",
+          "46.3087",
+          "+9.098077"
+        ],
+        [
+          "[0.6, 0.7)",
+          "158",
+          "64.7600",
+          "50.6329",
+          "+14.127073"
+        ],
+        [
+          "[0.7, 0.8)",
+          "182",
+          "74.9822",
+          "54.9451",
+          "+20.037128"
+        ],
+        [
+          "[0.8, 0.9)",
+          "243",
+          "85.4273",
+          "63.7860",
+          "+21.641320"
+        ],
+        [
+          "[0.9, 1.0]",
+          "808",
+          "97.2892",
+          "80.9406",
+          "+16.348588"
+        ]
+      ],
+      "rendered_rows_sha256": "455a7bbe865f83a9e52d1f2444d578f2b3958f9fd87bd210390985ac90b82009",
+      "display_rule": "bounds formatted 1 decimal, final interval closed; count unchanged; mean confidence and accuracy multiplied by 100, 4 decimals (%); signed gap multiplied by 100, explicitly signed 6 decimals (pp); empty bins N/A",
+      "cells_sha256": "0d2825348976e893142add9aa111a56bee480a6b179dc1a4892c08fd1d9f6154"
+    },
+    {
+      "kind": "bins",
+      "dataset": "IEMOCAP",
+      "model": "cmerc",
+      "source_csv": "/data2/yb/paper/lyx-msa/CMERC/checkpoints/analysis/high_confidence_errors/experiment_6_calibration/exp6_confidence_bins.csv",
+      "source_row_indices": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "source_columns": [
+        "lower_bound",
+        "upper_bound",
+        "count",
+        "mean_confidence",
+        "accuracy",
+        "signed_gap"
+      ],
+      "document_table_index": 41,
+      "headers": [
+        "Confidence interval",
+        "Count",
+        "Mean confidence (%)",
+        "Accuracy (%)",
+        "Signed gap (pp)"
+      ],
+      "columns": [
+        "Confidence interval",
+        "Count",
+        "Mean confidence (%)",
+        "Accuracy (%)",
+        "Signed gap (pp)"
+      ],
+      "row_count": 10,
+      "rendered_rows": [
+        [
+          "[0.0, 0.1)",
+          "0",
+          "N/A",
+          "N/A",
+          "N/A"
+        ],
+        [
+          "[0.1, 0.2)",
+          "0",
+          "N/A",
+          "N/A",
+          "N/A"
+        ],
+        [
+          "[0.2, 0.3)",
+          "4",
+          "26.1274",
+          "25.0000",
+          "+1.127356"
+        ],
+        [
+          "[0.3, 0.4)",
+          "64",
+          "36.0549",
+          "34.3750",
+          "+1.679879"
+        ],
+        [
+          "[0.4, 0.5)",
+          "193",
+          "45.7824",
+          "42.4870",
+          "+3.295390"
+        ],
+        [
+          "[0.5, 0.6)",
+          "239",
+          "55.1649",
+          "53.9749",
+          "+1.189977"
+        ],
+        [
+          "[0.6, 0.7)",
+          "243",
+          "64.9016",
+          "60.0823",
+          "+4.819300"
+        ],
+        [
+          "[0.7, 0.8)",
+          "246",
+          "75.0066",
+          "73.9837",
+          "+1.022885"
+        ],
+        [
+          "[0.8, 0.9)",
+          "272",
+          "85.3480",
+          "80.1471",
+          "+5.200933"
+        ],
+        [
+          "[0.9, 1.0]",
+          "362",
+          "95.7323",
+          "89.7790",
+          "+5.953284"
+        ]
+      ],
+      "rendered_rows_sha256": "1d5dd34ba8ea2ff71679ba07315b34c22feeaca827b6f74f6bd4ee4fc1275037",
+      "display_rule": "bounds formatted 1 decimal, final interval closed; count unchanged; mean confidence and accuracy multiplied by 100, 4 decimals (%); signed gap multiplied by 100, explicitly signed 6 decimals (pp); empty bins N/A",
+      "cells_sha256": "5db8fbc36b58e83787d2d8f039ed64582cd1de38ba1ecbb6a1ed17cb2a5b1383"
+    },
+    {
+      "kind": "bins",
+      "dataset": "MELD",
+      "model": "baseline",
+      "source_csv": "/data2/yb/paper/lyx-msa/CMERC/checkpoints/analysis/high_confidence_errors/experiment_6_calibration/exp6_confidence_bins.csv",
+      "source_row_indices": [
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29
+      ],
+      "source_columns": [
+        "lower_bound",
+        "upper_bound",
+        "count",
+        "mean_confidence",
+        "accuracy",
+        "signed_gap"
+      ],
+      "document_table_index": 42,
+      "headers": [
+        "Confidence interval",
+        "Count",
+        "Mean confidence (%)",
+        "Accuracy (%)",
+        "Signed gap (pp)"
+      ],
+      "columns": [
+        "Confidence interval",
+        "Count",
+        "Mean confidence (%)",
+        "Accuracy (%)",
+        "Signed gap (pp)"
+      ],
+      "row_count": 10,
+      "rendered_rows": [
+        [
+          "[0.0, 0.1)",
+          "0",
+          "N/A",
+          "N/A",
+          "N/A"
+        ],
+        [
+          "[0.1, 0.2)",
+          "6",
+          "19.1851",
+          "16.6667",
+          "+2.518423"
+        ],
+        [
+          "[0.2, 0.3)",
+          "480",
+          "26.4415",
+          "39.1667",
+          "-12.725149"
+        ],
+        [
+          "[0.3, 0.4)",
+          "791",
+          "35.0755",
+          "55.4994",
+          "-20.423907"
+        ],
+        [
+          "[0.4, 0.5)",
+          "866",
+          "45.1059",
+          "78.1755",
+          "-33.069607"
+        ],
+        [
+          "[0.5, 0.6)",
+          "433",
+          "53.6690",
+          "92.6097",
+          "-38.940716"
+        ],
+        [
+          "[0.6, 0.7)",
+          "34",
+          "61.8699",
+          "88.2353",
+          "-26.365442"
+        ],
+        [
+          "[0.7, 0.8)",
+          "0",
+          "N/A",
+          "N/A",
+          "N/A"
+        ],
+        [
+          "[0.8, 0.9)",
+          "0",
+          "N/A",
+          "N/A",
+          "N/A"
+        ],
+        [
+          "[0.9, 1.0]",
+          "0",
+          "N/A",
+          "N/A",
+          "N/A"
+        ]
+      ],
+      "rendered_rows_sha256": "f8bc94cff82efd7b34904d00d9df22a5065f01965a6ea706ae6f458c27f8c1e5",
+      "display_rule": "bounds formatted 1 decimal, final interval closed; count unchanged; mean confidence and accuracy multiplied by 100, 4 decimals (%); signed gap multiplied by 100, explicitly signed 6 decimals (pp); empty bins N/A",
+      "cells_sha256": "2d0ed6623c0d91c94eef03449161616fbccee75d1cc973f2c4141952edd31e78"
+    },
+    {
+      "kind": "bins",
+      "dataset": "MELD",
+      "model": "cmerc",
+      "source_csv": "/data2/yb/paper/lyx-msa/CMERC/checkpoints/analysis/high_confidence_errors/experiment_6_calibration/exp6_confidence_bins.csv",
+      "source_row_indices": [
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39
+      ],
+      "source_columns": [
+        "lower_bound",
+        "upper_bound",
+        "count",
+        "mean_confidence",
+        "accuracy",
+        "signed_gap"
+      ],
+      "document_table_index": 43,
+      "headers": [
+        "Confidence interval",
+        "Count",
+        "Mean confidence (%)",
+        "Accuracy (%)",
+        "Signed gap (pp)"
+      ],
+      "columns": [
+        "Confidence interval",
+        "Count",
+        "Mean confidence (%)",
+        "Accuracy (%)",
+        "Signed gap (pp)"
+      ],
+      "row_count": 10,
+      "rendered_rows": [
+        [
+          "[0.0, 0.1)",
+          "0",
+          "N/A",
+          "N/A",
+          "N/A"
+        ],
+        [
+          "[0.1, 0.2)",
+          "4",
+          "19.6738",
+          "25.0000",
+          "-5.326155"
+        ],
+        [
+          "[0.2, 0.3)",
+          "245",
+          "26.5803",
+          "37.9592",
+          "-11.378862"
+        ],
+        [
+          "[0.3, 0.4)",
+          "570",
+          "35.1004",
+          "47.1930",
+          "-12.092597"
+        ],
+        [
+          "[0.4, 0.5)",
+          "612",
+          "44.9678",
+          "64.8693",
+          "-19.901510"
+        ],
+        [
+          "[0.5, 0.6)",
+          "665",
+          "55.2506",
+          "77.8947",
+          "-22.644182"
+        ],
+        [
+          "[0.6, 0.7)",
+          "457",
+          "64.1279",
+          "89.0591",
+          "-24.931160"
+        ],
+        [
+          "[0.7, 0.8)",
+          "53",
+          "72.5516",
+          "98.1132",
+          "-25.561618"
+        ],
+        [
+          "[0.8, 0.9)",
+          "4",
+          "81.1179",
+          "100.0000",
+          "-18.882137"
+        ],
+        [
+          "[0.9, 1.0]",
+          "0",
+          "N/A",
+          "N/A",
+          "N/A"
+        ]
+      ],
+      "rendered_rows_sha256": "f2bc83719d37b47dbe80688cc70508a9f16ea8f75c7f3bb98851f24025f2d0ab",
+      "display_rule": "bounds formatted 1 decimal, final interval closed; count unchanged; mean confidence and accuracy multiplied by 100, 4 decimals (%); signed gap multiplied by 100, explicitly signed 6 decimals (pp); empty bins N/A",
+      "cells_sha256": "e881ea8602044636b6ef1813e2dbf076e246e90e3a79c27dce51b0a8f1bc4e72"
+    }
+  ],
+  "figures": [
+    {
+      "dataset": "IEMOCAP",
+      "files": {
+        "png": {
+          "path": "/data2/yb/paper/lyx-msa/CMERC/checkpoints/analysis/high_confidence_errors/experiment_6_calibration/figures/reliability_IEMOCAP.png",
+          "sha256": "44e728de3cfc2860b95ecd37e24058e0678ca34fa48d4c01c12802f8c7c2bcaa"
+        },
+        "pdf": {
+          "path": "/data2/yb/paper/lyx-msa/CMERC/checkpoints/analysis/high_confidence_errors/experiment_6_calibration/figures/reliability_IEMOCAP.pdf",
+          "sha256": "a1f404cf14d0ac5de39b215fec3e9f622fd583cd9235fd02a840da5324b2f955"
+        },
+        "svg": {
+          "path": "/data2/yb/paper/lyx-msa/CMERC/checkpoints/analysis/high_confidence_errors/experiment_6_calibration/figures/reliability_IEMOCAP.svg",
+          "sha256": "c1cfd47599fc5ca2f974bd6fca6f6173814edfd57ea827f1e8d7bace55414976"
+        }
+      },
+      "paths": {
+        "png": "/data2/yb/paper/lyx-msa/CMERC/checkpoints/analysis/high_confidence_errors/experiment_6_calibration/figures/reliability_IEMOCAP.png",
+        "pdf": "/data2/yb/paper/lyx-msa/CMERC/checkpoints/analysis/high_confidence_errors/experiment_6_calibration/figures/reliability_IEMOCAP.pdf",
+        "svg": "/data2/yb/paper/lyx-msa/CMERC/checkpoints/analysis/high_confidence_errors/experiment_6_calibration/figures/reliability_IEMOCAP.svg"
+      },
+      "curves": [
+        {
+          "model": "baseline",
+          "source_csv": "/data2/yb/paper/lyx-msa/CMERC/checkpoints/analysis/high_confidence_errors/experiment_6_calibration/exp6_confidence_bins.csv",
+          "bin_indices": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "source_row_indices": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "points": [
+            [
+              0.2778428017497583,
+              0.5
+            ],
+            [
+              0.37481860334926326,
+              0.21428571428571427
+            ],
+            [
+              0.46256287014779746,
+              0.34328358208955223
+            ],
+            [
+              0.5540680210875002,
+              0.46308724832214765
+            ],
+            [
+              0.6475998405593593,
+              0.5063291139240507
+            ],
+            [
+              0.74982182711865,
+              0.5494505494505495
+            ],
+            [
+              0.8542732826961437,
+              0.6378600823045267
+            ],
+            [
+              0.972891817997989,
+              0.8094059405940595
+            ]
+          ],
+          "counts": [
+            0,
+            0,
+            2,
+            14,
+            67,
+            149,
+            158,
+            182,
+            243,
+            808
+          ],
+          "count_source_row_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "model": "cmerc",
+          "source_csv": "/data2/yb/paper/lyx-msa/CMERC/checkpoints/analysis/high_confidence_errors/experiment_6_calibration/exp6_confidence_bins.csv",
+          "bin_indices": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "source_row_indices": [
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19
+          ],
+          "points": [
+            [
+              0.2612735614194951,
+              0.25
+            ],
+            [
+              0.36054879422376895,
+              0.34375
+            ],
+            [
+              0.45782436527349507,
+              0.42487046632124353
+            ],
+            [
+              0.5516487228957135,
+              0.5397489539748954
+            ],
+            [
+              0.6490160436544853,
+              0.6008230452674898
+            ],
+            [
+              0.7500662510371577,
+              0.7398373983739838
+            ],
+            [
+              0.8534799194348665,
+              0.8014705882352942
+            ],
+            [
+              0.9573228915980114,
+              0.8977900552486188
+            ]
+          ],
+          "counts": [
+            0,
+            0,
+            4,
+            64,
+            193,
+            239,
+            243,
+            246,
+            272,
+            362
+          ],
+          "count_source_row_indices": [
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19
+          ]
+        }
+      ],
+      "points": {
+        "baseline": [
+          {
+            "bin_index": 2,
+            "count": 2,
+            "source_row_index": 2,
+            "x": 0.2778428017497583,
+            "y": 0.5
+          },
+          {
+            "bin_index": 3,
+            "count": 14,
+            "source_row_index": 3,
+            "x": 0.37481860334926326,
+            "y": 0.21428571428571427
+          },
+          {
+            "bin_index": 4,
+            "count": 67,
+            "source_row_index": 4,
+            "x": 0.46256287014779746,
+            "y": 0.34328358208955223
+          },
+          {
+            "bin_index": 5,
+            "count": 149,
+            "source_row_index": 5,
+            "x": 0.5540680210875002,
+            "y": 0.46308724832214765
+          },
+          {
+            "bin_index": 6,
+            "count": 158,
+            "source_row_index": 6,
+            "x": 0.6475998405593593,
+            "y": 0.5063291139240507
+          },
+          {
+            "bin_index": 7,
+            "count": 182,
+            "source_row_index": 7,
+            "x": 0.74982182711865,
+            "y": 0.5494505494505495
+          },
+          {
+            "bin_index": 8,
+            "count": 243,
+            "source_row_index": 8,
+            "x": 0.8542732826961437,
+            "y": 0.6378600823045267
+          },
+          {
+            "bin_index": 9,
+            "count": 808,
+            "source_row_index": 9,
+            "x": 0.972891817997989,
+            "y": 0.8094059405940595
+          }
+        ],
+        "cmerc": [
+          {
+            "bin_index": 2,
+            "count": 4,
+            "source_row_index": 12,
+            "x": 0.2612735614194951,
+            "y": 0.25
+          },
+          {
+            "bin_index": 3,
+            "count": 64,
+            "source_row_index": 13,
+            "x": 0.36054879422376895,
+            "y": 0.34375
+          },
+          {
+            "bin_index": 4,
+            "count": 193,
+            "source_row_index": 14,
+            "x": 0.45782436527349507,
+            "y": 0.42487046632124353
+          },
+          {
+            "bin_index": 5,
+            "count": 239,
+            "source_row_index": 15,
+            "x": 0.5516487228957135,
+            "y": 0.5397489539748954
+          },
+          {
+            "bin_index": 6,
+            "count": 243,
+            "source_row_index": 16,
+            "x": 0.6490160436544853,
+            "y": 0.6008230452674898
+          },
+          {
+            "bin_index": 7,
+            "count": 246,
+            "source_row_index": 17,
+            "x": 0.7500662510371577,
+            "y": 0.7398373983739838
+          },
+          {
+            "bin_index": 8,
+            "count": 272,
+            "source_row_index": 18,
+            "x": 0.8534799194348665,
+            "y": 0.8014705882352942
+          },
+          {
+            "bin_index": 9,
+            "count": 362,
+            "source_row_index": 19,
+            "x": 0.9573228915980114,
+            "y": 0.8977900552486188
+          }
+        ]
+      },
+      "caption": "可靠性图仅绘制非空箱的平均最大类别概率与实际准确率；虚线为理想校准。下图为全部十个区间的样本数，空箱不虚构为准确率为零的点。小样本箱估计不稳定；结果是当前本地 validation 权重的单 checkpoint 描述性比较，不支持显著性、跨 seed 稳健性或模态冲突的因果结论。",
+      "axes": {
+        "xlim": [
+          0,
+          1
+        ],
+        "ylim": [
+          0,
+          1
+        ],
+        "aspect": "equal"
+      },
+      "png_dpi": 300
+    },
+    {
+      "dataset": "MELD",
+      "files": {
+        "png": {
+          "path": "/data2/yb/paper/lyx-msa/CMERC/checkpoints/analysis/high_confidence_errors/experiment_6_calibration/figures/reliability_MELD.png",
+          "sha256": "4e6e327a755b985bbfa1ef1ebe6c95274dd0778d25b63aa9272ee0c1969a1459"
+        },
+        "pdf": {
+          "path": "/data2/yb/paper/lyx-msa/CMERC/checkpoints/analysis/high_confidence_errors/experiment_6_calibration/figures/reliability_MELD.pdf",
+          "sha256": "9cceb6ebcdc126ea519a9b9e121b0e445d05a847f411d5cdc4195777f69b7927"
+        },
+        "svg": {
+          "path": "/data2/yb/paper/lyx-msa/CMERC/checkpoints/analysis/high_confidence_errors/experiment_6_calibration/figures/reliability_MELD.svg",
+          "sha256": "f9244e9267f8a8fe8e6dc716d1fc5cc35daa93fd4940e57bbc30b9d53caf9003"
+        }
+      },
+      "paths": {
+        "png": "/data2/yb/paper/lyx-msa/CMERC/checkpoints/analysis/high_confidence_errors/experiment_6_calibration/figures/reliability_MELD.png",
+        "pdf": "/data2/yb/paper/lyx-msa/CMERC/checkpoints/analysis/high_confidence_errors/experiment_6_calibration/figures/reliability_MELD.pdf",
+        "svg": "/data2/yb/paper/lyx-msa/CMERC/checkpoints/analysis/high_confidence_errors/experiment_6_calibration/figures/reliability_MELD.svg"
+      },
+      "curves": [
+        {
+          "model": "baseline",
+          "source_csv": "/data2/yb/paper/lyx-msa/CMERC/checkpoints/analysis/high_confidence_errors/experiment_6_calibration/exp6_confidence_bins.csv",
+          "bin_indices": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "source_row_indices": [
+            21,
+            22,
+            23,
+            24,
+            25,
+            26
+          ],
+          "points": [
+            [
+              0.1918509005231026,
+              0.16666666666666666
+            ],
+            [
+              0.2644151730510976,
+              0.39166666666666666
+            ],
+            [
+              0.3507546046651908,
+              0.5549936788874842
+            ],
+            [
+              0.45105912766787176,
+              0.7817551963048499
+            ],
+            [
+              0.536689840053087,
+              0.9260969976905312
+            ],
+            [
+              0.6186985167803046,
+              0.8823529411764706
+            ]
+          ],
+          "counts": [
+            0,
+            6,
+            480,
+            791,
+            866,
+            433,
+            34,
+            0,
+            0,
+            0
+          ],
+          "count_source_row_indices": [
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29
+          ]
+        },
+        {
+          "model": "cmerc",
+          "source_csv": "/data2/yb/paper/lyx-msa/CMERC/checkpoints/analysis/high_confidence_errors/experiment_6_calibration/exp6_confidence_bins.csv",
+          "bin_indices": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "source_row_indices": [
+            31,
+            32,
+            33,
+            34,
+            35,
+            36,
+            37,
+            38
+          ],
+          "points": [
+            [
+              0.196738453783387,
+              0.25
+            ],
+            [
+              0.26580322093332065,
+              0.3795918367346939
+            ],
+            [
+              0.3510038513364502,
+              0.47192982456140353
+            ],
+            [
+              0.44967771067238554,
+              0.6486928104575164
+            ],
+            [
+              0.5525055484384724,
+              0.7789473684210526
+            ],
+            [
+              0.6412792083666228,
+              0.8905908096280087
+            ],
+            [
+              0.7255158931746214,
+              0.9811320754716981
+            ],
+            [
+              0.8111786280722408,
+              1.0
+            ]
+          ],
+          "counts": [
+            0,
+            4,
+            245,
+            570,
+            612,
+            665,
+            457,
+            53,
+            4,
+            0
+          ],
+          "count_source_row_indices": [
+            30,
+            31,
+            32,
+            33,
+            34,
+            35,
+            36,
+            37,
+            38,
+            39
+          ]
+        }
+      ],
+      "points": {
+        "baseline": [
+          {
+            "bin_index": 1,
+            "count": 6,
+            "source_row_index": 21,
+            "x": 0.1918509005231026,
+            "y": 0.16666666666666666
+          },
+          {
+            "bin_index": 2,
+            "count": 480,
+            "source_row_index": 22,
+            "x": 0.2644151730510976,
+            "y": 0.39166666666666666
+          },
+          {
+            "bin_index": 3,
+            "count": 791,
+            "source_row_index": 23,
+            "x": 0.3507546046651908,
+            "y": 0.5549936788874842
+          },
+          {
+            "bin_index": 4,
+            "count": 866,
+            "source_row_index": 24,
+            "x": 0.45105912766787176,
+            "y": 0.7817551963048499
+          },
+          {
+            "bin_index": 5,
+            "count": 433,
+            "source_row_index": 25,
+            "x": 0.536689840053087,
+            "y": 0.9260969976905312
+          },
+          {
+            "bin_index": 6,
+            "count": 34,
+            "source_row_index": 26,
+            "x": 0.6186985167803046,
+            "y": 0.8823529411764706
+          }
+        ],
+        "cmerc": [
+          {
+            "bin_index": 1,
+            "count": 4,
+            "source_row_index": 31,
+            "x": 0.196738453783387,
+            "y": 0.25
+          },
+          {
+            "bin_index": 2,
+            "count": 245,
+            "source_row_index": 32,
+            "x": 0.26580322093332065,
+            "y": 0.3795918367346939
+          },
+          {
+            "bin_index": 3,
+            "count": 570,
+            "source_row_index": 33,
+            "x": 0.3510038513364502,
+            "y": 0.47192982456140353
+          },
+          {
+            "bin_index": 4,
+            "count": 612,
+            "source_row_index": 34,
+            "x": 0.44967771067238554,
+            "y": 0.6486928104575164
+          },
+          {
+            "bin_index": 5,
+            "count": 665,
+            "source_row_index": 35,
+            "x": 0.5525055484384724,
+            "y": 0.7789473684210526
+          },
+          {
+            "bin_index": 6,
+            "count": 457,
+            "source_row_index": 36,
+            "x": 0.6412792083666228,
+            "y": 0.8905908096280087
+          },
+          {
+            "bin_index": 7,
+            "count": 53,
+            "source_row_index": 37,
+            "x": 0.7255158931746214,
+            "y": 0.9811320754716981
+          },
+          {
+            "bin_index": 8,
+            "count": 4,
+            "source_row_index": 38,
+            "x": 0.8111786280722408,
+            "y": 1.0
+          }
+        ]
+      },
+      "caption": "可靠性图仅绘制非空箱的平均最大类别概率与实际准确率；虚线为理想校准。下图为全部十个区间的样本数，空箱不虚构为准确率为零的点。小样本箱估计不稳定；结果是当前本地 validation 权重的单 checkpoint 描述性比较，不支持显著性、跨 seed 稳健性或模态冲突的因果结论。",
+      "axes": {
+        "xlim": [
+          0,
+          1
+        ],
+        "ylim": [
+          0,
+          1
+        ],
+        "aspect": "equal"
+      },
+      "png_dpi": 300
+    }
+  ],
+  "sheets": [
+    {
+      "name": "Overall",
+      "worksheet_index": 1,
+      "source_csv": "/data2/yb/paper/lyx-msa/CMERC/checkpoints/analysis/high_confidence_errors/experiment_6_calibration/exp6_overall_summary.csv",
+      "source_row_indices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "row_count": 4,
+      "columns": [
+        "dataset",
+        "model",
+        "input_condition",
+        "valid_utterances",
+        "accuracy",
+        "mean_confidence",
+        "ece",
+        "mce",
+        "brier_score",
+        "nll",
+        "n_bins",
+        "zero_true_probability_count"
+      ],
+      "rendered_rows_sha256": "5f7ca828b867bb25e389a75a982c8b423a11e44fd352177b71d75976b99bcd78"
+    },
+    {
+      "name": "IEMOCAP_baseline",
+      "worksheet_index": 2,
+      "source_csv": "/data2/yb/paper/lyx-msa/CMERC/checkpoints/analysis/high_confidence_errors/experiment_6_calibration/exp6_confidence_bins.csv",
+      "source_row_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "row_count": 10,
+      "columns": [
+        "dataset",
+        "model",
+        "bin_index",
+        "lower_bound",
+        "upper_bound",
+        "count",
+        "mean_confidence",
+        "accuracy",
+        "signed_gap",
+        "absolute_gap",
+        "weight",
+        "ece_contribution"
+      ],
+      "rendered_rows_sha256": "0105e4884f72cd7d72455efe6dde7cdc1593390d38fc58bfca30e82e82b791d6"
+    },
+    {
+      "name": "IEMOCAP_cmerc",
+      "worksheet_index": 3,
+      "source_csv": "/data2/yb/paper/lyx-msa/CMERC/checkpoints/analysis/high_confidence_errors/experiment_6_calibration/exp6_confidence_bins.csv",
+      "source_row_indices": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "row_count": 10,
+      "columns": [
+        "dataset",
+        "model",
+        "bin_index",
+        "lower_bound",
+        "upper_bound",
+        "count",
+        "mean_confidence",
+        "accuracy",
+        "signed_gap",
+        "absolute_gap",
+        "weight",
+        "ece_contribution"
+      ],
+      "rendered_rows_sha256": "9fa48e31fe31feebeabfee420c1b159ec48a5189d60a37135291b9085862b188"
+    },
+    {
+      "name": "MELD_baseline",
+      "worksheet_index": 4,
+      "source_csv": "/data2/yb/paper/lyx-msa/CMERC/checkpoints/analysis/high_confidence_errors/experiment_6_calibration/exp6_confidence_bins.csv",
+      "source_row_indices": [
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29
+      ],
+      "row_count": 10,
+      "columns": [
+        "dataset",
+        "model",
+        "bin_index",
+        "lower_bound",
+        "upper_bound",
+        "count",
+        "mean_confidence",
+        "accuracy",
+        "signed_gap",
+        "absolute_gap",
+        "weight",
+        "ece_contribution"
+      ],
+      "rendered_rows_sha256": "4d1501a2a7914ccc330521751e9d36eeaab973b98da78e5b5731ad2c8c74095c"
+    },
+    {
+      "name": "MELD_cmerc",
+      "worksheet_index": 5,
+      "source_csv": "/data2/yb/paper/lyx-msa/CMERC/checkpoints/analysis/high_confidence_errors/experiment_6_calibration/exp6_confidence_bins.csv",
+      "source_row_indices": [
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39
+      ],
+      "row_count": 10,
+      "columns": [
+        "dataset",
+        "model",
+        "bin_index",
+        "lower_bound",
+        "upper_bound",
+        "count",
+        "mean_confidence",
+        "accuracy",
+        "signed_gap",
+        "absolute_gap",
+        "weight",
+        "ece_contribution"
+      ],
+      "rendered_rows_sha256": "442dbed830bb9d676d76760ed62dc09a8dbcfdedf516bd81cb08884a5c0dac9b"
+    }
+  ],
+  "sources": {
+    "exp6_overall_summary.csv": {
+      "path": "/data2/yb/paper/lyx-msa/CMERC/checkpoints/analysis/high_confidence_errors/experiment_6_calibration/exp6_overall_summary.csv",
+      "sha256": "1a83067a194b17c3d5130a2e57b2f81d85126567312cf4e43df3b50a41981767"
+    },
+    "exp6_confidence_bins.csv": {
+      "path": "/data2/yb/paper/lyx-msa/CMERC/checkpoints/analysis/high_confidence_errors/experiment_6_calibration/exp6_confidence_bins.csv",
+      "sha256": "f14cec49866d08b16e13b53e2ebc6f04574a81d41d182621f58f0195c056df10"
+    },
+    "SUMMARY.md": {
+      "path": "/data2/yb/paper/lyx-msa/CMERC/checkpoints/analysis/high_confidence_errors/experiment_6_calibration/SUMMARY.md",
+      "sha256": "34d5a7b7aa9641991fcaebbe0f9cc1583feea9024c86781c46c1ffa1bce76db5"
+    },
+    "run_manifest.json": {
+      "path": "/data2/yb/paper/lyx-msa/CMERC/checkpoints/analysis/high_confidence_errors/experiment_6_calibration/run_manifest.json",
+      "sha256": "09a003adb6cb4f16a3bc33dc64fe48ae0c25ad7f1e3e948503abe558c7605294"
+    }
+  },
+  "outputs": {
+    "CMERC_高置信度错误诊断报告_实验一至六.docx": {
+      "path": "/data2/yb/paper/lyx-msa/CMERC/checkpoints/analysis/high_confidence_errors/experiment_6_calibration/CMERC_高置信度错误诊断报告_实验一至六.docx",
+      "sha256": "58462820cecb08165fcb1b9cf53f8d833c5ddcff379a55dfa488bca9205cfe9b"
+    },
+    "CMERC_实验六_概率校准结果.xlsx": {
+      "path": "/data2/yb/paper/lyx-msa/CMERC/checkpoints/analysis/high_confidence_errors/experiment_6_calibration/CMERC_实验六_概率校准结果.xlsx",
+      "sha256": "89ef36ad9e433ce0a696aa9ea623efbd19eab3f7b85ca45655e19a24d250bb74"
+    },
+    "figure_contract.md": {
+      "path": "/data2/yb/paper/lyx-msa/CMERC/checkpoints/analysis/high_confidence_errors/experiment_6_calibration/figure_contract.md",
+      "sha256": "6ea8acbcd7ff258550e64e043a67c08fb83a0add0f94eb6bc223be27d0071c98"
+    },
+    "figures/reliability_IEMOCAP.png": {
+      "path": "/data2/yb/paper/lyx-msa/CMERC/checkpoints/analysis/high_confidence_errors/experiment_6_calibration/figures/reliability_IEMOCAP.png",
+      "sha256": "44e728de3cfc2860b95ecd37e24058e0678ca34fa48d4c01c12802f8c7c2bcaa"
+    },
+    "figures/reliability_IEMOCAP.pdf": {
+      "path": "/data2/yb/paper/lyx-msa/CMERC/checkpoints/analysis/high_confidence_errors/experiment_6_calibration/figures/reliability_IEMOCAP.pdf",
+      "sha256": "a1f404cf14d0ac5de39b215fec3e9f622fd583cd9235fd02a840da5324b2f955"
+    },
+    "figures/reliability_IEMOCAP.svg": {
+      "path": "/data2/yb/paper/lyx-msa/CMERC/checkpoints/analysis/high_confidence_errors/experiment_6_calibration/figures/reliability_IEMOCAP.svg",
+      "sha256": "c1cfd47599fc5ca2f974bd6fca6f6173814edfd57ea827f1e8d7bace55414976"
+    },
+    "figures/reliability_MELD.png": {
+      "path": "/data2/yb/paper/lyx-msa/CMERC/checkpoints/analysis/high_confidence_errors/experiment_6_calibration/figures/reliability_MELD.png",
+      "sha256": "4e6e327a755b985bbfa1ef1ebe6c95274dd0778d25b63aa9272ee0c1969a1459"
+    },
+    "figures/reliability_MELD.pdf": {
+      "path": "/data2/yb/paper/lyx-msa/CMERC/checkpoints/analysis/high_confidence_errors/experiment_6_calibration/figures/reliability_MELD.pdf",
+      "sha256": "9cceb6ebcdc126ea519a9b9e121b0e445d05a847f411d5cdc4195777f69b7927"
+    },
+    "figures/reliability_MELD.svg": {
+      "path": "/data2/yb/paper/lyx-msa/CMERC/checkpoints/analysis/high_confidence_errors/experiment_6_calibration/figures/reliability_MELD.svg",
+      "sha256": "f9244e9267f8a8fe8e6dc716d1fc5cc35daa93fd4940e57bbc30b9d53caf9003"
+    }
+  }
+}

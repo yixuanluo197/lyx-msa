@@ -1,0 +1,86 @@
+{
+  "status": "passed",
+  "independent_method": "NumPy recomputation from original full-input CSVs; production metric implementation not imported",
+  "samples_checked": 8466,
+  "summary_rows_checked": 4,
+  "bin_rows_checked": 40,
+  "original_artifacts_hashes_verified": 66,
+  "labels_text_ids_probabilities_aligned": true,
+  "empty_bins_na_verified": true,
+  "references": {
+    "IEMOCAP/baseline": {
+      "valid_utterances": 1623,
+      "accuracy": 0.6685150955021565,
+      "mean_confidence": 0.8329170286345289,
+      "ece": 0.16494945549404877,
+      "mce": 0.22215719825024172,
+      "brier_score": 0.4920175451728595,
+      "nll": 0.9804484391064617,
+      "n_bins": 10,
+      "zero_true_probability_count": 0
+    },
+    "IEMOCAP/cmerc": {
+      "valid_utterances": 1623,
+      "accuracy": 0.680837954405422,
+      "mean_confidence": 0.7179599418076426,
+      "ece": 0.037121987402220405,
+      "mce": 0.05953283634939266,
+      "brier_score": 0.43016534432619563,
+      "nll": 0.7789953495267861,
+      "n_bins": 10,
+      "zero_true_probability_count": 0
+    },
+    "MELD/baseline": {
+      "valid_utterances": 2610,
+      "accuracy": 0.6651340996168582,
+      "mean_confidence": 0.40212909411177217,
+      "ece": 0.2631207950860353,
+      "mce": 0.38940715763744416,
+      "brier_score": 0.5622586687657248,
+      "nll": 1.2066666455332804,
+      "n_bins": 10,
+      "zero_true_probability_count": 0
+    },
+    "MELD/cmerc": {
+      "valid_utterances": 2610,
+      "accuracy": 0.6670498084291188,
+      "mean_confidence": 0.47638373253745153,
+      "ece": 0.19066607589166726,
+      "mce": 0.2556161822970767,
+      "brier_score": 0.5207413799382419,
+      "nll": 1.1187046025105363,
+      "n_bins": 10,
+      "zero_true_probability_count": 0
+    }
+  },
+  "word_tables_checked": 5,
+  "three_line_format_verified": true,
+  "original_word_body_and_section_unchanged": true,
+  "excel_sheets_checked": 5,
+  "all_word_excel_cells_equal_csv": true,
+  "reliability_figures_checked": 2,
+  "plotted_points_and_histograms_equal_csv": true,
+  "editable_svg_text_verified": true,
+  "verified_at": "2026-10-23T05:51:18.821546+00:00",
+  "visual_review": {
+    "method": "Direct inspection of both exported PNG figures against the declared figure contract and CSV values",
+    "figures": [
+      "figures/reliability_IEMOCAP.png",
+      "figures/reliability_MELD.png"
+    ],
+    "axes": [
+      0,
+      1
+    ],
+    "labels_and_legend_readable": true,
+    "both_model_styles_distinguishable": true,
+    "empty_bins_not_plotted": true,
+    "no_reference_image_or_pixel_similarity_claim": true,
+    "scope": "Scientific reliability diagrams; no UI screenshot reference supplied"
+  },
+  "tests": {
+    "passed": 92,
+    "failed": 0,
+    "command": "/home/yangbin/miniconda3/bin/python -m pytest -q -p no:cacheprovider tests/test_high_confidence_calibration.py tests/test_render_calibration_experiment.py tests/test_high_confidence_followup_stats.py tests/test_high_confidence_followup_reports.py tests/test_high_confidence_analysis.py"
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "status": "completed",
+  "completed_at": "2026-10-23T05:51:18.865703+00:00",
+  "experiment": 6,
+  "new_training": false,
+  "new_inference": false,
+  "source_snapshot": {
+    "scripts/high_confidence_calibration.py": {
+      "snapshot": "/data2/yb/paper/lyx-msa/CMERC/checkpoints/analysis/high_confidence_errors/experiment_6_calibration/source_code/scripts/high_confidence_calibration.py",
+      "sha256": "de692252c418c85c350ad3ee6737f0a2da5683fcf2398150921eb987e466ec52"
+    },
+    "scripts/run_calibration_experiment.py": {
+      "snapshot": "/data2/yb/paper/lyx-msa/CMERC/checkpoints/analysis/high_confidence_errors/experiment_6_calibration/source_code/scripts/run_calibration_experiment.py",
+      "sha256": "ecbba9cfe15188c8e182759db3fcfb4d3ac76d82c8844c95508f8e4805ec1ea5"
+    },
+    "scripts/render_calibration_experiment.py": {
+      "snapshot": "/data2/yb/paper/lyx-msa/CMERC/checkpoints/analysis/high_confidence_errors/experiment_6_calibration/source_code/scripts/render_calibration_experiment.py",
+      "sha256": "733099af3f9df9b5fc1f86199ec9895cb3b475216922149773c5946a67ae1a6a"
+    },
+    "scripts/verify_calibration_experiment.py": {
+      "snapshot": "/data2/yb/paper/lyx-msa/CMERC/checkpoints/analysis/high_confidence_errors/experiment_6_calibration/source_code/scripts/verify_calibration_experiment.py",
+      "sha256": "097d6da057fe6f6bade2bdc3b32b30839f3a836420a75a18fbbf9580dafb0d27"
+    },
+    "scripts/high_confidence_followup_stats.py": {
+      "snapshot": "/data2/yb/paper/lyx-msa/CMERC/checkpoints/analysis/high_confidence_errors/experiment_6_calibration/source_code/scripts/high_confidence_followup_stats.py",
+      "sha256": "e30d3a299b3d1c28834a53bf881bb5440d8b134226090af85b375a36709e47ea"
+    },
+    "scripts/render_high_confidence_followups.py": {
+      "snapshot": "/data2/yb/paper/lyx-msa/CMERC/checkpoints/analysis/high_confidence_errors/experiment_6_calibration/source_code/scripts/render_high_confidence_followups.py",
+      "sha256": "f29ed4f546d68738736232ccf57a28fe6a42958397a782665810e294cdf9f8e0"
+    },
+    "tests/test_high_confidence_calibration.py": {
+      "snapshot": "/data2/yb/paper/lyx-msa/CMERC/checkpoints/analysis/high_confidence_errors/experiment_6_calibration/source_code/tests/test_high_confidence_calibration.py",
+      "sha256": "e46b772a0f34c3df5ed268e60ba678bd3b731909d2cd661ecb61e5f943d3edac"
+    },
+    "tests/test_render_calibration_experiment.py": {
+      "snapshot": "/data2/yb/paper/lyx-msa/CMERC/checkpoints/analysis/high_confidence_errors/experiment_6_calibration/source_code/tests/test_render_calibration_experiment.py",
+      "sha256": "093a07cd823492260427b7cf9466e3c34bacc49dd347893c3a9968ea962f5b9a"
+    }
+  },
+  "statistics_manifest": {
+    "path": "/data2/yb/paper/lyx-msa/CMERC/checkpoints/analysis/high_confidence_errors/experiment_6_calibration/run_manifest.json",
+    "sha256": "09a003adb6cb4f16a3bc33dc64fe48ae0c25ad7f1e3e948503abe558c7605294"
+  },
+  "render_manifest": {
+    "path": "/data2/yb/paper/lyx-msa/CMERC/checkpoints/analysis/high_confidence_errors/experiment_6_calibration/render_manifest.json",
+    "sha256": "bd1fcb649fc6a634f701a920401e8a1a9c94f1ff6e786a38639f24def66e1ce2"
+  },
+  "verification_file": "/data2/yb/paper/lyx-msa/CMERC/checkpoints/analysis/high_confidence_errors/experiment_6_calibration/verification.json",
+  "environment": {
+    "python": "3.13.11 | packaged by Anaconda, Inc. | (main, Dec 10 2025, 21:28:48) [GCC 14.3.0]",
+    "numpy": "2.4.4",
+    "matplotlib": "3.10.9",
+    "python_docx": "1.2.0",
+    "xlsxwriter": "3.2.9",
+    "lxml": "6.1.0"
+  },
+  "limitations": [
+    "Fixed local validation checkpoints; no author-release comparison, seed variability or significance claim.",
+    "Original experiment-1 Word mother remains unavailable; original five-experiment report is preserved exactly, including its disclosed Markdown fallback.",
+    "Statistical run_manifest is immutable after rendering; this separate completion record records the final workflow state."
+  ],
+  "tests_passed": 92
+}
