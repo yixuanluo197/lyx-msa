@@ -1,0 +1,49 @@
+{
+  "recorded_at_utc": "2026-10-23T06:34:09.905994+00:00",
+  "analysis_only_no_new_inference": true,
+  "validated_commands": [
+    [
+      "/data2/yb/conda_envs/cmerc-xp-repro/bin/python",
+      "/data2/yb/paper/lyx-msa/CMERC/experiments/minimal_ablation_validation/20261023T043115Z/scripts/verify_results.py"
+    ],
+    [
+      "/data2/yb/conda_envs/cmerc-xp-repro/bin/python",
+      "/data2/yb/paper/lyx-msa/CMERC/experiments/minimal_ablation_validation/20261023T043115Z/scripts/summarize_minimal.py"
+    ],
+    [
+      "/home/yangbin/miniconda3/envs/multimodalerc310/bin/python",
+      "/data2/yb/paper/lyx-msa/CMERC/experiments/minimal_ablation_validation/20261023T043115Z/scripts/plot_minimal.py"
+    ]
+  ],
+  "scripts_sha256": {
+    "scripts/finalize_when_done.py": "d743d5958203e55e92bc61f2f9122ac0baa0940d2c8311fb3b60ee8fe3143571",
+    "scripts/memory_observer.py": "eda9ebfe3c82eb0fcac02fd26f86b5b1c53e7d83ce43cc27d1fce402a849a524",
+    "scripts/observe_training.py": "47a20127d33806890397606bb562f9c9338b71e1b5bd2225f0eaa56e2ff03f3e",
+    "scripts/plot_minimal.py": "5bb4bca4b02beaefffd33e87d56a0e56a6fade10cd8ea32122a84d7dbdf7698e",
+    "scripts/run_preflights.py": "fa60f64799f952697c4cf39ecdc8a446e3e9c2f3d070851bf38216967a454601",
+    "scripts/status.py": "2e379902eff17db9d12a935a10416e85c33ac15597a5d9b6bdcbcc257aa9cf9a",
+    "scripts/summarize_minimal.py": "480243a2fd89ef23a6036e2245c8caec7c42c9ef60dc30f256bd83cf2637daf4",
+    "scripts/supervise.py": "509e912cda41db8e1a7f1a9a9f0d7bb1aacf78b2a71f76b448e4abf0f85a741b",
+    "scripts/test_observer.py": "f8d5e651a1c7ec553f5337217f30868a99f2fad7d3898f794547b15f174b203b",
+    "scripts/test_source_order.py": "8bbd1a8a7e45bac57fbf6c5110bfc1d0ec6b7d4b2d1ab67e162c55bad918df99",
+    "scripts/verify_results.py": "315bde05ed1cb12d6f5298a658af26e5aa62dc1dfa5770e300ebeb20b66674cb"
+  },
+  "generated_summary_time_utc": "2026-10-23T06:32:54.427474+00:00",
+  "independent_review": {
+    "MELD_wo_cc": "Saved prediction CPU recomputation, 2548 train batches, CC zero weighted; HSCL/CL retained.",
+    "IEMOCAP_baseline": "Saved prediction CPU recomputation, 560 train batches with all108 dialogues in source order each epoch.",
+    "IEMOCAP_cmerc": "Saved prediction CPU recomputation, 541 train batches, all80 curriculum subsets independently rebuilt.",
+    "scientific_report": "Historical controls and cross-card limits retained; negative validation gain shrinks without absolute validation improvement. Both reports links checked after correction."
+  },
+  "root_report": {
+    "path": "/data2/yb/paper/lyx-msa/CMERC/reports/CMERC_MINIMAL_ABLATION_RESULTS.md",
+    "sha256": "b04642509f9af23329ccddf919c9ebc52c69ae9c34ee24a3dfb2bc36dd286250"
+  },
+  "delivery_checks": {
+    "parsed_scripts": 11,
+    "resolved_report_links": 40,
+    "complete_figures": 14,
+    "current_input_hashes": true,
+    "visual_review": "Final MELD and IEMOCAP WF1, IEMOCAP loss and validation gain figures inspected; labels and legends readable without overflow."
+  }
+}

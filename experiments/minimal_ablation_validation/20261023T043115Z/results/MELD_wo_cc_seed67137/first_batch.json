@@ -1,0 +1,53 @@
+{
+  "initial_model_sha256": "bae890a3045955522ca88978adfe7efc5e765ad1cd26b49afbae45276a4fa162",
+  "rng_before_train": "9daedfa93e4d027611ddb30db8e30791651fd90bd6f2cd2e44fc7aa211eddfa3",
+  "rng_after_forward": "737ab99b3e094ee5568fbb3914623cdf18ac252914d8f20e967400ab78e99d40",
+  "model_before_step_sha256": "9423847a4f74b130a7c3e7d2eefe6f918d626a801b5cf40f5bb9c7da7b9fa8a3",
+  "model_after_step_sha256": "fa4313066fb2c4585db908fb2ca0b8f729549b1a27bb8bc2062b4c1d6848ce28",
+  "optimizer_updated_parameters": true,
+  "rng_after_step": "737ab99b3e094ee5568fbb3914623cdf18ac252914d8f20e967400ab78e99d40",
+  "components": {
+    "classification_loss": 5.825273036956787,
+    "cc_loss": 46.20790100097656,
+    "mscl_loss": 7.999588489532471,
+    "cscl_loss": 4.8782572746276855,
+    "total_loss": 7.7569499015808105
+  },
+  "dialogue_ids": [
+    973,
+    332,
+    201,
+    700,
+    352,
+    474,
+    30,
+    924,
+    336,
+    652,
+    200,
+    226,
+    182,
+    804,
+    869,
+    214
+  ],
+  "lengths": [
+    19,
+    16,
+    10,
+    13,
+    7,
+    19,
+    16,
+    7,
+    21,
+    16,
+    10,
+    19,
+    16,
+    10,
+    18,
+    11
+  ],
+  "gradients_finite": true
+}

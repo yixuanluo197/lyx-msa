@@ -1,0 +1,687 @@
+{
+  "created_at_utc": "2026-10-23T07:53:35.383972+00:00",
+  "repository": "https://github.com/yixuanluo197/lyx-msa",
+  "branch": "main",
+  "publication_parent_commit": "3d00280ef64d4b3ab6831d84c0a9df0f24703e4d",
+  "batch": "experiments/minimal_ablation_validation/20261023T043115Z",
+  "formal_runs": 3,
+  "new_training_or_inference_during_publication": false,
+  "files": {
+    "README.md": {
+      "bytes": 7558,
+      "sha256": "a8e4823efba5cac88dacbac2cb62da7aba1b3e3f4ea9fdceb7cb7511b07c80c7"
+    },
+    "experiment_records/06_minimal_ablation_validation/README.md": {
+      "bytes": 3370,
+      "sha256": "9e5fb70cf2c77fa100d18ac4c83f8357acd3a8c8ed564ef5aa3117d56fe9476b"
+    },
+    "experiment_records/README.md": {
+      "bytes": 5675,
+      "sha256": "5703626dd882ca90f27839af073eb3f1355808b7243e6cd2c98d164b9ebff015"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/.gitignore": {
+      "bytes": 433,
+      "sha256": "c4c47ceae804c37d426766bb84e7b5a8730dca4e3ed47a95908956d532f17d14"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/README.md": {
+      "bytes": 4403,
+      "sha256": "5798edb117aced6994ba82c655064383a80e71a8fcd8bf7f3b0d91966c2359cd"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/code_source_order/HypergraphConv.py": {
+      "bytes": 7795,
+      "sha256": "9297a572e1763a74c7984eb75dfb15fa8143bf131a44cf50433c307ef7f3b5d2"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/code_source_order/caldiff/IEMOCAP_diff.pkl": {
+      "bytes": 3308,
+      "sha256": "db4c7b96f169948a3615a62b29d2a793bd64cccd8a0387b1de9d7ceab348a150"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/code_source_order/caldiff/MELD_diff.pkl": {
+      "bytes": 13587,
+      "sha256": "db005ceb0e4847caffc8571eaa94ab7c5b4a310abd615b12c995c9a22ff060e0"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/code_source_order/causal_graph.py": {
+      "bytes": 5367,
+      "sha256": "3dd761b05cca95afa7b2f7b70e4640ee3ccfbb5726c3d705c0808468f7181da3"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/code_source_order/clloss.py": {
+      "bytes": 14384,
+      "sha256": "012c5d08f51eaaa99bdbd10d61e3d108275bf3dd44e42767b2e186e5be72ec3f"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/code_source_order/dataloader.py": {
+      "bytes": 10492,
+      "sha256": "337a7dc92d9e69e4f8854a8031197085ffca84cdc08b070b6ef5b05ebb6f3390"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/code_source_order/evaluation_metrics.py": {
+      "bytes": 3954,
+      "sha256": "ed831a1f38d5706d6d47d7310d03e8b35f6eb4573623c9650934c638d65835c8"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/code_source_order/high_fre_conv.py": {
+      "bytes": 1526,
+      "sha256": "f4414c019ca7f656a662698bb9615bf15ac6325a73caa06ff487e158f58f39df"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/code_source_order/model.py": {
+      "bytes": 37617,
+      "sha256": "ee84329b800e37a8ac652b58aa6f0fc3dee47cb2cf38feda14f5c0de26ec9a82"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/code_source_order/model_GCN.py": {
+      "bytes": 22167,
+      "sha256": "830d401ff3e4b30298199b927a0bad3a9056400429506abcc2d66a7db8b76f9f"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/code_source_order/model_cm.py": {
+      "bytes": 75667,
+      "sha256": "94acf11e2e9edd1bcd98049eb12d85b3604f8d71d46f64f0c3b8b9837fa12625"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/code_source_order/model_hyper.py": {
+      "bytes": 17571,
+      "sha256": "fb9ef2ee268afa697474c9199d2136a7519b5226adb4abeec4a9cf1aea678aba"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/code_source_order/source_origin.json": {
+      "bytes": 222,
+      "sha256": "7d5c10a6e92d846fde1aca1d52ad077bd21ac5cc9846c58b501d501b81738d4b"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/code_source_order/train.py": {
+      "bytes": 24415,
+      "sha256": "35a18a2bf33d8e3e0d8459955b1f0ce525d4f28970f9af801fb27087bcf02ad7"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/code_source_order/train_cm.py": {
+      "bytes": 76613,
+      "sha256": "9904778c9df3fc57c99fcc00e93042c672ca5423dff1b21be3e85d34e53da9e3"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/code_xp04/HypergraphConv.py": {
+      "bytes": 7795,
+      "sha256": "9297a572e1763a74c7984eb75dfb15fa8143bf131a44cf50433c307ef7f3b5d2"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/code_xp04/caldiff/IEMOCAP_diff.pkl": {
+      "bytes": 3308,
+      "sha256": "db4c7b96f169948a3615a62b29d2a793bd64cccd8a0387b1de9d7ceab348a150"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/code_xp04/caldiff/MELD_diff.pkl": {
+      "bytes": 13587,
+      "sha256": "db005ceb0e4847caffc8571eaa94ab7c5b4a310abd615b12c995c9a22ff060e0"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/code_xp04/causal_graph.py": {
+      "bytes": 5367,
+      "sha256": "3dd761b05cca95afa7b2f7b70e4640ee3ccfbb5726c3d705c0808468f7181da3"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/code_xp04/clloss.py": {
+      "bytes": 14384,
+      "sha256": "012c5d08f51eaaa99bdbd10d61e3d108275bf3dd44e42767b2e186e5be72ec3f"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/code_xp04/dataloader.py": {
+      "bytes": 10492,
+      "sha256": "337a7dc92d9e69e4f8854a8031197085ffca84cdc08b070b6ef5b05ebb6f3390"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/code_xp04/evaluation_metrics.py": {
+      "bytes": 3954,
+      "sha256": "ed831a1f38d5706d6d47d7310d03e8b35f6eb4573623c9650934c638d65835c8"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/code_xp04/high_fre_conv.py": {
+      "bytes": 1526,
+      "sha256": "f4414c019ca7f656a662698bb9615bf15ac6325a73caa06ff487e158f58f39df"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/code_xp04/model.py": {
+      "bytes": 37617,
+      "sha256": "ee84329b800e37a8ac652b58aa6f0fc3dee47cb2cf38feda14f5c0de26ec9a82"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/code_xp04/model_GCN.py": {
+      "bytes": 22167,
+      "sha256": "830d401ff3e4b30298199b927a0bad3a9056400429506abcc2d66a7db8b76f9f"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/code_xp04/model_cm.py": {
+      "bytes": 75667,
+      "sha256": "94acf11e2e9edd1bcd98049eb12d85b3604f8d71d46f64f0c3b8b9837fa12625"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/code_xp04/model_hyper.py": {
+      "bytes": 17571,
+      "sha256": "fb9ef2ee268afa697474c9199d2136a7519b5226adb4abeec4a9cf1aea678aba"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/code_xp04/source_origin.json": {
+      "bytes": 220,
+      "sha256": "c782a72cade239b3e1a2dfc25d5231f11a51451cee3f19fbb97aaecccdc3e185"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/code_xp04/train.py": {
+      "bytes": 24415,
+      "sha256": "35a18a2bf33d8e3e0d8459955b1f0ce525d4f28970f9af801fb27087bcf02ad7"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/code_xp04/train_cm.py": {
+      "bytes": 74480,
+      "sha256": "67fa7e48a3ecfda9f011d1df3344b68cc9eaa3fdb105a23a117684b1a669a3a0"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/configs/IEMOCAP_baseline_source_order_seed1475.historical_args.json": {
+      "bytes": 7216,
+      "sha256": "a4f00224ded9928028277d1ddcda43083c8e934b6b14006fd0c681212fab9b03"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/configs/IEMOCAP_baseline_source_order_seed1475.json": {
+      "bytes": 2089,
+      "sha256": "479b92543fd63e608de07dae2c46648cbcc10a48fdc68d7bd35685e44443e8ee"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/configs/IEMOCAP_cmerc_source_order_seed1475.historical_args.json": {
+      "bytes": 7325,
+      "sha256": "59e40ae7b7d63bb5f56806eedefb2f70c6797095455f63c083917b1141275369"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/configs/IEMOCAP_cmerc_source_order_seed1475.json": {
+      "bytes": 2298,
+      "sha256": "e27fba8eb6e92399c6b5657b0fa76cf10cb23d153b1d6c9165e06dcd441ccdee"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/configs/MELD_wo_cc_seed67137.historical_args.json": {
+      "bytes": 22114,
+      "sha256": "5d6271460c882dc34bf55bbcdec96afd09bb6b963c238745e04a54fb20515f68"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/configs/MELD_wo_cc_seed67137.json": {
+      "bytes": 2171,
+      "sha256": "9169e0142b380630226d7cf2af97bd6d7a9e2feb63397ae70c2492243237e76e"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/configs/registry.json": {
+      "bytes": 9537,
+      "sha256": "23129ada1f0bfaf462a62033adc5beed0a27365da733626732c19c68f31b5f75"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/preflight/IEMOCAP_baseline_source_order_seed1475/observer/effective_args.json": {
+      "bytes": 7260,
+      "sha256": "f28e25dd9c39221e26c92cf5c944f8b9296b89a9a32bd93501305a9e80aaf627"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/preflight/IEMOCAP_baseline_source_order_seed1475/observer/first_batch.json": {
+      "bytes": 1349,
+      "sha256": "cfd387bb0cd6f05eac6eba82e66f03b3dfa790ec14eeff74d40dcdbbb2ba5e96"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/preflight/IEMOCAP_baseline_source_order_seed1475/observer/launch.json": {
+      "bytes": 1268,
+      "sha256": "4749b2050d2d651e1d0e23cfdb1c89ff3bd68d3c99592d9fc7143bf4d4e1c46a"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/preflight/IEMOCAP_baseline_source_order_seed1475/observer/status.json": {
+      "bytes": 66,
+      "sha256": "03232c12d58baed271904df0a348598090fc5afa8fb077241e076744e38f3569"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/preflight/IEMOCAP_baseline_source_order_seed1475/runs/IEMOCAP_validation_seed1475/run_manifest.json": {
+      "bytes": 19015,
+      "sha256": "b397e0fa96a52c3eb71c3fc1050219feadb694ddfa993eaf911e0f4af79eff20"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/preflight/IEMOCAP_cmerc_source_order_seed1475/observer/effective_args.json": {
+      "bytes": 7369,
+      "sha256": "675cc10df89ae930603d9fc9c1c74e9235fbab7f2722f5cceefecbbecaded174"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/preflight/IEMOCAP_cmerc_source_order_seed1475/observer/first_batch.json": {
+      "bytes": 1378,
+      "sha256": "27469ddbd12ab25391b9cdf00412d17a290e79f13945914c3fc46fcc9db6aeb7"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/preflight/IEMOCAP_cmerc_source_order_seed1475/observer/launch.json": {
+      "bytes": 1495,
+      "sha256": "1fafc6174fddc06c2923b7a2eeb725d32828414f7542015f554de78398f4dfff"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/preflight/IEMOCAP_cmerc_source_order_seed1475/observer/status.json": {
+      "bytes": 66,
+      "sha256": "03232c12d58baed271904df0a348598090fc5afa8fb077241e076744e38f3569"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/preflight/IEMOCAP_cmerc_source_order_seed1475/runs/IEMOCAP_validation_seed1475/run_manifest.json": {
+      "bytes": 19328,
+      "sha256": "63527851e24c375120c2b339f4f0cae79318acd8167b4c2751bdc5ea7c4fa2e6"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/preflight/MELD_CC_pair_parity.json": {
+      "bytes": 813,
+      "sha256": "ae9168d308fffe176a749d31a0c2bf8c7b3cc735bcb62d6f37597a3a0d196aa9"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/preflight/MELD_wo_cc_seed67137/observer/effective_args.json": {
+      "bytes": 22145,
+      "sha256": "c3edb37d75ba429340fd96a9a247ab7131b4d8588aa1cda71e485ff880a94ad9"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/preflight/MELD_wo_cc_seed67137/observer/first_batch.json": {
+      "bytes": 1154,
+      "sha256": "26c0e418c4952b5a4ec20c69c996cdc0befde9bb0b7b40af0e24fda93c1a07a2"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/preflight/MELD_wo_cc_seed67137/observer/launch.json": {
+      "bytes": 1451,
+      "sha256": "a163b6443246ac5551b4786c8e89503045cedea296acbac78c3088878564d1ea"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/preflight/MELD_wo_cc_seed67137/observer/status.json": {
+      "bytes": 66,
+      "sha256": "03232c12d58baed271904df0a348598090fc5afa8fb077241e076744e38f3569"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/preflight/MELD_wo_cc_seed67137/runs/MELD_validation_seed67137/run_manifest.json": {
+      "bytes": 63688,
+      "sha256": "1cba3d91e69458e10d6f15cac2a3c24e46a8ff80c592942275fc8b67ea1e31c8"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/preflight/MELD_wo_cc_seed67137_full_cc/observer/effective_args.json": {
+      "bytes": 22152,
+      "sha256": "301da182e0944782b8efe37aaf9b6c650d09a1017cf3320f654ad8324bde00dd"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/preflight/MELD_wo_cc_seed67137_full_cc/observer/first_batch.json": {
+      "bytes": 1153,
+      "sha256": "3376ae612ef5e8c4a22832066831c2c13769f8bcb5a4132645e241176c96f796"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/preflight/MELD_wo_cc_seed67137_full_cc/observer/launch.json": {
+      "bytes": 1477,
+      "sha256": "d098f78beffe4ecb1d30c61d8875e0ff6c7a1b77602a78b35fcf3652bd6e08b9"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/preflight/MELD_wo_cc_seed67137_full_cc/observer/status.json": {
+      "bytes": 66,
+      "sha256": "03232c12d58baed271904df0a348598090fc5afa8fb077241e076744e38f3569"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/preflight/MELD_wo_cc_seed67137_full_cc/runs/MELD_validation_seed67137/run_manifest.json": {
+      "bytes": 63695,
+      "sha256": "fd705ed82926b78374aca4c56bbb6863372009911c2a7ebed7d125115ef17aa1"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/preflight/gate.json": {
+      "bytes": 668,
+      "sha256": "00712c4736fb56810a8dc057a0c7a1d643e611fea6a1cc9a02769e0ffc23ac7b"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/preflight/source_order_cpu.json": {
+      "bytes": 126263,
+      "sha256": "34b484b61b0a75a710d2ad2f5088f67bd9c6a0fea273e7bae62668957352ec89"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/provenance/artifact_manifest.json": {
+      "bytes": 34255,
+      "sha256": "40e4471757094f4286b33768f9aa7adb31d99938f36a26cb515b5b2a88d66fe9"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/provenance/data_inputs.json": {
+      "bytes": 3225,
+      "sha256": "49e731697d703ffb6e1d58982c85188767fdb31e220dc21f6aa2c99e9b218437"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/provenance/delivery_checks.json": {
+      "bytes": 264,
+      "sha256": "428cf523fd347f3b3ded1765df7bdc13274fd70f1dfe118cee948e30b1d20555"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/provenance/environment.json": {
+      "bytes": 796,
+      "sha256": "ee7daaf8f39bb8583b76c6118ad726884e8c188980b3eef740b5e3cd43323d57"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/provenance/final_analysis.json": {
+      "bytes": 3006,
+      "sha256": "3820ecde908a544c720afa83b7e42608ea483b9e759a4fc536ef88f2f5a761da"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/provenance/final_verification.json": {
+      "bytes": 3908,
+      "sha256": "1f9df572bb8bef54daf9c9c71aff19a01e96e817d4b3bbe1e3f9e5e432c660ad"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/provenance/finalizer_launch.json": {
+      "bytes": 281,
+      "sha256": "cd636a7558220f871de5dbef4e3efd7510dcaf54c668d05441c60d3112e6de06"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/provenance/frozen_execution.json": {
+      "bytes": 4547,
+      "sha256": "11b832b4bf0ecb4129622efa138f940739c7c7c797f74faea26ed741e7548c8f"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/provenance/hardware_pairing.json": {
+      "bytes": 1020,
+      "sha256": "e69ff083be5727dc274e801e895d69de8be377a215184366965649f0de9fb828"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/provenance/history_before.json": {
+      "bytes": 215527,
+      "sha256": "543d220508fdd2d3ebec7c6bc329c44b5ea5f04deb1f285095fa32321c94f9cd"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/provenance/host_repository.json": {
+      "bytes": 249,
+      "sha256": "5177f1f28b3a9e6ebd600850e09e621565e73055436383aa3dbb45c2acacf7cb"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/provenance/independent_review.json": {
+      "bytes": 1046,
+      "sha256": "0ae79290a5f45379b39e4dafc0c1b903432423bb88d2465586b994a1ffaaec45"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/provenance/launch.json": {
+      "bytes": 272,
+      "sha256": "d05bd1cd402e0973a6153a9837a782844d201d3698b9be6f253fdee242ceac64"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/provenance/preflight_invocations.json": {
+      "bytes": 5860,
+      "sha256": "709e8cb31fce13e672151b3d62796a4e54e71a6f156e5de12101ff9092d914b3"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/provenance/preflight_launch.json": {
+      "bytes": 277,
+      "sha256": "2b53f586e7b16875b64a534c24bd598b514479fb013ef93fd07173ccca0b06a6"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/provenance/read_report_inventory.json": {
+      "bytes": 48216,
+      "sha256": "073afdce47fa54d3073d10f9555e80a6a519e7b839f2f4dc27d539170df23e5d"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/provenance/resource_initial.json": {
+      "bytes": 1099,
+      "sha256": "92d387c3fd3959ee6900810d1937b6340a2301c907253ec942de796b67ac3a28"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/provenance/source_order.patch": {
+      "bytes": 4420,
+      "sha256": "5484fbbd56cc49e090940e83de4d4bf69fb3e747e0e5eab4107ba568c9fde8cd"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/provenance/xp04_references.json": {
+      "bytes": 240309,
+      "sha256": "aa1e03ff794ef4c80cc1cb08b8f9444bb540b5aae945c4717a29d31c47d2f0b0"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/reports/CMERC_MINIMAL_ABLATION_RESULTS.md": {
+      "bytes": 12441,
+      "sha256": "c3f9d2fdc67fc07627531fbff2f32550aaa75d575e9e304168390641d98cfde4"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/reports/PREREGISTRATION.md": {
+      "bytes": 4993,
+      "sha256": "ed1707567c4a305c3b7d9e39071a7a2301886fafb4a0a97c17b17f87dabb8b82"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/results/IEMOCAP_baseline_source_order_seed1475/effective_args.json": {
+      "bytes": 7250,
+      "sha256": "36871a26259a7a2d26cc996638cefbc23750b674981d0da82e2e1458b94522b0"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/results/IEMOCAP_baseline_source_order_seed1475/first_batch.json": {
+      "bytes": 1349,
+      "sha256": "4afb9468f0cab3f06cdb9a095ab785d9e66da8c2ae349fed3904cc0d843ca918"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/results/IEMOCAP_baseline_source_order_seed1475/launch.json": {
+      "bytes": 1259,
+      "sha256": "3cc529378f337041f248e85f476ae7fc2d7698b17e655fbe2090586c194a56e9"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/results/IEMOCAP_baseline_source_order_seed1475/metrics.json": {
+      "bytes": 1521,
+      "sha256": "91d8540dcf9e84490f61fc9f8d4e122be8aae5c9018dcec1b376f63f9f341f82"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/results/IEMOCAP_baseline_source_order_seed1475/observer_epochs.jsonl": {
+      "bytes": 270265,
+      "sha256": "199c9864034eb797f9691c949e6d772e0421ce3632b12e0f3e96dde4da0e297c"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/results/IEMOCAP_baseline_source_order_seed1475/status.json": {
+      "bytes": 157,
+      "sha256": "789891baa974df3a8c4a4e2e8d2294b325b488906132723f76ca055f5618a029"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/results/IEMOCAP_cmerc_source_order_seed1475/effective_args.json": {
+      "bytes": 7359,
+      "sha256": "e4793207e96e9d89073e21539d364345887f80ca57d3ab87c70271f20c3a4977"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/results/IEMOCAP_cmerc_source_order_seed1475/first_batch.json": {
+      "bytes": 1379,
+      "sha256": "21c89bdc2e40602340932e9485438d8c16a23d08f7e67d9c1f062617043d74f4"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/results/IEMOCAP_cmerc_source_order_seed1475/launch.json": {
+      "bytes": 1486,
+      "sha256": "32dd2abb6a626001c16a3c4a9f1ddf465313cfc96d5e95205606c68a5ce3e908"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/results/IEMOCAP_cmerc_source_order_seed1475/metrics.json": {
+      "bytes": 1521,
+      "sha256": "3374db3d5854f231f443a663d7646782c3b6236f95b813240f02ee52a05ba98b"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/results/IEMOCAP_cmerc_source_order_seed1475/observer_epochs.jsonl": {
+      "bytes": 297765,
+      "sha256": "7304c211494e26cda31b0f73bb2504c47be8a0f0e0aad021cbcb4d28d7afac79"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/results/IEMOCAP_cmerc_source_order_seed1475/status.json": {
+      "bytes": 157,
+      "sha256": "789891baa974df3a8c4a4e2e8d2294b325b488906132723f76ca055f5618a029"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/results/MELD_wo_cc_seed67137/effective_args.json": {
+      "bytes": 22135,
+      "sha256": "cb3cfdb31b51c1d93ce52f1dc172f1b5aa469e30265ecb7271ede72e0db78020"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/results/MELD_wo_cc_seed67137/first_batch.json": {
+      "bytes": 1154,
+      "sha256": "08b1c82cfa032be79d667124d4d690dd507b6e1b0e157d794ca6abd8d57b3948"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/results/MELD_wo_cc_seed67137/launch.json": {
+      "bytes": 1442,
+      "sha256": "39c8c078b8c86d83ff2ef59633350a8f3c02db04ddecf61a15038e47331a7961"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/results/MELD_wo_cc_seed67137/metrics.json": {
+      "bytes": 3594,
+      "sha256": "ba4e8f3a28e4a850cea9f05e1e229cd263ffd27f11352630e212363674b66a16"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/results/MELD_wo_cc_seed67137/observer_epochs.jsonl": {
+      "bytes": 288357,
+      "sha256": "b66a189e9c2c3889ab2d63b64443da66b9d9b81b7a1328ea81cdba887249ccd0"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/results/MELD_wo_cc_seed67137/status.json": {
+      "bytes": 157,
+      "sha256": "895955a69dbd3974442866d6f53708d3f29fafae7753019e74df1c867d505b03"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/results/comparison.csv": {
+      "bytes": 1619,
+      "sha256": "572968619a059adef248c5c4db72bf61b152b41a574dc90c63edfdcbaf5858aa"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/results/epoch_curves.csv": {
+      "bytes": 96763,
+      "sha256": "6a4f3809f5b9b084e14138043aced41c9b98b57eb81d56a65b8a47cb76f88936"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/results/epoch_loss_curves.csv": {
+      "bytes": 99729,
+      "sha256": "85dbbd25c1d653530a686c716be8d44114d19fb45e215da4bcb9ffe317244fd2"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/results/figures/IEMOCAP_baseline_source_order_seed1475_loss.png": {
+      "bytes": 107004,
+      "sha256": "feeb0036787aa0d99a6f6d4129d6ce2caf91ec73889a7858bb6778fb1d987ed4"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/results/figures/IEMOCAP_baseline_source_order_seed1475_loss.svg": {
+      "bytes": 32252,
+      "sha256": "3f2ddd91ca42bada5168ec86f3a83fdf9d48b194d16981e06ece5974acfb3187"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/results/figures/IEMOCAP_baseline_source_order_seed1475_wf1.png": {
+      "bytes": 117174,
+      "sha256": "f6ed3b172fece4747a4806ef1659d16bbc339dfc12a1f486df1917f2397897a3"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/results/figures/IEMOCAP_baseline_source_order_seed1475_wf1.svg": {
+      "bytes": 26836,
+      "sha256": "23ea8d8cb0633ae4f96939d7195a5704f9d4e445b2d6b2722dbaf95c35c80e64"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/results/figures/IEMOCAP_cmerc_source_order_seed1475_loss.png": {
+      "bytes": 171709,
+      "sha256": "29e2975e42247f0744c705ca70bd9c006dfe90fc1f1fdc527780b538dcd7e35a"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/results/figures/IEMOCAP_cmerc_source_order_seed1475_loss.svg": {
+      "bytes": 32889,
+      "sha256": "bfc4aee48268bfcdad4c46f615266a082e3781d509bd1987dd9bc091f3141753"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/results/figures/IEMOCAP_cmerc_source_order_seed1475_wf1.png": {
+      "bytes": 122173,
+      "sha256": "560af5177d682dad7899f709b097b517a65e240a41bd5464855c912a2dfaf4a2"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/results/figures/IEMOCAP_cmerc_source_order_seed1475_wf1.svg": {
+      "bytes": 26831,
+      "sha256": "b720711a679277118fa2a996b2cbbfaf7a459612ba737cfa482f7e6548a2eb3b"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/results/figures/IEMOCAP_validation_gain.png": {
+      "bytes": 142270,
+      "sha256": "94e88044012f576104365bef49292ecc309b0267a2d0619fbb8308d535a7dbdf"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/results/figures/IEMOCAP_validation_gain.svg": {
+      "bytes": 20885,
+      "sha256": "18e930af8b6180f7ee763bdcc35a5470b1b089df1baef2a7ebfbeb7b4c6d6c77"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/results/figures/MELD_wo_cc_seed67137_loss.png": {
+      "bytes": 106370,
+      "sha256": "dcaefed57d7cc76b72e1c06232162068a92e540505dc7719da5949a8eadebd65"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/results/figures/MELD_wo_cc_seed67137_loss.svg": {
+      "bytes": 26103,
+      "sha256": "994fa9a0f155edfefb9afbf976f14bd9d7e5c9e3bffe9f461fce853c57c491bb"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/results/figures/MELD_wo_cc_seed67137_wf1.png": {
+      "bytes": 94242,
+      "sha256": "b2162ba30d99004e7581ff4f4f2e5c096f181686b0022451789038bd9d41ed7e"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/results/figures/MELD_wo_cc_seed67137_wf1.svg": {
+      "bytes": 22955,
+      "sha256": "e24f4039330596b6b8331457d0a49256ba2464a2e619599198509852b643fade"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/results/figures/manifest.json": {
+      "bytes": 2420,
+      "sha256": "0e1f2c4ec79f2879d3956e11c86e4de09bc21bf550d3d9e43a74429e65848df4"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/results/metrics_summary.json": {
+      "bytes": 12443,
+      "sha256": "6dd221989791bfa27a63326c3024c4bf74014455478754947abe74794a8c2e5d"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/results/per_run.csv": {
+      "bytes": 929,
+      "sha256": "eebffd09ed08356c6d8185d1a9abdc9d3f47300697a7ee92961063bcd3c51146"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/runs/IEMOCAP_baseline_source_order_seed1475/IEMOCAP_validation_seed1475/final_test.json": {
+      "bytes": 373,
+      "sha256": "41b8f082f3ea836158148246ac2af59a4cbbf61db14822dfd8f5ebc5afb02de7"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/runs/IEMOCAP_baseline_source_order_seed1475/IEMOCAP_validation_seed1475/metrics.jsonl": {
+      "bytes": 67630,
+      "sha256": "456785859b1da4d307c2574609da9f34dc2383c73c4f55cf177855956ab59aea"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/runs/IEMOCAP_baseline_source_order_seed1475/IEMOCAP_validation_seed1475/run_manifest.json": {
+      "bytes": 19005,
+      "sha256": "f1d7d5dcf0eb2f1b73b56e2533daca6c4211701d27d10ba617ea0c3c3ac5f97f"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/runs/IEMOCAP_cmerc_source_order_seed1475/IEMOCAP_validation_seed1475/final_test.json": {
+      "bytes": 373,
+      "sha256": "f943fce23383769766e84e6b5100266bb15a465c76f6a6d18bc06764c064b923"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/runs/IEMOCAP_cmerc_source_order_seed1475/IEMOCAP_validation_seed1475/metrics.jsonl": {
+      "bytes": 70988,
+      "sha256": "4a001450aa720e9475aaf8919c40ec02823f5a4e87222aeab99dd0aca811ba4a"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/runs/IEMOCAP_cmerc_source_order_seed1475/IEMOCAP_validation_seed1475/run_manifest.json": {
+      "bytes": 19318,
+      "sha256": "a191166c0d2c9d3b2f535b960979061ecc3e57aa3d4ad63f407982204b6d0d32"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/runs/MELD_wo_cc_seed67137/MELD_validation_seed67137/final_test.json": {
+      "bytes": 373,
+      "sha256": "15d50b7940f2a98d57ef0ea7a0ef329056ab1df5cc47268b9d7a711f4c915619"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/runs/MELD_wo_cc_seed67137/MELD_validation_seed67137/metrics.jsonl": {
+      "bytes": 35445,
+      "sha256": "c98613719d36575a25100f375f319b251d8346da59094a9a96e0ec06692a1234"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/runs/MELD_wo_cc_seed67137/MELD_validation_seed67137/run_manifest.json": {
+      "bytes": 63678,
+      "sha256": "751fab11ff4c06f6f27ff08539d5fb2e40853c8650a8ce0ba651f1a2a663daa0"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/scripts/finalize_when_done.py": {
+      "bytes": 2168,
+      "sha256": "d743d5958203e55e92bc61f2f9122ac0baa0940d2c8311fb3b60ee8fe3143571"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/scripts/memory_observer.py": {
+      "bytes": 2793,
+      "sha256": "eda9ebfe3c82eb0fcac02fd26f86b5b1c53e7d83ce43cc27d1fce402a849a524"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/scripts/observe_training.py": {
+      "bytes": 16824,
+      "sha256": "47a20127d33806890397606bb562f9c9338b71e1b5bd2225f0eaa56e2ff03f3e"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/scripts/plot_minimal.py": {
+      "bytes": 5399,
+      "sha256": "5bb4bca4b02beaefffd33e87d56a0e56a6fade10cd8ea32122a84d7dbdf7698e"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/scripts/run_preflights.py": {
+      "bytes": 4709,
+      "sha256": "fa60f64799f952697c4cf39ecdc8a446e3e9c2f3d070851bf38216967a454601"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/scripts/status.py": {
+      "bytes": 1596,
+      "sha256": "2e379902eff17db9d12a935a10416e85c33ac15597a5d9b6bdcbcc257aa9cf9a"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/scripts/summarize_minimal.py": {
+      "bytes": 30205,
+      "sha256": "480243a2fd89ef23a6036e2245c8caec7c42c9ef60dc30f256bd83cf2637daf4"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/scripts/supervise.py": {
+      "bytes": 6390,
+      "sha256": "509e912cda41db8e1a7f1a9a9f0d7bb1aacf78b2a71f76b448e4abf0f85a741b"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/scripts/test_observer.py": {
+      "bytes": 6109,
+      "sha256": "f8d5e651a1c7ec553f5337217f30868a99f2fad7d3898f794547b15f174b203b"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/scripts/test_source_order.py": {
+      "bytes": 8949,
+      "sha256": "8bbd1a8a7e45bac57fbf6c5110bfc1d0ec6b7d4b2d1ab67e162c55bad918df99"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/scripts/verify_results.py": {
+      "bytes": 12190,
+      "sha256": "315bde05ed1cb12d6f5298a658af26e5aa62dc1dfa5770e300ebeb20b66674cb"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/state/HANDOFF.json": {
+      "bytes": 3545,
+      "sha256": "8da646c2711c3b298956ecff0bfff5e94b1682b8787bdb888ebcd21b3bd3835a"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/state/delivery.json": {
+      "bytes": 582,
+      "sha256": "8604d19bbb32682d0def650fa8537c0e5835c2d4509800423c9cc19e6fa09fcc"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/state/finalization.json": {
+      "bytes": 1282,
+      "sha256": "fa8bfb6f334f0733c01910c56f66b81e6b0ce841d67540547f8e1978a73dbb1b"
+    },
+    "experiments/minimal_ablation_validation/20261023T043115Z/state/status.json": {
+      "bytes": 5745,
+      "sha256": "6ac3e48277cc96f97d8c3a8776f2cf13eabad11aa30f345628b5da826262bebc"
+    },
+    "reports/CMERC_MINIMAL_ABLATION_RESULTS.md": {
+      "bytes": 13581,
+      "sha256": "b04642509f9af23329ccddf919c9ebc52c69ae9c34ee24a3dfb2bc36dd286250"
+    }
+  },
+  "manifest_excludes_itself": true,
+  "excluded_categories": [
+    "dataset features and data symlinks",
+    "model weights",
+    "per-example prediction and first-batch arrays",
+    "raw stdout and resource logs",
+    "raw per-batch traces",
+    "locks and caches"
+  ],
+  "server_manifest": "experiments/minimal_ablation_validation/20261023T043115Z/provenance/artifact_manifest.json",
+  "server_manifest_preserved": true,
+  "server_regular_files_not_published": [
+    "experiments/minimal_ablation_validation/20261023T043115Z/logs/IEMOCAP_baseline_source_order_seed1475.log",
+    "experiments/minimal_ablation_validation/20261023T043115Z/logs/IEMOCAP_baseline_source_order_seed1475_memory.jsonl",
+    "experiments/minimal_ablation_validation/20261023T043115Z/logs/IEMOCAP_cmerc_source_order_seed1475.log",
+    "experiments/minimal_ablation_validation/20261023T043115Z/logs/IEMOCAP_cmerc_source_order_seed1475_memory.jsonl",
+    "experiments/minimal_ablation_validation/20261023T043115Z/logs/MELD_wo_cc_seed67137.log",
+    "experiments/minimal_ablation_validation/20261023T043115Z/logs/MELD_wo_cc_seed67137_memory.jsonl",
+    "experiments/minimal_ablation_validation/20261023T043115Z/logs/final_plot_minimal.py.log",
+    "experiments/minimal_ablation_validation/20261023T043115Z/logs/final_summarize_minimal.py.log",
+    "experiments/minimal_ablation_validation/20261023T043115Z/logs/final_verify_results.py.log",
+    "experiments/minimal_ablation_validation/20261023T043115Z/logs/finalizer.log",
+    "experiments/minimal_ablation_validation/20261023T043115Z/logs/preflight_IEMOCAP_baseline_source_order_seed1475.log",
+    "experiments/minimal_ablation_validation/20261023T043115Z/logs/preflight_IEMOCAP_baseline_source_order_seed1475_memory.jsonl",
+    "experiments/minimal_ablation_validation/20261023T043115Z/logs/preflight_IEMOCAP_cmerc_source_order_seed1475.log",
+    "experiments/minimal_ablation_validation/20261023T043115Z/logs/preflight_IEMOCAP_cmerc_source_order_seed1475_memory.jsonl",
+    "experiments/minimal_ablation_validation/20261023T043115Z/logs/preflight_MELD_wo_cc_seed67137.log",
+    "experiments/minimal_ablation_validation/20261023T043115Z/logs/preflight_MELD_wo_cc_seed67137_full_cc.log",
+    "experiments/minimal_ablation_validation/20261023T043115Z/logs/preflight_MELD_wo_cc_seed67137_full_cc_memory.jsonl",
+    "experiments/minimal_ablation_validation/20261023T043115Z/logs/preflight_MELD_wo_cc_seed67137_memory.jsonl",
+    "experiments/minimal_ablation_validation/20261023T043115Z/logs/preflight_supervisor.log",
+    "experiments/minimal_ablation_validation/20261023T043115Z/logs/resources.jsonl",
+    "experiments/minimal_ablation_validation/20261023T043115Z/logs/supervisor.log",
+    "experiments/minimal_ablation_validation/20261023T043115Z/preflight/IEMOCAP_baseline_source_order_seed1475/observer/first_batch.npz",
+    "experiments/minimal_ablation_validation/20261023T043115Z/preflight/IEMOCAP_baseline_source_order_seed1475/observer/observer_batches.jsonl",
+    "experiments/minimal_ablation_validation/20261023T043115Z/preflight/IEMOCAP_baseline_source_order_seed1475/runs/IEMOCAP_validation_seed1475/.training.lock",
+    "experiments/minimal_ablation_validation/20261023T043115Z/preflight/IEMOCAP_cmerc_source_order_seed1475/observer/first_batch.npz",
+    "experiments/minimal_ablation_validation/20261023T043115Z/preflight/IEMOCAP_cmerc_source_order_seed1475/observer/observer_batches.jsonl",
+    "experiments/minimal_ablation_validation/20261023T043115Z/preflight/IEMOCAP_cmerc_source_order_seed1475/runs/IEMOCAP_validation_seed1475/.training.lock",
+    "experiments/minimal_ablation_validation/20261023T043115Z/preflight/MELD_wo_cc_seed67137/observer/first_batch.npz",
+    "experiments/minimal_ablation_validation/20261023T043115Z/preflight/MELD_wo_cc_seed67137/observer/observer_batches.jsonl",
+    "experiments/minimal_ablation_validation/20261023T043115Z/preflight/MELD_wo_cc_seed67137/runs/MELD_validation_seed67137/.training.lock",
+    "experiments/minimal_ablation_validation/20261023T043115Z/preflight/MELD_wo_cc_seed67137_full_cc/observer/first_batch.npz",
+    "experiments/minimal_ablation_validation/20261023T043115Z/preflight/MELD_wo_cc_seed67137_full_cc/observer/observer_batches.jsonl",
+    "experiments/minimal_ablation_validation/20261023T043115Z/preflight/MELD_wo_cc_seed67137_full_cc/runs/MELD_validation_seed67137/.training.lock",
+    "experiments/minimal_ablation_validation/20261023T043115Z/results/IEMOCAP_baseline_source_order_seed1475/first_batch.npz",
+    "experiments/minimal_ablation_validation/20261023T043115Z/results/IEMOCAP_baseline_source_order_seed1475/observer_batches.jsonl",
+    "experiments/minimal_ablation_validation/20261023T043115Z/results/IEMOCAP_baseline_source_order_seed1475/predictions.npz",
+    "experiments/minimal_ablation_validation/20261023T043115Z/results/IEMOCAP_cmerc_source_order_seed1475/first_batch.npz",
+    "experiments/minimal_ablation_validation/20261023T043115Z/results/IEMOCAP_cmerc_source_order_seed1475/observer_batches.jsonl",
+    "experiments/minimal_ablation_validation/20261023T043115Z/results/IEMOCAP_cmerc_source_order_seed1475/predictions.npz",
+    "experiments/minimal_ablation_validation/20261023T043115Z/results/MELD_wo_cc_seed67137/first_batch.npz",
+    "experiments/minimal_ablation_validation/20261023T043115Z/results/MELD_wo_cc_seed67137/observer_batches.jsonl",
+    "experiments/minimal_ablation_validation/20261023T043115Z/results/MELD_wo_cc_seed67137/predictions.npz",
+    "experiments/minimal_ablation_validation/20261023T043115Z/runs/IEMOCAP_baseline_source_order_seed1475/IEMOCAP_validation_seed1475/.training.lock",
+    "experiments/minimal_ablation_validation/20261023T043115Z/runs/IEMOCAP_baseline_source_order_seed1475/IEMOCAP_validation_seed1475/best.pt",
+    "experiments/minimal_ablation_validation/20261023T043115Z/runs/IEMOCAP_baseline_source_order_seed1475/IEMOCAP_validation_seed1475/latest.pt",
+    "experiments/minimal_ablation_validation/20261023T043115Z/runs/IEMOCAP_cmerc_source_order_seed1475/IEMOCAP_validation_seed1475/.training.lock",
+    "experiments/minimal_ablation_validation/20261023T043115Z/runs/IEMOCAP_cmerc_source_order_seed1475/IEMOCAP_validation_seed1475/best.pt",
+    "experiments/minimal_ablation_validation/20261023T043115Z/runs/IEMOCAP_cmerc_source_order_seed1475/IEMOCAP_validation_seed1475/latest.pt",
+    "experiments/minimal_ablation_validation/20261023T043115Z/runs/MELD_wo_cc_seed67137/MELD_validation_seed67137/.training.lock",
+    "experiments/minimal_ablation_validation/20261023T043115Z/runs/MELD_wo_cc_seed67137/MELD_validation_seed67137/best.pt",
+    "experiments/minimal_ablation_validation/20261023T043115Z/runs/MELD_wo_cc_seed67137/MELD_validation_seed67137/latest.pt",
+    "experiments/minimal_ablation_validation/20261023T043115Z/state/supervisor.lock"
+  ],
+  "server_data_symlinks_not_published": {
+    "experiments/minimal_ablation_validation/20261023T043115Z/code_source_order/data/IEMOCAP_features.pkl": "/data2/yb/paper/05_reproduction/external_repos/CMERC/data/IEMOCAP_features.pkl",
+    "experiments/minimal_ablation_validation/20261023T043115Z/code_source_order/data/MELD_features_raw1.pkl": "/data2/yb/paper/05_reproduction/external_repos/CMERC/data/MELD_features_raw1.pkl",
+    "experiments/minimal_ablation_validation/20261023T043115Z/code_source_order/data/iemocap_features_roberta.pkl": "/data2/yb/paper/05_reproduction/external_repos/CMERC/data/iemocap_features_roberta.pkl",
+    "experiments/minimal_ablation_validation/20261023T043115Z/code_source_order/data/meld_features_roberta.pkl": "/data2/yb/paper/05_reproduction/external_repos/CMERC/data/meld_features_roberta.pkl",
+    "experiments/minimal_ablation_validation/20261023T043115Z/code_xp04/data/IEMOCAP_features.pkl": "/data2/yb/paper/05_reproduction/external_repos/CMERC/data/IEMOCAP_features.pkl",
+    "experiments/minimal_ablation_validation/20261023T043115Z/code_xp04/data/MELD_features_raw1.pkl": "/data2/yb/paper/05_reproduction/external_repos/CMERC/data/MELD_features_raw1.pkl",
+    "experiments/minimal_ablation_validation/20261023T043115Z/code_xp04/data/iemocap_features_roberta.pkl": "/data2/yb/paper/05_reproduction/external_repos/CMERC/data/iemocap_features_roberta.pkl",
+    "experiments/minimal_ablation_validation/20261023T043115Z/code_xp04/data/meld_features_roberta.pkl": "/data2/yb/paper/05_reproduction/external_repos/CMERC/data/meld_features_roberta.pkl"
+  },
+  "limits": [
+    "Full checkpoint and per-example verification needs server-only artifacts and historical XP04 paths.",
+    "Historical execution/data/output paths are provenance, not portable defaults.",
+    "Single-seed historical controls and cross-card CUDA nondeterminism do not establish strict causal attribution."
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "active": false,
+  "phase": "completed",
+  "pid": 1336928,
+  "commands": [
+    {
+      "argv": [
+        "/data2/yb/conda_envs/cmerc-xp-repro/bin/python",
+        "-u",
+        "/data2/yb/paper/lyx-msa/CMERC/experiments/minimal_ablation_validation/20261023T043115Z/scripts/verify_results.py"
+      ],
+      "started_at_utc": "2026-10-23T06:28:53.527896+00:00",
+      "returncode": 0,
+      "finished_at_utc": "2026-10-23T06:29:34.388134+00:00"
+    },
+    {
+      "argv": [
+        "/data2/yb/conda_envs/cmerc-xp-repro/bin/python",
+        "-u",
+        "/data2/yb/paper/lyx-msa/CMERC/experiments/minimal_ablation_validation/20261023T043115Z/scripts/summarize_minimal.py"
+      ],
+      "started_at_utc": "2026-10-23T06:29:34.388960+00:00",
+      "returncode": 0,
+      "finished_at_utc": "2026-10-23T06:29:35.111526+00:00"
+    },
+    {
+      "argv": [
+        "/home/yangbin/miniconda3/envs/multimodalerc310/bin/python",
+        "-u",
+        "/data2/yb/paper/lyx-msa/CMERC/experiments/minimal_ablation_validation/20261023T043115Z/scripts/plot_minimal.py"
+      ],
+      "started_at_utc": "2026-10-23T06:29:35.112316+00:00",
+      "returncode": 0,
+      "finished_at_utc": "2026-10-23T06:29:38.300510+00:00"
+    }
+  ],
+  "completed_at_utc": "2026-10-23T06:29:38.301296+00:00"
+}

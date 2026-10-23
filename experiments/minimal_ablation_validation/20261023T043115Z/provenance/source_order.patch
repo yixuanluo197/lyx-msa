@@ -1,0 +1,71 @@
+--- code_xp04/train_cm.py
++++ code_source_order/train_cm.py
+@@ -366,6 +366,29 @@
+         raise RuntimeError('batch capacity rejection exceeded {} retries; no batches were emitted'.format(self.max_retries))
+ 
+ 
++
++class SourceOrderBatchSampler(CapacitySafeBatchSampler):
++    """Keep eligible source order, with the zero-retry reference RNG budget.
++
++    Consume one private permutation as in the registered XP04 seed, but emit
++    consecutive source indices. This does not advance model/global RNG.
++    """
++    def __iter__(self):
++        indices = list(range(len(self.lengths)))
++        batches = [indices[start:start + self.batch_size]
++                   for start in range(0, len(indices), self.batch_size)]
++        totals = [sum(self.lengths[index] for index in batch) for batch in batches]
++        edges = [total + 3 * len(batch) for total, batch in zip(totals, batches)]
++        nodes = [3 * total for total in totals]
++        if max(edges, default=0) > self.edge_capacity or max(nodes, default=0) > self.node_capacity:
++            raise RuntimeError('source_order exceeds fixed graph capacity; no batches were emitted')
++        torch.randperm(len(self.lengths), generator=self.generator)
++        self.retries = 0
++        self.max_batch_edges = max(edges, default=0)
++        self.max_batch_nodes = max(nodes, default=0)
++        yield from batches
++
++
+ def validation_training_loader(trainset, batch_size, randomness, batch_policy,
+                                edge_capacity, node_capacity, batch_max_retries,
+                                num_workers, pin_memory):
+@@ -376,8 +399,13 @@
+         batching = {'batch_sampler': CapacitySafeBatchSampler(
+             lengths, batch_size, randomness['generator'], edge_capacity,
+             node_capacity, batch_max_retries)}
++    elif batch_policy == 'source_order':
++        lengths = [len(trainset.videoLabels[key]) for key in trainset.keys]
++        batching = {'batch_sampler': SourceOrderBatchSampler(
++            lengths, batch_size, randomness['generator'], edge_capacity,
++            node_capacity, batch_max_retries)}
+     else:
+-        raise ValueError('batch_policy must be legacy or capacity_safe')
++        raise ValueError('batch_policy must be legacy, capacity_safe or source_order')
+     return DataLoader(trainset, **batching, **randomness,
+                       collate_fn=trainset.collate_fn, num_workers=num_workers,
+                       pin_memory=pin_memory)
+@@ -909,7 +937,7 @@
+                         help='IEMOCAP validation split seed; omitted preserves legacy training-seed split')
+     parser.add_argument('--rng-policy', choices=['legacy', 'continuous'], default='legacy',
+                         help='legacy resets each call; continuous preserves training RNG across epochs')
+-    parser.add_argument('--batch-policy', choices=['legacy', 'capacity_safe'], default='legacy',
++    parser.add_argument('--batch-policy', choices=['legacy', 'capacity_safe', 'source_order'], default='legacy',
+                         help='capacity_safe rejects whole epoch permutations exceeding fixed official graph weights')
+     parser.add_argument('--edge-capacity', type=int, default=1000)
+     parser.add_argument('--node-capacity', type=int, default=5200)
+@@ -946,6 +974,14 @@
+     if args.batch_policy == 'capacity_safe' and (not 0 < args.edge_capacity <= 1000
+             or not 0 < args.node_capacity <= 5200 or args.batch_max_retries < 0):
+         parser.error('capacity limits must fit official 1000 hyperedges / 5200 nodes and retry limit must be nonnegative')
++    if args.batch_policy == 'source_order':
++        if (args.Dataset != 'IEMOCAP' or args.num_workers != 0 or args.causal
++                or args.selection_protocol != 'validation' or args.rng_policy != 'continuous'
++                or args.modals != 'avl' or args.graph_type != 'hyper'):
++            parser.error('source_order requires IEMOCAP worker0 noncausal validation continuous hyper avl protocol')
++        if (not 0 < args.edge_capacity <= 1000 or not 0 < args.node_capacity <= 5200
++                or args.batch_max_retries < 0):
++            parser.error('source_order capacity limits must fit official graph weights')
+     if args.split_seed is None:
+         args.split_seed = args.seed
+     args.rnn_backend = 'aten' if args.rng_policy == 'continuous' else 'cudnn'

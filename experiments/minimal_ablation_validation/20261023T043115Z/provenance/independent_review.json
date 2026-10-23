@@ -1,0 +1,24 @@
+{
+  "reviewer": "iem_batch_audit independent read-only review",
+  "observer": {
+    "no_extra_training_forward_or_optimizer_step": true,
+    "baseline_eval_only_removal_restored": true,
+    "toy_state_and_rng_exact": true,
+    "single_test_means_loader_traversal": true
+  },
+  "verifier": {
+    "checkpoint_keys_zero_based_epochs_verified_on_real_cpu_checkpoint": true,
+    "first_MELD_order_rebuilt_from_data": true,
+    "independent_ECE_error": 2.6e-13,
+    "independent_CEL_error": 0.0,
+    "no_cuda_initialized": true
+  },
+  "limits": [
+    "toy reference auxiliary outputs do not prove full GPU mathematical behavior",
+    "in-run foreign PIDs are logged, not automatically killed; no cross-project mutex",
+    "nvidia-smi failure can stop supervisor without stopping child, independently inspect PIDs",
+    "cross-card and nondeterministic FP arithmetic not bitwise controlled",
+    "history symlinks checked as links; shared feature bytes separately covered by data_inputs hashes"
+  ],
+  "review_did_not_modify_history_or_run_GPU": true
+}

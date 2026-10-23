@@ -1,0 +1,4 @@
+run_id,dataset,variant,seed,complete,epochs_completed,epochs_planned,selected_epoch,selected_validation_weighted_f1,validation_last10_mean,factor_key,factor_value,test_policy,weighted_f1,macro_f1,accuracy,ece,cel
+MELD_wo_cc_seed67137,MELD,wo_cc,67137,True,40,40,8,65.77,62.766,calibrate,False,one_final_pass_on_validation_selected_checkpoint,65.30964094366121,48.87527830540815,66.36015325670498,23.898703089391,611.0441204756498
+IEMOCAP_baseline_source_order_seed1475,IEMOCAP,baseline,1475,True,80,80,62,65.58,63.706,batch_policy,source_order,one_final_pass_on_validation_selected_checkpoint,66.81591312056683,66.55739770455288,66.9747381392483,15.862198755173,1440.7064922792888
+IEMOCAP_cmerc_source_order_seed1475,IEMOCAP,cmerc,1475,True,80,80,75,64.96,62.658,batch_policy,source_order,one_final_pass_on_validation_selected_checkpoint,68.25010158171821,67.4159278766986,68.14540973505854,15.74530720674,1248.4877717873812

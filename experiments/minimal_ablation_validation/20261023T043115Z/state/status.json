@@ -1,0 +1,136 @@
+{
+  "active": false,
+  "phase": "completed",
+  "pid": 1313637,
+  "started_at_utc": "2026-10-23T04:41:00.270326+00:00",
+  "formal_started": 3,
+  "formal_completed": 3,
+  "runs": [
+    {
+      "run_id": "MELD_wo_cc_seed67137",
+      "started_at_utc": "2026-10-23T04:41:00.367027+00:00",
+      "argv": [
+        "/data2/yb/conda_envs/cmerc-xp-repro/bin/python",
+        "-u",
+        "/data2/yb/paper/lyx-msa/CMERC/experiments/minimal_ablation_validation/20261023T043115Z/scripts/memory_observer.py",
+        "/data2/yb/paper/lyx-msa/CMERC/experiments/minimal_ablation_validation/20261023T043115Z/scripts/observe_training.py",
+        "--run-id",
+        "MELD_wo_cc_seed67137"
+      ],
+      "environment": {
+        "CUDA_VISIBLE_DEVICES": "GPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456",
+        "LD_LIBRARY_PATH": "/data2/yb/conda_envs/cmerc-xp-repro/lib/python3.10/site-packages/nvidia/cusparse/lib",
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "PYTORCH_CUDA_ALLOC_CONF": "garbage_collection_threshold:0.8",
+        "CMERC_ENV_PREFIX": "/data2/yb/conda_envs/cmerc-xp-repro",
+        "PYTHONDONTWRITEBYTECODE": "1"
+      },
+      "profile_output": "/data2/yb/paper/lyx-msa/CMERC/experiments/minimal_ablation_validation/20261023T043115Z/logs/MELD_wo_cc_seed67137_memory.jsonl",
+      "admission": {
+        "time": "2026-10-23T04:41:00.366640+00:00",
+        "gpu": [
+          "GPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456",
+          "NVIDIA TITAN Xp",
+          "12179",
+          "5",
+          "0"
+        ],
+        "processes": [],
+        "free_mib": 12179,
+        "used_mib": 5,
+        "utilization_percent": 0
+      },
+      "log": "/data2/yb/paper/lyx-msa/CMERC/experiments/minimal_ablation_validation/20261023T043115Z/logs/MELD_wo_cc_seed67137.log",
+      "pid": 1313644,
+      "returncode": 0,
+      "finished_at_utc": "2026-10-23T05:14:33.734626+00:00"
+    },
+    {
+      "run_id": "IEMOCAP_baseline_source_order_seed1475",
+      "started_at_utc": "2026-10-23T05:14:33.844312+00:00",
+      "argv": [
+        "/data2/yb/conda_envs/cmerc-xp-repro/bin/python",
+        "-u",
+        "/data2/yb/paper/lyx-msa/CMERC/experiments/minimal_ablation_validation/20261023T043115Z/scripts/memory_observer.py",
+        "/data2/yb/paper/lyx-msa/CMERC/experiments/minimal_ablation_validation/20261023T043115Z/scripts/observe_training.py",
+        "--run-id",
+        "IEMOCAP_baseline_source_order_seed1475"
+      ],
+      "environment": {
+        "CUDA_VISIBLE_DEVICES": "GPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456",
+        "LD_LIBRARY_PATH": "/data2/yb/conda_envs/cmerc-xp-repro/lib/python3.10/site-packages/nvidia/cusparse/lib",
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "PYTORCH_CUDA_ALLOC_CONF": "garbage_collection_threshold:0.8",
+        "CMERC_ENV_PREFIX": "/data2/yb/conda_envs/cmerc-xp-repro",
+        "PYTHONDONTWRITEBYTECODE": "1"
+      },
+      "profile_output": "/data2/yb/paper/lyx-msa/CMERC/experiments/minimal_ablation_validation/20261023T043115Z/logs/IEMOCAP_baseline_source_order_seed1475_memory.jsonl",
+      "admission": {
+        "time": "2026-10-23T05:14:33.843951+00:00",
+        "gpu": [
+          "GPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456",
+          "NVIDIA TITAN Xp",
+          "12179",
+          "5",
+          "0"
+        ],
+        "processes": [],
+        "free_mib": 12179,
+        "used_mib": 5,
+        "utilization_percent": 0
+      },
+      "log": "/data2/yb/paper/lyx-msa/CMERC/experiments/minimal_ablation_validation/20261023T043115Z/logs/IEMOCAP_baseline_source_order_seed1475.log",
+      "pid": 1423745,
+      "returncode": 0,
+      "finished_at_utc": "2026-10-23T05:26:02.060013+00:00"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_source_order_seed1475",
+      "started_at_utc": "2026-10-23T05:26:17.263699+00:00",
+      "argv": [
+        "/data2/yb/conda_envs/cmerc-xp-repro/bin/python",
+        "-u",
+        "/data2/yb/paper/lyx-msa/CMERC/experiments/minimal_ablation_validation/20261023T043115Z/scripts/memory_observer.py",
+        "/data2/yb/paper/lyx-msa/CMERC/experiments/minimal_ablation_validation/20261023T043115Z/scripts/observe_training.py",
+        "--run-id",
+        "IEMOCAP_cmerc_source_order_seed1475"
+      ],
+      "environment": {
+        "CUDA_VISIBLE_DEVICES": "GPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456",
+        "LD_LIBRARY_PATH": "/data2/yb/conda_envs/cmerc-xp-repro/lib/python3.10/site-packages/nvidia/cusparse/lib",
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "PYTORCH_CUDA_ALLOC_CONF": "garbage_collection_threshold:0.8",
+        "CMERC_ENV_PREFIX": "/data2/yb/conda_envs/cmerc-xp-repro",
+        "PYTHONDONTWRITEBYTECODE": "1"
+      },
+      "profile_output": "/data2/yb/paper/lyx-msa/CMERC/experiments/minimal_ablation_validation/20261023T043115Z/logs/IEMOCAP_cmerc_source_order_seed1475_memory.jsonl",
+      "admission": {
+        "time": "2026-10-23T05:26:17.263356+00:00",
+        "gpu": [
+          "GPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456",
+          "NVIDIA TITAN Xp",
+          "12179",
+          "5",
+          "0"
+        ],
+        "processes": [],
+        "free_mib": 12179,
+        "used_mib": 5,
+        "utilization_percent": 0
+      },
+      "log": "/data2/yb/paper/lyx-msa/CMERC/experiments/minimal_ablation_validation/20261023T043115Z/logs/IEMOCAP_cmerc_source_order_seed1475.log",
+      "pid": 1473969,
+      "returncode": 0,
+      "finished_at_utc": "2026-10-23T06:28:41.342107+00:00"
+    }
+  ],
+  "current_run": "IEMOCAP_cmerc_source_order_seed1475",
+  "waiting_run": "IEMOCAP_cmerc_source_order_seed1475",
+  "completed_at_utc": "2026-10-23T06:28:41.343580+00:00"
+}

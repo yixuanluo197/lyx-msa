@@ -1,0 +1,22 @@
+{
+  "rtol": 1e-05,
+  "atol": 1e-06,
+  "floating_arrays_max_absolute_difference": {
+    "full_log_probabilities": 2.384185791015625e-07,
+    "labels": 0.0,
+    "text_log_probabilities": 2.384185791015625e-07,
+    "audio_log_probabilities": 2.384185791015625e-07,
+    "visual_log_probabilities": 2.384185791015625e-07,
+    "intra_context_log_probabilities": 2.384185791015625e-07,
+    "inter_context_log_probabilities": 2.384185791015625e-07
+  },
+  "loss_component_differences_full_minus_wo_cc": {
+    "classification_loss": 0.0,
+    "cc_loss": 7.62939453125e-06,
+    "mscl_loss": -4.76837158203125e-07,
+    "cscl_loss": 0.0,
+    "total_loss": 0.09241580963134766
+  },
+  "initialization_ids_rng_exact": true,
+  "interpretation": "forward/loss values agree within preregistered tolerance, not necessarily bitwise"
+}

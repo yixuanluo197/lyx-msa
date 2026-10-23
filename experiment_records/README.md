@@ -2,6 +2,8 @@
 
 历史01/02/03分别保留原版V100复现、旧XP多seed和V100多seed的代码与证据；V100的V1失败诊断单独标记，不混入V2正式统计。04为XP主研究基线，20项五seed配对训练与独立评估已完成并通过技术验收。05为官方README流程的4项单Seed对照，单独保留测试集选模及兼容补丁记录，不改变04的主线登记。
 
+06为接续04/05的3项最小消融：MELD关闭CC，IEMOCAP为Baseline/CMERC改变Batch排列。全部采用验证集选模与最终一次测试，只提供单Seed根因定位线索，不替代04的五Seed主线。
+
 | 实验系列 | 服务器与设备 | 正式范围 | 状态 | 入口 |
 | --- | --- | --- | --- | --- |
 | 原版单 seed 复现 | `biggpu` / V100 | 2 数据集 × baseline/CMERC × official_test/validation，共 8 run | 已完成 | [01_v100_single_seed](01_v100_single_seed/README.md) |
@@ -9,6 +11,7 @@
 | V100 多 seed V2 | `biggpu` / V100 | 5 seed × 2 数据集 × baseline/CMERC，共 20 run | 已完成 | [03_v100_multiseed](03_v100_multiseed/README.md) |
 | XP 主研究基线 | 本地 `user23` / TITAN Xp | 5 seed × 2 数据集 × baseline/CMERC，共20 run；validation/continuous/ATen/capacity_safe | 已完成并通过验收 | [04_xp_mainline_validation](04_xp_mainline_validation/README.md) |
 | 官方 README 单 Seed 对照 | 本地 `user23` / TITAN Xp GPU3 | IEMOCAP seed1475、MELD seed67137，各含baseline/CMERC，共4 run；official_test_selection | 已完成并通过验收 | [05_official_readme_reproduction](05_official_readme_reproduction/README.md) |
+| 最小消融根因验证 | 本地 `user23` / TITAN Xp GPU3 | MELD seed67137 w/o CC；IEMOCAP seed1475 source_order Baseline/CMERC，共3 run；validation/continuous/ATen | 已完成并通过验收 | [06_minimal_ablation_validation](06_minimal_ablation_validation/README.md) |
 
 ## 如何交给 GPT 审查
 
@@ -22,6 +25,7 @@
 
 - 原版01的两套选模协议分别保留；旧XP02使用逐轮测试集选模的 `official_test`；V100 V2 03与XP04使用验证集选模、固定split seed、continuous RNG、ATen RNN和capacity_safe。不同组独立展示，不合并均值，不把环境差异直接归因于显卡。
 - 05保留官方 `official_test_selection`、RNG段首重置、cuDNN GRU及完整原始训练池。其固定checkpoint独立进程重评不消除此前测试选轮偏差；每数据集仅一个Seed，不能替代五Seed统计，也不能把与04的差值直接视为同协议因果效应。
+- 06保持04对应Seed的划分与验证选模，分别登记CC开关或Batch排列；历史完整CMERC跨物理卡与CUDA非确定性限制严格因果解释。IEMOCAP验证负增量缩小不等于绝对提升，MELD去CC的验证证据混合；暂缓最终五Seed。
 - 旧XP02的两个baseline只是单seed诊断，不能支持五seed配对提升统计。V100 V2 03和XP04均有两种模型的完整五seed配对；04的主线登记依据完整性与协议验收。
 - V100 V1 的容量失败与中间进度报告是历史证据；最终结论使用 V2 完整结果。`first3` 是中间三 seed 版本，不能覆盖完整五 seed 汇总。
 - 原版复现未保存启动时的源码哈希。其 `code/` 来自原服务器留存工作目录的本次导出，不能将公开提交或导出哈希倒填为运行时冻结版本。

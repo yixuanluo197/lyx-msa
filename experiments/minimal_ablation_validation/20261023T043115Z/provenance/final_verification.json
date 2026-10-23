@@ -1,0 +1,114 @@
+{
+  "status": "passed",
+  "created_at_utc": "2026-10-23T06:29:34.165561+00:00",
+  "formal_runs_started": 3,
+  "formal_runs_completed": 3,
+  "history_files_unchanged": {
+    "/data2/yb/paper/lyx-msa/CMERC/experiment_records/04_xp_mainline_validation": 295,
+    "/data2/yb/paper/lyx-msa/CMERC/experiment_records/05_official_readme_reproduction": 2,
+    "/data2/yb/paper/lyx-msa/CMERC/experiments/official_readme_reproduction": 208,
+    "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z": 649
+  },
+  "data_and_frozen_execution_unchanged": true,
+  "runs": {
+    "MELD_wo_cc_seed67137": {
+      "status": "passed",
+      "epochs": 40,
+      "test_traversals": 1,
+      "selected_epoch": 8,
+      "test_metrics_independently_recomputed": {
+        "weighted_f1": 65.30964094366121,
+        "macro_f1": 48.87527830540815,
+        "accuracy": 66.36015325670498,
+        "ece": 23.898703089390683,
+        "cel": 611.0441204756498
+      },
+      "ordered_batch_coverage_every_epoch": true,
+      "weighted_loss_identity_every_batch": true,
+      "checkpoints": {
+        "best.pt": {
+          "sha256": "997502aefe7984cb90510e7d42a16b876a454c785d8226622216ce1beeedc6c1",
+          "epoch": 8,
+          "finite_model_and_adam": true
+        },
+        "latest.pt": {
+          "sha256": "fd377f101320e3c8d874396c58436f24b2310e5d0d10f74b6499400b4b0cf90a",
+          "epoch": 40,
+          "finite_model_and_adam": true
+        }
+      },
+      "train_batches": 2548,
+      "zero_mscl_train_batches": 0,
+      "zero_cscl_train_batches": 0
+    },
+    "IEMOCAP_baseline_source_order_seed1475": {
+      "status": "passed",
+      "epochs": 80,
+      "test_traversals": 1,
+      "selected_epoch": 62,
+      "test_metrics_independently_recomputed": {
+        "weighted_f1": 66.81591312056683,
+        "macro_f1": 66.55739770455288,
+        "accuracy": 66.9747381392483,
+        "ece": 15.862198755172617,
+        "cel": 1440.7064922792888
+      },
+      "ordered_batch_coverage_every_epoch": true,
+      "weighted_loss_identity_every_batch": true,
+      "checkpoints": {
+        "best.pt": {
+          "sha256": "e9f4e1b9b0253ad046f6486b6d55c2245b135c5b4a51b99371b9ba9b48c092c9",
+          "epoch": 62,
+          "finite_model_and_adam": true
+        },
+        "latest.pt": {
+          "sha256": "bc784d3625f31edc6555261d76c7185498620a7fc86413cb374dce398fa692da",
+          "epoch": 80,
+          "finite_model_and_adam": true
+        }
+      },
+      "train_batches": 560,
+      "zero_mscl_train_batches": 560,
+      "zero_cscl_train_batches": 560
+    },
+    "IEMOCAP_cmerc_source_order_seed1475": {
+      "status": "passed",
+      "epochs": 80,
+      "test_traversals": 1,
+      "selected_epoch": 75,
+      "test_metrics_independently_recomputed": {
+        "weighted_f1": 68.25010158171821,
+        "macro_f1": 67.4159278766986,
+        "accuracy": 68.14540973505854,
+        "ece": 15.745307206740293,
+        "cel": 1248.4877717873812
+      },
+      "ordered_batch_coverage_every_epoch": true,
+      "weighted_loss_identity_every_batch": true,
+      "checkpoints": {
+        "best.pt": {
+          "sha256": "6807aa27f5ea5eafa7142cb76248c9dc22213a980d3ec9e34f3d2d8c3c3daefb",
+          "epoch": 75,
+          "finite_model_and_adam": true
+        },
+        "latest.pt": {
+          "sha256": "4db0df0c7ce1a3aafa5d72d810977551e2f97781c6b4c7f2106543b770450805",
+          "epoch": 80,
+          "finite_model_and_adam": true
+        }
+      },
+      "train_batches": 541,
+      "zero_mscl_train_batches": 0,
+      "zero_cscl_train_batches": 0
+    }
+  },
+  "resource_samples": 641,
+  "unexpected_gpu_process_samples": 0,
+  "cuda_initialized": false,
+  "limits": [
+    "single seed, historical controls",
+    "same-model cross-card comparison is not bitwise guaranteed",
+    "fixed_author generation history unknown",
+    "discrete resource samples are not global mutual exclusion"
+  ]
+}

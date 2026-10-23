@@ -1,0 +1,17 @@
+# Keep original data, checkpoints, prediction arrays and raw traces on the server.
+/logs/
+/code_xp04/data/
+/code_source_order/data/
+**/observer_batches.jsonl
+**/*.lock
+*.pt
+*.pth
+*.ckpt
+*.npz
+*.npy
+
+# The fixed upstream commit already publishes these small difficulty files.
+!/code_xp04/caldiff/IEMOCAP_diff.pkl
+!/code_xp04/caldiff/MELD_diff.pkl
+!/code_source_order/caldiff/IEMOCAP_diff.pkl
+!/code_source_order/caldiff/MELD_diff.pkl

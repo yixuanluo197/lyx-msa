@@ -8,6 +8,7 @@ CMERC 多模态对话情绪识别代码、复现工程与时间因果变体，�
 
 - [实验档案总览](experiment_records/README.md)：历史复现、XP04 五 seed 主线，以及本次官方 README 单 Seed 对照的代码版本、配置、逐轮指标和最终结果。
 - [官方 README 四组对照实验](experiment_records/05_official_readme_reproduction/README.md)：IEMOCAP seed1475、MELD seed67137 的 Baseline/CMERC 实测、源码协议审计和与 XP04 的对照；保留官方测试集选模。
+- [CMERC 最小消融根因验证](experiment_records/06_minimal_ablation_validation/README.md)：MELD去CC及IEMOCAP固定源顺序Batch的3项正式实验；验证集选模、最终测试一次，区分相对负增量缩小与绝对性能提升。
 - [高置信度错误诊断：实验一至五](checkpoints/analysis/high_confidence_errors/experiments_2_to_5/README.md)：固定 validation checkpoint 的全量预测、模态均值替换、逐样本对比及统计；提供 [Word 报告](checkpoints/analysis/high_confidence_errors/experiments_2_to_5/CMERC_高置信度错误诊断报告_完整版.docx)、[Excel 全量结果](checkpoints/analysis/high_confidence_errors/experiments_2_to_5/CMERC_高置信度错误诊断结果_完整版.xlsx) 和 [统计摘要](checkpoints/analysis/high_confidence_errors/experiments_2_to_5/SUMMARY.md)。原始实验一 Word 母版未找到，新报告明确采用原 Markdown 转录。
 - [实验六：概率校准分析](checkpoints/analysis/high_confidence_errors/experiment_6_calibration/README.md)：沿用前五项固定预测，提供 ECE、MCE、Brier、NLL、十区间明细与两个数据集的可靠性图；[实验一至六 Word 报告](checkpoints/analysis/high_confidence_errors/experiment_6_calibration/CMERC_高置信度错误诊断报告_实验一至六.docx)完整保留前五项正文，另附[实验六 Excel](checkpoints/analysis/high_confidence_errors/experiment_6_calibration/CMERC_实验六_概率校准结果.xlsx)及[结果分析](checkpoints/analysis/high_confidence_errors/experiment_6_calibration/SUMMARY.md)。
 - [GPT / 人工代码审查指南](docs/GPT_REVIEW_GUIDE.md)：建议阅读顺序、重点文件和可复制的审查提示词。

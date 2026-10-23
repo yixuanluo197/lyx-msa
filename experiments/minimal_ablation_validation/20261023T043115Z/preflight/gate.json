@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "completed_at_utc": "2026-10-23T04:40:41.302069+00:00",
+  "formal_runs_started": 0,
+  "gpu_probes": 4,
+  "first_step_all_finite_and_parameters_updated": true,
+  "no_test_forward_in_preflight": true,
+  "MELD_full_vs_wo_CC_first_batch_same_initialization_forward_targets_and_rng": true,
+  "MELD_only_weighted_CC_removed_from_loss": true,
+  "source_order_cpu_evidence_sha256": "34b484b61b0a75a710d2ad2f5088f67bd9c6a0fea273e7bae62668957352ec89",
+  "observer_unit_tests": "three CPU tests passed before GPU probes",
+  "limits": [
+    "first-batch check does not prove five-seed efficacy",
+    "historical control uses another physical card"
+  ]
+}

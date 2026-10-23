@@ -1,0 +1,53 @@
+{
+  "initial_model_sha256": "ee6646949dcff38919cdaefb4838fededffb4bb789c5bb0f0ba54c5765e9dfa4",
+  "rng_before_train": "e8e53f92ecdf0de635182cb54208c37bf14553e3fb69f3dc9ac7540bca19f0e8",
+  "rng_after_forward": "e7616003ee621e09f3592fcf437ac68d7d90bf0ab821584cb1cfc06610e086c9",
+  "model_before_step_sha256": "7ada0ed6ab375041ca7b7cee06b844a2a5658fc9113cfdd082905c200cd6061d",
+  "model_after_step_sha256": "e9b4b8474dec7af42205c40d06ceaec570a012a06d13954d6021f8f3a191a976",
+  "optimizer_updated_parameters": true,
+  "rng_after_step": "e7616003ee621e09f3592fcf437ac68d7d90bf0ab821584cb1cfc06610e086c9",
+  "components": {
+    "classification_loss": 1.8150888681411743,
+    "cc_loss": 0.0,
+    "mscl_loss": 0.0,
+    "cscl_loss": 0.0,
+    "total_loss": 1.8150888681411743
+  },
+  "dialogue_ids": [
+    "Ses01M_impro03",
+    "Ses02M_impro08",
+    "Ses02F_script01_1",
+    "Ses02M_script02_2",
+    "Ses03M_impro05b",
+    "Ses01M_script02_2",
+    "Ses04F_impro07",
+    "Ses02M_impro02",
+    "Ses04F_script01_1",
+    "Ses02M_impro05",
+    "Ses03M_impro07",
+    "Ses03M_script02_2",
+    "Ses04M_script03_1",
+    "Ses03F_impro03",
+    "Ses04F_script01_3",
+    "Ses02F_script02_1"
+  ],
+  "lengths": [
+    49,
+    51,
+    54,
+    69,
+    63,
+    79,
+    110,
+    26,
+    62,
+    51,
+    42,
+    78,
+    34,
+    35,
+    39,
+    43
+  ],
+  "gradients_finite": true
+}

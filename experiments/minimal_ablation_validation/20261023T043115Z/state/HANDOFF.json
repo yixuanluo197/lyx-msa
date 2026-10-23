@@ -1,0 +1,52 @@
+{
+  "task": "Finish three preregistered CMERC minimal ablations and Chinese report; do not end while recoverable work remains",
+  "batch": "/data2/yb/paper/lyx-msa/CMERC/experiments/minimal_ablation_validation/20261023T043115Z",
+  "registry": "configs/registry.json",
+  "gpu_uuid": "GPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456",
+  "server": "local user23 TITAN Xp GPU3",
+  "formal_runs": [
+    {
+      "id": "MELD_wo_cc_seed67137",
+      "epochs": 40,
+      "run_dir": "/data2/yb/paper/lyx-msa/CMERC/experiments/minimal_ablation_validation/20261023T043115Z/runs/MELD_wo_cc_seed67137/MELD_validation_seed67137"
+    },
+    {
+      "id": "IEMOCAP_baseline_source_order_seed1475",
+      "epochs": 80,
+      "run_dir": "/data2/yb/paper/lyx-msa/CMERC/experiments/minimal_ablation_validation/20261023T043115Z/runs/IEMOCAP_baseline_source_order_seed1475/IEMOCAP_validation_seed1475"
+    },
+    {
+      "id": "IEMOCAP_cmerc_source_order_seed1475",
+      "epochs": 80,
+      "run_dir": "/data2/yb/paper/lyx-msa/CMERC/experiments/minimal_ablation_validation/20261023T043115Z/runs/IEMOCAP_cmerc_source_order_seed1475/IEMOCAP_validation_seed1475"
+    }
+  ],
+  "supervisor_pid": 1313637,
+  "finalizer_pid": 1336928,
+  "status": "completed",
+  "finalization": "state/finalization.json",
+  "frozen_execution": "provenance/frozen_execution.json",
+  "do_not_edit_frozen_files": true,
+  "completed_preflight": "4 real first-step probes passed; 160 CPU source-order epochs passed; 3 observer toy tests passed",
+  "primary_rules": "validation first maximum rounded percent WF1, strict improvement, same as XP04; only one final test-loader traversal with full and five removal predictions; no second GPU evaluation",
+  "historical_controls": "provenance/xp04_references.json; immutable historical roots in provenance/history_before.json",
+  "hardware_limits": "MELD historical GPU0->newGPU3; IEM full GPU1->GPU3; IEM baseline GPU3 unchanged. Same model/host not bitwise guarantee; configuration-only factors, no strict all-conditions causal claim",
+  "MELD_factor": "calibrate True->False only; contrastlearning/courselearning still True, raw CC still computed but excluded from weighted loss; source code exactly XP04",
+  "IEM_factor": "capacity_safe random -> source_order fixed eligible source subsequence; same private randperm consumed and discarded, same batch16/CL/continuous/ATen/loss/split/selection; code_source_order/train_cm.py only minimal sampler/CLI patch",
+  "monitoring_limits": "Supervisor only logs in-run foreign PIDs, no cross-project mutex. nvidia-smi errors may stop supervisor while child continues; independently verify own PIDs. Never kill unrelated processes.",
+  "pending": [],
+  "helpers": {
+    "status": "python scripts/status.py",
+    "train_python": "/data2/yb/conda_envs/cmerc-xp-repro/bin/python",
+    "cpu_plot_python": "/home/yangbin/miniconda3/envs/multimodalerc310/bin/python"
+  },
+  "agents_done": "meld_pair_audit wrote observer + summarize, iem_batch_audit wrote sampler+CPU tests and independently reviewed observer and verifier; both now idle, safe to reuse for read-only final review",
+  "unrelated_files_preserve": [
+    "CODEX_CAUSAL_CMERC_VERIFICATION_PROMPT.txt",
+    "pytest-of-yangbin/"
+  ],
+  "completed_at_utc": "2026-10-23T06:34:09.905994+00:00",
+  "result_report": "/data2/yb/paper/lyx-msa/CMERC/reports/CMERC_MINIMAL_ABLATION_RESULTS.md",
+  "final_verification": "provenance/final_verification.json",
+  "decision": "Defer final five seeds; no new HSCL/CL ablation or test rerun. Follow-up recommendations only."
+}
