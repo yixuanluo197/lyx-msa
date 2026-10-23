@@ -1,0 +1,5 @@
+run_id,dataset,seed,lr,complete,best_epoch,best_validation_wf1,last10_validation_wf1,historical_best_validation_wf1,historical_last10_validation_wf1,delta_best_validation_wf1,delta_last10_validation_wf1,candidate_category
+IEMOCAP_cmerc_lr5e-5_seed1475,IEMOCAP,1475,5e-05,True,67,63.47,62.257,65.02,62.967,-1.5499999999999972,-0.7100000000000009,no_best_improvement
+IEMOCAP_cmerc_lr2e-4_seed1475,IEMOCAP,1475,0.0002,True,44,66.21,62.144,65.02,62.967,1.1899999999999977,-0.8230000000000004,weak_mixed_candidate
+MELD_cmerc_lr5e-5_seed67137,MELD,67137,5e-05,True,17,65.94,63.437,65.24,62.909000000000006,0.7000000000000028,0.5279999999999916,strong_candidate
+MELD_cmerc_lr2e-4_seed67137,MELD,67137,0.0002,True,8,66.07,62.983,65.24,62.909000000000006,0.8299999999999983,0.07399999999999096,strong_candidate

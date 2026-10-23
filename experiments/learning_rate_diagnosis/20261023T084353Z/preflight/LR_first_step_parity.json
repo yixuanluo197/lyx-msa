@@ -1,0 +1,108 @@
+{
+  "created_at_utc": "2026-10-23T08:58:46.574711+00:00",
+  "status": "passed",
+  "pairs": {
+    "MELD": {
+      "run_ids": [
+        "MELD_cmerc_lr5e-5_seed67137",
+        "MELD_cmerc_lr2e-4_seed67137"
+      ],
+      "status": "passed",
+      "exactly_equal_fields": [
+        "initial_model_sha256",
+        "rng_before_train",
+        "rng_before_step",
+        "rng_after_step",
+        "dialogue_ids",
+        "lengths"
+      ],
+      "relative_tolerance": 1e-05,
+      "absolute_tolerance": 1e-06,
+      "numeric_comparison": {
+        "classification_loss": {
+          "left": 5.825273036956787,
+          "right": 5.825273036956787,
+          "difference": 0.0
+        },
+        "cc_loss": {
+          "left": 46.20790100097656,
+          "right": 46.20789337158203,
+          "difference": -7.62939453125e-06
+        },
+        "mscl_loss": {
+          "left": 7.9995880126953125,
+          "right": 7.999588489532471,
+          "difference": 4.76837158203125e-07
+        },
+        "cscl_loss": {
+          "left": 4.8782572746276855,
+          "right": 4.8782572746276855,
+          "difference": 0.0
+        },
+        "total_loss": {
+          "left": 7.849365711212158,
+          "right": 7.849365711212158,
+          "difference": 0.0
+        },
+        "gradient_l2": {
+          "left": 18.82671984631052,
+          "right": 18.826719800806394,
+          "difference": -4.550412668891113e-08
+        }
+      },
+      "post_Adam_parameters_expected_to_differ": true,
+      "post_Adam_model_hashes_different": true
+    },
+    "IEMOCAP": {
+      "run_ids": [
+        "IEMOCAP_cmerc_lr5e-5_seed1475",
+        "IEMOCAP_cmerc_lr2e-4_seed1475"
+      ],
+      "status": "passed",
+      "exactly_equal_fields": [
+        "initial_model_sha256",
+        "rng_before_train",
+        "rng_before_step",
+        "rng_after_step",
+        "dialogue_ids",
+        "lengths"
+      ],
+      "relative_tolerance": 1e-05,
+      "absolute_tolerance": 1e-06,
+      "numeric_comparison": {
+        "classification_loss": {
+          "left": 1.8559980392456055,
+          "right": 1.8559980392456055,
+          "difference": 0.0
+        },
+        "cc_loss": {
+          "left": 202.13632202148438,
+          "right": 202.13633728027344,
+          "difference": 1.52587890625e-05
+        },
+        "mscl_loss": {
+          "left": 6.492966175079346,
+          "right": 6.492966175079346,
+          "difference": 0.0
+        },
+        "cscl_loss": {
+          "left": 4.398528575897217,
+          "right": 4.398528575897217,
+          "difference": 0.0
+        },
+        "total_loss": {
+          "left": 3.411254405975342,
+          "right": 3.411254405975342,
+          "difference": 0.0
+        },
+        "gradient_l2": {
+          "left": 35.81739983446879,
+          "right": 35.81739977370073,
+          "difference": -6.076805902921478e-08
+        }
+      },
+      "post_Adam_parameters_expected_to_differ": true,
+      "post_Adam_model_hashes_different": true
+    }
+  }
+}

@@ -1,0 +1,125 @@
+{
+  "status": "passed",
+  "created_at_utc": "2026-10-23T11:38:19.270077+00:00",
+  "formal_runs": 4,
+  "test_forwards": 0,
+  "cuda_initialized": false,
+  "historical_files_unchanged": {
+    "experiment_records/04_xp_mainline_validation": 295,
+    "experiment_records/05_official_readme_reproduction": 2,
+    "experiment_records/06_minimal_ablation_validation": 2,
+    "experiments/xp_mainline_validation/20261016T050823Z": 649,
+    "experiments/official_readme_reproduction": 208,
+    "experiments/minimal_ablation_validation/20261023T043115Z": 201
+  },
+  "frozen_sources_and_inputs_unchanged": true,
+  "resource_samples": 937,
+  "unexpected_process_samples": 0,
+  "runs": {
+    "MELD_cmerc_lr5e-5_seed67137": {
+      "status": "passed",
+      "epochs": 40,
+      "selected_epoch": 17,
+      "validation_best_wf1": 65.94,
+      "validation_last10_wf1": 63.43700000000001,
+      "train_batches": 2548,
+      "loss_and_gradient_finite": true,
+      "every_epoch_order_matches_xp04_sampler": true,
+      "test_forwards": 0,
+      "checkpoints": {
+        "best.pt": {
+          "epoch": 17,
+          "sha256": "90a33e3b4e9f6f3d1d1ddbadcc2b1277585470342621040472321a9682235b55",
+          "model_and_adam_finite": true,
+          "full_rng_present": true
+        },
+        "latest.pt": {
+          "epoch": 40,
+          "sha256": "3f5075037ed7ca01bb169979ec18e17099637fe201f8a74cd3cc9ac9a42ad072",
+          "model_and_adam_finite": true,
+          "full_rng_present": true
+        }
+      }
+    },
+    "MELD_cmerc_lr2e-4_seed67137": {
+      "status": "passed",
+      "epochs": 40,
+      "selected_epoch": 8,
+      "validation_best_wf1": 66.07,
+      "validation_last10_wf1": 62.98299999999999,
+      "train_batches": 2548,
+      "loss_and_gradient_finite": true,
+      "every_epoch_order_matches_xp04_sampler": true,
+      "test_forwards": 0,
+      "checkpoints": {
+        "best.pt": {
+          "epoch": 8,
+          "sha256": "4e920acc75a8ab13a47ae64950da167414a26d2f2ea60ba69b7f56d22b83d311",
+          "model_and_adam_finite": true,
+          "full_rng_present": true
+        },
+        "latest.pt": {
+          "epoch": 40,
+          "sha256": "2d62ecc7fdd9948e6a79f9dce3c28303e9aec0c41cd8e898ee7529df070e5334",
+          "model_and_adam_finite": true,
+          "full_rng_present": true
+        }
+      }
+    },
+    "IEMOCAP_cmerc_lr5e-5_seed1475": {
+      "status": "passed",
+      "epochs": 80,
+      "selected_epoch": 67,
+      "validation_best_wf1": 63.47,
+      "validation_last10_wf1": 62.25700000000002,
+      "train_batches": 541,
+      "loss_and_gradient_finite": true,
+      "every_epoch_order_matches_xp04_sampler": true,
+      "test_forwards": 0,
+      "checkpoints": {
+        "best.pt": {
+          "epoch": 67,
+          "sha256": "0e20fec7b5cb46f06c28e10c6256eac53779f773e7efcf528731760ad08d6aec",
+          "model_and_adam_finite": true,
+          "full_rng_present": true
+        },
+        "latest.pt": {
+          "epoch": 80,
+          "sha256": "f21c8cac38444ff6fd8a81becab23cb20342dfd5189dad9e6db6d80f7c0c18c7",
+          "model_and_adam_finite": true,
+          "full_rng_present": true
+        }
+      }
+    },
+    "IEMOCAP_cmerc_lr2e-4_seed1475": {
+      "status": "passed",
+      "epochs": 80,
+      "selected_epoch": 44,
+      "validation_best_wf1": 66.21,
+      "validation_last10_wf1": 62.144000000000005,
+      "train_batches": 541,
+      "loss_and_gradient_finite": true,
+      "every_epoch_order_matches_xp04_sampler": true,
+      "test_forwards": 0,
+      "checkpoints": {
+        "best.pt": {
+          "epoch": 44,
+          "sha256": "04dc79cc4a36937ce33e0a489c62c146b89e68412ca161762719e68c4cfdb5cf",
+          "model_and_adam_finite": true,
+          "full_rng_present": true
+        },
+        "latest.pt": {
+          "epoch": 80,
+          "sha256": "574c135e2e28055d2a04c61148d5f8c6cb0e8752998a1c273b7ee033885cf8ad",
+          "model_and_adam_finite": true,
+          "full_rng_present": true
+        }
+      }
+    }
+  },
+  "limits": [
+    "Single seed per dataset, historical cross-card controls.",
+    "Author difficulty generation history unknown.",
+    "No test or final independent evaluation performed in this stage."
+  ]
+}

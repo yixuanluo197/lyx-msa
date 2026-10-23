@@ -1,0 +1,19 @@
+{
+  "active": false,
+  "phase": "completed",
+  "completed_at_utc": "2026-10-23T11:41:46.572296+00:00",
+  "formal_completed": 4,
+  "test_forwards": 0,
+  "report": "reports/CMERC_LEARNING_RATE_DIAGNOSIS.md",
+  "independent_verification": "provenance/final_verification.json",
+  "analysis_verification": "provenance/analysis_delivery.json",
+  "changes": "New isolated LR experiment snapshot/configuration/observation/analysis/results/report; no historical files or tracked model code modified",
+  "simplifications": "Reuse XP04 trainer and capacity sampler; one documented skip-final-test compatibility gate; no network or loss changes",
+  "remaining_risks": [
+    "single seed per dataset",
+    "historical physical GPU difference",
+    "unknown author curriculum provenance",
+    "validation-only evidence; no independent final test"
+  ],
+  "followup_started": false
+}

@@ -1,0 +1,4811 @@
+{
+  "status": "passed",
+  "epochs_checked": 240,
+  "original_sampling_ast_unchanged": true,
+  "global_cpu_rng_unchanged": true,
+  "cuda_initialized": false,
+  "test_lengths_or_predictions_examined": false,
+  "limits": "CPU graph capacity does not establish GPU memory safety.",
+  "records": [
+    {
+      "run_id": "MELD_cmerc_lr5e-5_seed67137",
+      "epoch": 1,
+      "sample_ratio": 0.4,
+      "train_dialogues": 415,
+      "train_batches": 26,
+      "validation_batches": 8,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 315,
+        "nodes": 801
+      },
+      "sampler_retries": 0,
+      "private_seed": 67137,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "d757b8122ea4321e96c7c88c705d13d76d2860562443102f78405ac57b32187c"
+    },
+    {
+      "run_id": "MELD_cmerc_lr5e-5_seed67137",
+      "epoch": 2,
+      "sample_ratio": 0.8,
+      "train_dialogues": 830,
+      "train_batches": 52,
+      "validation_batches": 8,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 280,
+        "nodes": 696
+      },
+      "sampler_retries": 0,
+      "private_seed": 67138,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "75fce5aa68ea9ccfacecc9c3bd3c9fea09ffbd9bd3824a8c9f7d7e4d2c427900"
+    },
+    {
+      "run_id": "MELD_cmerc_lr5e-5_seed67137",
+      "epoch": 3,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 259,
+        "nodes": 633
+      },
+      "sampler_retries": 0,
+      "private_seed": 67139,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "3b52fa5d1bc7c85f3ee018b4c956f532d42b48f952741b5f93b6ba8d5226af21"
+    },
+    {
+      "run_id": "MELD_cmerc_lr5e-5_seed67137",
+      "epoch": 4,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 256,
+        "nodes": 624
+      },
+      "sampler_retries": 0,
+      "private_seed": 67140,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "27957561288e6eaba7c38c41cd46156f0639b79f01011247a85bc469bf66ea88"
+    },
+    {
+      "run_id": "MELD_cmerc_lr5e-5_seed67137",
+      "epoch": 5,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 259,
+        "nodes": 633
+      },
+      "sampler_retries": 0,
+      "private_seed": 67141,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "af9a96a7e1fb7b9e3fd4b605998185375e792b3ed2303e20a9905cb20d9cdccc"
+    },
+    {
+      "run_id": "MELD_cmerc_lr5e-5_seed67137",
+      "epoch": 6,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 275,
+        "nodes": 681
+      },
+      "sampler_retries": 0,
+      "private_seed": 67142,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "f6f6722bca3c4c566babee00fdf1d939cb273304b08c04caf9a8a53be2dbd908"
+    },
+    {
+      "run_id": "MELD_cmerc_lr5e-5_seed67137",
+      "epoch": 7,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 260,
+        "nodes": 636
+      },
+      "sampler_retries": 0,
+      "private_seed": 67143,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "81c539468c251c754189f11cba7fdb69f8a07bb1732ad187f49be54d3250c5de"
+    },
+    {
+      "run_id": "MELD_cmerc_lr5e-5_seed67137",
+      "epoch": 8,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 266,
+        "nodes": 654
+      },
+      "sampler_retries": 0,
+      "private_seed": 67144,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "cbd4bab4460e51cea8bc98f27e8c2d7c3326b3a32fd39f3f471aea478da40f0a"
+    },
+    {
+      "run_id": "MELD_cmerc_lr5e-5_seed67137",
+      "epoch": 9,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 267,
+        "nodes": 657
+      },
+      "sampler_retries": 0,
+      "private_seed": 67145,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "f290253f04f62b0df20d502003fc1c7178b82968db49a1486454390ab55904b4"
+    },
+    {
+      "run_id": "MELD_cmerc_lr5e-5_seed67137",
+      "epoch": 10,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 242,
+        "nodes": 582
+      },
+      "sampler_retries": 0,
+      "private_seed": 67146,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "c2db2f8005162a3e84fb5b79b6790006c6dbed2703a7f885dd1bd9e036dab0ed"
+    },
+    {
+      "run_id": "MELD_cmerc_lr5e-5_seed67137",
+      "epoch": 11,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 260,
+        "nodes": 636
+      },
+      "sampler_retries": 0,
+      "private_seed": 67147,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "47c8cc974c150607f3df27fb5034ec8fe661fbdf5a2afad1ab66b31afd60faa3"
+    },
+    {
+      "run_id": "MELD_cmerc_lr5e-5_seed67137",
+      "epoch": 12,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 249,
+        "nodes": 603
+      },
+      "sampler_retries": 0,
+      "private_seed": 67148,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "eb9d394dfc67aea73bbdc078868f556ed1b807902b7f9319b7e98bdb525bccfc"
+    },
+    {
+      "run_id": "MELD_cmerc_lr5e-5_seed67137",
+      "epoch": 13,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 254,
+        "nodes": 618
+      },
+      "sampler_retries": 0,
+      "private_seed": 67149,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "484161cd6b03347debfe6e24c65c090de82bb118e1c1375bd4c602cd4109bfef"
+    },
+    {
+      "run_id": "MELD_cmerc_lr5e-5_seed67137",
+      "epoch": 14,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 261,
+        "nodes": 639
+      },
+      "sampler_retries": 0,
+      "private_seed": 67150,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "d0ec6d16330fcbdd9182e00c9d04dfec01ce0e9dfabe3c94df8ad7757267efba"
+    },
+    {
+      "run_id": "MELD_cmerc_lr5e-5_seed67137",
+      "epoch": 15,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 264,
+        "nodes": 648
+      },
+      "sampler_retries": 0,
+      "private_seed": 67151,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "e6c946a840818d46a38c1a608d0883eefd71d10d60881fb6fbf4bdd5c9f5c199"
+    },
+    {
+      "run_id": "MELD_cmerc_lr5e-5_seed67137",
+      "epoch": 16,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 268,
+        "nodes": 660
+      },
+      "sampler_retries": 0,
+      "private_seed": 67152,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "aa06183939f7a2d62be0977cb85797388605039557c08f21b902b47bd876c1b3"
+    },
+    {
+      "run_id": "MELD_cmerc_lr5e-5_seed67137",
+      "epoch": 17,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 269,
+        "nodes": 663
+      },
+      "sampler_retries": 0,
+      "private_seed": 67153,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "40863ed37d7c2ed28ba93735a3079effefe93b0e9af729ab6d3051597a81cc8e"
+    },
+    {
+      "run_id": "MELD_cmerc_lr5e-5_seed67137",
+      "epoch": 18,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 251,
+        "nodes": 609
+      },
+      "sampler_retries": 0,
+      "private_seed": 67154,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "4c18ee8855dd0a81efcd3b02ad0590066a2a3df42a7423a31e72508643e372ef"
+    },
+    {
+      "run_id": "MELD_cmerc_lr5e-5_seed67137",
+      "epoch": 19,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 261,
+        "nodes": 639
+      },
+      "sampler_retries": 0,
+      "private_seed": 67155,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "9804fd488b085366e69393814152f75714d811d714215117c1f2bfb935bdd68a"
+    },
+    {
+      "run_id": "MELD_cmerc_lr5e-5_seed67137",
+      "epoch": 20,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 255,
+        "nodes": 621
+      },
+      "sampler_retries": 0,
+      "private_seed": 67156,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "164383f72b3e90cf635bac17fe520dc5d5ddde5e055a432bcc8d541dd4ac41e1"
+    },
+    {
+      "run_id": "MELD_cmerc_lr5e-5_seed67137",
+      "epoch": 21,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 281,
+        "nodes": 699
+      },
+      "sampler_retries": 0,
+      "private_seed": 67157,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "53952e22f2707368d4f6bb0e4ed840686928f7814d705e7abd4c3f9cb38cd1da"
+    },
+    {
+      "run_id": "MELD_cmerc_lr5e-5_seed67137",
+      "epoch": 22,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 249,
+        "nodes": 603
+      },
+      "sampler_retries": 0,
+      "private_seed": 67158,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "6a2ed39ae366d97a4efc7bd5f6647f94c23ed85802aa9f34d80ef24f74400721"
+    },
+    {
+      "run_id": "MELD_cmerc_lr5e-5_seed67137",
+      "epoch": 23,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 251,
+        "nodes": 609
+      },
+      "sampler_retries": 0,
+      "private_seed": 67159,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "fd39b7464acc0083fb4606fa7de81dce2b5af7402f793fccdcf231228b52bf1c"
+    },
+    {
+      "run_id": "MELD_cmerc_lr5e-5_seed67137",
+      "epoch": 24,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 263,
+        "nodes": 645
+      },
+      "sampler_retries": 0,
+      "private_seed": 67160,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "385575284002f239ff21594ebcf3c131f922d98270b931ea687eab93a1477e4f"
+    },
+    {
+      "run_id": "MELD_cmerc_lr5e-5_seed67137",
+      "epoch": 25,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 244,
+        "nodes": 588
+      },
+      "sampler_retries": 0,
+      "private_seed": 67161,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "3b6fb573f3c87959f196b2ff5ecee6a8a81683753a004cc724ce84f36d0e5e8e"
+    },
+    {
+      "run_id": "MELD_cmerc_lr5e-5_seed67137",
+      "epoch": 26,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 264,
+        "nodes": 648
+      },
+      "sampler_retries": 0,
+      "private_seed": 67162,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "3572160efef2ad3417102e2e40b624e7641d2577e778ee15b1f1c73e96c9f554"
+    },
+    {
+      "run_id": "MELD_cmerc_lr5e-5_seed67137",
+      "epoch": 27,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 281,
+        "nodes": 699
+      },
+      "sampler_retries": 0,
+      "private_seed": 67163,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "60c12c814893a6eb0ce33a4ada5ce6fe63e321959e9847dda486806683b26aee"
+    },
+    {
+      "run_id": "MELD_cmerc_lr5e-5_seed67137",
+      "epoch": 28,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 252,
+        "nodes": 612
+      },
+      "sampler_retries": 0,
+      "private_seed": 67164,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "32a76f1fb84214c109c17c88484dcd86dfb6eaadce6f0d8bc3015aa177195a77"
+    },
+    {
+      "run_id": "MELD_cmerc_lr5e-5_seed67137",
+      "epoch": 29,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 243,
+        "nodes": 585
+      },
+      "sampler_retries": 0,
+      "private_seed": 67165,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "2778d74e2a06ccbad9bd285640cdff12ad8190b91228bd15a7e5ed2f8d066283"
+    },
+    {
+      "run_id": "MELD_cmerc_lr5e-5_seed67137",
+      "epoch": 30,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 257,
+        "nodes": 627
+      },
+      "sampler_retries": 0,
+      "private_seed": 67166,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "6d963c349c0c1ed5acd5bf620dba1eb9b5ae75a910c4c03639f8bc0a1b1217a0"
+    },
+    {
+      "run_id": "MELD_cmerc_lr5e-5_seed67137",
+      "epoch": 31,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 259,
+        "nodes": 633
+      },
+      "sampler_retries": 0,
+      "private_seed": 67167,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "815abf4798f9ce0e9fd0df3ef72675725a230e59a1f805b294e6f1c12a238e15"
+    },
+    {
+      "run_id": "MELD_cmerc_lr5e-5_seed67137",
+      "epoch": 32,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 266,
+        "nodes": 654
+      },
+      "sampler_retries": 0,
+      "private_seed": 67168,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "f6964607156854123a78f1c29535e1f424458243bfd119f005ef0982521a3680"
+    },
+    {
+      "run_id": "MELD_cmerc_lr5e-5_seed67137",
+      "epoch": 33,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 266,
+        "nodes": 654
+      },
+      "sampler_retries": 0,
+      "private_seed": 67169,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "dc1a2f17a26dd941f92814fd31f4f162fd813406d8a7e7a47c9039309b8507b1"
+    },
+    {
+      "run_id": "MELD_cmerc_lr5e-5_seed67137",
+      "epoch": 34,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 252,
+        "nodes": 612
+      },
+      "sampler_retries": 0,
+      "private_seed": 67170,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "73e06aeff9297f33caa465e1858d1ef5ec241005037ee40a82d0f41eff3cc403"
+    },
+    {
+      "run_id": "MELD_cmerc_lr5e-5_seed67137",
+      "epoch": 35,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 259,
+        "nodes": 633
+      },
+      "sampler_retries": 0,
+      "private_seed": 67171,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "52846420e76ac14c75270a7dbb00af4e773e8dd0086d206420ddd5e74c2f5f84"
+    },
+    {
+      "run_id": "MELD_cmerc_lr5e-5_seed67137",
+      "epoch": 36,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 268,
+        "nodes": 660
+      },
+      "sampler_retries": 0,
+      "private_seed": 67172,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "bb8db9ead10681ac0a32e858ecbf462fc250e6ef18b1c55a2da95a5037134d39"
+    },
+    {
+      "run_id": "MELD_cmerc_lr5e-5_seed67137",
+      "epoch": 37,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 273,
+        "nodes": 675
+      },
+      "sampler_retries": 0,
+      "private_seed": 67173,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "82bea590af4fd6702ae9b2c84e331ac95374479b5b150e73783cdf668c621a04"
+    },
+    {
+      "run_id": "MELD_cmerc_lr5e-5_seed67137",
+      "epoch": 38,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 268,
+        "nodes": 660
+      },
+      "sampler_retries": 0,
+      "private_seed": 67174,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "0947be511082e0d413e3c98282a0eab980dc2a3a88278bdbb8148db92a1599a8"
+    },
+    {
+      "run_id": "MELD_cmerc_lr5e-5_seed67137",
+      "epoch": 39,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 273,
+        "nodes": 675
+      },
+      "sampler_retries": 0,
+      "private_seed": 67175,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "0e7e103c08b38e4d34f4ecf28232c6dd41b557ea0b92fda62ff6d85bdf856d6b"
+    },
+    {
+      "run_id": "MELD_cmerc_lr5e-5_seed67137",
+      "epoch": 40,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 247,
+        "nodes": 597
+      },
+      "sampler_retries": 0,
+      "private_seed": 67176,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "7463e5b811c03bfe80381d9fe8487d09537993dc6001a50d00b1509633b2f588"
+    },
+    {
+      "run_id": "MELD_cmerc_lr2e-4_seed67137",
+      "epoch": 1,
+      "sample_ratio": 0.4,
+      "train_dialogues": 415,
+      "train_batches": 26,
+      "validation_batches": 8,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 315,
+        "nodes": 801
+      },
+      "sampler_retries": 0,
+      "private_seed": 67137,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "d757b8122ea4321e96c7c88c705d13d76d2860562443102f78405ac57b32187c"
+    },
+    {
+      "run_id": "MELD_cmerc_lr2e-4_seed67137",
+      "epoch": 2,
+      "sample_ratio": 0.8,
+      "train_dialogues": 830,
+      "train_batches": 52,
+      "validation_batches": 8,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 280,
+        "nodes": 696
+      },
+      "sampler_retries": 0,
+      "private_seed": 67138,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "75fce5aa68ea9ccfacecc9c3bd3c9fea09ffbd9bd3824a8c9f7d7e4d2c427900"
+    },
+    {
+      "run_id": "MELD_cmerc_lr2e-4_seed67137",
+      "epoch": 3,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 259,
+        "nodes": 633
+      },
+      "sampler_retries": 0,
+      "private_seed": 67139,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "3b52fa5d1bc7c85f3ee018b4c956f532d42b48f952741b5f93b6ba8d5226af21"
+    },
+    {
+      "run_id": "MELD_cmerc_lr2e-4_seed67137",
+      "epoch": 4,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 256,
+        "nodes": 624
+      },
+      "sampler_retries": 0,
+      "private_seed": 67140,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "27957561288e6eaba7c38c41cd46156f0639b79f01011247a85bc469bf66ea88"
+    },
+    {
+      "run_id": "MELD_cmerc_lr2e-4_seed67137",
+      "epoch": 5,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 259,
+        "nodes": 633
+      },
+      "sampler_retries": 0,
+      "private_seed": 67141,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "af9a96a7e1fb7b9e3fd4b605998185375e792b3ed2303e20a9905cb20d9cdccc"
+    },
+    {
+      "run_id": "MELD_cmerc_lr2e-4_seed67137",
+      "epoch": 6,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 275,
+        "nodes": 681
+      },
+      "sampler_retries": 0,
+      "private_seed": 67142,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "f6f6722bca3c4c566babee00fdf1d939cb273304b08c04caf9a8a53be2dbd908"
+    },
+    {
+      "run_id": "MELD_cmerc_lr2e-4_seed67137",
+      "epoch": 7,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 260,
+        "nodes": 636
+      },
+      "sampler_retries": 0,
+      "private_seed": 67143,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "81c539468c251c754189f11cba7fdb69f8a07bb1732ad187f49be54d3250c5de"
+    },
+    {
+      "run_id": "MELD_cmerc_lr2e-4_seed67137",
+      "epoch": 8,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 266,
+        "nodes": 654
+      },
+      "sampler_retries": 0,
+      "private_seed": 67144,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "cbd4bab4460e51cea8bc98f27e8c2d7c3326b3a32fd39f3f471aea478da40f0a"
+    },
+    {
+      "run_id": "MELD_cmerc_lr2e-4_seed67137",
+      "epoch": 9,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 267,
+        "nodes": 657
+      },
+      "sampler_retries": 0,
+      "private_seed": 67145,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "f290253f04f62b0df20d502003fc1c7178b82968db49a1486454390ab55904b4"
+    },
+    {
+      "run_id": "MELD_cmerc_lr2e-4_seed67137",
+      "epoch": 10,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 242,
+        "nodes": 582
+      },
+      "sampler_retries": 0,
+      "private_seed": 67146,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "c2db2f8005162a3e84fb5b79b6790006c6dbed2703a7f885dd1bd9e036dab0ed"
+    },
+    {
+      "run_id": "MELD_cmerc_lr2e-4_seed67137",
+      "epoch": 11,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 260,
+        "nodes": 636
+      },
+      "sampler_retries": 0,
+      "private_seed": 67147,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "47c8cc974c150607f3df27fb5034ec8fe661fbdf5a2afad1ab66b31afd60faa3"
+    },
+    {
+      "run_id": "MELD_cmerc_lr2e-4_seed67137",
+      "epoch": 12,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 249,
+        "nodes": 603
+      },
+      "sampler_retries": 0,
+      "private_seed": 67148,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "eb9d394dfc67aea73bbdc078868f556ed1b807902b7f9319b7e98bdb525bccfc"
+    },
+    {
+      "run_id": "MELD_cmerc_lr2e-4_seed67137",
+      "epoch": 13,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 254,
+        "nodes": 618
+      },
+      "sampler_retries": 0,
+      "private_seed": 67149,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "484161cd6b03347debfe6e24c65c090de82bb118e1c1375bd4c602cd4109bfef"
+    },
+    {
+      "run_id": "MELD_cmerc_lr2e-4_seed67137",
+      "epoch": 14,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 261,
+        "nodes": 639
+      },
+      "sampler_retries": 0,
+      "private_seed": 67150,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "d0ec6d16330fcbdd9182e00c9d04dfec01ce0e9dfabe3c94df8ad7757267efba"
+    },
+    {
+      "run_id": "MELD_cmerc_lr2e-4_seed67137",
+      "epoch": 15,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 264,
+        "nodes": 648
+      },
+      "sampler_retries": 0,
+      "private_seed": 67151,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "e6c946a840818d46a38c1a608d0883eefd71d10d60881fb6fbf4bdd5c9f5c199"
+    },
+    {
+      "run_id": "MELD_cmerc_lr2e-4_seed67137",
+      "epoch": 16,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 268,
+        "nodes": 660
+      },
+      "sampler_retries": 0,
+      "private_seed": 67152,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "aa06183939f7a2d62be0977cb85797388605039557c08f21b902b47bd876c1b3"
+    },
+    {
+      "run_id": "MELD_cmerc_lr2e-4_seed67137",
+      "epoch": 17,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 269,
+        "nodes": 663
+      },
+      "sampler_retries": 0,
+      "private_seed": 67153,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "40863ed37d7c2ed28ba93735a3079effefe93b0e9af729ab6d3051597a81cc8e"
+    },
+    {
+      "run_id": "MELD_cmerc_lr2e-4_seed67137",
+      "epoch": 18,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 251,
+        "nodes": 609
+      },
+      "sampler_retries": 0,
+      "private_seed": 67154,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "4c18ee8855dd0a81efcd3b02ad0590066a2a3df42a7423a31e72508643e372ef"
+    },
+    {
+      "run_id": "MELD_cmerc_lr2e-4_seed67137",
+      "epoch": 19,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 261,
+        "nodes": 639
+      },
+      "sampler_retries": 0,
+      "private_seed": 67155,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "9804fd488b085366e69393814152f75714d811d714215117c1f2bfb935bdd68a"
+    },
+    {
+      "run_id": "MELD_cmerc_lr2e-4_seed67137",
+      "epoch": 20,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 255,
+        "nodes": 621
+      },
+      "sampler_retries": 0,
+      "private_seed": 67156,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "164383f72b3e90cf635bac17fe520dc5d5ddde5e055a432bcc8d541dd4ac41e1"
+    },
+    {
+      "run_id": "MELD_cmerc_lr2e-4_seed67137",
+      "epoch": 21,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 281,
+        "nodes": 699
+      },
+      "sampler_retries": 0,
+      "private_seed": 67157,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "53952e22f2707368d4f6bb0e4ed840686928f7814d705e7abd4c3f9cb38cd1da"
+    },
+    {
+      "run_id": "MELD_cmerc_lr2e-4_seed67137",
+      "epoch": 22,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 249,
+        "nodes": 603
+      },
+      "sampler_retries": 0,
+      "private_seed": 67158,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "6a2ed39ae366d97a4efc7bd5f6647f94c23ed85802aa9f34d80ef24f74400721"
+    },
+    {
+      "run_id": "MELD_cmerc_lr2e-4_seed67137",
+      "epoch": 23,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 251,
+        "nodes": 609
+      },
+      "sampler_retries": 0,
+      "private_seed": 67159,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "fd39b7464acc0083fb4606fa7de81dce2b5af7402f793fccdcf231228b52bf1c"
+    },
+    {
+      "run_id": "MELD_cmerc_lr2e-4_seed67137",
+      "epoch": 24,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 263,
+        "nodes": 645
+      },
+      "sampler_retries": 0,
+      "private_seed": 67160,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "385575284002f239ff21594ebcf3c131f922d98270b931ea687eab93a1477e4f"
+    },
+    {
+      "run_id": "MELD_cmerc_lr2e-4_seed67137",
+      "epoch": 25,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 244,
+        "nodes": 588
+      },
+      "sampler_retries": 0,
+      "private_seed": 67161,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "3b6fb573f3c87959f196b2ff5ecee6a8a81683753a004cc724ce84f36d0e5e8e"
+    },
+    {
+      "run_id": "MELD_cmerc_lr2e-4_seed67137",
+      "epoch": 26,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 264,
+        "nodes": 648
+      },
+      "sampler_retries": 0,
+      "private_seed": 67162,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "3572160efef2ad3417102e2e40b624e7641d2577e778ee15b1f1c73e96c9f554"
+    },
+    {
+      "run_id": "MELD_cmerc_lr2e-4_seed67137",
+      "epoch": 27,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 281,
+        "nodes": 699
+      },
+      "sampler_retries": 0,
+      "private_seed": 67163,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "60c12c814893a6eb0ce33a4ada5ce6fe63e321959e9847dda486806683b26aee"
+    },
+    {
+      "run_id": "MELD_cmerc_lr2e-4_seed67137",
+      "epoch": 28,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 252,
+        "nodes": 612
+      },
+      "sampler_retries": 0,
+      "private_seed": 67164,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "32a76f1fb84214c109c17c88484dcd86dfb6eaadce6f0d8bc3015aa177195a77"
+    },
+    {
+      "run_id": "MELD_cmerc_lr2e-4_seed67137",
+      "epoch": 29,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 243,
+        "nodes": 585
+      },
+      "sampler_retries": 0,
+      "private_seed": 67165,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "2778d74e2a06ccbad9bd285640cdff12ad8190b91228bd15a7e5ed2f8d066283"
+    },
+    {
+      "run_id": "MELD_cmerc_lr2e-4_seed67137",
+      "epoch": 30,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 257,
+        "nodes": 627
+      },
+      "sampler_retries": 0,
+      "private_seed": 67166,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "6d963c349c0c1ed5acd5bf620dba1eb9b5ae75a910c4c03639f8bc0a1b1217a0"
+    },
+    {
+      "run_id": "MELD_cmerc_lr2e-4_seed67137",
+      "epoch": 31,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 259,
+        "nodes": 633
+      },
+      "sampler_retries": 0,
+      "private_seed": 67167,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "815abf4798f9ce0e9fd0df3ef72675725a230e59a1f805b294e6f1c12a238e15"
+    },
+    {
+      "run_id": "MELD_cmerc_lr2e-4_seed67137",
+      "epoch": 32,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 266,
+        "nodes": 654
+      },
+      "sampler_retries": 0,
+      "private_seed": 67168,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "f6964607156854123a78f1c29535e1f424458243bfd119f005ef0982521a3680"
+    },
+    {
+      "run_id": "MELD_cmerc_lr2e-4_seed67137",
+      "epoch": 33,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 266,
+        "nodes": 654
+      },
+      "sampler_retries": 0,
+      "private_seed": 67169,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "dc1a2f17a26dd941f92814fd31f4f162fd813406d8a7e7a47c9039309b8507b1"
+    },
+    {
+      "run_id": "MELD_cmerc_lr2e-4_seed67137",
+      "epoch": 34,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 252,
+        "nodes": 612
+      },
+      "sampler_retries": 0,
+      "private_seed": 67170,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "73e06aeff9297f33caa465e1858d1ef5ec241005037ee40a82d0f41eff3cc403"
+    },
+    {
+      "run_id": "MELD_cmerc_lr2e-4_seed67137",
+      "epoch": 35,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 259,
+        "nodes": 633
+      },
+      "sampler_retries": 0,
+      "private_seed": 67171,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "52846420e76ac14c75270a7dbb00af4e773e8dd0086d206420ddd5e74c2f5f84"
+    },
+    {
+      "run_id": "MELD_cmerc_lr2e-4_seed67137",
+      "epoch": 36,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 268,
+        "nodes": 660
+      },
+      "sampler_retries": 0,
+      "private_seed": 67172,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "bb8db9ead10681ac0a32e858ecbf462fc250e6ef18b1c55a2da95a5037134d39"
+    },
+    {
+      "run_id": "MELD_cmerc_lr2e-4_seed67137",
+      "epoch": 37,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 273,
+        "nodes": 675
+      },
+      "sampler_retries": 0,
+      "private_seed": 67173,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "82bea590af4fd6702ae9b2c84e331ac95374479b5b150e73783cdf668c621a04"
+    },
+    {
+      "run_id": "MELD_cmerc_lr2e-4_seed67137",
+      "epoch": 38,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 268,
+        "nodes": 660
+      },
+      "sampler_retries": 0,
+      "private_seed": 67174,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "0947be511082e0d413e3c98282a0eab980dc2a3a88278bdbb8148db92a1599a8"
+    },
+    {
+      "run_id": "MELD_cmerc_lr2e-4_seed67137",
+      "epoch": 39,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 273,
+        "nodes": 675
+      },
+      "sampler_retries": 0,
+      "private_seed": 67175,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "0e7e103c08b38e4d34f4ecf28232c6dd41b557ea0b92fda62ff6d85bdf856d6b"
+    },
+    {
+      "run_id": "MELD_cmerc_lr2e-4_seed67137",
+      "epoch": 40,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 247,
+        "nodes": 597
+      },
+      "sampler_retries": 0,
+      "private_seed": 67176,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "7463e5b811c03bfe80381d9fe8487d09537993dc6001a50d00b1509633b2f588"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr5e-5_seed1475",
+      "epoch": 1,
+      "sample_ratio": 0.15,
+      "train_dialogues": 16,
+      "train_batches": 1,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 862,
+        "nodes": 2442
+      },
+      "sampler_retries": 0,
+      "private_seed": 1475,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "2681618fe43284166d3bc297ca4930345754c5d017c5e490669d1acda647fa0e"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr5e-5_seed1475",
+      "epoch": 2,
+      "sample_ratio": 0.3,
+      "train_dialogues": 32,
+      "train_batches": 2,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 817,
+        "nodes": 2307
+      },
+      "sampler_retries": 0,
+      "private_seed": 1476,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "0d3a4dd347d40c6085f31f0355cb6c5adc9b7cd1fb82ff530ba749fbec72949b"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr5e-5_seed1475",
+      "epoch": 3,
+      "sample_ratio": 0.45,
+      "train_dialogues": 48,
+      "train_batches": 3,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 838,
+        "nodes": 2370
+      },
+      "sampler_retries": 0,
+      "private_seed": 1477,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "c3782c6032b3681914dcb3b7d3c0e3248d349015a3616a483fc81fb9f7e93b1c"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr5e-5_seed1475",
+      "epoch": 4,
+      "sample_ratio": 0.6,
+      "train_dialogues": 64,
+      "train_batches": 4,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 836,
+        "nodes": 2364
+      },
+      "sampler_retries": 0,
+      "private_seed": 1478,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "e56f37b4184ea56707bb07b5d33af3b9d61986718b38006da6f71cda032568cf"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr5e-5_seed1475",
+      "epoch": 5,
+      "sample_ratio": 0.75,
+      "train_dialogues": 81,
+      "train_batches": 6,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 911,
+        "nodes": 2589
+      },
+      "sampler_retries": 0,
+      "private_seed": 1479,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "cbe41cf4f2077d8eb3313c7185277d1cfcb996716c44396bd86b3941c0de9141"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr5e-5_seed1475",
+      "epoch": 6,
+      "sample_ratio": 0.9,
+      "train_dialogues": 97,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 937,
+        "nodes": 2667
+      },
+      "sampler_retries": 0,
+      "private_seed": 1480,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "4cf1594985a50755de1e3f03801ddf224f2444de2efeb60e4d0c3ccd8f9a0b3f"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr5e-5_seed1475",
+      "epoch": 7,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 919,
+        "nodes": 2613
+      },
+      "sampler_retries": 0,
+      "private_seed": 1481,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "03fb38b01332d6c3e0d2b16dda1ccf98fffc802935aadbcf90f6f219e4c41934"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr5e-5_seed1475",
+      "epoch": 8,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 909,
+        "nodes": 2583
+      },
+      "sampler_retries": 0,
+      "private_seed": 1482,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "122da102509a8e1ef1a6a824fa481ca45bd6e2a08b166a1f74df7743a786d7db"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr5e-5_seed1475",
+      "epoch": 9,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 912,
+        "nodes": 2592
+      },
+      "sampler_retries": 0,
+      "private_seed": 1483,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "017654d3f68b3b5b131ffb8c96e5c13563982c50e3f88c3d86c833d5ce5a0286"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr5e-5_seed1475",
+      "epoch": 10,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 875,
+        "nodes": 2481
+      },
+      "sampler_retries": 0,
+      "private_seed": 1484,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "e162f64847d766dbdddc9e156f41649f81b5ad0151923ebc4ea5e85313744775"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr5e-5_seed1475",
+      "epoch": 11,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 883,
+        "nodes": 2505
+      },
+      "sampler_retries": 0,
+      "private_seed": 1485,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "b7520bc5bb65ad5af4dabe055e92a28b4f3bb8b2439bf74e90dcc99e584c97f4"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr5e-5_seed1475",
+      "epoch": 12,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 903,
+        "nodes": 2565
+      },
+      "sampler_retries": 0,
+      "private_seed": 1486,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "3ad8ae7e0b2343bc6ccbf96b68d709560cdabb9a2985784d9b51f020083bdbc1"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr5e-5_seed1475",
+      "epoch": 13,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 939,
+        "nodes": 2673
+      },
+      "sampler_retries": 0,
+      "private_seed": 1487,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "a719e4e69dd14e956556ad29c59165578b24b043497a1b16f87192dc36417a55"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr5e-5_seed1475",
+      "epoch": 14,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 855,
+        "nodes": 2421
+      },
+      "sampler_retries": 0,
+      "private_seed": 1488,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "b679e9441997e8058fc9e6125cdfbdce66fe8be7cb75b1bbd8d5b2eca1fcebd4"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr5e-5_seed1475",
+      "epoch": 15,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 923,
+        "nodes": 2625
+      },
+      "sampler_retries": 0,
+      "private_seed": 1489,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "113396138bac62c2ba6afc3f8434e4805c3922c63e94f675380c66ac2058a1ea"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr5e-5_seed1475",
+      "epoch": 16,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 948,
+        "nodes": 2700
+      },
+      "sampler_retries": 0,
+      "private_seed": 1490,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "adc89c146493f9df45bc2dc86b038788b97121fd8bdafe748256be3a9e118f34"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr5e-5_seed1475",
+      "epoch": 17,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 855,
+        "nodes": 2421
+      },
+      "sampler_retries": 0,
+      "private_seed": 1491,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "1f10da22641fa563aed5c1f4bc59eef5e015b3a2350a498fd7a2f471eb1efe92"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr5e-5_seed1475",
+      "epoch": 18,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 968,
+        "nodes": 2760
+      },
+      "sampler_retries": 0,
+      "private_seed": 1492,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "b7030524d27c46824e097effd7f57119010e423202b39e379c5248610c97018a"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr5e-5_seed1475",
+      "epoch": 19,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 923,
+        "nodes": 2625
+      },
+      "sampler_retries": 0,
+      "private_seed": 1493,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "2426c5e7db3bf6c53d608debc107809e5828f1427cfb6d7003baab03fb9ff95b"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr5e-5_seed1475",
+      "epoch": 20,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 938,
+        "nodes": 2670
+      },
+      "sampler_retries": 0,
+      "private_seed": 1494,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "8ab18e101d8fb44778bc5f602f166413aef588697f99968702a6abe9c03ab342"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr5e-5_seed1475",
+      "epoch": 21,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 969,
+        "nodes": 2763
+      },
+      "sampler_retries": 0,
+      "private_seed": 1495,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "fb2f6c158269ac5266f6beb1ac1e3bedc6f8acee7b89ee7f302d1aab52d4ba64"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr5e-5_seed1475",
+      "epoch": 22,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 863,
+        "nodes": 2445
+      },
+      "sampler_retries": 0,
+      "private_seed": 1496,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "f8875ea3fdb5e394df04f5a337063c7d200a27e9408b9afb483984581237ee08"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr5e-5_seed1475",
+      "epoch": 23,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 907,
+        "nodes": 2577
+      },
+      "sampler_retries": 0,
+      "private_seed": 1497,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "68b942cd3313e638e25de6ae1a2e86c91233aa42a9553cc96461d6c41753eb3a"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr5e-5_seed1475",
+      "epoch": 24,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 896,
+        "nodes": 2544
+      },
+      "sampler_retries": 0,
+      "private_seed": 1498,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "772a6a975a6351d24f59f9711a5102ecb638d74cedbace8656d18d4e4571b24c"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr5e-5_seed1475",
+      "epoch": 25,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 858,
+        "nodes": 2430
+      },
+      "sampler_retries": 0,
+      "private_seed": 1499,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "058fd383c503df7d63b85de96d19452b2b1833246ff9199beaabd6a46fa63c16"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr5e-5_seed1475",
+      "epoch": 26,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 915,
+        "nodes": 2601
+      },
+      "sampler_retries": 0,
+      "private_seed": 1500,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "19cef49e1172196407c4457d514caf051f069e90383e83a8f95c8ee056405478"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr5e-5_seed1475",
+      "epoch": 27,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 965,
+        "nodes": 2751
+      },
+      "sampler_retries": 0,
+      "private_seed": 1501,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "5953814a08d4365931e27d933deb0790a00468d08e3f96ed26f600698824ecc6"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr5e-5_seed1475",
+      "epoch": 28,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 973,
+        "nodes": 2775
+      },
+      "sampler_retries": 0,
+      "private_seed": 1502,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "abdadeb8facc3a05639cc1d8999ba11f48e0c31eecaa6b3baea0337fd9173de5"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr5e-5_seed1475",
+      "epoch": 29,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 952,
+        "nodes": 2712
+      },
+      "sampler_retries": 0,
+      "private_seed": 1503,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "e2cf4cd3166b0c367596d863f584303ac0fa2e279c5024c467e85ecf91f6cdce"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr5e-5_seed1475",
+      "epoch": 30,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 873,
+        "nodes": 2475
+      },
+      "sampler_retries": 0,
+      "private_seed": 1504,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "6d6dbed0930ba78a5da9c4526e8bc1fd399ab898170a26b9e2387dc6dbcd3e5b"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr5e-5_seed1475",
+      "epoch": 31,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 902,
+        "nodes": 2562
+      },
+      "sampler_retries": 0,
+      "private_seed": 1505,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "d33d5d1cdaedbd5f90d6072ce51027a22c4513b7d21a70754c9ee734ed3f8aef"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr5e-5_seed1475",
+      "epoch": 32,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 881,
+        "nodes": 2499
+      },
+      "sampler_retries": 0,
+      "private_seed": 1506,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "f6cb7dd0ae8456ef9bb38979672f50b7f7376b8fe4db7bf61f81708476d382b2"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr5e-5_seed1475",
+      "epoch": 33,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 907,
+        "nodes": 2577
+      },
+      "sampler_retries": 0,
+      "private_seed": 1507,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "d340534eb3a8cc017a4122b09cd72dbefebce9c955349cff41748491f5c1c270"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr5e-5_seed1475",
+      "epoch": 34,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 911,
+        "nodes": 2589
+      },
+      "sampler_retries": 0,
+      "private_seed": 1508,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "5bb95939a01f662efc97008d3a082bbe18bfe048c8a88b95082b8bcdf1fd5af2"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr5e-5_seed1475",
+      "epoch": 35,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 876,
+        "nodes": 2484
+      },
+      "sampler_retries": 0,
+      "private_seed": 1509,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "2579acca844194d1fab12e2aa4b8f14c6cb47baae2d03163d9678b987895944c"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr5e-5_seed1475",
+      "epoch": 36,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 928,
+        "nodes": 2640
+      },
+      "sampler_retries": 0,
+      "private_seed": 1510,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "c7cf345aaa418490c046ad72ea8daf258b19603cafd70379f5a41b8ae1beb18c"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr5e-5_seed1475",
+      "epoch": 37,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 881,
+        "nodes": 2499
+      },
+      "sampler_retries": 0,
+      "private_seed": 1511,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "ac69409d51818b246dd1ea73979fe1532fe27124438411faf1792cc99a043df4"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr5e-5_seed1475",
+      "epoch": 38,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 967,
+        "nodes": 2757
+      },
+      "sampler_retries": 0,
+      "private_seed": 1512,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "3f307359ec94c723ac195a77057147553aec6ee65a27ab6e284bb1afbac48a6e"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr5e-5_seed1475",
+      "epoch": 39,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 891,
+        "nodes": 2529
+      },
+      "sampler_retries": 0,
+      "private_seed": 1513,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "abf6eb92a47e1e5f88ec9abf4dd12212e34fbace482543993f902ae387eec9d7"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr5e-5_seed1475",
+      "epoch": 40,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 903,
+        "nodes": 2565
+      },
+      "sampler_retries": 0,
+      "private_seed": 1514,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "9252c5135d4c32fb55dc31b5603be05aef4a363e3ef4441047e4d7a8d4fc3cf5"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr5e-5_seed1475",
+      "epoch": 41,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 883,
+        "nodes": 2505
+      },
+      "sampler_retries": 0,
+      "private_seed": 1515,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "db9d52c5c0945f7d902e14f54390e0d0a46dba03b68e4c8231a102b406bbfe02"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr5e-5_seed1475",
+      "epoch": 42,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 881,
+        "nodes": 2499
+      },
+      "sampler_retries": 0,
+      "private_seed": 1516,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "77058831ff45c2e0032aad00d772948ce73c79504c252ece13f4526c70184bb1"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr5e-5_seed1475",
+      "epoch": 43,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 919,
+        "nodes": 2613
+      },
+      "sampler_retries": 0,
+      "private_seed": 1517,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "e673f8a0977d8822f6ccb93edc1dc0abe31a9bd7ecdf987362ca1a8b62bb6cba"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr5e-5_seed1475",
+      "epoch": 44,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 937,
+        "nodes": 2667
+      },
+      "sampler_retries": 0,
+      "private_seed": 1518,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "c42975dc39bf6436c84b7cb73751be7e914fa860ba163d522053ebb1df55a7b0"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr5e-5_seed1475",
+      "epoch": 45,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 915,
+        "nodes": 2601
+      },
+      "sampler_retries": 0,
+      "private_seed": 1519,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "a045c00e576111eb42e52cf081037e3b18351fa97cb6edf46e0118298bd4ef5f"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr5e-5_seed1475",
+      "epoch": 46,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 935,
+        "nodes": 2661
+      },
+      "sampler_retries": 0,
+      "private_seed": 1520,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "5bbb61c848297eff4b0b89a04cb0a1ee60e850310f2c425c2935d2228f67fb7f"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr5e-5_seed1475",
+      "epoch": 47,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 908,
+        "nodes": 2580
+      },
+      "sampler_retries": 0,
+      "private_seed": 1521,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "a702dce5a6ca8ebc42e07f14b67073157f403ef7ef34c6aea1179ebc9c0bab92"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr5e-5_seed1475",
+      "epoch": 48,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 914,
+        "nodes": 2598
+      },
+      "sampler_retries": 0,
+      "private_seed": 1522,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "01b59e9432df4e29b057fc9d739fe15dfde0c91633f229f63ce7544aecf51caf"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr5e-5_seed1475",
+      "epoch": 49,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 890,
+        "nodes": 2526
+      },
+      "sampler_retries": 0,
+      "private_seed": 1523,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "443ba2fe76e5f8c6c27fbefa9eb2bfabcd8695aa1bacffc19ff5e21aa5de014d"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr5e-5_seed1475",
+      "epoch": 50,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 935,
+        "nodes": 2661
+      },
+      "sampler_retries": 0,
+      "private_seed": 1524,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "6f023b53c5f4e8ecc6bfa71276928936971757714b5b4cbb0f361809890df65c"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr5e-5_seed1475",
+      "epoch": 51,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 891,
+        "nodes": 2529
+      },
+      "sampler_retries": 0,
+      "private_seed": 1525,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "216bec2f77527890e38bfb94d84fe7db7b5d2faa3d31926c990133ac3594a88a"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr5e-5_seed1475",
+      "epoch": 52,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 936,
+        "nodes": 2664
+      },
+      "sampler_retries": 0,
+      "private_seed": 1526,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "72de34a811b142ab4c7fa9f555aa460b3ab8b90afbb932f518c640429969eae7"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr5e-5_seed1475",
+      "epoch": 53,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 944,
+        "nodes": 2688
+      },
+      "sampler_retries": 0,
+      "private_seed": 1527,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "d3c4e7d0df87eb44a79d0d660529d1eaa6c15ccbc57e8304b57a70a5e5d34f45"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr5e-5_seed1475",
+      "epoch": 54,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 955,
+        "nodes": 2721
+      },
+      "sampler_retries": 0,
+      "private_seed": 1528,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "5d45e223d5b7124287f03733997f39c0d1eb10a9483888172d3fcdbad7274300"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr5e-5_seed1475",
+      "epoch": 55,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 883,
+        "nodes": 2505
+      },
+      "sampler_retries": 0,
+      "private_seed": 1529,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "27e37e601115dd0c7600dc77b088374f1abdcdff1c78b95ed296b67fa14185b2"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr5e-5_seed1475",
+      "epoch": 56,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 912,
+        "nodes": 2592
+      },
+      "sampler_retries": 0,
+      "private_seed": 1530,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "08bb0345b4d026fed55e6dd1c3662d05c46c7da106af33f4a86333dcc4bddce3"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr5e-5_seed1475",
+      "epoch": 57,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 892,
+        "nodes": 2532
+      },
+      "sampler_retries": 0,
+      "private_seed": 1531,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "516a03928a4541dcd6ac8feabe6e08dff935d0329a1dcfd7683305d4fb33c6fb"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr5e-5_seed1475",
+      "epoch": 58,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 893,
+        "nodes": 2535
+      },
+      "sampler_retries": 0,
+      "private_seed": 1532,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "a42a5105a17a552fb6728c3b557a8c6bb52504d04cedfda42db40a24e2b03c40"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr5e-5_seed1475",
+      "epoch": 59,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 879,
+        "nodes": 2493
+      },
+      "sampler_retries": 0,
+      "private_seed": 1533,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "47d6a8001febbc0a249bac7b1fd876bf3a7bea8948c7c8e92a2ca47d07f9e466"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr5e-5_seed1475",
+      "epoch": 60,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 937,
+        "nodes": 2667
+      },
+      "sampler_retries": 0,
+      "private_seed": 1534,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "43b657f9b57d8b845752629433c626108d6e584881dc95cae3633e06ccf75db4"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr5e-5_seed1475",
+      "epoch": 61,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 892,
+        "nodes": 2532
+      },
+      "sampler_retries": 0,
+      "private_seed": 1535,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "130f8b14e68495ce9198051677472e811d88d4df5651763596e7bc205e2bf403"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr5e-5_seed1475",
+      "epoch": 62,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 868,
+        "nodes": 2460
+      },
+      "sampler_retries": 0,
+      "private_seed": 1536,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "aa49e85a97ffec58cea0892006203ef29070bb57d4d52f76d54a4b2813070f66"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr5e-5_seed1475",
+      "epoch": 63,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 865,
+        "nodes": 2451
+      },
+      "sampler_retries": 0,
+      "private_seed": 1537,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "66de825a0e9eec607614975e79af1ccbf4181ee010d9eca0e0d05a69fb8ea6c6"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr5e-5_seed1475",
+      "epoch": 64,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 895,
+        "nodes": 2541
+      },
+      "sampler_retries": 0,
+      "private_seed": 1538,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "5ec6f69a4ae9cb6796e3f1f494673bb1d5e49cc090efbd1a63bcc18e78df4377"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr5e-5_seed1475",
+      "epoch": 65,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 935,
+        "nodes": 2661
+      },
+      "sampler_retries": 0,
+      "private_seed": 1539,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "45246cdb255019526dd32c44a785f78af4e8e5104252bb61891e18479936ec5c"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr5e-5_seed1475",
+      "epoch": 66,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 924,
+        "nodes": 2628
+      },
+      "sampler_retries": 0,
+      "private_seed": 1540,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "6801ef199f380e92da338fc3c303461950bddfdd881c71312820859665940f27"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr5e-5_seed1475",
+      "epoch": 67,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 901,
+        "nodes": 2559
+      },
+      "sampler_retries": 0,
+      "private_seed": 1541,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "229f4bc4108a10e6823c41bed25c2b3620d14b8c0bf8bd708c9fa8d05a19fe12"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr5e-5_seed1475",
+      "epoch": 68,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 962,
+        "nodes": 2742
+      },
+      "sampler_retries": 0,
+      "private_seed": 1542,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "995ba06cfabd6667d155fb01a6a485b4f7773f87fa2ad534bf0a23a32650d87a"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr5e-5_seed1475",
+      "epoch": 69,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 928,
+        "nodes": 2640
+      },
+      "sampler_retries": 0,
+      "private_seed": 1543,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "143fc63a0c760ef2f30d648b3b7cc8797c1c5c8d105adab764aaa64e3996eca0"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr5e-5_seed1475",
+      "epoch": 70,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 951,
+        "nodes": 2709
+      },
+      "sampler_retries": 0,
+      "private_seed": 1544,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "29059727f0cddb8e6a21282e1e7e9f475f10f364a7ad58764505c7f8e266bb4a"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr5e-5_seed1475",
+      "epoch": 71,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 910,
+        "nodes": 2586
+      },
+      "sampler_retries": 0,
+      "private_seed": 1545,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "64119f8919e07ab0f76576c81d158c4dae9477a3f5f482dc69ec79db3dbf34fd"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr5e-5_seed1475",
+      "epoch": 72,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 952,
+        "nodes": 2712
+      },
+      "sampler_retries": 0,
+      "private_seed": 1546,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "973fe9e3bad27ed1bc2e70d0bc05c336dfebc8a11e2db34a71951385bbf63a50"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr5e-5_seed1475",
+      "epoch": 73,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 886,
+        "nodes": 2514
+      },
+      "sampler_retries": 0,
+      "private_seed": 1547,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "c68945aa8953212d75394d9be719aecd74162b4411a2d760200bccef8ab023c5"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr5e-5_seed1475",
+      "epoch": 74,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 925,
+        "nodes": 2631
+      },
+      "sampler_retries": 0,
+      "private_seed": 1548,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "7f276e57912e8dd89f595ccd66ef0de25f443d7e7c1cb79f850422830c7d0f6b"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr5e-5_seed1475",
+      "epoch": 75,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 941,
+        "nodes": 2679
+      },
+      "sampler_retries": 0,
+      "private_seed": 1549,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "a97e483994b4eef37bbc96ff2d179433f64fced301bfaa8b372af47ad143048a"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr5e-5_seed1475",
+      "epoch": 76,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 868,
+        "nodes": 2460
+      },
+      "sampler_retries": 0,
+      "private_seed": 1550,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "788c2a1b73796ba411153b71187a5afee4b603de7b50c9b3d7b2362ce236e2b0"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr5e-5_seed1475",
+      "epoch": 77,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 909,
+        "nodes": 2583
+      },
+      "sampler_retries": 0,
+      "private_seed": 1551,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "44f195d33253272c85c4935155df87a59b7d4489e5d64e0769e5729a03971498"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr5e-5_seed1475",
+      "epoch": 78,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 891,
+        "nodes": 2529
+      },
+      "sampler_retries": 0,
+      "private_seed": 1552,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "052d15efcee1d6cf10b347ddd8a39629f355d0237f075a49b9939e083e859b58"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr5e-5_seed1475",
+      "epoch": 79,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 951,
+        "nodes": 2709
+      },
+      "sampler_retries": 0,
+      "private_seed": 1553,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "78f51ba4ed334586f782d152348376f2fed6ecb6e7249e306ec09c668ce0a0cf"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr5e-5_seed1475",
+      "epoch": 80,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 907,
+        "nodes": 2577
+      },
+      "sampler_retries": 0,
+      "private_seed": 1554,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "77677390ba2ba834599f9ec94e83748b922a9727fa5b18b8e0fefbe84a4d7539"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr2e-4_seed1475",
+      "epoch": 1,
+      "sample_ratio": 0.15,
+      "train_dialogues": 16,
+      "train_batches": 1,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 862,
+        "nodes": 2442
+      },
+      "sampler_retries": 0,
+      "private_seed": 1475,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "2681618fe43284166d3bc297ca4930345754c5d017c5e490669d1acda647fa0e"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr2e-4_seed1475",
+      "epoch": 2,
+      "sample_ratio": 0.3,
+      "train_dialogues": 32,
+      "train_batches": 2,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 817,
+        "nodes": 2307
+      },
+      "sampler_retries": 0,
+      "private_seed": 1476,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "0d3a4dd347d40c6085f31f0355cb6c5adc9b7cd1fb82ff530ba749fbec72949b"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr2e-4_seed1475",
+      "epoch": 3,
+      "sample_ratio": 0.45,
+      "train_dialogues": 48,
+      "train_batches": 3,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 838,
+        "nodes": 2370
+      },
+      "sampler_retries": 0,
+      "private_seed": 1477,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "c3782c6032b3681914dcb3b7d3c0e3248d349015a3616a483fc81fb9f7e93b1c"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr2e-4_seed1475",
+      "epoch": 4,
+      "sample_ratio": 0.6,
+      "train_dialogues": 64,
+      "train_batches": 4,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 836,
+        "nodes": 2364
+      },
+      "sampler_retries": 0,
+      "private_seed": 1478,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "e56f37b4184ea56707bb07b5d33af3b9d61986718b38006da6f71cda032568cf"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr2e-4_seed1475",
+      "epoch": 5,
+      "sample_ratio": 0.75,
+      "train_dialogues": 81,
+      "train_batches": 6,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 911,
+        "nodes": 2589
+      },
+      "sampler_retries": 0,
+      "private_seed": 1479,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "cbe41cf4f2077d8eb3313c7185277d1cfcb996716c44396bd86b3941c0de9141"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr2e-4_seed1475",
+      "epoch": 6,
+      "sample_ratio": 0.9,
+      "train_dialogues": 97,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 937,
+        "nodes": 2667
+      },
+      "sampler_retries": 0,
+      "private_seed": 1480,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "4cf1594985a50755de1e3f03801ddf224f2444de2efeb60e4d0c3ccd8f9a0b3f"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr2e-4_seed1475",
+      "epoch": 7,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 919,
+        "nodes": 2613
+      },
+      "sampler_retries": 0,
+      "private_seed": 1481,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "03fb38b01332d6c3e0d2b16dda1ccf98fffc802935aadbcf90f6f219e4c41934"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr2e-4_seed1475",
+      "epoch": 8,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 909,
+        "nodes": 2583
+      },
+      "sampler_retries": 0,
+      "private_seed": 1482,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "122da102509a8e1ef1a6a824fa481ca45bd6e2a08b166a1f74df7743a786d7db"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr2e-4_seed1475",
+      "epoch": 9,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 912,
+        "nodes": 2592
+      },
+      "sampler_retries": 0,
+      "private_seed": 1483,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "017654d3f68b3b5b131ffb8c96e5c13563982c50e3f88c3d86c833d5ce5a0286"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr2e-4_seed1475",
+      "epoch": 10,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 875,
+        "nodes": 2481
+      },
+      "sampler_retries": 0,
+      "private_seed": 1484,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "e162f64847d766dbdddc9e156f41649f81b5ad0151923ebc4ea5e85313744775"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr2e-4_seed1475",
+      "epoch": 11,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 883,
+        "nodes": 2505
+      },
+      "sampler_retries": 0,
+      "private_seed": 1485,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "b7520bc5bb65ad5af4dabe055e92a28b4f3bb8b2439bf74e90dcc99e584c97f4"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr2e-4_seed1475",
+      "epoch": 12,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 903,
+        "nodes": 2565
+      },
+      "sampler_retries": 0,
+      "private_seed": 1486,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "3ad8ae7e0b2343bc6ccbf96b68d709560cdabb9a2985784d9b51f020083bdbc1"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr2e-4_seed1475",
+      "epoch": 13,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 939,
+        "nodes": 2673
+      },
+      "sampler_retries": 0,
+      "private_seed": 1487,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "a719e4e69dd14e956556ad29c59165578b24b043497a1b16f87192dc36417a55"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr2e-4_seed1475",
+      "epoch": 14,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 855,
+        "nodes": 2421
+      },
+      "sampler_retries": 0,
+      "private_seed": 1488,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "b679e9441997e8058fc9e6125cdfbdce66fe8be7cb75b1bbd8d5b2eca1fcebd4"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr2e-4_seed1475",
+      "epoch": 15,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 923,
+        "nodes": 2625
+      },
+      "sampler_retries": 0,
+      "private_seed": 1489,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "113396138bac62c2ba6afc3f8434e4805c3922c63e94f675380c66ac2058a1ea"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr2e-4_seed1475",
+      "epoch": 16,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 948,
+        "nodes": 2700
+      },
+      "sampler_retries": 0,
+      "private_seed": 1490,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "adc89c146493f9df45bc2dc86b038788b97121fd8bdafe748256be3a9e118f34"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr2e-4_seed1475",
+      "epoch": 17,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 855,
+        "nodes": 2421
+      },
+      "sampler_retries": 0,
+      "private_seed": 1491,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "1f10da22641fa563aed5c1f4bc59eef5e015b3a2350a498fd7a2f471eb1efe92"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr2e-4_seed1475",
+      "epoch": 18,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 968,
+        "nodes": 2760
+      },
+      "sampler_retries": 0,
+      "private_seed": 1492,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "b7030524d27c46824e097effd7f57119010e423202b39e379c5248610c97018a"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr2e-4_seed1475",
+      "epoch": 19,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 923,
+        "nodes": 2625
+      },
+      "sampler_retries": 0,
+      "private_seed": 1493,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "2426c5e7db3bf6c53d608debc107809e5828f1427cfb6d7003baab03fb9ff95b"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr2e-4_seed1475",
+      "epoch": 20,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 938,
+        "nodes": 2670
+      },
+      "sampler_retries": 0,
+      "private_seed": 1494,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "8ab18e101d8fb44778bc5f602f166413aef588697f99968702a6abe9c03ab342"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr2e-4_seed1475",
+      "epoch": 21,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 969,
+        "nodes": 2763
+      },
+      "sampler_retries": 0,
+      "private_seed": 1495,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "fb2f6c158269ac5266f6beb1ac1e3bedc6f8acee7b89ee7f302d1aab52d4ba64"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr2e-4_seed1475",
+      "epoch": 22,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 863,
+        "nodes": 2445
+      },
+      "sampler_retries": 0,
+      "private_seed": 1496,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "f8875ea3fdb5e394df04f5a337063c7d200a27e9408b9afb483984581237ee08"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr2e-4_seed1475",
+      "epoch": 23,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 907,
+        "nodes": 2577
+      },
+      "sampler_retries": 0,
+      "private_seed": 1497,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "68b942cd3313e638e25de6ae1a2e86c91233aa42a9553cc96461d6c41753eb3a"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr2e-4_seed1475",
+      "epoch": 24,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 896,
+        "nodes": 2544
+      },
+      "sampler_retries": 0,
+      "private_seed": 1498,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "772a6a975a6351d24f59f9711a5102ecb638d74cedbace8656d18d4e4571b24c"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr2e-4_seed1475",
+      "epoch": 25,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 858,
+        "nodes": 2430
+      },
+      "sampler_retries": 0,
+      "private_seed": 1499,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "058fd383c503df7d63b85de96d19452b2b1833246ff9199beaabd6a46fa63c16"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr2e-4_seed1475",
+      "epoch": 26,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 915,
+        "nodes": 2601
+      },
+      "sampler_retries": 0,
+      "private_seed": 1500,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "19cef49e1172196407c4457d514caf051f069e90383e83a8f95c8ee056405478"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr2e-4_seed1475",
+      "epoch": 27,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 965,
+        "nodes": 2751
+      },
+      "sampler_retries": 0,
+      "private_seed": 1501,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "5953814a08d4365931e27d933deb0790a00468d08e3f96ed26f600698824ecc6"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr2e-4_seed1475",
+      "epoch": 28,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 973,
+        "nodes": 2775
+      },
+      "sampler_retries": 0,
+      "private_seed": 1502,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "abdadeb8facc3a05639cc1d8999ba11f48e0c31eecaa6b3baea0337fd9173de5"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr2e-4_seed1475",
+      "epoch": 29,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 952,
+        "nodes": 2712
+      },
+      "sampler_retries": 0,
+      "private_seed": 1503,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "e2cf4cd3166b0c367596d863f584303ac0fa2e279c5024c467e85ecf91f6cdce"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr2e-4_seed1475",
+      "epoch": 30,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 873,
+        "nodes": 2475
+      },
+      "sampler_retries": 0,
+      "private_seed": 1504,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "6d6dbed0930ba78a5da9c4526e8bc1fd399ab898170a26b9e2387dc6dbcd3e5b"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr2e-4_seed1475",
+      "epoch": 31,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 902,
+        "nodes": 2562
+      },
+      "sampler_retries": 0,
+      "private_seed": 1505,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "d33d5d1cdaedbd5f90d6072ce51027a22c4513b7d21a70754c9ee734ed3f8aef"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr2e-4_seed1475",
+      "epoch": 32,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 881,
+        "nodes": 2499
+      },
+      "sampler_retries": 0,
+      "private_seed": 1506,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "f6cb7dd0ae8456ef9bb38979672f50b7f7376b8fe4db7bf61f81708476d382b2"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr2e-4_seed1475",
+      "epoch": 33,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 907,
+        "nodes": 2577
+      },
+      "sampler_retries": 0,
+      "private_seed": 1507,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "d340534eb3a8cc017a4122b09cd72dbefebce9c955349cff41748491f5c1c270"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr2e-4_seed1475",
+      "epoch": 34,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 911,
+        "nodes": 2589
+      },
+      "sampler_retries": 0,
+      "private_seed": 1508,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "5bb95939a01f662efc97008d3a082bbe18bfe048c8a88b95082b8bcdf1fd5af2"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr2e-4_seed1475",
+      "epoch": 35,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 876,
+        "nodes": 2484
+      },
+      "sampler_retries": 0,
+      "private_seed": 1509,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "2579acca844194d1fab12e2aa4b8f14c6cb47baae2d03163d9678b987895944c"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr2e-4_seed1475",
+      "epoch": 36,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 928,
+        "nodes": 2640
+      },
+      "sampler_retries": 0,
+      "private_seed": 1510,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "c7cf345aaa418490c046ad72ea8daf258b19603cafd70379f5a41b8ae1beb18c"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr2e-4_seed1475",
+      "epoch": 37,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 881,
+        "nodes": 2499
+      },
+      "sampler_retries": 0,
+      "private_seed": 1511,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "ac69409d51818b246dd1ea73979fe1532fe27124438411faf1792cc99a043df4"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr2e-4_seed1475",
+      "epoch": 38,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 967,
+        "nodes": 2757
+      },
+      "sampler_retries": 0,
+      "private_seed": 1512,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "3f307359ec94c723ac195a77057147553aec6ee65a27ab6e284bb1afbac48a6e"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr2e-4_seed1475",
+      "epoch": 39,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 891,
+        "nodes": 2529
+      },
+      "sampler_retries": 0,
+      "private_seed": 1513,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "abf6eb92a47e1e5f88ec9abf4dd12212e34fbace482543993f902ae387eec9d7"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr2e-4_seed1475",
+      "epoch": 40,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 903,
+        "nodes": 2565
+      },
+      "sampler_retries": 0,
+      "private_seed": 1514,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "9252c5135d4c32fb55dc31b5603be05aef4a363e3ef4441047e4d7a8d4fc3cf5"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr2e-4_seed1475",
+      "epoch": 41,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 883,
+        "nodes": 2505
+      },
+      "sampler_retries": 0,
+      "private_seed": 1515,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "db9d52c5c0945f7d902e14f54390e0d0a46dba03b68e4c8231a102b406bbfe02"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr2e-4_seed1475",
+      "epoch": 42,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 881,
+        "nodes": 2499
+      },
+      "sampler_retries": 0,
+      "private_seed": 1516,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "77058831ff45c2e0032aad00d772948ce73c79504c252ece13f4526c70184bb1"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr2e-4_seed1475",
+      "epoch": 43,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 919,
+        "nodes": 2613
+      },
+      "sampler_retries": 0,
+      "private_seed": 1517,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "e673f8a0977d8822f6ccb93edc1dc0abe31a9bd7ecdf987362ca1a8b62bb6cba"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr2e-4_seed1475",
+      "epoch": 44,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 937,
+        "nodes": 2667
+      },
+      "sampler_retries": 0,
+      "private_seed": 1518,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "c42975dc39bf6436c84b7cb73751be7e914fa860ba163d522053ebb1df55a7b0"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr2e-4_seed1475",
+      "epoch": 45,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 915,
+        "nodes": 2601
+      },
+      "sampler_retries": 0,
+      "private_seed": 1519,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "a045c00e576111eb42e52cf081037e3b18351fa97cb6edf46e0118298bd4ef5f"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr2e-4_seed1475",
+      "epoch": 46,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 935,
+        "nodes": 2661
+      },
+      "sampler_retries": 0,
+      "private_seed": 1520,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "5bbb61c848297eff4b0b89a04cb0a1ee60e850310f2c425c2935d2228f67fb7f"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr2e-4_seed1475",
+      "epoch": 47,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 908,
+        "nodes": 2580
+      },
+      "sampler_retries": 0,
+      "private_seed": 1521,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "a702dce5a6ca8ebc42e07f14b67073157f403ef7ef34c6aea1179ebc9c0bab92"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr2e-4_seed1475",
+      "epoch": 48,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 914,
+        "nodes": 2598
+      },
+      "sampler_retries": 0,
+      "private_seed": 1522,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "01b59e9432df4e29b057fc9d739fe15dfde0c91633f229f63ce7544aecf51caf"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr2e-4_seed1475",
+      "epoch": 49,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 890,
+        "nodes": 2526
+      },
+      "sampler_retries": 0,
+      "private_seed": 1523,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "443ba2fe76e5f8c6c27fbefa9eb2bfabcd8695aa1bacffc19ff5e21aa5de014d"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr2e-4_seed1475",
+      "epoch": 50,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 935,
+        "nodes": 2661
+      },
+      "sampler_retries": 0,
+      "private_seed": 1524,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "6f023b53c5f4e8ecc6bfa71276928936971757714b5b4cbb0f361809890df65c"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr2e-4_seed1475",
+      "epoch": 51,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 891,
+        "nodes": 2529
+      },
+      "sampler_retries": 0,
+      "private_seed": 1525,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "216bec2f77527890e38bfb94d84fe7db7b5d2faa3d31926c990133ac3594a88a"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr2e-4_seed1475",
+      "epoch": 52,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 936,
+        "nodes": 2664
+      },
+      "sampler_retries": 0,
+      "private_seed": 1526,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "72de34a811b142ab4c7fa9f555aa460b3ab8b90afbb932f518c640429969eae7"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr2e-4_seed1475",
+      "epoch": 53,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 944,
+        "nodes": 2688
+      },
+      "sampler_retries": 0,
+      "private_seed": 1527,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "d3c4e7d0df87eb44a79d0d660529d1eaa6c15ccbc57e8304b57a70a5e5d34f45"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr2e-4_seed1475",
+      "epoch": 54,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 955,
+        "nodes": 2721
+      },
+      "sampler_retries": 0,
+      "private_seed": 1528,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "5d45e223d5b7124287f03733997f39c0d1eb10a9483888172d3fcdbad7274300"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr2e-4_seed1475",
+      "epoch": 55,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 883,
+        "nodes": 2505
+      },
+      "sampler_retries": 0,
+      "private_seed": 1529,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "27e37e601115dd0c7600dc77b088374f1abdcdff1c78b95ed296b67fa14185b2"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr2e-4_seed1475",
+      "epoch": 56,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 912,
+        "nodes": 2592
+      },
+      "sampler_retries": 0,
+      "private_seed": 1530,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "08bb0345b4d026fed55e6dd1c3662d05c46c7da106af33f4a86333dcc4bddce3"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr2e-4_seed1475",
+      "epoch": 57,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 892,
+        "nodes": 2532
+      },
+      "sampler_retries": 0,
+      "private_seed": 1531,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "516a03928a4541dcd6ac8feabe6e08dff935d0329a1dcfd7683305d4fb33c6fb"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr2e-4_seed1475",
+      "epoch": 58,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 893,
+        "nodes": 2535
+      },
+      "sampler_retries": 0,
+      "private_seed": 1532,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "a42a5105a17a552fb6728c3b557a8c6bb52504d04cedfda42db40a24e2b03c40"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr2e-4_seed1475",
+      "epoch": 59,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 879,
+        "nodes": 2493
+      },
+      "sampler_retries": 0,
+      "private_seed": 1533,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "47d6a8001febbc0a249bac7b1fd876bf3a7bea8948c7c8e92a2ca47d07f9e466"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr2e-4_seed1475",
+      "epoch": 60,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 937,
+        "nodes": 2667
+      },
+      "sampler_retries": 0,
+      "private_seed": 1534,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "43b657f9b57d8b845752629433c626108d6e584881dc95cae3633e06ccf75db4"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr2e-4_seed1475",
+      "epoch": 61,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 892,
+        "nodes": 2532
+      },
+      "sampler_retries": 0,
+      "private_seed": 1535,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "130f8b14e68495ce9198051677472e811d88d4df5651763596e7bc205e2bf403"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr2e-4_seed1475",
+      "epoch": 62,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 868,
+        "nodes": 2460
+      },
+      "sampler_retries": 0,
+      "private_seed": 1536,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "aa49e85a97ffec58cea0892006203ef29070bb57d4d52f76d54a4b2813070f66"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr2e-4_seed1475",
+      "epoch": 63,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 865,
+        "nodes": 2451
+      },
+      "sampler_retries": 0,
+      "private_seed": 1537,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "66de825a0e9eec607614975e79af1ccbf4181ee010d9eca0e0d05a69fb8ea6c6"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr2e-4_seed1475",
+      "epoch": 64,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 895,
+        "nodes": 2541
+      },
+      "sampler_retries": 0,
+      "private_seed": 1538,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "5ec6f69a4ae9cb6796e3f1f494673bb1d5e49cc090efbd1a63bcc18e78df4377"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr2e-4_seed1475",
+      "epoch": 65,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 935,
+        "nodes": 2661
+      },
+      "sampler_retries": 0,
+      "private_seed": 1539,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "45246cdb255019526dd32c44a785f78af4e8e5104252bb61891e18479936ec5c"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr2e-4_seed1475",
+      "epoch": 66,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 924,
+        "nodes": 2628
+      },
+      "sampler_retries": 0,
+      "private_seed": 1540,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "6801ef199f380e92da338fc3c303461950bddfdd881c71312820859665940f27"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr2e-4_seed1475",
+      "epoch": 67,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 901,
+        "nodes": 2559
+      },
+      "sampler_retries": 0,
+      "private_seed": 1541,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "229f4bc4108a10e6823c41bed25c2b3620d14b8c0bf8bd708c9fa8d05a19fe12"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr2e-4_seed1475",
+      "epoch": 68,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 962,
+        "nodes": 2742
+      },
+      "sampler_retries": 0,
+      "private_seed": 1542,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "995ba06cfabd6667d155fb01a6a485b4f7773f87fa2ad534bf0a23a32650d87a"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr2e-4_seed1475",
+      "epoch": 69,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 928,
+        "nodes": 2640
+      },
+      "sampler_retries": 0,
+      "private_seed": 1543,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "143fc63a0c760ef2f30d648b3b7cc8797c1c5c8d105adab764aaa64e3996eca0"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr2e-4_seed1475",
+      "epoch": 70,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 951,
+        "nodes": 2709
+      },
+      "sampler_retries": 0,
+      "private_seed": 1544,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "29059727f0cddb8e6a21282e1e7e9f475f10f364a7ad58764505c7f8e266bb4a"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr2e-4_seed1475",
+      "epoch": 71,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 910,
+        "nodes": 2586
+      },
+      "sampler_retries": 0,
+      "private_seed": 1545,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "64119f8919e07ab0f76576c81d158c4dae9477a3f5f482dc69ec79db3dbf34fd"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr2e-4_seed1475",
+      "epoch": 72,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 952,
+        "nodes": 2712
+      },
+      "sampler_retries": 0,
+      "private_seed": 1546,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "973fe9e3bad27ed1bc2e70d0bc05c336dfebc8a11e2db34a71951385bbf63a50"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr2e-4_seed1475",
+      "epoch": 73,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 886,
+        "nodes": 2514
+      },
+      "sampler_retries": 0,
+      "private_seed": 1547,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "c68945aa8953212d75394d9be719aecd74162b4411a2d760200bccef8ab023c5"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr2e-4_seed1475",
+      "epoch": 74,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 925,
+        "nodes": 2631
+      },
+      "sampler_retries": 0,
+      "private_seed": 1548,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "7f276e57912e8dd89f595ccd66ef0de25f443d7e7c1cb79f850422830c7d0f6b"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr2e-4_seed1475",
+      "epoch": 75,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 941,
+        "nodes": 2679
+      },
+      "sampler_retries": 0,
+      "private_seed": 1549,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "a97e483994b4eef37bbc96ff2d179433f64fced301bfaa8b372af47ad143048a"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr2e-4_seed1475",
+      "epoch": 76,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 868,
+        "nodes": 2460
+      },
+      "sampler_retries": 0,
+      "private_seed": 1550,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "788c2a1b73796ba411153b71187a5afee4b603de7b50c9b3d7b2362ce236e2b0"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr2e-4_seed1475",
+      "epoch": 77,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 909,
+        "nodes": 2583
+      },
+      "sampler_retries": 0,
+      "private_seed": 1551,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "44f195d33253272c85c4935155df87a59b7d4489e5d64e0769e5729a03971498"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr2e-4_seed1475",
+      "epoch": 78,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 891,
+        "nodes": 2529
+      },
+      "sampler_retries": 0,
+      "private_seed": 1552,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "052d15efcee1d6cf10b347ddd8a39629f355d0237f075a49b9939e083e859b58"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr2e-4_seed1475",
+      "epoch": 79,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 951,
+        "nodes": 2709
+      },
+      "sampler_retries": 0,
+      "private_seed": 1553,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "78f51ba4ed334586f782d152348376f2fed6ecb6e7249e306ec09c668ce0a0cf"
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr2e-4_seed1475",
+      "epoch": 80,
+      "sample_ratio": 1,
+      "train_dialogues": 108,
+      "train_batches": 7,
+      "validation_batches": 1,
+      "validation_capacity": {
+        "edges": 563,
+        "nodes": 1581
+      },
+      "capacity": {
+        "edges": 907,
+        "nodes": 2577
+      },
+      "sampler_retries": 0,
+      "private_seed": 1554,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "77677390ba2ba834599f9ec94e83748b922a9727fa5b18b8e0fefbe84a4d7539"
+    }
+  ]
+}

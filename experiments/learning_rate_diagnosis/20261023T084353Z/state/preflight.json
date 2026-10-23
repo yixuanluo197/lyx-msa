@@ -1,0 +1,203 @@
+{
+  "active": false,
+  "phase": "passed",
+  "pid": 2000189,
+  "started_at_utc": "2026-10-23T08:57:18.954775+00:00",
+  "runs": [
+    {
+      "run_id": "MELD_cmerc_lr5e-5_seed67137",
+      "pid": 2000369,
+      "argv": [
+        "/data2/yb/conda_envs/cmerc-xp-repro/bin/python",
+        "-u",
+        "/data2/yb/paper/lyx-msa/CMERC/experiments/learning_rate_diagnosis/20261023T084353Z/scripts/memory_observer.py",
+        "/data2/yb/paper/lyx-msa/CMERC/experiments/learning_rate_diagnosis/20261023T084353Z/scripts/watch_training.py",
+        "--run-id",
+        "MELD_cmerc_lr5e-5_seed67137",
+        "--preflight"
+      ],
+      "started_at_utc": "2026-10-23T08:57:20.532650+00:00",
+      "environment": {
+        "CUDA_VISIBLE_DEVICES": "GPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456",
+        "LD_LIBRARY_PATH": "/data2/yb/conda_envs/cmerc-xp-repro/lib/python3.10/site-packages/nvidia/cusparse/lib",
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "PYTORCH_CUDA_ALLOC_CONF": "garbage_collection_threshold:0.8",
+        "CMERC_ENV_PREFIX": "/data2/yb/conda_envs/cmerc-xp-repro",
+        "PYTHONDONTWRITEBYTECODE": "1"
+      },
+      "profile_output": "/data2/yb/paper/lyx-msa/CMERC/experiments/learning_rate_diagnosis/20261023T084353Z/logs/preflight_MELD_cmerc_lr5e-5_seed67137_memory.jsonl",
+      "log": "/data2/yb/paper/lyx-msa/CMERC/experiments/learning_rate_diagnosis/20261023T084353Z/logs/preflight_MELD_cmerc_lr5e-5_seed67137.log",
+      "admission": {
+        "time": "2026-10-23T08:57:20.530392+00:00",
+        "gpu_index": 3,
+        "gpu_uuid": "GPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456",
+        "gpu_name": "NVIDIA TITAN Xp",
+        "total_mib": 12288,
+        "free_mib": 12179,
+        "used_mib": 5,
+        "utilization_percent": 0,
+        "processes": [],
+        "own_pids": [],
+        "unexpected_processes": []
+      },
+      "returncode": 0,
+      "finished_at_utc": "2026-10-23T08:57:40.755088+00:00",
+      "evidence": {
+        "first_sha256": "c33a63d7ac99421db20e5149a7a5175aa8e18f8b526a641344073f2f903a1be3",
+        "status_sha256": "a7b0e840c4fb39eaab373b0ee069c737ded103c287abe77dd10365ebb4ab4ec1"
+      }
+    },
+    {
+      "run_id": "MELD_cmerc_lr2e-4_seed67137",
+      "pid": 2001057,
+      "argv": [
+        "/data2/yb/conda_envs/cmerc-xp-repro/bin/python",
+        "-u",
+        "/data2/yb/paper/lyx-msa/CMERC/experiments/learning_rate_diagnosis/20261023T084353Z/scripts/memory_observer.py",
+        "/data2/yb/paper/lyx-msa/CMERC/experiments/learning_rate_diagnosis/20261023T084353Z/scripts/watch_training.py",
+        "--run-id",
+        "MELD_cmerc_lr2e-4_seed67137",
+        "--preflight"
+      ],
+      "started_at_utc": "2026-10-23T08:57:42.484519+00:00",
+      "environment": {
+        "CUDA_VISIBLE_DEVICES": "GPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456",
+        "LD_LIBRARY_PATH": "/data2/yb/conda_envs/cmerc-xp-repro/lib/python3.10/site-packages/nvidia/cusparse/lib",
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "PYTORCH_CUDA_ALLOC_CONF": "garbage_collection_threshold:0.8",
+        "CMERC_ENV_PREFIX": "/data2/yb/conda_envs/cmerc-xp-repro",
+        "PYTHONDONTWRITEBYTECODE": "1"
+      },
+      "profile_output": "/data2/yb/paper/lyx-msa/CMERC/experiments/learning_rate_diagnosis/20261023T084353Z/logs/preflight_MELD_cmerc_lr2e-4_seed67137_memory.jsonl",
+      "log": "/data2/yb/paper/lyx-msa/CMERC/experiments/learning_rate_diagnosis/20261023T084353Z/logs/preflight_MELD_cmerc_lr2e-4_seed67137.log",
+      "admission": {
+        "time": "2026-10-23T08:57:42.482156+00:00",
+        "gpu_index": 3,
+        "gpu_uuid": "GPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456",
+        "gpu_name": "NVIDIA TITAN Xp",
+        "total_mib": 12288,
+        "free_mib": 12179,
+        "used_mib": 5,
+        "utilization_percent": 0,
+        "processes": [],
+        "own_pids": [],
+        "unexpected_processes": []
+      },
+      "returncode": 0,
+      "finished_at_utc": "2026-10-23T08:58:02.712192+00:00",
+      "evidence": {
+        "first_sha256": "2f029267b5389f6ebc903876b28dcc464cf62db0bd7af03bf9b0e37534681c86",
+        "status_sha256": "a7b0e840c4fb39eaab373b0ee069c737ded103c287abe77dd10365ebb4ab4ec1"
+      }
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr5e-5_seed1475",
+      "pid": 2001740,
+      "argv": [
+        "/data2/yb/conda_envs/cmerc-xp-repro/bin/python",
+        "-u",
+        "/data2/yb/paper/lyx-msa/CMERC/experiments/learning_rate_diagnosis/20261023T084353Z/scripts/memory_observer.py",
+        "/data2/yb/paper/lyx-msa/CMERC/experiments/learning_rate_diagnosis/20261023T084353Z/scripts/watch_training.py",
+        "--run-id",
+        "IEMOCAP_cmerc_lr5e-5_seed1475",
+        "--preflight"
+      ],
+      "started_at_utc": "2026-10-23T08:58:04.426009+00:00",
+      "environment": {
+        "CUDA_VISIBLE_DEVICES": "GPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456",
+        "LD_LIBRARY_PATH": "/data2/yb/conda_envs/cmerc-xp-repro/lib/python3.10/site-packages/nvidia/cusparse/lib",
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "PYTORCH_CUDA_ALLOC_CONF": "garbage_collection_threshold:0.8",
+        "CMERC_ENV_PREFIX": "/data2/yb/conda_envs/cmerc-xp-repro",
+        "PYTHONDONTWRITEBYTECODE": "1"
+      },
+      "profile_output": "/data2/yb/paper/lyx-msa/CMERC/experiments/learning_rate_diagnosis/20261023T084353Z/logs/preflight_IEMOCAP_cmerc_lr5e-5_seed1475_memory.jsonl",
+      "log": "/data2/yb/paper/lyx-msa/CMERC/experiments/learning_rate_diagnosis/20261023T084353Z/logs/preflight_IEMOCAP_cmerc_lr5e-5_seed1475.log",
+      "admission": {
+        "time": "2026-10-23T08:58:04.423824+00:00",
+        "gpu_index": 3,
+        "gpu_uuid": "GPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456",
+        "gpu_name": "NVIDIA TITAN Xp",
+        "total_mib": 12288,
+        "free_mib": 12179,
+        "used_mib": 5,
+        "utilization_percent": 0,
+        "processes": [],
+        "own_pids": [],
+        "unexpected_processes": []
+      },
+      "returncode": 0,
+      "finished_at_utc": "2026-10-23T08:58:24.640033+00:00",
+      "evidence": {
+        "first_sha256": "b46350f0bad864dcb59023747a1d6e9a77caeadd1bbfbd3c2a3f274276e88e2f",
+        "status_sha256": "a7b0e840c4fb39eaab373b0ee069c737ded103c287abe77dd10365ebb4ab4ec1"
+      }
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr2e-4_seed1475",
+      "pid": 2002470,
+      "argv": [
+        "/data2/yb/conda_envs/cmerc-xp-repro/bin/python",
+        "-u",
+        "/data2/yb/paper/lyx-msa/CMERC/experiments/learning_rate_diagnosis/20261023T084353Z/scripts/memory_observer.py",
+        "/data2/yb/paper/lyx-msa/CMERC/experiments/learning_rate_diagnosis/20261023T084353Z/scripts/watch_training.py",
+        "--run-id",
+        "IEMOCAP_cmerc_lr2e-4_seed1475",
+        "--preflight"
+      ],
+      "started_at_utc": "2026-10-23T08:58:26.337349+00:00",
+      "environment": {
+        "CUDA_VISIBLE_DEVICES": "GPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456",
+        "LD_LIBRARY_PATH": "/data2/yb/conda_envs/cmerc-xp-repro/lib/python3.10/site-packages/nvidia/cusparse/lib",
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "PYTORCH_CUDA_ALLOC_CONF": "garbage_collection_threshold:0.8",
+        "CMERC_ENV_PREFIX": "/data2/yb/conda_envs/cmerc-xp-repro",
+        "PYTHONDONTWRITEBYTECODE": "1"
+      },
+      "profile_output": "/data2/yb/paper/lyx-msa/CMERC/experiments/learning_rate_diagnosis/20261023T084353Z/logs/preflight_IEMOCAP_cmerc_lr2e-4_seed1475_memory.jsonl",
+      "log": "/data2/yb/paper/lyx-msa/CMERC/experiments/learning_rate_diagnosis/20261023T084353Z/logs/preflight_IEMOCAP_cmerc_lr2e-4_seed1475.log",
+      "admission": {
+        "time": "2026-10-23T08:58:26.335164+00:00",
+        "gpu_index": 3,
+        "gpu_uuid": "GPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456",
+        "gpu_name": "NVIDIA TITAN Xp",
+        "total_mib": 12288,
+        "free_mib": 12179,
+        "used_mib": 5,
+        "utilization_percent": 0,
+        "processes": [],
+        "own_pids": [],
+        "unexpected_processes": []
+      },
+      "returncode": 0,
+      "finished_at_utc": "2026-10-23T08:58:46.571885+00:00",
+      "evidence": {
+        "first_sha256": "ecaceb24f0f76ce250c9e7a3eae0712ea7b68d6be4e51125c0cc0fccdf9fd121",
+        "status_sha256": "a7b0e840c4fb39eaab373b0ee069c737ded103c287abe77dd10365ebb4ab4ec1"
+      }
+    }
+  ],
+  "cpu_evidence": [
+    {
+      "path": "/data2/yb/paper/lyx-msa/CMERC/experiments/learning_rate_diagnosis/20261023T084353Z/preflight/capacity_cpu.json",
+      "sha256": "68ff1abc62eac245f0f7c953bd277b04bf38f77a3b8e1f00a06ba293153757ff"
+    },
+    {
+      "path": "/data2/yb/paper/lyx-msa/CMERC/experiments/learning_rate_diagnosis/20261023T084353Z/preflight/guard_tests.json",
+      "sha256": "aaa676f14bb8d7ff798ee8c988585a241d79795ab71e33ef4b8d05168c4271c9"
+    }
+  ],
+  "foreign_process_samples": 0,
+  "foreign_process_observations": [],
+  "current_run": "IEMOCAP_cmerc_lr2e-4_seed1475",
+  "child_pid": null,
+  "completed_at_utc": "2026-10-23T08:58:48.128390+00:00"
+}

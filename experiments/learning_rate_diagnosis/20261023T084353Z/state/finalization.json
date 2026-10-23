@@ -1,0 +1,38 @@
+{
+  "active": false,
+  "phase": "completed",
+  "pid": 2005448,
+  "commands": [
+    {
+      "argv": [
+        "/data2/yb/conda_envs/cmerc-xp-repro/bin/python",
+        "-u",
+        "/data2/yb/paper/lyx-msa/CMERC/experiments/learning_rate_diagnosis/20261023T084353Z/scripts/verify_lr.py"
+      ],
+      "started_at_utc": "2026-10-23T11:37:24.998752+00:00",
+      "returncode": 0,
+      "finished_at_utc": "2026-10-23T11:38:19.550192+00:00"
+    },
+    {
+      "argv": [
+        "/data2/yb/conda_envs/cmerc-xp-repro/bin/python",
+        "-u",
+        "/data2/yb/paper/lyx-msa/CMERC/experiments/learning_rate_diagnosis/20261023T084353Z/scripts/analyze_lr.py"
+      ],
+      "started_at_utc": "2026-10-23T11:38:19.550994+00:00",
+      "returncode": 0,
+      "finished_at_utc": "2026-10-23T11:38:19.671798+00:00"
+    },
+    {
+      "argv": [
+        "/home/yangbin/miniconda3/envs/multimodalerc310/bin/python",
+        "-u",
+        "/data2/yb/paper/lyx-msa/CMERC/experiments/learning_rate_diagnosis/20261023T084353Z/scripts/plot_lr.py"
+      ],
+      "started_at_utc": "2026-10-23T11:38:19.672567+00:00",
+      "returncode": 0,
+      "finished_at_utc": "2026-10-23T11:38:23.411188+00:00"
+    }
+  ],
+  "finished_at_utc": "2026-10-23T11:38:23.411989+00:00"
+}

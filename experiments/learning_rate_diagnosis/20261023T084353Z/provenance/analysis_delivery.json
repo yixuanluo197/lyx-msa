@@ -1,0 +1,47 @@
+{
+  "status": "passed",
+  "created_at_utc": "2026-10-23T11:41:00.619308+00:00",
+  "formal_runs": 4,
+  "test_forwards": 0,
+  "final_verification_sha256": "3e8b2df46fc7a8270969af38300670cf561669e341d5ac9913ea631b49e82ff5",
+  "analysis_summary_sha256": "2c3b9cd0a8e840e94e17a44368fb0c602bcb0b88bb924bcecc438c57fc4454f5",
+  "figures": 12,
+  "figure_artifacts": 24,
+  "figure_inputs_and_outputs_match": true,
+  "report_links_checked": 38,
+  "python_scripts_ast_valid": true,
+  "script_hashes": {
+    "scripts/verify_lr.py": "d00cf9551e0ecac2de6876d4c84d73f84030817a79bc975fe49786a77726349c",
+    "scripts/watch_training.py": "50b11dbec8219c63eddae78e97086e9a8542241cac2cfa6831e7c466677d27cf",
+    "scripts/analyze_lr.py": "70310df79f8c98835143021a04f68c3c687743a7c47a5dc2ca4273b1157c2440",
+    "scripts/supervise_lr.py": "3b269d3085284d58598afdc50ebcf99a7c942bbb903f08c28981a6c44f7b6f69",
+    "scripts/test_lr_analysis.py": "5ad1971e53424b532b66e791442d98b30bdd1876066c270578016feef660326e",
+    "scripts/plot_lr.py": "710b1fbe6b3b467ef6fa2884c30dbfeb226e96fc874886093736c666c42e97ba",
+    "scripts/test_training_guard.py": "22bc91202f47c031187a95dfe21e8b6b429f78e2b728eed4c5fb84e6e8d74a30",
+    "scripts/memory_observer.py": "eda9ebfe3c82eb0fcac02fd26f86b5b1c53e7d83ce43cc27d1fce402a849a524",
+    "scripts/status.py": "7c3668b0828eacda7a3c4315de6c0d84b6fea4112053602fa57bf894dba620ba",
+    "scripts/check_capacity.py": "9443626983d47a5f6ec1a402d9bebb04714944191a81912d15b723616ca822d2",
+    "scripts/finalize_lr.py": "5b489308dee4d8749e99af85801615acfbe1130edb51521ad1cb4f9224b9e86b",
+    "scripts/run_preflights.py": "d7febcdc0363d7b0fda0ec8b870929920fafbd3211ede9feaf2fb196d8979c19"
+  },
+  "independent_reviews": [
+    "iem_batch_audit: all four runs and checkpoints CPU-only passed",
+    "meld_pair_audit: final report and qualification decisions passed"
+  ],
+  "post_finalizer_actions": [
+    "CPU-only analysis re-render after Markdown spacing correction",
+    "CPU-only plots re-render with legends outside data region; no numeric input changes",
+    "7 analysis qualification regression tests passed after final report edits"
+  ],
+  "next_phase": {
+    "IEMOCAP": "weak mixed evidence; no eligible second-seed LR candidate",
+    "MELD": "lr0.0002 eligible by registered peak-first rule; reserve seed2024, not started",
+    "batch_size_8": "defer; no independent evidence this stage"
+  },
+  "remaining_limits": [
+    "one seed per dataset",
+    "historical controls ran on different physical GPUs",
+    "author curriculum generation history unknown",
+    "no independent final test performed; no validation ECE/CEL collected"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "recorded_at_utc": "2026-10-23T09:09:44.865894+00:00",
+  "solo_first_full_pool_epoch_seconds": 38.1,
+  "concurrent": [
+    {
+      "run_id": "MELD_cmerc_lr5e-5_seed67137",
+      "last4_epoch_seconds": 55.31,
+      "epochs_seen": 12
+    },
+    {
+      "run_id": "MELD_cmerc_lr2e-4_seed67137",
+      "last4_epoch_seconds": 58.5375,
+      "epochs_seen": 9
+    }
+  ],
+  "approx_total_epoch_rate_ratio": 1.3397095237824985,
+  "decision": "retain two MELD jobs concurrently; no protocol or batch changes",
+  "limits": "Different epochs and shared host resources; engineering throughput estimate, not controlled performance benchmark."
+}

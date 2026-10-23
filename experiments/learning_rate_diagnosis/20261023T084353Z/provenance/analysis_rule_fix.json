@@ -1,0 +1,52 @@
+{
+  "recorded_at_utc": "2026-10-23T09:17:07.230249+00:00",
+  "classification": "alignment_of_implementation_with_original_preregistration_not_a_new_rule",
+  "root_cause": "qualification_filter_missing_before_ranking",
+  "red": {
+    "returncode": 1,
+    "tests": 7,
+    "expected_failures": 2,
+    "analyze_sha256": "9df46fd4c730a01a543ccfd11a31e304d04cd71c2cee5ebd658019074d81ce94"
+  },
+  "green": {
+    "returncode": 0,
+    "tests": 7,
+    "failures": 0,
+    "analyze_sha256": "dc1c6c832cb20d65f763da614a881f71eab38dc34415889ceecb26564eccdf72"
+  },
+  "progress_snapshot": [
+    {
+      "run_id": "MELD_cmerc_lr5e-5_seed67137",
+      "epochs_completed": 19,
+      "epochs_planned": 40
+    },
+    {
+      "run_id": "MELD_cmerc_lr2e-4_seed67137",
+      "epochs_completed": 16,
+      "epochs_planned": 40
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr5e-5_seed1475",
+      "epochs_completed": 0,
+      "epochs_planned": 80
+    },
+    {
+      "run_id": "IEMOCAP_cmerc_lr2e-4_seed1475",
+      "epochs_completed": 0,
+      "epochs_planned": 80
+    }
+  ],
+  "final_tail_window_seen": false,
+  "score_fields_used_to_change_rule": false,
+  "synthetic_cpu_tests_only": true,
+  "gpu_or_forward_calls": 0,
+  "analysis_main_run": false,
+  "plots_regenerated": false,
+  "protected_files_unchanged_sha256": {
+    "reports/PREREGISTRATION.md": "baa98e7517c9df7af2e2dcb90dd7ec65137a68f80095de6a8c0df3b95b9e5d4c",
+    "configs/registry.json": "626e61a9164e3a59566e7021b6d4aa39f4e9e69e1784de14acdace9a5b0fc79c",
+    "provenance/frozen_execution.json": "edebf309d63738452747f58610a1603f73b4d9f8acc6f9052c403763c626e1fe"
+  },
+  "test_script_sha256": "5ad1971e53424b532b66e791442d98b30bdd1876066c270578016feef660326e",
+  "log_sha256": "f9ce3a841d546a62864305c568da48ca00b4d0f04d7d4235215ccf6592019d25"
+}

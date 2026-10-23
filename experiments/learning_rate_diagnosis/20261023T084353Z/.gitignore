@@ -1,0 +1,16 @@
+# Keep datasets, model weights and raw execution traces on the server.
+/logs/*
+!/logs/analysis_rule_regression.log
+!/logs/cpu_guard_tests.log
+/code_xp04/data/
+**/watch_batches.jsonl
+**/*.lock
+*.pt
+*.pth
+*.ckpt
+*.npz
+*.npy
+
+# These small difficulty files are already public in the upstream repository.
+!/code_xp04/caldiff/IEMOCAP_diff.pkl
+!/code_xp04/caldiff/MELD_diff.pkl
