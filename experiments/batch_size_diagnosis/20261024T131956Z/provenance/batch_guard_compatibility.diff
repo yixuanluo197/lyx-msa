@@ -1,0 +1,480 @@
+--- 08/scripts/watch_training.py
++++ 09/scripts/watch_training.py
+@@ -1,4 +1,4 @@
+-"""Call/return-only guard for validation-only CMERC learning-rate diagnosis."""
++"""Call/return-only guard for validation-only CMERC batch-size diagnosis."""
+ from __future__ import annotations
+ 
+ import argparse
+@@ -73,12 +73,15 @@
+ 
+ def assert_scientific_pair(args, historical, run, patched_sha):
+     actual, expected = vars(args), historical['args']
+-    permitted = {'lr', 'skip_final_test', 'output_dir', 'provenance'}
++    permitted = {'batch_size', 'skip_final_test', 'output_dir', 'provenance'}
+     differences = {key: (expected.get(key), actual.get(key))
+                    for key in set(actual) | set(expected)
+                    if key not in permitted and actual.get(key) != expected.get(key)}
+     assert not differences, 'Unregistered scientific differences: ' + repr(differences)
+-    assert actual['lr'] == run['lr'] and actual['skip_final_test'] is True
++    assert actual['lr'] == expected['lr'] == run['lr'] == 1e-4
++    assert expected['batch_size'] == 16 and actual['batch_size'] == run['batch_size'] == 8
++    assert run['validation_batch_size'] == actual['batch_size']
++    assert actual['skip_final_test'] is True
+     assert actual['seed'] == run['seed'] and actual['epochs'] == run['epochs']
+     assert actual['selection_protocol'] == 'validation' and actual['testing'] is False
+     assert actual['rng_policy'] == 'continuous' and actual['rnn_backend'] == 'aten'
+@@ -229,10 +232,14 @@
+                       for row in local['loss_components']]
+         assert components, 'Empty train/validation evaluation'
+         keys, dataset = state['keys'], local['dataloader'].dataset
++        batch_size = state['frame'].f_globals['args'].batch_size
++        assert len(components) == math.ceil(len(keys) / batch_size)
+         expected_utterances = sum(len(dataset.videoLabels[key]) for key in keys)
+         assert len(result[2]) == len(result[3]) == expected_utterances
+         if state['split'] == 'train':
+             assert len(state['steps']) == len(components)
++            assert [len(step['dialogue_ids']) for step in state['steps']] == [
++                min(batch_size, len(keys) - start) for start in range(0, len(keys), batch_size)]
+             assert len(state['seen_ids']) == len(keys) and set(state['seen_ids']) == set(keys)
+         averaged = {key: float(np.mean([row[key] for row in components])) for key in LOSSES}
+         norms = [step['gradient_l2'] for step in state['steps']]
+--- 08/scripts/test_training_guard.py
++++ 09/scripts/test_training_guard.py
+@@ -47,26 +47,27 @@
+ 
+ 
+ def fixture():
+-    split = {'train_ids': [1, 2], 'validation_ids': [3], 'test_ids': [4], 'hash': 'split'}
++    split = {'train_ids': list(range(1,18)), 'validation_ids': list(range(101,110)), 'test_ids': [201], 'hash': 'split'}
+     provenance = {'split': split, 'data': {},
+                   'source': {'files': {'train_cm.py': 'old', 'model.py': 'unchanged'}}}
+-    old = dict(lr=.0001, skip_final_test=False, output_dir='/old', provenance=provenance,
++    old = dict(lr=.0001, batch_size=16, skip_final_test=False, output_dir='/old', provenance=provenance,
+                seed=1475, epochs=2, selection_protocol='validation', testing=False,
+                rng_policy='continuous', rnn_backend='aten', batch_policy='capacity_safe',
+                num_workers=0, calibrate=True, contrastlearning=True, courselearning=True,
+                rank_coff=.005, mscl_coff=.05, cscl_coff=.05)
+     historical = {'args': copy.deepcopy(old), **copy.deepcopy(provenance)}
+     actual = copy.deepcopy(old)
+-    actual.update(lr=.00005, skip_final_test=True, output_dir='/new')
++    actual.update(batch_size=8, skip_final_test=True, output_dir='/new')
+     actual['provenance']['source']['files']['train_cm.py'] = 'patched'
+-    run = dict(lr=.00005, seed=1475, epochs=2, split_hash='split')
++    run = dict(lr=.0001, batch_size=8, validation_batch_size=8, seed=1475, epochs=2, split_hash='split')
+     return argparse.Namespace(**actual), historical, run
+ 
+ 
+ class Loader:
+     def __init__(self, keys):
+         self.dataset = argparse.Namespace(keys=keys, videoLabels={key: [0] for key in keys})
+-        self.items = [(torch.ones(1, 2), torch.zeros(1, dtype=torch.long), [key]) for key in keys]
++        self.items = [(torch.ones(len(group), 2), torch.zeros(len(group), dtype=torch.long), group)
++                      for group in [keys[start:start+8] for start in range(0,len(keys),8)]]
+ 
+     def __iter__(self):
+         return iter(self.items)
+@@ -87,6 +88,16 @@
+         args.provenance['source']['files']['model.py'] = 'changed'
+         with self.assertRaises(AssertionError):
+             assert_scientific_pair(args, old, run, 'patched')
++
++    def test_batch_factor_requires_eight_and_forbids_lr_seed_or_loss_changes(self):
++        args, old, run = fixture()
++        assert_scientific_pair(args, old, run, 'patched')
++        for field, value in [('lr', .0002), ('seed', 2024), ('batch_size', 16),
++                             ('mscl_coff', .2), ('calibrate', False), ('split_seed', 2024)]:
++            actual, historical, registered = fixture()
++            setattr(actual, field, value)
++            with self.subTest(field=field), self.assertRaises(AssertionError):
++                assert_scientific_pair(actual, historical, registered, 'patched')
+ 
+     def test_test_loader_rejected_before_any_model_call(self):
+         args, old, run = fixture()
+@@ -99,13 +110,13 @@
+         sys.settrace(guard.trace)
+         try:
+             with self.assertRaisesRegex(AssertionError, 'Forbidden evaluation'):
+-                scope['train_or_eval_graph_model'](model,None,None,None,torch.nn.NLLLoss(),Loader([4]),0,False,'avl')
++                scope['train_or_eval_graph_model'](model,None,None,None,torch.nn.NLLLoss(),Loader([201]),0,False,'avl')
+         finally:
+             sys.settrace(original)
+         self.assertEqual(scope['forwards'], 0)
+         self.assertEqual(guard.counts['test'], 0)
+         with self.assertRaises(AssertionError):
+-            guard.split_for(True, [1, 3])
++            guard.split_for(True, [1, 101])
+ 
+     def execute(self, observed, preflight=False):
+         torch.manual_seed(77)
+@@ -128,7 +139,7 @@
+         stopped = False
+         try:
+             for epoch in range(2):
+-                for train, keys in [(True, [2, 1]), (False, [3])]:
++                for train, keys in [(True, list(range(17,0,-1))), (False, list(range(101,110)))]:
+                     scope['train_or_eval_graph_model'](model,None,None,None,torch.nn.NLLLoss(),Loader(keys),epoch,False,'avl',optimizer,train)
+         except PreflightComplete:
+             stopped = True
+@@ -143,8 +154,8 @@
+         plain, watched = self.execute(False), self.execute(True)
+         self.assertEqual(plain['forwards'], watched['forwards'])
+         self.assertEqual(plain['steps_counter'], watched['steps_counter'])
+-        self.assertEqual(watched['forwards'], 6)
+-        self.assertEqual(watched['steps_counter'], 4)
++        self.assertEqual(watched['forwards'], 10)
++        self.assertEqual(watched['steps_counter'], 6)
+         self.assertEqual(plain['rng'], watched['rng'])
+         for key, value in plain['state'].items():
+             self.assertTrue(torch.equal(value, watched['state'][key]))
+@@ -157,6 +168,13 @@
+         guard = watched['guard']
+         self.assertEqual(guard.counts, dict(train=2, validation=2, test=0))
+         self.assertEqual(guard.line_events, 0)
++        recorded = [row for name,row in guard.memory_records if name == 'watch_batches.jsonl']
++        for epoch in (1, 2):
++            steps = [row for row in recorded if row['epoch'] == epoch]
++            self.assertEqual([len(row['dialogue_ids']) for row in steps], [8,8,1])
++            self.assertEqual([key for row in steps for key in row['dialogue_ids']], list(range(17,0,-1)))
++        evaluations = [row for name,row in guard.memory_records if name == 'watch_epochs.jsonl' and row['split']=='validation']
++        self.assertTrue(all(row['batches'] == 2 and row['n_utterances'] == 9 for row in evaluations))
+         self.assertTrue(guard.first['optimizer_updated_parameters'])
+         self.assertEqual(guard.first['rng_before_step'], guard.first['rng_after_step'])
+ 
+@@ -183,6 +201,36 @@
+         self.assertEqual(ast.dump(epoch_loop(old), include_attributes=False),
+                          ast.dump(epoch_loop(path.read_bytes()), include_attributes=False))
+ 
++    def test_original_and_current_batch8_samplers_match_with_partial_batch(self):
++        from check_capacity import surface, replay
++        original = ROOT.parents[2] / 'experiment_records/04_xp_mainline_validation/code/train_cm.py'
++        old, old_ast = surface(original)
++        new, new_ast = surface(ROOT / 'code_xp04/train_cm.py')
++        self.assertEqual(old_ast, new_ast)
++        keys = list(range(17))
++        labels = {key: list(range(1 + key % 3)) for key in keys}
++        before = torch.get_rng_state().clone()
++        a, b = replay(old,keys,labels,8,2024), replay(new,keys,labels,8,2024)
++        self.assertEqual(a[0], b[0])
++        self.assertTrue(torch.equal(a[1], b[1]))
++        self.assertEqual(a[2:], b[2:])
++        self.assertEqual([len(batch) for batch in b[0]], [8,8,1])
++        historical16 = replay(old,keys,labels,16,2024)
++        self.assertEqual([len(batch) for batch in historical16[0]], [16,1])
++        self.assertTrue(torch.equal(before,torch.get_rng_state()))
++
++    def test_validation_batch8_preserves_every_dialogue_and_tail(self):
++        from check_capacity import validation_plan
++        keys = list(range(17))
++        labels = {key:[0,0] for key in keys}
++        current, current_cap = validation_plan(keys,labels,8)
++        historical, historical_cap = validation_plan(keys,labels,16)
++        self.assertEqual(sum(current,[]), list(range(17)))
++        self.assertEqual(sum(historical,[]), list(range(17)))
++        self.assertEqual([len(batch) for batch in current], [8,8,1])
++        self.assertEqual([len(batch) for batch in historical], [16,1])
++        self.assertNotEqual(current_cap, historical_cap)
++
+ 
+ if __name__ == '__main__':
+     unittest.main()
+--- 08/scripts/check_capacity.py
++++ 09/scripts/check_capacity.py
+@@ -1,4 +1,4 @@
+-"""CPU audit of every registered train/validation batch, using real lengths."""
++"""CPU batch8 audit plus separate historical batch16 replay; no test access."""
+ import ast
+ import hashlib
+ import json
+@@ -43,6 +43,36 @@
+             'nodes': max((3*n for n in totals), default=0)}
+ 
+ 
++def replay(code, keys, labels, batch_size, seed):
++    generator = torch.Generator().manual_seed(seed)
++    # Real DataLoader iteration consumes its private base seed before randperm.
++    loader = code['validation_training_loader'](
++        Indices(keys, labels), batch_size, {'generator': generator},
++        'capacity_safe', 1000, 5200, 10000, 0, False)
++    batches = list(loader)
++    assert sorted(sum(batches, [])) == list(range(len(keys)))
++    assert [len(batch) for batch in batches] == [
++        min(batch_size, len(keys)-start) for start in range(0,len(keys),batch_size)]
++    cap = limits(keys, labels, batches)
++    assert cap['edges'] <= 1000 and cap['nodes'] <= 5200
++    assert cap['edges'] == loader.batch_sampler.max_batch_edges
++    assert cap['nodes'] == loader.batch_sampler.max_batch_nodes
++    return batches, generator.get_state(), loader.batch_sampler.retries, cap
++
++
++def order_sha(keys, batches):
++    return hashlib.sha256(json.dumps([keys[index] for index in sum(batches, [])]).encode()).hexdigest()
++
++
++def validation_plan(keys, labels, batch_size):
++    batches = [list(range(start, min(start+batch_size, len(keys))))
++               for start in range(0,len(keys),batch_size)]
++    cap = limits(keys, labels, batches)
++    assert cap['edges'] <= 1000 and cap['nodes'] <= 5200
++    assert sum(map(len,batches)) == len(keys)
++    return batches, cap
++
++
+ def main():
+     registry = json.loads((ROOT/'configs/registry.json').read_text())
+     references = json.loads((ROOT/'provenance/xp04_validation_references.json').read_text())
+@@ -54,6 +84,9 @@
+     for run in registry['runs']:
+         ds = run['dataset']
+         ref = references[f"{ds}_{run['seed']}"]
++        assert ds == 'MELD' and run['seed'] == 2024 and run['epochs'] == 40
++        assert run['batch_size'] == run['validation_batch_size'] == 8
++        assert ref['args']['batch_size'] == 16 and ref['args']['lr'] == run['lr'] == 1e-4
+         if ds not in datasets:
+             name = 'IEMOCAP_features.pkl' if ds == 'IEMOCAP' else 'MELD_features_raw1.pkl'
+             with (ROOT/'code_xp04/data'/name).open('rb') as stream:
+@@ -69,46 +102,60 @@
+         train, valid = ref['split']['train_ids'], ref['split']['validation_ids']
+         assert not set(train).intersection(valid)
+         assert not set(train+valid).intersection(ref['split']['test_ids'])
+-        valid_batches = [list(range(start, min(start+16, len(valid))))
+-                         for start in range(0, len(valid), 16)]
+-        valid_limit = limits(valid, labels, valid_batches)
+-        assert valid_limit['edges'] <= 1000 and valid_limit['nodes'] <= 5200
++        valid_batches, valid_limit = validation_plan(valid, labels, 8)
++        old_valid_batches, old_valid_limit = validation_plan(valid, labels, 16)
++        assert len(ref['epochs']) == run['epochs']
+         for epoch, old_row in enumerate(ref['epochs']):
++            assert old_row['epoch'] == epoch+1
+             ratio = old_row['sample_ratio']
++            expected_ratio = min(1,round(ref['args']['epoch_ratio'] * int(epoch/ref['args']['scheduler_steps']+1),2))
++            assert ratio == expected_ratio
+             chosen = set(sorted(train, key=lambda key: difficulty[key])[:int(ratio*len(train))])
+             keys = [key for key in train if key in chosen]
+-            results = []
+-            for code in [old, new]:
+-                generator = torch.Generator().manual_seed(run['seed']+epoch)
+-                loader = code['validation_training_loader'](
+-                    Indices(keys, labels), 16, {'generator': generator},
+-                    'capacity_safe', 1000, 5200, 10000, 0, False)
+-                batches = list(loader)
+-                assert sorted(sum(batches, [])) == list(range(len(keys)))
+-                cap = limits(keys, labels, batches)
+-                assert cap['edges'] <= 1000 and cap['nodes'] <= 5200
+-                assert cap['edges'] == loader.batch_sampler.max_batch_edges
+-                assert cap['nodes'] == loader.batch_sampler.max_batch_nodes
+-                results.append((batches, generator.get_state(), loader.batch_sampler.retries, cap))
+-            a, z = results
++            assert len(keys) == old_row['train_dialogues']
++            historical16 = replay(old,keys,labels,16,run['seed']+epoch)
++            assert historical16[2] == old_row['sampler_retries']
++            assert historical16[3]['edges'] == old_row['max_batch_edges']
++            assert historical16[3]['nodes'] == old_row['max_batch_nodes']
++            a = replay(old,keys,labels,8,run['seed']+epoch)
++            z = replay(new,keys,labels,8,run['seed']+epoch)
+             assert a[0] == z[0] and torch.equal(a[1], z[1]) and a[2:] == z[2:]
+-            assert z[2] == old_row['sampler_retries']
+-            assert z[3]['edges'] == old_row['max_batch_edges']
+-            assert z[3]['nodes'] == old_row['max_batch_nodes']
+             records.append({'run_id': run['run_id'], 'epoch': epoch+1,
+                             'sample_ratio': ratio, 'train_dialogues': len(keys),
++                            'batch_size': 8, 'validation_batch_size': 8,
+                             'train_batches': len(z[0]), 'validation_batches': len(valid_batches),
++                            'train_last_batch_dialogues': len(z[0][-1]),
++                            'validation_last_batch_dialogues': len(valid_batches[-1]),
+                             'validation_capacity': valid_limit, 'capacity': z[3],
+                             'sampler_retries': z[2], 'private_seed': run['seed']+epoch,
+-                            'same_as_historical_sampler': True,
+-                            'ordered_train_ids_sha256': hashlib.sha256(json.dumps(
+-                                [keys[i] for i in sum(z[0], [])]).encode()).hexdigest()})
++                            'same_as_original_sampler_batch8': True,
++                            'ordered_train_ids_sha256': order_sha(keys,z[0]),
++                            'historical16': {
++                                'batch_size':16, 'train_batches':len(historical16[0]),
++                                'validation_batches':len(old_valid_batches),
++                                'train_last_batch_dialogues':len(historical16[0][-1]),
++                                'validation_last_batch_dialogues':len(old_valid_batches[-1]),
++                                'capacity':historical16[3], 'validation_capacity':old_valid_limit,
++                                'sampler_retries':historical16[2],
++                                'ordered_train_ids_sha256':order_sha(keys,historical16[0]),
++                                'replayed_metrics_match':True,
++                                'step_count_source':'CPU reconstruction, not a historical step log'},
++                            'same_epoch_id_permutation_as_batch16':order_sha(keys,z[0])==order_sha(keys,historical16[0]),
++                            'eligible_dialogue_ids_sha256':hashlib.sha256(json.dumps(keys).encode()).hexdigest()})
+     assert len(records) == sum(r['epochs'] for r in registry['runs']) and torch.equal(before, torch.get_rng_state())
+     assert not torch.cuda.is_initialized()
+     value = {'status': 'passed', 'epochs_checked': len(records),
+              'original_sampling_ast_unchanged': True, 'global_cpu_rng_unchanged': True,
+              'cuda_initialized': False, 'test_lengths_or_predictions_examined': False,
+-             'limits': 'CPU graph capacity does not establish GPU memory safety.',
++             'historical_batch16_replay_passed':True,
++             'batch_size':8, 'historical_batch_size':16, 'validation_batch_size':8,
++             'expected_train_optimizer_steps_batch8':sum(row['train_batches'] for row in records),
++             'historical_train_optimizer_steps_batch16_reconstructed':sum(row['historical16']['train_batches'] for row in records),
++             'expected_validation_batches_batch8':sum(row['validation_batches'] for row in records),
++             'historical_validation_batches_batch16_reconstructed':sum(row['historical16']['validation_batches'] for row in records),
++             'limits': ['CPU graph capacity does not establish GPU memory safety.',
++                        'Historical batch16 optimizer step counts are reconstructed, not measured from step logs.',
++                        'Same eligible pool does not imply same batch groups, steps, loss scale or RNG model trajectory.'],
+              'records': records}
+     output = ROOT/'preflight/capacity_cpu.json'
+     with output.open('x') as stream:
+--- 08/scripts/run_single.py
++++ 09/scripts/run_single.py
+@@ -13,7 +13,7 @@
+ 
+ ROOT = Path(__file__).resolve().parents[1]
+ INTERVAL = 10
+-ALLOWED_PID = 2933763
++ALLOWED_PID = 1843864
+ 
+ 
+ def now():
+@@ -63,7 +63,7 @@
+         value = read(path)
+         assert value['status'] == 'passed' and value['cuda_initialized'] is False
+         if name == 'guard_tests.json':
+-            assert value['tests'] == 5 and value['failures'] == value['errors'] == 0
++            assert value['tests'] >= 5 and value['failures'] == value['errors'] == 0
+         else:
+             assert value['epochs_checked'] == 40 and len(value['records']) == 40
+         records.append({'path': str(path), 'sha256': sha(path)})
+@@ -216,7 +216,9 @@
+     registry = read(ROOT / 'configs/registry.json')
+     assert registry['formal_run_count'] == len(registry['runs']) == 1
+     run = registry['runs'][0]
+-    assert (run['run_id'], run['dataset'], run['seed'], run['lr'], run['epochs']) == ('MELD_cmerc_lr2e-4_seed2024', 'MELD', 2024, .0002, 40)
++    assert (run['run_id'], run['dataset'], run['seed'], run['lr'], run['epochs'], run['batch_size'], run['validation_batch_size']) == ('MELD_cmerc_batch8_lr1e-4_seed2024', 'MELD', 2024, .0001, 40, 8, 8)
++    assert float(run['argv'][run['argv'].index('--lr')+1]) == .0001
++    assert int(run['argv'][run['argv'].index('--batch-size')+1]) == 8
+     assert registry['gpu_index'] == 3 and registry['gpu_uuid'] == 'GPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456'
+     assert registry['environment']['CUDA_VISIBLE_DEVICES'] == registry['gpu_uuid']
+     policy = registry['resource_policy']
+--- 08/scripts/verify_lr.py
++++ 09/scripts/verify_lr.py
+@@ -46,7 +46,7 @@
+ 
+ def resource_evidence(registry, state):
+     policy = registry['resource_policy']
+-    assert policy['preexisting_gpu3_pids'] == [2933763]
++    assert policy['preexisting_gpu3_pids'] == [1843864]
+     resources = rows(ROOT/'logs/resources.jsonl')
+     assert resources
+     errors_path = ROOT/'logs/resource_errors.jsonl'
+@@ -92,7 +92,7 @@
+             'minimum_free_mib': min(sample['free_mib'] for sample in resources),
+             'minimum_free_mib_during_formal': min(sample['free_mib'] for sample in resources if sample['stage']=='formal_running'),
+             'maximum_utilization_percent': max(sample['utilization_percent'] for sample in resources),
+-            'limits': ['The preregistered existing PID 2933763 may share this GPU; this is not exclusive GPU occupancy.',
++            'limits': ['The preregistered existing PID 1843864 may share this GPU; this is not exclusive GPU occupancy.',
+                        'New foreign PIDs and resource pressure during active work are recorded without terminating any task.',
+                        'Discrete nvidia-smi samples cannot establish continuous resource isolation.']}
+ 
+@@ -102,7 +102,7 @@
+     registry = read(ROOT/'configs/registry.json')
+     assert registry['formal_run_count'] == len(registry['runs']) == 1
+     registered = registry['runs'][0]
+-    assert (registered['dataset'],registered['seed'],registered['lr'],registered['epochs']) == ('MELD',2024,.0002,40)
++    assert (registered['dataset'],registered['seed'],registered['lr'],registered['epochs'],registered['batch_size'],registered['validation_batch_size']) == ('MELD',2024,.0001,40,8,8)
+     state = read(ROOT/'state/status.json')
+     assert not state['active'] and state['phase'] == 'completed'
+     assert state['formal_started'] == state['formal_completed'] == 1
+@@ -119,6 +119,7 @@
+         path = Path(name) if Path(name).is_absolute() else ROOT/name
+         assert sha(path) == expected, name
+     history = read(ROOT/'provenance/history_before.json')['roots']
++    assert len(history) == 10
+     historical = {}
+     for relative, snapshot in history.items():
+         original = REPO/relative
+@@ -136,7 +137,10 @@
+     for value in read(ROOT/'provenance/data_inputs.json').values():
+         assert sha(Path(value['path'])) == value['sha256']
+         assert str(Path(value['path']).resolve()) == value['resolved']
+-    expected = {(r['run_id'], r['epoch']): r for r in read(ROOT/'preflight/capacity_cpu.json')['records']}
++    capacity = read(ROOT/'preflight/capacity_cpu.json')
++    assert capacity['status'] == 'passed' and capacity['original_sampling_ast_unchanged'] is True
++    assert capacity['historical_batch16_replay_passed'] is True
++    expected = {(r['run_id'], r['epoch']): r for r in capacity['records']}
+     results = {}
+     for run in registry['runs']:
+         directory = Path(run['run_dir'])
+@@ -156,10 +160,12 @@
+             expected_sha = patched_sha if name == 'train_cm.py' else digest
+             assert manifest['source']['files'][name] == expected_sha
+             assert sha(ROOT/'code_xp04'/name) == expected_sha
+-        allowed = {'lr', 'skip_final_test', 'output_dir', 'provenance'}
++        allowed = {'batch_size', 'skip_final_test', 'output_dir', 'provenance'}
+         assert {k:v for k,v in args.items() if k not in allowed} == {
+             k:v for k,v in old['args'].items() if k not in allowed}
+-        assert args['lr'] == run['lr'] and args['skip_final_test'] is True
++        assert args['lr'] == run['lr'] == old['args']['lr'] == .0001
++        assert args['batch_size'] == run['batch_size'] == 8 and old['args']['batch_size'] == 16
++        assert args['skip_final_test'] is True
+         assert args['selection_protocol'] == 'validation' and args['rng_policy'] == 'continuous'
+         assert args['rnn_backend'] == 'aten' and args['batch_policy'] == 'capacity_safe'
+         assert args['calibrate'] and args['contrastlearning'] and args['courselearning']
+@@ -190,6 +196,9 @@
+             assert epoch['test_accuracy'] is None and epoch['test_weighted_f1'] is None
+             assert epoch['selection_protocol'] == epoch['selection_split'] == 'validation'
+             cap = expected[run['run_id'], epoch['epoch']]
++            assert cap['batch_size'] == cap['validation_batch_size'] == 8
++            assert cap['same_as_original_sampler_batch8'] is True
++            assert cap['historical16']['batch_size'] == 16 and cap['historical16']['replayed_metrics_match'] is True
+             assert epoch['train_dialogues'] == cap['train_dialogues']
+             assert epoch['sampler_retries'] == cap['sampler_retries']
+             assert epoch['max_batch_edges'] == cap['capacity']['edges']
+@@ -200,16 +209,24 @@
+                 assert obs['weighted_f1'] == epoch[split+'_weighted_f1']
+                 assert obs['accuracy'] == epoch[split+'_accuracy']
+                 assert obs['batches'] == cap[split+'_batches']
++                if split == 'validation':
++                    assert obs['dialogue_ids'] == manifest['split']['validation_ids']
++                    assert obs['batches'] == math.ceil(len(obs['dialogue_ids']) / 8)
++                    assert cap['validation_last_batch_dialogues'] == (len(obs['dialogue_ids'])-1) % 8 + 1
+                 assert all(math.isfinite(obs['loss_components'][k]) for k in LOSS)
+                 if split == 'train':
+                     assert obs['gradients_finite'] is True and obs['first_step_parameters_changed'] is True
+                     assert all(math.isclose(obs['loss_components'][k], epoch[k], rel_tol=1e-10, abs_tol=1e-10) for k in LOSS)
+                     steps = [e for e in batches if e['epoch'] == epoch['epoch']]
++                    assert len(steps) == cap['train_batches'] == math.ceil(cap['train_dialogues'] / 8)
++                    assert all(len(step['dialogue_ids']) == 8 for step in steps[:-1])
++                    assert len(steps[-1]['dialogue_ids']) == cap['train_last_batch_dialogues']
+                     ids = [key for step in steps for key in step['dialogue_ids']]
+                     assert len(ids) == len(set(ids)) == len(obs['dialogue_ids'])
+                     assert set(ids) == set(obs['dialogue_ids'])
+                     assert hashlib.sha256(json.dumps(ids).encode()).hexdigest() == cap['ordered_train_ids_sha256']
+         for batch in batches:
++            assert 0 < len(batch['dialogue_ids']) <= 8
+             assert batch['gradients_finite'] and math.isfinite(batch['gradient_l2'])
+             assert all(math.isfinite(batch[k]) for k in LOSS)
+             value = batch['classification_loss'] + args['rank_coff']*batch['cc_loss']
+@@ -222,6 +239,7 @@
+             assert checkpoint['best_epoch']+1 == selected['epoch']
+             assert checkpoint['best_metric'] == selected['validation_weighted_f1']
+             assert checkpoint['args']['lr'] == run['lr'] and checkpoint['args']['skip_final_test']
++            assert checkpoint['args']['batch_size'] == 8
+             assert json.loads(json.dumps(checkpoint['args'])) == manifest['args']
+             assert json.loads(json.dumps(checkpoint['provenance'])) == manifest['args']['provenance']
+             assert checkpoint['optimizer_state_dict']['state'] and checkpoint['rng_state']
+@@ -241,14 +259,18 @@
+             'selected_epoch':selected['epoch'], 'validation_best_wf1':selected['validation_weighted_f1'],
+             'validation_last10_wf1':sum(e['validation_weighted_f1'] for e in epochs[-10:])/10,
+             'train_batches':len(batches), 'loss_and_gradient_finite':True,
+-            'every_epoch_order_matches_xp04_sampler':True,'test_forwards':0,'checkpoints':checkpoints}
++            'every_epoch_order_matches_registered_batch8_replay':True,
++            'unchanged_sampler_AST_and_historical_batch16_replay_passed':True,
++            'train_and_validation_batch_size':8,'lr_unchanged_from_xp04':.0001,
++            'test_forwards':0,'checkpoints':checkpoints}
+     resource_report = resource_evidence(registry,state)
+     assert not torch.cuda.is_initialized()
+     report = {'status':'passed','created_at_utc':dt.datetime.now(dt.timezone.utc).isoformat(),
+               'formal_runs':1,'test_forwards':0,'cuda_initialized':False,
+               'historical_files_unchanged':historical,'frozen_sources_and_inputs_unchanged':True,
+               'resource_evidence':resource_report,'runs':results,
+-              'limits':['This is a second-seed confirmation, not a completed five-seed study.',
++              'limits':['This is one registered Batch Size=8 diagnosis, not a completed five-seed study.',
++                        'Train and validation batches both change from16 to8; grouping and optimizer step counts differ from the historical control.',
+                         'GPU3 is shared with the explicitly permitted preexisting PID when observed; resource isolation is limited.',
+                         'Author difficulty generation history unknown.',
+                         'No test or final independent evaluation performed in this stage.']}

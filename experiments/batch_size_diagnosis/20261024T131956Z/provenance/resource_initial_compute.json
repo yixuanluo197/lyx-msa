@@ -1,0 +1,9 @@
+{
+  "time": "2026-10-24T13:23:59.636260+00:00",
+  "argv": [
+    "nvidia-smi",
+    "--query-compute-apps=pid,gpu_uuid,used_memory",
+    "--format=csv,noheader,nounits"
+  ],
+  "stdout": "1901620, GPU-7ff18ebb-100e-98fe-038b-a98bd4f94248, 4310\n1945730, GPU-7ff18ebb-100e-98fe-038b-a98bd4f94248, 382\n2966262, GPU-d17e4326-9d3b-2025-fbf8-c9b0d16623a0, 11566\n1945798, GPU-d17e4326-9d3b-2025-fbf8-c9b0d16623a0, 328\n"
+}

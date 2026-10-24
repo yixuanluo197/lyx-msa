@@ -18,6 +18,7 @@
 | 最小消融根因验证 | 本地 `user23` / TITAN Xp GPU3 | MELD seed67137 w/o CC；IEMOCAP seed1475 source_order Baseline/CMERC，共3 run；validation/continuous/ATen | 已完成并通过验收 | [06_minimal_ablation_validation](06_minimal_ablation_validation/README.md) |
 | 完整CMERC学习率诊断 | 本地 `user23` / TITAN Xp GPU3 | IEMOCAP seed1475、MELD seed67137，各比较0.00005和0.0002，共4 run；validation/continuous/ATen，零测试前向 | 已完成并通过验收 | [07_learning_rate_diagnosis](07_learning_rate_diagnosis/README.md) |
 | MELD学习率第二Seed确认 | 本地 `user23` / TITAN Xp GPU3 | MELD seed2024、lr0.0002，唯一40轮完整CMERC；validation/continuous/ATen，零测试前向 | 训练与技术验收完成；主指标收益未确认 | [08_lr_second_seed_confirmation](08_lr_second_seed_confirmation/GITHUB_DELIVERY.md) |
+| MELD Batch Size诊断 | 本地 `user23` / TITAN Xp GPU3 | MELD seed2024、lr0.0001、Batch8，登记唯一40轮；验证选模、零测试前向 | CPU预检通过，GPU资源排队；未正式训练 | [09_batch_size_diagnosis](09_batch_size_diagnosis/GITHUB_DELIVERY.md) |
 
 ## 如何交给 GPT 审查
 
