@@ -1,0 +1,32 @@
+{
+  "status": "passed",
+  "created_at_utc": "2026-10-23T18:51:52.861202+00:00",
+  "formal_runs": 1,
+  "test_forwards": 0,
+  "cpu_tests_passed": 9,
+  "final_verification_sha256": "a1f61f467bbc12de6c5668da3fe8551e05790ad9fdb71ee65ae7c3813c345b2e",
+  "analysis_summary_sha256": "5ffc888427e38317f2f51161f36f0ee46d9f989b227a526ca4339cc9c67fd5dc",
+  "report_sha256": "3baec81a3be564deab96ab951ae7ad1d9299033844073a7a9a9595e907cce6fd",
+  "figure_artifacts": 36,
+  "all_figure_inputs_and_outputs_match": true,
+  "markdown_links_checked": 57,
+  "all_scripts_ast_valid": true,
+  "previously_tracked_files_unchanged": true,
+  "script_sha256": {
+    "scripts/verify_lr.py": "9011089d5d59d684c957cdf58def476a9323a0eb99128ff573e3914f2b9d4f11",
+    "scripts/watch_training.py": "50b11dbec8219c63eddae78e97086e9a8542241cac2cfa6831e7c466677d27cf",
+    "scripts/run_single.py": "40360b7f0a3f473a5898488baedacc8172a5d8bd98138e8e5c88b5f5fb8b146e",
+    "scripts/plot_second_seed.py": "225f87715d33f4d6a37a295965eb5fb6dca683b19adf6ea92ce41468336d321c",
+    "scripts/test_training_guard.py": "22bc91202f47c031187a95dfe21e8b6b429f78e2b728eed4c5fb84e6e8d74a30",
+    "scripts/memory_observer.py": "eda9ebfe3c82eb0fcac02fd26f86b5b1c53e7d83ce43cc27d1fce402a849a524",
+    "scripts/test_second_seed_analysis.py": "e8700cae839d53f1e0c1dbfcb1f7764cf6e42db508398a58cd7d8df1b6bd1215",
+    "scripts/finalize_second_seed.py": "00acf6a916de1f2587f006f4c8298e7ac2a1460c9daacc218fef834d6077dee0",
+    "scripts/analyze_second_seed.py": "d16409582cc1f8b617ee64c11e453142bfe4107cae7699b512ccf7ea3d126e59",
+    "scripts/check_capacity.py": "7d03a3102c8068774af235823ca0c907df64b6d194ee6583e6e82caaf5ebd9fe"
+  },
+  "independent_run_review": "iem_batch_audit CPU-only passed current run and checkpoints",
+  "post_finalizer_prose_change": "Explicitly retained improved tail as secondary evidence while keeping best-validation primary criterion; strict CPU analysis and plots rerendered; no training change",
+  "no_additional_runs_started": true,
+  "resource_limitation": "limited",
+  "independent_report_review": "meld_pair_audit: final report/summary/verification and decision passed"
+}

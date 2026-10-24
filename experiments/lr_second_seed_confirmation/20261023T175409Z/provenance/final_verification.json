@@ -1,0 +1,72 @@
+{
+  "status": "passed",
+  "created_at_utc": "2026-10-23T18:49:01.583186+00:00",
+  "formal_runs": 1,
+  "test_forwards": 0,
+  "cuda_initialized": false,
+  "historical_files_unchanged": {
+    "experiment_records/04_xp_mainline_validation": 295,
+    "experiment_records/05_official_readme_reproduction": 2,
+    "experiment_records/06_minimal_ablation_validation": 2,
+    "experiment_records/07_learning_rate_diagnosis": 2,
+    "experiments/xp_mainline_validation/20261016T050823Z": 649,
+    "experiments/official_readme_reproduction": 208,
+    "experiments/minimal_ablation_validation/20261023T043115Z": 201,
+    "experiments/learning_rate_diagnosis/20261023T084353Z": 196
+  },
+  "frozen_sources_and_inputs_unchanged": true,
+  "resource_evidence": {
+    "status": "limited",
+    "admissions_passed_registered_three_sample_policy": true,
+    "allowed_preexisting_pids": [
+      2933763
+    ],
+    "resource_samples": 270,
+    "all_foreign_process_samples": 270,
+    "allowed_preexisting_pid_samples": 270,
+    "new_foreign_pid_samples": 0,
+    "new_foreign_pids": [],
+    "resource_query_errors": 0,
+    "minimum_free_mib": 9867,
+    "minimum_free_mib_during_formal": 9867,
+    "maximum_utilization_percent": 82,
+    "limits": [
+      "The preregistered existing PID 2933763 may share this GPU; this is not exclusive GPU occupancy.",
+      "New foreign PIDs and resource pressure during active work are recorded without terminating any task.",
+      "Discrete nvidia-smi samples cannot establish continuous resource isolation."
+    ]
+  },
+  "runs": {
+    "MELD_cmerc_lr2e-4_seed2024": {
+      "status": "passed",
+      "epochs": 40,
+      "selected_epoch": 5,
+      "validation_best_wf1": 65.46,
+      "validation_last10_wf1": 62.03399999999999,
+      "train_batches": 2548,
+      "loss_and_gradient_finite": true,
+      "every_epoch_order_matches_xp04_sampler": true,
+      "test_forwards": 0,
+      "checkpoints": {
+        "best.pt": {
+          "epoch": 5,
+          "sha256": "81762564524e7295b3d1254a84c476ade08898f9baab494229f28626ac7bc312",
+          "model_and_adam_finite": true,
+          "full_rng_present": true
+        },
+        "latest.pt": {
+          "epoch": 40,
+          "sha256": "7027986a045d567d7cf1ca902f380cb79834cc6694dd21f97168af0eec32067e",
+          "model_and_adam_finite": true,
+          "full_rng_present": true
+        }
+      }
+    }
+  },
+  "limits": [
+    "This is a second-seed confirmation, not a completed five-seed study.",
+    "GPU3 is shared with the explicitly permitted preexisting PID when observed; resource isolation is limited.",
+    "Author difficulty generation history unknown.",
+    "No test or final independent evaluation performed in this stage."
+  ]
+}

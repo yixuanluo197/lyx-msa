@@ -1,0 +1,29 @@
+{
+  "active": false,
+  "task": "第08组仅一次MELD seed2024 lr2e-4完整40轮；validation选模、零测试前向，完成后中文报告；不追加实验",
+  "batch": "/data2/yb/paper/lyx-msa/CMERC/experiments/lr_second_seed_confirmation/20261023T175409Z",
+  "phase": "completed",
+  "created_at_utc": "2026-10-23T18:01:01.744306+00:00",
+  "history": "8roots/1555 files/28 symlinks snapshot; do not modify04/05/06/07",
+  "controls": "provenance/xp04_validation_references.json train/validation only: seed2024 best66.01/e9 last10 61.223; seed67137 best65.24/e8 last10 62.909",
+  "prior_new_lr": "provenance/seed67137_lr2e4_reference.json: best66.07/e8 late62.983",
+  "source": "07 byte-identical12 code files; skip-final-test only; unchanged5-test observer; newcapacity counter40",
+  "environment": "current packages and CUDA module match07; local user23 GPU3 UUID GPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456",
+  "resource": "existing other-userPID2933763~352MiB allowed/disclose, no signals; requires3samples free>=5000/util<=65 before probe andformal",
+  "owners": {
+    "parent": "setup/freeze/launch/finalverify/reportreview",
+    "lr_runtime": "scripts/run_single.py +verify_lr.py; not authorized GPU launch",
+    "meld_pair_audit": "scripts/analyze_second_seed.py +plot_second_seed.py; no GPU/launch"
+  },
+  "pending": [],
+  "supervisor_pid": 3064686,
+  "frozen_inputs": 36,
+  "frozen_capsule_sha256": "01535d1936f915b597bc8ef9eef712cd75466d8d9ebb9a4f6e62c75632cffea7",
+  "finalizer_pid": 3069169,
+  "formal_started": 1,
+  "updated_at_utc": "2026-10-23T18:22:12.673978+00:00",
+  "progress": "唯一正式40/40完成并独立验收；best65.46/e5，last10 62.034，对XP04 -.55/+.811 pp；no_best_improvement。zero test forwards，2ckpt/fullargs/Adam/RNG/order/loss/1555history均通过；36figureartifacts/57链接检查；不追加五Seed/Batch8/Baseline/Seed/LR/test或Gitpush。",
+  "analysis_scripts_ready": true,
+  "cpu_tests": 9,
+  "completed_at_utc": "2026-10-23T18:52:32.535186+00:00"
+}

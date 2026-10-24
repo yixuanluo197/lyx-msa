@@ -6,6 +6,8 @@
 
 07固定XP04完整CMERC，仅比较两个新学习率与历史0.0001控制，共4项训练；验证集选模且不做最终测试。IEMOCAP的峰值改善伴随末段下降，MELD有待第二Seed确认的候选；不与历史测试集分数混报。
 
+08接续07选定的MELD学习率0.0002，以预留seed2024完成唯一一次40轮确认，采用相同验证协议、零测试前向。最佳验证值未提高，末段均值改善作为辅助线索保留；暂缓五Seed和Batch8。
+
 | 实验系列 | 服务器与设备 | 正式范围 | 状态 | 入口 |
 | --- | --- | --- | --- | --- |
 | 原版单 seed 复现 | `biggpu` / V100 | 2 数据集 × baseline/CMERC × official_test/validation，共 8 run | 已完成 | [01_v100_single_seed](01_v100_single_seed/README.md) |
@@ -15,6 +17,7 @@
 | 官方 README 单 Seed 对照 | 本地 `user23` / TITAN Xp GPU3 | IEMOCAP seed1475、MELD seed67137，各含baseline/CMERC，共4 run；official_test_selection | 已完成并通过验收 | [05_official_readme_reproduction](05_official_readme_reproduction/README.md) |
 | 最小消融根因验证 | 本地 `user23` / TITAN Xp GPU3 | MELD seed67137 w/o CC；IEMOCAP seed1475 source_order Baseline/CMERC，共3 run；validation/continuous/ATen | 已完成并通过验收 | [06_minimal_ablation_validation](06_minimal_ablation_validation/README.md) |
 | 完整CMERC学习率诊断 | 本地 `user23` / TITAN Xp GPU3 | IEMOCAP seed1475、MELD seed67137，各比较0.00005和0.0002，共4 run；validation/continuous/ATen，零测试前向 | 已完成并通过验收 | [07_learning_rate_diagnosis](07_learning_rate_diagnosis/README.md) |
+| MELD学习率第二Seed确认 | 本地 `user23` / TITAN Xp GPU3 | MELD seed2024、lr0.0002，唯一40轮完整CMERC；validation/continuous/ATen，零测试前向 | 训练与技术验收完成；主指标收益未确认 | [08_lr_second_seed_confirmation](08_lr_second_seed_confirmation/GITHUB_DELIVERY.md) |
 
 ## 如何交给 GPT 审查
 
@@ -30,6 +33,7 @@
 - 05保留官方 `official_test_selection`、RNG段首重置、cuDNN GRU及完整原始训练池。其固定checkpoint独立进程重评不消除此前测试选轮偏差；每数据集仅一个Seed，不能替代五Seed统计，也不能把与04的差值直接视为同协议因果效应。
 - 06保持04对应Seed的划分与验证选模，分别登记CC开关或Batch排列；历史完整CMERC跨物理卡与CUDA非确定性限制严格因果解释。IEMOCAP验证负增量缩小不等于绝对提升，MELD去CC的验证证据混合；暂缓最终五Seed。
 - 07保持04完整模型及全部辅助项，仅改变学习率；新增训练没有测试评估。MELD按预登记最佳值优先规则首选0.0002，但末段只提高0.074个百分点，不代表稳健改善；IEMOCAP尚无满足资格的第二Seed候选。本批不追加Seed、Batch8、Baseline或最终测试。
+- 08以预留seed2024独立确认07的MELD候选。最佳验证65.46%低于XP04同Seed的66.01%，末10轮均值62.034%高于61.223%；按原规则为主指标未改善，不据末段结果更换确认门槛或宣称两Seed显著。保留同卡配对及共享资源限制，不新增测试、Baseline或Batch8。
 - 旧XP02的两个baseline只是单seed诊断，不能支持五seed配对提升统计。V100 V2 03和XP04均有两种模型的完整五seed配对；04的主线登记依据完整性与协议验收。
 - V100 V1 的容量失败与中间进度报告是历史证据；最终结论使用 V2 完整结果。`first3` 是中间三 seed 版本，不能覆盖完整五 seed 汇总。
 - 原版复现未保存启动时的源码哈希。其 `code/` 来自原服务器留存工作目录的本次导出，不能将公开提交或导出哈希倒填为运行时冻结版本。

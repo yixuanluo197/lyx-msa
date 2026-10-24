@@ -1,0 +1,27 @@
+{
+  "active": false,
+  "phase": "completed",
+  "completed_at_utc": "2026-10-23T18:52:32.535186+00:00",
+  "formal_runs_authorized": 1,
+  "formal_runs_completed": 1,
+  "test_forwards": 0,
+  "report": "reports/CMERC_LR_SECOND_SEED_CONFIRMATION.md",
+  "verification": "provenance/final_verification.json",
+  "analysis_delivery": "provenance/analysis_delivery.json",
+  "best_validation_wf1": 65.46,
+  "best_epoch": 5,
+  "last10_validation_wf1": 62.034,
+  "delta_best_validation_pp": -0.55,
+  "delta_last10_validation_pp": 0.811,
+  "classification": "no_best_improvement",
+  "confirmation": "not_consistently_confirmed",
+  "additional_runs_started": false,
+  "remaining_limits": [
+    "two seeds do not establish statistical significance",
+    "historical run timing and CUDA nondeterminism",
+    "registered co-resident task; not exclusive GPU",
+    "fixed_author difficulty generation history unknown",
+    "validation-only, no final independent test"
+  ],
+  "simplification": "Reuse byte-identical07 trainer and watcher; no network/loss formula edits; single-run orchestration only"
+}

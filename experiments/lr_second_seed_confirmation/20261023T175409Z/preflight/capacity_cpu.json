@@ -1,0 +1,811 @@
+{
+  "status": "passed",
+  "epochs_checked": 40,
+  "original_sampling_ast_unchanged": true,
+  "global_cpu_rng_unchanged": true,
+  "cuda_initialized": false,
+  "test_lengths_or_predictions_examined": false,
+  "limits": "CPU graph capacity does not establish GPU memory safety.",
+  "records": [
+    {
+      "run_id": "MELD_cmerc_lr2e-4_seed2024",
+      "epoch": 1,
+      "sample_ratio": 0.4,
+      "train_dialogues": 415,
+      "train_batches": 26,
+      "validation_batches": 8,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 300,
+        "nodes": 756
+      },
+      "sampler_retries": 0,
+      "private_seed": 2024,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "ac65babe0bf179c6763517617fa9a30cbbbda5b0e3791198ec7a6c2048612b1a"
+    },
+    {
+      "run_id": "MELD_cmerc_lr2e-4_seed2024",
+      "epoch": 2,
+      "sample_ratio": 0.8,
+      "train_dialogues": 830,
+      "train_batches": 52,
+      "validation_batches": 8,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 275,
+        "nodes": 681
+      },
+      "sampler_retries": 0,
+      "private_seed": 2025,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "e30e4debff1aede42d5d0b6697f6ae4ac1067a04b1f5e9e491ee1dc113daeed8"
+    },
+    {
+      "run_id": "MELD_cmerc_lr2e-4_seed2024",
+      "epoch": 3,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 250,
+        "nodes": 606
+      },
+      "sampler_retries": 0,
+      "private_seed": 2026,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "2130fc1a8db0cf0fd21f3fc45b7e1716138ba5a2bc75db2363ae00a81f315674"
+    },
+    {
+      "run_id": "MELD_cmerc_lr2e-4_seed2024",
+      "epoch": 4,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 254,
+        "nodes": 618
+      },
+      "sampler_retries": 0,
+      "private_seed": 2027,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "2b4ad32a004f51c901ef3364521865b275ea74556d04393262dce291c0b7528e"
+    },
+    {
+      "run_id": "MELD_cmerc_lr2e-4_seed2024",
+      "epoch": 5,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 261,
+        "nodes": 639
+      },
+      "sampler_retries": 0,
+      "private_seed": 2028,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "e822ffca0c7f4559df29f00e2cb25acb9430000df0b74d38fc61eba9f496cd80"
+    },
+    {
+      "run_id": "MELD_cmerc_lr2e-4_seed2024",
+      "epoch": 6,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 260,
+        "nodes": 636
+      },
+      "sampler_retries": 0,
+      "private_seed": 2029,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "1f5873bf6554bf0e456bbbf03ac4437bfee11e1f27b23feec1999109fb4198ce"
+    },
+    {
+      "run_id": "MELD_cmerc_lr2e-4_seed2024",
+      "epoch": 7,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 262,
+        "nodes": 642
+      },
+      "sampler_retries": 0,
+      "private_seed": 2030,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "8a06444baac085b74f3ddfc29d01df42e98b848031774a235e0ae8ca14ff36ce"
+    },
+    {
+      "run_id": "MELD_cmerc_lr2e-4_seed2024",
+      "epoch": 8,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 260,
+        "nodes": 636
+      },
+      "sampler_retries": 0,
+      "private_seed": 2031,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "5370bde1687c34e21ada7e8510d9d24edfb0680f83d18dd277f9b1808511cf59"
+    },
+    {
+      "run_id": "MELD_cmerc_lr2e-4_seed2024",
+      "epoch": 9,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 253,
+        "nodes": 615
+      },
+      "sampler_retries": 0,
+      "private_seed": 2032,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "18244127b5c3e485dd3812037b8ccc29f11c91337cc962f9c080e3e2ecf57d5b"
+    },
+    {
+      "run_id": "MELD_cmerc_lr2e-4_seed2024",
+      "epoch": 10,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 263,
+        "nodes": 645
+      },
+      "sampler_retries": 0,
+      "private_seed": 2033,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "0689f64d5864167ffa9f9c8f3d20bcf4da80aa64fcf5906ea28bf4b2e744991f"
+    },
+    {
+      "run_id": "MELD_cmerc_lr2e-4_seed2024",
+      "epoch": 11,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 259,
+        "nodes": 633
+      },
+      "sampler_retries": 0,
+      "private_seed": 2034,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "88fd0ea91a8202341ea503efc9e7b2ba521a97562796e6ae9690e90a32b9f81d"
+    },
+    {
+      "run_id": "MELD_cmerc_lr2e-4_seed2024",
+      "epoch": 12,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 236,
+        "nodes": 564
+      },
+      "sampler_retries": 0,
+      "private_seed": 2035,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "78554cb240497832d9c888ef91b79a720f0b28ca2b9ff0b6278a8e46d525dfdc"
+    },
+    {
+      "run_id": "MELD_cmerc_lr2e-4_seed2024",
+      "epoch": 13,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 251,
+        "nodes": 609
+      },
+      "sampler_retries": 0,
+      "private_seed": 2036,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "6c88cb2af3bc0decfda0716ee57d41387d7797ec572f0ea8487a9c2e21862d36"
+    },
+    {
+      "run_id": "MELD_cmerc_lr2e-4_seed2024",
+      "epoch": 14,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 254,
+        "nodes": 618
+      },
+      "sampler_retries": 0,
+      "private_seed": 2037,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "731e7c0dd683ce29282b50f2a1f774a6532eec3de25d2f06a60b029f1d577ca0"
+    },
+    {
+      "run_id": "MELD_cmerc_lr2e-4_seed2024",
+      "epoch": 15,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 251,
+        "nodes": 609
+      },
+      "sampler_retries": 0,
+      "private_seed": 2038,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "8b71b581d45a5b4b593d7b71f053f80cc4666188830a562889718d536bcb9440"
+    },
+    {
+      "run_id": "MELD_cmerc_lr2e-4_seed2024",
+      "epoch": 16,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 278,
+        "nodes": 690
+      },
+      "sampler_retries": 0,
+      "private_seed": 2039,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "8e82f17280baa70691fdc7fa836cbd8153dd18dd2113599fe407d3624f648b12"
+    },
+    {
+      "run_id": "MELD_cmerc_lr2e-4_seed2024",
+      "epoch": 17,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 274,
+        "nodes": 678
+      },
+      "sampler_retries": 0,
+      "private_seed": 2040,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "ea5fd4624d715db01d93b99cc70d996f76caa584959404c012abf251bafdce7b"
+    },
+    {
+      "run_id": "MELD_cmerc_lr2e-4_seed2024",
+      "epoch": 18,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 243,
+        "nodes": 585
+      },
+      "sampler_retries": 0,
+      "private_seed": 2041,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "6302b71cdc22c9cc15eafbe9640b86545b60dc6450ab7f672ee28f6635ebadc9"
+    },
+    {
+      "run_id": "MELD_cmerc_lr2e-4_seed2024",
+      "epoch": 19,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 257,
+        "nodes": 627
+      },
+      "sampler_retries": 0,
+      "private_seed": 2042,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "01a9289dad8b739223b5d5245484ee9a8e5b65a41778f818cc5a478fe1e5c166"
+    },
+    {
+      "run_id": "MELD_cmerc_lr2e-4_seed2024",
+      "epoch": 20,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 265,
+        "nodes": 651
+      },
+      "sampler_retries": 0,
+      "private_seed": 2043,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "c9c11b45336cfe7eebc12d591979776bced0dbdf2fa60c8676c512a1dbca770f"
+    },
+    {
+      "run_id": "MELD_cmerc_lr2e-4_seed2024",
+      "epoch": 21,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 251,
+        "nodes": 609
+      },
+      "sampler_retries": 0,
+      "private_seed": 2044,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "496ae31338bd0998af6148465c0e1fbc15c945af71b4a7bec9af98d189d81c67"
+    },
+    {
+      "run_id": "MELD_cmerc_lr2e-4_seed2024",
+      "epoch": 22,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 249,
+        "nodes": 603
+      },
+      "sampler_retries": 0,
+      "private_seed": 2045,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "9e354b998e7139830463dd41c795a23a85c963a5cc135d4b0e8f0810a8cdd14c"
+    },
+    {
+      "run_id": "MELD_cmerc_lr2e-4_seed2024",
+      "epoch": 23,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 261,
+        "nodes": 639
+      },
+      "sampler_retries": 0,
+      "private_seed": 2046,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "c7c851ca9a63b7edde6bf9c8c0d6bd02cb5b9658e6ec493add7c98a73b31193e"
+    },
+    {
+      "run_id": "MELD_cmerc_lr2e-4_seed2024",
+      "epoch": 24,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 267,
+        "nodes": 657
+      },
+      "sampler_retries": 0,
+      "private_seed": 2047,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "80fcc9eff33337d603d63c7972ee52cbbdc120011d46d1d9d35e2adcf7beb003"
+    },
+    {
+      "run_id": "MELD_cmerc_lr2e-4_seed2024",
+      "epoch": 25,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 265,
+        "nodes": 651
+      },
+      "sampler_retries": 0,
+      "private_seed": 2048,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "1e3148cad8a85c0ae28b8009eaa00b99cee88810470d2baa43f2c2380be961a3"
+    },
+    {
+      "run_id": "MELD_cmerc_lr2e-4_seed2024",
+      "epoch": 26,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 245,
+        "nodes": 591
+      },
+      "sampler_retries": 0,
+      "private_seed": 2049,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "5b063728873e524ac36d1071ef1d70212a176467dd6f39fff86bcf7816cea77f"
+    },
+    {
+      "run_id": "MELD_cmerc_lr2e-4_seed2024",
+      "epoch": 27,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 252,
+        "nodes": 612
+      },
+      "sampler_retries": 0,
+      "private_seed": 2050,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "8447cd33319ea618c1c614c146f73d8efd580c6ddf82796bfb2f44f31f0df9e1"
+    },
+    {
+      "run_id": "MELD_cmerc_lr2e-4_seed2024",
+      "epoch": 28,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 256,
+        "nodes": 624
+      },
+      "sampler_retries": 0,
+      "private_seed": 2051,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "c276f8a7402244f249f615d3c871370f696818697eb5cc778ca8840122c78e54"
+    },
+    {
+      "run_id": "MELD_cmerc_lr2e-4_seed2024",
+      "epoch": 29,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 266,
+        "nodes": 654
+      },
+      "sampler_retries": 0,
+      "private_seed": 2052,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "ef37a5818a76fe70401a92c59d94b11eec0bc82296897f97adf999d1ab5a882d"
+    },
+    {
+      "run_id": "MELD_cmerc_lr2e-4_seed2024",
+      "epoch": 30,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 256,
+        "nodes": 624
+      },
+      "sampler_retries": 0,
+      "private_seed": 2053,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "ef3589a9379ed9e5a1d4aa43c39f9802b1bd1bd7381d6cb230837e8bbe5c953d"
+    },
+    {
+      "run_id": "MELD_cmerc_lr2e-4_seed2024",
+      "epoch": 31,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 282,
+        "nodes": 702
+      },
+      "sampler_retries": 0,
+      "private_seed": 2054,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "d1514b6e6decb31dc986c7de6a893008ac76f2c5c3eef5bfdec370bf2b5011b9"
+    },
+    {
+      "run_id": "MELD_cmerc_lr2e-4_seed2024",
+      "epoch": 32,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 260,
+        "nodes": 636
+      },
+      "sampler_retries": 0,
+      "private_seed": 2055,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "b1388ce081440d868acdd4b12c7c9a389246ecdc36da3bdd0d3eb36ba457477c"
+    },
+    {
+      "run_id": "MELD_cmerc_lr2e-4_seed2024",
+      "epoch": 33,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 256,
+        "nodes": 624
+      },
+      "sampler_retries": 0,
+      "private_seed": 2056,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "9327be1760de84c109f71a43a19d72e4e2b14259a9e5128d1450e1714178dbb2"
+    },
+    {
+      "run_id": "MELD_cmerc_lr2e-4_seed2024",
+      "epoch": 34,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 256,
+        "nodes": 624
+      },
+      "sampler_retries": 0,
+      "private_seed": 2057,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "3f67cfb2f89e01021bed0457d42f9ace10d9fe397b92f0b17a8d625509a13f24"
+    },
+    {
+      "run_id": "MELD_cmerc_lr2e-4_seed2024",
+      "epoch": 35,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 250,
+        "nodes": 606
+      },
+      "sampler_retries": 0,
+      "private_seed": 2058,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "70251f15c6e83a1d3a951181cc1ef13706d13c5c11831edd48d007fe7d4e6e72"
+    },
+    {
+      "run_id": "MELD_cmerc_lr2e-4_seed2024",
+      "epoch": 36,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 256,
+        "nodes": 624
+      },
+      "sampler_retries": 0,
+      "private_seed": 2059,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "1ccef834454cf09fb735a63e5ae9f44c925532b1ae5247bd4ea03fb7c4d3caec"
+    },
+    {
+      "run_id": "MELD_cmerc_lr2e-4_seed2024",
+      "epoch": 37,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 256,
+        "nodes": 624
+      },
+      "sampler_retries": 0,
+      "private_seed": 2060,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "f51213c5f5bcc850264d002907410569ace44b766742a2385d1d432a6cd25ed2"
+    },
+    {
+      "run_id": "MELD_cmerc_lr2e-4_seed2024",
+      "epoch": 38,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 260,
+        "nodes": 636
+      },
+      "sampler_retries": 0,
+      "private_seed": 2061,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "2ac10d67356159403e80dc95e000680b312f3df78df61d77ef799fca136c7822"
+    },
+    {
+      "run_id": "MELD_cmerc_lr2e-4_seed2024",
+      "epoch": 39,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "sampler_retries": 0,
+      "private_seed": 2062,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "7e0c1f1128fe338bae77f1a7cd8d15771f53991c2944ee12b3a572abe31bd039"
+    },
+    {
+      "run_id": "MELD_cmerc_lr2e-4_seed2024",
+      "epoch": 40,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 250,
+        "nodes": 606
+      },
+      "sampler_retries": 0,
+      "private_seed": 2063,
+      "same_as_historical_sampler": true,
+      "ordered_train_ids_sha256": "15409ecd603180b2e88a5aa30eb251c674d8522ee49f06341db58ac84bbf2acf"
+    }
+  ]
+}

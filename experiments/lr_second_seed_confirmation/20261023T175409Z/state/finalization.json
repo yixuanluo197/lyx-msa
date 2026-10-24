@@ -1,0 +1,38 @@
+{
+  "active": false,
+  "phase": "completed",
+  "pid": 3069169,
+  "commands": [
+    {
+      "argv": [
+        "/data2/yb/conda_envs/cmerc-xp-repro/bin/python",
+        "-u",
+        "/data2/yb/paper/lyx-msa/CMERC/experiments/lr_second_seed_confirmation/20261023T175409Z/scripts/verify_lr.py"
+      ],
+      "started_at_utc": "2026-10-23T18:48:01.034381+00:00",
+      "returncode": 0,
+      "finished_at_utc": "2026-10-23T18:49:01.819984+00:00"
+    },
+    {
+      "argv": [
+        "/data2/yb/conda_envs/cmerc-xp-repro/bin/python",
+        "-u",
+        "/data2/yb/paper/lyx-msa/CMERC/experiments/lr_second_seed_confirmation/20261023T175409Z/scripts/analyze_second_seed.py"
+      ],
+      "started_at_utc": "2026-10-23T18:49:01.933111+00:00",
+      "returncode": 0,
+      "finished_at_utc": "2026-10-23T18:49:02.070054+00:00"
+    },
+    {
+      "argv": [
+        "/home/yangbin/miniconda3/envs/multimodalerc310/bin/python",
+        "-u",
+        "/data2/yb/paper/lyx-msa/CMERC/experiments/lr_second_seed_confirmation/20261023T175409Z/scripts/plot_second_seed.py"
+      ],
+      "started_at_utc": "2026-10-23T18:49:02.070869+00:00",
+      "returncode": 0,
+      "finished_at_utc": "2026-10-23T18:49:07.149652+00:00"
+    }
+  ],
+  "finished_at_utc": "2026-10-23T18:49:07.150291+00:00"
+}
