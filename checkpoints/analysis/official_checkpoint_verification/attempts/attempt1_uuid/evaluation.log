@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/data2/yb/paper/cmerc_reproduction_20261013/checkpoints/analysis/official_checkpoint_verification/source_code/verify_author_checkpoints.py", line 245, in <module>
+    main()
+  File "/data2/yb/paper/cmerc_reproduction_20261013/checkpoints/analysis/official_checkpoint_verification/source_code/verify_author_checkpoints.py", line 88, in main
+    if torch.cuda.get_device_properties(0).name != 'Tesla V100-SXM2-32GB':
+  File "/data2/yb/conda_envs/cmerc-repro/lib/python3.10/site-packages/torch/cuda/__init__.py", line 374, in get_device_properties
+    raise AssertionError("Invalid device id")
+AssertionError: Invalid device id

@@ -1,0 +1,30 @@
+{
+  "status": "passed",
+  "independent_calculation": "Counter-based precision/recall/F1 from this run CSV; no official metric function reused",
+  "datasets": {
+    "IEMOCAP": {
+      "valid_samples": 1623,
+      "accuracy": 71.90388170055454,
+      "weighted_f1": 71.98379358245155,
+      "macro_f1": 71.37466315596619,
+      "classification_report_and_matrix_match": true,
+      "probabilities_and_padding_checked": true
+    },
+    "MELD": {
+      "valid_samples": 2610,
+      "accuracy": 67.77777777777777,
+      "weighted_f1": 66.84839220070872,
+      "macro_f1": 51.07702281920148,
+      "classification_report_and_matrix_match": true,
+      "probabilities_and_padding_checked": true
+    }
+  },
+  "protected_previous_diagnostic_files": 94,
+  "official_inputs_hashes_verified": 6,
+  "frozen_code_files_per_copy": 14,
+  "unit_tests_passed": 4,
+  "strict_loading_verified": true,
+  "optimizer_updates": 0,
+  "full_forward_calls": 20,
+  "removed_forward_calls": 0
+}

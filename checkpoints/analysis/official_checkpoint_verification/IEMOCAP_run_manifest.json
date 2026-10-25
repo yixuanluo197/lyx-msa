@@ -1,0 +1,304 @@
+{
+  "status": "completed",
+  "dataset": "IEMOCAP",
+  "started_at": "2026-10-25T05:07:34.376701+00:00",
+  "completed_at": "2026-10-25T05:07:47.161805+00:00",
+  "host": "user22",
+  "pid": 3572742,
+  "python": "3.10.13",
+  "torch": "1.13.1+cu117",
+  "numpy": "1.26.4",
+  "sklearn": "1.3.2",
+  "cuda_runtime": "11.7",
+  "cudnn_version": 8500,
+  "cudnn_enabled": true,
+  "cudnn_deterministic": true,
+  "cuda_visible_devices": "1",
+  "gpu_name": "Tesla V100-SXM2-32GB",
+  "cuda_device_order": "PCI_BUS_ID",
+  "actual_gpu_uuids": [
+    "GPU-56b14af1-00dc-4542-e2d8-5bba1dd39049"
+  ],
+  "official_argv": [
+    "train.py",
+    "--base-model",
+    "GRU",
+    "--dropout",
+    "0.5",
+    "--lr",
+    "0.0001",
+    "--batch-size",
+    "16",
+    "--graph_type",
+    "hyper",
+    "--epochs",
+    "0",
+    "--graph_construct",
+    "direct",
+    "--multi_modal",
+    "--mm_fusion_mthd",
+    "concat_DHT",
+    "--modals",
+    "avl",
+    "--Dataset",
+    "IEMOCAP",
+    "--norm",
+    "BN",
+    "--testing"
+  ],
+  "effective_args": {
+    "no_cuda": false,
+    "base_model": "GRU",
+    "graph_model": true,
+    "nodal_attention": true,
+    "windowp": 10,
+    "windowf": 10,
+    "lr": 0.0001,
+    "l2": 3e-05,
+    "rec_dropout": 0.1,
+    "dropout": 0.5,
+    "batch_size": 16,
+    "epochs": 0,
+    "class_weight": true,
+    "active_listener": false,
+    "attention": "general",
+    "tensorboard": false,
+    "graph_type": "hyper",
+    "use_topic": false,
+    "alpha": 0.2,
+    "multiheads": 6,
+    "graph_construct": "direct",
+    "use_gcn": false,
+    "use_residue": false,
+    "multi_modal": true,
+    "mm_fusion_mthd": "concat_DHT",
+    "modals": "avl",
+    "av_using_lstm": false,
+    "Deep_GCN_nlayers": 4,
+    "Dataset": "IEMOCAP",
+    "use_speaker": true,
+    "use_modal": false,
+    "norm": "BN",
+    "testing": true,
+    "num_L": 3,
+    "num_K": 4,
+    "seed": 1475,
+    "cuda": true
+  },
+  "audit": {
+    "strict_load_calls": 1,
+    "forward_calls": 2,
+    "optimizer_steps": 0,
+    "masking_forward_calls": 0,
+    "batches": [
+      {
+        "dialogue_ids": [
+          "Ses05F_impro08",
+          "Ses05M_impro02",
+          "Ses05F_impro01",
+          "Ses05F_script01_2",
+          "Ses05F_impro05",
+          "Ses05M_script01_2",
+          "Ses05F_impro04",
+          "Ses05M_impro08",
+          "Ses05F_script03_2",
+          "Ses05F_script02_2",
+          "Ses05M_impro04",
+          "Ses05M_script03_2",
+          "Ses05M_impro05",
+          "Ses05M_impro03",
+          "Ses05M_script01_3",
+          "Ses05F_impro02"
+        ],
+        "lengths": [
+          59,
+          29,
+          44,
+          28,
+          91,
+          23,
+          84,
+          54,
+          59,
+          59,
+          75,
+          64,
+          42,
+          58,
+          43,
+          49
+        ],
+        "valid_utterances": 861,
+        "padded_time": 91,
+        "feature_shapes": [
+          [
+            91,
+            16,
+            1024
+          ],
+          [
+            91,
+            16,
+            1024
+          ],
+          [
+            91,
+            16,
+            1024
+          ],
+          [
+            91,
+            16,
+            1024
+          ],
+          [
+            91,
+            16,
+            342
+          ],
+          [
+            91,
+            16,
+            1582
+          ],
+          [
+            91,
+            16,
+            2
+          ],
+          [
+            16,
+            91
+          ],
+          [
+            16,
+            91
+          ]
+        ],
+        "batch_size": 16,
+        "num_workers": 2
+      },
+      {
+        "dialogue_ids": [
+          "Ses05F_script02_1",
+          "Ses05F_impro03",
+          "Ses05F_impro06",
+          "Ses05M_script02_2",
+          "Ses05F_script03_1",
+          "Ses05M_script03_1",
+          "Ses05M_script02_1",
+          "Ses05M_script01_1b",
+          "Ses05F_script01_3",
+          "Ses05F_script01_1",
+          "Ses05M_impro01",
+          "Ses05F_impro07",
+          "Ses05M_impro07",
+          "Ses05M_script01_1",
+          "Ses05M_impro06"
+        ],
+        "lengths": [
+          43,
+          83,
+          52,
+          58,
+          37,
+          43,
+          34,
+          44,
+          44,
+          53,
+          40,
+          68,
+          83,
+          52,
+          28
+        ],
+        "valid_utterances": 762,
+        "padded_time": 83,
+        "feature_shapes": [
+          [
+            83,
+            15,
+            1024
+          ],
+          [
+            83,
+            15,
+            1024
+          ],
+          [
+            83,
+            15,
+            1024
+          ],
+          [
+            83,
+            15,
+            1024
+          ],
+          [
+            83,
+            15,
+            342
+          ],
+          [
+            83,
+            15,
+            1582
+          ],
+          [
+            83,
+            15,
+            2
+          ],
+          [
+            15,
+            83
+          ],
+          [
+            15,
+            83
+          ]
+        ],
+        "batch_size": 16,
+        "num_workers": 2
+      }
+    ],
+    "gradient_enabled_observations": [
+      false,
+      false
+    ],
+    "model_training_observations": [
+      false,
+      false
+    ]
+  },
+  "model_state_unchanged": true,
+  "all_parameter_grads_none": true,
+  "original_inputs_unchanged": true,
+  "observer_line": 207,
+  "official_rounded_accuracy": 71.9,
+  "official_rounded_weighted_f1": 71.98,
+  "classification_metrics": {
+    "dataset": "IEMOCAP",
+    "model": "Official CMERC",
+    "accuracy": 71.90388170055454,
+    "weighted_f1": 71.98379358245155,
+    "macro_f1": 71.37466315596619,
+    "valid_samples": 1623,
+    "paper_weighted_f1": 71.98,
+    "class_names": [
+      "happy",
+      "sad",
+      "neutral",
+      "angry",
+      "excited",
+      "frustrated"
+    ],
+    "gap_percentage_points": 0.003793582451550037,
+    "within_0p5_points": true
+  },
+  "training": false,
+  "new_calibration_diagnostics": false,
+  "modality_removal": false
+}

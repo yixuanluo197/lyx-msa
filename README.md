@@ -15,6 +15,7 @@ CMERC 多模态对话情绪识别代码、复现工程与时间因果变体，�
 - [MELD Dropout诊断：第10组](experiment_records/10_dropout_diagnosis/README.md)：Dropout0.5唯一40轮已完成；最佳验证66.49%（+0.48 pp），末10轮62.775%（+1.552 pp），满足第二Seed候选条件；验证分类Loss未改善，零测试前向。
 - [高置信度错误诊断：实验一至五](checkpoints/analysis/high_confidence_errors/experiments_2_to_5/README.md)：固定 validation checkpoint 的全量预测、模态均值替换、逐样本对比及统计；提供 [Word 报告](checkpoints/analysis/high_confidence_errors/experiments_2_to_5/CMERC_高置信度错误诊断报告_完整版.docx)、[Excel 全量结果](checkpoints/analysis/high_confidence_errors/experiments_2_to_5/CMERC_高置信度错误诊断结果_完整版.xlsx) 和 [统计摘要](checkpoints/analysis/high_confidence_errors/experiments_2_to_5/SUMMARY.md)。原始实验一 Word 母版未找到，新报告明确采用原 Markdown 转录。
 - [实验六：概率校准分析](checkpoints/analysis/high_confidence_errors/experiment_6_calibration/README.md)：沿用前五项固定预测，提供 ECE、MCE、Brier、NLL、十区间明细与两个数据集的可靠性图；[实验一至六 Word 报告](checkpoints/analysis/high_confidence_errors/experiment_6_calibration/CMERC_高置信度错误诊断报告_实验一至六.docx)完整保留前五项正文，另附[实验六 Excel](checkpoints/analysis/high_confidence_errors/experiment_6_calibration/CMERC_实验六_概率校准结果.xlsx)及[结果分析](checkpoints/analysis/high_confidence_errors/experiment_6_calibration/SUMMARY.md)。
+- [作者官方 Checkpoint 独立验证](checkpoints/analysis/official_checkpoint_verification/SUMMARY.md)：重新加载作者发布权重，仅执行完整三模态分类；IEMOCAP／MELD 实测 W-F1 为 71.9838%／66.8484%，均接近论文。提供[性能对比表](checkpoints/analysis/official_checkpoint_verification/evaluation_results.csv)、逐类别报告、混淆矩阵、完整预测和[实际运行日志](checkpoints/analysis/official_checkpoint_verification/evaluation.log)，与前六项本地 validation 权重诊断分开记录。
 - [GPT / 人工代码审查指南](docs/GPT_REVIEW_GUIDE.md)：建议阅读顺序、重点文件和可复制的审查提示词。
 - [复现运行指南](REPRODUCTION_GUIDE.md)：环境、数据准备、训练、评测和断点恢复。
 - [时间因果变体说明](CAUSAL_README.md)：历史与当前话语的可见性约束、实现范围和验证边界。
@@ -71,7 +72,7 @@ CMERC_PYTHON="$HOME/conda-envs/cmerc-repro/bin/python" \
 
 ## 数据、权重与结果
 
-公开仓库包含源码、测试、脚本、依赖快照和复现报告。[实验档案](experiment_records/README.md)另保留经过筛选的运行配置、逐轮指标、聚合评测与结果图。本次额外公开 `checkpoints/analysis/high_confidence_errors/` 下实验一至六的逐话语预测、CSV、Word、Excel 和来源清单，便于核验全部诊断结果。数据特征、模型 checkpoint 和原始训练日志仍保留在实验服务器；`.gitignore` 仅为上述诊断目录设置例外，继续排除其他本地运行产物。
+公开仓库包含源码、测试、脚本、依赖快照和复现报告。[实验档案](experiment_records/README.md)另保留经过筛选的运行配置、逐轮指标、聚合评测与结果图。本次额外公开 `checkpoints/analysis/high_confidence_errors/` 下实验一至六的逐话语预测、CSV、Word、Excel 和来源清单，以及 `checkpoints/analysis/official_checkpoint_verification/` 下作者权重验证的分类结果、预测、日志和代码快照。后者的两份 NPZ 仅保存预测数组，小型课程难度 PKL 来自上游代码。数据特征、模型 checkpoint 和原始训练日志仍保留在实验服务器；`.gitignore` 为上述交付设置限定例外，继续排除其他本地运行产物。
 
 从 [原始 README](docs/UPSTREAM_README.md) 的作者链接获取特征和官方 checkpoint，放入根目录的 `data/`、`checkpoints/`。文件清单与校验值见 [数据审计](reports/03_DATA_AUDIT.md)。`caldiff/IEMOCAP_diff.pkl` 和 `caldiff/MELD_diff.pkl` 是上游已跟踪的小型课程难度文件，继续保留。
 

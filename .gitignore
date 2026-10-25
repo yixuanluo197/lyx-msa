@@ -4,6 +4,7 @@
 !/checkpoints/analysis/
 /checkpoints/analysis/*
 !/checkpoints/analysis/high_confidence_errors/
+!/checkpoints/analysis/official_checkpoint_verification/
 /logs/
 /results/
 /runs/
@@ -24,6 +25,14 @@
 *.zip
 *.tar
 *.tar.gz
+
+# Bounded author-checkpoint verification outputs, not weights or feature datasets
+!/checkpoints/analysis/official_checkpoint_verification/IEMOCAP_predictions.npz
+!/checkpoints/analysis/official_checkpoint_verification/MELD_predictions.npz
+!/checkpoints/analysis/official_checkpoint_verification/code_official/caldiff/IEMOCAP_diff.pkl
+!/checkpoints/analysis/official_checkpoint_verification/code_official/caldiff/MELD_diff.pkl
+!/checkpoints/analysis/official_checkpoint_verification/code_runtime/caldiff/IEMOCAP_diff.pkl
+!/checkpoints/analysis/official_checkpoint_verification/code_runtime/caldiff/MELD_diff.pkl
 
 # Python caches and local environments
 *.pyc
