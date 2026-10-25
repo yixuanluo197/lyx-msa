@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "model_and_statistics_tests": {
+    "passed": 45,
+    "command": "CMERC_ENV_PREFIX=/data2/yb/conda_envs/cmerc-xp-repro scripts/with_cmerc_env.sh python -m pytest -q tests/test_official_reliability.py tests/test_official_modality_ablation.py tests/test_high_confidence_calibration.py tests/test_verify_author_checkpoints.py"
+  },
+  "report_tests": {
+    "passed": 2,
+    "command": "python -m pytest -q tests/test_render_official_reliability.py"
+  },
+  "environment_note": "The PyTorch experiment environment lacks matplotlib; report checks use the existing local report Python environment. No dependencies installed."
+}

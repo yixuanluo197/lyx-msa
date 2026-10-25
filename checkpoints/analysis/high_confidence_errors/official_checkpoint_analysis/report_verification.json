@@ -1,0 +1,2041 @@
+{
+  "status": "passed",
+  "training": false,
+  "gpu_inference": false,
+  "previous_validation_results_used": false,
+  "sources": {
+    "official_cmerc_summary.csv": "d4e8392ffee14c3a407fa44709e6a4e1895bb851ff4ce62afa0eba8fadc81550",
+    "IEMOCAP/all_predictions.csv": "467553d8d2062ac720c532c45ec54639d5012b72239365429d165cfc81924300",
+    "IEMOCAP/calibration_bins.csv": "3c893fcf0f4ff323f579cfadd9581ac08bfb53b057eeb35bf143d161a01e4c34",
+    "IEMOCAP/class_error_summary.csv": "4539ba8c5c4c018c6856536de61d9c001ac3b92af64dd04abd309e6a76d2f41c",
+    "IEMOCAP/error_confidence_distribution.csv": "8da0d74a76e1833474e8246aedd9c82378d913c44a3cd0fa1a80a2537a224e33",
+    "IEMOCAP/errors_all.csv": "f3f7af3996badfe9dd612f460c07b3feb9eb68d7c363a26e50ba66797a104292",
+    "IEMOCAP/full_correct_to_masked_error.csv": "7e64f7ae315da699005239c510ee01fd38dc68815674f917ee3ae54138ec6611",
+    "IEMOCAP/high_confidence_errors.csv": "c113621a100675e0b280b0066b99acf1296ed16a6a9e6ce1533b0f798893f91d",
+    "IEMOCAP/modality_ablation_predictions.csv": "865b8280004811c59c6290dac2ac2a22d4259cd08d6c4de670e702319f32b27f",
+    "IEMOCAP/modality_ablation_summary.csv": "8add1f20bbdc57fc61f3cc2a7f47113b4e67f95ec9c3b85272b1de389641039a",
+    "IEMOCAP/new_masked_high_confidence_errors.csv": "484078cc7005fb0caafd7002cfc775b98f7173b0de2ef0b7a014863ed19c74df",
+    "MELD/all_predictions.csv": "50c22532984508726cec53f50a414826bae2b06e2c71b22dfb11459d82f1e843",
+    "MELD/calibration_bins.csv": "b401804b59254fafc63b7ab4096c4621ce4c78739d902b8e1dddf91e0118da08",
+    "MELD/class_error_summary.csv": "f1c09d26b7e65eb64af0f60ceb326258a0516c8f667a7debf678ba1b227f0c59",
+    "MELD/error_confidence_distribution.csv": "7b03c0fd12cadf3c6793555bd94de63fe0ba3646c8d2cfb4285704956b95a623",
+    "MELD/errors_all.csv": "c9b6154a4a3f4703b1ab91ae3d37c8528d2fe7a2973d7148bc20850b663b6b55",
+    "MELD/full_correct_to_masked_error.csv": "7b65037a884ba7c3fc79a665d6f2ebfbf7534d6d11f7f46f3f060b920bb83d7a",
+    "MELD/high_confidence_errors.csv": "8b8fba8a63f15ed1035022738ea0b64d7f3280a54f45c34265f84c68db6e26f9",
+    "MELD/modality_ablation_predictions.csv": "55a7b5e3356b5102a10a61dc5d9e5e455ad6e1ec3254e6e2834bacbd26cf5261",
+    "MELD/modality_ablation_summary.csv": "1f3ae3a169c2b487973ff7de771b012fc275629f5391ff061d6a8f139f9d5a02",
+    "MELD/new_masked_high_confidence_errors.csv": "4cbbee10b87a8c3aef98452baf7215dd94d882cb3576608aed1c9b9c95490497",
+    "baseline_checkpoint_audit.md": "1b00abf0c0ba797b26fed2daa1a7f3ba9041007608c51fc803a39297a0973791"
+  },
+  "word": {
+    "passed": true,
+    "tables_checked": 17,
+    "all_table_cells_match_csv": true,
+    "font": "宋体",
+    "font_size_points": 12,
+    "color": "000000",
+    "runs_checked": 654,
+    "explicit_three_line_tables": true,
+    "reliability_images": 2,
+    "headers_footers": false,
+    "font_embedding": false,
+    "office_layout_rendered": false,
+    "layout_note": "OOXML formatting and numbers verified; Office/LibreOffice pagination not rendered.",
+    "table_provenance": [
+      {
+        "table_index": 0,
+        "source_csv": "official_cmerc_summary.csv",
+        "columns": [
+          "dataset",
+          "valid_utterances",
+          "accuracy",
+          "weighted_f1",
+          "total_errors",
+          "errors_ge_0p8",
+          "errors_ge_0p9",
+          "errors_ge_0p95"
+        ],
+        "source_row_indices": [
+          0,
+          1
+        ],
+        "percentage_columns": [
+          "accuracy",
+          "weighted_f1"
+        ],
+        "signed_columns": [],
+        "headers": [
+          "数据集",
+          "有效话语",
+          "Accuracy (%)",
+          "W-F1 (%)",
+          "错误总数",
+          "错误≥0.80",
+          "错误≥0.90",
+          "错误≥0.95"
+        ],
+        "rendered_rows": [
+          [
+            "IEMOCAP",
+            "1623",
+            "71.9039",
+            "71.9838",
+            "456",
+            "200",
+            "128",
+            "76"
+          ],
+          [
+            "MELD",
+            "2610",
+            "67.7778",
+            "66.8484",
+            "841",
+            "0",
+            "0",
+            "0"
+          ]
+        ]
+      },
+      {
+        "table_index": 1,
+        "source_csv": "official_cmerc_summary.csv",
+        "columns": [
+          "dataset",
+          "mean_error_confidence",
+          "median_error_confidence",
+          "high_confidence_predictions_ge_0p9",
+          "errors_ge_0p9",
+          "high_confidence_error_rate_ge_0p9"
+        ],
+        "source_row_indices": [
+          0,
+          1
+        ],
+        "percentage_columns": [
+          "high_confidence_error_rate_ge_0p9"
+        ],
+        "signed_columns": [],
+        "headers": [
+          "数据集",
+          "错误平均置信度",
+          "错误中位置信度",
+          "预测≥0.90",
+          "错误≥0.90",
+          "高置信度预测错误率 (%)"
+        ],
+        "rendered_rows": [
+          [
+            "IEMOCAP",
+            "0.747381",
+            "0.764896",
+            "796",
+            "128",
+            "16.0804"
+          ],
+          [
+            "MELD",
+            "0.382656",
+            "0.368278",
+            "0",
+            "0",
+            "N/A"
+          ]
+        ]
+      },
+      {
+        "table_index": 2,
+        "source_csv": "IEMOCAP/class_error_summary.csv",
+        "columns": [
+          "true_emotion",
+          "support",
+          "total_errors",
+          "error_rate",
+          "errors_ge_0p8",
+          "errors_ge_0p9",
+          "errors_ge_0p95"
+        ],
+        "source_row_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "percentage_columns": [
+          "error_rate"
+        ],
+        "signed_columns": [],
+        "headers": [
+          "真实情绪",
+          "支持数",
+          "错误总数",
+          "类内错误率 (%)",
+          "错误≥0.80",
+          "错误≥0.90",
+          "错误≥0.95"
+        ],
+        "rendered_rows": [
+          [
+            "happy",
+            "144",
+            "52",
+            "36.1111",
+            "18",
+            "12",
+            "10"
+          ],
+          [
+            "sad",
+            "245",
+            "46",
+            "18.7755",
+            "22",
+            "16",
+            "8"
+          ],
+          [
+            "neutral",
+            "384",
+            "101",
+            "26.3021",
+            "51",
+            "36",
+            "23"
+          ],
+          [
+            "angry",
+            "170",
+            "56",
+            "32.9412",
+            "24",
+            "15",
+            "4"
+          ],
+          [
+            "excited",
+            "299",
+            "74",
+            "24.7492",
+            "22",
+            "9",
+            "6"
+          ],
+          [
+            "frustrated",
+            "381",
+            "127",
+            "33.3333",
+            "63",
+            "40",
+            "25"
+          ]
+        ]
+      },
+      {
+        "table_index": 3,
+        "source_csv": "MELD/class_error_summary.csv",
+        "columns": [
+          "true_emotion",
+          "support",
+          "total_errors",
+          "error_rate",
+          "errors_ge_0p8",
+          "errors_ge_0p9",
+          "errors_ge_0p95"
+        ],
+        "source_row_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "percentage_columns": [
+          "error_rate"
+        ],
+        "signed_columns": [],
+        "headers": [
+          "真实情绪",
+          "支持数",
+          "错误总数",
+          "类内错误率 (%)",
+          "错误≥0.80",
+          "错误≥0.90",
+          "错误≥0.95"
+        ],
+        "rendered_rows": [
+          [
+            "neutral",
+            "1256",
+            "206",
+            "16.4013",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "surprise",
+            "281",
+            "110",
+            "39.1459",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "fear",
+            "50",
+            "40",
+            "80.0000",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "sadness",
+            "208",
+            "140",
+            "67.3077",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "joy",
+            "402",
+            "132",
+            "32.8358",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "disgust",
+            "68",
+            "47",
+            "69.1176",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "anger",
+            "345",
+            "166",
+            "48.1159",
+            "0",
+            "0",
+            "0"
+          ]
+        ]
+      },
+      {
+        "table_index": 4,
+        "source_csv": "IEMOCAP/modality_ablation_summary.csv",
+        "columns": [
+          "input_condition",
+          "total_errors",
+          "errors_ge_0p8",
+          "errors_ge_0p9",
+          "errors_ge_0p95",
+          "mean_error_confidence"
+        ],
+        "source_row_indices": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "percentage_columns": [],
+        "signed_columns": [],
+        "headers": [
+          "输入条件",
+          "错误总数",
+          "错误≥0.80",
+          "错误≥0.90",
+          "错误≥0.95",
+          "错误平均置信度"
+        ],
+        "rendered_rows": [
+          [
+            "full",
+            "456",
+            "200",
+            "128",
+            "76",
+            "0.747381"
+          ],
+          [
+            "w/o_text",
+            "641",
+            "325",
+            "221",
+            "165",
+            "0.777124"
+          ],
+          [
+            "w/o_audio",
+            "537",
+            "232",
+            "145",
+            "79",
+            "0.731949"
+          ],
+          [
+            "w/o_visual",
+            "468",
+            "192",
+            "118",
+            "69",
+            "0.733989"
+          ]
+        ]
+      },
+      {
+        "table_index": 5,
+        "source_csv": "IEMOCAP/modality_ablation_summary.csv",
+        "columns": [
+          "input_condition",
+          "valid_samples",
+          "accuracy",
+          "weighted_f1"
+        ],
+        "source_row_indices": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "percentage_columns": [
+          "accuracy",
+          "weighted_f1"
+        ],
+        "signed_columns": [],
+        "headers": [
+          "输入条件",
+          "有效话语",
+          "Accuracy (%)",
+          "W-F1 (%)"
+        ],
+        "rendered_rows": [
+          [
+            "full",
+            "1623",
+            "71.9039",
+            "71.9838"
+          ],
+          [
+            "w/o_text",
+            "1623",
+            "60.5052",
+            "61.1511"
+          ],
+          [
+            "w/o_audio",
+            "1623",
+            "66.9131",
+            "67.1066"
+          ],
+          [
+            "w/o_visual",
+            "1623",
+            "71.1645",
+            "71.1790"
+          ]
+        ]
+      },
+      {
+        "table_index": 6,
+        "source_csv": "IEMOCAP/full_correct_to_masked_error.csv",
+        "columns": [
+          "input_condition",
+          "threshold",
+          "full_correct_samples",
+          "new_high_confidence_errors",
+          "ratio"
+        ],
+        "source_row_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "percentage_columns": [
+          "ratio"
+        ],
+        "signed_columns": [],
+        "headers": [
+          "输入条件",
+          "阈值",
+          "完整输入正确数",
+          "新增高置信度错误",
+          "占完整正确比例 (%)"
+        ],
+        "rendered_rows": [
+          [
+            "w/o_text",
+            "0.800000",
+            "1167",
+            "104",
+            "8.9117"
+          ],
+          [
+            "w/o_text",
+            "0.900000",
+            "1167",
+            "66",
+            "5.6555"
+          ],
+          [
+            "w/o_text",
+            "0.950000",
+            "1167",
+            "44",
+            "3.7704"
+          ],
+          [
+            "w/o_audio",
+            "0.800000",
+            "1167",
+            "34",
+            "2.9135"
+          ],
+          [
+            "w/o_audio",
+            "0.900000",
+            "1167",
+            "22",
+            "1.8852"
+          ],
+          [
+            "w/o_audio",
+            "0.950000",
+            "1167",
+            "10",
+            "0.8569"
+          ],
+          [
+            "w/o_visual",
+            "0.800000",
+            "1167",
+            "0",
+            "0.0000"
+          ],
+          [
+            "w/o_visual",
+            "0.900000",
+            "1167",
+            "0",
+            "0.0000"
+          ],
+          [
+            "w/o_visual",
+            "0.950000",
+            "1167",
+            "0",
+            "0.0000"
+          ]
+        ]
+      },
+      {
+        "table_index": 7,
+        "source_csv": "IEMOCAP/full_correct_to_masked_error.csv",
+        "columns": [
+          "input_condition",
+          "full_wrong_samples",
+          "still_wrong_count",
+          "still_wrong_ratio"
+        ],
+        "source_row_indices": [
+          0,
+          3,
+          6
+        ],
+        "percentage_columns": [
+          "still_wrong_ratio"
+        ],
+        "signed_columns": [],
+        "headers": [
+          "输入条件",
+          "完整输入错误数",
+          "删除后仍错数",
+          "占完整错误比例 (%)"
+        ],
+        "rendered_rows": [
+          [
+            "w/o_text",
+            "456",
+            "363",
+            "79.6053"
+          ],
+          [
+            "w/o_audio",
+            "456",
+            "379",
+            "83.1140"
+          ],
+          [
+            "w/o_visual",
+            "456",
+            "446",
+            "97.8070"
+          ]
+        ]
+      },
+      {
+        "table_index": 8,
+        "source_csv": "MELD/modality_ablation_summary.csv",
+        "columns": [
+          "input_condition",
+          "total_errors",
+          "errors_ge_0p8",
+          "errors_ge_0p9",
+          "errors_ge_0p95",
+          "mean_error_confidence"
+        ],
+        "source_row_indices": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "percentage_columns": [],
+        "signed_columns": [],
+        "headers": [
+          "输入条件",
+          "错误总数",
+          "错误≥0.80",
+          "错误≥0.90",
+          "错误≥0.95",
+          "错误平均置信度"
+        ],
+        "rendered_rows": [
+          [
+            "full",
+            "841",
+            "0",
+            "0",
+            "0",
+            "0.382656"
+          ],
+          [
+            "w/o_text",
+            "1296",
+            "0",
+            "0",
+            "0",
+            "0.335564"
+          ],
+          [
+            "w/o_audio",
+            "867",
+            "0",
+            "0",
+            "0",
+            "0.367354"
+          ],
+          [
+            "w/o_visual",
+            "850",
+            "0",
+            "0",
+            "0",
+            "0.381038"
+          ]
+        ]
+      },
+      {
+        "table_index": 9,
+        "source_csv": "MELD/modality_ablation_summary.csv",
+        "columns": [
+          "input_condition",
+          "valid_samples",
+          "accuracy",
+          "weighted_f1"
+        ],
+        "source_row_indices": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "percentage_columns": [
+          "accuracy",
+          "weighted_f1"
+        ],
+        "signed_columns": [],
+        "headers": [
+          "输入条件",
+          "有效话语",
+          "Accuracy (%)",
+          "W-F1 (%)"
+        ],
+        "rendered_rows": [
+          [
+            "full",
+            "2610",
+            "67.7778",
+            "66.8484"
+          ],
+          [
+            "w/o_text",
+            "2610",
+            "50.3448",
+            "43.5585"
+          ],
+          [
+            "w/o_audio",
+            "2610",
+            "66.7816",
+            "66.2565"
+          ],
+          [
+            "w/o_visual",
+            "2610",
+            "67.4330",
+            "66.5199"
+          ]
+        ]
+      },
+      {
+        "table_index": 10,
+        "source_csv": "MELD/full_correct_to_masked_error.csv",
+        "columns": [
+          "input_condition",
+          "threshold",
+          "full_correct_samples",
+          "new_high_confidence_errors",
+          "ratio"
+        ],
+        "source_row_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "percentage_columns": [
+          "ratio"
+        ],
+        "signed_columns": [],
+        "headers": [
+          "输入条件",
+          "阈值",
+          "完整输入正确数",
+          "新增高置信度错误",
+          "占完整正确比例 (%)"
+        ],
+        "rendered_rows": [
+          [
+            "w/o_text",
+            "0.800000",
+            "1769",
+            "0",
+            "0.0000"
+          ],
+          [
+            "w/o_text",
+            "0.900000",
+            "1769",
+            "0",
+            "0.0000"
+          ],
+          [
+            "w/o_text",
+            "0.950000",
+            "1769",
+            "0",
+            "0.0000"
+          ],
+          [
+            "w/o_audio",
+            "0.800000",
+            "1769",
+            "0",
+            "0.0000"
+          ],
+          [
+            "w/o_audio",
+            "0.900000",
+            "1769",
+            "0",
+            "0.0000"
+          ],
+          [
+            "w/o_audio",
+            "0.950000",
+            "1769",
+            "0",
+            "0.0000"
+          ],
+          [
+            "w/o_visual",
+            "0.800000",
+            "1769",
+            "0",
+            "0.0000"
+          ],
+          [
+            "w/o_visual",
+            "0.900000",
+            "1769",
+            "0",
+            "0.0000"
+          ],
+          [
+            "w/o_visual",
+            "0.950000",
+            "1769",
+            "0",
+            "0.0000"
+          ]
+        ]
+      },
+      {
+        "table_index": 11,
+        "source_csv": "MELD/full_correct_to_masked_error.csv",
+        "columns": [
+          "input_condition",
+          "full_wrong_samples",
+          "still_wrong_count",
+          "still_wrong_ratio"
+        ],
+        "source_row_indices": [
+          0,
+          3,
+          6
+        ],
+        "percentage_columns": [
+          "still_wrong_ratio"
+        ],
+        "signed_columns": [],
+        "headers": [
+          "输入条件",
+          "完整输入错误数",
+          "删除后仍错数",
+          "占完整错误比例 (%)"
+        ],
+        "rendered_rows": [
+          [
+            "w/o_text",
+            "841",
+            "640",
+            "76.0999"
+          ],
+          [
+            "w/o_audio",
+            "841",
+            "814",
+            "96.7895"
+          ],
+          [
+            "w/o_visual",
+            "841",
+            "834",
+            "99.1677"
+          ]
+        ]
+      },
+      {
+        "table_index": 12,
+        "source_csv": "IEMOCAP/error_confidence_distribution.csv",
+        "columns": [
+          "confidence_range",
+          "error_count",
+          "ratio_of_all_errors"
+        ],
+        "source_row_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "percentage_columns": [
+          "ratio_of_all_errors"
+        ],
+        "signed_columns": [],
+        "headers": [
+          "置信度区间",
+          "错误数",
+          "占全部错误比例 (%)"
+        ],
+        "rendered_rows": [
+          [
+            "[0,0.5)",
+            "50",
+            "10.9649"
+          ],
+          [
+            "[0.5,0.6)",
+            "69",
+            "15.1316"
+          ],
+          [
+            "[0.6,0.7)",
+            "64",
+            "14.0351"
+          ],
+          [
+            "[0.7,0.8)",
+            "73",
+            "16.0088"
+          ],
+          [
+            "[0.8,0.9)",
+            "72",
+            "15.7895"
+          ],
+          [
+            "[0.9,0.95)",
+            "52",
+            "11.4035"
+          ],
+          [
+            "[0.95,1]",
+            "76",
+            "16.6667"
+          ]
+        ]
+      },
+      {
+        "table_index": 13,
+        "source_csv": "MELD/error_confidence_distribution.csv",
+        "columns": [
+          "confidence_range",
+          "error_count",
+          "ratio_of_all_errors"
+        ],
+        "source_row_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "percentage_columns": [
+          "ratio_of_all_errors"
+        ],
+        "signed_columns": [],
+        "headers": [
+          "置信度区间",
+          "错误数",
+          "占全部错误比例 (%)"
+        ],
+        "rendered_rows": [
+          [
+            "[0,0.5)",
+            "712",
+            "84.6611"
+          ],
+          [
+            "[0.5,0.6)",
+            "99",
+            "11.7717"
+          ],
+          [
+            "[0.6,0.7)",
+            "29",
+            "3.4483"
+          ],
+          [
+            "[0.7,0.8)",
+            "1",
+            "0.1189"
+          ],
+          [
+            "[0.8,0.9)",
+            "0",
+            "0.0000"
+          ],
+          [
+            "[0.9,0.95)",
+            "0",
+            "0.0000"
+          ],
+          [
+            "[0.95,1]",
+            "0",
+            "0.0000"
+          ]
+        ]
+      },
+      {
+        "table_index": 14,
+        "source_csv": "official_cmerc_summary.csv",
+        "columns": [
+          "dataset",
+          "accuracy",
+          "mean_confidence",
+          "ece",
+          "mce",
+          "brier_score",
+          "nll"
+        ],
+        "source_row_indices": [
+          0,
+          1
+        ],
+        "percentage_columns": [
+          "accuracy",
+          "mean_confidence",
+          "ece",
+          "mce"
+        ],
+        "signed_columns": [],
+        "headers": [
+          "数据集",
+          "Accuracy (%)",
+          "平均置信度 (%)",
+          "ECE (%)",
+          "MCE (%)",
+          "Brier",
+          "NLL"
+        ],
+        "rendered_rows": [
+          [
+            "IEMOCAP",
+            "71.9039",
+            "83.1707",
+            "11.2668",
+            "16.6292",
+            "0.429447",
+            "0.869046"
+          ],
+          [
+            "MELD",
+            "67.7778",
+            "44.9601",
+            "22.8176",
+            "30.0950",
+            "0.529921",
+            "1.140703"
+          ]
+        ]
+      },
+      {
+        "table_index": 15,
+        "source_csv": "IEMOCAP/calibration_bins.csv",
+        "columns": [
+          "lower_bound",
+          "upper_bound",
+          "count",
+          "mean_confidence",
+          "accuracy",
+          "signed_gap"
+        ],
+        "source_row_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "percentage_columns": [
+          "mean_confidence",
+          "accuracy",
+          "signed_gap"
+        ],
+        "signed_columns": [
+          "signed_gap"
+        ],
+        "headers": [
+          "下界",
+          "上界",
+          "样本数",
+          "平均置信度 (%)",
+          "实际准确率 (%)",
+          "差值 (pp)"
+        ],
+        "rendered_rows": [
+          [
+            "0",
+            "0.100000",
+            "0",
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          [
+            "0.100000",
+            "0.200000",
+            "0",
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          [
+            "0.200000",
+            "0.300000",
+            "0",
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          [
+            "0.300000",
+            "0.400000",
+            "14",
+            "36.1921",
+            "35.7143",
+            "+0.4778"
+          ],
+          [
+            "0.400000",
+            "0.500000",
+            "71",
+            "45.3584",
+            "42.2535",
+            "+3.1048"
+          ],
+          [
+            "0.500000",
+            "0.600000",
+            "150",
+            "54.9795",
+            "54.0000",
+            "+0.9795"
+          ],
+          [
+            "0.600000",
+            "0.700000",
+            "157",
+            "65.1238",
+            "59.2357",
+            "+5.8881"
+          ],
+          [
+            "0.700000",
+            "0.800000",
+            "176",
+            "75.1519",
+            "58.5227",
+            "+16.6292"
+          ],
+          [
+            "0.800000",
+            "0.900000",
+            "259",
+            "85.4683",
+            "72.2008",
+            "+13.2675"
+          ],
+          [
+            "0.900000",
+            "1",
+            "796",
+            "97.2670",
+            "83.9196",
+            "+13.3474"
+          ]
+        ]
+      },
+      {
+        "table_index": 16,
+        "source_csv": "MELD/calibration_bins.csv",
+        "columns": [
+          "lower_bound",
+          "upper_bound",
+          "count",
+          "mean_confidence",
+          "accuracy",
+          "signed_gap"
+        ],
+        "source_row_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "percentage_columns": [
+          "mean_confidence",
+          "accuracy",
+          "signed_gap"
+        ],
+        "signed_columns": [
+          "signed_gap"
+        ],
+        "headers": [
+          "下界",
+          "上界",
+          "样本数",
+          "平均置信度 (%)",
+          "实际准确率 (%)",
+          "差值 (pp)"
+        ],
+        "rendered_rows": [
+          [
+            "0",
+            "0.100000",
+            "0",
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          [
+            "0.100000",
+            "0.200000",
+            "7",
+            "19.2870",
+            "28.5714",
+            "-9.2844"
+          ],
+          [
+            "0.200000",
+            "0.300000",
+            "354",
+            "26.1807",
+            "41.5254",
+            "-15.3448"
+          ],
+          [
+            "0.300000",
+            "0.400000",
+            "602",
+            "34.9341",
+            "52.3256",
+            "-17.3915"
+          ],
+          [
+            "0.400000",
+            "0.500000",
+            "670",
+            "45.0016",
+            "68.2090",
+            "-23.2074"
+          ],
+          [
+            "0.500000",
+            "0.600000",
+            "653",
+            "54.7442",
+            "84.8392",
+            "-30.0950"
+          ],
+          [
+            "0.600000",
+            "0.700000",
+            "281",
+            "63.6580",
+            "89.6797",
+            "-26.0217"
+          ],
+          [
+            "0.700000",
+            "0.800000",
+            "41",
+            "72.2737",
+            "97.5610",
+            "-25.2873"
+          ],
+          [
+            "0.800000",
+            "0.900000",
+            "2",
+            "81.2854",
+            "100.0000",
+            "-18.7146"
+          ],
+          [
+            "0.900000",
+            "1",
+            "0",
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        ]
+      }
+    ]
+  },
+  "excel": {
+    "passed": true,
+    "cells_checked": 622830,
+    "worksheets": [
+      {
+        "name": "官方总体统计",
+        "worksheet_index": 2,
+        "source_csv": "official_cmerc_summary.csv",
+        "columns": [
+          "dataset",
+          "model",
+          "input_condition",
+          "valid_utterances",
+          "accuracy",
+          "mean_confidence",
+          "ece",
+          "mce",
+          "brier_score",
+          "nll",
+          "n_bins",
+          "zero_true_probability_count",
+          "total_errors",
+          "weighted_f1",
+          "macro_f1",
+          "mean_error_confidence",
+          "median_error_confidence",
+          "errors_ge_0p8",
+          "high_confidence_predictions_ge_0p8",
+          "high_confidence_error_rate_ge_0p8",
+          "errors_ge_0p9",
+          "high_confidence_predictions_ge_0p9",
+          "high_confidence_error_rate_ge_0p9",
+          "errors_ge_0p95",
+          "high_confidence_predictions_ge_0p95",
+          "high_confidence_error_rate_ge_0p95"
+        ],
+        "row_count": 2,
+        "all_cells_match_csv": true
+      },
+      {
+        "name": "IEMOCAP_全预测",
+        "worksheet_index": 3,
+        "source_csv": "IEMOCAP/all_predictions.csv",
+        "columns": [
+          "dataset",
+          "model",
+          "dialogue_id",
+          "utterance_index",
+          "source_utterance_id",
+          "utterance_text",
+          "true_label",
+          "true_emotion",
+          "predicted_label",
+          "predicted_emotion",
+          "predicted_confidence",
+          "true_label_probability",
+          "input_condition",
+          "probability_happy",
+          "probability_sad",
+          "probability_neutral",
+          "probability_angry",
+          "probability_excited",
+          "probability_frustrated",
+          "correct",
+          "true_label_log_probability"
+        ],
+        "row_count": 1623,
+        "all_cells_match_csv": true
+      },
+      {
+        "name": "IEMOCAP_校准分箱",
+        "worksheet_index": 4,
+        "source_csv": "IEMOCAP/calibration_bins.csv",
+        "columns": [
+          "dataset",
+          "model",
+          "bin_index",
+          "lower_bound",
+          "upper_bound",
+          "count",
+          "mean_confidence",
+          "accuracy",
+          "signed_gap",
+          "absolute_gap",
+          "weight",
+          "ece_contribution"
+        ],
+        "row_count": 10,
+        "all_cells_match_csv": true
+      },
+      {
+        "name": "IEMOCAP_类别错误",
+        "worksheet_index": 5,
+        "source_csv": "IEMOCAP/class_error_summary.csv",
+        "columns": [
+          "dataset",
+          "model",
+          "true_label",
+          "true_emotion",
+          "support",
+          "total_errors",
+          "error_rate",
+          "errors_ge_0p8",
+          "high_confidence_predictions_ge_0p8",
+          "high_confidence_error_rate_ge_0p8",
+          "errors_ge_0p9",
+          "high_confidence_predictions_ge_0p9",
+          "high_confidence_error_rate_ge_0p9",
+          "errors_ge_0p95",
+          "high_confidence_predictions_ge_0p95",
+          "high_confidence_error_rate_ge_0p95"
+        ],
+        "row_count": 6,
+        "all_cells_match_csv": true
+      },
+      {
+        "name": "IEMOCAP_错误分布",
+        "worksheet_index": 6,
+        "source_csv": "IEMOCAP/error_confidence_distribution.csv",
+        "columns": [
+          "dataset",
+          "model",
+          "confidence_range",
+          "error_count",
+          "ratio_of_all_errors"
+        ],
+        "row_count": 7,
+        "all_cells_match_csv": true
+      },
+      {
+        "name": "IEMOCAP_全部错误",
+        "worksheet_index": 7,
+        "source_csv": "IEMOCAP/errors_all.csv",
+        "columns": [
+          "dataset",
+          "model",
+          "dialogue_id",
+          "utterance_index",
+          "source_utterance_id",
+          "utterance_text",
+          "true_label",
+          "true_emotion",
+          "predicted_label",
+          "predicted_emotion",
+          "predicted_confidence",
+          "true_label_probability",
+          "input_condition",
+          "probability_happy",
+          "probability_sad",
+          "probability_neutral",
+          "probability_angry",
+          "probability_excited",
+          "probability_frustrated",
+          "correct",
+          "true_label_log_probability"
+        ],
+        "row_count": 456,
+        "all_cells_match_csv": true
+      },
+      {
+        "name": "IEMOCAP_删除新增错误",
+        "worksheet_index": 8,
+        "source_csv": "IEMOCAP/full_correct_to_masked_error.csv",
+        "columns": [
+          "dataset",
+          "model",
+          "input_condition",
+          "removed_modality",
+          "threshold",
+          "full_correct_samples",
+          "new_high_confidence_errors",
+          "ratio",
+          "full_wrong_samples",
+          "still_wrong_count",
+          "still_wrong_ratio"
+        ],
+        "row_count": 9,
+        "all_cells_match_csv": true
+      },
+      {
+        "name": "IEMOCAP_高置信错误",
+        "worksheet_index": 9,
+        "source_csv": "IEMOCAP/high_confidence_errors.csv",
+        "columns": [
+          "dataset",
+          "model",
+          "dialogue_id",
+          "utterance_index",
+          "source_utterance_id",
+          "utterance_text",
+          "true_label",
+          "true_emotion",
+          "predicted_label",
+          "predicted_emotion",
+          "predicted_confidence",
+          "true_label_probability",
+          "input_condition",
+          "probability_happy",
+          "probability_sad",
+          "probability_neutral",
+          "probability_angry",
+          "probability_excited",
+          "probability_frustrated",
+          "correct",
+          "true_label_log_probability",
+          "threshold",
+          "error_type"
+        ],
+        "row_count": 404,
+        "all_cells_match_csv": true
+      },
+      {
+        "name": "IEMOCAP_删除预测",
+        "worksheet_index": 10,
+        "source_csv": "IEMOCAP/modality_ablation_predictions.csv",
+        "columns": [
+          "dataset",
+          "model",
+          "dialogue_id",
+          "utterance_index",
+          "source_utterance_id",
+          "utterance_text",
+          "true_label",
+          "true_emotion",
+          "predicted_label",
+          "predicted_emotion",
+          "predicted_confidence",
+          "true_label_probability",
+          "input_condition",
+          "probability_happy",
+          "probability_sad",
+          "probability_neutral",
+          "probability_angry",
+          "probability_excited",
+          "probability_frustrated",
+          "correct",
+          "true_label_log_probability",
+          "removed_modality",
+          "full_prediction",
+          "full_confidence",
+          "full_correct",
+          "full_true_label_probability",
+          "true_label_probability_delta",
+          "transition_type"
+        ],
+        "row_count": 6492,
+        "all_cells_match_csv": true
+      },
+      {
+        "name": "IEMOCAP_删除汇总",
+        "worksheet_index": 11,
+        "source_csv": "IEMOCAP/modality_ablation_summary.csv",
+        "columns": [
+          "dataset",
+          "model",
+          "input_condition",
+          "valid_samples",
+          "total_errors",
+          "mean_error_confidence",
+          "accuracy",
+          "weighted_f1",
+          "errors_ge_0p8",
+          "high_confidence_predictions_ge_0p8",
+          "high_confidence_error_rate_ge_0p8",
+          "errors_ge_0p9",
+          "high_confidence_predictions_ge_0p9",
+          "high_confidence_error_rate_ge_0p9",
+          "errors_ge_0p95",
+          "high_confidence_predictions_ge_0p95",
+          "high_confidence_error_rate_ge_0p95"
+        ],
+        "row_count": 4,
+        "all_cells_match_csv": true
+      },
+      {
+        "name": "IEMOCAP_new_masked_high_confide",
+        "worksheet_index": 12,
+        "source_csv": "IEMOCAP/new_masked_high_confidence_errors.csv",
+        "columns": [
+          "dataset",
+          "model",
+          "dialogue_id",
+          "utterance_index",
+          "source_utterance_id",
+          "utterance_text",
+          "true_label",
+          "true_emotion",
+          "predicted_label",
+          "predicted_emotion",
+          "predicted_confidence",
+          "true_label_probability",
+          "input_condition",
+          "probability_happy",
+          "probability_sad",
+          "probability_neutral",
+          "probability_angry",
+          "probability_excited",
+          "probability_frustrated",
+          "correct",
+          "true_label_log_probability",
+          "removed_modality",
+          "full_prediction",
+          "full_confidence",
+          "full_correct",
+          "full_true_label_probability",
+          "true_label_probability_delta",
+          "transition_type",
+          "threshold"
+        ],
+        "row_count": 280,
+        "all_cells_match_csv": true
+      },
+      {
+        "name": "MELD_全预测",
+        "worksheet_index": 13,
+        "source_csv": "MELD/all_predictions.csv",
+        "columns": [
+          "dataset",
+          "model",
+          "dialogue_id",
+          "utterance_index",
+          "source_utterance_id",
+          "utterance_text",
+          "true_label",
+          "true_emotion",
+          "predicted_label",
+          "predicted_emotion",
+          "predicted_confidence",
+          "true_label_probability",
+          "input_condition",
+          "probability_neutral",
+          "probability_surprise",
+          "probability_fear",
+          "probability_sadness",
+          "probability_joy",
+          "probability_disgust",
+          "probability_anger",
+          "correct",
+          "true_label_log_probability"
+        ],
+        "row_count": 2610,
+        "all_cells_match_csv": true
+      },
+      {
+        "name": "MELD_校准分箱",
+        "worksheet_index": 14,
+        "source_csv": "MELD/calibration_bins.csv",
+        "columns": [
+          "dataset",
+          "model",
+          "bin_index",
+          "lower_bound",
+          "upper_bound",
+          "count",
+          "mean_confidence",
+          "accuracy",
+          "signed_gap",
+          "absolute_gap",
+          "weight",
+          "ece_contribution"
+        ],
+        "row_count": 10,
+        "all_cells_match_csv": true
+      },
+      {
+        "name": "MELD_类别错误",
+        "worksheet_index": 15,
+        "source_csv": "MELD/class_error_summary.csv",
+        "columns": [
+          "dataset",
+          "model",
+          "true_label",
+          "true_emotion",
+          "support",
+          "total_errors",
+          "error_rate",
+          "errors_ge_0p8",
+          "high_confidence_predictions_ge_0p8",
+          "high_confidence_error_rate_ge_0p8",
+          "errors_ge_0p9",
+          "high_confidence_predictions_ge_0p9",
+          "high_confidence_error_rate_ge_0p9",
+          "errors_ge_0p95",
+          "high_confidence_predictions_ge_0p95",
+          "high_confidence_error_rate_ge_0p95"
+        ],
+        "row_count": 7,
+        "all_cells_match_csv": true
+      },
+      {
+        "name": "MELD_错误分布",
+        "worksheet_index": 16,
+        "source_csv": "MELD/error_confidence_distribution.csv",
+        "columns": [
+          "dataset",
+          "model",
+          "confidence_range",
+          "error_count",
+          "ratio_of_all_errors"
+        ],
+        "row_count": 7,
+        "all_cells_match_csv": true
+      },
+      {
+        "name": "MELD_全部错误",
+        "worksheet_index": 17,
+        "source_csv": "MELD/errors_all.csv",
+        "columns": [
+          "dataset",
+          "model",
+          "dialogue_id",
+          "utterance_index",
+          "source_utterance_id",
+          "utterance_text",
+          "true_label",
+          "true_emotion",
+          "predicted_label",
+          "predicted_emotion",
+          "predicted_confidence",
+          "true_label_probability",
+          "input_condition",
+          "probability_neutral",
+          "probability_surprise",
+          "probability_fear",
+          "probability_sadness",
+          "probability_joy",
+          "probability_disgust",
+          "probability_anger",
+          "correct",
+          "true_label_log_probability"
+        ],
+        "row_count": 841,
+        "all_cells_match_csv": true
+      },
+      {
+        "name": "MELD_删除新增错误",
+        "worksheet_index": 18,
+        "source_csv": "MELD/full_correct_to_masked_error.csv",
+        "columns": [
+          "dataset",
+          "model",
+          "input_condition",
+          "removed_modality",
+          "threshold",
+          "full_correct_samples",
+          "new_high_confidence_errors",
+          "ratio",
+          "full_wrong_samples",
+          "still_wrong_count",
+          "still_wrong_ratio"
+        ],
+        "row_count": 9,
+        "all_cells_match_csv": true
+      },
+      {
+        "name": "MELD_高置信错误",
+        "worksheet_index": 19,
+        "source_csv": "MELD/high_confidence_errors.csv",
+        "columns": [
+          "dataset",
+          "model",
+          "dialogue_id",
+          "utterance_index",
+          "source_utterance_id",
+          "utterance_text",
+          "true_label",
+          "true_emotion",
+          "predicted_label",
+          "predicted_emotion",
+          "predicted_confidence",
+          "true_label_probability",
+          "input_condition",
+          "probability_neutral",
+          "probability_surprise",
+          "probability_fear",
+          "probability_sadness",
+          "probability_joy",
+          "probability_disgust",
+          "probability_anger",
+          "correct",
+          "true_label_log_probability",
+          "threshold",
+          "error_type"
+        ],
+        "row_count": 0,
+        "all_cells_match_csv": true
+      },
+      {
+        "name": "MELD_删除预测",
+        "worksheet_index": 20,
+        "source_csv": "MELD/modality_ablation_predictions.csv",
+        "columns": [
+          "dataset",
+          "model",
+          "dialogue_id",
+          "utterance_index",
+          "source_utterance_id",
+          "utterance_text",
+          "true_label",
+          "true_emotion",
+          "predicted_label",
+          "predicted_emotion",
+          "predicted_confidence",
+          "true_label_probability",
+          "input_condition",
+          "probability_neutral",
+          "probability_surprise",
+          "probability_fear",
+          "probability_sadness",
+          "probability_joy",
+          "probability_disgust",
+          "probability_anger",
+          "correct",
+          "true_label_log_probability",
+          "removed_modality",
+          "full_prediction",
+          "full_confidence",
+          "full_correct",
+          "full_true_label_probability",
+          "true_label_probability_delta",
+          "transition_type"
+        ],
+        "row_count": 10440,
+        "all_cells_match_csv": true
+      },
+      {
+        "name": "MELD_删除汇总",
+        "worksheet_index": 21,
+        "source_csv": "MELD/modality_ablation_summary.csv",
+        "columns": [
+          "dataset",
+          "model",
+          "input_condition",
+          "valid_samples",
+          "total_errors",
+          "mean_error_confidence",
+          "accuracy",
+          "weighted_f1",
+          "errors_ge_0p8",
+          "high_confidence_predictions_ge_0p8",
+          "high_confidence_error_rate_ge_0p8",
+          "errors_ge_0p9",
+          "high_confidence_predictions_ge_0p9",
+          "high_confidence_error_rate_ge_0p9",
+          "errors_ge_0p95",
+          "high_confidence_predictions_ge_0p95",
+          "high_confidence_error_rate_ge_0p95"
+        ],
+        "row_count": 4,
+        "all_cells_match_csv": true
+      },
+      {
+        "name": "MELD_new_masked_high_confidence",
+        "worksheet_index": 22,
+        "source_csv": "MELD/new_masked_high_confidence_errors.csv",
+        "columns": [
+          "dataset",
+          "model",
+          "dialogue_id",
+          "utterance_index",
+          "source_utterance_id",
+          "utterance_text",
+          "true_label",
+          "true_emotion",
+          "predicted_label",
+          "predicted_emotion",
+          "predicted_confidence",
+          "true_label_probability",
+          "input_condition",
+          "probability_neutral",
+          "probability_surprise",
+          "probability_fear",
+          "probability_sadness",
+          "probability_joy",
+          "probability_disgust",
+          "probability_anger",
+          "correct",
+          "true_label_log_probability",
+          "removed_modality",
+          "full_prediction",
+          "full_confidence",
+          "full_correct",
+          "full_true_label_probability",
+          "true_label_probability_delta",
+          "transition_type",
+          "threshold"
+        ],
+        "row_count": 0,
+        "all_cells_match_csv": true
+      }
+    ],
+    "numeric_tolerance": "relative 2e-15 or absolute 1e-15; Excel binary floating point"
+  },
+  "figures": [
+    {
+      "dataset": "IEMOCAP",
+      "files": [
+        "figures/reliability_IEMOCAP.png",
+        "figures/reliability_IEMOCAP.svg",
+        "figures/reliability_IEMOCAP.pdf"
+      ],
+      "source_csv": "IEMOCAP/calibration_bins.csv",
+      "bin_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "points": [
+        [
+          0.3619212270849667,
+          0.35714285714285715
+        ],
+        [
+          0.4535836023406897,
+          0.4225352112676056
+        ],
+        [
+          0.5497952490596948,
+          0.54
+        ],
+        [
+          0.6512381225351086,
+          0.5923566878980892
+        ],
+        [
+          0.7515191420363435,
+          0.5852272727272727
+        ],
+        [
+          0.8546825534463426,
+          0.722007722007722
+        ],
+        [
+          0.9726704545406406,
+          0.8391959798994975
+        ]
+      ],
+      "counts": [
+        0,
+        0,
+        0,
+        14,
+        71,
+        150,
+        157,
+        176,
+        259,
+        796
+      ],
+      "ideal_diagonal": true,
+      "empty_bins_omitted": true
+    },
+    {
+      "dataset": "MELD",
+      "files": [
+        "figures/reliability_MELD.png",
+        "figures/reliability_MELD.svg",
+        "figures/reliability_MELD.pdf"
+      ],
+      "source_csv": "MELD/calibration_bins.csv",
+      "bin_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "points": [
+        [
+          0.1928702718037613,
+          0.2857142857142857
+        ],
+        [
+          0.2618065207129077,
+          0.4152542372881356
+        ],
+        [
+          0.3493406509340764,
+          0.5232558139534884
+        ],
+        [
+          0.4500156576991686,
+          0.682089552238806
+        ],
+        [
+          0.5474417187694197,
+          0.8483920367534457
+        ],
+        [
+          0.6365799897714365,
+          0.896797153024911
+        ],
+        [
+          0.7227366174152243,
+          0.975609756097561
+        ],
+        [
+          0.8128544543665434,
+          1.0
+        ]
+      ],
+      "counts": [
+        0,
+        7,
+        354,
+        602,
+        670,
+        653,
+        281,
+        41,
+        2,
+        0
+      ],
+      "ideal_diagonal": true,
+      "empty_bins_omitted": true
+    }
+  ],
+  "outputs": {
+    "CMERC_官方Checkpoint_可靠性诊断报告.docx": {
+      "sha256": "ad5b4d16a87230f184bd7f053de3cac794fd436a20fa476c1a0b72c17740f7ca",
+      "bytes": 202696
+    },
+    "CMERC_官方Checkpoint_诊断统计.xlsx": {
+      "sha256": "9e17d90945cf7a932534d6611280a0ad4fe4111f21617db49dc823356f660de0",
+      "bytes": 4694580
+    },
+    "figure_contract.md": {
+      "sha256": "d7c327549df6c0a7cc3f13a13a10a466e98bbf9127888a1578d68a0630bf6d0f",
+      "bytes": 808
+    },
+    "figures/reliability_IEMOCAP.png": {
+      "sha256": "b108df44097dde229a845da4fa96a54ec00dcb2384c10683a6179f4f794bd52c",
+      "bytes": 94875
+    },
+    "figures/reliability_IEMOCAP.svg": {
+      "sha256": "8c0887d75055fecf26aa9839169d98ce5bb83f339617489489b3bbe3a61d2a11",
+      "bytes": 17210
+    },
+    "figures/reliability_IEMOCAP.pdf": {
+      "sha256": "ec84ed2be8163709a334af7fbd5efa02bbe59528d6919463166526e1057f72fa",
+      "bytes": 12943
+    },
+    "figures/reliability_MELD.png": {
+      "sha256": "0291d32c1dafb797595042c0b5c14e0999801b70da9a9b52b1cf7f6b7ec7ad61",
+      "bytes": 95924
+    },
+    "figures/reliability_MELD.svg": {
+      "sha256": "1235a65e76ff86b05880f9a57b3300f1791e46cdfb5f793e10c826182c2ac3af",
+      "bytes": 17336
+    },
+    "figures/reliability_MELD.pdf": {
+      "sha256": "c594151ce473db62e66c610799115727804ad4b94241ba06672c775e653ba8ec",
+      "bytes": 12565
+    }
+  }
+}

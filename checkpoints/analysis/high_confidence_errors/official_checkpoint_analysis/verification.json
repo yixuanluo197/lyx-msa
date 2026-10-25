@@ -1,0 +1,35 @@
+{
+  "status": "passed",
+  "verified_at": "2026-10-25T05:50:26.572528+00:00",
+  "existing_files_unchanged": 156,
+  "full_utterances": 4233,
+  "masked_utterance_predictions": 12699,
+  "full_forward_calls": 0,
+  "masked_forward_calls": 60,
+  "optimizer_steps": 0,
+  "probability_id_label_text_order_padding_checks": "passed",
+  "independent_check_count": 833,
+  "word_tables_checked": 17,
+  "word_font": "宋体",
+  "word_font_size_points": 12,
+  "word_color": "000000",
+  "word_reliability_figures": 2,
+  "excel_cells_checked": 622830,
+  "tests_passed": 47,
+  "test_evidence": "test_results.json",
+  "baseline_comparison_completed": false,
+  "baseline_reason": "Baseline comparison pending: matched checkpoint unavailable",
+  "component_checks": {
+    "full_input_verification.json": "219bcdaeaca1967ad17853d475a65c7250002d8bb9f4727d08e1a2a6e21929ac",
+    "ablation_verification.json": "a9c25f654764d08512f0ed3d96b86b18a3b0d3a85804df5018b53d4e1c1a5742",
+    "independent_verification.json": "69f829b88023517c94fce65201102c9ba1111fcdfc2edd1c55ab8128c05be96c",
+    "report_verification.json": "e6f21d180d09a054b6fcf8e18d0b1d4c965db9a726e8814da13fc4822ea9ecae"
+  },
+  "report_and_csv_consistent": true,
+  "source_snapshot_matches": true,
+  "previous_validation_results_used_as_official_baseline": false,
+  "unverified": [
+    "Strict paired Baseline experiments",
+    "Office/LibreOffice pagination"
+  ]
+}

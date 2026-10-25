@@ -1,0 +1,358 @@
+{
+  "status": "completed",
+  "dataset": "IEMOCAP",
+  "started_at": "2026-10-25T05:39:38.496213+00:00",
+  "completed_at": "2026-10-25T05:39:49.287148+00:00",
+  "host": "user22",
+  "pid": 3636350,
+  "python": "3.10.13",
+  "torch": "1.13.1+cu117",
+  "numpy": "1.26.4",
+  "sklearn": "1.3.2",
+  "cuda_runtime": "11.7",
+  "cudnn_version": 8500,
+  "cudnn_enabled": true,
+  "cudnn_deterministic": true,
+  "cuda_visible_devices": "1",
+  "gpu_name": "Tesla V100-SXM2-32GB",
+  "cuda_device_order": "PCI_BUS_ID",
+  "actual_gpu_uuids": [
+    "GPU-56b14af1-00dc-4542-e2d8-5bba1dd39049"
+  ],
+  "official_argv": [
+    "train.py",
+    "--base-model",
+    "GRU",
+    "--dropout",
+    "0.5",
+    "--lr",
+    "0.0001",
+    "--batch-size",
+    "16",
+    "--graph_type",
+    "hyper",
+    "--epochs",
+    "0",
+    "--graph_construct",
+    "direct",
+    "--multi_modal",
+    "--mm_fusion_mthd",
+    "concat_DHT",
+    "--modals",
+    "avl",
+    "--Dataset",
+    "IEMOCAP",
+    "--norm",
+    "BN",
+    "--testing"
+  ],
+  "effective_args": {
+    "no_cuda": false,
+    "base_model": "GRU",
+    "graph_model": true,
+    "nodal_attention": true,
+    "windowp": 10,
+    "windowf": 10,
+    "lr": 0.0001,
+    "l2": 3e-05,
+    "rec_dropout": 0.1,
+    "dropout": 0.5,
+    "batch_size": 16,
+    "epochs": 0,
+    "class_weight": true,
+    "active_listener": false,
+    "attention": "general",
+    "tensorboard": false,
+    "graph_type": "hyper",
+    "use_topic": false,
+    "alpha": 0.2,
+    "multiheads": 6,
+    "graph_construct": "direct",
+    "use_gcn": false,
+    "use_residue": false,
+    "multi_modal": true,
+    "mm_fusion_mthd": "concat_DHT",
+    "modals": "avl",
+    "av_using_lstm": false,
+    "Deep_GCN_nlayers": 4,
+    "Dataset": "IEMOCAP",
+    "use_speaker": true,
+    "use_modal": false,
+    "norm": "BN",
+    "testing": true,
+    "num_L": 3,
+    "num_K": 4,
+    "seed": 1475,
+    "cuda": true
+  },
+  "audit": {
+    "strict_load_calls": 1,
+    "forward_calls": 2,
+    "optimizer_steps": 0,
+    "masking_forward_calls": 2,
+    "batches": [
+      {
+        "dialogue_ids": [
+          "Ses05F_impro08",
+          "Ses05M_impro02",
+          "Ses05F_impro01",
+          "Ses05F_script01_2",
+          "Ses05F_impro05",
+          "Ses05M_script01_2",
+          "Ses05F_impro04",
+          "Ses05M_impro08",
+          "Ses05F_script03_2",
+          "Ses05F_script02_2",
+          "Ses05M_impro04",
+          "Ses05M_script03_2",
+          "Ses05M_impro05",
+          "Ses05M_impro03",
+          "Ses05M_script01_3",
+          "Ses05F_impro02"
+        ],
+        "lengths": [
+          59,
+          29,
+          44,
+          28,
+          91,
+          23,
+          84,
+          54,
+          59,
+          59,
+          75,
+          64,
+          42,
+          58,
+          43,
+          49
+        ],
+        "valid_utterances": 861,
+        "padded_time": 91,
+        "feature_shapes": [
+          [
+            91,
+            16,
+            1024
+          ],
+          [
+            91,
+            16,
+            1024
+          ],
+          [
+            91,
+            16,
+            1024
+          ],
+          [
+            91,
+            16,
+            1024
+          ],
+          [
+            91,
+            16,
+            342
+          ],
+          [
+            91,
+            16,
+            1582
+          ],
+          [
+            91,
+            16,
+            2
+          ],
+          [
+            16,
+            91
+          ],
+          [
+            16,
+            91
+          ]
+        ],
+        "batch_size": 16,
+        "num_workers": 2
+      },
+      {
+        "dialogue_ids": [
+          "Ses05F_script02_1",
+          "Ses05F_impro03",
+          "Ses05F_impro06",
+          "Ses05M_script02_2",
+          "Ses05F_script03_1",
+          "Ses05M_script03_1",
+          "Ses05M_script02_1",
+          "Ses05M_script01_1b",
+          "Ses05F_script01_3",
+          "Ses05F_script01_1",
+          "Ses05M_impro01",
+          "Ses05F_impro07",
+          "Ses05M_impro07",
+          "Ses05M_script01_1",
+          "Ses05M_impro06"
+        ],
+        "lengths": [
+          43,
+          83,
+          52,
+          58,
+          37,
+          43,
+          34,
+          44,
+          44,
+          53,
+          40,
+          68,
+          83,
+          52,
+          28
+        ],
+        "valid_utterances": 762,
+        "padded_time": 83,
+        "feature_shapes": [
+          [
+            83,
+            15,
+            1024
+          ],
+          [
+            83,
+            15,
+            1024
+          ],
+          [
+            83,
+            15,
+            1024
+          ],
+          [
+            83,
+            15,
+            1024
+          ],
+          [
+            83,
+            15,
+            342
+          ],
+          [
+            83,
+            15,
+            1582
+          ],
+          [
+            83,
+            15,
+            2
+          ],
+          [
+            15,
+            83
+          ],
+          [
+            15,
+            83
+          ]
+        ],
+        "batch_size": 16,
+        "num_workers": 2
+      }
+    ],
+    "gradient_enabled_observations": [
+      false,
+      false
+    ],
+    "model_training_observations": [
+      false,
+      false
+    ],
+    "replacement_checks": [
+      {
+        "condition": "w/o_visual",
+        "mean_axis": 0,
+        "padding_included_in_mean": true,
+        "feature_shapes": [
+          [
+            91,
+            16,
+            342
+          ]
+        ],
+        "target_changed_elements": 497952,
+        "non_target_arguments_identical": true
+      },
+      {
+        "condition": "w/o_visual",
+        "mean_axis": 0,
+        "padding_included_in_mean": true,
+        "feature_shapes": [
+          [
+            83,
+            15,
+            342
+          ]
+        ],
+        "target_changed_elements": 425790,
+        "non_target_arguments_identical": true
+      }
+    ]
+  },
+  "model_state_unchanged": true,
+  "all_parameter_grads_none": true,
+  "original_inputs_unchanged": true,
+  "observer_line": 207,
+  "official_rounded_accuracy": 71.16,
+  "official_rounded_weighted_f1": 71.18,
+  "classification_metrics": {
+    "dataset": "IEMOCAP",
+    "model": "Official CMERC",
+    "accuracy": 71.1645101663586,
+    "weighted_f1": 71.17900515677039,
+    "macro_f1": 70.64431527104674,
+    "valid_samples": 1623,
+    "paper_weighted_f1": 71.98,
+    "class_names": [
+      "happy",
+      "sad",
+      "neutral",
+      "angry",
+      "excited",
+      "frustrated"
+    ],
+    "gap_percentage_points": -0.800994843229617,
+    "within_0p5_points": false
+  },
+  "training": false,
+  "new_calibration_diagnostics": false,
+  "modality_removal": true,
+  "input_condition": "w/o_visual",
+  "full_forward_calls": 0,
+  "source_prediction_sha256": "f876f4423410cfc4025c0abb3a1b52e77c90c96a196699df01ee2dbd332372d8",
+  "reference_artifacts_unchanged": true,
+  "runtime_sha256": {
+    "HypergraphConv.py": "9297a572e1763a74c7984eb75dfb15fa8143bf131a44cf50433c307ef7f3b5d2",
+    "README.md": "5b02de406be3b0ec68f2ea3de65f3fc2a1b059cb091c98b1b02f15d9a8f4000b",
+    "caldiff/IEMOCAP_diff.pkl": "db4c7b96f169948a3615a62b29d2a793bd64cccd8a0387b1de9d7ceab348a150",
+    "caldiff/MELD_diff.pkl": "db005ceb0e4847caffc8571eaa94ab7c5b4a310abd615b12c995c9a22ff060e0",
+    "caldiff/cal_diff.py": "89ac07031971eea8675ec78c888bb350ecf9e6483a110c3762b8e9d329e228a5",
+    "clloss.py": "2f5afd557d451bc2599ffd725f1f56c0ec8723a1a718527ca814de526e885066",
+    "dataloader.py": "7ff80e8e2de73aa228effb4df56a5168c05068e8fa585a06d2e8b813e2aa4f95",
+    "high_fre_conv.py": "f4414c019ca7f656a662698bb9615bf15ac6325a73caa06ff487e158f58f39df",
+    "model.py": "ee84329b800e37a8ac652b58aa6f0fc3dee47cb2cf38feda14f5c0de26ec9a82",
+    "model_GCN.py": "830d401ff3e4b30298199b927a0bad3a9056400429506abcc2d66a7db8b76f9f",
+    "model_cm.py": "f08a6673649029ca0889b89dcc1ce47cb8a88126e023d46ee1cb874f6945a216",
+    "model_hyper.py": "af6493cb63443b4ceaba5de0fece86db7e029c62d6f6fca931ba64b6ac5a1d86",
+    "train.py": "35a18a2bf33d8e3e0d8459955b1f0ce525d4f28970f9af801fb27087bcf02ad7",
+    "train_cm.py": "fd3dbe7dc5e6c50ee5e884ce34e6f434aeb765059b9760c9b5cc8fb17a439717"
+  },
+  "official_commit": "815c7c060914f5b55db816c0ba3662b11d08552f",
+  "source_script_sha256": "ec3e35cd2829aee8adcacd07d0a622cd915b4cc670f8f800e6aaabc2018331fa",
+  "gpu_host_index": 1,
+  "gpu_uuid": "GPU-56b14af1-00dc-4542-e2d8-5bba1dd39049"
+}

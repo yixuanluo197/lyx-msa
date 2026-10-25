@@ -1,0 +1,17 @@
+{
+  "status": "completed",
+  "pid": 3635155,
+  "started_at": "2026-10-25T05:39:01.282490+00:00",
+  "gpu_host_index": 1,
+  "gpu_uuid": "GPU-56b14af1-00dc-4542-e2d8-5bba1dd39049",
+  "excluded_host_gpu": 4,
+  "full_forward_calls_planned": 0,
+  "masked_forward_calls_planned": 60,
+  "command": [
+    "bash",
+    "/data2/yb/paper/cmerc_reproduction_20261013/checkpoints/analysis/high_confidence_errors/official_checkpoint_analysis/run_ablation.sh"
+  ],
+  "completed_at": "2026-10-25T05:40:40.668887+00:00",
+  "masked_forward_calls_actual": 60,
+  "full_forward_calls_actual": 0
+}

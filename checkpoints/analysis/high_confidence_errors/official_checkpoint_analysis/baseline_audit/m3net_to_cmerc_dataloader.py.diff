@@ -1,0 +1,76 @@
+--- M3NET/dataloader.py
++++ CMERC/dataloader.py
+@@ -6,19 +6,34 @@
+ import numpy
+ class IEMOCAPDataset(Dataset):
+ 
+-    def __init__(self, train=True):
++    def __init__(self, train=True, epoch_ratio=-1):
+         self.videoIDs, self.videoSpeakers, self.videoLabels, self.videoText,\
+         self.videoAudio, self.videoVisual, self.videoSentence, self.trainVid,\
+-        self.testVid = pickle.load(open('./IEMOCAP_features/IEMOCAP_features.pkl', 'rb'), encoding='latin1')
++        self.testVid = pickle.load(open('data/IEMOCAP_features.pkl', 'rb'), encoding='latin1')
+ 
+         _, _, self.roberta1, self.roberta2, self.roberta3, self.roberta4,\
+-        _, _, _, _ = pickle.load(open('./IEMOCAP_features/iemocap_features_roberta.pkl', 'rb'), encoding='latin1')
++        _, _, _, _ = pickle.load(open('data/iemocap_features_roberta.pkl', 'rb'), encoding='latin1')
+         '''
+         label index mapping = {'hap':0, 'sad':1, 'neu':2, 'ang':3, 'exc':4, 'fru':5}
+         '''
+         self.keys = [x for x in (self.trainVid if train else self.testVid)]
+ 
+         self.len = len(self.keys)
++
++        if epoch_ratio != -1:
++            assert epoch_ratio > 0 and epoch_ratio <= 1
++            self.diff = pickle.load(open('caldiff/IEMOCAP_diff.pkl', 'rb'))
++            sorted_diff = [item[0] for item in sorted(self.diff.items(), key=lambda x: x[1])]
++            # sorted_diff.reverse()
++            sorted_diff = sorted_diff[:int(epoch_ratio*len(sorted_diff))]
++
++            #### align to origin order            
++            keysdict = {item:item_index for item_index, item in enumerate(self.keys)}
++            sorted_diff = {item:keysdict[item]  for item in sorted_diff}
++            sorted_diff = [item[0] for item in sorted(sorted_diff.items(), key=lambda x: x[1])]
++
++            self.keys = sorted_diff
++            self.len = len(self.keys)
+ 
+     def __getitem__(self, index):
+         vid = self.keys[index]
+@@ -43,18 +58,33 @@
+ 
+ class MELDDataset(Dataset):
+ 
+-    def __init__(self, path, train=True):
++    def __init__(self, path, train=True, epoch_ratio=-1):
+         self.videoIDs, self.videoSpeakers, self.videoLabels, self.videoText,\
+         self.videoAudio, self.videoVisual, self.videoSentence, self.trainVid,\
+         self.testVid, _ = pickle.load(open(path, 'rb'))
+ 
+         _, _, _, self.roberta1, self.roberta2, self.roberta3, self.roberta4, \
+             _, self.trainIds, self.testIds, self.validIds \
+-            = pickle.load(open("./MELD_features/meld_features_roberta.pkl", 'rb'), encoding='latin1')
++            = pickle.load(open("data/meld_features_roberta.pkl", 'rb'), encoding='latin1')
+ 
+         self.keys = [x for x in (self.trainVid if train else self.testVid)]
+ 
+         self.len = len(self.keys)
++        if epoch_ratio != -1:
++            assert epoch_ratio > 0 and epoch_ratio <= 1
++            self.diff = pickle.load(open('caldiff/MELD_diff.pkl', 'rb'))
++            sorted_diff = [item[0] for item in sorted(self.diff.items(), key=lambda x: x[1])]
++            # sorted_diff.reverse()
++            sorted_diff = sorted_diff[:int(epoch_ratio*len(sorted_diff))]
++
++            #### align to origin order            
++            keysdict = {item:item_index for item_index, item in enumerate(self.keys)}
++            sorted_diff = {item:keysdict[item]  for item in sorted_diff}
++            sorted_diff = [item[0] for item in sorted(sorted_diff.items(), key=lambda x: x[1])]
++
++            self.keys = sorted_diff
++            self.len = len(self.keys)
++
+ 
+     def __getitem__(self, index):
+         vid = self.keys[index]

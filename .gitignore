@@ -34,6 +34,14 @@
 !/checkpoints/analysis/official_checkpoint_verification/code_runtime/caldiff/IEMOCAP_diff.pkl
 !/checkpoints/analysis/official_checkpoint_verification/code_runtime/caldiff/MELD_diff.pkl
 
+# Fixed official-checkpoint modality-removal prediction arrays
+!/checkpoints/analysis/high_confidence_errors/official_checkpoint_analysis/IEMOCAP/inference/without_audio/IEMOCAP_predictions.npz
+!/checkpoints/analysis/high_confidence_errors/official_checkpoint_analysis/IEMOCAP/inference/without_text/IEMOCAP_predictions.npz
+!/checkpoints/analysis/high_confidence_errors/official_checkpoint_analysis/IEMOCAP/inference/without_visual/IEMOCAP_predictions.npz
+!/checkpoints/analysis/high_confidence_errors/official_checkpoint_analysis/MELD/inference/without_audio/MELD_predictions.npz
+!/checkpoints/analysis/high_confidence_errors/official_checkpoint_analysis/MELD/inference/without_text/MELD_predictions.npz
+!/checkpoints/analysis/high_confidence_errors/official_checkpoint_analysis/MELD/inference/without_visual/MELD_predictions.npz
+
 # Python caches and local environments
 *.pyc
 __pycache__/

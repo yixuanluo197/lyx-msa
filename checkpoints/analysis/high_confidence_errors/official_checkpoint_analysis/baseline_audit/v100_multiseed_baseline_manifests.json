@@ -1,0 +1,202 @@
+[
+  {
+    "path": "experiment_records/03_v100_multiseed/runs/multiseed_validation_v2/baseline/IEMOCAP_validation_seed67137/run_manifest.json",
+    "args": {
+      "Dataset": "IEMOCAP",
+      "seed": 67137,
+      "calibrate": false,
+      "contrastlearning": false,
+      "courselearning": false,
+      "selection_protocol": "validation",
+      "rnn_backend": "aten",
+      "batch_policy": "capacity_safe",
+      "batch_size": 16
+    },
+    "data": {
+      "data/IEMOCAP_features.pkl": "ceb5cc9a45d1792998438e27f86a12642320aa6315546e4425316140ea503fb3",
+      "data/iemocap_features_roberta.pkl": "4bd60c581a5b7c70e217e18439f741b191605fbd6f2cf4dc1a6dcb7fcaa18f06"
+    },
+    "split_hash": "d1ae10a27d20d9ee0bf81b9c884073d037a4362e2ba8b9f3f6720902d2502d62",
+    "source_base_commit": "91a1bffa763d57015896dee1014f0d11c5d09029"
+  },
+  {
+    "path": "experiment_records/03_v100_multiseed/runs/multiseed_validation_v2/baseline/MELD_validation_seed2024/run_manifest.json",
+    "args": {
+      "Dataset": "MELD",
+      "seed": 2024,
+      "calibrate": false,
+      "contrastlearning": false,
+      "courselearning": false,
+      "selection_protocol": "validation",
+      "rnn_backend": "aten",
+      "batch_policy": "capacity_safe",
+      "batch_size": 16
+    },
+    "data": {
+      "data/MELD_features_raw1.pkl": "d043b3ec1813c8917e2067af01e933ff0892d33d19d93595098aaf88c4b200b0",
+      "data/meld_features_roberta.pkl": "58b2bdadc2eaec6abb40ac0cb3ffa3f31e929d636ece8197aecf1ca373a92951"
+    },
+    "split_hash": "5317189c62939f28801eadf558763bd901cae04544ae829ebd45d1dd057055b8",
+    "source_base_commit": "91a1bffa763d57015896dee1014f0d11c5d09029"
+  },
+  {
+    "path": "experiment_records/03_v100_multiseed/runs/multiseed_validation_v2/baseline/IEMOCAP_validation_seed3407/run_manifest.json",
+    "args": {
+      "Dataset": "IEMOCAP",
+      "seed": 3407,
+      "calibrate": false,
+      "contrastlearning": false,
+      "courselearning": false,
+      "selection_protocol": "validation",
+      "rnn_backend": "aten",
+      "batch_policy": "capacity_safe",
+      "batch_size": 16
+    },
+    "data": {
+      "data/IEMOCAP_features.pkl": "ceb5cc9a45d1792998438e27f86a12642320aa6315546e4425316140ea503fb3",
+      "data/iemocap_features_roberta.pkl": "4bd60c581a5b7c70e217e18439f741b191605fbd6f2cf4dc1a6dcb7fcaa18f06"
+    },
+    "split_hash": "d1ae10a27d20d9ee0bf81b9c884073d037a4362e2ba8b9f3f6720902d2502d62",
+    "source_base_commit": "91a1bffa763d57015896dee1014f0d11c5d09029"
+  },
+  {
+    "path": "experiment_records/03_v100_multiseed/runs/multiseed_validation_v2/baseline/MELD_validation_seed42/run_manifest.json",
+    "args": {
+      "Dataset": "MELD",
+      "seed": 42,
+      "calibrate": false,
+      "contrastlearning": false,
+      "courselearning": false,
+      "selection_protocol": "validation",
+      "rnn_backend": "aten",
+      "batch_policy": "capacity_safe",
+      "batch_size": 16
+    },
+    "data": {
+      "data/MELD_features_raw1.pkl": "d043b3ec1813c8917e2067af01e933ff0892d33d19d93595098aaf88c4b200b0",
+      "data/meld_features_roberta.pkl": "58b2bdadc2eaec6abb40ac0cb3ffa3f31e929d636ece8197aecf1ca373a92951"
+    },
+    "split_hash": "5317189c62939f28801eadf558763bd901cae04544ae829ebd45d1dd057055b8",
+    "source_base_commit": "91a1bffa763d57015896dee1014f0d11c5d09029"
+  },
+  {
+    "path": "experiment_records/03_v100_multiseed/runs/multiseed_validation_v2/baseline/IEMOCAP_validation_seed1475/run_manifest.json",
+    "args": {
+      "Dataset": "IEMOCAP",
+      "seed": 1475,
+      "calibrate": false,
+      "contrastlearning": false,
+      "courselearning": false,
+      "selection_protocol": "validation",
+      "rnn_backend": "aten",
+      "batch_policy": "capacity_safe",
+      "batch_size": 16
+    },
+    "data": {
+      "data/IEMOCAP_features.pkl": "ceb5cc9a45d1792998438e27f86a12642320aa6315546e4425316140ea503fb3",
+      "data/iemocap_features_roberta.pkl": "4bd60c581a5b7c70e217e18439f741b191605fbd6f2cf4dc1a6dcb7fcaa18f06"
+    },
+    "split_hash": "d1ae10a27d20d9ee0bf81b9c884073d037a4362e2ba8b9f3f6720902d2502d62",
+    "source_base_commit": "91a1bffa763d57015896dee1014f0d11c5d09029"
+  },
+  {
+    "path": "experiment_records/03_v100_multiseed/runs/multiseed_validation_v2/baseline/IEMOCAP_validation_seed2024/run_manifest.json",
+    "args": {
+      "Dataset": "IEMOCAP",
+      "seed": 2024,
+      "calibrate": false,
+      "contrastlearning": false,
+      "courselearning": false,
+      "selection_protocol": "validation",
+      "rnn_backend": "aten",
+      "batch_policy": "capacity_safe",
+      "batch_size": 16
+    },
+    "data": {
+      "data/IEMOCAP_features.pkl": "ceb5cc9a45d1792998438e27f86a12642320aa6315546e4425316140ea503fb3",
+      "data/iemocap_features_roberta.pkl": "4bd60c581a5b7c70e217e18439f741b191605fbd6f2cf4dc1a6dcb7fcaa18f06"
+    },
+    "split_hash": "d1ae10a27d20d9ee0bf81b9c884073d037a4362e2ba8b9f3f6720902d2502d62",
+    "source_base_commit": "91a1bffa763d57015896dee1014f0d11c5d09029"
+  },
+  {
+    "path": "experiment_records/03_v100_multiseed/runs/multiseed_validation_v2/baseline/MELD_validation_seed1475/run_manifest.json",
+    "args": {
+      "Dataset": "MELD",
+      "seed": 1475,
+      "calibrate": false,
+      "contrastlearning": false,
+      "courselearning": false,
+      "selection_protocol": "validation",
+      "rnn_backend": "aten",
+      "batch_policy": "capacity_safe",
+      "batch_size": 16
+    },
+    "data": {
+      "data/MELD_features_raw1.pkl": "d043b3ec1813c8917e2067af01e933ff0892d33d19d93595098aaf88c4b200b0",
+      "data/meld_features_roberta.pkl": "58b2bdadc2eaec6abb40ac0cb3ffa3f31e929d636ece8197aecf1ca373a92951"
+    },
+    "split_hash": "5317189c62939f28801eadf558763bd901cae04544ae829ebd45d1dd057055b8",
+    "source_base_commit": "91a1bffa763d57015896dee1014f0d11c5d09029"
+  },
+  {
+    "path": "experiment_records/03_v100_multiseed/runs/multiseed_validation_v2/baseline/MELD_validation_seed3407/run_manifest.json",
+    "args": {
+      "Dataset": "MELD",
+      "seed": 3407,
+      "calibrate": false,
+      "contrastlearning": false,
+      "courselearning": false,
+      "selection_protocol": "validation",
+      "rnn_backend": "aten",
+      "batch_policy": "capacity_safe",
+      "batch_size": 16
+    },
+    "data": {
+      "data/MELD_features_raw1.pkl": "d043b3ec1813c8917e2067af01e933ff0892d33d19d93595098aaf88c4b200b0",
+      "data/meld_features_roberta.pkl": "58b2bdadc2eaec6abb40ac0cb3ffa3f31e929d636ece8197aecf1ca373a92951"
+    },
+    "split_hash": "5317189c62939f28801eadf558763bd901cae04544ae829ebd45d1dd057055b8",
+    "source_base_commit": "91a1bffa763d57015896dee1014f0d11c5d09029"
+  },
+  {
+    "path": "experiment_records/03_v100_multiseed/runs/multiseed_validation_v2/baseline/MELD_validation_seed67137/run_manifest.json",
+    "args": {
+      "Dataset": "MELD",
+      "seed": 67137,
+      "calibrate": false,
+      "contrastlearning": false,
+      "courselearning": false,
+      "selection_protocol": "validation",
+      "rnn_backend": "aten",
+      "batch_policy": "capacity_safe",
+      "batch_size": 16
+    },
+    "data": {
+      "data/MELD_features_raw1.pkl": "d043b3ec1813c8917e2067af01e933ff0892d33d19d93595098aaf88c4b200b0",
+      "data/meld_features_roberta.pkl": "58b2bdadc2eaec6abb40ac0cb3ffa3f31e929d636ece8197aecf1ca373a92951"
+    },
+    "split_hash": "5317189c62939f28801eadf558763bd901cae04544ae829ebd45d1dd057055b8",
+    "source_base_commit": "91a1bffa763d57015896dee1014f0d11c5d09029"
+  },
+  {
+    "path": "experiment_records/03_v100_multiseed/runs/multiseed_validation_v2/baseline/IEMOCAP_validation_seed42/run_manifest.json",
+    "args": {
+      "Dataset": "IEMOCAP",
+      "seed": 42,
+      "calibrate": false,
+      "contrastlearning": false,
+      "courselearning": false,
+      "selection_protocol": "validation",
+      "rnn_backend": "aten",
+      "batch_policy": "capacity_safe",
+      "batch_size": 16
+    },
+    "data": {
+      "data/IEMOCAP_features.pkl": "ceb5cc9a45d1792998438e27f86a12642320aa6315546e4425316140ea503fb3",
+      "data/iemocap_features_roberta.pkl": "4bd60c581a5b7c70e217e18439f741b191605fbd6f2cf4dc1a6dcb7fcaa18f06"
+    },
+    "split_hash": "d1ae10a27d20d9ee0bf81b9c884073d037a4362e2ba8b9f3f6720902d2502d62",
+    "source_base_commit": "91a1bffa763d57015896dee1014f0d11c5d09029"
+  }
+]

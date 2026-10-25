@@ -1,0 +1,5 @@
+﻿dataset,model,input_condition,valid_samples,total_errors,mean_error_confidence,accuracy,weighted_f1,errors_ge_0p8,high_confidence_predictions_ge_0p8,high_confidence_error_rate_ge_0p8,errors_ge_0p9,high_confidence_predictions_ge_0p9,high_confidence_error_rate_ge_0p9,errors_ge_0p95,high_confidence_predictions_ge_0p95,high_confidence_error_rate_ge_0p95
+MELD,Official CMERC,full,2610,841,0.3826555418705688,0.6777777777777778,0.6684839220070871,0,2,0.0,0,0,,0,0,
+MELD,Official CMERC,w/o_text,2610,1296,0.33556409183600455,0.503448275862069,0.4355849959843695,0,0,,0,0,,0,0,
+MELD,Official CMERC,w/o_audio,2610,867,0.36735441652074263,0.667816091954023,0.6625648907844272,0,2,0.0,0,0,,0,0,
+MELD,Official CMERC,w/o_visual,2610,850,0.38103761587404333,0.6743295019157088,0.6651994656643283,0,2,0.0,0,0,,0,0,

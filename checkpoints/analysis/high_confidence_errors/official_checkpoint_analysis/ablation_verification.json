@@ -1,0 +1,84 @@
+{
+  "status": "passed",
+  "full_forward_calls": 0,
+  "masked_forward_calls": 60,
+  "optimizer_steps": 0,
+  "sample_alignment": "Exact per-row dataset/dialogue/index/source_id/text/true_label alignment with cached full predictions",
+  "mean_protocol": "torch.mean(feature, dim=0).repeat(time, 1, 1), includes padded zeros; official caldiff/cal_diff.py lines 241-247",
+  "unchanged_official_runtime": true,
+  "unchanged_checkpoint_and_input_files": true,
+  "datasets_and_conditions": [
+    {
+      "dataset": "IEMOCAP",
+      "input_condition": "w/o_text",
+      "valid_samples": 1623,
+      "masked_forward_calls": 2,
+      "gpu_host_index": 1,
+      "actual_gpu_uuids": [
+        "GPU-56b14af1-00dc-4542-e2d8-5bba1dd39049"
+      ],
+      "source_manifest_sha256": "3cc0247638d77660c3cf81eeacc0ae7d142cfd51073afc0de683bdbcbabdfe0f",
+      "all_checks_passed": true
+    },
+    {
+      "dataset": "IEMOCAP",
+      "input_condition": "w/o_audio",
+      "valid_samples": 1623,
+      "masked_forward_calls": 2,
+      "gpu_host_index": 1,
+      "actual_gpu_uuids": [
+        "GPU-56b14af1-00dc-4542-e2d8-5bba1dd39049"
+      ],
+      "source_manifest_sha256": "c08cc3602dab4a77b93700ff35ce8ab82d121f6e4771cf4967fc7da4c092a002",
+      "all_checks_passed": true
+    },
+    {
+      "dataset": "IEMOCAP",
+      "input_condition": "w/o_visual",
+      "valid_samples": 1623,
+      "masked_forward_calls": 2,
+      "gpu_host_index": 1,
+      "actual_gpu_uuids": [
+        "GPU-56b14af1-00dc-4542-e2d8-5bba1dd39049"
+      ],
+      "source_manifest_sha256": "35ac8cc9c8c5379fdfcc0e3d01bb3cc8e965a4f2298123395c00a278ecc9a52e",
+      "all_checks_passed": true
+    },
+    {
+      "dataset": "MELD",
+      "input_condition": "w/o_text",
+      "valid_samples": 2610,
+      "masked_forward_calls": 18,
+      "gpu_host_index": 1,
+      "actual_gpu_uuids": [
+        "GPU-56b14af1-00dc-4542-e2d8-5bba1dd39049"
+      ],
+      "source_manifest_sha256": "02cccebfbe73c4b36adcf85e2fce0ba9d800586335cde6be6aa5845d51159435",
+      "all_checks_passed": true
+    },
+    {
+      "dataset": "MELD",
+      "input_condition": "w/o_audio",
+      "valid_samples": 2610,
+      "masked_forward_calls": 18,
+      "gpu_host_index": 1,
+      "actual_gpu_uuids": [
+        "GPU-56b14af1-00dc-4542-e2d8-5bba1dd39049"
+      ],
+      "source_manifest_sha256": "4d016b82af87f02033d61c089fb79f98b048a14f4579dff73148d886a014a479",
+      "all_checks_passed": true
+    },
+    {
+      "dataset": "MELD",
+      "input_condition": "w/o_visual",
+      "valid_samples": 2610,
+      "masked_forward_calls": 18,
+      "gpu_host_index": 1,
+      "actual_gpu_uuids": [
+        "GPU-56b14af1-00dc-4542-e2d8-5bba1dd39049"
+      ],
+      "source_manifest_sha256": "5f5d6c5fa3534ad11ec038555227105bc3791ddaa088a9a1616188aa4b06301c",
+      "all_checks_passed": true
+    }
+  ]
+}

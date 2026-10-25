@@ -1,0 +1,1997 @@
+{
+  "status": "completed",
+  "dataset": "MELD",
+  "started_at": "2026-10-25T05:40:11.915798+00:00",
+  "completed_at": "2026-10-25T05:40:23.124126+00:00",
+  "host": "user22",
+  "pid": 3637419,
+  "python": "3.10.13",
+  "torch": "1.13.1+cu117",
+  "numpy": "1.26.4",
+  "sklearn": "1.3.2",
+  "cuda_runtime": "11.7",
+  "cudnn_version": 8500,
+  "cudnn_enabled": true,
+  "cudnn_deterministic": true,
+  "cuda_visible_devices": "1",
+  "gpu_name": "Tesla V100-SXM2-32GB",
+  "cuda_device_order": "PCI_BUS_ID",
+  "actual_gpu_uuids": [
+    "GPU-56b14af1-00dc-4542-e2d8-5bba1dd39049"
+  ],
+  "official_argv": [
+    "train.py",
+    "--base-model",
+    "GRU",
+    "--dropout",
+    "0.4",
+    "--lr",
+    "0.0001",
+    "--batch-size",
+    "16",
+    "--graph_type",
+    "hyper",
+    "--epochs",
+    "0",
+    "--graph_construct",
+    "direct",
+    "--multi_modal",
+    "--mm_fusion_mthd",
+    "concat_DHT",
+    "--modals",
+    "avl",
+    "--Dataset",
+    "MELD",
+    "--norm",
+    "BN",
+    "--testing",
+    "--num_L",
+    "3",
+    "--num_K",
+    "3"
+  ],
+  "effective_args": {
+    "no_cuda": false,
+    "base_model": "GRU",
+    "graph_model": true,
+    "nodal_attention": true,
+    "windowp": 10,
+    "windowf": 10,
+    "lr": 0.0001,
+    "l2": 3e-05,
+    "rec_dropout": 0.1,
+    "dropout": 0.4,
+    "batch_size": 16,
+    "epochs": 0,
+    "class_weight": true,
+    "active_listener": false,
+    "attention": "general",
+    "tensorboard": false,
+    "graph_type": "hyper",
+    "use_topic": false,
+    "alpha": 0.2,
+    "multiheads": 6,
+    "graph_construct": "direct",
+    "use_gcn": false,
+    "use_residue": false,
+    "multi_modal": true,
+    "mm_fusion_mthd": "concat_DHT",
+    "modals": "avl",
+    "av_using_lstm": false,
+    "Deep_GCN_nlayers": 4,
+    "Dataset": "MELD",
+    "use_speaker": true,
+    "use_modal": false,
+    "norm": "BN",
+    "testing": true,
+    "num_L": 3,
+    "num_K": 3,
+    "seed": 1475,
+    "cuda": true
+  },
+  "audit": {
+    "strict_load_calls": 1,
+    "forward_calls": 18,
+    "optimizer_steps": 0,
+    "masking_forward_calls": 18,
+    "batches": [
+      {
+        "dialogue_ids": [
+          "1153",
+          "1154",
+          "1155",
+          "1156",
+          "1157",
+          "1158",
+          "1159",
+          "1160",
+          "1161",
+          "1162",
+          "1163",
+          "1164",
+          "1165",
+          "1166",
+          "1167",
+          "1168"
+        ],
+        "lengths": [
+          3,
+          8,
+          11,
+          7,
+          9,
+          9,
+          3,
+          9,
+          7,
+          18,
+          4,
+          5,
+          20,
+          8,
+          11,
+          6
+        ],
+        "valid_utterances": 138,
+        "padded_time": 20,
+        "feature_shapes": [
+          [
+            20,
+            16,
+            1024
+          ],
+          [
+            20,
+            16,
+            1024
+          ],
+          [
+            20,
+            16,
+            1024
+          ],
+          [
+            20,
+            16,
+            1024
+          ],
+          [
+            20,
+            16,
+            342
+          ],
+          [
+            20,
+            16,
+            300
+          ],
+          [
+            20,
+            16,
+            9
+          ],
+          [
+            16,
+            20
+          ],
+          [
+            16,
+            20
+          ]
+        ],
+        "batch_size": 16,
+        "num_workers": 2
+      },
+      {
+        "dialogue_ids": [
+          "1169",
+          "1170",
+          "1171",
+          "1172",
+          "1173",
+          "1174",
+          "1175",
+          "1176",
+          "1177",
+          "1178",
+          "1179",
+          "1180",
+          "1181",
+          "1182",
+          "1183",
+          "1184"
+        ],
+        "lengths": [
+          10,
+          33,
+          3,
+          1,
+          8,
+          7,
+          22,
+          3,
+          4,
+          17,
+          1,
+          2,
+          17,
+          13,
+          6,
+          1
+        ],
+        "valid_utterances": 148,
+        "padded_time": 33,
+        "feature_shapes": [
+          [
+            33,
+            16,
+            1024
+          ],
+          [
+            33,
+            16,
+            1024
+          ],
+          [
+            33,
+            16,
+            1024
+          ],
+          [
+            33,
+            16,
+            1024
+          ],
+          [
+            33,
+            16,
+            342
+          ],
+          [
+            33,
+            16,
+            300
+          ],
+          [
+            33,
+            16,
+            9
+          ],
+          [
+            16,
+            33
+          ],
+          [
+            16,
+            33
+          ]
+        ],
+        "batch_size": 16,
+        "num_workers": 2
+      },
+      {
+        "dialogue_ids": [
+          "1185",
+          "1186",
+          "1187",
+          "1188",
+          "1189",
+          "1190",
+          "1191",
+          "1192",
+          "1193",
+          "1194",
+          "1195",
+          "1196",
+          "1197",
+          "1198",
+          "1199",
+          "1200"
+        ],
+        "lengths": [
+          13,
+          11,
+          19,
+          5,
+          2,
+          8,
+          5,
+          12,
+          2,
+          13,
+          9,
+          7,
+          4,
+          9,
+          9,
+          14
+        ],
+        "valid_utterances": 142,
+        "padded_time": 19,
+        "feature_shapes": [
+          [
+            19,
+            16,
+            1024
+          ],
+          [
+            19,
+            16,
+            1024
+          ],
+          [
+            19,
+            16,
+            1024
+          ],
+          [
+            19,
+            16,
+            1024
+          ],
+          [
+            19,
+            16,
+            342
+          ],
+          [
+            19,
+            16,
+            300
+          ],
+          [
+            19,
+            16,
+            9
+          ],
+          [
+            16,
+            19
+          ],
+          [
+            16,
+            19
+          ]
+        ],
+        "batch_size": 16,
+        "num_workers": 2
+      },
+      {
+        "dialogue_ids": [
+          "1201",
+          "1202",
+          "1203",
+          "1204",
+          "1205",
+          "1206",
+          "1207",
+          "1208",
+          "1209",
+          "1210",
+          "1211",
+          "1212",
+          "1213",
+          "1214",
+          "1215",
+          "1216"
+        ],
+        "lengths": [
+          7,
+          17,
+          4,
+          3,
+          12,
+          13,
+          12,
+          3,
+          12,
+          6,
+          17,
+          3,
+          7,
+          3,
+          2,
+          2
+        ],
+        "valid_utterances": 123,
+        "padded_time": 17,
+        "feature_shapes": [
+          [
+            17,
+            16,
+            1024
+          ],
+          [
+            17,
+            16,
+            1024
+          ],
+          [
+            17,
+            16,
+            1024
+          ],
+          [
+            17,
+            16,
+            1024
+          ],
+          [
+            17,
+            16,
+            342
+          ],
+          [
+            17,
+            16,
+            300
+          ],
+          [
+            17,
+            16,
+            9
+          ],
+          [
+            16,
+            17
+          ],
+          [
+            16,
+            17
+          ]
+        ],
+        "batch_size": 16,
+        "num_workers": 2
+      },
+      {
+        "dialogue_ids": [
+          "1217",
+          "1218",
+          "1219",
+          "1220",
+          "1221",
+          "1222",
+          "1223",
+          "1224",
+          "1225",
+          "1226",
+          "1227",
+          "1228",
+          "1229",
+          "1230",
+          "1231",
+          "1232"
+        ],
+        "lengths": [
+          17,
+          11,
+          5,
+          4,
+          15,
+          6,
+          23,
+          14,
+          17,
+          11,
+          5,
+          6,
+          19,
+          5,
+          10,
+          2
+        ],
+        "valid_utterances": 170,
+        "padded_time": 23,
+        "feature_shapes": [
+          [
+            23,
+            16,
+            1024
+          ],
+          [
+            23,
+            16,
+            1024
+          ],
+          [
+            23,
+            16,
+            1024
+          ],
+          [
+            23,
+            16,
+            1024
+          ],
+          [
+            23,
+            16,
+            342
+          ],
+          [
+            23,
+            16,
+            300
+          ],
+          [
+            23,
+            16,
+            9
+          ],
+          [
+            16,
+            23
+          ],
+          [
+            16,
+            23
+          ]
+        ],
+        "batch_size": 16,
+        "num_workers": 2
+      },
+      {
+        "dialogue_ids": [
+          "1233",
+          "1234",
+          "1235",
+          "1236",
+          "1237",
+          "1238",
+          "1239",
+          "1240",
+          "1241",
+          "1242",
+          "1243",
+          "1244",
+          "1245",
+          "1246",
+          "1247",
+          "1248"
+        ],
+        "lengths": [
+          10,
+          2,
+          1,
+          11,
+          3,
+          6,
+          8,
+          2,
+          14,
+          3,
+          6,
+          1,
+          6,
+          13,
+          3,
+          20
+        ],
+        "valid_utterances": 109,
+        "padded_time": 20,
+        "feature_shapes": [
+          [
+            20,
+            16,
+            1024
+          ],
+          [
+            20,
+            16,
+            1024
+          ],
+          [
+            20,
+            16,
+            1024
+          ],
+          [
+            20,
+            16,
+            1024
+          ],
+          [
+            20,
+            16,
+            342
+          ],
+          [
+            20,
+            16,
+            300
+          ],
+          [
+            20,
+            16,
+            9
+          ],
+          [
+            16,
+            20
+          ],
+          [
+            16,
+            20
+          ]
+        ],
+        "batch_size": 16,
+        "num_workers": 2
+      },
+      {
+        "dialogue_ids": [
+          "1249",
+          "1250",
+          "1251",
+          "1252",
+          "1253",
+          "1254",
+          "1255",
+          "1256",
+          "1257",
+          "1258",
+          "1259",
+          "1260",
+          "1261",
+          "1262",
+          "1263",
+          "1264"
+        ],
+        "lengths": [
+          21,
+          12,
+          12,
+          10,
+          20,
+          4,
+          10,
+          6,
+          3,
+          3,
+          4,
+          13,
+          8,
+          8,
+          9,
+          15
+        ],
+        "valid_utterances": 158,
+        "padded_time": 21,
+        "feature_shapes": [
+          [
+            21,
+            16,
+            1024
+          ],
+          [
+            21,
+            16,
+            1024
+          ],
+          [
+            21,
+            16,
+            1024
+          ],
+          [
+            21,
+            16,
+            1024
+          ],
+          [
+            21,
+            16,
+            342
+          ],
+          [
+            21,
+            16,
+            300
+          ],
+          [
+            21,
+            16,
+            9
+          ],
+          [
+            16,
+            21
+          ],
+          [
+            16,
+            21
+          ]
+        ],
+        "batch_size": 16,
+        "num_workers": 2
+      },
+      {
+        "dialogue_ids": [
+          "1265",
+          "1266",
+          "1267",
+          "1268",
+          "1269",
+          "1270",
+          "1271",
+          "1272",
+          "1273",
+          "1274",
+          "1275",
+          "1276",
+          "1277",
+          "1278",
+          "1279",
+          "1280"
+        ],
+        "lengths": [
+          22,
+          17,
+          6,
+          6,
+          12,
+          9,
+          12,
+          7,
+          19,
+          6,
+          5,
+          16,
+          15,
+          23,
+          16,
+          6
+        ],
+        "valid_utterances": 197,
+        "padded_time": 23,
+        "feature_shapes": [
+          [
+            23,
+            16,
+            1024
+          ],
+          [
+            23,
+            16,
+            1024
+          ],
+          [
+            23,
+            16,
+            1024
+          ],
+          [
+            23,
+            16,
+            1024
+          ],
+          [
+            23,
+            16,
+            342
+          ],
+          [
+            23,
+            16,
+            300
+          ],
+          [
+            23,
+            16,
+            9
+          ],
+          [
+            16,
+            23
+          ],
+          [
+            16,
+            23
+          ]
+        ],
+        "batch_size": 16,
+        "num_workers": 2
+      },
+      {
+        "dialogue_ids": [
+          "1281",
+          "1282",
+          "1283",
+          "1284",
+          "1285",
+          "1286",
+          "1287",
+          "1288",
+          "1289",
+          "1290",
+          "1291",
+          "1292",
+          "1293",
+          "1294",
+          "1295",
+          "1296"
+        ],
+        "lengths": [
+          10,
+          8,
+          18,
+          9,
+          20,
+          16,
+          4,
+          6,
+          1,
+          15,
+          4,
+          10,
+          17,
+          5,
+          2,
+          9
+        ],
+        "valid_utterances": 154,
+        "padded_time": 20,
+        "feature_shapes": [
+          [
+            20,
+            16,
+            1024
+          ],
+          [
+            20,
+            16,
+            1024
+          ],
+          [
+            20,
+            16,
+            1024
+          ],
+          [
+            20,
+            16,
+            1024
+          ],
+          [
+            20,
+            16,
+            342
+          ],
+          [
+            20,
+            16,
+            300
+          ],
+          [
+            20,
+            16,
+            9
+          ],
+          [
+            16,
+            20
+          ],
+          [
+            16,
+            20
+          ]
+        ],
+        "batch_size": 16,
+        "num_workers": 2
+      },
+      {
+        "dialogue_ids": [
+          "1297",
+          "1298",
+          "1299",
+          "1300",
+          "1301",
+          "1302",
+          "1303",
+          "1304",
+          "1305",
+          "1306",
+          "1307",
+          "1308",
+          "1309",
+          "1310",
+          "1311",
+          "1312"
+        ],
+        "lengths": [
+          15,
+          13,
+          7,
+          11,
+          1,
+          3,
+          6,
+          4,
+          5,
+          12,
+          21,
+          9,
+          16,
+          8,
+          7,
+          2
+        ],
+        "valid_utterances": 140,
+        "padded_time": 21,
+        "feature_shapes": [
+          [
+            21,
+            16,
+            1024
+          ],
+          [
+            21,
+            16,
+            1024
+          ],
+          [
+            21,
+            16,
+            1024
+          ],
+          [
+            21,
+            16,
+            1024
+          ],
+          [
+            21,
+            16,
+            342
+          ],
+          [
+            21,
+            16,
+            300
+          ],
+          [
+            21,
+            16,
+            9
+          ],
+          [
+            16,
+            21
+          ],
+          [
+            16,
+            21
+          ]
+        ],
+        "batch_size": 16,
+        "num_workers": 2
+      },
+      {
+        "dialogue_ids": [
+          "1313",
+          "1314",
+          "1315",
+          "1316",
+          "1317",
+          "1318",
+          "1319",
+          "1320",
+          "1321",
+          "1322",
+          "1323",
+          "1324",
+          "1325",
+          "1326",
+          "1327",
+          "1328"
+        ],
+        "lengths": [
+          14,
+          12,
+          6,
+          10,
+          9,
+          5,
+          14,
+          17,
+          19,
+          23,
+          5,
+          9,
+          3,
+          19,
+          19,
+          23
+        ],
+        "valid_utterances": 207,
+        "padded_time": 23,
+        "feature_shapes": [
+          [
+            23,
+            16,
+            1024
+          ],
+          [
+            23,
+            16,
+            1024
+          ],
+          [
+            23,
+            16,
+            1024
+          ],
+          [
+            23,
+            16,
+            1024
+          ],
+          [
+            23,
+            16,
+            342
+          ],
+          [
+            23,
+            16,
+            300
+          ],
+          [
+            23,
+            16,
+            9
+          ],
+          [
+            16,
+            23
+          ],
+          [
+            16,
+            23
+          ]
+        ],
+        "batch_size": 16,
+        "num_workers": 2
+      },
+      {
+        "dialogue_ids": [
+          "1329",
+          "1330",
+          "1331",
+          "1332",
+          "1333",
+          "1334",
+          "1335",
+          "1336",
+          "1337",
+          "1338",
+          "1339",
+          "1340",
+          "1341",
+          "1342",
+          "1343",
+          "1344"
+        ],
+        "lengths": [
+          2,
+          3,
+          10,
+          4,
+          10,
+          6,
+          10,
+          9,
+          15,
+          8,
+          4,
+          9,
+          9,
+          10,
+          5,
+          10
+        ],
+        "valid_utterances": 124,
+        "padded_time": 15,
+        "feature_shapes": [
+          [
+            15,
+            16,
+            1024
+          ],
+          [
+            15,
+            16,
+            1024
+          ],
+          [
+            15,
+            16,
+            1024
+          ],
+          [
+            15,
+            16,
+            1024
+          ],
+          [
+            15,
+            16,
+            342
+          ],
+          [
+            15,
+            16,
+            300
+          ],
+          [
+            15,
+            16,
+            9
+          ],
+          [
+            16,
+            15
+          ],
+          [
+            16,
+            15
+          ]
+        ],
+        "batch_size": 16,
+        "num_workers": 2
+      },
+      {
+        "dialogue_ids": [
+          "1345",
+          "1346",
+          "1347",
+          "1348",
+          "1349",
+          "1350",
+          "1351",
+          "1352",
+          "1353",
+          "1354",
+          "1355",
+          "1356",
+          "1357",
+          "1358",
+          "1359",
+          "1360"
+        ],
+        "lengths": [
+          12,
+          5,
+          5,
+          12,
+          18,
+          5,
+          13,
+          16,
+          5,
+          12,
+          8,
+          13,
+          10,
+          8,
+          5,
+          2
+        ],
+        "valid_utterances": 149,
+        "padded_time": 18,
+        "feature_shapes": [
+          [
+            18,
+            16,
+            1024
+          ],
+          [
+            18,
+            16,
+            1024
+          ],
+          [
+            18,
+            16,
+            1024
+          ],
+          [
+            18,
+            16,
+            1024
+          ],
+          [
+            18,
+            16,
+            342
+          ],
+          [
+            18,
+            16,
+            300
+          ],
+          [
+            18,
+            16,
+            9
+          ],
+          [
+            16,
+            18
+          ],
+          [
+            16,
+            18
+          ]
+        ],
+        "batch_size": 16,
+        "num_workers": 2
+      },
+      {
+        "dialogue_ids": [
+          "1361",
+          "1362",
+          "1363",
+          "1364",
+          "1365",
+          "1366",
+          "1367",
+          "1368",
+          "1369",
+          "1370",
+          "1371",
+          "1372",
+          "1373",
+          "1374",
+          "1375",
+          "1376"
+        ],
+        "lengths": [
+          14,
+          2,
+          10,
+          8,
+          7,
+          12,
+          8,
+          11,
+          4,
+          12,
+          3,
+          2,
+          2,
+          5,
+          14,
+          7
+        ],
+        "valid_utterances": 121,
+        "padded_time": 14,
+        "feature_shapes": [
+          [
+            14,
+            16,
+            1024
+          ],
+          [
+            14,
+            16,
+            1024
+          ],
+          [
+            14,
+            16,
+            1024
+          ],
+          [
+            14,
+            16,
+            1024
+          ],
+          [
+            14,
+            16,
+            342
+          ],
+          [
+            14,
+            16,
+            300
+          ],
+          [
+            14,
+            16,
+            9
+          ],
+          [
+            16,
+            14
+          ],
+          [
+            16,
+            14
+          ]
+        ],
+        "batch_size": 16,
+        "num_workers": 2
+      },
+      {
+        "dialogue_ids": [
+          "1377",
+          "1378",
+          "1379",
+          "1380",
+          "1381",
+          "1382",
+          "1383",
+          "1384",
+          "1385",
+          "1386",
+          "1387",
+          "1388",
+          "1389",
+          "1390",
+          "1391",
+          "1392"
+        ],
+        "lengths": [
+          9,
+          6,
+          9,
+          4,
+          13,
+          11,
+          9,
+          14,
+          10,
+          14,
+          15,
+          1,
+          1,
+          12,
+          5,
+          12
+        ],
+        "valid_utterances": 145,
+        "padded_time": 15,
+        "feature_shapes": [
+          [
+            15,
+            16,
+            1024
+          ],
+          [
+            15,
+            16,
+            1024
+          ],
+          [
+            15,
+            16,
+            1024
+          ],
+          [
+            15,
+            16,
+            1024
+          ],
+          [
+            15,
+            16,
+            342
+          ],
+          [
+            15,
+            16,
+            300
+          ],
+          [
+            15,
+            16,
+            9
+          ],
+          [
+            16,
+            15
+          ],
+          [
+            16,
+            15
+          ]
+        ],
+        "batch_size": 16,
+        "num_workers": 2
+      },
+      {
+        "dialogue_ids": [
+          "1393",
+          "1394",
+          "1395",
+          "1396",
+          "1397",
+          "1398",
+          "1399",
+          "1400",
+          "1401",
+          "1402",
+          "1403",
+          "1404",
+          "1405",
+          "1406",
+          "1407",
+          "1408"
+        ],
+        "lengths": [
+          17,
+          15,
+          8,
+          6,
+          22,
+          5,
+          14,
+          5,
+          1,
+          8,
+          9,
+          5,
+          19,
+          13,
+          18,
+          9
+        ],
+        "valid_utterances": 174,
+        "padded_time": 22,
+        "feature_shapes": [
+          [
+            22,
+            16,
+            1024
+          ],
+          [
+            22,
+            16,
+            1024
+          ],
+          [
+            22,
+            16,
+            1024
+          ],
+          [
+            22,
+            16,
+            1024
+          ],
+          [
+            22,
+            16,
+            342
+          ],
+          [
+            22,
+            16,
+            300
+          ],
+          [
+            22,
+            16,
+            9
+          ],
+          [
+            16,
+            22
+          ],
+          [
+            16,
+            22
+          ]
+        ],
+        "batch_size": 16,
+        "num_workers": 2
+      },
+      {
+        "dialogue_ids": [
+          "1409",
+          "1410",
+          "1411",
+          "1412",
+          "1413",
+          "1414",
+          "1415",
+          "1416",
+          "1417",
+          "1418",
+          "1419",
+          "1420",
+          "1421",
+          "1422",
+          "1423",
+          "1424"
+        ],
+        "lengths": [
+          2,
+          5,
+          13,
+          16,
+          11,
+          9,
+          17,
+          10,
+          4,
+          2,
+          17,
+          11,
+          14,
+          5,
+          15,
+          6
+        ],
+        "valid_utterances": 157,
+        "padded_time": 17,
+        "feature_shapes": [
+          [
+            17,
+            16,
+            1024
+          ],
+          [
+            17,
+            16,
+            1024
+          ],
+          [
+            17,
+            16,
+            1024
+          ],
+          [
+            17,
+            16,
+            1024
+          ],
+          [
+            17,
+            16,
+            342
+          ],
+          [
+            17,
+            16,
+            300
+          ],
+          [
+            17,
+            16,
+            9
+          ],
+          [
+            16,
+            17
+          ],
+          [
+            16,
+            17
+          ]
+        ],
+        "batch_size": 16,
+        "num_workers": 2
+      },
+      {
+        "dialogue_ids": [
+          "1425",
+          "1426",
+          "1427",
+          "1428",
+          "1429",
+          "1430",
+          "1431",
+          "1432"
+        ],
+        "lengths": [
+          6,
+          4,
+          5,
+          4,
+          1,
+          1,
+          17,
+          16
+        ],
+        "valid_utterances": 54,
+        "padded_time": 17,
+        "feature_shapes": [
+          [
+            17,
+            8,
+            1024
+          ],
+          [
+            17,
+            8,
+            1024
+          ],
+          [
+            17,
+            8,
+            1024
+          ],
+          [
+            17,
+            8,
+            1024
+          ],
+          [
+            17,
+            8,
+            342
+          ],
+          [
+            17,
+            8,
+            300
+          ],
+          [
+            17,
+            8,
+            9
+          ],
+          [
+            8,
+            17
+          ],
+          [
+            8,
+            17
+          ]
+        ],
+        "batch_size": 16,
+        "num_workers": 2
+      }
+    ],
+    "gradient_enabled_observations": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ],
+    "model_training_observations": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ],
+    "replacement_checks": [
+      {
+        "condition": "w/o_audio",
+        "mean_axis": 0,
+        "padding_included_in_mean": true,
+        "feature_shapes": [
+          [
+            20,
+            16,
+            300
+          ]
+        ],
+        "target_changed_elements": 54218,
+        "non_target_arguments_identical": true
+      },
+      {
+        "condition": "w/o_audio",
+        "mean_axis": 0,
+        "padding_included_in_mean": true,
+        "feature_shapes": [
+          [
+            33,
+            16,
+            300
+          ]
+        ],
+        "target_changed_elements": 88306,
+        "non_target_arguments_identical": true
+      },
+      {
+        "condition": "w/o_audio",
+        "mean_axis": 0,
+        "padding_included_in_mean": true,
+        "feature_shapes": [
+          [
+            19,
+            16,
+            300
+          ]
+        ],
+        "target_changed_elements": 51144,
+        "non_target_arguments_identical": true
+      },
+      {
+        "condition": "w/o_audio",
+        "mean_axis": 0,
+        "padding_included_in_mean": true,
+        "feature_shapes": [
+          [
+            17,
+            16,
+            300
+          ]
+        ],
+        "target_changed_elements": 45692,
+        "non_target_arguments_identical": true
+      },
+      {
+        "condition": "w/o_audio",
+        "mean_axis": 0,
+        "padding_included_in_mean": true,
+        "feature_shapes": [
+          [
+            23,
+            16,
+            300
+          ]
+        ],
+        "target_changed_elements": 62123,
+        "non_target_arguments_identical": true
+      },
+      {
+        "condition": "w/o_audio",
+        "mean_axis": 0,
+        "padding_included_in_mean": true,
+        "feature_shapes": [
+          [
+            20,
+            16,
+            300
+          ]
+        ],
+        "target_changed_elements": 53899,
+        "non_target_arguments_identical": true
+      },
+      {
+        "condition": "w/o_audio",
+        "mean_axis": 0,
+        "padding_included_in_mean": true,
+        "feature_shapes": [
+          [
+            21,
+            16,
+            300
+          ]
+        ],
+        "target_changed_elements": 56741,
+        "non_target_arguments_identical": true
+      },
+      {
+        "condition": "w/o_audio",
+        "mean_axis": 0,
+        "padding_included_in_mean": true,
+        "feature_shapes": [
+          [
+            23,
+            16,
+            300
+          ]
+        ],
+        "target_changed_elements": 62513,
+        "non_target_arguments_identical": true
+      },
+      {
+        "condition": "w/o_audio",
+        "mean_axis": 0,
+        "padding_included_in_mean": true,
+        "feature_shapes": [
+          [
+            20,
+            16,
+            300
+          ]
+        ],
+        "target_changed_elements": 54179,
+        "non_target_arguments_identical": true
+      },
+      {
+        "condition": "w/o_audio",
+        "mean_axis": 0,
+        "padding_included_in_mean": true,
+        "feature_shapes": [
+          [
+            21,
+            16,
+            300
+          ]
+        ],
+        "target_changed_elements": 56655,
+        "non_target_arguments_identical": true
+      },
+      {
+        "condition": "w/o_audio",
+        "mean_axis": 0,
+        "padding_included_in_mean": true,
+        "feature_shapes": [
+          [
+            23,
+            16,
+            300
+          ]
+        ],
+        "target_changed_elements": 62764,
+        "non_target_arguments_identical": true
+      },
+      {
+        "condition": "w/o_audio",
+        "mean_axis": 0,
+        "padding_included_in_mean": true,
+        "feature_shapes": [
+          [
+            15,
+            16,
+            300
+          ]
+        ],
+        "target_changed_elements": 40590,
+        "non_target_arguments_identical": true
+      },
+      {
+        "condition": "w/o_audio",
+        "mean_axis": 0,
+        "padding_included_in_mean": true,
+        "feature_shapes": [
+          [
+            18,
+            16,
+            300
+          ]
+        ],
+        "target_changed_elements": 48400,
+        "non_target_arguments_identical": true
+      },
+      {
+        "condition": "w/o_audio",
+        "mean_axis": 0,
+        "padding_included_in_mean": true,
+        "feature_shapes": [
+          [
+            14,
+            16,
+            300
+          ]
+        ],
+        "target_changed_elements": 37672,
+        "non_target_arguments_identical": true
+      },
+      {
+        "condition": "w/o_audio",
+        "mean_axis": 0,
+        "padding_included_in_mean": true,
+        "feature_shapes": [
+          [
+            15,
+            16,
+            300
+          ]
+        ],
+        "target_changed_elements": 40243,
+        "non_target_arguments_identical": true
+      },
+      {
+        "condition": "w/o_audio",
+        "mean_axis": 0,
+        "padding_included_in_mean": true,
+        "feature_shapes": [
+          [
+            22,
+            16,
+            300
+          ]
+        ],
+        "target_changed_elements": 59838,
+        "non_target_arguments_identical": true
+      },
+      {
+        "condition": "w/o_audio",
+        "mean_axis": 0,
+        "padding_included_in_mean": true,
+        "feature_shapes": [
+          [
+            17,
+            16,
+            300
+          ]
+        ],
+        "target_changed_elements": 45946,
+        "non_target_arguments_identical": true
+      },
+      {
+        "condition": "w/o_audio",
+        "mean_axis": 0,
+        "padding_included_in_mean": true,
+        "feature_shapes": [
+          [
+            17,
+            8,
+            300
+          ]
+        ],
+        "target_changed_elements": 22848,
+        "non_target_arguments_identical": true
+      }
+    ]
+  },
+  "model_state_unchanged": true,
+  "all_parameter_grads_none": true,
+  "original_inputs_unchanged": true,
+  "observer_line": 207,
+  "official_rounded_accuracy": 66.78,
+  "official_rounded_weighted_f1": 66.26,
+  "classification_metrics": {
+    "dataset": "MELD",
+    "model": "Official CMERC",
+    "accuracy": 66.7816091954023,
+    "weighted_f1": 66.25648907844271,
+    "macro_f1": 50.54225808194145,
+    "valid_samples": 2610,
+    "paper_weighted_f1": 66.85,
+    "class_names": [
+      "neutral",
+      "surprise",
+      "fear",
+      "sadness",
+      "joy",
+      "disgust",
+      "anger"
+    ],
+    "gap_percentage_points": -0.5935109215572822,
+    "within_0p5_points": false
+  },
+  "training": false,
+  "new_calibration_diagnostics": false,
+  "modality_removal": true,
+  "input_condition": "w/o_audio",
+  "full_forward_calls": 0,
+  "source_prediction_sha256": "499bdb4986a5c212b211c7b02188b475f071343f0f5b50fbe9249af63f5bfe37",
+  "reference_artifacts_unchanged": true,
+  "runtime_sha256": {
+    "HypergraphConv.py": "9297a572e1763a74c7984eb75dfb15fa8143bf131a44cf50433c307ef7f3b5d2",
+    "README.md": "5b02de406be3b0ec68f2ea3de65f3fc2a1b059cb091c98b1b02f15d9a8f4000b",
+    "caldiff/IEMOCAP_diff.pkl": "db4c7b96f169948a3615a62b29d2a793bd64cccd8a0387b1de9d7ceab348a150",
+    "caldiff/MELD_diff.pkl": "db005ceb0e4847caffc8571eaa94ab7c5b4a310abd615b12c995c9a22ff060e0",
+    "caldiff/cal_diff.py": "89ac07031971eea8675ec78c888bb350ecf9e6483a110c3762b8e9d329e228a5",
+    "clloss.py": "2f5afd557d451bc2599ffd725f1f56c0ec8723a1a718527ca814de526e885066",
+    "dataloader.py": "7ff80e8e2de73aa228effb4df56a5168c05068e8fa585a06d2e8b813e2aa4f95",
+    "high_fre_conv.py": "f4414c019ca7f656a662698bb9615bf15ac6325a73caa06ff487e158f58f39df",
+    "model.py": "ee84329b800e37a8ac652b58aa6f0fc3dee47cb2cf38feda14f5c0de26ec9a82",
+    "model_GCN.py": "830d401ff3e4b30298199b927a0bad3a9056400429506abcc2d66a7db8b76f9f",
+    "model_cm.py": "f08a6673649029ca0889b89dcc1ce47cb8a88126e023d46ee1cb874f6945a216",
+    "model_hyper.py": "af6493cb63443b4ceaba5de0fece86db7e029c62d6f6fca931ba64b6ac5a1d86",
+    "train.py": "35a18a2bf33d8e3e0d8459955b1f0ce525d4f28970f9af801fb27087bcf02ad7",
+    "train_cm.py": "fd3dbe7dc5e6c50ee5e884ce34e6f434aeb765059b9760c9b5cc8fb17a439717"
+  },
+  "official_commit": "815c7c060914f5b55db816c0ba3662b11d08552f",
+  "source_script_sha256": "ec3e35cd2829aee8adcacd07d0a622cd915b4cc670f8f800e6aaabc2018331fa",
+  "gpu_host_index": 1,
+  "gpu_uuid": "GPU-56b14af1-00dc-4542-e2d8-5bba1dd39049"
+}

@@ -1,0 +1,321 @@
+{
+  "status": "passed",
+  "verified_at": "2026-10-25T05:45:12.164180+00:00",
+  "independent_method": "Independent NumPy calculations directly from official raw CSV/NPZ and trusted test pickles; no diagnostic statistic generator called; CPU-only synthetic modality replacement; no GPU or inference executed",
+  "check_count": 833,
+  "preserved_file_count": 156,
+  "full_forward_calls": 0,
+  "masked_forward_calls": 60,
+  "source_script_sha256": "ec3e35cd2829aee8adcacd07d0a622cd915b4cc670f8f800e6aaabc2018331fa",
+  "evidence": {
+    "IEMOCAP": {
+      "metrics": {
+        "valid_utterances": 1623,
+        "total_errors": 456,
+        "accuracy": 0.7190388170055453,
+        "weighted_f1": 0.7198379358245155,
+        "macro_f1": 0.7137466315596619,
+        "mean_confidence": 0.8317072320996266,
+        "ece": 0.11266841509408139,
+        "mce": 0.1662918693090708,
+        "brier_score": 0.429447064697167,
+        "nll": 0.8690462521935721,
+        "mean_error_confidence": 0.7473806232532686,
+        "median_error_confidence": 0.7648955883698028,
+        "errors_ge_0p8": 200,
+        "high_confidence_predictions_ge_0p8": 1055,
+        "high_confidence_error_rate_ge_0p8": 0.1895734597156398,
+        "errors_ge_0p9": 128,
+        "high_confidence_predictions_ge_0p9": 796,
+        "high_confidence_error_rate_ge_0p9": 0.16080402010050251,
+        "errors_ge_0p95": 76,
+        "high_confidence_predictions_ge_0p95": 619,
+        "high_confidence_error_rate_ge_0p95": 0.12277867528271405
+      },
+      "calibration_bins": [
+        {
+          "count": 0,
+          "mean_confidence": null,
+          "accuracy": null,
+          "signed_gap": null
+        },
+        {
+          "count": 0,
+          "mean_confidence": null,
+          "accuracy": null,
+          "signed_gap": null
+        },
+        {
+          "count": 0,
+          "mean_confidence": null,
+          "accuracy": null,
+          "signed_gap": null
+        },
+        {
+          "count": 14,
+          "mean_confidence": 0.3619212270849668,
+          "accuracy": 0.35714285714285715,
+          "signed_gap": 0.004778369942109673
+        },
+        {
+          "count": 71,
+          "mean_confidence": 0.4535836023406897,
+          "accuracy": 0.4225352112676056,
+          "signed_gap": 0.031048391073084047
+        },
+        {
+          "count": 150,
+          "mean_confidence": 0.5497952490596948,
+          "accuracy": 0.54,
+          "signed_gap": 0.009795249059694755
+        },
+        {
+          "count": 157,
+          "mean_confidence": 0.6512381225351086,
+          "accuracy": 0.5923566878980892,
+          "signed_gap": 0.05888143463701945
+        },
+        {
+          "count": 176,
+          "mean_confidence": 0.7515191420363435,
+          "accuracy": 0.5852272727272727,
+          "signed_gap": 0.1662918693090708
+        },
+        {
+          "count": 259,
+          "mean_confidence": 0.8546825534463426,
+          "accuracy": 0.722007722007722,
+          "signed_gap": 0.13267483143862058
+        },
+        {
+          "count": 796,
+          "mean_confidence": 0.9726704545406408,
+          "accuracy": 0.8391959798994975,
+          "signed_gap": 0.13347447464114337
+        }
+      ],
+      "ablations": [
+        {
+          "condition": "w/o_text",
+          "metrics": {
+            "valid_samples": 1623,
+            "total_errors": 641,
+            "accuracy": 0.6050523721503389,
+            "mean_error_confidence": 0.7771243377448434,
+            "errors_ge_0p8": 325,
+            "high_confidence_predictions_ge_0p8": 931,
+            "high_confidence_error_rate_ge_0p8": 0.34908700322234154,
+            "errors_ge_0p9": 221,
+            "high_confidence_predictions_ge_0p9": 698,
+            "high_confidence_error_rate_ge_0p9": 0.3166189111747851,
+            "errors_ge_0p95": 165,
+            "high_confidence_predictions_ge_0p95": 548,
+            "high_confidence_error_rate_ge_0p95": 0.3010948905109489
+          },
+          "manifest_sha256": "3cc0247638d77660c3cf81eeacc0ae7d142cfd51073afc0de683bdbcbabdfe0f"
+        },
+        {
+          "condition": "w/o_audio",
+          "metrics": {
+            "valid_samples": 1623,
+            "total_errors": 537,
+            "accuracy": 0.6691312384473198,
+            "mean_error_confidence": 0.7319489081897487,
+            "errors_ge_0p8": 232,
+            "high_confidence_predictions_ge_0p8": 998,
+            "high_confidence_error_rate_ge_0p8": 0.23246492985971945,
+            "errors_ge_0p9": 145,
+            "high_confidence_predictions_ge_0p9": 719,
+            "high_confidence_error_rate_ge_0p9": 0.20166898470097358,
+            "errors_ge_0p95": 79,
+            "high_confidence_predictions_ge_0p95": 516,
+            "high_confidence_error_rate_ge_0p95": 0.15310077519379844
+          },
+          "manifest_sha256": "c08cc3602dab4a77b93700ff35ce8ab82d121f6e4771cf4967fc7da4c092a002"
+        },
+        {
+          "condition": "w/o_visual",
+          "metrics": {
+            "valid_samples": 1623,
+            "total_errors": 468,
+            "accuracy": 0.711645101663586,
+            "mean_error_confidence": 0.7339893583914429,
+            "errors_ge_0p8": 192,
+            "high_confidence_predictions_ge_0p8": 1035,
+            "high_confidence_error_rate_ge_0p8": 0.1855072463768116,
+            "errors_ge_0p9": 118,
+            "high_confidence_predictions_ge_0p9": 765,
+            "high_confidence_error_rate_ge_0p9": 0.1542483660130719,
+            "errors_ge_0p95": 69,
+            "high_confidence_predictions_ge_0p95": 587,
+            "high_confidence_error_rate_ge_0p95": 0.11754684838160136
+          },
+          "manifest_sha256": "35ac8cc9c8c5379fdfcc0e3d01bb3cc8e965a4f2298123395c00a278ecc9a52e"
+        }
+      ],
+      "raw_test_identity_verified": true,
+      "full_prediction_sha256": "f876f4423410cfc4025c0abb3a1b52e77c90c96a196699df01ee2dbd332372d8"
+    },
+    "MELD": {
+      "metrics": {
+        "valid_utterances": 2610,
+        "total_errors": 841,
+        "accuracy": 0.6777777777777778,
+        "weighted_f1": 0.6684839220070871,
+        "macro_f1": 0.5107702281920149,
+        "mean_confidence": 0.44960133810755354,
+        "ece": 0.22817643967022425,
+        "mce": 0.30095031798402583,
+        "brier_score": 0.5299212061914491,
+        "nll": 1.1407030700209955,
+        "mean_error_confidence": 0.38265554187056877,
+        "median_error_confidence": 0.36827820816966517,
+        "errors_ge_0p8": 0,
+        "high_confidence_predictions_ge_0p8": 2,
+        "high_confidence_error_rate_ge_0p8": 0.0,
+        "errors_ge_0p9": 0,
+        "high_confidence_predictions_ge_0p9": 0,
+        "high_confidence_error_rate_ge_0p9": null,
+        "errors_ge_0p95": 0,
+        "high_confidence_predictions_ge_0p95": 0,
+        "high_confidence_error_rate_ge_0p95": null
+      },
+      "calibration_bins": [
+        {
+          "count": 0,
+          "mean_confidence": null,
+          "accuracy": null,
+          "signed_gap": null
+        },
+        {
+          "count": 7,
+          "mean_confidence": 0.1928702718037613,
+          "accuracy": 0.2857142857142857,
+          "signed_gap": -0.09284401391052441
+        },
+        {
+          "count": 354,
+          "mean_confidence": 0.2618065207129077,
+          "accuracy": 0.4152542372881356,
+          "signed_gap": -0.15344771657522788
+        },
+        {
+          "count": 602,
+          "mean_confidence": 0.3493406509340764,
+          "accuracy": 0.5232558139534884,
+          "signed_gap": -0.173915163019412
+        },
+        {
+          "count": 670,
+          "mean_confidence": 0.4500156576991686,
+          "accuracy": 0.682089552238806,
+          "signed_gap": -0.23207389453963734
+        },
+        {
+          "count": 653,
+          "mean_confidence": 0.5474417187694198,
+          "accuracy": 0.8483920367534457,
+          "signed_gap": -0.30095031798402583
+        },
+        {
+          "count": 281,
+          "mean_confidence": 0.6365799897714365,
+          "accuracy": 0.896797153024911,
+          "signed_gap": -0.26021716325347455
+        },
+        {
+          "count": 41,
+          "mean_confidence": 0.7227366174152242,
+          "accuracy": 0.975609756097561,
+          "signed_gap": -0.25287313868233674
+        },
+        {
+          "count": 2,
+          "mean_confidence": 0.8128544543665434,
+          "accuracy": 1.0,
+          "signed_gap": -0.18714554563345664
+        },
+        {
+          "count": 0,
+          "mean_confidence": null,
+          "accuracy": null,
+          "signed_gap": null
+        }
+      ],
+      "ablations": [
+        {
+          "condition": "w/o_text",
+          "metrics": {
+            "valid_samples": 2610,
+            "total_errors": 1296,
+            "accuracy": 0.503448275862069,
+            "mean_error_confidence": 0.3355640918360049,
+            "errors_ge_0p8": 0,
+            "high_confidence_predictions_ge_0p8": 0,
+            "high_confidence_error_rate_ge_0p8": null,
+            "errors_ge_0p9": 0,
+            "high_confidence_predictions_ge_0p9": 0,
+            "high_confidence_error_rate_ge_0p9": null,
+            "errors_ge_0p95": 0,
+            "high_confidence_predictions_ge_0p95": 0,
+            "high_confidence_error_rate_ge_0p95": null
+          },
+          "manifest_sha256": "02cccebfbe73c4b36adcf85e2fce0ba9d800586335cde6be6aa5845d51159435"
+        },
+        {
+          "condition": "w/o_audio",
+          "metrics": {
+            "valid_samples": 2610,
+            "total_errors": 867,
+            "accuracy": 0.667816091954023,
+            "mean_error_confidence": 0.3673544165207422,
+            "errors_ge_0p8": 0,
+            "high_confidence_predictions_ge_0p8": 2,
+            "high_confidence_error_rate_ge_0p8": 0.0,
+            "errors_ge_0p9": 0,
+            "high_confidence_predictions_ge_0p9": 0,
+            "high_confidence_error_rate_ge_0p9": null,
+            "errors_ge_0p95": 0,
+            "high_confidence_predictions_ge_0p95": 0,
+            "high_confidence_error_rate_ge_0p95": null
+          },
+          "manifest_sha256": "4d016b82af87f02033d61c089fb79f98b048a14f4579dff73148d886a014a479"
+        },
+        {
+          "condition": "w/o_visual",
+          "metrics": {
+            "valid_samples": 2610,
+            "total_errors": 850,
+            "accuracy": 0.6743295019157088,
+            "mean_error_confidence": 0.38103761587404333,
+            "errors_ge_0p8": 0,
+            "high_confidence_predictions_ge_0p8": 2,
+            "high_confidence_error_rate_ge_0p8": 0.0,
+            "errors_ge_0p9": 0,
+            "high_confidence_predictions_ge_0p9": 0,
+            "high_confidence_error_rate_ge_0p9": null,
+            "errors_ge_0p95": 0,
+            "high_confidence_predictions_ge_0p95": 0,
+            "high_confidence_error_rate_ge_0p95": null
+          },
+          "manifest_sha256": "5f5d6c5fa3534ad11ec038555227105bc3791ddaa088a9a1616188aa4b06301c"
+        }
+      ],
+      "raw_test_identity_verified": true,
+      "full_prediction_sha256": "499bdb4986a5c212b211c7b02188b475f071343f0f5b50fbe9249af63f5bfe37"
+    }
+  },
+  "risks": [
+    "Official temporal means include padded zeros and depend on fixed batch composition; preserved exactly.",
+    "Original official training loop consults test metrics; author plain state_dict lacks epoch, seed and selection metadata.",
+    "Matched baseline eligibility and Word/Excel/chart rendering are independently audited by other task owners."
+  ],
+  "checks_summary": [
+    "All 156 prior artifacts retain SHA-256.",
+    "4233 cached full-input samples and 12699 masked samples match raw test IDs, labels, texts and valid ordering.",
+    "Eight raw CSV/NPZ pairs pass finite/range/sum/argmax/identity checks.",
+    "Independent threshold counts, class errors, error distributions, ECE/MCE/Brier/NLL, ablation summaries, paired predictions and transition tables match generated CSVs.",
+    "6 run manifests prove strict official weights load, same runtime/args/cuDNN, healthy V100 1, zero updates and zero new full forwards.",
+    "CPU synthetic replacement equals official padded temporal means and preserves non-target object identity."
+  ]
+}

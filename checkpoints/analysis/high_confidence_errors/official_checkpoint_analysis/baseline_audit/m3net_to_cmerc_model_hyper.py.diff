@@ -1,0 +1,68 @@
+--- M3NET/model_hyper.py
++++ CMERC/model_hyper.py
+@@ -124,7 +124,7 @@
+             setattr(self,'conv%d' %(kk+1), highConv(nhidden, nhidden))
+         #self.conv = highConv(nhidden, nhidden)
+ 
+-    def forward(self, a, v, l, dia_len, qmask, epoch):
++    def forward(self, a, v, l, dia_len, qmask, epoch, mask_context=None):
+         qmask = torch.cat([qmask[:x,i,:] for i,x in enumerate(dia_len)],dim=0)
+         spk_idx = torch.argmax(qmask, dim=-1)
+         spk_emb_vector = self.speaker_embeddings(spk_idx)
+@@ -164,7 +164,7 @@
+         #out1 = self.reverse_features(dia_len, out1)                                     
+ 
+         #---------------------------------------
+-        gnn_edge_index, gnn_features = self.create_gnn_index(a, v, l, dia_len, self.modals)
++        gnn_edge_index, gnn_features = self.create_gnn_index(a, v, l, dia_len, self.modals, mask_context, qmask)
+         gnn_out = x1
+         for kk in range(self.num_K):
+             gnn_out = gnn_out + getattr(self,'conv%d' %(kk+1))(gnn_out,gnn_edge_index)
+@@ -271,7 +271,7 @@
+         return features
+ 
+ 
+-    def create_gnn_index(self, a, v, l, dia_len, modals):
++    def create_gnn_index(self, a, v, l, dia_len, modals, mask_context=None, qmask=None):
+         self_loop = False
+         num_modality = len(modals)
+         node_count = 0
+@@ -305,6 +305,37 @@
+                 features =  torch.cat([features,features_temp],dim=0)
+                 temp = temp+i
+             node_count = node_count + i*num_modality
++        
++
++        if mask_context == 'intra':
++            ## To remove intra speaker edges
++            speaker_index = torch.nonzero(qmask)[:,1].tolist()
++            new_index = []
++            mask_index_count = 0
++            mask_node_count = 0
++            for cur_len in dia_len:
++                dia_speaker = speaker_index[mask_node_count:mask_node_count+cur_len] * 3
++                dia_speaker = {i+mask_node_count*3:dia_speaker[i] for i in range(len(dia_speaker))}
++                for cur_index in index[mask_index_count : mask_index_count + (cur_len -1) * cur_len * 3]:
++                    if dia_speaker[cur_index[0]] != dia_speaker[cur_index[1]]:
++                        new_index.append(cur_index)
++                mask_node_count += cur_len
++                mask_index_count = (mask_index_count + (cur_len -1) * cur_len * 3)
++            index = new_index
++        elif mask_context == 'inter':
++            speaker_index = torch.nonzero(qmask)[:,1].tolist()
++            new_index = []
++            mask_index_count = 0
++            mask_node_count = 0
++            for cur_len in dia_len:
++                dia_speaker = speaker_index[mask_node_count:mask_node_count+cur_len] * 3
++                dia_speaker = {i+mask_node_count*3:dia_speaker[i] for i in range(len(dia_speaker))}
++                for cur_index in index[mask_index_count : mask_index_count + (cur_len -1) * cur_len * 3]:
++                    if dia_speaker[cur_index[0]] == dia_speaker[cur_index[1]]:
++                        new_index.append(cur_index)
++                mask_node_count += cur_len
++                mask_index_count = (mask_index_count + (cur_len -1) * cur_len * 3)
++            index = new_index
++            
+         edge_index = torch.cat([torch.LongTensor(index).T,torch.LongTensor(tmp).T],1).cuda()
+-
+         return edge_index, features

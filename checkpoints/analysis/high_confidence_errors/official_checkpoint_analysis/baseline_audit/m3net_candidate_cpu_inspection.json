@@ -1,0 +1,667 @@
+{
+  "inspected_at_utc": "2026-10-25T05:46:48.653529+00:00",
+  "server": "biggpu",
+  "python_torch": "1.13.1+cu117",
+  "archive_path": "/data2/yb/paper/cmerc_reproduction_20261013/checkpoints/baseline_candidates/m3net_official_20261025/checkpoints.zip",
+  "archive_bytes": 78816511,
+  "archive_sha256": "92c887f02fba3e74843b2b292259aa295123e8d5e293e6eaa05dd869afa17cab",
+  "candidate_path": "/data2/yb/paper/cmerc_reproduction_20261013/checkpoints/baseline_candidates/m3net_official_20261025/Roberta_IEMOCAP3.pth.tar",
+  "candidate_bytes": 26271973,
+  "candidate_sha256": "fb939de1f88855fda46a9d491e5cce4400c88c7187f3b792bb40f61c4ed03faa",
+  "load_method": "torch.load(weights_only=True,map_location=cpu)",
+  "loaded_type": "OrderedDict",
+  "all_values_tensors": true,
+  "top_level_key_count": 85,
+  "top_level_keys": [
+    "normBNa.weight",
+    "normBNa.bias",
+    "normBNa.running_mean",
+    "normBNa.running_var",
+    "normBNa.num_batches_tracked",
+    "normBNb.weight",
+    "normBNb.bias",
+    "normBNb.running_mean",
+    "normBNb.running_var",
+    "normBNb.num_batches_tracked",
+    "normBNc.weight",
+    "normBNc.bias",
+    "normBNc.running_mean",
+    "normBNc.running_var",
+    "normBNc.num_batches_tracked",
+    "normBNd.weight",
+    "normBNd.bias",
+    "normBNd.running_mean",
+    "normBNd.running_var",
+    "normBNd.num_batches_tracked",
+    "normLNa.weight",
+    "normLNa.bias",
+    "normLNb.weight",
+    "normLNb.bias",
+    "normLNc.weight",
+    "normLNc.bias",
+    "normLNd.weight",
+    "normLNd.bias",
+    "linear_a.weight",
+    "linear_a.bias",
+    "linear_v.weight",
+    "linear_v.bias",
+    "linear_l.weight",
+    "linear_l.bias",
+    "gru_l.weight_ih_l0",
+    "gru_l.weight_hh_l0",
+    "gru_l.bias_ih_l0",
+    "gru_l.bias_hh_l0",
+    "gru_l.weight_ih_l0_reverse",
+    "gru_l.weight_hh_l0_reverse",
+    "gru_l.bias_ih_l0_reverse",
+    "gru_l.bias_hh_l0_reverse",
+    "gru_l.weight_ih_l1",
+    "gru_l.weight_hh_l1",
+    "gru_l.bias_ih_l1",
+    "gru_l.bias_hh_l1",
+    "gru_l.weight_ih_l1_reverse",
+    "gru_l.weight_hh_l1_reverse",
+    "gru_l.bias_ih_l1_reverse",
+    "gru_l.bias_hh_l1_reverse",
+    "graph_model.hyperedge_weight",
+    "graph_model.EW_weight",
+    "graph_model.hyperedge_attr1",
+    "graph_model.hyperedge_attr2",
+    "graph_model.modal_embeddings.weight",
+    "graph_model.speaker_embeddings.weight",
+    "graph_model.fc1.weight",
+    "graph_model.fc1.bias",
+    "graph_model.hyperconv1.weight",
+    "graph_model.hyperconv1.edgeweight",
+    "graph_model.hyperconv1.bias",
+    "graph_model.hyperconv1.edgefc.weight",
+    "graph_model.hyperconv1.edgefc.bias",
+    "graph_model.hyperconv2.weight",
+    "graph_model.hyperconv2.edgeweight",
+    "graph_model.hyperconv2.bias",
+    "graph_model.hyperconv2.edgefc.weight",
+    "graph_model.hyperconv2.edgefc.bias",
+    "graph_model.hyperconv3.weight",
+    "graph_model.hyperconv3.edgeweight",
+    "graph_model.hyperconv3.bias",
+    "graph_model.hyperconv3.edgefc.weight",
+    "graph_model.hyperconv3.edgefc.bias",
+    "graph_model.conv1.gate.weight",
+    "graph_model.conv1.gate.bias",
+    "graph_model.conv2.gate.weight",
+    "graph_model.conv2.gate.bias",
+    "graph_model.conv3.gate.weight",
+    "graph_model.conv3.gate.bias",
+    "graph_model.conv4.gate.weight",
+    "graph_model.conv4.gate.bias",
+    "hidfc.weight",
+    "hidfc.bias",
+    "smax_fc.weight",
+    "smax_fc.bias"
+  ],
+  "comparisons": {
+    "IEMOCAP": {
+      "reference_sha256": "f3098fed2734c18171c02a59d014ee27320d845bc1ad5dfa17162b8dcfb49925",
+      "reference_tensor_count": 85,
+      "missing_candidate_keys": [],
+      "extra_candidate_keys": [],
+      "shape_mismatch": {},
+      "equal_tensor_count": 23
+    },
+    "MELD": {
+      "reference_sha256": "1c72e29c173b749675885bdd4f477bd5d3702ab7cca7eb03cb145850bf0beba7",
+      "reference_tensor_count": 83,
+      "missing_candidate_keys": [],
+      "extra_candidate_keys": [
+        "graph_model.conv4.gate.bias",
+        "graph_model.conv4.gate.weight"
+      ],
+      "shape_mismatch": {
+        "gru_l.bias_hh_l0_reverse": {
+          "candidate": [
+            768
+          ],
+          "reference": [
+            1536
+          ]
+        },
+        "linear_l.weight": {
+          "candidate": [
+            512,
+            1024
+          ],
+          "reference": [
+            1024,
+            1024
+          ]
+        },
+        "linear_a.bias": {
+          "candidate": [
+            512
+          ],
+          "reference": [
+            1024
+          ]
+        },
+        "linear_a.weight": {
+          "candidate": [
+            512,
+            1582
+          ],
+          "reference": [
+            1024,
+            300
+          ]
+        },
+        "gru_l.bias_hh_l0": {
+          "candidate": [
+            768
+          ],
+          "reference": [
+            1536
+          ]
+        },
+        "gru_l.bias_hh_l1_reverse": {
+          "candidate": [
+            768
+          ],
+          "reference": [
+            1536
+          ]
+        },
+        "linear_v.bias": {
+          "candidate": [
+            512
+          ],
+          "reference": [
+            1024
+          ]
+        },
+        "gru_l.weight_ih_l1_reverse": {
+          "candidate": [
+            768,
+            512
+          ],
+          "reference": [
+            1536,
+            1024
+          ]
+        },
+        "graph_model.fc1.weight": {
+          "candidate": [
+            512,
+            512
+          ],
+          "reference": [
+            512,
+            1024
+          ]
+        },
+        "smax_fc.weight": {
+          "candidate": [
+            6,
+            3072
+          ],
+          "reference": [
+            7,
+            3072
+          ]
+        },
+        "gru_l.weight_ih_l0_reverse": {
+          "candidate": [
+            768,
+            512
+          ],
+          "reference": [
+            1536,
+            1024
+          ]
+        },
+        "gru_l.bias_hh_l1": {
+          "candidate": [
+            768
+          ],
+          "reference": [
+            1536
+          ]
+        },
+        "gru_l.weight_hh_l0_reverse": {
+          "candidate": [
+            768,
+            256
+          ],
+          "reference": [
+            1536,
+            512
+          ]
+        },
+        "gru_l.bias_ih_l1_reverse": {
+          "candidate": [
+            768
+          ],
+          "reference": [
+            1536
+          ]
+        },
+        "gru_l.weight_hh_l1_reverse": {
+          "candidate": [
+            768,
+            256
+          ],
+          "reference": [
+            1536,
+            512
+          ]
+        },
+        "gru_l.weight_hh_l1": {
+          "candidate": [
+            768,
+            256
+          ],
+          "reference": [
+            1536,
+            512
+          ]
+        },
+        "gru_l.weight_ih_l0": {
+          "candidate": [
+            768,
+            512
+          ],
+          "reference": [
+            1536,
+            1024
+          ]
+        },
+        "graph_model.modal_embeddings.weight": {
+          "candidate": [
+            3,
+            512
+          ],
+          "reference": [
+            3,
+            1024
+          ]
+        },
+        "smax_fc.bias": {
+          "candidate": [
+            6
+          ],
+          "reference": [
+            7
+          ]
+        },
+        "gru_l.bias_ih_l0_reverse": {
+          "candidate": [
+            768
+          ],
+          "reference": [
+            1536
+          ]
+        },
+        "hidfc.weight": {
+          "candidate": [
+            6,
+            512
+          ],
+          "reference": [
+            7,
+            512
+          ]
+        },
+        "graph_model.speaker_embeddings.weight": {
+          "candidate": [
+            2,
+            512
+          ],
+          "reference": [
+            9,
+            1024
+          ]
+        },
+        "gru_l.bias_ih_l1": {
+          "candidate": [
+            768
+          ],
+          "reference": [
+            1536
+          ]
+        },
+        "gru_l.weight_ih_l1": {
+          "candidate": [
+            768,
+            512
+          ],
+          "reference": [
+            1536,
+            1024
+          ]
+        },
+        "linear_l.bias": {
+          "candidate": [
+            512
+          ],
+          "reference": [
+            1024
+          ]
+        },
+        "gru_l.weight_hh_l0": {
+          "candidate": [
+            768,
+            256
+          ],
+          "reference": [
+            1536,
+            512
+          ]
+        },
+        "linear_v.weight": {
+          "candidate": [
+            512,
+            342
+          ],
+          "reference": [
+            1024,
+            342
+          ]
+        },
+        "hidfc.bias": {
+          "candidate": [
+            6
+          ],
+          "reference": [
+            7
+          ]
+        },
+        "gru_l.bias_ih_l0": {
+          "candidate": [
+            768
+          ],
+          "reference": [
+            1536
+          ]
+        }
+      },
+      "equal_tensor_count": 8
+    }
+  },
+  "tensor_shapes": {
+    "normBNa.weight": [
+      1024
+    ],
+    "normBNa.bias": [
+      1024
+    ],
+    "normBNa.running_mean": [
+      1024
+    ],
+    "normBNa.running_var": [
+      1024
+    ],
+    "normBNa.num_batches_tracked": [],
+    "normBNb.weight": [
+      1024
+    ],
+    "normBNb.bias": [
+      1024
+    ],
+    "normBNb.running_mean": [
+      1024
+    ],
+    "normBNb.running_var": [
+      1024
+    ],
+    "normBNb.num_batches_tracked": [],
+    "normBNc.weight": [
+      1024
+    ],
+    "normBNc.bias": [
+      1024
+    ],
+    "normBNc.running_mean": [
+      1024
+    ],
+    "normBNc.running_var": [
+      1024
+    ],
+    "normBNc.num_batches_tracked": [],
+    "normBNd.weight": [
+      1024
+    ],
+    "normBNd.bias": [
+      1024
+    ],
+    "normBNd.running_mean": [
+      1024
+    ],
+    "normBNd.running_var": [
+      1024
+    ],
+    "normBNd.num_batches_tracked": [],
+    "normLNa.weight": [
+      1024
+    ],
+    "normLNa.bias": [
+      1024
+    ],
+    "normLNb.weight": [
+      1024
+    ],
+    "normLNb.bias": [
+      1024
+    ],
+    "normLNc.weight": [
+      1024
+    ],
+    "normLNc.bias": [
+      1024
+    ],
+    "normLNd.weight": [
+      1024
+    ],
+    "normLNd.bias": [
+      1024
+    ],
+    "linear_a.weight": [
+      512,
+      1582
+    ],
+    "linear_a.bias": [
+      512
+    ],
+    "linear_v.weight": [
+      512,
+      342
+    ],
+    "linear_v.bias": [
+      512
+    ],
+    "linear_l.weight": [
+      512,
+      1024
+    ],
+    "linear_l.bias": [
+      512
+    ],
+    "gru_l.weight_ih_l0": [
+      768,
+      512
+    ],
+    "gru_l.weight_hh_l0": [
+      768,
+      256
+    ],
+    "gru_l.bias_ih_l0": [
+      768
+    ],
+    "gru_l.bias_hh_l0": [
+      768
+    ],
+    "gru_l.weight_ih_l0_reverse": [
+      768,
+      512
+    ],
+    "gru_l.weight_hh_l0_reverse": [
+      768,
+      256
+    ],
+    "gru_l.bias_ih_l0_reverse": [
+      768
+    ],
+    "gru_l.bias_hh_l0_reverse": [
+      768
+    ],
+    "gru_l.weight_ih_l1": [
+      768,
+      512
+    ],
+    "gru_l.weight_hh_l1": [
+      768,
+      256
+    ],
+    "gru_l.bias_ih_l1": [
+      768
+    ],
+    "gru_l.bias_hh_l1": [
+      768
+    ],
+    "gru_l.weight_ih_l1_reverse": [
+      768,
+      512
+    ],
+    "gru_l.weight_hh_l1_reverse": [
+      768,
+      256
+    ],
+    "gru_l.bias_ih_l1_reverse": [
+      768
+    ],
+    "gru_l.bias_hh_l1_reverse": [
+      768
+    ],
+    "graph_model.hyperedge_weight": [
+      1000
+    ],
+    "graph_model.EW_weight": [
+      5200
+    ],
+    "graph_model.hyperedge_attr1": [
+      512
+    ],
+    "graph_model.hyperedge_attr2": [
+      512
+    ],
+    "graph_model.modal_embeddings.weight": [
+      3,
+      512
+    ],
+    "graph_model.speaker_embeddings.weight": [
+      2,
+      512
+    ],
+    "graph_model.fc1.weight": [
+      512,
+      512
+    ],
+    "graph_model.fc1.bias": [
+      512
+    ],
+    "graph_model.hyperconv1.weight": [
+      512,
+      512
+    ],
+    "graph_model.hyperconv1.edgeweight": [
+      512,
+      512
+    ],
+    "graph_model.hyperconv1.bias": [
+      512
+    ],
+    "graph_model.hyperconv1.edgefc.weight": [
+      512,
+      512
+    ],
+    "graph_model.hyperconv1.edgefc.bias": [
+      512
+    ],
+    "graph_model.hyperconv2.weight": [
+      512,
+      512
+    ],
+    "graph_model.hyperconv2.edgeweight": [
+      512,
+      512
+    ],
+    "graph_model.hyperconv2.bias": [
+      512
+    ],
+    "graph_model.hyperconv2.edgefc.weight": [
+      512,
+      512
+    ],
+    "graph_model.hyperconv2.edgefc.bias": [
+      512
+    ],
+    "graph_model.hyperconv3.weight": [
+      512,
+      512
+    ],
+    "graph_model.hyperconv3.edgeweight": [
+      512,
+      512
+    ],
+    "graph_model.hyperconv3.bias": [
+      512
+    ],
+    "graph_model.hyperconv3.edgefc.weight": [
+      512,
+      512
+    ],
+    "graph_model.hyperconv3.edgefc.bias": [
+      512
+    ],
+    "graph_model.conv1.gate.weight": [
+      1,
+      1024
+    ],
+    "graph_model.conv1.gate.bias": [
+      1
+    ],
+    "graph_model.conv2.gate.weight": [
+      1,
+      1024
+    ],
+    "graph_model.conv2.gate.bias": [
+      1
+    ],
+    "graph_model.conv3.gate.weight": [
+      1,
+      1024
+    ],
+    "graph_model.conv3.gate.bias": [
+      1
+    ],
+    "graph_model.conv4.gate.weight": [
+      1,
+      1024
+    ],
+    "graph_model.conv4.gate.bias": [
+      1
+    ],
+    "hidfc.weight": [
+      6,
+      512
+    ],
+    "hidfc.bias": [
+      6
+    ],
+    "smax_fc.weight": [
+      6,
+      3072
+    ],
+    "smax_fc.bias": [
+      6
+    ]
+  },
+  "non_tensor_metadata": {}
+}
