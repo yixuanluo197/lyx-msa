@@ -1,0 +1,60 @@
+{
+  "status": "passed",
+  "verified_at": "2026-10-25T13:06:44.323174+00:00",
+  "training": false,
+  "gpu_inference": false,
+  "model_forward_calls": 0,
+  "valid_paired_samples": 1623,
+  "typical_case_records": 599,
+  "independent_checks": 39287,
+  "independent_verification_sha256": "8f0f556d91f7077041de0f5ad9788470721676cad201732a5545314dd402204a",
+  "report_verification_sha256": "770c09af5fe5de9483c70464e469ebfa242473581bae65e6511c4ac36db84cab",
+  "preserved_existing_file_count": 321,
+  "preserved_existing_file_sha_unchanged": true,
+  "source_csv_unchanged": true,
+  "all_new_csv_independently_recomputed": true,
+  "all_probabilities_labels_text_ids_checked": true,
+  "tests_passed": 38,
+  "test_command": "python -m pytest -q tests/test_public_m3net_comparison.py tests/test_render_public_m3net_comparison.py tests/test_high_confidence_calibration.py",
+  "word_tables_checked": 34,
+  "word_cells_checked": 627,
+  "word_format_and_numeric_checks_passed": true,
+  "reference_values_used_in_generation": false,
+  "post_computation_reference_values_matched": true,
+  "reference_check_tolerance": "integer exact; calibration rounded six decimals within 0.5e-6",
+  "reference_values": {
+    "classification": {
+      "both_correct": 1083,
+      "baseline_wrong_cmerc_correct": 84,
+      "baseline_correct_cmerc_wrong": 93,
+      "both_wrong": 363
+    },
+    "threshold_0p90": {
+      "baseline_high_confidence_errors": 137,
+      "cmerc_high_confidence_errors": 128,
+      "baseline_hce_corrected": 6,
+      "baseline_hce_still_wrong_confidence_lower": 85,
+      "baseline_hce_still_wrong_confidence_not_lower": 46
+    },
+    "calibration": {
+      "baseline": {
+        "ece": 0.115123,
+        "mce": 0.169779,
+        "brier_score": 0.432485,
+        "nll": 0.88399
+      },
+      "cmerc": {
+        "ece": 0.112668,
+        "mce": 0.166292,
+        "brier_score": 0.429447,
+        "nll": 0.869046
+      }
+    }
+  },
+  "strict_training_pairing_confirmed": false,
+  "limitations": [
+    "No verified training seed/epoch/selection/pairing; descriptive public-weight comparison",
+    "Single fixed pair; no cross-training-run significance claim",
+    "OOXML formatting verified; Office/LibreOffice pagination not rendered"
+  ]
+}

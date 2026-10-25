@@ -1,0 +1,1810 @@
+{
+  "status": "passed",
+  "training": false,
+  "gpu_inference": false,
+  "source_csv_sha256": {
+    "paired_predictions.csv": "ed631e83cf8ee6ec506b5388c3654fe2caaf7510407e759bda2805545b97b930",
+    "classification_transitions.csv": "9776028bda03c819f805f6f6fca6ecf8617506bf9be1fd56f673913758e21123",
+    "high_confidence_transitions.csv": "dc296735c0b4e02eefae70725ae77261b227346632bddb3718b6e1478b5905cd",
+    "classwise_transitions.csv": "50e1dec7792d3fa692a24c9385e684768167ee07aa049aee662355d1267ecf45",
+    "calibration_comparison.csv": "0bd5ada17ad75658181ae02395acbe6d8089b60ebe1426256841ac1f191b94b3",
+    "calibration_bins.csv": "15e860426ec362a40d8368b5d4ee86a648d8a60327e6bce97fb3cfe2b3cfa19b",
+    "typical_cases.csv": "0f5219a139468e2988e73b721a926bf46c3ed4ea51c9887187957292d643a79b"
+  },
+  "figure": {
+    "source_csv": "calibration_bins.csv",
+    "ideal_diagonal": true,
+    "empty_bins_omitted": true,
+    "model_series": [
+      {
+        "model": "Official M³Net",
+        "counts": [
+          0,
+          0,
+          0,
+          15,
+          51,
+          168,
+          143,
+          186,
+          270,
+          790
+        ],
+        "nonempty_bin_indices": [
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "points": [
+          [
+            0.37823143597535275,
+            0.4666666666666667
+          ],
+          [
+            0.4558980364488791,
+            0.5294117647058824
+          ],
+          [
+            0.5511533256492923,
+            0.5535714285714286
+          ],
+          [
+            0.654272943031718,
+            0.6223776223776224
+          ],
+          [
+            0.74995210962548,
+            0.6559139784946236
+          ],
+          [
+            0.8549640894038109,
+            0.6851851851851852
+          ],
+          [
+            0.9702156954765252,
+            0.8265822784810126
+          ]
+        ]
+      },
+      {
+        "model": "Official CMERC",
+        "counts": [
+          0,
+          0,
+          0,
+          14,
+          71,
+          150,
+          157,
+          176,
+          259,
+          796
+        ],
+        "nonempty_bin_indices": [
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "points": [
+          [
+            0.3619212270849667,
+            0.35714285714285715
+          ],
+          [
+            0.4535836023406897,
+            0.4225352112676056
+          ],
+          [
+            0.5497952490596948,
+            0.54
+          ],
+          [
+            0.6512381225351086,
+            0.5923566878980892
+          ],
+          [
+            0.7515191420363435,
+            0.5852272727272727
+          ],
+          [
+            0.8546825534463426,
+            0.722007722007722
+          ],
+          [
+            0.9726704545406406,
+            0.8391959798994975
+          ]
+        ]
+      }
+    ]
+  },
+  "word": {
+    "passed": true,
+    "tables_checked": 34,
+    "table_cells_checked": 627,
+    "all_table_cells_match_csv": true,
+    "heading_and_header_bold": true,
+    "font": "宋体",
+    "font_size_points": 12,
+    "color": "000000",
+    "explicit_three_line_tables": true,
+    "headers_footers": false,
+    "embedded_figure_sha256": "66767a8931f29405230b8d506348113c5d9ad9dca0476fa6c4bd93f052f3c464",
+    "office_layout_rendered": false,
+    "layout_note": "OOXML checked; Office/LibreOffice pagination was not rendered.",
+    "table_provenance": [
+      {
+        "table_index": 0,
+        "source_csv": "classification_transitions.csv",
+        "columns": [
+          "transition",
+          "count",
+          "ratio"
+        ],
+        "source_row_indices": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "headers": [
+          "分类转移",
+          "话语数",
+          "占全部话语 (%)"
+        ],
+        "percentage_columns": [
+          "ratio"
+        ],
+        "integer_columns": [
+          "count"
+        ],
+        "signed_columns": [],
+        "rendered_rows": [
+          [
+            "both_correct",
+            "1083",
+            "66.7283"
+          ],
+          [
+            "baseline_wrong_cmerc_correct",
+            "84",
+            "5.1756"
+          ],
+          [
+            "baseline_correct_cmerc_wrong",
+            "93",
+            "5.7301"
+          ],
+          [
+            "both_wrong",
+            "363",
+            "22.3660"
+          ]
+        ]
+      },
+      {
+        "table_index": 1,
+        "source_csv": "high_confidence_transitions.csv",
+        "columns": [
+          "threshold",
+          "baseline_high_confidence_predictions",
+          "baseline_high_confidence_errors",
+          "baseline_high_confidence_error_rate",
+          "cmerc_high_confidence_predictions",
+          "cmerc_high_confidence_errors",
+          "cmerc_high_confidence_error_rate"
+        ],
+        "source_row_indices": [
+          0,
+          1,
+          2
+        ],
+        "headers": [
+          "阈值",
+          "M³Net 高置信预测",
+          "M³Net 高置信错误",
+          "M³Net 错误率 (%)",
+          "CMERC 高置信预测",
+          "CMERC 高置信错误",
+          "CMERC 错误率 (%)"
+        ],
+        "percentage_columns": [
+          "baseline_high_confidence_error_rate",
+          "cmerc_high_confidence_error_rate"
+        ],
+        "integer_columns": [
+          "baseline_high_confidence_predictions",
+          "baseline_high_confidence_errors",
+          "cmerc_high_confidence_predictions",
+          "cmerc_high_confidence_errors"
+        ],
+        "signed_columns": [],
+        "rendered_rows": [
+          [
+            "0.8",
+            "1060",
+            "222",
+            "20.9434",
+            "1055",
+            "200",
+            "18.9573"
+          ],
+          [
+            "0.9",
+            "790",
+            "137",
+            "17.3418",
+            "796",
+            "128",
+            "16.0804"
+          ],
+          [
+            "0.95",
+            "605",
+            "88",
+            "14.5455",
+            "619",
+            "76",
+            "12.2779"
+          ]
+        ]
+      },
+      {
+        "table_index": 2,
+        "source_csv": "high_confidence_transitions.csv",
+        "columns": [
+          "threshold",
+          "baseline_high_confidence_errors",
+          "corrected",
+          "still_wrong_confidence_lower",
+          "still_wrong_confidence_not_lower",
+          "still_wrong_above_threshold",
+          "new_cmerc_hc_errors"
+        ],
+        "source_row_indices": [
+          0,
+          1,
+          2
+        ],
+        "headers": [
+          "阈值",
+          "原高置信错误",
+          "分类纠正",
+          "仍错且置信度下降",
+          "仍错且置信度未降",
+          "仍错且达到原阈值",
+          "CMERC 新增高置信错误"
+        ],
+        "percentage_columns": [],
+        "integer_columns": [
+          "baseline_high_confidence_errors",
+          "corrected",
+          "still_wrong_confidence_lower",
+          "still_wrong_confidence_not_lower",
+          "still_wrong_above_threshold",
+          "new_cmerc_hc_errors"
+        ],
+        "signed_columns": [],
+        "rendered_rows": [
+          [
+            "0.8",
+            "222",
+            "16",
+            "134",
+            "72",
+            "138",
+            "62"
+          ],
+          [
+            "0.9",
+            "137",
+            "6",
+            "85",
+            "46",
+            "87",
+            "41"
+          ],
+          [
+            "0.95",
+            "88",
+            "2",
+            "60",
+            "26",
+            "49",
+            "27"
+          ]
+        ]
+      },
+      {
+        "table_index": 3,
+        "source_csv": "high_confidence_transitions.csv",
+        "columns": [
+          "threshold",
+          "corrected_ratio",
+          "still_wrong_confidence_lower_ratio",
+          "still_wrong_confidence_not_lower_ratio",
+          "still_wrong_above_threshold_ratio"
+        ],
+        "source_row_indices": [
+          0,
+          1,
+          2
+        ],
+        "headers": [
+          "阈值",
+          "分类纠正 (%)",
+          "仍错且置信度下降 (%)",
+          "仍错且置信度未降 (%)",
+          "仍错且达到原阈值 (%)"
+        ],
+        "percentage_columns": [
+          "corrected_ratio",
+          "still_wrong_confidence_lower_ratio",
+          "still_wrong_confidence_not_lower_ratio",
+          "still_wrong_above_threshold_ratio"
+        ],
+        "integer_columns": [],
+        "signed_columns": [],
+        "rendered_rows": [
+          [
+            "0.8",
+            "7.2072",
+            "60.3604",
+            "32.4324",
+            "62.1622"
+          ],
+          [
+            "0.9",
+            "4.3796",
+            "62.0438",
+            "33.5766",
+            "63.5036"
+          ],
+          [
+            "0.95",
+            "2.2727",
+            "68.1818",
+            "29.5455",
+            "55.6818"
+          ]
+        ]
+      },
+      {
+        "table_index": 4,
+        "source_csv": "high_confidence_transitions.csv",
+        "columns": [
+          "threshold",
+          "eligible_non_baseline_hc_errors",
+          "new_cmerc_hc_errors",
+          "new_cmerc_hc_error_ratio_of_eligible",
+          "new_cmerc_hc_errors_from_baseline_correct",
+          "new_cmerc_hc_errors_from_baseline_wrong_below_threshold"
+        ],
+        "source_row_indices": [
+          0,
+          1,
+          2
+        ],
+        "headers": [
+          "阈值",
+          "原非高置信错误数",
+          "新增高置信错误",
+          "新增占可进入样本 (%)",
+          "来自原正确",
+          "来自原低置信错误"
+        ],
+        "percentage_columns": [
+          "new_cmerc_hc_error_ratio_of_eligible"
+        ],
+        "integer_columns": [
+          "eligible_non_baseline_hc_errors",
+          "new_cmerc_hc_errors",
+          "new_cmerc_hc_errors_from_baseline_correct",
+          "new_cmerc_hc_errors_from_baseline_wrong_below_threshold"
+        ],
+        "signed_columns": [],
+        "rendered_rows": [
+          [
+            "0.8",
+            "1401",
+            "62",
+            "4.4254",
+            "16",
+            "46"
+          ],
+          [
+            "0.9",
+            "1486",
+            "41",
+            "2.7591",
+            "5",
+            "36"
+          ],
+          [
+            "0.95",
+            "1535",
+            "27",
+            "1.7590",
+            "1",
+            "26"
+          ]
+        ]
+      },
+      {
+        "table_index": 5,
+        "source_csv": "classwise_transitions.csv",
+        "columns": [
+          "true_emotion",
+          "support",
+          "baseline_errors",
+          "cmerc_errors",
+          "corrected",
+          "regressed",
+          "both_wrong",
+          "net_error_change"
+        ],
+        "source_row_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "headers": [
+          "真实情绪",
+          "支持数",
+          "M³Net 错误",
+          "CMERC 错误",
+          "错→对",
+          "对→错",
+          "两者都错",
+          "净错误变化"
+        ],
+        "percentage_columns": [],
+        "integer_columns": [
+          "support",
+          "baseline_errors",
+          "cmerc_errors",
+          "corrected",
+          "regressed",
+          "both_wrong",
+          "net_error_change"
+        ],
+        "signed_columns": [],
+        "rendered_rows": [
+          [
+            "happy",
+            "144",
+            "49",
+            "52",
+            "8",
+            "11",
+            "41",
+            "3"
+          ],
+          [
+            "sad",
+            "245",
+            "50",
+            "46",
+            "12",
+            "8",
+            "38",
+            "-4"
+          ],
+          [
+            "neutral",
+            "384",
+            "94",
+            "101",
+            "12",
+            "19",
+            "82",
+            "7"
+          ],
+          [
+            "angry",
+            "170",
+            "66",
+            "56",
+            "15",
+            "5",
+            "51",
+            "-10"
+          ],
+          [
+            "excited",
+            "299",
+            "72",
+            "74",
+            "22",
+            "24",
+            "50",
+            "2"
+          ],
+          [
+            "frustrated",
+            "381",
+            "116",
+            "127",
+            "15",
+            "26",
+            "101",
+            "11"
+          ]
+        ]
+      },
+      {
+        "table_index": 6,
+        "source_csv": "calibration_comparison.csv",
+        "columns": [
+          "model",
+          "valid_utterances",
+          "total_errors",
+          "accuracy",
+          "weighted_f1",
+          "mean_confidence",
+          "mean_error_confidence"
+        ],
+        "source_row_indices": [
+          0,
+          1
+        ],
+        "headers": [
+          "模型",
+          "话语数",
+          "错误数",
+          "Accuracy (%)",
+          "W-F1 (%)",
+          "平均置信度 (%)",
+          "错误平均置信度 (%)"
+        ],
+        "percentage_columns": [
+          "accuracy",
+          "weighted_f1",
+          "mean_confidence",
+          "mean_error_confidence"
+        ],
+        "integer_columns": [
+          "valid_utterances",
+          "total_errors"
+        ],
+        "signed_columns": [],
+        "rendered_rows": [
+          [
+            "Official M³Net",
+            "1623",
+            "447",
+            "72.4584",
+            "72.6601",
+            "83.2952",
+            "76.6322"
+          ],
+          [
+            "Official CMERC",
+            "1623",
+            "456",
+            "71.9039",
+            "71.9838",
+            "83.1707",
+            "74.7381"
+          ]
+        ]
+      },
+      {
+        "table_index": 7,
+        "source_csv": "calibration_comparison.csv",
+        "columns": [
+          "model",
+          "ece",
+          "mce",
+          "brier_score",
+          "nll"
+        ],
+        "source_row_indices": [
+          0,
+          1
+        ],
+        "headers": [
+          "模型",
+          "ECE (%)",
+          "MCE (%)",
+          "Brier Score",
+          "NLL"
+        ],
+        "percentage_columns": [
+          "ece",
+          "mce"
+        ],
+        "integer_columns": [],
+        "signed_columns": [],
+        "rendered_rows": [
+          [
+            "Official M³Net",
+            "11.5123",
+            "16.9779",
+            "0.432485",
+            "0.883990"
+          ],
+          [
+            "Official CMERC",
+            "11.2668",
+            "16.6292",
+            "0.429447",
+            "0.869046"
+          ]
+        ]
+      },
+      {
+        "table_index": 8,
+        "source_csv": "calibration_bins.csv",
+        "columns": [
+          "lower_bound",
+          "upper_bound",
+          "count",
+          "mean_confidence",
+          "accuracy",
+          "signed_gap"
+        ],
+        "source_row_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "headers": [
+          "下界",
+          "上界",
+          "话语数",
+          "平均置信度 (%)",
+          "实际准确率 (%)",
+          "有符号差值 (pp)"
+        ],
+        "percentage_columns": [
+          "mean_confidence",
+          "accuracy",
+          "signed_gap"
+        ],
+        "integer_columns": [
+          "count"
+        ],
+        "signed_columns": [
+          "signed_gap"
+        ],
+        "rendered_rows": [
+          [
+            "0.0",
+            "0.1",
+            "0",
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          [
+            "0.1",
+            "0.2",
+            "0",
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          [
+            "0.2",
+            "0.3",
+            "0",
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          [
+            "0.3",
+            "0.4",
+            "15",
+            "37.8231",
+            "46.6667",
+            "-8.8435"
+          ],
+          [
+            "0.4",
+            "0.5",
+            "51",
+            "45.5898",
+            "52.9412",
+            "-7.3514"
+          ],
+          [
+            "0.5",
+            "0.6",
+            "168",
+            "55.1153",
+            "55.3571",
+            "-0.2418"
+          ],
+          [
+            "0.6",
+            "0.7",
+            "143",
+            "65.4273",
+            "62.2378",
+            "+3.1895"
+          ],
+          [
+            "0.7",
+            "0.8",
+            "186",
+            "74.9952",
+            "65.5914",
+            "+9.4038"
+          ],
+          [
+            "0.8",
+            "0.9",
+            "270",
+            "85.4964",
+            "68.5185",
+            "+16.9779"
+          ],
+          [
+            "0.9",
+            "1.0",
+            "790",
+            "97.0216",
+            "82.6582",
+            "+14.3633"
+          ]
+        ]
+      },
+      {
+        "table_index": 9,
+        "source_csv": "calibration_bins.csv",
+        "columns": [
+          "lower_bound",
+          "upper_bound",
+          "count",
+          "mean_confidence",
+          "accuracy",
+          "signed_gap"
+        ],
+        "source_row_indices": [
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19
+        ],
+        "headers": [
+          "下界",
+          "上界",
+          "话语数",
+          "平均置信度 (%)",
+          "实际准确率 (%)",
+          "有符号差值 (pp)"
+        ],
+        "percentage_columns": [
+          "mean_confidence",
+          "accuracy",
+          "signed_gap"
+        ],
+        "integer_columns": [
+          "count"
+        ],
+        "signed_columns": [
+          "signed_gap"
+        ],
+        "rendered_rows": [
+          [
+            "0.0",
+            "0.1",
+            "0",
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          [
+            "0.1",
+            "0.2",
+            "0",
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          [
+            "0.2",
+            "0.3",
+            "0",
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          [
+            "0.3",
+            "0.4",
+            "14",
+            "36.1921",
+            "35.7143",
+            "+0.4778"
+          ],
+          [
+            "0.4",
+            "0.5",
+            "71",
+            "45.3584",
+            "42.2535",
+            "+3.1048"
+          ],
+          [
+            "0.5",
+            "0.6",
+            "150",
+            "54.9795",
+            "54.0000",
+            "+0.9795"
+          ],
+          [
+            "0.6",
+            "0.7",
+            "157",
+            "65.1238",
+            "59.2357",
+            "+5.8881"
+          ],
+          [
+            "0.7",
+            "0.8",
+            "176",
+            "75.1519",
+            "58.5227",
+            "+16.6292"
+          ],
+          [
+            "0.8",
+            "0.9",
+            "259",
+            "85.4683",
+            "72.2008",
+            "+13.2675"
+          ],
+          [
+            "0.9",
+            "1.0",
+            "796",
+            "97.2670",
+            "83.9196",
+            "+13.3474"
+          ]
+        ]
+      },
+      {
+        "table_index": 10,
+        "source_csv": "typical_cases.csv",
+        "columns": [
+          "baseline_predicted_emotion",
+          "baseline_predicted_confidence",
+          "baseline_true_label_probability",
+          "cmerc_predicted_emotion",
+          "cmerc_predicted_confidence",
+          "cmerc_true_label_probability"
+        ],
+        "source_row_indices": [
+          16
+        ],
+        "headers": [
+          "M³Net 预测",
+          "M³Net 最大概率 (%)",
+          "M³Net 真实类概率 (%)",
+          "CMERC 预测",
+          "CMERC 最大概率 (%)",
+          "CMERC 真实类概率 (%)"
+        ],
+        "percentage_columns": [
+          "baseline_predicted_confidence",
+          "baseline_true_label_probability",
+          "cmerc_predicted_confidence",
+          "cmerc_true_label_probability"
+        ],
+        "integer_columns": [],
+        "signed_columns": [],
+        "rendered_rows": [
+          [
+            "happy",
+            "50.5062",
+            "50.5062",
+            "excited",
+            "97.5837",
+            "1.7647"
+          ]
+        ]
+      },
+      {
+        "table_index": 11,
+        "source_csv": "typical_cases.csv",
+        "columns": [
+          "baseline_probability_happy",
+          "baseline_probability_sad",
+          "baseline_probability_neutral",
+          "baseline_probability_angry",
+          "baseline_probability_excited",
+          "baseline_probability_frustrated"
+        ],
+        "source_row_indices": [
+          16
+        ],
+        "headers": [
+          "happy",
+          "sad",
+          "neutral",
+          "angry",
+          "excited",
+          "frustrated"
+        ],
+        "percentage_columns": [],
+        "integer_columns": [],
+        "signed_columns": [],
+        "rendered_rows": [
+          [
+            "0.505062",
+            "0.000000",
+            "0.007124",
+            "0.000013",
+            "0.487702",
+            "0.000100"
+          ]
+        ]
+      },
+      {
+        "table_index": 12,
+        "source_csv": "typical_cases.csv",
+        "columns": [
+          "cmerc_probability_happy",
+          "cmerc_probability_sad",
+          "cmerc_probability_neutral",
+          "cmerc_probability_angry",
+          "cmerc_probability_excited",
+          "cmerc_probability_frustrated"
+        ],
+        "source_row_indices": [
+          16
+        ],
+        "headers": [
+          "happy",
+          "sad",
+          "neutral",
+          "angry",
+          "excited",
+          "frustrated"
+        ],
+        "percentage_columns": [],
+        "integer_columns": [],
+        "signed_columns": [],
+        "rendered_rows": [
+          [
+            "0.017647",
+            "0.000005",
+            "0.006362",
+            "0.000064",
+            "0.975837",
+            "0.000084"
+          ]
+        ]
+      },
+      {
+        "table_index": 13,
+        "source_csv": "typical_cases.csv",
+        "columns": [
+          "baseline_predicted_emotion",
+          "baseline_predicted_confidence",
+          "baseline_true_label_probability",
+          "cmerc_predicted_emotion",
+          "cmerc_predicted_confidence",
+          "cmerc_true_label_probability"
+        ],
+        "source_row_indices": [
+          17
+        ],
+        "headers": [
+          "M³Net 预测",
+          "M³Net 最大概率 (%)",
+          "M³Net 真实类概率 (%)",
+          "CMERC 预测",
+          "CMERC 最大概率 (%)",
+          "CMERC 真实类概率 (%)"
+        ],
+        "percentage_columns": [
+          "baseline_predicted_confidence",
+          "baseline_true_label_probability",
+          "cmerc_predicted_confidence",
+          "cmerc_true_label_probability"
+        ],
+        "integer_columns": [],
+        "signed_columns": [],
+        "rendered_rows": [
+          [
+            "frustrated",
+            "53.8706",
+            "53.8706",
+            "angry",
+            "94.4146",
+            "5.5817"
+          ]
+        ]
+      },
+      {
+        "table_index": 14,
+        "source_csv": "typical_cases.csv",
+        "columns": [
+          "baseline_probability_happy",
+          "baseline_probability_sad",
+          "baseline_probability_neutral",
+          "baseline_probability_angry",
+          "baseline_probability_excited",
+          "baseline_probability_frustrated"
+        ],
+        "source_row_indices": [
+          17
+        ],
+        "headers": [
+          "happy",
+          "sad",
+          "neutral",
+          "angry",
+          "excited",
+          "frustrated"
+        ],
+        "percentage_columns": [],
+        "integer_columns": [],
+        "signed_columns": [],
+        "rendered_rows": [
+          [
+            "0.000002",
+            "0.000000",
+            "0.000022",
+            "0.460325",
+            "0.000944",
+            "0.538706"
+          ]
+        ]
+      },
+      {
+        "table_index": 15,
+        "source_csv": "typical_cases.csv",
+        "columns": [
+          "cmerc_probability_happy",
+          "cmerc_probability_sad",
+          "cmerc_probability_neutral",
+          "cmerc_probability_angry",
+          "cmerc_probability_excited",
+          "cmerc_probability_frustrated"
+        ],
+        "source_row_indices": [
+          17
+        ],
+        "headers": [
+          "happy",
+          "sad",
+          "neutral",
+          "angry",
+          "excited",
+          "frustrated"
+        ],
+        "percentage_columns": [],
+        "integer_columns": [],
+        "signed_columns": [],
+        "rendered_rows": [
+          [
+            "0.000000",
+            "0.000000",
+            "0.000001",
+            "0.944146",
+            "0.000036",
+            "0.055817"
+          ]
+        ]
+      },
+      {
+        "table_index": 16,
+        "source_csv": "typical_cases.csv",
+        "columns": [
+          "baseline_predicted_emotion",
+          "baseline_predicted_confidence",
+          "baseline_true_label_probability",
+          "cmerc_predicted_emotion",
+          "cmerc_predicted_confidence",
+          "cmerc_true_label_probability"
+        ],
+        "source_row_indices": [
+          160
+        ],
+        "headers": [
+          "M³Net 预测",
+          "M³Net 最大概率 (%)",
+          "M³Net 真实类概率 (%)",
+          "CMERC 预测",
+          "CMERC 最大概率 (%)",
+          "CMERC 真实类概率 (%)"
+        ],
+        "percentage_columns": [
+          "baseline_predicted_confidence",
+          "baseline_true_label_probability",
+          "cmerc_predicted_confidence",
+          "cmerc_true_label_probability"
+        ],
+        "integer_columns": [],
+        "signed_columns": [],
+        "rendered_rows": [
+          [
+            "sad",
+            "99.9922",
+            "0.0077",
+            "sad",
+            "99.9982",
+            "0.0018"
+          ]
+        ]
+      },
+      {
+        "table_index": 17,
+        "source_csv": "typical_cases.csv",
+        "columns": [
+          "baseline_probability_happy",
+          "baseline_probability_sad",
+          "baseline_probability_neutral",
+          "baseline_probability_angry",
+          "baseline_probability_excited",
+          "baseline_probability_frustrated"
+        ],
+        "source_row_indices": [
+          160
+        ],
+        "headers": [
+          "happy",
+          "sad",
+          "neutral",
+          "angry",
+          "excited",
+          "frustrated"
+        ],
+        "percentage_columns": [],
+        "integer_columns": [],
+        "signed_columns": [],
+        "rendered_rows": [
+          [
+            "0.000000",
+            "0.999922",
+            "0.000077",
+            "0.000000",
+            "0.000000",
+            "0.000001"
+          ]
+        ]
+      },
+      {
+        "table_index": 18,
+        "source_csv": "typical_cases.csv",
+        "columns": [
+          "cmerc_probability_happy",
+          "cmerc_probability_sad",
+          "cmerc_probability_neutral",
+          "cmerc_probability_angry",
+          "cmerc_probability_excited",
+          "cmerc_probability_frustrated"
+        ],
+        "source_row_indices": [
+          160
+        ],
+        "headers": [
+          "happy",
+          "sad",
+          "neutral",
+          "angry",
+          "excited",
+          "frustrated"
+        ],
+        "percentage_columns": [],
+        "integer_columns": [],
+        "signed_columns": [],
+        "rendered_rows": [
+          [
+            "0.000000",
+            "0.999982",
+            "0.000018",
+            "0.000000",
+            "0.000000",
+            "0.000000"
+          ]
+        ]
+      },
+      {
+        "table_index": 19,
+        "source_csv": "typical_cases.csv",
+        "columns": [
+          "baseline_predicted_emotion",
+          "baseline_predicted_confidence",
+          "baseline_true_label_probability",
+          "cmerc_predicted_emotion",
+          "cmerc_predicted_confidence",
+          "cmerc_true_label_probability"
+        ],
+        "source_row_indices": [
+          161
+        ],
+        "headers": [
+          "M³Net 预测",
+          "M³Net 最大概率 (%)",
+          "M³Net 真实类概率 (%)",
+          "CMERC 预测",
+          "CMERC 最大概率 (%)",
+          "CMERC 真实类概率 (%)"
+        ],
+        "percentage_columns": [
+          "baseline_predicted_confidence",
+          "baseline_true_label_probability",
+          "cmerc_predicted_confidence",
+          "cmerc_true_label_probability"
+        ],
+        "integer_columns": [],
+        "signed_columns": [],
+        "rendered_rows": [
+          [
+            "sad",
+            "99.9821",
+            "0.0172",
+            "sad",
+            "99.9941",
+            "0.0058"
+          ]
+        ]
+      },
+      {
+        "table_index": 20,
+        "source_csv": "typical_cases.csv",
+        "columns": [
+          "baseline_probability_happy",
+          "baseline_probability_sad",
+          "baseline_probability_neutral",
+          "baseline_probability_angry",
+          "baseline_probability_excited",
+          "baseline_probability_frustrated"
+        ],
+        "source_row_indices": [
+          161
+        ],
+        "headers": [
+          "happy",
+          "sad",
+          "neutral",
+          "angry",
+          "excited",
+          "frustrated"
+        ],
+        "percentage_columns": [],
+        "integer_columns": [],
+        "signed_columns": [],
+        "rendered_rows": [
+          [
+            "0.000000",
+            "0.999821",
+            "0.000172",
+            "0.000000",
+            "0.000001",
+            "0.000005"
+          ]
+        ]
+      },
+      {
+        "table_index": 21,
+        "source_csv": "typical_cases.csv",
+        "columns": [
+          "cmerc_probability_happy",
+          "cmerc_probability_sad",
+          "cmerc_probability_neutral",
+          "cmerc_probability_angry",
+          "cmerc_probability_excited",
+          "cmerc_probability_frustrated"
+        ],
+        "source_row_indices": [
+          161
+        ],
+        "headers": [
+          "happy",
+          "sad",
+          "neutral",
+          "angry",
+          "excited",
+          "frustrated"
+        ],
+        "percentage_columns": [],
+        "integer_columns": [],
+        "signed_columns": [],
+        "rendered_rows": [
+          [
+            "0.000001",
+            "0.999941",
+            "0.000058",
+            "0.000000",
+            "0.000000",
+            "0.000001"
+          ]
+        ]
+      },
+      {
+        "table_index": 22,
+        "source_csv": "typical_cases.csv",
+        "columns": [
+          "baseline_predicted_emotion",
+          "baseline_predicted_confidence",
+          "baseline_true_label_probability",
+          "cmerc_predicted_emotion",
+          "cmerc_predicted_confidence",
+          "cmerc_true_label_probability"
+        ],
+        "source_row_indices": [
+          312
+        ],
+        "headers": [
+          "M³Net 预测",
+          "M³Net 最大概率 (%)",
+          "M³Net 真实类概率 (%)",
+          "CMERC 预测",
+          "CMERC 最大概率 (%)",
+          "CMERC 真实类概率 (%)"
+        ],
+        "percentage_columns": [
+          "baseline_predicted_confidence",
+          "baseline_true_label_probability",
+          "cmerc_predicted_confidence",
+          "cmerc_true_label_probability"
+        ],
+        "integer_columns": [],
+        "signed_columns": [],
+        "rendered_rows": [
+          [
+            "sad",
+            "99.0812",
+            "0.7957",
+            "happy",
+            "70.5606",
+            "70.5606"
+          ]
+        ]
+      },
+      {
+        "table_index": 23,
+        "source_csv": "typical_cases.csv",
+        "columns": [
+          "baseline_probability_happy",
+          "baseline_probability_sad",
+          "baseline_probability_neutral",
+          "baseline_probability_angry",
+          "baseline_probability_excited",
+          "baseline_probability_frustrated"
+        ],
+        "source_row_indices": [
+          312
+        ],
+        "headers": [
+          "happy",
+          "sad",
+          "neutral",
+          "angry",
+          "excited",
+          "frustrated"
+        ],
+        "percentage_columns": [],
+        "integer_columns": [],
+        "signed_columns": [],
+        "rendered_rows": [
+          [
+            "0.007957",
+            "0.990812",
+            "0.000900",
+            "0.000000",
+            "0.000258",
+            "0.000072"
+          ]
+        ]
+      },
+      {
+        "table_index": 24,
+        "source_csv": "typical_cases.csv",
+        "columns": [
+          "cmerc_probability_happy",
+          "cmerc_probability_sad",
+          "cmerc_probability_neutral",
+          "cmerc_probability_angry",
+          "cmerc_probability_excited",
+          "cmerc_probability_frustrated"
+        ],
+        "source_row_indices": [
+          312
+        ],
+        "headers": [
+          "happy",
+          "sad",
+          "neutral",
+          "angry",
+          "excited",
+          "frustrated"
+        ],
+        "percentage_columns": [],
+        "integer_columns": [],
+        "signed_columns": [],
+        "rendered_rows": [
+          [
+            "0.705606",
+            "0.263526",
+            "0.024080",
+            "0.000019",
+            "0.003893",
+            "0.002876"
+          ]
+        ]
+      },
+      {
+        "table_index": 25,
+        "source_csv": "typical_cases.csv",
+        "columns": [
+          "baseline_predicted_emotion",
+          "baseline_predicted_confidence",
+          "baseline_true_label_probability",
+          "cmerc_predicted_emotion",
+          "cmerc_predicted_confidence",
+          "cmerc_true_label_probability"
+        ],
+        "source_row_indices": [
+          313
+        ],
+        "headers": [
+          "M³Net 预测",
+          "M³Net 最大概率 (%)",
+          "M³Net 真实类概率 (%)",
+          "CMERC 预测",
+          "CMERC 最大概率 (%)",
+          "CMERC 真实类概率 (%)"
+        ],
+        "percentage_columns": [
+          "baseline_predicted_confidence",
+          "baseline_true_label_probability",
+          "cmerc_predicted_confidence",
+          "cmerc_true_label_probability"
+        ],
+        "integer_columns": [],
+        "signed_columns": [],
+        "rendered_rows": [
+          [
+            "neutral",
+            "95.5531",
+            "4.3485",
+            "frustrated",
+            "77.6309",
+            "77.6309"
+          ]
+        ]
+      },
+      {
+        "table_index": 26,
+        "source_csv": "typical_cases.csv",
+        "columns": [
+          "baseline_probability_happy",
+          "baseline_probability_sad",
+          "baseline_probability_neutral",
+          "baseline_probability_angry",
+          "baseline_probability_excited",
+          "baseline_probability_frustrated"
+        ],
+        "source_row_indices": [
+          313
+        ],
+        "headers": [
+          "happy",
+          "sad",
+          "neutral",
+          "angry",
+          "excited",
+          "frustrated"
+        ],
+        "percentage_columns": [],
+        "integer_columns": [],
+        "signed_columns": [],
+        "rendered_rows": [
+          [
+            "0.000001",
+            "0.000832",
+            "0.955531",
+            "0.000150",
+            "0.000001",
+            "0.043485"
+          ]
+        ]
+      },
+      {
+        "table_index": 27,
+        "source_csv": "typical_cases.csv",
+        "columns": [
+          "cmerc_probability_happy",
+          "cmerc_probability_sad",
+          "cmerc_probability_neutral",
+          "cmerc_probability_angry",
+          "cmerc_probability_excited",
+          "cmerc_probability_frustrated"
+        ],
+        "source_row_indices": [
+          313
+        ],
+        "headers": [
+          "happy",
+          "sad",
+          "neutral",
+          "angry",
+          "excited",
+          "frustrated"
+        ],
+        "percentage_columns": [],
+        "integer_columns": [],
+        "signed_columns": [],
+        "rendered_rows": [
+          [
+            "0.000000",
+            "0.001497",
+            "0.216685",
+            "0.005509",
+            "0.000000",
+            "0.776309"
+          ]
+        ]
+      },
+      {
+        "table_index": 28,
+        "source_csv": "typical_cases.csv",
+        "columns": [
+          "baseline_predicted_emotion",
+          "baseline_predicted_confidence",
+          "baseline_true_label_probability",
+          "cmerc_predicted_emotion",
+          "cmerc_predicted_confidence",
+          "cmerc_true_label_probability"
+        ],
+        "source_row_indices": [
+          454
+        ],
+        "headers": [
+          "M³Net 预测",
+          "M³Net 最大概率 (%)",
+          "M³Net 真实类概率 (%)",
+          "CMERC 预测",
+          "CMERC 最大概率 (%)",
+          "CMERC 真实类概率 (%)"
+        ],
+        "percentage_columns": [
+          "baseline_predicted_confidence",
+          "baseline_true_label_probability",
+          "cmerc_predicted_confidence",
+          "cmerc_true_label_probability"
+        ],
+        "integer_columns": [],
+        "signed_columns": [],
+        "rendered_rows": [
+          [
+            "sad",
+            "99.9763",
+            "0.0151",
+            "sad",
+            "99.9557",
+            "0.0376"
+          ]
+        ]
+      },
+      {
+        "table_index": 29,
+        "source_csv": "typical_cases.csv",
+        "columns": [
+          "baseline_probability_happy",
+          "baseline_probability_sad",
+          "baseline_probability_neutral",
+          "baseline_probability_angry",
+          "baseline_probability_excited",
+          "baseline_probability_frustrated"
+        ],
+        "source_row_indices": [
+          454
+        ],
+        "headers": [
+          "happy",
+          "sad",
+          "neutral",
+          "angry",
+          "excited",
+          "frustrated"
+        ],
+        "percentage_columns": [],
+        "integer_columns": [],
+        "signed_columns": [],
+        "rendered_rows": [
+          [
+            "0.000084",
+            "0.999763",
+            "0.000151",
+            "0.000000",
+            "0.000000",
+            "0.000002"
+          ]
+        ]
+      },
+      {
+        "table_index": 30,
+        "source_csv": "typical_cases.csv",
+        "columns": [
+          "cmerc_probability_happy",
+          "cmerc_probability_sad",
+          "cmerc_probability_neutral",
+          "cmerc_probability_angry",
+          "cmerc_probability_excited",
+          "cmerc_probability_frustrated"
+        ],
+        "source_row_indices": [
+          454
+        ],
+        "headers": [
+          "happy",
+          "sad",
+          "neutral",
+          "angry",
+          "excited",
+          "frustrated"
+        ],
+        "percentage_columns": [],
+        "integer_columns": [],
+        "signed_columns": [],
+        "rendered_rows": [
+          [
+            "0.000061",
+            "0.999557",
+            "0.000376",
+            "0.000000",
+            "0.000000",
+            "0.000005"
+          ]
+        ]
+      },
+      {
+        "table_index": 31,
+        "source_csv": "typical_cases.csv",
+        "columns": [
+          "baseline_predicted_emotion",
+          "baseline_predicted_confidence",
+          "baseline_true_label_probability",
+          "cmerc_predicted_emotion",
+          "cmerc_predicted_confidence",
+          "cmerc_true_label_probability"
+        ],
+        "source_row_indices": [
+          455
+        ],
+        "headers": [
+          "M³Net 预测",
+          "M³Net 最大概率 (%)",
+          "M³Net 真实类概率 (%)",
+          "CMERC 预测",
+          "CMERC 最大概率 (%)",
+          "CMERC 真实类概率 (%)"
+        ],
+        "percentage_columns": [
+          "baseline_predicted_confidence",
+          "baseline_true_label_probability",
+          "cmerc_predicted_confidence",
+          "cmerc_true_label_probability"
+        ],
+        "integer_columns": [],
+        "signed_columns": [],
+        "rendered_rows": [
+          [
+            "frustrated",
+            "99.9116",
+            "0.0822",
+            "frustrated",
+            "95.0684",
+            "4.8025"
+          ]
+        ]
+      },
+      {
+        "table_index": 32,
+        "source_csv": "typical_cases.csv",
+        "columns": [
+          "baseline_probability_happy",
+          "baseline_probability_sad",
+          "baseline_probability_neutral",
+          "baseline_probability_angry",
+          "baseline_probability_excited",
+          "baseline_probability_frustrated"
+        ],
+        "source_row_indices": [
+          455
+        ],
+        "headers": [
+          "happy",
+          "sad",
+          "neutral",
+          "angry",
+          "excited",
+          "frustrated"
+        ],
+        "percentage_columns": [],
+        "integer_columns": [],
+        "signed_columns": [],
+        "rendered_rows": [
+          [
+            "0.000000",
+            "0.000000",
+            "0.000062",
+            "0.000822",
+            "0.000000",
+            "0.999116"
+          ]
+        ]
+      },
+      {
+        "table_index": 33,
+        "source_csv": "typical_cases.csv",
+        "columns": [
+          "cmerc_probability_happy",
+          "cmerc_probability_sad",
+          "cmerc_probability_neutral",
+          "cmerc_probability_angry",
+          "cmerc_probability_excited",
+          "cmerc_probability_frustrated"
+        ],
+        "source_row_indices": [
+          455
+        ],
+        "headers": [
+          "happy",
+          "sad",
+          "neutral",
+          "angry",
+          "excited",
+          "frustrated"
+        ],
+        "percentage_columns": [],
+        "integer_columns": [],
+        "signed_columns": [],
+        "rendered_rows": [
+          [
+            "0.000016",
+            "0.000100",
+            "0.001112",
+            "0.048025",
+            "0.000062",
+            "0.950684"
+          ]
+        ]
+      }
+    ]
+  },
+  "artifact_sha256": {
+    "CMERC_官方权重_实验二分类纠错与校准对比.docx": "471f776bfc147112177d1b5a34298d2b4c1415f15603d5d569c1efc507acdd46",
+    "figure_contract.md": "c9a82a33468f457b73dfbd50f182c5dc8756148826d4bcd7dc568cac18091fcf",
+    "figures/reliability_IEMOCAP_public_comparison.png": "66767a8931f29405230b8d506348113c5d9ad9dca0476fa6c4bd93f052f3c464",
+    "figures/reliability_IEMOCAP_public_comparison.svg": "30df32566bcf4f764d69761aabaea3069123645728cdfd819983915def4451bc",
+    "figures/reliability_IEMOCAP_public_comparison.pdf": "a676f8c910555285914fde201730a29646ba747f7a7846431d1f8a1c81340138"
+  }
+}

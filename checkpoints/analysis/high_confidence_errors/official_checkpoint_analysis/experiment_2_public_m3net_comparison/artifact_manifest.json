@@ -1,0 +1,127 @@
+{
+  "hash_algorithm": "sha256",
+  "self_excluded": true,
+  "file_count": 30,
+  "files": {
+    "CMERC_官方权重_实验二分类纠错与校准对比.docx": {
+      "sha256": "471f776bfc147112177d1b5a34298d2b4c1415f15603d5d569c1efc507acdd46",
+      "bytes": 168047
+    },
+    "README.md": {
+      "sha256": "5ed712288adf01531a421cc12d1cd7fefa1bb2ce3313d66c41a5da3573bad894",
+      "bytes": 5635
+    },
+    "SUMMARY.md": {
+      "sha256": "da22e4260522210c62ed7901ffbf600f6ff6c616e9e244da22ec01038d0202c6",
+      "bytes": 6449
+    },
+    "calibration_bins.csv": {
+      "sha256": "15e860426ec362a40d8368b5d4ee86a648d8a60327e6bce97fb3cfe2b3cfa19b",
+      "bytes": 2699
+    },
+    "calibration_comparison.csv": {
+      "sha256": "0bd5ada17ad75658181ae02395acbe6d8089b60ebe1426256841ac1f191b94b3",
+      "bytes": 797
+    },
+    "classification_transitions.csv": {
+      "sha256": "9776028bda03c819f805f6f6fca6ecf8617506bf9be1fd56f673913758e21123",
+      "bytes": 246
+    },
+    "classwise_transitions.csv": {
+      "sha256": "50e1dec7792d3fa692a24c9385e684768167ee07aa049aee662355d1267ecf45",
+      "bytes": 396
+    },
+    "figure_contract.md": {
+      "sha256": "c9a82a33468f457b73dfbd50f182c5dc8756148826d4bcd7dc568cac18091fcf",
+      "bytes": 1112
+    },
+    "figures/reliability_IEMOCAP_public_comparison.pdf": {
+      "sha256": "a676f8c910555285914fde201730a29646ba747f7a7846431d1f8a1c81340138",
+      "bytes": 15133
+    },
+    "figures/reliability_IEMOCAP_public_comparison.png": {
+      "sha256": "66767a8931f29405230b8d506348113c5d9ad9dca0476fa6c4bd93f052f3c464",
+      "bytes": 147426
+    },
+    "figures/reliability_IEMOCAP_public_comparison.svg": {
+      "sha256": "30df32566bcf4f764d69761aabaea3069123645728cdfd819983915def4451bc",
+      "bytes": 21020
+    },
+    "high_confidence_transitions.csv": {
+      "sha256": "dc296735c0b4e02eefae70725ae77261b227346632bddb3718b6e1478b5905cd",
+      "bytes": 1240
+    },
+    "independent_verification.json": {
+      "sha256": "8f0f556d91f7077041de0f5ad9788470721676cad201732a5545314dd402204a",
+      "bytes": 3524359
+    },
+    "paired_predictions.csv": {
+      "sha256": "ed631e83cf8ee6ec506b5388c3654fe2caaf7510407e759bda2805545b97b930",
+      "bytes": 1199881
+    },
+    "preserved_inputs.json": {
+      "sha256": "5d980fa0b0e0aefcba0ebc1e29133b54d4518d9941ab4a0c52465c9de1a2138f",
+      "bytes": 55391
+    },
+    "report_verification.json": {
+      "sha256": "770c09af5fe5de9483c70464e469ebfa242473581bae65e6511c4ac36db84cab",
+      "bytes": 43009
+    },
+    "run_manifest.json": {
+      "sha256": "78ffd91c46079d36254e484bd8f81647c33566d3209d38779c02fafff900ee8b",
+      "bytes": 6007
+    },
+    "source_code/analyze_public_m3net_comparison.py": {
+      "sha256": "f5f5a4d6f5fdcfc22dd612a2792d56dc2e93bb1eac0cc9df1ed34225f3e89a98",
+      "bytes": 20603
+    },
+    "source_code/high_confidence_calibration.py": {
+      "sha256": "de692252c418c85c350ad3ee6737f0a2da5683fcf2398150921eb987e466ec52",
+      "bytes": 5035
+    },
+    "source_code/high_confidence_followup_stats.py": {
+      "sha256": "e30d3a299b3d1c28834a53bf881bb5440d8b134226090af85b375a36709e47ea",
+      "bytes": 18647
+    },
+    "source_code/independent_recompute.py": {
+      "sha256": "eef3b6422c138fd6ce89055bb12ebd9f6671a2d8527c72d82e8bdb7d79366da6",
+      "bytes": 21099
+    },
+    "source_code/render_official_reliability.py": {
+      "sha256": "60ce0f9299bd7fd400477b9fc850fb1b73e8d9a345177bef2e731a9289611940",
+      "bytes": 38893
+    },
+    "source_code/render_public_m3net_comparison.py": {
+      "sha256": "48c281838a0b0d382ab9928eeb5606df67e54dc5653042b98cec07fa89e98442",
+      "bytes": 28490
+    },
+    "source_code/summarize_m3net_verification.py": {
+      "sha256": "02198d845d61d2b53cf9b5f93bd15b35b90a6a9bf371778b26bbf5b34cc09d8a",
+      "bytes": 15708
+    },
+    "source_code/test_high_confidence_calibration.py": {
+      "sha256": "e46b772a0f34c3df5ed268e60ba678bd3b731909d2cd661ecb61e5f943d3edac",
+      "bytes": 5625
+    },
+    "source_code/test_public_m3net_comparison.py": {
+      "sha256": "67118a1d70428ff3a261cc3ff69c8f4ee2a8b3580568a62240d93973ad24ec9f",
+      "bytes": 3551
+    },
+    "source_code/test_render_public_m3net_comparison.py": {
+      "sha256": "1f5e638b64bc4b0325aa353bc46934b56ac4322fc994f863456f8e40657d3356",
+      "bytes": 4516
+    },
+    "source_code_manifest.json": {
+      "sha256": "04d03cf69ef5456186ba9b3f5a0a359d746cc38b74e19e834ab7009e150a4e63",
+      "bytes": 1030
+    },
+    "typical_cases.csv": {
+      "sha256": "0f5219a139468e2988e73b721a926bf46c3ed4ea51c9887187957292d643a79b",
+      "bytes": 479795
+    },
+    "verification.json": {
+      "sha256": "bacb5afd507f912066a5267cdd014356f593151a84d3e0c0ae831ac561923b85",
+      "bytes": 2232
+    }
+  }
+}

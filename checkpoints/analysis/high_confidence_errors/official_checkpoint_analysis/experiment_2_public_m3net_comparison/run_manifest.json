@@ -1,0 +1,107 @@
+{
+  "status": "completed",
+  "created_at": "2026-10-25T13:00:01.615814+00:00",
+  "dataset": "IEMOCAP",
+  "valid_samples": 1623,
+  "experiment": "2 fixed public M3Net-CMERC behavior comparison",
+  "training": false,
+  "gpu_inference": false,
+  "model_forward_calls": 0,
+  "git_commit": "a899c2fc06d15979b578f59709d1c299ceeb2776",
+  "input_predictions_sha256": {
+    "checkpoints/analysis/m3net_official_checkpoint_verification/all_predictions.csv": "c50cdfe9b3f7fb85d44ad1352c87d4dfb2a942dd2c5ac4a6ff7fd2e05492d630",
+    "checkpoints/analysis/official_checkpoint_verification/IEMOCAP_predictions.csv": "f876f4423410cfc4025c0abb3a1b52e77c90c96a196699df01ee2dbd332372d8"
+  },
+  "checkpoint_sources": {
+    "baseline": {
+      "path": "/data2/yb/paper/cmerc_reproduction_20261013/checkpoints/baseline_candidates/m3net_official_20261025/Roberta_IEMOCAP3.pth.tar",
+      "sha256": "fb939de1f88855fda46a9d491e5cce4400c88c7187f3b792bb40f61c4ed03faa",
+      "tensor_keys": 85,
+      "training_epoch": null,
+      "training_seed": null,
+      "selection_protocol": null
+    },
+    "cmerc": {
+      "path": "/data2/yb/paper/cmerc_reproduction_20261013/checkpoints/IEMOCAP_checkpoint.pkl",
+      "sha256": "f3098fed2734c18171c02a59d014ee27320d845bc1ad5dfa17162b8dcfb49925",
+      "tensor_keys": 85,
+      "training_epoch": null,
+      "training_seed": null,
+      "selection_protocol": null
+    }
+  },
+  "class_names": [
+    "happy",
+    "sad",
+    "neutral",
+    "angry",
+    "excited",
+    "frustrated"
+  ],
+  "sample_key": [
+    "dataset",
+    "dialogue_id",
+    "utterance_index"
+  ],
+  "sample_order": "Original verified test order; exact source metadata match",
+  "threshold_comparison": ">=",
+  "thresholds": [
+    0.8,
+    0.9,
+    0.95
+  ],
+  "confidence": "Maximum class probability; true-label probability saved separately",
+  "calibration": {
+    "ece_mce": "10 equal-width left-closed/right-open bins; p=1 in last bin; exclude empty bin observations",
+    "brier": "Mean of sum over all classes of squared probability minus one-hot error",
+    "nll": "Negative mean natural log original true-label probability; no clipping or renormalization"
+  },
+  "missing_values": "N/A for undefined ratios or empty-bin observations",
+  "high_confidence_denominators": "HC error rate: all predictions >=threshold; correction outcomes: baseline HC errors; new error ratio: all non-baseline-HC-error samples",
+  "high_confidence_overlapping_measure": "still_wrong_above_threshold is a separate overlapping flag, not a fourth mutually exclusive outcome",
+  "typical_cases": "All matching rows for all four case categories and all three thresholds; categories/thresholds can overlap; Word top2 by selection_score within each type at .90 then stable sample ID tie-break",
+  "metric_units": "All rates, F1, confidence, ECE/MCE and signed gaps stored as fractions [0,1]",
+  "public_weight_behavior_comparison": true,
+  "strict_training_pairing_confirmed": false,
+  "interpretation_limit": "Separately published fixed author weights; training seed/epoch/selection/pairing unknown; no module causal attribution",
+  "python": "3.13.11",
+  "host": "user23",
+  "output_csv_sha256": {
+    "paired_predictions.csv": "ed631e83cf8ee6ec506b5388c3654fe2caaf7510407e759bda2805545b97b930",
+    "classification_transitions.csv": "9776028bda03c819f805f6f6fca6ecf8617506bf9be1fd56f673913758e21123",
+    "high_confidence_transitions.csv": "dc296735c0b4e02eefae70725ae77261b227346632bddb3718b6e1478b5905cd",
+    "classwise_transitions.csv": "50e1dec7792d3fa692a24c9385e684768167ee07aa049aee662355d1267ecf45",
+    "calibration_comparison.csv": "0bd5ada17ad75658181ae02395acbe6d8089b60ebe1426256841ac1f191b94b3",
+    "calibration_bins.csv": "15e860426ec362a40d8368b5d4ee86a648d8a60327e6bce97fb3cfe2b3cfa19b",
+    "typical_cases.csv": "0f5219a139468e2988e73b721a926bf46c3ed4ea51c9887187957292d643a79b"
+  },
+  "completed_at": "2026-10-25T13:06:44.323174+00:00",
+  "verification": "verification.json",
+  "independent_verification": "independent_verification.json",
+  "report_verification": "report_verification.json",
+  "statistical_code_sha256": {
+    "scripts/analyze_public_m3net_comparison.py": "f5f5a4d6f5fdcfc22dd612a2792d56dc2e93bb1eac0cc9df1ed34225f3e89a98",
+    "scripts/render_public_m3net_comparison.py": "48c281838a0b0d382ab9928eeb5606df67e54dc5653042b98cec07fa89e98442",
+    "tests/test_public_m3net_comparison.py": "67118a1d70428ff3a261cc3ff69c8f4ee2a8b3580568a62240d93973ad24ec9f",
+    "tests/test_render_public_m3net_comparison.py": "1f5e638b64bc4b0325aa353bc46934b56ac4322fc994f863456f8e40657d3356",
+    "tests/test_high_confidence_calibration.py": "e46b772a0f34c3df5ed268e60ba678bd3b731909d2cd661ecb61e5f943d3edac",
+    "scripts/high_confidence_calibration.py": "de692252c418c85c350ad3ee6737f0a2da5683fcf2398150921eb987e466ec52",
+    "scripts/high_confidence_followup_stats.py": "e30d3a299b3d1c28834a53bf881bb5440d8b134226090af85b375a36709e47ea",
+    "scripts/summarize_m3net_verification.py": "02198d845d61d2b53cf9b5f93bd15b35b90a6a9bf371778b26bbf5b34cc09d8a",
+    "scripts/render_official_reliability.py": "60ce0f9299bd7fd400477b9fc850fb1b73e8d9a345177bef2e731a9289611940"
+  },
+  "environment": {
+    "numpy": "2.4.4",
+    "matplotlib": "3.10.9",
+    "python-docx": "1.2.0",
+    "pytest": "9.1.1"
+  },
+  "actual_commands": [
+    "python scripts/analyze_public_m3net_comparison.py",
+    "python scripts/render_public_m3net_comparison.py --output-dir checkpoints/analysis/high_confidence_errors/official_checkpoint_analysis/experiment_2_public_m3net_comparison",
+    "python checkpoints/analysis/high_confidence_errors/official_checkpoint_analysis/experiment_2_public_m3net_comparison/source_code/independent_recompute.py --root /data2/yb/paper/lyx-msa/CMERC",
+    "python -m pytest -q tests/test_public_m3net_comparison.py tests/test_render_public_m3net_comparison.py tests/test_high_confidence_calibration.py"
+  ],
+  "word_report": "CMERC_官方权重_实验二分类纠错与校准对比.docx",
+  "prior_files_preserved": 321
+}
