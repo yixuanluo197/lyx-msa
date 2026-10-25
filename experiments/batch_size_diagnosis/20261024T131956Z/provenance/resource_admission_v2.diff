@@ -1,0 +1,263 @@
+--- v1/configs/registry.json
++++ v2/configs/registry.json
+@@ -112,22 +112,26 @@
+     "weak": "best improves but last10 falls: mixed evidence",
+     "no_best_improvement": "current seed does not support primary-metric improvement; no additional runs"
+   },
+-  "hardware_limit": "Same host user23 GPU3 as XP04 MELD seed2024 control; current preregistered co-resident PID disclosed; CUDA scatter non-determinism and historical timing limit causal/timing claims.",
++  "hardware_limit": "Same host user23 and same TITAN Xp GPU3 as XP04 seed2024; capacity-based shared GPU admission. All foreign PIDs and occupancy recorded; discrete sampling and CUDA scatter non-determinism limit isolation/timing claims.",
+   "resource_policy": {
+     "preexisting_gpu3_pids": [
+-      1843864
++      2527571,
++      2560936
+     ],
+-    "preexisting_memory_mib": 430,
++    "preexisting_memory_mib": 8656,
+     "estimated_own_peak_mib": 2200,
+-    "admission_min_free_mib": 5000,
+-    "admission_max_utilization_percent": 65,
++    "admission_min_free_mib": 3000,
++    "admission_max_utilization_percent": 95,
+     "samples_required": 3,
+     "sample_seconds": 10,
+-    "new_foreign_pids_pause_admission": true,
++    "new_foreign_pids_pause_admission": false,
+     "no_foreign_process_signals": true,
+-    "co_resident_processes_disclosed": true
++    "co_resident_processes_disclosed": true,
++    "admission_basis": "Three fresh samples of GPU identity, free memory >=3000MiB, utilization <=95%, no own running child. Fixed or new foreign PIDs are recorded, not an unconditional veto.",
++    "minimum_budget_margin_mib": 800
+   },
+   "phase": "09_batch_size_diagnosis",
+   "no_additional_training": true,
+-  "batch_factor_scope": "Original --batch-size applies to both train and validation DataLoaders; both now8, same validation dialogue pool; loss formula and coefficients unchanged."
++  "batch_factor_scope": "Original --batch-size applies to both train and validation DataLoaders; both now8, same validation dialogue pool; loss formula and coefficients unchanged.",
++  "resource_revision": "v2_before_any_probe_or_formal_20261024"
+ }
+--- v1/scripts/run_single.py
++++ v2/scripts/run_single.py
+@@ -13,7 +13,6 @@
+ 
+ ROOT = Path(__file__).resolve().parents[1]
+ INTERVAL = 10
+-ALLOWED_PID = 1843864
+ 
+ 
+ def now():
+@@ -58,11 +57,11 @@
+ 
+ def cpu_evidence():
+     records = []
+-    for name in ('guard_tests.json', 'capacity_cpu.json'):
++    for name in ('guard_tests.json', 'capacity_cpu.json', 'resource_guard_tests.json'):
+         path = ROOT / 'preflight' / name
+         value = read(path)
+         assert value['status'] == 'passed' and value['cuda_initialized'] is False
+-        if name == 'guard_tests.json':
++        if name in ('guard_tests.json', 'resource_guard_tests.json'):
+             assert value['tests'] >= 5 and value['failures'] == value['errors'] == 0
+         else:
+             assert value['epochs_checked'] == 40 and len(value['records']) == 40
+@@ -97,9 +96,22 @@
+ 
+ 
+ def admissible(sample, policy):
+-    return (not sample['own_pids'] and not sample['unexpected_processes']
++    if sample is None:
++        return False
++    foreign_blocked = policy['new_foreign_pids_pause_admission'] and bool(sample['unexpected_processes'])
++    return (not sample['own_pids'] and not foreign_blocked
+             and sample['free_mib'] >= policy['admission_min_free_mib']
+             and sample['utilization_percent'] <= policy['admission_max_utilization_percent'])
++
++
++def validate_resource_policy(policy):
++    assert (policy['admission_min_free_mib'], policy['admission_max_utilization_percent'],
++            policy['samples_required'], policy['sample_seconds']) == (3000, 95, 3, 10)
++    assert policy['estimated_own_peak_mib'] == 2200
++    assert policy['new_foreign_pids_pause_admission'] is False
++    assert policy['no_foreign_process_signals'] is True and policy['co_resident_processes_disclosed'] is True
++    pids = policy['preexisting_gpu3_pids']
++    assert len(pids) == len(set(pids)) and all(isinstance(pid, int) and pid > 0 for pid in pids)
+ 
+ 
+ def observe(registry, state, stage, own_pids=()):
+@@ -112,19 +124,22 @@
+         state['last_resource_error'] = failure
+         state['resource_query_errors'] += 1
+         state['admission_paused'] = True
++        state['admission_conditions_currently_met'] = False
+         write(ROOT / 'state/status.json', state)
+         return None
+     state['resource_samples'] += 1
+     state['preexisting_pid_samples'] += bool(sample['allowed_foreign_processes'])
+     state['unexpected_process_samples'] += bool(sample['unexpected_processes'])
++    state['observed_foreign_pids'] = sorted(set(state['observed_foreign_pids']) | {p['pid'] for p in sample['all_foreign_processes']})
+     if sample['unexpected_processes']:
+         state['unexpected_pids'] = sorted(set(state['unexpected_pids']) | {p['pid'] for p in sample['unexpected_processes']})
+     policy = registry['resource_policy']
+     pressure = (sample['free_mib'] < policy['admission_min_free_mib']
+                 or sample['utilization_percent'] > policy['admission_max_utilization_percent'])
+-    state['admission_conditions_currently_met'] = not sample['unexpected_processes'] and not pressure
++    foreign_blocked = policy['new_foreign_pids_pause_admission'] and bool(sample['unexpected_processes'])
++    state['admission_conditions_currently_met'] = not foreign_blocked and not pressure
+     # The utilization threshold is an admission rule; active training may normally exceed it.
+-    state['admission_paused'] = bool(sample['unexpected_processes'] or (stage.endswith('_admission') and pressure))
++    state['admission_paused'] = bool(foreign_blocked or (stage.endswith('_admission') and pressure))
+     state['last_resource'] = sample
+     write(ROOT / 'state/status.json', state)
+     return sample
+@@ -183,8 +198,24 @@
+     expected = loss['classification_loss'] + .002 * loss['cc_loss'] + .15 * loss['mscl_loss'] + .15 * loss['cscl_loss']
+     assert math.isclose(expected, loss['total_loss'], rel_tol=1e-5, abs_tol=1e-6)
+     assert not list((ROOT / 'preflight' / run['run_id']).rglob('final_test.json'))
++    memory_path = ROOT / 'logs' / ('preflight_' + run['run_id'] + '_memory.jsonl')
++    memory = [json.loads(line) for line in memory_path.read_text().splitlines()]
++    assert memory, 'Probe memory telemetry missing'
++    assert all(math.isfinite(row[key]) and row[key] >= 0 for row in memory
++               for key in ('peak_allocated_mib', 'peak_reserved_mib'))
++    peak_allocated = max(row['peak_allocated_mib'] for row in memory)
++    peak_reserved = max(row['peak_reserved_mib'] for row in memory)
++    budget = read(ROOT / 'configs/registry.json')['resource_policy']['estimated_own_peak_mib']
++    assert peak_reserved <= budget, 'Probe exceeded registered Torch reserved-memory budget; formal work not admitted'
++    resources = [json.loads(line) for line in (ROOT / 'logs/resources.jsonl').read_text().splitlines()]
++    probe_resources = [row for row in resources if row['stage'] == 'preflight_running']
++    assert probe_resources and all(row['free_mib'] > 0 for row in probe_resources)
+     return {'status': 'passed', 'first_step_parameters_changed': True, 'test_forward_passes': 0,
+-            'first_sha256': sha(folder / 'first.json'), 'status_sha256': sha(folder / 'status.json')}
++            'first_sha256': sha(folder / 'first.json'), 'status_sha256': sha(folder / 'status.json'),
++            'memory_profile_sha256': sha(memory_path), 'torch_peak_allocated_mib': peak_allocated,
++            'torch_peak_reserved_mib': peak_reserved, 'registered_memory_budget_mib': budget,
++            'preflight_sampled_gpu_free_mib_min': min(row['free_mib'] for row in probe_resources),
++            'memory_limits': 'Torch allocator telemetry is not whole-process GPU occupancy; free memory is sampled, not a continuous minimum.'}
+ 
+ 
+ def verify_formal(run):
+@@ -204,6 +235,10 @@
+     gate = read(ROOT / 'preflight/gate.json')
+     assert gate['status'] == 'passed' and gate['formal_runs_authorized'] == 1 and gate['test_forward_passes'] == 0
+     assert gate['frozen_execution_sha256'] == capsule_sha
++    policy = read(ROOT / 'configs/registry.json')['resource_policy']
++    validate_resource_policy(policy)
++    assert gate['resource_policy'] == policy
++    assert gate['preregistered_co_resident_pids'] == policy['preexisting_gpu3_pids']
+     assert gate['cpu_evidence'] == cpu_evidence()
+     assert gate['probe_evidence'] == verify_probe(run)
+     validate_capsule(capsule_sha)
+@@ -222,8 +257,7 @@
+     assert registry['gpu_index'] == 3 and registry['gpu_uuid'] == 'GPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456'
+     assert registry['environment']['CUDA_VISIBLE_DEVICES'] == registry['gpu_uuid']
+     policy = registry['resource_policy']
+-    assert policy['preexisting_gpu3_pids'] == [ALLOWED_PID]
+-    assert (policy['admission_min_free_mib'], policy['admission_max_utilization_percent'], policy['samples_required'], policy['sample_seconds']) == (5000, 65, 3, 10)
++    validate_resource_policy(policy)
+     assert not (ROOT / 'state/status.json').exists(), 'Existing supervision state: no implicit retry'
+     assert not Path(run['output_root']).exists() and not (ROOT / 'results' / run['run_id']).exists()
+     assert not (ROOT / 'preflight' / run['run_id']).exists() and not (ROOT / 'preflight/gate.json').exists()
+@@ -233,7 +267,8 @@
+              'formal_started': 0, 'formal_completed': 0, 'runs': [], 'preflight_started': 0,
+              'frozen_execution_sha256': capsule_sha, 'resource_samples': 0, 'resource_query_errors': 0,
+              'preexisting_pid_samples': 0, 'unexpected_process_samples': 0, 'unexpected_pids': [],
+-             'co_resident_pid_explicitly_allowed': ALLOWED_PID, 'admission_paused': False,
++             'preregistered_co_resident_pids': policy['preexisting_gpu3_pids'], 'observed_foreign_pids': [],
++             'new_foreign_pids_pause_admission': policy['new_foreign_pids_pause_admission'], 'admission_paused': False,
+              'active_pids': [], 'preflight': None}
+     write(ROOT / 'state/status.json', state)
+     child, log, row, mode = None, None, None, None
+@@ -280,9 +315,11 @@
+                 probe = verify_probe(run)
+                 gate = {'status': 'passed', 'created_at_utc': now(), 'formal_runs_authorized': 1,
+                         'test_forward_passes': 0, 'frozen_execution_sha256': capsule_sha,
+-                        'cpu_evidence': cpu, 'probe_evidence': probe, 'co_resident_pid_allowed': ALLOWED_PID,
++                        'cpu_evidence': cpu, 'probe_evidence': probe, 'resource_policy': policy,
++                        'preregistered_co_resident_pids': policy['preexisting_gpu3_pids'],
+                         'preflight_resource_disclosure': {'preexisting_pid_samples': state['preexisting_pid_samples'],
+                             'unexpected_process_samples': state['unexpected_process_samples'], 'unexpected_pids': state['unexpected_pids'],
++                            'observed_foreign_pids': state['observed_foreign_pids'],
+                             'resource_query_errors': state['resource_query_errors']}}
+                 write(ROOT / 'preflight/gate.json', gate)
+                 write(ROOT / 'state/preflight.json', {'active': False, 'phase': 'passed', **row, **probe})
+--- v1/scripts/verify_lr.py
++++ v2/scripts/verify_lr.py
+@@ -7,7 +7,7 @@
+ import os
+ 
+ import torch
+-from run_single import validate_gate
++from run_single import admissible, validate_gate, validate_resource_policy
+ from watch_training import verify_skip_patch
+ 
+ ROOT = Path(__file__).resolve().parents[1]
+@@ -46,7 +46,9 @@
+ 
+ def resource_evidence(registry, state):
+     policy = registry['resource_policy']
+-    assert policy['preexisting_gpu3_pids'] == [1843864]
++    validate_resource_policy(policy)
++    assert state['preregistered_co_resident_pids'] == policy['preexisting_gpu3_pids']
++    assert state['new_foreign_pids_pause_admission'] is False
+     resources = rows(ROOT/'logs/resources.jsonl')
+     assert resources
+     errors_path = ROOT/'logs/resource_errors.jsonl'
+@@ -66,11 +68,10 @@
+         if other: unexpected.append(sample)
+     for run in [state['preflight'], *state['runs']]:
+         samples = run['admission_samples']
+-        assert len(samples) == 3
++        assert len(samples) == policy['samples_required']
+         for sample in samples:
+             assert sample in resources and not sample['own_pids']
+-            assert not sample['unexpected_processes']
+-            assert sample['free_mib'] >= 5000 and sample['utilization_percent'] <= 65
++            assert admissible(sample, policy)
+         stamps = [dt.datetime.fromisoformat(sample['time']) for sample in samples]
+         assert all((later-earlier).total_seconds() >= 9.5 for earlier,later in zip(stamps,stamps[1:]))
+         release = run['gpu_release_confirmed']
+@@ -83,17 +84,24 @@
+     assert state['preexisting_pid_samples'] == len(allowed)
+     assert state['unexpected_process_samples'] == len(unexpected)
+     assert state['unexpected_pids'] == sorted({p['pid'] for sample in unexpected for p in sample['unexpected_processes']})
++    observed_pids = sorted({p['pid'] for sample in all_foreign for p in sample['all_foreign_processes']})
++    assert state['observed_foreign_pids'] == observed_pids
+     return {'status': 'limited' if all_foreign or errors else 'sampled_no_foreign_observed',
+             'admissions_passed_registered_three_sample_policy': True,
+-            'allowed_preexisting_pids': policy['preexisting_gpu3_pids'],
++            'preregistered_co_resident_pids': policy['preexisting_gpu3_pids'],
++            'observed_foreign_pids': observed_pids,
++            'admission_min_free_mib': policy['admission_min_free_mib'],
++            'admission_max_utilization_percent': policy['admission_max_utilization_percent'],
++            'new_foreign_pids_pause_admission': policy['new_foreign_pids_pause_admission'],
+             'resource_samples': len(resources), 'all_foreign_process_samples': len(all_foreign),
+             'allowed_preexisting_pid_samples': len(allowed), 'new_foreign_pid_samples': len(unexpected),
+             'new_foreign_pids': state['unexpected_pids'], 'resource_query_errors': len(errors),
+             'minimum_free_mib': min(sample['free_mib'] for sample in resources),
+             'minimum_free_mib_during_formal': min(sample['free_mib'] for sample in resources if sample['stage']=='formal_running'),
+             'maximum_utilization_percent': max(sample['utilization_percent'] for sample in resources),
+-            'limits': ['The preregistered existing PID 1843864 may share this GPU; this is not exclusive GPU occupancy.',
+-                       'New foreign PIDs and resource pressure during active work are recorded without terminating any task.',
++            'limits': ['GPU co-residency is allowed; preregistered PIDs are disclosure records, not an exclusive allowlist.',
++                       'New foreign PIDs are recorded and do not block admission when the registered memory/utilization conditions pass.',
++                       'Resource pressure and query errors are recorded without terminating any task; failed queries cannot authorize admission.',
+                        'Discrete nvidia-smi samples cannot establish continuous resource isolation.']}
+ 
+ 
+@@ -271,7 +279,7 @@
+               'resource_evidence':resource_report,'runs':results,
+               'limits':['This is one registered Batch Size=8 diagnosis, not a completed five-seed study.',
+                         'Train and validation batches both change from16 to8; grouping and optimizer step counts differ from the historical control.',
+-                        'GPU3 is shared with the explicitly permitted preexisting PID when observed; resource isolation is limited.',
++                        'GPU3 may be shared with all observed foreign PIDs under the registered capacity gate; resource isolation is limited.',
+                         'Author difficulty generation history unknown.',
+                         'No test or final independent evaluation performed in this stage.']}
+     (ROOT/'provenance/final_verification.json').write_text(json.dumps(report,indent=2)+'\n')
+--- v1/reports/PREREGISTRATION.md
++++ v2/reports/PREREGISTRATION.md
+@@ -31,3 +31,7 @@
+ - 最佳值未提高：本Seed不支持主指标改善，其他辅助变化如实保留。
+ 
+ 单Seed不证明跨Seed稳定收益或统计显著。最佳和末段来自同一曲线，不是独立统计证据；末段变化不用于事后替换主指标。本组不自动启动第二Seed、其他学习率/Batch Size、Baseline、五Seed或最终测试。04～08源码、权重、日志、结果和报告保持不变，独立哈希验收。
++
++## GPU启动前资源修订
++
++资源门禁v2替代上述v1资源条件，详见[资源准入修订](RESOURCE_ADMISSION_AMENDMENT_V2.md)。旧登记原字节归档于provenance/resource_gate_v1/reports/PREREGISTRATION.md。全部科学参数、唯一正式运行次数和零测试规则保持不变；修订前探针0次、正式0次。

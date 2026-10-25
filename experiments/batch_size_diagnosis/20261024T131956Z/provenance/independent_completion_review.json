@@ -1,0 +1,25 @@
+{
+  "created_at_utc": "2026-10-25T02:33:10.313075+00:00",
+  "reviewer": "Codex native subagent /root/iem_batch_audit",
+  "status": "passed",
+  "best_validation_wf1": 65.89,
+  "best_epoch": 9,
+  "last10_validation_wf1": 63.048,
+  "epochs": 40,
+  "optimizer_steps": 5096,
+  "test_forwards": 0,
+  "checkpoints_cpu_loaded_finite_args_and_rng_checked": true,
+  "frozen_files_rehashed": 92,
+  "historical_inventory_count": 1691,
+  "historical_rehash_by_this_reviewer": false,
+  "historical_evidence": "existing passed final_verification; parent separately rechecking hashes",
+  "preregistered_decision": "no_best_improvement",
+  "report_limitations_confirmed": [
+    "train and validation grouping both changed",
+    "GPU1 vs historical GPU3",
+    "fixed_author generation unknown",
+    "shared GPU free memory minimum31MiB"
+  ],
+  "documentation_adjustment": "clarified3000MiB/95% threshold is admission-only, not continuous runtime condition",
+  "reviewer_new_model_forward_or_training": false
+}

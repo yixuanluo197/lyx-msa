@@ -1,0 +1,13 @@
+{
+  "created_at_utc": "2026-10-25T02:31:32.631092+00:00",
+  "scope": "postprocessing/navigation only",
+  "failure": "delivery started before state/finalization.json existed and exited FileNotFoundError",
+  "training_affected": false,
+  "formal_runs": 1,
+  "test_forwards": 0,
+  "frozen_script": false,
+  "fix": "wait for finalization state file before reading; rerun after finalization passed",
+  "original_script_sha256": "c4b5bdd29502d317eb1dd83f3f36584efeae80500bd9b6f0f29e3efbd040d191",
+  "corrected_script_sha256": "c5719ec6fc0f844099c0e984e22bced4bee3aa26bc2d18b8e9dbef328f2eddb8",
+  "changed_scientific_protocol": false
+}

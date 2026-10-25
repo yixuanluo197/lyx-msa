@@ -1,23 +1,27 @@
-# 第09组Batch Size诊断：阶段报告发布
+# 第09组Batch Size诊断：完成报告发布
 
-本次按用户要求发布[中文报告](../../reports/CMERC_BATCH_SIZE_DIAGNOSIS.md)及其审查材料。**这是一份资源阻塞状态报告，GPU探针和正式训练均为0次，不是Batch8性能报告。**
+唯一登记正式训练已在本地user23 GPU1完成40轮，并通过独立CPU验收。MELD完整非因果CMERC，seed2024/split_seed1475、LR0.0001、Batch8；验证集W-F1选模，全程零测试前向。
 
-控制已从XP04同Seed归档核实：MELD seed2024、LR0.0001、Batch16，最佳验证66.01%/第9轮，末10轮61.223%。Batch8数值待唯一一次40轮正式训练完成后产生。CPU容量通过不代替GPU前后向或完整训练验收，预计5096更新并非实际训练计数。
+| 指标 | Batch16（XP04） | Batch8（09） |
+|---|---:|---:|
+| 最佳验证W-F1 | 66.01% | 65.89% |
+| 最佳Epoch | 9 | 9 |
+| 末10轮验证均值 | 61.223% | 63.048% |
 
-## 本次公开材料
+最佳值下降0.12个百分点，末段提高1.825个百分点；按预登记规则为主指标未改善，暂不追加第二Seed或最终五Seed。后期过拟合迹象较轻属于辅助线索，尚未证明跨Seed收益或内部机制因果。原参数同时改变train/validation分组，且控制GPU3、本次GPU1；这些限制保留。
 
-- [报告](../../reports/CMERC_BATCH_SIZE_DIAGNOSIS.md)、[独立批次](../../experiments/batch_size_diagnosis/20261024T131956Z/README.md)、[训练前登记](../../experiments/batch_size_diagnosis/20261024T131956Z/reports/PREREGISTRATION.md)
-- [协议审计](../../experiments/batch_size_diagnosis/20261024T131956Z/reports/PROTOCOL_AUDIT.md)、[配置和完整argv](../../experiments/batch_size_diagnosis/20261024T131956Z/configs/registry.json)
-- [CPU保护测试](../../experiments/batch_size_diagnosis/20261024T131956Z/preflight/guard_tests.json)、[40轮容量重放](../../experiments/batch_size_diagnosis/20261024T131956Z/preflight/capacity_cpu.json)
-- 冻结训练源码、工程补丁、观测/启动及CPU核验脚本、源与数据哈希、环境和历史文件保全清单
-- [上传时监督器快照](../../experiments/batch_size_diagnosis/20261024T131956Z/provenance/publication_status.json)；实际文件及SHA见[publication_manifest.json](publication_manifest.json)
+## 公开证据
 
-## 状态及复核边界
+- [完整中文报告](../../reports/CMERC_BATCH_SIZE_DIAGNOSIS.md)、[独立实验目录](../../experiments/batch_size_diagnosis/20261024T131956Z/README.md)、[预登记](../../experiments/batch_size_diagnosis/20261024T131956Z/reports/PREREGISTRATION.md)
+- [配置及完整argv](../../experiments/batch_size_diagnosis/20261024T131956Z/configs/registry.json)、[实际解析参数](../../experiments/batch_size_diagnosis/20261024T131956Z/results/MELD_cmerc_batch8_lr1e-4_seed2024/effective_args.json)、[环境](../../experiments/batch_size_diagnosis/20261024T131956Z/provenance/environment.json)
+- [对照CSV](../../experiments/batch_size_diagnosis/20261024T131956Z/results/comparison.csv)、[逐轮曲线CSV](../../experiments/batch_size_diagnosis/20261024T131956Z/results/curves.csv)、[各项Loss](../../experiments/batch_size_diagnosis/20261024T131956Z/results/loss_curves.csv)、[汇总JSON](../../experiments/batch_size_diagnosis/20261024T131956Z/results/metrics_summary.json)
+- [独立验收](../../experiments/batch_size_diagnosis/20261024T131956Z/provenance/final_verification.json)、[完成前哈希及指标复核](../../experiments/batch_size_diagnosis/20261024T131956Z/provenance/completion_recheck.json)、[20件图及SHA](../../experiments/batch_size_diagnosis/20261024T131956Z/results/figures/manifest.json)
+- [资源门禁修订v2](../../experiments/batch_size_diagnosis/20261024T131956Z/reports/RESOURCE_ADMISSION_AMENDMENT_V2.md)、[GPU0/1/3选择修订v3](../../experiments/batch_size_diagnosis/20261024T131956Z/reports/XP_DEVICE_SELECTION_AMENDMENT_V3.md)、[导航脚本启动竞态修复记录](../../experiments/batch_size_diagnosis/20261024T131956Z/provenance/delivery_recovery.json)
 
-快照时间：`2026-10-24T14:13:23.658649+00:00`。服务器后台监督器仍在GPU资源准入队列，本次上传不改变队列、配置或任何04～08历史文件，不重复启动任务，不执行模型前向/反向或测试。
+## 发布边界
 
-GitHub上的快照和报告不会随服务器队列实时更新；正式训练及独立验收后的结果需要另行发布。模型权重、输入数据及其链接、原始日志、逐Batch跟踪、实时state与锁保留在服务器。冻结清单中的服务器绝对路径及未上传文件SHA仅供溯源，不保证仅克隆公开仓库即可重算全部检查。
+92项运行冻结源/输入、1691项历史文件保全通过；best/latest为第9/40轮，模型及Adam有限并保存完整随机状态，SHA见验收文件。450次资源采样显示共享GPU正式阶段最小空闲31MiB，未发生本任务OOM；不能声明独占或证明未影响其他任务吞吐。未终止其他项目进程，未追加训练。
 
-唯一科学CLI因素为Batch16→8，原参数同时改变train与validation分组。BN/padding、未pack双向GRU、HSCL配对、CC尺度、更新次数及实际RNG消耗的耦合限制完整保留；不得把本次设计说成仅改变训练分组。未生成新测试F1，不据测试或当前未知结果作参数选择。
+先前提交`adea816600aa014652d78dcc11e488f60935465b`发布的是0次正式训练的排队阶段快照；其原[publication_manifest.json](publication_manifest.json)及批次publication_status/publication_checks保留为历史证据，**不能当作当前状态**。本次完成材料的文件SHA另见[final_publication_manifest.json](final_publication_manifest.json)。
 
-发布前CPU复查13项全部通过，CUDA未初始化；39项冻结输入哈希保持不变。原冻结源码及补丁的CRLF/空白按08原字节保留，未做格式化。
+数据与其本地链接、模型权重、原始训练/资源日志、逐Batch/逐Epoch原始观测、实时state和锁保留服务器，未上传。公开CSV为训练/验证指标和Loss汇总，不含新测试结果。冻结清单中的绝对路径及未公开文件SHA用于溯源，仅克隆GitHub仓库不能重算所有服务器验收。

@@ -13,7 +13,11 @@ import time
 
 ROOT = Path(__file__).resolve().parents[1]
 INTERVAL = 10
-ALLOWED_PID = 1843864
+HEALTHY_XP_GPUS = {
+    0: 'GPU-7ff18ebb-100e-98fe-038b-a98bd4f94248',
+    1: 'GPU-eed2f34f-b4c0-7b7a-498e-71a026e30c5a',
+    3: 'GPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456',
+}
 
 
 def now():
@@ -58,11 +62,11 @@ def validate_capsule(expected=None):
 
 def cpu_evidence():
     records = []
-    for name in ('guard_tests.json', 'capacity_cpu.json'):
+    for name in ('guard_tests.json', 'capacity_cpu.json', 'resource_guard_tests.json'):
         path = ROOT / 'preflight' / name
         value = read(path)
         assert value['status'] == 'passed' and value['cuda_initialized'] is False
-        if name == 'guard_tests.json':
+        if name in ('guard_tests.json', 'resource_guard_tests.json'):
             assert value['tests'] >= 5 and value['failures'] == value['errors'] == 0
         else:
             assert value['epochs_checked'] == 40 and len(value['records']) == 40
@@ -70,8 +74,14 @@ def cpu_evidence():
     return records
 
 
+def validate_device(index, uuid, name=None):
+    assert HEALTHY_XP_GPUS.get(index) == uuid, 'Device index/UUID is not in the registered healthy XP mapping'
+    assert name is None or 'TITAN Xp' in name, 'Selected GPU is not a TITAN Xp'
+
+
 def resource_snapshot(registry, own_pids=(), stage=None):
     uuid = registry['gpu_uuid']
+    validate_device(registry['gpu_index'], uuid)
     query = subprocess.run(['nvidia-smi', '--id=' + uuid,
         '--query-gpu=index,uuid,name,memory.total,memory.free,memory.used,utilization.gpu',
         '--format=csv,noheader,nounits'], capture_output=True, text=True, check=True, timeout=20)
@@ -79,7 +89,7 @@ def resource_snapshot(registry, own_pids=(), stage=None):
         '--format=csv,noheader,nounits'], capture_output=True, text=True, check=True, timeout=20)
     fields = [part.strip() for part in query.stdout.strip().split(',')]
     assert len(fields) == 7 and fields[0] == str(registry['gpu_index']) and fields[1] == uuid
-    assert 'TITAN Xp' in fields[2]
+    validate_device(int(fields[0]), fields[1], fields[2])
     processes = []
     for line in apps.stdout.splitlines():
         parts = [part.strip() for part in line.split(',')]
@@ -87,6 +97,7 @@ def resource_snapshot(registry, own_pids=(), stage=None):
             processes.append({'pid': int(parts[1]), 'name': parts[2], 'used_memory': parts[3]})
     own = set(own_pids)
     foreign = [value for value in processes if value['pid'] not in own]
+    # Legacy field name: disclosure for the selected card, including an empty list.
     allowed = set(registry['resource_policy']['preexisting_gpu3_pids'])
     return {'time': now(), 'stage': stage, 'gpu_index': int(fields[0]), 'gpu_uuid': uuid,
             'gpu_name': fields[2], 'total_mib': int(fields[3]), 'free_mib': int(fields[4]),
@@ -97,9 +108,22 @@ def resource_snapshot(registry, own_pids=(), stage=None):
 
 
 def admissible(sample, policy):
-    return (not sample['own_pids'] and not sample['unexpected_processes']
+    if sample is None:
+        return False
+    foreign_blocked = policy['new_foreign_pids_pause_admission'] and bool(sample['unexpected_processes'])
+    return (not sample['own_pids'] and not foreign_blocked
             and sample['free_mib'] >= policy['admission_min_free_mib']
             and sample['utilization_percent'] <= policy['admission_max_utilization_percent'])
+
+
+def validate_resource_policy(policy):
+    assert (policy['admission_min_free_mib'], policy['admission_max_utilization_percent'],
+            policy['samples_required'], policy['sample_seconds']) == (3000, 95, 3, 10)
+    assert policy['estimated_own_peak_mib'] == 2200
+    assert policy['new_foreign_pids_pause_admission'] is False
+    assert policy['no_foreign_process_signals'] is True and policy['co_resident_processes_disclosed'] is True
+    pids = policy['preexisting_gpu3_pids']
+    assert len(pids) == len(set(pids)) and all(isinstance(pid, int) and pid > 0 for pid in pids)
 
 
 def observe(registry, state, stage, own_pids=()):
@@ -112,19 +136,22 @@ def observe(registry, state, stage, own_pids=()):
         state['last_resource_error'] = failure
         state['resource_query_errors'] += 1
         state['admission_paused'] = True
+        state['admission_conditions_currently_met'] = False
         write(ROOT / 'state/status.json', state)
         return None
     state['resource_samples'] += 1
     state['preexisting_pid_samples'] += bool(sample['allowed_foreign_processes'])
     state['unexpected_process_samples'] += bool(sample['unexpected_processes'])
+    state['observed_foreign_pids'] = sorted(set(state['observed_foreign_pids']) | {p['pid'] for p in sample['all_foreign_processes']})
     if sample['unexpected_processes']:
         state['unexpected_pids'] = sorted(set(state['unexpected_pids']) | {p['pid'] for p in sample['unexpected_processes']})
     policy = registry['resource_policy']
     pressure = (sample['free_mib'] < policy['admission_min_free_mib']
                 or sample['utilization_percent'] > policy['admission_max_utilization_percent'])
-    state['admission_conditions_currently_met'] = not sample['unexpected_processes'] and not pressure
+    foreign_blocked = policy['new_foreign_pids_pause_admission'] and bool(sample['unexpected_processes'])
+    state['admission_conditions_currently_met'] = not foreign_blocked and not pressure
     # The utilization threshold is an admission rule; active training may normally exceed it.
-    state['admission_paused'] = bool(sample['unexpected_processes'] or (stage.endswith('_admission') and pressure))
+    state['admission_paused'] = bool(foreign_blocked or (stage.endswith('_admission') and pressure))
     state['last_resource'] = sample
     write(ROOT / 'state/status.json', state)
     return sample
@@ -183,8 +210,24 @@ def verify_probe(run):
     expected = loss['classification_loss'] + .002 * loss['cc_loss'] + .15 * loss['mscl_loss'] + .15 * loss['cscl_loss']
     assert math.isclose(expected, loss['total_loss'], rel_tol=1e-5, abs_tol=1e-6)
     assert not list((ROOT / 'preflight' / run['run_id']).rglob('final_test.json'))
+    memory_path = ROOT / 'logs' / ('preflight_' + run['run_id'] + '_memory.jsonl')
+    memory = [json.loads(line) for line in memory_path.read_text().splitlines()]
+    assert memory, 'Probe memory telemetry missing'
+    assert all(math.isfinite(row[key]) and row[key] >= 0 for row in memory
+               for key in ('peak_allocated_mib', 'peak_reserved_mib'))
+    peak_allocated = max(row['peak_allocated_mib'] for row in memory)
+    peak_reserved = max(row['peak_reserved_mib'] for row in memory)
+    budget = read(ROOT / 'configs/registry.json')['resource_policy']['estimated_own_peak_mib']
+    assert peak_reserved <= budget, 'Probe exceeded registered Torch reserved-memory budget; formal work not admitted'
+    resources = [json.loads(line) for line in (ROOT / 'logs/resources.jsonl').read_text().splitlines()]
+    probe_resources = [row for row in resources if row['stage'] == 'preflight_running']
+    assert probe_resources and all(row['free_mib'] > 0 for row in probe_resources)
     return {'status': 'passed', 'first_step_parameters_changed': True, 'test_forward_passes': 0,
-            'first_sha256': sha(folder / 'first.json'), 'status_sha256': sha(folder / 'status.json')}
+            'first_sha256': sha(folder / 'first.json'), 'status_sha256': sha(folder / 'status.json'),
+            'memory_profile_sha256': sha(memory_path), 'torch_peak_allocated_mib': peak_allocated,
+            'torch_peak_reserved_mib': peak_reserved, 'registered_memory_budget_mib': budget,
+            'preflight_sampled_gpu_free_mib_min': min(row['free_mib'] for row in probe_resources),
+            'memory_limits': 'Torch allocator telemetry is not whole-process GPU occupancy; free memory is sampled, not a continuous minimum.'}
 
 
 def verify_formal(run):
@@ -204,6 +247,10 @@ def validate_gate(capsule_sha, run):
     gate = read(ROOT / 'preflight/gate.json')
     assert gate['status'] == 'passed' and gate['formal_runs_authorized'] == 1 and gate['test_forward_passes'] == 0
     assert gate['frozen_execution_sha256'] == capsule_sha
+    policy = read(ROOT / 'configs/registry.json')['resource_policy']
+    validate_resource_policy(policy)
+    assert gate['resource_policy'] == policy
+    assert gate['preregistered_co_resident_pids'] == policy['preexisting_gpu3_pids']
     assert gate['cpu_evidence'] == cpu_evidence()
     assert gate['probe_evidence'] == verify_probe(run)
     validate_capsule(capsule_sha)
@@ -219,11 +266,10 @@ def main():
     assert (run['run_id'], run['dataset'], run['seed'], run['lr'], run['epochs'], run['batch_size'], run['validation_batch_size']) == ('MELD_cmerc_batch8_lr1e-4_seed2024', 'MELD', 2024, .0001, 40, 8, 8)
     assert float(run['argv'][run['argv'].index('--lr')+1]) == .0001
     assert int(run['argv'][run['argv'].index('--batch-size')+1]) == 8
-    assert registry['gpu_index'] == 3 and registry['gpu_uuid'] == 'GPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456'
+    validate_device(registry['gpu_index'], registry['gpu_uuid'])
     assert registry['environment']['CUDA_VISIBLE_DEVICES'] == registry['gpu_uuid']
     policy = registry['resource_policy']
-    assert policy['preexisting_gpu3_pids'] == [ALLOWED_PID]
-    assert (policy['admission_min_free_mib'], policy['admission_max_utilization_percent'], policy['samples_required'], policy['sample_seconds']) == (5000, 65, 3, 10)
+    validate_resource_policy(policy)
     assert not (ROOT / 'state/status.json').exists(), 'Existing supervision state: no implicit retry'
     assert not Path(run['output_root']).exists() and not (ROOT / 'results' / run['run_id']).exists()
     assert not (ROOT / 'preflight' / run['run_id']).exists() and not (ROOT / 'preflight/gate.json').exists()
@@ -233,7 +279,8 @@ def main():
              'formal_started': 0, 'formal_completed': 0, 'runs': [], 'preflight_started': 0,
              'frozen_execution_sha256': capsule_sha, 'resource_samples': 0, 'resource_query_errors': 0,
              'preexisting_pid_samples': 0, 'unexpected_process_samples': 0, 'unexpected_pids': [],
-             'co_resident_pid_explicitly_allowed': ALLOWED_PID, 'admission_paused': False,
+             'preregistered_co_resident_pids': policy['preexisting_gpu3_pids'], 'observed_foreign_pids': [],
+             'new_foreign_pids_pause_admission': policy['new_foreign_pids_pause_admission'], 'admission_paused': False,
              'active_pids': [], 'preflight': None}
     write(ROOT / 'state/status.json', state)
     child, log, row, mode = None, None, None, None
@@ -280,9 +327,11 @@ def main():
                 probe = verify_probe(run)
                 gate = {'status': 'passed', 'created_at_utc': now(), 'formal_runs_authorized': 1,
                         'test_forward_passes': 0, 'frozen_execution_sha256': capsule_sha,
-                        'cpu_evidence': cpu, 'probe_evidence': probe, 'co_resident_pid_allowed': ALLOWED_PID,
+                        'cpu_evidence': cpu, 'probe_evidence': probe, 'resource_policy': policy,
+                        'preregistered_co_resident_pids': policy['preexisting_gpu3_pids'],
                         'preflight_resource_disclosure': {'preexisting_pid_samples': state['preexisting_pid_samples'],
                             'unexpected_process_samples': state['unexpected_process_samples'], 'unexpected_pids': state['unexpected_pids'],
+                            'observed_foreign_pids': state['observed_foreign_pids'],
                             'resource_query_errors': state['resource_query_errors']}}
                 write(ROOT / 'preflight/gate.json', gate)
                 write(ROOT / 'state/preflight.json', {'active': False, 'phase': 'passed', **row, **probe})

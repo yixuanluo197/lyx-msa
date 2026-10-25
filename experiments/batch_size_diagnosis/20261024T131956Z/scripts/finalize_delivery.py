@@ -33,6 +33,9 @@ def main():
     state = {'active': True, 'phase': 'waiting_for_finalization', 'pid': os.getpid()}
     save(state)
     while True:
+        if not (ROOT/'state/finalization.json').exists():
+            time.sleep(20)
+            continue
         finalization = read(ROOT/'state/finalization.json')
         if not finalization['active']:
             if finalization['phase'] != 'completed':

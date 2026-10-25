@@ -1,0 +1,117 @@
+{
+  "generated_at_utc": "2026-10-24T18:57:30.610306+00:00",
+  "formal_training_complete": true,
+  "matplotlib_version": "3.10.9",
+  "legend_location": "outside axes, reserved right margin",
+  "scope": "CPU train/validation CSV plotting only; no model, test or scheduler calls",
+  "input_sha256": {
+    "results/per_run.csv": "e26ab2f9d69186a2bc7f6579327c807e09dbc0cc1349804d1579264674097fed",
+    "results/comparison.csv": "846eaea7e4bc54bfed0fb1c4c204ecac2d48fbc03e9564d142e1e1d233d90a07",
+    "results/curves.csv": "e3272cba13c3b66396d6747a87136e3b8f95928efd47153da9896a1bdaafaa8f",
+    "results/loss_curves.csv": "d364d2c7bbab958097bdf87c1c2c3335ad59f5587324160a881ddeb2d011d550",
+    "results/metrics_summary.json": "c63b69668c036f4467ba79d0d221412ac3a19df68fa8d0bfcf08ef066e9516a5",
+    "scripts/plot_batch_size.py": "1fed6d388b76570be035ebc200cbfd4bdeb5701e4180e2d627a43452981ad07b"
+  },
+  "artifacts": [
+    {
+      "path": "results/figures/MELD_batch_size_wf1.png",
+      "sha256": "444fa0679988b7f5072288c9a6a125badb1c26b747bf624d6bb54a6d953c3aa9",
+      "bytes": 121528
+    },
+    {
+      "path": "results/figures/MELD_batch_size_wf1.svg",
+      "sha256": "91e0876650269382b2a8d87eb900eb30cf579834dcd1b2b0a0f4389e1f71eb0f",
+      "bytes": 61294
+    },
+    {
+      "path": "results/figures/MELD_batch_size_classification_loss.png",
+      "sha256": "1405e45d3e64765220ebb3db8be62585f818158014579c1fe41e26b1b3f84602",
+      "bytes": 139973
+    },
+    {
+      "path": "results/figures/MELD_batch_size_classification_loss.svg",
+      "sha256": "679726599abaa2b519fc63f1a241b1eaf695f5044ae89deb6dcc19722030e9d1",
+      "bytes": 59770
+    },
+    {
+      "path": "results/figures/MELD_batch_size_weighted_loss.png",
+      "sha256": "e71151a644e8927989787fa139b39a93b2140ddc20107dea9dcb2c3ac890a06d",
+      "bytes": 115542
+    },
+    {
+      "path": "results/figures/MELD_batch_size_weighted_loss.svg",
+      "sha256": "a55c4156a90eec0ec4e4b8768a9401279df0c5f56aba4e7c415085eda5a5cee2",
+      "bytes": 54534
+    },
+    {
+      "path": "results/figures/MELD_batch_size_weighted_cc_loss.png",
+      "sha256": "fc85ea072cde6c058630df0d489cc8801f0f50a9946f38d4936e5525c33a707f",
+      "bytes": 118909
+    },
+    {
+      "path": "results/figures/MELD_batch_size_weighted_cc_loss.svg",
+      "sha256": "ca857ad4751272f42448cd811f233571f7e28fcbbdfed3ddbd2f5bdb9c60ed92",
+      "bytes": 51168
+    },
+    {
+      "path": "results/figures/MELD_batch_size_weighted_mscl_loss.png",
+      "sha256": "6abb12229bedf6020b79b371ba64cea4ff677bbfcc551df9647bf39895ac4e28",
+      "bytes": 124139
+    },
+    {
+      "path": "results/figures/MELD_batch_size_weighted_mscl_loss.svg",
+      "sha256": "d8402c79e23712f1bffd88363fcbf0a69a14d9914190f5918ff9956b1896a38e",
+      "bytes": 51720
+    },
+    {
+      "path": "results/figures/MELD_batch_size_weighted_cscl_loss.png",
+      "sha256": "4a22873925d6c3112c0f8eac250d96cef1de9cec6b6e8d58a147a0970432b460",
+      "bytes": 147350
+    },
+    {
+      "path": "results/figures/MELD_batch_size_weighted_cscl_loss.svg",
+      "sha256": "724f7a21b0db0b88d7a10128ad8f9ffba2af212fb73e02de413971bbf57f3935",
+      "bytes": 51865
+    },
+    {
+      "path": "results/figures/MELD_batch_size_raw_cc_loss.png",
+      "sha256": "e043072b4fa2986f0ce92a35a77bb2e403d6ba3a1645252f439e783c946b431f",
+      "bytes": 113732
+    },
+    {
+      "path": "results/figures/MELD_batch_size_raw_cc_loss.svg",
+      "sha256": "6a15e5608f9292f26f24ede85a840d3364a093ed6088fbb68f66a2b65a69e640",
+      "bytes": 49724
+    },
+    {
+      "path": "results/figures/MELD_batch_size_raw_mscl_loss.png",
+      "sha256": "c234dd319202950f5759c70be86dc2275dae06177fa729ab9f364c04eb1af5eb",
+      "bytes": 122672
+    },
+    {
+      "path": "results/figures/MELD_batch_size_raw_mscl_loss.svg",
+      "sha256": "263acb1665795397ad7b77581eebf37a13d6ad6e74cee8e171d6b295c18144aa",
+      "bytes": 52065
+    },
+    {
+      "path": "results/figures/MELD_batch_size_raw_cscl_loss.png",
+      "sha256": "abfc84f6ed0e3da553e4387df4a91a889a8b223bbbb97ea57268128bfbc8d90b",
+      "bytes": 143911
+    },
+    {
+      "path": "results/figures/MELD_batch_size_raw_cscl_loss.svg",
+      "sha256": "21ec48139fa724287d64ec846038a95a7c16d7df98a9da9fb17751b324c03660",
+      "bytes": 52194
+    },
+    {
+      "path": "results/figures/MELD_batch_size_optimizer_steps.png",
+      "sha256": "83ad6fd95642585c007521232a1a422eb80474c501b7e6522a07cf13e7232db2",
+      "bytes": 78058
+    },
+    {
+      "path": "results/figures/MELD_batch_size_optimizer_steps.svg",
+      "sha256": "85c4a1bdbee4f96312d87025bf85da1618659644d28db9be304a5925d5ef9656",
+      "bytes": 51321
+    }
+  ]
+}

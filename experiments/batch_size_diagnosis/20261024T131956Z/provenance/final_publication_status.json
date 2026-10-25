@@ -1,0 +1,21 @@
+{
+  "created_at_utc": "2026-10-25T02:33:50.591794+00:00",
+  "phase": "completed",
+  "server": "user23",
+  "gpu_index": 1,
+  "gpu_uuid": "GPU-eed2f34f-b4c0-7b7a-498e-71a026e30c5a",
+  "formal_started": 1,
+  "formal_completed": 1,
+  "epochs": 40,
+  "test_forwards": 0,
+  "new_best_validation_wf1": 65.89,
+  "new_last10_validation_wf1": 63.048,
+  "best_epoch": 9,
+  "final_verification": "passed",
+  "completion_recheck": "passed",
+  "frozen_source_and_inputs": 92,
+  "historical_files": 1691,
+  "plots": 20,
+  "limits": "singleSeed; both train and validation batch grouping change; different physical GPU vs control; shared resources; no independent test",
+  "previous_queued_snapshot_commit": "adea816600aa014652d78dcc11e488f60935465b"
+}

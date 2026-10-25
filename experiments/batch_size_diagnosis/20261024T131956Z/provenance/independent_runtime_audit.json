@@ -1,0 +1,19 @@
+{
+  "created_at_utc": "2026-10-24T17:57:29.140194+00:00",
+  "reviewer": "iem_batch_audit",
+  "scope": "Read-only runtime/config/selected-device/finalization review during training, not final 40-epoch acceptance.",
+  "status": "passed",
+  "findings": {
+    "no_stale_gpu3_or_pid1843864_hard_block": true,
+    "actual_host_gpu_index": 1,
+    "logical_cuda_device": "cuda:0",
+    "gpu_uuid": "GPU-eed2f34f-b4c0-7b7a-498e-71a026e30c5a",
+    "scientific_args_match_xp04_except_registered_batch_and_engineering_fields": true,
+    "data_split_and_lr_match": true,
+    "related_capsule_hashes_match": true,
+    "probe_formal_first_step_initial_weights_rng_ids_exact": true,
+    "probe_formal_first_step_losses_gradnorm_within_tolerance": true,
+    "finalizers_cpu_only": true
+  },
+  "no_model_forward_or_test_metrics_read_by_reviewer": true
+}

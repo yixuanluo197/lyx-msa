@@ -31,3 +31,9 @@ batch16→8同时改变每Epoch优化步数、BatchNorm训练统计、HSCL正负
 - 最佳值未提高：本Seed不支持主指标改善，其他辅助变化如实保留。
 
 单Seed不证明跨Seed稳定收益或统计显著。最佳和末段来自同一曲线，不是独立统计证据；末段变化不用于事后替换主指标。本组不自动启动第二Seed、其他学习率/Batch Size、Baseline、五Seed或最终测试。04～08源码、权重、日志、结果和报告保持不变，独立哈希验收。
+
+## GPU启动前资源修订
+
+资源门禁v2替代上述v1资源条件，详见[资源准入修订](RESOURCE_ADMISSION_AMENDMENT_V2.md)。旧登记原字节归档于provenance/resource_gate_v1/reports/PREREGISTRATION.md。全部科学参数、唯一正式运行次数和零测试规则保持不变；修订前探针0次、正式0次。
+
+设备候选修订v3在0探针/0正式运行时登记，GPU0/1/3按可用空间选唯一设备，详见[设备选择修订](XP_DEVICE_SELECTION_AMENDMENT_V3.md)。最终registry及gpu_selection将在GPU调用前冻结，之后探针/正式同卡。

@@ -104,6 +104,11 @@ def fmt(value,signed=False):return '历史未记录' if value is None else forma
 def report(summary,registry):
     comp=summary['comparison'][0];protocols=summary['per_run'];run=registry['runs'][0]
     origin=read(ROOT/'provenance/source_origin.json');environment=read(ROOT/'provenance/environment.json')
+    policy=registry['resource_policy']
+    co_resident_pids=policy.get('preexisting_gpu_pids',policy.get('preregistered_co_resident_pids',policy.get('preexisting_gpu3_pids',[])))
+    historical_gpu_uuid='GPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456'
+    same_physical=(registry['gpu_index']==3 and registry['gpu_uuid']==historical_gpu_uuid)
+    pairing_note=('本次与XP04控制同物理卡。' if same_physical else '本次与XP04控制为同host、同型号、不同物理卡；不能声称同物理卡配对。')
     current_sha=sha(ROOT/'code_xp04/train_cm.py')
     labels={'second_seed_candidate':'满足第二Seed候选资格（非统计强证据）','mixed_evidence':'最佳升、末段降：混合线索','no_best_improvement':'预登记主指标未改善'}
     lines=['# CMERC Batch Size 诊断', '', f"生成时间：{summary['generated_at_utc']}。本批仅1/1正式训练完成：MELD seed2024、lr1e-4、Batch8、40轮。", '',
@@ -140,7 +145,10 @@ def report(summary,registry):
     lines+=['', 'train为在线训练态、val为固定模型eval，不同模式与参数时点下的曲线间距不是严格泛化gap。末段时间窗SD不是跨Seed标准差；有限梯度与真实参数更新只能证明所检数值和执行路径正常，不能据此排除目标竞争、伪目标噪声或泛化根因。训练辅助模型保留epoch入口快照语义。', '',
             '## 零测试与配对边界', '',
             '本次零测试loader遍历、零测试前向；不解析测试指标或预测数组、不据测试筛选。本阶段未计算ECE/CEL。原综合pickle及测试loader元数据仍加载，零前向不等于完全未加载含测试数据的文件。训练后原自动测试由明确skip-final-test门禁跳过，不进行新测试评估。', '',
-            'XP04 seed2024控制与本批同为本地user23 GPU3（GPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456），但CUDA scatter数值非确定性、历史时点和预登记共驻PID1843864仍限制严格因果与速度解释；不得称独占资源或连续隔离，不终止其他项目。作者fixed_author课程包含validation键、生成史未知；使用同一文件保持配对，不称完整预处理链validation-free。', '',
+            f"XP04 seed2024控制位于本地user23 GPU3（{historical_gpu_uuid}）；本批实际设备为同host GPU{registry['gpu_index']}（{registry['gpu_uuid']}）。{pairing_note}CUDA scatter数值非确定性、硬件/历史时点和共享资源仍限制严格因果与速度解释；不得称独占资源或连续隔离，不终止其他项目。registry当前登记的共驻PID为`{co_resident_pids}`，实际观察到的PID另见最终资源证据。作者fixed_author课程包含validation键、生成史未知；使用同一文件保持配对，不称完整预处理链validation-free。", '',
+            '设备选择在任何GPU探针和正式训练前由CPU selector监控同host健康TITAN Xp候选GPU0/1/3；首个连续三次新采样满足资源v2门槛者作为唯一设备，记录实际registry和冻结清单后不再换卡。完整候选、时间及实际选择见[XP设备选择工程修订v3](../reports/XP_DEVICE_SELECTION_AMENDMENT_V3.md)与[设备选择记录](../provenance/gpu_selection.json)。本修订不改变科学配置、候选资格或唯一训练预算。', '',
+            f"资源准入v2按registry实际值执行：free>={policy['admission_min_free_mib']} MiB、util<={policy['admission_max_utilization_percent']}%、{policy['samples_required']}次新采样、间隔{policy['sample_seconds']}秒；本任务估计预算{policy['estimated_own_peak_mib']} MiB。新增外部PID是否暂停准入的登记值为`{policy['new_foreign_pids_pause_admission']}`，不再以PID更替本身作硬拒绝；身份、资源和查询有效性仍需核验。", '',
+            'v2仅修订资源管理，原v1门禁与等待记录已原字节归档；科学配置、唯一正式预算、零测试与候选资格不变。时间和资源依据见[资源准入工程修订v2](../reports/RESOURCE_ADMISSION_AMENDMENT_V2.md)，不将等待结束或门禁放行解释为训练成功。', '',
             '## 建议及证据状态', '', '**当前直接建议：** '+recommendation(comp['candidate_category']), '',
             '已证实事实是本次固定配置、日志轨迹、数值执行和登记主指标的比较；优化机制、校准收益、跨Seed稳定性和论文差距根因仍未证实。一个Batch参数改变产生多项相互耦合的执行变化，不能将观测差值分摊为BN、HSCL或CC的单独效应。后续仅提出独立预登记建议，不自动开展五Seed、其他Batch Size、lr、Seed或测试。', '',
             '## 可追溯材料', '',
@@ -158,7 +166,8 @@ def report(summary,registry):
             lines += [f"单run完成40次train/40次validation，记录{v['train_batches']}个真实训练Batch，test前向{v['test_forwards']}。登记Batch8排列重放匹配`{v['every_epoch_order_matches_registered_batch8_replay']}`，原sampler AST与历史Batch16重放通过`{v['unchanged_sampler_AST_and_historical_batch16_replay_passed']}`，实际train/val Batch均`{v['train_and_validation_batch_size']}`、lr保持`{v['lr_unchanged_from_xp04']}`。", '',
                       f"best/latest两个Checkpoint分别第{ck['best.pt']['epoch']}/{ck['latest.pt']['epoch']}轮，模型和Adam有限`{ck['best.pt']['model_and_adam_finite']}`/`{ck['latest.pt']['model_and_adam_finite']}`，完整RNG存在`{ck['best.pt']['full_rng_present']}`/`{ck['latest.pt']['full_rng_present']}`；验收脚本同时核对完整args/provenance和Adam lr。best SHA `{ck['best.pt']['sha256']}`，latest SHA `{ck['latest.pt']['sha256']}`。冻结源/输入未变`{verification['frozen_sources_and_inputs_unchanged']}`，历史文件哈希保全合计{history}项。"]
             resource=verification.get('resource_evidence',{})
-            if resource:lines+=['',f"资源证据`{resource.get('status','unknown')}`：采样{resource.get('resource_samples','未记录')}次、许可共驻PID采样{resource.get('allowed_preexisting_pid_samples','未记录')}次、新外部PID采样{resource.get('new_foreign_pid_samples','未记录')}次、查询错误{resource.get('resource_query_errors','未记录')}次；正式阶段最小空闲{resource.get('minimum_free_mib_during_formal','未记录')} MiB、最大利用率{resource.get('maximum_utilization_percent','未记录')}%。离散采样不能证明连续独占或资源隔离；运行期压力仅记录，不终止他人任务。"]
+            if resource:lines+=['',f"资源证据`{resource.get('status','unknown')}`：采样{resource.get('resource_samples','未记录')}次、预登记共驻PID采样{resource.get('allowed_preexisting_pid_samples','未记录')}次、新外部PID采样{resource.get('new_foreign_pid_samples','未记录')}次、查询错误{resource.get('resource_query_errors','未记录')}次；正式阶段最小空闲{resource.get('minimum_free_mib_during_formal','未记录')} MiB、最大利用率{resource.get('maximum_utilization_percent','未记录')}%。", '',
+                                 f"最终验收记录的预登记共驻PID：`{resource.get('preregistered_co_resident_pids',co_resident_pids)}`；实际观察到的外部PID：`{resource.get('observed_foreign_pids','未记录')}`。验收资源门槛free>={resource.get('admission_min_free_mib',policy['admission_min_free_mib'])} MiB、util<={resource.get('admission_max_utilization_percent',policy['admission_max_utilization_percent'])}%，新增PID暂停准入值`{resource.get('new_foreign_pids_pause_admission',policy['new_foreign_pids_pause_admission'])}`。离散采样不能证明连续独占或资源隔离；运行期压力和新增PID仅记录，不终止他人任务。"]
         else:lines+=['验收尚未通过，不宣称完整验收成功。']
     else:lines+=['','最终验收文件尚未生成；统计门禁不代替独立产物验收。']
     lines+=['',f'本批根目录：`{ROOT}`。仓库根报告正文一致，链接按所在位置调整。','']
@@ -217,7 +226,7 @@ def main():
                 comp=observed['loss_components'];loss_records.append({'batch_size':item['batch_size'],'source':item['source'],'split':'validation','epoch':observed['epoch'],**comp,**weighted(comp,config)})
     input_files=[ROOT/name for name in ['configs/registry.json','provenance/xp04_validation_references.json','preflight/capacity_cpu.json','scripts/analyze_batch_size.py','provenance/source_origin.json','provenance/environment.json','provenance/frozen_execution.json']]
     input_files += [directory/'metrics.jsonl',directory/'run_manifest.json',result/'status.json',result/'watch_epochs.jsonl',result/'watch_batches.jsonl']
-    input_files += [path for path in [ROOT/'preflight/gate.json',ROOT/'provenance/final_verification.json'] if path.exists()]
+    input_files += [path for path in [ROOT/'preflight/gate.json',ROOT/'provenance/final_verification.json',ROOT/'reports/RESOURCE_ADMISSION_AMENDMENT_V2.md',ROOT/'reports/XP_DEVICE_SELECTION_AMENDMENT_V3.md',ROOT/'provenance/gpu_selection.json'] if path.exists()]
     summary={'generated_at_utc':dt.datetime.now(dt.timezone.utc).isoformat(),'formal_training_complete':True,'new_runs_completed':1,'per_run':[old,new],'comparison':[comparison],
              'optimizer_step_records':step_records,'test_forward_passes':0,'automatic_additional_runs':False,
              'inputs_sha256':{str(path.relative_to(ROOT)) if path.is_relative_to(ROOT) else str(path):sha(path) for path in input_files},

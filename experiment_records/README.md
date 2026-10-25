@@ -18,7 +18,7 @@
 | 最小消融根因验证 | 本地 `user23` / TITAN Xp GPU3 | MELD seed67137 w/o CC；IEMOCAP seed1475 source_order Baseline/CMERC，共3 run；validation/continuous/ATen | 已完成并通过验收 | [06_minimal_ablation_validation](06_minimal_ablation_validation/README.md) |
 | 完整CMERC学习率诊断 | 本地 `user23` / TITAN Xp GPU3 | IEMOCAP seed1475、MELD seed67137，各比较0.00005和0.0002，共4 run；validation/continuous/ATen，零测试前向 | 已完成并通过验收 | [07_learning_rate_diagnosis](07_learning_rate_diagnosis/README.md) |
 | MELD学习率第二Seed确认 | 本地 `user23` / TITAN Xp GPU3 | MELD seed2024、lr0.0002，唯一40轮完整CMERC；validation/continuous/ATen，零测试前向 | 训练与技术验收完成；主指标收益未确认 | [08_lr_second_seed_confirmation](08_lr_second_seed_confirmation/GITHUB_DELIVERY.md) |
-| MELD Batch Size诊断 | 本地 `user23` / TITAN Xp GPU3 | MELD seed2024、lr0.0001、Batch8，登记唯一40轮；验证选模、零测试前向 | CPU预检通过，GPU资源排队；未正式训练 | [09_batch_size_diagnosis](09_batch_size_diagnosis/GITHUB_DELIVERY.md) |
+| MELD Batch Size诊断 | 本地 `user23` / TITAN Xp GPU1 | MELD seed2024、lr0.0001、Batch8，完成唯一40轮；验证选模、零测试前向 | 最佳验证65.89%/第9轮，末10轮63.048%；独立验收通过 | [09_batch_size_diagnosis](09_batch_size_diagnosis/GITHUB_DELIVERY.md) |
 
 ## 如何交给 GPT 审查
 
@@ -47,3 +47,5 @@
 ## 当前主研究基线
 
 04 为 XP 主研究基线：非因果、验证集选模、固定外部课程、五 seed 配对。20项完整性与协议验收通过后登记，分数不作为登记门槛。历史01/02/03原目录不变；不同协议/环境的统计分别展示。大型权重、逐样本预测和原始日志保留原批次及独立备份，公开04仅提供代码、配置和审查材料。
+
+09按登记规则为最佳验证主指标未改善（65.89% vs 66.01%），末10轮改善1.825个百分点仅作辅助线索；暂不追加第二Seed或最终五Seed。两loader分组与历史GPU物理卡均变化，限制严格机制归因。

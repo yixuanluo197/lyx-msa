@@ -1,0 +1,30 @@
+{
+  "created_at_utc": "2026-10-24T17:35:19.324991+00:00",
+  "reason": "User explicitly requested GPU0/1 use; before any probe/formal, permit first available healthy XP card on same host.",
+  "preflight_started": 0,
+  "formal_started": 0,
+  "stopped_only_own_cpu_supervisors": {
+    "2607491": "run_single.py",
+    "2607492": "finalize_batch_size.py",
+    "2607493": "finalize_delivery.py"
+  },
+  "files": {
+    "state/status.json": "4659bfab0990136cecbe09bc50e24c8fb09fd67074b71fb7809a193eb7f881c2",
+    "state/finalization.json": "7b1d1369c18398ce25614a837314fd03c35ec710d467194273a0f0403fad8dfd",
+    "state/delivery.json": "a9a5271d6895f7bd4eee00ca93b7b7c6d4b7890d90a130ede333ed524d46ad75",
+    "logs/resources.jsonl": "b6881db61af2fd2d91cff94a6514dc05928d7fbf807cafdd0e88b91676324930",
+    "logs/finalizer.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/supervisor.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/delivery.log": "a8b94961b7ca12a4f5a79a47899d5361693ef5a3940af1458872dfa5b4a70224",
+    "scripts/test_resource_policy.py": "d883ed962283f9b232df79d59515f1ba2a3baf3789d1fb49be7b2690c1a7e48f",
+    "scripts/verify_lr.py": "e84b90ee2d4eb1c1bf48a42d9d345a26de79be4dc82ab9f6455a9ab2b650b227",
+    "scripts/run_single.py": "730d4d3b95f633049835dc535a60fc452241ccde120dc594c2bfce57d2073adc",
+    "reports/PREREGISTRATION.md": "18757dc69cd1aa1fa5bf9d1468dc1fe61c8d925d5d3888430c4461d04f2924d6",
+    "reports/RESOURCE_ADMISSION_AMENDMENT_V2.md": "01d331b346cd0acca8a4c27074fc1b835738f5b2bafe9410ff0f037893aee10a",
+    "configs/registry.json": "ceb90e8b92b434cb9f4fcaa04a07b5fb507405af73645a740167acc56a9e01e8",
+    "provenance/supervisor_launch.json": "2f16568c9a06aed584516f2ae5b7a346b3927c4697a0858ec5d249660a167fd0",
+    "provenance/finalizer_launch.json": "88b53a939b7de1261be3eb06dfdf31010070c17e0df0d481114039b5d5e631ff",
+    "provenance/delivery_launch.json": "547ce8c131c45ea7b400ab7fd9f2111330e0e58f1af9ba6137446e43bc611f54",
+    "provenance/frozen_execution.json": "3b2565f02eacd0dc9f9b48ea9e9bc874a5b5b4a03f0db29c87e9b7de9d6b96b5"
+  }
+}

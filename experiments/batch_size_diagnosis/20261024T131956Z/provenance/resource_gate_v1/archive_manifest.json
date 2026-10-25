@@ -1,0 +1,28 @@
+{
+  "created_at_utc": "2026-10-24T16:45:23.952758+00:00",
+  "reason": "Before any GPU probe or formal run, replace overly conservative fixed-PID/free5GiB gate with recorded capacity-based shared-XP admission. User requested continuing.",
+  "original_formal_started": 0,
+  "original_preflight_started": 0,
+  "terminated_only_own_cpu_supervisors": {
+    "2032912": "run_single.py",
+    "2032913": "finalize_batch_size.py",
+    "2063824": "finalize_delivery.py"
+  },
+  "files": {
+    "configs/registry.json": "ec2b413d871b9d4dfaf1e9b1cd553fbf6d2a6b48d65f6ee617b28f27b868bee0",
+    "scripts/run_single.py": "34990966f83bd08c3a852383dfec384d2978b9d070d73ec06991d54eca2f454e",
+    "scripts/verify_lr.py": "1ca70abd75b39448a56fbc4dad4c90effae3e0c9cd7a5c475b79058e1c37809c",
+    "provenance/frozen_execution.json": "ce8e264c8800975f9d4d8cadc502b1c857de3e2a2cb7a3af2dfb0b57bff7e592",
+    "provenance/supervisor_launch.json": "b4b0f31b2ca610a12f96e7f3271cdfbb2bcc65f18b3d20c437ffd22fb8de2994",
+    "provenance/finalizer_launch.json": "c79a4fa01c12c82759fbe3573140d273eb6d773edf9e4270f48a6b5a99c5acf1",
+    "provenance/delivery_launch.json": "f4cd3433449e2b15e852526d5081f5c2887fb277d313c450e37cd6e3e922cb45",
+    "state/status.json": "d73ea5d2f376fbba0aea5095e5abd10f0069f589798c58c9e62e057e7e929cd7",
+    "state/finalization.json": "e1f39cbab51091430c5ca49af2f3d186fffdc0df478a59f520b8017ece463734",
+    "state/delivery.json": "cfe46c04c905638b2a4979d0a1494012dc6beb72481256b565b6444adfef1d9a",
+    "logs/resources.jsonl": "69e7405ebbe9d4036129e62cabbb92aa3c6b50e91f6c8735fb03b1456d7a12e0",
+    "logs/supervisor.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/finalizer.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/delivery.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "reports/PREREGISTRATION.md": "b76af4ff6bf57b1b489518e9d499047c1461e74af08dd610f93f46192e80256b"
+  }
+}

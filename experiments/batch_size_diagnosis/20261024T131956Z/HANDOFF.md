@@ -1,13 +1,11 @@
-# 第09组执行交接
+# 第09组已完成交接
 
-本批路径：/data2/yb/paper/lyx-msa/CMERC/experiments/batch_size_diagnosis/20261024T131956Z
+唯一正式训练已在本地user23 GPU1（GPU-eed2f34f-b4c0-7b7a-498e-71a026e30c5a）完成。2026-10-24 17:40:55—18:54:45 UTC，PID2791997，返回0。40轮train/validation，5096次真实Adam更新，0测试前向；不得重复启动。
 
-Supervisor PID2032912；CPU finalizer PID2032913。唯一正式run MELD_cmerc_batch8_lr1e-4_seed2024。当前GPU准入排队，不得复制启动器或重复提交。state/status.json记录唯一计数及完整PID/资源。冻结清单39项SHA，hash见provenance/supervisor_launch.json。04–08共10根、1691文件/30symlink保存于history_before。
+最佳验证65.89%/第9轮，末10轮63.048%；XP04同Seed/lr Batch16为66.01%/第9轮、61.223%。最佳差-0.12个百分点、末段+1.825个百分点，按预登记主指标未改善，不自动追加第二Seed/五Seed或其他训练。
 
-通过门禁后自动独立首Adam探针→GPU释放→重新3次准入→唯一正式40epoch；正式从头初始化不复用探针权重。当前新外部PID存在，门禁暂停；不改变科学配置、不终止任务、不迁移服务器。
+独立CPU验收passed：best/latest第9/40轮，模型/Adam有限、完整RNG，92项冻结源输入未变、1691历史文件未变。10组曲线PNG/SVG共20件；详见results和provenance/final_verification.json。资源共享，正式最小空闲31MiB，未发生本任务OOM；不能声明资源独占或速度因果对照。
 
-完成后CPU finalizer自动执行verify_lr.py（无forward）、analyze_batch_size.py、plot_batch_size.py；state/finalization.json标记真实状态，脚本失败仅排错CPU处理，不重训。报告路径reports/CMERC_BATCH_SIZE_DIAGNOSIS.md及仓库根同名；最终必须检查两个Checkpoint/40train40val/0test/历史hash/图和字段。
+后台delivery只因finalization.json尚未创建的启动竞态退出，未影响训练或CPU验收。完成后修复非冻结导航脚本的等待逻辑并执行成功，未改任何训练代码/配置/结果。原v1/v2队列均归档，实际科学源及资源冻结以最终frozen_execution.json为准。
 
-原--batch-size同时改变train/validation分组，报告必须披露未pack双向GRU/padding可能影响验证预测。主判据best↑且末10不降为下一Seed候选；只建议，不自动启动额外实验或测试。当前用户未请求09上传GitHub。
-
-CPU delivery watcher PID2063824：仅在finalization=completed且独立验收通过后更新09档案导航。资源准入状态报告已保存于仓库根reports/CMERC_BATCH_SIZE_DIAGNOSIS.md；不得称为完整实验结果。
+最终中文报告位于批次reports及仓库reports/CMERC_BATCH_SIZE_DIAGNOSIS.md。GitHub先前adea816为排队快照，完成材料另行发布；训练数据、权重、原始日志及逐Batch跟踪保留服务器。

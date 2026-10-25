@@ -7,7 +7,7 @@ import math
 import os
 
 import torch
-from run_single import validate_gate
+from run_single import admissible, validate_device, validate_gate, validate_resource_policy
 from watch_training import verify_skip_patch
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -46,14 +46,18 @@ def finite(value):
 
 def resource_evidence(registry, state):
     policy = registry['resource_policy']
-    assert policy['preexisting_gpu3_pids'] == [1843864]
+    validate_device(registry['gpu_index'], registry['gpu_uuid'])
+    validate_resource_policy(policy)
+    assert state['preregistered_co_resident_pids'] == policy['preexisting_gpu3_pids']
+    assert state['new_foreign_pids_pause_admission'] is False
     resources = rows(ROOT/'logs/resources.jsonl')
     assert resources
     errors_path = ROOT/'logs/resource_errors.jsonl'
     errors = rows(errors_path) if errors_path.exists() else []
     allowed, unexpected, all_foreign = [], [], []
     for sample in resources:
-        assert sample['gpu_index'] == 3 and sample['gpu_uuid'] == registry['gpu_uuid']
+        assert sample['gpu_index'] == registry['gpu_index'] and sample['gpu_uuid'] == registry['gpu_uuid']
+        validate_device(sample['gpu_index'], sample['gpu_uuid'], sample['gpu_name'])
         own = set(sample['own_pids'])
         foreign = [p for p in sample['processes'] if p['pid'] not in own]
         permitted = [p for p in foreign if p['pid'] in policy['preexisting_gpu3_pids']]
@@ -66,11 +70,10 @@ def resource_evidence(registry, state):
         if other: unexpected.append(sample)
     for run in [state['preflight'], *state['runs']]:
         samples = run['admission_samples']
-        assert len(samples) == 3
+        assert len(samples) == policy['samples_required']
         for sample in samples:
             assert sample in resources and not sample['own_pids']
-            assert not sample['unexpected_processes']
-            assert sample['free_mib'] >= 5000 and sample['utilization_percent'] <= 65
+            assert admissible(sample, policy)
         stamps = [dt.datetime.fromisoformat(sample['time']) for sample in samples]
         assert all((later-earlier).total_seconds() >= 9.5 for earlier,later in zip(stamps,stamps[1:]))
         release = run['gpu_release_confirmed']
@@ -83,17 +86,24 @@ def resource_evidence(registry, state):
     assert state['preexisting_pid_samples'] == len(allowed)
     assert state['unexpected_process_samples'] == len(unexpected)
     assert state['unexpected_pids'] == sorted({p['pid'] for sample in unexpected for p in sample['unexpected_processes']})
+    observed_pids = sorted({p['pid'] for sample in all_foreign for p in sample['all_foreign_processes']})
+    assert state['observed_foreign_pids'] == observed_pids
     return {'status': 'limited' if all_foreign or errors else 'sampled_no_foreign_observed',
             'admissions_passed_registered_three_sample_policy': True,
-            'allowed_preexisting_pids': policy['preexisting_gpu3_pids'],
+            'preregistered_co_resident_pids': policy['preexisting_gpu3_pids'],
+            'observed_foreign_pids': observed_pids,
+            'admission_min_free_mib': policy['admission_min_free_mib'],
+            'admission_max_utilization_percent': policy['admission_max_utilization_percent'],
+            'new_foreign_pids_pause_admission': policy['new_foreign_pids_pause_admission'],
             'resource_samples': len(resources), 'all_foreign_process_samples': len(all_foreign),
             'allowed_preexisting_pid_samples': len(allowed), 'new_foreign_pid_samples': len(unexpected),
             'new_foreign_pids': state['unexpected_pids'], 'resource_query_errors': len(errors),
             'minimum_free_mib': min(sample['free_mib'] for sample in resources),
             'minimum_free_mib_during_formal': min(sample['free_mib'] for sample in resources if sample['stage']=='formal_running'),
             'maximum_utilization_percent': max(sample['utilization_percent'] for sample in resources),
-            'limits': ['The preregistered existing PID 1843864 may share this GPU; this is not exclusive GPU occupancy.',
-                       'New foreign PIDs and resource pressure during active work are recorded without terminating any task.',
+            'limits': ['GPU co-residency is allowed; preregistered PIDs are disclosure records, not an exclusive allowlist.',
+                       'New foreign PIDs are recorded and do not block admission when the registered memory/utilization conditions pass.',
+                       'Resource pressure and query errors are recorded without terminating any task; failed queries cannot authorize admission.',
                        'Discrete nvidia-smi samples cannot establish continuous resource isolation.']}
 
 
@@ -271,7 +281,7 @@ def main():
               'resource_evidence':resource_report,'runs':results,
               'limits':['This is one registered Batch Size=8 diagnosis, not a completed five-seed study.',
                         'Train and validation batches both change from16 to8; grouping and optimizer step counts differ from the historical control.',
-                        'GPU3 is shared with the explicitly permitted preexisting PID when observed; resource isolation is limited.',
+                        'The selected healthy XP GPU may be shared with observed foreign PIDs under the registered capacity gate; resource isolation is limited.',
                         'Author difficulty generation history unknown.',
                         'No test or final independent evaluation performed in this stage.']}
     (ROOT/'provenance/final_verification.json').write_text(json.dumps(report,indent=2)+'\n')
