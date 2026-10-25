@@ -1,0 +1,64 @@
+{
+  "status": "passed",
+  "created_at_utc": "2026-10-25T08:21:07.422807+00:00",
+  "formal_runs_authorized": 1,
+  "test_forward_passes": 0,
+  "frozen_execution_sha256": "a0db5f98ad07b674158a5df37b3121892995839d3e35a511c583dfb872704585",
+  "cpu_evidence": [
+    {
+      "path": "/data2/yb/paper/lyx-msa/CMERC/experiments/hscl_ablation_validation/20261025T080937Z/preflight/guard_tests.json",
+      "sha256": "e19ef687f71364879fa4a3d188f68205d787265f07cbed8363fece2bf40ac132"
+    },
+    {
+      "path": "/data2/yb/paper/lyx-msa/CMERC/experiments/hscl_ablation_validation/20261025T080937Z/preflight/capacity_cpu.json",
+      "sha256": "58a08f53a2be1211503f763c6214ed1abebe548d28f0313257d4f669c59ad8f9"
+    },
+    {
+      "path": "/data2/yb/paper/lyx-msa/CMERC/experiments/hscl_ablation_validation/20261025T080937Z/preflight/resource_guard_tests.json",
+      "sha256": "7e53501365567fce90b7150c83daa73209e53eda0fae1dfa5fbcd6a234b47d90"
+    }
+  ],
+  "probe_evidence": {
+    "status": "passed",
+    "first_step_parameters_changed": true,
+    "test_forward_passes": 0,
+    "first_sha256": "b7e80894ae162a53545f7ed8c44f4bae0b07da29f86552d07c8b3b8c6932f0fb",
+    "status_sha256": "7f30fe05772576164334dc5cb893343b2e52488baf48f5bf0d73a7542366b444",
+    "module_audit_sha256": "c4023d23c944ab635c74723b06090265ec7a5f9d92e97412151353108dfdb09c",
+    "gradient_audit_sha256": "bb621d3b9aa67b7cfed7cebe5ea7b9c3c1ec71071147e07d34211694d7aa7002",
+    "memory_profile_sha256": "74998e7547e0346b7c03259aab57aa7b8b60e5d0fafd8203ccdfba4e4efb4efd",
+    "torch_peak_allocated_mib": 666.71044921875,
+    "torch_peak_reserved_mib": 710.0,
+    "registered_memory_budget_mib": 2200,
+    "preflight_sampled_gpu_free_mib_min": 10879,
+    "memory_limits": "Torch allocator telemetry is not whole-process GPU occupancy; free memory is sampled, not a continuous minimum."
+  },
+  "resource_policy": {
+    "preexisting_gpu3_pids": [
+      3939591
+    ],
+    "preexisting_memory_mib": 502,
+    "estimated_own_peak_mib": 2200,
+    "admission_min_free_mib": 3000,
+    "admission_max_utilization_percent": 95,
+    "samples_required": 3,
+    "sample_seconds": 10,
+    "new_foreign_pids_pause_admission": false,
+    "no_foreign_process_signals": true,
+    "co_resident_processes_disclosed": true,
+    "admission_basis": "Three fresh samples of GPU identity, free memory >=3000MiB, utilization <=95%, no own running child. Fixed or new foreign PIDs are recorded, not an unconditional veto.",
+    "minimum_budget_margin_mib": 800
+  },
+  "preregistered_co_resident_pids": [
+    3939591
+  ],
+  "preflight_resource_disclosure": {
+    "preexisting_pid_samples": 8,
+    "unexpected_process_samples": 0,
+    "unexpected_pids": [],
+    "observed_foreign_pids": [
+      3939591
+    ],
+    "resource_query_errors": 0
+  }
+}

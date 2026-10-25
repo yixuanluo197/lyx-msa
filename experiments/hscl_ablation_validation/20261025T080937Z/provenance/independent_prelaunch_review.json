@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "reviewer": "iem_batch_audit",
+  "scope": "独立只读复核新观测器、单次锁、零测试守卫、预检专用梯度诊断及CPU证据",
+  "required_corrections": [],
+  "preflight_extra_autograd_only": true,
+  "formal_extra_gradient_diagnostic_calls_required": 0,
+  "counts": {
+    "guard_tests": 11,
+    "resource_tests": 11,
+    "analysis_tests": 12,
+    "capacity_epochs": 40,
+    "optimizer_steps": 2548,
+    "validation_batches": 320
+  }
+}

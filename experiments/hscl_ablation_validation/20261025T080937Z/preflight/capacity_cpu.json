@@ -1,0 +1,1823 @@
+{
+  "status": "passed",
+  "epochs_checked": 40,
+  "original_sampling_ast_unchanged": true,
+  "global_cpu_rng_unchanged": true,
+  "cuda_initialized": false,
+  "test_lengths_or_predictions_examined": false,
+  "historical_batch16_replay_passed": true,
+  "batch_size": 16,
+  "historical_batch_size": 16,
+  "validation_batch_size": 16,
+  "expected_train_optimizer_steps_batch16": 2548,
+  "historical_train_optimizer_steps_batch16_reconstructed": 2548,
+  "expected_validation_batches_batch16": 320,
+  "historical_validation_batches_batch16_reconstructed": 320,
+  "limits": [
+    "CPU graph capacity does not establish GPU memory safety.",
+    "Historical batch16 optimizer step counts are reconstructed, not measured from step logs.",
+    "Matching sampler order/private RNG does not imply identical model RNG trajectory under changed dropout."
+  ],
+  "records": [
+    {
+      "run_id": "MELD_wo_hscl_seed67137",
+      "epoch": 1,
+      "sample_ratio": 0.4,
+      "train_dialogues": 415,
+      "batch_size": 16,
+      "validation_batch_size": 16,
+      "train_batches": 26,
+      "validation_batches": 8,
+      "train_last_batch_dialogues": 15,
+      "validation_last_batch_dialogues": 2,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 315,
+        "nodes": 801
+      },
+      "sampler_retries": 0,
+      "private_seed": 67137,
+      "same_as_original_sampler_batch16": true,
+      "ordered_train_ids_sha256": "d757b8122ea4321e96c7c88c705d13d76d2860562443102f78405ac57b32187c",
+      "historical16": {
+        "batch_size": 16,
+        "train_batches": 26,
+        "validation_batches": 8,
+        "train_last_batch_dialogues": 15,
+        "validation_last_batch_dialogues": 2,
+        "capacity": {
+          "edges": 315,
+          "nodes": 801
+        },
+        "validation_capacity": {
+          "edges": 248,
+          "nodes": 600
+        },
+        "sampler_retries": 0,
+        "ordered_train_ids_sha256": "d757b8122ea4321e96c7c88c705d13d76d2860562443102f78405ac57b32187c",
+        "replayed_metrics_match": true,
+        "step_count_source": "CPU reconstruction, not a historical step log"
+      },
+      "same_groups_steps_private_rng_as_historical_batch16": true,
+      "eligible_dialogue_ids_sha256": "2214ab20b1b366bdf63f3926c13b4e4cd5085cdab65b5853f65fef6ba5a2aca9"
+    },
+    {
+      "run_id": "MELD_wo_hscl_seed67137",
+      "epoch": 2,
+      "sample_ratio": 0.8,
+      "train_dialogues": 830,
+      "batch_size": 16,
+      "validation_batch_size": 16,
+      "train_batches": 52,
+      "validation_batches": 8,
+      "train_last_batch_dialogues": 14,
+      "validation_last_batch_dialogues": 2,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 280,
+        "nodes": 696
+      },
+      "sampler_retries": 0,
+      "private_seed": 67138,
+      "same_as_original_sampler_batch16": true,
+      "ordered_train_ids_sha256": "75fce5aa68ea9ccfacecc9c3bd3c9fea09ffbd9bd3824a8c9f7d7e4d2c427900",
+      "historical16": {
+        "batch_size": 16,
+        "train_batches": 52,
+        "validation_batches": 8,
+        "train_last_batch_dialogues": 14,
+        "validation_last_batch_dialogues": 2,
+        "capacity": {
+          "edges": 280,
+          "nodes": 696
+        },
+        "validation_capacity": {
+          "edges": 248,
+          "nodes": 600
+        },
+        "sampler_retries": 0,
+        "ordered_train_ids_sha256": "75fce5aa68ea9ccfacecc9c3bd3c9fea09ffbd9bd3824a8c9f7d7e4d2c427900",
+        "replayed_metrics_match": true,
+        "step_count_source": "CPU reconstruction, not a historical step log"
+      },
+      "same_groups_steps_private_rng_as_historical_batch16": true,
+      "eligible_dialogue_ids_sha256": "35803dae47ac091f9f84afa9d6b505077e47d1bee4ce38edb445fe9aad043256"
+    },
+    {
+      "run_id": "MELD_wo_hscl_seed67137",
+      "epoch": 3,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "batch_size": 16,
+      "validation_batch_size": 16,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "train_last_batch_dialogues": 14,
+      "validation_last_batch_dialogues": 2,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 259,
+        "nodes": 633
+      },
+      "sampler_retries": 0,
+      "private_seed": 67139,
+      "same_as_original_sampler_batch16": true,
+      "ordered_train_ids_sha256": "3b52fa5d1bc7c85f3ee018b4c956f532d42b48f952741b5f93b6ba8d5226af21",
+      "historical16": {
+        "batch_size": 16,
+        "train_batches": 65,
+        "validation_batches": 8,
+        "train_last_batch_dialogues": 14,
+        "validation_last_batch_dialogues": 2,
+        "capacity": {
+          "edges": 259,
+          "nodes": 633
+        },
+        "validation_capacity": {
+          "edges": 248,
+          "nodes": 600
+        },
+        "sampler_retries": 0,
+        "ordered_train_ids_sha256": "3b52fa5d1bc7c85f3ee018b4c956f532d42b48f952741b5f93b6ba8d5226af21",
+        "replayed_metrics_match": true,
+        "step_count_source": "CPU reconstruction, not a historical step log"
+      },
+      "same_groups_steps_private_rng_as_historical_batch16": true,
+      "eligible_dialogue_ids_sha256": "475aa7bcfed1039078824ee949e6ba35d62fc0d8b4c277dc766419ecb6230614"
+    },
+    {
+      "run_id": "MELD_wo_hscl_seed67137",
+      "epoch": 4,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "batch_size": 16,
+      "validation_batch_size": 16,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "train_last_batch_dialogues": 14,
+      "validation_last_batch_dialogues": 2,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 256,
+        "nodes": 624
+      },
+      "sampler_retries": 0,
+      "private_seed": 67140,
+      "same_as_original_sampler_batch16": true,
+      "ordered_train_ids_sha256": "27957561288e6eaba7c38c41cd46156f0639b79f01011247a85bc469bf66ea88",
+      "historical16": {
+        "batch_size": 16,
+        "train_batches": 65,
+        "validation_batches": 8,
+        "train_last_batch_dialogues": 14,
+        "validation_last_batch_dialogues": 2,
+        "capacity": {
+          "edges": 256,
+          "nodes": 624
+        },
+        "validation_capacity": {
+          "edges": 248,
+          "nodes": 600
+        },
+        "sampler_retries": 0,
+        "ordered_train_ids_sha256": "27957561288e6eaba7c38c41cd46156f0639b79f01011247a85bc469bf66ea88",
+        "replayed_metrics_match": true,
+        "step_count_source": "CPU reconstruction, not a historical step log"
+      },
+      "same_groups_steps_private_rng_as_historical_batch16": true,
+      "eligible_dialogue_ids_sha256": "475aa7bcfed1039078824ee949e6ba35d62fc0d8b4c277dc766419ecb6230614"
+    },
+    {
+      "run_id": "MELD_wo_hscl_seed67137",
+      "epoch": 5,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "batch_size": 16,
+      "validation_batch_size": 16,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "train_last_batch_dialogues": 14,
+      "validation_last_batch_dialogues": 2,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 259,
+        "nodes": 633
+      },
+      "sampler_retries": 0,
+      "private_seed": 67141,
+      "same_as_original_sampler_batch16": true,
+      "ordered_train_ids_sha256": "af9a96a7e1fb7b9e3fd4b605998185375e792b3ed2303e20a9905cb20d9cdccc",
+      "historical16": {
+        "batch_size": 16,
+        "train_batches": 65,
+        "validation_batches": 8,
+        "train_last_batch_dialogues": 14,
+        "validation_last_batch_dialogues": 2,
+        "capacity": {
+          "edges": 259,
+          "nodes": 633
+        },
+        "validation_capacity": {
+          "edges": 248,
+          "nodes": 600
+        },
+        "sampler_retries": 0,
+        "ordered_train_ids_sha256": "af9a96a7e1fb7b9e3fd4b605998185375e792b3ed2303e20a9905cb20d9cdccc",
+        "replayed_metrics_match": true,
+        "step_count_source": "CPU reconstruction, not a historical step log"
+      },
+      "same_groups_steps_private_rng_as_historical_batch16": true,
+      "eligible_dialogue_ids_sha256": "475aa7bcfed1039078824ee949e6ba35d62fc0d8b4c277dc766419ecb6230614"
+    },
+    {
+      "run_id": "MELD_wo_hscl_seed67137",
+      "epoch": 6,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "batch_size": 16,
+      "validation_batch_size": 16,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "train_last_batch_dialogues": 14,
+      "validation_last_batch_dialogues": 2,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 275,
+        "nodes": 681
+      },
+      "sampler_retries": 0,
+      "private_seed": 67142,
+      "same_as_original_sampler_batch16": true,
+      "ordered_train_ids_sha256": "f6f6722bca3c4c566babee00fdf1d939cb273304b08c04caf9a8a53be2dbd908",
+      "historical16": {
+        "batch_size": 16,
+        "train_batches": 65,
+        "validation_batches": 8,
+        "train_last_batch_dialogues": 14,
+        "validation_last_batch_dialogues": 2,
+        "capacity": {
+          "edges": 275,
+          "nodes": 681
+        },
+        "validation_capacity": {
+          "edges": 248,
+          "nodes": 600
+        },
+        "sampler_retries": 0,
+        "ordered_train_ids_sha256": "f6f6722bca3c4c566babee00fdf1d939cb273304b08c04caf9a8a53be2dbd908",
+        "replayed_metrics_match": true,
+        "step_count_source": "CPU reconstruction, not a historical step log"
+      },
+      "same_groups_steps_private_rng_as_historical_batch16": true,
+      "eligible_dialogue_ids_sha256": "475aa7bcfed1039078824ee949e6ba35d62fc0d8b4c277dc766419ecb6230614"
+    },
+    {
+      "run_id": "MELD_wo_hscl_seed67137",
+      "epoch": 7,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "batch_size": 16,
+      "validation_batch_size": 16,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "train_last_batch_dialogues": 14,
+      "validation_last_batch_dialogues": 2,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 260,
+        "nodes": 636
+      },
+      "sampler_retries": 0,
+      "private_seed": 67143,
+      "same_as_original_sampler_batch16": true,
+      "ordered_train_ids_sha256": "81c539468c251c754189f11cba7fdb69f8a07bb1732ad187f49be54d3250c5de",
+      "historical16": {
+        "batch_size": 16,
+        "train_batches": 65,
+        "validation_batches": 8,
+        "train_last_batch_dialogues": 14,
+        "validation_last_batch_dialogues": 2,
+        "capacity": {
+          "edges": 260,
+          "nodes": 636
+        },
+        "validation_capacity": {
+          "edges": 248,
+          "nodes": 600
+        },
+        "sampler_retries": 0,
+        "ordered_train_ids_sha256": "81c539468c251c754189f11cba7fdb69f8a07bb1732ad187f49be54d3250c5de",
+        "replayed_metrics_match": true,
+        "step_count_source": "CPU reconstruction, not a historical step log"
+      },
+      "same_groups_steps_private_rng_as_historical_batch16": true,
+      "eligible_dialogue_ids_sha256": "475aa7bcfed1039078824ee949e6ba35d62fc0d8b4c277dc766419ecb6230614"
+    },
+    {
+      "run_id": "MELD_wo_hscl_seed67137",
+      "epoch": 8,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "batch_size": 16,
+      "validation_batch_size": 16,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "train_last_batch_dialogues": 14,
+      "validation_last_batch_dialogues": 2,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 266,
+        "nodes": 654
+      },
+      "sampler_retries": 0,
+      "private_seed": 67144,
+      "same_as_original_sampler_batch16": true,
+      "ordered_train_ids_sha256": "cbd4bab4460e51cea8bc98f27e8c2d7c3326b3a32fd39f3f471aea478da40f0a",
+      "historical16": {
+        "batch_size": 16,
+        "train_batches": 65,
+        "validation_batches": 8,
+        "train_last_batch_dialogues": 14,
+        "validation_last_batch_dialogues": 2,
+        "capacity": {
+          "edges": 266,
+          "nodes": 654
+        },
+        "validation_capacity": {
+          "edges": 248,
+          "nodes": 600
+        },
+        "sampler_retries": 0,
+        "ordered_train_ids_sha256": "cbd4bab4460e51cea8bc98f27e8c2d7c3326b3a32fd39f3f471aea478da40f0a",
+        "replayed_metrics_match": true,
+        "step_count_source": "CPU reconstruction, not a historical step log"
+      },
+      "same_groups_steps_private_rng_as_historical_batch16": true,
+      "eligible_dialogue_ids_sha256": "475aa7bcfed1039078824ee949e6ba35d62fc0d8b4c277dc766419ecb6230614"
+    },
+    {
+      "run_id": "MELD_wo_hscl_seed67137",
+      "epoch": 9,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "batch_size": 16,
+      "validation_batch_size": 16,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "train_last_batch_dialogues": 14,
+      "validation_last_batch_dialogues": 2,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 267,
+        "nodes": 657
+      },
+      "sampler_retries": 0,
+      "private_seed": 67145,
+      "same_as_original_sampler_batch16": true,
+      "ordered_train_ids_sha256": "f290253f04f62b0df20d502003fc1c7178b82968db49a1486454390ab55904b4",
+      "historical16": {
+        "batch_size": 16,
+        "train_batches": 65,
+        "validation_batches": 8,
+        "train_last_batch_dialogues": 14,
+        "validation_last_batch_dialogues": 2,
+        "capacity": {
+          "edges": 267,
+          "nodes": 657
+        },
+        "validation_capacity": {
+          "edges": 248,
+          "nodes": 600
+        },
+        "sampler_retries": 0,
+        "ordered_train_ids_sha256": "f290253f04f62b0df20d502003fc1c7178b82968db49a1486454390ab55904b4",
+        "replayed_metrics_match": true,
+        "step_count_source": "CPU reconstruction, not a historical step log"
+      },
+      "same_groups_steps_private_rng_as_historical_batch16": true,
+      "eligible_dialogue_ids_sha256": "475aa7bcfed1039078824ee949e6ba35d62fc0d8b4c277dc766419ecb6230614"
+    },
+    {
+      "run_id": "MELD_wo_hscl_seed67137",
+      "epoch": 10,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "batch_size": 16,
+      "validation_batch_size": 16,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "train_last_batch_dialogues": 14,
+      "validation_last_batch_dialogues": 2,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 242,
+        "nodes": 582
+      },
+      "sampler_retries": 0,
+      "private_seed": 67146,
+      "same_as_original_sampler_batch16": true,
+      "ordered_train_ids_sha256": "c2db2f8005162a3e84fb5b79b6790006c6dbed2703a7f885dd1bd9e036dab0ed",
+      "historical16": {
+        "batch_size": 16,
+        "train_batches": 65,
+        "validation_batches": 8,
+        "train_last_batch_dialogues": 14,
+        "validation_last_batch_dialogues": 2,
+        "capacity": {
+          "edges": 242,
+          "nodes": 582
+        },
+        "validation_capacity": {
+          "edges": 248,
+          "nodes": 600
+        },
+        "sampler_retries": 0,
+        "ordered_train_ids_sha256": "c2db2f8005162a3e84fb5b79b6790006c6dbed2703a7f885dd1bd9e036dab0ed",
+        "replayed_metrics_match": true,
+        "step_count_source": "CPU reconstruction, not a historical step log"
+      },
+      "same_groups_steps_private_rng_as_historical_batch16": true,
+      "eligible_dialogue_ids_sha256": "475aa7bcfed1039078824ee949e6ba35d62fc0d8b4c277dc766419ecb6230614"
+    },
+    {
+      "run_id": "MELD_wo_hscl_seed67137",
+      "epoch": 11,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "batch_size": 16,
+      "validation_batch_size": 16,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "train_last_batch_dialogues": 14,
+      "validation_last_batch_dialogues": 2,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 260,
+        "nodes": 636
+      },
+      "sampler_retries": 0,
+      "private_seed": 67147,
+      "same_as_original_sampler_batch16": true,
+      "ordered_train_ids_sha256": "47c8cc974c150607f3df27fb5034ec8fe661fbdf5a2afad1ab66b31afd60faa3",
+      "historical16": {
+        "batch_size": 16,
+        "train_batches": 65,
+        "validation_batches": 8,
+        "train_last_batch_dialogues": 14,
+        "validation_last_batch_dialogues": 2,
+        "capacity": {
+          "edges": 260,
+          "nodes": 636
+        },
+        "validation_capacity": {
+          "edges": 248,
+          "nodes": 600
+        },
+        "sampler_retries": 0,
+        "ordered_train_ids_sha256": "47c8cc974c150607f3df27fb5034ec8fe661fbdf5a2afad1ab66b31afd60faa3",
+        "replayed_metrics_match": true,
+        "step_count_source": "CPU reconstruction, not a historical step log"
+      },
+      "same_groups_steps_private_rng_as_historical_batch16": true,
+      "eligible_dialogue_ids_sha256": "475aa7bcfed1039078824ee949e6ba35d62fc0d8b4c277dc766419ecb6230614"
+    },
+    {
+      "run_id": "MELD_wo_hscl_seed67137",
+      "epoch": 12,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "batch_size": 16,
+      "validation_batch_size": 16,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "train_last_batch_dialogues": 14,
+      "validation_last_batch_dialogues": 2,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 249,
+        "nodes": 603
+      },
+      "sampler_retries": 0,
+      "private_seed": 67148,
+      "same_as_original_sampler_batch16": true,
+      "ordered_train_ids_sha256": "eb9d394dfc67aea73bbdc078868f556ed1b807902b7f9319b7e98bdb525bccfc",
+      "historical16": {
+        "batch_size": 16,
+        "train_batches": 65,
+        "validation_batches": 8,
+        "train_last_batch_dialogues": 14,
+        "validation_last_batch_dialogues": 2,
+        "capacity": {
+          "edges": 249,
+          "nodes": 603
+        },
+        "validation_capacity": {
+          "edges": 248,
+          "nodes": 600
+        },
+        "sampler_retries": 0,
+        "ordered_train_ids_sha256": "eb9d394dfc67aea73bbdc078868f556ed1b807902b7f9319b7e98bdb525bccfc",
+        "replayed_metrics_match": true,
+        "step_count_source": "CPU reconstruction, not a historical step log"
+      },
+      "same_groups_steps_private_rng_as_historical_batch16": true,
+      "eligible_dialogue_ids_sha256": "475aa7bcfed1039078824ee949e6ba35d62fc0d8b4c277dc766419ecb6230614"
+    },
+    {
+      "run_id": "MELD_wo_hscl_seed67137",
+      "epoch": 13,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "batch_size": 16,
+      "validation_batch_size": 16,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "train_last_batch_dialogues": 14,
+      "validation_last_batch_dialogues": 2,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 254,
+        "nodes": 618
+      },
+      "sampler_retries": 0,
+      "private_seed": 67149,
+      "same_as_original_sampler_batch16": true,
+      "ordered_train_ids_sha256": "484161cd6b03347debfe6e24c65c090de82bb118e1c1375bd4c602cd4109bfef",
+      "historical16": {
+        "batch_size": 16,
+        "train_batches": 65,
+        "validation_batches": 8,
+        "train_last_batch_dialogues": 14,
+        "validation_last_batch_dialogues": 2,
+        "capacity": {
+          "edges": 254,
+          "nodes": 618
+        },
+        "validation_capacity": {
+          "edges": 248,
+          "nodes": 600
+        },
+        "sampler_retries": 0,
+        "ordered_train_ids_sha256": "484161cd6b03347debfe6e24c65c090de82bb118e1c1375bd4c602cd4109bfef",
+        "replayed_metrics_match": true,
+        "step_count_source": "CPU reconstruction, not a historical step log"
+      },
+      "same_groups_steps_private_rng_as_historical_batch16": true,
+      "eligible_dialogue_ids_sha256": "475aa7bcfed1039078824ee949e6ba35d62fc0d8b4c277dc766419ecb6230614"
+    },
+    {
+      "run_id": "MELD_wo_hscl_seed67137",
+      "epoch": 14,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "batch_size": 16,
+      "validation_batch_size": 16,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "train_last_batch_dialogues": 14,
+      "validation_last_batch_dialogues": 2,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 261,
+        "nodes": 639
+      },
+      "sampler_retries": 0,
+      "private_seed": 67150,
+      "same_as_original_sampler_batch16": true,
+      "ordered_train_ids_sha256": "d0ec6d16330fcbdd9182e00c9d04dfec01ce0e9dfabe3c94df8ad7757267efba",
+      "historical16": {
+        "batch_size": 16,
+        "train_batches": 65,
+        "validation_batches": 8,
+        "train_last_batch_dialogues": 14,
+        "validation_last_batch_dialogues": 2,
+        "capacity": {
+          "edges": 261,
+          "nodes": 639
+        },
+        "validation_capacity": {
+          "edges": 248,
+          "nodes": 600
+        },
+        "sampler_retries": 0,
+        "ordered_train_ids_sha256": "d0ec6d16330fcbdd9182e00c9d04dfec01ce0e9dfabe3c94df8ad7757267efba",
+        "replayed_metrics_match": true,
+        "step_count_source": "CPU reconstruction, not a historical step log"
+      },
+      "same_groups_steps_private_rng_as_historical_batch16": true,
+      "eligible_dialogue_ids_sha256": "475aa7bcfed1039078824ee949e6ba35d62fc0d8b4c277dc766419ecb6230614"
+    },
+    {
+      "run_id": "MELD_wo_hscl_seed67137",
+      "epoch": 15,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "batch_size": 16,
+      "validation_batch_size": 16,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "train_last_batch_dialogues": 14,
+      "validation_last_batch_dialogues": 2,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 264,
+        "nodes": 648
+      },
+      "sampler_retries": 0,
+      "private_seed": 67151,
+      "same_as_original_sampler_batch16": true,
+      "ordered_train_ids_sha256": "e6c946a840818d46a38c1a608d0883eefd71d10d60881fb6fbf4bdd5c9f5c199",
+      "historical16": {
+        "batch_size": 16,
+        "train_batches": 65,
+        "validation_batches": 8,
+        "train_last_batch_dialogues": 14,
+        "validation_last_batch_dialogues": 2,
+        "capacity": {
+          "edges": 264,
+          "nodes": 648
+        },
+        "validation_capacity": {
+          "edges": 248,
+          "nodes": 600
+        },
+        "sampler_retries": 0,
+        "ordered_train_ids_sha256": "e6c946a840818d46a38c1a608d0883eefd71d10d60881fb6fbf4bdd5c9f5c199",
+        "replayed_metrics_match": true,
+        "step_count_source": "CPU reconstruction, not a historical step log"
+      },
+      "same_groups_steps_private_rng_as_historical_batch16": true,
+      "eligible_dialogue_ids_sha256": "475aa7bcfed1039078824ee949e6ba35d62fc0d8b4c277dc766419ecb6230614"
+    },
+    {
+      "run_id": "MELD_wo_hscl_seed67137",
+      "epoch": 16,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "batch_size": 16,
+      "validation_batch_size": 16,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "train_last_batch_dialogues": 14,
+      "validation_last_batch_dialogues": 2,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 268,
+        "nodes": 660
+      },
+      "sampler_retries": 0,
+      "private_seed": 67152,
+      "same_as_original_sampler_batch16": true,
+      "ordered_train_ids_sha256": "aa06183939f7a2d62be0977cb85797388605039557c08f21b902b47bd876c1b3",
+      "historical16": {
+        "batch_size": 16,
+        "train_batches": 65,
+        "validation_batches": 8,
+        "train_last_batch_dialogues": 14,
+        "validation_last_batch_dialogues": 2,
+        "capacity": {
+          "edges": 268,
+          "nodes": 660
+        },
+        "validation_capacity": {
+          "edges": 248,
+          "nodes": 600
+        },
+        "sampler_retries": 0,
+        "ordered_train_ids_sha256": "aa06183939f7a2d62be0977cb85797388605039557c08f21b902b47bd876c1b3",
+        "replayed_metrics_match": true,
+        "step_count_source": "CPU reconstruction, not a historical step log"
+      },
+      "same_groups_steps_private_rng_as_historical_batch16": true,
+      "eligible_dialogue_ids_sha256": "475aa7bcfed1039078824ee949e6ba35d62fc0d8b4c277dc766419ecb6230614"
+    },
+    {
+      "run_id": "MELD_wo_hscl_seed67137",
+      "epoch": 17,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "batch_size": 16,
+      "validation_batch_size": 16,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "train_last_batch_dialogues": 14,
+      "validation_last_batch_dialogues": 2,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 269,
+        "nodes": 663
+      },
+      "sampler_retries": 0,
+      "private_seed": 67153,
+      "same_as_original_sampler_batch16": true,
+      "ordered_train_ids_sha256": "40863ed37d7c2ed28ba93735a3079effefe93b0e9af729ab6d3051597a81cc8e",
+      "historical16": {
+        "batch_size": 16,
+        "train_batches": 65,
+        "validation_batches": 8,
+        "train_last_batch_dialogues": 14,
+        "validation_last_batch_dialogues": 2,
+        "capacity": {
+          "edges": 269,
+          "nodes": 663
+        },
+        "validation_capacity": {
+          "edges": 248,
+          "nodes": 600
+        },
+        "sampler_retries": 0,
+        "ordered_train_ids_sha256": "40863ed37d7c2ed28ba93735a3079effefe93b0e9af729ab6d3051597a81cc8e",
+        "replayed_metrics_match": true,
+        "step_count_source": "CPU reconstruction, not a historical step log"
+      },
+      "same_groups_steps_private_rng_as_historical_batch16": true,
+      "eligible_dialogue_ids_sha256": "475aa7bcfed1039078824ee949e6ba35d62fc0d8b4c277dc766419ecb6230614"
+    },
+    {
+      "run_id": "MELD_wo_hscl_seed67137",
+      "epoch": 18,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "batch_size": 16,
+      "validation_batch_size": 16,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "train_last_batch_dialogues": 14,
+      "validation_last_batch_dialogues": 2,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 251,
+        "nodes": 609
+      },
+      "sampler_retries": 0,
+      "private_seed": 67154,
+      "same_as_original_sampler_batch16": true,
+      "ordered_train_ids_sha256": "4c18ee8855dd0a81efcd3b02ad0590066a2a3df42a7423a31e72508643e372ef",
+      "historical16": {
+        "batch_size": 16,
+        "train_batches": 65,
+        "validation_batches": 8,
+        "train_last_batch_dialogues": 14,
+        "validation_last_batch_dialogues": 2,
+        "capacity": {
+          "edges": 251,
+          "nodes": 609
+        },
+        "validation_capacity": {
+          "edges": 248,
+          "nodes": 600
+        },
+        "sampler_retries": 0,
+        "ordered_train_ids_sha256": "4c18ee8855dd0a81efcd3b02ad0590066a2a3df42a7423a31e72508643e372ef",
+        "replayed_metrics_match": true,
+        "step_count_source": "CPU reconstruction, not a historical step log"
+      },
+      "same_groups_steps_private_rng_as_historical_batch16": true,
+      "eligible_dialogue_ids_sha256": "475aa7bcfed1039078824ee949e6ba35d62fc0d8b4c277dc766419ecb6230614"
+    },
+    {
+      "run_id": "MELD_wo_hscl_seed67137",
+      "epoch": 19,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "batch_size": 16,
+      "validation_batch_size": 16,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "train_last_batch_dialogues": 14,
+      "validation_last_batch_dialogues": 2,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 261,
+        "nodes": 639
+      },
+      "sampler_retries": 0,
+      "private_seed": 67155,
+      "same_as_original_sampler_batch16": true,
+      "ordered_train_ids_sha256": "9804fd488b085366e69393814152f75714d811d714215117c1f2bfb935bdd68a",
+      "historical16": {
+        "batch_size": 16,
+        "train_batches": 65,
+        "validation_batches": 8,
+        "train_last_batch_dialogues": 14,
+        "validation_last_batch_dialogues": 2,
+        "capacity": {
+          "edges": 261,
+          "nodes": 639
+        },
+        "validation_capacity": {
+          "edges": 248,
+          "nodes": 600
+        },
+        "sampler_retries": 0,
+        "ordered_train_ids_sha256": "9804fd488b085366e69393814152f75714d811d714215117c1f2bfb935bdd68a",
+        "replayed_metrics_match": true,
+        "step_count_source": "CPU reconstruction, not a historical step log"
+      },
+      "same_groups_steps_private_rng_as_historical_batch16": true,
+      "eligible_dialogue_ids_sha256": "475aa7bcfed1039078824ee949e6ba35d62fc0d8b4c277dc766419ecb6230614"
+    },
+    {
+      "run_id": "MELD_wo_hscl_seed67137",
+      "epoch": 20,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "batch_size": 16,
+      "validation_batch_size": 16,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "train_last_batch_dialogues": 14,
+      "validation_last_batch_dialogues": 2,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 255,
+        "nodes": 621
+      },
+      "sampler_retries": 0,
+      "private_seed": 67156,
+      "same_as_original_sampler_batch16": true,
+      "ordered_train_ids_sha256": "164383f72b3e90cf635bac17fe520dc5d5ddde5e055a432bcc8d541dd4ac41e1",
+      "historical16": {
+        "batch_size": 16,
+        "train_batches": 65,
+        "validation_batches": 8,
+        "train_last_batch_dialogues": 14,
+        "validation_last_batch_dialogues": 2,
+        "capacity": {
+          "edges": 255,
+          "nodes": 621
+        },
+        "validation_capacity": {
+          "edges": 248,
+          "nodes": 600
+        },
+        "sampler_retries": 0,
+        "ordered_train_ids_sha256": "164383f72b3e90cf635bac17fe520dc5d5ddde5e055a432bcc8d541dd4ac41e1",
+        "replayed_metrics_match": true,
+        "step_count_source": "CPU reconstruction, not a historical step log"
+      },
+      "same_groups_steps_private_rng_as_historical_batch16": true,
+      "eligible_dialogue_ids_sha256": "475aa7bcfed1039078824ee949e6ba35d62fc0d8b4c277dc766419ecb6230614"
+    },
+    {
+      "run_id": "MELD_wo_hscl_seed67137",
+      "epoch": 21,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "batch_size": 16,
+      "validation_batch_size": 16,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "train_last_batch_dialogues": 14,
+      "validation_last_batch_dialogues": 2,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 281,
+        "nodes": 699
+      },
+      "sampler_retries": 0,
+      "private_seed": 67157,
+      "same_as_original_sampler_batch16": true,
+      "ordered_train_ids_sha256": "53952e22f2707368d4f6bb0e4ed840686928f7814d705e7abd4c3f9cb38cd1da",
+      "historical16": {
+        "batch_size": 16,
+        "train_batches": 65,
+        "validation_batches": 8,
+        "train_last_batch_dialogues": 14,
+        "validation_last_batch_dialogues": 2,
+        "capacity": {
+          "edges": 281,
+          "nodes": 699
+        },
+        "validation_capacity": {
+          "edges": 248,
+          "nodes": 600
+        },
+        "sampler_retries": 0,
+        "ordered_train_ids_sha256": "53952e22f2707368d4f6bb0e4ed840686928f7814d705e7abd4c3f9cb38cd1da",
+        "replayed_metrics_match": true,
+        "step_count_source": "CPU reconstruction, not a historical step log"
+      },
+      "same_groups_steps_private_rng_as_historical_batch16": true,
+      "eligible_dialogue_ids_sha256": "475aa7bcfed1039078824ee949e6ba35d62fc0d8b4c277dc766419ecb6230614"
+    },
+    {
+      "run_id": "MELD_wo_hscl_seed67137",
+      "epoch": 22,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "batch_size": 16,
+      "validation_batch_size": 16,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "train_last_batch_dialogues": 14,
+      "validation_last_batch_dialogues": 2,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 249,
+        "nodes": 603
+      },
+      "sampler_retries": 0,
+      "private_seed": 67158,
+      "same_as_original_sampler_batch16": true,
+      "ordered_train_ids_sha256": "6a2ed39ae366d97a4efc7bd5f6647f94c23ed85802aa9f34d80ef24f74400721",
+      "historical16": {
+        "batch_size": 16,
+        "train_batches": 65,
+        "validation_batches": 8,
+        "train_last_batch_dialogues": 14,
+        "validation_last_batch_dialogues": 2,
+        "capacity": {
+          "edges": 249,
+          "nodes": 603
+        },
+        "validation_capacity": {
+          "edges": 248,
+          "nodes": 600
+        },
+        "sampler_retries": 0,
+        "ordered_train_ids_sha256": "6a2ed39ae366d97a4efc7bd5f6647f94c23ed85802aa9f34d80ef24f74400721",
+        "replayed_metrics_match": true,
+        "step_count_source": "CPU reconstruction, not a historical step log"
+      },
+      "same_groups_steps_private_rng_as_historical_batch16": true,
+      "eligible_dialogue_ids_sha256": "475aa7bcfed1039078824ee949e6ba35d62fc0d8b4c277dc766419ecb6230614"
+    },
+    {
+      "run_id": "MELD_wo_hscl_seed67137",
+      "epoch": 23,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "batch_size": 16,
+      "validation_batch_size": 16,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "train_last_batch_dialogues": 14,
+      "validation_last_batch_dialogues": 2,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 251,
+        "nodes": 609
+      },
+      "sampler_retries": 0,
+      "private_seed": 67159,
+      "same_as_original_sampler_batch16": true,
+      "ordered_train_ids_sha256": "fd39b7464acc0083fb4606fa7de81dce2b5af7402f793fccdcf231228b52bf1c",
+      "historical16": {
+        "batch_size": 16,
+        "train_batches": 65,
+        "validation_batches": 8,
+        "train_last_batch_dialogues": 14,
+        "validation_last_batch_dialogues": 2,
+        "capacity": {
+          "edges": 251,
+          "nodes": 609
+        },
+        "validation_capacity": {
+          "edges": 248,
+          "nodes": 600
+        },
+        "sampler_retries": 0,
+        "ordered_train_ids_sha256": "fd39b7464acc0083fb4606fa7de81dce2b5af7402f793fccdcf231228b52bf1c",
+        "replayed_metrics_match": true,
+        "step_count_source": "CPU reconstruction, not a historical step log"
+      },
+      "same_groups_steps_private_rng_as_historical_batch16": true,
+      "eligible_dialogue_ids_sha256": "475aa7bcfed1039078824ee949e6ba35d62fc0d8b4c277dc766419ecb6230614"
+    },
+    {
+      "run_id": "MELD_wo_hscl_seed67137",
+      "epoch": 24,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "batch_size": 16,
+      "validation_batch_size": 16,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "train_last_batch_dialogues": 14,
+      "validation_last_batch_dialogues": 2,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 263,
+        "nodes": 645
+      },
+      "sampler_retries": 0,
+      "private_seed": 67160,
+      "same_as_original_sampler_batch16": true,
+      "ordered_train_ids_sha256": "385575284002f239ff21594ebcf3c131f922d98270b931ea687eab93a1477e4f",
+      "historical16": {
+        "batch_size": 16,
+        "train_batches": 65,
+        "validation_batches": 8,
+        "train_last_batch_dialogues": 14,
+        "validation_last_batch_dialogues": 2,
+        "capacity": {
+          "edges": 263,
+          "nodes": 645
+        },
+        "validation_capacity": {
+          "edges": 248,
+          "nodes": 600
+        },
+        "sampler_retries": 0,
+        "ordered_train_ids_sha256": "385575284002f239ff21594ebcf3c131f922d98270b931ea687eab93a1477e4f",
+        "replayed_metrics_match": true,
+        "step_count_source": "CPU reconstruction, not a historical step log"
+      },
+      "same_groups_steps_private_rng_as_historical_batch16": true,
+      "eligible_dialogue_ids_sha256": "475aa7bcfed1039078824ee949e6ba35d62fc0d8b4c277dc766419ecb6230614"
+    },
+    {
+      "run_id": "MELD_wo_hscl_seed67137",
+      "epoch": 25,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "batch_size": 16,
+      "validation_batch_size": 16,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "train_last_batch_dialogues": 14,
+      "validation_last_batch_dialogues": 2,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 244,
+        "nodes": 588
+      },
+      "sampler_retries": 0,
+      "private_seed": 67161,
+      "same_as_original_sampler_batch16": true,
+      "ordered_train_ids_sha256": "3b6fb573f3c87959f196b2ff5ecee6a8a81683753a004cc724ce84f36d0e5e8e",
+      "historical16": {
+        "batch_size": 16,
+        "train_batches": 65,
+        "validation_batches": 8,
+        "train_last_batch_dialogues": 14,
+        "validation_last_batch_dialogues": 2,
+        "capacity": {
+          "edges": 244,
+          "nodes": 588
+        },
+        "validation_capacity": {
+          "edges": 248,
+          "nodes": 600
+        },
+        "sampler_retries": 0,
+        "ordered_train_ids_sha256": "3b6fb573f3c87959f196b2ff5ecee6a8a81683753a004cc724ce84f36d0e5e8e",
+        "replayed_metrics_match": true,
+        "step_count_source": "CPU reconstruction, not a historical step log"
+      },
+      "same_groups_steps_private_rng_as_historical_batch16": true,
+      "eligible_dialogue_ids_sha256": "475aa7bcfed1039078824ee949e6ba35d62fc0d8b4c277dc766419ecb6230614"
+    },
+    {
+      "run_id": "MELD_wo_hscl_seed67137",
+      "epoch": 26,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "batch_size": 16,
+      "validation_batch_size": 16,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "train_last_batch_dialogues": 14,
+      "validation_last_batch_dialogues": 2,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 264,
+        "nodes": 648
+      },
+      "sampler_retries": 0,
+      "private_seed": 67162,
+      "same_as_original_sampler_batch16": true,
+      "ordered_train_ids_sha256": "3572160efef2ad3417102e2e40b624e7641d2577e778ee15b1f1c73e96c9f554",
+      "historical16": {
+        "batch_size": 16,
+        "train_batches": 65,
+        "validation_batches": 8,
+        "train_last_batch_dialogues": 14,
+        "validation_last_batch_dialogues": 2,
+        "capacity": {
+          "edges": 264,
+          "nodes": 648
+        },
+        "validation_capacity": {
+          "edges": 248,
+          "nodes": 600
+        },
+        "sampler_retries": 0,
+        "ordered_train_ids_sha256": "3572160efef2ad3417102e2e40b624e7641d2577e778ee15b1f1c73e96c9f554",
+        "replayed_metrics_match": true,
+        "step_count_source": "CPU reconstruction, not a historical step log"
+      },
+      "same_groups_steps_private_rng_as_historical_batch16": true,
+      "eligible_dialogue_ids_sha256": "475aa7bcfed1039078824ee949e6ba35d62fc0d8b4c277dc766419ecb6230614"
+    },
+    {
+      "run_id": "MELD_wo_hscl_seed67137",
+      "epoch": 27,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "batch_size": 16,
+      "validation_batch_size": 16,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "train_last_batch_dialogues": 14,
+      "validation_last_batch_dialogues": 2,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 281,
+        "nodes": 699
+      },
+      "sampler_retries": 0,
+      "private_seed": 67163,
+      "same_as_original_sampler_batch16": true,
+      "ordered_train_ids_sha256": "60c12c814893a6eb0ce33a4ada5ce6fe63e321959e9847dda486806683b26aee",
+      "historical16": {
+        "batch_size": 16,
+        "train_batches": 65,
+        "validation_batches": 8,
+        "train_last_batch_dialogues": 14,
+        "validation_last_batch_dialogues": 2,
+        "capacity": {
+          "edges": 281,
+          "nodes": 699
+        },
+        "validation_capacity": {
+          "edges": 248,
+          "nodes": 600
+        },
+        "sampler_retries": 0,
+        "ordered_train_ids_sha256": "60c12c814893a6eb0ce33a4ada5ce6fe63e321959e9847dda486806683b26aee",
+        "replayed_metrics_match": true,
+        "step_count_source": "CPU reconstruction, not a historical step log"
+      },
+      "same_groups_steps_private_rng_as_historical_batch16": true,
+      "eligible_dialogue_ids_sha256": "475aa7bcfed1039078824ee949e6ba35d62fc0d8b4c277dc766419ecb6230614"
+    },
+    {
+      "run_id": "MELD_wo_hscl_seed67137",
+      "epoch": 28,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "batch_size": 16,
+      "validation_batch_size": 16,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "train_last_batch_dialogues": 14,
+      "validation_last_batch_dialogues": 2,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 252,
+        "nodes": 612
+      },
+      "sampler_retries": 0,
+      "private_seed": 67164,
+      "same_as_original_sampler_batch16": true,
+      "ordered_train_ids_sha256": "32a76f1fb84214c109c17c88484dcd86dfb6eaadce6f0d8bc3015aa177195a77",
+      "historical16": {
+        "batch_size": 16,
+        "train_batches": 65,
+        "validation_batches": 8,
+        "train_last_batch_dialogues": 14,
+        "validation_last_batch_dialogues": 2,
+        "capacity": {
+          "edges": 252,
+          "nodes": 612
+        },
+        "validation_capacity": {
+          "edges": 248,
+          "nodes": 600
+        },
+        "sampler_retries": 0,
+        "ordered_train_ids_sha256": "32a76f1fb84214c109c17c88484dcd86dfb6eaadce6f0d8bc3015aa177195a77",
+        "replayed_metrics_match": true,
+        "step_count_source": "CPU reconstruction, not a historical step log"
+      },
+      "same_groups_steps_private_rng_as_historical_batch16": true,
+      "eligible_dialogue_ids_sha256": "475aa7bcfed1039078824ee949e6ba35d62fc0d8b4c277dc766419ecb6230614"
+    },
+    {
+      "run_id": "MELD_wo_hscl_seed67137",
+      "epoch": 29,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "batch_size": 16,
+      "validation_batch_size": 16,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "train_last_batch_dialogues": 14,
+      "validation_last_batch_dialogues": 2,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 243,
+        "nodes": 585
+      },
+      "sampler_retries": 0,
+      "private_seed": 67165,
+      "same_as_original_sampler_batch16": true,
+      "ordered_train_ids_sha256": "2778d74e2a06ccbad9bd285640cdff12ad8190b91228bd15a7e5ed2f8d066283",
+      "historical16": {
+        "batch_size": 16,
+        "train_batches": 65,
+        "validation_batches": 8,
+        "train_last_batch_dialogues": 14,
+        "validation_last_batch_dialogues": 2,
+        "capacity": {
+          "edges": 243,
+          "nodes": 585
+        },
+        "validation_capacity": {
+          "edges": 248,
+          "nodes": 600
+        },
+        "sampler_retries": 0,
+        "ordered_train_ids_sha256": "2778d74e2a06ccbad9bd285640cdff12ad8190b91228bd15a7e5ed2f8d066283",
+        "replayed_metrics_match": true,
+        "step_count_source": "CPU reconstruction, not a historical step log"
+      },
+      "same_groups_steps_private_rng_as_historical_batch16": true,
+      "eligible_dialogue_ids_sha256": "475aa7bcfed1039078824ee949e6ba35d62fc0d8b4c277dc766419ecb6230614"
+    },
+    {
+      "run_id": "MELD_wo_hscl_seed67137",
+      "epoch": 30,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "batch_size": 16,
+      "validation_batch_size": 16,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "train_last_batch_dialogues": 14,
+      "validation_last_batch_dialogues": 2,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 257,
+        "nodes": 627
+      },
+      "sampler_retries": 0,
+      "private_seed": 67166,
+      "same_as_original_sampler_batch16": true,
+      "ordered_train_ids_sha256": "6d963c349c0c1ed5acd5bf620dba1eb9b5ae75a910c4c03639f8bc0a1b1217a0",
+      "historical16": {
+        "batch_size": 16,
+        "train_batches": 65,
+        "validation_batches": 8,
+        "train_last_batch_dialogues": 14,
+        "validation_last_batch_dialogues": 2,
+        "capacity": {
+          "edges": 257,
+          "nodes": 627
+        },
+        "validation_capacity": {
+          "edges": 248,
+          "nodes": 600
+        },
+        "sampler_retries": 0,
+        "ordered_train_ids_sha256": "6d963c349c0c1ed5acd5bf620dba1eb9b5ae75a910c4c03639f8bc0a1b1217a0",
+        "replayed_metrics_match": true,
+        "step_count_source": "CPU reconstruction, not a historical step log"
+      },
+      "same_groups_steps_private_rng_as_historical_batch16": true,
+      "eligible_dialogue_ids_sha256": "475aa7bcfed1039078824ee949e6ba35d62fc0d8b4c277dc766419ecb6230614"
+    },
+    {
+      "run_id": "MELD_wo_hscl_seed67137",
+      "epoch": 31,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "batch_size": 16,
+      "validation_batch_size": 16,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "train_last_batch_dialogues": 14,
+      "validation_last_batch_dialogues": 2,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 259,
+        "nodes": 633
+      },
+      "sampler_retries": 0,
+      "private_seed": 67167,
+      "same_as_original_sampler_batch16": true,
+      "ordered_train_ids_sha256": "815abf4798f9ce0e9fd0df3ef72675725a230e59a1f805b294e6f1c12a238e15",
+      "historical16": {
+        "batch_size": 16,
+        "train_batches": 65,
+        "validation_batches": 8,
+        "train_last_batch_dialogues": 14,
+        "validation_last_batch_dialogues": 2,
+        "capacity": {
+          "edges": 259,
+          "nodes": 633
+        },
+        "validation_capacity": {
+          "edges": 248,
+          "nodes": 600
+        },
+        "sampler_retries": 0,
+        "ordered_train_ids_sha256": "815abf4798f9ce0e9fd0df3ef72675725a230e59a1f805b294e6f1c12a238e15",
+        "replayed_metrics_match": true,
+        "step_count_source": "CPU reconstruction, not a historical step log"
+      },
+      "same_groups_steps_private_rng_as_historical_batch16": true,
+      "eligible_dialogue_ids_sha256": "475aa7bcfed1039078824ee949e6ba35d62fc0d8b4c277dc766419ecb6230614"
+    },
+    {
+      "run_id": "MELD_wo_hscl_seed67137",
+      "epoch": 32,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "batch_size": 16,
+      "validation_batch_size": 16,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "train_last_batch_dialogues": 14,
+      "validation_last_batch_dialogues": 2,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 266,
+        "nodes": 654
+      },
+      "sampler_retries": 0,
+      "private_seed": 67168,
+      "same_as_original_sampler_batch16": true,
+      "ordered_train_ids_sha256": "f6964607156854123a78f1c29535e1f424458243bfd119f005ef0982521a3680",
+      "historical16": {
+        "batch_size": 16,
+        "train_batches": 65,
+        "validation_batches": 8,
+        "train_last_batch_dialogues": 14,
+        "validation_last_batch_dialogues": 2,
+        "capacity": {
+          "edges": 266,
+          "nodes": 654
+        },
+        "validation_capacity": {
+          "edges": 248,
+          "nodes": 600
+        },
+        "sampler_retries": 0,
+        "ordered_train_ids_sha256": "f6964607156854123a78f1c29535e1f424458243bfd119f005ef0982521a3680",
+        "replayed_metrics_match": true,
+        "step_count_source": "CPU reconstruction, not a historical step log"
+      },
+      "same_groups_steps_private_rng_as_historical_batch16": true,
+      "eligible_dialogue_ids_sha256": "475aa7bcfed1039078824ee949e6ba35d62fc0d8b4c277dc766419ecb6230614"
+    },
+    {
+      "run_id": "MELD_wo_hscl_seed67137",
+      "epoch": 33,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "batch_size": 16,
+      "validation_batch_size": 16,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "train_last_batch_dialogues": 14,
+      "validation_last_batch_dialogues": 2,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 266,
+        "nodes": 654
+      },
+      "sampler_retries": 0,
+      "private_seed": 67169,
+      "same_as_original_sampler_batch16": true,
+      "ordered_train_ids_sha256": "dc1a2f17a26dd941f92814fd31f4f162fd813406d8a7e7a47c9039309b8507b1",
+      "historical16": {
+        "batch_size": 16,
+        "train_batches": 65,
+        "validation_batches": 8,
+        "train_last_batch_dialogues": 14,
+        "validation_last_batch_dialogues": 2,
+        "capacity": {
+          "edges": 266,
+          "nodes": 654
+        },
+        "validation_capacity": {
+          "edges": 248,
+          "nodes": 600
+        },
+        "sampler_retries": 0,
+        "ordered_train_ids_sha256": "dc1a2f17a26dd941f92814fd31f4f162fd813406d8a7e7a47c9039309b8507b1",
+        "replayed_metrics_match": true,
+        "step_count_source": "CPU reconstruction, not a historical step log"
+      },
+      "same_groups_steps_private_rng_as_historical_batch16": true,
+      "eligible_dialogue_ids_sha256": "475aa7bcfed1039078824ee949e6ba35d62fc0d8b4c277dc766419ecb6230614"
+    },
+    {
+      "run_id": "MELD_wo_hscl_seed67137",
+      "epoch": 34,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "batch_size": 16,
+      "validation_batch_size": 16,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "train_last_batch_dialogues": 14,
+      "validation_last_batch_dialogues": 2,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 252,
+        "nodes": 612
+      },
+      "sampler_retries": 0,
+      "private_seed": 67170,
+      "same_as_original_sampler_batch16": true,
+      "ordered_train_ids_sha256": "73e06aeff9297f33caa465e1858d1ef5ec241005037ee40a82d0f41eff3cc403",
+      "historical16": {
+        "batch_size": 16,
+        "train_batches": 65,
+        "validation_batches": 8,
+        "train_last_batch_dialogues": 14,
+        "validation_last_batch_dialogues": 2,
+        "capacity": {
+          "edges": 252,
+          "nodes": 612
+        },
+        "validation_capacity": {
+          "edges": 248,
+          "nodes": 600
+        },
+        "sampler_retries": 0,
+        "ordered_train_ids_sha256": "73e06aeff9297f33caa465e1858d1ef5ec241005037ee40a82d0f41eff3cc403",
+        "replayed_metrics_match": true,
+        "step_count_source": "CPU reconstruction, not a historical step log"
+      },
+      "same_groups_steps_private_rng_as_historical_batch16": true,
+      "eligible_dialogue_ids_sha256": "475aa7bcfed1039078824ee949e6ba35d62fc0d8b4c277dc766419ecb6230614"
+    },
+    {
+      "run_id": "MELD_wo_hscl_seed67137",
+      "epoch": 35,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "batch_size": 16,
+      "validation_batch_size": 16,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "train_last_batch_dialogues": 14,
+      "validation_last_batch_dialogues": 2,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 259,
+        "nodes": 633
+      },
+      "sampler_retries": 0,
+      "private_seed": 67171,
+      "same_as_original_sampler_batch16": true,
+      "ordered_train_ids_sha256": "52846420e76ac14c75270a7dbb00af4e773e8dd0086d206420ddd5e74c2f5f84",
+      "historical16": {
+        "batch_size": 16,
+        "train_batches": 65,
+        "validation_batches": 8,
+        "train_last_batch_dialogues": 14,
+        "validation_last_batch_dialogues": 2,
+        "capacity": {
+          "edges": 259,
+          "nodes": 633
+        },
+        "validation_capacity": {
+          "edges": 248,
+          "nodes": 600
+        },
+        "sampler_retries": 0,
+        "ordered_train_ids_sha256": "52846420e76ac14c75270a7dbb00af4e773e8dd0086d206420ddd5e74c2f5f84",
+        "replayed_metrics_match": true,
+        "step_count_source": "CPU reconstruction, not a historical step log"
+      },
+      "same_groups_steps_private_rng_as_historical_batch16": true,
+      "eligible_dialogue_ids_sha256": "475aa7bcfed1039078824ee949e6ba35d62fc0d8b4c277dc766419ecb6230614"
+    },
+    {
+      "run_id": "MELD_wo_hscl_seed67137",
+      "epoch": 36,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "batch_size": 16,
+      "validation_batch_size": 16,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "train_last_batch_dialogues": 14,
+      "validation_last_batch_dialogues": 2,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 268,
+        "nodes": 660
+      },
+      "sampler_retries": 0,
+      "private_seed": 67172,
+      "same_as_original_sampler_batch16": true,
+      "ordered_train_ids_sha256": "bb8db9ead10681ac0a32e858ecbf462fc250e6ef18b1c55a2da95a5037134d39",
+      "historical16": {
+        "batch_size": 16,
+        "train_batches": 65,
+        "validation_batches": 8,
+        "train_last_batch_dialogues": 14,
+        "validation_last_batch_dialogues": 2,
+        "capacity": {
+          "edges": 268,
+          "nodes": 660
+        },
+        "validation_capacity": {
+          "edges": 248,
+          "nodes": 600
+        },
+        "sampler_retries": 0,
+        "ordered_train_ids_sha256": "bb8db9ead10681ac0a32e858ecbf462fc250e6ef18b1c55a2da95a5037134d39",
+        "replayed_metrics_match": true,
+        "step_count_source": "CPU reconstruction, not a historical step log"
+      },
+      "same_groups_steps_private_rng_as_historical_batch16": true,
+      "eligible_dialogue_ids_sha256": "475aa7bcfed1039078824ee949e6ba35d62fc0d8b4c277dc766419ecb6230614"
+    },
+    {
+      "run_id": "MELD_wo_hscl_seed67137",
+      "epoch": 37,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "batch_size": 16,
+      "validation_batch_size": 16,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "train_last_batch_dialogues": 14,
+      "validation_last_batch_dialogues": 2,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 273,
+        "nodes": 675
+      },
+      "sampler_retries": 0,
+      "private_seed": 67173,
+      "same_as_original_sampler_batch16": true,
+      "ordered_train_ids_sha256": "82bea590af4fd6702ae9b2c84e331ac95374479b5b150e73783cdf668c621a04",
+      "historical16": {
+        "batch_size": 16,
+        "train_batches": 65,
+        "validation_batches": 8,
+        "train_last_batch_dialogues": 14,
+        "validation_last_batch_dialogues": 2,
+        "capacity": {
+          "edges": 273,
+          "nodes": 675
+        },
+        "validation_capacity": {
+          "edges": 248,
+          "nodes": 600
+        },
+        "sampler_retries": 0,
+        "ordered_train_ids_sha256": "82bea590af4fd6702ae9b2c84e331ac95374479b5b150e73783cdf668c621a04",
+        "replayed_metrics_match": true,
+        "step_count_source": "CPU reconstruction, not a historical step log"
+      },
+      "same_groups_steps_private_rng_as_historical_batch16": true,
+      "eligible_dialogue_ids_sha256": "475aa7bcfed1039078824ee949e6ba35d62fc0d8b4c277dc766419ecb6230614"
+    },
+    {
+      "run_id": "MELD_wo_hscl_seed67137",
+      "epoch": 38,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "batch_size": 16,
+      "validation_batch_size": 16,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "train_last_batch_dialogues": 14,
+      "validation_last_batch_dialogues": 2,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 268,
+        "nodes": 660
+      },
+      "sampler_retries": 0,
+      "private_seed": 67174,
+      "same_as_original_sampler_batch16": true,
+      "ordered_train_ids_sha256": "0947be511082e0d413e3c98282a0eab980dc2a3a88278bdbb8148db92a1599a8",
+      "historical16": {
+        "batch_size": 16,
+        "train_batches": 65,
+        "validation_batches": 8,
+        "train_last_batch_dialogues": 14,
+        "validation_last_batch_dialogues": 2,
+        "capacity": {
+          "edges": 268,
+          "nodes": 660
+        },
+        "validation_capacity": {
+          "edges": 248,
+          "nodes": 600
+        },
+        "sampler_retries": 0,
+        "ordered_train_ids_sha256": "0947be511082e0d413e3c98282a0eab980dc2a3a88278bdbb8148db92a1599a8",
+        "replayed_metrics_match": true,
+        "step_count_source": "CPU reconstruction, not a historical step log"
+      },
+      "same_groups_steps_private_rng_as_historical_batch16": true,
+      "eligible_dialogue_ids_sha256": "475aa7bcfed1039078824ee949e6ba35d62fc0d8b4c277dc766419ecb6230614"
+    },
+    {
+      "run_id": "MELD_wo_hscl_seed67137",
+      "epoch": 39,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "batch_size": 16,
+      "validation_batch_size": 16,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "train_last_batch_dialogues": 14,
+      "validation_last_batch_dialogues": 2,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 273,
+        "nodes": 675
+      },
+      "sampler_retries": 0,
+      "private_seed": 67175,
+      "same_as_original_sampler_batch16": true,
+      "ordered_train_ids_sha256": "0e7e103c08b38e4d34f4ecf28232c6dd41b557ea0b92fda62ff6d85bdf856d6b",
+      "historical16": {
+        "batch_size": 16,
+        "train_batches": 65,
+        "validation_batches": 8,
+        "train_last_batch_dialogues": 14,
+        "validation_last_batch_dialogues": 2,
+        "capacity": {
+          "edges": 273,
+          "nodes": 675
+        },
+        "validation_capacity": {
+          "edges": 248,
+          "nodes": 600
+        },
+        "sampler_retries": 0,
+        "ordered_train_ids_sha256": "0e7e103c08b38e4d34f4ecf28232c6dd41b557ea0b92fda62ff6d85bdf856d6b",
+        "replayed_metrics_match": true,
+        "step_count_source": "CPU reconstruction, not a historical step log"
+      },
+      "same_groups_steps_private_rng_as_historical_batch16": true,
+      "eligible_dialogue_ids_sha256": "475aa7bcfed1039078824ee949e6ba35d62fc0d8b4c277dc766419ecb6230614"
+    },
+    {
+      "run_id": "MELD_wo_hscl_seed67137",
+      "epoch": 40,
+      "sample_ratio": 1,
+      "train_dialogues": 1038,
+      "batch_size": 16,
+      "validation_batch_size": 16,
+      "train_batches": 65,
+      "validation_batches": 8,
+      "train_last_batch_dialogues": 14,
+      "validation_last_batch_dialogues": 2,
+      "validation_capacity": {
+        "edges": 248,
+        "nodes": 600
+      },
+      "capacity": {
+        "edges": 247,
+        "nodes": 597
+      },
+      "sampler_retries": 0,
+      "private_seed": 67176,
+      "same_as_original_sampler_batch16": true,
+      "ordered_train_ids_sha256": "7463e5b811c03bfe80381d9fe8487d09537993dc6001a50d00b1509633b2f588",
+      "historical16": {
+        "batch_size": 16,
+        "train_batches": 65,
+        "validation_batches": 8,
+        "train_last_batch_dialogues": 14,
+        "validation_last_batch_dialogues": 2,
+        "capacity": {
+          "edges": 247,
+          "nodes": 597
+        },
+        "validation_capacity": {
+          "edges": 248,
+          "nodes": 600
+        },
+        "sampler_retries": 0,
+        "ordered_train_ids_sha256": "7463e5b811c03bfe80381d9fe8487d09537993dc6001a50d00b1509633b2f588",
+        "replayed_metrics_match": true,
+        "step_count_source": "CPU reconstruction, not a historical step log"
+      },
+      "same_groups_steps_private_rng_as_historical_batch16": true,
+      "eligible_dialogue_ids_sha256": "475aa7bcfed1039078824ee949e6ba35d62fc0d8b4c277dc766419ecb6230614"
+    }
+  ]
+}

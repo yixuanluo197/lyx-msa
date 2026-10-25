@@ -1,0 +1,19 @@
+{
+  "recorded_at_utc": "2026-10-25T08:17:17.284517+00:00",
+  "command": [
+    "/data2/yb/conda_envs/cmerc-xp-repro/bin/python",
+    "/data2/yb/paper/lyx-msa/CMERC/experiments/hscl_ablation_validation/20261025T080937Z/scripts/test_hscl_ablation_analysis.py"
+  ],
+  "returncode": 0,
+  "tests": 12,
+  "stdout": "",
+  "stderr": "test_actual_flat_environment_schema (__main__.Rules) ... ok\ntest_best_cannot_be_replaced_by_tail (__main__.Rules) ... ok\ntest_early_status_rejected (__main__.Rules) ... ok\ntest_final_result_gate (__main__.Rules) ... ok\ntest_first_rounded_maximum_wins (__main__.Rules) ... ok\ntest_fixed_tail (__main__.Rules) ... ok\ntest_missing_history_validation_aux_not_zero (__main__.Rules) ... ok\ntest_only_switch_changes (__main__.Rules) ... ok\ntest_partial_watch_rejected (__main__.Rules) ... ok\ntest_positive_requires_strict_tail_increase (__main__.Rules) ... ok\ntest_raw_hscl_is_retained_but_weighted_zero (__main__.Rules) ... ok\ntest_tail_fall_is_mixed (__main__.Rules) ... ok\n\n----------------------------------------------------------------------\nRan 12 tests in 0.001s\n\nOK\n",
+  "cuda_visible_devices": "",
+  "scope": "pure synthetic CPU tests; no analysis main/plotting main/model forward/current intermediate scores/test metrics",
+  "red_stage": "Initial 11-test red stage: 4 passed and 7 missing-function errors; environment regression added before fix: 12 ran, 11 passed and missing environment_versions error. Green stage follows implementation.",
+  "scripts_sha256": {
+    "analyze_hscl_ablation.py": "f873988789871a518d3bfbd8fa806bc1dab987675dc5e08cd10ad486c0793865",
+    "plot_hscl_ablation.py": "b9fbbd7b090cb158aad91b71cab44617972757c04bdbd39bce5421901cbe1a9a",
+    "test_hscl_ablation_analysis.py": "3878ac7925f2d952b3937a78a60864a30a48802a00f1711cfea7102fd165fdae"
+  }
+}

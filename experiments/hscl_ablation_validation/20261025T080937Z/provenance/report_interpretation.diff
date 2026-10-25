@@ -1,0 +1,60 @@
+--- generated_report
++++ reviewed_report
+@@ -8,7 +8,7 @@
+ 
+ 唯一登记科学改动：contrastlearning=True→False；保留calibrate=True、courselearning=True。dropout=0.4、rec_dropout CLI元数据0.1、MELD seed67137、split_seed1475、lr=0.0001、L2=0.00003、Adam、Batch16/16、40 epochs、GRU/ATen、hyper/direct/concat_DHT、BN、L3/K3、CC系数0.002、MSCL/CSCL登记系数0.15/0.15、CL epoch_ratio0.4/scheduler_steps1、continuous RNG与capacity_safe保持XP04。工程skip_final_test=True取消最终测试，不改变训练数学。
+ 
+-train_cm.py:656使用contrastlearning or calibrate控制共享分支。本批CC仍开，故:667–674的五个移除辅助前向、:689–707的CC、:708–771的伪标签及原始MSCL/CSCL仍执行；原始HSCL不应伪造为零。:236–259仅按实际开关组合目标，关闭HSCL后effective MSCL=CSCL=0，总Loss=classification+0.002×rawCC。:1270课程学习独立控制，未因关闭HSCL而关闭CL。辅助teacher保持epoch入口快照/eval，网络和Loss公式未修改。
++train_cm.py:656使用contrastlearning or calibrate控制共享分支。本批CC仍开，故:669–675的五个移除辅助前向、:689–707的CC、:708–771的伪标签及原始MSCL/CSCL仍执行；原始HSCL不应伪造为零。:236–259仅按实际开关组合目标，关闭HSCL后effective MSCL=CSCL=0，总Loss=classification+0.002×rawCC。:1270课程学习独立控制，未因关闭HSCL而关闭CL。辅助teacher保持epoch入口快照/eval，网络和Loss公式未修改。
+ 
+ HSCL主要是确定性张量计算，采样使用固定private RNG，但这不等于已经证明所有随机调用与全程RNG轨迹匹配。只依据实际预检/首Batch审计报告初始化、RNG和梯度证据；关闭目标项会改变后续参数与预测，不要求后续数值轨迹相同，也不人为改源码强制RNG。
+ 
+@@ -19,6 +19,12 @@
+ 选模为完整固定validation池话语级汇总W-F1，百分比round2后严格提高才保存，最高并列取首次，不是Batch F1平均。末段固定31–40轮均值，时间窗SD使用ddof=1，不是跨Seed波动或统计显著证据。positive要求最佳和末段均严格提高；最佳升而末段降或不变为mixed_incomplete；最佳未升为no_best_improvement。
+ 
+ ## 三臂实际训练/验证结果
++
++| 实验 | CC / calibrate | HSCL优化 / contrastlearning | CL / courselearning |
++|---|---|---|---|
++| XP04 完整CMERC | 开 / True | 开 / True | 开 / True |
++| XP06 w/o CC（描述） | 关 / False | 开 / True | 开 / True |
++| XP12 w/o HSCL（本次） | 开 / True | 关 / False | 开 / True |
+ 
+ | 臂 | 最佳val W-F1 % | Epoch | 末10轮val W-F1 % | 末段SD | 最佳轮val ACC % | 末段val ACC % | 最佳轮val Macro-F1 % |
+ |---|---:|---:|---:|---:|---:|---:|---:|
+@@ -64,6 +70,29 @@
+ - XP12_wo_hscl：最佳验证轮→末段，train分类Loss -0.8422，val分类Loss +1.1281，val W-F1 -2.8960 pp。
+ 
+ train为在线训练态、val为固定epoch权重eval，不把二者差当严格泛化gap。train Loss下降同时val Loss上升/验证末段回落仅为过拟合或目标竞争线索；W-F1与Loss方向不一致时不宣称已解决过拟合。有限梯度和更新只证明数值执行，不排除伪目标质量或泛化问题。首Batch梯度审计仅预检额外autograd.grad，不是正式训练的新算法，也不能代替多Seed机制证据。
++
++
++### 对混合证据的解释和下一步最小工作
++
++**已证实的方向差异：** XP12最佳验证W-F1提高0.450个百分点，但最佳轮从8提前到5，末10轮均值下降0.115个百分点。时间窗SD从0.497537降到0.235570，说明该固定窗口内波动更小；最佳至末段回落却从2.331扩大到2.896个百分点，增加0.565。更低波动不能替代均值或预登记双升条件，也不能单凭这些相关摘要证明优化更稳定。
++
++末段训练分类Loss从2.70667967降至2.65724834，验证分类Loss从5.18186降至5.14309691（约−0.03876309；旧验证日志精度为4位小数）。验证F1末段却略降，表明Focal分类Loss与离散argmax后的Weighted F1并不单调对应；不能把Loss改善等同于主指标改善，更不能推断未计算的ECE/CEL或测试收益。训练末段W-F1达到99.200%，高于控制98.129%；从本臂最佳轮到末段仍表现为train分类Loss下降而validation分类Loss上升1.1281，过拟合迹象并未消失。
++
++**CC仍实际生效：** 非正式首Batch证实CC梯度达到文本GRU与模态投影，raw CC梯度L2约1589.1644、backbone部分约207.8765，主分类梯度L2约15.7839；这些范数仅描述该Batch，不代表全程梯度竞争。正式每步验证有效CC贡献为0.002×raw CC；最佳轮和末段训练加权CC分别约0.092731和0.112536，均非零。原始MSCL/CSCL仍计算且本次2548步均非零，但两项有效权重始终0，额外梯度审计仅在probe进行，正式额外次数0。不同臂总Loss包含的目标项不同，不能仅以XP12总Loss数值更低宣称优化更好。
++
++**有证据支持但未隔离的推断：** 当前结果提供“HSCL可能影响早期峰值与后期正则化权衡”的线索；不满足本轮积极证据门槛。没有直接测量HSCL梯度与分类梯度的夹角、伪标签质量或按类别贡献，不能断言HSCL与分类目标冲突，更不能断言HSCL无效。联合关闭MSCL和CSCL也不能分辨二者各自净影响。
++
++**下一步建议（未执行）：** 暂缓第二Seed和最终五Seed，不凭本次混合结果直接降低两项HSCL系数。若后续另行登记，最小工作可先固定训练/验证Batch与Checkpoint，审计MSCL/CSCL伪标签分布及其与分类目标的梯度方向；再决定是否提出只改一个系数的窄范围验证假设。若未来要推广为配置收益，仍需独立Seed和同协议配对验证；本批不追加训练、权重搜索、w/o CL或测试。
++
++源码定位按本次冻结副本：MELD FocalLoss为train_cm.py:1211，Adam为:1225，CL比例分支为:1270–1273、loader为:1282–1293。冻结审计表部分后半段行号沿用XP04原文件，因已有skip-final-test工程补丁偏移4行，详见[行号勘误](../provenance/source_line_reference_corrections.json)；源代码、科学配置与冻结判据均未改变。
++
++### 主要训练曲线
++
++![训练与验证Weighted F1](../results/figures/MELD_hscl_wf1.png)
++
++![训练与验证分类Loss](../results/figures/MELD_hscl_classification_loss.png)
++
++![实际加权辅助Loss](../results/figures/MELD_hscl_effective_auxiliary_loss.png)
+ 
+ ## 预检、资源和完整验收
+ 
+@@ -137,4 +166,4 @@
+ 
+ [per_run.csv](../results/per_run.csv)、[comparison.csv](../results/comparison.csv)、[metrics_summary.json](../results/metrics_summary.json)、[curves.csv](../results/curves.csv)、[loss_curves.csv](../results/loss_curves.csv)、[9图18文件及SHA](../results/figures/manifest.json)。
+ 
+-实验根目录：`/data2/yb/paper/lyx-msa/CMERC/experiments/hscl_ablation_validation/20261025T080937Z`。仓库根副本由父级在验收后复制并调整链接。
++实验根目录：`/data2/yb/paper/lyx-msa/CMERC/experiments/hscl_ablation_validation/20261025T080937Z`。仓库根报告正文相同，相对链接按位置调整。

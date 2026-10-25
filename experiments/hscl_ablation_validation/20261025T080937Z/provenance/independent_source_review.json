@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "reviewer": "iem_batch_audit",
+  "read_only": true,
+  "main_facts": [
+    "contrastlearningFalse仅排除HSCL目标/梯度",
+    "calibrateTrue下teacher/伪标签/rawHSCL仍计算",
+    "CC与CL保持",
+    "MELD分类Loss为FocalLoss，Adam仅主模型",
+    "HSCL hidden未detach，开启时可导",
+    "clloss内部NaN/Inf回退0原样保留"
+  ],
+  "limits": [
+    "不保证完整数值/RNG轨迹",
+    "课程生成史未知",
+    "单Seed不能确定机制"
+  ],
+  "historical_test_metrics_read_by_this_reviewer": false
+}

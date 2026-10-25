@@ -1,0 +1,6 @@
+{
+  "initial_shell_import_issue": "libcusparse.so.11 missing when registry LD_LIBRARY_PATH was not applied",
+  "resolution": "Apply unchanged XP04/XP11 LD_LIBRARY_PATH from registry.environment; no install or source change",
+  "effective_environment_import_returncode": 0,
+  "cuda_initialized": false
+}

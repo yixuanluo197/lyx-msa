@@ -1,0 +1,606 @@
+--- XP11/scripts/watch_training.py
++++ XP12/scripts/watch_training.py
+@@ -1,4 +1,4 @@
+-"""Call/return-only guard for validation-only CMERC dropout diagnosis."""
++"""Validation-only HSCL-objective ablation; extra gradient checks are preflight-only."""
+ from __future__ import annotations
+ 
+ import argparse
+@@ -74,7 +74,7 @@
+ 
+ def assert_scientific_pair(args, historical, run, patched_sha):
+     actual, expected = vars(args), historical['args']
+-    permitted = {'dropout', 'skip_final_test', 'output_dir', 'provenance'}
++    permitted = {'contrastlearning', 'skip_final_test', 'output_dir', 'provenance'}
+     differences = {key: (expected.get(key), actual.get(key))
+                    for key in set(actual) | set(expected)
+                    if key not in permitted and actual.get(key) != expected.get(key)}
+@@ -82,7 +82,7 @@
+     assert actual['lr'] == expected['lr'] == run['lr'] == 1e-4
+     assert expected['batch_size'] == actual['batch_size'] == run['batch_size'] == 16
+     assert run['validation_batch_size'] == actual['batch_size']
+-    assert expected['dropout'] == .4 and actual['dropout'] == run['dropout'] == .5
++    assert expected['dropout'] == actual['dropout'] == run['dropout'] == .4
+     assert actual['rec_dropout'] == expected['rec_dropout'] == run['rec_dropout'] == .1
+     assert actual['skip_final_test'] is True
+     assert actual['seed'] == run['seed'] and actual['epochs'] == run['epochs']
+@@ -91,7 +91,8 @@
+     assert actual['selection_protocol'] == 'validation' and actual['testing'] is False
+     assert actual['rng_policy'] == 'continuous' and actual['rnn_backend'] == 'aten'
+     assert actual['batch_policy'] == 'capacity_safe' and actual['num_workers'] == 0
+-    assert actual['calibrate'] and actual['contrastlearning'] and actual['courselearning']
++    assert actual['calibrate'] is True and actual['courselearning'] is True
++    assert expected['contrastlearning'] is True and actual['contrastlearning'] is run['contrastlearning'] is False
+     assert (actual['rank_coff'], actual['mscl_coff'], actual['cscl_coff']) == (.002, .15, .15)
+     provenance = actual['provenance']
+     assert provenance['split'] == historical['split']
+@@ -106,15 +107,15 @@
+ def audit_dropout_models(args, models):
+     """Read attributes only; no model construction, forward, mutation, or RNG draws."""
+     before = rng_hash()
+-    assert args.dropout == .5 and args.rec_dropout == .1
++    assert args.dropout == .4 and args.rec_dropout == .1
+     result = {'cli_dropout': args.dropout, 'cli_rec_dropout_metadata': args.rec_dropout, 'models': {}}
+     assert set(models) == {'model', 'model_mm', 'model_intra', 'model_inter'}
+     for name, model in models.items():
+         gru, hidden_dropout = model.gru_l, model.dropout_
+-        assert isinstance(gru, torch.nn.GRU) and gru.dropout == .5
++        assert isinstance(gru, torch.nn.GRU) and gru.dropout == .4
+         assert gru.num_layers == 2 and gru.bidirectional is True
+-        assert isinstance(hidden_dropout, torch.nn.Dropout) and hidden_dropout.p == .5
+-        assert model.dropout == .5
++        assert isinstance(hidden_dropout, torch.nn.Dropout) and hidden_dropout.p == .4
++        assert model.dropout == .4
+         fixed = {}
+         dropouts = {}
+         for module_name, module in model.named_modules():
+@@ -158,7 +159,64 @@
+     if args.contrastlearning:
+         expected += args.mscl_coff * values['mscl_loss'] + args.cscl_coff * values['cscl_loss']
+     assert math.isclose(expected, values['total_loss'], rel_tol=1e-5, abs_tol=1e-6), values
++    values['weighted_cc_loss'] = args.rank_coff * values['cc_loss'] if args.calibrate else 0.
++    values['weighted_mscl_loss'] = args.mscl_coff * values['mscl_loss'] if args.contrastlearning else 0.
++    values['weighted_cscl_loss'] = args.cscl_coff * values['cscl_loss'] if args.contrastlearning else 0.
++    assert values['weighted_mscl_loss'] == values['weighted_cscl_loss'] == 0.
+     return values
++
++
++def preflight_gradient_audit(total, classification, cc, mscl, cscl, model):
++    """Inspect the first synthetic/probe graph without accumulating parameter gradients."""
++    before = rng_hash()
++    names, parameters = zip(*[(name, p) for name, p in model.named_parameters() if p.requires_grad])
++    original_grads = [None if p.grad is None else p.grad.detach().cpu().clone() for p in parameters]
++    assert torch.is_tensor(cc) and cc.requires_grad, 'CC has no differentiable active margin in the first probe batch'
++    auxiliary = [(name, value) for name, value in [('MSCL', mscl), ('CSCL', cscl)]
++                 if torch.is_tensor(value) and value.requires_grad]
++    gradients = torch.autograd.grad(total, tuple(parameters) + tuple(value for _, value in auxiliary),
++                                    retain_graph=True, allow_unused=True)
++    total_gradients = [None if value is None else value.detach().cpu() for value in gradients[:len(parameters)]]
++    assert all(value is None for value in gradients[len(parameters):]), 'HSCL is still on the objective gradient path'
++    del gradients
++    classification_gradients = [None if value is None else value.detach().cpu() for value in
++        torch.autograd.grad(classification, parameters, retain_graph=True, allow_unused=True)]
++    cc_gradients = [None if value is None else value.detach().cpu() for value in
++        torch.autograd.grad(cc, parameters, retain_graph=True, allow_unused=True)]
++    squared = {'classification': 0., 'cc': 0., 'total': 0., 'cc_backbone': 0.}
++    maximum_difference, compared, backbone_nonzero = 0., 0, []
++    for name, actual, cls, rank in zip(names, total_gradients, classification_gradients, cc_gradients):
++        for key, value in [('classification', cls), ('cc', rank), ('total', actual)]:
++            if value is not None:
++                assert torch.isfinite(value).all().item(), 'Nonfinite probe gradient: ' + key
++                squared[key] += value.double().square().sum().item()
++        if rank is not None and name.startswith(('gru_l.', 'linear_l.', 'linear_a.', 'linear_v.')):
++            norm = rank.double().square().sum().item()
++            squared['cc_backbone'] += norm
++            if norm > 0:
++                backbone_nonzero.append(name)
++        if cls is None and rank is None:
++            assert actual is None
++            continue
++        expected = (cls if cls is not None else torch.zeros_like(rank)) + .002 * (rank if rank is not None else torch.zeros_like(cls))
++        assert actual is not None and torch.allclose(actual, expected, rtol=1e-4, atol=1e-5), name
++        maximum_difference = max(maximum_difference, (actual-expected).abs().max().item())
++        compared += 1
++    assert squared['cc_backbone'] > 0, 'CC gradient did not reach a registered backbone parameter'
++    for old, parameter in zip(original_grads, parameters):
++        assert (parameter.grad is None if old is None else parameter.grad is not None and torch.equal(old, parameter.grad.detach().cpu()))
++    after = rng_hash()
++    assert before == after
++    return {'status': 'passed', 'preflight_only': True, 'additional_model_forwards': 0,
++        'parameter_grad_buffers_unchanged': True, 'rng_before': before, 'rng_after': after,
++        'CC_backbone_gradient_nonzero': True, 'CC_backbone_parameters_nonzero': backbone_nonzero,
++        'gradient_l2': {name: math.sqrt(value) for name, value in squared.items()},
++        'total_equals_classification_plus_0p002_CC_gradient': True, 'compared_parameters': compared,
++        'maximum_absolute_gradient_difference': maximum_difference, 'relative_tolerance': 1e-4, 'absolute_tolerance': 1e-5,
++        'MSCL_gradient_wrt_total': None, 'CSCL_gradient_wrt_total': None,
++        'auxiliary_raw_requires_grad': {'MSCL': torch.is_tensor(mscl) and mscl.requires_grad,
++                                      'CSCL': torch.is_tensor(cscl) and cscl.requires_grad},
++        'limit': 'First probe batch only; this does not assert nonzero CC gradients in every formal batch.'}
+ 
+ 
+ class PreflightComplete(Exception):
+@@ -179,6 +237,7 @@
+         self.first = None
+         self.memory_records = []
+         self.line_events = 0
++        self.gradient_audit = None
+ 
+     def emit(self, name, value, append=False):
+         if self.output is None:
+@@ -200,7 +259,19 @@
+         return 'validation'
+ 
+     def trace(self, frame, event, arg):
+-        if frame.f_code.co_filename != self.target or frame.f_code.co_name != 'train_or_eval_graph_model':
++        if frame.f_code.co_filename != self.target:
++            return None
++        if self.preflight and self.gradient_audit is None and frame.f_code.co_name == 'combine_training_losses':
++            frame.f_trace_lines = False
++            frame.f_trace_opcodes = False
++            if event == 'return' and arg is not None:
++                assert self.active is not None and self.active['split'] == 'train' and self.active['epoch'] == 1 and not self.active['steps']
++                local = frame.f_locals
++                self.gradient_audit = preflight_gradient_audit(arg[0], local['classification_loss'], local['cc_loss'],
++                    local['mscl_loss'], local['cscl_loss'], self.active['frame'].f_locals['model'])
++                self.emit('gradient_audit.json', self.gradient_audit)
++            return self.trace
++        if frame.f_code.co_name != 'train_or_eval_graph_model':
+             return None
+         frame.f_trace_lines = False
+         frame.f_trace_opcodes = False
+@@ -295,7 +366,7 @@
+             assert [len(step['dialogue_ids']) for step in state['steps']] == [
+                 min(batch_size, len(keys) - start) for start in range(0, len(keys), batch_size)]
+             assert len(state['seen_ids']) == len(keys) and set(state['seen_ids']) == set(keys)
+-        averaged = {key: float(np.mean([row[key] for row in components])) for key in LOSSES}
++        averaged = {key: float(np.mean([row[key] for row in components])) for key in components[0]}
+         norms = [step['gradient_l2'] for step in state['steps']]
+         row = {'split': state['split'], 'epoch': state['epoch'], 'dialogue_ids': keys,
+                'weighted_f1': float(result[4]), 'accuracy': float(result[1]),
+@@ -356,13 +427,16 @@
+         runpy.run_path(target, run_name='__main__')
+     except PreflightComplete:
+         assert options.preflight
++        assert guard.gradient_audit is not None
+         guard.emit('status.json', {'phase': 'preflight_passed', 'first_step_completed': True,
+                                   'counts': guard.counts, 'test_forward_passes': 0,
++                                  'extra_gradient_diagnostic_calls': 1,
+                                   'target_line_events': guard.line_events})
+     else:
+         assert not options.preflight, 'Preflight should stop after its first Adam step'
+         assert guard.counts == {'train': run['epochs'], 'validation': run['epochs'], 'test': 0}
+         assert guard.active is None and guard.line_events == 0
++        assert guard.gradient_audit is None
+         assert not (Path(run['run_dir']) / 'final_test.json').exists()
+         epochs = [json.loads(line) for line in (Path(run['run_dir']) / 'metrics.jsonl').read_text().splitlines()]
+         assert [row['epoch'] for row in epochs] == list(range(1, run['epochs'] + 1))
+@@ -372,6 +446,7 @@
+                                   'test_forward_passes': 0, 'no_final_test_artifacts': True,
+                                   'selected_epoch': selected['epoch'],
+                                   'selection_weighted_f1': selected['validation_weighted_f1'],
++                                  'extra_gradient_diagnostic_calls': 0,
+                                   'target_line_events': guard.line_events})
+     finally:
+         sys.settrace(old_trace)
+--- XP11/scripts/run_single.py
++++ XP12/scripts/run_single.py
+@@ -198,11 +198,11 @@
+ 
+ 
+ def validate_module_audit(audit):
+-    assert audit['cli_dropout'] == .5 and audit['cli_rec_dropout_metadata'] == .1
++    assert audit['cli_dropout'] == .4 and audit['cli_rec_dropout_metadata'] == .1
+     assert set(audit['models']) == {'model', 'model_mm', 'model_intra', 'model_inter'}
+     for model in audit['models'].values():
+-        assert model['language_gru'] == {'dropout': .5, 'num_layers': 2, 'bidirectional': True}
+-        assert model['hidden_dropout_p'] == .5
++        assert model['language_gru'] == {'dropout': .4, 'num_layers': 2, 'bidirectional': True}
++        assert model['hidden_dropout_p'] == .4
+         assert all(value == .5 for value in model['registered_fixed_modality_dropouts'].values())
+     definition = audit['fixed_modality_dropout_definition']
+     assert definition['class'] == 'MMGatedAttention'
+@@ -217,12 +217,21 @@
+     assert status['phase'] == 'preflight_passed' and status['first_step_completed']
+     assert status['counts'] == {'train': 0, 'validation': 0, 'test': 0}
+     assert status['test_forward_passes'] == status['target_line_events'] == 0
++    assert status['extra_gradient_diagnostic_calls'] == 1
+     assert first['gradients_finite'] and first['optimizer_updated_parameters']
+     assert math.isfinite(first['gradient_l2']) and first['gradient_l2'] > 0
+     assert all(math.isfinite(value) for value in first['components'].values())
+     loss = first['components']
+-    expected = loss['classification_loss'] + .002 * loss['cc_loss'] + .15 * loss['mscl_loss'] + .15 * loss['cscl_loss']
++    expected = loss['classification_loss'] + .002 * loss['cc_loss']
+     assert math.isclose(expected, loss['total_loss'], rel_tol=1e-5, abs_tol=1e-6)
++    assert loss['weighted_mscl_loss'] == loss['weighted_cscl_loss'] == 0.
++    assert math.isclose(loss['weighted_cc_loss'], .002 * loss['cc_loss'], rel_tol=1e-10, abs_tol=1e-10)
++    gradient_path = folder / 'gradient_audit.json'
++    gradient_audit = read(gradient_path)
++    assert gradient_audit['status'] == 'passed' and gradient_audit['preflight_only'] is True
++    assert gradient_audit['CC_backbone_gradient_nonzero'] and gradient_audit['total_equals_classification_plus_0p002_CC_gradient']
++    assert gradient_audit['MSCL_gradient_wrt_total'] is gradient_audit['CSCL_gradient_wrt_total'] is None
++    assert gradient_audit['parameter_grad_buffers_unchanged'] and gradient_audit['rng_before'] == gradient_audit['rng_after']
+     module_path = folder / 'module_audit.json'
+     validate_module_audit(read(module_path))
+     assert not list((ROOT / 'preflight' / run['run_id']).rglob('final_test.json'))
+@@ -241,6 +250,7 @@
+     return {'status': 'passed', 'first_step_parameters_changed': True, 'test_forward_passes': 0,
+             'first_sha256': sha(folder / 'first.json'), 'status_sha256': sha(folder / 'status.json'),
+             'module_audit_sha256': sha(module_path),
++            'gradient_audit_sha256': sha(gradient_path),
+             'memory_profile_sha256': sha(memory_path), 'torch_peak_allocated_mib': peak_allocated,
+             'torch_peak_reserved_mib': peak_reserved, 'registered_memory_budget_mib': budget,
+             'preflight_sampled_gpu_free_mib_min': min(row['free_mib'] for row in probe_resources),
+@@ -253,6 +263,7 @@
+     assert observed['phase'] == 'completed'
+     assert observed['counts'] == {'train': 40, 'validation': 40, 'test': 0}
+     assert observed['test_forward_passes'] == observed['target_line_events'] == 0
++    assert observed['extra_gradient_diagnostic_calls'] == 0
+     assert observed['no_final_test_artifacts']
+     assert all((folder / name).is_file() for name in ('best.pt', 'latest.pt'))
+     assert not (folder / 'final_test.json').exists()
+@@ -280,10 +291,12 @@
+     registry = read(ROOT / 'configs/registry.json')
+     assert registry['formal_run_count'] == len(registry['runs']) == 1
+     run = registry['runs'][0]
+-    assert (run['run_id'], run['dataset'], run['seed'], run['lr'], run['epochs'], run['batch_size'], run['validation_batch_size'], run['dropout'], run['rec_dropout']) == ('MELD_cmerc_dropout0p5_lr1e-4_seed67137', 'MELD', 67137, .0001, 40, 16, 16, .5, .1)
++    assert (run['run_id'], run['dataset'], run['seed'], run['lr'], run['epochs'], run['batch_size'], run['validation_batch_size'], run['dropout'], run['rec_dropout']) == ('MELD_wo_hscl_seed67137', 'MELD', 67137, .0001, 40, 16, 16, .4, .1)
++    assert run['contrastlearning'] is False and run['calibrate'] is True and run['courselearning'] is True
++    assert '--contrastlearning' not in run['argv'] and '--calibrate' in run['argv'] and '--courselearning' in run['argv']
+     assert float(run['argv'][run['argv'].index('--lr')+1]) == .0001
+     assert int(run['argv'][run['argv'].index('--batch-size')+1]) == 16
+-    assert float(run['argv'][run['argv'].index('--dropout')+1]) == .5
++    assert float(run['argv'][run['argv'].index('--dropout')+1]) == .4
+     assert float(run['argv'][run['argv'].index('--rec-dropout')+1]) == .1
+     validate_device(registry['gpu_index'], registry['gpu_uuid'])
+     assert registry['environment']['CUDA_VISIBLE_DEVICES'] == registry['gpu_uuid']
+--- XP11/scripts/verify_lr.py
++++ XP12/scripts/verify_lr.py
+@@ -13,6 +13,7 @@
+ ROOT = Path(__file__).resolve().parents[1]
+ REPO = ROOT.parents[2]
+ LOSS = ['classification_loss', 'cc_loss', 'mscl_loss', 'cscl_loss', 'total_loss']
++WEIGHTED = ['weighted_cc_loss', 'weighted_mscl_loss', 'weighted_cscl_loss']
+ 
+ 
+ def read(path):
+@@ -112,7 +113,7 @@
+     registry = read(ROOT/'configs/registry.json')
+     assert registry['formal_run_count'] == len(registry['runs']) == 1
+     registered = registry['runs'][0]
+-    assert (registered['dataset'],registered['seed'],registered['lr'],registered['epochs'],registered['batch_size'],registered['validation_batch_size'],registered['dropout'],registered['rec_dropout']) == ('MELD',67137,.0001,40,16,16,.5,.1)
++    assert (registered['dataset'],registered['seed'],registered['lr'],registered['epochs'],registered['batch_size'],registered['validation_batch_size'],registered['dropout'],registered['rec_dropout']) == ('MELD',67137,.0001,40,16,16,.4,.1)
+     state = read(ROOT/'state/status.json')
+     assert not state['active'] and state['phase'] == 'completed'
+     assert state['formal_started'] == state['formal_completed'] == 1
+@@ -159,6 +160,7 @@
+         assert status['phase'] == 'completed' and status['counts'] == {
+             'train': run['epochs'], 'validation': run['epochs'], 'test': 0}
+         assert status['test_forward_passes'] == 0 and status['target_line_events'] == 0
++        assert status['extra_gradient_diagnostic_calls'] == 0 and not (observed/'gradient_audit.json').exists()
+         assert not (directory/'final_test.json').exists()
+         assert not list(observed.glob('*.npz'))
+         manifest = read(directory/'run_manifest.json')
+@@ -170,17 +172,19 @@
+             expected_sha = patched_sha if name == 'train_cm.py' else digest
+             assert manifest['source']['files'][name] == expected_sha
+             assert sha(ROOT/'code_xp04'/name) == expected_sha
+-        allowed = {'dropout', 'skip_final_test', 'output_dir', 'provenance'}
++        allowed = {'contrastlearning', 'skip_final_test', 'output_dir', 'provenance'}
+         assert {k:v for k,v in args.items() if k not in allowed} == {
+             k:v for k,v in old['args'].items() if k not in allowed}
+         assert args['lr'] == run['lr'] == old['args']['lr'] == .0001
+         assert args['batch_size'] == run['batch_size'] == run['validation_batch_size'] == old['args']['batch_size'] == 16
+-        assert args['dropout'] == run['dropout'] == .5 and old['args']['dropout'] == .4
++        assert args['dropout'] == run['dropout'] == old['args']['dropout'] == .4
+         assert args['rec_dropout'] == run['rec_dropout'] == old['args']['rec_dropout'] == .1
+         assert args['skip_final_test'] is True
+         assert args['selection_protocol'] == 'validation' and args['rng_policy'] == 'continuous'
+         assert args['rnn_backend'] == 'aten' and args['batch_policy'] == 'capacity_safe'
+-        assert args['calibrate'] and args['contrastlearning'] and args['courselearning']
++        assert args['calibrate'] is True and args['courselearning'] is True
++        assert old['args']['contrastlearning'] is True and args['contrastlearning'] is run['contrastlearning'] is False
++        assert (args['rank_coff'],args['mscl_coff'],args['cscl_coff']) == (.002,.15,.15)
+         assert manifest['split'] == old['split'] and manifest['data'] == old['data']
+         assert manifest['split']['hash'] == run['split_hash']
+         first = read(observed/'first.json')
+@@ -190,6 +194,8 @@
+         validate_module_audit(module_audit)
+         validate_module_audit(probe_audit)
+         assert module_audit == probe_audit
++        gradient_audit = read(ROOT/'preflight'/run['run_id']/'observer/gradient_audit.json')
++        assert gradient_audit['status'] == 'passed' and gradient_audit['preflight_only']
+         for key in ['initial_model_sha256','rng_before_train','rng_before_step','rng_after_step','dialogue_ids','lengths']:
+             assert first[key] == probe_first[key], key
+         for entry in [first,probe_first]:
+@@ -205,6 +211,7 @@
+         assert status['selection_weighted_f1'] == selected['validation_weighted_f1']
+         watchers = rows(observed/'watch_epochs.jsonl')
+         batches = rows(observed/'watch_batches.jsonl')
++        assert len(batches) == sum(value['train_batches'] for key,value in expected.items() if key[0]==run['run_id']) == 2548
+         assert len(watchers) == 2*run['epochs']
+         for split in ['train', 'validation']:
+             assert [e['epoch'] for e in watchers if e['split'] == split] == list(range(1,run['epochs']+1))
+@@ -232,6 +239,9 @@
+                     assert obs['batches'] == math.ceil(len(obs['dialogue_ids']) / 16)
+                     assert cap['validation_last_batch_dialogues'] == (len(obs['dialogue_ids'])-1) % 16 + 1
+                 assert all(math.isfinite(obs['loss_components'][k]) for k in LOSS)
++                assert all(math.isfinite(obs['loss_components'][k]) for k in WEIGHTED)
++                assert obs['loss_components']['weighted_mscl_loss'] == obs['loss_components']['weighted_cscl_loss'] == 0.
++                assert math.isclose(obs['loss_components']['total_loss'], obs['loss_components']['classification_loss'] + .002*obs['loss_components']['cc_loss'],rel_tol=1e-5,abs_tol=1e-6)
+                 if split == 'train':
+                     assert obs['gradients_finite'] is True and obs['first_step_parameters_changed'] is True
+                     assert all(math.isclose(obs['loss_components'][k], epoch[k], rel_tol=1e-10, abs_tol=1e-10) for k in LOSS)
+@@ -248,7 +258,8 @@
+             assert batch['gradients_finite'] and math.isfinite(batch['gradient_l2'])
+             assert all(math.isfinite(batch[k]) for k in LOSS)
+             value = batch['classification_loss'] + args['rank_coff']*batch['cc_loss']
+-            value += args['mscl_coff']*batch['mscl_loss'] + args['cscl_coff']*batch['cscl_loss']
++            assert batch['weighted_mscl_loss'] == batch['weighted_cscl_loss'] == 0.
++            assert math.isclose(batch['weighted_cc_loss'], .002*batch['cc_loss'],rel_tol=1e-10,abs_tol=1e-10)
+             assert math.isclose(value, batch['total_loss'], rel_tol=1e-5, abs_tol=1e-6)
+         checkpoints = {}
+         for filename, epoch in [('best.pt', selected['epoch']), ('latest.pt', run['epochs'])]:
+@@ -258,7 +269,8 @@
+             assert checkpoint['best_metric'] == selected['validation_weighted_f1']
+             assert checkpoint['args']['lr'] == run['lr'] and checkpoint['args']['skip_final_test']
+             assert checkpoint['args']['batch_size'] == 16
+-            assert checkpoint['args']['dropout'] == .5 and checkpoint['args']['rec_dropout'] == .1
++            assert checkpoint['args']['dropout'] == .4 and checkpoint['args']['rec_dropout'] == .1
++            assert checkpoint['args']['contrastlearning'] is False
+             assert json.loads(json.dumps(checkpoint['args'])) == manifest['args']
+             assert json.loads(json.dumps(checkpoint['provenance'])) == manifest['args']['provenance']
+             assert checkpoint['optimizer_state_dict']['state'] and checkpoint['rng_state']
+@@ -278,10 +290,14 @@
+             'selected_epoch':selected['epoch'], 'validation_best_wf1':selected['validation_weighted_f1'],
+             'validation_last10_wf1':sum(e['validation_weighted_f1'] for e in epochs[-10:])/10,
+             'train_batches':len(batches), 'loss_and_gradient_finite':True,
++            'validation_batches':sum(row['batches'] for row in watchers if row['split']=='validation'),
+             'every_epoch_order_matches_historical_and_registered_batch16_replay':True,
+             'unchanged_sampler_AST_and_historical_batch16_replay_passed':True,
+             'train_and_validation_batch_size':16,'lr_unchanged_from_xp04':.0001,
+-            'dropout':.5,'rec_dropout_metadata':.1,'module_audit':module_audit,
++            'dropout':.4,'rec_dropout_metadata':.1,'module_audit':module_audit,
++            'contrastlearning':False,'calibrate':True,'courselearning':True,
++            'weighted_MSCL_and_CSCL_zero_every_step':True,'raw_HSCL_still_computed':True,
++            'preflight_gradient_audit':gradient_audit,'formal_extra_gradient_diagnostic_calls':0,
+             'test_forwards':0,'checkpoints':checkpoints}
+     resource_report = resource_evidence(registry,state)
+     assert not torch.cuda.is_initialized()
+@@ -289,8 +305,9 @@
+               'formal_runs':1,'test_forwards':0,'cuda_initialized':False,
+               'historical_files_unchanged':historical,'frozen_sources_and_inputs_unchanged':True,
+               'resource_evidence':resource_report,'runs':results,
+-              'limits':['This is one registered dropout0.5 diagnosis, not a completed five-seed study.',
+-                        'CLI dropout changes the language GRU inter-layer dropout and hidden-feature dropout; rec_dropout0.1 remains metadata.',
++              'limits':['This is one registered HSCL-objective ablation, not a completed five-seed study.',
++                        'Raw MSCL/CSCL and pseudo-label computations remain in the original code; their objective weights are inactive.',
++                        'Extra autograd.grad checks occur in the nonformal first-batch probe only; CC need not be nonzero in every formal batch.',
+                         'The selected healthy XP GPU may be shared with observed foreign PIDs under the registered capacity gate; resource isolation is limited.',
+                         'Author difficulty generation history unknown.',
+                         'No test or final independent evaluation performed in this stage.']}
+--- XP11/scripts/check_capacity.py
++++ XP12/scripts/check_capacity.py
+@@ -87,7 +87,9 @@
+         assert ds == 'MELD' and run['seed'] == 67137 and run['epochs'] == 40
+         assert run['batch_size'] == run['validation_batch_size'] == 16
+         assert ref['args']['batch_size'] == 16 and ref['args']['lr'] == run['lr'] == 1e-4
+-        assert ref['args']['dropout'] == .4 and run['dropout'] == .5
++        assert ref['args']['dropout'] == run['dropout'] == .4
++        assert ref['args']['contrastlearning'] is True and run['contrastlearning'] is False
++        assert run['calibrate'] is True and run['courselearning'] is True
+         assert ref['args']['rec_dropout'] == run['rec_dropout'] == .1
+         if ds not in datasets:
+             name = 'IEMOCAP_features.pkl' if ds == 'IEMOCAP' else 'MELD_features_raw1.pkl'
+--- XP11/scripts/test_training_guard.py
++++ XP12/scripts/test_training_guard.py
+@@ -14,12 +14,21 @@
+ import torch
+ 
+ from watch_training import (ROOT, PreflightComplete, TrainingGuard,
+-                            assert_scientific_pair, audit_dropout_models, rng_hash, verify_skip_patch)
++                            assert_scientific_pair, audit_dropout_models, check_components,
++                            preflight_gradient_audit, rng_hash, verify_skip_patch)
+ 
+ TOY = '''import torch
+ from sklearn.metrics import accuracy_score, f1_score
+ forwards = 0
+ steps = 0
++def combine_training_losses(classification_loss, cc_loss, mscl_loss, cscl_loss, calibrate, contrastlearning, rank_coff, mscl_coff, cscl_coff):
++    total = classification_loss
++    if calibrate:
++        total = total + rank_coff*cc_loss
++    if contrastlearning:
++        total = total + mscl_coff*mscl_loss + cscl_coff*cscl_loss
++    components = dict(classification_loss=classification_loss.item(),cc_loss=cc_loss.item(),mscl_loss=mscl_loss.item(),cscl_loss=cscl_loss.item(),total_loss=total.item())
++    return total, components
+ def train_or_eval_graph_model(model, model_mm, model_intra, model_inter, loss_function, dataloader, epoch, cuda, modals, optimizer=None, train=False, dataset='IEMOCAP', return_components=False):
+     global forwards, steps
+     model.train(train)
+@@ -33,8 +42,7 @@
+         label = data[1]
+         classification_loss = loss_function(log_prob, label)
+         cc, mscl, cscl = classification_loss*.1, classification_loss*.2, classification_loss*.3
+-        total_loss = classification_loss + args.rank_coff*cc + args.mscl_coff*mscl + args.cscl_coff*cscl
+-        components = dict(classification_loss=classification_loss.item(),cc_loss=cc.item(),mscl_loss=mscl.item(),cscl_loss=cscl.item(),total_loss=total_loss.item())
++        total_loss, components = combine_training_losses(classification_loss,cc,mscl,cscl,args.calibrate,args.contrastlearning,args.rank_coff,args.mscl_coff,args.cscl_coff)
+         loss_components.append(components)
+         if train:
+             total_loss.backward()
+@@ -57,9 +65,9 @@
+                rank_coff=.002, mscl_coff=.15, cscl_coff=.15)
+     historical = {'args': copy.deepcopy(old), **copy.deepcopy(provenance)}
+     actual = copy.deepcopy(old)
+-    actual.update(dropout=.5, skip_final_test=True, output_dir='/new')
++    actual.update(contrastlearning=False, skip_final_test=True, output_dir='/new')
+     actual['provenance']['source']['files']['train_cm.py'] = 'patched'
+-    run = dict(lr=.0001, batch_size=16, validation_batch_size=16, dropout=.5, rec_dropout=.1,
++    run = dict(lr=.0001, batch_size=16, validation_batch_size=16, dropout=.4, rec_dropout=.1, contrastlearning=False,
+                seed=67137, dataset='MELD', epochs=2, split_hash='split')
+     return argparse.Namespace(**actual), historical, run
+ 
+@@ -77,13 +85,14 @@
+ class ToyModel(torch.nn.Module):
+     def __init__(self):
+         super().__init__()
+-        self.network = torch.nn.Sequential(torch.nn.Linear(2, 3), torch.nn.Dropout(.2), torch.nn.Linear(3, 2))
+-        self.gru_l = torch.nn.GRU(2, 1, num_layers=2, bidirectional=True, dropout=.5)
+-        self.dropout_ = torch.nn.Dropout(.5)
+-        self.dropout = .5
++        self.linear_l = torch.nn.Linear(2, 3)
++        self.network = torch.nn.Sequential(torch.nn.Dropout(.2), torch.nn.Linear(3, 2))
++        self.gru_l = torch.nn.GRU(2, 1, num_layers=2, bidirectional=True, dropout=.4)
++        self.dropout_ = torch.nn.Dropout(.4)
++        self.dropout = .4
+ 
+     def forward(self, values):
+-        return self.network(values)
++        return self.network(self.linear_l(values))
+ 
+ 
+ class GuardTests(unittest.TestCase):
+@@ -102,10 +111,10 @@
+         with self.assertRaises(AssertionError):
+             assert_scientific_pair(args, old, run, 'patched')
+ 
+-    def test_dropout_factor_forbids_batch_lr_rec_dropout_seed_or_loss_changes(self):
++    def test_hscl_switch_forbids_dropout_batch_lr_rec_dropout_seed_or_loss_changes(self):
+         args, old, run = fixture()
+         assert_scientific_pair(args, old, run, 'patched')
+-        for field, value in [('lr', .0002), ('seed', 42), ('batch_size', 8), ('dropout', .4), ('rec_dropout', .2),
++        for field, value in [('lr', .0002), ('seed', 42), ('batch_size', 8), ('dropout', .5), ('rec_dropout', .2), ('contrastlearning',True),
+                              ('mscl_coff', .2), ('calibrate', False), ('split_seed', 67137)]:
+             actual, historical, registered = fixture()
+             setattr(actual, field, value)
+@@ -182,6 +191,7 @@
+         guard = watched['guard']
+         self.assertEqual(guard.counts, dict(train=2, validation=2, test=0))
+         self.assertEqual(guard.line_events, 0)
++        self.assertIsNone(guard.gradient_audit)
+         recorded = [row for name,row in guard.memory_records if name == 'watch_batches.jsonl']
+         for epoch in (1, 2):
+             steps = [row for row in recorded if row['epoch'] == epoch]
+@@ -201,6 +211,13 @@
+         self.assertEqual(result['guard'].counts, dict(train=0, validation=0, test=0))
+         self.assertTrue(result['guard'].first['optimizer_updated_parameters'])
+         self.assertEqual(len(result['optimizer']['state']), 4)
++        audit = result['guard'].gradient_audit
++        self.assertTrue(audit['CC_backbone_gradient_nonzero'])
++        self.assertTrue(audit['total_equals_classification_plus_0p002_CC_gradient'])
++        self.assertIsNone(audit['MSCL_gradient_wrt_total'])
++        self.assertIsNone(audit['CSCL_gradient_wrt_total'])
++        self.assertTrue(audit['parameter_grad_buffers_unchanged'])
++        self.assertEqual(audit['rng_before'], audit['rng_after'])
+ 
+     def test_patch_reverses_exactly_and_training_loop_ast_is_identical(self):
+         path = ROOT / 'code_xp04/train_cm.py'
+@@ -253,17 +270,57 @@
+         self.assertEqual(before, rng_hash())
+         self.assertEqual(result['rng_before'], result['rng_after'])
+         self.assertFalse(any(result['fixed_modality_dropout_definition']['active_instances'].values()))
++        models['model_mm'].gru_l.dropout = .5
++        with self.assertRaises(AssertionError):
++            audit_dropout_models(args, models)
+         models['model_mm'].gru_l.dropout = .4
++        models['model_inter'].dropout_.p = .5
+         with self.assertRaises(AssertionError):
+             audit_dropout_models(args, models)
+-        models['model_mm'].gru_l.dropout = .5
+         models['model_inter'].dropout_.p = .4
++        args.rec_dropout = .2
+         with self.assertRaises(AssertionError):
+             audit_dropout_models(args, models)
+-        models['model_inter'].dropout_.p = .5
+-        args.rec_dropout = .2
+-        with self.assertRaises(AssertionError):
+-            audit_dropout_models(args, models)
++
++    def test_raw_hscl_can_be_nonzero_while_weighted_objective_is_zero(self):
++        args, _, _ = fixture()
++        components = {'classification_loss':1.,'cc_loss':2.,'mscl_loss':3.,'cscl_loss':4.,'total_loss':1.004}
++        checked = check_components(components,args)
++        self.assertEqual(checked['weighted_cc_loss'],.004)
++        self.assertEqual(checked['weighted_mscl_loss'],0.)
++        self.assertEqual(checked['weighted_cscl_loss'],0.)
++        with self.assertRaises(AssertionError):
++            check_components({**components,'total_loss':2.054},args)
++
++    def test_exact_source_ranking_and_combiner_keep_cc_but_exclude_hscl_gradients(self):
++        tree = ast.parse((ROOT/'code_xp04/train_cm.py').read_bytes())
++        combine = next(node for node in tree.body if isinstance(node,ast.FunctionDef) and node.name=='combine_training_losses')
++        function = next(node for node in tree.body if isinstance(node,ast.FunctionDef) and node.name=='train_or_eval_graph_model')
++        loop = next(node for node in function.body if isinstance(node,ast.For))
++        branch = next(node for node in loop.body if isinstance(node,ast.If) and ast.unparse(node.test)=='args.contrastlearning or args.calibrate')
++        rank_nodes = branch.body[1:8]
++        self.assertEqual(ast.unparse(rank_nodes[0]),'lp_ = log_prob')
++        self.assertEqual(ast.unparse(rank_nodes[-1]),'rank_loss = rank_loss + rank_lossc')
++        self.assertTrue(any(isinstance(node,ast.Call) and isinstance(node.func,ast.Name) and node.func.id=='CKSCL_m' for node in ast.walk(branch)))
++        self.assertTrue(any(isinstance(node,ast.Call) and isinstance(node.func,ast.Name) and node.func.id=='CKSCL_c' for node in ast.walk(branch)))
++        model = ToyModel()
++        probability = model(torch.ones(1,2)).log_softmax(-1)
++        fixed = torch.tensor([[-1e-6,-13.8]])
++        scope = {'torch':torch,'log_prob':probability,'labels_':torch.tensor([0]),
++                 **{name:fixed for name in ('log_prob2t','log_prob2a','log_prob2v','log_prob2intra','log_prob2inter')}}
++        exec(compile(ast.Module(body=rank_nodes+[combine],type_ignores=[]),'<exact-source-loss>','exec'),scope)
++        classification,cc = -probability[0,0],scope['rank_loss']
++        mscl,cscl = classification*.2,classification*.3
++        total,_ = scope['combine_training_losses'](classification,cc,mscl,cscl,
++            calibrate=True,contrastlearning=False,rank_coff=.002,mscl_coff=.15,cscl_coff=.15)
++        audit = preflight_gradient_audit(total,classification,cc,mscl,cscl,model)
++        self.assertTrue(audit['CC_backbone_gradient_nonzero'])
++        self.assertIsNone(audit['MSCL_gradient_wrt_total'])
++        self.assertIsNone(audit['CSCL_gradient_wrt_total'])
++        wrong,_ = scope['combine_training_losses'](classification,cc,mscl,cscl,
++            calibrate=True,contrastlearning=True,rank_coff=.002,mscl_coff=.15,cscl_coff=.15)
++        with self.assertRaisesRegex(AssertionError,'HSCL is still on the objective'):
++            preflight_gradient_audit(wrong,classification,cc,mscl,cscl,model)
+ 
+ 
+ if __name__ == '__main__':
+--- XP11/scripts/test_resource_policy.py
++++ XP12/scripts/test_resource_policy.py
+@@ -137,21 +137,26 @@
+         folder.mkdir(parents=True)
+         status = {'phase': 'preflight_passed', 'first_step_completed': True,
+                   'counts': {'train': 0, 'validation': 0, 'test': 0},
+-                  'test_forward_passes': 0, 'target_line_events': 0}
++                  'test_forward_passes': 0, 'target_line_events': 0, 'extra_gradient_diagnostic_calls': 1}
+         first = {'gradients_finite': True, 'optimizer_updated_parameters': True, 'gradient_l2': 1.,
+                  'components': {'classification_loss': 1., 'cc_loss': 2., 'mscl_loss': 3.,
+-                                'cscl_loss': 4., 'total_loss': 2.054}}
++                                'cscl_loss': 4., 'total_loss': 1.004,
++                                'weighted_cc_loss':.004,'weighted_mscl_loss':0.,'weighted_cscl_loss':0.}}
+         (folder / 'status.json').write_text(json.dumps(status))
+         (folder / 'first.json').write_text(json.dumps(first))
+-        audit = {'cli_dropout': .5, 'cli_rec_dropout_metadata': .1,
+-                 'models': {name: {'language_gru': {'dropout': .5, 'num_layers': 2, 'bidirectional': True},
+-                                  'hidden_dropout_p': .5, 'registered_fixed_modality_dropouts': {}}
++        audit = {'cli_dropout': .4, 'cli_rec_dropout_metadata': .1,
++                 'models': {name: {'language_gru': {'dropout': .4, 'num_layers': 2, 'bidirectional': True},
++                                  'hidden_dropout_p': .4, 'registered_fixed_modality_dropouts': {}}
+                             for name in ('model', 'model_mm', 'model_intra', 'model_inter')},
+                  'fixed_modality_dropout_definition': {'class': 'MMGatedAttention',
+                     'values': {'dropouta': .5, 'dropoutv': .5, 'dropoutl': .5},
+                     'active_instances': {name: False for name in ('model', 'model_mm', 'model_intra', 'model_inter')}},
+                  'rng_before': 'unchanged', 'rng_after': 'unchanged'}
+         (folder / 'module_audit.json').write_text(json.dumps(audit))
++        gradient_audit = {'status':'passed','preflight_only':True,'CC_backbone_gradient_nonzero':True,
++            'total_equals_classification_plus_0p002_CC_gradient':True,'MSCL_gradient_wrt_total':None,
++            'CSCL_gradient_wrt_total':None,'parameter_grad_buffers_unchanged':True,'rng_before':'same','rng_after':'same'}
++        (folder / 'gradient_audit.json').write_text(json.dumps(gradient_audit))
+         (self.root / 'configs/registry.json').write_text(json.dumps({'resource_policy': POLICY}))
+         memory_path = self.root / 'logs/preflight_registered_memory.jsonl'
+         memory_path.write_text(json.dumps({'peak_allocated_mib': 939., 'peak_reserved_mib': 1630.}) + '\n')
+@@ -168,9 +173,10 @@
+             runtime.verify_probe(run)
+ 
+     def registry(self):
+-        run = {'run_id': 'MELD_cmerc_dropout0p5_lr1e-4_seed67137', 'dataset': 'MELD', 'seed': 67137,
+-               'lr': .0001, 'epochs': 40, 'batch_size': 16, 'validation_batch_size': 16, 'dropout': .5, 'rec_dropout': .1,
+-               'argv': ['--lr', '0.0001', '--batch-size', '16', '--dropout', '0.5', '--rec-dropout', '0.1'],
++        run = {'run_id': 'MELD_wo_hscl_seed67137', 'dataset': 'MELD', 'seed': 67137,
++               'lr': .0001, 'epochs': 40, 'batch_size': 16, 'validation_batch_size': 16, 'dropout': .4, 'rec_dropout': .1,
++               'contrastlearning':False,'calibrate':True,'courselearning':True,
++               'argv': ['--lr', '0.0001', '--batch-size', '16', '--dropout', '0.4', '--rec-dropout', '0.1','--calibrate','--courselearning'],
+                'output_root': str(self.root / 'runs/formal')}
+         return {'runs': [run], 'formal_run_count': 1, 'python': '/fake/python',
+                 'gpu_index': 3, 'gpu_uuid': UUID, 'environment': {'CUDA_VISIBLE_DEVICES': UUID},

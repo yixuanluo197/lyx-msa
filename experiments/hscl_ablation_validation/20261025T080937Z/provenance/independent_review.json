@@ -1,0 +1,29 @@
+{
+  "status": "passed",
+  "reviewer": "iem_batch_audit",
+  "cpu_only_no_model_forward": true,
+  "new_checkpoints_checked": 2,
+  "epochs_train_validation": [
+    40,
+    40
+  ],
+  "test_forwards": 0,
+  "optimizer_steps": 2548,
+  "validation_batches": 320,
+  "frozen_files_rehashed": 50,
+  "large_input_rehash_deferred_to_full_verifier": 1,
+  "analysis_capsule_files_rehashed": 4,
+  "raw_hscl_nonzero_steps": {
+    "MSCL": 2548,
+    "CSCL": 2548
+  },
+  "effective_hscl_all_zero": true,
+  "CC_backbone_gradient_nonzero_in_probe": true,
+  "formal_extra_gradient_calls": 0,
+  "args_model_adam_rng_finite_and_complete": true,
+  "full_verifier_historical_files_preserved": 2166,
+  "report_csv_summary_consistent": true,
+  "only_required_correction": "教师前向引用667–674改为669–675，已在报告改正且记录diff",
+  "single_seed_classification": "mixed_incomplete",
+  "no_historical_mixed_test_reads_by_reviewer": true
+}

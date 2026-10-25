@@ -1,0 +1,49 @@
+{
+  "status": "passed",
+  "preflight_only": true,
+  "additional_model_forwards": 0,
+  "parameter_grad_buffers_unchanged": true,
+  "rng_before": "0cb5cf4fa84eea8eb13550f995c20ad76aa31fddcd478128b7c6046099151089",
+  "rng_after": "0cb5cf4fa84eea8eb13550f995c20ad76aa31fddcd478128b7c6046099151089",
+  "CC_backbone_gradient_nonzero": true,
+  "CC_backbone_parameters_nonzero": [
+    "linear_a.weight",
+    "linear_a.bias",
+    "linear_v.weight",
+    "linear_v.bias",
+    "gru_l.weight_ih_l0",
+    "gru_l.weight_hh_l0",
+    "gru_l.bias_ih_l0",
+    "gru_l.bias_hh_l0",
+    "gru_l.weight_ih_l0_reverse",
+    "gru_l.weight_hh_l0_reverse",
+    "gru_l.bias_ih_l0_reverse",
+    "gru_l.bias_hh_l0_reverse",
+    "gru_l.weight_ih_l1",
+    "gru_l.weight_hh_l1",
+    "gru_l.bias_ih_l1",
+    "gru_l.bias_hh_l1",
+    "gru_l.weight_ih_l1_reverse",
+    "gru_l.weight_hh_l1_reverse",
+    "gru_l.bias_ih_l1_reverse",
+    "gru_l.bias_hh_l1_reverse"
+  ],
+  "gradient_l2": {
+    "classification": 15.783873743530553,
+    "cc": 1589.1644095956517,
+    "total": 18.638935264173533,
+    "cc_backbone": 207.87647455783988
+  },
+  "total_equals_classification_plus_0p002_CC_gradient": true,
+  "compared_parameters": 44,
+  "maximum_absolute_gradient_difference": 2.384185791015625e-07,
+  "relative_tolerance": 0.0001,
+  "absolute_tolerance": 1e-05,
+  "MSCL_gradient_wrt_total": null,
+  "CSCL_gradient_wrt_total": null,
+  "auxiliary_raw_requires_grad": {
+    "MSCL": true,
+    "CSCL": true
+  },
+  "limit": "First probe batch only; this does not assert nonzero CC gradients in every formal batch."
+}

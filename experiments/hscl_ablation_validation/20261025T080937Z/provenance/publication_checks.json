@@ -1,0 +1,31 @@
+{
+  "status": "passed",
+  "checked_at_utc": "2026-10-25T09:08:29.401662+00:00",
+  "frozen_items_rehashed": {
+    "frozen_execution": 51,
+    "analysis_frozen": 4
+  },
+  "new_checkpoints_rehashed": 2,
+  "plot_artifacts_rehashed": 18,
+  "plot_and_analysis_input_hashes_verified": true,
+  "public_json_parsed": true,
+  "python_sources_compile": true,
+  "report_links_resolve": true,
+  "root_batch_report_consistent": true,
+  "staged_scope_allowlisted": true,
+  "weights_data_rawlogs_excluded": true,
+  "history_files_unchanged_by_full_verifier": 2166,
+  "note": "完整历史哈希由final_verification核实；此轮检查未重新启动GPU或模型前向",
+  "visual_review": {
+    "status": "passed",
+    "viewed": [
+      "MELD_hscl_wf1.png",
+      "MELD_hscl_classification_loss.png"
+    ],
+    "checked": [
+      "图例不遮挡曲线",
+      "坐标/单位/训练验证区分清楚",
+      "最佳轮及Loss方向与CSV一致"
+    ]
+  }
+}

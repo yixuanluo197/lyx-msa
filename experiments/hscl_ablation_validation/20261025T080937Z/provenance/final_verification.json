@@ -1,0 +1,225 @@
+{
+  "status": "passed",
+  "created_at_utc": "2026-10-25T09:03:56.959749+00:00",
+  "formal_runs": 1,
+  "test_forwards": 0,
+  "cuda_initialized": false,
+  "historical_files_unchanged": {
+    "experiment_records/04_xp_mainline_validation": 295,
+    "experiment_records/05_official_readme_reproduction": 2,
+    "experiment_records/06_minimal_ablation_validation": 2,
+    "experiment_records/07_learning_rate_diagnosis": 2,
+    "experiment_records/08_lr_second_seed_confirmation": 3,
+    "experiments/xp_mainline_validation/20261016T050823Z": 649,
+    "experiments/official_readme_reproduction": 208,
+    "experiments/minimal_ablation_validation/20261023T043115Z": 201,
+    "experiments/learning_rate_diagnosis/20261023T084353Z": 196,
+    "experiments/lr_second_seed_confirmation/20261023T175409Z": 133,
+    "experiment_records/09_batch_size_diagnosis": 8,
+    "experiments/batch_size_diagnosis/20261024T131956Z": 182,
+    "experiment_records/10_dropout_diagnosis": 3,
+    "experiments/dropout_diagnosis/20261025T032711Z": 127,
+    "experiment_records/11_dropout_second_seed_confirmation": 3,
+    "experiments/dropout_second_seed_confirmation/20261025T052219Z": 152
+  },
+  "frozen_sources_and_inputs_unchanged": true,
+  "resource_evidence": {
+    "status": "limited",
+    "admissions_passed_registered_three_sample_policy": true,
+    "preregistered_co_resident_pids": [
+      3939591
+    ],
+    "observed_foreign_pids": [
+      3939591
+    ],
+    "admission_min_free_mib": 3000,
+    "admission_max_utilization_percent": 95,
+    "new_foreign_pids_pause_admission": false,
+    "resource_samples": 247,
+    "all_foreign_process_samples": 247,
+    "allowed_preexisting_pid_samples": 247,
+    "new_foreign_pid_samples": 0,
+    "new_foreign_pids": [],
+    "resource_query_errors": 0,
+    "minimum_free_mib": 9595,
+    "minimum_free_mib_during_formal": 9595,
+    "maximum_utilization_percent": 84,
+    "limits": [
+      "GPU co-residency is allowed; preregistered PIDs are disclosure records, not an exclusive allowlist.",
+      "New foreign PIDs are recorded and do not block admission when the registered memory/utilization conditions pass.",
+      "Resource pressure and query errors are recorded without terminating any task; failed queries cannot authorize admission.",
+      "Discrete nvidia-smi samples cannot establish continuous resource isolation."
+    ]
+  },
+  "runs": {
+    "MELD_wo_hscl_seed67137": {
+      "status": "passed",
+      "epochs": 40,
+      "selected_epoch": 5,
+      "validation_best_wf1": 65.69,
+      "validation_last10_wf1": 62.794,
+      "train_batches": 2548,
+      "loss_and_gradient_finite": true,
+      "validation_batches": 320,
+      "every_epoch_order_matches_historical_and_registered_batch16_replay": true,
+      "unchanged_sampler_AST_and_historical_batch16_replay_passed": true,
+      "train_and_validation_batch_size": 16,
+      "lr_unchanged_from_xp04": 0.0001,
+      "dropout": 0.4,
+      "rec_dropout_metadata": 0.1,
+      "module_audit": {
+        "cli_dropout": 0.4,
+        "cli_rec_dropout_metadata": 0.1,
+        "models": {
+          "model": {
+            "class": "Model",
+            "language_gru": {
+              "dropout": 0.4,
+              "num_layers": 2,
+              "bidirectional": true
+            },
+            "hidden_dropout_p": 0.4,
+            "registered_dropout_modules": {
+              "dropout_": 0.4
+            },
+            "registered_fixed_modality_dropouts": {}
+          },
+          "model_mm": {
+            "class": "Model",
+            "language_gru": {
+              "dropout": 0.4,
+              "num_layers": 2,
+              "bidirectional": true
+            },
+            "hidden_dropout_p": 0.4,
+            "registered_dropout_modules": {
+              "dropout_": 0.4
+            },
+            "registered_fixed_modality_dropouts": {}
+          },
+          "model_intra": {
+            "class": "Model_Intra",
+            "language_gru": {
+              "dropout": 0.4,
+              "num_layers": 2,
+              "bidirectional": true
+            },
+            "hidden_dropout_p": 0.4,
+            "registered_dropout_modules": {
+              "dropout_": 0.4
+            },
+            "registered_fixed_modality_dropouts": {}
+          },
+          "model_inter": {
+            "class": "Model_Inter",
+            "language_gru": {
+              "dropout": 0.4,
+              "num_layers": 2,
+              "bidirectional": true
+            },
+            "hidden_dropout_p": 0.4,
+            "registered_dropout_modules": {
+              "dropout_": 0.4
+            },
+            "registered_fixed_modality_dropouts": {}
+          }
+        },
+        "fixed_modality_dropout_definition": {
+          "class": "MMGatedAttention",
+          "values": {
+            "dropouta": 0.5,
+            "dropoutv": 0.5,
+            "dropoutl": 0.5
+          },
+          "active_instances": {
+            "model": false,
+            "model_mm": false,
+            "model_intra": false,
+            "model_inter": false
+          },
+          "note": "No UnimodalEncoder class in this frozen source; gated attention is not instantiated by concat_DHT."
+        },
+        "rng_before": "858a766f250f173fb74c223f23dd430725d4796405461e8ef8ded8ea12ae3f32",
+        "rng_after": "858a766f250f173fb74c223f23dd430725d4796405461e8ef8ded8ea12ae3f32"
+      },
+      "contrastlearning": false,
+      "calibrate": true,
+      "courselearning": true,
+      "weighted_MSCL_and_CSCL_zero_every_step": true,
+      "raw_HSCL_still_computed": true,
+      "preflight_gradient_audit": {
+        "status": "passed",
+        "preflight_only": true,
+        "additional_model_forwards": 0,
+        "parameter_grad_buffers_unchanged": true,
+        "rng_before": "0cb5cf4fa84eea8eb13550f995c20ad76aa31fddcd478128b7c6046099151089",
+        "rng_after": "0cb5cf4fa84eea8eb13550f995c20ad76aa31fddcd478128b7c6046099151089",
+        "CC_backbone_gradient_nonzero": true,
+        "CC_backbone_parameters_nonzero": [
+          "linear_a.weight",
+          "linear_a.bias",
+          "linear_v.weight",
+          "linear_v.bias",
+          "gru_l.weight_ih_l0",
+          "gru_l.weight_hh_l0",
+          "gru_l.bias_ih_l0",
+          "gru_l.bias_hh_l0",
+          "gru_l.weight_ih_l0_reverse",
+          "gru_l.weight_hh_l0_reverse",
+          "gru_l.bias_ih_l0_reverse",
+          "gru_l.bias_hh_l0_reverse",
+          "gru_l.weight_ih_l1",
+          "gru_l.weight_hh_l1",
+          "gru_l.bias_ih_l1",
+          "gru_l.bias_hh_l1",
+          "gru_l.weight_ih_l1_reverse",
+          "gru_l.weight_hh_l1_reverse",
+          "gru_l.bias_ih_l1_reverse",
+          "gru_l.bias_hh_l1_reverse"
+        ],
+        "gradient_l2": {
+          "classification": 15.783873743530553,
+          "cc": 1589.1644095956517,
+          "total": 18.638935264173533,
+          "cc_backbone": 207.87647455783988
+        },
+        "total_equals_classification_plus_0p002_CC_gradient": true,
+        "compared_parameters": 44,
+        "maximum_absolute_gradient_difference": 2.384185791015625e-07,
+        "relative_tolerance": 0.0001,
+        "absolute_tolerance": 1e-05,
+        "MSCL_gradient_wrt_total": null,
+        "CSCL_gradient_wrt_total": null,
+        "auxiliary_raw_requires_grad": {
+          "MSCL": true,
+          "CSCL": true
+        },
+        "limit": "First probe batch only; this does not assert nonzero CC gradients in every formal batch."
+      },
+      "formal_extra_gradient_diagnostic_calls": 0,
+      "test_forwards": 0,
+      "checkpoints": {
+        "best.pt": {
+          "epoch": 5,
+          "sha256": "aa8c9636a440c4f068222d59f7cfed16cb00f25d9a3b707b30b34881cc23a6ea",
+          "model_and_adam_finite": true,
+          "full_rng_present": true
+        },
+        "latest.pt": {
+          "epoch": 40,
+          "sha256": "a6a8840ff12f2be43d80f53e2fd39bd6904f83ae592120addf46ad9d58ea73d4",
+          "model_and_adam_finite": true,
+          "full_rng_present": true
+        }
+      }
+    }
+  },
+  "limits": [
+    "This is one registered HSCL-objective ablation, not a completed five-seed study.",
+    "Raw MSCL/CSCL and pseudo-label computations remain in the original code; their objective weights are inactive.",
+    "Extra autograd.grad checks occur in the nonformal first-batch probe only; CC need not be nonzero in every formal batch.",
+    "The selected healthy XP GPU may be shared with observed foreign PIDs under the registered capacity gate; resource isolation is limited.",
+    "Author difficulty generation history unknown.",
+    "No test or final independent evaluation performed in this stage."
+  ]
+}

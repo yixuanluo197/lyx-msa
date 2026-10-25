@@ -1,0 +1,32 @@
+{
+  "scope": "只修正文档的源码定位，不修改冻结源码、指标、配置或判据",
+  "reason": "冻结审计表沿用XP04原文件后半段行号；继承的skip-final-test解析工程补丁在此之前增加4行。训练源码及数学未变。",
+  "source_sha256": "0fb27f08bdfd6fabe176eb7b717587fb5e7025ba94c6e3c191b01dc18168d3a2",
+  "frozen_audit_preserved": true,
+  "references": [
+    {
+      "symbol": "MELD FocalLoss",
+      "xp04_original_line": 1207,
+      "xp12_frozen_line": 1211
+    },
+    {
+      "symbol": "Adam(model.parameters())",
+      "xp04_original_line": 1221,
+      "xp12_frozen_line": 1225
+    },
+    {
+      "symbol": "courselearning epoch ratio branch",
+      "xp04_original_lines": "1266-1269",
+      "xp12_frozen_lines": "1270-1273"
+    },
+    {
+      "symbol": "validation training loader",
+      "xp04_original_lines": "1278-1289",
+      "xp12_frozen_lines": "1282-1293"
+    },
+    {
+      "symbol": "five teacher forwards",
+      "xp12_frozen_lines": "669-675"
+    }
+  ]
+}

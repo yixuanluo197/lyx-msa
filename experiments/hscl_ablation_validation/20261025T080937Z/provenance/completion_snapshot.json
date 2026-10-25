@@ -1,0 +1,445 @@
+{
+  "captured_at_utc": "2026-10-25T09:08:29.401276+00:00",
+  "status": {
+    "active": false,
+    "phase": "completed",
+    "pid": 110094,
+    "started_at_utc": "2026-10-25T08:20:04.219618+00:00",
+    "formal_started": 1,
+    "formal_completed": 1,
+    "runs": [
+      {
+        "run_id": "MELD_wo_hscl_seed67137",
+        "stage": "formal",
+        "pid": 112782,
+        "argv": [
+          "/data2/yb/conda_envs/cmerc-xp-repro/bin/python",
+          "-u",
+          "/data2/yb/paper/lyx-msa/CMERC/experiments/hscl_ablation_validation/20261025T080937Z/scripts/memory_observer.py",
+          "/data2/yb/paper/lyx-msa/CMERC/experiments/hscl_ablation_validation/20261025T080937Z/scripts/watch_training.py",
+          "--run-id",
+          "MELD_wo_hscl_seed67137"
+        ],
+        "started_at_utc": "2026-10-25T08:21:29.488431+00:00",
+        "admission_samples": [
+          {
+            "time": "2026-10-25T08:21:09.263760+00:00",
+            "stage": "formal_admission",
+            "gpu_index": 0,
+            "gpu_uuid": "GPU-7ff18ebb-100e-98fe-038b-a98bd4f94248",
+            "gpu_name": "NVIDIA TITAN Xp",
+            "total_mib": 12288,
+            "free_mib": 11911,
+            "used_mib": 273,
+            "utilization_percent": 7,
+            "processes": [
+              {
+                "pid": 3939591,
+                "name": "python",
+                "used_memory": "268"
+              }
+            ],
+            "own_pids": [],
+            "all_foreign_processes": [
+              {
+                "pid": 3939591,
+                "name": "python",
+                "used_memory": "268"
+              }
+            ],
+            "allowed_foreign_processes": [
+              {
+                "pid": 3939591,
+                "name": "python",
+                "used_memory": "268"
+              }
+            ],
+            "unexpected_processes": []
+          },
+          {
+            "time": "2026-10-25T08:21:19.366981+00:00",
+            "stage": "formal_admission",
+            "gpu_index": 0,
+            "gpu_uuid": "GPU-7ff18ebb-100e-98fe-038b-a98bd4f94248",
+            "gpu_name": "NVIDIA TITAN Xp",
+            "total_mib": 12288,
+            "free_mib": 11849,
+            "used_mib": 335,
+            "utilization_percent": 14,
+            "processes": [
+              {
+                "pid": 3939591,
+                "name": "python",
+                "used_memory": "330"
+              }
+            ],
+            "own_pids": [],
+            "all_foreign_processes": [
+              {
+                "pid": 3939591,
+                "name": "python",
+                "used_memory": "330"
+              }
+            ],
+            "allowed_foreign_processes": [
+              {
+                "pid": 3939591,
+                "name": "python",
+                "used_memory": "330"
+              }
+            ],
+            "unexpected_processes": []
+          },
+          {
+            "time": "2026-10-25T08:21:29.478340+00:00",
+            "stage": "formal_admission",
+            "gpu_index": 0,
+            "gpu_uuid": "GPU-7ff18ebb-100e-98fe-038b-a98bd4f94248",
+            "gpu_name": "NVIDIA TITAN Xp",
+            "total_mib": 12288,
+            "free_mib": 11933,
+            "used_mib": 251,
+            "utilization_percent": 8,
+            "processes": [
+              {
+                "pid": 3939591,
+                "name": "python",
+                "used_memory": "246"
+              }
+            ],
+            "own_pids": [],
+            "all_foreign_processes": [
+              {
+                "pid": 3939591,
+                "name": "python",
+                "used_memory": "246"
+              }
+            ],
+            "allowed_foreign_processes": [
+              {
+                "pid": 3939591,
+                "name": "python",
+                "used_memory": "246"
+              }
+            ],
+            "unexpected_processes": []
+          }
+        ],
+        "environment": {
+          "CUDA_VISIBLE_DEVICES": "GPU-7ff18ebb-100e-98fe-038b-a98bd4f94248",
+          "LD_LIBRARY_PATH": "/data2/yb/conda_envs/cmerc-xp-repro/lib/python3.10/site-packages/nvidia/cusparse/lib",
+          "OMP_NUM_THREADS": "1",
+          "MKL_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1",
+          "PYTORCH_CUDA_ALLOC_CONF": "garbage_collection_threshold:0.8",
+          "CMERC_ENV_PREFIX": "/data2/yb/conda_envs/cmerc-xp-repro",
+          "PYTHONDONTWRITEBYTECODE": "1"
+        },
+        "profile_output": "/data2/yb/paper/lyx-msa/CMERC/experiments/hscl_ablation_validation/20261025T080937Z/logs/MELD_wo_hscl_seed67137_memory.jsonl",
+        "log": "/data2/yb/paper/lyx-msa/CMERC/experiments/hscl_ablation_validation/20261025T080937Z/logs/formal_MELD_wo_hscl_seed67137.log",
+        "returncode": 0,
+        "finished_at_utc": "2026-10-25T09:01:07.779886+00:00",
+        "gpu_release_confirmed": {
+          "time": "2026-10-25T09:01:07.869793+00:00",
+          "stage": "formal_release",
+          "gpu_index": 0,
+          "gpu_uuid": "GPU-7ff18ebb-100e-98fe-038b-a98bd4f94248",
+          "gpu_name": "NVIDIA TITAN Xp",
+          "total_mib": 12288,
+          "free_mib": 11911,
+          "used_mib": 273,
+          "utilization_percent": 8,
+          "processes": [
+            {
+              "pid": 3939591,
+              "name": "python",
+              "used_memory": "268"
+            }
+          ],
+          "own_pids": [
+            112782
+          ],
+          "all_foreign_processes": [
+            {
+              "pid": 3939591,
+              "name": "python",
+              "used_memory": "268"
+            }
+          ],
+          "allowed_foreign_processes": [
+            {
+              "pid": 3939591,
+              "name": "python",
+              "used_memory": "268"
+            }
+          ],
+          "unexpected_processes": []
+        }
+      }
+    ],
+    "preflight_started": 1,
+    "frozen_execution_sha256": "a0db5f98ad07b674158a5df37b3121892995839d3e35a511c583dfb872704585",
+    "resource_samples": 247,
+    "resource_query_errors": 0,
+    "preexisting_pid_samples": 247,
+    "unexpected_process_samples": 0,
+    "unexpected_pids": [],
+    "preregistered_co_resident_pids": [
+      3939591
+    ],
+    "observed_foreign_pids": [
+      3939591
+    ],
+    "new_foreign_pids_pause_admission": false,
+    "admission_paused": false,
+    "active_pids": [],
+    "preflight": {
+      "run_id": "MELD_wo_hscl_seed67137",
+      "stage": "preflight",
+      "pid": 110813,
+      "argv": [
+        "/data2/yb/conda_envs/cmerc-xp-repro/bin/python",
+        "-u",
+        "/data2/yb/paper/lyx-msa/CMERC/experiments/hscl_ablation_validation/20261025T080937Z/scripts/memory_observer.py",
+        "/data2/yb/paper/lyx-msa/CMERC/experiments/hscl_ablation_validation/20261025T080937Z/scripts/watch_training.py",
+        "--run-id",
+        "MELD_wo_hscl_seed67137",
+        "--preflight"
+      ],
+      "started_at_utc": "2026-10-25T08:20:25.495038+00:00",
+      "admission_samples": [
+        {
+          "time": "2026-10-25T08:20:05.195475+00:00",
+          "stage": "preflight_admission",
+          "gpu_index": 0,
+          "gpu_uuid": "GPU-7ff18ebb-100e-98fe-038b-a98bd4f94248",
+          "gpu_name": "NVIDIA TITAN Xp",
+          "total_mib": 12288,
+          "free_mib": 11911,
+          "used_mib": 273,
+          "utilization_percent": 9,
+          "processes": [
+            {
+              "pid": 3939591,
+              "name": "python",
+              "used_memory": "268"
+            }
+          ],
+          "own_pids": [],
+          "all_foreign_processes": [
+            {
+              "pid": 3939591,
+              "name": "python",
+              "used_memory": "268"
+            }
+          ],
+          "allowed_foreign_processes": [
+            {
+              "pid": 3939591,
+              "name": "python",
+              "used_memory": "268"
+            }
+          ],
+          "unexpected_processes": []
+        },
+        {
+          "time": "2026-10-25T08:20:15.316873+00:00",
+          "stage": "preflight_admission",
+          "gpu_index": 0,
+          "gpu_uuid": "GPU-7ff18ebb-100e-98fe-038b-a98bd4f94248",
+          "gpu_name": "NVIDIA TITAN Xp",
+          "total_mib": 12288,
+          "free_mib": 11911,
+          "used_mib": 273,
+          "utilization_percent": 10,
+          "processes": [
+            {
+              "pid": 3939591,
+              "name": "python",
+              "used_memory": "268"
+            }
+          ],
+          "own_pids": [],
+          "all_foreign_processes": [
+            {
+              "pid": 3939591,
+              "name": "python",
+              "used_memory": "268"
+            }
+          ],
+          "allowed_foreign_processes": [
+            {
+              "pid": 3939591,
+              "name": "python",
+              "used_memory": "268"
+            }
+          ],
+          "unexpected_processes": []
+        },
+        {
+          "time": "2026-10-25T08:20:25.456086+00:00",
+          "stage": "preflight_admission",
+          "gpu_index": 0,
+          "gpu_uuid": "GPU-7ff18ebb-100e-98fe-038b-a98bd4f94248",
+          "gpu_name": "NVIDIA TITAN Xp",
+          "total_mib": 12288,
+          "free_mib": 11911,
+          "used_mib": 273,
+          "utilization_percent": 11,
+          "processes": [
+            {
+              "pid": 3939591,
+              "name": "python",
+              "used_memory": "268"
+            }
+          ],
+          "own_pids": [],
+          "all_foreign_processes": [
+            {
+              "pid": 3939591,
+              "name": "python",
+              "used_memory": "268"
+            }
+          ],
+          "allowed_foreign_processes": [
+            {
+              "pid": 3939591,
+              "name": "python",
+              "used_memory": "268"
+            }
+          ],
+          "unexpected_processes": []
+        }
+      ],
+      "environment": {
+        "CUDA_VISIBLE_DEVICES": "GPU-7ff18ebb-100e-98fe-038b-a98bd4f94248",
+        "LD_LIBRARY_PATH": "/data2/yb/conda_envs/cmerc-xp-repro/lib/python3.10/site-packages/nvidia/cusparse/lib",
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "PYTORCH_CUDA_ALLOC_CONF": "garbage_collection_threshold:0.8",
+        "CMERC_ENV_PREFIX": "/data2/yb/conda_envs/cmerc-xp-repro",
+        "PYTHONDONTWRITEBYTECODE": "1"
+      },
+      "profile_output": "/data2/yb/paper/lyx-msa/CMERC/experiments/hscl_ablation_validation/20261025T080937Z/logs/preflight_MELD_wo_hscl_seed67137_memory.jsonl",
+      "log": "/data2/yb/paper/lyx-msa/CMERC/experiments/hscl_ablation_validation/20261025T080937Z/logs/preflight_MELD_wo_hscl_seed67137.log",
+      "returncode": 0,
+      "finished_at_utc": "2026-10-25T08:21:05.931612+00:00",
+      "gpu_release_confirmed": {
+        "time": "2026-10-25T08:21:06.035371+00:00",
+        "stage": "preflight_release",
+        "gpu_index": 0,
+        "gpu_uuid": "GPU-7ff18ebb-100e-98fe-038b-a98bd4f94248",
+        "gpu_name": "NVIDIA TITAN Xp",
+        "total_mib": 12288,
+        "free_mib": 11911,
+        "used_mib": 273,
+        "utilization_percent": 8,
+        "processes": [
+          {
+            "pid": 3939591,
+            "name": "python",
+            "used_memory": "268"
+          }
+        ],
+        "own_pids": [
+          110813
+        ],
+        "all_foreign_processes": [
+          {
+            "pid": 3939591,
+            "name": "python",
+            "used_memory": "268"
+          }
+        ],
+        "allowed_foreign_processes": [
+          {
+            "pid": 3939591,
+            "name": "python",
+            "used_memory": "268"
+          }
+        ],
+        "unexpected_processes": []
+      }
+    },
+    "current_run": "MELD_wo_hscl_seed67137",
+    "admission_conditions_currently_met": true,
+    "last_resource": {
+      "time": "2026-10-25T09:01:07.869793+00:00",
+      "stage": "formal_release",
+      "gpu_index": 0,
+      "gpu_uuid": "GPU-7ff18ebb-100e-98fe-038b-a98bd4f94248",
+      "gpu_name": "NVIDIA TITAN Xp",
+      "total_mib": 12288,
+      "free_mib": 11911,
+      "used_mib": 273,
+      "utilization_percent": 8,
+      "processes": [
+        {
+          "pid": 3939591,
+          "name": "python",
+          "used_memory": "268"
+        }
+      ],
+      "own_pids": [
+        112782
+      ],
+      "all_foreign_processes": [
+        {
+          "pid": 3939591,
+          "name": "python",
+          "used_memory": "268"
+        }
+      ],
+      "allowed_foreign_processes": [
+        {
+          "pid": 3939591,
+          "name": "python",
+          "used_memory": "268"
+        }
+      ],
+      "unexpected_processes": []
+    },
+    "admission_consecutive_samples": 3,
+    "completed_at_utc": "2026-10-25T09:01:08.905553+00:00",
+    "final_frozen_execution_sha256": "a0db5f98ad07b674158a5df37b3121892995839d3e35a511c583dfb872704585"
+  },
+  "cpu_finalization": {
+    "active": false,
+    "phase": "completed",
+    "pid": 110095,
+    "commands": [
+      {
+        "argv": [
+          "/data2/yb/conda_envs/cmerc-xp-repro/bin/python",
+          "-u",
+          "/data2/yb/paper/lyx-msa/CMERC/experiments/hscl_ablation_validation/20261025T080937Z/scripts/verify_lr.py"
+        ],
+        "started_at_utc": "2026-10-25T09:01:25.657717+00:00",
+        "returncode": 0,
+        "finished_at_utc": "2026-10-25T09:03:57.222891+00:00"
+      },
+      {
+        "argv": [
+          "/data2/yb/conda_envs/cmerc-xp-repro/bin/python",
+          "-u",
+          "/data2/yb/paper/lyx-msa/CMERC/experiments/hscl_ablation_validation/20261025T080937Z/scripts/analyze_hscl_ablation.py"
+        ],
+        "started_at_utc": "2026-10-25T09:03:57.224477+00:00",
+        "returncode": 0,
+        "finished_at_utc": "2026-10-25T09:03:58.429835+00:00"
+      },
+      {
+        "argv": [
+          "/home/yangbin/miniconda3/envs/multimodalerc310/bin/python",
+          "-u",
+          "/data2/yb/paper/lyx-msa/CMERC/experiments/hscl_ablation_validation/20261025T080937Z/scripts/plot_hscl_ablation.py"
+        ],
+        "started_at_utc": "2026-10-25T09:03:58.431437+00:00",
+        "returncode": 0,
+        "finished_at_utc": "2026-10-25T09:04:01.350795+00:00"
+      }
+    ],
+    "finished_at_utc": "2026-10-25T09:04:01.351615+00:00"
+  }
+}
