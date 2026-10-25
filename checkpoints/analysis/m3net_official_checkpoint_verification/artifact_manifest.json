@@ -1,0 +1,123 @@
+{
+  "hash_algorithm": "sha256",
+  "self_excluded": true,
+  "file_count": 29,
+  "files": {
+    "README.md": {
+      "sha256": "06083b40cf9932d3851843d67ae1de2e4486684631fa60da346fefeb72e9aa22",
+      "bytes": 3959
+    },
+    "SUMMARY.md": {
+      "sha256": "276cb223a64b33bd194566647d441c9eeb6f218172cf4df3e59468951fe4174f",
+      "bytes": 5516
+    },
+    "all_predictions.csv": {
+      "sha256": "c50cdfe9b3f7fb85d44ad1352c87d4dfb2a942dd2c5ac4a6ff7fd2e05492d630",
+      "bytes": 529657
+    },
+    "checkpoint_audit.json": {
+      "sha256": "784d6c2671011a864c14119ba226dc54b8d2d39fb7a91356374ff8911bd4d84d",
+      "bytes": 10547
+    },
+    "classification_report.csv": {
+      "sha256": "930b23704c35653e73bc0f984f120fcab191ef0265f7e5c1f18d3947777a6acd",
+      "bytes": 458
+    },
+    "code_state_at_launch.json": {
+      "sha256": "a551c49713ae096f4945b76e0640b8d2f0ddc2aff290b929b3dd97569262b346",
+      "bytes": 351
+    },
+    "confusion_matrix.csv": {
+      "sha256": "95c2584f1b6f48a2af95ebd1d775d01ba7ef76f548024fdd6cff81d7fbf18e8e",
+      "bytes": 204
+    },
+    "evaluation.log": {
+      "sha256": "b7204aec01e0b2406ca189e3b644227c71c58aaef140ca07aa7703c9eed5cf4f",
+      "bytes": 1464
+    },
+    "evaluation_results.csv": {
+      "sha256": "a4590f27ca3b5ad9765284940e63925a4cc6767b5184d1aec239e9ff70556220",
+      "bytes": 228
+    },
+    "inference/IEMOCAP_checkpoint_inventory.json": {
+      "sha256": "784d6c2671011a864c14119ba226dc54b8d2d39fb7a91356374ff8911bd4d84d",
+      "bytes": 10547
+    },
+    "inference/IEMOCAP_classification_report.csv": {
+      "sha256": "930b23704c35653e73bc0f984f120fcab191ef0265f7e5c1f18d3947777a6acd",
+      "bytes": 458
+    },
+    "inference/IEMOCAP_confusion_matrix.csv": {
+      "sha256": "95c2584f1b6f48a2af95ebd1d775d01ba7ef76f548024fdd6cff81d7fbf18e8e",
+      "bytes": 204
+    },
+    "inference/IEMOCAP_metrics.json": {
+      "sha256": "16954149d9ac7fd88ff9e46ccea9dd8095a235c6879d5f6a45ae97bb30b3e34e",
+      "bytes": 291
+    },
+    "inference/IEMOCAP_predictions.csv": {
+      "sha256": "c50cdfe9b3f7fb85d44ad1352c87d4dfb2a942dd2c5ac4a6ff7fd2e05492d630",
+      "bytes": 529657
+    },
+    "inference/IEMOCAP_predictions.npz": {
+      "sha256": "81a59dcf5f7e7d79a4c7a46023ea5655838c7dbdb5442a63430c8334f5584624",
+      "bytes": 112467
+    },
+    "inference/IEMOCAP_run_manifest.json": {
+      "sha256": "f86848588585656ba59dcc76ee57291ca849ea9015fde55d2aeb76ef2121a2f3",
+      "bytes": 7953
+    },
+    "launch.json": {
+      "sha256": "c17b35c58f75395a308efb6890af09758224318d6954ed0b80ef5a782a9b9807",
+      "bytes": 612
+    },
+    "pairing_feasibility.md": {
+      "sha256": "ccd7e974f4533dbe851d0594f54146fd3255702133296af2cbfaf0c3c82aef0d",
+      "bytes": 9123
+    },
+    "predictions.npz": {
+      "sha256": "81a59dcf5f7e7d79a4c7a46023ea5655838c7dbdb5442a63430c8334f5584624",
+      "bytes": 112467
+    },
+    "preserved_inputs.json": {
+      "sha256": "15c9e0c67888840bb6bdc3b410dd1ac2a8a73a3cb4bfc06b35493d8b34043398",
+      "bytes": 50549
+    },
+    "protocol_audit/independent_alignment_verification.json": {
+      "sha256": "039e8c9e1c5424858a463e21481c6f30cae67e4b539c91d248d5bc84158d1422",
+      "bytes": 1502
+    },
+    "protocol_audit/source_protocol_comparison.json": {
+      "sha256": "06c1851bc3f327da0656bd68be9476f5531b609c04b15fa79756c3009acd0f33",
+      "bytes": 11159
+    },
+    "run_evaluation.sh": {
+      "sha256": "93d1068450171754a504f437ada77d245ec575a8005a1fee0cdf6bf6f892a806",
+      "bytes": 700
+    },
+    "run_manifest.json": {
+      "sha256": "b3d6ae4291a173fabbc8404473e3450bd30371b08a5f65372ac91fd86c1378ed",
+      "bytes": 8420
+    },
+    "source_code/summarize_m3net_verification.py": {
+      "sha256": "02198d845d61d2b53cf9b5f93bd15b35b90a6a9bf371778b26bbf5b34cc09d8a",
+      "bytes": 15708
+    },
+    "source_code/test_m3net_official_checkpoint.py": {
+      "sha256": "fdff6c7a9d87ab41d864910b8342e9a3ccfbeb71ca9285a1fcccd7fd0bebe948",
+      "bytes": 2601
+    },
+    "source_code/verify_m3net_official_checkpoint.py": {
+      "sha256": "540c9946b4478dd8437d06940f41c11d9eef7d791a534b6985a84a0475468ea8",
+      "bytes": 18927
+    },
+    "source_code_manifest.json": {
+      "sha256": "24737699cc0e10a0f24eaf35bf9be4d13156eb93e810d86b42f3f04216b37c23",
+      "bytes": 429
+    },
+    "verification.json": {
+      "sha256": "f6f151ae8458fa56957bf846a40591cb40dcf87d0286b11c63aeaff597e7a1d1",
+      "bytes": 1914
+    }
+  }
+}

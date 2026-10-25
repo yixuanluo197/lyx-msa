@@ -1,0 +1,9 @@
+Official argv: ["train.py", "--base-model", "GRU", "--dropout", "0.5", "--lr", "0.0001", "--batch-size", "16", "--graph_type", "hyper", "--epochs", "0", "--graph_construct", "direct", "--multi_modal", "--mm_fusion_mthd", "concat_DHT", "--modals", "avl", "--Dataset", "IEMOCAP", "--norm", "BN", "--testing"]
+Checkpoint: /data2/yb/paper/cmerc_reproduction_20261013/checkpoints/baseline_candidates/m3net_official_20261025/Roberta_IEMOCAP3.pth.tar GPU: Tesla V100-SXM2-32GB cuDNN: True
+Namespace(no_cuda=False, base_model='GRU', graph_model=True, nodal_attention=True, windowp=10, windowf=10, lr=0.0001, l2=3e-05, rec_dropout=0.1, dropout=0.5, batch_size=16, epochs=0, class_weight=True, active_listener=False, attention='general', tensorboard=False, graph_type='hyper', use_topic=False, alpha=0.2, multiheads=6, graph_construct='direct', use_gcn=False, use_residue=False, multi_modal=True, mm_fusion_mthd='concat_DHT', modals='avl', av_using_lstm=False, Deep_GCN_nlayers=4, Dataset='IEMOCAP', use_speaker=True, use_modal=False, norm='BN', testing=True, num_L=3, num_K=4, seed=1475)
+Running on GPU
+construct hyper
+Graph NN with GRU as base model.
+testing loaded model
+test_acc: 72.46 test_fscore: 72.66
+ACTUAL_RESULT {"dataset": "IEMOCAP", "model": "Official M\u00b3Net", "accuracy": 72.45841035120148, "weighted_f1": 72.66013116562415, "macro_f1": 71.5532217841169, "valid_samples": 1623, "class_names": ["happy", "sad", "neutral", "angry", "excited", "frustrated"]}

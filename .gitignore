@@ -5,6 +5,7 @@
 /checkpoints/analysis/*
 !/checkpoints/analysis/high_confidence_errors/
 !/checkpoints/analysis/official_checkpoint_verification/
+!/checkpoints/analysis/m3net_official_checkpoint_verification/
 /logs/
 /results/
 /runs/
@@ -41,6 +42,10 @@
 !/checkpoints/analysis/high_confidence_errors/official_checkpoint_analysis/MELD/inference/without_audio/MELD_predictions.npz
 !/checkpoints/analysis/high_confidence_errors/official_checkpoint_analysis/MELD/inference/without_text/MELD_predictions.npz
 !/checkpoints/analysis/high_confidence_errors/official_checkpoint_analysis/MELD/inference/without_visual/MELD_predictions.npz
+
+# Fixed public M3Net checkpoint verification prediction arrays
+!/checkpoints/analysis/m3net_official_checkpoint_verification/predictions.npz
+!/checkpoints/analysis/m3net_official_checkpoint_verification/inference/IEMOCAP_predictions.npz
 
 # Python caches and local environments
 *.pyc

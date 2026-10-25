@@ -1,0 +1,48 @@
+{
+  "status": "passed",
+  "sample_count": 1623,
+  "unique_sample_ids": 1623,
+  "aligned_fields": {
+    "dataset": true,
+    "dialogue_id": true,
+    "utterance_index": true,
+    "source_utterance_id": true,
+    "utterance_text": true,
+    "true_label": true,
+    "true_emotion": true,
+    "input_condition": true
+  },
+  "all_class_probability_columns": [
+    "probability_happy",
+    "probability_sad",
+    "probability_neutral",
+    "probability_angry",
+    "probability_excited",
+    "probability_frustrated"
+  ],
+  "same_effective_args": true,
+  "same_official_argv": true,
+  "identical_batch_ids_lengths_masks_shapes": true,
+  "probabilities_verified_both_models": true,
+  "independently_recomputed_classification_metrics": [
+    {
+      "model": "Official M³Net",
+      "accuracy": 72.45841035120148,
+      "weighted_f1": 72.66013116562415,
+      "macro_f1": 71.5532217841169,
+      "samples": 1623
+    },
+    {
+      "model": "Official CMERC",
+      "accuracy": 71.90388170055454,
+      "weighted_f1": 71.98379358245155,
+      "macro_f1": 71.37466315596619,
+      "samples": 1623
+    }
+  ],
+  "m3net_minus_cmerc_weighted_f1_percentage_points": 0.6763375831725966,
+  "csv_sha256": {
+    "checkpoints/analysis/m3net_official_checkpoint_verification/all_predictions.csv": "c50cdfe9b3f7fb85d44ad1352c87d4dfb2a942dd2c5ac4a6ff7fd2e05492d630",
+    "checkpoints/analysis/official_checkpoint_verification/IEMOCAP_predictions.csv": "f876f4423410cfc4025c0abb3a1b52e77c90c96a196699df01ee2dbd332372d8"
+  }
+}

@@ -18,6 +18,7 @@ CMERC 多模态对话情绪识别代码、复现工程与时间因果变体，�
 - [实验六：概率校准分析](checkpoints/analysis/high_confidence_errors/experiment_6_calibration/README.md)：沿用前五项固定预测，提供 ECE、MCE、Brier、NLL、十区间明细与两个数据集的可靠性图；[实验一至六 Word 报告](checkpoints/analysis/high_confidence_errors/experiment_6_calibration/CMERC_高置信度错误诊断报告_实验一至六.docx)完整保留前五项正文，另附[实验六 Excel](checkpoints/analysis/high_confidence_errors/experiment_6_calibration/CMERC_实验六_概率校准结果.xlsx)及[结果分析](checkpoints/analysis/high_confidence_errors/experiment_6_calibration/SUMMARY.md)。
 - [作者官方 Checkpoint 独立验证](checkpoints/analysis/official_checkpoint_verification/SUMMARY.md)：重新加载作者发布权重，仅执行完整三模态分类；IEMOCAP／MELD 实测 W-F1 为 71.9838%／66.8484%，均接近论文。提供[性能对比表](checkpoints/analysis/official_checkpoint_verification/evaluation_results.csv)、逐类别报告、混淆矩阵、完整预测和[实际运行日志](checkpoints/analysis/official_checkpoint_verification/evaluation.log)，与前六项本地 validation 权重诊断分开记录。
 - [作者官方 Checkpoint 可靠性诊断](checkpoints/analysis/high_confidence_errors/official_checkpoint_analysis/SUMMARY.md)：复用达到论文 F1 的官方预测，完成错误、模态删除、置信度分布与概率校准分析；提供 [Word 报告](checkpoints/analysis/high_confidence_errors/official_checkpoint_analysis/CMERC_官方Checkpoint_可靠性诊断报告.docx)、[Excel 全量统计](checkpoints/analysis/high_confidence_errors/official_checkpoint_analysis/CMERC_官方Checkpoint_诊断统计.xlsx) 和 [复现步骤](checkpoints/analysis/high_confidence_errors/official_checkpoint_analysis/README.md)。M³Net 候选的来源/结构已核验，严格 Baseline 配对仍缺训练与选模记录，实验二及相关对比保持待完成。
+- [M³Net 官方 IEMOCAP 权重验证与可比性分析](checkpoints/analysis/m3net_official_checkpoint_verification/SUMMARY.md)：预先固定 IEMOCAP3 权重，实测 W-F1 **72.6601%**，既有官方 CMERC 为 **71.9838%**；1623 条测试话语严格对齐，公开权重行为对照可行，严格训练配对仍未确认。提供[性能表](checkpoints/analysis/m3net_official_checkpoint_verification/evaluation_results.csv)、[完整预测](checkpoints/analysis/m3net_official_checkpoint_verification/all_predictions.csv)、[协议分析](checkpoints/analysis/m3net_official_checkpoint_verification/pairing_feasibility.md)与[复现步骤](checkpoints/analysis/m3net_official_checkpoint_verification/README.md)，本阶段未执行实验二完整纠错分析。
 - [GPT / 人工代码审查指南](docs/GPT_REVIEW_GUIDE.md)：建议阅读顺序、重点文件和可复制的审查提示词。
 - [复现运行指南](REPRODUCTION_GUIDE.md)：环境、数据准备、训练、评测和断点恢复。
 - [时间因果变体说明](CAUSAL_README.md)：历史与当前话语的可见性约束、实现范围和验证边界。
@@ -74,7 +75,7 @@ CMERC_PYTHON="$HOME/conda-envs/cmerc-repro/bin/python" \
 
 ## 数据、权重与结果
 
-公开仓库包含源码、测试、脚本、依赖快照和复现报告。[实验档案](experiment_records/README.md)另保留经过筛选的运行配置、逐轮指标、聚合评测与结果图。本次额外公开 `checkpoints/analysis/high_confidence_errors/` 下实验一至六的逐话语预测、CSV、Word、Excel 和来源清单，以及 `checkpoints/analysis/official_checkpoint_verification/` 下作者权重验证的分类结果、预测、日志和代码快照。上述 NPZ 均仅保存预测数组；官方可靠性诊断另包含六份模态删除预测 NPZ，小型课程难度 PKL 来自上游代码。数据特征、模型 checkpoint 和原始训练日志仍保留在实验服务器；`.gitignore` 为上述交付设置限定例外，继续排除其他本地运行产物。
+公开仓库包含源码、测试、脚本、依赖快照和复现报告。[实验档案](experiment_records/README.md)另保留经过筛选的运行配置、逐轮指标、聚合评测与结果图。本次额外公开 `checkpoints/analysis/high_confidence_errors/` 下实验一至六的逐话语预测、CSV、Word、Excel 和来源清单，以及 `checkpoints/analysis/official_checkpoint_verification/` 下作者权重验证的分类结果、预测、日志和代码快照。上述 NPZ 均仅保存预测数组；官方可靠性诊断另包含六份模态删除预测 NPZ，小型课程难度 PKL 来自上游代码。 `checkpoints/analysis/m3net_official_checkpoint_verification/` 独立保存固定 M³Net 权重的性能验证、全部预测（含两份命名对应的预测 NPZ）、协议审计和日志。数据特征、模型 checkpoint 和原始训练日志仍保留在实验服务器；`.gitignore` 为上述交付设置限定例外，继续排除其他本地运行产物。
 
 从 [原始 README](docs/UPSTREAM_README.md) 的作者链接获取特征和官方 checkpoint，放入根目录的 `data/`、`checkpoints/`。文件清单与校验值见 [数据审计](reports/03_DATA_AUDIT.md)。`caldiff/IEMOCAP_diff.pkl` 和 `caldiff/MELD_diff.pkl` 是上游已跟踪的小型课程难度文件，继续保留。
 

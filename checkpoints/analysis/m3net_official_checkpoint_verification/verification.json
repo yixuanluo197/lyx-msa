@@ -1,0 +1,58 @@
+{
+  "status": "passed",
+  "verified_at": "2026-10-25T07:44:11.323241+00:00",
+  "checkpoint_sha256_verified": true,
+  "strict_load_complete": true,
+  "parameter_tensor_count": 85,
+  "parameter_and_buffer_hash_unchanged": true,
+  "optimizer_steps": 0,
+  "full_m3net_forwards": 2,
+  "cmerc_forwards": 0,
+  "masked_forwards": 0,
+  "valid_samples": 1623,
+  "dialogues": 31,
+  "raw_labels_ids_text_order_verified": true,
+  "padding_excluded": true,
+  "class_mapping": [
+    "happy",
+    "sad",
+    "neutral",
+    "angry",
+    "excited",
+    "frustrated"
+  ],
+  "class_probability_fields": [
+    "probability_happy",
+    "probability_sad",
+    "probability_neutral",
+    "probability_angry",
+    "probability_excited",
+    "probability_frustrated"
+  ],
+  "model_probability_values_expected_to_differ": true,
+  "probability_sum_max_deviation": {
+    "m3net": 1.480167068912408e-07,
+    "cmerc": 1.5131774666610198e-07
+  },
+  "finite_normalized_probabilities_argmax_correct": true,
+  "csv_npz_values_exactly_equal": true,
+  "same_test_utterance_alignment": true,
+  "same_batch_padding_eval_backend": true,
+  "classification_metrics_and_confusion_independently_recomputed": true,
+  "independent_metric_method": "Counter contingency counts; Precision/Recall/F1 and aggregate metrics recomputed without sklearn",
+  "preserved_original_files": 291,
+  "preserved_original_files_unchanged": true,
+  "public_weight_behavior_comparison_feasible": true,
+  "strict_training_pairing_confirmed": false,
+  "training_seed": null,
+  "training_epoch": null,
+  "checkpoint_selection": null,
+  "evaluation_seed": 1475,
+  "tests_passed": 17,
+  "six_diagnostic_experiments_executed": false,
+  "experiment2_full_error_analysis_executed": false,
+  "source_prediction_sha256": {
+    "m3net": "c50cdfe9b3f7fb85d44ad1352c87d4dfb2a942dd2c5ac4a6ff7fd2e05492d630",
+    "cmerc": "f876f4423410cfc4025c0abb3a1b52e77c90c96a196699df01ee2dbd332372d8"
+  }
+}
