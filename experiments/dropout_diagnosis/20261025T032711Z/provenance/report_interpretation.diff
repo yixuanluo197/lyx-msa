@@ -1,0 +1,54 @@
+--- experiments/dropout_diagnosis/20261025T032711Z/reports/CMERC_DROPOUT_DIAGNOSIS.md:core
++++ experiments/dropout_diagnosis/20261025T032711Z/reports/CMERC_DROPOUT_DIAGNOSIS.md:reviewed
+@@ -4,7 +4,7 @@
+ 
+ ## 实际科学协议与Dropout路径
+ 
+-直接对照XP04完整CMERC同Seed、同lr、同Batch16，唯一登记变化为args.dropout 0.4→0.5。rec_dropout参数固定0.1、Adam/L2=3e-5、dropout以外全部模型参数不变；GRU、ATen、continuous RNG、capacity_safe、BN、hyper/direct、concat_DHT、L3/K3、FP32、worker0、split_seed1475、CC/MSCL/CSCL=.002/.15/.15、CL比例步长=.4/1。训练池1038、验证114对话，train/val均Batch16，划分SHA `5317189c62939f28801eadf558763bd901cae04544ae829ebd45d1dd057055b8`。
++直接对照XP04完整CMERC同Seed、同lr、同Batch16，唯一登记变化为args.dropout 0.4→0.5。rec_dropout参数固定0.1、Adam/L2=3e-5、其余模型超参数不变；GRU、ATen、continuous RNG、capacity_safe、BN、hyper/direct、concat_DHT、L3/K3、FP32、worker0、split_seed1475、CC/MSCL/CSCL=.002/.15/.15、CL比例步长=.4/1。训练池1038、验证114对话，train/val均Batch16，划分SHA `5317189c62939f28801eadf558763bd901cae04544ae829ebd45d1dd057055b8`。
+ 
+ **rec_dropout的实际边界：** train_cm.py:1040–1073的活跃graph Model入口传递dropout=args.dropout，未传args.rec_dropout。model_cm.py:658的文本两层双向GRU使用dropout=dropout，:713定义nn.Dropout(self.dropout)；因此本次通用dropout变化也作用于活跃GRU层间dropout。rec_dropout=.1是保持不变的CLI元数据，不能声称真实GRU dropout固定.1或本次只改变非循环层Dropout。av_using_lstm=False时音/视GRU分支不启用。hyper输出的hidden-feature Dropout在model_cm.py:892–896参与分类；辅助模型按原train_cm.py:608–613始终eval，辅助前向不因配置中的概率提高而启用Dropout。
+ 
+@@ -92,3 +92,15 @@
+ 资源证据`limited`：181次采样，既有共驻PID样本82次，新外部PID样本119次，查询错误0次，正式最小空闲6013MiB，最大利用率87%；离散采样不能证明连续资源隔离。
+ 
+ 实验根目录：`/data2/yb/paper/lyx-msa/CMERC/experiments/dropout_diagnosis/20261025T032711Z`。仓库根报告正文相同，相对链接按位置调整。
++
++## 针对研究问题的最终判断
++
++**已证实事实：** 最佳验证W-F1提高0.480个百分点，末10轮均值提高1.552个百分点，满足原先登记的第二Seed候选条件。最佳轮从9推迟到15，末10轮验证Accuracy从62.499%升至63.930%。最佳轮至末10轮的W-F1回落从4.787降至3.715个百分点，减轻1.072个百分点，但回落仍存在。
++
++**分类Loss没有同时改善：** 末10轮验证分类Loss为5.32022，高于控制5.08928（+0.23094）；两组都保留训练Loss下降、验证Loss上升的后期轨迹。因此，F1维度的末段衰退较轻，并不足以证明整体过拟合或概率质量问题已解决。Loss和F1衡量的目标不同，本阶段没有ECE/CEL等额外校准评估，不据此判断校准机制已改善。
++
++**欠拟合判断属于有边界的推断：** Dropout0.5的末10轮训练W-F1仍达到96.924%（控制97.768%），训练分类Loss持续下降到末段均值2.73957。训练拟合稍低且验证F1提高，未出现明显的整体欠拟合证据；单次在线训练曲线不能排除局部类别拟合不足，也不能证明正则化是唯一作用机制。
++
++**下一步最小建议（本组不执行）：** 值得将Dropout0.5作为固定候选，在新的独立登记中用另一预先确定的Seed与XP04同Seed的Dropout0.4控制确认；其余Batch16、LR0.0001、split1475、rec_dropout0.1、损失和课程保持不变，仍用最佳验证W-F1及末10轮规则，不做测试筛选。如果跨Seed证据一致，再决定是否冻结后续正式配置；当前不启动第二Seed、Baseline、五Seed或测试。暂不叠加LR0.0002或Batch8，以免失去单因素含义。
++
++后续若继续诊断，可先汇总已有训练/验证曲线的F1与分类Loss分歧，再另行设计有明确预算的类别错误/置信度检查；不要仅凭本Seed的最高分扩大Dropout搜索。07–10已反复使用相同验证划分探索超参数，候选结果属于开发阶段证据，最终泛化表现仍需在正式配置冻结后的独立评估中确认。本组没有执行这类评估。
+--- reports/CMERC_DROPOUT_DIAGNOSIS.md:core
++++ reports/CMERC_DROPOUT_DIAGNOSIS.md:reviewed
+@@ -4,7 +4,7 @@
+ 
+ ## 实际科学协议与Dropout路径
+ 
+-直接对照XP04完整CMERC同Seed、同lr、同Batch16，唯一登记变化为args.dropout 0.4→0.5。rec_dropout参数固定0.1、Adam/L2=3e-5、dropout以外全部模型参数不变；GRU、ATen、continuous RNG、capacity_safe、BN、hyper/direct、concat_DHT、L3/K3、FP32、worker0、split_seed1475、CC/MSCL/CSCL=.002/.15/.15、CL比例步长=.4/1。训练池1038、验证114对话，train/val均Batch16，划分SHA `5317189c62939f28801eadf558763bd901cae04544ae829ebd45d1dd057055b8`。
++直接对照XP04完整CMERC同Seed、同lr、同Batch16，唯一登记变化为args.dropout 0.4→0.5。rec_dropout参数固定0.1、Adam/L2=3e-5、其余模型超参数不变；GRU、ATen、continuous RNG、capacity_safe、BN、hyper/direct、concat_DHT、L3/K3、FP32、worker0、split_seed1475、CC/MSCL/CSCL=.002/.15/.15、CL比例步长=.4/1。训练池1038、验证114对话，train/val均Batch16，划分SHA `5317189c62939f28801eadf558763bd901cae04544ae829ebd45d1dd057055b8`。
+ 
+ **rec_dropout的实际边界：** train_cm.py:1040–1073的活跃graph Model入口传递dropout=args.dropout，未传args.rec_dropout。model_cm.py:658的文本两层双向GRU使用dropout=dropout，:713定义nn.Dropout(self.dropout)；因此本次通用dropout变化也作用于活跃GRU层间dropout。rec_dropout=.1是保持不变的CLI元数据，不能声称真实GRU dropout固定.1或本次只改变非循环层Dropout。av_using_lstm=False时音/视GRU分支不启用。hyper输出的hidden-feature Dropout在model_cm.py:892–896参与分类；辅助模型按原train_cm.py:608–613始终eval，辅助前向不因配置中的概率提高而启用Dropout。
+ 
+@@ -92,3 +92,15 @@
+ 资源证据`limited`：181次采样，既有共驻PID样本82次，新外部PID样本119次，查询错误0次，正式最小空闲6013MiB，最大利用率87%；离散采样不能证明连续资源隔离。
+ 
+ 实验根目录：`/data2/yb/paper/lyx-msa/CMERC/experiments/dropout_diagnosis/20261025T032711Z`。仓库根报告正文相同，相对链接按位置调整。
++
++## 针对研究问题的最终判断
++
++**已证实事实：** 最佳验证W-F1提高0.480个百分点，末10轮均值提高1.552个百分点，满足原先登记的第二Seed候选条件。最佳轮从9推迟到15，末10轮验证Accuracy从62.499%升至63.930%。最佳轮至末10轮的W-F1回落从4.787降至3.715个百分点，减轻1.072个百分点，但回落仍存在。
++
++**分类Loss没有同时改善：** 末10轮验证分类Loss为5.32022，高于控制5.08928（+0.23094）；两组都保留训练Loss下降、验证Loss上升的后期轨迹。因此，F1维度的末段衰退较轻，并不足以证明整体过拟合或概率质量问题已解决。Loss和F1衡量的目标不同，本阶段没有ECE/CEL等额外校准评估，不据此判断校准机制已改善。
++
++**欠拟合判断属于有边界的推断：** Dropout0.5的末10轮训练W-F1仍达到96.924%（控制97.768%），训练分类Loss持续下降到末段均值2.73957。训练拟合稍低且验证F1提高，未出现明显的整体欠拟合证据；单次在线训练曲线不能排除局部类别拟合不足，也不能证明正则化是唯一作用机制。
++
++**下一步最小建议（本组不执行）：** 值得将Dropout0.5作为固定候选，在新的独立登记中用另一预先确定的Seed与XP04同Seed的Dropout0.4控制确认；其余Batch16、LR0.0001、split1475、rec_dropout0.1、损失和课程保持不变，仍用最佳验证W-F1及末10轮规则，不做测试筛选。如果跨Seed证据一致，再决定是否冻结后续正式配置；当前不启动第二Seed、Baseline、五Seed或测试。暂不叠加LR0.0002或Batch8，以免失去单因素含义。
++
++后续若继续诊断，可先汇总已有训练/验证曲线的F1与分类Loss分歧，再另行设计有明确预算的类别错误/置信度检查；不要仅凭本Seed的最高分扩大Dropout搜索。07–10已反复使用相同验证划分探索超参数，候选结果属于开发阶段证据，最终泛化表现仍需在正式配置冻结后的独立评估中确认。本组没有执行这类评估。

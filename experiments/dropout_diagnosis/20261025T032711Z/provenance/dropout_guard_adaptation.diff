@@ -1,0 +1,574 @@
+--- 09/scripts/watch_training.py
++++ 10/scripts/watch_training.py
+@@ -1,7 +1,8 @@
+-"""Call/return-only guard for validation-only CMERC batch-size diagnosis."""
++"""Call/return-only guard for validation-only CMERC dropout diagnosis."""
+ from __future__ import annotations
+ 
+ import argparse
++import ast
+ import functools
+ import hashlib
+ import json
+@@ -73,20 +74,23 @@
+ 
+ def assert_scientific_pair(args, historical, run, patched_sha):
+     actual, expected = vars(args), historical['args']
+-    permitted = {'batch_size', 'skip_final_test', 'output_dir', 'provenance'}
++    permitted = {'dropout', 'skip_final_test', 'output_dir', 'provenance'}
+     differences = {key: (expected.get(key), actual.get(key))
+                    for key in set(actual) | set(expected)
+                    if key not in permitted and actual.get(key) != expected.get(key)}
+     assert not differences, 'Unregistered scientific differences: ' + repr(differences)
+     assert actual['lr'] == expected['lr'] == run['lr'] == 1e-4
+-    assert expected['batch_size'] == 16 and actual['batch_size'] == run['batch_size'] == 8
++    assert expected['batch_size'] == actual['batch_size'] == run['batch_size'] == 16
+     assert run['validation_batch_size'] == actual['batch_size']
++    assert expected['dropout'] == .4 and actual['dropout'] == run['dropout'] == .5
++    assert actual['rec_dropout'] == expected['rec_dropout'] == run['rec_dropout'] == .1
+     assert actual['skip_final_test'] is True
+     assert actual['seed'] == run['seed'] and actual['epochs'] == run['epochs']
+     assert actual['selection_protocol'] == 'validation' and actual['testing'] is False
+     assert actual['rng_policy'] == 'continuous' and actual['rnn_backend'] == 'aten'
+     assert actual['batch_policy'] == 'capacity_safe' and actual['num_workers'] == 0
+     assert actual['calibrate'] and actual['contrastlearning'] and actual['courselearning']
++    assert (actual['rank_coff'], actual['mscl_coff'], actual['cscl_coff']) == (.002, .15, .15)
+     provenance = actual['provenance']
+     assert provenance['split'] == historical['split']
+     assert provenance['split']['hash'] == run['split_hash']
+@@ -95,6 +99,52 @@
+     assert set(files) == set(old_files)
+     for name, digest in old_files.items():
+         assert files[name] == (patched_sha if name == 'train_cm.py' else digest), name
++
++
++def audit_dropout_models(args, models):
++    """Read attributes only; no model construction, forward, mutation, or RNG draws."""
++    before = rng_hash()
++    assert args.dropout == .5 and args.rec_dropout == .1
++    result = {'cli_dropout': args.dropout, 'cli_rec_dropout_metadata': args.rec_dropout, 'models': {}}
++    assert set(models) == {'model', 'model_mm', 'model_intra', 'model_inter'}
++    for name, model in models.items():
++        gru, hidden_dropout = model.gru_l, model.dropout_
++        assert isinstance(gru, torch.nn.GRU) and gru.dropout == .5
++        assert gru.num_layers == 2 and gru.bidirectional is True
++        assert isinstance(hidden_dropout, torch.nn.Dropout) and hidden_dropout.p == .5
++        assert model.dropout == .5
++        fixed = {}
++        dropouts = {}
++        for module_name, module in model.named_modules():
++            if isinstance(module, torch.nn.Dropout):
++                dropouts[module_name] = module.p
++            for attr in ('dropouta', 'dropoutv', 'dropoutl'):
++                if hasattr(module, attr):
++                    value = getattr(module, attr)
++                    assert isinstance(value, torch.nn.Dropout) and value.p == .5
++                    fixed[(module_name + '.' + attr).lstrip('.')] = value.p
++        result['models'][name] = {'class': type(model).__name__, 'language_gru': {
++            'dropout': gru.dropout, 'num_layers': gru.num_layers, 'bidirectional': gru.bidirectional},
++            'hidden_dropout_p': hidden_dropout.p, 'registered_dropout_modules': dropouts,
++            'registered_fixed_modality_dropouts': fixed}
++    tree = ast.parse((ROOT / 'code_xp04/model_cm.py').read_bytes())
++    gated = next(node for node in tree.body if isinstance(node, ast.ClassDef) and node.name == 'MMGatedAttention')
++    definitions = {}
++    for node in ast.walk(gated):
++        if isinstance(node, ast.Assign) and isinstance(node.value, ast.Call):
++            for target in node.targets:
++                if isinstance(target, ast.Attribute) and target.attr in ('dropouta', 'dropoutv', 'dropoutl'):
++                    assert ast.unparse(node.value.func) == 'nn.Dropout'
++                    assert len(node.value.args) == 1 and ast.literal_eval(node.value.args[0]) == .5
++                    definitions[target.attr] = .5
++    assert definitions == {'dropouta': .5, 'dropoutv': .5, 'dropoutl': .5}
++    result['fixed_modality_dropout_definition'] = {'class': 'MMGatedAttention', 'values': definitions,
++        'active_instances': {name: bool(value['registered_fixed_modality_dropouts']) for name, value in result['models'].items()},
++        'note': 'No UnimodalEncoder class in this frozen source; gated attention is not instantiated by concat_DHT.'}
++    result['rng_before'] = before
++    result['rng_after'] = rng_hash()
++    assert result['rng_before'] == result['rng_after']
++    return result
+ 
+ 
+ def check_components(components, args):
+@@ -175,6 +225,8 @@
+             self.active = {'split': split, 'epoch': epoch, 'keys': keys,
+                            'steps': [], 'seen_ids': [], 'frame': frame}
+             if self.first is None and split == 'train':
++                self.emit('module_audit.json', audit_dropout_models(args, {
++                    name: local[name] for name in ('model', 'model_mm', 'model_intra', 'model_inter')}))
+                 self.first = {'initial_model_sha256': model_hash(local['model']),
+                               'rng_before_train': rng_hash()}
+             return self.trace
+--- 09/scripts/run_single.py
++++ 10/scripts/run_single.py
+@@ -197,6 +197,20 @@
+     return env
+ 
+ 
++def validate_module_audit(audit):
++    assert audit['cli_dropout'] == .5 and audit['cli_rec_dropout_metadata'] == .1
++    assert set(audit['models']) == {'model', 'model_mm', 'model_intra', 'model_inter'}
++    for model in audit['models'].values():
++        assert model['language_gru'] == {'dropout': .5, 'num_layers': 2, 'bidirectional': True}
++        assert model['hidden_dropout_p'] == .5
++        assert all(value == .5 for value in model['registered_fixed_modality_dropouts'].values())
++    definition = audit['fixed_modality_dropout_definition']
++    assert definition['class'] == 'MMGatedAttention'
++    assert definition['values'] == {'dropouta': .5, 'dropoutv': .5, 'dropoutl': .5}
++    assert not any(definition['active_instances'].values())
++    assert audit['rng_before'] == audit['rng_after']
++
++
+ def verify_probe(run):
+     folder = ROOT / 'preflight' / run['run_id'] / 'observer'
+     status, first = read(folder / 'status.json'), read(folder / 'first.json')
+@@ -209,6 +223,8 @@
+     loss = first['components']
+     expected = loss['classification_loss'] + .002 * loss['cc_loss'] + .15 * loss['mscl_loss'] + .15 * loss['cscl_loss']
+     assert math.isclose(expected, loss['total_loss'], rel_tol=1e-5, abs_tol=1e-6)
++    module_path = folder / 'module_audit.json'
++    validate_module_audit(read(module_path))
+     assert not list((ROOT / 'preflight' / run['run_id']).rglob('final_test.json'))
+     memory_path = ROOT / 'logs' / ('preflight_' + run['run_id'] + '_memory.jsonl')
+     memory = [json.loads(line) for line in memory_path.read_text().splitlines()]
+@@ -224,6 +240,7 @@
+     assert probe_resources and all(row['free_mib'] > 0 for row in probe_resources)
+     return {'status': 'passed', 'first_step_parameters_changed': True, 'test_forward_passes': 0,
+             'first_sha256': sha(folder / 'first.json'), 'status_sha256': sha(folder / 'status.json'),
++            'module_audit_sha256': sha(module_path),
+             'memory_profile_sha256': sha(memory_path), 'torch_peak_allocated_mib': peak_allocated,
+             'torch_peak_reserved_mib': peak_reserved, 'registered_memory_budget_mib': budget,
+             'preflight_sampled_gpu_free_mib_min': min(row['free_mib'] for row in probe_resources),
+@@ -263,9 +280,11 @@
+     registry = read(ROOT / 'configs/registry.json')
+     assert registry['formal_run_count'] == len(registry['runs']) == 1
+     run = registry['runs'][0]
+-    assert (run['run_id'], run['dataset'], run['seed'], run['lr'], run['epochs'], run['batch_size'], run['validation_batch_size']) == ('MELD_cmerc_batch8_lr1e-4_seed2024', 'MELD', 2024, .0001, 40, 8, 8)
++    assert (run['run_id'], run['dataset'], run['seed'], run['lr'], run['epochs'], run['batch_size'], run['validation_batch_size'], run['dropout'], run['rec_dropout']) == ('MELD_cmerc_dropout0p5_lr1e-4_seed2024', 'MELD', 2024, .0001, 40, 16, 16, .5, .1)
+     assert float(run['argv'][run['argv'].index('--lr')+1]) == .0001
+-    assert int(run['argv'][run['argv'].index('--batch-size')+1]) == 8
++    assert int(run['argv'][run['argv'].index('--batch-size')+1]) == 16
++    assert float(run['argv'][run['argv'].index('--dropout')+1]) == .5
++    assert float(run['argv'][run['argv'].index('--rec-dropout')+1]) == .1
+     validate_device(registry['gpu_index'], registry['gpu_uuid'])
+     assert registry['environment']['CUDA_VISIBLE_DEVICES'] == registry['gpu_uuid']
+     policy = registry['resource_policy']
+--- 09/scripts/verify_lr.py
++++ 10/scripts/verify_lr.py
+@@ -7,7 +7,7 @@
+ import os
+ 
+ import torch
+-from run_single import admissible, validate_device, validate_gate, validate_resource_policy
++from run_single import admissible, validate_device, validate_gate, validate_module_audit, validate_resource_policy
+ from watch_training import verify_skip_patch
+ 
+ ROOT = Path(__file__).resolve().parents[1]
+@@ -112,7 +112,7 @@
+     registry = read(ROOT/'configs/registry.json')
+     assert registry['formal_run_count'] == len(registry['runs']) == 1
+     registered = registry['runs'][0]
+-    assert (registered['dataset'],registered['seed'],registered['lr'],registered['epochs'],registered['batch_size'],registered['validation_batch_size']) == ('MELD',2024,.0001,40,8,8)
++    assert (registered['dataset'],registered['seed'],registered['lr'],registered['epochs'],registered['batch_size'],registered['validation_batch_size'],registered['dropout'],registered['rec_dropout']) == ('MELD',2024,.0001,40,16,16,.5,.1)
+     state = read(ROOT/'state/status.json')
+     assert not state['active'] and state['phase'] == 'completed'
+     assert state['formal_started'] == state['formal_completed'] == 1
+@@ -129,7 +129,7 @@
+         path = Path(name) if Path(name).is_absolute() else ROOT/name
+         assert sha(path) == expected, name
+     history = read(ROOT/'provenance/history_before.json')['roots']
+-    assert len(history) == 10
++    assert history
+     historical = {}
+     for relative, snapshot in history.items():
+         original = REPO/relative
+@@ -170,11 +170,13 @@
+             expected_sha = patched_sha if name == 'train_cm.py' else digest
+             assert manifest['source']['files'][name] == expected_sha
+             assert sha(ROOT/'code_xp04'/name) == expected_sha
+-        allowed = {'batch_size', 'skip_final_test', 'output_dir', 'provenance'}
++        allowed = {'dropout', 'skip_final_test', 'output_dir', 'provenance'}
+         assert {k:v for k,v in args.items() if k not in allowed} == {
+             k:v for k,v in old['args'].items() if k not in allowed}
+         assert args['lr'] == run['lr'] == old['args']['lr'] == .0001
+-        assert args['batch_size'] == run['batch_size'] == 8 and old['args']['batch_size'] == 16
++        assert args['batch_size'] == run['batch_size'] == run['validation_batch_size'] == old['args']['batch_size'] == 16
++        assert args['dropout'] == run['dropout'] == .5 and old['args']['dropout'] == .4
++        assert args['rec_dropout'] == run['rec_dropout'] == old['args']['rec_dropout'] == .1
+         assert args['skip_final_test'] is True
+         assert args['selection_protocol'] == 'validation' and args['rng_policy'] == 'continuous'
+         assert args['rnn_backend'] == 'aten' and args['batch_policy'] == 'capacity_safe'
+@@ -183,6 +185,11 @@
+         assert manifest['split']['hash'] == run['split_hash']
+         first = read(observed/'first.json')
+         probe_first = read(ROOT/'preflight'/run['run_id']/'observer/first.json')
++        module_audit = read(observed/'module_audit.json')
++        probe_audit = read(ROOT/'preflight'/run['run_id']/'observer/module_audit.json')
++        validate_module_audit(module_audit)
++        validate_module_audit(probe_audit)
++        assert module_audit == probe_audit
+         for key in ['initial_model_sha256','rng_before_train','rng_before_step','rng_after_step','dialogue_ids','lengths']:
+             assert first[key] == probe_first[key], key
+         for entry in [first,probe_first]:
+@@ -206,8 +213,9 @@
+             assert epoch['test_accuracy'] is None and epoch['test_weighted_f1'] is None
+             assert epoch['selection_protocol'] == epoch['selection_split'] == 'validation'
+             cap = expected[run['run_id'], epoch['epoch']]
+-            assert cap['batch_size'] == cap['validation_batch_size'] == 8
+-            assert cap['same_as_original_sampler_batch8'] is True
++            assert cap['batch_size'] == cap['validation_batch_size'] == 16
++            assert cap['same_as_original_sampler_batch16'] is True
++            assert cap['same_groups_steps_private_rng_as_historical_batch16'] is True
+             assert cap['historical16']['batch_size'] == 16 and cap['historical16']['replayed_metrics_match'] is True
+             assert epoch['train_dialogues'] == cap['train_dialogues']
+             assert epoch['sampler_retries'] == cap['sampler_retries']
+@@ -221,22 +229,22 @@
+                 assert obs['batches'] == cap[split+'_batches']
+                 if split == 'validation':
+                     assert obs['dialogue_ids'] == manifest['split']['validation_ids']
+-                    assert obs['batches'] == math.ceil(len(obs['dialogue_ids']) / 8)
+-                    assert cap['validation_last_batch_dialogues'] == (len(obs['dialogue_ids'])-1) % 8 + 1
++                    assert obs['batches'] == math.ceil(len(obs['dialogue_ids']) / 16)
++                    assert cap['validation_last_batch_dialogues'] == (len(obs['dialogue_ids'])-1) % 16 + 1
+                 assert all(math.isfinite(obs['loss_components'][k]) for k in LOSS)
+                 if split == 'train':
+                     assert obs['gradients_finite'] is True and obs['first_step_parameters_changed'] is True
+                     assert all(math.isclose(obs['loss_components'][k], epoch[k], rel_tol=1e-10, abs_tol=1e-10) for k in LOSS)
+                     steps = [e for e in batches if e['epoch'] == epoch['epoch']]
+-                    assert len(steps) == cap['train_batches'] == math.ceil(cap['train_dialogues'] / 8)
+-                    assert all(len(step['dialogue_ids']) == 8 for step in steps[:-1])
++                    assert len(steps) == cap['train_batches'] == math.ceil(cap['train_dialogues'] / 16)
++                    assert all(len(step['dialogue_ids']) == 16 for step in steps[:-1])
+                     assert len(steps[-1]['dialogue_ids']) == cap['train_last_batch_dialogues']
+                     ids = [key for step in steps for key in step['dialogue_ids']]
+                     assert len(ids) == len(set(ids)) == len(obs['dialogue_ids'])
+                     assert set(ids) == set(obs['dialogue_ids'])
+                     assert hashlib.sha256(json.dumps(ids).encode()).hexdigest() == cap['ordered_train_ids_sha256']
+         for batch in batches:
+-            assert 0 < len(batch['dialogue_ids']) <= 8
++            assert 0 < len(batch['dialogue_ids']) <= 16
+             assert batch['gradients_finite'] and math.isfinite(batch['gradient_l2'])
+             assert all(math.isfinite(batch[k]) for k in LOSS)
+             value = batch['classification_loss'] + args['rank_coff']*batch['cc_loss']
+@@ -249,7 +257,8 @@
+             assert checkpoint['best_epoch']+1 == selected['epoch']
+             assert checkpoint['best_metric'] == selected['validation_weighted_f1']
+             assert checkpoint['args']['lr'] == run['lr'] and checkpoint['args']['skip_final_test']
+-            assert checkpoint['args']['batch_size'] == 8
++            assert checkpoint['args']['batch_size'] == 16
++            assert checkpoint['args']['dropout'] == .5 and checkpoint['args']['rec_dropout'] == .1
+             assert json.loads(json.dumps(checkpoint['args'])) == manifest['args']
+             assert json.loads(json.dumps(checkpoint['provenance'])) == manifest['args']['provenance']
+             assert checkpoint['optimizer_state_dict']['state'] and checkpoint['rng_state']
+@@ -269,9 +278,10 @@
+             'selected_epoch':selected['epoch'], 'validation_best_wf1':selected['validation_weighted_f1'],
+             'validation_last10_wf1':sum(e['validation_weighted_f1'] for e in epochs[-10:])/10,
+             'train_batches':len(batches), 'loss_and_gradient_finite':True,
+-            'every_epoch_order_matches_registered_batch8_replay':True,
++            'every_epoch_order_matches_historical_and_registered_batch16_replay':True,
+             'unchanged_sampler_AST_and_historical_batch16_replay_passed':True,
+-            'train_and_validation_batch_size':8,'lr_unchanged_from_xp04':.0001,
++            'train_and_validation_batch_size':16,'lr_unchanged_from_xp04':.0001,
++            'dropout':.5,'rec_dropout_metadata':.1,'module_audit':module_audit,
+             'test_forwards':0,'checkpoints':checkpoints}
+     resource_report = resource_evidence(registry,state)
+     assert not torch.cuda.is_initialized()
+@@ -279,8 +289,8 @@
+               'formal_runs':1,'test_forwards':0,'cuda_initialized':False,
+               'historical_files_unchanged':historical,'frozen_sources_and_inputs_unchanged':True,
+               'resource_evidence':resource_report,'runs':results,
+-              'limits':['This is one registered Batch Size=8 diagnosis, not a completed five-seed study.',
+-                        'Train and validation batches both change from16 to8; grouping and optimizer step counts differ from the historical control.',
++              'limits':['This is one registered dropout0.5 diagnosis, not a completed five-seed study.',
++                        'CLI dropout changes the language GRU inter-layer dropout and hidden-feature dropout; rec_dropout0.1 remains metadata.',
+                         'The selected healthy XP GPU may be shared with observed foreign PIDs under the registered capacity gate; resource isolation is limited.',
+                         'Author difficulty generation history unknown.',
+                         'No test or final independent evaluation performed in this stage.']}
+--- 09/scripts/check_capacity.py
++++ 10/scripts/check_capacity.py
+@@ -1,4 +1,4 @@
+-"""CPU batch8 audit plus separate historical batch16 replay; no test access."""
++"""CPU audit of identical current/historical batch16 sampling; no test access."""
+ import ast
+ import hashlib
+ import json
+@@ -85,8 +85,10 @@
+         ds = run['dataset']
+         ref = references[f"{ds}_{run['seed']}"]
+         assert ds == 'MELD' and run['seed'] == 2024 and run['epochs'] == 40
+-        assert run['batch_size'] == run['validation_batch_size'] == 8
++        assert run['batch_size'] == run['validation_batch_size'] == 16
+         assert ref['args']['batch_size'] == 16 and ref['args']['lr'] == run['lr'] == 1e-4
++        assert ref['args']['dropout'] == .4 and run['dropout'] == .5
++        assert ref['args']['rec_dropout'] == run['rec_dropout'] == .1
+         if ds not in datasets:
+             name = 'IEMOCAP_features.pkl' if ds == 'IEMOCAP' else 'MELD_features_raw1.pkl'
+             with (ROOT/'code_xp04/data'/name).open('rb') as stream:
+@@ -102,8 +104,9 @@
+         train, valid = ref['split']['train_ids'], ref['split']['validation_ids']
+         assert not set(train).intersection(valid)
+         assert not set(train+valid).intersection(ref['split']['test_ids'])
+-        valid_batches, valid_limit = validation_plan(valid, labels, 8)
++        valid_batches, valid_limit = validation_plan(valid, labels, 16)
+         old_valid_batches, old_valid_limit = validation_plan(valid, labels, 16)
++        assert valid_batches == old_valid_batches and valid_limit == old_valid_limit
+         assert len(ref['epochs']) == run['epochs']
+         for epoch, old_row in enumerate(ref['epochs']):
+             assert old_row['epoch'] == epoch+1
+@@ -117,18 +120,18 @@
+             assert historical16[2] == old_row['sampler_retries']
+             assert historical16[3]['edges'] == old_row['max_batch_edges']
+             assert historical16[3]['nodes'] == old_row['max_batch_nodes']
+-            a = replay(old,keys,labels,8,run['seed']+epoch)
+-            z = replay(new,keys,labels,8,run['seed']+epoch)
++            a = historical16
++            z = replay(new,keys,labels,16,run['seed']+epoch)
+             assert a[0] == z[0] and torch.equal(a[1], z[1]) and a[2:] == z[2:]
+             records.append({'run_id': run['run_id'], 'epoch': epoch+1,
+                             'sample_ratio': ratio, 'train_dialogues': len(keys),
+-                            'batch_size': 8, 'validation_batch_size': 8,
++                            'batch_size': 16, 'validation_batch_size': 16,
+                             'train_batches': len(z[0]), 'validation_batches': len(valid_batches),
+                             'train_last_batch_dialogues': len(z[0][-1]),
+                             'validation_last_batch_dialogues': len(valid_batches[-1]),
+                             'validation_capacity': valid_limit, 'capacity': z[3],
+                             'sampler_retries': z[2], 'private_seed': run['seed']+epoch,
+-                            'same_as_original_sampler_batch8': True,
++                            'same_as_original_sampler_batch16': True,
+                             'ordered_train_ids_sha256': order_sha(keys,z[0]),
+                             'historical16': {
+                                 'batch_size':16, 'train_batches':len(historical16[0]),
+@@ -140,7 +143,7 @@
+                                 'ordered_train_ids_sha256':order_sha(keys,historical16[0]),
+                                 'replayed_metrics_match':True,
+                                 'step_count_source':'CPU reconstruction, not a historical step log'},
+-                            'same_epoch_id_permutation_as_batch16':order_sha(keys,z[0])==order_sha(keys,historical16[0]),
++                            'same_groups_steps_private_rng_as_historical_batch16': True,
+                             'eligible_dialogue_ids_sha256':hashlib.sha256(json.dumps(keys).encode()).hexdigest()})
+     assert len(records) == sum(r['epochs'] for r in registry['runs']) and torch.equal(before, torch.get_rng_state())
+     assert not torch.cuda.is_initialized()
+@@ -148,14 +151,14 @@
+              'original_sampling_ast_unchanged': True, 'global_cpu_rng_unchanged': True,
+              'cuda_initialized': False, 'test_lengths_or_predictions_examined': False,
+              'historical_batch16_replay_passed':True,
+-             'batch_size':8, 'historical_batch_size':16, 'validation_batch_size':8,
+-             'expected_train_optimizer_steps_batch8':sum(row['train_batches'] for row in records),
++             'batch_size':16, 'historical_batch_size':16, 'validation_batch_size':16,
++             'expected_train_optimizer_steps_batch16':sum(row['train_batches'] for row in records),
+              'historical_train_optimizer_steps_batch16_reconstructed':sum(row['historical16']['train_batches'] for row in records),
+-             'expected_validation_batches_batch8':sum(row['validation_batches'] for row in records),
++             'expected_validation_batches_batch16':sum(row['validation_batches'] for row in records),
+              'historical_validation_batches_batch16_reconstructed':sum(row['historical16']['validation_batches'] for row in records),
+              'limits': ['CPU graph capacity does not establish GPU memory safety.',
+                         'Historical batch16 optimizer step counts are reconstructed, not measured from step logs.',
+-                        'Same eligible pool does not imply same batch groups, steps, loss scale or RNG model trajectory.'],
++                        'Matching sampler order/private RNG does not imply identical model RNG trajectory under changed dropout.'],
+              'records': records}
+     output = ROOT/'preflight/capacity_cpu.json'
+     with output.open('x') as stream:
+--- 09/scripts/test_training_guard.py
++++ 10/scripts/test_training_guard.py
+@@ -14,7 +14,7 @@
+ import torch
+ 
+ from watch_training import (ROOT, PreflightComplete, TrainingGuard,
+-                            assert_scientific_pair, rng_hash, verify_skip_patch)
++                            assert_scientific_pair, audit_dropout_models, rng_hash, verify_skip_patch)
+ 
+ TOY = '''import torch
+ from sklearn.metrics import accuracy_score, f1_score
+@@ -51,15 +51,16 @@
+     provenance = {'split': split, 'data': {},
+                   'source': {'files': {'train_cm.py': 'old', 'model.py': 'unchanged'}}}
+     old = dict(lr=.0001, batch_size=16, skip_final_test=False, output_dir='/old', provenance=provenance,
+-               seed=1475, epochs=2, selection_protocol='validation', testing=False,
++               dropout=.4, rec_dropout=.1, seed=2024, epochs=2, selection_protocol='validation', testing=False,
+                rng_policy='continuous', rnn_backend='aten', batch_policy='capacity_safe',
+                num_workers=0, calibrate=True, contrastlearning=True, courselearning=True,
+-               rank_coff=.005, mscl_coff=.05, cscl_coff=.05)
++               rank_coff=.002, mscl_coff=.15, cscl_coff=.15)
+     historical = {'args': copy.deepcopy(old), **copy.deepcopy(provenance)}
+     actual = copy.deepcopy(old)
+-    actual.update(batch_size=8, skip_final_test=True, output_dir='/new')
++    actual.update(dropout=.5, skip_final_test=True, output_dir='/new')
+     actual['provenance']['source']['files']['train_cm.py'] = 'patched'
+-    run = dict(lr=.0001, batch_size=8, validation_batch_size=8, seed=1475, epochs=2, split_hash='split')
++    run = dict(lr=.0001, batch_size=16, validation_batch_size=16, dropout=.5, rec_dropout=.1,
++               seed=2024, epochs=2, split_hash='split')
+     return argparse.Namespace(**actual), historical, run
+ 
+ 
+@@ -67,12 +68,24 @@
+     def __init__(self, keys):
+         self.dataset = argparse.Namespace(keys=keys, videoLabels={key: [0] for key in keys})
+         self.items = [(torch.ones(len(group), 2), torch.zeros(len(group), dtype=torch.long), group)
+-                      for group in [keys[start:start+8] for start in range(0,len(keys),8)]]
++                      for group in [keys[start:start+16] for start in range(0,len(keys),16)]]
+ 
+     def __iter__(self):
+         return iter(self.items)
+ 
+ 
++class ToyModel(torch.nn.Module):
++    def __init__(self):
++        super().__init__()
++        self.network = torch.nn.Sequential(torch.nn.Linear(2, 3), torch.nn.Dropout(.2), torch.nn.Linear(3, 2))
++        self.gru_l = torch.nn.GRU(2, 1, num_layers=2, bidirectional=True, dropout=.5)
++        self.dropout_ = torch.nn.Dropout(.5)
++        self.dropout = .5
++
++    def forward(self, values):
++        return self.network(values)
++
++
+ class GuardTests(unittest.TestCase):
+     def test_scientific_gate_rejects_undeclared_config_or_source(self):
+         args, old, run = fixture()
+@@ -89,10 +102,10 @@
+         with self.assertRaises(AssertionError):
+             assert_scientific_pair(args, old, run, 'patched')
+ 
+-    def test_batch_factor_requires_eight_and_forbids_lr_seed_or_loss_changes(self):
++    def test_dropout_factor_forbids_batch_lr_rec_dropout_seed_or_loss_changes(self):
+         args, old, run = fixture()
+         assert_scientific_pair(args, old, run, 'patched')
+-        for field, value in [('lr', .0002), ('seed', 2024), ('batch_size', 16),
++        for field, value in [('lr', .0002), ('seed', 42), ('batch_size', 8), ('dropout', .4), ('rec_dropout', .2),
+                              ('mscl_coff', .2), ('calibrate', False), ('split_seed', 2024)]:
+             actual, historical, registered = fixture()
+             setattr(actual, field, value)
+@@ -126,7 +139,8 @@
+         target = str(ROOT / '<memory-toy>')
+         scope = {'args': args}
+         exec(compile(TOY, target, 'exec'), scope)
+-        model = torch.nn.Sequential(torch.nn.Linear(2, 3), torch.nn.Dropout(.2), torch.nn.Linear(3, 2))
++        model = ToyModel()
++        copies = [copy.deepcopy(model) for _ in range(3)]
+         optimizer = torch.optim.Adam(model.parameters(), lr=args.lr)
+         guard = TrainingGuard(run, old, target, 'patched', preflight=preflight)
+         old_step, old_trace = torch.optim.Adam.step, sys.gettrace()
+@@ -140,7 +154,7 @@
+         try:
+             for epoch in range(2):
+                 for train, keys in [(True, list(range(17,0,-1))), (False, list(range(101,110)))]:
+-                    scope['train_or_eval_graph_model'](model,None,None,None,torch.nn.NLLLoss(),Loader(keys),epoch,False,'avl',optimizer,train)
++                    scope['train_or_eval_graph_model'](model,*copies,torch.nn.NLLLoss(),Loader(keys),epoch,False,'avl',optimizer,train)
+         except PreflightComplete:
+             stopped = True
+         finally:
+@@ -154,8 +168,8 @@
+         plain, watched = self.execute(False), self.execute(True)
+         self.assertEqual(plain['forwards'], watched['forwards'])
+         self.assertEqual(plain['steps_counter'], watched['steps_counter'])
+-        self.assertEqual(watched['forwards'], 10)
+-        self.assertEqual(watched['steps_counter'], 6)
++        self.assertEqual(watched['forwards'], 6)
++        self.assertEqual(watched['steps_counter'], 4)
+         self.assertEqual(plain['rng'], watched['rng'])
+         for key, value in plain['state'].items():
+             self.assertTrue(torch.equal(value, watched['state'][key]))
+@@ -171,10 +185,10 @@
+         recorded = [row for name,row in guard.memory_records if name == 'watch_batches.jsonl']
+         for epoch in (1, 2):
+             steps = [row for row in recorded if row['epoch'] == epoch]
+-            self.assertEqual([len(row['dialogue_ids']) for row in steps], [8,8,1])
++            self.assertEqual([len(row['dialogue_ids']) for row in steps], [16,1])
+             self.assertEqual([key for row in steps for key in row['dialogue_ids']], list(range(17,0,-1)))
+         evaluations = [row for name,row in guard.memory_records if name == 'watch_epochs.jsonl' and row['split']=='validation']
+-        self.assertTrue(all(row['batches'] == 2 and row['n_utterances'] == 9 for row in evaluations))
++        self.assertTrue(all(row['batches'] == 1 and row['n_utterances'] == 9 for row in evaluations))
+         self.assertTrue(guard.first['optimizer_updated_parameters'])
+         self.assertEqual(guard.first['rng_before_step'], guard.first['rng_after_step'])
+ 
+@@ -201,7 +215,7 @@
+         self.assertEqual(ast.dump(epoch_loop(old), include_attributes=False),
+                          ast.dump(epoch_loop(path.read_bytes()), include_attributes=False))
+ 
+-    def test_original_and_current_batch8_samplers_match_with_partial_batch(self):
++    def test_original_and_current_batch16_samplers_match_with_partial_batch(self):
+         from check_capacity import surface, replay
+         original = ROOT.parents[2] / 'experiment_records/04_xp_mainline_validation/code/train_cm.py'
+         old, old_ast = surface(original)
+@@ -210,26 +224,46 @@
+         keys = list(range(17))
+         labels = {key: list(range(1 + key % 3)) for key in keys}
+         before = torch.get_rng_state().clone()
+-        a, b = replay(old,keys,labels,8,2024), replay(new,keys,labels,8,2024)
++        a, b = replay(old,keys,labels,16,2024), replay(new,keys,labels,16,2024)
+         self.assertEqual(a[0], b[0])
+         self.assertTrue(torch.equal(a[1], b[1]))
+         self.assertEqual(a[2:], b[2:])
+-        self.assertEqual([len(batch) for batch in b[0]], [8,8,1])
++        self.assertEqual([len(batch) for batch in b[0]], [16,1])
+         historical16 = replay(old,keys,labels,16,2024)
+         self.assertEqual([len(batch) for batch in historical16[0]], [16,1])
+         self.assertTrue(torch.equal(before,torch.get_rng_state()))
+ 
+-    def test_validation_batch8_preserves_every_dialogue_and_tail(self):
++    def test_validation_batch16_matches_historical_dialogues_and_tail(self):
+         from check_capacity import validation_plan
+         keys = list(range(17))
+         labels = {key:[0,0] for key in keys}
+-        current, current_cap = validation_plan(keys,labels,8)
++        current, current_cap = validation_plan(keys,labels,16)
+         historical, historical_cap = validation_plan(keys,labels,16)
+         self.assertEqual(sum(current,[]), list(range(17)))
+         self.assertEqual(sum(historical,[]), list(range(17)))
+-        self.assertEqual([len(batch) for batch in current], [8,8,1])
++        self.assertEqual([len(batch) for batch in current], [16,1])
+         self.assertEqual([len(batch) for batch in historical], [16,1])
+-        self.assertNotEqual(current_cap, historical_cap)
++        self.assertEqual(current_cap, historical_cap)
++
++    def test_module_audit_is_read_only_and_rejects_wrong_gru_hidden_or_rec_dropout(self):
++        args, _, _ = fixture()
++        models = {name: ToyModel() for name in ('model', 'model_mm', 'model_intra', 'model_inter')}
++        before = rng_hash()
++        result = audit_dropout_models(args, models)
++        self.assertEqual(before, rng_hash())
++        self.assertEqual(result['rng_before'], result['rng_after'])
++        self.assertFalse(any(result['fixed_modality_dropout_definition']['active_instances'].values()))
++        models['model_mm'].gru_l.dropout = .4
++        with self.assertRaises(AssertionError):
++            audit_dropout_models(args, models)
++        models['model_mm'].gru_l.dropout = .5
++        models['model_inter'].dropout_.p = .4
++        with self.assertRaises(AssertionError):
++            audit_dropout_models(args, models)
++        models['model_inter'].dropout_.p = .5
++        args.rec_dropout = .2
++        with self.assertRaises(AssertionError):
++            audit_dropout_models(args, models)
+ 
+ 
+ if __name__ == '__main__':
+--- 09/scripts/test_resource_policy.py
++++ 10/scripts/test_resource_policy.py
+@@ -143,6 +143,15 @@
+                                 'cscl_loss': 4., 'total_loss': 2.054}}
+         (folder / 'status.json').write_text(json.dumps(status))
+         (folder / 'first.json').write_text(json.dumps(first))
++        audit = {'cli_dropout': .5, 'cli_rec_dropout_metadata': .1,
++                 'models': {name: {'language_gru': {'dropout': .5, 'num_layers': 2, 'bidirectional': True},
++                                  'hidden_dropout_p': .5, 'registered_fixed_modality_dropouts': {}}
++                            for name in ('model', 'model_mm', 'model_intra', 'model_inter')},
++                 'fixed_modality_dropout_definition': {'class': 'MMGatedAttention',
++                    'values': {'dropouta': .5, 'dropoutv': .5, 'dropoutl': .5},
++                    'active_instances': {name: False for name in ('model', 'model_mm', 'model_intra', 'model_inter')}},
++                 'rng_before': 'unchanged', 'rng_after': 'unchanged'}
++        (folder / 'module_audit.json').write_text(json.dumps(audit))
+         (self.root / 'configs/registry.json').write_text(json.dumps({'resource_policy': POLICY}))
+         memory_path = self.root / 'logs/preflight_registered_memory.jsonl'
+         memory_path.write_text(json.dumps({'peak_allocated_mib': 939., 'peak_reserved_mib': 1630.}) + '\n')
+@@ -159,9 +168,9 @@
+             runtime.verify_probe(run)
+ 
+     def registry(self):
+-        run = {'run_id': 'MELD_cmerc_batch8_lr1e-4_seed2024', 'dataset': 'MELD', 'seed': 2024,
+-               'lr': .0001, 'epochs': 40, 'batch_size': 8, 'validation_batch_size': 8,
+-               'argv': ['--lr', '0.0001', '--batch-size', '8'],
++        run = {'run_id': 'MELD_cmerc_dropout0p5_lr1e-4_seed2024', 'dataset': 'MELD', 'seed': 2024,
++               'lr': .0001, 'epochs': 40, 'batch_size': 16, 'validation_batch_size': 16, 'dropout': .5, 'rec_dropout': .1,
++               'argv': ['--lr', '0.0001', '--batch-size', '16', '--dropout', '0.5', '--rec-dropout', '0.1'],
+                'output_root': str(self.root / 'runs/formal')}
+         return {'runs': [run], 'formal_run_count': 1, 'python': '/fake/python',
+                 'gpu_index': 3, 'gpu_uuid': UUID, 'environment': {'CUDA_VISIBLE_DEVICES': UUID},

@@ -1,0 +1,75 @@
+{
+  "cli_dropout": 0.5,
+  "cli_rec_dropout_metadata": 0.1,
+  "models": {
+    "model": {
+      "class": "Model",
+      "language_gru": {
+        "dropout": 0.5,
+        "num_layers": 2,
+        "bidirectional": true
+      },
+      "hidden_dropout_p": 0.5,
+      "registered_dropout_modules": {
+        "dropout_": 0.5
+      },
+      "registered_fixed_modality_dropouts": {}
+    },
+    "model_mm": {
+      "class": "Model",
+      "language_gru": {
+        "dropout": 0.5,
+        "num_layers": 2,
+        "bidirectional": true
+      },
+      "hidden_dropout_p": 0.5,
+      "registered_dropout_modules": {
+        "dropout_": 0.5
+      },
+      "registered_fixed_modality_dropouts": {}
+    },
+    "model_intra": {
+      "class": "Model_Intra",
+      "language_gru": {
+        "dropout": 0.5,
+        "num_layers": 2,
+        "bidirectional": true
+      },
+      "hidden_dropout_p": 0.5,
+      "registered_dropout_modules": {
+        "dropout_": 0.5
+      },
+      "registered_fixed_modality_dropouts": {}
+    },
+    "model_inter": {
+      "class": "Model_Inter",
+      "language_gru": {
+        "dropout": 0.5,
+        "num_layers": 2,
+        "bidirectional": true
+      },
+      "hidden_dropout_p": 0.5,
+      "registered_dropout_modules": {
+        "dropout_": 0.5
+      },
+      "registered_fixed_modality_dropouts": {}
+    }
+  },
+  "fixed_modality_dropout_definition": {
+    "class": "MMGatedAttention",
+    "values": {
+      "dropouta": 0.5,
+      "dropoutv": 0.5,
+      "dropoutl": 0.5
+    },
+    "active_instances": {
+      "model": false,
+      "model_mm": false,
+      "model_intra": false,
+      "model_inter": false
+    },
+    "note": "No UnimodalEncoder class in this frozen source; gated attention is not instantiated by concat_DHT."
+  },
+  "rng_before": "e9ed19137b807864fffde6a6f5e990962ebf2ccc628c69ffcba3c1f199be03f5",
+  "rng_after": "e9ed19137b807864fffde6a6f5e990962ebf2ccc628c69ffcba3c1f199be03f5"
+}

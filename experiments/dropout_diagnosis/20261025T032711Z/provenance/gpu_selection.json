@@ -1,0 +1,36 @@
+{
+  "selected_at_utc": "2026-10-25T03:33:01.927504+00:00",
+  "host": "user23",
+  "index": 3,
+  "uuid": "GPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456",
+  "reason": "healthy same physicalGPU3 as XP04 seed2024 control; sufficient sampled memory; process occupancy disclosed and fresh three-sample admission required before each GPU stage",
+  "co_resident_processes": [
+    {
+      "pid": 3670055,
+      "process_name": "/home/yangbin/miniconda3/envs/multimodalerc310/bin/python",
+      "used_memory_mib": 1426
+    },
+    {
+      "pid": 3672750,
+      "process_name": "/home/yangbin/miniconda3/envs/multimodalerc310/bin/python",
+      "used_memory_mib": 1390
+    },
+    {
+      "pid": 3673489,
+      "process_name": "/home/yangbin/miniconda3/envs/multimodalerc310/bin/python",
+      "used_memory_mib": 1390
+    }
+  ],
+  "query": [
+    "nvidia-smi",
+    "--query-compute-apps=gpu_uuid,pid,process_name,used_gpu_memory",
+    "--format=csv,noheader,nounits"
+  ],
+  "raw_stdout": "GPU-7ff18ebb-100e-98fe-038b-a98bd4f94248, 3668260, /home/yangbin/miniconda3/envs/multimodalerc310/bin/python, 1426\nGPU-7ff18ebb-100e-98fe-038b-a98bd4f94248, 3670909, /home/yangbin/miniconda3/envs/multimodalerc310/bin/python, 1426\nGPU-7ff18ebb-100e-98fe-038b-a98bd4f94248, 3674380, /home/yangbin/miniconda3/envs/multimodalerc310/bin/python, 1390\nGPU-eed2f34f-b4c0-7b7a-498e-71a026e30c5a, 3671021, /home/yangbin/miniconda3/envs/multimodalerc310/bin/python, 1426\nGPU-eed2f34f-b4c0-7b7a-498e-71a026e30c5a, 3671599, /home/yangbin/miniconda3/envs/multimodalerc310/bin/python, 1390\nGPU-eed2f34f-b4c0-7b7a-498e-71a026e30c5a, 3674414, /home/yangbin/miniconda3/envs/multimodalerc310/bin/python, 1390\nGPU-d17e4326-9d3b-2025-fbf8-c9b0d16623a0, 2966262, /home/yyl/anaconda3/envs/lerobot/bin/python3.1, 11566\nGPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456, 3670055, /home/yangbin/miniconda3/envs/multimodalerc310/bin/python, 1426\nGPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456, 3672750, /home/yangbin/miniconda3/envs/multimodalerc310/bin/python, 1390\nGPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456, 3673489, /home/yangbin/miniconda3/envs/multimodalerc310/bin/python, 1390\n",
+  "selection_before_any_gpu_call": true,
+  "alternative_healthy_same_host_indices": [
+    0,
+    1
+  ],
+  "forbidden_to_terminate_foreign_processes": true
+}

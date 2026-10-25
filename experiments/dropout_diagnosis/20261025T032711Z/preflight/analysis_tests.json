@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "recorded_at_utc": "2026-10-25T03:32:27.910712+00:00",
+  "command": [
+    "/home/yangbin/miniconda3/bin/python",
+    "scripts/test_dropout_analysis.py"
+  ],
+  "exit_code": 0,
+  "tests": 10,
+  "synthetic_only": true,
+  "model_or_gpu_calls": 0,
+  "analysis_main_run": false,
+  "output": "test_candidate_peak_up_tail_equal (__main__.DropoutAnalysisTests.test_candidate_peak_up_tail_equal) ... ok\ntest_first_maximum_wins_rounded_tie (__main__.DropoutAnalysisTests.test_first_maximum_wins_rounded_tie) ... ok\ntest_incomplete_tail_rejected (__main__.DropoutAnalysisTests.test_incomplete_tail_rejected) ... ok\ntest_last10_means_epochs31_to40 (__main__.DropoutAnalysisTests.test_last10_means_epochs31_to40) ... ok\ntest_lr_batch_and_rec_dropout_changes_rejected (__main__.DropoutAnalysisTests.test_lr_batch_and_rec_dropout_changes_rejected) ... ok\ntest_mixed_peak_up_tail_down (__main__.DropoutAnalysisTests.test_mixed_peak_up_tail_down) ... ok\ntest_no_peak_gain_cannot_be_replaced_by_tail_gain (__main__.DropoutAnalysisTests.test_no_peak_gain_cannot_be_replaced_by_tail_gain) ... ok\ntest_only_dropout_scientific_change_accepted (__main__.DropoutAnalysisTests.test_only_dropout_scientific_change_accepted) ... ok\ntest_recommendation_does_not_authorize_additional_runs (__main__.DropoutAnalysisTests.test_recommendation_does_not_authorize_additional_runs) ... ok\ntest_unrounded_selection_input_rejected (__main__.DropoutAnalysisTests.test_unrounded_selection_input_rejected) ... ok\n\n----------------------------------------------------------------------\nRan 10 tests in 0.001s\n\nOK\n",
+  "scripts_sha256": {
+    "scripts/analyze_dropout.py": "854e825b32c4ea21166bb33de728117f6bf9c8dc04db4ebfa480f23d1cd75758",
+    "scripts/test_dropout_analysis.py": "ff56997bcdd96fd02364caa6ffb8193875238add747c55c93ee7bbae0984c5ba"
+  }
+}

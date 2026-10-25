@@ -1,0 +1,18 @@
+{
+  "created_at_utc": "2026-10-25T04:07:54.728705+00:00",
+  "scope": "post-render Chinese interpretation only; frozen analyzer and scientific files unchanged",
+  "summary_sha256": "dcaced7ba512434694fc1f031da297f9e3c18482c3654cc9f0c2cd65d5b46a18",
+  "test_forwards": 0,
+  "new_model_forward_or_training": false,
+  "report_changes": {
+    "experiments/dropout_diagnosis/20261025T032711Z/reports/CMERC_DROPOUT_DIAGNOSIS.md": {
+      "before_sha256": "aa5eadd2c613c137d7576719018dcf10839974c26efd7a4db50e5f7fd2a37132",
+      "after_sha256": "387597a48063625ad3ef3c1a1f751fca33fdea9a188bdd2ae1635f45d4d434fd"
+    },
+    "reports/CMERC_DROPOUT_DIAGNOSIS.md": {
+      "before_sha256": "21aa4cd0614b8ac9998e5f2dc2d8b65a4e3f21bd293d639e7246d5335d813cc2",
+      "after_sha256": "d4e871f9786ee7c88e6c14b7039767299043ab8f05f966a0809efa1e10353886"
+    }
+  },
+  "clarification": "Model hyperparameters, not trained weights, are fixed except dropout"
+}

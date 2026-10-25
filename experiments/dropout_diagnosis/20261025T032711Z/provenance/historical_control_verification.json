@@ -1,0 +1,19 @@
+{
+  "created_at_utc": "2026-10-25T03:29:27.191637+00:00",
+  "status": "passed",
+  "scope": "historical train/validation fields only; no final_test or prediction arrays opened",
+  "historical_manifest": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/cmerc/MELD_validation_seed2024/run_manifest.json",
+  "historical_metrics": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/cmerc/MELD_validation_seed2024/metrics.jsonl",
+  "reference_file_sha256": "add702da7063eaa02d2e760b620ab2b10cf839603b07c50df1c4a71b73fa5669",
+  "dropout": 0.4,
+  "rec_dropout": 0.1,
+  "batch_size": 16,
+  "lr": 0.0001,
+  "best_validation_wf1": 66.01,
+  "best_epoch": 9,
+  "last10_validation_wf1": 61.223,
+  "best_train_classification_loss": 3.297963472513052,
+  "best_validation_classification_loss": 4.1074,
+  "last10_train_classification_loss": 2.70762985926408,
+  "last10_validation_classification_loss": 5.0892800000000005
+}

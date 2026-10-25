@@ -1,0 +1,127 @@
+{
+  "generated_at_utc": "2026-10-25T04:06:53.955820+00:00",
+  "formal_training_complete": true,
+  "matplotlib_version": "3.10.9",
+  "legend_location": "outside axes, reserved right margin",
+  "scope": "CPU train/validation CSV plotting only; no model or test calls",
+  "input_sha256": {
+    "results/per_run.csv": "718ddf96c1fdacc5fc60acb460001dc1e1b734079ab97cd7b29839c0e3045cea",
+    "results/comparison.csv": "4be847881f43647276315cc9f9a32195a281f6de96fd3e6ef0189a512aa81cd9",
+    "results/curves.csv": "1cea9b1f909ee2088580b4105419f6604b613fd2becf4403b655de172fd4a2aa",
+    "results/loss_curves.csv": "13b558a916dbb5d291f74daed3207d0fc08a724c1bb09630fbe9d5bfc1591785",
+    "results/metrics_summary.json": "dcaced7ba512434694fc1f031da297f9e3c18482c3654cc9f0c2cd65d5b46a18",
+    "scripts/plot_dropout.py": "881e92e8291bf7da108f324ad99ca178b961c9cd97dbc09701f808ebc092b4c2"
+  },
+  "artifacts": [
+    {
+      "path": "results/figures/MELD_dropout_wf1.png",
+      "sha256": "0dea41e84a57e4236f8722deea4b49d0e377c998f50add43301c3861ba08bd06",
+      "bytes": 121777
+    },
+    {
+      "path": "results/figures/MELD_dropout_wf1.svg",
+      "sha256": "405e088e63590a1217c19af09272f23b4e5c71b56fb301892d52897ea9d9b590",
+      "bytes": 61431
+    },
+    {
+      "path": "results/figures/MELD_dropout_accuracy.png",
+      "sha256": "a3f18afec036c3827de3df68fa7cec1ee080063e88d13236477efe7853617ea9",
+      "bytes": 121114
+    },
+    {
+      "path": "results/figures/MELD_dropout_accuracy.svg",
+      "sha256": "d5df3175e7f5e4dabb8af3a96e3b66f7ff6ab7b9508d46aa1e490ee7e744e695",
+      "bytes": 58098
+    },
+    {
+      "path": "results/figures/MELD_dropout_classification_loss.png",
+      "sha256": "7e8dcfab8145b41ddc4184c1610a279368c1c0f7f59be5fbd6003b709b073fcc",
+      "bytes": 133417
+    },
+    {
+      "path": "results/figures/MELD_dropout_classification_loss.svg",
+      "sha256": "3ad20906279c1e6f69f212d6e5c4e9d571531e39871f58d695563952004e806a",
+      "bytes": 55646
+    },
+    {
+      "path": "results/figures/MELD_dropout_total_loss.png",
+      "sha256": "b1deb22ca186224295d7fd77c1f682165e419dcba7f20e48151d55d2e5ceda84",
+      "bytes": 125037
+    },
+    {
+      "path": "results/figures/MELD_dropout_total_loss.svg",
+      "sha256": "11afec0419a04d603c07a5af3fe9ebe1cb5433f07bc10d2649c9814358e2d94d",
+      "bytes": 55250
+    },
+    {
+      "path": "results/figures/MELD_dropout_raw_cc_loss.png",
+      "sha256": "9caccf21c19893d7bfcb99e23f30dc0888e5047c2c1a08f0951c2df5c98a78b5",
+      "bytes": 133192
+    },
+    {
+      "path": "results/figures/MELD_dropout_raw_cc_loss.svg",
+      "sha256": "a709ef1d958a8a602c9379c05cfd5fad13c63e76d80ff360979d0fad948878fe",
+      "bytes": 56611
+    },
+    {
+      "path": "results/figures/MELD_dropout_raw_mscl_loss.png",
+      "sha256": "f6c545b1fe05765d3cb412f2085728d22b5c55f0d24236a66c29fa319f423016",
+      "bytes": 166915
+    },
+    {
+      "path": "results/figures/MELD_dropout_raw_mscl_loss.svg",
+      "sha256": "ffd493868ea9c0151d429b155f19a85527b93f6925379fdf4712c76bf1f98edf",
+      "bytes": 58202
+    },
+    {
+      "path": "results/figures/MELD_dropout_raw_cscl_loss.png",
+      "sha256": "aff9099bde7cfe6ab1bcbbaac95367002da39a6212d84c433728831a2fa3f949",
+      "bytes": 154538
+    },
+    {
+      "path": "results/figures/MELD_dropout_raw_cscl_loss.svg",
+      "sha256": "5afb259ed939f4b6497383f0a19208421b43e320db5e9b2a16ddd86ee5670547",
+      "bytes": 56651
+    },
+    {
+      "path": "results/figures/MELD_dropout_weighted_cc_loss.png",
+      "sha256": "27192721cbd528b939c1bab2ff3a1bf325048055692e4db86ee32368f2133e8e",
+      "bytes": 138376
+    },
+    {
+      "path": "results/figures/MELD_dropout_weighted_cc_loss.svg",
+      "sha256": "0b24ad73e805eb6bf9aa81e190ea61c5f111d07752d3086a316bf751a57fefac",
+      "bytes": 57578
+    },
+    {
+      "path": "results/figures/MELD_dropout_weighted_mscl_loss.png",
+      "sha256": "11f5e6b4c3efdca7085265abfdb8a9a9734a6dfcd31271b29085aed2e14b5b69",
+      "bytes": 167709
+    },
+    {
+      "path": "results/figures/MELD_dropout_weighted_mscl_loss.svg",
+      "sha256": "464fa6bd866d768b7b08a9aba42071421b2b0671340a4396d59f887323669d5c",
+      "bytes": 56339
+    },
+    {
+      "path": "results/figures/MELD_dropout_weighted_cscl_loss.png",
+      "sha256": "88725d8aa6210f8bd1cb69e7b8fa1e3dbf252aaa1ec821021f4862343d1992b2",
+      "bytes": 156535
+    },
+    {
+      "path": "results/figures/MELD_dropout_weighted_cscl_loss.svg",
+      "sha256": "f6f362871d08c021424a667cdd12f3e2b302f70d0278d74f62721bbd7780fb6a",
+      "bytes": 55934
+    },
+    {
+      "path": "results/figures/MELD_dropout_optimizer_steps.png",
+      "sha256": "0e30c4990db756496cc0692eccb9b191bf7d63a5f7af48304235de23087b83ef",
+      "bytes": 80266
+    },
+    {
+      "path": "results/figures/MELD_dropout_optimizer_steps.svg",
+      "sha256": "3566c4a983eaf68d5f50cc02e4f37f78cb49c6fab48f25e2b117def83c6409a0",
+      "bytes": 52731
+    }
+  ]
+}
