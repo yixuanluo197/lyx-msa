@@ -1,0 +1,37 @@
+Source: /data2/yb/paper/lyx-msa/CMERC/experiments/official_readme_reproduction/runtime_code/train_cm.py
+SHA-256: fd3dbe7dc5e6c50ee5e884ce34e6f434aeb765059b9760c9b5cc8fb17a439717
+Lines: 49-81
+
+49: def get_train_valid_sampler(trainset, valid=0.1, dataset='IEMOCAP'):
+50:     size = len(trainset)
+51:     idx = list(range(size))
+52:     split = int(valid*size)
+53:     return SubsetRandomSampler(idx[split:]), SubsetRandomSampler(idx[:split])
+54: 
+55: 
+56: def get_MELD_loaders(batch_size=32, valid=0.1, num_workers=0, pin_memory=False, epoch_ratio=-1):
+57:     trainset = MELDDataset('data/MELD_features_raw1.pkl', epoch_ratio=epoch_ratio)
+58:     train_sampler, valid_sampler = get_train_valid_sampler(trainset, valid, 'MELD')
+59: 
+60:     train_loader = DataLoader(trainset,
+61:                               batch_size=batch_size,
+62:                               sampler=train_sampler,
+63:                               collate_fn=trainset.collate_fn,
+64:                               num_workers=num_workers,
+65:                               pin_memory=pin_memory)
+66: 
+67:     valid_loader = DataLoader(trainset,
+68:                               batch_size=batch_size,
+69:                               sampler=valid_sampler,
+70:                               collate_fn=trainset.collate_fn,
+71:                               num_workers=num_workers,
+72:                               pin_memory=pin_memory)
+73: 
+74:     testset = MELDDataset('data/MELD_features_raw1.pkl', train=False)
+75:     test_loader = DataLoader(testset,
+76:                              batch_size=batch_size,
+77:                              collate_fn=testset.collate_fn,
+78:                              num_workers=num_workers,
+79:                              pin_memory=pin_memory)
+80: 
+81:     return train_loader, valid_loader, test_loader

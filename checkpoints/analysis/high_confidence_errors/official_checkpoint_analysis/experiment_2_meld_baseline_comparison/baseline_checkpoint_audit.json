@@ -1,0 +1,746 @@
+{
+  "schema_version": 1,
+  "audited_at": "2026-10-25T14:56:41.135980+00:00",
+  "decision": "Preselected first candidate technically compatible; do not evaluate alternatives to select by test score.",
+  "selection_fixed_before_new_inference": true,
+  "identity": "Local M3Net baseline reproduction using CMERC official README training command; not an author-released MELD baseline.",
+  "checkpoint": {
+    "path": "/data2/yb/paper/lyx-msa/CMERC/experiments/official_readme_reproduction/checkpoints/MELD_baseline_seed67137/best.pt",
+    "sha256": "a6ab85cb6c0c12054dade9c6bcdf01cfaa6abc417625059a927de5ba386d3738",
+    "bytes": 142006793,
+    "internal_keys": [
+      "model",
+      "optimizer",
+      "epoch",
+      "args",
+      "python_rng",
+      "numpy_rng",
+      "torch_rng",
+      "cuda_rng",
+      "selection_protocol"
+    ],
+    "model_state_key": "model",
+    "epoch_1based": 5,
+    "selection_protocol": "official_test_selection",
+    "args": {
+      "no_cuda": false,
+      "base_model": "GRU",
+      "graph_model": true,
+      "nodal_attention": true,
+      "windowp": 10,
+      "windowf": 10,
+      "lr": 0.0001,
+      "l2": 3e-05,
+      "rec_dropout": 0.1,
+      "dropout": 0.4,
+      "batch_size": 16,
+      "epochs": 40,
+      "class_weight": true,
+      "active_listener": false,
+      "attention": "general",
+      "tensorboard": false,
+      "graph_type": "hyper",
+      "use_topic": false,
+      "alpha": 0.2,
+      "multiheads": 6,
+      "graph_construct": "direct",
+      "use_gcn": false,
+      "use_residue": false,
+      "multi_modal": true,
+      "mm_fusion_mthd": "concat_DHT",
+      "modals": "avl",
+      "av_using_lstm": false,
+      "Deep_GCN_nlayers": 4,
+      "Dataset": "MELD",
+      "use_speaker": true,
+      "use_modal": false,
+      "norm": "BN",
+      "testing": false,
+      "num_L": 3,
+      "num_K": 3,
+      "seed": 67137,
+      "calibrate": false,
+      "rank_coff": 0,
+      "contrastlearning": false,
+      "mscl_coff": 0,
+      "cscl_coff": 0,
+      "courselearning": false,
+      "epoch_ratio": 0,
+      "scheduler_steps": 0,
+      "cuda": true
+    }
+  },
+  "safe_loading": {
+    "weights_only_initial_attempt": true,
+    "weights_only_error": {
+      "type": "UnpicklingError",
+      "message": "Weights only load failed. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution.Do it only if you get the file from a trusted source. WeightsUnpickler error: Unsupported operand 71"
+    },
+    "fallback": "Only after exact prior trusted local SHA verification: torch.load(map_location=cpu, weights_only=False).",
+    "unknown_remote_pickle_loaded": false
+  },
+  "state": {
+    "tensor_count": 83,
+    "keys_missing": [],
+    "keys_extra": [],
+    "shape_mismatches": {},
+    "dtype_mismatches": {},
+    "tensor_content_fingerprint_sha256": "ccd9cd6e40c181752abadd8bc6aaa7d11bbba1f6d584a9a63f1bb192f08ca0e9",
+    "fingerprint_protocol": "sorted key + NUL + dtype + NUL + JSON shape + NUL + contiguous CPU numpy bytes",
+    "inventory": {
+      "normBNa.weight": {
+        "shape": [
+          1024
+        ],
+        "dtype": "torch.float32"
+      },
+      "normBNa.bias": {
+        "shape": [
+          1024
+        ],
+        "dtype": "torch.float32"
+      },
+      "normBNa.running_mean": {
+        "shape": [
+          1024
+        ],
+        "dtype": "torch.float32"
+      },
+      "normBNa.running_var": {
+        "shape": [
+          1024
+        ],
+        "dtype": "torch.float32"
+      },
+      "normBNa.num_batches_tracked": {
+        "shape": [],
+        "dtype": "torch.int64"
+      },
+      "normBNb.weight": {
+        "shape": [
+          1024
+        ],
+        "dtype": "torch.float32"
+      },
+      "normBNb.bias": {
+        "shape": [
+          1024
+        ],
+        "dtype": "torch.float32"
+      },
+      "normBNb.running_mean": {
+        "shape": [
+          1024
+        ],
+        "dtype": "torch.float32"
+      },
+      "normBNb.running_var": {
+        "shape": [
+          1024
+        ],
+        "dtype": "torch.float32"
+      },
+      "normBNb.num_batches_tracked": {
+        "shape": [],
+        "dtype": "torch.int64"
+      },
+      "normBNc.weight": {
+        "shape": [
+          1024
+        ],
+        "dtype": "torch.float32"
+      },
+      "normBNc.bias": {
+        "shape": [
+          1024
+        ],
+        "dtype": "torch.float32"
+      },
+      "normBNc.running_mean": {
+        "shape": [
+          1024
+        ],
+        "dtype": "torch.float32"
+      },
+      "normBNc.running_var": {
+        "shape": [
+          1024
+        ],
+        "dtype": "torch.float32"
+      },
+      "normBNc.num_batches_tracked": {
+        "shape": [],
+        "dtype": "torch.int64"
+      },
+      "normBNd.weight": {
+        "shape": [
+          1024
+        ],
+        "dtype": "torch.float32"
+      },
+      "normBNd.bias": {
+        "shape": [
+          1024
+        ],
+        "dtype": "torch.float32"
+      },
+      "normBNd.running_mean": {
+        "shape": [
+          1024
+        ],
+        "dtype": "torch.float32"
+      },
+      "normBNd.running_var": {
+        "shape": [
+          1024
+        ],
+        "dtype": "torch.float32"
+      },
+      "normBNd.num_batches_tracked": {
+        "shape": [],
+        "dtype": "torch.int64"
+      },
+      "normLNa.weight": {
+        "shape": [
+          1024
+        ],
+        "dtype": "torch.float32"
+      },
+      "normLNa.bias": {
+        "shape": [
+          1024
+        ],
+        "dtype": "torch.float32"
+      },
+      "normLNb.weight": {
+        "shape": [
+          1024
+        ],
+        "dtype": "torch.float32"
+      },
+      "normLNb.bias": {
+        "shape": [
+          1024
+        ],
+        "dtype": "torch.float32"
+      },
+      "normLNc.weight": {
+        "shape": [
+          1024
+        ],
+        "dtype": "torch.float32"
+      },
+      "normLNc.bias": {
+        "shape": [
+          1024
+        ],
+        "dtype": "torch.float32"
+      },
+      "normLNd.weight": {
+        "shape": [
+          1024
+        ],
+        "dtype": "torch.float32"
+      },
+      "normLNd.bias": {
+        "shape": [
+          1024
+        ],
+        "dtype": "torch.float32"
+      },
+      "linear_a.weight": {
+        "shape": [
+          1024,
+          300
+        ],
+        "dtype": "torch.float32"
+      },
+      "linear_a.bias": {
+        "shape": [
+          1024
+        ],
+        "dtype": "torch.float32"
+      },
+      "linear_v.weight": {
+        "shape": [
+          1024,
+          342
+        ],
+        "dtype": "torch.float32"
+      },
+      "linear_v.bias": {
+        "shape": [
+          1024
+        ],
+        "dtype": "torch.float32"
+      },
+      "linear_l.weight": {
+        "shape": [
+          1024,
+          1024
+        ],
+        "dtype": "torch.float32"
+      },
+      "linear_l.bias": {
+        "shape": [
+          1024
+        ],
+        "dtype": "torch.float32"
+      },
+      "gru_l.weight_ih_l0": {
+        "shape": [
+          1536,
+          1024
+        ],
+        "dtype": "torch.float32"
+      },
+      "gru_l.weight_hh_l0": {
+        "shape": [
+          1536,
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "gru_l.bias_ih_l0": {
+        "shape": [
+          1536
+        ],
+        "dtype": "torch.float32"
+      },
+      "gru_l.bias_hh_l0": {
+        "shape": [
+          1536
+        ],
+        "dtype": "torch.float32"
+      },
+      "gru_l.weight_ih_l0_reverse": {
+        "shape": [
+          1536,
+          1024
+        ],
+        "dtype": "torch.float32"
+      },
+      "gru_l.weight_hh_l0_reverse": {
+        "shape": [
+          1536,
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "gru_l.bias_ih_l0_reverse": {
+        "shape": [
+          1536
+        ],
+        "dtype": "torch.float32"
+      },
+      "gru_l.bias_hh_l0_reverse": {
+        "shape": [
+          1536
+        ],
+        "dtype": "torch.float32"
+      },
+      "gru_l.weight_ih_l1": {
+        "shape": [
+          1536,
+          1024
+        ],
+        "dtype": "torch.float32"
+      },
+      "gru_l.weight_hh_l1": {
+        "shape": [
+          1536,
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "gru_l.bias_ih_l1": {
+        "shape": [
+          1536
+        ],
+        "dtype": "torch.float32"
+      },
+      "gru_l.bias_hh_l1": {
+        "shape": [
+          1536
+        ],
+        "dtype": "torch.float32"
+      },
+      "gru_l.weight_ih_l1_reverse": {
+        "shape": [
+          1536,
+          1024
+        ],
+        "dtype": "torch.float32"
+      },
+      "gru_l.weight_hh_l1_reverse": {
+        "shape": [
+          1536,
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "gru_l.bias_ih_l1_reverse": {
+        "shape": [
+          1536
+        ],
+        "dtype": "torch.float32"
+      },
+      "gru_l.bias_hh_l1_reverse": {
+        "shape": [
+          1536
+        ],
+        "dtype": "torch.float32"
+      },
+      "graph_model.hyperedge_weight": {
+        "shape": [
+          1000
+        ],
+        "dtype": "torch.float32"
+      },
+      "graph_model.EW_weight": {
+        "shape": [
+          5200
+        ],
+        "dtype": "torch.float32"
+      },
+      "graph_model.hyperedge_attr1": {
+        "shape": [
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "graph_model.hyperedge_attr2": {
+        "shape": [
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "graph_model.modal_embeddings.weight": {
+        "shape": [
+          3,
+          1024
+        ],
+        "dtype": "torch.float32"
+      },
+      "graph_model.speaker_embeddings.weight": {
+        "shape": [
+          9,
+          1024
+        ],
+        "dtype": "torch.float32"
+      },
+      "graph_model.fc1.weight": {
+        "shape": [
+          512,
+          1024
+        ],
+        "dtype": "torch.float32"
+      },
+      "graph_model.fc1.bias": {
+        "shape": [
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "graph_model.hyperconv1.weight": {
+        "shape": [
+          512,
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "graph_model.hyperconv1.edgeweight": {
+        "shape": [
+          512,
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "graph_model.hyperconv1.bias": {
+        "shape": [
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "graph_model.hyperconv1.edgefc.weight": {
+        "shape": [
+          512,
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "graph_model.hyperconv1.edgefc.bias": {
+        "shape": [
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "graph_model.hyperconv2.weight": {
+        "shape": [
+          512,
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "graph_model.hyperconv2.edgeweight": {
+        "shape": [
+          512,
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "graph_model.hyperconv2.bias": {
+        "shape": [
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "graph_model.hyperconv2.edgefc.weight": {
+        "shape": [
+          512,
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "graph_model.hyperconv2.edgefc.bias": {
+        "shape": [
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "graph_model.hyperconv3.weight": {
+        "shape": [
+          512,
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "graph_model.hyperconv3.edgeweight": {
+        "shape": [
+          512,
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "graph_model.hyperconv3.bias": {
+        "shape": [
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "graph_model.hyperconv3.edgefc.weight": {
+        "shape": [
+          512,
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "graph_model.hyperconv3.edgefc.bias": {
+        "shape": [
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "graph_model.conv1.gate.weight": {
+        "shape": [
+          1,
+          1024
+        ],
+        "dtype": "torch.float32"
+      },
+      "graph_model.conv1.gate.bias": {
+        "shape": [
+          1
+        ],
+        "dtype": "torch.float32"
+      },
+      "graph_model.conv2.gate.weight": {
+        "shape": [
+          1,
+          1024
+        ],
+        "dtype": "torch.float32"
+      },
+      "graph_model.conv2.gate.bias": {
+        "shape": [
+          1
+        ],
+        "dtype": "torch.float32"
+      },
+      "graph_model.conv3.gate.weight": {
+        "shape": [
+          1,
+          1024
+        ],
+        "dtype": "torch.float32"
+      },
+      "graph_model.conv3.gate.bias": {
+        "shape": [
+          1
+        ],
+        "dtype": "torch.float32"
+      },
+      "hidfc.weight": {
+        "shape": [
+          7,
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "hidfc.bias": {
+        "shape": [
+          7
+        ],
+        "dtype": "torch.float32"
+      },
+      "smax_fc.weight": {
+        "shape": [
+          7,
+          3072
+        ],
+        "dtype": "torch.float32"
+      },
+      "smax_fc.bias": {
+        "shape": [
+          7
+        ],
+        "dtype": "torch.float32"
+      }
+    }
+  },
+  "export": {
+    "path": "/data2/yb/paper/lyx-msa/CMERC/checkpoints/baseline_candidates/meld_readme_fixed_20261025/model_state.pt",
+    "sha256": "1d446d95fc21d14fd550e20bed939e0510d7ac343284507dad9f40a4e2217c6d",
+    "bytes": 56495089,
+    "tensor_content_fingerprint_sha256": "ccd9cd6e40c181752abadd8bc6aaa7d11bbba1f6d584a9a63f1bb192f08ca0e9",
+    "safe_weights_only_load_passed": true,
+    "source_state_identical": true,
+    "weight_is_not_a_report_artifact": true
+  },
+  "official_cmerc_reference": {
+    "path": "/data2/yb/paper/lyx-msa/CMERC/checkpoints/MELD_checkpoint.pkl",
+    "sha256": "1c72e29c173b749675885bdd4f477bd5d3702ab7cca7eb03cb145850bf0beba7",
+    "tensor_count": 83,
+    "training_seed_epoch_selection": "unknown"
+  },
+  "data": {
+    "MELD_features_raw1.pkl": {
+      "path": "/data2/yb/paper/05_reproduction/external_repos/CMERC/data/MELD_features_raw1.pkl",
+      "size_bytes": 88193675,
+      "sha256": "d043b3ec1813c8917e2067af01e933ff0892d33d19d93595098aaf88c4b200b0",
+      "current_path": "/data2/yb/paper/05_reproduction/external_repos/CMERC/data/MELD_features_raw1.pkl",
+      "current_sha256": "d043b3ec1813c8917e2067af01e933ff0892d33d19d93595098aaf88c4b200b0"
+    },
+    "meld_features_roberta.pkl": {
+      "path": "/data2/yb/paper/05_reproduction/external_repos/CMERC/data/meld_features_roberta.pkl",
+      "size_bytes": 229654413,
+      "sha256": "58b2bdadc2eaec6abb40ac0cb3ffa3f31e929d636ece8197aecf1ca373a92951",
+      "current_path": "/data2/yb/paper/05_reproduction/external_repos/CMERC/data/meld_features_roberta.pkl",
+      "current_sha256": "58b2bdadc2eaec6abb40ac0cb3ffa3f31e929d636ece8197aecf1ca373a92951"
+    }
+  },
+  "runtime_code": {
+    "model.py": {
+      "sha256": "ee84329b800e37a8ac652b58aa6f0fc3dee47cb2cf38feda14f5c0de26ec9a82",
+      "identical_to_verified_cmerc_runtime": true
+    },
+    "model_cm.py": {
+      "sha256": "f08a6673649029ca0889b89dcc1ce47cb8a88126e023d46ee1cb874f6945a216",
+      "identical_to_verified_cmerc_runtime": true
+    },
+    "model_hyper.py": {
+      "sha256": "af6493cb63443b4ceaba5de0fece86db7e029c62d6f6fca931ba64b6ac5a1d86",
+      "identical_to_verified_cmerc_runtime": true
+    },
+    "HypergraphConv.py": {
+      "sha256": "9297a572e1763a74c7984eb75dfb15fa8143bf131a44cf50433c307ef7f3b5d2",
+      "identical_to_verified_cmerc_runtime": true
+    },
+    "dataloader.py": {
+      "sha256": "7ff80e8e2de73aa228effb4df56a5168c05068e8fa585a06d2e8b813e2aa4f95",
+      "identical_to_verified_cmerc_runtime": true
+    },
+    "train.py": {
+      "sha256": "35a18a2bf33d8e3e0d8459955b1f0ce525d4f28970f9af801fb27087bcf02ad7",
+      "identical_to_verified_cmerc_runtime": true
+    }
+  },
+  "training_server": {
+    "server": "local",
+    "host": "user23",
+    "gpu": "TITAN Xp",
+    "uuid": "GPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456"
+  },
+  "training_backend": {
+    "torch": "1.13.1+cu117",
+    "cuda": "11.7",
+    "cudnn_version": 8500,
+    "implementation": "Official nn.GRU, bidirectional, default cuDNN path; benchmark=False, deterministic=True; no ATen override in frozen entry point or launcher.",
+    "limitation": "Historical environment and frozen-source evidence; checkpoint does not embed a per-forward dispatched-kernel trace."
+  },
+  "causal": {
+    "argument_present": false,
+    "conclusion": "Official noncausal/bidirectional full-context model; no local causal variant loaded.",
+    "evidence": "Frozen model_cm.py nn.GRU(... bidirectional=True), official model and hypergraph source hashes; Model.__init__ AST identical to official inference model.py."
+  },
+  "prospective_evaluation": {
+    "server": "biggpu",
+    "gpu": "healthy V100, explicitly excluding physical GPU 4",
+    "reason": "User explicitly requests the verified official CMERC test protocol/environment.",
+    "strict_load_required": true,
+    "batch_size": 16,
+    "num_workers": 2,
+    "full_tav_only": true,
+    "cudnn_enabled": true,
+    "rnn_backend_matches_official_cmerc": true,
+    "no_training": true,
+    "no_modality_deletion": true,
+    "label_order": [
+      "neutral",
+      "surprise",
+      "fear",
+      "sadness",
+      "joy",
+      "disgust",
+      "anger"
+    ]
+  },
+  "risks": [
+    "Historical checkpoint was selected by first maximum rounded TEST weighted-F1 over 40 epochs, selected epoch 5: test-selection leakage; no independent validation selection.",
+    "Author CMERC training seed/epoch/model selection and correspondence to this local baseline are unknown.",
+    "Training was on local XP; this requested standardized inference is on biggpu V100. Do not conflate training server and evaluation server.",
+    "Descriptive fixed-weight behavior comparison may be feasible after inference alignment; strict training pairing and module causal attribution are not established."
+  ],
+  "candidate_policy": [
+    "User-prioritized official_readme_reproduction MELD baseline (selected).",
+    "runs/formal/baseline/MELD_official_test_seed67137/best.pt only if first technically incompatible.",
+    "runs/formal/baseline/MELD_validation_seed67137/best.pt only if preceding incompatible.",
+    "xp_mainline_validation MELD baseline only if preceding incompatible."
+  ],
+  "alternatives_checked_without_inference": [
+    {
+      "path": "/data2/yb/paper/lyx-msa/CMERC/runs/formal/baseline/MELD_official_test_seed67137/best.pt",
+      "exists": true,
+      "sha256": "c458dbb7b51d9c9294c2abb0b1c7a1dbea117375b04acbaaf360c5b3ca9e7db0",
+      "selected": false,
+      "reason": "First candidate already compatible; no test-score comparison or inference."
+    },
+    {
+      "path": "/data2/yb/paper/lyx-msa/CMERC/runs/formal/baseline/MELD_validation_seed67137/best.pt",
+      "exists": true,
+      "sha256": "c9cc2eb7578b38e279d6e73d391494eb498edb2ddff9cba3d5a3886ab48af86e",
+      "selected": false,
+      "reason": "First candidate already compatible; no test-score comparison or inference."
+    },
+    {
+      "path": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/baseline/MELD_validation_seed67137/best.pt",
+      "exists": true,
+      "sha256": "22a44516e58fc6f613879085d902cfb7e572c05fb2b50c06d16f4f1cf20bb96e",
+      "selected": false,
+      "reason": "First candidate already compatible; no test-score comparison or inference."
+    }
+  ],
+  "gpu_inference_in_this_audit": false,
+  "source_checkpoint_sha256_after": "a6ab85cb6c0c12054dade9c6bcdf01cfaa6abc417625059a927de5ba386d3738",
+  "source_unchanged": true
+}

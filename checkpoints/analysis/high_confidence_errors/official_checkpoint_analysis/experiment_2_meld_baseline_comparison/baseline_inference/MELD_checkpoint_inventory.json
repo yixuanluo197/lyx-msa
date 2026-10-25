@@ -1,0 +1,546 @@
+{
+  "path": "/data2/yb/paper/cmerc_reproduction_20261013/checkpoints/baseline_candidates/meld_readme_fixed_20261025/model_state.pt",
+  "sha256": "1d446d95fc21d14fd550e20bed939e0510d7ac343284507dad9f40a4e2217c6d",
+  "size_bytes": 56495089,
+  "structure": "OrderedDict",
+  "tensor_keys": 83,
+  "metadata_present": false,
+  "training_epoch": 5,
+  "training_seed": 67137,
+  "selection_protocol": "official_test_selection",
+  "source_training_metadata_present": true,
+  "source_training_checkpoint": "experiments/official_readme_reproduction/checkpoints/MELD_baseline_seed67137/best.pt",
+  "source_training_checkpoint_sha256": "a6ab85cb6c0c12054dade9c6bcdf01cfaa6abc417625059a927de5ba386d3738",
+  "source_training_server": "local user23 TITAN Xp",
+  "evaluation_server_change": "User requested evaluation under the already verified official CMERC V100/cuDNN protocol",
+  "identity": "Local M3Net baseline reproduced with official CMERC README protocol, epoch5 test-selected; not author-released baseline",
+  "requested_by_official_entry": "/data2/yb/paper/cmerc_reproduction_20261013/checkpoints/MELD_checkpoint.pkl",
+  "actual_loaded_checkpoint": "/data2/yb/paper/cmerc_reproduction_20261013/checkpoints/baseline_candidates/meld_readme_fixed_20261025/model_state.pt",
+  "source_repository": "https://github.com/HITSZ-HLT/CMERC",
+  "source_url": "Local reproduction; see MELD_baseline_checkpoint_audit.md",
+  "parameters": {
+    "normBNa.weight": {
+      "shape": [
+        1024
+      ],
+      "dtype": "torch.float32"
+    },
+    "normBNa.bias": {
+      "shape": [
+        1024
+      ],
+      "dtype": "torch.float32"
+    },
+    "normBNa.running_mean": {
+      "shape": [
+        1024
+      ],
+      "dtype": "torch.float32"
+    },
+    "normBNa.running_var": {
+      "shape": [
+        1024
+      ],
+      "dtype": "torch.float32"
+    },
+    "normBNa.num_batches_tracked": {
+      "shape": [],
+      "dtype": "torch.int64"
+    },
+    "normBNb.weight": {
+      "shape": [
+        1024
+      ],
+      "dtype": "torch.float32"
+    },
+    "normBNb.bias": {
+      "shape": [
+        1024
+      ],
+      "dtype": "torch.float32"
+    },
+    "normBNb.running_mean": {
+      "shape": [
+        1024
+      ],
+      "dtype": "torch.float32"
+    },
+    "normBNb.running_var": {
+      "shape": [
+        1024
+      ],
+      "dtype": "torch.float32"
+    },
+    "normBNb.num_batches_tracked": {
+      "shape": [],
+      "dtype": "torch.int64"
+    },
+    "normBNc.weight": {
+      "shape": [
+        1024
+      ],
+      "dtype": "torch.float32"
+    },
+    "normBNc.bias": {
+      "shape": [
+        1024
+      ],
+      "dtype": "torch.float32"
+    },
+    "normBNc.running_mean": {
+      "shape": [
+        1024
+      ],
+      "dtype": "torch.float32"
+    },
+    "normBNc.running_var": {
+      "shape": [
+        1024
+      ],
+      "dtype": "torch.float32"
+    },
+    "normBNc.num_batches_tracked": {
+      "shape": [],
+      "dtype": "torch.int64"
+    },
+    "normBNd.weight": {
+      "shape": [
+        1024
+      ],
+      "dtype": "torch.float32"
+    },
+    "normBNd.bias": {
+      "shape": [
+        1024
+      ],
+      "dtype": "torch.float32"
+    },
+    "normBNd.running_mean": {
+      "shape": [
+        1024
+      ],
+      "dtype": "torch.float32"
+    },
+    "normBNd.running_var": {
+      "shape": [
+        1024
+      ],
+      "dtype": "torch.float32"
+    },
+    "normBNd.num_batches_tracked": {
+      "shape": [],
+      "dtype": "torch.int64"
+    },
+    "normLNa.weight": {
+      "shape": [
+        1024
+      ],
+      "dtype": "torch.float32"
+    },
+    "normLNa.bias": {
+      "shape": [
+        1024
+      ],
+      "dtype": "torch.float32"
+    },
+    "normLNb.weight": {
+      "shape": [
+        1024
+      ],
+      "dtype": "torch.float32"
+    },
+    "normLNb.bias": {
+      "shape": [
+        1024
+      ],
+      "dtype": "torch.float32"
+    },
+    "normLNc.weight": {
+      "shape": [
+        1024
+      ],
+      "dtype": "torch.float32"
+    },
+    "normLNc.bias": {
+      "shape": [
+        1024
+      ],
+      "dtype": "torch.float32"
+    },
+    "normLNd.weight": {
+      "shape": [
+        1024
+      ],
+      "dtype": "torch.float32"
+    },
+    "normLNd.bias": {
+      "shape": [
+        1024
+      ],
+      "dtype": "torch.float32"
+    },
+    "linear_a.weight": {
+      "shape": [
+        1024,
+        300
+      ],
+      "dtype": "torch.float32"
+    },
+    "linear_a.bias": {
+      "shape": [
+        1024
+      ],
+      "dtype": "torch.float32"
+    },
+    "linear_v.weight": {
+      "shape": [
+        1024,
+        342
+      ],
+      "dtype": "torch.float32"
+    },
+    "linear_v.bias": {
+      "shape": [
+        1024
+      ],
+      "dtype": "torch.float32"
+    },
+    "linear_l.weight": {
+      "shape": [
+        1024,
+        1024
+      ],
+      "dtype": "torch.float32"
+    },
+    "linear_l.bias": {
+      "shape": [
+        1024
+      ],
+      "dtype": "torch.float32"
+    },
+    "gru_l.weight_ih_l0": {
+      "shape": [
+        1536,
+        1024
+      ],
+      "dtype": "torch.float32"
+    },
+    "gru_l.weight_hh_l0": {
+      "shape": [
+        1536,
+        512
+      ],
+      "dtype": "torch.float32"
+    },
+    "gru_l.bias_ih_l0": {
+      "shape": [
+        1536
+      ],
+      "dtype": "torch.float32"
+    },
+    "gru_l.bias_hh_l0": {
+      "shape": [
+        1536
+      ],
+      "dtype": "torch.float32"
+    },
+    "gru_l.weight_ih_l0_reverse": {
+      "shape": [
+        1536,
+        1024
+      ],
+      "dtype": "torch.float32"
+    },
+    "gru_l.weight_hh_l0_reverse": {
+      "shape": [
+        1536,
+        512
+      ],
+      "dtype": "torch.float32"
+    },
+    "gru_l.bias_ih_l0_reverse": {
+      "shape": [
+        1536
+      ],
+      "dtype": "torch.float32"
+    },
+    "gru_l.bias_hh_l0_reverse": {
+      "shape": [
+        1536
+      ],
+      "dtype": "torch.float32"
+    },
+    "gru_l.weight_ih_l1": {
+      "shape": [
+        1536,
+        1024
+      ],
+      "dtype": "torch.float32"
+    },
+    "gru_l.weight_hh_l1": {
+      "shape": [
+        1536,
+        512
+      ],
+      "dtype": "torch.float32"
+    },
+    "gru_l.bias_ih_l1": {
+      "shape": [
+        1536
+      ],
+      "dtype": "torch.float32"
+    },
+    "gru_l.bias_hh_l1": {
+      "shape": [
+        1536
+      ],
+      "dtype": "torch.float32"
+    },
+    "gru_l.weight_ih_l1_reverse": {
+      "shape": [
+        1536,
+        1024
+      ],
+      "dtype": "torch.float32"
+    },
+    "gru_l.weight_hh_l1_reverse": {
+      "shape": [
+        1536,
+        512
+      ],
+      "dtype": "torch.float32"
+    },
+    "gru_l.bias_ih_l1_reverse": {
+      "shape": [
+        1536
+      ],
+      "dtype": "torch.float32"
+    },
+    "gru_l.bias_hh_l1_reverse": {
+      "shape": [
+        1536
+      ],
+      "dtype": "torch.float32"
+    },
+    "graph_model.hyperedge_weight": {
+      "shape": [
+        1000
+      ],
+      "dtype": "torch.float32"
+    },
+    "graph_model.EW_weight": {
+      "shape": [
+        5200
+      ],
+      "dtype": "torch.float32"
+    },
+    "graph_model.hyperedge_attr1": {
+      "shape": [
+        512
+      ],
+      "dtype": "torch.float32"
+    },
+    "graph_model.hyperedge_attr2": {
+      "shape": [
+        512
+      ],
+      "dtype": "torch.float32"
+    },
+    "graph_model.modal_embeddings.weight": {
+      "shape": [
+        3,
+        1024
+      ],
+      "dtype": "torch.float32"
+    },
+    "graph_model.speaker_embeddings.weight": {
+      "shape": [
+        9,
+        1024
+      ],
+      "dtype": "torch.float32"
+    },
+    "graph_model.fc1.weight": {
+      "shape": [
+        512,
+        1024
+      ],
+      "dtype": "torch.float32"
+    },
+    "graph_model.fc1.bias": {
+      "shape": [
+        512
+      ],
+      "dtype": "torch.float32"
+    },
+    "graph_model.hyperconv1.weight": {
+      "shape": [
+        512,
+        512
+      ],
+      "dtype": "torch.float32"
+    },
+    "graph_model.hyperconv1.edgeweight": {
+      "shape": [
+        512,
+        512
+      ],
+      "dtype": "torch.float32"
+    },
+    "graph_model.hyperconv1.bias": {
+      "shape": [
+        512
+      ],
+      "dtype": "torch.float32"
+    },
+    "graph_model.hyperconv1.edgefc.weight": {
+      "shape": [
+        512,
+        512
+      ],
+      "dtype": "torch.float32"
+    },
+    "graph_model.hyperconv1.edgefc.bias": {
+      "shape": [
+        512
+      ],
+      "dtype": "torch.float32"
+    },
+    "graph_model.hyperconv2.weight": {
+      "shape": [
+        512,
+        512
+      ],
+      "dtype": "torch.float32"
+    },
+    "graph_model.hyperconv2.edgeweight": {
+      "shape": [
+        512,
+        512
+      ],
+      "dtype": "torch.float32"
+    },
+    "graph_model.hyperconv2.bias": {
+      "shape": [
+        512
+      ],
+      "dtype": "torch.float32"
+    },
+    "graph_model.hyperconv2.edgefc.weight": {
+      "shape": [
+        512,
+        512
+      ],
+      "dtype": "torch.float32"
+    },
+    "graph_model.hyperconv2.edgefc.bias": {
+      "shape": [
+        512
+      ],
+      "dtype": "torch.float32"
+    },
+    "graph_model.hyperconv3.weight": {
+      "shape": [
+        512,
+        512
+      ],
+      "dtype": "torch.float32"
+    },
+    "graph_model.hyperconv3.edgeweight": {
+      "shape": [
+        512,
+        512
+      ],
+      "dtype": "torch.float32"
+    },
+    "graph_model.hyperconv3.bias": {
+      "shape": [
+        512
+      ],
+      "dtype": "torch.float32"
+    },
+    "graph_model.hyperconv3.edgefc.weight": {
+      "shape": [
+        512,
+        512
+      ],
+      "dtype": "torch.float32"
+    },
+    "graph_model.hyperconv3.edgefc.bias": {
+      "shape": [
+        512
+      ],
+      "dtype": "torch.float32"
+    },
+    "graph_model.conv1.gate.weight": {
+      "shape": [
+        1,
+        1024
+      ],
+      "dtype": "torch.float32"
+    },
+    "graph_model.conv1.gate.bias": {
+      "shape": [
+        1
+      ],
+      "dtype": "torch.float32"
+    },
+    "graph_model.conv2.gate.weight": {
+      "shape": [
+        1,
+        1024
+      ],
+      "dtype": "torch.float32"
+    },
+    "graph_model.conv2.gate.bias": {
+      "shape": [
+        1
+      ],
+      "dtype": "torch.float32"
+    },
+    "graph_model.conv3.gate.weight": {
+      "shape": [
+        1,
+        1024
+      ],
+      "dtype": "torch.float32"
+    },
+    "graph_model.conv3.gate.bias": {
+      "shape": [
+        1
+      ],
+      "dtype": "torch.float32"
+    },
+    "hidfc.weight": {
+      "shape": [
+        7,
+        512
+      ],
+      "dtype": "torch.float32"
+    },
+    "hidfc.bias": {
+      "shape": [
+        7
+      ],
+      "dtype": "torch.float32"
+    },
+    "smax_fc.weight": {
+      "shape": [
+        7,
+        3072
+      ],
+      "dtype": "torch.float32"
+    },
+    "smax_fc.bias": {
+      "shape": [
+        7
+      ],
+      "dtype": "torch.float32"
+    }
+  },
+  "compatibility": {
+    "missing_keys": [],
+    "unexpected_keys": [],
+    "shape_mismatches": []
+  }
+}

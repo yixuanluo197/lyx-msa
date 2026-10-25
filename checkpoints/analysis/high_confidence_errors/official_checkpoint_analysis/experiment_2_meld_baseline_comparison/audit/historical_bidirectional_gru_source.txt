@@ -1,0 +1,24 @@
+Source: /data2/yb/paper/lyx-msa/CMERC/experiments/official_readme_reproduction/runtime_code/model_cm.py
+SHA-256: f08a6673649029ca0889b89dcc1ce47cb8a88126e023d46ee1cb874f6945a216
+Lines: 614-633
+
+614:         elif self.base_model == 'GRU':
+615:             #self.gru = nn.GRU(input_size=D_m, hidden_size=D_e, num_layers=2, bidirectional=True, dropout=dropout)
+616:             if 'a' in self.modals:
+617:                 hidden_a = D_g
+618:                 self.linear_a = nn.Linear(D_m_a, hidden_a)
+619:                 if self.av_using_lstm:
+620:                     self.gru_a = nn.GRU(input_size=hidden_a, hidden_size=D_g//2, num_layers=2, bidirectional=True, dropout=dropout)
+621:             if 'v' in self.modals:
+622:                 hidden_v = D_g
+623:                 self.linear_v = nn.Linear(D_m_v, hidden_v)
+624:                 if self.av_using_lstm:
+625:                     self.gru_v = nn.GRU(input_size=hidden_v, hidden_size=D_g//2, num_layers=2, bidirectional=True, dropout=dropout)
+626:             if 'l' in self.modals:
+627:                 hidden_l = D_g
+628:                 if self.use_bert_seq:
+629:                     self.txtCNN = TextCNN(input_dim=D_m, emb_size=hidden_l)
+630:                 else:
+631:                     self.linear_l = nn.Linear(D_m, hidden_l)
+632:                 self.gru_l = nn.GRU(input_size=hidden_l, hidden_size=D_g//2, num_layers=2, bidirectional=True, dropout=dropout)
+633:         elif self.base_model == 'Transformer':

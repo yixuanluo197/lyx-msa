@@ -47,6 +47,10 @@
 !/checkpoints/analysis/m3net_official_checkpoint_verification/predictions.npz
 !/checkpoints/analysis/m3net_official_checkpoint_verification/inference/IEMOCAP_predictions.npz
 
+# Audited MELD local-baseline prediction arrays, not model weights
+!/checkpoints/analysis/high_confidence_errors/official_checkpoint_analysis/experiment_2_meld_baseline_comparison/baseline_predictions.npz
+!/checkpoints/analysis/high_confidence_errors/official_checkpoint_analysis/experiment_2_meld_baseline_comparison/baseline_inference/MELD_predictions.npz
+
 # Python caches and local environments
 *.pyc
 __pycache__/

@@ -1,0 +1,24 @@
+Source: /data2/yb/paper/lyx-msa/CMERC/experiments/official_readme_reproduction/scripts/observe_run.py
+SHA-256: 7cd16d0bf3cc08813dd33dd1d7055a8ab016e73fd3e685118f2c48b0e19f52fc
+Lines: 119-138
+
+119:                 conf = probs.max(1); correct = preds == labels
+120:                 ece = 0.0
+121:                 for lower in np.linspace(0, 1, 16)[:-1]:
+122:                     mask = (conf > lower) & (conf <= lower+1/15)
+123:                     if mask.any():
+124:                         ece += mask.mean()*abs(correct[mask].mean()-conf[mask].mean())
+125:                 row.update(wf1_percent=float(f1_score(labels,preds,average="weighted")*100),
+126:                            accuracy_percent=float(accuracy_score(labels,preds)*100),
+127:                            macro_f1_percent=float(f1_score(labels,preds,average="macro")*100),
+128:                            cross_entropy_nll=float(-np.log(np.clip(probs[np.arange(len(labels)),labels],1e-30,1)).mean()),
+129:                            cel=sum(b["rank_loss"] for b in current["batches"]) if frame.f_globals["args"].calibrate or frame.f_globals["args"].contrastlearning else None,
+130:                            ece_15_percent=float(ece*100))
+131:                 if split == "test":
+132:                     if best is None or row["official_wf1_percent"] > best["official_wf1_percent"]:
+133:                         best = dict(row)
+134:                         checkpoint("best.pt", frame.f_globals, row["epoch"])
+135:                         write_json("best_test.json", row)
+136:                         np.savez_compressed(output/"best_predictions.npz", labels=labels, probs=probs)
+137:                     checkpoint("latest.pt", frame.f_globals, row["epoch"])
+138:             epochs.append(row)

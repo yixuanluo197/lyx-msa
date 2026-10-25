@@ -1,0 +1,29 @@
+{
+  "python": "3.10.13 | packaged by conda-forge | (main, Dec 23 2023, 15:36:39) [GCC 12.3.0]",
+  "executable": "/data2/yb/conda_envs/cmerc-xp-repro/bin/python",
+  "host": "user23",
+  "platform": "Linux-6.8.0-60-generic-x86_64-with-glibc2.39",
+  "torch_cuda": "11.7",
+  "cudnn": 8500,
+  "packages": {
+    "torch": "1.13.1+cu117",
+    "torch-geometric": "2.4.0",
+    "torch-scatter": "2.1.0+pt113cu117",
+    "torch-sparse": "0.6.15+pt113cu117",
+    "numpy": "1.26.4",
+    "scipy": "1.11.4",
+    "scikit-learn": "1.3.2",
+    "pandas": "1.5.3",
+    "ipdb": "0.13.13",
+    "tqdm": "4.67.1"
+  },
+  "environment": {
+    "CUDA_VISIBLE_DEVICES": null,
+    "LD_LIBRARY_PATH": "/data2/yb/conda_envs/cmerc-xp-repro/lib/python3.10/site-packages/nvidia/cusparse/lib",
+    "OMP_NUM_THREADS": null,
+    "MKL_NUM_THREADS": null,
+    "OPENBLAS_NUM_THREADS": null,
+    "PYTHONHASHSEED": null,
+    "PYTORCH_CUDA_ALLOC_CONF": null
+  }
+}

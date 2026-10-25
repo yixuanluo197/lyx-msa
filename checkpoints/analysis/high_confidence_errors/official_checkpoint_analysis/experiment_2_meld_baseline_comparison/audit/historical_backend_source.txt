@@ -1,0 +1,19 @@
+Source: /data2/yb/paper/lyx-msa/CMERC/experiments/official_readme_reproduction/runtime_code/train_cm.py
+SHA-256: fd3dbe7dc5e6c50ee5e884ce34e6f434aeb765059b9760c9b5cc8fb17a439717
+Lines: 32-46
+
+32:         else:
+33:             weights.append(total/labels_dict[i])
+34:     return weights
+35: 
+36: # seed = 1475 # We use seed = 1475 on IEMOCAP and seed = 67137 on MELD
+37: def seed_everything(seed):
+38:     random.seed(seed)
+39:     np.random.seed(seed)
+40:     torch.manual_seed(seed)
+41:     torch.cuda.manual_seed(seed)
+42:     torch.cuda.manual_seed_all(seed)
+43:     torch.backends.cudnn.benchmark = False
+44:     torch.backends.cudnn.deterministic = True
+45: 
+46: def _init_fn(worker_id):

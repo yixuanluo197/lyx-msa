@@ -1,0 +1,21 @@
+--- official_code/model_hyper.py
++++ runtime_code/model_hyper.py
+@@ -13,7 +13,6 @@
+ from HypergraphConv import HypergraphConv
+ from torch_geometric.nn import GCNConv
+ from itertools import permutations
+-from torch_geometric.nn.pool.topk_pool import topk
+ from torch_geometric.nn import global_mean_pool as gap, global_max_pool as gmp, global_add_pool as gsp
+ from torch_geometric.nn.inits import glorot
+ from torch_geometric.nn.conv.gcn_conv import gcn_norm
+--- official_code/HypergraphConv.py
++++ runtime_code/HypergraphConv.py
+@@ -148,7 +148,7 @@
+                              size=(num_nodes, num_edges))                   #num_edges,1,100
+         self.flow = 'target_to_source'
+         out = self.propagate(hyperedge_index, x=out, norm=D, alpha=alpha,
+-                             size=(num_edges, num_nodes))                   #num_nodes,1,100
++                             size=(num_nodes, num_edges))                   #num_nodes,1,100
+         if self.concat is True and out.size(1) == 1:
+             out = out.view(-1, self.heads * self.out_channels)
+         else:
