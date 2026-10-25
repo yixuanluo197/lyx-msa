@@ -1,0 +1,17 @@
+{
+  "created_at_utc": "2026-10-25T05:28:55.765205+00:00",
+  "status": "passed",
+  "reviewer": "Codex native subagent iem_batch_audit",
+  "scientific_start_blockers": [],
+  "checks": [
+    "same67137 historical control; only scientific dropout0.4to0.5",
+    "batch16 lr1e-4 rec_dropout0.1 split1475",
+    "physicalGPU0 UUID and CVD match healthy mapping",
+    "single formal budget, no implicit repeat; zero new test forward guard",
+    "four model attribute audit preserves RNG",
+    "40epoch sampler replay2548 optimizer steps320validation batches",
+    "dynamic14protected roots2011historical files"
+  ],
+  "audit_incident_separately_disclosed": "provenance/test_metric_access_incident.json",
+  "reviewer_gpu_or_model_forward": false
+}

@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "reviewer": "iem_batch_audit",
+  "scope": [
+    "CPU best/latest模型、Adam、RNG与args",
+    "40轮/2548步及排列哈希",
+    "47+4冻结项独立重哈希",
+    "最终报告与comparison.csv复核"
+  ],
+  "no_model_forward": true,
+  "no_gpu_evaluation": true,
+  "report_review": "mixed_evidence、末段/Loss方向、历史字段偶然访问披露均准确",
+  "limits": "未重复2011项历史哈希；该检查由完整final_verification完成"
+}

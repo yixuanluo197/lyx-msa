@@ -20,6 +20,7 @@
 | MELD学习率第二Seed确认 | 本地 `user23` / TITAN Xp GPU3 | MELD seed2024、lr0.0002，唯一40轮完整CMERC；validation/continuous/ATen，零测试前向 | 训练与技术验收完成；主指标收益未确认 | [08_lr_second_seed_confirmation](08_lr_second_seed_confirmation/GITHUB_DELIVERY.md) |
 | MELD Batch Size诊断 | 本地 `user23` / TITAN Xp GPU1 | MELD seed2024、lr0.0001、Batch8，完成唯一40轮；验证选模、零测试前向 | 最佳验证65.89%/第9轮，末10轮63.048%；独立验收通过 | [09_batch_size_diagnosis](09_batch_size_diagnosis/GITHUB_DELIVERY.md) |
 | MELD Dropout诊断 | 本地 `user23` / TITAN Xp GPU3 | MELD seed2024、lr0.0001、Batch16、Dropout0.5，唯一40轮；验证选模、零测试前向 | 最佳66.49%/e15、末10轮62.775%；验收通过，第二Seed候选 | [10_dropout_diagnosis](10_dropout_diagnosis/README.md) |
+| MELD Dropout第二Seed确认 | 本地 `user23` / TITAN Xp GPU0 | MELD seed67137、lr0.0001、Batch16、Dropout0.5，唯一40轮；验证选模、零新增测试前向 | 最佳66.41%/e17、末10轮62.440%；验收通过，混合证据 | [11_dropout_second_seed_confirmation](11_dropout_second_seed_confirmation/README.md) |
 
 ## 如何交给 GPT 审查
 
@@ -52,3 +53,5 @@
 09按登记规则为最佳验证主指标未改善（65.89% vs 66.01%），末10轮改善1.825个百分点仅作辅助线索；暂不追加第二Seed或最终五Seed。两loader分组与历史GPU物理卡均变化，限制严格机制归因。
 
 10仅提高Dropout0.4→0.5，保持XP04同Seed及其余解析科学参数。最佳和末段W-F1均提高，但验证分类Loss升高，单Seed不证明稳定收益或过拟合根因；只建议另行登记第二Seed，本组未执行额外训练或测试。
+
+11复用10的seed2024，以seed67137做唯一第二Seed确认：最佳+1.17 pp但末段−0.469 pp、波动增大；两Seed最佳均提高而末段方向不一致，未满足原登记完整一致性规则，暂缓五Seed。验证分类Loss未改善；偶然历史测试字段访问事件已公开说明，未据测试决策、零新增测试前向。

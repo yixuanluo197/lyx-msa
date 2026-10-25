@@ -1,0 +1,33 @@
+{
+  "selected_at_utc": "2026-10-25T05:24:20.047178+00:00",
+  "index": 0,
+  "uuid": "GPU-7ff18ebb-100e-98fe-038b-a98bd4f94248",
+  "host": "user23",
+  "co_resident_processes": [
+    {
+      "pid": 3875951,
+      "name": "/home/yangbin/miniconda3/envs/multimodalerc310/bin/python",
+      "used_memory_mib": 1892
+    },
+    {
+      "pid": 3900060,
+      "name": "/home/yangbin/miniconda3/envs/multimodalerc310/bin/python",
+      "used_memory_mib": 1892
+    }
+  ],
+  "selection_before_any_gpu_call": true,
+  "reason": "XP04 seed67137 control used same physicalGPU0; sufficient sampled capacity, requires3fresh samples before each GPU stage",
+  "control_gpu_evidence": {
+    "source": "experiment_records/04_xp_mainline_validation/provenance/run_supplements/MELD_cmerc_validation_seed67137.json",
+    "lines": [
+      3140,
+      3146,
+      3152
+    ],
+    "gpu_index": 0,
+    "gpu_uuid": "GPU-7ff18ebb-100e-98fe-038b-a98bd4f94248",
+    "auditor": "iem_batch_audit"
+  },
+  "raw_apps_query": "GPU-7ff18ebb-100e-98fe-038b-a98bd4f94248, 3875951, /home/yangbin/miniconda3/envs/multimodalerc310/bin/python, 1892\nGPU-7ff18ebb-100e-98fe-038b-a98bd4f94248, 3900060, /home/yangbin/miniconda3/envs/multimodalerc310/bin/python, 1892\nGPU-eed2f34f-b4c0-7b7a-498e-71a026e30c5a, 3876912, /home/yangbin/miniconda3/envs/multimodalerc310/bin/python, 1892\nGPU-eed2f34f-b4c0-7b7a-498e-71a026e30c5a, 3897735, /home/yangbin/miniconda3/envs/multimodalerc310/bin/python, 1892\nGPU-d17e4326-9d3b-2025-fbf8-c9b0d16623a0, 2966262, /home/yyl/anaconda3/envs/lerobot/bin/python3.1, 11566\nGPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456, 3870268, /home/yangbin/miniconda3/envs/multimodalerc310/bin/python, 1892\nGPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456, 3877234, /home/yangbin/miniconda3/envs/multimodalerc310/bin/python, 1892\n",
+  "freeze_occupancy_at_utc": "2026-10-25T05:30:42.649613+00:00"
+}

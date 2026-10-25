@@ -1,0 +1,15 @@
+{
+  "recorded_at_utc": "2026-10-25T05:24:20.047404+00:00",
+  "scope": "read-only historical GPU provenance audit",
+  "actor": "Codex native subagent iem_batch_audit",
+  "event": "Whole mixed run_supplement was printed while locating device metadata and historical test-summary fields were incidentally exposed to that auditor",
+  "affected_artifact": "experiment_records/04_xp_mainline_validation/provenance/run_supplements/MELD_cmerc_validation_seed67137.json",
+  "test_metric_values_omitted": true,
+  "new_test_forward_passes": 0,
+  "configuration_preassigned_by_user": true,
+  "scientific_configuration_derived_from_test_metrics": false,
+  "model_selection_derived_from_test_metrics": false,
+  "containment": "No further mixed-summary/test-metric inspection; use explicit train/validation projections and device-only evidence; retain exact incident rather than claim no historical test exposure",
+  "impact": "Does not change the user-prespecified science configuration or validation-only selection; zero new test forwards is distinct from historical test-field access",
+  "registration_created_before_incident_acknowledgement": "2026-10-25T05:22:19.304367+00:00"
+}

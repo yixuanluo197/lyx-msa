@@ -1,0 +1,9 @@
+{
+  "captured_at_utc": "2026-10-25T05:24:52.770580+00:00",
+  "command": [
+    "nvidia-smi",
+    "--query-compute-apps=gpu_uuid,pid,process_name,used_gpu_memory",
+    "--format=csv,noheader,nounits"
+  ],
+  "stdout": "GPU-7ff18ebb-100e-98fe-038b-a98bd4f94248, 3857195, /home/yangbin/miniconda3/envs/multimodalerc310/bin/python, 1796\nGPU-7ff18ebb-100e-98fe-038b-a98bd4f94248, 3875951, /home/yangbin/miniconda3/envs/multimodalerc310/bin/python, 1892\nGPU-eed2f34f-b4c0-7b7a-498e-71a026e30c5a, 3869929, /home/yangbin/miniconda3/envs/multimodalerc310/bin/python, 1270\nGPU-eed2f34f-b4c0-7b7a-498e-71a026e30c5a, 3876912, /home/yangbin/miniconda3/envs/multimodalerc310/bin/python, 1892\nGPU-d17e4326-9d3b-2025-fbf8-c9b0d16623a0, 2966262, /home/yyl/anaconda3/envs/lerobot/bin/python3.1, 11566\nGPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456, 3870268, /home/yangbin/miniconda3/envs/multimodalerc310/bin/python, 1892\nGPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456, 3877234, /home/yangbin/miniconda3/envs/multimodalerc310/bin/python, 1892\n"
+}

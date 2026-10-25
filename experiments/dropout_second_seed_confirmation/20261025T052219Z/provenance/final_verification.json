@@ -1,0 +1,181 @@
+{
+  "status": "passed",
+  "created_at_utc": "2026-10-25T06:15:15.109512+00:00",
+  "formal_runs": 1,
+  "test_forwards": 0,
+  "cuda_initialized": false,
+  "historical_files_unchanged": {
+    "experiment_records/04_xp_mainline_validation": 295,
+    "experiment_records/05_official_readme_reproduction": 2,
+    "experiment_records/06_minimal_ablation_validation": 2,
+    "experiment_records/07_learning_rate_diagnosis": 2,
+    "experiment_records/08_lr_second_seed_confirmation": 3,
+    "experiments/xp_mainline_validation/20261016T050823Z": 649,
+    "experiments/official_readme_reproduction": 208,
+    "experiments/minimal_ablation_validation/20261023T043115Z": 201,
+    "experiments/learning_rate_diagnosis/20261023T084353Z": 196,
+    "experiments/lr_second_seed_confirmation/20261023T175409Z": 133,
+    "experiment_records/09_batch_size_diagnosis": 8,
+    "experiments/batch_size_diagnosis/20261024T131956Z": 182,
+    "experiment_records/10_dropout_diagnosis": 3,
+    "experiments/dropout_diagnosis/20261025T032711Z": 127
+  },
+  "frozen_sources_and_inputs_unchanged": true,
+  "resource_evidence": {
+    "status": "limited",
+    "admissions_passed_registered_three_sample_policy": true,
+    "preregistered_co_resident_pids": [
+      3875951,
+      3900060
+    ],
+    "observed_foreign_pids": [
+      3875951,
+      3900060,
+      3939506,
+      3939591,
+      3969736,
+      3988595,
+      4006524,
+      4026340
+    ],
+    "admission_min_free_mib": 3000,
+    "admission_max_utilization_percent": 95,
+    "new_foreign_pids_pause_admission": false,
+    "resource_samples": 256,
+    "all_foreign_process_samples": 256,
+    "allowed_preexisting_pid_samples": 97,
+    "new_foreign_pid_samples": 192,
+    "new_foreign_pids": [
+      3939506,
+      3939591,
+      3969736,
+      3988595,
+      4006524,
+      4026340
+    ],
+    "resource_query_errors": 0,
+    "minimum_free_mib": 5955,
+    "minimum_free_mib_during_formal": 5955,
+    "maximum_utilization_percent": 96,
+    "limits": [
+      "GPU co-residency is allowed; preregistered PIDs are disclosure records, not an exclusive allowlist.",
+      "New foreign PIDs are recorded and do not block admission when the registered memory/utilization conditions pass.",
+      "Resource pressure and query errors are recorded without terminating any task; failed queries cannot authorize admission.",
+      "Discrete nvidia-smi samples cannot establish continuous resource isolation."
+    ]
+  },
+  "runs": {
+    "MELD_cmerc_dropout0p5_lr1e-4_seed67137": {
+      "status": "passed",
+      "epochs": 40,
+      "selected_epoch": 17,
+      "validation_best_wf1": 66.41,
+      "validation_last10_wf1": 62.44,
+      "train_batches": 2548,
+      "loss_and_gradient_finite": true,
+      "every_epoch_order_matches_historical_and_registered_batch16_replay": true,
+      "unchanged_sampler_AST_and_historical_batch16_replay_passed": true,
+      "train_and_validation_batch_size": 16,
+      "lr_unchanged_from_xp04": 0.0001,
+      "dropout": 0.5,
+      "rec_dropout_metadata": 0.1,
+      "module_audit": {
+        "cli_dropout": 0.5,
+        "cli_rec_dropout_metadata": 0.1,
+        "models": {
+          "model": {
+            "class": "Model",
+            "language_gru": {
+              "dropout": 0.5,
+              "num_layers": 2,
+              "bidirectional": true
+            },
+            "hidden_dropout_p": 0.5,
+            "registered_dropout_modules": {
+              "dropout_": 0.5
+            },
+            "registered_fixed_modality_dropouts": {}
+          },
+          "model_mm": {
+            "class": "Model",
+            "language_gru": {
+              "dropout": 0.5,
+              "num_layers": 2,
+              "bidirectional": true
+            },
+            "hidden_dropout_p": 0.5,
+            "registered_dropout_modules": {
+              "dropout_": 0.5
+            },
+            "registered_fixed_modality_dropouts": {}
+          },
+          "model_intra": {
+            "class": "Model_Intra",
+            "language_gru": {
+              "dropout": 0.5,
+              "num_layers": 2,
+              "bidirectional": true
+            },
+            "hidden_dropout_p": 0.5,
+            "registered_dropout_modules": {
+              "dropout_": 0.5
+            },
+            "registered_fixed_modality_dropouts": {}
+          },
+          "model_inter": {
+            "class": "Model_Inter",
+            "language_gru": {
+              "dropout": 0.5,
+              "num_layers": 2,
+              "bidirectional": true
+            },
+            "hidden_dropout_p": 0.5,
+            "registered_dropout_modules": {
+              "dropout_": 0.5
+            },
+            "registered_fixed_modality_dropouts": {}
+          }
+        },
+        "fixed_modality_dropout_definition": {
+          "class": "MMGatedAttention",
+          "values": {
+            "dropouta": 0.5,
+            "dropoutv": 0.5,
+            "dropoutl": 0.5
+          },
+          "active_instances": {
+            "model": false,
+            "model_mm": false,
+            "model_intra": false,
+            "model_inter": false
+          },
+          "note": "No UnimodalEncoder class in this frozen source; gated attention is not instantiated by concat_DHT."
+        },
+        "rng_before": "858a766f250f173fb74c223f23dd430725d4796405461e8ef8ded8ea12ae3f32",
+        "rng_after": "858a766f250f173fb74c223f23dd430725d4796405461e8ef8ded8ea12ae3f32"
+      },
+      "test_forwards": 0,
+      "checkpoints": {
+        "best.pt": {
+          "epoch": 17,
+          "sha256": "d7e93f485575e8683f41055afe2fc07796b249e3a4562e3ceb2168b8ca45db0f",
+          "model_and_adam_finite": true,
+          "full_rng_present": true
+        },
+        "latest.pt": {
+          "epoch": 40,
+          "sha256": "558fbec74284e8ff5132f1a984471901dd5c3b4c1ac71df1c6b4506104ebe5f8",
+          "model_and_adam_finite": true,
+          "full_rng_present": true
+        }
+      }
+    }
+  },
+  "limits": [
+    "This is one registered dropout0.5 diagnosis, not a completed five-seed study.",
+    "CLI dropout changes the language GRU inter-layer dropout and hidden-feature dropout; rec_dropout0.1 remains metadata.",
+    "The selected healthy XP GPU may be shared with observed foreign PIDs under the registered capacity gate; resource isolation is limited.",
+    "Author difficulty generation history unknown.",
+    "No test or final independent evaluation performed in this stage."
+  ]
+}

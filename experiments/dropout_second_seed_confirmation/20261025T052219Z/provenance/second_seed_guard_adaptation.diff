@@ -1,0 +1,99 @@
+--- 10/scripts/watch_training.py
++++ 11/scripts/watch_training.py
+@@ -86,6 +86,8 @@
+     assert actual['rec_dropout'] == expected['rec_dropout'] == run['rec_dropout'] == .1
+     assert actual['skip_final_test'] is True
+     assert actual['seed'] == run['seed'] and actual['epochs'] == run['epochs']
++    assert actual['seed'] == 67137 and actual['split_seed'] == expected['split_seed'] == 1475
++    assert actual['Dataset'] == run['dataset'] == 'MELD'
+     assert actual['selection_protocol'] == 'validation' and actual['testing'] is False
+     assert actual['rng_policy'] == 'continuous' and actual['rnn_backend'] == 'aten'
+     assert actual['batch_policy'] == 'capacity_safe' and actual['num_workers'] == 0
+--- 10/scripts/check_capacity.py
++++ 11/scripts/check_capacity.py
+@@ -84,7 +84,7 @@
+     for run in registry['runs']:
+         ds = run['dataset']
+         ref = references[f"{ds}_{run['seed']}"]
+-        assert ds == 'MELD' and run['seed'] == 2024 and run['epochs'] == 40
++        assert ds == 'MELD' and run['seed'] == 67137 and run['epochs'] == 40
+         assert run['batch_size'] == run['validation_batch_size'] == 16
+         assert ref['args']['batch_size'] == 16 and ref['args']['lr'] == run['lr'] == 1e-4
+         assert ref['args']['dropout'] == .4 and run['dropout'] == .5
+--- 10/scripts/run_single.py
++++ 11/scripts/run_single.py
+@@ -280,7 +280,7 @@
+     registry = read(ROOT / 'configs/registry.json')
+     assert registry['formal_run_count'] == len(registry['runs']) == 1
+     run = registry['runs'][0]
+-    assert (run['run_id'], run['dataset'], run['seed'], run['lr'], run['epochs'], run['batch_size'], run['validation_batch_size'], run['dropout'], run['rec_dropout']) == ('MELD_cmerc_dropout0p5_lr1e-4_seed2024', 'MELD', 2024, .0001, 40, 16, 16, .5, .1)
++    assert (run['run_id'], run['dataset'], run['seed'], run['lr'], run['epochs'], run['batch_size'], run['validation_batch_size'], run['dropout'], run['rec_dropout']) == ('MELD_cmerc_dropout0p5_lr1e-4_seed67137', 'MELD', 67137, .0001, 40, 16, 16, .5, .1)
+     assert float(run['argv'][run['argv'].index('--lr')+1]) == .0001
+     assert int(run['argv'][run['argv'].index('--batch-size')+1]) == 16
+     assert float(run['argv'][run['argv'].index('--dropout')+1]) == .5
+--- 10/scripts/verify_lr.py
++++ 11/scripts/verify_lr.py
+@@ -112,7 +112,7 @@
+     registry = read(ROOT/'configs/registry.json')
+     assert registry['formal_run_count'] == len(registry['runs']) == 1
+     registered = registry['runs'][0]
+-    assert (registered['dataset'],registered['seed'],registered['lr'],registered['epochs'],registered['batch_size'],registered['validation_batch_size'],registered['dropout'],registered['rec_dropout']) == ('MELD',2024,.0001,40,16,16,.5,.1)
++    assert (registered['dataset'],registered['seed'],registered['lr'],registered['epochs'],registered['batch_size'],registered['validation_batch_size'],registered['dropout'],registered['rec_dropout']) == ('MELD',67137,.0001,40,16,16,.5,.1)
+     state = read(ROOT/'state/status.json')
+     assert not state['active'] and state['phase'] == 'completed'
+     assert state['formal_started'] == state['formal_completed'] == 1
+--- 10/scripts/test_training_guard.py
++++ 11/scripts/test_training_guard.py
+@@ -51,7 +51,7 @@
+     provenance = {'split': split, 'data': {},
+                   'source': {'files': {'train_cm.py': 'old', 'model.py': 'unchanged'}}}
+     old = dict(lr=.0001, batch_size=16, skip_final_test=False, output_dir='/old', provenance=provenance,
+-               dropout=.4, rec_dropout=.1, seed=2024, epochs=2, selection_protocol='validation', testing=False,
++               dropout=.4, rec_dropout=.1, seed=67137, split_seed=1475, Dataset='MELD', epochs=2, selection_protocol='validation', testing=False,
+                rng_policy='continuous', rnn_backend='aten', batch_policy='capacity_safe',
+                num_workers=0, calibrate=True, contrastlearning=True, courselearning=True,
+                rank_coff=.002, mscl_coff=.15, cscl_coff=.15)
+@@ -60,7 +60,7 @@
+     actual.update(dropout=.5, skip_final_test=True, output_dir='/new')
+     actual['provenance']['source']['files']['train_cm.py'] = 'patched'
+     run = dict(lr=.0001, batch_size=16, validation_batch_size=16, dropout=.5, rec_dropout=.1,
+-               seed=2024, epochs=2, split_hash='split')
++               seed=67137, dataset='MELD', epochs=2, split_hash='split')
+     return argparse.Namespace(**actual), historical, run
+ 
+ 
+@@ -106,7 +106,7 @@
+         args, old, run = fixture()
+         assert_scientific_pair(args, old, run, 'patched')
+         for field, value in [('lr', .0002), ('seed', 42), ('batch_size', 8), ('dropout', .4), ('rec_dropout', .2),
+-                             ('mscl_coff', .2), ('calibrate', False), ('split_seed', 2024)]:
++                             ('mscl_coff', .2), ('calibrate', False), ('split_seed', 67137)]:
+             actual, historical, registered = fixture()
+             setattr(actual, field, value)
+             with self.subTest(field=field), self.assertRaises(AssertionError):
+@@ -224,12 +224,12 @@
+         keys = list(range(17))
+         labels = {key: list(range(1 + key % 3)) for key in keys}
+         before = torch.get_rng_state().clone()
+-        a, b = replay(old,keys,labels,16,2024), replay(new,keys,labels,16,2024)
++        a, b = replay(old,keys,labels,16,67137), replay(new,keys,labels,16,67137)
+         self.assertEqual(a[0], b[0])
+         self.assertTrue(torch.equal(a[1], b[1]))
+         self.assertEqual(a[2:], b[2:])
+         self.assertEqual([len(batch) for batch in b[0]], [16,1])
+-        historical16 = replay(old,keys,labels,16,2024)
++        historical16 = replay(old,keys,labels,16,67137)
+         self.assertEqual([len(batch) for batch in historical16[0]], [16,1])
+         self.assertTrue(torch.equal(before,torch.get_rng_state()))
+ 
+--- 10/scripts/test_resource_policy.py
++++ 11/scripts/test_resource_policy.py
+@@ -168,7 +168,7 @@
+             runtime.verify_probe(run)
+ 
+     def registry(self):
+-        run = {'run_id': 'MELD_cmerc_dropout0p5_lr1e-4_seed2024', 'dataset': 'MELD', 'seed': 2024,
++        run = {'run_id': 'MELD_cmerc_dropout0p5_lr1e-4_seed67137', 'dataset': 'MELD', 'seed': 67137,
+                'lr': .0001, 'epochs': 40, 'batch_size': 16, 'validation_batch_size': 16, 'dropout': .5, 'rec_dropout': .1,
+                'argv': ['--lr', '0.0001', '--batch-size', '16', '--dropout', '0.5', '--rec-dropout', '0.1'],
+                'output_root': str(self.root / 'runs/formal')}

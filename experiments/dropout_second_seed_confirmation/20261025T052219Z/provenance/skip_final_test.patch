@@ -1,0 +1,29 @@
+--- a/train_cm.py
++++ b/train_cm.py
+@@ -928,6 +928,8 @@
+     parser.add_argument('--selection-protocol', choices=['official_test', 'validation'],
+                         default='official_test',
+                         help='official_test faithfully selects on test W-F1; validation selects on a held-out validation split')
++    parser.add_argument('--skip-final-test', action='store_true',
++                        help='validation-only diagnosis: do not evaluate the test loader after training')
+     parser.add_argument('--output-dir', default='runs/train_cm',
+                         help='root directory for JSONL logs and latest/best checkpoints')
+     parser.add_argument('--resume', default=None,
+@@ -938,6 +940,8 @@
+     args = parser.parse_args()
+     if args.seed is None:
+         parser.error('--seed must be specified')
++    if args.skip_final_test and (args.selection_protocol != 'validation' or args.testing):
++        parser.error('--skip-final-test requires validation selection and forbids --testing')
+     if args.require_noncausal and args.causal:
+         parser.error('--require-noncausal forbids --causal')
+     if args.batch_policy == 'capacity_safe' and (args.causal or args.selection_protocol != 'validation'
+@@ -1409,7 +1413,7 @@
+                 print(classification_report(best_label, best_pred, sample_weight=best_mask,digits=4))
+                 print(confusion_matrix(best_label,best_pred,sample_weight=best_mask))
+ 
+-    if args.selection_protocol == 'validation' and best_checkpoint_path.exists():
++    if args.selection_protocol == 'validation' and not args.skip_final_test and best_checkpoint_path.exists():
+         best_checkpoint = torch.load(best_checkpoint_path, map_location='cpu')
+         model.load_state_dict(best_checkpoint['model_state_dict'])
+         if cuda:

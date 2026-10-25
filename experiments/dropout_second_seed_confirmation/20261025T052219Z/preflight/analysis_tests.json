@@ -1,0 +1,19 @@
+{
+  "recorded_at_utc": "2026-10-25T05:30:26.287963+00:00",
+  "command": [
+    "/data2/yb/conda_envs/cmerc-xp-repro/bin/python",
+    "/data2/yb/paper/lyx-msa/CMERC/experiments/dropout_second_seed_confirmation/20261025T052219Z/scripts/test_dropout_confirmation_analysis.py"
+  ],
+  "returncode": 0,
+  "tests": 10,
+  "stdout": "",
+  "stderr": "test_candidate_requires_both_metrics (__main__.AnalysisRules) ... ok\ntest_completion_rejects_early_and_test (__main__.AnalysisRules) ... ok\ntest_final_verifier_gate_rejects_nonpassed_and_test (__main__.AnalysisRules) ... ok\ntest_first_max_tie (__main__.AnalysisRules) ... ok\ntest_fixed_last10 (__main__.AnalysisRules) ... ok\ntest_only_registered_dropout_change_allowed (__main__.AnalysisRules) ... ok\ntest_partial_watcher_cannot_pass (__main__.AnalysisRules) ... ok\ntest_second_seed_mixed (__main__.AnalysisRules) ... ok\ntest_second_seed_tail_cannot_replace_best (__main__.AnalysisRules) ... ok\ntest_two_seed_confirmation (__main__.AnalysisRules) ... ok\n\n----------------------------------------------------------------------\nRan 10 tests in 0.001s\n\nOK\n",
+  "cuda_visible_devices": "",
+  "scope": "pure synthetic CPU tests; no analysis main, plotting main, model or test metric reads",
+  "red_stage": "Before missing final verification and watcher gates were implemented, 10 tests ran: 8 passed and 2 failed with missing verify_final/verify_watch AttributeError. Green stage below follows implementation.",
+  "scripts_sha256": {
+    "analyze_dropout_confirmation.py": "6b0cd87a4e1ccc77d8691ffac2d4af8a66d04235af3caf44b0e3146ce01b7a82",
+    "plot_dropout_confirmation.py": "8d8c4921d35063116686614dfdffdfca47c38935fae69ef4aae1dd9879629d9f",
+    "test_dropout_confirmation_analysis.py": "b8011772f007818b34c6e04fd3a357e3a591867f388eeb834fd4f025e1d8f8be"
+  }
+}

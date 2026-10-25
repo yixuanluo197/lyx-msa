@@ -1,0 +1,595 @@
+{
+  "captured_at_utc": "2026-10-25T06:19:14.073403+00:00",
+  "status": {
+    "active": false,
+    "phase": "completed",
+    "pid": 3908947,
+    "started_at_utc": "2026-10-25T05:30:45.113603+00:00",
+    "formal_started": 1,
+    "formal_completed": 1,
+    "runs": [
+      {
+        "run_id": "MELD_cmerc_dropout0p5_lr1e-4_seed67137",
+        "stage": "formal",
+        "pid": 3913031,
+        "argv": [
+          "/data2/yb/conda_envs/cmerc-xp-repro/bin/python",
+          "-u",
+          "/data2/yb/paper/lyx-msa/CMERC/experiments/dropout_second_seed_confirmation/20261025T052219Z/scripts/memory_observer.py",
+          "/data2/yb/paper/lyx-msa/CMERC/experiments/dropout_second_seed_confirmation/20261025T052219Z/scripts/watch_training.py",
+          "--run-id",
+          "MELD_cmerc_dropout0p5_lr1e-4_seed67137"
+        ],
+        "started_at_utc": "2026-10-25T05:32:10.168986+00:00",
+        "admission_samples": [
+          {
+            "time": "2026-10-25T05:31:49.926061+00:00",
+            "stage": "formal_admission",
+            "gpu_index": 0,
+            "gpu_uuid": "GPU-7ff18ebb-100e-98fe-038b-a98bd4f94248",
+            "gpu_name": "NVIDIA TITAN Xp",
+            "total_mib": 12288,
+            "free_mib": 8395,
+            "used_mib": 3789,
+            "utilization_percent": 0,
+            "processes": [
+              {
+                "pid": 3875951,
+                "name": "/home/yangbin/miniconda3/envs/multimodalerc310/bin/python",
+                "used_memory": "1892"
+              },
+              {
+                "pid": 3900060,
+                "name": "/home/yangbin/miniconda3/envs/multimodalerc310/bin/python",
+                "used_memory": "1892"
+              }
+            ],
+            "own_pids": [],
+            "all_foreign_processes": [
+              {
+                "pid": 3875951,
+                "name": "/home/yangbin/miniconda3/envs/multimodalerc310/bin/python",
+                "used_memory": "1892"
+              },
+              {
+                "pid": 3900060,
+                "name": "/home/yangbin/miniconda3/envs/multimodalerc310/bin/python",
+                "used_memory": "1892"
+              }
+            ],
+            "allowed_foreign_processes": [
+              {
+                "pid": 3875951,
+                "name": "/home/yangbin/miniconda3/envs/multimodalerc310/bin/python",
+                "used_memory": "1892"
+              },
+              {
+                "pid": 3900060,
+                "name": "/home/yangbin/miniconda3/envs/multimodalerc310/bin/python",
+                "used_memory": "1892"
+              }
+            ],
+            "unexpected_processes": []
+          },
+          {
+            "time": "2026-10-25T05:32:00.046640+00:00",
+            "stage": "formal_admission",
+            "gpu_index": 0,
+            "gpu_uuid": "GPU-7ff18ebb-100e-98fe-038b-a98bd4f94248",
+            "gpu_name": "NVIDIA TITAN Xp",
+            "total_mib": 12288,
+            "free_mib": 8395,
+            "used_mib": 3789,
+            "utilization_percent": 69,
+            "processes": [
+              {
+                "pid": 3875951,
+                "name": "/home/yangbin/miniconda3/envs/multimodalerc310/bin/python",
+                "used_memory": "1892"
+              },
+              {
+                "pid": 3900060,
+                "name": "/home/yangbin/miniconda3/envs/multimodalerc310/bin/python",
+                "used_memory": "1892"
+              }
+            ],
+            "own_pids": [],
+            "all_foreign_processes": [
+              {
+                "pid": 3875951,
+                "name": "/home/yangbin/miniconda3/envs/multimodalerc310/bin/python",
+                "used_memory": "1892"
+              },
+              {
+                "pid": 3900060,
+                "name": "/home/yangbin/miniconda3/envs/multimodalerc310/bin/python",
+                "used_memory": "1892"
+              }
+            ],
+            "allowed_foreign_processes": [
+              {
+                "pid": 3875951,
+                "name": "/home/yangbin/miniconda3/envs/multimodalerc310/bin/python",
+                "used_memory": "1892"
+              },
+              {
+                "pid": 3900060,
+                "name": "/home/yangbin/miniconda3/envs/multimodalerc310/bin/python",
+                "used_memory": "1892"
+              }
+            ],
+            "unexpected_processes": []
+          },
+          {
+            "time": "2026-10-25T05:32:10.154599+00:00",
+            "stage": "formal_admission",
+            "gpu_index": 0,
+            "gpu_uuid": "GPU-7ff18ebb-100e-98fe-038b-a98bd4f94248",
+            "gpu_name": "NVIDIA TITAN Xp",
+            "total_mib": 12288,
+            "free_mib": 8395,
+            "used_mib": 3789,
+            "utilization_percent": 0,
+            "processes": [
+              {
+                "pid": 3875951,
+                "name": "/home/yangbin/miniconda3/envs/multimodalerc310/bin/python",
+                "used_memory": "1892"
+              },
+              {
+                "pid": 3900060,
+                "name": "/home/yangbin/miniconda3/envs/multimodalerc310/bin/python",
+                "used_memory": "1892"
+              }
+            ],
+            "own_pids": [],
+            "all_foreign_processes": [
+              {
+                "pid": 3875951,
+                "name": "/home/yangbin/miniconda3/envs/multimodalerc310/bin/python",
+                "used_memory": "1892"
+              },
+              {
+                "pid": 3900060,
+                "name": "/home/yangbin/miniconda3/envs/multimodalerc310/bin/python",
+                "used_memory": "1892"
+              }
+            ],
+            "allowed_foreign_processes": [
+              {
+                "pid": 3875951,
+                "name": "/home/yangbin/miniconda3/envs/multimodalerc310/bin/python",
+                "used_memory": "1892"
+              },
+              {
+                "pid": 3900060,
+                "name": "/home/yangbin/miniconda3/envs/multimodalerc310/bin/python",
+                "used_memory": "1892"
+              }
+            ],
+            "unexpected_processes": []
+          }
+        ],
+        "environment": {
+          "CUDA_VISIBLE_DEVICES": "GPU-7ff18ebb-100e-98fe-038b-a98bd4f94248",
+          "LD_LIBRARY_PATH": "/data2/yb/conda_envs/cmerc-xp-repro/lib/python3.10/site-packages/nvidia/cusparse/lib",
+          "OMP_NUM_THREADS": "1",
+          "MKL_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1",
+          "PYTORCH_CUDA_ALLOC_CONF": "garbage_collection_threshold:0.8",
+          "CMERC_ENV_PREFIX": "/data2/yb/conda_envs/cmerc-xp-repro",
+          "PYTHONDONTWRITEBYTECODE": "1"
+        },
+        "profile_output": "/data2/yb/paper/lyx-msa/CMERC/experiments/dropout_second_seed_confirmation/20261025T052219Z/logs/MELD_cmerc_dropout0p5_lr1e-4_seed67137_memory.jsonl",
+        "log": "/data2/yb/paper/lyx-msa/CMERC/experiments/dropout_second_seed_confirmation/20261025T052219Z/logs/formal_MELD_cmerc_dropout0p5_lr1e-4_seed67137.log",
+        "returncode": 0,
+        "finished_at_utc": "2026-10-25T06:13:17.133981+00:00",
+        "gpu_release_confirmed": {
+          "time": "2026-10-25T06:13:17.234003+00:00",
+          "stage": "formal_release",
+          "gpu_index": 0,
+          "gpu_uuid": "GPU-7ff18ebb-100e-98fe-038b-a98bd4f94248",
+          "gpu_name": "NVIDIA TITAN Xp",
+          "total_mib": 12288,
+          "free_mib": 10671,
+          "used_mib": 1513,
+          "utilization_percent": 7,
+          "processes": [
+            {
+              "pid": 3939591,
+              "name": "python",
+              "used_memory": "268"
+            },
+            {
+              "pid": 4026340,
+              "name": "/home/yangbin/miniconda3/envs/multimodalerc310/bin/python",
+              "used_memory": "1240"
+            }
+          ],
+          "own_pids": [
+            3913031
+          ],
+          "all_foreign_processes": [
+            {
+              "pid": 3939591,
+              "name": "python",
+              "used_memory": "268"
+            },
+            {
+              "pid": 4026340,
+              "name": "/home/yangbin/miniconda3/envs/multimodalerc310/bin/python",
+              "used_memory": "1240"
+            }
+          ],
+          "allowed_foreign_processes": [],
+          "unexpected_processes": [
+            {
+              "pid": 3939591,
+              "name": "python",
+              "used_memory": "268"
+            },
+            {
+              "pid": 4026340,
+              "name": "/home/yangbin/miniconda3/envs/multimodalerc310/bin/python",
+              "used_memory": "1240"
+            }
+          ]
+        }
+      }
+    ],
+    "preflight_started": 1,
+    "frozen_execution_sha256": "f4c3fcc2e6cde597feda2d3402fb365e61f272ff0d997f2510034ba45aa44977",
+    "resource_samples": 256,
+    "resource_query_errors": 0,
+    "preexisting_pid_samples": 97,
+    "unexpected_process_samples": 192,
+    "unexpected_pids": [
+      3939506,
+      3939591,
+      3969736,
+      3988595,
+      4006524,
+      4026340
+    ],
+    "preregistered_co_resident_pids": [
+      3875951,
+      3900060
+    ],
+    "observed_foreign_pids": [
+      3875951,
+      3900060,
+      3939506,
+      3939591,
+      3969736,
+      3988595,
+      4006524,
+      4026340
+    ],
+    "new_foreign_pids_pause_admission": false,
+    "admission_paused": false,
+    "active_pids": [],
+    "preflight": {
+      "run_id": "MELD_cmerc_dropout0p5_lr1e-4_seed67137",
+      "stage": "preflight",
+      "pid": 3909939,
+      "argv": [
+        "/data2/yb/conda_envs/cmerc-xp-repro/bin/python",
+        "-u",
+        "/data2/yb/paper/lyx-msa/CMERC/experiments/dropout_second_seed_confirmation/20261025T052219Z/scripts/memory_observer.py",
+        "/data2/yb/paper/lyx-msa/CMERC/experiments/dropout_second_seed_confirmation/20261025T052219Z/scripts/watch_training.py",
+        "--run-id",
+        "MELD_cmerc_dropout0p5_lr1e-4_seed67137",
+        "--preflight"
+      ],
+      "started_at_utc": "2026-10-25T05:31:06.416113+00:00",
+      "admission_samples": [
+        {
+          "time": "2026-10-25T05:30:46.169357+00:00",
+          "stage": "preflight_admission",
+          "gpu_index": 0,
+          "gpu_uuid": "GPU-7ff18ebb-100e-98fe-038b-a98bd4f94248",
+          "gpu_name": "NVIDIA TITAN Xp",
+          "total_mib": 12288,
+          "free_mib": 8395,
+          "used_mib": 3789,
+          "utilization_percent": 5,
+          "processes": [
+            {
+              "pid": 3875951,
+              "name": "/home/yangbin/miniconda3/envs/multimodalerc310/bin/python",
+              "used_memory": "1892"
+            },
+            {
+              "pid": 3900060,
+              "name": "/home/yangbin/miniconda3/envs/multimodalerc310/bin/python",
+              "used_memory": "1892"
+            }
+          ],
+          "own_pids": [],
+          "all_foreign_processes": [
+            {
+              "pid": 3875951,
+              "name": "/home/yangbin/miniconda3/envs/multimodalerc310/bin/python",
+              "used_memory": "1892"
+            },
+            {
+              "pid": 3900060,
+              "name": "/home/yangbin/miniconda3/envs/multimodalerc310/bin/python",
+              "used_memory": "1892"
+            }
+          ],
+          "allowed_foreign_processes": [
+            {
+              "pid": 3875951,
+              "name": "/home/yangbin/miniconda3/envs/multimodalerc310/bin/python",
+              "used_memory": "1892"
+            },
+            {
+              "pid": 3900060,
+              "name": "/home/yangbin/miniconda3/envs/multimodalerc310/bin/python",
+              "used_memory": "1892"
+            }
+          ],
+          "unexpected_processes": []
+        },
+        {
+          "time": "2026-10-25T05:30:56.268095+00:00",
+          "stage": "preflight_admission",
+          "gpu_index": 0,
+          "gpu_uuid": "GPU-7ff18ebb-100e-98fe-038b-a98bd4f94248",
+          "gpu_name": "NVIDIA TITAN Xp",
+          "total_mib": 12288,
+          "free_mib": 8395,
+          "used_mib": 3789,
+          "utilization_percent": 0,
+          "processes": [
+            {
+              "pid": 3875951,
+              "name": "/home/yangbin/miniconda3/envs/multimodalerc310/bin/python",
+              "used_memory": "1892"
+            },
+            {
+              "pid": 3900060,
+              "name": "/home/yangbin/miniconda3/envs/multimodalerc310/bin/python",
+              "used_memory": "1892"
+            }
+          ],
+          "own_pids": [],
+          "all_foreign_processes": [
+            {
+              "pid": 3875951,
+              "name": "/home/yangbin/miniconda3/envs/multimodalerc310/bin/python",
+              "used_memory": "1892"
+            },
+            {
+              "pid": 3900060,
+              "name": "/home/yangbin/miniconda3/envs/multimodalerc310/bin/python",
+              "used_memory": "1892"
+            }
+          ],
+          "allowed_foreign_processes": [
+            {
+              "pid": 3875951,
+              "name": "/home/yangbin/miniconda3/envs/multimodalerc310/bin/python",
+              "used_memory": "1892"
+            },
+            {
+              "pid": 3900060,
+              "name": "/home/yangbin/miniconda3/envs/multimodalerc310/bin/python",
+              "used_memory": "1892"
+            }
+          ],
+          "unexpected_processes": []
+        },
+        {
+          "time": "2026-10-25T05:31:06.395694+00:00",
+          "stage": "preflight_admission",
+          "gpu_index": 0,
+          "gpu_uuid": "GPU-7ff18ebb-100e-98fe-038b-a98bd4f94248",
+          "gpu_name": "NVIDIA TITAN Xp",
+          "total_mib": 12288,
+          "free_mib": 8395,
+          "used_mib": 3789,
+          "utilization_percent": 0,
+          "processes": [
+            {
+              "pid": 3875951,
+              "name": "/home/yangbin/miniconda3/envs/multimodalerc310/bin/python",
+              "used_memory": "1892"
+            },
+            {
+              "pid": 3900060,
+              "name": "/home/yangbin/miniconda3/envs/multimodalerc310/bin/python",
+              "used_memory": "1892"
+            }
+          ],
+          "own_pids": [],
+          "all_foreign_processes": [
+            {
+              "pid": 3875951,
+              "name": "/home/yangbin/miniconda3/envs/multimodalerc310/bin/python",
+              "used_memory": "1892"
+            },
+            {
+              "pid": 3900060,
+              "name": "/home/yangbin/miniconda3/envs/multimodalerc310/bin/python",
+              "used_memory": "1892"
+            }
+          ],
+          "allowed_foreign_processes": [
+            {
+              "pid": 3875951,
+              "name": "/home/yangbin/miniconda3/envs/multimodalerc310/bin/python",
+              "used_memory": "1892"
+            },
+            {
+              "pid": 3900060,
+              "name": "/home/yangbin/miniconda3/envs/multimodalerc310/bin/python",
+              "used_memory": "1892"
+            }
+          ],
+          "unexpected_processes": []
+        }
+      ],
+      "environment": {
+        "CUDA_VISIBLE_DEVICES": "GPU-7ff18ebb-100e-98fe-038b-a98bd4f94248",
+        "LD_LIBRARY_PATH": "/data2/yb/conda_envs/cmerc-xp-repro/lib/python3.10/site-packages/nvidia/cusparse/lib",
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "PYTORCH_CUDA_ALLOC_CONF": "garbage_collection_threshold:0.8",
+        "CMERC_ENV_PREFIX": "/data2/yb/conda_envs/cmerc-xp-repro",
+        "PYTHONDONTWRITEBYTECODE": "1"
+      },
+      "profile_output": "/data2/yb/paper/lyx-msa/CMERC/experiments/dropout_second_seed_confirmation/20261025T052219Z/logs/preflight_MELD_cmerc_dropout0p5_lr1e-4_seed67137_memory.jsonl",
+      "log": "/data2/yb/paper/lyx-msa/CMERC/experiments/dropout_second_seed_confirmation/20261025T052219Z/logs/preflight_MELD_cmerc_dropout0p5_lr1e-4_seed67137.log",
+      "returncode": 0,
+      "finished_at_utc": "2026-10-25T05:31:46.869388+00:00",
+      "gpu_release_confirmed": {
+        "time": "2026-10-25T05:31:46.968598+00:00",
+        "stage": "preflight_release",
+        "gpu_index": 0,
+        "gpu_uuid": "GPU-7ff18ebb-100e-98fe-038b-a98bd4f94248",
+        "gpu_name": "NVIDIA TITAN Xp",
+        "total_mib": 12288,
+        "free_mib": 8395,
+        "used_mib": 3789,
+        "utilization_percent": 27,
+        "processes": [
+          {
+            "pid": 3875951,
+            "name": "/home/yangbin/miniconda3/envs/multimodalerc310/bin/python",
+            "used_memory": "1892"
+          },
+          {
+            "pid": 3900060,
+            "name": "/home/yangbin/miniconda3/envs/multimodalerc310/bin/python",
+            "used_memory": "1892"
+          }
+        ],
+        "own_pids": [
+          3909939
+        ],
+        "all_foreign_processes": [
+          {
+            "pid": 3875951,
+            "name": "/home/yangbin/miniconda3/envs/multimodalerc310/bin/python",
+            "used_memory": "1892"
+          },
+          {
+            "pid": 3900060,
+            "name": "/home/yangbin/miniconda3/envs/multimodalerc310/bin/python",
+            "used_memory": "1892"
+          }
+        ],
+        "allowed_foreign_processes": [
+          {
+            "pid": 3875951,
+            "name": "/home/yangbin/miniconda3/envs/multimodalerc310/bin/python",
+            "used_memory": "1892"
+          },
+          {
+            "pid": 3900060,
+            "name": "/home/yangbin/miniconda3/envs/multimodalerc310/bin/python",
+            "used_memory": "1892"
+          }
+        ],
+        "unexpected_processes": []
+      }
+    },
+    "current_run": "MELD_cmerc_dropout0p5_lr1e-4_seed67137",
+    "admission_conditions_currently_met": true,
+    "last_resource": {
+      "time": "2026-10-25T06:13:17.234003+00:00",
+      "stage": "formal_release",
+      "gpu_index": 0,
+      "gpu_uuid": "GPU-7ff18ebb-100e-98fe-038b-a98bd4f94248",
+      "gpu_name": "NVIDIA TITAN Xp",
+      "total_mib": 12288,
+      "free_mib": 10671,
+      "used_mib": 1513,
+      "utilization_percent": 7,
+      "processes": [
+        {
+          "pid": 3939591,
+          "name": "python",
+          "used_memory": "268"
+        },
+        {
+          "pid": 4026340,
+          "name": "/home/yangbin/miniconda3/envs/multimodalerc310/bin/python",
+          "used_memory": "1240"
+        }
+      ],
+      "own_pids": [
+        3913031
+      ],
+      "all_foreign_processes": [
+        {
+          "pid": 3939591,
+          "name": "python",
+          "used_memory": "268"
+        },
+        {
+          "pid": 4026340,
+          "name": "/home/yangbin/miniconda3/envs/multimodalerc310/bin/python",
+          "used_memory": "1240"
+        }
+      ],
+      "allowed_foreign_processes": [],
+      "unexpected_processes": [
+        {
+          "pid": 3939591,
+          "name": "python",
+          "used_memory": "268"
+        },
+        {
+          "pid": 4026340,
+          "name": "/home/yangbin/miniconda3/envs/multimodalerc310/bin/python",
+          "used_memory": "1240"
+        }
+      ]
+    },
+    "admission_consecutive_samples": 3,
+    "completed_at_utc": "2026-10-25T06:13:18.543837+00:00",
+    "final_frozen_execution_sha256": "f4c3fcc2e6cde597feda2d3402fb365e61f272ff0d997f2510034ba45aa44977"
+  },
+  "cpu_finalization": {
+    "active": false,
+    "phase": "completed",
+    "pid": 3908948,
+    "commands": [
+      {
+        "argv": [
+          "/data2/yb/conda_envs/cmerc-xp-repro/bin/python",
+          "-u",
+          "/data2/yb/paper/lyx-msa/CMERC/experiments/dropout_second_seed_confirmation/20261025T052219Z/scripts/verify_lr.py"
+        ],
+        "started_at_utc": "2026-10-25T06:13:26.361587+00:00",
+        "returncode": 0,
+        "finished_at_utc": "2026-10-25T06:15:18.155983+00:00"
+      },
+      {
+        "argv": [
+          "/data2/yb/conda_envs/cmerc-xp-repro/bin/python",
+          "-u",
+          "/data2/yb/paper/lyx-msa/CMERC/experiments/dropout_second_seed_confirmation/20261025T052219Z/scripts/analyze_dropout_confirmation.py"
+        ],
+        "started_at_utc": "2026-10-25T06:15:18.157544+00:00",
+        "returncode": 0,
+        "finished_at_utc": "2026-10-25T06:15:19.891721+00:00"
+      },
+      {
+        "argv": [
+          "/home/yangbin/miniconda3/envs/multimodalerc310/bin/python",
+          "-u",
+          "/data2/yb/paper/lyx-msa/CMERC/experiments/dropout_second_seed_confirmation/20261025T052219Z/scripts/plot_dropout_confirmation.py"
+        ],
+        "started_at_utc": "2026-10-25T06:15:19.893237+00:00",
+        "returncode": 0,
+        "finished_at_utc": "2026-10-25T06:15:26.431126+00:00"
+      }
+    ],
+    "finished_at_utc": "2026-10-25T06:15:26.431924+00:00"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "created_at_utc": "2026-10-25T05:24:20.124906+00:00",
+  "status": "passed",
+  "historical_manifest": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/cmerc/MELD_validation_seed67137/run_manifest.json",
+  "historical_metrics": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/cmerc/MELD_validation_seed67137/metrics.jsonl",
+  "dropout": 0.4,
+  "rec_dropout": 0.1,
+  "batch_size": 16,
+  "lr": 0.0001,
+  "seed": 67137,
+  "best_epoch": 8,
+  "best_validation_wf1": 65.24,
+  "last10_validation_wf1": 62.909,
+  "last10_validation_wf1_sample_sd": 0.49753726828583716,
+  "best_to_tail_wf1_decline": 2.330999999999996,
+  "best_train_classification_loss": 3.3452713012695314,
+  "best_validation_classification_loss": 4.1291,
+  "last10_train_classification_loss": 2.706679672094492,
+  "last10_validation_classification_loss": 5.18186,
+  "scope": "train/validation and args projection only; incidental mixed-file test-field access separately disclosed"
+}

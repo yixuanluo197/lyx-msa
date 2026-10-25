@@ -1,0 +1,25 @@
+--- generated_report
++++ reviewed_report
+@@ -12,7 +12,7 @@
+ 
+ 使用完整固定验证池拼接话语后计算Weighted F1，保留原训练器按百分比四舍五入两位后严格提高才保存的规则；并列最高选首次。末段固定为31–40轮均值；末段时间窗SD使用ddof=1，不是跨Seed标准差，峰值和末段也不是独立证据。
+ 
+-train_cm.py SHA256：`0fb27f08bdfd6fabe176eb7b717587fb5e7025ba94c6e3c191b01dc18168d3a2`；源码来源`/data2/yb/paper/lyx-msa/CMERC/experiments/dropout_diagnosis/20261025T032711Z/code_xp04`，12个训练源码与第10组字节相同标记`True`；记录Git HEAD `17e3c1eef813c1db7715a827c81aae6185c8d0e8`。科学与工程来源见[源码和协议审计](../experiments/dropout_second_seed_confirmation/20261025T052219Z/reports/SOURCE_AND_PROTOCOL_AUDIT.md)。
++train_cm.py SHA256：`0fb27f08bdfd6fabe176eb7b717587fb5e7025ba94c6e3c191b01dc18168d3a2`；源码来源`/data2/yb/paper/lyx-msa/CMERC/experiments/dropout_diagnosis/20261025T032711Z/code_xp04`，12个训练源码与第10组字节相同标记`True`；复制来源记录Git HEAD `17e3c1eef813c1db7715a827c81aae6185c8d0e8`；本批实际登记时Git HEAD为`da8388a24e562d9059b700c4b99b38a13f8a632f`，以冻结清单为准。科学与工程来源见[源码和协议审计](../experiments/dropout_second_seed_confirmation/20261025T052219Z/reports/SOURCE_AND_PROTOCOL_AUDIT.md)。
+ 
+ 实际环境：Python 3.10.13、PyTorch 1.13.1+cu117、CUDA build 11.7、PyG 2.4.0；复用已验证环境，无新增依赖。
+ 
+@@ -70,6 +70,13 @@
+ 
+ **推断边界：** train分类Loss继续下降而val分类Loss上升、验证峰值后衰退，只是过拟合/目标竞争的轨迹线索；若W-F1和分类Loss方向不一致，也不能宣称过拟合已解决。训练拟合下降既可能是正则化作用也可能是欠拟合，不能只凭训练分数下降判定欠拟合。train为在线训练态不断变化的参数，val为固定epoch权重eval，二者间距不是严格泛化gap。有限梯度和真实更新验证数值执行，不能排除伪目标噪声、梯度竞争或泛化问题。
+ 
++
++### 跨Seed的方向检查和最小下一步
++
++Seed67137的末10轮时间标准差由0.4975增至0.8664个百分点，最佳轮至末段回落由2.331增至3.970个百分点，增加1.639个百分点；Seed2024则由4.787减至3.715个百分点。后期稳定性改善没有跨Seed一致确认。提高Dropout后，末段验证分类Loss在2024从5.08928升至5.32021924，在67137从5.18186升至5.26803213；最佳F1与分类Loss方向不同，两个指标必须分别报告。该现象可能涉及错误样本的置信度变化或分类/辅助目标竞争，现有聚合曲线没有隔离这些机制，均属于待验证假设。
++
++当前不将Dropout0.5直接升级为最终配置，也不启动五Seed。最小后续工作建议先对已有验证集轨迹做按类别的错误率与置信度审计，预先固定Checkpoint、指标和比较规则；若需要额外前向，应另行登记，仍不据测试结果调参。本批没有进行此项额外评估。未来若决定完整五Seed确认，需单独冻结统一配置与判据，完整报告全部Seed；若要声称CMERC相对Baseline的收益，应安排同协议配对Baseline，不能以两个Seed的验证峰值代替。
++
+ ## 来源、资源、测试访问与完整验收
+ 
+ 本批实际设备：user23 GPU0，UUID `GPU-7ff18ebb-100e-98fe-038b-a98bd4f94248`；XP04 seed67137控制为GPU0（GPU-7ff18ebb-100e-98fe-038b-a98bd4f94248），同物理卡。seed2024的XP04控制和复用XP10均用GPU3（GPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456）。共享资源、历史时点和CUDA scatter非确定性仍限制严格因果及速度解释。
