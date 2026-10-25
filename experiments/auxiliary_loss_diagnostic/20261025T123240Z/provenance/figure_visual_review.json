@@ -1,0 +1,28 @@
+{
+  "status": "passed",
+  "created_at_utc": "2026-10-25T13:33:18.377764+00:00",
+  "method": "Actual view_image inspection of all nine PNGs; no synthetic reference score",
+  "figures_inspected": 9,
+  "checks": [
+    "axes and labels readable",
+    "valid n and N/A explicit",
+    "relationship vs emotion semantics explicit",
+    "actual/reference coefficients distinct",
+    "legend complete after figure07 layout-only repair",
+    "notes do not overlap plotted values"
+  ],
+  "data_changed": false,
+  "model_forwards": 0,
+  "autograd_calls": 0,
+  "inspected_png_sha256": {
+    "results/figures/01_cosine_distributions.png": "8c04cd775df9ae8a65fb3904e4a640bda164532ac9c6b3d98d1bbb4cd7864330",
+    "results/figures/02_reference_norm_ratios.png": "1e058242aa623bc21cbed63f1d2e36916dcd086676e28670383703cec8ea3822",
+    "results/figures/03_group_conflict_frequency.png": "51f797b86d6084f8da50f8ea37ea278401825a797f48a20cca268ab77371a76f",
+    "results/figures/04_pseudo_label_proportions.png": "5305b4f8342a7f5ed0220b024b12e65e5e42f9b0b03c744bbfd9d975ffce7795",
+    "results/figures/05_emotion_relationship_heatmap.png": "0e8d73a60ca744ecc193759e3474bf2c38de0c4bc81c41b71b8ad212f516c3fd",
+    "results/figures/06_paired_checkpoint_cosine_changes.png": "4d8789129920f2436ee6b5da8c15504a5e6f2fc9e7693bee7bad37524516a07d",
+    "results/figures/07_pseudo_branch_coverage.png": "ae506ab391a02d284c4cde2c0ad7d44c22b262c750deafb4ade4897b15ad3fba",
+    "results/figures/08_relationship_pair_coverage.png": "abb0276961a578f11c95526ad05a54557b50457f8838792bb3e12a7190123756",
+    "results/figures/09_actual_reference_gradient_scale.png": "fafedc6cd3e8c935ccd27509082545e2b8f3a8198ae3906691db94e1d1930f5e"
+  }
+}

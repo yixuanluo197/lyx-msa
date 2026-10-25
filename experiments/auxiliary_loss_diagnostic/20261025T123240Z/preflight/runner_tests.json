@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "returncode": 0,
+  "tests": 8,
+  "created_at_utc": "2026-10-25T12:50:21.622651+00:00",
+  "synthetic_only": true,
+  "model_forwards": 0,
+  "optimizer_steps": 0,
+  "initial_test_assertion_corrected": "Privacy test expected bare case_summary.csv literal but implementation uses results/case_summary.csv; corrected fixture path, no runtime change",
+  "stdout": "",
+  "stderr": "test_csv_refuses_schema_changes (__main__.Guards) ... ok\ntest_frozen_constructor_includes_scientific_arguments (__main__.Guards) ... ok\ntest_no_training_entry_called (__main__.Guards) ... ok\ntest_nonfinite_is_missing_not_zero (__main__.Guards) ... ok\ntest_only_autograd_grad_not_step_or_backward_calls (__main__.Guards) ... ok\ntest_public_context_does_not_export_dialogue_keys_in_summary (__main__.Guards) ... ok\ntest_real_constructor_surface (__main__.Guards) ... ok\ntest_stop_before_optimizer_on_combiner_return (__main__.Guards) ... ok\n\n----------------------------------------------------------------------\nRan 8 tests in 0.091s\n\nOK\n",
+  "final_checked_at_utc": "2026-10-25T12:59:33.860792+00:00"
+}

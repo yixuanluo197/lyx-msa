@@ -1,0 +1,43 @@
+{
+  "active": false,
+  "phase": "completed",
+  "pid": 624745,
+  "started_at_utc": "2026-10-25T13:01:09.641514+00:00",
+  "training_runs": 0,
+  "optimizer_steps": 0,
+  "test_forwards": 0,
+  "completed_cases": 128,
+  "model_forward_calls": 768,
+  "autograd_calls": 512,
+  "tensor_backward_calls": 0,
+  "failed_cases": [],
+  "admission_samples": [
+    {
+      "time": "2026-10-25T13:01:09.685326+00:00",
+      "gpu_index": 0,
+      "gpu_uuid": "GPU-7ff18ebb-100e-98fe-038b-a98bd4f94248",
+      "free_mib": 12181,
+      "utilization": 0
+    },
+    {
+      "time": "2026-10-25T13:01:19.751421+00:00",
+      "gpu_index": 0,
+      "gpu_uuid": "GPU-7ff18ebb-100e-98fe-038b-a98bd4f94248",
+      "free_mib": 12181,
+      "utilization": 0
+    },
+    {
+      "time": "2026-10-25T13:01:29.806049+00:00",
+      "gpu_index": 0,
+      "gpu_uuid": "GPU-7ff18ebb-100e-98fe-038b-a98bd4f94248",
+      "free_mib": 12181,
+      "utilization": 0
+    }
+  ],
+  "current_case": {
+    "checkpoint_id": "XP12_latest",
+    "batch_id": "B32",
+    "length_stratum": 4
+  },
+  "finished_at_utc": "2026-10-25T13:23:25.186817+00:00"
+}

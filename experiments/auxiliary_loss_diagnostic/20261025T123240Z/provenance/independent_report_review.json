@@ -1,0 +1,43 @@
+{
+  "status": "passed",
+  "created_at_utc": "2026-10-25T13:34:13.180029+00:00",
+  "reviewer": "iem_batch_audit",
+  "scope": "Only final curated added report sections, existing current public aggregates, FocalLoss source text, curation provenance and links. No GPU, model forward, autograd, private utterance records, historical mixed summary or test metric access.",
+  "reports": {
+    "batch": {
+      "path": "experiments/auxiliary_loss_diagnostic/20261025T123240Z/reports/CMERC_AUXILIARY_LOSS_DIAGNOSTIC.md",
+      "sha256": "5d5de375d41862f1168c42251a1c0f553eaefc849bcf06b16b6f29f168de6db8"
+    },
+    "root": {
+      "path": "reports/CMERC_AUXILIARY_LOSS_DIAGNOSTIC.md",
+      "sha256": "20bc6dda88d25c798c7de162f391fedca2d6053ace0ec4df62e8fc2bb002bead"
+    }
+  },
+  "generated_snapshot_preserved_sha256": "a0af3812cf3d9c78b703786ee24c938c87f3bafbb5f26cd826830e281c138154",
+  "report_curation_sha256": "2102586d8d90d3ddad29ab60a8fa986267622d5050e8e1f1a370649ad78fbb42",
+  "prior_independent_final_review_unchanged_sha256": "cbbc6db5576c2716164059a87db39d6d7d21e5be616b10fdf638bb0f0ac4eaaf",
+  "checks": {
+    "all_new_gradient_conflict_counts_cosine_and_weighted_norm_claims_match_aggregates": true,
+    "aux_actual_sum_values_match": true,
+    "historical_validation_numbers_match_already_reviewed_clean_references": true,
+    "default_zero_837_split_682_negative_155_positive_and_latest_77_negative_match": true,
+    "class_weight_maxima_60p333_and_181_match": true,
+    "zero_true_positive_anchor_batches_3_and_4_match": true,
+    "negative_neg_sum_65_is_distinct_from_zero_negative_zero_nonfinite_denominator_counts": true,
+    "seven_emotion_coverage_and_class_conditioned_relationship_numbers_match": true,
+    "focal_formula_target_and_nontarget_terms_and_full_class_mean_are_faithful": true,
+    "CC_comparison_includes_equality_after_editorial_correction": true,
+    "single_next_mechanism_is_confidence_conditioned_classification_objective_vs_CC": true,
+    "no_coefficient_selected_no_causal_or_five_seed_claim": true,
+    "report_links_resolve": true,
+    "curation_hashes_match_and_original_generated_snapshot_preserved": true
+  },
+  "scientific_interpretation": "The original FocalLoss explicitly includes -alpha*log_p_j for non-target classes, so CC opposition to that objective is not direct evidence of F1 harm. Confidence-conditioned objective-direction decomposition is a next hypothesis, not an established root cause or a selected coefficient.",
+  "required_corrections": [],
+  "resolved_editorial_issue": "CC triggering condition was made precise as removed true-class log probability not lower than the main value, matching the original <= comparisons, including equality.",
+  "limitations": [
+    "No independent re-execution or new statistical tests.",
+    "The 32 fixed training batches and four eval snapshots do not reconstruct historical online optimization or establish cross-seed/test generalization.",
+    "Figure manual-quality and publication staging statements were checked against referenced provenance/file existence, not re-rendered or republished by this reviewer."
+  ]
+}

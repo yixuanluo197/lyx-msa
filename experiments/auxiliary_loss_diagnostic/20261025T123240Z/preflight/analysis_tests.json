@@ -1,0 +1,30 @@
+{
+  "recorded_at_utc": "2026-10-25T12:56:22.880189+00:00",
+  "command": [
+    "/data2/yb/conda_envs/cmerc-xp-repro/bin/python",
+    "/data2/yb/paper/lyx-msa/CMERC/experiments/auxiliary_loss_diagnostic/20261025T123240Z/scripts/test_diagnostic_analysis.py"
+  ],
+  "returncode": 0,
+  "tests": 14,
+  "stdout": "",
+  "stderr": "test_all_missing_is_na_not_zero_cosine (__main__.Rules) ... ok\ntest_case_coverage_same_batches_all_checkpoints (__main__.Rules) ... ok\ntest_conflict_denominator_excludes_missing_zero (__main__.Rules) ... ok\ntest_core_statuses_preserved_and_explicitly_certified (__main__.Rules) ... ok\ntest_gate_rejects_incomplete_and_test (__main__.Rules) ... ok\ntest_nonfinite_ratio_is_missing (__main__.Rules) ... ok\ntest_original_wrapper_flags_not_recomputed_loss (__main__.Rules) ... ok\ntest_paired_delta_requires_both_valid_and_same_batch (__main__.Rules) ... ok\ntest_priority_requires_consistent_direction_and_scale (__main__.Rules) ... ok\ntest_private_ids_and_paths_rejected (__main__.Rules) ... ok\ntest_public_aggregate_allowed (__main__.Rules) ... ok\ntest_quantiles_and_nonsignificance (__main__.Rules) ... ok\ntest_reference_not_actual_xp12_weight (__main__.Rules) ... ok\ntest_valid_requires_shared_finite_nonzero_norms (__main__.Rules) ... ok\n\n----------------------------------------------------------------------\nRan 14 tests in 0.002s\n\nOK\n",
+  "cuda_visible_devices": "",
+  "scope": "synthetic CPU unit tests only; no analysis main, plot main, model forward, checkpoint/private/intermediate/test result reads",
+  "red_stages": [
+    "Initial 11 tests failed for not-yet-implemented functions.",
+    "Wrapper trace regression failed before summarize_wrappers was implemented.",
+    "Core-status adapter regression failed (partial_support != valid) before explicit certification preserved source_status."
+  ],
+  "plot_runtime_checked": {
+    "python": "/home/yangbin/miniconda3/envs/multimodalerc310/bin/python",
+    "matplotlib": "3.10.9",
+    "numpy": "1.24.3",
+    "rendered_figures": 0
+  },
+  "scripts_sha256": {
+    "analyze_diagnostic.py": "1be53d1c3e217ef66f97b73fcac8e450eb46ff04a93c4865c0e2bd84753bd8eb",
+    "plot_diagnostic.py": "4a57182cb31b3c014247e8a1132e38b5265d7bcbc19a7595356c66dd4414c935",
+    "test_diagnostic_analysis.py": "73e53ab3b13674d86649f0d1f86d6be72d10f24afebe44c1d2094b52a05ad31e"
+  },
+  "figure_contract_sha256": "94d0969003bd382edcb30c0c7bd1ff92010ce1ce7889d984130cf0e5d6d7698d"
+}

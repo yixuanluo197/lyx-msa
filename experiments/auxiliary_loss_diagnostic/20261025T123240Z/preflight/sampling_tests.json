@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "tests": 12,
+  "failures": 0,
+  "errors": 0,
+  "cuda_initialized": false,
+  "torch_imported": false,
+  "recorded_at_utc": "2026-10-25T12:43:47.017896+00:00",
+  "scope": "Pure synthetic stdlib CPU sampling; no model, real data, or gradient access.",
+  "red_stage": {
+    "tests": 12,
+    "failures": 14,
+    "errors": 0,
+    "reason": "Expected missing-implementation assertions before prepare_diagnostic.py existed."
+  },
+  "test_script_sha256": "edfb6617fef3888b3b03e74af4b5d96bd9b986f8fea1e233ad3036442e9e40e8",
+  "implementation_sha256": "2d707fd8d45629c3b2f6c444b402de678dc774dcce71b9dc174cd44d814184ba",
+  "output": "test_capacity_violation_fails_without_resampling (__main__.SamplingTests) ... ok\ntest_duplicate_ids_fail (__main__.SamplingTests) ... ok\ntest_exact_32_batches_512_distinct_dialogues (__main__.SamplingTests) ... ok\ntest_insufficient_stratum_fails (__main__.SamplingTests) ... ok\ntest_invalid_or_empty_label_sequence_fails (__main__.SamplingTests) ... ok\ntest_never_accesses_validation_or_test_labels (__main__.SamplingTests) ... ok\ntest_public_batch_summary_excludes_dialogue_ids (__main__.SamplingTests) ... ok\ntest_rank_strata_and_all_available_classes_covered (__main__.SamplingTests) ... ok\ntest_rare_available_class_is_not_lost (__main__.SamplingTests) ... ok\ntest_reproducible_private_rng_and_no_input_mutation (__main__.SamplingTests) ... ok\ntest_seed_changes_selection_without_changing_budget (__main__.SamplingTests) ... ok\ntest_unavailable_classes_are_not_required (__main__.SamplingTests) ... ok\n\n----------------------------------------------------------------------\nRan 12 tests in 0.051s\n\nOK\n"
+}

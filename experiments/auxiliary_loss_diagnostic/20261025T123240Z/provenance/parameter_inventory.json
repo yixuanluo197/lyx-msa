@@ -1,0 +1,1170 @@
+{
+  "status": "passed",
+  "parameters": [
+    {
+      "name": "normBNa.weight",
+      "shape": [
+        1024
+      ],
+      "dtype": "torch.float32",
+      "numel": 1024,
+      "requires_grad": true,
+      "group": "other"
+    },
+    {
+      "name": "normBNa.bias",
+      "shape": [
+        1024
+      ],
+      "dtype": "torch.float32",
+      "numel": 1024,
+      "requires_grad": true,
+      "group": "other"
+    },
+    {
+      "name": "normBNb.weight",
+      "shape": [
+        1024
+      ],
+      "dtype": "torch.float32",
+      "numel": 1024,
+      "requires_grad": true,
+      "group": "other"
+    },
+    {
+      "name": "normBNb.bias",
+      "shape": [
+        1024
+      ],
+      "dtype": "torch.float32",
+      "numel": 1024,
+      "requires_grad": true,
+      "group": "other"
+    },
+    {
+      "name": "normBNc.weight",
+      "shape": [
+        1024
+      ],
+      "dtype": "torch.float32",
+      "numel": 1024,
+      "requires_grad": true,
+      "group": "other"
+    },
+    {
+      "name": "normBNc.bias",
+      "shape": [
+        1024
+      ],
+      "dtype": "torch.float32",
+      "numel": 1024,
+      "requires_grad": true,
+      "group": "other"
+    },
+    {
+      "name": "normBNd.weight",
+      "shape": [
+        1024
+      ],
+      "dtype": "torch.float32",
+      "numel": 1024,
+      "requires_grad": true,
+      "group": "other"
+    },
+    {
+      "name": "normBNd.bias",
+      "shape": [
+        1024
+      ],
+      "dtype": "torch.float32",
+      "numel": 1024,
+      "requires_grad": true,
+      "group": "other"
+    },
+    {
+      "name": "normLNa.weight",
+      "shape": [
+        1024
+      ],
+      "dtype": "torch.float32",
+      "numel": 1024,
+      "requires_grad": true,
+      "group": "other"
+    },
+    {
+      "name": "normLNa.bias",
+      "shape": [
+        1024
+      ],
+      "dtype": "torch.float32",
+      "numel": 1024,
+      "requires_grad": true,
+      "group": "other"
+    },
+    {
+      "name": "normLNb.weight",
+      "shape": [
+        1024
+      ],
+      "dtype": "torch.float32",
+      "numel": 1024,
+      "requires_grad": true,
+      "group": "other"
+    },
+    {
+      "name": "normLNb.bias",
+      "shape": [
+        1024
+      ],
+      "dtype": "torch.float32",
+      "numel": 1024,
+      "requires_grad": true,
+      "group": "other"
+    },
+    {
+      "name": "normLNc.weight",
+      "shape": [
+        1024
+      ],
+      "dtype": "torch.float32",
+      "numel": 1024,
+      "requires_grad": true,
+      "group": "other"
+    },
+    {
+      "name": "normLNc.bias",
+      "shape": [
+        1024
+      ],
+      "dtype": "torch.float32",
+      "numel": 1024,
+      "requires_grad": true,
+      "group": "other"
+    },
+    {
+      "name": "normLNd.weight",
+      "shape": [
+        1024
+      ],
+      "dtype": "torch.float32",
+      "numel": 1024,
+      "requires_grad": true,
+      "group": "other"
+    },
+    {
+      "name": "normLNd.bias",
+      "shape": [
+        1024
+      ],
+      "dtype": "torch.float32",
+      "numel": 1024,
+      "requires_grad": true,
+      "group": "other"
+    },
+    {
+      "name": "linear_a.weight",
+      "shape": [
+        1024,
+        300
+      ],
+      "dtype": "torch.float32",
+      "numel": 307200,
+      "requires_grad": true,
+      "group": "audio_projection"
+    },
+    {
+      "name": "linear_a.bias",
+      "shape": [
+        1024
+      ],
+      "dtype": "torch.float32",
+      "numel": 1024,
+      "requires_grad": true,
+      "group": "audio_projection"
+    },
+    {
+      "name": "linear_v.weight",
+      "shape": [
+        1024,
+        342
+      ],
+      "dtype": "torch.float32",
+      "numel": 350208,
+      "requires_grad": true,
+      "group": "visual_projection"
+    },
+    {
+      "name": "linear_v.bias",
+      "shape": [
+        1024
+      ],
+      "dtype": "torch.float32",
+      "numel": 1024,
+      "requires_grad": true,
+      "group": "visual_projection"
+    },
+    {
+      "name": "linear_l.weight",
+      "shape": [
+        1024,
+        1024
+      ],
+      "dtype": "torch.float32",
+      "numel": 1048576,
+      "requires_grad": true,
+      "group": "other"
+    },
+    {
+      "name": "linear_l.bias",
+      "shape": [
+        1024
+      ],
+      "dtype": "torch.float32",
+      "numel": 1024,
+      "requires_grad": true,
+      "group": "other"
+    },
+    {
+      "name": "gru_l.weight_ih_l0",
+      "shape": [
+        1536,
+        1024
+      ],
+      "dtype": "torch.float32",
+      "numel": 1572864,
+      "requires_grad": true,
+      "group": "text_gru"
+    },
+    {
+      "name": "gru_l.weight_hh_l0",
+      "shape": [
+        1536,
+        512
+      ],
+      "dtype": "torch.float32",
+      "numel": 786432,
+      "requires_grad": true,
+      "group": "text_gru"
+    },
+    {
+      "name": "gru_l.bias_ih_l0",
+      "shape": [
+        1536
+      ],
+      "dtype": "torch.float32",
+      "numel": 1536,
+      "requires_grad": true,
+      "group": "text_gru"
+    },
+    {
+      "name": "gru_l.bias_hh_l0",
+      "shape": [
+        1536
+      ],
+      "dtype": "torch.float32",
+      "numel": 1536,
+      "requires_grad": true,
+      "group": "text_gru"
+    },
+    {
+      "name": "gru_l.weight_ih_l0_reverse",
+      "shape": [
+        1536,
+        1024
+      ],
+      "dtype": "torch.float32",
+      "numel": 1572864,
+      "requires_grad": true,
+      "group": "text_gru"
+    },
+    {
+      "name": "gru_l.weight_hh_l0_reverse",
+      "shape": [
+        1536,
+        512
+      ],
+      "dtype": "torch.float32",
+      "numel": 786432,
+      "requires_grad": true,
+      "group": "text_gru"
+    },
+    {
+      "name": "gru_l.bias_ih_l0_reverse",
+      "shape": [
+        1536
+      ],
+      "dtype": "torch.float32",
+      "numel": 1536,
+      "requires_grad": true,
+      "group": "text_gru"
+    },
+    {
+      "name": "gru_l.bias_hh_l0_reverse",
+      "shape": [
+        1536
+      ],
+      "dtype": "torch.float32",
+      "numel": 1536,
+      "requires_grad": true,
+      "group": "text_gru"
+    },
+    {
+      "name": "gru_l.weight_ih_l1",
+      "shape": [
+        1536,
+        1024
+      ],
+      "dtype": "torch.float32",
+      "numel": 1572864,
+      "requires_grad": true,
+      "group": "text_gru"
+    },
+    {
+      "name": "gru_l.weight_hh_l1",
+      "shape": [
+        1536,
+        512
+      ],
+      "dtype": "torch.float32",
+      "numel": 786432,
+      "requires_grad": true,
+      "group": "text_gru"
+    },
+    {
+      "name": "gru_l.bias_ih_l1",
+      "shape": [
+        1536
+      ],
+      "dtype": "torch.float32",
+      "numel": 1536,
+      "requires_grad": true,
+      "group": "text_gru"
+    },
+    {
+      "name": "gru_l.bias_hh_l1",
+      "shape": [
+        1536
+      ],
+      "dtype": "torch.float32",
+      "numel": 1536,
+      "requires_grad": true,
+      "group": "text_gru"
+    },
+    {
+      "name": "gru_l.weight_ih_l1_reverse",
+      "shape": [
+        1536,
+        1024
+      ],
+      "dtype": "torch.float32",
+      "numel": 1572864,
+      "requires_grad": true,
+      "group": "text_gru"
+    },
+    {
+      "name": "gru_l.weight_hh_l1_reverse",
+      "shape": [
+        1536,
+        512
+      ],
+      "dtype": "torch.float32",
+      "numel": 786432,
+      "requires_grad": true,
+      "group": "text_gru"
+    },
+    {
+      "name": "gru_l.bias_ih_l1_reverse",
+      "shape": [
+        1536
+      ],
+      "dtype": "torch.float32",
+      "numel": 1536,
+      "requires_grad": true,
+      "group": "text_gru"
+    },
+    {
+      "name": "gru_l.bias_hh_l1_reverse",
+      "shape": [
+        1536
+      ],
+      "dtype": "torch.float32",
+      "numel": 1536,
+      "requires_grad": true,
+      "group": "text_gru"
+    },
+    {
+      "name": "graph_model.hyperedge_weight",
+      "shape": [
+        1000
+      ],
+      "dtype": "torch.float32",
+      "numel": 1000,
+      "requires_grad": true,
+      "group": "graph_shared"
+    },
+    {
+      "name": "graph_model.EW_weight",
+      "shape": [
+        5200
+      ],
+      "dtype": "torch.float32",
+      "numel": 5200,
+      "requires_grad": true,
+      "group": "graph_shared"
+    },
+    {
+      "name": "graph_model.hyperedge_attr1",
+      "shape": [
+        512
+      ],
+      "dtype": "torch.float32",
+      "numel": 512,
+      "requires_grad": true,
+      "group": "graph_shared"
+    },
+    {
+      "name": "graph_model.hyperedge_attr2",
+      "shape": [
+        512
+      ],
+      "dtype": "torch.float32",
+      "numel": 512,
+      "requires_grad": true,
+      "group": "graph_shared"
+    },
+    {
+      "name": "graph_model.modal_embeddings.weight",
+      "shape": [
+        3,
+        1024
+      ],
+      "dtype": "torch.float32",
+      "numel": 3072,
+      "requires_grad": true,
+      "group": "graph_shared"
+    },
+    {
+      "name": "graph_model.speaker_embeddings.weight",
+      "shape": [
+        9,
+        1024
+      ],
+      "dtype": "torch.float32",
+      "numel": 9216,
+      "requires_grad": true,
+      "group": "graph_shared"
+    },
+    {
+      "name": "graph_model.fc1.weight",
+      "shape": [
+        512,
+        1024
+      ],
+      "dtype": "torch.float32",
+      "numel": 524288,
+      "requires_grad": true,
+      "group": "graph_shared"
+    },
+    {
+      "name": "graph_model.fc1.bias",
+      "shape": [
+        512
+      ],
+      "dtype": "torch.float32",
+      "numel": 512,
+      "requires_grad": true,
+      "group": "graph_shared"
+    },
+    {
+      "name": "graph_model.hyperconv1.weight",
+      "shape": [
+        512,
+        512
+      ],
+      "dtype": "torch.float32",
+      "numel": 262144,
+      "requires_grad": true,
+      "group": "graph_shared"
+    },
+    {
+      "name": "graph_model.hyperconv1.edgeweight",
+      "shape": [
+        512,
+        512
+      ],
+      "dtype": "torch.float32",
+      "numel": 262144,
+      "requires_grad": true,
+      "group": "graph_shared"
+    },
+    {
+      "name": "graph_model.hyperconv1.bias",
+      "shape": [
+        512
+      ],
+      "dtype": "torch.float32",
+      "numel": 512,
+      "requires_grad": true,
+      "group": "graph_shared"
+    },
+    {
+      "name": "graph_model.hyperconv1.edgefc.weight",
+      "shape": [
+        512,
+        512
+      ],
+      "dtype": "torch.float32",
+      "numel": 262144,
+      "requires_grad": true,
+      "group": "graph_shared"
+    },
+    {
+      "name": "graph_model.hyperconv1.edgefc.bias",
+      "shape": [
+        512
+      ],
+      "dtype": "torch.float32",
+      "numel": 512,
+      "requires_grad": true,
+      "group": "graph_shared"
+    },
+    {
+      "name": "graph_model.hyperconv2.weight",
+      "shape": [
+        512,
+        512
+      ],
+      "dtype": "torch.float32",
+      "numel": 262144,
+      "requires_grad": true,
+      "group": "graph_shared"
+    },
+    {
+      "name": "graph_model.hyperconv2.edgeweight",
+      "shape": [
+        512,
+        512
+      ],
+      "dtype": "torch.float32",
+      "numel": 262144,
+      "requires_grad": true,
+      "group": "graph_shared"
+    },
+    {
+      "name": "graph_model.hyperconv2.bias",
+      "shape": [
+        512
+      ],
+      "dtype": "torch.float32",
+      "numel": 512,
+      "requires_grad": true,
+      "group": "graph_shared"
+    },
+    {
+      "name": "graph_model.hyperconv2.edgefc.weight",
+      "shape": [
+        512,
+        512
+      ],
+      "dtype": "torch.float32",
+      "numel": 262144,
+      "requires_grad": true,
+      "group": "graph_shared"
+    },
+    {
+      "name": "graph_model.hyperconv2.edgefc.bias",
+      "shape": [
+        512
+      ],
+      "dtype": "torch.float32",
+      "numel": 512,
+      "requires_grad": true,
+      "group": "graph_shared"
+    },
+    {
+      "name": "graph_model.hyperconv3.weight",
+      "shape": [
+        512,
+        512
+      ],
+      "dtype": "torch.float32",
+      "numel": 262144,
+      "requires_grad": true,
+      "group": "graph_shared"
+    },
+    {
+      "name": "graph_model.hyperconv3.edgeweight",
+      "shape": [
+        512,
+        512
+      ],
+      "dtype": "torch.float32",
+      "numel": 262144,
+      "requires_grad": true,
+      "group": "graph_shared"
+    },
+    {
+      "name": "graph_model.hyperconv3.bias",
+      "shape": [
+        512
+      ],
+      "dtype": "torch.float32",
+      "numel": 512,
+      "requires_grad": true,
+      "group": "graph_shared"
+    },
+    {
+      "name": "graph_model.hyperconv3.edgefc.weight",
+      "shape": [
+        512,
+        512
+      ],
+      "dtype": "torch.float32",
+      "numel": 262144,
+      "requires_grad": true,
+      "group": "graph_shared"
+    },
+    {
+      "name": "graph_model.hyperconv3.edgefc.bias",
+      "shape": [
+        512
+      ],
+      "dtype": "torch.float32",
+      "numel": 512,
+      "requires_grad": true,
+      "group": "graph_shared"
+    },
+    {
+      "name": "graph_model.conv1.gate.weight",
+      "shape": [
+        1,
+        1024
+      ],
+      "dtype": "torch.float32",
+      "numel": 1024,
+      "requires_grad": true,
+      "group": "graph_shared"
+    },
+    {
+      "name": "graph_model.conv1.gate.bias",
+      "shape": [
+        1
+      ],
+      "dtype": "torch.float32",
+      "numel": 1,
+      "requires_grad": true,
+      "group": "graph_shared"
+    },
+    {
+      "name": "graph_model.conv2.gate.weight",
+      "shape": [
+        1,
+        1024
+      ],
+      "dtype": "torch.float32",
+      "numel": 1024,
+      "requires_grad": true,
+      "group": "graph_shared"
+    },
+    {
+      "name": "graph_model.conv2.gate.bias",
+      "shape": [
+        1
+      ],
+      "dtype": "torch.float32",
+      "numel": 1,
+      "requires_grad": true,
+      "group": "graph_shared"
+    },
+    {
+      "name": "graph_model.conv3.gate.weight",
+      "shape": [
+        1,
+        1024
+      ],
+      "dtype": "torch.float32",
+      "numel": 1024,
+      "requires_grad": true,
+      "group": "graph_shared"
+    },
+    {
+      "name": "graph_model.conv3.gate.bias",
+      "shape": [
+        1
+      ],
+      "dtype": "torch.float32",
+      "numel": 1,
+      "requires_grad": true,
+      "group": "graph_shared"
+    },
+    {
+      "name": "hidfc.weight",
+      "shape": [
+        7,
+        512
+      ],
+      "dtype": "torch.float32",
+      "numel": 3584,
+      "requires_grad": true,
+      "group": "classification_head"
+    },
+    {
+      "name": "hidfc.bias",
+      "shape": [
+        7
+      ],
+      "dtype": "torch.float32",
+      "numel": 7,
+      "requires_grad": true,
+      "group": "classification_head"
+    },
+    {
+      "name": "smax_fc.weight",
+      "shape": [
+        7,
+        3072
+      ],
+      "dtype": "torch.float32",
+      "numel": 21504,
+      "requires_grad": true,
+      "group": "classification_head"
+    },
+    {
+      "name": "smax_fc.bias",
+      "shape": [
+        7
+      ],
+      "dtype": "torch.float32",
+      "numel": 7,
+      "requires_grad": true,
+      "group": "classification_head"
+    }
+  ],
+  "buffers": [
+    {
+      "name": "normBNa.running_mean",
+      "shape": [
+        1024
+      ],
+      "dtype": "torch.float32",
+      "numel": 1024
+    },
+    {
+      "name": "normBNa.running_var",
+      "shape": [
+        1024
+      ],
+      "dtype": "torch.float32",
+      "numel": 1024
+    },
+    {
+      "name": "normBNa.num_batches_tracked",
+      "shape": [],
+      "dtype": "torch.int64",
+      "numel": 1
+    },
+    {
+      "name": "normBNb.running_mean",
+      "shape": [
+        1024
+      ],
+      "dtype": "torch.float32",
+      "numel": 1024
+    },
+    {
+      "name": "normBNb.running_var",
+      "shape": [
+        1024
+      ],
+      "dtype": "torch.float32",
+      "numel": 1024
+    },
+    {
+      "name": "normBNb.num_batches_tracked",
+      "shape": [],
+      "dtype": "torch.int64",
+      "numel": 1
+    },
+    {
+      "name": "normBNc.running_mean",
+      "shape": [
+        1024
+      ],
+      "dtype": "torch.float32",
+      "numel": 1024
+    },
+    {
+      "name": "normBNc.running_var",
+      "shape": [
+        1024
+      ],
+      "dtype": "torch.float32",
+      "numel": 1024
+    },
+    {
+      "name": "normBNc.num_batches_tracked",
+      "shape": [],
+      "dtype": "torch.int64",
+      "numel": 1
+    },
+    {
+      "name": "normBNd.running_mean",
+      "shape": [
+        1024
+      ],
+      "dtype": "torch.float32",
+      "numel": 1024
+    },
+    {
+      "name": "normBNd.running_var",
+      "shape": [
+        1024
+      ],
+      "dtype": "torch.float32",
+      "numel": 1024
+    },
+    {
+      "name": "normBNd.num_batches_tracked",
+      "shape": [],
+      "dtype": "torch.int64",
+      "numel": 1
+    }
+  ],
+  "groups": {
+    "text_gru": [
+      "gru_l.weight_ih_l0",
+      "gru_l.weight_hh_l0",
+      "gru_l.bias_ih_l0",
+      "gru_l.bias_hh_l0",
+      "gru_l.weight_ih_l0_reverse",
+      "gru_l.weight_hh_l0_reverse",
+      "gru_l.bias_ih_l0_reverse",
+      "gru_l.bias_hh_l0_reverse",
+      "gru_l.weight_ih_l1",
+      "gru_l.weight_hh_l1",
+      "gru_l.bias_ih_l1",
+      "gru_l.bias_hh_l1",
+      "gru_l.weight_ih_l1_reverse",
+      "gru_l.weight_hh_l1_reverse",
+      "gru_l.bias_ih_l1_reverse",
+      "gru_l.bias_hh_l1_reverse"
+    ],
+    "audio_projection": [
+      "linear_a.weight",
+      "linear_a.bias"
+    ],
+    "visual_projection": [
+      "linear_v.weight",
+      "linear_v.bias"
+    ],
+    "graph_shared": [
+      "graph_model.hyperedge_weight",
+      "graph_model.EW_weight",
+      "graph_model.hyperedge_attr1",
+      "graph_model.hyperedge_attr2",
+      "graph_model.modal_embeddings.weight",
+      "graph_model.speaker_embeddings.weight",
+      "graph_model.fc1.weight",
+      "graph_model.fc1.bias",
+      "graph_model.hyperconv1.weight",
+      "graph_model.hyperconv1.edgeweight",
+      "graph_model.hyperconv1.bias",
+      "graph_model.hyperconv1.edgefc.weight",
+      "graph_model.hyperconv1.edgefc.bias",
+      "graph_model.hyperconv2.weight",
+      "graph_model.hyperconv2.edgeweight",
+      "graph_model.hyperconv2.bias",
+      "graph_model.hyperconv2.edgefc.weight",
+      "graph_model.hyperconv2.edgefc.bias",
+      "graph_model.hyperconv3.weight",
+      "graph_model.hyperconv3.edgeweight",
+      "graph_model.hyperconv3.bias",
+      "graph_model.hyperconv3.edgefc.weight",
+      "graph_model.hyperconv3.edgefc.bias",
+      "graph_model.conv1.gate.weight",
+      "graph_model.conv1.gate.bias",
+      "graph_model.conv2.gate.weight",
+      "graph_model.conv2.gate.bias",
+      "graph_model.conv3.gate.weight",
+      "graph_model.conv3.gate.bias"
+    ],
+    "classification_head": [
+      "hidfc.weight",
+      "hidfc.bias",
+      "smax_fc.weight",
+      "smax_fc.bias"
+    ],
+    "other": [
+      "normBNa.weight",
+      "normBNa.bias",
+      "normBNb.weight",
+      "normBNb.bias",
+      "normBNc.weight",
+      "normBNc.bias",
+      "normBNd.weight",
+      "normBNd.bias",
+      "normLNa.weight",
+      "normLNa.bias",
+      "normLNb.weight",
+      "normLNb.bias",
+      "normLNc.weight",
+      "normLNc.bias",
+      "normLNd.weight",
+      "normLNd.bias",
+      "linear_l.weight",
+      "linear_l.bias"
+    ],
+    "shared_backbone": [
+      "normBNa.weight",
+      "normBNa.bias",
+      "normBNb.weight",
+      "normBNb.bias",
+      "normBNc.weight",
+      "normBNc.bias",
+      "normBNd.weight",
+      "normBNd.bias",
+      "normLNa.weight",
+      "normLNa.bias",
+      "normLNb.weight",
+      "normLNb.bias",
+      "normLNc.weight",
+      "normLNc.bias",
+      "normLNd.weight",
+      "normLNd.bias",
+      "linear_a.weight",
+      "linear_a.bias",
+      "linear_v.weight",
+      "linear_v.bias",
+      "linear_l.weight",
+      "linear_l.bias",
+      "gru_l.weight_ih_l0",
+      "gru_l.weight_hh_l0",
+      "gru_l.bias_ih_l0",
+      "gru_l.bias_hh_l0",
+      "gru_l.weight_ih_l0_reverse",
+      "gru_l.weight_hh_l0_reverse",
+      "gru_l.bias_ih_l0_reverse",
+      "gru_l.bias_hh_l0_reverse",
+      "gru_l.weight_ih_l1",
+      "gru_l.weight_hh_l1",
+      "gru_l.bias_ih_l1",
+      "gru_l.bias_hh_l1",
+      "gru_l.weight_ih_l1_reverse",
+      "gru_l.weight_hh_l1_reverse",
+      "gru_l.bias_ih_l1_reverse",
+      "gru_l.bias_hh_l1_reverse",
+      "graph_model.hyperedge_weight",
+      "graph_model.EW_weight",
+      "graph_model.hyperedge_attr1",
+      "graph_model.hyperedge_attr2",
+      "graph_model.modal_embeddings.weight",
+      "graph_model.speaker_embeddings.weight",
+      "graph_model.fc1.weight",
+      "graph_model.fc1.bias",
+      "graph_model.hyperconv1.weight",
+      "graph_model.hyperconv1.edgeweight",
+      "graph_model.hyperconv1.bias",
+      "graph_model.hyperconv1.edgefc.weight",
+      "graph_model.hyperconv1.edgefc.bias",
+      "graph_model.hyperconv2.weight",
+      "graph_model.hyperconv2.edgeweight",
+      "graph_model.hyperconv2.bias",
+      "graph_model.hyperconv2.edgefc.weight",
+      "graph_model.hyperconv2.edgefc.bias",
+      "graph_model.hyperconv3.weight",
+      "graph_model.hyperconv3.edgeweight",
+      "graph_model.hyperconv3.bias",
+      "graph_model.hyperconv3.edgefc.weight",
+      "graph_model.hyperconv3.edgefc.bias",
+      "graph_model.conv1.gate.weight",
+      "graph_model.conv1.gate.bias",
+      "graph_model.conv2.gate.weight",
+      "graph_model.conv2.gate.bias",
+      "graph_model.conv3.gate.weight",
+      "graph_model.conv3.gate.bias"
+    ],
+    "all": [
+      "normBNa.weight",
+      "normBNa.bias",
+      "normBNb.weight",
+      "normBNb.bias",
+      "normBNc.weight",
+      "normBNc.bias",
+      "normBNd.weight",
+      "normBNd.bias",
+      "normLNa.weight",
+      "normLNa.bias",
+      "normLNb.weight",
+      "normLNb.bias",
+      "normLNc.weight",
+      "normLNc.bias",
+      "normLNd.weight",
+      "normLNd.bias",
+      "linear_a.weight",
+      "linear_a.bias",
+      "linear_v.weight",
+      "linear_v.bias",
+      "linear_l.weight",
+      "linear_l.bias",
+      "gru_l.weight_ih_l0",
+      "gru_l.weight_hh_l0",
+      "gru_l.bias_ih_l0",
+      "gru_l.bias_hh_l0",
+      "gru_l.weight_ih_l0_reverse",
+      "gru_l.weight_hh_l0_reverse",
+      "gru_l.bias_ih_l0_reverse",
+      "gru_l.bias_hh_l0_reverse",
+      "gru_l.weight_ih_l1",
+      "gru_l.weight_hh_l1",
+      "gru_l.bias_ih_l1",
+      "gru_l.bias_hh_l1",
+      "gru_l.weight_ih_l1_reverse",
+      "gru_l.weight_hh_l1_reverse",
+      "gru_l.bias_ih_l1_reverse",
+      "gru_l.bias_hh_l1_reverse",
+      "graph_model.hyperedge_weight",
+      "graph_model.EW_weight",
+      "graph_model.hyperedge_attr1",
+      "graph_model.hyperedge_attr2",
+      "graph_model.modal_embeddings.weight",
+      "graph_model.speaker_embeddings.weight",
+      "graph_model.fc1.weight",
+      "graph_model.fc1.bias",
+      "graph_model.hyperconv1.weight",
+      "graph_model.hyperconv1.edgeweight",
+      "graph_model.hyperconv1.bias",
+      "graph_model.hyperconv1.edgefc.weight",
+      "graph_model.hyperconv1.edgefc.bias",
+      "graph_model.hyperconv2.weight",
+      "graph_model.hyperconv2.edgeweight",
+      "graph_model.hyperconv2.bias",
+      "graph_model.hyperconv2.edgefc.weight",
+      "graph_model.hyperconv2.edgefc.bias",
+      "graph_model.hyperconv3.weight",
+      "graph_model.hyperconv3.edgeweight",
+      "graph_model.hyperconv3.bias",
+      "graph_model.hyperconv3.edgefc.weight",
+      "graph_model.hyperconv3.edgefc.bias",
+      "graph_model.conv1.gate.weight",
+      "graph_model.conv1.gate.bias",
+      "graph_model.conv2.gate.weight",
+      "graph_model.conv2.gate.bias",
+      "graph_model.conv3.gate.weight",
+      "graph_model.conv3.gate.bias",
+      "hidfc.weight",
+      "hidfc.bias",
+      "smax_fc.weight",
+      "smax_fc.bias"
+    ]
+  },
+  "group_numel": {
+    "text_gru": 9449472,
+    "audio_projection": 308224,
+    "visual_projection": 351232,
+    "graph_shared": 2909755,
+    "classification_head": 25102,
+    "other": 1065984,
+    "shared_backbone": 14084667,
+    "all": 14109769
+  },
+  "n_parameter_tensors": 71,
+  "n_parameters": 14109769,
+  "n_state_keys": 83,
+  "state_keys": [
+    "normBNa.weight",
+    "normBNa.bias",
+    "normBNa.running_mean",
+    "normBNa.running_var",
+    "normBNa.num_batches_tracked",
+    "normBNb.weight",
+    "normBNb.bias",
+    "normBNb.running_mean",
+    "normBNb.running_var",
+    "normBNb.num_batches_tracked",
+    "normBNc.weight",
+    "normBNc.bias",
+    "normBNc.running_mean",
+    "normBNc.running_var",
+    "normBNc.num_batches_tracked",
+    "normBNd.weight",
+    "normBNd.bias",
+    "normBNd.running_mean",
+    "normBNd.running_var",
+    "normBNd.num_batches_tracked",
+    "normLNa.weight",
+    "normLNa.bias",
+    "normLNb.weight",
+    "normLNb.bias",
+    "normLNc.weight",
+    "normLNc.bias",
+    "normLNd.weight",
+    "normLNd.bias",
+    "linear_a.weight",
+    "linear_a.bias",
+    "linear_v.weight",
+    "linear_v.bias",
+    "linear_l.weight",
+    "linear_l.bias",
+    "gru_l.weight_ih_l0",
+    "gru_l.weight_hh_l0",
+    "gru_l.bias_ih_l0",
+    "gru_l.bias_hh_l0",
+    "gru_l.weight_ih_l0_reverse",
+    "gru_l.weight_hh_l0_reverse",
+    "gru_l.bias_ih_l0_reverse",
+    "gru_l.bias_hh_l0_reverse",
+    "gru_l.weight_ih_l1",
+    "gru_l.weight_hh_l1",
+    "gru_l.bias_ih_l1",
+    "gru_l.bias_hh_l1",
+    "gru_l.weight_ih_l1_reverse",
+    "gru_l.weight_hh_l1_reverse",
+    "gru_l.bias_ih_l1_reverse",
+    "gru_l.bias_hh_l1_reverse",
+    "graph_model.hyperedge_weight",
+    "graph_model.EW_weight",
+    "graph_model.hyperedge_attr1",
+    "graph_model.hyperedge_attr2",
+    "graph_model.modal_embeddings.weight",
+    "graph_model.speaker_embeddings.weight",
+    "graph_model.fc1.weight",
+    "graph_model.fc1.bias",
+    "graph_model.hyperconv1.weight",
+    "graph_model.hyperconv1.edgeweight",
+    "graph_model.hyperconv1.bias",
+    "graph_model.hyperconv1.edgefc.weight",
+    "graph_model.hyperconv1.edgefc.bias",
+    "graph_model.hyperconv2.weight",
+    "graph_model.hyperconv2.edgeweight",
+    "graph_model.hyperconv2.bias",
+    "graph_model.hyperconv2.edgefc.weight",
+    "graph_model.hyperconv2.edgefc.bias",
+    "graph_model.hyperconv3.weight",
+    "graph_model.hyperconv3.edgeweight",
+    "graph_model.hyperconv3.bias",
+    "graph_model.hyperconv3.edgefc.weight",
+    "graph_model.hyperconv3.edgefc.bias",
+    "graph_model.conv1.gate.weight",
+    "graph_model.conv1.gate.bias",
+    "graph_model.conv2.gate.weight",
+    "graph_model.conv2.gate.bias",
+    "graph_model.conv3.gate.weight",
+    "graph_model.conv3.gate.bias",
+    "hidfc.weight",
+    "hidfc.bias",
+    "smax_fc.weight",
+    "smax_fc.bias"
+  ],
+  "source_sha256": {
+    "model_cm.py": "94acf11e2e9edd1bcd98049eb12d85b3604f8d71d46f64f0c3b8b9837fa12625",
+    "model_hyper.py": "fb9ef2ee268afa697474c9199d2136a7519b5226adb4abeec4a9cf1aea678aba",
+    "HypergraphConv.py": "9297a572e1763a74c7984eb75dfb15fa8143bf131a44cf50433c307ef7f3b5d2",
+    "high_fre_conv.py": "f4414c019ca7f656a662698bb9615bf15ac6325a73caa06ff487e158f58f39df"
+  },
+  "construction": "Real CPU Model constructor and named_parameters/named_buffers; no forward.",
+  "limits": [
+    "Group membership does not imply an active gradient.",
+    "other includes linear_l and normalization parameters, as preregistered.",
+    "shared_backbone excludes only classification_head; all includes every parameter."
+  ]
+}

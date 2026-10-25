@@ -1,0 +1,24 @@
+{
+  "diagnostic": [
+    "/data2/yb/conda_envs/cmerc-xp-repro/bin/python",
+    "-u",
+    "/data2/yb/paper/lyx-msa/CMERC/experiments/auxiliary_loss_diagnostic/20261025T123240Z/scripts/diagnose.py",
+    "--run"
+  ],
+  "finalizer": [
+    "/data2/yb/conda_envs/cmerc-xp-repro/bin/python",
+    "-u",
+    "/data2/yb/paper/lyx-msa/CMERC/experiments/auxiliary_loss_diagnostic/20261025T123240Z/scripts/finalize.py"
+  ],
+  "cwd": "/data2/yb/paper/lyx-msa/CMERC/experiments/auxiliary_loss_diagnostic/20261025T123240Z",
+  "environment": {
+    "CUDA_VISIBLE_DEVICES": "GPU-7ff18ebb-100e-98fe-038b-a98bd4f94248",
+    "LD_LIBRARY_PATH": "/data2/yb/conda_envs/cmerc-xp-repro/lib/python3.10/site-packages/nvidia/cusparse/lib",
+    "OMP_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "PYTORCH_CUDA_ALLOC_CONF": "garbage_collection_threshold:0.8",
+    "CMERC_ENV_PREFIX": "/data2/yb/conda_envs/cmerc-xp-repro",
+    "PYTHONDONTWRITEBYTECODE": "1"
+  }
+}

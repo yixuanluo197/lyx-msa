@@ -1,0 +1,10 @@
+{
+  "created_at_utc": "2026-10-25T13:35:04.044248+00:00",
+  "stage": "publication-only privacy check",
+  "first_attempt": "Rejected harmless public checkpoint_ids list by overbroad *_ids check.",
+  "fix": "Explicitly allow diagnostic checkpoint_ids and anonymous batch_ids; continue rejecting train/test/validation/dialogue ID arrays.",
+  "scientific_scripts_changed": false,
+  "model_forwards": 0,
+  "autograd_calls": 0,
+  "final_script_sha256": "a26660579aa9f4bb10bff4827da4c7d7f9ca664f91f2af75f9fc042b44d14b99"
+}

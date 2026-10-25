@@ -1,0 +1,38 @@
+{
+  "active": false,
+  "phase": "completed",
+  "pid": 624746,
+  "commands": [
+    {
+      "argv": [
+        "/data2/yb/conda_envs/cmerc-xp-repro/bin/python",
+        "-u",
+        "/data2/yb/paper/lyx-msa/CMERC/experiments/auxiliary_loss_diagnostic/20261025T123240Z/scripts/verify_diagnostic.py"
+      ],
+      "started_at_utc": "2026-10-25T13:23:28.357017+00:00",
+      "returncode": 0,
+      "finished_at_utc": "2026-10-25T13:25:36.946004+00:00"
+    },
+    {
+      "argv": [
+        "/data2/yb/conda_envs/cmerc-xp-repro/bin/python",
+        "-u",
+        "/data2/yb/paper/lyx-msa/CMERC/experiments/auxiliary_loss_diagnostic/20261025T123240Z/scripts/analyze_diagnostic.py"
+      ],
+      "started_at_utc": "2026-10-25T13:25:36.947639+00:00",
+      "returncode": 0,
+      "finished_at_utc": "2026-10-25T13:25:39.194119+00:00"
+    },
+    {
+      "argv": [
+        "/home/yangbin/miniconda3/envs/multimodalerc310/bin/python",
+        "-u",
+        "/data2/yb/paper/lyx-msa/CMERC/experiments/auxiliary_loss_diagnostic/20261025T123240Z/scripts/plot_diagnostic.py"
+      ],
+      "started_at_utc": "2026-10-25T13:25:39.195751+00:00",
+      "returncode": 0,
+      "finished_at_utc": "2026-10-25T13:25:44.205549+00:00"
+    }
+  ],
+  "finished_at_utc": "2026-10-25T13:25:44.206343+00:00"
+}

@@ -22,6 +22,7 @@
 | MELD Dropout诊断 | 本地 `user23` / TITAN Xp GPU3 | MELD seed2024、lr0.0001、Batch16、Dropout0.5，唯一40轮；验证选模、零测试前向 | 最佳66.49%/e15、末10轮62.775%；验收通过，第二Seed候选 | [10_dropout_diagnosis](10_dropout_diagnosis/README.md) |
 | MELD Dropout第二Seed确认 | 本地 `user23` / TITAN Xp GPU0 | MELD seed67137、lr0.0001、Batch16、Dropout0.5，唯一40轮；验证选模、零新增测试前向 | 最佳66.41%/e17、末10轮62.440%；验收通过，混合证据 | [11_dropout_second_seed_confirmation](11_dropout_second_seed_confirmation/README.md) |
 | MELD HSCL最小机制消融 | 本地 `user23` / TITAN Xp GPU0 | MELD seed67137、Dropout0.4、lr0.0001、Batch16、w/o HSCL，唯一40轮；保留CC和CL，验证选模、零新增测试前向 | 最佳65.69%/e5、末10轮62.794%；验收通过，混合证据 | [12_hscl_ablation_validation](12_hscl_ablation_validation/README.md) |
+| 辅助损失梯度与伪标签诊断 | 本地 `user23` / TITAN Xp GPU0 | XP04 e8/e40与XP12 e5/e40，同32训练Batch；768前向、512独立autograd；训练/step/测试均0 | 128单元及独立验收通过；唯一优先系数证据不足 | [13_auxiliary_loss_diagnostic](13_auxiliary_loss_diagnostic/README.md) |
 
 ## 如何交给 GPT 审查
 

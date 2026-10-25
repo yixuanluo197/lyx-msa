@@ -1,0 +1,942 @@
+{
+  "status": "passed",
+  "selection_seed": 67137,
+  "rule": "Within four rank-based dialogue-length quartiles, greedy cover seven emotion labels where available (seeded tie breaking), fill uniform without replacement to128 dialogues, seeded shuffle and partition eight batches16; no performance/gradient/test selection.",
+  "rank_boundary_rule": "slice[floor(q*N/4):floor((q+1)*N/4)]",
+  "n_batches": 32,
+  "batch_size": 16,
+  "n_unique_dialogues": 512,
+  "training_pool_dialogues": 1038,
+  "train_split_hash": "5317189c62939f28801eadf558763bd901cae04544ae829ebd45d1dd057055b8",
+  "raw_training_input_sha256": "d043b3ec1813c8917e2067af01e933ff0892d33d19d93595098aaf88c4b200b0",
+  "fixed_batches_content_sha256": "88a444303eaf3204bd88e5af6f4a940110766c2b6ee24d85755345a4b8a43ae0",
+  "batches": [
+    {
+      "batch_id": "B01",
+      "length_stratum": 1,
+      "n_dialogues": 16,
+      "n_utterances": 42,
+      "emotion_counts": [
+        28,
+        7,
+        1,
+        0,
+        4,
+        0,
+        2
+      ],
+      "length_min": 1,
+      "length_max": 5,
+      "length_mean": 2.625,
+      "capacity": {
+        "edges": 90,
+        "nodes": 126
+      },
+      "dialogue_ids_sha256": "88cd2559076cc29c26d655f114b8a2caec5205156b1c2e67ea0861e817e5e508"
+    },
+    {
+      "batch_id": "B02",
+      "length_stratum": 1,
+      "n_dialogues": 16,
+      "n_utterances": 45,
+      "emotion_counts": [
+        24,
+        3,
+        1,
+        1,
+        13,
+        2,
+        1
+      ],
+      "length_min": 1,
+      "length_max": 5,
+      "length_mean": 2.8125,
+      "capacity": {
+        "edges": 93,
+        "nodes": 135
+      },
+      "dialogue_ids_sha256": "e1e252a9e01d1d7277d2189473a337c9931119152d693e860fcbf2e19d915c79"
+    },
+    {
+      "batch_id": "B03",
+      "length_stratum": 1,
+      "n_dialogues": 16,
+      "n_utterances": 54,
+      "emotion_counts": [
+        26,
+        6,
+        1,
+        8,
+        4,
+        3,
+        6
+      ],
+      "length_min": 1,
+      "length_max": 5,
+      "length_mean": 3.375,
+      "capacity": {
+        "edges": 102,
+        "nodes": 162
+      },
+      "dialogue_ids_sha256": "30189997180c915eff45f15c3baae0b6ab07198a0c91fa22ec7a38db382f3d5c"
+    },
+    {
+      "batch_id": "B04",
+      "length_stratum": 1,
+      "n_dialogues": 16,
+      "n_utterances": 45,
+      "emotion_counts": [
+        16,
+        9,
+        2,
+        4,
+        7,
+        1,
+        6
+      ],
+      "length_min": 1,
+      "length_max": 5,
+      "length_mean": 2.8125,
+      "capacity": {
+        "edges": 93,
+        "nodes": 135
+      },
+      "dialogue_ids_sha256": "2b640f90185a62efde16500abbeb2ba42b55ee274cf0526ead7f6e28457ffb84"
+    },
+    {
+      "batch_id": "B05",
+      "length_stratum": 1,
+      "n_dialogues": 16,
+      "n_utterances": 41,
+      "emotion_counts": [
+        16,
+        5,
+        0,
+        3,
+        11,
+        1,
+        5
+      ],
+      "length_min": 1,
+      "length_max": 5,
+      "length_mean": 2.5625,
+      "capacity": {
+        "edges": 89,
+        "nodes": 123
+      },
+      "dialogue_ids_sha256": "390663c060a239260d37eb057c60ab260abd05196d23cc2a496e3e5e93661a17"
+    },
+    {
+      "batch_id": "B06",
+      "length_stratum": 1,
+      "n_dialogues": 16,
+      "n_utterances": 42,
+      "emotion_counts": [
+        21,
+        4,
+        2,
+        5,
+        5,
+        1,
+        4
+      ],
+      "length_min": 1,
+      "length_max": 5,
+      "length_mean": 2.625,
+      "capacity": {
+        "edges": 90,
+        "nodes": 126
+      },
+      "dialogue_ids_sha256": "3012f08366fc28e22bbae03950a7eb2a885eb453365e2f1bb2949b97ed02c98b"
+    },
+    {
+      "batch_id": "B07",
+      "length_stratum": 1,
+      "n_dialogues": 16,
+      "n_utterances": 48,
+      "emotion_counts": [
+        29,
+        5,
+        3,
+        1,
+        9,
+        1,
+        0
+      ],
+      "length_min": 1,
+      "length_max": 5,
+      "length_mean": 3.0,
+      "capacity": {
+        "edges": 96,
+        "nodes": 144
+      },
+      "dialogue_ids_sha256": "174c730f03062b17f754955c3b1e3e80a91b2fd35588dba03011654e11cea684"
+    },
+    {
+      "batch_id": "B08",
+      "length_stratum": 1,
+      "n_dialogues": 16,
+      "n_utterances": 36,
+      "emotion_counts": [
+        20,
+        6,
+        3,
+        0,
+        3,
+        2,
+        2
+      ],
+      "length_min": 1,
+      "length_max": 5,
+      "length_mean": 2.25,
+      "capacity": {
+        "edges": 84,
+        "nodes": 108
+      },
+      "dialogue_ids_sha256": "88b169872413eec67eb8206c2166a2408b9b4f044258c06c62fc557771425b66"
+    },
+    {
+      "batch_id": "B09",
+      "length_stratum": 2,
+      "n_dialogues": 16,
+      "n_utterances": 108,
+      "emotion_counts": [
+        53,
+        12,
+        1,
+        11,
+        18,
+        2,
+        11
+      ],
+      "length_min": 5,
+      "length_max": 8,
+      "length_mean": 6.75,
+      "capacity": {
+        "edges": 156,
+        "nodes": 324
+      },
+      "dialogue_ids_sha256": "5cc7e137bdbfd1109248b020ded3d32f4464daaf44e61672325e119b92d2f5a9"
+    },
+    {
+      "batch_id": "B10",
+      "length_stratum": 2,
+      "n_dialogues": 16,
+      "n_utterances": 104,
+      "emotion_counts": [
+        51,
+        12,
+        0,
+        11,
+        18,
+        1,
+        11
+      ],
+      "length_min": 5,
+      "length_max": 8,
+      "length_mean": 6.5,
+      "capacity": {
+        "edges": 152,
+        "nodes": 312
+      },
+      "dialogue_ids_sha256": "af1c24391f164b48e9c2ec717d9779a322e28081f97d70e85fea66992bb6fa0a"
+    },
+    {
+      "batch_id": "B11",
+      "length_stratum": 2,
+      "n_dialogues": 16,
+      "n_utterances": 104,
+      "emotion_counts": [
+        39,
+        13,
+        5,
+        13,
+        20,
+        5,
+        9
+      ],
+      "length_min": 5,
+      "length_max": 9,
+      "length_mean": 6.5,
+      "capacity": {
+        "edges": 152,
+        "nodes": 312
+      },
+      "dialogue_ids_sha256": "b020e52e42c9d84809ab1d86915d3146eca40d1a7faceb582c927f312491aa44"
+    },
+    {
+      "batch_id": "B12",
+      "length_stratum": 2,
+      "n_dialogues": 16,
+      "n_utterances": 112,
+      "emotion_counts": [
+        58,
+        18,
+        1,
+        7,
+        17,
+        2,
+        9
+      ],
+      "length_min": 5,
+      "length_max": 9,
+      "length_mean": 7.0,
+      "capacity": {
+        "edges": 160,
+        "nodes": 336
+      },
+      "dialogue_ids_sha256": "4ea0d425fedbe1c1965cdba22edfbb1e06d67202528bd7d772f95585ce8e5132"
+    },
+    {
+      "batch_id": "B13",
+      "length_stratum": 2,
+      "n_dialogues": 16,
+      "n_utterances": 111,
+      "emotion_counts": [
+        58,
+        7,
+        3,
+        6,
+        26,
+        1,
+        10
+      ],
+      "length_min": 5,
+      "length_max": 9,
+      "length_mean": 6.9375,
+      "capacity": {
+        "edges": 159,
+        "nodes": 333
+      },
+      "dialogue_ids_sha256": "e34794f33390d0aaace64a306a611247db79001b711f7f06aec54f699cb3cba4"
+    },
+    {
+      "batch_id": "B14",
+      "length_stratum": 2,
+      "n_dialogues": 16,
+      "n_utterances": 103,
+      "emotion_counts": [
+        46,
+        7,
+        3,
+        9,
+        19,
+        5,
+        14
+      ],
+      "length_min": 5,
+      "length_max": 8,
+      "length_mean": 6.4375,
+      "capacity": {
+        "edges": 151,
+        "nodes": 309
+      },
+      "dialogue_ids_sha256": "18508ffd8ba10964d5d491ea4c17b77f71944fb6b63701a917d51f16def9cc71"
+    },
+    {
+      "batch_id": "B15",
+      "length_stratum": 2,
+      "n_dialogues": 16,
+      "n_utterances": 117,
+      "emotion_counts": [
+        52,
+        13,
+        5,
+        9,
+        20,
+        1,
+        17
+      ],
+      "length_min": 6,
+      "length_max": 9,
+      "length_mean": 7.3125,
+      "capacity": {
+        "edges": 165,
+        "nodes": 351
+      },
+      "dialogue_ids_sha256": "43b3429db29321475002164e82b4bb02538313e8ee1d142b829126b5019b1672"
+    },
+    {
+      "batch_id": "B16",
+      "length_stratum": 2,
+      "n_dialogues": 16,
+      "n_utterances": 119,
+      "emotion_counts": [
+        73,
+        13,
+        1,
+        1,
+        19,
+        2,
+        10
+      ],
+      "length_min": 5,
+      "length_max": 9,
+      "length_mean": 7.4375,
+      "capacity": {
+        "edges": 167,
+        "nodes": 357
+      },
+      "dialogue_ids_sha256": "2d4570a5bccfe41649278c3051b8a089ce7fb5e1655c7f968a71b8fabb0a4d0a"
+    },
+    {
+      "batch_id": "B17",
+      "length_stratum": 3,
+      "n_dialogues": 16,
+      "n_utterances": 181,
+      "emotion_counts": [
+        78,
+        23,
+        4,
+        10,
+        34,
+        6,
+        26
+      ],
+      "length_min": 10,
+      "length_max": 14,
+      "length_mean": 11.3125,
+      "capacity": {
+        "edges": 229,
+        "nodes": 543
+      },
+      "dialogue_ids_sha256": "9204e4dc210bee45faf1f7c04ba6793e0cf390cb03a203ec3cc89560dc056c29"
+    },
+    {
+      "batch_id": "B18",
+      "length_stratum": 3,
+      "n_dialogues": 16,
+      "n_utterances": 176,
+      "emotion_counts": [
+        82,
+        15,
+        4,
+        26,
+        39,
+        1,
+        9
+      ],
+      "length_min": 9,
+      "length_max": 14,
+      "length_mean": 11.0,
+      "capacity": {
+        "edges": 224,
+        "nodes": 528
+      },
+      "dialogue_ids_sha256": "990539d926bdedfc53c54d2cad351a446512eebd409d28d330196804f014a03e"
+    },
+    {
+      "batch_id": "B19",
+      "length_stratum": 3,
+      "n_dialogues": 16,
+      "n_utterances": 186,
+      "emotion_counts": [
+        71,
+        35,
+        5,
+        12,
+        34,
+        13,
+        16
+      ],
+      "length_min": 9,
+      "length_max": 14,
+      "length_mean": 11.625,
+      "capacity": {
+        "edges": 234,
+        "nodes": 558
+      },
+      "dialogue_ids_sha256": "24e84f738727299be29c8b48d7b8348113ebad036132f490d07069332df75db0"
+    },
+    {
+      "batch_id": "B20",
+      "length_stratum": 3,
+      "n_dialogues": 16,
+      "n_utterances": 179,
+      "emotion_counts": [
+        93,
+        21,
+        9,
+        14,
+        23,
+        2,
+        17
+      ],
+      "length_min": 9,
+      "length_max": 14,
+      "length_mean": 11.1875,
+      "capacity": {
+        "edges": 227,
+        "nodes": 537
+      },
+      "dialogue_ids_sha256": "65c2be7634c0f95a21290932504e1b21fdf7d8d9d233e1e61826db6f7be3de47"
+    },
+    {
+      "batch_id": "B21",
+      "length_stratum": 3,
+      "n_dialogues": 16,
+      "n_utterances": 168,
+      "emotion_counts": [
+        82,
+        27,
+        3,
+        14,
+        20,
+        0,
+        22
+      ],
+      "length_min": 9,
+      "length_max": 14,
+      "length_mean": 10.5,
+      "capacity": {
+        "edges": 216,
+        "nodes": 504
+      },
+      "dialogue_ids_sha256": "e01b8295c4765635e8089b8b73b77a699db073d69dd0375ff05c4f8bdd4a8f01"
+    },
+    {
+      "batch_id": "B22",
+      "length_stratum": 3,
+      "n_dialogues": 16,
+      "n_utterances": 181,
+      "emotion_counts": [
+        89,
+        16,
+        3,
+        15,
+        26,
+        7,
+        25
+      ],
+      "length_min": 9,
+      "length_max": 14,
+      "length_mean": 11.3125,
+      "capacity": {
+        "edges": 229,
+        "nodes": 543
+      },
+      "dialogue_ids_sha256": "445ab53008f315f66cd0d3b6f35fb5f33f53eb4a8eff460229ce00dcb99b70ff"
+    },
+    {
+      "batch_id": "B23",
+      "length_stratum": 3,
+      "n_dialogues": 16,
+      "n_utterances": 178,
+      "emotion_counts": [
+        77,
+        29,
+        7,
+        9,
+        40,
+        5,
+        11
+      ],
+      "length_min": 9,
+      "length_max": 14,
+      "length_mean": 11.125,
+      "capacity": {
+        "edges": 226,
+        "nodes": 534
+      },
+      "dialogue_ids_sha256": "13d70a103d1acfba9561be7e4d0f52110a471fb75b3c1c19e0b08db5c0e713b1"
+    },
+    {
+      "batch_id": "B24",
+      "length_stratum": 3,
+      "n_dialogues": 16,
+      "n_utterances": 192,
+      "emotion_counts": [
+        102,
+        24,
+        3,
+        13,
+        31,
+        6,
+        13
+      ],
+      "length_min": 10,
+      "length_max": 14,
+      "length_mean": 12.0,
+      "capacity": {
+        "edges": 240,
+        "nodes": 576
+      },
+      "dialogue_ids_sha256": "a412e4907b11406332cf417df6683df4eaa02dbf37c9acbc37566d914bb847d5"
+    },
+    {
+      "batch_id": "B25",
+      "length_stratum": 4,
+      "n_dialogues": 16,
+      "n_utterances": 270,
+      "emotion_counts": [
+        104,
+        32,
+        10,
+        15,
+        44,
+        5,
+        60
+      ],
+      "length_min": 14,
+      "length_max": 22,
+      "length_mean": 16.875,
+      "capacity": {
+        "edges": 318,
+        "nodes": 810
+      },
+      "dialogue_ids_sha256": "7dad411483728f3407ecaf412b8a0edac86ad62e66c3962d2dd3b14d99ccc1a3"
+    },
+    {
+      "batch_id": "B26",
+      "length_stratum": 4,
+      "n_dialogues": 16,
+      "n_utterances": 301,
+      "emotion_counts": [
+        126,
+        37,
+        7,
+        28,
+        27,
+        12,
+        64
+      ],
+      "length_min": 14,
+      "length_max": 24,
+      "length_mean": 18.8125,
+      "capacity": {
+        "edges": 349,
+        "nodes": 903
+      },
+      "dialogue_ids_sha256": "c1425a25a494e08111f2122c895eb4b786bedcf64ffb88db4ea8a73819ee1475"
+    },
+    {
+      "batch_id": "B27",
+      "length_stratum": 4,
+      "n_dialogues": 16,
+      "n_utterances": 280,
+      "emotion_counts": [
+        102,
+        43,
+        12,
+        16,
+        67,
+        7,
+        33
+      ],
+      "length_min": 14,
+      "length_max": 21,
+      "length_mean": 17.5,
+      "capacity": {
+        "edges": 328,
+        "nodes": 840
+      },
+      "dialogue_ids_sha256": "f8503e981f58e14aa59ecb068a5324c03bb118d8e3eff3a04b9a07409cd1fc3d"
+    },
+    {
+      "batch_id": "B28",
+      "length_stratum": 4,
+      "n_dialogues": 16,
+      "n_utterances": 293,
+      "emotion_counts": [
+        143,
+        44,
+        13,
+        14,
+        42,
+        9,
+        28
+      ],
+      "length_min": 14,
+      "length_max": 24,
+      "length_mean": 18.3125,
+      "capacity": {
+        "edges": 341,
+        "nodes": 879
+      },
+      "dialogue_ids_sha256": "b621c97159ebbcae6c94cf897aa14483737634d0fef62dd79f35b645c48d4e7f"
+    },
+    {
+      "batch_id": "B29",
+      "length_stratum": 4,
+      "n_dialogues": 16,
+      "n_utterances": 285,
+      "emotion_counts": [
+        157,
+        19,
+        6,
+        19,
+        42,
+        10,
+        32
+      ],
+      "length_min": 15,
+      "length_max": 23,
+      "length_mean": 17.8125,
+      "capacity": {
+        "edges": 333,
+        "nodes": 855
+      },
+      "dialogue_ids_sha256": "5849389132246f329658f8e681888d02323d766e32e2083bf29f75fbaf501618"
+    },
+    {
+      "batch_id": "B30",
+      "length_stratum": 4,
+      "n_dialogues": 16,
+      "n_utterances": 274,
+      "emotion_counts": [
+        125,
+        28,
+        6,
+        13,
+        60,
+        12,
+        30
+      ],
+      "length_min": 15,
+      "length_max": 21,
+      "length_mean": 17.125,
+      "capacity": {
+        "edges": 322,
+        "nodes": 822
+      },
+      "dialogue_ids_sha256": "03bcd94250a72aee748207a06cb40b14b29ca9a25475e9bc2d113b3b3a1a5f9a"
+    },
+    {
+      "batch_id": "B31",
+      "length_stratum": 4,
+      "n_dialogues": 16,
+      "n_utterances": 272,
+      "emotion_counts": [
+        131,
+        32,
+        3,
+        21,
+        61,
+        6,
+        18
+      ],
+      "length_min": 14,
+      "length_max": 23,
+      "length_mean": 17.0,
+      "capacity": {
+        "edges": 320,
+        "nodes": 816
+      },
+      "dialogue_ids_sha256": "dd55a60e854247a177fac6d2d5fa4f94fb1b7ab6f3843f473760cc9e390e588e"
+    },
+    {
+      "batch_id": "B32",
+      "length_stratum": 4,
+      "n_dialogues": 16,
+      "n_utterances": 289,
+      "emotion_counts": [
+        143,
+        42,
+        7,
+        19,
+        47,
+        4,
+        27
+      ],
+      "length_min": 14,
+      "length_max": 24,
+      "length_mean": 18.0625,
+      "capacity": {
+        "edges": 337,
+        "nodes": 867
+      },
+      "dialogue_ids_sha256": "3067b87d6642f8aa238a2d55c39e1109a04843572001601665a50a5ea8679d20"
+    }
+  ],
+  "coverage": [
+    {
+      "length_stratum": 0,
+      "scope": "pool",
+      "n_dialogues": 1038,
+      "n_utterances": 9989,
+      "length_min": 1,
+      "length_max": 24,
+      "length_mean": 9.623314065510597,
+      "dialogue_coverage_of_stratum": 1.0,
+      "utterance_coverage_of_stratum": 1.0,
+      "emotion_0_utterances": 4710,
+      "emotion_1_utterances": 1205,
+      "emotion_2_utterances": 268,
+      "emotion_3_utterances": 683,
+      "emotion_4_utterances": 1743,
+      "emotion_5_utterances": 271,
+      "emotion_6_utterances": 1109
+    },
+    {
+      "length_stratum": 0,
+      "scope": "selected",
+      "n_dialogues": 512,
+      "n_utterances": 4936,
+      "length_min": 1,
+      "length_max": 24,
+      "length_mean": 9.640625,
+      "dialogue_coverage_of_stratum": 0.4932562620423892,
+      "utterance_coverage_of_stratum": 0.49414355791370507,
+      "emotion_0_utterances": 2315,
+      "emotion_1_utterances": 607,
+      "emotion_2_utterances": 134,
+      "emotion_3_utterances": 347,
+      "emotion_4_utterances": 850,
+      "emotion_5_utterances": 135,
+      "emotion_6_utterances": 548
+    },
+    {
+      "length_stratum": 1,
+      "scope": "pool",
+      "n_dialogues": 259,
+      "n_utterances": 679,
+      "length_min": 1,
+      "length_max": 5,
+      "length_mean": 2.6216216216216215,
+      "dialogue_coverage_of_stratum": 1.0,
+      "utterance_coverage_of_stratum": 1.0,
+      "emotion_0_utterances": 357,
+      "emotion_1_utterances": 72,
+      "emotion_2_utterances": 21,
+      "emotion_3_utterances": 36,
+      "emotion_4_utterances": 128,
+      "emotion_5_utterances": 15,
+      "emotion_6_utterances": 50
+    },
+    {
+      "length_stratum": 1,
+      "scope": "selected",
+      "n_dialogues": 128,
+      "n_utterances": 353,
+      "length_min": 1,
+      "length_max": 5,
+      "length_mean": 2.7578125,
+      "dialogue_coverage_of_stratum": 0.4942084942084942,
+      "utterance_coverage_of_stratum": 0.5198821796759941,
+      "emotion_0_utterances": 180,
+      "emotion_1_utterances": 45,
+      "emotion_2_utterances": 13,
+      "emotion_3_utterances": 22,
+      "emotion_4_utterances": 56,
+      "emotion_5_utterances": 11,
+      "emotion_6_utterances": 26
+    },
+    {
+      "length_stratum": 2,
+      "scope": "pool",
+      "n_dialogues": 260,
+      "n_utterances": 1782,
+      "length_min": 5,
+      "length_max": 9,
+      "length_mean": 6.8538461538461535,
+      "dialogue_coverage_of_stratum": 1.0,
+      "utterance_coverage_of_stratum": 1.0,
+      "emotion_0_utterances": 843,
+      "emotion_1_utterances": 208,
+      "emotion_2_utterances": 42,
+      "emotion_3_utterances": 120,
+      "emotion_4_utterances": 334,
+      "emotion_5_utterances": 44,
+      "emotion_6_utterances": 191
+    },
+    {
+      "length_stratum": 2,
+      "scope": "selected",
+      "n_dialogues": 128,
+      "n_utterances": 878,
+      "length_min": 5,
+      "length_max": 9,
+      "length_mean": 6.859375,
+      "dialogue_coverage_of_stratum": 0.49230769230769234,
+      "utterance_coverage_of_stratum": 0.49270482603815935,
+      "emotion_0_utterances": 430,
+      "emotion_1_utterances": 95,
+      "emotion_2_utterances": 19,
+      "emotion_3_utterances": 67,
+      "emotion_4_utterances": 157,
+      "emotion_5_utterances": 19,
+      "emotion_6_utterances": 91
+    },
+    {
+      "length_stratum": 3,
+      "scope": "pool",
+      "n_dialogues": 259,
+      "n_utterances": 2929,
+      "length_min": 9,
+      "length_max": 14,
+      "length_mean": 11.308880308880308,
+      "dialogue_coverage_of_stratum": 1.0,
+      "utterance_coverage_of_stratum": 1.0,
+      "emotion_0_utterances": 1370,
+      "emotion_1_utterances": 383,
+      "emotion_2_utterances": 77,
+      "emotion_3_utterances": 230,
+      "emotion_4_utterances": 501,
+      "emotion_5_utterances": 73,
+      "emotion_6_utterances": 295
+    },
+    {
+      "length_stratum": 3,
+      "scope": "selected",
+      "n_dialogues": 128,
+      "n_utterances": 1441,
+      "length_min": 9,
+      "length_max": 14,
+      "length_mean": 11.2578125,
+      "dialogue_coverage_of_stratum": 0.4942084942084942,
+      "utterance_coverage_of_stratum": 0.4919767838852851,
+      "emotion_0_utterances": 674,
+      "emotion_1_utterances": 190,
+      "emotion_2_utterances": 38,
+      "emotion_3_utterances": 113,
+      "emotion_4_utterances": 247,
+      "emotion_5_utterances": 40,
+      "emotion_6_utterances": 139
+    },
+    {
+      "length_stratum": 4,
+      "scope": "pool",
+      "n_dialogues": 260,
+      "n_utterances": 4599,
+      "length_min": 14,
+      "length_max": 24,
+      "length_mean": 17.68846153846154,
+      "dialogue_coverage_of_stratum": 1.0,
+      "utterance_coverage_of_stratum": 1.0,
+      "emotion_0_utterances": 2140,
+      "emotion_1_utterances": 542,
+      "emotion_2_utterances": 128,
+      "emotion_3_utterances": 297,
+      "emotion_4_utterances": 780,
+      "emotion_5_utterances": 139,
+      "emotion_6_utterances": 573
+    },
+    {
+      "length_stratum": 4,
+      "scope": "selected",
+      "n_dialogues": 128,
+      "n_utterances": 2264,
+      "length_min": 14,
+      "length_max": 24,
+      "length_mean": 17.6875,
+      "dialogue_coverage_of_stratum": 0.49230769230769234,
+      "utterance_coverage_of_stratum": 0.492280930637095,
+      "emotion_0_utterances": 1031,
+      "emotion_1_utterances": 277,
+      "emotion_2_utterances": 64,
+      "emotion_3_utterances": 145,
+      "emotion_4_utterances": 390,
+      "emotion_5_utterances": 65,
+      "emotion_6_utterances": 292
+    }
+  ],
+  "validation_and_test_labels_examined": false,
+  "text_content_examined": false,
+  "capacity_resampling_attempts": 0,
+  "global_python_rng_unchanged_by_sampling": true,
+  "limitations": [
+    "Class-covering selection is not an unbiased uniform pool sample.",
+    "The complete feature pickle is deserialized, but only registered training IDs index raw labels.",
+    "No batches are selected or replaced using gradients, predictions, or performance."
+  ]
+}

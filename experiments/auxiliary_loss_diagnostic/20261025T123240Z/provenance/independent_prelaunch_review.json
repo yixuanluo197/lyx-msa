@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "reviewer": "iem_batch_audit",
+  "source_reuse": "original dimension block/constructor calls/complete eval loss function; stop at combiner return",
+  "mode": "main eval+grad; teachers eval+no_grad",
+  "no_training_backward_optimizer": true,
+  "per_case_forward_calls": 6,
+  "per_case_autograd_max": 4,
+  "state_buffer_rng_grad_guards": true,
+  "privacy_guard": true,
+  "repeat_execution_guard": "lock plus exclusive start marker",
+  "correction_before_execution": "negative_neg_sum distinct from negative(pos+neg) denominator",
+  "CPU_tests": {
+    "sampling": 12,
+    "core": 18,
+    "runner": 8,
+    "analysis": 14
+  }
+}

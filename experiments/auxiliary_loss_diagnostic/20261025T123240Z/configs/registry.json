@@ -1,0 +1,94 @@
+{
+  "created_at_utc": "2026-10-25T12:36:16.989059+00:00",
+  "host": "user23",
+  "gpu_index": 0,
+  "gpu_uuid": "GPU-7ff18ebb-100e-98fe-038b-a98bd4f94248",
+  "python": "/data2/yb/conda_envs/cmerc-xp-repro/bin/python",
+  "plot_python": "/home/yangbin/miniconda3/envs/multimodalerc310/bin/python",
+  "environment": {
+    "CUDA_VISIBLE_DEVICES": "GPU-7ff18ebb-100e-98fe-038b-a98bd4f94248",
+    "LD_LIBRARY_PATH": "/data2/yb/conda_envs/cmerc-xp-repro/lib/python3.10/site-packages/nvidia/cusparse/lib",
+    "OMP_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "PYTORCH_CUDA_ALLOC_CONF": "garbage_collection_threshold:0.8",
+    "CMERC_ENV_PREFIX": "/data2/yb/conda_envs/cmerc-xp-repro",
+    "PYTHONDONTWRITEBYTECODE": "1"
+  },
+  "code_dir": "/data2/yb/paper/lyx-msa/CMERC/experiments/auxiliary_loss_diagnostic/20261025T123240Z/code_xp04",
+  "checkpoints": [
+    {
+      "checkpoint_id": "XP04_best",
+      "history_group": "XP04",
+      "path": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/cmerc/MELD_validation_seed67137/best.pt",
+      "manifest_path": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/cmerc/MELD_validation_seed67137/run_manifest.json",
+      "expected_epoch": 8,
+      "expected_contrastlearning": true
+    },
+    {
+      "checkpoint_id": "XP04_latest",
+      "history_group": "XP04",
+      "path": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/cmerc/MELD_validation_seed67137/latest.pt",
+      "manifest_path": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/cmerc/MELD_validation_seed67137/run_manifest.json",
+      "expected_epoch": 40,
+      "expected_contrastlearning": true
+    },
+    {
+      "checkpoint_id": "XP12_best",
+      "history_group": "XP12",
+      "path": "/data2/yb/paper/lyx-msa/CMERC/experiments/hscl_ablation_validation/20261025T080937Z/runs/MELD_wo_hscl_seed67137/MELD_validation_seed67137/best.pt",
+      "manifest_path": "/data2/yb/paper/lyx-msa/CMERC/experiments/hscl_ablation_validation/20261025T080937Z/runs/MELD_wo_hscl_seed67137/MELD_validation_seed67137/run_manifest.json",
+      "expected_epoch": 5,
+      "expected_contrastlearning": false
+    },
+    {
+      "checkpoint_id": "XP12_latest",
+      "history_group": "XP12",
+      "path": "/data2/yb/paper/lyx-msa/CMERC/experiments/hscl_ablation_validation/20261025T080937Z/runs/MELD_wo_hscl_seed67137/MELD_validation_seed67137/latest.pt",
+      "manifest_path": "/data2/yb/paper/lyx-msa/CMERC/experiments/hscl_ablation_validation/20261025T080937Z/runs/MELD_wo_hscl_seed67137/MELD_validation_seed67137/run_manifest.json",
+      "expected_epoch": 40,
+      "expected_contrastlearning": false
+    }
+  ],
+  "sample_seed": 67137,
+  "diagnostic_seed": 67137,
+  "batch_size": 16,
+  "n_batches": 32,
+  "length_strata": 4,
+  "batches_per_stratum": 8,
+  "selection_rule": "Within four rank-based dialogue-length quartiles, greedy cover seven emotion labels where available (seeded tie breaking), fill uniform without replacement to128 dialogues, seeded shuffle and partition eight batches16; no performance/gradient/test selection.",
+  "mode": "eval with gradients enabled; fixed checkpoint main and fresh synchronized eval teachers per batch, not historical train gradients",
+  "reference_coefficients": {
+    "classification": 1.0,
+    "cc": 0.002,
+    "mscl": 0.15,
+    "cscl": 0.15
+  },
+  "model_forward_calls_per_case": 6,
+  "autograd_calls_per_case_max": 4,
+  "expected_cases": 128,
+  "training_runs_authorized": 0,
+  "optimizer_steps_authorized": 0,
+  "new_test_forwards_authorized": 0,
+  "hardware_policy": {
+    "minimum_free_mib": 4000,
+    "maximum_utilization_percent": 95,
+    "samples": 3,
+    "interval_seconds": 10,
+    "do_not_signal_foreign_processes": true
+  },
+  "primary_comparison": [
+    "XP04_best",
+    "XP04_latest"
+  ],
+  "auxiliary_comparison": [
+    "XP12_best",
+    "XP12_latest"
+  ],
+  "XP12_effective_coefficients": {
+    "cc": 0.002,
+    "mscl": 0.0,
+    "cscl": 0.0
+  },
+  "privacy": "All dialogue IDs, per-utterance labels/predictions/confidences and raw gradients private server only; publish batch IDs, aggregate diagnostics and hashes."
+}

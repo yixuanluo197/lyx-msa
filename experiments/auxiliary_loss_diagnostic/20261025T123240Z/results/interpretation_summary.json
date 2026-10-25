@@ -1,0 +1,91 @@
+{
+  "created_at_utc": "2026-10-25T13:31:06.183211+00:00",
+  "historical_curves_source": "experiments/hscl_ablation_validation/20261025T080937Z/results/curves.csv",
+  "historical_curves_sha256": "8bf9da4279de2f11f5bc2affc08da26607642002b26b11b83a3174abe31ccc56",
+  "generated_report_sha256": "a0af3812cf3d9c78b703786ee24c938c87f3bafbb5f26cd826830e281c138154",
+  "metrics_summary_sha256": "a7da02776047d17e9ae738f279b80a0c6226733b9ce1e2ec6f5926ed35a8a106",
+  "history_validation_only": [
+    {
+      "variant": "XP04_full",
+      "best_validation_weighted_f1": 65.24,
+      "best_epoch": 8,
+      "last10_validation_weighted_f1_mean": 62.909,
+      "last10_validation_classification_loss_mean": 5.18186
+    },
+    {
+      "variant": "XP06_wo_cc",
+      "best_validation_weighted_f1": 65.77,
+      "best_epoch": 8,
+      "last10_validation_weighted_f1_mean": 62.766,
+      "last10_validation_classification_loss_mean": 4.63393
+    },
+    {
+      "variant": "XP12_wo_hscl",
+      "best_validation_weighted_f1": 65.69,
+      "best_epoch": 5,
+      "last10_validation_weighted_f1_mean": 62.794,
+      "last10_validation_classification_loss_mean": 5.143096905946732
+    }
+  ],
+  "preregistered_priority": {
+    "status": "insufficient",
+    "mechanism": null,
+    "reason": "方向冲突与加权尺度排序未在两个XP04快照集中到同一项；证据不足以唯一选CC/MSCL/CSCL或系数。",
+    "evidence": [
+      {
+        "checkpoint_id": "XP04_best",
+        "loss_b": "cc",
+        "valid_n": 32,
+        "conflict_frequency": 0.875,
+        "norm_ratio_reference_weighted_median": 0.3952665598104068
+      },
+      {
+        "checkpoint_id": "XP04_best",
+        "loss_b": "cscl",
+        "valid_n": 32,
+        "conflict_frequency": 0.46875,
+        "norm_ratio_reference_weighted_median": 0.1334612292593934
+      },
+      {
+        "checkpoint_id": "XP04_best",
+        "loss_b": "mscl",
+        "valid_n": 32,
+        "conflict_frequency": 0.3125,
+        "norm_ratio_reference_weighted_median": 0.10218643412107596
+      },
+      {
+        "checkpoint_id": "XP04_latest",
+        "loss_b": "cc",
+        "valid_n": 32,
+        "conflict_frequency": 0.875,
+        "norm_ratio_reference_weighted_median": 0.5393887708263696
+      },
+      {
+        "checkpoint_id": "XP04_latest",
+        "loss_b": "cscl",
+        "valid_n": 32,
+        "conflict_frequency": 0.25,
+        "norm_ratio_reference_weighted_median": 0.2967098651509506
+      },
+      {
+        "checkpoint_id": "XP04_latest",
+        "loss_b": "mscl",
+        "valid_n": 32,
+        "conflict_frequency": 0.46875,
+        "norm_ratio_reference_weighted_median": 1.0078454559946506
+      }
+    ]
+  },
+  "next_single_mechanism_to_verify": "原始分类Loss与CC在不同真实类置信度下的局部目标方向关系",
+  "new_coefficient_selected": null,
+  "new_training_authorized_or_started": false,
+  "reason_for_no_unique_loss_coefficient": "CC冲突频率跨快照最高，但late MSCL有效梯度尺度更高，原唯一筛选规则未通过。",
+  "classification_source": {
+    "file": "code_xp04/model_cm.py",
+    "lines": "41-49",
+    "sha256": "94acf11e2e9edd1bcd98049eb12d85b3604f8d71d46f64f0c3b8b9837fa12625",
+    "fact": "非真实类别仍贡献-alpha*log_p，最终对N*C取mean；本组保留原公式。"
+  },
+  "model_forwards_added_by_editorial_analysis": 0,
+  "autograd_calls_added_by_editorial_analysis": 0
+}

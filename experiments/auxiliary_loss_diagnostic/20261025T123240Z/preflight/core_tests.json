@@ -1,0 +1,17 @@
+{
+  "status": "passed",
+  "tests": 18,
+  "failures": 0,
+  "errors": 0,
+  "cuda_initialized": false,
+  "synthetic_only": true,
+  "model_forwards": 0,
+  "results_or_checkpoints_read": false,
+  "created_at_utc": "2026-10-25T12:51:21.971339+00:00",
+  "command": "PYTHONDONTWRITEBYTECODE=1 CUDA_VISIBLE_DEVICES=empty CPU unittest test_diagnostic_core",
+  "test_output": "test_contributions_use_actual_base_logits_N_denominator_and_class_weights (test_diagnostic_core.CoreTests) ... ok\ntest_coordinatewise_disjoint_nonzero_vectors_have_valid_zero_cosine (test_diagnostic_core.CoreTests) ... ok\ntest_finite_values_with_overflowing_aggregate_are_not_reported_finite (test_diagnostic_core.CoreTests) ... ok\ntest_five_original_branches_and_default_zero_probability_directions (test_diagnostic_core.CoreTests) ... ok\ntest_fractional_class_indices_are_not_silently_truncated (test_diagnostic_core.CoreTests) ... ok\ntest_mismatched_pseudo_or_weights_are_rejected (test_diagnostic_core.CoreTests) ... ok\ntest_nan_not_replaced_by_zero_and_inactive_branch_not_confused_with_raw (test_diagnostic_core.CoreTests) ... ok\ntest_negative_cosine_joint_support_and_all_coordinates_preserved (test_diagnostic_core.CoreTests) ... ok\ntest_no_joint_support_has_none_cosine_and_explicit_reason (test_diagnostic_core.CoreTests) ... ok\ntest_none_zero_and_cancelled_sum_have_distinct_status (test_diagnostic_core.CoreTests) ... ok\ntest_nonfinite_base_values_not_zeroed_and_original_fallback_is_disclosed (test_diagnostic_core.CoreTests) ... ok\ntest_ordered_pair_counts_and_float32_epsilon_leak_cells (test_diagnostic_core.CoreTests) ... ok\ntest_parameter_groups_partition_and_exclude_heads_from_shared (test_diagnostic_core.CoreTests) ... ok\ntest_public_rows_have_no_private_anchor_keys_or_real_ids (test_diagnostic_core.CoreTests) ... ok\ntest_shape_mismatch_and_sensitive_public_context_rejected (test_diagnostic_core.CoreTests) ... ok\ntest_single_relation_class_and_one_anchor_extremes (test_diagnostic_core.CoreTests) ... ok\ntest_tables_have_uniform_csv_columns_and_anchor_pair_counts_are_private (test_diagnostic_core.CoreTests) ... ok\ntest_weighted_norms_and_parameterwise_auxiliary_sum (test_diagnostic_core.CoreTests) ... ok\n\n----------------------------------------------------------------------\nRan 18 tests in 0.229s\n\nOK\n",
+  "source_sha256": {
+    "diagnostic_core.py": "1967f1c574647a9ac9f51fa84bc3e6bb4f866e467774dd87b79a7a919a4b1d83",
+    "test_diagnostic_core.py": "db46341f4c899859a72e0257e0acd761db131cab86f52a706eacb50cdd5c0726"
+  }
+}

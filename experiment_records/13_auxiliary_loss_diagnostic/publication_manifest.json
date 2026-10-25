@@ -1,0 +1,638 @@
+{
+  "status": "completed_and_accepted",
+  "created_at_utc": "2026-10-25T13:34:27.335921+00:00",
+  "repository": "https://github.com/yixuanluo197/lyx-msa",
+  "parent_commit": "a4b240491785bd5ff06bfc6ad23be6135fe86185",
+  "frozen_diagnostic_base_commit": "a899c2fc06d15979b578f59709d1c299ceeb2776",
+  "batch": "experiments/auxiliary_loss_diagnostic/20261025T123240Z",
+  "new_training_runs": 0,
+  "optimizer_steps": 0,
+  "test_forwards": 0,
+  "diagnostic_cases": 128,
+  "model_forward_calls": 768,
+  "autograd_calls": 512,
+  "next_single_mechanism": "原分类Loss与CC的置信度条件方向关系；未选新系数",
+  "excluded": [
+    "模型权重",
+    "原始数据",
+    "原始日志",
+    "实际对话ID与逐话语标签/预测/置信度",
+    "原始梯度向量",
+    "冻结历史参考含ID的服务器原件",
+    "运行时state及缓存",
+    "作者课程pkl输入（公开SHA）"
+  ],
+  "manifest_self_excluded": true,
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 13008,
+      "sha256": "d78b24b4f1dfb18f02c2f7c9445dbe9c17bc4b5678510690722a7e22482f6d3d"
+    },
+    {
+      "path": "experiment_records/13_auxiliary_loss_diagnostic/GITHUB_DELIVERY.md",
+      "bytes": 1236,
+      "sha256": "2a23a977f7d2d4ba86f66710af6d192910ede54fd9c24d6a6ac5e8b70e6cdcbc"
+    },
+    {
+      "path": "experiment_records/13_auxiliary_loss_diagnostic/README.md",
+      "bytes": 2222,
+      "sha256": "7a4111c07ab077f956cb14dda83b94f6f8258e0032f3f1bea1d3ca979a3571a6"
+    },
+    {
+      "path": "experiment_records/README.md",
+      "bytes": 10107,
+      "sha256": "ab086a834ee72708816c49931950346148ccae34c5d0d26fc96136fd3091f4c0"
+    },
+    {
+      "path": "experiments/auxiliary_loss_diagnostic/.gitignore",
+      "bytes": 126,
+      "sha256": "328df07685e12f3d567ea291d5770ce3eec90b2cce57779af238551d71cab348"
+    },
+    {
+      "path": "experiments/auxiliary_loss_diagnostic/20261025T123240Z/.gitignore",
+      "bytes": 96,
+      "sha256": "b831075463e4dfc088558339fcd26cdd23b395cbfa2ef8dde7b2387b51215f25"
+    },
+    {
+      "path": "experiments/auxiliary_loss_diagnostic/20261025T123240Z/README.md",
+      "bytes": 2489,
+      "sha256": "10b5c7aa2a732cbfd6e38ed40ac55d30bd86c7ca72f829c576a988064a2269aa"
+    },
+    {
+      "path": "experiments/auxiliary_loss_diagnostic/20261025T123240Z/code_xp04/HypergraphConv.py",
+      "bytes": 7795,
+      "sha256": "9297a572e1763a74c7984eb75dfb15fa8143bf131a44cf50433c307ef7f3b5d2"
+    },
+    {
+      "path": "experiments/auxiliary_loss_diagnostic/20261025T123240Z/code_xp04/caldiff/.gitignore",
+      "bytes": 7,
+      "sha256": "150cdc63b7edb8abaedb88690c83e7ca4c12011d9ff55595e76cccce1d328b6c"
+    },
+    {
+      "path": "experiments/auxiliary_loss_diagnostic/20261025T123240Z/code_xp04/causal_graph.py",
+      "bytes": 5367,
+      "sha256": "3dd761b05cca95afa7b2f7b70e4640ee3ccfbb5726c3d705c0808468f7181da3"
+    },
+    {
+      "path": "experiments/auxiliary_loss_diagnostic/20261025T123240Z/code_xp04/clloss.py",
+      "bytes": 14384,
+      "sha256": "012c5d08f51eaaa99bdbd10d61e3d108275bf3dd44e42767b2e186e5be72ec3f"
+    },
+    {
+      "path": "experiments/auxiliary_loss_diagnostic/20261025T123240Z/code_xp04/dataloader.py",
+      "bytes": 10492,
+      "sha256": "337a7dc92d9e69e4f8854a8031197085ffca84cdc08b070b6ef5b05ebb6f3390"
+    },
+    {
+      "path": "experiments/auxiliary_loss_diagnostic/20261025T123240Z/code_xp04/evaluation_metrics.py",
+      "bytes": 3954,
+      "sha256": "ed831a1f38d5706d6d47d7310d03e8b35f6eb4573623c9650934c638d65835c8"
+    },
+    {
+      "path": "experiments/auxiliary_loss_diagnostic/20261025T123240Z/code_xp04/high_fre_conv.py",
+      "bytes": 1526,
+      "sha256": "f4414c019ca7f656a662698bb9615bf15ac6325a73caa06ff487e158f58f39df"
+    },
+    {
+      "path": "experiments/auxiliary_loss_diagnostic/20261025T123240Z/code_xp04/model.py",
+      "bytes": 37617,
+      "sha256": "ee84329b800e37a8ac652b58aa6f0fc3dee47cb2cf38feda14f5c0de26ec9a82"
+    },
+    {
+      "path": "experiments/auxiliary_loss_diagnostic/20261025T123240Z/code_xp04/model_GCN.py",
+      "bytes": 22167,
+      "sha256": "830d401ff3e4b30298199b927a0bad3a9056400429506abcc2d66a7db8b76f9f"
+    },
+    {
+      "path": "experiments/auxiliary_loss_diagnostic/20261025T123240Z/code_xp04/model_cm.py",
+      "bytes": 75667,
+      "sha256": "94acf11e2e9edd1bcd98049eb12d85b3604f8d71d46f64f0c3b8b9837fa12625"
+    },
+    {
+      "path": "experiments/auxiliary_loss_diagnostic/20261025T123240Z/code_xp04/model_hyper.py",
+      "bytes": 17571,
+      "sha256": "fb9ef2ee268afa697474c9199d2136a7519b5226adb4abeec4a9cf1aea678aba"
+    },
+    {
+      "path": "experiments/auxiliary_loss_diagnostic/20261025T123240Z/code_xp04/train.py",
+      "bytes": 24415,
+      "sha256": "35a18a2bf33d8e3e0d8459955b1f0ce525d4f28970f9af801fb27087bcf02ad7"
+    },
+    {
+      "path": "experiments/auxiliary_loss_diagnostic/20261025T123240Z/code_xp04/train_cm.py",
+      "bytes": 74870,
+      "sha256": "0fb27f08bdfd6fabe176eb7b717587fb5e7025ba94c6e3c191b01dc18168d3a2"
+    },
+    {
+      "path": "experiments/auxiliary_loss_diagnostic/20261025T123240Z/configs/commands.json",
+      "bytes": 969,
+      "sha256": "37c06aee9be054a368b45e1eb6d82cefefa99f081cce457bb47cda16c1a3bc27"
+    },
+    {
+      "path": "experiments/auxiliary_loss_diagnostic/20261025T123240Z/configs/public_sampling_summary.json",
+      "bytes": 21937,
+      "sha256": "dea7d48fbe184fdabcf94dac1348236f27731c98b174fbad4a89dc1cfae49f02"
+    },
+    {
+      "path": "experiments/auxiliary_loss_diagnostic/20261025T123240Z/configs/registry.json",
+      "bytes": 4260,
+      "sha256": "6a8f00099aa76e5cb650761b6b0917856755f2a77603c29a7365bf11dac139eb"
+    },
+    {
+      "path": "experiments/auxiliary_loss_diagnostic/20261025T123240Z/preflight/analysis_tests.json",
+      "bytes": 2449,
+      "sha256": "ead75874668997119fea5a0563c9b9bc45ae375b865c66d0fe436eb2de08e815"
+    },
+    {
+      "path": "experiments/auxiliary_loss_diagnostic/20261025T123240Z/preflight/checkpoint_inventory.json",
+      "bytes": 7539,
+      "sha256": "4d0f8e9ba3461d1f0434d66fadb282616bbcb9392501ea27d5e564d9a92a36f3"
+    },
+    {
+      "path": "experiments/auxiliary_loss_diagnostic/20261025T123240Z/preflight/core_tests.json",
+      "bytes": 2544,
+      "sha256": "6172a1bfa482b48248ac3d489c4bf5a4e30e58f16a52bace7c9745e308840f81"
+    },
+    {
+      "path": "experiments/auxiliary_loss_diagnostic/20261025T123240Z/preflight/runner_tests.json",
+      "bytes": 1116,
+      "sha256": "b02fcad94d60d581d830e028439d8acb5ee9ef2952c44d422c57a020be48ce9d"
+    },
+    {
+      "path": "experiments/auxiliary_loss_diagnostic/20261025T123240Z/preflight/sampling_tests.json",
+      "bytes": 1674,
+      "sha256": "7ccb5c9bb85e38fa3cf167d724dadb61ecb807b56c28b48cc1b9c908ef0b3d4e"
+    },
+    {
+      "path": "experiments/auxiliary_loss_diagnostic/20261025T123240Z/provenance/.gitignore",
+      "bytes": 32,
+      "sha256": "73fa1e0b09acb786591a91b6c036d37f5db56cdcf78f76dd880f18eb9243c829"
+    },
+    {
+      "path": "experiments/auxiliary_loss_diagnostic/20261025T123240Z/provenance/analysis_frozen.json",
+      "bytes": 610,
+      "sha256": "c5036f5cb63f35ce06d712f33a353d808cfdd5466f0cc0b7a7b970332e50bc99"
+    },
+    {
+      "path": "experiments/auxiliary_loss_diagnostic/20261025T123240Z/provenance/data_inputs.json",
+      "bytes": 690,
+      "sha256": "debea336636668c8268d0a7453afd53f9dd973f119185887b2b734d02ee487bb"
+    },
+    {
+      "path": "experiments/auxiliary_loss_diagnostic/20261025T123240Z/provenance/diagnostic_launch.json",
+      "bytes": 303,
+      "sha256": "f843294788b353487adea0c3cc1cbd9d5728cf3c2a1a6d60b9824102e6011ba7"
+    },
+    {
+      "path": "experiments/auxiliary_loss_diagnostic/20261025T123240Z/provenance/environment.json",
+      "bytes": 249,
+      "sha256": "4cfb079cff44ca0a4be090020469bf8f9257612cca2a868cb39340b522e804c1"
+    },
+    {
+      "path": "experiments/auxiliary_loss_diagnostic/20261025T123240Z/provenance/execution_completion.json",
+      "bytes": 1099,
+      "sha256": "de1bb9ef6c59473133b12bdeeca34bb91ee8b510e6d939ff0e411aead8a2255a"
+    },
+    {
+      "path": "experiments/auxiliary_loss_diagnostic/20261025T123240Z/provenance/figure7_layout_revision.json",
+      "bytes": 834,
+      "sha256": "24d7e0f8a995fcc2877b9da5db3696a5d33d1b348976529ca12fda8d94970e97"
+    },
+    {
+      "path": "experiments/auxiliary_loss_diagnostic/20261025T123240Z/provenance/figure_contract.md",
+      "bytes": 3099,
+      "sha256": "94d0969003bd382edcb30c0c7bd1ff92010ce1ce7889d984130cf0e5d6d7698d"
+    },
+    {
+      "path": "experiments/auxiliary_loss_diagnostic/20261025T123240Z/provenance/figure_visual_review.json",
+      "bytes": 1698,
+      "sha256": "84df2ff096b38a09aa425233bad01befedaff208637a6537b6700a3ce1633c63"
+    },
+    {
+      "path": "experiments/auxiliary_loss_diagnostic/20261025T123240Z/provenance/final_verification.json",
+      "bytes": 3162,
+      "sha256": "6f2386f99237e8c3cd8fb8d348f88073f27cedae7b00d7159b0edf21513ae82f"
+    },
+    {
+      "path": "experiments/auxiliary_loss_diagnostic/20261025T123240Z/provenance/finalization_completion.json",
+      "bytes": 1281,
+      "sha256": "dd3280928b7f360b98edee3c2b1212e2354d0953abc4e60151500d76a9b0c67f"
+    },
+    {
+      "path": "experiments/auxiliary_loss_diagnostic/20261025T123240Z/provenance/finalizer_launch.json",
+      "bytes": 290,
+      "sha256": "82c3100dc6ee2a66e8f0dd12a3bae45896223c7cc4ab124a30da14788463edd4"
+    },
+    {
+      "path": "experiments/auxiliary_loss_diagnostic/20261025T123240Z/provenance/frozen_execution.json",
+      "bytes": 6559,
+      "sha256": "5af817ee8502b1e1512ab4c7ae2debc1fbca0df2e25ac2752cfce8dc01b980c0"
+    },
+    {
+      "path": "experiments/auxiliary_loss_diagnostic/20261025T123240Z/provenance/git_head.json",
+      "bytes": 187,
+      "sha256": "ae671b1c02ffbaa334b88221371af579ae0dabe5a9abf6e5cf85aefa6d492cc8"
+    },
+    {
+      "path": "experiments/auxiliary_loss_diagnostic/20261025T123240Z/provenance/gpu_initial.json",
+      "bytes": 649,
+      "sha256": "a348aaa8db600b7f02458fd4b649ca134968ac551a851ea86bb24d41ed166e9d"
+    },
+    {
+      "path": "experiments/auxiliary_loss_diagnostic/20261025T123240Z/provenance/history_before.json",
+      "bytes": 292931,
+      "sha256": "4c4ec04fc9ddf2c058d6f4167a7d3f29a999cefca8570d262c2f5cb82b1c00b0"
+    },
+    {
+      "path": "experiments/auxiliary_loss_diagnostic/20261025T123240Z/provenance/independent_final_review.json",
+      "bytes": 4375,
+      "sha256": "cbbc6db5576c2716164059a87db39d6d7d21e5be616b10fdf638bb0f0ac4eaaf"
+    },
+    {
+      "path": "experiments/auxiliary_loss_diagnostic/20261025T123240Z/provenance/independent_prelaunch_review.json",
+      "bytes": 649,
+      "sha256": "0aae202735c35e458d20584c220d695cec1c281aa4380ad2a4c6a4b6cb094ef8"
+    },
+    {
+      "path": "experiments/auxiliary_loss_diagnostic/20261025T123240Z/provenance/independent_report_review.json",
+      "bytes": 3116,
+      "sha256": "c900193109fe45529fe89ca67a1dea6e27ff4835c56326da36e10cb4234136e6"
+    },
+    {
+      "path": "experiments/auxiliary_loss_diagnostic/20261025T123240Z/provenance/parameter_inventory.json",
+      "bytes": 26798,
+      "sha256": "dfecd9a5aa1c371549cb57121660c0e410166d3ebbab843425f649d5b605d34b"
+    },
+    {
+      "path": "experiments/auxiliary_loss_diagnostic/20261025T123240Z/provenance/process_initial.json",
+      "bytes": 434,
+      "sha256": "82329e15872ac1541cb80ce090155d2f79ab6dbf120640e673023ed5bd8891de"
+    },
+    {
+      "path": "experiments/auxiliary_loss_diagnostic/20261025T123240Z/provenance/publication_gate_revision.json",
+      "bytes": 516,
+      "sha256": "0fe0724bdddc610a5cf5b575811b1e05e7736517844f34369ac0693c270e5e54"
+    },
+    {
+      "path": "experiments/auxiliary_loss_diagnostic/20261025T123240Z/provenance/report_curation.json",
+      "bytes": 1782,
+      "sha256": "2102586d8d90d3ddad29ab60a8fa986267622d5050e8e1f1a370649ad78fbb42"
+    },
+    {
+      "path": "experiments/auxiliary_loss_diagnostic/20261025T123240Z/provenance/xp04_validation_reference_public.json",
+      "bytes": 47701,
+      "sha256": "773d47c955fe1439c46bb13157faa633acdc2e92fa2eee085d74f0ecf3c786aa"
+    },
+    {
+      "path": "experiments/auxiliary_loss_diagnostic/20261025T123240Z/reports/CMERC_AUXILIARY_LOSS_DIAGNOSTIC.md",
+      "bytes": 25410,
+      "sha256": "5d5de375d41862f1168c42251a1c0f553eaefc849bcf06b16b6f29f168de6db8"
+    },
+    {
+      "path": "experiments/auxiliary_loss_diagnostic/20261025T123240Z/reports/GENERATED_SNAPSHOT_REPORT.md",
+      "bytes": 15775,
+      "sha256": "a0af3812cf3d9c78b703786ee24c938c87f3bafbb5f26cd826830e281c138154"
+    },
+    {
+      "path": "experiments/auxiliary_loss_diagnostic/20261025T123240Z/reports/PREREGISTRATION.md",
+      "bytes": 6452,
+      "sha256": "82998597c7174f562114976dab47054fe46302b9aaed05a7e2f3391188214a8f"
+    },
+    {
+      "path": "experiments/auxiliary_loss_diagnostic/20261025T123240Z/reports/SOURCE_AUDIT.md",
+      "bytes": 2331,
+      "sha256": "0299c3540a024bd5f34c3e0f33717ec51a4690040fbd07feb98313dafb02a9a5"
+    },
+    {
+      "path": "experiments/auxiliary_loss_diagnostic/20261025T123240Z/results/analysis_gradient_pairs.csv",
+      "bytes": 2003578,
+      "sha256": "b30233631f620492f922a7b084e77b73c05e4edad9440df556b6ff432ac3d763"
+    },
+    {
+      "path": "experiments/auxiliary_loss_diagnostic/20261025T123240Z/results/branch_counts.csv",
+      "bytes": 348343,
+      "sha256": "9e9d3e9e1ab1f82124d9195d57998a484ea8e89513edd69aa734b7ea50475e63"
+    },
+    {
+      "path": "experiments/auxiliary_loss_diagnostic/20261025T123240Z/results/branch_summary.csv",
+      "bytes": 7081,
+      "sha256": "5ed364a338d1be970d190621530c4b84a96de8a0d0e30487c9f7193f330949ed"
+    },
+    {
+      "path": "experiments/auxiliary_loss_diagnostic/20261025T123240Z/results/case_summary.csv",
+      "bytes": 27583,
+      "sha256": "6e6568aab752125ec5bf2a08bcccdffe8ef74d311220388f4933faac8e2127d8"
+    },
+    {
+      "path": "experiments/auxiliary_loss_diagnostic/20261025T123240Z/results/ckscl_numeric.csv",
+      "bytes": 60637,
+      "sha256": "a4012b84d97ed77439b082297c9eff07ddbf26993dcd5cb14c7d234d2d071fef"
+    },
+    {
+      "path": "experiments/auxiliary_loss_diagnostic/20261025T123240Z/results/ckscl_numeric_summary.csv",
+      "bytes": 2330,
+      "sha256": "e35876f4fc40f848d3a70d41df6176660d35354cb428f3b109d27452679c29e5"
+    },
+    {
+      "path": "experiments/auxiliary_loss_diagnostic/20261025T123240Z/results/ckscl_wrapper_audit.csv",
+      "bytes": 18458,
+      "sha256": "d0042d265695307c9cb9851b949527e375e977dc0e961553334d27a1c89a0083"
+    },
+    {
+      "path": "experiments/auxiliary_loss_diagnostic/20261025T123240Z/results/class_relation_summary.csv",
+      "bytes": 12159,
+      "sha256": "60e435b3c1c15979885bf0b4c942487e0af8ba72ae4964119cdc241beb8fb265"
+    },
+    {
+      "path": "experiments/auxiliary_loss_diagnostic/20261025T123240Z/results/class_relations.csv",
+      "bytes": 703515,
+      "sha256": "0f976db24ecc2acefe20b51b0eb9055bd1ed389ecb35dcf6c758e0126fceefe9"
+    },
+    {
+      "path": "experiments/auxiliary_loss_diagnostic/20261025T123240Z/results/class_weight_summary.csv",
+      "bytes": 5341,
+      "sha256": "fa37e991cc9bd3c16e82f90b8dbc87aac4d383048a31d42482270763268bea8a"
+    },
+    {
+      "path": "experiments/auxiliary_loss_diagnostic/20261025T123240Z/results/confidence_aggregate.csv",
+      "bytes": 8515,
+      "sha256": "2ba4eb523bdcfb4bbad7e19b0e940cca5f382eb070e653848861b629ca88283f"
+    },
+    {
+      "path": "experiments/auxiliary_loss_diagnostic/20261025T123240Z/results/confidence_summary.csv",
+      "bytes": 598554,
+      "sha256": "8bc4948fc6f81a55c26bca672cac65afedd69938f78040bd510271481f4e705a"
+    },
+    {
+      "path": "experiments/auxiliary_loss_diagnostic/20261025T123240Z/results/contribution_aggregate.csv",
+      "bytes": 2449,
+      "sha256": "b5fff0dac42100e0fb80d483eafc15fb70276b9ddc6a7abef807082fe402d60b"
+    },
+    {
+      "path": "experiments/auxiliary_loss_diagnostic/20261025T123240Z/results/contribution_summary.csv",
+      "bytes": 6740685,
+      "sha256": "a2f8bc2ce8c63887a1d1ffdcdb0ce6d37059e188c25ff2c6a06a975d5647146c"
+    },
+    {
+      "path": "experiments/auxiliary_loss_diagnostic/20261025T123240Z/results/fallback_summary.csv",
+      "bytes": 221,
+      "sha256": "758cb0fc4ebd807b142521d88f0e6258f88fffb91a689edbc7155a84c5ed44b5"
+    },
+    {
+      "path": "experiments/auxiliary_loss_diagnostic/20261025T123240Z/results/figures/01_cosine_distributions.png",
+      "bytes": 133414,
+      "sha256": "8c04cd775df9ae8a65fb3904e4a640bda164532ac9c6b3d98d1bbb4cd7864330"
+    },
+    {
+      "path": "experiments/auxiliary_loss_diagnostic/20261025T123240Z/results/figures/01_cosine_distributions.svg",
+      "bytes": 31256,
+      "sha256": "9ea811c2ecaa90a372ee0d5dd31477940442723ce5b19f2ff504bdad40694f3e"
+    },
+    {
+      "path": "experiments/auxiliary_loss_diagnostic/20261025T123240Z/results/figures/02_reference_norm_ratios.png",
+      "bytes": 127594,
+      "sha256": "1e058242aa623bc21cbed63f1d2e36916dcd086676e28670383703cec8ea3822"
+    },
+    {
+      "path": "experiments/auxiliary_loss_diagnostic/20261025T123240Z/results/figures/02_reference_norm_ratios.svg",
+      "bytes": 29229,
+      "sha256": "da45e55a1d0d0288cac4e96487d31cf00e132d6231ad86a59c282e29a7f71d6e"
+    },
+    {
+      "path": "experiments/auxiliary_loss_diagnostic/20261025T123240Z/results/figures/03_group_conflict_frequency.png",
+      "bytes": 222799,
+      "sha256": "51f797b86d6084f8da50f8ea37ea278401825a797f48a20cca268ab77371a76f"
+    },
+    {
+      "path": "experiments/auxiliary_loss_diagnostic/20261025T123240Z/results/figures/03_group_conflict_frequency.svg",
+      "bytes": 41755,
+      "sha256": "49d6259e1dc68fd3d29c57245d149398034de1fd3e19c7a9f32ae2932aae4dec"
+    },
+    {
+      "path": "experiments/auxiliary_loss_diagnostic/20261025T123240Z/results/figures/04_pseudo_label_proportions.png",
+      "bytes": 185731,
+      "sha256": "5305b4f8342a7f5ed0220b024b12e65e5e42f9b0b03c744bbfd9d975ffce7795"
+    },
+    {
+      "path": "experiments/auxiliary_loss_diagnostic/20261025T123240Z/results/figures/04_pseudo_label_proportions.svg",
+      "bytes": 19647,
+      "sha256": "7a2362f8c12ba76501911e58d3bf681a345e1669aad2fe886ed387239ec6b456"
+    },
+    {
+      "path": "experiments/auxiliary_loss_diagnostic/20261025T123240Z/results/figures/05_emotion_relationship_heatmap.png",
+      "bytes": 312108,
+      "sha256": "0e8d73a60ca744ecc193759e3474bf2c38de0c4bc81c41b71b8ad212f516c3fd"
+    },
+    {
+      "path": "experiments/auxiliary_loss_diagnostic/20261025T123240Z/results/figures/05_emotion_relationship_heatmap.svg",
+      "bytes": 66631,
+      "sha256": "95df72186d14d819c406b169fd3a6d1719216982df53b8890cc217bcef5bcf8d"
+    },
+    {
+      "path": "experiments/auxiliary_loss_diagnostic/20261025T123240Z/results/figures/06_paired_checkpoint_cosine_changes.png",
+      "bytes": 108964,
+      "sha256": "4d8789129920f2436ee6b5da8c15504a5e6f2fc9e7693bee7bad37524516a07d"
+    },
+    {
+      "path": "experiments/auxiliary_loss_diagnostic/20261025T123240Z/results/figures/06_paired_checkpoint_cosine_changes.svg",
+      "bytes": 17680,
+      "sha256": "f42f1240c905ca65b24ac3e93c0de96dd242e387407b30c91f101d1ad9a651fc"
+    },
+    {
+      "path": "experiments/auxiliary_loss_diagnostic/20261025T123240Z/results/figures/07_pseudo_branch_coverage.png",
+      "bytes": 155645,
+      "sha256": "ae506ab391a02d284c4cde2c0ad7d44c22b262c750deafb4ade4897b15ad3fba"
+    },
+    {
+      "path": "experiments/auxiliary_loss_diagnostic/20261025T123240Z/results/figures/07_pseudo_branch_coverage.svg",
+      "bytes": 38209,
+      "sha256": "c4b2b8b868820f06e7ba13a0be082fb0eba3abcbae96a70e386e52145f73b4d8"
+    },
+    {
+      "path": "experiments/auxiliary_loss_diagnostic/20261025T123240Z/results/figures/08_relationship_pair_coverage.png",
+      "bytes": 134022,
+      "sha256": "abb0276961a578f11c95526ad05a54557b50457f8838792bb3e12a7190123756"
+    },
+    {
+      "path": "experiments/auxiliary_loss_diagnostic/20261025T123240Z/results/figures/08_relationship_pair_coverage.svg",
+      "bytes": 25392,
+      "sha256": "aa0ce46e42a3b7227e758853da9100d75c5f1fa1062e90c7989bc9113207d78f"
+    },
+    {
+      "path": "experiments/auxiliary_loss_diagnostic/20261025T123240Z/results/figures/09_actual_reference_gradient_scale.png",
+      "bytes": 136172,
+      "sha256": "fafedc6cd3e8c935ccd27509082545e2b8f3a8198ae3906691db94e1d1930f5e"
+    },
+    {
+      "path": "experiments/auxiliary_loss_diagnostic/20261025T123240Z/results/figures/09_actual_reference_gradient_scale.svg",
+      "bytes": 19376,
+      "sha256": "b21e156c5ea5411e75900531bb2aa3b3695b0b044f8f1fd06965d23c19ffbcae"
+    },
+    {
+      "path": "experiments/auxiliary_loss_diagnostic/20261025T123240Z/results/figures/manifest.json",
+      "bytes": 8090,
+      "sha256": "f4f869ae6f8e53566264a9f0543e896005343b31f90c4b38f0988cfdc9cc9920"
+    },
+    {
+      "path": "experiments/auxiliary_loss_diagnostic/20261025T123240Z/results/gradient_norms.csv",
+      "bytes": 1050074,
+      "sha256": "54eef7b72ccca3f5f2b346635dcd8e65c2dc68c8c21beb42ee31a021ef025af8"
+    },
+    {
+      "path": "experiments/auxiliary_loss_diagnostic/20261025T123240Z/results/gradient_pairs.csv",
+      "bytes": 1959532,
+      "sha256": "5a5d43852118477426f573a0bba53b0a0fefdef1f209f8caf5282cc0f47e55a5"
+    },
+    {
+      "path": "experiments/auxiliary_loss_diagnostic/20261025T123240Z/results/gradient_summary.csv",
+      "bytes": 70964,
+      "sha256": "b5c5741fb99157f39315f24fb4e324ffaa6e3aa6919c381309a059a27a586d5c"
+    },
+    {
+      "path": "experiments/auxiliary_loss_diagnostic/20261025T123240Z/results/historical_validation_comparison.csv",
+      "bytes": 242,
+      "sha256": "df3a45c82b2283f0e401713f0f805e9950b225a8a1700260adb4737cdfc5cbc1"
+    },
+    {
+      "path": "experiments/auxiliary_loss_diagnostic/20261025T123240Z/results/historical_validation_curves.csv",
+      "bytes": 12564,
+      "sha256": "8bf9da4279de2f11f5bc2affc08da26607642002b26b11b83a3174abe31ccc56"
+    },
+    {
+      "path": "experiments/auxiliary_loss_diagnostic/20261025T123240Z/results/interpretation_summary.json",
+      "bytes": 3409,
+      "sha256": "58f2c1b0007f0351ad9b0e8c05e2c642081d7b583e511381c2b2e9f76aa835d3"
+    },
+    {
+      "path": "experiments/auxiliary_loss_diagnostic/20261025T123240Z/results/metrics_summary.json",
+      "bytes": 572433,
+      "sha256": "a7da02776047d17e9ae738f279b80a0c6226733b9ce1e2ec6f5926ed35a8a106"
+    },
+    {
+      "path": "experiments/auxiliary_loss_diagnostic/20261025T123240Z/results/norm_summary.csv",
+      "bytes": 78822,
+      "sha256": "024c2cd163bfc381bd0f604e9a2c150f2f9cc7ca40923012435e5339faa50ffb"
+    },
+    {
+      "path": "experiments/auxiliary_loss_diagnostic/20261025T123240Z/results/pair_counts.csv",
+      "bytes": 206696,
+      "sha256": "5a84b0e056b675c166aa6998d86b9212014d912fc6d6d961c529aca3d14778e4"
+    },
+    {
+      "path": "experiments/auxiliary_loss_diagnostic/20261025T123240Z/results/paired_checkpoint_deltas.csv",
+      "bytes": 301900,
+      "sha256": "53adfc2853e547ebd675782a8a75c9ff14992be84402e7860ef80b2964297549"
+    },
+    {
+      "path": "experiments/auxiliary_loss_diagnostic/20261025T123240Z/results/paired_summary.csv",
+      "bytes": 13993,
+      "sha256": "1be93dddc2f9595349f6c594430e7de511d2b72d9ef1dc23ec3ffdc94824e0d4"
+    },
+    {
+      "path": "experiments/auxiliary_loss_diagnostic/20261025T123240Z/results/pseudo_counts.csv",
+      "bytes": 166085,
+      "sha256": "06c5eb30af70b8a9c05a4d0e7aaedb47f7170c00b876599a7c0a688ef597c52f"
+    },
+    {
+      "path": "experiments/auxiliary_loss_diagnostic/20261025T123240Z/results/pseudo_summary.csv",
+      "bytes": 1760,
+      "sha256": "96ae398c7de78dcf6d6ed946f0cd05106bfbcd113eee072971862fdd7a3414c6"
+    },
+    {
+      "path": "experiments/auxiliary_loss_diagnostic/20261025T123240Z/results/sample_coverage.csv",
+      "bytes": 1160,
+      "sha256": "89b1ea8e4c86857911f7a8a5055a57db13d7b23a5bc0a2ac915405266ada6990"
+    },
+    {
+      "path": "experiments/auxiliary_loss_diagnostic/20261025T123240Z/results/state_audit.csv",
+      "bytes": 86366,
+      "sha256": "6e14d944a60d0c69058d43ae1da53fc29f2176f245c0ae8f780a918c8626dd9c"
+    },
+    {
+      "path": "experiments/auxiliary_loss_diagnostic/20261025T123240Z/scripts/analyze_diagnostic.py",
+      "bytes": 32250,
+      "sha256": "1be53d1c3e217ef66f97b73fcac8e450eb46ff04a93c4865c0e2bd84753bd8eb"
+    },
+    {
+      "path": "experiments/auxiliary_loss_diagnostic/20261025T123240Z/scripts/curate_report.py",
+      "bytes": 13974,
+      "sha256": "5ab12d88fe58e5106f4857a29f3ccfc505fe84246344d3defa781091f1bb4f48"
+    },
+    {
+      "path": "experiments/auxiliary_loss_diagnostic/20261025T123240Z/scripts/diagnose.py",
+      "bytes": 24258,
+      "sha256": "631d023c097336e531283e0c2225387b6d9a709e6fe4b010f6c7f5d61e83be74"
+    },
+    {
+      "path": "experiments/auxiliary_loss_diagnostic/20261025T123240Z/scripts/diagnostic_core.py",
+      "bytes": 26165,
+      "sha256": "1967f1c574647a9ac9f51fa84bc3e6bb4f866e467774dd87b79a7a919a4b1d83"
+    },
+    {
+      "path": "experiments/auxiliary_loss_diagnostic/20261025T123240Z/scripts/finalize.py",
+      "bytes": 2631,
+      "sha256": "db4e3ad90decca0a8c1811132c8f240531396a8ee38a8bf8b0d35206d1439a18"
+    },
+    {
+      "path": "experiments/auxiliary_loss_diagnostic/20261025T123240Z/scripts/plot_diagnostic.py",
+      "bytes": 14157,
+      "sha256": "4a57182cb31b3c014247e8a1132e38b5265d7bcbc19a7595356c66dd4414c935"
+    },
+    {
+      "path": "experiments/auxiliary_loss_diagnostic/20261025T123240Z/scripts/prepare_diagnostic.py",
+      "bytes": 19010,
+      "sha256": "2d707fd8d45629c3b2f6c444b402de678dc774dcce71b9dc174cd44d814184ba"
+    },
+    {
+      "path": "experiments/auxiliary_loss_diagnostic/20261025T123240Z/scripts/redact_reference.py",
+      "bytes": 1474,
+      "sha256": "a4672b68a80264a7092efb2cd1601b3085625828ff7cc0dee36ba067dfa672a0"
+    },
+    {
+      "path": "experiments/auxiliary_loss_diagnostic/20261025T123240Z/scripts/render_figure7_layout.py",
+      "bytes": 4209,
+      "sha256": "20951e6132cae9a5025fdab0b5c1fdf7332883493f333afbfe0ec440c55cf546"
+    },
+    {
+      "path": "experiments/auxiliary_loss_diagnostic/20261025T123240Z/scripts/snapshot_history.py",
+      "bytes": 1085,
+      "sha256": "5c390b175c919e071f7c3bcff7a4d474192855d46b60d1cb44b73addf756e27c"
+    },
+    {
+      "path": "experiments/auxiliary_loss_diagnostic/20261025T123240Z/scripts/test_diagnostic_analysis.py",
+      "bytes": 6095,
+      "sha256": "73e53ab3b13674d86649f0d1f86d6be72d10f24afebe44c1d2094b52a05ad31e"
+    },
+    {
+      "path": "experiments/auxiliary_loss_diagnostic/20261025T123240Z/scripts/test_diagnostic_core.py",
+      "bytes": 14495,
+      "sha256": "db46341f4c899859a72e0257e0acd761db131cab86f52a706eacb50cdd5c0726"
+    },
+    {
+      "path": "experiments/auxiliary_loss_diagnostic/20261025T123240Z/scripts/test_runner_guards.py",
+      "bytes": 4324,
+      "sha256": "d39d6ae5c154caa1a14a9c5826d6525007228d395abcd7f12dc6ed02c08e6195"
+    },
+    {
+      "path": "experiments/auxiliary_loss_diagnostic/20261025T123240Z/scripts/test_sampling.py",
+      "bytes": 7615,
+      "sha256": "edfb6617fef3888b3b03e74af4b5d96bd9b986f8fea1e233ad3036442e9e40e8"
+    },
+    {
+      "path": "experiments/auxiliary_loss_diagnostic/20261025T123240Z/scripts/verify_diagnostic.py",
+      "bytes": 9287,
+      "sha256": "d8442f1e2c9fde69951b9cb3f2b4a7ee0b1fc980bde5e31ad333d255660611fc"
+    },
+    {
+      "path": "experiments/auxiliary_loss_diagnostic/20261025T123240Z/scripts/verify_publication.py",
+      "bytes": 5503,
+      "sha256": "a26660579aa9f4bb10bff4827da4c7d7f9ca664f91f2af75f9fc042b44d14b99"
+    },
+    {
+      "path": "reports/CMERC_AUXILIARY_LOSS_DIAGNOSTIC.md",
+      "bytes": 27720,
+      "sha256": "20bc6dda88d25c798c7de162f391fedca2d6053ace0ec4df62e8fc2bb002bead"
+    }
+  ]
+}

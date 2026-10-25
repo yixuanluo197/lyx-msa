@@ -1,0 +1,157 @@
+{
+  "generated_at_utc": "2026-10-25T13:25:44.109994+00:00",
+  "completed": true,
+  "matplotlib_version": "3.10.9",
+  "svg_text_editable": true,
+  "png_dpi": 240,
+  "sample_unit": "fixed batch; not independent seed",
+  "source_data": {
+    "results/analysis_gradient_pairs.csv": "b30233631f620492f922a7b084e77b73c05e4edad9440df556b6ff432ac3d763",
+    "results/gradient_summary.csv": "b5c5741fb99157f39315f24fb4e324ffaa6e3aa6919c381309a059a27a586d5c",
+    "results/norm_summary.csv": "024c2cd163bfc381bd0f604e9a2c150f2f9cc7ca40923012435e5339faa50ffb",
+    "results/paired_checkpoint_deltas.csv": "53adfc2853e547ebd675782a8a75c9ff14992be84402e7860ef80b2964297549",
+    "results/pseudo_summary.csv": "96ae398c7de78dcf6d6ed946f0cd05106bfbcd113eee072971862fdd7a3414c6",
+    "results/class_relation_summary.csv": "60e435b3c1c15979885bf0b4c942487e0af8ba72ae4964119cdc241beb8fb265",
+    "results/branch_summary.csv": "5ed364a338d1be970d190621530c4b84a96de8a0d0e30487c9f7193f330949ed",
+    "results/pair_counts.csv": "5a84b0e056b675c166aa6998d86b9212014d912fc6d6d961c529aca3d14778e4",
+    "results/metrics_summary.json": "a7da02776047d17e9ae738f279b80a0c6226733b9ce1e2ec6f5926ed35a8a106",
+    "scripts/plot_diagnostic.py": "4a57182cb31b3c014247e8a1132e38b5265d7bcbc19a7595356c66dd4414c935",
+    "provenance/figure_contract.md": "94d0969003bd382edcb30c0c7bd1ff92010ce1ce7889d984130cf0e5d6d7698d",
+    "scripts/render_figure7_layout.py": "20951e6132cae9a5025fdab0b5c1fdf7332883493f333afbfe0ec440c55cf546"
+  },
+  "analysis_input_sha256": {
+    "results/gradient_norms.csv": "54eef7b72ccca3f5f2b346635dcd8e65c2dc68c8c21beb42ee31a021ef025af8",
+    "results/gradient_pairs.csv": "5a5d43852118477426f573a0bba53b0a0fefdef1f209f8caf5282cc0f47e55a5",
+    "results/pseudo_counts.csv": "06c5eb30af70b8a9c05a4d0e7aaedb47f7170c00b876599a7c0a688ef597c52f",
+    "results/pair_counts.csv": "5a84b0e056b675c166aa6998d86b9212014d912fc6d6d961c529aca3d14778e4",
+    "results/class_relations.csv": "0f976db24ecc2acefe20b51b0eb9055bd1ed389ecb35dcf6c758e0126fceefe9",
+    "results/branch_counts.csv": "9e9d3e9e1ab1f82124d9195d57998a484ea8e89513edd69aa734b7ea50475e63",
+    "results/confidence_summary.csv": "8bc4948fc6f81a55c26bca672cac65afedd69938f78040bd510271481f4e705a",
+    "results/contribution_summary.csv": "a2f8bc2ce8c63887a1d1ffdcdb0ce6d37059e188c25ff2c6a06a975d5647146c",
+    "results/case_summary.csv": "6e6568aab752125ec5bf2a08bcccdffe8ef74d311220388f4933faac8e2127d8",
+    "results/sample_coverage.csv": "89b1ea8e4c86857911f7a8a5055a57db13d7b23a5bc0a2ac915405266ada6990",
+    "results/state_audit.csv": "6e14d944a60d0c69058d43ae1da53fc29f2176f245c0ae8f780a918c8626dd9c",
+    "results/ckscl_numeric.csv": "a4012b84d97ed77439b082297c9eff07ddbf26993dcd5cb14c7d234d2d071fef",
+    "results/ckscl_wrapper_audit.csv": "d0042d265695307c9cb9851b949527e375e977dc0e961553334d27a1c89a0083",
+    "configs/registry.json": "6a8f00099aa76e5cb650761b6b0917856755f2a77603c29a7365bf11dac139eb",
+    "state/status.json": "de1bb9ef6c59473133b12bdeeca34bb91ee8b510e6d939ff0e411aead8a2255a",
+    "provenance/final_verification.json": "6f2386f99237e8c3cd8fb8d348f88073f27cedae7b00d7159b0edf21513ae82f",
+    "preflight/checkpoint_inventory.json": "4d0f8e9ba3461d1f0434d66fadb282616bbcb9392501ea27d5e564d9a92a36f3",
+    "provenance/figure_contract.md": "94d0969003bd382edcb30c0c7bd1ff92010ce1ce7889d984130cf0e5d6d7698d",
+    "scripts/analyze_diagnostic.py": "1be53d1c3e217ef66f97b73fcac8e450eb46ff04a93c4865c0e2bd84753bd8eb",
+    "scripts/plot_diagnostic.py": "4a57182cb31b3c014247e8a1132e38b5265d7bcbc19a7595356c66dd4414c935",
+    "scripts/test_diagnostic_analysis.py": "73e53ab3b13674d86649f0d1f86d6be72d10f24afebe44c1d2094b52a05ad31e",
+    "preflight/analysis_tests.json": "ead75874668997119fea5a0563c9b9bc45ae375b865c66d0fe436eb2de08e815",
+    "provenance/frozen_execution.json": "5af817ee8502b1e1512ab4c7ae2debc1fbca0df2e25ac2752cfce8dc01b980c0",
+    "reports/PREREGISTRATION.md": "82998597c7174f562114976dab47054fe46302b9aaed05a7e2f3391188214a8f"
+  },
+  "artifacts": [
+    {
+      "path": "results/figures/01_cosine_distributions.png",
+      "sha256": "8c04cd775df9ae8a65fb3904e4a640bda164532ac9c6b3d98d1bbb4cd7864330",
+      "bytes": 133414
+    },
+    {
+      "path": "results/figures/01_cosine_distributions.svg",
+      "sha256": "9ea811c2ecaa90a372ee0d5dd31477940442723ce5b19f2ff504bdad40694f3e",
+      "bytes": 31256
+    },
+    {
+      "path": "results/figures/02_reference_norm_ratios.png",
+      "sha256": "1e058242aa623bc21cbed63f1d2e36916dcd086676e28670383703cec8ea3822",
+      "bytes": 127594
+    },
+    {
+      "path": "results/figures/02_reference_norm_ratios.svg",
+      "sha256": "da45e55a1d0d0288cac4e96487d31cf00e132d6231ad86a59c282e29a7f71d6e",
+      "bytes": 29229
+    },
+    {
+      "path": "results/figures/03_group_conflict_frequency.png",
+      "sha256": "51f797b86d6084f8da50f8ea37ea278401825a797f48a20cca268ab77371a76f",
+      "bytes": 222799
+    },
+    {
+      "path": "results/figures/03_group_conflict_frequency.svg",
+      "sha256": "49d6259e1dc68fd3d29c57245d149398034de1fd3e19c7a9f32ae2932aae4dec",
+      "bytes": 41755
+    },
+    {
+      "path": "results/figures/04_pseudo_label_proportions.png",
+      "sha256": "5305b4f8342a7f5ed0220b024b12e65e5e42f9b0b03c744bbfd9d975ffce7795",
+      "bytes": 185731
+    },
+    {
+      "path": "results/figures/04_pseudo_label_proportions.svg",
+      "sha256": "7a2362f8c12ba76501911e58d3bf681a345e1669aad2fe886ed387239ec6b456",
+      "bytes": 19647
+    },
+    {
+      "path": "results/figures/05_emotion_relationship_heatmap.png",
+      "sha256": "0e8d73a60ca744ecc193759e3474bf2c38de0c4bc81c41b71b8ad212f516c3fd",
+      "bytes": 312108
+    },
+    {
+      "path": "results/figures/05_emotion_relationship_heatmap.svg",
+      "sha256": "95df72186d14d819c406b169fd3a6d1719216982df53b8890cc217bcef5bcf8d",
+      "bytes": 66631
+    },
+    {
+      "path": "results/figures/06_paired_checkpoint_cosine_changes.png",
+      "sha256": "4d8789129920f2436ee6b5da8c15504a5e6f2fc9e7693bee7bad37524516a07d",
+      "bytes": 108964
+    },
+    {
+      "path": "results/figures/06_paired_checkpoint_cosine_changes.svg",
+      "sha256": "f42f1240c905ca65b24ac3e93c0de96dd242e387407b30c91f101d1ad9a651fc",
+      "bytes": 17680
+    },
+    {
+      "path": "results/figures/07_pseudo_branch_coverage.png",
+      "sha256": "ae506ab391a02d284c4cde2c0ad7d44c22b262c750deafb4ade4897b15ad3fba",
+      "bytes": 155645
+    },
+    {
+      "path": "results/figures/07_pseudo_branch_coverage.svg",
+      "sha256": "c4b2b8b868820f06e7ba13a0be082fb0eba3abcbae96a70e386e52145f73b4d8",
+      "bytes": 38209
+    },
+    {
+      "path": "results/figures/08_relationship_pair_coverage.png",
+      "sha256": "abb0276961a578f11c95526ad05a54557b50457f8838792bb3e12a7190123756",
+      "bytes": 134022
+    },
+    {
+      "path": "results/figures/08_relationship_pair_coverage.svg",
+      "sha256": "aa0ce46e42a3b7227e758853da9100d75c5f1fa1062e90c7989bc9113207d78f",
+      "bytes": 25392
+    },
+    {
+      "path": "results/figures/09_actual_reference_gradient_scale.png",
+      "sha256": "fafedc6cd3e8c935ccd27509082545e2b8f3a8198ae3906691db94e1d1930f5e",
+      "bytes": 136172
+    },
+    {
+      "path": "results/figures/09_actual_reference_gradient_scale.svg",
+      "sha256": "b21e156c5ea5411e75900531bb2aa3b3695b0b044f8f1fd06965d23c19ffbcae",
+      "bytes": 19376
+    }
+  ],
+  "layout_only_revision": {
+    "script": "scripts/render_figure7_layout.py",
+    "changes": [
+      {
+        "path": "results/figures/07_pseudo_branch_coverage.png",
+        "before_sha256": "6fe2dd4d2a9d2cda61abe42b736f8461a60388d55834c6801e6bb2b5c27eb36b",
+        "after_sha256": "ae506ab391a02d284c4cde2c0ad7d44c22b262c750deafb4ade4897b15ad3fba"
+      },
+      {
+        "path": "results/figures/07_pseudo_branch_coverage.svg",
+        "before_sha256": "53ac409b229f1c530e3dd5dd93fb3772c71cd902a97dee169f0db25cdaf3c13c",
+        "after_sha256": "c4b2b8b868820f06e7ba13a0be082fb0eba3abcbae96a70e386e52145f73b4d8"
+      }
+    ],
+    "data_or_statistics_changed": false,
+    "frozen_original_plot_script_unchanged": true
+  }
+}

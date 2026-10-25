@@ -1,0 +1,89 @@
+{
+  "status": "passed",
+  "created_at_utc": "2026-10-25T13:30:07.189170+00:00",
+  "reviewer": "iem_batch_audit",
+  "scope": "Independent read-only source and current PUBLIC CSV/JSON review using stdlib only; no model/torch import, forward, GPU call, private utterance read, or historical mixed/test file read. Only this review JSON is newly written.",
+  "runtime": {
+    "cases": 128,
+    "model_forwards": 768,
+    "autograd_grad_calls": 512,
+    "training_runs": 0,
+    "optimizer_steps": 0,
+    "tensor_backward_calls": 0,
+    "new_test_forwards": 0,
+    "failed_cases": 0
+  },
+  "independently_checked": {
+    "exact_case_loss_group_relation_keys": true,
+    "state_rng_model_and_grad_buffer_hashes": true,
+    "all_recorded_loss_and_gradient_tensors_finite": true,
+    "reference_vs_actual_weighted_objectives_separated": true,
+    "XP12_actual_auxiliary_sum_matches_weighted_CC": true,
+    "norm_and_pair_arithmetic": true,
+    "pair_support_exclusion_partition": true,
+    "pseudo_emotion_branch_confidence_aggregate_consistency": true,
+    "original_wrapper_return_fallback_consistency": true,
+    "summary_conflict_frequency_medians_and_priority_recomputed": true,
+    "raw_csv_and_summary_input_hashes": true,
+    "public_column_privacy_check": true,
+    "report_links_resolve": true
+  },
+  "record_counts": {
+    "gradient_norms": 6144,
+    "gradient_pairs": 5120,
+    "valid_pairs": 4864,
+    "state_audit": 128,
+    "pseudo_counts": 1280,
+    "class_relations": 8960,
+    "pair_counts": 640,
+    "branch_counts": 3200,
+    "confidence_summary": 2560,
+    "ckscl_numeric": 640,
+    "ckscl_wrapper_audit": 256
+  },
+  "numeric_evidence": {
+    "nonfinite_logits": 0,
+    "nonfinite_similarity_cells": 0,
+    "negative_neg_sum_anchors": 65,
+    "negative_denominator_anchors": 0,
+    "zero_denominator_anchors": 0,
+    "nonfinite_denominator_anchors": 0
+  },
+  "wrapper_fallbacks": 0,
+  "priority_recomputed": "insufficient",
+  "capsule_hash_checks": [
+    {
+      "capsule": "frozen_execution.json",
+      "entries": 54,
+      "independently_rehashed": 49,
+      "large_inputs_not_rehashed": 5
+    },
+    {
+      "capsule": "analysis_frozen.json",
+      "entries": 4,
+      "independently_rehashed": 4,
+      "large_inputs_not_rehashed": 0
+    }
+  ],
+  "formal_verifier_history_files": 2302,
+  "history_hashes_independently_repeated": false,
+  "focal_loss_source_fact": {
+    "file": "code_xp04/model_cm.py",
+    "lines": "41-48",
+    "fact": "For non-target classes onehot*log_p is zero, so every non-target entry contributes -alpha*log_p_j; the target entry is alpha*(1-log_p_y)^gamma*(-log_p_y); the default reduction averages all N*C entries.",
+    "interpretation": "Observed CC conflict is relative to this original classification objective, not directly to W-F1. Confidence-conditioned decomposition is a hypothesis for a separately registered diagnostic; current data do not establish harmful CC or justify choosing a coefficient."
+  },
+  "limitations": [
+    "No independent model/gradient re-execution; gradient statistics are checked against persisted public arithmetic and audited frozen source.",
+    "No private utterance records were read by this reviewer; private/public reconciliation is delegated to the passed formal verifier.",
+    "Four large checkpoints and the large RoBERTa input were not rehashed here; passed formal verification covers these and historical preservation.",
+    "Pairs use entire finite nonzero parameter tensors on common support; differing common support and missing/zero tensors limit cross-loss scale comparisons.",
+    "Fixed class-covering length-stratified training batches, one seed, eval mode and freshly synchronized teachers do not reproduce historical online training gradients or population conflict frequency.",
+    "XP12 raw HSCL reference gradients are offline counterfactual quantities; its actual HSCL coefficients are zero.",
+    "Snapshot conflict, norm scale and binary relation labels do not establish F1 harm, pseudo-label correctness, test generalization or a unique root cause."
+  ],
+  "reviewed_report_sha256": "a0af3812cf3d9c78b703786ee24c938c87f3bafbb5f26cd826830e281c138154",
+  "summary_sha256": "a7da02776047d17e9ae738f279b80a0c6226733b9ce1e2ec6f5926ed35a8a106",
+  "formal_verification_sha256": "6f2386f99237e8c3cd8fb8d348f88073f27cedae7b00d7159b0edf21513ae82f",
+  "required_corrections": []
+}
