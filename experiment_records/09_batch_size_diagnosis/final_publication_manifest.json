@@ -1,8 +1,8 @@
 {
-  "created_at_utc": "2026-10-25T02:34:33.526574+00:00",
+  "created_at_utc": "2026-10-25T02:48:12.419018+00:00",
   "repository": "https://github.com/yixuanluo197/lyx-msa",
   "branch": "main",
-  "publication_parent_commit": "adea816600aa014652d78dcc11e488f60935465b",
+  "publication_parent_commit": "c61e2241d2459ecc9b759f5901935f2b97c6e8d0",
   "batch": "experiments/batch_size_diagnosis/20261024T131956Z",
   "status": "completed_validation_only",
   "formal_runs_started": 1,
@@ -13,7 +13,7 @@
   "best_epoch": 9,
   "last10_validation_wf1": 63.048,
   "scope": "Final Chinese reports, scientific snapshot/provenance, parsed args, aggregate train/validation CSV and20 figures; no weights/features/raw logs/step logs/live state. Existing public author curriculum retained.",
-  "historical_queued_manifest": "experiment_records/09_batch_size_diagnosis/publication_manifest.json",
+  "historical_queued_manifest": "experiment_records/09_batch_size_diagnosis/publication_history/adea816/publication_manifest.json",
   "manifest_self_excluded": true,
   "files": {
     "README.md": {
@@ -21,16 +21,28 @@
       "sha256": "6dcb021ff4eaacae927e999fd31e6d80785b2d01bde099e8149f0e60ee5a38f1"
     },
     "experiment_records/09_batch_size_diagnosis/GITHUB_DELIVERY.md": {
-      "bytes": 3596,
-      "sha256": "4dd6b4d8bd960c2272c6c77def784190bc4af90a4fe1553803ea7a86bf29b171"
+      "bytes": 3796,
+      "sha256": "e6b94296e3795bd5bcbde5ae0a4cac69d0a1f082b691037bbc3a4eeed8535570"
     },
     "experiment_records/09_batch_size_diagnosis/README.md": {
-      "bytes": 1549,
-      "sha256": "1f72419f434059b9ec2031dea60ed3a98201a0be93fb54b009e1b6a48abcfee8"
+      "bytes": 1693,
+      "sha256": "a7e82f1f741c370ee4d494bb477740aff38e2e03c5188168ed81d907c117a56d"
     },
-    "experiment_records/09_batch_size_diagnosis/publication_manifest.json": {
+    "experiment_records/09_batch_size_diagnosis/publication_history/adea816/README.md": {
+      "bytes": 408,
+      "sha256": "17f230cba8ee82a29b67f6a76cefe27c949140f3759b231e69a7c26312da1b1a"
+    },
+    "experiment_records/09_batch_size_diagnosis/publication_history/adea816/publication_checks.json": {
+      "bytes": 578,
+      "sha256": "530e0c1b30ef913f352fae4f61f700ce5046edc2daeabcbf6c15af1c055236e9"
+    },
+    "experiment_records/09_batch_size_diagnosis/publication_history/adea816/publication_manifest.json": {
       "bytes": 11623,
       "sha256": "57b9f89e5505e12931d1cc03c5e24bfb1c629ed4b6daadd623ccb890a1ba03ae"
+    },
+    "experiment_records/09_batch_size_diagnosis/publication_history/adea816/publication_status.json": {
+      "bytes": 3565,
+      "sha256": "2b4aa828b3979db59ddff9dc6576eb5e05c665e792562e9dd5a326600ab7af26"
     },
     "experiment_records/README.md": {
       "bytes": 7918,
@@ -45,8 +57,8 @@
       "sha256": "75032ccbaa50f6c3d5c95282f6ea811511919d123e4d9a501cf907a894655e0e"
     },
     "experiments/batch_size_diagnosis/20261024T131956Z/HANDOFF.md": {
-      "bytes": 1376,
-      "sha256": "1b23786ab81175563cf10c8dcb96a520e492e2417afa50636e10132e63bfc6d2"
+      "bytes": 1476,
+      "sha256": "b18870a8ce6aecfc0201dd84643a762b11f3faa48d04004c6813e1588ce609bf"
     },
     "experiments/batch_size_diagnosis/20261024T131956Z/README.md": {
       "bytes": 485,
@@ -225,12 +237,12 @@
       "sha256": "a6bfe087a2b5f7ccb94a9497008b6e9adaddeef7f2640e03fa26ad4ac4ca857d"
     },
     "experiments/batch_size_diagnosis/20261024T131956Z/provenance/publication_checks.json": {
-      "bytes": 578,
-      "sha256": "530e0c1b30ef913f352fae4f61f700ce5046edc2daeabcbf6c15af1c055236e9"
+      "bytes": 1387,
+      "sha256": "cad6579caa9b119bcce8d3a4996e35e9ede0b8a99cf823b39cb5d6a0f1a1c6c7"
     },
     "experiments/batch_size_diagnosis/20261024T131956Z/provenance/publication_status.json": {
-      "bytes": 3565,
-      "sha256": "2b4aa828b3979db59ddff9dc6576eb5e05c665e792562e9dd5a326600ab7af26"
+      "bytes": 1029,
+      "sha256": "dbde6196524bf33d4ab448d51b994da93645c5ba3e9f41a54dc0aedcb8b3cabd"
     },
     "experiments/batch_size_diagnosis/20261024T131956Z/provenance/queue_handoff.json": {
       "bytes": 2910,
@@ -564,5 +576,10 @@
       "bytes": 12932,
       "sha256": "f252eebaba95630fb01e31bc336e6f614aac72f857ecd10bd42f5b7506e1c822"
     }
-  }
+  },
+  "current_publication_replaces_queued_version": true,
+  "manifest_files_excluded": [
+    "experiment_records/09_batch_size_diagnosis/final_publication_manifest.json",
+    "experiment_records/09_batch_size_diagnosis/publication_manifest.json"
+  ]
 }

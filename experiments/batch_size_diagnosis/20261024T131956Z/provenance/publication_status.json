@@ -1,124 +1,25 @@
 {
-  "captured_at_utc": "2026-10-24T14:13:23.658649+00:00",
-  "scope": "Immutable publication-time snapshot; repository copies do not update with the live server queue.",
-  "status": {
-    "active": true,
-    "phase": "preflight_admission",
-    "pid": 2032912,
-    "started_at_utc": "2026-10-24T13:29:24.067985+00:00",
-    "formal_started": 0,
-    "formal_completed": 0,
-    "runs": [],
-    "preflight_started": 0,
-    "frozen_execution_sha256": "ce8e264c8800975f9d4d8cadc502b1c857de3e2a2cb7a3af2dfb0b57bff7e592",
-    "resource_samples": 260,
-    "resource_query_errors": 0,
-    "preexisting_pid_samples": 0,
-    "unexpected_process_samples": 260,
-    "unexpected_pids": [
-      2009993,
-      2015107,
-      2016946,
-      2018672,
-      2020386,
-      2097721,
-      2098961,
-      2100130,
-      2101261
-    ],
-    "co_resident_pid_explicitly_allowed": 1843864,
-    "admission_paused": true,
-    "active_pids": [],
-    "preflight": null,
-    "current_run": "MELD_cmerc_batch8_lr1e-4_seed2024",
-    "admission_conditions_currently_met": false,
-    "last_resource": {
-      "time": "2026-10-24T14:13:21.705645+00:00",
-      "stage": "preflight_admission",
-      "gpu_index": 3,
-      "gpu_uuid": "GPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456",
-      "gpu_name": "NVIDIA TITAN Xp",
-      "total_mib": 12288,
-      "free_mib": 4741,
-      "used_mib": 7443,
-      "utilization_percent": 99,
-      "processes": [
-        {
-          "pid": 2009993,
-          "name": "python",
-          "used_memory": "430"
-        },
-        {
-          "pid": 2098961,
-          "name": "/home/yangbin/miniconda3/envs/multimodalerc310/bin/python",
-          "used_memory": "2336"
-        },
-        {
-          "pid": 2100130,
-          "name": "/home/yangbin/miniconda3/envs/multimodalerc310/bin/python",
-          "used_memory": "2336"
-        },
-        {
-          "pid": 2101261,
-          "name": "/home/yangbin/miniconda3/envs/multimodalerc310/bin/python",
-          "used_memory": "2336"
-        }
-      ],
-      "own_pids": [],
-      "all_foreign_processes": [
-        {
-          "pid": 2009993,
-          "name": "python",
-          "used_memory": "430"
-        },
-        {
-          "pid": 2098961,
-          "name": "/home/yangbin/miniconda3/envs/multimodalerc310/bin/python",
-          "used_memory": "2336"
-        },
-        {
-          "pid": 2100130,
-          "name": "/home/yangbin/miniconda3/envs/multimodalerc310/bin/python",
-          "used_memory": "2336"
-        },
-        {
-          "pid": 2101261,
-          "name": "/home/yangbin/miniconda3/envs/multimodalerc310/bin/python",
-          "used_memory": "2336"
-        }
-      ],
-      "allowed_foreign_processes": [],
-      "unexpected_processes": [
-        {
-          "pid": 2009993,
-          "name": "python",
-          "used_memory": "430"
-        },
-        {
-          "pid": 2098961,
-          "name": "/home/yangbin/miniconda3/envs/multimodalerc310/bin/python",
-          "used_memory": "2336"
-        },
-        {
-          "pid": 2100130,
-          "name": "/home/yangbin/miniconda3/envs/multimodalerc310/bin/python",
-          "used_memory": "2336"
-        },
-        {
-          "pid": 2101261,
-          "name": "/home/yangbin/miniconda3/envs/multimodalerc310/bin/python",
-          "used_memory": "2336"
-        }
-      ]
-    },
-    "admission_consecutive_samples": 0
-  },
-  "finalization": {
-    "active": true,
-    "phase": "waiting_for_single_run",
-    "pid": 2032913,
-    "commands": []
-  },
-  "supervisor_process_present": true,
-  "new_training_or_evaluation_during_publication": false
+  "created_at_utc": "2026-10-25T02:33:50.591794+00:00",
+  "phase": "completed",
+  "server": "user23",
+  "gpu_index": 1,
+  "gpu_uuid": "GPU-eed2f34f-b4c0-7b7a-498e-71a026e30c5a",
+  "formal_started": 1,
+  "formal_completed": 1,
+  "epochs": 40,
+  "test_forwards": 0,
+  "new_best_validation_wf1": 65.89,
+  "new_last10_validation_wf1": 63.048,
+  "best_epoch": 9,
+  "final_verification": "passed",
+  "completion_recheck": "passed",
+  "frozen_source_and_inputs": 92,
+  "historical_files": 1691,
+  "plots": 20,
+  "limits": "singleSeed; both train and validation batch grouping change; different physical GPU vs control; shared resources; no independent test",
+  "previous_queued_snapshot_commit": "adea816600aa014652d78dcc11e488f60935465b",
+  "current_publication": true,
+  "updated_at_utc": "2026-10-25T02:47:45.222929+00:00",
+  "supersedes_queued_publication": "adea816600aa014652d78dcc11e488f60935465b",
+  "queued_snapshot_archive": "experiment_records/09_batch_size_diagnosis/publication_history/adea816/publication_status.json"
 }

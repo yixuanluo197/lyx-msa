@@ -1,5 +1,7 @@
 # 第09组：MELD Batch Size诊断
 
+当前GitHub版本已覆盖原先未训练的09组发布；旧排队快照仅保存在[历史目录](publication_history/adea816/README.md)。
+
 唯一登记正式训练已完成并通过独立CPU验收：完整非因果CMERC，MELD seed2024/split_seed1475、LR=0.0001、Batch8、40轮，验证W-F1选模、零测试前向。
 
 | 指标 | Batch16（XP04） | Batch8（09） |

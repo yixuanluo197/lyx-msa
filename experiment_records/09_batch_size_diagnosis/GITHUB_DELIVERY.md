@@ -22,6 +22,6 @@
 
 92项运行冻结源/输入、1691项历史文件保全通过；best/latest为第9/40轮，模型及Adam有限并保存完整随机状态，SHA见验收文件。450次资源采样显示共享GPU正式阶段最小空闲31MiB，未发生本任务OOM；不能声明独占或证明未影响其他任务吞吐。未终止其他项目进程，未追加训练。
 
-先前提交`adea816600aa014652d78dcc11e488f60935465b`发布的是0次正式训练的排队阶段快照；其原[publication_manifest.json](publication_manifest.json)及批次publication_status/publication_checks保留为历史证据，**不能当作当前状态**。本次完成材料的文件SHA另见[final_publication_manifest.json](final_publication_manifest.json)。
+当前分支已用完成实验的报告、结果和发布状态覆盖原09组待运行版本：原路径[publication_manifest.json](publication_manifest.json)及批次publication_status/publication_checks均表示唯一40轮训练已完成。先前提交`adea816600aa014652d78dcc11e488f60935465b`的0次训练快照已移至[历史发布目录](publication_history/adea816/README.md)，仅用于追溯。本次完整文件SHA见[publication_manifest.json](publication_manifest.json)；[final_publication_manifest.json](final_publication_manifest.json)为同内容副本。
 
 数据与其本地链接、模型权重、原始训练/资源日志、逐Batch/逐Epoch原始观测、实时state和锁保留服务器，未上传。公开CSV为训练/验证指标和Loss汇总，不含新测试结果。冻结清单中的绝对路径及未公开文件SHA用于溯源，仅克隆GitHub仓库不能重算所有服务器验收。

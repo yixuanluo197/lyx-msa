@@ -8,4 +8,4 @@
 
 后台delivery只因finalization.json尚未创建的启动竞态退出，未影响训练或CPU验收。完成后修复非冻结导航脚本的等待逻辑并执行成功，未改任何训练代码/配置/结果。原v1/v2队列均归档，实际科学源及资源冻结以最终frozen_execution.json为准。
 
-最终中文报告位于批次reports及仓库reports/CMERC_BATCH_SIZE_DIAGNOSIS.md。GitHub先前adea816为排队快照，完成材料另行发布；训练数据、权重、原始日志及逐Batch跟踪保留服务器。
+最终中文报告位于批次reports及仓库reports/CMERC_BATCH_SIZE_DIAGNOSIS.md。GitHub当前09组已替换为完整实训结果；先前adea816的排队快照仅保留在experiment_records/09_batch_size_diagnosis/publication_history/adea816/；训练数据、权重、原始日志及逐Batch跟踪保留服务器。
