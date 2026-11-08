@@ -1,0 +1,822 @@
+{
+  "status": "complete",
+  "started_at": "2026-11-08T10:11:11.119305+00:00",
+  "supervisor_pid": 2000780,
+  "gpu_host_index": 3,
+  "server": "user23",
+  "environment": {
+    "CUDA_VISIBLE_DEVICES": "3",
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "OMP_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "LD_LIBRARY_PATH": "/data2/yb/conda_envs/cmerc-xp-repro/lib/python3.10/site-packages/nvidia/cusparse/lib",
+    "PYTORCH_CUDA_ALLOC_CONF": "garbage_collection_threshold:0.8"
+  },
+  "jobs": [
+    {
+      "dataset": "IEMOCAP",
+      "seed": 1475,
+      "phase": "overall_attenuation",
+      "pid": 2000795,
+      "status": "complete",
+      "started_at": "2026-11-08T10:11:11.205018+00:00",
+      "command": [
+        "/data2/yb/conda_envs/cmerc-xp-repro/bin/python",
+        "-u",
+        "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/scripts/run_evidence.py",
+        "--dataset",
+        "IEMOCAP",
+        "--phase",
+        "overall_attenuation"
+      ],
+      "log": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/logs/overall_attenuation_IEMOCAP.log",
+      "complete_artifact": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/runs/IEMOCAP/seed1475/overall_attenuation_complete.json",
+      "exit_code": 0,
+      "finished_at": "2026-11-08T10:18:18.404764+00:00",
+      "seconds": 419.41114380792715,
+      "target_forwards": 6320,
+      "stored_vectors": 6324,
+      "skipped_visual_missing": 4
+    },
+    {
+      "dataset": "MELD",
+      "seed": 67137,
+      "phase": "overall_attenuation",
+      "pid": 2001080,
+      "status": "complete",
+      "started_at": "2026-11-08T10:11:19.305631+00:00",
+      "command": [
+        "/data2/yb/conda_envs/cmerc-xp-repro/bin/python",
+        "-u",
+        "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/scripts/run_evidence.py",
+        "--dataset",
+        "MELD",
+        "--phase",
+        "overall_attenuation"
+      ],
+      "log": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/logs/overall_attenuation_MELD.log",
+      "complete_artifact": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/runs/MELD/seed67137/overall_attenuation_complete.json",
+      "exit_code": 0,
+      "finished_at": "2026-11-08T10:16:18.088796+00:00",
+      "seconds": 286.4209909699857,
+      "target_forwards": 12928,
+      "stored_vectors": 13308,
+      "skipped_visual_missing": 380
+    },
+    {
+      "dataset": "IEMOCAP",
+      "seed": 1475,
+      "phase": "layer_attenuation",
+      "pid": 2013121,
+      "status": "complete",
+      "started_at": "2026-11-08T10:18:18.521061+00:00",
+      "command": [
+        "/data2/yb/conda_envs/cmerc-xp-repro/bin/python",
+        "-u",
+        "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/scripts/run_evidence.py",
+        "--dataset",
+        "IEMOCAP",
+        "--phase",
+        "layer_attenuation"
+      ],
+      "log": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/logs/layer_attenuation_IEMOCAP.log",
+      "complete_artifact": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/runs/IEMOCAP/seed1475/layer_attenuation_complete.json",
+      "exit_code": 0,
+      "finished_at": "2026-11-08T10:27:56.215588+00:00",
+      "seconds": 563.3618516940624,
+      "target_forwards": 8432,
+      "stored_vectors": 8432,
+      "skipped_visual_missing": 0
+    },
+    {
+      "dataset": "MELD",
+      "seed": 67137,
+      "phase": "layer_attenuation",
+      "pid": 2013401,
+      "status": "complete",
+      "started_at": "2026-11-08T10:18:26.618701+00:00",
+      "command": [
+        "/data2/yb/conda_envs/cmerc-xp-repro/bin/python",
+        "-u",
+        "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/scripts/run_evidence.py",
+        "--dataset",
+        "MELD",
+        "--phase",
+        "layer_attenuation"
+      ],
+      "log": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/logs/layer_attenuation_MELD.log",
+      "complete_artifact": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/runs/MELD/seed67137/layer_attenuation_complete.json",
+      "exit_code": 0,
+      "finished_at": "2026-11-08T10:25:05.700544+00:00",
+      "seconds": 382.6407033879077,
+      "target_forwards": 17744,
+      "stored_vectors": 17744,
+      "skipped_visual_missing": 0
+    },
+    {
+      "dataset": "IEMOCAP",
+      "seed": 1475,
+      "phase": "random_masking",
+      "pid": 2030052,
+      "status": "complete",
+      "started_at": "2026-11-08T10:27:56.328839+00:00",
+      "command": [
+        "/data2/yb/conda_envs/cmerc-xp-repro/bin/python",
+        "-u",
+        "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/scripts/run_evidence.py",
+        "--dataset",
+        "IEMOCAP",
+        "--phase",
+        "random_masking"
+      ],
+      "log": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/logs/random_masking_IEMOCAP.log",
+      "complete_artifact": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/runs/IEMOCAP/seed1475/random_masking_complete.json",
+      "exit_code": 0,
+      "finished_at": "2026-11-08T11:45:34.998866+00:00",
+      "seconds": 4645.317377637024,
+      "target_forwards": 73760,
+      "stored_vectors": 73780,
+      "skipped_visual_missing": 20
+    },
+    {
+      "dataset": "MELD",
+      "seed": 67137,
+      "phase": "random_masking",
+      "pid": 2030425,
+      "status": "complete",
+      "started_at": "2026-11-08T10:28:04.457219+00:00",
+      "command": [
+        "/data2/yb/conda_envs/cmerc-xp-repro/bin/python",
+        "-u",
+        "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/scripts/run_evidence.py",
+        "--dataset",
+        "MELD",
+        "--phase",
+        "random_masking"
+      ],
+      "log": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/logs/random_masking_MELD.log",
+      "complete_artifact": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/runs/MELD/seed67137/random_masking_complete.json",
+      "exit_code": 0,
+      "finished_at": "2026-11-08T11:29:52.376624+00:00",
+      "seconds": 3691.7639156089863,
+      "target_forwards": 153360,
+      "stored_vectors": 155260,
+      "skipped_visual_missing": 1900
+    }
+  ],
+  "events": [
+    {
+      "type": "resource_check",
+      "tag": "overall_attenuation_IEMOCAP_before",
+      "file": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/logs/launch_resources_overall_attenuation_IEMOCAP_before_1794132671203566429.json",
+      "utc": "2026-11-08T10:11:11.203889+00:00"
+    },
+    {
+      "type": "resource_check",
+      "tag": "overall_attenuation_MELD_before",
+      "file": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/logs/launch_resources_overall_attenuation_MELD_before_1794132679303155248.json",
+      "utc": "2026-11-08T10:11:19.303748+00:00"
+    },
+    {
+      "type": "resource_check",
+      "tag": "overall_attenuation_progress",
+      "file": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/logs/launch_resources_overall_attenuation_progress_1794132687426799426.json",
+      "utc": "2026-11-08T10:11:27.427347+00:00"
+    },
+    {
+      "type": "resource_check",
+      "tag": "overall_attenuation_progress",
+      "file": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/logs/launch_resources_overall_attenuation_progress_1794132747569908615.json",
+      "utc": "2026-11-08T10:12:27.570480+00:00"
+    },
+    {
+      "type": "resource_check",
+      "tag": "overall_attenuation_progress",
+      "file": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/logs/launch_resources_overall_attenuation_progress_1794132807720585193.json",
+      "utc": "2026-11-08T10:13:27.721105+00:00"
+    },
+    {
+      "type": "resource_check",
+      "tag": "overall_attenuation_progress",
+      "file": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/logs/launch_resources_overall_attenuation_progress_1794132867872209677.json",
+      "utc": "2026-11-08T10:14:27.872807+00:00"
+    },
+    {
+      "type": "resource_check",
+      "tag": "overall_attenuation_progress",
+      "file": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/logs/launch_resources_overall_attenuation_progress_1794132928048783556.json",
+      "utc": "2026-11-08T10:15:28.049509+00:00"
+    },
+    {
+      "type": "resource_check",
+      "tag": "overall_attenuation_progress",
+      "file": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/logs/launch_resources_overall_attenuation_progress_1794132988207063346.json",
+      "utc": "2026-11-08T10:16:28.207615+00:00"
+    },
+    {
+      "type": "resource_check",
+      "tag": "overall_attenuation_progress",
+      "file": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/logs/launch_resources_overall_attenuation_progress_1794133048353117254.json",
+      "utc": "2026-11-08T10:17:28.353653+00:00"
+    },
+    {
+      "type": "global_phase_barrier_passed",
+      "phase": "overall_attenuation",
+      "utc": "2026-11-08T10:18:18.411552+00:00"
+    },
+    {
+      "type": "resource_check",
+      "tag": "layer_attenuation_IEMOCAP_before",
+      "file": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/logs/launch_resources_layer_attenuation_IEMOCAP_before_1794133098518573802.json",
+      "utc": "2026-11-08T10:18:18.519014+00:00"
+    },
+    {
+      "type": "resource_check",
+      "tag": "layer_attenuation_MELD_before",
+      "file": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/logs/launch_resources_layer_attenuation_MELD_before_1794133106616008561.json",
+      "utc": "2026-11-08T10:18:26.616550+00:00"
+    },
+    {
+      "type": "resource_check",
+      "tag": "layer_attenuation_progress",
+      "file": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/logs/launch_resources_layer_attenuation_progress_1794133114728742902.json",
+      "utc": "2026-11-08T10:18:34.729265+00:00"
+    },
+    {
+      "type": "resource_check",
+      "tag": "layer_attenuation_progress",
+      "file": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/logs/launch_resources_layer_attenuation_progress_1794133174891142407.json",
+      "utc": "2026-11-08T10:19:34.891690+00:00"
+    },
+    {
+      "type": "resource_check",
+      "tag": "layer_attenuation_progress",
+      "file": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/logs/launch_resources_layer_attenuation_progress_1794133235046811316.json",
+      "utc": "2026-11-08T10:20:35.047329+00:00"
+    },
+    {
+      "type": "resource_check",
+      "tag": "layer_attenuation_progress",
+      "file": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/logs/launch_resources_layer_attenuation_progress_1794133295209999725.json",
+      "utc": "2026-11-08T10:21:35.210545+00:00"
+    },
+    {
+      "type": "resource_check",
+      "tag": "layer_attenuation_progress",
+      "file": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/logs/launch_resources_layer_attenuation_progress_1794133355361309998.json",
+      "utc": "2026-11-08T10:22:35.361850+00:00"
+    },
+    {
+      "type": "resource_check",
+      "tag": "layer_attenuation_progress",
+      "file": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/logs/launch_resources_layer_attenuation_progress_1794133415518712173.json",
+      "utc": "2026-11-08T10:23:35.519241+00:00"
+    },
+    {
+      "type": "resource_check",
+      "tag": "layer_attenuation_progress",
+      "file": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/logs/launch_resources_layer_attenuation_progress_1794133475668880743.json",
+      "utc": "2026-11-08T10:24:35.669244+00:00"
+    },
+    {
+      "type": "resource_check",
+      "tag": "layer_attenuation_progress",
+      "file": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/logs/launch_resources_layer_attenuation_progress_1794133535853800307.json",
+      "utc": "2026-11-08T10:25:35.854349+00:00"
+    },
+    {
+      "type": "resource_check",
+      "tag": "layer_attenuation_progress",
+      "file": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/logs/launch_resources_layer_attenuation_progress_1794133596009644830.json",
+      "utc": "2026-11-08T10:26:36.010205+00:00"
+    },
+    {
+      "type": "resource_check",
+      "tag": "layer_attenuation_progress",
+      "file": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/logs/launch_resources_layer_attenuation_progress_1794133656192059170.json",
+      "utc": "2026-11-08T10:27:36.194009+00:00"
+    },
+    {
+      "type": "global_phase_barrier_passed",
+      "phase": "layer_attenuation",
+      "utc": "2026-11-08T10:27:56.224445+00:00"
+    },
+    {
+      "type": "resource_check",
+      "tag": "random_masking_IEMOCAP_before",
+      "file": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/logs/launch_resources_random_masking_IEMOCAP_before_1794133676325880490.json",
+      "utc": "2026-11-08T10:27:56.326399+00:00"
+    },
+    {
+      "type": "resource_check",
+      "tag": "random_masking_MELD_before",
+      "file": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/logs/launch_resources_random_masking_MELD_before_1794133684454267160.json",
+      "utc": "2026-11-08T10:28:04.455019+00:00"
+    },
+    {
+      "type": "resource_check",
+      "tag": "random_masking_progress",
+      "file": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/logs/launch_resources_random_masking_progress_1794133692572137743.json",
+      "utc": "2026-11-08T10:28:12.572768+00:00"
+    },
+    {
+      "type": "resource_check",
+      "tag": "random_masking_progress",
+      "file": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/logs/launch_resources_random_masking_progress_1794133752722887345.json",
+      "utc": "2026-11-08T10:29:12.723432+00:00"
+    },
+    {
+      "type": "resource_check",
+      "tag": "random_masking_progress",
+      "file": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/logs/launch_resources_random_masking_progress_1794133812889106233.json",
+      "utc": "2026-11-08T10:30:12.889526+00:00"
+    },
+    {
+      "type": "resource_check",
+      "tag": "random_masking_progress",
+      "file": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/logs/launch_resources_random_masking_progress_1794133873044557715.json",
+      "utc": "2026-11-08T10:31:13.045120+00:00"
+    },
+    {
+      "type": "resource_check",
+      "tag": "random_masking_progress",
+      "file": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/logs/launch_resources_random_masking_progress_1794133933199160991.json",
+      "utc": "2026-11-08T10:32:13.199734+00:00"
+    },
+    {
+      "type": "resource_check",
+      "tag": "random_masking_progress",
+      "file": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/logs/launch_resources_random_masking_progress_1794133993367396127.json",
+      "utc": "2026-11-08T10:33:13.367946+00:00"
+    },
+    {
+      "type": "resource_check",
+      "tag": "random_masking_progress",
+      "file": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/logs/launch_resources_random_masking_progress_1794134053536984917.json",
+      "utc": "2026-11-08T10:34:13.537548+00:00"
+    },
+    {
+      "type": "resource_check",
+      "tag": "random_masking_progress",
+      "file": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/logs/launch_resources_random_masking_progress_1794134113683588856.json",
+      "utc": "2026-11-08T10:35:13.683979+00:00"
+    },
+    {
+      "type": "resource_check",
+      "tag": "random_masking_progress",
+      "file": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/logs/launch_resources_random_masking_progress_1794134173856278344.json",
+      "utc": "2026-11-08T10:36:13.856924+00:00"
+    },
+    {
+      "type": "resource_check",
+      "tag": "random_masking_progress",
+      "file": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/logs/launch_resources_random_masking_progress_1794134234007274083.json",
+      "utc": "2026-11-08T10:37:14.008136+00:00"
+    },
+    {
+      "type": "resource_check",
+      "tag": "random_masking_progress",
+      "file": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/logs/launch_resources_random_masking_progress_1794134294184940172.json",
+      "utc": "2026-11-08T10:38:14.185524+00:00"
+    },
+    {
+      "type": "resource_check",
+      "tag": "random_masking_progress",
+      "file": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/logs/launch_resources_random_masking_progress_1794134354347013230.json",
+      "utc": "2026-11-08T10:39:14.367026+00:00"
+    },
+    {
+      "type": "resource_check",
+      "tag": "random_masking_progress",
+      "file": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/logs/launch_resources_random_masking_progress_1794134414522602988.json",
+      "utc": "2026-11-08T10:40:14.523156+00:00"
+    },
+    {
+      "type": "resource_check",
+      "tag": "random_masking_progress",
+      "file": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/logs/launch_resources_random_masking_progress_1794134474672712302.json",
+      "utc": "2026-11-08T10:41:14.673252+00:00"
+    },
+    {
+      "type": "resource_check",
+      "tag": "random_masking_progress",
+      "file": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/logs/launch_resources_random_masking_progress_1794134534814102049.json",
+      "utc": "2026-11-08T10:42:14.814701+00:00"
+    },
+    {
+      "type": "resource_check",
+      "tag": "random_masking_progress",
+      "file": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/logs/launch_resources_random_masking_progress_1794134594971303926.json",
+      "utc": "2026-11-08T10:43:14.971688+00:00"
+    },
+    {
+      "type": "resource_check",
+      "tag": "random_masking_progress",
+      "file": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/logs/launch_resources_random_masking_progress_1794134655141878363.json",
+      "utc": "2026-11-08T10:44:15.142509+00:00"
+    },
+    {
+      "type": "resource_check",
+      "tag": "random_masking_progress",
+      "file": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/logs/launch_resources_random_masking_progress_1794134715292638285.json",
+      "utc": "2026-11-08T10:45:15.293178+00:00"
+    },
+    {
+      "type": "resource_check",
+      "tag": "random_masking_progress",
+      "file": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/logs/launch_resources_random_masking_progress_1794134775446155127.json",
+      "utc": "2026-11-08T10:46:15.446730+00:00"
+    },
+    {
+      "type": "resource_check",
+      "tag": "random_masking_progress",
+      "file": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/logs/launch_resources_random_masking_progress_1794134835621293748.json",
+      "utc": "2026-11-08T10:47:15.621928+00:00"
+    },
+    {
+      "type": "resource_check",
+      "tag": "random_masking_progress",
+      "file": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/logs/launch_resources_random_masking_progress_1794134895792215693.json",
+      "utc": "2026-11-08T10:48:15.793150+00:00"
+    },
+    {
+      "type": "resource_check",
+      "tag": "random_masking_progress",
+      "file": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/logs/launch_resources_random_masking_progress_1794134955948499436.json",
+      "utc": "2026-11-08T10:49:15.949059+00:00"
+    },
+    {
+      "type": "resource_check",
+      "tag": "random_masking_progress",
+      "file": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/logs/launch_resources_random_masking_progress_1794135016104235454.json",
+      "utc": "2026-11-08T10:50:16.104868+00:00"
+    },
+    {
+      "type": "resource_check",
+      "tag": "random_masking_progress",
+      "file": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/logs/launch_resources_random_masking_progress_1794135076247718005.json",
+      "utc": "2026-11-08T10:51:16.248266+00:00"
+    },
+    {
+      "type": "resource_check",
+      "tag": "random_masking_progress",
+      "file": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/logs/launch_resources_random_masking_progress_1794135136398744455.json",
+      "utc": "2026-11-08T10:52:16.399305+00:00"
+    },
+    {
+      "type": "resource_check",
+      "tag": "random_masking_progress",
+      "file": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/logs/launch_resources_random_masking_progress_1794135196557996401.json",
+      "utc": "2026-11-08T10:53:16.558573+00:00"
+    },
+    {
+      "type": "resource_check",
+      "tag": "random_masking_progress",
+      "file": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/logs/launch_resources_random_masking_progress_1794135256731587602.json",
+      "utc": "2026-11-08T10:54:16.732130+00:00"
+    },
+    {
+      "type": "resource_check",
+      "tag": "random_masking_progress",
+      "file": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/logs/launch_resources_random_masking_progress_1794135316887103041.json",
+      "utc": "2026-11-08T10:55:16.887667+00:00"
+    },
+    {
+      "type": "resource_check",
+      "tag": "random_masking_progress",
+      "file": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/logs/launch_resources_random_masking_progress_1794135377048639413.json",
+      "utc": "2026-11-08T10:56:17.049174+00:00"
+    },
+    {
+      "type": "resource_check",
+      "tag": "random_masking_progress",
+      "file": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/logs/launch_resources_random_masking_progress_1794135437204283455.json",
+      "utc": "2026-11-08T10:57:17.204863+00:00"
+    },
+    {
+      "type": "resource_check",
+      "tag": "random_masking_progress",
+      "file": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/logs/launch_resources_random_masking_progress_1794135497361097000.json",
+      "utc": "2026-11-08T10:58:17.361746+00:00"
+    },
+    {
+      "type": "resource_check",
+      "tag": "random_masking_progress",
+      "file": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/logs/launch_resources_random_masking_progress_1794135557512642589.json",
+      "utc": "2026-11-08T10:59:17.513233+00:00"
+    },
+    {
+      "type": "resource_check",
+      "tag": "random_masking_progress",
+      "file": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/logs/launch_resources_random_masking_progress_1794135617668902795.json",
+      "utc": "2026-11-08T11:00:17.669465+00:00"
+    },
+    {
+      "type": "resource_check",
+      "tag": "random_masking_progress",
+      "file": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/logs/launch_resources_random_masking_progress_1794135677852491370.json",
+      "utc": "2026-11-08T11:01:17.853065+00:00"
+    },
+    {
+      "type": "resource_check",
+      "tag": "random_masking_progress",
+      "file": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/logs/launch_resources_random_masking_progress_1794135738009884151.json",
+      "utc": "2026-11-08T11:02:18.010479+00:00"
+    },
+    {
+      "type": "resource_check",
+      "tag": "random_masking_progress",
+      "file": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/logs/launch_resources_random_masking_progress_1794135798171289930.json",
+      "utc": "2026-11-08T11:03:18.171866+00:00"
+    },
+    {
+      "type": "resource_check",
+      "tag": "random_masking_progress",
+      "file": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/logs/launch_resources_random_masking_progress_1794135858314511304.json",
+      "utc": "2026-11-08T11:04:18.315055+00:00"
+    },
+    {
+      "type": "resource_check",
+      "tag": "random_masking_progress",
+      "file": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/logs/launch_resources_random_masking_progress_1794135918477223559.json",
+      "utc": "2026-11-08T11:05:18.477818+00:00"
+    },
+    {
+      "type": "resource_check",
+      "tag": "random_masking_progress",
+      "file": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/logs/launch_resources_random_masking_progress_1794135978647120787.json",
+      "utc": "2026-11-08T11:06:18.647771+00:00"
+    },
+    {
+      "type": "resource_check",
+      "tag": "random_masking_progress",
+      "file": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/logs/launch_resources_random_masking_progress_1794136038802519310.json",
+      "utc": "2026-11-08T11:07:18.803093+00:00"
+    },
+    {
+      "type": "resource_check",
+      "tag": "random_masking_progress",
+      "file": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/logs/launch_resources_random_masking_progress_1794136098969312548.json",
+      "utc": "2026-11-08T11:08:18.969919+00:00"
+    },
+    {
+      "type": "resource_check",
+      "tag": "random_masking_progress",
+      "file": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/logs/launch_resources_random_masking_progress_1794136159122070616.json",
+      "utc": "2026-11-08T11:09:19.122897+00:00"
+    },
+    {
+      "type": "resource_check",
+      "tag": "random_masking_progress",
+      "file": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/logs/launch_resources_random_masking_progress_1794136219264769012.json",
+      "utc": "2026-11-08T11:10:19.265337+00:00"
+    },
+    {
+      "type": "resource_check",
+      "tag": "random_masking_progress",
+      "file": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/logs/launch_resources_random_masking_progress_1794136279424867509.json",
+      "utc": "2026-11-08T11:11:19.425442+00:00"
+    },
+    {
+      "type": "resource_check",
+      "tag": "random_masking_progress",
+      "file": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/logs/launch_resources_random_masking_progress_1794136339575997365.json",
+      "utc": "2026-11-08T11:12:19.576616+00:00"
+    },
+    {
+      "type": "resource_check",
+      "tag": "random_masking_progress",
+      "file": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/logs/launch_resources_random_masking_progress_1794136399728456954.json",
+      "utc": "2026-11-08T11:13:19.733593+00:00"
+    },
+    {
+      "type": "resource_check",
+      "tag": "random_masking_progress",
+      "file": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/logs/launch_resources_random_masking_progress_1794136459904808377.json",
+      "utc": "2026-11-08T11:14:19.905363+00:00"
+    },
+    {
+      "type": "resource_check",
+      "tag": "random_masking_progress",
+      "file": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/logs/launch_resources_random_masking_progress_1794136520077446604.json",
+      "utc": "2026-11-08T11:15:20.078027+00:00"
+    },
+    {
+      "type": "resource_check",
+      "tag": "random_masking_progress",
+      "file": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/logs/launch_resources_random_masking_progress_1794136580237905978.json",
+      "utc": "2026-11-08T11:16:20.238508+00:00"
+    },
+    {
+      "type": "resource_check",
+      "tag": "random_masking_progress",
+      "file": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/logs/launch_resources_random_masking_progress_1794136640385568509.json",
+      "utc": "2026-11-08T11:17:20.386131+00:00"
+    },
+    {
+      "type": "resource_check",
+      "tag": "random_masking_progress",
+      "file": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/logs/launch_resources_random_masking_progress_1794136700536072134.json",
+      "utc": "2026-11-08T11:18:20.536656+00:00"
+    },
+    {
+      "type": "resource_check",
+      "tag": "random_masking_progress",
+      "file": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/logs/launch_resources_random_masking_progress_1794136760708687228.json",
+      "utc": "2026-11-08T11:19:20.709247+00:00"
+    },
+    {
+      "type": "resource_check",
+      "tag": "random_masking_progress",
+      "file": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/logs/launch_resources_random_masking_progress_1794136820862904363.json",
+      "utc": "2026-11-08T11:20:20.863691+00:00"
+    },
+    {
+      "type": "resource_check",
+      "tag": "random_masking_progress",
+      "file": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/logs/launch_resources_random_masking_progress_1794136881014863927.json",
+      "utc": "2026-11-08T11:21:21.018111+00:00"
+    },
+    {
+      "type": "resource_check",
+      "tag": "random_masking_progress",
+      "file": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/logs/launch_resources_random_masking_progress_1794136941184236480.json",
+      "utc": "2026-11-08T11:22:21.184858+00:00"
+    },
+    {
+      "type": "resource_check",
+      "tag": "random_masking_progress",
+      "file": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/logs/launch_resources_random_masking_progress_1794137001339848219.json",
+      "utc": "2026-11-08T11:23:21.340432+00:00"
+    },
+    {
+      "type": "resource_check",
+      "tag": "random_masking_progress",
+      "file": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/logs/launch_resources_random_masking_progress_1794137061489923840.json",
+      "utc": "2026-11-08T11:24:21.490518+00:00"
+    },
+    {
+      "type": "resource_check",
+      "tag": "random_masking_progress",
+      "file": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/logs/launch_resources_random_masking_progress_1794137121643904310.json",
+      "utc": "2026-11-08T11:25:21.644518+00:00"
+    },
+    {
+      "type": "resource_check",
+      "tag": "random_masking_progress",
+      "file": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/logs/launch_resources_random_masking_progress_1794137181814218775.json",
+      "utc": "2026-11-08T11:26:21.814890+00:00"
+    },
+    {
+      "type": "resource_check",
+      "tag": "random_masking_progress",
+      "file": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/logs/launch_resources_random_masking_progress_1794137241997547714.json",
+      "utc": "2026-11-08T11:27:21.997947+00:00"
+    },
+    {
+      "type": "resource_check",
+      "tag": "random_masking_progress",
+      "file": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/logs/launch_resources_random_masking_progress_1794137302175509476.json",
+      "utc": "2026-11-08T11:28:22.176076+00:00"
+    },
+    {
+      "type": "resource_check",
+      "tag": "random_masking_progress",
+      "file": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/logs/launch_resources_random_masking_progress_1794137362343617111.json",
+      "utc": "2026-11-08T11:29:22.344199+00:00"
+    },
+    {
+      "type": "resource_check",
+      "tag": "random_masking_progress",
+      "file": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/logs/launch_resources_random_masking_progress_1794137422562803689.json",
+      "utc": "2026-11-08T11:30:22.563339+00:00"
+    },
+    {
+      "type": "resource_check",
+      "tag": "random_masking_progress",
+      "file": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/logs/launch_resources_random_masking_progress_1794137482738352638.json",
+      "utc": "2026-11-08T11:31:22.739000+00:00"
+    },
+    {
+      "type": "resource_check",
+      "tag": "random_masking_progress",
+      "file": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/logs/launch_resources_random_masking_progress_1794137542909480386.json",
+      "utc": "2026-11-08T11:32:22.910062+00:00"
+    },
+    {
+      "type": "resource_check",
+      "tag": "random_masking_progress",
+      "file": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/logs/launch_resources_random_masking_progress_1794137603068562542.json",
+      "utc": "2026-11-08T11:33:23.069170+00:00"
+    },
+    {
+      "type": "resource_check",
+      "tag": "random_masking_progress",
+      "file": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/logs/launch_resources_random_masking_progress_1794137663239021716.json",
+      "utc": "2026-11-08T11:34:23.239722+00:00"
+    },
+    {
+      "type": "resource_check",
+      "tag": "random_masking_progress",
+      "file": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/logs/launch_resources_random_masking_progress_1794137723390263613.json",
+      "utc": "2026-11-08T11:35:23.390835+00:00"
+    },
+    {
+      "type": "resource_check",
+      "tag": "random_masking_progress",
+      "file": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/logs/launch_resources_random_masking_progress_1794137783542728679.json",
+      "utc": "2026-11-08T11:36:23.543301+00:00"
+    },
+    {
+      "type": "resource_check",
+      "tag": "random_masking_progress",
+      "file": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/logs/launch_resources_random_masking_progress_1794137843708630985.json",
+      "utc": "2026-11-08T11:37:23.709180+00:00"
+    },
+    {
+      "type": "resource_check",
+      "tag": "random_masking_progress",
+      "file": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/logs/launch_resources_random_masking_progress_1794137903887667575.json",
+      "utc": "2026-11-08T11:38:23.888225+00:00"
+    },
+    {
+      "type": "resource_check",
+      "tag": "random_masking_progress",
+      "file": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/logs/launch_resources_random_masking_progress_1794137964052785072.json",
+      "utc": "2026-11-08T11:39:24.053596+00:00"
+    },
+    {
+      "type": "resource_check",
+      "tag": "random_masking_progress",
+      "file": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/logs/launch_resources_random_masking_progress_1794138024209612200.json",
+      "utc": "2026-11-08T11:40:24.210182+00:00"
+    },
+    {
+      "type": "resource_check",
+      "tag": "random_masking_progress",
+      "file": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/logs/launch_resources_random_masking_progress_1794138084373829743.json",
+      "utc": "2026-11-08T11:41:24.374427+00:00"
+    },
+    {
+      "type": "resource_check",
+      "tag": "random_masking_progress",
+      "file": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/logs/launch_resources_random_masking_progress_1794138144530234502.json",
+      "utc": "2026-11-08T11:42:24.530831+00:00"
+    },
+    {
+      "type": "resource_check",
+      "tag": "random_masking_progress",
+      "file": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/logs/launch_resources_random_masking_progress_1794138204688180528.json",
+      "utc": "2026-11-08T11:43:24.688805+00:00"
+    },
+    {
+      "type": "resource_check",
+      "tag": "random_masking_progress",
+      "file": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/logs/launch_resources_random_masking_progress_1794138264837531582.json",
+      "utc": "2026-11-08T11:44:24.838147+00:00"
+    },
+    {
+      "type": "resource_check",
+      "tag": "random_masking_progress",
+      "file": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/logs/launch_resources_random_masking_progress_1794138324985517079.json",
+      "utc": "2026-11-08T11:45:24.986098+00:00"
+    },
+    {
+      "type": "global_phase_barrier_passed",
+      "phase": "random_masking",
+      "utc": "2026-11-08T11:45:35.031877+00:00"
+    },
+    {
+      "type": "resource_check",
+      "tag": "pipeline_complete",
+      "file": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/logs/launch_resources_pipeline_complete_1794138335156732553.json",
+      "utc": "2026-11-08T11:45:35.157252+00:00"
+    }
+  ],
+  "source_sha256": {
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/scripts/launch_evidence.py": "50b54e39bdd8e11c065e82b15eb7b63170707ae4c2a78d1c55626596180e4a9e",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/scripts/run_evidence.py": "9dd749dc82d49e5e67eb9be1d72e8b3e6aab664f47c4be1c45df7952a520e5b6",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/scripts/evidence_core.py": "172bc3206e3d7de8abc6007f3975925fce31b63eea92eca7580cc4af201a93c8"
+  },
+  "phase": "random_masking",
+  "completed_at": "2026-11-08T11:45:35.061862+00:00",
+  "successful_jobs": 6,
+  "final_integrity_check": {
+    "verified_at": "2026-11-08T11:46:22.695734+00:00",
+    "six_exit_codes_zero": true,
+    "six_complete_passed": true,
+    "condition_npz_count": 112,
+    "condition_sha256_verified": true,
+    "full_probabilities_finite_shapes_normalization_argmax_verified": true,
+    "target_forwards": 272544,
+    "stored_probability_vectors": 274848,
+    "missing_visual_vectors_skipped": 2304,
+    "full_output_original_cached_parity_checks": 523,
+    "max_probability_error": 2.980232238769531e-07,
+    "max_log_probability_error": 3.814697265625e-06,
+    "frozen_inference_and_config_hashes_unchanged": true,
+    "gpu_compute_processes_empty": true,
+    "pipeline_wall_seconds": 5663.942557
+  }
+}

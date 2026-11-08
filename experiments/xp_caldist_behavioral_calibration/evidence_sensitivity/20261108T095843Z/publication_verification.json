@@ -1,0 +1,27 @@
+{
+  "status": "passed",
+  "split": "validation",
+  "model_forward": false,
+  "calibration_fitting": false,
+  "csv_byte_matches": {
+    "per_utterance_sensitivity.csv": true,
+    "modality_sensitivity_summary.csv": true,
+    "sensitivity_summary.csv": true,
+    "classwise_sensitivity.csv": true,
+    "correctness_group_contrasts.csv": true,
+    "previous_pilot_sensitivity_comparison.csv": true,
+    "visual_missingness_analysis.csv": true,
+    "high_confidence_wrong_sensitive_cases.csv": true,
+    "monotonicity_analysis.csv": true
+  },
+  "bootstrap_array_matches": {
+    "IEMOCAP": true,
+    "MELD": true
+  },
+  "note": "Offline prediction-based verification; not a new audit of inaccessible data/weights. Reference provenance is retained under provenance/published_reference/. Manual stable-missing report supplement is retained in the published original reports/logs.",
+  "existing_output_rejected": true,
+  "portable_unit_tests": {
+    "test_evidence_core.py": "........\n----------------------------------------------------------------------\nRan 8 tests in 0.029s\n\nOK",
+    "test_analyze_evidence.py": "............\n----------------------------------------------------------------------\nRan 12 tests in 1.455s\n\nOK"
+  }
+}

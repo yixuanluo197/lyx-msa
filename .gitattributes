@@ -1,2 +1,5 @@
 # Preserve frozen artifact bytes and standard CSV CRLF endings.
 /experiments/xp_caldist_behavioral_calibration/20261107T172302Z/** -text whitespace=cr-at-eol,-blank-at-eof
+/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/** -text whitespace=cr-at-eol,-blank-at-eof
+# Preserve matplotlib-generated SVG whitespace in the frozen delivery.
+/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/figures/*.svg -whitespace

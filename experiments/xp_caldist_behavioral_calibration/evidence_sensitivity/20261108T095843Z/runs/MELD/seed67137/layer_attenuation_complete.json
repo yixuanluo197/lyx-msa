@@ -1,0 +1,880 @@
+{
+  "passed": true,
+  "dataset": "MELD",
+  "seed": 67137,
+  "phase": "layer_attenuation",
+  "seconds": 382.6407033879077,
+  "target_forwards": 17744,
+  "skipped_visual_missing": 0,
+  "stored_vectors": 17744,
+  "complete_probability_parity_checks": [
+    {
+      "batch": 0,
+      "kind": "original",
+      "log_error": 4.76837158203125e-07,
+      "probability_error": 2.384185791015625e-07,
+      "previous_log_error": 4.76837158203125e-07,
+      "previous_probability_error": 2.384185791015625e-07
+    },
+    {
+      "batch": 0,
+      "kind": "decay_T1_rho0p25",
+      "log_error": 4.76837158203125e-07,
+      "probability_error": 1.7881393432617188e-07
+    },
+    {
+      "batch": 0,
+      "kind": "decay_T1_rho0p50",
+      "log_error": 4.76837158203125e-07,
+      "probability_error": 1.7881393432617188e-07
+    },
+    {
+      "batch": 0,
+      "kind": "decay_T1_rho0p75",
+      "log_error": 4.76837158203125e-07,
+      "probability_error": 1.1920928955078125e-07
+    },
+    {
+      "batch": 0,
+      "kind": "decay_T1_rho1p00",
+      "log_error": 4.76837158203125e-07,
+      "probability_error": 1.1920928955078125e-07
+    },
+    {
+      "batch": 0,
+      "kind": "decay_T2_rho0p25",
+      "log_error": 4.76837158203125e-07,
+      "probability_error": 1.4901161193847656e-07
+    },
+    {
+      "batch": 0,
+      "kind": "decay_T2_rho0p50",
+      "log_error": 4.76837158203125e-07,
+      "probability_error": 2.384185791015625e-07
+    },
+    {
+      "batch": 0,
+      "kind": "decay_T2_rho0p75",
+      "log_error": 4.76837158203125e-07,
+      "probability_error": 1.1920928955078125e-07
+    },
+    {
+      "batch": 0,
+      "kind": "decay_T2_rho1p00",
+      "log_error": 4.76837158203125e-07,
+      "probability_error": 1.1920928955078125e-07
+    },
+    {
+      "batch": 0,
+      "kind": "decay_T3_rho0p25",
+      "log_error": 4.76837158203125e-07,
+      "probability_error": 1.1920928955078125e-07
+    },
+    {
+      "batch": 0,
+      "kind": "decay_T3_rho0p50",
+      "log_error": 4.76837158203125e-07,
+      "probability_error": 1.1920928955078125e-07
+    },
+    {
+      "batch": 0,
+      "kind": "decay_T3_rho0p75",
+      "log_error": 4.76837158203125e-07,
+      "probability_error": 1.7881393432617188e-07
+    },
+    {
+      "batch": 0,
+      "kind": "decay_T3_rho1p00",
+      "log_error": 4.76837158203125e-07,
+      "probability_error": 1.1920928955078125e-07
+    },
+    {
+      "batch": 0,
+      "kind": "decay_T4_rho0p25",
+      "log_error": 7.152557373046875e-07,
+      "probability_error": 1.1920928955078125e-07
+    },
+    {
+      "batch": 0,
+      "kind": "decay_T4_rho0p50",
+      "log_error": 4.76837158203125e-07,
+      "probability_error": 1.1920928955078125e-07
+    },
+    {
+      "batch": 0,
+      "kind": "decay_T4_rho0p75",
+      "log_error": 4.76837158203125e-07,
+      "probability_error": 1.1920928955078125e-07
+    },
+    {
+      "batch": 0,
+      "kind": "decay_T4_rho1p00",
+      "log_error": 4.76837158203125e-07,
+      "probability_error": 1.7881393432617188e-07
+    },
+    {
+      "batch": 1,
+      "kind": "original",
+      "log_error": 4.76837158203125e-07,
+      "probability_error": 1.7881393432617188e-07,
+      "previous_log_error": 4.76837158203125e-07,
+      "previous_probability_error": 1.7881393432617188e-07
+    },
+    {
+      "batch": 1,
+      "kind": "decay_T1_rho0p25",
+      "log_error": 4.76837158203125e-07,
+      "probability_error": 1.7881393432617188e-07
+    },
+    {
+      "batch": 1,
+      "kind": "decay_T1_rho0p50",
+      "log_error": 4.76837158203125e-07,
+      "probability_error": 1.7881393432617188e-07
+    },
+    {
+      "batch": 1,
+      "kind": "decay_T1_rho0p75",
+      "log_error": 7.152557373046875e-07,
+      "probability_error": 1.7881393432617188e-07
+    },
+    {
+      "batch": 1,
+      "kind": "decay_T1_rho1p00",
+      "log_error": 4.76837158203125e-07,
+      "probability_error": 1.7881393432617188e-07
+    },
+    {
+      "batch": 1,
+      "kind": "decay_T2_rho0p25",
+      "log_error": 4.76837158203125e-07,
+      "probability_error": 1.7881393432617188e-07
+    },
+    {
+      "batch": 1,
+      "kind": "decay_T2_rho0p50",
+      "log_error": 4.76837158203125e-07,
+      "probability_error": 1.7881393432617188e-07
+    },
+    {
+      "batch": 1,
+      "kind": "decay_T2_rho0p75",
+      "log_error": 4.76837158203125e-07,
+      "probability_error": 1.4901161193847656e-07
+    },
+    {
+      "batch": 1,
+      "kind": "decay_T2_rho1p00",
+      "log_error": 4.76837158203125e-07,
+      "probability_error": 1.7881393432617188e-07
+    },
+    {
+      "batch": 1,
+      "kind": "decay_T3_rho0p25",
+      "log_error": 4.76837158203125e-07,
+      "probability_error": 1.4901161193847656e-07
+    },
+    {
+      "batch": 1,
+      "kind": "decay_T3_rho0p50",
+      "log_error": 4.76837158203125e-07,
+      "probability_error": 1.7881393432617188e-07
+    },
+    {
+      "batch": 1,
+      "kind": "decay_T3_rho0p75",
+      "log_error": 7.152557373046875e-07,
+      "probability_error": 1.1920928955078125e-07
+    },
+    {
+      "batch": 1,
+      "kind": "decay_T3_rho1p00",
+      "log_error": 4.76837158203125e-07,
+      "probability_error": 1.7881393432617188e-07
+    },
+    {
+      "batch": 1,
+      "kind": "decay_T4_rho0p25",
+      "log_error": 4.76837158203125e-07,
+      "probability_error": 1.7881393432617188e-07
+    },
+    {
+      "batch": 1,
+      "kind": "decay_T4_rho0p50",
+      "log_error": 4.76837158203125e-07,
+      "probability_error": 1.7881393432617188e-07
+    },
+    {
+      "batch": 1,
+      "kind": "decay_T4_rho0p75",
+      "log_error": 7.152557373046875e-07,
+      "probability_error": 1.7881393432617188e-07
+    },
+    {
+      "batch": 1,
+      "kind": "decay_T4_rho1p00",
+      "log_error": 4.76837158203125e-07,
+      "probability_error": 1.7881393432617188e-07
+    },
+    {
+      "batch": 2,
+      "kind": "original",
+      "log_error": 4.76837158203125e-07,
+      "probability_error": 1.7881393432617188e-07,
+      "previous_log_error": 4.76837158203125e-07,
+      "previous_probability_error": 1.1920928955078125e-07
+    },
+    {
+      "batch": 2,
+      "kind": "decay_T1_rho0p25",
+      "log_error": 4.76837158203125e-07,
+      "probability_error": 1.1920928955078125e-07
+    },
+    {
+      "batch": 2,
+      "kind": "decay_T1_rho0p50",
+      "log_error": 4.76837158203125e-07,
+      "probability_error": 1.7881393432617188e-07
+    },
+    {
+      "batch": 2,
+      "kind": "decay_T1_rho0p75",
+      "log_error": 4.76837158203125e-07,
+      "probability_error": 1.7881393432617188e-07
+    },
+    {
+      "batch": 2,
+      "kind": "decay_T1_rho1p00",
+      "log_error": 4.76837158203125e-07,
+      "probability_error": 1.1920928955078125e-07
+    },
+    {
+      "batch": 2,
+      "kind": "decay_T2_rho0p25",
+      "log_error": 4.76837158203125e-07,
+      "probability_error": 1.7881393432617188e-07
+    },
+    {
+      "batch": 2,
+      "kind": "decay_T2_rho0p50",
+      "log_error": 4.76837158203125e-07,
+      "probability_error": 1.7881393432617188e-07
+    },
+    {
+      "batch": 2,
+      "kind": "decay_T2_rho0p75",
+      "log_error": 4.76837158203125e-07,
+      "probability_error": 1.7881393432617188e-07
+    },
+    {
+      "batch": 2,
+      "kind": "decay_T2_rho1p00",
+      "log_error": 4.76837158203125e-07,
+      "probability_error": 1.7881393432617188e-07
+    },
+    {
+      "batch": 2,
+      "kind": "decay_T3_rho0p25",
+      "log_error": 4.76837158203125e-07,
+      "probability_error": 1.1920928955078125e-07
+    },
+    {
+      "batch": 2,
+      "kind": "decay_T3_rho0p50",
+      "log_error": 4.76837158203125e-07,
+      "probability_error": 1.1920928955078125e-07
+    },
+    {
+      "batch": 2,
+      "kind": "decay_T3_rho0p75",
+      "log_error": 4.76837158203125e-07,
+      "probability_error": 1.1920928955078125e-07
+    },
+    {
+      "batch": 2,
+      "kind": "decay_T3_rho1p00",
+      "log_error": 4.76837158203125e-07,
+      "probability_error": 1.4901161193847656e-07
+    },
+    {
+      "batch": 2,
+      "kind": "decay_T4_rho0p25",
+      "log_error": 4.76837158203125e-07,
+      "probability_error": 1.7881393432617188e-07
+    },
+    {
+      "batch": 2,
+      "kind": "decay_T4_rho0p50",
+      "log_error": 4.76837158203125e-07,
+      "probability_error": 1.1920928955078125e-07
+    },
+    {
+      "batch": 2,
+      "kind": "decay_T4_rho0p75",
+      "log_error": 4.76837158203125e-07,
+      "probability_error": 1.7881393432617188e-07
+    },
+    {
+      "batch": 2,
+      "kind": "decay_T4_rho1p00",
+      "log_error": 4.76837158203125e-07,
+      "probability_error": 1.7881393432617188e-07
+    },
+    {
+      "batch": 3,
+      "kind": "original",
+      "log_error": 4.76837158203125e-07,
+      "probability_error": 1.7881393432617188e-07,
+      "previous_log_error": 4.76837158203125e-07,
+      "previous_probability_error": 1.7881393432617188e-07
+    },
+    {
+      "batch": 3,
+      "kind": "decay_T1_rho0p25",
+      "log_error": 4.76837158203125e-07,
+      "probability_error": 1.7881393432617188e-07
+    },
+    {
+      "batch": 3,
+      "kind": "decay_T1_rho0p50",
+      "log_error": 4.76837158203125e-07,
+      "probability_error": 1.1920928955078125e-07
+    },
+    {
+      "batch": 3,
+      "kind": "decay_T1_rho0p75",
+      "log_error": 7.152557373046875e-07,
+      "probability_error": 1.1920928955078125e-07
+    },
+    {
+      "batch": 3,
+      "kind": "decay_T1_rho1p00",
+      "log_error": 4.76837158203125e-07,
+      "probability_error": 1.4901161193847656e-07
+    },
+    {
+      "batch": 3,
+      "kind": "decay_T2_rho0p25",
+      "log_error": 4.76837158203125e-07,
+      "probability_error": 1.1920928955078125e-07
+    },
+    {
+      "batch": 3,
+      "kind": "decay_T2_rho0p50",
+      "log_error": 4.76837158203125e-07,
+      "probability_error": 1.7881393432617188e-07
+    },
+    {
+      "batch": 3,
+      "kind": "decay_T2_rho0p75",
+      "log_error": 4.76837158203125e-07,
+      "probability_error": 1.1920928955078125e-07
+    },
+    {
+      "batch": 3,
+      "kind": "decay_T2_rho1p00",
+      "log_error": 4.76837158203125e-07,
+      "probability_error": 1.4901161193847656e-07
+    },
+    {
+      "batch": 3,
+      "kind": "decay_T3_rho0p25",
+      "log_error": 4.76837158203125e-07,
+      "probability_error": 1.7881393432617188e-07
+    },
+    {
+      "batch": 3,
+      "kind": "decay_T3_rho0p50",
+      "log_error": 4.76837158203125e-07,
+      "probability_error": 1.7881393432617188e-07
+    },
+    {
+      "batch": 3,
+      "kind": "decay_T3_rho0p75",
+      "log_error": 4.76837158203125e-07,
+      "probability_error": 1.7881393432617188e-07
+    },
+    {
+      "batch": 3,
+      "kind": "decay_T3_rho1p00",
+      "log_error": 4.76837158203125e-07,
+      "probability_error": 1.1920928955078125e-07
+    },
+    {
+      "batch": 3,
+      "kind": "decay_T4_rho0p25",
+      "log_error": 4.76837158203125e-07,
+      "probability_error": 1.7881393432617188e-07
+    },
+    {
+      "batch": 3,
+      "kind": "decay_T4_rho0p50",
+      "log_error": 4.76837158203125e-07,
+      "probability_error": 1.7881393432617188e-07
+    },
+    {
+      "batch": 3,
+      "kind": "decay_T4_rho0p75",
+      "log_error": 4.76837158203125e-07,
+      "probability_error": 1.7881393432617188e-07
+    },
+    {
+      "batch": 3,
+      "kind": "decay_T4_rho1p00",
+      "log_error": 4.76837158203125e-07,
+      "probability_error": 2.384185791015625e-07
+    },
+    {
+      "batch": 4,
+      "kind": "original",
+      "log_error": 7.152557373046875e-07,
+      "probability_error": 1.7881393432617188e-07,
+      "previous_log_error": 4.76837158203125e-07,
+      "previous_probability_error": 1.7881393432617188e-07
+    },
+    {
+      "batch": 4,
+      "kind": "decay_T1_rho0p25",
+      "log_error": 4.76837158203125e-07,
+      "probability_error": 1.4901161193847656e-07
+    },
+    {
+      "batch": 4,
+      "kind": "decay_T1_rho0p50",
+      "log_error": 4.76837158203125e-07,
+      "probability_error": 1.7881393432617188e-07
+    },
+    {
+      "batch": 4,
+      "kind": "decay_T1_rho0p75",
+      "log_error": 4.76837158203125e-07,
+      "probability_error": 1.1920928955078125e-07
+    },
+    {
+      "batch": 4,
+      "kind": "decay_T1_rho1p00",
+      "log_error": 4.76837158203125e-07,
+      "probability_error": 1.1920928955078125e-07
+    },
+    {
+      "batch": 4,
+      "kind": "decay_T2_rho0p25",
+      "log_error": 4.76837158203125e-07,
+      "probability_error": 1.1920928955078125e-07
+    },
+    {
+      "batch": 4,
+      "kind": "decay_T2_rho0p50",
+      "log_error": 4.76837158203125e-07,
+      "probability_error": 1.1920928955078125e-07
+    },
+    {
+      "batch": 4,
+      "kind": "decay_T2_rho0p75",
+      "log_error": 4.76837158203125e-07,
+      "probability_error": 1.1920928955078125e-07
+    },
+    {
+      "batch": 4,
+      "kind": "decay_T2_rho1p00",
+      "log_error": 4.76837158203125e-07,
+      "probability_error": 1.1920928955078125e-07
+    },
+    {
+      "batch": 4,
+      "kind": "decay_T3_rho0p25",
+      "log_error": 4.76837158203125e-07,
+      "probability_error": 1.4901161193847656e-07
+    },
+    {
+      "batch": 4,
+      "kind": "decay_T3_rho0p50",
+      "log_error": 4.76837158203125e-07,
+      "probability_error": 1.1920928955078125e-07
+    },
+    {
+      "batch": 4,
+      "kind": "decay_T3_rho0p75",
+      "log_error": 4.76837158203125e-07,
+      "probability_error": 1.7881393432617188e-07
+    },
+    {
+      "batch": 4,
+      "kind": "decay_T3_rho1p00",
+      "log_error": 4.76837158203125e-07,
+      "probability_error": 1.7881393432617188e-07
+    },
+    {
+      "batch": 4,
+      "kind": "decay_T4_rho0p25",
+      "log_error": 4.76837158203125e-07,
+      "probability_error": 1.1920928955078125e-07
+    },
+    {
+      "batch": 4,
+      "kind": "decay_T4_rho0p50",
+      "log_error": 4.76837158203125e-07,
+      "probability_error": 1.7881393432617188e-07
+    },
+    {
+      "batch": 4,
+      "kind": "decay_T4_rho0p75",
+      "log_error": 4.76837158203125e-07,
+      "probability_error": 1.1920928955078125e-07
+    },
+    {
+      "batch": 4,
+      "kind": "decay_T4_rho1p00",
+      "log_error": 4.76837158203125e-07,
+      "probability_error": 1.7881393432617188e-07
+    },
+    {
+      "batch": 5,
+      "kind": "original",
+      "log_error": 7.152557373046875e-07,
+      "probability_error": 1.1920928955078125e-07,
+      "previous_log_error": 4.76837158203125e-07,
+      "previous_probability_error": 1.7881393432617188e-07
+    },
+    {
+      "batch": 5,
+      "kind": "decay_T1_rho0p25",
+      "log_error": 4.76837158203125e-07,
+      "probability_error": 1.1920928955078125e-07
+    },
+    {
+      "batch": 5,
+      "kind": "decay_T1_rho0p50",
+      "log_error": 4.76837158203125e-07,
+      "probability_error": 1.1920928955078125e-07
+    },
+    {
+      "batch": 5,
+      "kind": "decay_T1_rho0p75",
+      "log_error": 4.76837158203125e-07,
+      "probability_error": 8.940696716308594e-08
+    },
+    {
+      "batch": 5,
+      "kind": "decay_T1_rho1p00",
+      "log_error": 4.76837158203125e-07,
+      "probability_error": 1.7881393432617188e-07
+    },
+    {
+      "batch": 5,
+      "kind": "decay_T2_rho0p25",
+      "log_error": 7.152557373046875e-07,
+      "probability_error": 1.1920928955078125e-07
+    },
+    {
+      "batch": 5,
+      "kind": "decay_T2_rho0p50",
+      "log_error": 4.76837158203125e-07,
+      "probability_error": 1.1920928955078125e-07
+    },
+    {
+      "batch": 5,
+      "kind": "decay_T2_rho0p75",
+      "log_error": 4.76837158203125e-07,
+      "probability_error": 1.1920928955078125e-07
+    },
+    {
+      "batch": 5,
+      "kind": "decay_T2_rho1p00",
+      "log_error": 4.76837158203125e-07,
+      "probability_error": 1.7881393432617188e-07
+    },
+    {
+      "batch": 5,
+      "kind": "decay_T3_rho0p25",
+      "log_error": 4.76837158203125e-07,
+      "probability_error": 1.4901161193847656e-07
+    },
+    {
+      "batch": 5,
+      "kind": "decay_T3_rho0p50",
+      "log_error": 4.76837158203125e-07,
+      "probability_error": 1.7881393432617188e-07
+    },
+    {
+      "batch": 5,
+      "kind": "decay_T3_rho0p75",
+      "log_error": 4.76837158203125e-07,
+      "probability_error": 1.1920928955078125e-07
+    },
+    {
+      "batch": 5,
+      "kind": "decay_T3_rho1p00",
+      "log_error": 7.152557373046875e-07,
+      "probability_error": 1.7881393432617188e-07
+    },
+    {
+      "batch": 5,
+      "kind": "decay_T4_rho0p25",
+      "log_error": 4.76837158203125e-07,
+      "probability_error": 1.7881393432617188e-07
+    },
+    {
+      "batch": 5,
+      "kind": "decay_T4_rho0p50",
+      "log_error": 4.76837158203125e-07,
+      "probability_error": 1.1920928955078125e-07
+    },
+    {
+      "batch": 5,
+      "kind": "decay_T4_rho0p75",
+      "log_error": 4.76837158203125e-07,
+      "probability_error": 1.7881393432617188e-07
+    },
+    {
+      "batch": 5,
+      "kind": "decay_T4_rho1p00",
+      "log_error": 4.76837158203125e-07,
+      "probability_error": 1.7881393432617188e-07
+    },
+    {
+      "batch": 6,
+      "kind": "original",
+      "log_error": 4.76837158203125e-07,
+      "probability_error": 1.7881393432617188e-07,
+      "previous_log_error": 4.76837158203125e-07,
+      "previous_probability_error": 1.7881393432617188e-07
+    },
+    {
+      "batch": 6,
+      "kind": "decay_T1_rho0p25",
+      "log_error": 4.76837158203125e-07,
+      "probability_error": 1.1920928955078125e-07
+    },
+    {
+      "batch": 6,
+      "kind": "decay_T1_rho0p50",
+      "log_error": 4.76837158203125e-07,
+      "probability_error": 1.7881393432617188e-07
+    },
+    {
+      "batch": 6,
+      "kind": "decay_T1_rho0p75",
+      "log_error": 4.76837158203125e-07,
+      "probability_error": 1.1920928955078125e-07
+    },
+    {
+      "batch": 6,
+      "kind": "decay_T1_rho1p00",
+      "log_error": 4.76837158203125e-07,
+      "probability_error": 1.7881393432617188e-07
+    },
+    {
+      "batch": 6,
+      "kind": "decay_T2_rho0p25",
+      "log_error": 4.76837158203125e-07,
+      "probability_error": 1.1920928955078125e-07
+    },
+    {
+      "batch": 6,
+      "kind": "decay_T2_rho0p50",
+      "log_error": 4.76837158203125e-07,
+      "probability_error": 1.7881393432617188e-07
+    },
+    {
+      "batch": 6,
+      "kind": "decay_T2_rho0p75",
+      "log_error": 4.76837158203125e-07,
+      "probability_error": 1.7881393432617188e-07
+    },
+    {
+      "batch": 6,
+      "kind": "decay_T2_rho1p00",
+      "log_error": 7.152557373046875e-07,
+      "probability_error": 1.7881393432617188e-07
+    },
+    {
+      "batch": 6,
+      "kind": "decay_T3_rho0p25",
+      "log_error": 4.76837158203125e-07,
+      "probability_error": 1.1920928955078125e-07
+    },
+    {
+      "batch": 6,
+      "kind": "decay_T3_rho0p50",
+      "log_error": 4.76837158203125e-07,
+      "probability_error": 1.7881393432617188e-07
+    },
+    {
+      "batch": 6,
+      "kind": "decay_T3_rho0p75",
+      "log_error": 4.76837158203125e-07,
+      "probability_error": 1.7881393432617188e-07
+    },
+    {
+      "batch": 6,
+      "kind": "decay_T3_rho1p00",
+      "log_error": 4.76837158203125e-07,
+      "probability_error": 1.1920928955078125e-07
+    },
+    {
+      "batch": 6,
+      "kind": "decay_T4_rho0p25",
+      "log_error": 4.76837158203125e-07,
+      "probability_error": 1.7881393432617188e-07
+    },
+    {
+      "batch": 6,
+      "kind": "decay_T4_rho0p50",
+      "log_error": 4.76837158203125e-07,
+      "probability_error": 1.1920928955078125e-07
+    },
+    {
+      "batch": 6,
+      "kind": "decay_T4_rho0p75",
+      "log_error": 4.76837158203125e-07,
+      "probability_error": 1.4901161193847656e-07
+    },
+    {
+      "batch": 6,
+      "kind": "decay_T4_rho1p00",
+      "log_error": 4.76837158203125e-07,
+      "probability_error": 1.7881393432617188e-07
+    },
+    {
+      "batch": 7,
+      "kind": "original",
+      "log_error": 4.76837158203125e-07,
+      "probability_error": 5.960464477539063e-08,
+      "previous_log_error": 4.76837158203125e-07,
+      "previous_probability_error": 5.960464477539063e-08
+    },
+    {
+      "batch": 7,
+      "kind": "decay_T1_rho0p25",
+      "log_error": 4.76837158203125e-07,
+      "probability_error": 5.960464477539063e-08
+    },
+    {
+      "batch": 7,
+      "kind": "decay_T1_rho0p50",
+      "log_error": 4.76837158203125e-07,
+      "probability_error": 8.940696716308594e-08
+    },
+    {
+      "batch": 7,
+      "kind": "decay_T1_rho0p75",
+      "log_error": 4.76837158203125e-07,
+      "probability_error": 8.940696716308594e-08
+    },
+    {
+      "batch": 7,
+      "kind": "decay_T1_rho1p00",
+      "log_error": 4.76837158203125e-07,
+      "probability_error": 5.960464477539063e-08
+    },
+    {
+      "batch": 7,
+      "kind": "decay_T2_rho0p25",
+      "log_error": 4.76837158203125e-07,
+      "probability_error": 8.940696716308594e-08
+    },
+    {
+      "batch": 7,
+      "kind": "decay_T2_rho0p50",
+      "log_error": 4.76837158203125e-07,
+      "probability_error": 5.960464477539063e-08
+    },
+    {
+      "batch": 7,
+      "kind": "decay_T2_rho0p75",
+      "log_error": 4.76837158203125e-07,
+      "probability_error": 5.960464477539063e-08
+    },
+    {
+      "batch": 7,
+      "kind": "decay_T2_rho1p00",
+      "log_error": 4.76837158203125e-07,
+      "probability_error": 5.960464477539063e-08
+    },
+    {
+      "batch": 7,
+      "kind": "decay_T3_rho0p25",
+      "log_error": 4.76837158203125e-07,
+      "probability_error": 5.960464477539063e-08
+    },
+    {
+      "batch": 7,
+      "kind": "decay_T3_rho0p50",
+      "log_error": 4.76837158203125e-07,
+      "probability_error": 1.4901161193847656e-07
+    },
+    {
+      "batch": 7,
+      "kind": "decay_T3_rho0p75",
+      "log_error": 4.76837158203125e-07,
+      "probability_error": 5.960464477539063e-08
+    },
+    {
+      "batch": 7,
+      "kind": "decay_T3_rho1p00",
+      "log_error": 4.76837158203125e-07,
+      "probability_error": 1.1920928955078125e-07
+    },
+    {
+      "batch": 7,
+      "kind": "decay_T4_rho0p25",
+      "log_error": 4.76837158203125e-07,
+      "probability_error": 1.1920928955078125e-07
+    },
+    {
+      "batch": 7,
+      "kind": "decay_T4_rho0p50",
+      "log_error": 4.76837158203125e-07,
+      "probability_error": 1.1920928955078125e-07
+    },
+    {
+      "batch": 7,
+      "kind": "decay_T4_rho0p75",
+      "log_error": 4.76837158203125e-07,
+      "probability_error": 5.960464477539063e-08
+    },
+    {
+      "batch": 7,
+      "kind": "decay_T4_rho1p00",
+      "log_error": 4.76837158203125e-07,
+      "probability_error": 1.1920928955078125e-07
+    }
+  ],
+  "graph_guard_observations": 35776,
+  "cache": {
+    "hyper_hits": 17744,
+    "hyper_misses": 8,
+    "gnn_hits": 17744,
+    "gnn_misses": 8,
+    "gnn_bypasses": 0,
+    "feature_exact_checks": 16
+  },
+  "inputs_restored_exact": true,
+  "parameters_and_buffers_unchanged": true,
+  "gradients_absent": true,
+  "test_inference": false,
+  "server": "user23",
+  "pid": 2013401,
+  "gpu_visible": "3",
+  "config_sha256": "20a7e0d913850d8d7f95a8723049de1413d2223a7b4043a8ddc38e8cd0c060d8",
+  "runner_sha256": "9dd749dc82d49e5e67eb9be1d72e8b3e6aab664f47c4be1c45df7952a520e5b6",
+  "conditions": {
+    "decay_T1_rho0p25": "6aba266d1079d8aa6540df2ef9c3cf2f07aa7d41906412992fa6533ae9419c6b",
+    "decay_T1_rho0p50": "49c84ffb6dced7076f0466d29f7215bcaf09bc0af945abee30674ba1b18d6264",
+    "decay_T1_rho0p75": "5c2a51f5106d4c7e63c95646a22ec84dc1b804c2b9309b997d0ecb34fd578d57",
+    "decay_T1_rho1p00": "7444fc54212b01448b63375bb86ff1cfd7443f307d2fbadd2a7e3eb9e7559111",
+    "decay_T2_rho0p25": "50f80a9065633de3e1447ef31531ed42452e3f4f5aeb5e67078e48f8858bad3f",
+    "decay_T2_rho0p50": "884857d0e83b4f7274f23af7bb22655d198b6615e8549c688c3eaf09fcf32dbd",
+    "decay_T2_rho0p75": "159359a17e7b5b1f21e06bb1efc39864c627dc8c1595bd07feb6f8ccefefa424",
+    "decay_T2_rho1p00": "08d8879ab5163dce819335402dbff0206fa9d04bc7e7b253531a57c99b8ac248",
+    "decay_T3_rho0p25": "2eb1c528a4696a1a659a9bdc12f5f0471d7578c4b1360b834879e7dfd852d75a",
+    "decay_T3_rho0p50": "6d1cd09233e9ae32ae390ceaf7858b29e689bd40b0987836ab611c327bd6528e",
+    "decay_T3_rho0p75": "af3822a6df33e1ea6321399a6a7a6d37f61de55c9cd6ad6a56f2ad91454c1fa4",
+    "decay_T3_rho1p00": "6bb6c46dd6d82923d87eb7f5d2b771acda0a7d8dfea4ac9319a732dfe7aca446",
+    "decay_T4_rho0p25": "567dd8a05f428d260b5426186e3b95d7766dbad567a6c6e07671ca19bd4f1c21",
+    "decay_T4_rho0p50": "7fcd36d5843168cc81568499e71992d4e0a999b339f099c24156cccd514c24d5",
+    "decay_T4_rho0p75": "5624da2ae893e780ee89b82389839bd50f6e2a4f7ad1cd296b0652284f90c27b",
+    "decay_T4_rho1p00": "8246b00789f6842a1c1da9f0a3fb321bf5df7629bd3eb625b42a6cca236a79d9"
+  }
+}

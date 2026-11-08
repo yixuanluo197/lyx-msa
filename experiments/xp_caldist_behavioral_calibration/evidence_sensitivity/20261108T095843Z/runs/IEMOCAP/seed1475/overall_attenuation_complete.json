@@ -1,0 +1,124 @@
+{
+  "passed": true,
+  "dataset": "IEMOCAP",
+  "seed": 1475,
+  "phase": "overall_attenuation",
+  "seconds": 419.41114380792715,
+  "target_forwards": 6320,
+  "skipped_visual_missing": 4,
+  "stored_vectors": 6324,
+  "complete_probability_parity_checks": [
+    {
+      "batch": 0,
+      "kind": "original",
+      "log_error": 1.9073486328125e-06,
+      "probability_error": 2.980232238769531e-07,
+      "previous_log_error": 2.86102294921875e-06,
+      "previous_probability_error": 2.086162567138672e-07
+    },
+    {
+      "batch": 0,
+      "kind": "decay_T-All_rho0p25",
+      "log_error": 1.9073486328125e-06,
+      "probability_error": 2.086162567138672e-07
+    },
+    {
+      "batch": 0,
+      "kind": "decay_T-All_rho0p50",
+      "log_error": 1.9073486328125e-06,
+      "probability_error": 2.384185791015625e-07
+    },
+    {
+      "batch": 0,
+      "kind": "decay_T-All_rho0p75",
+      "log_error": 2.86102294921875e-06,
+      "probability_error": 2.980232238769531e-07
+    },
+    {
+      "batch": 0,
+      "kind": "decay_T-All_rho1p00",
+      "log_error": 2.86102294921875e-06,
+      "probability_error": 2.384185791015625e-07
+    },
+    {
+      "batch": 0,
+      "kind": "decay_A_rho0p25",
+      "log_error": 3.814697265625e-06,
+      "probability_error": 2.384185791015625e-07
+    },
+    {
+      "batch": 0,
+      "kind": "decay_A_rho0p50",
+      "log_error": 1.9073486328125e-06,
+      "probability_error": 2.384185791015625e-07
+    },
+    {
+      "batch": 0,
+      "kind": "decay_A_rho0p75",
+      "log_error": 2.86102294921875e-06,
+      "probability_error": 2.086162567138672e-07
+    },
+    {
+      "batch": 0,
+      "kind": "decay_A_rho1p00",
+      "log_error": 1.9073486328125e-06,
+      "probability_error": 2.384185791015625e-07
+    },
+    {
+      "batch": 0,
+      "kind": "decay_V_rho0p25",
+      "log_error": 1.9073486328125e-06,
+      "probability_error": 2.384185791015625e-07
+    },
+    {
+      "batch": 0,
+      "kind": "decay_V_rho0p50",
+      "log_error": 2.86102294921875e-06,
+      "probability_error": 2.980232238769531e-07
+    },
+    {
+      "batch": 0,
+      "kind": "decay_V_rho0p75",
+      "log_error": 1.9073486328125e-06,
+      "probability_error": 2.384185791015625e-07
+    },
+    {
+      "batch": 0,
+      "kind": "decay_V_rho1p00",
+      "log_error": 1.9073486328125e-06,
+      "probability_error": 2.980232238769531e-07
+    }
+  ],
+  "graph_guard_observations": 12668,
+  "cache": {
+    "hyper_hits": 6320,
+    "hyper_misses": 1,
+    "gnn_hits": 6320,
+    "gnn_misses": 1,
+    "gnn_bypasses": 0,
+    "feature_exact_checks": 2
+  },
+  "inputs_restored_exact": true,
+  "parameters_and_buffers_unchanged": true,
+  "gradients_absent": true,
+  "test_inference": false,
+  "server": "user23",
+  "pid": 2000795,
+  "gpu_visible": "3",
+  "config_sha256": "20a7e0d913850d8d7f95a8723049de1413d2223a7b4043a8ddc38e8cd0c060d8",
+  "runner_sha256": "9dd749dc82d49e5e67eb9be1d72e8b3e6aab664f47c4be1c45df7952a520e5b6",
+  "conditions": {
+    "decay_T-All_rho0p25": "2545fbf436b876fdae8f122a949df8bd9e35af6751308ca72140193c349ed3f6",
+    "decay_T-All_rho0p50": "a7307a9f473ee5ef9fe825b232404b4a4ba8c65a83fc056fc5a93571ce6f77f7",
+    "decay_T-All_rho0p75": "681a213d7dacb1708aeb1fcb53f98a7fe811c4a482695202c007100e49e3bdc9",
+    "decay_T-All_rho1p00": "4086226a5118f05e7bfb9795c9d84adc10c1dd1a7d7be3b88382e79f3ed73aba",
+    "decay_A_rho0p25": "8c1bfc3e83873939bfca2a46f926eb35cc334807eb6f4352aef0517132b674b2",
+    "decay_A_rho0p50": "8d632e064bcb8ba3b426dd64d2fe1dd40b3d2c150c2d2f7e3600881a39b933d0",
+    "decay_A_rho0p75": "bbb19035a478eba7adda6fc56ed3ba8e79f4151622cd27122fa82295b4897ad9",
+    "decay_A_rho1p00": "2f7c270d1dd3689c289d22be724f54f39d1b34659a88d463f61bd23d2032db0c",
+    "decay_V_rho0p25": "9a4a7e29cfc93dd47d9551582f29a5e8d17da12c87fae334f4baccfc6b854512",
+    "decay_V_rho0p50": "9eb6df0f6d2adf30d4b29b9c526efcf76518f70d5a146ae67100bef23148e410",
+    "decay_V_rho0p75": "989943a68d94319ce3adf0a5a53ba33341290c713e62ef6c0437dbf5f0759c1a",
+    "decay_V_rho1p00": "31890a64b46405edcfb44c61ef7d44a9f7393a274156f1358075ab8e36b20ccd"
+  }
+}

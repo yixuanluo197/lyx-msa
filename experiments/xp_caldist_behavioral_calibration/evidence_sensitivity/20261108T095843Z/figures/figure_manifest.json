@@ -1,0 +1,110 @@
+{
+  "backend": "Python/matplotlib",
+  "matplotlib_version": "3.10.9",
+  "figures": [
+    {
+      "name": "modality_acc_curves",
+      "source": [
+        "results/sensitivity_summary.csv"
+      ],
+      "outputs": [
+        "figures/modality_acc_curves.svg",
+        "figures/modality_acc_curves.pdf",
+        "figures/modality_acc_curves.png"
+      ],
+      "png_dimensions": [
+        1846,
+        1008
+      ],
+      "png_nonzero_pixel_variance": true,
+      "note": "Validation only; shaded bands: 95% paired dialogue bootstrap. V-present excludes zero visual rows; V-all retains them."
+    },
+    {
+      "name": "trueprob_curves",
+      "source": [
+        "results/sensitivity_summary.csv"
+      ],
+      "outputs": [
+        "figures/trueprob_curves.svg",
+        "figures/trueprob_curves.pdf",
+        "figures/trueprob_curves.png"
+      ],
+      "png_dimensions": [
+        1889,
+        1008
+      ],
+      "png_nonzero_pixel_variance": true,
+      "note": "Validation only; shaded bands: 95% paired dialogue bootstrap. V-present excludes zero visual rows; V-all retains them."
+    },
+    {
+      "name": "text_layer_comparison",
+      "source": [
+        "results/sensitivity_summary.csv"
+      ],
+      "outputs": [
+        "figures/text_layer_comparison.svg",
+        "figures/text_layer_comparison.pdf",
+        "figures/text_layer_comparison.png"
+      ],
+      "png_dimensions": [
+        1861,
+        1008
+      ],
+      "png_nonzero_pixel_variance": true,
+      "note": "Validation only; shaded bands: 95% paired dialogue bootstrap. T1-T4 are stored arrays; other utterances and modalities remain unchanged."
+    },
+    {
+      "name": "flip_curves",
+      "source": [
+        "results/sensitivity_summary.csv"
+      ],
+      "outputs": [
+        "figures/flip_curves.svg",
+        "figures/flip_curves.pdf",
+        "figures/flip_curves.png"
+      ],
+      "png_dimensions": [
+        1846,
+        1008
+      ],
+      "png_nonzero_pixel_variance": true,
+      "note": "Validation only; shaded bands: 95% paired dialogue bootstrap. V-present excludes zero visual rows; V-all retains them."
+    },
+    {
+      "name": "class_heatmap",
+      "source": [
+        "results/classwise_sensitivity.csv"
+      ],
+      "outputs": [
+        "figures/class_heatmap.svg",
+        "figures/class_heatmap.pdf",
+        "figures/class_heatmap.png"
+      ],
+      "png_dimensions": [
+        2009,
+        990
+      ],
+      "png_nonzero_pixel_variance": true,
+      "note": "Validation only; all rows retained. Negative values indicate lower accuracy. Classwise paired CIs are in the source CSV; exploratory."
+    },
+    {
+      "name": "meld_visual_missingness",
+      "source": [
+        "results/visual_missingness_analysis.csv",
+        "results/sensitivity_summary.csv"
+      ],
+      "outputs": [
+        "figures/meld_visual_missingness.svg",
+        "figures/meld_visual_missingness.pdf",
+        "figures/meld_visual_missingness.png"
+      ],
+      "png_dimensions": [
+        1880,
+        965
+      ],
+      "png_nonzero_pixel_variance": true,
+      "note": "Missing rows receive no V intervention and remain in all-sample results. Missingness groups are observational; bars: 95% dialogue bootstrap."
+    }
+  ],
+  "real_saved_validation_data_only": true
+}

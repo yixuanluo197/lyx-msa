@@ -1,0 +1,156 @@
+{
+  "definition": "visual_missing AND original_wrong AND T-All-rho1 prediction == original_prediction AND A-rho1 prediction == original_prediction; two separate interventions, never joint",
+  "formula": "mask = t[visual_missing] & (p0 != labels) & (t[probabilities].argmax(-1)[:,0] == p0) & (a[probabilities].argmax(-1)[:,0] == p0)",
+  "datasets": [
+    {
+      "dataset": "IEMOCAP",
+      "seed": 1475,
+      "visual_missing_count": 1,
+      "visual_missing_original_wrong_count": 1,
+      "separately_stable_wrong_count": 1,
+      "cases": [
+        {
+          "dialogue_id": "Ses02M_impro07",
+          "utterance_index": 23,
+          "label": 0,
+          "original_prediction": 4,
+          "T_All_rho1_prediction": 4,
+          "A_rho1_prediction": 4,
+          "original_confidence": 0.8451732397079468,
+          "T_All_rho1_confidence": 0.8475470542907715,
+          "A_rho1_confidence": 0.6733417510986328,
+          "V_intervened": false
+        }
+      ]
+    },
+    {
+      "dataset": "MELD",
+      "seed": 67137,
+      "visual_missing_count": 95,
+      "visual_missing_original_wrong_count": 34,
+      "separately_stable_wrong_count": 9,
+      "cases": [
+        {
+          "dialogue_id": "1044",
+          "utterance_index": 12,
+          "label": 6,
+          "original_prediction": 0,
+          "T_All_rho1_prediction": 0,
+          "A_rho1_prediction": 0,
+          "original_confidence": 0.3969981372356415,
+          "T_All_rho1_confidence": 0.3673095703125,
+          "A_rho1_confidence": 0.3931736648082733,
+          "V_intervened": false
+        },
+        {
+          "dialogue_id": "1056",
+          "utterance_index": 1,
+          "label": 6,
+          "original_prediction": 0,
+          "T_All_rho1_prediction": 0,
+          "A_rho1_prediction": 0,
+          "original_confidence": 0.5547328591346741,
+          "T_All_rho1_confidence": 0.43979737162590027,
+          "A_rho1_confidence": 0.5355851650238037,
+          "V_intervened": false
+        },
+        {
+          "dialogue_id": "1090",
+          "utterance_index": 1,
+          "label": 4,
+          "original_prediction": 0,
+          "T_All_rho1_prediction": 0,
+          "A_rho1_prediction": 0,
+          "original_confidence": 0.44513237476348877,
+          "T_All_rho1_confidence": 0.4222283363342285,
+          "A_rho1_confidence": 0.4469890594482422,
+          "V_intervened": false
+        },
+        {
+          "dialogue_id": "1115",
+          "utterance_index": 4,
+          "label": 4,
+          "original_prediction": 0,
+          "T_All_rho1_prediction": 0,
+          "A_rho1_prediction": 0,
+          "original_confidence": 0.6005722880363464,
+          "T_All_rho1_confidence": 0.2884400188922882,
+          "A_rho1_confidence": 0.5892124176025391,
+          "V_intervened": false
+        },
+        {
+          "dialogue_id": "1131",
+          "utterance_index": 10,
+          "label": 5,
+          "original_prediction": 0,
+          "T_All_rho1_prediction": 0,
+          "A_rho1_prediction": 0,
+          "original_confidence": 0.2902432978153229,
+          "T_All_rho1_confidence": 0.3223465383052826,
+          "A_rho1_confidence": 0.3298136591911316,
+          "V_intervened": false
+        },
+        {
+          "dialogue_id": "1133",
+          "utterance_index": 11,
+          "label": 6,
+          "original_prediction": 0,
+          "T_All_rho1_prediction": 0,
+          "A_rho1_prediction": 0,
+          "original_confidence": 0.5333325862884521,
+          "T_All_rho1_confidence": 0.2994822561740875,
+          "A_rho1_confidence": 0.5381169319152832,
+          "V_intervened": false
+        },
+        {
+          "dialogue_id": "1147",
+          "utterance_index": 8,
+          "label": 3,
+          "original_prediction": 4,
+          "T_All_rho1_prediction": 4,
+          "A_rho1_prediction": 4,
+          "original_confidence": 0.3209250271320343,
+          "T_All_rho1_confidence": 0.3298541009426117,
+          "A_rho1_confidence": 0.32572653889656067,
+          "V_intervened": false
+        },
+        {
+          "dialogue_id": "1152",
+          "utterance_index": 2,
+          "label": 0,
+          "original_prediction": 4,
+          "T_All_rho1_prediction": 4,
+          "A_rho1_prediction": 4,
+          "original_confidence": 0.2033950537443161,
+          "T_All_rho1_confidence": 0.3568062484264374,
+          "A_rho1_confidence": 0.2150978446006775,
+          "V_intervened": false
+        },
+        {
+          "dialogue_id": "1152",
+          "utterance_index": 3,
+          "label": 3,
+          "original_prediction": 0,
+          "T_All_rho1_prediction": 0,
+          "A_rho1_prediction": 0,
+          "original_confidence": 0.5062688589096069,
+          "T_All_rho1_confidence": 0.3550882339477539,
+          "A_rho1_confidence": 0.48523253202438354,
+          "V_intervened": false
+        }
+      ]
+    }
+  ],
+  "source_sha256": {
+    "runs/IEMOCAP/seed1475/baseline_validation.npz": "52222b1bdc95f93e784f6de133e5455aebd5a6aa117dc05925e8104be9529191",
+    "runs/IEMOCAP/seed1475/conditions/decay_T-All_rho1p00.npz": "4086226a5118f05e7bfb9795c9d84adc10c1dd1a7d7be3b88382e79f3ed73aba",
+    "runs/IEMOCAP/seed1475/conditions/decay_A_rho1p00.npz": "2f7c270d1dd3689c289d22be724f54f39d1b34659a88d463f61bd23d2032db0c",
+    "runs/IEMOCAP/seed1475/conditions/decay_V_rho1p00.npz": "31890a64b46405edcfb44c61ef7d44a9f7393a274156f1358075ab8e36b20ccd",
+    "runs/MELD/seed67137/baseline_validation.npz": "9f972156bfa08b98128ed527e3a34f442ef08be2d8060ee6d4a32a4e8311c4d3",
+    "runs/MELD/seed67137/conditions/decay_T-All_rho1p00.npz": "7eb8b55c7e7059ec719e4e1672413fd14adefb43f961f1244aa880f1637d4203",
+    "runs/MELD/seed67137/conditions/decay_A_rho1p00.npz": "355d1e179f62d3197e6837ffe479bea4d46e995a64c1192db57778ec7297bd76",
+    "runs/MELD/seed67137/conditions/decay_V_rho1p00.npz": "06f03426d347aafba0641557fd5ad9c996bfc0548b5e0508ad0f9c77fb7930eb"
+  },
+  "recomputation_python": "import hashlib,json,numpy as np\nfrom pathlib import Path\nroot=Path('/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z')\ndef load(path):\n    with np.load(path,allow_pickle=False) as z:return {k:z[k] for k in z.files}\nresult={'definition':'visual_missing AND original_wrong AND T-All-rho1 prediction == original_prediction AND A-rho1 prediction == original_prediction; two separate interventions, never joint','formula':'mask = t[visual_missing] & (p0 != labels) & (t[probabilities].argmax(-1)[:,0] == p0) & (a[probabilities].argmax(-1)[:,0] == p0)','datasets':[],'source_sha256':{}}\nfor dataset,seed in [('IEMOCAP',1475),('MELD',67137)]:\n    directory=root/f'runs/{dataset}/seed{seed}'\n    paths=[directory/'baseline_validation.npz',directory/'conditions/decay_T-All_rho1p00.npz',directory/'conditions/decay_A_rho1p00.npz',directory/'conditions/decay_V_rho1p00.npz']\n    base,t,a,v=map(load,paths)\n    for path in paths:result['source_sha256'][str(path.relative_to(root))]=hashlib.sha256(path.read_bytes()).hexdigest()\n    p0=base['predictions'];labels=base['labels'];missing=t['visual_missing']\n    for payload in (t,a,v):\n        for key in ('labels','dialogue_ids','utterance_indices'):\n            assert np.array_equal(payload[key],base[key])\n        assert np.array_equal(payload['visual_missing'],missing)\n        assert np.array_equal(payload['original_probabilities'],base['probabilities'])\n    tp=t['probabilities'].argmax(-1)[:,0];ap=a['probabilities'].argmax(-1)[:,0]\n    mask=missing & (p0!=labels) & (tp==p0) & (ap==p0)\n    assert not v['active'][missing].any()\n    assert np.array_equal(v['probabilities'][missing,0],base['probabilities'][missing])\n    rows=[]\n    for i in np.flatnonzero(mask):\n        rows.append(dict(dialogue_id=str(base['dialogue_ids'][i]),utterance_index=int(base['utterance_indices'][i]),label=int(labels[i]),original_prediction=int(p0[i]),T_All_rho1_prediction=int(tp[i]),A_rho1_prediction=int(ap[i]),original_confidence=float(base['probabilities'][i].max()),T_All_rho1_confidence=float(t['probabilities'][i,0].max()),A_rho1_confidence=float(a['probabilities'][i,0].max()),V_intervened=bool(v['active'][i])))\n    result['datasets'].append(dict(dataset=dataset,seed=seed,visual_missing_count=int(missing.sum()),visual_missing_original_wrong_count=int((missing&(p0!=labels)).sum()),separately_stable_wrong_count=int(mask.sum()),cases=rows))\n",
+  "complete_cli": "CUDA_VISIBLE_DEVICES='' PYTHONDONTWRITEBYTECODE=1 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 /data2/yb/conda_envs/cmerc-xp-repro/bin/python - <<'PY'\nimport hashlib,json,numpy as np\nfrom pathlib import Path\nroot=Path('/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z')\ndef load(path):\n    with np.load(path,allow_pickle=False) as z:return {k:z[k] for k in z.files}\nresult={'definition':'visual_missing AND original_wrong AND T-All-rho1 prediction == original_prediction AND A-rho1 prediction == original_prediction; two separate interventions, never joint','formula':'mask = t[visual_missing] & (p0 != labels) & (t[probabilities].argmax(-1)[:,0] == p0) & (a[probabilities].argmax(-1)[:,0] == p0)','datasets':[],'source_sha256':{}}\nfor dataset,seed in [('IEMOCAP',1475),('MELD',67137)]:\n    directory=root/f'runs/{dataset}/seed{seed}'\n    paths=[directory/'baseline_validation.npz',directory/'conditions/decay_T-All_rho1p00.npz',directory/'conditions/decay_A_rho1p00.npz',directory/'conditions/decay_V_rho1p00.npz']\n    base,t,a,v=map(load,paths)\n    for path in paths:result['source_sha256'][str(path.relative_to(root))]=hashlib.sha256(path.read_bytes()).hexdigest()\n    p0=base['predictions'];labels=base['labels'];missing=t['visual_missing']\n    for payload in (t,a,v):\n        for key in ('labels','dialogue_ids','utterance_indices'):\n            assert np.array_equal(payload[key],base[key])\n        assert np.array_equal(payload['visual_missing'],missing)\n        assert np.array_equal(payload['original_probabilities'],base['probabilities'])\n    tp=t['probabilities'].argmax(-1)[:,0];ap=a['probabilities'].argmax(-1)[:,0]\n    mask=missing & (p0!=labels) & (tp==p0) & (ap==p0)\n    assert not v['active'][missing].any()\n    assert np.array_equal(v['probabilities'][missing,0],base['probabilities'][missing])\n    rows=[]\n    for i in np.flatnonzero(mask):\n        rows.append(dict(dialogue_id=str(base['dialogue_ids'][i]),utterance_index=int(base['utterance_indices'][i]),label=int(labels[i]),original_prediction=int(p0[i]),T_All_rho1_prediction=int(tp[i]),A_rho1_prediction=int(ap[i]),original_confidence=float(base['probabilities'][i].max()),T_All_rho1_confidence=float(t['probabilities'][i,0].max()),A_rho1_confidence=float(a['probabilities'][i,0].max()),V_intervened=bool(v['active'][i])))\n    result['datasets'].append(dict(dataset=dataset,seed=seed,visual_missing_count=int(missing.sum()),visual_missing_original_wrong_count=int((missing&(p0!=labels)).sum()),separately_stable_wrong_count=int(mask.sum()),cases=rows))\n\nprint(json.dumps(result,indent=2,ensure_ascii=False))\nPY"
+}

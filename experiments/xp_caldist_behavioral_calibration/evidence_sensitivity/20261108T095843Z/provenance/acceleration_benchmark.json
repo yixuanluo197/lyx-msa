@@ -1,0 +1,1328 @@
+{
+  "validation_only": true,
+  "original_batch_size": 16,
+  "fp32": true,
+  "gradients": false,
+  "batches": [
+    {
+      "dataset": "MELD",
+      "batch_index": 0,
+      "lengths": [
+        2,
+        16,
+        6,
+        3,
+        15,
+        13,
+        10,
+        11,
+        15,
+        8,
+        10,
+        13,
+        5,
+        22,
+        9,
+        10
+      ],
+      "checks": [
+        {
+          "passed": true,
+          "max_log_error": 9.5367431640625e-07,
+          "max_probability_error": 1.7881393432617188e-07,
+          "target_utterance": 0,
+          "group": "T1",
+          "kind": "attenuation",
+          "rho": 0.25
+        },
+        {
+          "passed": true,
+          "max_log_error": 7.152557373046875e-07,
+          "max_probability_error": 1.7881393432617188e-07,
+          "target_utterance": 0,
+          "group": "T1",
+          "kind": "attenuation",
+          "rho": 1.0
+        },
+        {
+          "passed": true,
+          "max_log_error": 7.152557373046875e-07,
+          "max_probability_error": 1.7881393432617188e-07,
+          "target_utterance": 0,
+          "group": "T1",
+          "kind": "mask",
+          "rho": 0.8
+        },
+        {
+          "passed": true,
+          "max_log_error": 7.152557373046875e-07,
+          "max_probability_error": 1.7881393432617188e-07,
+          "target_utterance": 0,
+          "group": "T2",
+          "kind": "attenuation",
+          "rho": 0.25
+        },
+        {
+          "passed": true,
+          "max_log_error": 7.152557373046875e-07,
+          "max_probability_error": 2.086162567138672e-07,
+          "target_utterance": 0,
+          "group": "T2",
+          "kind": "attenuation",
+          "rho": 1.0
+        },
+        {
+          "passed": true,
+          "max_log_error": 7.152557373046875e-07,
+          "max_probability_error": 1.7881393432617188e-07,
+          "target_utterance": 0,
+          "group": "T2",
+          "kind": "mask",
+          "rho": 0.8
+        },
+        {
+          "passed": true,
+          "max_log_error": 7.152557373046875e-07,
+          "max_probability_error": 1.7881393432617188e-07,
+          "target_utterance": 0,
+          "group": "T3",
+          "kind": "attenuation",
+          "rho": 0.25
+        },
+        {
+          "passed": true,
+          "max_log_error": 7.152557373046875e-07,
+          "max_probability_error": 1.7881393432617188e-07,
+          "target_utterance": 0,
+          "group": "T3",
+          "kind": "attenuation",
+          "rho": 1.0
+        },
+        {
+          "passed": true,
+          "max_log_error": 7.152557373046875e-07,
+          "max_probability_error": 1.7881393432617188e-07,
+          "target_utterance": 0,
+          "group": "T3",
+          "kind": "mask",
+          "rho": 0.8
+        },
+        {
+          "passed": true,
+          "max_log_error": 7.152557373046875e-07,
+          "max_probability_error": 1.7881393432617188e-07,
+          "target_utterance": 0,
+          "group": "T4",
+          "kind": "attenuation",
+          "rho": 0.25
+        },
+        {
+          "passed": true,
+          "max_log_error": 9.5367431640625e-07,
+          "max_probability_error": 1.7881393432617188e-07,
+          "target_utterance": 0,
+          "group": "T4",
+          "kind": "attenuation",
+          "rho": 1.0
+        },
+        {
+          "passed": true,
+          "max_log_error": 9.5367431640625e-07,
+          "max_probability_error": 1.7881393432617188e-07,
+          "target_utterance": 0,
+          "group": "T4",
+          "kind": "mask",
+          "rho": 0.8
+        },
+        {
+          "passed": true,
+          "max_log_error": 7.152557373046875e-07,
+          "max_probability_error": 1.7881393432617188e-07,
+          "target_utterance": 0,
+          "group": "T-All",
+          "kind": "attenuation",
+          "rho": 0.25
+        },
+        {
+          "passed": true,
+          "max_log_error": 7.152557373046875e-07,
+          "max_probability_error": 1.7881393432617188e-07,
+          "target_utterance": 0,
+          "group": "T-All",
+          "kind": "attenuation",
+          "rho": 1.0
+        },
+        {
+          "passed": true,
+          "max_log_error": 9.5367431640625e-07,
+          "max_probability_error": 1.7881393432617188e-07,
+          "target_utterance": 0,
+          "group": "T-All",
+          "kind": "mask",
+          "rho": 0.8
+        },
+        {
+          "passed": true,
+          "max_log_error": 9.5367431640625e-07,
+          "max_probability_error": 1.7881393432617188e-07,
+          "target_utterance": 0,
+          "group": "A",
+          "kind": "attenuation",
+          "rho": 0.25
+        },
+        {
+          "passed": true,
+          "max_log_error": 7.152557373046875e-07,
+          "max_probability_error": 1.7881393432617188e-07,
+          "target_utterance": 0,
+          "group": "A",
+          "kind": "attenuation",
+          "rho": 1.0
+        },
+        {
+          "passed": true,
+          "max_log_error": 7.152557373046875e-07,
+          "max_probability_error": 1.7881393432617188e-07,
+          "target_utterance": 0,
+          "group": "A",
+          "kind": "mask",
+          "rho": 0.8
+        },
+        {
+          "passed": true,
+          "max_log_error": 7.152557373046875e-07,
+          "max_probability_error": 1.4901161193847656e-07,
+          "target_utterance": 0,
+          "group": "V",
+          "kind": "attenuation",
+          "rho": 0.25
+        },
+        {
+          "passed": true,
+          "max_log_error": 9.5367431640625e-07,
+          "max_probability_error": 1.7881393432617188e-07,
+          "target_utterance": 0,
+          "group": "V",
+          "kind": "attenuation",
+          "rho": 1.0
+        },
+        {
+          "passed": true,
+          "max_log_error": 9.5367431640625e-07,
+          "max_probability_error": 1.7881393432617188e-07,
+          "target_utterance": 0,
+          "group": "V",
+          "kind": "mask",
+          "rho": 0.8
+        },
+        {
+          "passed": true,
+          "max_log_error": 7.152557373046875e-07,
+          "max_probability_error": 1.7881393432617188e-07,
+          "target_utterance": 1,
+          "group": "T1",
+          "kind": "attenuation",
+          "rho": 0.25
+        },
+        {
+          "passed": true,
+          "max_log_error": 7.152557373046875e-07,
+          "max_probability_error": 1.7881393432617188e-07,
+          "target_utterance": 1,
+          "group": "T1",
+          "kind": "attenuation",
+          "rho": 1.0
+        },
+        {
+          "passed": true,
+          "max_log_error": 7.152557373046875e-07,
+          "max_probability_error": 1.7881393432617188e-07,
+          "target_utterance": 1,
+          "group": "T1",
+          "kind": "mask",
+          "rho": 0.8
+        },
+        {
+          "passed": true,
+          "max_log_error": 7.152557373046875e-07,
+          "max_probability_error": 1.7881393432617188e-07,
+          "target_utterance": 1,
+          "group": "T2",
+          "kind": "attenuation",
+          "rho": 0.25
+        },
+        {
+          "passed": true,
+          "max_log_error": 9.5367431640625e-07,
+          "max_probability_error": 1.7881393432617188e-07,
+          "target_utterance": 1,
+          "group": "T2",
+          "kind": "attenuation",
+          "rho": 1.0
+        },
+        {
+          "passed": true,
+          "max_log_error": 7.152557373046875e-07,
+          "max_probability_error": 1.1920928955078125e-07,
+          "target_utterance": 1,
+          "group": "T2",
+          "kind": "mask",
+          "rho": 0.8
+        },
+        {
+          "passed": true,
+          "max_log_error": 9.5367431640625e-07,
+          "max_probability_error": 1.7881393432617188e-07,
+          "target_utterance": 1,
+          "group": "T3",
+          "kind": "attenuation",
+          "rho": 0.25
+        },
+        {
+          "passed": true,
+          "max_log_error": 7.152557373046875e-07,
+          "max_probability_error": 1.7881393432617188e-07,
+          "target_utterance": 1,
+          "group": "T3",
+          "kind": "attenuation",
+          "rho": 1.0
+        },
+        {
+          "passed": true,
+          "max_log_error": 4.76837158203125e-07,
+          "max_probability_error": 1.7881393432617188e-07,
+          "target_utterance": 1,
+          "group": "T3",
+          "kind": "mask",
+          "rho": 0.8
+        },
+        {
+          "passed": true,
+          "max_log_error": 9.5367431640625e-07,
+          "max_probability_error": 1.7881393432617188e-07,
+          "target_utterance": 1,
+          "group": "T4",
+          "kind": "attenuation",
+          "rho": 0.25
+        },
+        {
+          "passed": true,
+          "max_log_error": 9.5367431640625e-07,
+          "max_probability_error": 1.4901161193847656e-07,
+          "target_utterance": 1,
+          "group": "T4",
+          "kind": "attenuation",
+          "rho": 1.0
+        },
+        {
+          "passed": true,
+          "max_log_error": 7.152557373046875e-07,
+          "max_probability_error": 1.7881393432617188e-07,
+          "target_utterance": 1,
+          "group": "T4",
+          "kind": "mask",
+          "rho": 0.8
+        },
+        {
+          "passed": true,
+          "max_log_error": 7.152557373046875e-07,
+          "max_probability_error": 1.7881393432617188e-07,
+          "target_utterance": 1,
+          "group": "T-All",
+          "kind": "attenuation",
+          "rho": 0.25
+        },
+        {
+          "passed": true,
+          "max_log_error": 7.152557373046875e-07,
+          "max_probability_error": 2.086162567138672e-07,
+          "target_utterance": 1,
+          "group": "T-All",
+          "kind": "attenuation",
+          "rho": 1.0
+        },
+        {
+          "passed": true,
+          "max_log_error": 4.76837158203125e-07,
+          "max_probability_error": 1.7881393432617188e-07,
+          "target_utterance": 1,
+          "group": "T-All",
+          "kind": "mask",
+          "rho": 0.8
+        },
+        {
+          "passed": true,
+          "max_log_error": 9.5367431640625e-07,
+          "max_probability_error": 1.7881393432617188e-07,
+          "target_utterance": 1,
+          "group": "A",
+          "kind": "attenuation",
+          "rho": 0.25
+        },
+        {
+          "passed": true,
+          "max_log_error": 9.5367431640625e-07,
+          "max_probability_error": 1.7881393432617188e-07,
+          "target_utterance": 1,
+          "group": "A",
+          "kind": "attenuation",
+          "rho": 1.0
+        },
+        {
+          "passed": true,
+          "max_log_error": 7.152557373046875e-07,
+          "max_probability_error": 1.7881393432617188e-07,
+          "target_utterance": 1,
+          "group": "A",
+          "kind": "mask",
+          "rho": 0.8
+        },
+        {
+          "passed": true,
+          "max_log_error": 7.152557373046875e-07,
+          "max_probability_error": 2.086162567138672e-07,
+          "target_utterance": 1,
+          "group": "V",
+          "kind": "attenuation",
+          "rho": 0.25
+        },
+        {
+          "passed": true,
+          "max_log_error": 9.5367431640625e-07,
+          "max_probability_error": 1.4901161193847656e-07,
+          "target_utterance": 1,
+          "group": "V",
+          "kind": "attenuation",
+          "rho": 1.0
+        },
+        {
+          "passed": true,
+          "max_log_error": 7.152557373046875e-07,
+          "max_probability_error": 1.7881393432617188e-07,
+          "target_utterance": 1,
+          "group": "V",
+          "kind": "mask",
+          "rho": 0.8
+        },
+        {
+          "passed": true,
+          "max_log_error": 7.152557373046875e-07,
+          "max_probability_error": 2.086162567138672e-07,
+          "kind": "original"
+        }
+      ],
+      "build_seconds": 5.0584929150063545,
+      "mode": "jit_trace_frozen",
+      "capture_error": null,
+      "cached_eager_seconds_per_forward": 0.00971355169895105,
+      "accelerated_seconds_per_forward": 0.005316667002625763,
+      "speedup": 1.8270002041041467
+    },
+    {
+      "dataset": "MELD",
+      "batch_index": 1,
+      "lengths": [
+        19,
+        5,
+        14,
+        23,
+        8,
+        7,
+        14,
+        14,
+        9,
+        6,
+        17,
+        10,
+        11,
+        11,
+        19,
+        13
+      ],
+      "checks": [
+        {
+          "passed": true,
+          "max_log_error": 9.5367431640625e-07,
+          "max_probability_error": 1.7881393432617188e-07,
+          "target_utterance": 0,
+          "group": "T1",
+          "kind": "attenuation",
+          "rho": 0.25
+        },
+        {
+          "passed": true,
+          "max_log_error": 7.152557373046875e-07,
+          "max_probability_error": 2.086162567138672e-07,
+          "target_utterance": 0,
+          "group": "T1",
+          "kind": "attenuation",
+          "rho": 1.0
+        },
+        {
+          "passed": true,
+          "max_log_error": 7.152557373046875e-07,
+          "max_probability_error": 1.7881393432617188e-07,
+          "target_utterance": 0,
+          "group": "T1",
+          "kind": "mask",
+          "rho": 0.8
+        },
+        {
+          "passed": true,
+          "max_log_error": 7.152557373046875e-07,
+          "max_probability_error": 1.1920928955078125e-07,
+          "target_utterance": 0,
+          "group": "T2",
+          "kind": "attenuation",
+          "rho": 0.25
+        },
+        {
+          "passed": true,
+          "max_log_error": 9.5367431640625e-07,
+          "max_probability_error": 1.7881393432617188e-07,
+          "target_utterance": 0,
+          "group": "T2",
+          "kind": "attenuation",
+          "rho": 1.0
+        },
+        {
+          "passed": true,
+          "max_log_error": 7.152557373046875e-07,
+          "max_probability_error": 1.7881393432617188e-07,
+          "target_utterance": 0,
+          "group": "T2",
+          "kind": "mask",
+          "rho": 0.8
+        },
+        {
+          "passed": true,
+          "max_log_error": 7.152557373046875e-07,
+          "max_probability_error": 1.7881393432617188e-07,
+          "target_utterance": 0,
+          "group": "T3",
+          "kind": "attenuation",
+          "rho": 0.25
+        },
+        {
+          "passed": true,
+          "max_log_error": 9.5367431640625e-07,
+          "max_probability_error": 1.1920928955078125e-07,
+          "target_utterance": 0,
+          "group": "T3",
+          "kind": "attenuation",
+          "rho": 1.0
+        },
+        {
+          "passed": true,
+          "max_log_error": 7.152557373046875e-07,
+          "max_probability_error": 2.086162567138672e-07,
+          "target_utterance": 0,
+          "group": "T3",
+          "kind": "mask",
+          "rho": 0.8
+        },
+        {
+          "passed": true,
+          "max_log_error": 9.5367431640625e-07,
+          "max_probability_error": 2.086162567138672e-07,
+          "target_utterance": 0,
+          "group": "T4",
+          "kind": "attenuation",
+          "rho": 0.25
+        },
+        {
+          "passed": true,
+          "max_log_error": 7.152557373046875e-07,
+          "max_probability_error": 1.7881393432617188e-07,
+          "target_utterance": 0,
+          "group": "T4",
+          "kind": "attenuation",
+          "rho": 1.0
+        },
+        {
+          "passed": true,
+          "max_log_error": 9.5367431640625e-07,
+          "max_probability_error": 1.1920928955078125e-07,
+          "target_utterance": 0,
+          "group": "T4",
+          "kind": "mask",
+          "rho": 0.8
+        },
+        {
+          "passed": true,
+          "max_log_error": 9.5367431640625e-07,
+          "max_probability_error": 1.7881393432617188e-07,
+          "target_utterance": 0,
+          "group": "T-All",
+          "kind": "attenuation",
+          "rho": 0.25
+        },
+        {
+          "passed": true,
+          "max_log_error": 9.5367431640625e-07,
+          "max_probability_error": 1.7881393432617188e-07,
+          "target_utterance": 0,
+          "group": "T-All",
+          "kind": "attenuation",
+          "rho": 1.0
+        },
+        {
+          "passed": true,
+          "max_log_error": 7.152557373046875e-07,
+          "max_probability_error": 1.7881393432617188e-07,
+          "target_utterance": 0,
+          "group": "T-All",
+          "kind": "mask",
+          "rho": 0.8
+        },
+        {
+          "passed": true,
+          "max_log_error": 7.152557373046875e-07,
+          "max_probability_error": 2.086162567138672e-07,
+          "target_utterance": 0,
+          "group": "A",
+          "kind": "attenuation",
+          "rho": 0.25
+        },
+        {
+          "passed": true,
+          "max_log_error": 7.152557373046875e-07,
+          "max_probability_error": 1.7881393432617188e-07,
+          "target_utterance": 0,
+          "group": "A",
+          "kind": "attenuation",
+          "rho": 1.0
+        },
+        {
+          "passed": true,
+          "max_log_error": 1.1920928955078125e-06,
+          "max_probability_error": 1.1920928955078125e-07,
+          "target_utterance": 0,
+          "group": "A",
+          "kind": "mask",
+          "rho": 0.8
+        },
+        {
+          "passed": true,
+          "max_log_error": 7.152557373046875e-07,
+          "max_probability_error": 1.4901161193847656e-07,
+          "target_utterance": 0,
+          "group": "V",
+          "kind": "attenuation",
+          "rho": 0.25
+        },
+        {
+          "passed": true,
+          "max_log_error": 9.5367431640625e-07,
+          "max_probability_error": 1.4901161193847656e-07,
+          "target_utterance": 0,
+          "group": "V",
+          "kind": "attenuation",
+          "rho": 1.0
+        },
+        {
+          "passed": true,
+          "max_log_error": 7.152557373046875e-07,
+          "max_probability_error": 1.4901161193847656e-07,
+          "target_utterance": 0,
+          "group": "V",
+          "kind": "mask",
+          "rho": 0.8
+        },
+        {
+          "passed": true,
+          "max_log_error": 7.152557373046875e-07,
+          "max_probability_error": 1.7881393432617188e-07,
+          "target_utterance": 1,
+          "group": "T1",
+          "kind": "attenuation",
+          "rho": 0.25
+        },
+        {
+          "passed": true,
+          "max_log_error": 7.152557373046875e-07,
+          "max_probability_error": 1.7881393432617188e-07,
+          "target_utterance": 1,
+          "group": "T1",
+          "kind": "attenuation",
+          "rho": 1.0
+        },
+        {
+          "passed": true,
+          "max_log_error": 7.152557373046875e-07,
+          "max_probability_error": 2.086162567138672e-07,
+          "target_utterance": 1,
+          "group": "T1",
+          "kind": "mask",
+          "rho": 0.8
+        },
+        {
+          "passed": true,
+          "max_log_error": 7.152557373046875e-07,
+          "max_probability_error": 1.1920928955078125e-07,
+          "target_utterance": 1,
+          "group": "T2",
+          "kind": "attenuation",
+          "rho": 0.25
+        },
+        {
+          "passed": true,
+          "max_log_error": 9.5367431640625e-07,
+          "max_probability_error": 1.7881393432617188e-07,
+          "target_utterance": 1,
+          "group": "T2",
+          "kind": "attenuation",
+          "rho": 1.0
+        },
+        {
+          "passed": true,
+          "max_log_error": 7.152557373046875e-07,
+          "max_probability_error": 1.4901161193847656e-07,
+          "target_utterance": 1,
+          "group": "T2",
+          "kind": "mask",
+          "rho": 0.8
+        },
+        {
+          "passed": true,
+          "max_log_error": 7.152557373046875e-07,
+          "max_probability_error": 1.7881393432617188e-07,
+          "target_utterance": 1,
+          "group": "T3",
+          "kind": "attenuation",
+          "rho": 0.25
+        },
+        {
+          "passed": true,
+          "max_log_error": 7.152557373046875e-07,
+          "max_probability_error": 1.7881393432617188e-07,
+          "target_utterance": 1,
+          "group": "T3",
+          "kind": "attenuation",
+          "rho": 1.0
+        },
+        {
+          "passed": true,
+          "max_log_error": 9.5367431640625e-07,
+          "max_probability_error": 1.4901161193847656e-07,
+          "target_utterance": 1,
+          "group": "T3",
+          "kind": "mask",
+          "rho": 0.8
+        },
+        {
+          "passed": true,
+          "max_log_error": 7.152557373046875e-07,
+          "max_probability_error": 1.7881393432617188e-07,
+          "target_utterance": 1,
+          "group": "T4",
+          "kind": "attenuation",
+          "rho": 0.25
+        },
+        {
+          "passed": true,
+          "max_log_error": 7.152557373046875e-07,
+          "max_probability_error": 2.086162567138672e-07,
+          "target_utterance": 1,
+          "group": "T4",
+          "kind": "attenuation",
+          "rho": 1.0
+        },
+        {
+          "passed": true,
+          "max_log_error": 7.152557373046875e-07,
+          "max_probability_error": 1.7881393432617188e-07,
+          "target_utterance": 1,
+          "group": "T4",
+          "kind": "mask",
+          "rho": 0.8
+        },
+        {
+          "passed": true,
+          "max_log_error": 7.152557373046875e-07,
+          "max_probability_error": 1.7881393432617188e-07,
+          "target_utterance": 1,
+          "group": "T-All",
+          "kind": "attenuation",
+          "rho": 0.25
+        },
+        {
+          "passed": true,
+          "max_log_error": 9.5367431640625e-07,
+          "max_probability_error": 1.7881393432617188e-07,
+          "target_utterance": 1,
+          "group": "T-All",
+          "kind": "attenuation",
+          "rho": 1.0
+        },
+        {
+          "passed": true,
+          "max_log_error": 7.152557373046875e-07,
+          "max_probability_error": 2.384185791015625e-07,
+          "target_utterance": 1,
+          "group": "T-All",
+          "kind": "mask",
+          "rho": 0.8
+        },
+        {
+          "passed": true,
+          "max_log_error": 9.5367431640625e-07,
+          "max_probability_error": 1.7881393432617188e-07,
+          "target_utterance": 1,
+          "group": "A",
+          "kind": "attenuation",
+          "rho": 0.25
+        },
+        {
+          "passed": true,
+          "max_log_error": 9.5367431640625e-07,
+          "max_probability_error": 1.7881393432617188e-07,
+          "target_utterance": 1,
+          "group": "A",
+          "kind": "attenuation",
+          "rho": 1.0
+        },
+        {
+          "passed": true,
+          "max_log_error": 9.5367431640625e-07,
+          "max_probability_error": 1.4901161193847656e-07,
+          "target_utterance": 1,
+          "group": "A",
+          "kind": "mask",
+          "rho": 0.8
+        },
+        {
+          "passed": true,
+          "max_log_error": 9.5367431640625e-07,
+          "max_probability_error": 1.4901161193847656e-07,
+          "target_utterance": 1,
+          "group": "V",
+          "kind": "attenuation",
+          "rho": 0.25
+        },
+        {
+          "passed": true,
+          "max_log_error": 9.5367431640625e-07,
+          "max_probability_error": 1.4901161193847656e-07,
+          "target_utterance": 1,
+          "group": "V",
+          "kind": "attenuation",
+          "rho": 1.0
+        },
+        {
+          "passed": true,
+          "max_log_error": 7.152557373046875e-07,
+          "max_probability_error": 1.4901161193847656e-07,
+          "target_utterance": 1,
+          "group": "V",
+          "kind": "mask",
+          "rho": 0.8
+        },
+        {
+          "passed": true,
+          "max_log_error": 9.5367431640625e-07,
+          "max_probability_error": 2.086162567138672e-07,
+          "kind": "original"
+        }
+      ],
+      "build_seconds": 4.713627484044991,
+      "mode": "jit_trace_frozen",
+      "capture_error": null,
+      "cached_eager_seconds_per_forward": 0.010426389949861914,
+      "accelerated_seconds_per_forward": 0.0059047596470918505,
+      "speedup": 1.76576026341682
+    }
+  ],
+  "started_at": 1794132407.9224694,
+  "previous_attempts": [
+    {
+      "validation_only": true,
+      "original_batch_size": 16,
+      "fp32": true,
+      "gradients": false,
+      "batches": [
+        {
+          "dataset": "IEMOCAP",
+          "batch_index": 0,
+          "lengths": [
+            30,
+            18,
+            53,
+            30,
+            94,
+            47,
+            53,
+            43,
+            26,
+            51,
+            35,
+            47
+          ],
+          "checks": [
+            {
+              "passed": true,
+              "max_log_error": 3.814697265625e-06,
+              "max_probability_error": 2.682209014892578e-07,
+              "target_utterance": 0,
+              "group": "T1",
+              "kind": "attenuation",
+              "rho": 0.25
+            },
+            {
+              "passed": true,
+              "max_log_error": 3.814697265625e-06,
+              "max_probability_error": 2.980232238769531e-07,
+              "target_utterance": 0,
+              "group": "T1",
+              "kind": "attenuation",
+              "rho": 1.0
+            },
+            {
+              "passed": true,
+              "max_log_error": 3.814697265625e-06,
+              "max_probability_error": 2.384185791015625e-07,
+              "target_utterance": 0,
+              "group": "T1",
+              "kind": "mask",
+              "rho": 0.8
+            },
+            {
+              "passed": true,
+              "max_log_error": 3.814697265625e-06,
+              "max_probability_error": 2.980232238769531e-07,
+              "target_utterance": 0,
+              "group": "T2",
+              "kind": "attenuation",
+              "rho": 0.25
+            },
+            {
+              "passed": true,
+              "max_log_error": 2.86102294921875e-06,
+              "max_probability_error": 2.980232238769531e-07,
+              "target_utterance": 0,
+              "group": "T2",
+              "kind": "attenuation",
+              "rho": 1.0
+            },
+            {
+              "passed": true,
+              "max_log_error": 2.86102294921875e-06,
+              "max_probability_error": 2.980232238769531e-07,
+              "target_utterance": 0,
+              "group": "T2",
+              "kind": "mask",
+              "rho": 0.8
+            },
+            {
+              "passed": true,
+              "max_log_error": 2.86102294921875e-06,
+              "max_probability_error": 2.980232238769531e-07,
+              "target_utterance": 0,
+              "group": "T3",
+              "kind": "attenuation",
+              "rho": 0.25
+            },
+            {
+              "passed": true,
+              "max_log_error": 3.814697265625e-06,
+              "max_probability_error": 2.384185791015625e-07,
+              "target_utterance": 0,
+              "group": "T3",
+              "kind": "attenuation",
+              "rho": 1.0
+            },
+            {
+              "passed": true,
+              "max_log_error": 2.86102294921875e-06,
+              "max_probability_error": 2.980232238769531e-07,
+              "target_utterance": 0,
+              "group": "T3",
+              "kind": "mask",
+              "rho": 0.8
+            },
+            {
+              "passed": true,
+              "max_log_error": 3.814697265625e-06,
+              "max_probability_error": 3.5762786865234375e-07,
+              "target_utterance": 0,
+              "group": "T4",
+              "kind": "attenuation",
+              "rho": 0.25
+            },
+            {
+              "passed": true,
+              "max_log_error": 3.814697265625e-06,
+              "max_probability_error": 2.980232238769531e-07,
+              "target_utterance": 0,
+              "group": "T4",
+              "kind": "attenuation",
+              "rho": 1.0
+            },
+            {
+              "passed": true,
+              "max_log_error": 2.86102294921875e-06,
+              "max_probability_error": 3.5762786865234375e-07,
+              "target_utterance": 0,
+              "group": "T4",
+              "kind": "mask",
+              "rho": 0.8
+            },
+            {
+              "passed": true,
+              "max_log_error": 3.814697265625e-06,
+              "max_probability_error": 2.384185791015625e-07,
+              "target_utterance": 0,
+              "group": "T-All",
+              "kind": "attenuation",
+              "rho": 0.25
+            },
+            {
+              "passed": true,
+              "max_log_error": 3.814697265625e-06,
+              "max_probability_error": 2.384185791015625e-07,
+              "target_utterance": 0,
+              "group": "T-All",
+              "kind": "attenuation",
+              "rho": 1.0
+            },
+            {
+              "passed": true,
+              "max_log_error": 3.814697265625e-06,
+              "max_probability_error": 2.682209014892578e-07,
+              "target_utterance": 0,
+              "group": "T-All",
+              "kind": "mask",
+              "rho": 0.8
+            },
+            {
+              "passed": true,
+              "max_log_error": 3.814697265625e-06,
+              "max_probability_error": 3.5762786865234375e-07,
+              "target_utterance": 0,
+              "group": "A",
+              "kind": "attenuation",
+              "rho": 0.25
+            },
+            {
+              "passed": true,
+              "max_log_error": 3.337860107421875e-06,
+              "max_probability_error": 2.384185791015625e-07,
+              "target_utterance": 0,
+              "group": "A",
+              "kind": "attenuation",
+              "rho": 1.0
+            },
+            {
+              "passed": true,
+              "max_log_error": 2.384185791015625e-06,
+              "max_probability_error": 3.5762786865234375e-07,
+              "target_utterance": 0,
+              "group": "A",
+              "kind": "mask",
+              "rho": 0.8
+            },
+            {
+              "passed": true,
+              "max_log_error": 3.814697265625e-06,
+              "max_probability_error": 2.980232238769531e-07,
+              "target_utterance": 0,
+              "group": "V",
+              "kind": "attenuation",
+              "rho": 0.25
+            },
+            {
+              "passed": true,
+              "max_log_error": 3.814697265625e-06,
+              "max_probability_error": 2.682209014892578e-07,
+              "target_utterance": 0,
+              "group": "V",
+              "kind": "attenuation",
+              "rho": 1.0
+            },
+            {
+              "passed": true,
+              "max_log_error": 5.7220458984375e-06,
+              "max_probability_error": 2.980232238769531e-07,
+              "target_utterance": 0,
+              "group": "V",
+              "kind": "mask",
+              "rho": 0.8
+            },
+            {
+              "passed": true,
+              "max_log_error": 3.814697265625e-06,
+              "max_probability_error": 2.980232238769531e-07,
+              "target_utterance": 1,
+              "group": "T1",
+              "kind": "attenuation",
+              "rho": 0.25
+            },
+            {
+              "passed": true,
+              "max_log_error": 2.86102294921875e-06,
+              "max_probability_error": 3.5762786865234375e-07,
+              "target_utterance": 1,
+              "group": "T1",
+              "kind": "attenuation",
+              "rho": 1.0
+            },
+            {
+              "passed": true,
+              "max_log_error": 3.814697265625e-06,
+              "max_probability_error": 2.980232238769531e-07,
+              "target_utterance": 1,
+              "group": "T1",
+              "kind": "mask",
+              "rho": 0.8
+            },
+            {
+              "passed": true,
+              "max_log_error": 2.384185791015625e-06,
+              "max_probability_error": 2.980232238769531e-07,
+              "target_utterance": 1,
+              "group": "T2",
+              "kind": "attenuation",
+              "rho": 0.25
+            },
+            {
+              "passed": true,
+              "max_log_error": 3.814697265625e-06,
+              "max_probability_error": 2.980232238769531e-07,
+              "target_utterance": 1,
+              "group": "T2",
+              "kind": "attenuation",
+              "rho": 1.0
+            },
+            {
+              "passed": true,
+              "max_log_error": 3.814697265625e-06,
+              "max_probability_error": 2.980232238769531e-07,
+              "target_utterance": 1,
+              "group": "T2",
+              "kind": "mask",
+              "rho": 0.8
+            },
+            {
+              "passed": true,
+              "max_log_error": 3.814697265625e-06,
+              "max_probability_error": 2.980232238769531e-07,
+              "target_utterance": 1,
+              "group": "T3",
+              "kind": "attenuation",
+              "rho": 0.25
+            },
+            {
+              "passed": true,
+              "max_log_error": 4.76837158203125e-06,
+              "max_probability_error": 2.384185791015625e-07,
+              "target_utterance": 1,
+              "group": "T3",
+              "kind": "attenuation",
+              "rho": 1.0
+            },
+            {
+              "passed": true,
+              "max_log_error": 2.86102294921875e-06,
+              "max_probability_error": 3.5762786865234375e-07,
+              "target_utterance": 1,
+              "group": "T3",
+              "kind": "mask",
+              "rho": 0.8
+            },
+            {
+              "passed": true,
+              "max_log_error": 2.86102294921875e-06,
+              "max_probability_error": 2.384185791015625e-07,
+              "target_utterance": 1,
+              "group": "T4",
+              "kind": "attenuation",
+              "rho": 0.25
+            },
+            {
+              "passed": true,
+              "max_log_error": 3.814697265625e-06,
+              "max_probability_error": 2.980232238769531e-07,
+              "target_utterance": 1,
+              "group": "T4",
+              "kind": "attenuation",
+              "rho": 1.0
+            },
+            {
+              "passed": true,
+              "max_log_error": 3.814697265625e-06,
+              "max_probability_error": 2.384185791015625e-07,
+              "target_utterance": 1,
+              "group": "T4",
+              "kind": "mask",
+              "rho": 0.8
+            },
+            {
+              "passed": true,
+              "max_log_error": 3.814697265625e-06,
+              "max_probability_error": 2.384185791015625e-07,
+              "target_utterance": 1,
+              "group": "T-All",
+              "kind": "attenuation",
+              "rho": 0.25
+            },
+            {
+              "passed": true,
+              "max_log_error": 2.86102294921875e-06,
+              "max_probability_error": 2.682209014892578e-07,
+              "target_utterance": 1,
+              "group": "T-All",
+              "kind": "attenuation",
+              "rho": 1.0
+            },
+            {
+              "passed": true,
+              "max_log_error": 2.86102294921875e-06,
+              "max_probability_error": 2.384185791015625e-07,
+              "target_utterance": 1,
+              "group": "T-All",
+              "kind": "mask",
+              "rho": 0.8
+            },
+            {
+              "passed": true,
+              "max_log_error": 3.814697265625e-06,
+              "max_probability_error": 3.5762786865234375e-07,
+              "target_utterance": 1,
+              "group": "A",
+              "kind": "attenuation",
+              "rho": 0.25
+            },
+            {
+              "passed": true,
+              "max_log_error": 3.337860107421875e-06,
+              "max_probability_error": 2.980232238769531e-07,
+              "target_utterance": 1,
+              "group": "A",
+              "kind": "attenuation",
+              "rho": 1.0
+            },
+            {
+              "passed": true,
+              "max_log_error": 3.814697265625e-06,
+              "max_probability_error": 2.980232238769531e-07,
+              "target_utterance": 1,
+              "group": "A",
+              "kind": "mask",
+              "rho": 0.8
+            },
+            {
+              "passed": true,
+              "max_log_error": 3.814697265625e-06,
+              "max_probability_error": 2.980232238769531e-07,
+              "target_utterance": 1,
+              "group": "V",
+              "kind": "attenuation",
+              "rho": 0.25
+            },
+            {
+              "passed": true,
+              "max_log_error": 3.814697265625e-06,
+              "max_probability_error": 2.384185791015625e-07,
+              "target_utterance": 1,
+              "group": "V",
+              "kind": "attenuation",
+              "rho": 1.0
+            },
+            {
+              "passed": true,
+              "max_log_error": 3.814697265625e-06,
+              "max_probability_error": 2.384185791015625e-07,
+              "target_utterance": 1,
+              "group": "V",
+              "kind": "mask",
+              "rho": 0.8
+            },
+            {
+              "passed": true,
+              "max_log_error": 3.814697265625e-06,
+              "max_probability_error": 2.384185791015625e-07,
+              "kind": "original"
+            }
+          ],
+          "build_seconds": 8.18361366901081,
+          "mode": "jit_trace_frozen_cuda_graph",
+          "capture_error": null,
+          "cached_eager_seconds_per_forward": 0.0427049211517442,
+          "accelerated_seconds_per_forward": 0.03260241310345009,
+          "speedup": 1.309869947854413
+        },
+        {
+          "dataset": "MELD",
+          "batch_index": 0,
+          "lengths": [
+            2,
+            16,
+            6,
+            3,
+            15,
+            13,
+            10,
+            11,
+            15,
+            8,
+            10,
+            13,
+            5,
+            22,
+            9,
+            10
+          ],
+          "checks": [
+            {
+              "passed": true,
+              "max_log_error": 7.152557373046875e-07,
+              "max_probability_error": 1.7881393432617188e-07,
+              "target_utterance": 0,
+              "group": "T1",
+              "kind": "attenuation",
+              "rho": 0.25
+            },
+            {
+              "passed": false,
+              "max_log_error": 1.6421235799789429,
+              "max_probability_error": 0.35677778720855713,
+              "target_utterance": 0,
+              "group": "T1",
+              "kind": "attenuation",
+              "rho": 1.0
+            }
+          ],
+          "build_seconds": 4.745265726000071,
+          "mode": "jit_trace_frozen_cuda_graph",
+          "capture_error": null
+        }
+      ],
+      "started_at": 1794132323.534029,
+      "model_unchanged": {
+        "IEMOCAP": true
+      },
+      "passed": false,
+      "error": "AssertionError('Accelerated full forward differs')",
+      "traceback": "Traceback (most recent call last):\n  File \"/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/scripts/test_accelerated_forward.py\", line 75, in benchmark\n    if not result['passed']:raise AssertionError('Accelerated full forward differs')\nAssertionError: Accelerated full forward differs\n",
+      "finished_at": 1794132356.7113876,
+      "source_sha256": {
+        "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/scripts/test_accelerated_forward.py": "02d0b396f9ccd47361937457b1c97fa34a39e750cd551e934cdfcfdfe500e74b",
+        "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/scripts/accelerated_forward.py": "ea3012eb3335e392f982e2bb16c7dd1c57ce4b5e0f4ed6590af2448938692063"
+      }
+    }
+  ],
+  "model_unchanged": {
+    "MELD": true
+  },
+  "passed": true,
+  "finished_at": 1794132424.2981665,
+  "source_sha256": {
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/scripts/test_accelerated_forward.py": "dbe7258f3061d5d6f22a9851eb27a44fc6563f49d97ec124279085a5dfb564f5",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/scripts/accelerated_forward.py": "ea3012eb3335e392f982e2bb16c7dd1c57ce4b5e0f4ed6590af2448938692063"
+  },
+  "adopted": false,
+  "decision": "Use existing graph-index-cached eager execution only",
+  "reason": "CUDA Graph failed a full-vector MELD strong-intervention check; limited JIT speedup does not justify extra implementation risk",
+  "technical_probe_note": "JIT acceleration stress tests used zero attenuation/masking; final cached-eager parity instead uses the preregistered training-mean interventions. Neither technical benchmark supplies research outcomes.",
+  "final_cached_eager_proof": "provenance/graph_cache_parity.json"
+}

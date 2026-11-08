@@ -1,0 +1,37 @@
+{
+  "host": "user23",
+  "pid": 2001080,
+  "utc": "2026-11-08T10:11:21Z",
+  "gpu": "0, GPU-7ff18ebb-100e-98fe-038b-a98bd4f94248, NVIDIA TITAN Xp, 3 MiB, 12181 MiB, 0 %\n1, GPU-eed2f34f-b4c0-7b7a-498e-71a026e30c5a, NVIDIA TITAN Xp, 3 MiB, 12181 MiB, 0 %\n2, GPU-d17e4326-9d3b-2025-fbf8-c9b0d16623a0, NVIDIA TITAN Xp, 3 MiB, 12181 MiB, 0 %\n3, GPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456, NVIDIA TITAN Xp, 1467 MiB, 10717 MiB, 1 %\n",
+  "processes": "GPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456, 2000795, /data2/yb/conda_envs/cmerc-xp-repro/bin/python, 1462 MiB\n",
+  "disks": {
+    "/data1": {
+      "total": 1007919267840,
+      "used": 876318871552,
+      "free": 80373198848
+    },
+    "/data2": {
+      "total": 7541287677952,
+      "used": 7015798804480,
+      "free": 145399840768
+    }
+  },
+  "visible_devices": "3",
+  "python": "/data2/yb/conda_envs/cmerc-xp-repro/bin/python",
+  "python_version": "3.10.13 | packaged by conda-forge | (main, Dec 23 2023, 15:36:39) [GCC 12.3.0]",
+  "command": [
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/scripts/run_evidence.py",
+    "--dataset",
+    "MELD",
+    "--phase",
+    "overall_attenuation"
+  ],
+  "runner_sha256": "de0b49182745b71efca7a59882fbbeb61e3c676b5ec86cf914caca4924665a80",
+  "environment": {
+    "LD_LIBRARY_PATH": "/data2/yb/conda_envs/cmerc-xp-repro/lib/python3.10/site-packages/nvidia/cusparse/lib",
+    "OMP_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "PYTORCH_CUDA_ALLOC_CONF": "garbage_collection_threshold:0.8"
+  }
+}

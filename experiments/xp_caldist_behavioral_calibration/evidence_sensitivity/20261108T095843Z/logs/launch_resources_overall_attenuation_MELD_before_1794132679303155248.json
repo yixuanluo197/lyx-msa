@@ -1,0 +1,29 @@
+{
+  "utc": "2026-11-08T10:11:19.303114+00:00",
+  "host": "user23",
+  "gpu_index": 3,
+  "gpu_uuid": "GPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456",
+  "gpu_name": "NVIDIA TITAN Xp",
+  "gpu_memory_used_mib": 1467,
+  "gpu_memory_free_mib": 10717,
+  "gpu_utilization": 48,
+  "gpu_processes": [
+    {
+      "pid": 2000795,
+      "uuid": "GPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456",
+      "memory_mib": 1462
+    }
+  ],
+  "disks": {
+    "/data1": {
+      "total": 1007919267840,
+      "used": 876318871552,
+      "free": 80373198848
+    },
+    "/data2": {
+      "total": 7541287677952,
+      "used": 7015798792192,
+      "free": 145399853056
+    }
+  }
+}

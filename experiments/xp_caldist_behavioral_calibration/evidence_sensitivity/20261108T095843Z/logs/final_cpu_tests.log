@@ -1,0 +1,30 @@
+test_classification_matches_sklearn_including_absent_classes (test_analyze_evidence.EvidenceAnalysisTests) ... ok
+test_correctness_contrast_empty_group_is_na (test_analyze_evidence.EvidenceAnalysisTests) ... ok
+test_correctness_contrast_uses_paired_difference_not_overlapping_group_intervals (test_analyze_evidence.EvidenceAnalysisTests) ... ok
+test_curve_zero_is_baseline_not_invented_intervention (test_analyze_evidence.EvidenceAnalysisTests) ... ok
+test_full_condition_io_in_automatically_deleted_fixture (test_analyze_evidence.EvidenceAnalysisTests) ... ok
+test_identical_predictions_have_zero_paired_deltas (test_analyze_evidence.EvidenceAnalysisTests) ... ok
+test_missing_visual_inactive_prediction_must_be_exact_original (test_analyze_evidence.EvidenceAnalysisTests) ... ok
+test_repeat_classification_is_not_probability_ensemble (test_analyze_evidence.EvidenceAnalysisTests) ... ok
+test_shared_dialogue_weights_are_deterministic_and_clustered (test_analyze_evidence.EvidenceAnalysisTests) ... ok
+test_subgroup_bootstrap_retains_original_dialogue_pool_and_empty_draw_is_na (test_analyze_evidence.EvidenceAnalysisTests) ... ok
+test_vectorized_bootstrap_f1_matches_explicit_cluster_resampling (test_analyze_evidence.EvidenceAnalysisTests) ... ok
+test_weak_stability_does_not_hide_strong_sensitivity (test_analyze_evidence.EvidenceAnalysisTests) ... ok
+test_attenuation_endpoints_formula_and_no_mutation (test_evidence_core.EvidenceCoreTests) ... ok
+test_exact_mask_count_independent_layers_and_no_rescaling (test_evidence_core.EvidenceCoreTests) ... ok
+test_invalid_inputs_fail (test_evidence_core.EvidenceCoreTests) ... ok
+test_known_sensitivity_metrics_and_transitions (test_evidence_core.EvidenceCoreTests) ... ok
+test_mask_boundaries_and_unequal_layer_dimensions (test_evidence_core.EvidenceCoreTests) ... ok
+test_rng_canonical_replay_and_every_key_component (test_evidence_core.EvidenceCoreTests) ... ok
+test_targets_and_exact_condition_groups (test_evidence_core.EvidenceCoreTests) ... ok
+test_zero_probability_js_and_normalization_roundoff (test_evidence_core.EvidenceCoreTests) ... ok
+test_compare_rejects_nonfinite_shape_and_argmax_drift (test_runner_controls.RunnerControlTests) ... ok
+test_complete_runner_only_changes_one_target_and_preserves_missing_visual (test_runner_controls.RunnerControlTests) ... ok
+test_gate_checks_hashes_phase_order_and_rejects_unknown_dataset (test_runner_controls.RunnerControlTests) ... ok
+test_loader_preserves_batch16_and_original_dialogue_order (test_runner_controls.RunnerControlTests) ... ok
+test_metadata_is_dialogue_major_and_excludes_padding (test_runner_controls.RunnerControlTests) ... ok
+
+----------------------------------------------------------------------
+Ran 25 tests in 1.462s
+
+OK

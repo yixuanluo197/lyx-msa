@@ -1,0 +1,236 @@
+{
+  "passed": true,
+  "dataset": "IEMOCAP",
+  "seed": 1475,
+  "phase": "random_masking",
+  "seconds": 4645.317377637024,
+  "target_forwards": 73760,
+  "skipped_visual_missing": 20,
+  "stored_vectors": 73780,
+  "complete_probability_parity_checks": [
+    {
+      "batch": 0,
+      "kind": "original",
+      "log_error": 3.814697265625e-06,
+      "probability_error": 2.384185791015625e-07,
+      "previous_log_error": 1.9073486328125e-06,
+      "previous_probability_error": 2.384185791015625e-07
+    },
+    {
+      "batch": 0,
+      "kind": "mask_T1_ratio0p10",
+      "log_error": 1.9073486328125e-06,
+      "probability_error": 2.980232238769531e-07
+    },
+    {
+      "batch": 0,
+      "kind": "mask_T1_ratio0p30",
+      "log_error": 2.86102294921875e-06,
+      "probability_error": 2.980232238769531e-07
+    },
+    {
+      "batch": 0,
+      "kind": "mask_T1_ratio0p50",
+      "log_error": 2.86102294921875e-06,
+      "probability_error": 2.384185791015625e-07
+    },
+    {
+      "batch": 0,
+      "kind": "mask_T1_ratio0p80",
+      "log_error": 1.9073486328125e-06,
+      "probability_error": 2.384185791015625e-07
+    },
+    {
+      "batch": 0,
+      "kind": "mask_T2_ratio0p10",
+      "log_error": 1.9073486328125e-06,
+      "probability_error": 2.384185791015625e-07
+    },
+    {
+      "batch": 0,
+      "kind": "mask_T2_ratio0p30",
+      "log_error": 1.9073486328125e-06,
+      "probability_error": 2.384185791015625e-07
+    },
+    {
+      "batch": 0,
+      "kind": "mask_T2_ratio0p50",
+      "log_error": 1.9073486328125e-06,
+      "probability_error": 2.384185791015625e-07
+    },
+    {
+      "batch": 0,
+      "kind": "mask_T2_ratio0p80",
+      "log_error": 1.9073486328125e-06,
+      "probability_error": 2.384185791015625e-07
+    },
+    {
+      "batch": 0,
+      "kind": "mask_T3_ratio0p10",
+      "log_error": 2.86102294921875e-06,
+      "probability_error": 2.384185791015625e-07
+    },
+    {
+      "batch": 0,
+      "kind": "mask_T3_ratio0p30",
+      "log_error": 1.9073486328125e-06,
+      "probability_error": 2.682209014892578e-07
+    },
+    {
+      "batch": 0,
+      "kind": "mask_T3_ratio0p50",
+      "log_error": 2.86102294921875e-06,
+      "probability_error": 2.384185791015625e-07
+    },
+    {
+      "batch": 0,
+      "kind": "mask_T3_ratio0p80",
+      "log_error": 2.86102294921875e-06,
+      "probability_error": 2.980232238769531e-07
+    },
+    {
+      "batch": 0,
+      "kind": "mask_T4_ratio0p10",
+      "log_error": 1.9073486328125e-06,
+      "probability_error": 2.384185791015625e-07
+    },
+    {
+      "batch": 0,
+      "kind": "mask_T4_ratio0p30",
+      "log_error": 1.9073486328125e-06,
+      "probability_error": 2.384185791015625e-07
+    },
+    {
+      "batch": 0,
+      "kind": "mask_T4_ratio0p50",
+      "log_error": 1.9073486328125e-06,
+      "probability_error": 2.384185791015625e-07
+    },
+    {
+      "batch": 0,
+      "kind": "mask_T4_ratio0p80",
+      "log_error": 2.86102294921875e-06,
+      "probability_error": 1.7881393432617188e-07
+    },
+    {
+      "batch": 0,
+      "kind": "mask_T-All_ratio0p10",
+      "log_error": 2.86102294921875e-06,
+      "probability_error": 2.980232238769531e-07
+    },
+    {
+      "batch": 0,
+      "kind": "mask_T-All_ratio0p30",
+      "log_error": 2.86102294921875e-06,
+      "probability_error": 2.384185791015625e-07
+    },
+    {
+      "batch": 0,
+      "kind": "mask_T-All_ratio0p50",
+      "log_error": 1.9073486328125e-06,
+      "probability_error": 2.384185791015625e-07
+    },
+    {
+      "batch": 0,
+      "kind": "mask_T-All_ratio0p80",
+      "log_error": 2.86102294921875e-06,
+      "probability_error": 2.384185791015625e-07
+    },
+    {
+      "batch": 0,
+      "kind": "mask_A_ratio0p10",
+      "log_error": 1.9073486328125e-06,
+      "probability_error": 2.980232238769531e-07
+    },
+    {
+      "batch": 0,
+      "kind": "mask_A_ratio0p30",
+      "log_error": 1.9073486328125e-06,
+      "probability_error": 2.384185791015625e-07
+    },
+    {
+      "batch": 0,
+      "kind": "mask_A_ratio0p50",
+      "log_error": 1.9073486328125e-06,
+      "probability_error": 2.980232238769531e-07
+    },
+    {
+      "batch": 0,
+      "kind": "mask_A_ratio0p80",
+      "log_error": 1.9073486328125e-06,
+      "probability_error": 2.384185791015625e-07
+    },
+    {
+      "batch": 0,
+      "kind": "mask_V_ratio0p10",
+      "log_error": 1.9073486328125e-06,
+      "probability_error": 2.980232238769531e-07
+    },
+    {
+      "batch": 0,
+      "kind": "mask_V_ratio0p30",
+      "log_error": 2.86102294921875e-06,
+      "probability_error": 2.384185791015625e-07
+    },
+    {
+      "batch": 0,
+      "kind": "mask_V_ratio0p50",
+      "log_error": 2.86102294921875e-06,
+      "probability_error": 1.7881393432617188e-07
+    },
+    {
+      "batch": 0,
+      "kind": "mask_V_ratio0p80",
+      "log_error": 3.814697265625e-06,
+      "probability_error": 2.384185791015625e-07
+    }
+  ],
+  "graph_guard_observations": 147580,
+  "cache": {
+    "hyper_hits": 73760,
+    "hyper_misses": 1,
+    "gnn_hits": 73760,
+    "gnn_misses": 1,
+    "gnn_bypasses": 0,
+    "feature_exact_checks": 2
+  },
+  "inputs_restored_exact": true,
+  "parameters_and_buffers_unchanged": true,
+  "gradients_absent": true,
+  "test_inference": false,
+  "server": "user23",
+  "pid": 2030052,
+  "gpu_visible": "3",
+  "config_sha256": "20a7e0d913850d8d7f95a8723049de1413d2223a7b4043a8ddc38e8cd0c060d8",
+  "runner_sha256": "9dd749dc82d49e5e67eb9be1d72e8b3e6aab664f47c4be1c45df7952a520e5b6",
+  "conditions": {
+    "mask_T1_ratio0p10": "b905c52bd67840d8060414842ec963b8c8dc8c3b77740ca791d8a875b30d5da9",
+    "mask_T1_ratio0p30": "d7d13d246a2e7f5ff3594312b36e8a8a109136d8d823835fa94b96eb2ac01d00",
+    "mask_T1_ratio0p50": "d3ca12278cca7136a4fcbba7a58cb43ec166ee30496c16710fb822798a3759a2",
+    "mask_T1_ratio0p80": "90e3654ee821e02ed9e55bd8cc90d07881b45d964b7e370c1bfaaa31c1b5998d",
+    "mask_T2_ratio0p10": "272ad080f8e8f16b0443887d98c0ca20ac9c618c7bc9709962c773d93b855bcb",
+    "mask_T2_ratio0p30": "0c7109d8288656435f83ec6581e3301d5f7d6127ec0136d72feedd8aff357cf0",
+    "mask_T2_ratio0p50": "15d2892ec24a99f9d99b101217905153078c23dd8901a32f769f82ab87d4a811",
+    "mask_T2_ratio0p80": "aa2cc0f1cb969ad4261d2e4243e546adb370b68cd514051de2002dc6883ec7c2",
+    "mask_T3_ratio0p10": "7c6c39fdbace1967c4681214bb8ee3f6ad2054e2562b9169b59a7bfd40ab198b",
+    "mask_T3_ratio0p30": "882bec9a710f5bb2ae3300e242ce4bf637a2e818f9524aa4bf48c71769f5f3da",
+    "mask_T3_ratio0p50": "325f29919a38eb7a4148b4ad29d4c2984a2ca392e5a8abab631d41f715175a33",
+    "mask_T3_ratio0p80": "d4d02080dce91a6e63e726107eeae0a351d59d98771412eab8e2d49f7344188b",
+    "mask_T4_ratio0p10": "96dcb5f6988ca671451f4a9de19c98fb49ba2b8a384a659b1970c90ba339d6f7",
+    "mask_T4_ratio0p30": "8b0400f5c56edb6d2b23008913a05c5837bb2da7422e74722e2134bd6bceecfd",
+    "mask_T4_ratio0p50": "20433b2e7e252ecd8c7e7e95edc331f490cd5ac821bda22f1c5525763d838ca1",
+    "mask_T4_ratio0p80": "52e94125bcbb4f3547b9278ee1e89f568e43ebb0f718647e9607061d2e994d32",
+    "mask_T-All_ratio0p10": "8a9c083e448c845ceeed8d2415ec777756d7734e051337ed7f6f98d0ad9bd1b0",
+    "mask_T-All_ratio0p30": "b388494054431d3a9627cd27b0dacda077cdfb16a149b530b59e9079ce6fe7c3",
+    "mask_T-All_ratio0p50": "3f98d8b7ab9912c87f749cc161d7bf8760d1915ce3e5159afcfc9dbf6b9b41a5",
+    "mask_T-All_ratio0p80": "fffa00b4bdc5556970aaefe55ab493189b6e10dda4c36ee85ee7113d011b45e7",
+    "mask_A_ratio0p10": "70454482ef420a1e90ae62905991105c30df42281263a60b46399cdf575fec42",
+    "mask_A_ratio0p30": "b7c7448032c1dcc02a7fcec37280a10792b8ebf2f3a622dd3cdfaad251f47772",
+    "mask_A_ratio0p50": "56260e285a7b4186403484fe04562eef4fd7815b6dbc885ab6733a2164566228",
+    "mask_A_ratio0p80": "9402d6aa48329b155fe772cebe2ecda0cb35c63929c0dc62cef7147ac6ed084d",
+    "mask_V_ratio0p10": "c1c696328110a2d9d1cc49f1721f92e58ae1f2934cc2e3f01840d770fed9b412",
+    "mask_V_ratio0p30": "886365130a5a7cb9c1d677760d36baef165e78eabc453ad34cc21f97c4b3c39e",
+    "mask_V_ratio0p50": "70f2f7264a5ce64dece2526988b9f27ba387eac2fad212c6b6c33181ebae3d7b",
+    "mask_V_ratio0p80": "4deeeed57ee9135d12fa12d6874653f6289780a57d365e5b9e2797dcb9d738c4"
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "interim_only": true,
+  "source": "completed rho1 attenuation validation predictions",
+  "rows": [
+    {
+      "dataset": "IEMOCAP",
+      "target": "T-All",
+      "delta_accuracy": -0.032258064516129115,
+      "delta_accuracy_ci": [
+        -0.10394891231468373,
+        0.013673215379901954
+      ],
+      "true_probability_change": -0.02967693726410665,
+      "true_probability_change_ci": [
+        -0.05230710435539043,
+        -0.013721269059877785
+      ]
+    },
+    {
+      "dataset": "IEMOCAP",
+      "target": "A",
+      "delta_accuracy": -0.0379506641366224,
+      "delta_accuracy_ci": [
+        -0.0744831538385535,
+        0.006980802792321053
+      ],
+      "true_probability_change": -0.05233703490101027,
+      "true_probability_change_ci": [
+        -0.09241679860577255,
+        -0.017438282090472563
+      ]
+    },
+    {
+      "dataset": "IEMOCAP",
+      "target": "V",
+      "delta_accuracy": 0.001897533206831059,
+      "delta_accuracy_ci": [
+        0.0,
+        0.006220920477791511
+      ],
+      "true_probability_change": -0.0010061071999746586,
+      "true_probability_change_ci": [
+        -0.003462972973729266,
+        0.0008518556703618263
+      ]
+    },
+    {
+      "dataset": "MELD",
+      "target": "T-All",
+      "delta_accuracy": -0.26600541027953106,
+      "delta_accuracy_ci": [
+        -0.30534169126576477,
+        -0.22450759373516846
+      ],
+      "true_probability_change": -0.1405721140523232,
+      "true_probability_change_ci": [
+        -0.15215207797266672,
+        -0.12834376718316837
+      ]
+    },
+    {
+      "dataset": "MELD",
+      "target": "A",
+      "delta_accuracy": -0.008115419296663595,
+      "delta_accuracy_ci": [
+        -0.02003483736211802,
+        0.003431273629419428
+      ],
+      "true_probability_change": -0.006381023458538558,
+      "true_probability_change_ci": [
+        -0.00939564603988339,
+        -0.0037563787315929575
+      ]
+    },
+    {
+      "dataset": "MELD",
+      "target": "V",
+      "delta_accuracy": -0.0054102795311090635,
+      "delta_accuracy_ci": [
+        -0.01175433464525055,
+        0.0
+      ],
+      "true_probability_change": -0.0007830859238333913,
+      "true_probability_change_ci": [
+        -0.001403251623401203,
+        -0.0002008599557939311
+      ]
+    }
+  ]
+}

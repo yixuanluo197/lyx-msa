@@ -1,0 +1,5 @@
+dataset,seed,subgroup,n_total,n_utterances,original_correct_count,original_accuracy,original_accuracy_ci_low,original_accuracy_ci_high,visual_intervention_applied,handling
+IEMOCAP,1475,visual_present,527,526,348,0.6615969581749049,0.5768328173374614,0.7283950617283951,True,missing rows retained; V missing inputs/probabilities unchanged
+IEMOCAP,1475,visual_missing,527,1,0,0.0,0.0,0.0,False,missing rows retained; V missing inputs/probabilities unchanged
+MELD,67137,visual_present,1109,1014,674,0.6646942800788954,0.6304492967368164,0.7008898238000335,True,missing rows retained; V missing inputs/probabilities unchanged
+MELD,67137,visual_missing,1109,95,61,0.6421052631578947,0.5473440043407488,0.7391417572463767,False,missing rows retained; V missing inputs/probabilities unchanged

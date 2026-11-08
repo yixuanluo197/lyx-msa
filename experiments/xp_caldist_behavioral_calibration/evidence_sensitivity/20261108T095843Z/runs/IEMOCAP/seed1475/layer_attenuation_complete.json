@@ -1,0 +1,152 @@
+{
+  "passed": true,
+  "dataset": "IEMOCAP",
+  "seed": 1475,
+  "phase": "layer_attenuation",
+  "seconds": 563.3618516940624,
+  "target_forwards": 8432,
+  "skipped_visual_missing": 0,
+  "stored_vectors": 8432,
+  "complete_probability_parity_checks": [
+    {
+      "batch": 0,
+      "kind": "original",
+      "log_error": 1.9073486328125e-06,
+      "probability_error": 2.384185791015625e-07,
+      "previous_log_error": 1.9073486328125e-06,
+      "previous_probability_error": 2.384185791015625e-07
+    },
+    {
+      "batch": 0,
+      "kind": "decay_T1_rho0p25",
+      "log_error": 1.9073486328125e-06,
+      "probability_error": 2.980232238769531e-07
+    },
+    {
+      "batch": 0,
+      "kind": "decay_T1_rho0p50",
+      "log_error": 2.86102294921875e-06,
+      "probability_error": 2.384185791015625e-07
+    },
+    {
+      "batch": 0,
+      "kind": "decay_T1_rho0p75",
+      "log_error": 2.86102294921875e-06,
+      "probability_error": 2.980232238769531e-07
+    },
+    {
+      "batch": 0,
+      "kind": "decay_T1_rho1p00",
+      "log_error": 2.86102294921875e-06,
+      "probability_error": 2.384185791015625e-07
+    },
+    {
+      "batch": 0,
+      "kind": "decay_T2_rho0p25",
+      "log_error": 2.384185791015625e-06,
+      "probability_error": 2.682209014892578e-07
+    },
+    {
+      "batch": 0,
+      "kind": "decay_T2_rho0p50",
+      "log_error": 3.814697265625e-06,
+      "probability_error": 2.384185791015625e-07
+    },
+    {
+      "batch": 0,
+      "kind": "decay_T2_rho0p75",
+      "log_error": 1.9073486328125e-06,
+      "probability_error": 2.384185791015625e-07
+    },
+    {
+      "batch": 0,
+      "kind": "decay_T2_rho1p00",
+      "log_error": 1.9073486328125e-06,
+      "probability_error": 2.980232238769531e-07
+    },
+    {
+      "batch": 0,
+      "kind": "decay_T3_rho0p25",
+      "log_error": 1.9073486328125e-06,
+      "probability_error": 2.980232238769531e-07
+    },
+    {
+      "batch": 0,
+      "kind": "decay_T3_rho0p50",
+      "log_error": 2.86102294921875e-06,
+      "probability_error": 2.384185791015625e-07
+    },
+    {
+      "batch": 0,
+      "kind": "decay_T3_rho0p75",
+      "log_error": 3.814697265625e-06,
+      "probability_error": 2.384185791015625e-07
+    },
+    {
+      "batch": 0,
+      "kind": "decay_T3_rho1p00",
+      "log_error": 1.9073486328125e-06,
+      "probability_error": 2.384185791015625e-07
+    },
+    {
+      "batch": 0,
+      "kind": "decay_T4_rho0p25",
+      "log_error": 1.9073486328125e-06,
+      "probability_error": 2.980232238769531e-07
+    },
+    {
+      "batch": 0,
+      "kind": "decay_T4_rho0p50",
+      "log_error": 3.814697265625e-06,
+      "probability_error": 2.980232238769531e-07
+    },
+    {
+      "batch": 0,
+      "kind": "decay_T4_rho0p75",
+      "log_error": 3.814697265625e-06,
+      "probability_error": 2.980232238769531e-07
+    },
+    {
+      "batch": 0,
+      "kind": "decay_T4_rho1p00",
+      "log_error": 3.814697265625e-06,
+      "probability_error": 2.980232238769531e-07
+    }
+  ],
+  "graph_guard_observations": 16900,
+  "cache": {
+    "hyper_hits": 8432,
+    "hyper_misses": 1,
+    "gnn_hits": 8432,
+    "gnn_misses": 1,
+    "gnn_bypasses": 0,
+    "feature_exact_checks": 2
+  },
+  "inputs_restored_exact": true,
+  "parameters_and_buffers_unchanged": true,
+  "gradients_absent": true,
+  "test_inference": false,
+  "server": "user23",
+  "pid": 2013121,
+  "gpu_visible": "3",
+  "config_sha256": "20a7e0d913850d8d7f95a8723049de1413d2223a7b4043a8ddc38e8cd0c060d8",
+  "runner_sha256": "9dd749dc82d49e5e67eb9be1d72e8b3e6aab664f47c4be1c45df7952a520e5b6",
+  "conditions": {
+    "decay_T1_rho0p25": "cf539fad2b38c2a79205d87355f3a170673972f60e98680f79b3e32bf847664b",
+    "decay_T1_rho0p50": "d8e7a77d57160f78291afda870059d19bf9f09d020b25454624b14be1cae8f60",
+    "decay_T1_rho0p75": "3fc7ecf45b5241cd2e007a184c46d6ef7b7748bd6b905d09991dc95a52fef039",
+    "decay_T1_rho1p00": "56ce41e69b372a348f1393ddb173081c1f6b8378b7119d18d0858ae8a2502c54",
+    "decay_T2_rho0p25": "e9d611a5b148153b71816c681ee40e36242377517c72600ecc14cf017e8873b7",
+    "decay_T2_rho0p50": "7dc94d0378138f4fdae06d673831f6181e534b0c61cfe1ef608b4d0e1f9ed9cb",
+    "decay_T2_rho0p75": "aae146e445eeeee17278ca3dbda5036ad9c302dfda16f17760a9424f7d0acb9d",
+    "decay_T2_rho1p00": "5f1852bcfca4a17581af40f4ab989be122f969b2c8bb6ee9219a2f8868df9d93",
+    "decay_T3_rho0p25": "73b6d1b1101af73000eb697a2080ec146249134959369f296f8cbbcd5536c00d",
+    "decay_T3_rho0p50": "3b3dc8793432b00d08d19db3f319ca06d9e4467fa2167a6b64f441a737004297",
+    "decay_T3_rho0p75": "90de36c9e265f8dc97830222053dbdb5526b4881f9e90ba0f324c96d46862845",
+    "decay_T3_rho1p00": "c1ca7807cb0deac019c5ae6cc491354cedb4c010d9890564b921376746390007",
+    "decay_T4_rho0p25": "5e913b11c8b825ddca1a244e7aa141c5a5258b60948d1c3fc173709a218784d1",
+    "decay_T4_rho0p50": "6c9145db826d69ac8587b033479b3d82462998f0b7ef327d535a9d0af4cebd85",
+    "decay_T4_rho0p75": "16a4a7bc691c82f6a9850298aff9f07b3169973978a101a2ca2e53baae5f80d1",
+    "decay_T4_rho1p00": "d336888df1dc888950b6f8eab0a0c6f81bb19f2826c23c6e6f678930ff1aa19c"
+  }
+}

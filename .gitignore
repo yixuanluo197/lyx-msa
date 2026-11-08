@@ -71,3 +71,10 @@ venv/
 
 # Frozen CMERC behavioral pilot: predictions and aggregate train statistics only
 !/experiments/xp_caldist_behavioral_calibration/20261107T172302Z/**/*.npz
+
+# Frozen Validation evidence sensitivity: predictions and visual QA only
+!/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/**/*.npz
+!/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/.omx/
+!/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/.omx/state/
+!/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/.omx/state/evidence_figures/
+!/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/.omx/state/evidence_figures/ralph-progress.json

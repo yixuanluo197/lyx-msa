@@ -1,0 +1,19 @@
+{
+  "stage": "validation_modality_evidence_sensitivity",
+  "created_at_utc": "2026-11-08T09:58:43Z",
+  "previous_pilot": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/20261107T172302Z",
+  "xp04": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z",
+  "anchors": {"IEMOCAP":1475,"MELD":67137},
+  "validation_sizes": {"IEMOCAP":{"dialogues":12,"utterances":527},"MELD":{"dialogues":114,"utterances":1109}},
+  "phases": {"overall_attenuation":["T-All","A","V"],"layer_attenuation":["T1","T2","T3","T4"],"random_masking":["T1","T2","T3","T4","T-All","A","V"]},
+  "attenuation": {"rho":[0.25,0.5,0.75,1.0],"repeats":1,"formula":"train_mean + (1-rho)*(x-train_mean)","reference":"train-only per-dimension means from previous verified statistics"},
+  "random_masking": {"ratios":[0.1,0.3,0.5,0.8],"repeats":5,"dimension_count":"int(floor(ratio*D + 0.5)) selected without replacement", "replacement":"train-only mean", "rng":"numpy PCG64(first128bitsBigEndian(SHA256(canonicalJSON[dataset,seed,dialogue_id,utterance_index,target,ratio,repeat]))); text-all layers consume independent sequential draws"},
+  "text_layers": {"meaning":"four stored RoBERTa arrays, not established encoder layer indices","T1":[0],"T2":[1],"T3":[2],"T4":[3],"T-All":[0,1,2,3]},
+  "visual_missingness": {"definition":"all raw visual dimensions exactly zero","expected_counts":{"IEMOCAP":1,"MELD":95},"handling":"retain original input and original saved prediction; exclude from active visual intervention; retain in all-sample summary and report present/missing strata separately"},
+  "inference": {"split":"validation","dtype":"float32","eval":true,"batch_size":16,"backend":"aten","preserve_original_batch_order_padding_masks":true,"one_target_utterance_at_a_time":true,"atol":1e-6,"rtol":1e-5,"reuse_verified_graph_indices":true,"optional_equivalent_execution_acceleration":"may use tracing/CUDA graph only after full-output parity checks on original and representative strongest modifications; no protocol/parameter changes"},
+  "statistics": {"source":"previous pilot train_statistics.npz","ddof":0,"recompute_train_mean_and_std_for_audit":true,"padding_excluded":true},
+  "analysis": {"bootstrap_unit":"dialogue_id","bootstrap_repeats":2000,"bootstrap_seed":20261108,"ci":"paired percentile 95%; same dialogue draws shared by all conditions of a dataset","random_mask_aggregation":"per-repeat classification metric then mean; per-utterance behavior averaged across repeats, no probability ensemble", "strata":["all","original_correct","original_wrong","true_class","original_prediction_class","visual_present","visual_missing"],"high_confidence_threshold":0.9,"high_sensitivity_case_definition":"original confidence>=0.9 and wrong, with flip or true-class probability drop>=0.1 at rho=1", "monotonicity":"report adjacent changes across rho0,0.25,0.5,0.75,1 without assuming monotonicity","interpretation":"dependence on feature representations, not reliability, causal emotion evidence, or physical changes"},
+  "native_batch_mean_control":"skipped; primary target-only protocol retained",
+  "figures":{"backend":"Python, matching supplied PyTorch/.py workflow","formats":["svg","pdf","png"],"data":"real validation predictions only","uncertainty":"2000 dialogue-level paired bootstrap intervals"},
+  "prohibited": ["CMERC_training","test_split_inference_or_metrics","joint_modalities","extra_seeds","reliability_score_fitting","temperature_scaling","historical_writes","automatic_formal_experiments"]
+}

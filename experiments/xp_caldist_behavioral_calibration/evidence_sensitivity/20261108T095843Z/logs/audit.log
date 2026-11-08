@@ -1,0 +1,6 @@
+Read-only audit; writes restricted to this audit.json and audit.log. No GPU/model forward/Test prediction deserialization/Test metrics.
+Prior artifacts: 151/151 match; manifest itself matches published SHA; total prior files hashed=152; verification passed.
+Required 8 documents read; actual CSV rows 18/54/4908. All 18 conditional AUROC intervals include zero; binary Brier/NLL deteriorate in 15/18 each.
+IEMOCAP seed1475: checkpoint/data/source SHA pass; six train mean/std/count arrays exact; train n=5283; Validation 12/527 identity exact; visual missing=1.
+MELD seed67137: checkpoint/data/source SHA pass; six train mean/std/count arrays exact; train n=9989; Validation 114/1109 identity exact; visual missing=95.
+Audit passed. Prior 152 files unchanged at audit end. Written only provenance/audit.json and logs/audit.log.
