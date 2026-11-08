@@ -1,0 +1,113 @@
+{
+  "status": "passed",
+  "historical_inputs_unchanged": true,
+  "config_unchanged": true,
+  "gpu_alignment_runs": 10,
+  "true_validation_runs": 10,
+  "pilot_runs": 6,
+  "perturbation_files": 18,
+  "perturbed_probability_vectors": 53988,
+  "behavior_rows": 14724,
+  "summary_rows": 18,
+  "cached_vs_original_full_vector_checks": 76,
+  "all_behavior_metrics_independently_recomputed": true,
+  "classification_summary_metrics_independently_recomputed": true,
+  "conditional_oof_metrics_and_bootstrap_ci_independently_recomputed": true,
+  "training_statistics_independently_recomputed": true,
+  "input_and_model_invariants_passed": true,
+  "graph_indices_invariants_passed": true,
+  "no_training": true,
+  "no_joint_modalities": true,
+  "no_extra_seed_perturbations": true,
+  "analysis_split": "validation",
+  "runs": [
+    {
+      "dataset": "IEMOCAP",
+      "seed": 1475,
+      "test_alignment": true,
+      "true_validation_identity": true,
+      "utterances": 527,
+      "dialogues": 12
+    },
+    {
+      "dataset": "IEMOCAP",
+      "seed": 67137,
+      "test_alignment": true,
+      "true_validation_identity": true,
+      "utterances": 527,
+      "dialogues": 12
+    },
+    {
+      "dataset": "IEMOCAP",
+      "seed": 2024,
+      "test_alignment": true,
+      "true_validation_identity": true,
+      "utterances": 527,
+      "dialogues": 12
+    },
+    {
+      "dataset": "IEMOCAP",
+      "seed": 3407,
+      "test_alignment": true,
+      "true_validation_identity": true,
+      "utterances": 527,
+      "dialogues": 12
+    },
+    {
+      "dataset": "IEMOCAP",
+      "seed": 42,
+      "test_alignment": true,
+      "true_validation_identity": true,
+      "utterances": 527,
+      "dialogues": 12
+    },
+    {
+      "dataset": "MELD",
+      "seed": 1475,
+      "test_alignment": true,
+      "true_validation_identity": true,
+      "utterances": 1109,
+      "dialogues": 114
+    },
+    {
+      "dataset": "MELD",
+      "seed": 67137,
+      "test_alignment": true,
+      "true_validation_identity": true,
+      "utterances": 1109,
+      "dialogues": 114
+    },
+    {
+      "dataset": "MELD",
+      "seed": 2024,
+      "test_alignment": true,
+      "true_validation_identity": true,
+      "utterances": 1109,
+      "dialogues": 114
+    },
+    {
+      "dataset": "MELD",
+      "seed": 3407,
+      "test_alignment": true,
+      "true_validation_identity": true,
+      "utterances": 1109,
+      "dialogues": 114
+    },
+    {
+      "dataset": "MELD",
+      "seed": 42,
+      "test_alignment": true,
+      "true_validation_identity": true,
+      "utterances": 1109,
+      "dialogues": 114
+    }
+  ],
+  "limitations": [
+    "Two anchor seeds only; exploratory validation diagnostics, not generalization or calibration improvement",
+    "Bootstrap uses fixed LODO scores and does not cover refit uncertainty",
+    "Feature-space perturbations do not demonstrate physical or semantic robustness"
+  ],
+  "unit_tests_passed": 27,
+  "gpu_processes_empty_at_completion": true,
+  "completed_at": "2026-11-07T18:00:49Z"
+}

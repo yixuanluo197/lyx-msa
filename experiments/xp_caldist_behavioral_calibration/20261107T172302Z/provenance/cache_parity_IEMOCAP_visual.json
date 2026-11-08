@@ -1,0 +1,106 @@
+{
+  "protocol_change": false,
+  "optimization": "reuse constant graph indices only; recompute all feature tensors and model operations",
+  "wrapper_sha256": "2b49ec4d2674ab7df176bbb6ed1a16b23634864a2bebfa82882068eee2d4ff17",
+  "cache_sha256": "af5994faa3ccf7560ab65d1797ca181932b438ca463380ce2e7425fdab12b49d",
+  "runner_sha256": "de0b49182745b71efca7a59882fbbeb61e3c676b5ec86cf914caca4924665a80",
+  "parity_checks": [
+    {
+      "batch_lengths": [
+        30,
+        18,
+        53,
+        30,
+        94,
+        47,
+        53,
+        43,
+        26,
+        51,
+        35,
+        47
+      ],
+      "call_in_batch": 1,
+      "passed": true,
+      "probabilities_passed": true,
+      "max_log_probability_error": 2.86102294921875e-06,
+      "max_probability_error": 2.384185791015625e-07
+    },
+    {
+      "batch_lengths": [
+        30,
+        18,
+        53,
+        30,
+        94,
+        47,
+        53,
+        43,
+        26,
+        51,
+        35,
+        47
+      ],
+      "call_in_batch": 2,
+      "passed": true,
+      "probabilities_passed": true,
+      "max_log_probability_error": 2.86102294921875e-06,
+      "max_probability_error": 2.980232238769531e-07
+    },
+    {
+      "batch_lengths": [
+        30,
+        18,
+        53,
+        30,
+        94,
+        47,
+        53,
+        43,
+        26,
+        51,
+        35,
+        47
+      ],
+      "call_in_batch": 7,
+      "passed": true,
+      "probabilities_passed": true,
+      "max_log_probability_error": 1.9073486328125e-06,
+      "max_probability_error": 2.384185791015625e-07
+    },
+    {
+      "batch_lengths": [
+        30,
+        18,
+        53,
+        30,
+        94,
+        47,
+        53,
+        43,
+        26,
+        51,
+        35,
+        47
+      ],
+      "call_in_batch": 12,
+      "passed": true,
+      "probabilities_passed": true,
+      "max_log_probability_error": 1.9073486328125e-06,
+      "max_probability_error": 2.384185791015625e-07
+    }
+  ],
+  "started_at": 1794073336.7900867,
+  "passed": true,
+  "finished_at": 1794073720.351549,
+  "cache_statistics": [
+    {
+      "hyper_hits": 5797,
+      "hyper_misses": 1,
+      "gnn_hits": 5797,
+      "gnn_misses": 1,
+      "gnn_bypasses": 0,
+      "feature_exact_checks": 2
+    }
+  ]
+}

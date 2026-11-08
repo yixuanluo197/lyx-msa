@@ -1,0 +1,19 @@
+E
+======================================================================
+ERROR: test_runner (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_runner
+Traceback (most recent call last):
+  File "/data2/yb/conda_envs/cmerc-xp-repro/lib/python3.10/unittest/loader.py", line 436, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "/data2/yb/conda_envs/cmerc-xp-repro/lib/python3.10/unittest/loader.py", line 377, in _get_module_from_name
+    __import__(name)
+  File "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/20261107T172302Z/scripts/test_runner.py", line 3, in <module>
+    from run_pilot import compare_alignment
+ModuleNotFoundError: No module named 'run_pilot'
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (errors=1)

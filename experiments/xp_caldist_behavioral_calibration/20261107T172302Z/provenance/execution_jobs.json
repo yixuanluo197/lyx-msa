@@ -1,0 +1,351 @@
+{
+  "gpu_host_index": 3,
+  "gpu_uuid": "GPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456",
+  "jobs": [
+    {
+      "dataset": "IEMOCAP",
+      "modality": "audio",
+      "pid": 416566,
+      "status": "stopped_for_equivalent_graph_cache",
+      "log": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/20261107T172302Z/logs/pilot_audio_IEMOCAP.log",
+      "command": "/data2/yb/conda_envs/cmerc-xp-repro/bin/python -u experiments/xp_caldist_behavioral_calibration/20261107T172302Z/scripts/run_pilot.py --root experiments/xp_caldist_behavioral_calibration/20261107T172302Z --stage pilot --dataset IEMOCAP --modality audio",
+      "exit_status_owner": "root session",
+      "stop_signal": "SIGTERM",
+      "stopped_at": "2026-11-07T17:33:01.254328+00:00",
+      "reason": "Leader-authorized replacement after profiling immutable graph index rebuild cost; preserve all logs; no completed outputs overwritten"
+    },
+    {
+      "dataset": "MELD",
+      "modality": "audio",
+      "pid": 419529,
+      "status": "complete",
+      "started_at": "2026-11-07T17:31:14.723175+00:00",
+      "log": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/20261107T172302Z/logs/pilot_audio_MELD.log",
+      "command": [
+        "/data2/yb/conda_envs/cmerc-xp-repro/bin/python",
+        "-u",
+        "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/20261107T172302Z/scripts/run_pilot.py",
+        "--root",
+        "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/20261107T172302Z",
+        "--stage",
+        "pilot",
+        "--dataset",
+        "MELD",
+        "--modality",
+        "audio"
+      ],
+      "environment_overrides": {
+        "CUDA_VISIBLE_DEVICES": "3",
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "LD_LIBRARY_PATH": "/data2/yb/conda_envs/cmerc-xp-repro/lib/python3.10/site-packages/nvidia/cusparse/lib",
+        "PYTORCH_CUDA_ALLOC_CONF": "garbage_collection_threshold:0.8"
+      },
+      "exit_status": "completion_artifact_pending",
+      "exit_code": 0,
+      "complete_artifact": "experiments/xp_caldist_behavioral_calibration/20261107T172302Z/runs/MELD/seed67137/audio_complete.json",
+      "targets": 1109,
+      "forwards": 12199,
+      "seconds": 276.23287110205274,
+      "exit_evidence": "experiments/xp_caldist_behavioral_calibration/20261107T172302Z/logs/pilot_audio_MELD_exit.json"
+    },
+    {
+      "dataset": "IEMOCAP",
+      "modality": "audio",
+      "pid": 428797,
+      "status": "complete",
+      "started_at": "2026-11-07T17:36:07.977560+00:00",
+      "log": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/20261107T172302Z/logs/pilot_audio_IEMOCAP_cached.log",
+      "command": [
+        "/data2/yb/conda_envs/cmerc-xp-repro/bin/python",
+        "-u",
+        "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/20261107T172302Z/scripts/run_cached_pilot.py",
+        "--root",
+        "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/20261107T172302Z",
+        "--stage",
+        "pilot",
+        "--dataset",
+        "IEMOCAP",
+        "--modality",
+        "audio"
+      ],
+      "environment_overrides": {
+        "CUDA_VISIBLE_DEVICES": "3",
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "LD_LIBRARY_PATH": "/data2/yb/conda_envs/cmerc-xp-repro/lib/python3.10/site-packages/nvidia/cusparse/lib",
+        "PYTORCH_CUDA_ALLOC_CONF": "garbage_collection_threshold:0.8"
+      },
+      "source_sha256": {
+        "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/20261107T172302Z/scripts/run_cached_pilot.py": "abcf84e2da9caca31204090c4068cfd6844508dae0be15384e848f6779021253",
+        "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/20261107T172302Z/scripts/graph_index_cache.py": "af5994faa3ccf7560ab65d1797ca181932b438ca463380ce2e7425fdab12b49d",
+        "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/20261107T172302Z/scripts/run_pilot.py": "de0b49182745b71efca7a59882fbbeb61e3c676b5ec86cf914caca4924665a80"
+      },
+      "equivalent_graph_cache": true,
+      "exit_code": 0,
+      "complete_artifact": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/20261107T172302Z/runs/IEMOCAP/seed1475/audio_complete.json",
+      "exit_evidence": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/20261107T172302Z/logs/pilot_audio_IEMOCAP_cached_exit.json"
+    },
+    {
+      "dataset": "IEMOCAP",
+      "modality": "visual",
+      "pid": 440253,
+      "status": "complete",
+      "started_at": "2026-11-07T17:42:15.748401+00:00",
+      "log": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/20261107T172302Z/logs/pilot_visual_IEMOCAP_cached.log",
+      "command": [
+        "/data2/yb/conda_envs/cmerc-xp-repro/bin/python",
+        "-u",
+        "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/20261107T172302Z/scripts/run_cached_pilot.py",
+        "--root",
+        "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/20261107T172302Z",
+        "--stage",
+        "pilot",
+        "--dataset",
+        "IEMOCAP",
+        "--modality",
+        "visual"
+      ],
+      "environment_overrides": {
+        "CUDA_VISIBLE_DEVICES": "3",
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "LD_LIBRARY_PATH": "/data2/yb/conda_envs/cmerc-xp-repro/lib/python3.10/site-packages/nvidia/cusparse/lib",
+        "PYTORCH_CUDA_ALLOC_CONF": "garbage_collection_threshold:0.8"
+      },
+      "source_sha256": {
+        "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/20261107T172302Z/scripts/run_cached_pilot.py": "2b49ec4d2674ab7df176bbb6ed1a16b23634864a2bebfa82882068eee2d4ff17",
+        "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/20261107T172302Z/scripts/graph_index_cache.py": "af5994faa3ccf7560ab65d1797ca181932b438ca463380ce2e7425fdab12b49d",
+        "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/20261107T172302Z/scripts/run_pilot.py": "de0b49182745b71efca7a59882fbbeb61e3c676b5ec86cf914caca4924665a80"
+      },
+      "equivalent_graph_cache": true,
+      "exit_code": 0,
+      "complete_artifact": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/20261107T172302Z/runs/IEMOCAP/seed1475/visual_complete.json",
+      "exit_evidence": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/20261107T172302Z/logs/pilot_visual_IEMOCAP_cached_exit.json"
+    },
+    {
+      "dataset": "MELD",
+      "modality": "visual",
+      "pid": 441082,
+      "status": "complete",
+      "started_at": "2026-11-07T17:42:40.716114+00:00",
+      "log": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/20261107T172302Z/logs/pilot_visual_MELD_cached.log",
+      "command": [
+        "/data2/yb/conda_envs/cmerc-xp-repro/bin/python",
+        "-u",
+        "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/20261107T172302Z/scripts/run_cached_pilot.py",
+        "--root",
+        "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/20261107T172302Z",
+        "--stage",
+        "pilot",
+        "--dataset",
+        "MELD",
+        "--modality",
+        "visual"
+      ],
+      "environment_overrides": {
+        "CUDA_VISIBLE_DEVICES": "3",
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "LD_LIBRARY_PATH": "/data2/yb/conda_envs/cmerc-xp-repro/lib/python3.10/site-packages/nvidia/cusparse/lib",
+        "PYTORCH_CUDA_ALLOC_CONF": "garbage_collection_threshold:0.8"
+      },
+      "source_sha256": {
+        "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/20261107T172302Z/scripts/run_cached_pilot.py": "2b49ec4d2674ab7df176bbb6ed1a16b23634864a2bebfa82882068eee2d4ff17",
+        "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/20261107T172302Z/scripts/graph_index_cache.py": "af5994faa3ccf7560ab65d1797ca181932b438ca463380ce2e7425fdab12b49d",
+        "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/20261107T172302Z/scripts/run_pilot.py": "de0b49182745b71efca7a59882fbbeb61e3c676b5ec86cf914caca4924665a80"
+      },
+      "equivalent_graph_cache": true,
+      "exit_code": 0,
+      "complete_artifact": "experiments/xp_caldist_behavioral_calibration/20261107T172302Z/runs/MELD/seed67137/visual_complete.json",
+      "exit_evidence": "experiments/xp_caldist_behavioral_calibration/20261107T172302Z/logs/pilot_visual_MELD_cached_exit.json",
+      "seconds": 285.8628874049755
+    },
+    {
+      "dataset": "IEMOCAP",
+      "modality": "text_representation",
+      "pid": 452589,
+      "status": "complete",
+      "started_at": "2026-11-07T17:48:59.024890+00:00",
+      "log": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/20261107T172302Z/logs/pilot_text_representation_IEMOCAP_cached.log",
+      "command": [
+        "/data2/yb/conda_envs/cmerc-xp-repro/bin/python",
+        "-u",
+        "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/20261107T172302Z/scripts/run_cached_pilot.py",
+        "--root",
+        "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/20261107T172302Z",
+        "--stage",
+        "pilot",
+        "--dataset",
+        "IEMOCAP",
+        "--modality",
+        "text_representation"
+      ],
+      "environment_overrides": {
+        "CUDA_VISIBLE_DEVICES": "3",
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "LD_LIBRARY_PATH": "/data2/yb/conda_envs/cmerc-xp-repro/lib/python3.10/site-packages/nvidia/cusparse/lib",
+        "PYTORCH_CUDA_ALLOC_CONF": "garbage_collection_threshold:0.8"
+      },
+      "source_sha256": {
+        "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/20261107T172302Z/scripts/run_cached_pilot.py": "2b49ec4d2674ab7df176bbb6ed1a16b23634864a2bebfa82882068eee2d4ff17",
+        "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/20261107T172302Z/scripts/graph_index_cache.py": "af5994faa3ccf7560ab65d1797ca181932b438ca463380ce2e7425fdab12b49d",
+        "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/20261107T172302Z/scripts/run_pilot.py": "de0b49182745b71efca7a59882fbbeb61e3c676b5ec86cf914caca4924665a80"
+      },
+      "equivalent_graph_cache": true,
+      "exit_code": 0,
+      "complete_artifact": "experiments/xp_caldist_behavioral_calibration/20261107T172302Z/runs/IEMOCAP/seed1475/text_representation_complete.json",
+      "exit_evidence": "experiments/xp_caldist_behavioral_calibration/20261107T172302Z/logs/pilot_text_representation_IEMOCAP_cached_exit.json"
+    },
+    {
+      "dataset": "MELD",
+      "modality": "text_representation",
+      "pid": 453900,
+      "status": "complete",
+      "started_at": "2026-11-07T17:49:40.080497+00:00",
+      "log": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/20261107T172302Z/logs/pilot_text_representation_MELD_cached.log",
+      "command": [
+        "/data2/yb/conda_envs/cmerc-xp-repro/bin/python",
+        "-u",
+        "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/20261107T172302Z/scripts/run_cached_pilot.py",
+        "--root",
+        "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/20261107T172302Z",
+        "--stage",
+        "pilot",
+        "--dataset",
+        "MELD",
+        "--modality",
+        "text_representation"
+      ],
+      "environment_overrides": {
+        "CUDA_VISIBLE_DEVICES": "3",
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "LD_LIBRARY_PATH": "/data2/yb/conda_envs/cmerc-xp-repro/lib/python3.10/site-packages/nvidia/cusparse/lib",
+        "PYTORCH_CUDA_ALLOC_CONF": "garbage_collection_threshold:0.8"
+      },
+      "source_sha256": {
+        "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/20261107T172302Z/scripts/run_cached_pilot.py": "2b49ec4d2674ab7df176bbb6ed1a16b23634864a2bebfa82882068eee2d4ff17",
+        "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/20261107T172302Z/scripts/graph_index_cache.py": "af5994faa3ccf7560ab65d1797ca181932b438ca463380ce2e7425fdab12b49d",
+        "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/20261107T172302Z/scripts/run_pilot.py": "de0b49182745b71efca7a59882fbbeb61e3c676b5ec86cf914caca4924665a80"
+      },
+      "equivalent_graph_cache": true,
+      "exit_code": 0,
+      "complete_artifact": "experiments/xp_caldist_behavioral_calibration/20261107T172302Z/runs/MELD/seed67137/text_representation_complete.json",
+      "exit_evidence": "experiments/xp_caldist_behavioral_calibration/20261107T172302Z/logs/pilot_text_representation_MELD_cached_exit.json",
+      "seconds": 266.6700981820468
+    }
+  ],
+  "all_six_pilots_complete": true,
+  "completed_at": "2026-11-07T17:56:04.737551+00:00",
+  "verified_complete_runs": [
+    {
+      "dataset": "IEMOCAP",
+      "modality": "audio",
+      "seconds": 338.73330116900615,
+      "forwards": 5797,
+      "changed_target_counts": {
+        "gaussian": 2635,
+        "dropout": 2635,
+        "attenuation": 527
+      }
+    },
+    {
+      "dataset": "IEMOCAP",
+      "modality": "visual",
+      "seconds": 375.5595325770555,
+      "forwards": 5797,
+      "changed_target_counts": {
+        "gaussian": 2635,
+        "dropout": 2630,
+        "attenuation": 526
+      }
+    },
+    {
+      "dataset": "IEMOCAP",
+      "modality": "text_representation",
+      "seconds": 398.264635931002,
+      "forwards": 5797,
+      "changed_target_counts": {
+        "gaussian": 2635,
+        "dropout": 2635,
+        "attenuation": 527
+      }
+    },
+    {
+      "dataset": "MELD",
+      "modality": "audio",
+      "seconds": 276.23287110205274,
+      "forwards": 12199,
+      "changed_target_counts": {
+        "gaussian": 5545,
+        "dropout": 5543,
+        "attenuation": 1109
+      }
+    },
+    {
+      "dataset": "MELD",
+      "modality": "visual",
+      "seconds": 285.8628874049755,
+      "forwards": 12199,
+      "changed_target_counts": {
+        "gaussian": 5545,
+        "dropout": 5070,
+        "attenuation": 1014
+      }
+    },
+    {
+      "dataset": "MELD",
+      "modality": "text_representation",
+      "seconds": 266.6700981820468,
+      "forwards": 12199,
+      "changed_target_counts": {
+        "gaussian": 5545,
+        "dropout": 5545,
+        "attenuation": 1109
+      }
+    }
+  ],
+  "status": "complete",
+  "successful_pilot_count": 6,
+  "controlled_stopped_attempt_count": 1,
+  "failed_pilot_count": 0,
+  "verified_npz_count": 18,
+  "target_forward_count": 53988,
+  "successful_run_compute_seconds": 1941.3233263661386,
+  "cache_parity_summary": {
+    "checks": 76,
+    "all_passed": true,
+    "max_probability_error": 2.980232238769531e-07,
+    "max_log_probability_error": 2.86102294921875e-06
+  },
+  "final_gpu_processes_empty": true,
+  "resource_summary": {
+    "host": "user23",
+    "gpu_host_index": 3,
+    "gpu_uuid": "GPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456",
+    "observed_concurrent_memory_mib_max": 2065,
+    "iemocap_peak_allocated_mib": 1119.58740234375,
+    "meld_peak_allocated_mib_max": 203.37060546875,
+    "no_other_projects_observed_on_gpu": true
+  },
+  "leader_observed_original_iemocap_audio_stop": {
+    "python_pid": 416566,
+    "signal": "SIGTERM",
+    "shell_exit_code": 143,
+    "evidence": "primary exec session56332 completed exit143; no complete perturbation artifact from that attempt"
+  }
+}

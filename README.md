@@ -6,6 +6,7 @@ CMERC 多模态对话情绪识别代码、复现工程与时间因果变体，�
 
 ## 阅读入口
 
+- [CMERC 单模态行为鲁棒性 Pilot](experiments/xp_caldist_behavioral_calibration/20261107T172302Z/GITHUB_DELIVERY.md)：十个 XP04 checkpoint 的 GPU 原预测对齐、真实 Validation 推理及 Audio/Visual/Text Representation 单模态实验全部完成；提供完整概率、CSV、代码和来源校验。未确认稳定独立正确性收益，未运行联合模态或重新训练。
 - [实验档案总览](experiment_records/README.md)：历史复现、XP04 五 seed 主线，以及本次官方 README 单 Seed 对照的代码版本、配置、逐轮指标和最终结果。
 - [官方 README 四组对照实验](experiment_records/05_official_readme_reproduction/README.md)：IEMOCAP seed1475、MELD seed67137 的 Baseline/CMERC 实测、源码协议审计和与 XP04 的对照；保留官方测试集选模。
 - [CMERC 最小消融根因验证](experiment_records/06_minimal_ablation_validation/README.md)：MELD去CC及IEMOCAP固定源顺序Batch的3项正式实验；验证集选模、最终测试一次，区分相对负增量缩小与绝对性能提升。

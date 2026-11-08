@@ -1,0 +1,33 @@
+{
+  "passed": true,
+  "checks": {
+    "dialogue_ids": {
+      "equal": true
+    },
+    "utterance_indices": {
+      "equal": true
+    },
+    "labels": {
+      "equal": true
+    },
+    "predictions": {
+      "equal": true
+    },
+    "probabilities": {
+      "equal": true,
+      "max_abs_error": 2.980232238769531e-07
+    },
+    "log_probabilities": {
+      "equal": true,
+      "max_abs_error": 2.86102294921875e-06
+    },
+    "argmax": {
+      "equal": true
+    }
+  },
+  "dataset": "IEMOCAP",
+  "seed": 67137,
+  "reference": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/results/cmerc/IEMOCAP/validation/seed67137/predictions.npz",
+  "seconds": 1.6813565229531378,
+  "peak_allocated_mib": 1992.302734375
+}

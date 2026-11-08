@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/20261107T172302Z/scripts/run_pilot.py", line 292, in <module>
+    if __name__=='__main__':main()
+  File "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/20261107T172302Z/scripts/run_pilot.py", line 286, in main
+    if args.stage=='align':align(root,api)
+  File "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/20261107T172302Z/scripts/run_pilot.py", line 138, in align
+    evidence={};frozen=freeze_inputs(root)
+  File "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/20261107T172302Z/scripts/run_pilot.py", line 125, in freeze_inputs
+    assert all(files[str(CODE/f)]==v for f,v in origin.items() if str(CODE/f) in files)
+AssertionError

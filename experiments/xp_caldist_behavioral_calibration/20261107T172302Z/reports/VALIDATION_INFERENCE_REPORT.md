@@ -1,0 +1,5 @@
+# 真正验证集原始推理
+
+全部10个checkpoint均已生成Validation概率。IEMOCAP为12对话/527话语；MELD为114对话/1109话语。按XP04 provenance中的validation_ids选取，保持原顺序，与train/test均不相交。
+
+每个run保存validation_predictions.npz，包含完整probability/log probability、标签、预测、dialogue_id、utterance_index、speaker_id、batch_index和对话长度。只有IEMOCAP1475与MELD67137进入本阶段扰动；其余seed没有执行扰动或正式实验。

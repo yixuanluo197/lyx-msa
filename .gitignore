@@ -68,3 +68,6 @@ venv/
 *.pem
 *.key
 .DS_Store
+
+# Frozen CMERC behavioral pilot: predictions and aggregate train statistics only
+!/experiments/xp_caldist_behavioral_calibration/20261107T172302Z/**/*.npz

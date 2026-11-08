@@ -1,0 +1,33 @@
+         8640 function calls (8469 primitive calls) in 1.034 seconds
+
+   Ordered by: cumulative time
+   List reduced from 164 to 25 due to restriction <25>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        3    0.000    0.000    0.999    0.333 /data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/20261107T172302Z/scripts/run_pilot.py:99(forward)
+    117/3    0.001    0.000    0.999    0.333 /data2/yb/conda_envs/cmerc-xp-repro/lib/python3.10/site-packages/torch/nn/modules/module.py:1188(_call_impl)
+        3    0.001    0.000    0.999    0.333 /data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/code/model.py:720(forward)
+        3    0.008    0.003    0.902    0.301 /data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/code/model_hyper.py:136(forward)
+        3    0.735    0.245    0.743    0.248 /data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/code/model_hyper.py:235(create_hyper_index)
+        3    0.128    0.043    0.132    0.044 /data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/code/model_hyper.py:328(create_gnn_index)
+        3    0.000    0.000    0.092    0.031 /data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/code/train_cm.py:82(call)
+        3    0.000    0.000    0.092    0.031 /data2/yb/conda_envs/cmerc-xp-repro/lib/python3.10/site-packages/torch/nn/modules/rnn.py:917(forward)
+        3    0.092    0.031    0.092    0.031 {built-in method torch.gru}
+        1    0.000    0.000    0.035    0.035 /data2/yb/conda_envs/cmerc-xp-repro/lib/python3.10/site-packages/torch/cuda/__init__.py:560(synchronize)
+        1    0.035    0.035    0.035    0.035 {built-in method torch._C._cuda_synchronize}
+       30    0.001    0.000    0.012    0.000 /data2/yb/conda_envs/cmerc-xp-repro/lib/python3.10/site-packages/torch_geometric/nn/conv/message_passing.py:378(propagate)
+        9    0.002    0.000    0.010    0.001 /data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/code/HypergraphConv.py:94(forward)
+       12    0.000    0.000    0.008    0.001 /data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/code/high_fre_conv.py:10(forward)
+       30    0.006    0.000    0.006    0.000 {method 'cuda' of 'torch._C._TensorBase' objects}
+      183    0.005    0.000    0.005    0.000 {built-in method torch.cat}
+       12    0.001    0.000    0.004    0.000 /data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/code/high_fre_conv.py:23(message)
+       30    0.000    0.000    0.003    0.000 /data2/yb/conda_envs/cmerc-xp-repro/lib/python3.10/site-packages/torch_geometric/nn/conv/message_passing.py:591(aggregate)
+       30    0.000    0.000    0.003    0.000 /data2/yb/conda_envs/cmerc-xp-repro/lib/python3.10/site-packages/torch_geometric/experimental.py:112(wrapper)
+       30    0.001    0.000    0.003    0.000 /data2/yb/conda_envs/cmerc-xp-repro/lib/python3.10/site-packages/torch_geometric/nn/conv/message_passing.py:310(_collect)
+       30    0.000    0.000    0.003    0.000 /data2/yb/conda_envs/cmerc-xp-repro/lib/python3.10/site-packages/torch_geometric/nn/aggr/base.py:95(__call__)
+       30    0.000    0.000    0.002    0.000 /data2/yb/conda_envs/cmerc-xp-repro/lib/python3.10/site-packages/torch_geometric/nn/aggr/basic.py:19(forward)
+       30    0.000    0.000    0.002    0.000 /data2/yb/conda_envs/cmerc-xp-repro/lib/python3.10/site-packages/torch_geometric/nn/aggr/base.py:167(reduce)
+       30    0.000    0.000    0.002    0.000 /data2/yb/conda_envs/cmerc-xp-repro/lib/python3.10/site-packages/torch_geometric/utils/scatter.py:15(scatter)
+       27    0.000    0.000    0.002    0.000 /data2/yb/conda_envs/cmerc-xp-repro/lib/python3.10/site-packages/torch/nn/modules/linear.py:113(forward)
+
+

@@ -1,0 +1,33 @@
+{
+  "passed": true,
+  "checks": {
+    "dialogue_ids": {
+      "equal": true
+    },
+    "utterance_indices": {
+      "equal": true
+    },
+    "labels": {
+      "equal": true
+    },
+    "predictions": {
+      "equal": true
+    },
+    "probabilities": {
+      "equal": true,
+      "max_abs_error": 2.384185791015625e-07
+    },
+    "log_probabilities": {
+      "equal": true,
+      "max_abs_error": 7.152557373046875e-07
+    },
+    "argmax": {
+      "equal": true
+    }
+  },
+  "dataset": "MELD",
+  "seed": 1475,
+  "reference": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/results/cmerc/MELD/validation/seed1475/predictions.npz",
+  "seconds": 0.8026229189708829,
+  "peak_allocated_mib": 1992.302734375
+}

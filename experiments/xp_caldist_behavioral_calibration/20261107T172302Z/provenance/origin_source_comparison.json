@@ -1,0 +1,24 @@
+{
+  "mismatches": {
+    "scripts/multiseed_scheduler.py": {
+      "expected": "1ff51520491137cd1132984723c9415519768695af65855135a0d74fc4eadd83",
+      "actual": "ca85f940763515d52d767eede25858381a147259f019aa642a3e0ffdf951c1ba",
+      "used_by_this_run": false
+    }
+  },
+  "enforced_imported_files": [
+    "model.py",
+    "model_cm.py",
+    "dataloader.py",
+    "train_cm.py",
+    "model_hyper.py",
+    "model_GCN.py",
+    "HypergraphConv.py",
+    "causal_graph.py",
+    "high_fre_conv.py",
+    "clloss.py",
+    "evaluation_metrics.py",
+    "scripts/evaluate_checkpoint.py"
+  ],
+  "note": "Historical scheduling code is not imported or executed by this experiment."
+}

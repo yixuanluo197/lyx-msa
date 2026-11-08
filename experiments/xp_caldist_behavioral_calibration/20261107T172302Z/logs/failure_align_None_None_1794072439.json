@@ -1,0 +1,4 @@
+{
+  "error": "AssertionError()",
+  "traceback": "Traceback (most recent call last):\n  File \"/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/20261107T172302Z/scripts/run_pilot.py\", line 286, in main\n    if args.stage=='align':align(root,api)\n  File \"/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/20261107T172302Z/scripts/run_pilot.py\", line 138, in align\n    evidence={};frozen=freeze_inputs(root)\n  File \"/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/20261107T172302Z/scripts/run_pilot.py\", line 125, in freeze_inputs\n    assert all(files[str(CODE/f)]==v for f,v in origin.items() if str(CODE/f) in files)\nAssertionError\n"
+}

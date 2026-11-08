@@ -1,0 +1,15 @@
+{
+  "stage": "GPU alignment and validation-only single-modality feature-space pilot",
+  "baseline": "CMERC/experiments/xp_mainline_validation/20261016T050823Z",
+  "alignment_seeds": [1475, 67137, 2024, 3407, 42],
+  "pilots": {"IEMOCAP": 1475, "MELD": 67137},
+  "modality_order": ["audio", "visual", "text_representation"],
+  "perturbations": {"gaussian": {"strength": 0.05, "repeats": 5}, "dropout": {"strength": 0.05, "repeats": 5}, "attenuation": {"strength": 0.95, "repeats": 1}},
+  "statistics": {"split": "train", "std_ddof": 0, "text_layers": "independent statistics and independent draws"},
+  "rng": "numpy PCG64 seeded by first 128 bits of SHA256 of canonical JSON [dataset,seed,dialogue_id,utterance_index,modality,type,strength,repeat]; text layer streams consumed in layer order",
+  "inference": {"dtype": "float32", "eval": true, "batch_size": 16, "preserve_batch_order_and_padding": true, "target_only": true, "parallel_targets": false, "atol": 1e-6, "rtol": 1e-5},
+  "diagnostics": {"ece_bins": 15, "confidence_strata": "fixed intervals of width 0.1", "bootstrap_unit": "dialogue", "bootstrap_repeats": 2000, "bootstrap_seed": 20261107, "conditional_diagnostic": "leave-one-dialogue-out logistic regression: original confidence vs original confidence plus mu, confidence_MAD, JS; validation-only, no hyperparameter search", "stable": "FlipRate == 0; separately report MAD and JS", "sensitive": "FlipRate > 0", "multiple_comparisons": "exploratory, no confirmatory significance claims"},
+  "no_calibration_fit": true,
+  "no_joint_experiments": true,
+  "text_semantic_perturbations": false
+}
