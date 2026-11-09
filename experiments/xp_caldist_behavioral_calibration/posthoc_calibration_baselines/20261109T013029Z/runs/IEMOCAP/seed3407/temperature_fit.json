@@ -1,0 +1,23 @@
+{
+  "dataset": "IEMOCAP",
+  "seed": 3407,
+  "temperature": 2.132159149609369,
+  "validation_nll_before": 1.1924527692918143,
+  "validation_nll_after": 0.9568920877733559,
+  "nll_improvement": 0.23556068151845844,
+  "optimization_method": "2001-point log grid plus deterministic golden-section refinement",
+  "search_bounds": [
+    0.05,
+    20.0
+  ],
+  "search_grid_size": 2001,
+  "grid_best_index": 1253,
+  "grid_best_temperature": 2.1338337941841377,
+  "grid_best_nll": 0.956892299093962,
+  "convergence_status": "converged_interior",
+  "boundary_optimum": false,
+  "refinement_iterations": 128,
+  "checkpoint_sha256": "e4978c68e4119309d371152aeec469149c3fdd8989078182fb348c6db7e4f0ed",
+  "validation_split_hash": "44d678894d4260e0a302ef466c3f255117b96a2ecd876d973761d3c08d37bc70",
+  "validation_prediction_sha256": "39bd02e4ab0a88f9b04cd862c19a3d8f6a2a50cc4dc1b5eaba52d975e0d6c0a9"
+}

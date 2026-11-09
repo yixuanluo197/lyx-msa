@@ -1,0 +1,23 @@
+{
+  "dataset": "MELD",
+  "seed": 3407,
+  "temperature": 0.6375642171657696,
+  "validation_nll_before": 1.1051650146753753,
+  "validation_nll_after": 1.0093970385049968,
+  "nll_improvement": 0.09576797617037847,
+  "optimization_method": "2001-point log grid plus deterministic golden-section refinement",
+  "search_bounds": [
+    0.05,
+    20.0
+  ],
+  "search_grid_size": 2001,
+  "grid_best_index": 850,
+  "grid_best_temperature": 0.6380364656795914,
+  "grid_best_nll": 1.0093973531032496,
+  "convergence_status": "converged_interior",
+  "boundary_optimum": false,
+  "refinement_iterations": 128,
+  "checkpoint_sha256": "0c0ccae216958f22d6c58d8d4d5a566ef61e22a81a29c0f815d7b7e180404562",
+  "validation_split_hash": "702621a4bd060d9972d2a1cd624c9699097d1d5d59fcece6bb8e72ae133c8a48",
+  "validation_prediction_sha256": "f180c75eaa975046e996806c4f9dd2ce202e4b35edeffcd911c2b07a1adbcc76"
+}

@@ -1,0 +1,380 @@
+{
+  "status": "passed",
+  "completed_at_utc": "2026-11-09T01:35:38Z",
+  "scope": "read-only checkpoint, prediction, split, and Experiment 6 identity audit",
+  "datasets": {
+    "IEMOCAP": [
+      {
+        "seed": 1475,
+        "checkpoint": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/cmerc/IEMOCAP_validation_seed1475/best.pt",
+        "checkpoint_sha256": "2c0d1a7a39627e12d1244d23a225ad3da03bbce071a118909921a547a2bfd106",
+        "checkpoint_hash_matches_prior": true,
+        "splits": {
+          "validation": {
+            "path": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/20261107T172302Z/runs/IEMOCAP/seed1475/validation_predictions.npz",
+            "file_sha256": "656a1fcc20d181b1c29c1640ab9a6f599474dfb839f03c1ec2495b8e6036629c",
+            "artifact_manifest_matches": true,
+            "identity_sha256": "44d678894d4260e0a302ef466c3f255117b96a2ecd876d973761d3c08d37bc70",
+            "utterances": 527,
+            "dialogues": 12,
+            "classes": 6,
+            "unique_dialogue_utterance_ids": true,
+            "same_metadata_across_seeds": true,
+            "expected_size_matches": true
+          },
+          "test": {
+            "path": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/20261107T172302Z/runs/IEMOCAP/seed1475/test_alignment_predictions.npz",
+            "file_sha256": "fc5b982ada469bd3f9034b7b81750041354b6f800938fb9cf54f891065904168",
+            "artifact_manifest_matches": true,
+            "identity_sha256": "da3edab8b90259bd497194db6ca8f97e6fbbb6aefdfab09a8bba05527756e8a1",
+            "utterances": 1623,
+            "dialogues": 31,
+            "classes": 6,
+            "unique_dialogue_utterance_ids": true,
+            "same_metadata_across_seeds": true,
+            "expected_size_matches": true
+          }
+        },
+        "validation_test_dialogue_overlap": []
+      },
+      {
+        "seed": 67137,
+        "checkpoint": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/cmerc/IEMOCAP_validation_seed67137/best.pt",
+        "checkpoint_sha256": "1b4b91bc683de99264a7b446b84187bae3b982f1ff7c73b552e3c8e3f82eedf3",
+        "checkpoint_hash_matches_prior": true,
+        "splits": {
+          "validation": {
+            "path": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/20261107T172302Z/runs/IEMOCAP/seed67137/validation_predictions.npz",
+            "file_sha256": "68f08248594ea5fe4ff0f4c7f11ca4a813c607f3416d31ee9e54c92356462967",
+            "artifact_manifest_matches": true,
+            "identity_sha256": "44d678894d4260e0a302ef466c3f255117b96a2ecd876d973761d3c08d37bc70",
+            "utterances": 527,
+            "dialogues": 12,
+            "classes": 6,
+            "unique_dialogue_utterance_ids": true,
+            "same_metadata_across_seeds": true,
+            "expected_size_matches": true
+          },
+          "test": {
+            "path": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/20261107T172302Z/runs/IEMOCAP/seed67137/test_alignment_predictions.npz",
+            "file_sha256": "54bba14653e37a4529fa64de3849734c79b86ad45df622760abd0cc18516364a",
+            "artifact_manifest_matches": true,
+            "identity_sha256": "da3edab8b90259bd497194db6ca8f97e6fbbb6aefdfab09a8bba05527756e8a1",
+            "utterances": 1623,
+            "dialogues": 31,
+            "classes": 6,
+            "unique_dialogue_utterance_ids": true,
+            "same_metadata_across_seeds": true,
+            "expected_size_matches": true
+          }
+        },
+        "validation_test_dialogue_overlap": []
+      },
+      {
+        "seed": 2024,
+        "checkpoint": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/cmerc/IEMOCAP_validation_seed2024/best.pt",
+        "checkpoint_sha256": "80ee239060ae1afa3f8c49d7c99d38db8e91fb1d706c7f95087b9e6c025ebf96",
+        "checkpoint_hash_matches_prior": true,
+        "splits": {
+          "validation": {
+            "path": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/20261107T172302Z/runs/IEMOCAP/seed2024/validation_predictions.npz",
+            "file_sha256": "93ab3a130dbf5e9c50b53afc3674455fdf28bb2ceae2cf1097e1424da2659aa3",
+            "artifact_manifest_matches": true,
+            "identity_sha256": "44d678894d4260e0a302ef466c3f255117b96a2ecd876d973761d3c08d37bc70",
+            "utterances": 527,
+            "dialogues": 12,
+            "classes": 6,
+            "unique_dialogue_utterance_ids": true,
+            "same_metadata_across_seeds": true,
+            "expected_size_matches": true
+          },
+          "test": {
+            "path": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/20261107T172302Z/runs/IEMOCAP/seed2024/test_alignment_predictions.npz",
+            "file_sha256": "faf309708377fb0854fd22f30dfe390db756dbf37ea022748810a0a29bf84994",
+            "artifact_manifest_matches": true,
+            "identity_sha256": "da3edab8b90259bd497194db6ca8f97e6fbbb6aefdfab09a8bba05527756e8a1",
+            "utterances": 1623,
+            "dialogues": 31,
+            "classes": 6,
+            "unique_dialogue_utterance_ids": true,
+            "same_metadata_across_seeds": true,
+            "expected_size_matches": true
+          }
+        },
+        "validation_test_dialogue_overlap": []
+      },
+      {
+        "seed": 3407,
+        "checkpoint": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/cmerc/IEMOCAP_validation_seed3407/best.pt",
+        "checkpoint_sha256": "e4978c68e4119309d371152aeec469149c3fdd8989078182fb348c6db7e4f0ed",
+        "checkpoint_hash_matches_prior": true,
+        "splits": {
+          "validation": {
+            "path": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/20261107T172302Z/runs/IEMOCAP/seed3407/validation_predictions.npz",
+            "file_sha256": "39bd02e4ab0a88f9b04cd862c19a3d8f6a2a50cc4dc1b5eaba52d975e0d6c0a9",
+            "artifact_manifest_matches": true,
+            "identity_sha256": "44d678894d4260e0a302ef466c3f255117b96a2ecd876d973761d3c08d37bc70",
+            "utterances": 527,
+            "dialogues": 12,
+            "classes": 6,
+            "unique_dialogue_utterance_ids": true,
+            "same_metadata_across_seeds": true,
+            "expected_size_matches": true
+          },
+          "test": {
+            "path": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/20261107T172302Z/runs/IEMOCAP/seed3407/test_alignment_predictions.npz",
+            "file_sha256": "5bebb82a537db62c91b386cd6985b5665dab360311b9993abe2b063558014e38",
+            "artifact_manifest_matches": true,
+            "identity_sha256": "da3edab8b90259bd497194db6ca8f97e6fbbb6aefdfab09a8bba05527756e8a1",
+            "utterances": 1623,
+            "dialogues": 31,
+            "classes": 6,
+            "unique_dialogue_utterance_ids": true,
+            "same_metadata_across_seeds": true,
+            "expected_size_matches": true
+          }
+        },
+        "validation_test_dialogue_overlap": []
+      },
+      {
+        "seed": 42,
+        "checkpoint": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/cmerc/IEMOCAP_validation_seed42/best.pt",
+        "checkpoint_sha256": "f896b657e62110dcb7b5de033df8f81f485ec037e922cca8ad8ebc48d74b43fa",
+        "checkpoint_hash_matches_prior": true,
+        "splits": {
+          "validation": {
+            "path": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/20261107T172302Z/runs/IEMOCAP/seed42/validation_predictions.npz",
+            "file_sha256": "16a8ec427a862cadfa1351f2f375fd9f58d894ed483b13459637c2b99ee85b42",
+            "artifact_manifest_matches": true,
+            "identity_sha256": "44d678894d4260e0a302ef466c3f255117b96a2ecd876d973761d3c08d37bc70",
+            "utterances": 527,
+            "dialogues": 12,
+            "classes": 6,
+            "unique_dialogue_utterance_ids": true,
+            "same_metadata_across_seeds": true,
+            "expected_size_matches": true
+          },
+          "test": {
+            "path": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/20261107T172302Z/runs/IEMOCAP/seed42/test_alignment_predictions.npz",
+            "file_sha256": "ccdd844aa96d3c217551ef35aedfb02f068508fb9c01612dc631055293a5dbab",
+            "artifact_manifest_matches": true,
+            "identity_sha256": "da3edab8b90259bd497194db6ca8f97e6fbbb6aefdfab09a8bba05527756e8a1",
+            "utterances": 1623,
+            "dialogues": 31,
+            "classes": 6,
+            "unique_dialogue_utterance_ids": true,
+            "same_metadata_across_seeds": true,
+            "expected_size_matches": true
+          }
+        },
+        "validation_test_dialogue_overlap": []
+      }
+    ],
+    "MELD": [
+      {
+        "seed": 1475,
+        "checkpoint": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/cmerc/MELD_validation_seed1475/best.pt",
+        "checkpoint_sha256": "263145b6a2057624e55791eb8c68c6d3de8a353af46a2b2f234e977588655601",
+        "checkpoint_hash_matches_prior": true,
+        "splits": {
+          "validation": {
+            "path": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/20261107T172302Z/runs/MELD/seed1475/validation_predictions.npz",
+            "file_sha256": "5e00fad457f725203cf32489a7ffd334a28a227c8f5727a305494b59b4f22a2f",
+            "artifact_manifest_matches": true,
+            "identity_sha256": "702621a4bd060d9972d2a1cd624c9699097d1d5d59fcece6bb8e72ae133c8a48",
+            "utterances": 1109,
+            "dialogues": 114,
+            "classes": 7,
+            "unique_dialogue_utterance_ids": true,
+            "same_metadata_across_seeds": true,
+            "expected_size_matches": true
+          },
+          "test": {
+            "path": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/20261107T172302Z/runs/MELD/seed1475/test_alignment_predictions.npz",
+            "file_sha256": "b224a2e0699ddbe6cdfe40404b5fda2cb8cffc64f74412a604a42563274cbc92",
+            "artifact_manifest_matches": true,
+            "identity_sha256": "8f18d9e58fcceac4a33b1b9e98ad0df3905ff9641e66b9ac7ae5d02e729dcc9d",
+            "utterances": 2610,
+            "dialogues": 280,
+            "classes": 7,
+            "unique_dialogue_utterance_ids": true,
+            "same_metadata_across_seeds": true,
+            "expected_size_matches": true
+          }
+        },
+        "validation_test_dialogue_overlap": []
+      },
+      {
+        "seed": 67137,
+        "checkpoint": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/cmerc/MELD_validation_seed67137/best.pt",
+        "checkpoint_sha256": "3f79f9eb3547e35ac15ad7ff4345d9b873d0c884a6f3a1ce60a7a7e47077e701",
+        "checkpoint_hash_matches_prior": true,
+        "splits": {
+          "validation": {
+            "path": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/20261107T172302Z/runs/MELD/seed67137/validation_predictions.npz",
+            "file_sha256": "b8d805b6b2f50948bfd170e153e2aab56871b7f92ad316fdc6bbd0e94283a0a8",
+            "artifact_manifest_matches": true,
+            "identity_sha256": "702621a4bd060d9972d2a1cd624c9699097d1d5d59fcece6bb8e72ae133c8a48",
+            "utterances": 1109,
+            "dialogues": 114,
+            "classes": 7,
+            "unique_dialogue_utterance_ids": true,
+            "same_metadata_across_seeds": true,
+            "expected_size_matches": true
+          },
+          "test": {
+            "path": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/20261107T172302Z/runs/MELD/seed67137/test_alignment_predictions.npz",
+            "file_sha256": "366bfd81ab1ccfdfd8334a00bf203de52360726d636a254ad0252e0ad56af622",
+            "artifact_manifest_matches": true,
+            "identity_sha256": "8f18d9e58fcceac4a33b1b9e98ad0df3905ff9641e66b9ac7ae5d02e729dcc9d",
+            "utterances": 2610,
+            "dialogues": 280,
+            "classes": 7,
+            "unique_dialogue_utterance_ids": true,
+            "same_metadata_across_seeds": true,
+            "expected_size_matches": true
+          }
+        },
+        "validation_test_dialogue_overlap": []
+      },
+      {
+        "seed": 2024,
+        "checkpoint": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/cmerc/MELD_validation_seed2024/best.pt",
+        "checkpoint_sha256": "59c6f3fa544b59bcdc79d14bbe8ee17772a4900b15f4d32ef088971e59c9d0df",
+        "checkpoint_hash_matches_prior": true,
+        "splits": {
+          "validation": {
+            "path": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/20261107T172302Z/runs/MELD/seed2024/validation_predictions.npz",
+            "file_sha256": "664e4bd156df761ce09f3326919b12f60f927de60c292a6aef7f4ef4d7c25cd7",
+            "artifact_manifest_matches": true,
+            "identity_sha256": "702621a4bd060d9972d2a1cd624c9699097d1d5d59fcece6bb8e72ae133c8a48",
+            "utterances": 1109,
+            "dialogues": 114,
+            "classes": 7,
+            "unique_dialogue_utterance_ids": true,
+            "same_metadata_across_seeds": true,
+            "expected_size_matches": true
+          },
+          "test": {
+            "path": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/20261107T172302Z/runs/MELD/seed2024/test_alignment_predictions.npz",
+            "file_sha256": "da09384d501b7eadab816711d72bc5be6fd1c35fe75d02cbbc3ff229d73d47f4",
+            "artifact_manifest_matches": true,
+            "identity_sha256": "8f18d9e58fcceac4a33b1b9e98ad0df3905ff9641e66b9ac7ae5d02e729dcc9d",
+            "utterances": 2610,
+            "dialogues": 280,
+            "classes": 7,
+            "unique_dialogue_utterance_ids": true,
+            "same_metadata_across_seeds": true,
+            "expected_size_matches": true
+          }
+        },
+        "validation_test_dialogue_overlap": []
+      },
+      {
+        "seed": 3407,
+        "checkpoint": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/cmerc/MELD_validation_seed3407/best.pt",
+        "checkpoint_sha256": "0c0ccae216958f22d6c58d8d4d5a566ef61e22a81a29c0f815d7b7e180404562",
+        "checkpoint_hash_matches_prior": true,
+        "splits": {
+          "validation": {
+            "path": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/20261107T172302Z/runs/MELD/seed3407/validation_predictions.npz",
+            "file_sha256": "f180c75eaa975046e996806c4f9dd2ce202e4b35edeffcd911c2b07a1adbcc76",
+            "artifact_manifest_matches": true,
+            "identity_sha256": "702621a4bd060d9972d2a1cd624c9699097d1d5d59fcece6bb8e72ae133c8a48",
+            "utterances": 1109,
+            "dialogues": 114,
+            "classes": 7,
+            "unique_dialogue_utterance_ids": true,
+            "same_metadata_across_seeds": true,
+            "expected_size_matches": true
+          },
+          "test": {
+            "path": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/20261107T172302Z/runs/MELD/seed3407/test_alignment_predictions.npz",
+            "file_sha256": "e33dbc7b604a0f04e5f4407857145e526327f121e06ae52ad3dc9ac1d43d0eb8",
+            "artifact_manifest_matches": true,
+            "identity_sha256": "8f18d9e58fcceac4a33b1b9e98ad0df3905ff9641e66b9ac7ae5d02e729dcc9d",
+            "utterances": 2610,
+            "dialogues": 280,
+            "classes": 7,
+            "unique_dialogue_utterance_ids": true,
+            "same_metadata_across_seeds": true,
+            "expected_size_matches": true
+          }
+        },
+        "validation_test_dialogue_overlap": []
+      },
+      {
+        "seed": 42,
+        "checkpoint": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/cmerc/MELD_validation_seed42/best.pt",
+        "checkpoint_sha256": "e14f4c855e277cca5d256f0e2a3e4048b0a407035be9c28a5de0a3451721026b",
+        "checkpoint_hash_matches_prior": true,
+        "splits": {
+          "validation": {
+            "path": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/20261107T172302Z/runs/MELD/seed42/validation_predictions.npz",
+            "file_sha256": "192b15edefba874f2a75828388b39437962401574bc8fc0af5e23dc10158c7d2",
+            "artifact_manifest_matches": true,
+            "identity_sha256": "702621a4bd060d9972d2a1cd624c9699097d1d5d59fcece6bb8e72ae133c8a48",
+            "utterances": 1109,
+            "dialogues": 114,
+            "classes": 7,
+            "unique_dialogue_utterance_ids": true,
+            "same_metadata_across_seeds": true,
+            "expected_size_matches": true
+          },
+          "test": {
+            "path": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/20261107T172302Z/runs/MELD/seed42/test_alignment_predictions.npz",
+            "file_sha256": "2637fc57ca175da03f4df2ae5dfd2eae2f93ba7236807f32519eb5078c324a34",
+            "artifact_manifest_matches": true,
+            "identity_sha256": "8f18d9e58fcceac4a33b1b9e98ad0df3905ff9641e66b9ac7ae5d02e729dcc9d",
+            "utterances": 2610,
+            "dialogues": 280,
+            "classes": 7,
+            "unique_dialogue_utterance_ids": true,
+            "same_metadata_across_seeds": true,
+            "expected_size_matches": true
+          }
+        },
+        "validation_test_dialogue_overlap": []
+      }
+    ]
+  },
+  "checks": {
+    "all_checkpoint_hashes_match": true,
+    "all_prediction_files_match_historical_manifest": true,
+    "all_expected_split_sizes_match": true,
+    "validation_test_dialogues_disjoint": true,
+    "saved_predictions_sufficient_no_gpu": true
+  },
+  "experiment6": {
+    "IEMOCAP": {
+      "anchor_seed": 1475,
+      "summary_path": "/data2/yb/paper/lyx-msa/CMERC/checkpoints/analysis/high_confidence_errors/experiment_6_calibration/exp6_overall_summary.csv",
+      "summary_sha256": "1a83067a194b17c3d5130a2e57b2f81d85126567312cf4e43df3b50a41981767",
+      "test_only_descriptive_reference": true,
+      "never_used_for_fitting": true,
+      "metric_absolute_differences": {
+        "accuracy": 0.0,
+        "mean_confidence": 7.103237442684929e-09,
+        "ece10": 7.103237421868247e-09,
+        "brier": 3.8708898308925654e-09,
+        "nll": 5.261895363872782e-10
+      },
+      "matches_current_test_predictions": true
+    },
+    "MELD": {
+      "anchor_seed": 67137,
+      "summary_path": "/data2/yb/paper/lyx-msa/CMERC/checkpoints/analysis/high_confidence_errors/experiment_6_calibration/exp6_overall_summary.csv",
+      "summary_sha256": "1a83067a194b17c3d5130a2e57b2f81d85126567312cf4e43df3b50a41981767",
+      "test_only_descriptive_reference": true,
+      "never_used_for_fitting": true,
+      "metric_absolute_differences": {
+        "accuracy": 0.0,
+        "mean_confidence": 1.214700562357507e-10,
+        "ece10": 1.214700839913263e-10,
+        "brier": 1.085447176585319e-09,
+        "nll": 7.588174533168512e-10
+      },
+      "matches_current_test_predictions": true
+    }
+  }
+}

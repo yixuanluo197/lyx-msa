@@ -1,0 +1,31 @@
+{
+  "status": "passed",
+  "verified_at_utc": "2026-11-09T01:42:59Z",
+  "checks": {
+    "input_audit_passed": true,
+    "frozen_manifest_hash_valid": true,
+    "temperature_count_is_ten": true,
+    "fit_declares_no_test_read": true,
+    "test_evaluation_once": true,
+    "independent_temperature_recomputation_exact": true,
+    "independent_validation_nll_recomputation_exact": true,
+    "saved_calibrated_probabilities_exact": true,
+    "independent_test_metrics_match": true,
+    "independent_dialogue_bootstrap_recomputation_exact": true,
+    "all_argmax_unchanged": true,
+    "all_classification_metrics_unchanged": true,
+    "all_temperatures_in_bounds": true,
+    "no_boundary_temperatures": true
+  },
+  "maximum_absolute_errors": {
+    "temperature": 0.0,
+    "validation_nll": 0.0,
+    "probabilities": 0.0,
+    "test_metric": 0.0,
+    "bootstrap_summary": 0.0
+  },
+  "limitations": [
+    "The dialogue bootstrap conditions on the fixed fitted temperature and fixed model predictions; it does not refit temperature inside each resample.",
+    "Five seeds share the same Test utterances and are summarized as model-seed replications, not independent datasets."
+  ]
+}
