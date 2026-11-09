@@ -1,0 +1,21 @@
+{
+  "checkpoint_path": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/independent_cmerc_pilot/20261109T164030Z/runs/MELD/fold1/seed1475/training/best.pt",
+  "checkpoint_sha256": "3a2e8b6882a4edad19356e30a7fd30c83b01fca81a8564c9a983ee0c519cc84d",
+  "checkpoint_metadata": {
+    "dataset": "MELD",
+    "fold": "fold1",
+    "selected_epoch": 14,
+    "is_best": true,
+    "best_checkpoint": null,
+    "training_complete": true,
+    "complete": true
+  },
+  "calibration_artifact": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/independent_cmerc_pilot/20261109T164030Z/runs/MELD/fold1/seed1475/artifacts/calibration_role_artifact.pt",
+  "calibration_artifact_sha256": "e3be801b48ca6c2682bd01cf242fc65eef64c1d5cbf83362ec518325de21cd9c",
+  "approved_manifest_sha256": "6d43928865915fe22a913c98b1165a05ba6e3e8f21d4d4c896cf51eb9c9b62be",
+  "prediction_npz_sha256": null,
+  "episode_mapping_sha256": null,
+  "episode_mapping_source": "calibration_artifact.dialogue_groups",
+  "script_sha256": "5be646de8a6aaf4b7c24c07b4b956ad3fcd8e148c7363bda9fb5a00ea1469f80",
+  "role": "calibration"
+}

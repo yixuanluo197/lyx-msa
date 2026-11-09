@@ -1,0 +1,21 @@
+{
+  "checkpoint_path": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/independent_cmerc_pilot/20261109T164030Z/runs/IEMOCAP/fold1/seed1475/training/best.pt",
+  "checkpoint_sha256": "a4ae69de9bea3624122df6ece120fd58d3d62fca628bad08b0c44ff171ee8a14",
+  "checkpoint_metadata": {
+    "dataset": "IEMOCAP",
+    "fold": "fold1",
+    "selected_epoch": 79,
+    "is_best": true,
+    "best_checkpoint": null,
+    "training_complete": true,
+    "complete": true
+  },
+  "calibration_artifact": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/independent_cmerc_pilot/20261109T164030Z/runs/IEMOCAP/fold1/seed1475/artifacts/calibration_role_artifact.pt",
+  "calibration_artifact_sha256": "8e223c42c23197d6423ff54bb43d089dbb4ec66c53c1d3758d01887014009b29",
+  "approved_manifest_sha256": "6d43928865915fe22a913c98b1165a05ba6e3e8f21d4d4c896cf51eb9c9b62be",
+  "prediction_npz_sha256": null,
+  "episode_mapping_sha256": null,
+  "episode_mapping_source": "calibration_artifact.dialogue_groups",
+  "script_sha256": "5be646de8a6aaf4b7c24c07b4b956ad3fcd8e148c7363bda9fb5a00ea1469f80",
+  "role": "calibration"
+}

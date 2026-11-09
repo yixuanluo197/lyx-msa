@@ -1,0 +1,112 @@
+{
+  "E0": {
+    "temperature": 1.0
+  },
+  "E1": {
+    "temperature": 1.4587346597246282,
+    "theta": 0.37756938852194877,
+    "objective": 0.7936700024812233,
+    "success": true,
+    "message": "Solution found.",
+    "iterations": 15,
+    "boundary": false
+  },
+  "E2": {
+    "temperatures": [
+      1.4586494223288295,
+      1.4599878320761703,
+      1.4578942878827241,
+      1.4595053022282252,
+      1.458552449546985,
+      1.4578220096450738
+    ],
+    "log_temperatures": [
+      0.37751095439505594,
+      0.3784281014911116,
+      0.3769931260763269,
+      0.37809754421274766,
+      0.37744447097283196,
+      0.376943547701554
+    ],
+    "support": [
+      101,
+      173,
+      315,
+      178,
+      251,
+      330
+    ],
+    "fallback_global": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ],
+    "lambda": 100.0,
+    "global_theta": 0.37756938852194877,
+    "objective": 0.7936405859584458,
+    "success": true,
+    "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL",
+    "iterations": 3,
+    "retained_global_solution": false,
+    "boundary": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
+  },
+  "E3": {
+    "temperatures": [
+      1.395067408706361,
+      2.000492552337583,
+      1.2595769726459094,
+      1.7646802719377974,
+      1.4120941738604016,
+      1.2653177844940502
+    ],
+    "log_temperatures": [
+      0.3329427357591809,
+      0.6933934264077394,
+      0.2307759285961296,
+      0.5679695249320494,
+      0.3450738322155695,
+      0.2353233036695465
+    ],
+    "support": [
+      101,
+      173,
+      315,
+      178,
+      251,
+      330
+    ],
+    "fallback_global": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ],
+    "lambda": 0.0,
+    "global_theta": 0.37756938852194877,
+    "objective": 0.7844905553726829,
+    "success": true,
+    "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+    "iterations": 10,
+    "retained_global_solution": false,
+    "boundary": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
+  }
+}

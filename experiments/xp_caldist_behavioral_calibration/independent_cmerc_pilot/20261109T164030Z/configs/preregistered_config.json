@@ -1,0 +1,166 @@
+{
+  "status": "preregistered_frozen_before_training",
+  "created_utc": "2026-11-09T16:40:30Z",
+  "scope": "two Fold1 seed1475 CMERC pilots; no Evaluation",
+  "approved_manifest": {
+    "path": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/independent_training_pilot/20261109T142243Z/approved_split_manifests.json",
+    "sha256": "6d43928865915fe22a913c98b1165a05ba6e3e8f21d4d4c896cf51eb9c9b62be"
+  },
+  "teacher_pilot": {
+    "root": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/curriculum_teacher_pilot/20261109T154754Z",
+    "artifacts": {
+      "IEMOCAP": {
+        "teacher_final": {
+          "path": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/curriculum_teacher_pilot/20261109T154754Z/runs/IEMOCAP/fold1/teacher/teacher_final.pt",
+          "sha256": "48b93d53c17fb32331376d8984aaee46293f07b03addeda055cfb6e7b3f7ba7a",
+          "bytes": 59759697
+        },
+        "training_role_artifact": {
+          "path": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/curriculum_teacher_pilot/20261109T154754Z/runs/IEMOCAP/fold1/training_role_artifact.pt",
+          "sha256": "82399a485cdbd7034cfb0de2326e0767d451c70428949545289cc48c1a2445b3",
+          "bytes": 101846471
+        },
+        "difficulty": {
+          "path": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/curriculum_teacher_pilot/20261109T154754Z/results/IEMOCAP_fold1_difficulty.json",
+          "sha256": "3b53dc2a8baf32ce23df8f4c2793fefef5ac05201f7d99b38c1868def7115149",
+          "bytes": 54142
+        },
+        "six_view_probabilities": {
+          "path": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/curriculum_teacher_pilot/20261109T154754Z/results/IEMOCAP_fold1_six_view_probabilities.npz",
+          "sha256": "070990b711f9a83394d4bfa3e4782361b06922d3754f9b7915a5cc7db000a303",
+          "bytes": 584291
+        }
+      },
+      "MELD": {
+        "teacher_final": {
+          "path": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/curriculum_teacher_pilot/20261109T154754Z/runs/MELD/fold1/teacher/teacher_final.pt",
+          "sha256": "5408e7bfb3e3341e4f070775762587c583022844804b8c3b5bbf8d3622b55707",
+          "bytes": 142044781
+        },
+        "training_role_artifact": {
+          "path": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/curriculum_teacher_pilot/20261109T154754Z/runs/MELD/fold1/training_role_artifact.pt",
+          "sha256": "3aaf098e1ab71ee93055220f4b996a978242afe4cc2394705f13956b7f665d25",
+          "bytes": 157920167
+        },
+        "difficulty": {
+          "path": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/curriculum_teacher_pilot/20261109T154754Z/results/MELD_fold1_difficulty.json",
+          "sha256": "ec0dd56f4fec836cbb864c88b274b11c15137700c5d3f87170359db5949fe7a0",
+          "bytes": 516269
+        },
+        "six_view_probabilities": {
+          "path": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/curriculum_teacher_pilot/20261109T154754Z/results/MELD_fold1_six_view_probabilities.npz",
+          "sha256": "d6af0bec5d26ad8f98fa22b34db126c623e0f2489abb31a2f78aa0747bffc677",
+          "bytes": 1218414
+        }
+      }
+    }
+  },
+  "source_root": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/curriculum_teacher_pilot/20261109T154754Z/source_snapshot",
+  "jobs": {
+    "IEMOCAP": {
+      "fold": "fold1",
+      "seed": 1475,
+      "host_gpu_index": 0,
+      "expected_gpu_uuid": "GPU-7ff18ebb-100e-98fe-038b-a98bd4f94248",
+      "epochs": 80,
+      "classes": 6,
+      "class_names": [
+        "happy",
+        "sad",
+        "neutral",
+        "angry",
+        "excited",
+        "frustrated"
+      ],
+      "dropout": 0.5,
+      "rank_coff": 0.005,
+      "mscl_coff": 0.05,
+      "cscl_coff": 0.05,
+      "curriculum_base_ratio": 0.15,
+      "num_L": 3,
+      "num_K": 4
+    },
+    "MELD": {
+      "fold": "fold1",
+      "seed": 1475,
+      "host_gpu_index": 1,
+      "expected_gpu_uuid": "GPU-eed2f34f-b4c0-7b7a-498e-71a026e30c5a",
+      "epochs": 40,
+      "classes": 7,
+      "class_names": [
+        "neutral",
+        "surprise",
+        "fear",
+        "sadness",
+        "joy",
+        "disgust",
+        "anger"
+      ],
+      "dropout": 0.4,
+      "rank_coff": 0.002,
+      "mscl_coff": 0.15,
+      "cscl_coff": 0.15,
+      "curriculum_base_ratio": 0.4,
+      "num_L": 3,
+      "num_K": 3
+    }
+  },
+  "shared": {
+    "batch_size": 16,
+    "edge_capacity": 1000,
+    "node_capacity": 5200,
+    "base_model": "GRU",
+    "graph_type": "hyper",
+    "norm": "BN",
+    "fp32": true,
+    "optimizer": "Adam",
+    "lr": 0.0001,
+    "weight_decay": 3e-05,
+    "scheduler_steps": 1,
+    "num_workers": 0,
+    "omp_threads": 4,
+    "mkl_threads": 4,
+    "checkpoint_selection": "strict maximum rounded Development weighted-F1; earliest tie",
+    "student_initialization": "random",
+    "historical_cmerc_checkpoint_loaded": false
+  },
+  "calibration": {
+    "roles": [
+      "calibration"
+    ],
+    "evaluation_access": false,
+    "methods": [
+      "E0",
+      "E1",
+      "E2",
+      "E3"
+    ],
+    "temperature_bounds": [
+      0.05,
+      20.0
+    ],
+    "hierarchical_lambda_candidates": [
+      0.001,
+      0.01,
+      0.1,
+      1.0,
+      10.0,
+      100.0
+    ],
+    "selection_metric": "grouped-CV NLL",
+    "IEMOCAP_group": "dialogue_id",
+    "MELD_group": "season_episode_id",
+    "metrics": [
+      "NLL",
+      "multiclass_Brier",
+      "ECE15"
+    ]
+  },
+  "forbidden": {
+    "evaluation_loader": true,
+    "evaluation_labels": true,
+    "evaluation_forward": true,
+    "additional_models": true,
+    "git_commit_push": true
+  }
+}

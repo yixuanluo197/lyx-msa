@@ -1,0 +1,234 @@
+{
+  "status": "passed",
+  "scope": "two Fold1 seed1475 CMERC pilots plus Calibration; Evaluation sealed",
+  "approved_manifest_sha256": "6d43928865915fe22a913c98b1165a05ba6e3e8f21d4d4c896cf51eb9c9b62be",
+  "datasets": [
+    {
+      "dataset": "IEMOCAP",
+      "epochs": 80,
+      "best_epoch": 79,
+      "best_development_weighted_f1": 67.94,
+      "best_development_accuracy": 0.6877637130801688,
+      "best_development_macro_f1": 0.6455891838282184,
+      "training_seconds": 1600.3065054119797,
+      "gpu_hours": 0.44452958483666105,
+      "peak_allocated_bytes": 7890010624,
+      "peak_reserved_bytes": 12291407872,
+      "max_batch_edges": 1000,
+      "max_batch_nodes": 2856,
+      "initialization_sha256": "2aeb62aa0f9d488b60848bc255488cb92ddf457d1bbb2056a8a62fac56c63d75",
+      "best_checkpoint_sha256": "a4ae69de9bea3624122df6ece120fd58d3d62fca628bad08b0c44ff171ee8a14",
+      "difficulty_sha256": "3b53dc2a8baf32ce23df8f4c2793fefef5ac05201f7d99b38c1868def7115149",
+      "manifest_sha256": "6d43928865915fe22a913c98b1165a05ba6e3e8f21d4d4c896cf51eb9c9b62be",
+      "calibration_fit_n": 1348,
+      "global_temperature": 1.4587346597246282,
+      "hierarchical_lambda": 100.0,
+      "fit_metrics": {
+        "E0": {
+          "n": 1348,
+          "nll": 0.8417058766940596,
+          "brier": 0.44816918307138165,
+          "ece15": 0.080337734700797,
+          "accuracy": 0.6928783382789317
+        },
+        "E1": {
+          "n": 1348,
+          "nll": 0.7936700024812233,
+          "brier": 0.4390645855111468,
+          "ece15": 0.06857963756689588,
+          "accuracy": 0.6928783382789317
+        },
+        "E2": {
+          "n": 1348,
+          "nll": 0.793611267450494,
+          "brier": 0.4390463547930446,
+          "ece15": 0.06854705511795366,
+          "accuracy": 0.6928783382789317
+        },
+        "E3": {
+          "n": 1348,
+          "nll": 0.7844905553726829,
+          "brier": 0.4355009092925076,
+          "ece15": 0.05836211857957781,
+          "accuracy": 0.6928783382789317
+        }
+      },
+      "oof_metrics": {
+        "E0": {
+          "n": 1348,
+          "nll": 0.8417058766940596,
+          "brier": 0.44816918307138165,
+          "ece15": 0.080337734700797,
+          "accuracy": 0.6928783382789317
+        },
+        "E1": {
+          "n": 1348,
+          "nll": 0.8120697619120707,
+          "brier": 0.4434907220196281,
+          "ece15": 0.06572637790615066,
+          "accuracy": 0.6928783382789317
+        },
+        "E2": {
+          "n": 1348,
+          "nll": 0.8120986581634136,
+          "brier": 0.4434998851384372,
+          "ece15": 0.06532521122096607,
+          "accuracy": 0.6928783382789317
+        },
+        "E3": {
+          "n": 1348,
+          "nll": 0.8413735037828103,
+          "brier": 0.4530648343015079,
+          "ece15": 0.07633101597157839,
+          "accuracy": 0.6928783382789317
+        }
+      },
+      "no_evaluation_access": true,
+      "all_argmax_invariant": true
+    },
+    {
+      "dataset": "MELD",
+      "epochs": 40,
+      "best_epoch": 14,
+      "best_development_weighted_f1": 70.97,
+      "best_development_accuracy": 0.7116654438738078,
+      "best_development_macro_f1": 0.591693274743505,
+      "training_seconds": 426.1786520630121,
+      "gpu_hours": 0.11838295890639226,
+      "peak_allocated_bytes": 1028595200,
+      "peak_reserved_bytes": 1304428544,
+      "max_batch_edges": 343,
+      "max_batch_nodes": 885,
+      "initialization_sha256": "85985e96d8f8c95a5023bfa78500ec9a618e2152705ad5ac18fd4b81dcd53ad5",
+      "best_checkpoint_sha256": "3a2e8b6882a4edad19356e30a7fd30c83b01fca81a8564c9a983ee0c519cc84d",
+      "difficulty_sha256": "ec0dd56f4fec836cbb864c88b274b11c15137700c5d3f87170359db5949fe7a0",
+      "manifest_sha256": "6d43928865915fe22a913c98b1165a05ba6e3e8f21d4d4c896cf51eb9c9b62be",
+      "calibration_fit_n": 1406,
+      "global_temperature": 0.5355669833806046,
+      "hierarchical_lambda": 0.1,
+      "fit_metrics": {
+        "E0": {
+          "n": 1406,
+          "nll": 1.0435776855883556,
+          "brier": 0.4763012789325413,
+          "ece15": 0.2458197579091203,
+          "accuracy": 0.7261735419630156
+        },
+        "E1": {
+          "n": 1406,
+          "nll": 0.8699880945198369,
+          "brier": 0.39424221376678,
+          "ece15": 0.037074613370883185,
+          "accuracy": 0.7261735419630156
+        },
+        "E2": {
+          "n": 1406,
+          "nll": 0.8442035327706766,
+          "brier": 0.3885366705797865,
+          "ece15": 0.023675053431481644,
+          "accuracy": 0.7261735419630156
+        },
+        "E3": {
+          "n": 1406,
+          "nll": 0.8425457743284899,
+          "brier": 0.3883587636053107,
+          "ece15": 0.02457575090316292,
+          "accuracy": 0.7261735419630156
+        }
+      },
+      "oof_metrics": {
+        "E0": {
+          "n": 1406,
+          "nll": 1.0435776855883556,
+          "brier": 0.4763012789325413,
+          "ece15": 0.2458197579091203,
+          "accuracy": 0.7261735419630156
+        },
+        "E1": {
+          "n": 1406,
+          "nll": 0.8716875598369352,
+          "brier": 0.3946335744131257,
+          "ece15": 0.03616382962108503,
+          "accuracy": 0.7261735419630156
+        },
+        "E2": {
+          "n": 1406,
+          "nll": 0.851258114207485,
+          "brier": 0.39024268912230464,
+          "ece15": 0.022895165413419346,
+          "accuracy": 0.7261735419630156
+        },
+        "E3": {
+          "n": 1406,
+          "nll": 0.8517097418279655,
+          "brier": 0.39077940222753493,
+          "ece15": 0.025740712133986574,
+          "accuracy": 0.7261735419630156
+        }
+      },
+      "no_evaluation_access": true,
+      "all_argmax_invariant": true
+    }
+  ],
+  "tests": {
+    "runner": "8 passed",
+    "calibration": "10 passed",
+    "py_compile": "passed"
+  },
+  "evaluation": {
+    "loader_constructed": false,
+    "labels_read": false,
+    "forward_run": false,
+    "metrics_computed": false
+  },
+  "decision": "ready_for_formal_50_model_training_after_researcher_review",
+  "limitations": [
+    "Calibration metrics and grouped OOF values are internal diagnostics, not independent Evaluation results.",
+    "IEMOCAP peak reserved memory nearly fills a 12 GiB TITAN Xp; schedule one IEMOCAP job per such GPU."
+  ],
+  "independent_verifier": {
+    "status": "passed",
+    "assertions": 4440,
+    "failures": 0
+  },
+  "checkpoint_strict_reload": {
+    "status": "passed",
+    "datasets": {
+      "IEMOCAP": {
+        "best.pt": {
+          "epoch": 79,
+          "strict_missing_keys": [],
+          "strict_unexpected_keys": [],
+          "state_sha256_matches": true
+        },
+        "latest.pt": {
+          "epoch": 80,
+          "strict_missing_keys": [],
+          "strict_unexpected_keys": [],
+          "state_sha256_matches": true
+        }
+      },
+      "MELD": {
+        "best.pt": {
+          "epoch": 14,
+          "strict_missing_keys": [],
+          "strict_unexpected_keys": [],
+          "state_sha256_matches": true
+        },
+        "latest.pt": {
+          "epoch": 40,
+          "strict_missing_keys": [],
+          "strict_unexpected_keys": [],
+          "state_sha256_matches": true
+        }
+      }
+    }
+  },
+  "probability_verification": {
+    "finite": true,
+    "maximum_sum_error": 4.44e-16,
+    "argmax_invariant_E0_E1_E2_E3": true,
+    "all_optimizer_fits_succeeded": true,
+    "boundary_solutions": 0
+  }
+}

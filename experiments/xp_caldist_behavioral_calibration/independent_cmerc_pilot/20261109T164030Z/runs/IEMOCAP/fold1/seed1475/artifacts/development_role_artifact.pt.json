@@ -1,0 +1,75 @@
+{
+  "schema": "protocol_b_role_v2",
+  "role": "development",
+  "dataset": "IEMOCAP",
+  "fold": "fold1",
+  "dialogue_ids": [
+    "Ses03M_impro03",
+    "Ses03M_impro06",
+    "Ses03M_impro08b",
+    "Ses04F_script01_1",
+    "Ses04F_script02_2",
+    "Ses04M_script02_1",
+    "Ses05F_impro05",
+    "Ses05F_script01_2",
+    "Ses05M_script03_1"
+  ],
+  "dialogue_groups": {
+    "Ses03M_impro03": "Ses03",
+    "Ses03M_impro06": "Ses03",
+    "Ses03M_impro08b": "Ses03",
+    "Ses04F_script01_1": "Ses04",
+    "Ses04F_script02_2": "Ses04",
+    "Ses04M_script02_1": "Ses04",
+    "Ses05F_impro05": "Ses05",
+    "Ses05F_script01_2": "Ses05",
+    "Ses05M_script03_1": "Ses05"
+  },
+  "approved_manifest_sha256": "6d43928865915fe22a913c98b1165a05ba6e3e8f21d4d4c896cf51eb9c9b62be",
+  "approved_role": {
+    "dialogue_ids": [
+      "Ses03M_impro03",
+      "Ses03M_impro06",
+      "Ses03M_impro08b",
+      "Ses04F_script01_1",
+      "Ses04F_script02_2",
+      "Ses04M_script02_1",
+      "Ses05F_impro05",
+      "Ses05F_script01_2",
+      "Ses05M_script03_1"
+    ],
+    "group_ids": [
+      "Ses03",
+      "Ses04",
+      "Ses05"
+    ],
+    "dialogue_count": 9,
+    "utterance_count": 488,
+    "supervision_eligible_count": 474,
+    "unknown_masked_count": 14,
+    "class_support_supervision_eligible": {
+      "angry": 76,
+      "excited": 68,
+      "frustrated": 124,
+      "happy": 27,
+      "neutral": 109,
+      "sad": 70
+    },
+    "sha256": "e0152ee8264af6d9d2ef59b117a5291bb7ad77474644f606b40a8a03ebb0a083"
+  },
+  "provenance": {
+    "approved_manifest_path": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/independent_training_pilot/20261109T142243Z/approved_split_manifests.json",
+    "approved_manifest_sha256": "6d43928865915fe22a913c98b1165a05ba6e3e8f21d4d4c896cf51eb9c9b62be",
+    "approved_manifest_content_sha256": "a30d64a9bae6d5f2b49ec54dbeb4073ceea29a6f12a630cb2e28b221705f9bde",
+    "role_sha256": "e0152ee8264af6d9d2ef59b117a5291bb7ad77474644f606b40a8a03ebb0a083",
+    "sample_lineage_sha256": "76d1e44cc0c5e657ab08c98a5ff2811d291f30891eb292f74e90289b13c0238a",
+    "dialogue_groups_sha256": "cb047b879df513a7b82ef55ee17d77c59b3cd12f682eb859402e8c2b453c8299",
+    "source_data_sha256": {
+      "/data2/yb/paper/05_reproduction/external_repos/CMERC/data/IEMOCAP_features.pkl": "ceb5cc9a45d1792998438e27f86a12642320aa6315546e4425316140ea503fb3",
+      "/data2/yb/paper/05_reproduction/external_repos/CMERC/data/iemocap_features_roberta.pkl": "4bd60c581a5b7c70e217e18439f741b191605fbd6f2cf4dc1a6dcb7fcaa18f06"
+    },
+    "extraction_access": "monolithic_deserialization_then_requested_role_only_extraction",
+    "builder_sha256": "0625c3b255edd7aa605796f080bc29d18ae9b975b57df8b7a5f2928e08741cb1"
+  },
+  "artifact_sha256": "6c2a6a05a8912ae158a644e63eb5ced6ae48cb5cddcf9d0128105eb1b53d7c1f"
+}

@@ -1,0 +1,2130 @@
+{
+  "metrics": {
+    "E0": {
+      "n": 1406,
+      "nll": 1.0435776855883556,
+      "brier": 0.4763012789325413,
+      "ece15": 0.2458197579091203,
+      "accuracy": 0.7261735419630156
+    },
+    "E1": {
+      "n": 1406,
+      "nll": 0.8716875598369352,
+      "brier": 0.3946335744131257,
+      "ece15": 0.03616382962108503,
+      "accuracy": 0.7261735419630156
+    },
+    "E2": {
+      "n": 1406,
+      "nll": 0.851258114207485,
+      "brier": 0.39024268912230464,
+      "ece15": 0.022895165413419346,
+      "accuracy": 0.7261735419630156
+    },
+    "E3": {
+      "n": 1406,
+      "nll": 0.8517097418279655,
+      "brier": 0.39077940222753493,
+      "ece15": 0.025740712133986574,
+      "accuracy": 0.7261735419630156
+    }
+  },
+  "lambda_oof_nll": {
+    "0.001": 0.851653099850295,
+    "0.01": 0.8513393002075104,
+    "0.1": 0.851258114207485,
+    "1.0": 0.8564598095928841,
+    "10.0": 0.8676550473601422,
+    "100.0": 0.8712087392958184
+  },
+  "selected_lambda": 0.1,
+  "folds": [
+    {
+      "fold": 0,
+      "train_groups": [
+        "S01E04",
+        "S01E22",
+        "S03E23",
+        "S04E04",
+        "S05E19",
+        "S06E18",
+        "S07E07",
+        "S07E09",
+        "S07E16",
+        "S07E23",
+        "S08E02",
+        "S08E16",
+        "S08E20",
+        "S09E10",
+        "S09E21"
+      ],
+      "held_groups": [
+        "S01E02",
+        "S01E10",
+        "S01E15",
+        "S06E22"
+      ],
+      "train_n": 1173,
+      "held_n": 233,
+      "global_fit": {
+        "temperature": 0.531094418740589,
+        "theta": -0.6328154604762793,
+        "objective": 0.8698215105932653,
+        "success": true,
+        "message": "Solution found.",
+        "iterations": 12,
+        "boundary": false
+      },
+      "unregularized_fit": {
+        "temperatures": [
+          0.4305393111054965,
+          0.5233866401053069,
+          0.8945515781778024,
+          0.6477168769171967,
+          0.5608509259795729,
+          0.8057403690901326,
+          0.7526209661135909
+        ],
+        "log_temperatures": [
+          -0.8427166442879659,
+          -0.6474348144214432,
+          -0.11143271623367289,
+          -0.43430159644415,
+          -0.5783001378633421,
+          -0.2159937110851324,
+          -0.2841935429679546
+        ],
+        "support": [
+          527,
+          167,
+          40,
+          49,
+          215,
+          19,
+          156
+        ],
+        "fallback_global": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "lambda": 0.0,
+        "global_theta": -0.6328154604762793,
+        "objective": 0.8454993226671639,
+        "success": true,
+        "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+        "iterations": 20,
+        "retained_global_solution": false,
+        "boundary": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ]
+      },
+      "hierarchical_fits": {
+        "0.001": {
+          "temperatures": [
+            0.43059730475752944,
+            0.5234008109970911,
+            0.8866065842636969,
+            0.6467916833086403,
+            0.5608065943682772,
+            0.7971398331020851,
+            0.7520060866912668
+          ],
+          "log_temperatures": [
+            -0.8425819533433415,
+            -0.6474077394087075,
+            -0.12035393027906993,
+            -0.4357310095736024,
+            -0.5783791844716242,
+            -0.22672516626882422,
+            -0.2850108610607094
+          ],
+          "support": [
+            527,
+            167,
+            40,
+            49,
+            215,
+            19,
+            156
+          ],
+          "fallback_global": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          "lambda": 0.001,
+          "global_theta": -0.6328154604762793,
+          "objective": 0.8455913244174782,
+          "success": true,
+          "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+          "iterations": 20,
+          "retained_global_solution": false,
+          "boundary": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        "0.01": {
+          "temperatures": [
+            0.4311164989603652,
+            0.5235259333815753,
+            0.8319126846933692,
+            0.6391485139880348,
+            0.5604128515849847,
+            0.7419524251978955,
+            0.7466573135931361
+          ],
+          "log_temperatures": [
+            -0.8413769261906555,
+            -0.6471687114428031,
+            -0.18402778995018299,
+            -0.4476184353523708,
+            -0.5790815319039657,
+            -0.2984701548543066,
+            -0.2921489493173818
+          ],
+          "support": [
+            527,
+            167,
+            40,
+            49,
+            215,
+            19,
+            156
+          ],
+          "fallback_global": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          "lambda": 0.01,
+          "global_theta": -0.6328154604762793,
+          "objective": 0.8463195945695188,
+          "success": true,
+          "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+          "iterations": 18,
+          "retained_global_solution": false,
+          "boundary": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        "0.1": {
+          "temperatures": [
+            0.4360235806658055,
+            0.5245851847250682,
+            0.667942166092434,
+            0.597413972836029,
+            0.5569881828493565,
+            0.6082673877972635,
+            0.7063518132539928
+          ],
+          "log_temperatures": [
+            -0.8300589529997106,
+            -0.6451474530364691,
+            -0.40355368689949445,
+            -0.5151449840594792,
+            -0.585211254990221,
+            -0.4971407111306887,
+            -0.3476418465519567
+          ],
+          "support": [
+            527,
+            167,
+            40,
+            49,
+            215,
+            19,
+            156
+          ],
+          "fallback_global": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          "lambda": 0.1,
+          "global_theta": -0.6328154604762793,
+          "objective": 0.850259347386321,
+          "success": true,
+          "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+          "iterations": 15,
+          "retained_global_solution": false,
+          "boundary": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        "1.0": {
+          "temperatures": [
+            0.46725683491265585,
+            0.5283843342923655,
+            0.5554436333933588,
+            0.5453338216172174,
+            0.5430825764464625,
+            0.5423085520620549,
+            0.5976350320061713
+          ],
+          "log_temperatures": [
+            -0.7608762047969926,
+            -0.6379313542141014,
+            -0.5879881450898431,
+            -0.6063571551018597,
+            -0.6104938961233146,
+            -0.6119201552759618,
+            -0.514775025720084
+          ],
+          "support": [
+            527,
+            167,
+            40,
+            49,
+            215,
+            19,
+            156
+          ],
+          "fallback_global": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          "lambda": 1.0,
+          "global_theta": -0.6328154604762793,
+          "objective": 0.8599501885953456,
+          "success": true,
+          "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+          "iterations": 9,
+          "retained_global_solution": false,
+          "boundary": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        "10.0": {
+          "temperatures": [
+            0.516234320227914,
+            0.5306983063078443,
+            0.5337769725810662,
+            0.5327140861912608,
+            0.5329831096363008,
+            0.5322739600841097,
+            0.5407886707287894
+          ],
+          "log_temperatures": [
+            -0.6611945076080223,
+            -0.6335615805838603,
+            -0.6277771816063821,
+            -0.6297704223991057,
+            -0.6292655445561166,
+            -0.6305969596240952,
+            -0.6147267035689915
+          ],
+          "support": [
+            527,
+            167,
+            40,
+            49,
+            215,
+            19,
+            156
+          ],
+          "fallback_global": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          "lambda": 10.0,
+          "global_theta": -0.6328154604762793,
+          "objective": 0.867917507230087,
+          "success": true,
+          "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+          "iterations": 5,
+          "retained_global_solution": false,
+          "boundary": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        "100.0": {
+          "temperatures": [
+            0.5293840722105082,
+            0.5310528925746743,
+            0.5313655276066993,
+            0.5312586712027375,
+            0.5312948768266867,
+            0.5312129955223649,
+            0.532113266556351
+          ],
+          "log_temperatures": [
+            -0.6360410761349281,
+            -0.6328936533323806,
+            -0.6323051186550626,
+            -0.6325062366127406,
+            -0.6324380882845356,
+            -0.6325922166568797,
+            -0.6308989052411742
+          ],
+          "support": [
+            527,
+            167,
+            40,
+            49,
+            215,
+            19,
+            156
+          ],
+          "fallback_global": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          "lambda": 100.0,
+          "global_theta": -0.6328154604762793,
+          "objective": 0.8696098238335602,
+          "success": true,
+          "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL",
+          "iterations": 4,
+          "retained_global_solution": false,
+          "boundary": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        }
+      }
+    },
+    {
+      "fold": 1,
+      "train_groups": [
+        "S01E02",
+        "S01E04",
+        "S01E10",
+        "S01E15",
+        "S01E22",
+        "S03E23",
+        "S06E22",
+        "S07E07",
+        "S07E09",
+        "S07E23",
+        "S08E02",
+        "S08E16",
+        "S08E20",
+        "S09E10",
+        "S09E21"
+      ],
+      "held_groups": [
+        "S04E04",
+        "S05E19",
+        "S06E18",
+        "S07E16"
+      ],
+      "train_n": 1030,
+      "held_n": 376,
+      "global_fit": {
+        "temperature": 0.5297474701809467,
+        "theta": -0.6353548573412207,
+        "objective": 0.8510462524189225,
+        "success": true,
+        "message": "Solution found.",
+        "iterations": 11,
+        "boundary": false
+      },
+      "unregularized_fit": {
+        "temperatures": [
+          0.4336895540841178,
+          0.5971376485638367,
+          0.7800050910529137,
+          0.796835624383417,
+          0.5495310477671473,
+          0.549131556418628,
+          0.7294143433443224
+        ],
+        "log_temperatures": [
+          -0.835426314010501,
+          -0.5156076250574416,
+          -0.24845483232888532,
+          -0.22710686439464284,
+          -0.5986900048835889,
+          -0.5994172370012633,
+          -0.31551333622135436
+        ],
+        "support": [
+          509,
+          162,
+          33,
+          38,
+          156,
+          10,
+          122
+        ],
+        "fallback_global": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "lambda": 0.0,
+        "global_theta": -0.6353548573412207,
+        "objective": 0.8283900324728943,
+        "success": true,
+        "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+        "iterations": 23,
+        "retained_global_solution": false,
+        "boundary": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ]
+      },
+      "hierarchical_fits": {
+        "0.001": {
+          "temperatures": [
+            0.4337400641559416,
+            0.5970220571361312,
+            0.7749088359408611,
+            0.7938428884018398,
+            0.5494961876515225,
+            0.5484474854633943,
+            0.7288079675679555
+          ],
+          "log_temperatures": [
+            -0.8353098548285254,
+            -0.5158012196453593,
+            -0.25500988759191406,
+            -0.23086971086387512,
+            -0.5987534430123506,
+            -0.6006637459408575,
+            -0.3163450006483488
+          ],
+          "support": [
+            509,
+            162,
+            33,
+            38,
+            156,
+            10,
+            122
+          ],
+          "fallback_global": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          "lambda": 0.001,
+          "global_theta": -0.6353548573412207,
+          "objective": 0.8284573496809483,
+          "success": true,
+          "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+          "iterations": 23,
+          "retained_global_solution": false,
+          "boundary": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        "0.01": {
+          "temperatures": [
+            0.4341923143238126,
+            0.5960002793056882,
+            0.7387334696615686,
+            0.7703490416691839,
+            0.5491878578367062,
+            0.5439591066364334,
+            0.7235427802302881
+          ],
+          "log_temperatures": [
+            -0.8342677224688746,
+            -0.517514143283192,
+            -0.3028180866048089,
+            -0.26091156597513865,
+            -0.5993147141515407,
+            -0.6088812065759258,
+            -0.3235956051074886
+          ],
+          "support": [
+            509,
+            162,
+            33,
+            38,
+            156,
+            10,
+            122
+          ],
+          "fallback_global": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          "lambda": 0.01,
+          "global_theta": -0.6353548573412207,
+          "objective": 0.8290141997788188,
+          "success": true,
+          "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+          "iterations": 22,
+          "retained_global_solution": false,
+          "boundary": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        "0.1": {
+          "temperatures": [
+            0.43848730370588246,
+            0.587315117815659,
+            0.6237915670214208,
+            0.6655617220084715,
+            0.5465657210874427,
+            0.5339611954597808,
+            0.6843926638868589
+          ],
+          "log_temperatures": [
+            -0.8244244215095227,
+            -0.5321937755698102,
+            -0.4719389936214852,
+            -0.4071239001305397,
+            -0.6041007204304828,
+            -0.6274321103406789,
+            -0.3792234560647115
+          ],
+          "support": [
+            509,
+            162,
+            33,
+            38,
+            156,
+            10,
+            122
+          ],
+          "fallback_global": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          "lambda": 0.1,
+          "global_theta": -0.6353548573412207,
+          "objective": 0.8324596329520209,
+          "success": true,
+          "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+          "iterations": 16,
+          "retained_global_solution": false,
+          "boundary": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        "1.0": {
+          "temperatures": [
+            0.46670932487964584,
+            0.5549928620367492,
+            0.5457530334150944,
+            0.5579461723597977,
+            0.536927561195653,
+            0.5302733718091645,
+            0.5846731600368087
+          ],
+          "log_temperatures": [
+            -0.762048645768194,
+            -0.5888000265134549,
+            -0.6055887253172433,
+            -0.5834927865589249,
+            -0.6218920889250702,
+            -0.6343626095465854,
+            -0.5367022886735044
+          ],
+          "support": [
+            509,
+            162,
+            33,
+            38,
+            156,
+            10,
+            122
+          ],
+          "fallback_global": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          "lambda": 1.0,
+          "global_theta": -0.6353548573412207,
+          "objective": 0.8415190067435757,
+          "success": true,
+          "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+          "iterations": 9,
+          "retained_global_solution": false,
+          "boundary": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        "10.0": {
+          "temperatures": [
+            0.5143557533845903,
+            0.5336054889080102,
+            0.5314866737812345,
+            0.5329566196253466,
+            0.5308165357770396,
+            0.5298014046994411,
+            0.5373760061551165
+          ],
+          "log_temperatures": [
+            -0.664840125729172,
+            -0.6280984978743899,
+            -0.6320771543625642,
+            -0.629315247199207,
+            -0.6333388244527224,
+            -0.635253050770859,
+            -0.6210572318155178
+          ],
+          "support": [
+            509,
+            162,
+            33,
+            38,
+            156,
+            10,
+            122
+          ],
+          "fallback_global": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          "lambda": 10.0,
+          "global_theta": -0.6353548573412207,
+          "objective": 0.8491283174383575,
+          "success": true,
+          "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+          "iterations": 5,
+          "retained_global_solution": false,
+          "boundary": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        "100.0": {
+          "temperatures": [
+            0.5279518488182905,
+            0.530155097200196,
+            0.5299229477186761,
+            0.5300730018204244,
+            0.5298598889514998,
+            0.5297528774559206,
+            0.5305426315130977
+          ],
+          "log_temperatures": [
+            -0.638750194854335,
+            -0.6345856790188136,
+            -0.6350236646677831,
+            -0.6347405426373341,
+            -0.6351426678542261,
+            -0.6353446501242319,
+            -0.6338549631519752
+          ],
+          "support": [
+            509,
+            162,
+            33,
+            38,
+            156,
+            10,
+            122
+          ],
+          "fallback_global": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          "lambda": 100.0,
+          "global_theta": -0.6353548573412207,
+          "objective": 0.8508303107063343,
+          "success": true,
+          "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+          "iterations": 4,
+          "retained_global_solution": false,
+          "boundary": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        }
+      }
+    },
+    {
+      "fold": 2,
+      "train_groups": [
+        "S01E02",
+        "S01E10",
+        "S01E15",
+        "S04E04",
+        "S05E19",
+        "S06E18",
+        "S06E22",
+        "S07E09",
+        "S07E16",
+        "S07E23",
+        "S08E02",
+        "S08E16",
+        "S08E20",
+        "S09E10",
+        "S09E21"
+      ],
+      "held_groups": [
+        "S01E04",
+        "S01E22",
+        "S03E23",
+        "S07E07"
+      ],
+      "train_n": 1042,
+      "held_n": 364,
+      "global_fit": {
+        "temperature": 0.5232575156675731,
+        "theta": -0.647681554323781,
+        "objective": 0.8467431011297712,
+        "success": true,
+        "message": "Solution found.",
+        "iterations": 19,
+        "boundary": false
+      },
+      "unregularized_fit": {
+        "temperatures": [
+          0.39880151961939186,
+          0.5459897011544974,
+          0.8269223668558702,
+          0.569398833747618,
+          0.5666452501170872,
+          0.9568905160350429,
+          0.7549404308288754
+        ],
+        "log_temperatures": [
+          -0.9192914304217942,
+          -0.6051551657695288,
+          -0.19004446157415805,
+          -0.5631741523531214,
+          -0.5680218322311698,
+          -0.04406629738090545,
+          -0.28111643241025014
+        ],
+        "support": [
+          465,
+          148,
+          39,
+          48,
+          177,
+          13,
+          152
+        ],
+        "fallback_global": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "lambda": 0.0,
+        "global_theta": -0.647681554323781,
+        "objective": 0.8150967322771768,
+        "success": true,
+        "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+        "iterations": 20,
+        "retained_global_solution": false,
+        "boundary": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ]
+      },
+      "hierarchical_fits": {
+        "0.001": {
+          "temperatures": [
+            0.39887987026155763,
+            0.5459476375986115,
+            0.8218393275983199,
+            0.5690796396294249,
+            0.5665733257656398,
+            0.9347940336270859,
+            0.7543552341327597
+          ],
+          "log_temperatures": [
+            -0.9190949844637673,
+            -0.6052322096701518,
+            -0.19621036824062735,
+            -0.56373489045054,
+            -0.568148770410749,
+            -0.06742905885054755,
+            -0.28189188912032476
+          ],
+          "support": [
+            465,
+            148,
+            39,
+            48,
+            177,
+            13,
+            152
+          ],
+          "fallback_global": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          "lambda": 0.001,
+          "global_theta": -0.647681554323781,
+          "objective": 0.8152081289685468,
+          "success": true,
+          "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+          "iterations": 19,
+          "retained_global_solution": false,
+          "boundary": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        "0.01": {
+          "temperatures": [
+            0.39958031220363877,
+            0.5455760765331553,
+            0.78456167386195,
+            0.566401170148577,
+            0.5659367732219394,
+            0.8184207803581302,
+            0.7492502532865261
+          ],
+          "log_temperatures": [
+            -0.9173405021811466,
+            -0.6059130214106524,
+            -0.24263009439628216,
+            -0.5684526706644768,
+            -0.5692729151072137,
+            -0.20037867322263703,
+            -0.2886822347320001
+          ],
+          "support": [
+            465,
+            148,
+            39,
+            48,
+            177,
+            13,
+            152
+          ],
+          "fallback_global": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          "lambda": 0.01,
+          "global_theta": -0.647681554323781,
+          "objective": 0.8160550789053226,
+          "success": true,
+          "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+          "iterations": 18,
+          "retained_global_solution": false,
+          "boundary": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        "0.1": {
+          "temperatures": [
+            0.40615120877045785,
+            0.5424400715263705,
+            0.6524822096221297,
+            0.5506527061840751,
+            0.5604808882494282,
+            0.6166019833160111,
+            0.7099325471658665
+          ],
+          "log_temperatures": [
+            -0.9010297533220347,
+            -0.6116776669019732,
+            -0.42697140510391174,
+            -0.5966509658566551,
+            -0.5789601347329241,
+            -0.4835315469994004,
+            -0.3425853174516783
+          ],
+          "support": [
+            465,
+            148,
+            39,
+            48,
+            177,
+            13,
+            152
+          ],
+          "fallback_global": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          "lambda": 0.1,
+          "global_theta": -0.647681554323781,
+          "objective": 0.8205108309080131,
+          "success": true,
+          "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+          "iterations": 14,
+          "retained_global_solution": false,
+          "boundary": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        "1.0": {
+          "temperatures": [
+            0.4463074373866165,
+            0.5312592961455961,
+            0.5474712111154123,
+            0.5292458474633034,
+            0.5396814345282049,
+            0.5360878817582394,
+            0.5972198642378055
+          ],
+          "log_temperatures": [
+            -0.8067472429403548,
+            -0.6325050602696053,
+            -0.6024454011115891,
+            -0.6363022150757828,
+            -0.6167762495634412,
+            -0.6234571728468836,
+            -0.5154699515832641
+          ],
+          "support": [
+            465,
+            148,
+            39,
+            48,
+            177,
+            13,
+            152
+          ],
+          "fallback_global": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          "lambda": 1.0,
+          "global_theta": -0.647681554323781,
+          "objective": 0.832957123165802,
+          "success": true,
+          "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+          "iterations": 9,
+          "retained_global_solution": false,
+          "boundary": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        "10.0": {
+          "temperatures": [
+            0.5057317479609096,
+            0.5244321223853342,
+            0.5259537368516535,
+            0.5239388673483646,
+            0.5257613492328418,
+            0.524595883584733,
+            0.5343138644226351
+          ],
+          "log_temperatures": [
+            -0.681748892639567,
+            -0.6454392734664711,
+            -0.6425420228660079,
+            -0.6463802668327444,
+            -0.6429078778841647,
+            -0.6451270583496257,
+            -0.626771851594762
+          ],
+          "support": [
+            465,
+            148,
+            39,
+            48,
+            177,
+            13,
+            152
+          ],
+          "fallback_global": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          "lambda": 10.0,
+          "global_theta": -0.647681554323781,
+          "objective": 0.8440816683885435,
+          "success": true,
+          "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+          "iterations": 5,
+          "retained_global_solution": false,
+          "boundary": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        "100.0": {
+          "temperatures": [
+            0.5212493042318511,
+            0.5233807615730172,
+            0.5235303384986719,
+            0.5233266078713005,
+            0.5235218376926936,
+            0.5233919405345069,
+            0.5244245990272374
+          ],
+          "log_temperatures": [
+            -0.6515268406770169,
+            -0.6474460462047035,
+            -0.6471602971536862,
+            -0.647549520591807,
+            -0.6471765347513376,
+            -0.6474246872956153,
+            -0.6454536192926328
+          ],
+          "support": [
+            465,
+            148,
+            39,
+            48,
+            177,
+            13,
+            152
+          ],
+          "fallback_global": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          "lambda": 100.0,
+          "global_theta": -0.647681554323781,
+          "objective": 0.8464478354096584,
+          "success": true,
+          "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL",
+          "iterations": 4,
+          "retained_global_solution": false,
+          "boundary": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        }
+      }
+    },
+    {
+      "fold": 3,
+      "train_groups": [
+        "S01E02",
+        "S01E04",
+        "S01E10",
+        "S01E15",
+        "S01E22",
+        "S03E23",
+        "S04E04",
+        "S05E19",
+        "S06E18",
+        "S06E22",
+        "S07E07",
+        "S07E16",
+        "S08E02",
+        "S08E16",
+        "S08E20"
+      ],
+      "held_groups": [
+        "S07E09",
+        "S07E23",
+        "S09E10",
+        "S09E21"
+      ],
+      "train_n": 1188,
+      "held_n": 218,
+      "global_fit": {
+        "temperature": 0.5522637381650063,
+        "theta": -0.5937295602778744,
+        "objective": 0.902951177734073,
+        "success": true,
+        "message": "Solution found.",
+        "iterations": 15,
+        "boundary": false
+      },
+      "unregularized_fit": {
+        "temperatures": [
+          0.43644916628310354,
+          0.5922716900840058,
+          0.9196700411628448,
+          0.6579793547636721,
+          0.5902700460407765,
+          0.8274130873739274,
+          0.8142089607833035
+        ],
+        "log_temperatures": [
+          -0.8290833680257588,
+          -0.5237898134243135,
+          -0.08374032417962193,
+          -0.41858172388814885,
+          -0.5271751416435662,
+          -0.18945120761082798,
+          -0.2055382373446092
+        ],
+        "support": [
+          560,
+          170,
+          35,
+          47,
+          201,
+          18,
+          157
+        ],
+        "fallback_global": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "lambda": 0.0,
+        "global_theta": -0.5937295602778744,
+        "objective": 0.8735690104154795,
+        "success": true,
+        "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+        "iterations": 20,
+        "retained_global_solution": false,
+        "boundary": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ]
+      },
+      "hierarchical_fits": {
+        "0.001": {
+          "temperatures": [
+            0.43651102684566023,
+            0.5921974116262368,
+            0.910830075291054,
+            0.6570807554677164,
+            0.5902092476836595,
+            0.8183361919262839,
+            0.8134431750233027
+          ],
+          "log_temperatures": [
+            -0.8289416420612826,
+            -0.5239152341005627,
+            -0.09339892459655919,
+            -0.4199483525750385,
+            -0.5272781478673839,
+            -0.2004820342387853,
+            -0.20647920722344038
+          ],
+          "support": [
+            560,
+            170,
+            35,
+            47,
+            201,
+            18,
+            157
+          ],
+          "fallback_global": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          "lambda": 0.001,
+          "global_theta": -0.5937295602778744,
+          "objective": 0.8736632300817869,
+          "success": true,
+          "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+          "iterations": 20,
+          "retained_global_solution": false,
+          "boundary": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        "0.01": {
+          "temperatures": [
+            0.4370647777700481,
+            0.5915413541141672,
+            0.85143585871749,
+            0.6496949378582996,
+            0.5896710784203877,
+            0.7609454469742755,
+            0.8067999895415001
+          ],
+          "log_temperatures": [
+            -0.82767386198855,
+            -0.5250236840360212,
+            -0.16083110911830126,
+            -0.4312523526323939,
+            -0.5281903917427783,
+            -0.2731936096633702,
+            -0.21467948586502028
+          ],
+          "support": [
+            560,
+            170,
+            35,
+            47,
+            201,
+            18,
+            157
+          ],
+          "fallback_global": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          "lambda": 0.01,
+          "global_theta": -0.5937295602778744,
+          "objective": 0.8744096713347607,
+          "success": true,
+          "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+          "iterations": 20,
+          "retained_global_solution": false,
+          "boundary": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        "0.1": {
+          "temperatures": [
+            0.44232003438159634,
+            0.5860190742718216,
+            0.6835825221289537,
+            0.6105321550692097,
+            0.5850378743841145,
+            0.6267521236241184,
+            0.7575906291663684
+          ],
+          "log_temperatures": [
+            -0.8157215992223207,
+            -0.5344029399829485,
+            -0.3804078954622957,
+            -0.4934243167623609,
+            -0.5360786913090403,
+            -0.4672041536381569,
+            -0.2776121062913489
+          ],
+          "support": [
+            560,
+            170,
+            35,
+            47,
+            201,
+            18,
+            157
+          ],
+          "fallback_global": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          "lambda": 0.1,
+          "global_theta": -0.5937295602778744,
+          "objective": 0.8785800069869573,
+          "success": true,
+          "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+          "iterations": 16,
+          "retained_global_solution": false,
+          "boundary": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        "1.0": {
+          "temperatures": [
+            0.47670023950164797,
+            0.5664126437380104,
+            0.5749525115057426,
+            0.5643492194373018,
+            0.5669993669468439,
+            0.5629274700238055,
+            0.6294058344163805
+          ],
+          "log_temperatures": [
+            -0.7408674143556075,
+            -0.5684324138680058,
+            -0.553467830281085,
+            -0.5720820356995556,
+            -0.5673970917508744,
+            -0.5746044868078634,
+            -0.46297902458802576
+          ],
+          "support": [
+            560,
+            170,
+            35,
+            47,
+            201,
+            18,
+            157
+          ],
+          "fallback_global": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          "lambda": 1.0,
+          "global_theta": -0.5937295602778744,
+          "objective": 0.8900380384766522,
+          "success": true,
+          "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+          "iterations": 9,
+          "retained_global_solution": false,
+          "boundary": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        "10.0": {
+          "temperatures": [
+            0.5340445044203215,
+            0.5543550345444925,
+            0.5547449821781528,
+            0.5536260529532261,
+            0.5545425061501267,
+            0.5533824858570283,
+            0.5634978240850039
+          ],
+          "log_temperatures": [
+            -0.6272761018835724,
+            -0.5899499409172335,
+            -0.5892467624051992,
+            -0.5912658148155872,
+            -0.5896118184116992,
+            -0.591705860382697,
+            -0.5735918069383259
+          ],
+          "support": [
+            560,
+            170,
+            35,
+            47,
+            201,
+            18,
+            157
+          ],
+          "fallback_global": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          "lambda": 10.0,
+          "global_theta": -0.5937295602778744,
+          "objective": 0.9003723193582711,
+          "success": true,
+          "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+          "iterations": 5,
+          "retained_global_solution": false,
+          "boundary": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        "100.0": {
+          "temperatures": [
+            0.5501488851981974,
+            0.5524834592883973,
+            0.5525142823646597,
+            0.5524017456262188,
+            0.5525048911348555,
+            0.5523761719901247,
+            0.5534447169076301
+          ],
+          "log_temperatures": [
+            -0.5975663370279933,
+            -0.5933317839779307,
+            -0.5932759954905726,
+            -0.593479697375565,
+            -0.5932929928966443,
+            -0.5935259938043602,
+            -0.5915934109407031
+          ],
+          "support": [
+            560,
+            170,
+            35,
+            47,
+            201,
+            18,
+            157
+          ],
+          "fallback_global": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          "lambda": 100.0,
+          "global_theta": -0.5937295602778744,
+          "objective": 0.9026624153708441,
+          "success": true,
+          "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL",
+          "iterations": 4,
+          "retained_global_solution": false,
+          "boundary": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        }
+      }
+    },
+    {
+      "fold": 4,
+      "train_groups": [
+        "S01E02",
+        "S01E04",
+        "S01E10",
+        "S01E15",
+        "S01E22",
+        "S03E23",
+        "S04E04",
+        "S05E19",
+        "S06E18",
+        "S06E22",
+        "S07E07",
+        "S07E09",
+        "S07E16",
+        "S07E23",
+        "S09E10",
+        "S09E21"
+      ],
+      "held_groups": [
+        "S08E02",
+        "S08E16",
+        "S08E20"
+      ],
+      "train_n": 1191,
+      "held_n": 215,
+      "global_fit": {
+        "temperature": 0.5388140944027902,
+        "theta": -0.6183846759113206,
+        "objective": 0.8730922966444638,
+        "success": true,
+        "message": "Solution found.",
+        "iterations": 23,
+        "boundary": false
+      },
+      "unregularized_fit": {
+        "temperatures": [
+          0.4164411195632114,
+          0.5650956601392415,
+          0.8503008090363154,
+          0.6965505353408487,
+          0.5950265914660363,
+          0.8518300009011025,
+          0.7939063889009442
+        ],
+        "log_temperatures": [
+          -0.876010196964994,
+          -0.5707602521860549,
+          -0.16216509911922647,
+          -0.36161493226965197,
+          -0.5191491828955875,
+          -0.16036830152027196,
+          -0.2307897227951718
+        ],
+        "support": [
+          571,
+          153,
+          37,
+          50,
+          199,
+          16,
+          165
+        ],
+        "fallback_global": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "lambda": 0.0,
+        "global_theta": -0.6183846759113206,
+        "objective": 0.8404765816610108,
+        "success": true,
+        "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+        "iterations": 21,
+        "retained_global_solution": false,
+        "boundary": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ]
+      },
+      "hierarchical_fits": {
+        "0.001": {
+          "temperatures": [
+            0.4165090961517392,
+            0.5650416937442083,
+            0.8438438358775531,
+            0.6952061569984777,
+            0.5949331409063253,
+            0.8386978736626193,
+            0.7931955682956124
+          ],
+          "log_temperatures": [
+            -0.875846978113744,
+            -0.5708557563208201,
+            -0.1697878300871779,
+            -0.3635468486281739,
+            -0.5193062479749525,
+            -0.17590474027265374,
+            -0.23168546947311722
+          ],
+          "support": [
+            571,
+            153,
+            37,
+            50,
+            199,
+            16,
+            165
+          ],
+          "fallback_global": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          "lambda": 0.001,
+          "global_theta": -0.6183846759113206,
+          "objective": 0.8405767268049225,
+          "success": true,
+          "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+          "iterations": 21,
+          "retained_global_solution": false,
+          "boundary": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        "0.01": {
+          "temperatures": [
+            0.41711726492658624,
+            0.5645657358371109,
+            0.7985056563435239,
+            0.6842071115149532,
+            0.5941063293799667,
+            0.7626320620527142,
+            0.7870174585949244
+          ],
+          "log_temperatures": [
+            -0.8743878858605741,
+            -0.5716984525049982,
+            -0.22501322764079562,
+            -0.37949461258011885,
+            -0.5206969699489195,
+            -0.27097958936258226,
+            -0.23950484708153313
+          ],
+          "support": [
+            571,
+            153,
+            37,
+            50,
+            199,
+            16,
+            165
+          ],
+          "fallback_global": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          "lambda": 0.01,
+          "global_theta": -0.6183846759113206,
+          "objective": 0.8413660753021116,
+          "success": true,
+          "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+          "iterations": 20,
+          "retained_global_solution": false,
+          "boundary": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        "0.1": {
+          "temperatures": [
+            0.422870044272349,
+            0.5606192385459444,
+            0.6569821789398302,
+            0.6266430239969175,
+            0.587034122376287,
+            0.6121704662534986,
+            0.7406722840819997
+          ],
+          "log_temperatures": [
+            -0.86069037108124,
+            -0.5787133230630084,
+            -0.42009838576673714,
+            -0.4673782402024514,
+            -0.532672330730605,
+            -0.4907444956248721,
+            -0.30019701321030534
+          ],
+          "support": [
+            571,
+            153,
+            37,
+            50,
+            199,
+            16,
+            165
+          ],
+          "fallback_global": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          "lambda": 0.1,
+          "global_theta": -0.6183846759113206,
+          "objective": 0.8458300647942937,
+          "success": true,
+          "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+          "iterations": 16,
+          "retained_global_solution": false,
+          "boundary": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        "1.0": {
+          "temperatures": [
+            0.45981667689888583,
+            0.5474673863232103,
+            0.5594257754417765,
+            0.5576222740388649,
+            0.560166155590369,
+            0.5489389798610095,
+            0.6161172964713841
+          ],
+          "log_temperatures": [
+            -0.7769273974132593,
+            -0.6024523874251795,
+            -0.5808444223330336,
+            -0.5840734740659621,
+            -0.5795218328502113,
+            -0.5997679914441342,
+            -0.48431791722585976
+          ],
+          "support": [
+            571,
+            153,
+            37,
+            50,
+            199,
+            16,
+            165
+          ],
+          "fallback_global": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          "lambda": 1.0,
+          "global_theta": -0.6183846759113206,
+          "objective": 0.8585487149992872,
+          "success": true,
+          "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+          "iterations": 9,
+          "retained_global_solution": false,
+          "boundary": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        "10.0": {
+          "temperatures": [
+            0.519892445827298,
+            0.5400487838774622,
+            0.541069467031604,
+            0.5409576576336388,
+            0.5420879736911851,
+            0.5398703733844806,
+            0.5501890288463264
+          ],
+          "log_temperatures": [
+            -0.6541333237474656,
+            -0.6160958029904565,
+            -0.6142076035145219,
+            -0.6144142700496102,
+            -0.6123269776304667,
+            -0.6164262175282578,
+            -0.5974933709915886
+          ],
+          "support": [
+            571,
+            153,
+            37,
+            50,
+            199,
+            16,
+            165
+          ],
+          "fallback_global": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          "lambda": 10.0,
+          "global_theta": -0.6183846759113206,
+          "objective": 0.8701887913728924,
+          "success": true,
+          "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+          "iterations": 5,
+          "retained_global_solution": false,
+          "boundary": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        "100.0": {
+          "temperatures": [
+            0.5366188350682736,
+            0.5389430939840741,
+            0.5390418396930321,
+            0.5390315396882881,
+            0.5391601144086816,
+            0.5389201869812202,
+            0.540011926249861
+          ],
+          "log_temperatures": [
+            -0.6224672408457779,
+            -0.6181452906707674,
+            -0.6179620864233809,
+            -0.6179811945934578,
+            -0.617742693914076,
+            -0.6181877951391205,
+            -0.6161640540198104
+          ],
+          "support": [
+            571,
+            153,
+            37,
+            50,
+            199,
+            16,
+            165
+          ],
+          "fallback_global": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          "lambda": 100.0,
+          "global_theta": -0.6183846759113206,
+          "objective": 0.8727672610495235,
+          "success": true,
+          "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL",
+          "iterations": 4,
+          "retained_global_solution": false,
+          "boundary": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        }
+      }
+    }
+  ],
+  "diagnostic_only": true,
+  "selection_bias_note": "E2 uses the same grouped OOF predictions for lambda selection and diagnostics; not unbiased evaluation."
+}

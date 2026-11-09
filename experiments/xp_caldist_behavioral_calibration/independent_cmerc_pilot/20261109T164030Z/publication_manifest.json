@@ -1,0 +1,545 @@
+{
+  "schema": "cmerc_independent_pilot_github_publication_v1",
+  "repository": "https://github.com/yixuanluo197/lyx-msa",
+  "target_branch": "main",
+  "source_experiment_root": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/independent_cmerc_pilot/20261109T164030Z",
+  "published_root": "experiments/xp_caldist_behavioral_calibration/independent_cmerc_pilot/20261109T164030Z",
+  "policy": "reports, reproducibility code, tests, compact metadata and audit evidence; no weights, role-feature binaries, NPZ probabilities, caches, bulk JSONL logs, or duplicate prestable metadata",
+  "included_file_count": 59,
+  "included_size_bytes": 452784,
+  "excluded_file_count": 38,
+  "excluded_size_bytes": 1123835965,
+  "included_files": [
+    {
+      "path": "GITHUB_DELIVERY.md",
+      "size_bytes": 2026,
+      "sha256": "b8887d4635c1fc8c69cc882b18cb61ce2af5b274f00d3e12215cd3ade9f8b196"
+    },
+    {
+      "path": "configs/execution_manifest.json",
+      "size_bytes": 47645,
+      "sha256": "d783172cb73c375883ffcfa1e2b834f85598d533e897afdce2b7596d99114a17"
+    },
+    {
+      "path": "configs/preregistered_config.json",
+      "size_bytes": 5760,
+      "sha256": "778fb32b1ebb8d276bb9cc84652267ba5b16a8e2aae57e6e45b61c6ad44e0383"
+    },
+    {
+      "path": "logs/disk_postflight.txt",
+      "size_bytes": 208,
+      "sha256": "027c2033f2abb7df93d689f128a30fbc609a24fe97bf9cdf5821003b7a794fca"
+    },
+    {
+      "path": "logs/disk_preflight.txt",
+      "size_bytes": 208,
+      "sha256": "ddf846ba26e0af8d8a3a00b27884d264ca1458e34a3142d7ae8191e067f64743"
+    },
+    {
+      "path": "logs/gpu_postflight.csv",
+      "size_bytes": 324,
+      "sha256": "665b9a28706ac5d347bf17c4d64684f3298c701803eaa11bd186580c1db11683"
+    },
+    {
+      "path": "logs/gpu_preflight.csv",
+      "size_bytes": 324,
+      "sha256": "665b9a28706ac5d347bf17c4d64684f3298c701803eaa11bd186580c1db11683"
+    },
+    {
+      "path": "logs/gpu_processes_postflight.csv",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "logs/gpu_processes_preflight.csv",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "provenance/final_artifact_hashes.json",
+      "size_bytes": 18948,
+      "sha256": "4da9704a69f15c94053f38b656e10b56d63d6bb631f952f5448e62471a3f9daf"
+    },
+    {
+      "path": "provenance/source_hashes.json",
+      "size_bytes": 8578,
+      "sha256": "a0026b846b8070a627fc159c898a12b4e1740fbd5a9647f2aaccbf8e38001e93"
+    },
+    {
+      "path": "reports/CALIBRATION_PILOT_REPORT.md",
+      "size_bytes": 1329,
+      "sha256": "512231fdbe0264dc3b861a9bf30ec74bce79cbd6c4e92098ada7e4c6f82a8514"
+    },
+    {
+      "path": "reports/CURRICULUM_TRAINING_AUDIT.md",
+      "size_bytes": 1043,
+      "sha256": "f713a4aee61239d6724edad4e854db028b2ab1e3057a9047d2967e6cd0a3766f"
+    },
+    {
+      "path": "reports/FINAL_CMERC_PILOT_DECISION.md",
+      "size_bytes": 1564,
+      "sha256": "4dc9750ae7e484084344e581644f4c15a2a0c726f4118e027982909f36186e7e"
+    },
+    {
+      "path": "reports/FULL_EPOCH_MASK_AUDIT.md",
+      "size_bytes": 1274,
+      "sha256": "b4d51d13d858a1c59810098d40165020c21d4505b4c663716215d571dd9fa2b3"
+    },
+    {
+      "path": "reports/GPU_RESOURCE_REPORT.md",
+      "size_bytes": 955,
+      "sha256": "a3c998e4375cc88d60d8499b52b2ceba5201bc57581981708c7adce87cff0e4b"
+    },
+    {
+      "path": "reports/IEMOCAP_PILOT_TRAINING.md",
+      "size_bytes": 1143,
+      "sha256": "57f5b162b301537eb2c9b223fdd18bd17bdad872d23022e836d7ddc900f3a0ad"
+    },
+    {
+      "path": "reports/MELD_PILOT_TRAINING.md",
+      "size_bytes": 1061,
+      "sha256": "93af312594c4bead3f361202594786751e27371a7edabe274cf981741ca8d8ab"
+    },
+    {
+      "path": "results/calibration_summary.csv",
+      "size_bytes": 1880,
+      "sha256": "01cdaab1b5ba86d7ad218617c35d069429a51ffe312571b9b1b1c2cdaa3a489b"
+    },
+    {
+      "path": "results/checkpoint_reload_verification.json",
+      "size_bytes": 728,
+      "sha256": "9d0b0e4fa1702b917c5f2818ecfa950070473ddab27fadd7617721c9b18991fc"
+    },
+    {
+      "path": "results/pilot_training_summary.csv",
+      "size_bytes": 462,
+      "sha256": "9ec081b13f413bc90e4158ef06cd5889d88c349914209d7399e01fdbed5697f8"
+    },
+    {
+      "path": "results/preflight_artifact_verification.json",
+      "size_bytes": 1185,
+      "sha256": "fcb65b692fefaa82a3c1e1c2e2b3e65bf69368933b0b147dbfa8a5563e24eb13"
+    },
+    {
+      "path": "runs/IEMOCAP/fold1/seed1475/artifacts/calibration_role_artifact.pt.json",
+      "size_bytes": 4481,
+      "sha256": "0866100c1d68fbf925586f85be04bcf11ef8215c2b57f275ff2e16bb798705ab"
+    },
+    {
+      "path": "runs/IEMOCAP/fold1/seed1475/artifacts/development_role_artifact.pt.json",
+      "size_bytes": 2810,
+      "sha256": "42e65019008798c978551d76aa3e6373804c228abc775ee3fcabe8ccc62ecb4a"
+    },
+    {
+      "path": "runs/IEMOCAP/fold1/seed1475/artifacts/training_role_artifact.pt.json",
+      "size_bytes": 8896,
+      "sha256": "5ba65bc31fd33963d3f0f334682723f0c31ef03506ae79177e886244fe8ce37b"
+    },
+    {
+      "path": "runs/IEMOCAP/fold1/seed1475/calibration/calibration_metrics.json",
+      "size_bytes": 653,
+      "sha256": "1d2198e3adae8324988c333f25c4412ca0239c49ac7f66043b04abc37bbcb430"
+    },
+    {
+      "path": "runs/IEMOCAP/fold1/seed1475/calibration/effective_config.json",
+      "size_bytes": 655,
+      "sha256": "4d73c5104220da42b334889dfc1ef12c2521288f0f2bd349cfff2e6afa622ca0"
+    },
+    {
+      "path": "runs/IEMOCAP/fold1/seed1475/calibration/oof_diagnostic.json",
+      "size_bytes": 49974,
+      "sha256": "71343c6d139f303465eaa7ccca7385c33ab02f3ef5c2a16fb0059404dbda91f3"
+    },
+    {
+      "path": "runs/IEMOCAP/fold1/seed1475/calibration/parameters.json",
+      "size_bytes": 2128,
+      "sha256": "1ccef51962af1602d59a319e65b67bf38144f206980539b900a07268efd02d57"
+    },
+    {
+      "path": "runs/IEMOCAP/fold1/seed1475/calibration/provenance.json",
+      "size_bytes": 1134,
+      "sha256": "b2fe637273cbedc37934e50644e17cf880c84db07e6eca8856ffba0be421d27e"
+    },
+    {
+      "path": "runs/IEMOCAP/fold1/seed1475/pretraining_audit/artifact_audit.json",
+      "size_bytes": 391,
+      "sha256": "127f4e366a10256039ea30206ffdfa1017521d046e46c3b4d2fc5b1f0948fbe0"
+    },
+    {
+      "path": "runs/IEMOCAP/fold1/seed1475/pretraining_audit/effective_config.json",
+      "size_bytes": 986,
+      "sha256": "8d046a6ada518483344fa3a9fa85a7d41c878de4e5c79e56c584dde8a544ee5e"
+    },
+    {
+      "path": "runs/IEMOCAP/fold1/seed1475/training/artifact_audit.json",
+      "size_bytes": 391,
+      "sha256": "127f4e366a10256039ea30206ffdfa1017521d046e46c3b4d2fc5b1f0948fbe0"
+    },
+    {
+      "path": "runs/IEMOCAP/fold1/seed1475/training/completion.json",
+      "size_bytes": 691,
+      "sha256": "8d6c2f1d5a2d1089c1f372930d1997ecd5fd31caaaaf0a3481bda4eaa21acbfa"
+    },
+    {
+      "path": "runs/IEMOCAP/fold1/seed1475/training/effective_config.json",
+      "size_bytes": 986,
+      "sha256": "8d046a6ada518483344fa3a9fa85a7d41c878de4e5c79e56c584dde8a544ee5e"
+    },
+    {
+      "path": "runs/IEMOCAP/fold1/seed1475/training/first_epoch_gate.json",
+      "size_bytes": 4223,
+      "sha256": "225118ff67316778713570a9eeea7713c9a1b2c5cb5d46ccf8e5cdf9c72866ec"
+    },
+    {
+      "path": "runs/IEMOCAP/fold1/seed1475/training/provenance.json",
+      "size_bytes": 2423,
+      "sha256": "17ffad0129dd24dfa72fdb9fe8b8d153911dc69d3ca31a2267707b87f60ea2a2"
+    },
+    {
+      "path": "runs/MELD/fold1/seed1475/artifacts/calibration_role_artifact.pt.json",
+      "size_bytes": 14893,
+      "sha256": "e9d706b080af61c5402a533854d4d74d579744a97a6a2c3ea2714977302e66b1"
+    },
+    {
+      "path": "runs/MELD/fold1/seed1475/artifacts/development_role_artifact.pt.json",
+      "size_bytes": 13876,
+      "sha256": "1194f9b0e51a6a17061968626c8f7a16e5d658dc4bb9a3b8c63beabf4902c7a0"
+    },
+    {
+      "path": "runs/MELD/fold1/seed1475/artifacts/training_role_artifact.pt.json",
+      "size_bytes": 73301,
+      "sha256": "43d101a7bf160c64e8484dda4e508687b41e9cdda09f6f4f432ea1d0082e757b"
+    },
+    {
+      "path": "runs/MELD/fold1/seed1475/calibration/calibration_metrics.json",
+      "size_bytes": 654,
+      "sha256": "eb6ec18b87555af4b0faf6a8f395b9595135f15c85444e442f279ed8a855043a"
+    },
+    {
+      "path": "runs/MELD/fold1/seed1475/calibration/effective_config.json",
+      "size_bytes": 651,
+      "sha256": "9166ae224186ecb88bcb4a68f89f1f1134623bef87ab99278d090510994f3ec7"
+    },
+    {
+      "path": "runs/MELD/fold1/seed1475/calibration/oof_diagnostic.json",
+      "size_bytes": 51849,
+      "sha256": "5756c918d4b555c97afa1026fcc2e506b0f2399a33f01cb6810f64534fd21590"
+    },
+    {
+      "path": "runs/MELD/fold1/seed1475/calibration/parameters.json",
+      "size_bytes": 2316,
+      "sha256": "d195cace3b2248451ed636bd0665df461471a7a878b0ca6070fb23ca8822e081"
+    },
+    {
+      "path": "runs/MELD/fold1/seed1475/calibration/provenance.json",
+      "size_bytes": 1125,
+      "sha256": "b9d4c80c2bf07261cf27499456817672c0d5090f76f2d2e381453def99d8a84b"
+    },
+    {
+      "path": "runs/MELD/fold1/seed1475/pretraining_audit/artifact_audit.json",
+      "size_bytes": 388,
+      "sha256": "201f9889b24df06329c831e301f9c6afdb15e6aff9770a805cb0063b8e14100b"
+    },
+    {
+      "path": "runs/MELD/fold1/seed1475/pretraining_audit/effective_config.json",
+      "size_bytes": 816,
+      "sha256": "8ebf333e7d51d7aee40a6ef711377d845f6c37fc357a673363aca8cf58c98edb"
+    },
+    {
+      "path": "runs/MELD/fold1/seed1475/training/artifact_audit.json",
+      "size_bytes": 388,
+      "sha256": "201f9889b24df06329c831e301f9c6afdb15e6aff9770a805cb0063b8e14100b"
+    },
+    {
+      "path": "runs/MELD/fold1/seed1475/training/completion.json",
+      "size_bytes": 688,
+      "sha256": "d433c2da23cba1d1a1a013cce17bf5de6f49370f23821ef5f01c8824fb37efdd"
+    },
+    {
+      "path": "runs/MELD/fold1/seed1475/training/effective_config.json",
+      "size_bytes": 816,
+      "sha256": "8ebf333e7d51d7aee40a6ef711377d845f6c37fc357a673363aca8cf58c98edb"
+    },
+    {
+      "path": "runs/MELD/fold1/seed1475/training/first_epoch_gate.json",
+      "size_bytes": 10398,
+      "sha256": "34005faa57e8789cc3312f051696473628b230eb12c7d69a3522b0aff83019cd"
+    },
+    {
+      "path": "runs/MELD/fold1/seed1475/training/provenance.json",
+      "size_bytes": 2423,
+      "sha256": "88adbb31303914e12da72b7b99fbee1a35b1ca983ecbd07cb5b3c6c177c303e9"
+    },
+    {
+      "path": "scripts/build_role_artifact.py",
+      "size_bytes": 8596,
+      "sha256": "0625c3b255edd7aa605796f080bc29d18ae9b975b57df8b7a5f2928e08741cb1"
+    },
+    {
+      "path": "scripts/calibration_only.py",
+      "size_bytes": 24457,
+      "sha256": "5be646de8a6aaf4b7c24c07b4b956ad3fcd8e148c7363bda9fb5a00ea1469f80"
+    },
+    {
+      "path": "scripts/cmerc_runner.py",
+      "size_bytes": 31541,
+      "sha256": "b3371cfc98621b68d08d79a48fe23565e0449fab998557d95aae7cdd7a56c130"
+    },
+    {
+      "path": "scripts/finalize_pilot.py",
+      "size_bytes": 9569,
+      "sha256": "bc65a0dbf86ed5a6c4d5893a7d90f4b843a9007a59c0d459288bb5966f208ef6"
+    },
+    {
+      "path": "tests/test_calibration_only.py",
+      "size_bytes": 8725,
+      "sha256": "b5fe95958207b001da3279b47c0503fccc1a93a137bd44f5a348dae675568ecf"
+    },
+    {
+      "path": "tests/test_cmerc_runner.py",
+      "size_bytes": 10451,
+      "sha256": "778efc2365ab0653a80f5fc75d5f889e66ccd9b6cbb0e9f107f3ece62d3c2593"
+    },
+    {
+      "path": "verification.json",
+      "size_bytes": 7396,
+      "sha256": "7053032a1b5acf0c41940613599bd3bc1ba32fca46bce8ff86a75ff793257a29"
+    }
+  ],
+  "excluded_files": [
+    {
+      "path": "provenance/prestable_artifacts/IEMOCAP_calibration_role_artifact.pt",
+      "size_bytes": 32768677,
+      "sha256": "a3afd0a41155023b1a9e2f118e6aaa63edc33bbc3273dfafb16def5ecad1d858",
+      "reason": "model_or_role_artifact_binary"
+    },
+    {
+      "path": "provenance/prestable_artifacts/IEMOCAP_calibration_role_artifact.pt.json",
+      "size_bytes": 4286,
+      "sha256": "1033bab642f67016e8d91242b258dc02631a359c598dca0437162a9413cc3d37",
+      "reason": "duplicate_prestable_artifact_metadata"
+    },
+    {
+      "path": "provenance/prestable_artifacts/IEMOCAP_development_role_artifact.pt",
+      "size_bytes": 11788623,
+      "sha256": "c4eaa07edf0eeaf04f3cf47650d827e09c5d977f58ece1abfcc838f15fecdb9b",
+      "reason": "model_or_role_artifact_binary"
+    },
+    {
+      "path": "provenance/prestable_artifacts/IEMOCAP_development_role_artifact.pt.json",
+      "size_bytes": 2615,
+      "sha256": "990bf205ddfda06c100497d505a8465c6247381b31935cdcb326bf399af31996",
+      "reason": "duplicate_prestable_artifact_metadata"
+    },
+    {
+      "path": "provenance/prestable_artifacts/IEMOCAP_training_role_artifact.pt",
+      "size_bytes": 101849927,
+      "sha256": "53063c47810ca05118415adf1f5f411758792ace9892a146c11111b747fc1b96",
+      "reason": "model_or_role_artifact_binary"
+    },
+    {
+      "path": "provenance/prestable_artifacts/IEMOCAP_training_role_artifact.pt.json",
+      "size_bytes": 8701,
+      "sha256": "a1e2368f55972650786be784cea7d0e06016ee38fd0e25e3a9c1e5fb970e5df2",
+      "reason": "duplicate_prestable_artifact_metadata"
+    },
+    {
+      "path": "provenance/prestable_artifacts/MELD_calibration_role_artifact.pt",
+      "size_bytes": 27159831,
+      "sha256": "e3be801b48ca6c2682bd01cf242fc65eef64c1d5cbf83362ec518325de21cd9c",
+      "reason": "model_or_role_artifact_binary"
+    },
+    {
+      "path": "provenance/prestable_artifacts/MELD_calibration_role_artifact.pt.json",
+      "size_bytes": 14893,
+      "sha256": "e9d706b080af61c5402a533854d4d74d579744a97a6a2c3ea2714977302e66b1",
+      "reason": "duplicate_prestable_artifact_metadata"
+    },
+    {
+      "path": "provenance/prestable_artifacts/MELD_development_role_artifact.pt",
+      "size_bytes": 26307423,
+      "sha256": "f82df1d64655c2e0032c49ac6ed735fdea00689f4610590f886dd15f349e3a68",
+      "reason": "model_or_role_artifact_binary"
+    },
+    {
+      "path": "provenance/prestable_artifacts/MELD_development_role_artifact.pt.json",
+      "size_bytes": 13681,
+      "sha256": "5661e7524ded6780f21d3c6e832d2c5bcfddc188078b49f29d60913b8b979711",
+      "reason": "duplicate_prestable_artifact_metadata"
+    },
+    {
+      "path": "provenance/prestable_artifacts/MELD_training_role_artifact.pt",
+      "size_bytes": 157955303,
+      "sha256": "edccddb4c9e41d3b8203d4ef3d606a018ab0bdec0e8a21787fea57e9caf47e60",
+      "reason": "model_or_role_artifact_binary"
+    },
+    {
+      "path": "provenance/prestable_artifacts/MELD_training_role_artifact.pt.json",
+      "size_bytes": 73106,
+      "sha256": "3c2f5ac2d0ce591f375974063d3c99748f52b9fc71c828b87928e7e8810dab0b",
+      "reason": "duplicate_prestable_artifact_metadata"
+    },
+    {
+      "path": "runs/IEMOCAP/fold1/seed1475/artifacts/calibration_role_artifact.pt",
+      "size_bytes": 32768869,
+      "sha256": "8e223c42c23197d6423ff54bb43d089dbb4ec66c53c1d3758d01887014009b29",
+      "reason": "model_or_role_artifact_binary"
+    },
+    {
+      "path": "runs/IEMOCAP/fold1/seed1475/artifacts/development_role_artifact.pt",
+      "size_bytes": 11788815,
+      "sha256": "6c2a6a05a8912ae158a644e63eb5ced6ae48cb5cddcf9d0128105eb1b53d7c1f",
+      "reason": "model_or_role_artifact_binary"
+    },
+    {
+      "path": "runs/IEMOCAP/fold1/seed1475/artifacts/training_role_artifact.pt",
+      "size_bytes": 101850119,
+      "sha256": "bc24638a9604d205c2b93fc90e0c079d8cabf441caf767dae85b2e9738a2ac4f",
+      "reason": "model_or_role_artifact_binary"
+    },
+    {
+      "path": "runs/IEMOCAP/fold1/seed1475/calibration/calibration_probabilities.npz",
+      "size_bytes": 838352,
+      "sha256": "45a02a2031f80e3004455d12732cff7d41a3ea9d8b4c1864769a83d622487291",
+      "reason": "full_probability_binary"
+    },
+    {
+      "path": "runs/IEMOCAP/fold1/seed1475/training/batch_access.jsonl",
+      "size_bytes": 253310,
+      "sha256": "41fdc03551e5d0d8490593000bbdddf8602c36b4e5681ad110a36f317002c79c",
+      "reason": "bulk_training_access_or_epoch_log"
+    },
+    {
+      "path": "runs/IEMOCAP/fold1/seed1475/training/best.pt",
+      "size_bytes": 59754449,
+      "sha256": "a4ae69de9bea3624122df6ece120fd58d3d62fca628bad08b0c44ff171ee8a14",
+      "reason": "model_or_role_artifact_binary"
+    },
+    {
+      "path": "runs/IEMOCAP/fold1/seed1475/training/epochs.jsonl",
+      "size_bytes": 223056,
+      "sha256": "3dd374ef9ba9e79599f3c8722e888713f714ab2f8505d5f1be481fbd91f5e1d6",
+      "reason": "bulk_training_access_or_epoch_log"
+    },
+    {
+      "path": "runs/IEMOCAP/fold1/seed1475/training/latest.pt",
+      "size_bytes": 59757893,
+      "sha256": "1d974f2231f9e6afc2b42ff9359be37acb9d33f36fa32fdd58e7f462b189473c",
+      "reason": "model_or_role_artifact_binary"
+    },
+    {
+      "path": "runs/MELD/fold1/seed1475/artifacts/calibration_role_artifact.pt",
+      "size_bytes": 27159831,
+      "sha256": "e3be801b48ca6c2682bd01cf242fc65eef64c1d5cbf83362ec518325de21cd9c",
+      "reason": "model_or_role_artifact_binary"
+    },
+    {
+      "path": "runs/MELD/fold1/seed1475/artifacts/development_role_artifact.pt",
+      "size_bytes": 26307679,
+      "sha256": "d49688ddb1190b3736259ad356fc04a960d4e014cec2d5ef7acb1d9c5b3b6c68",
+      "reason": "model_or_role_artifact_binary"
+    },
+    {
+      "path": "runs/MELD/fold1/seed1475/artifacts/training_role_artifact.pt",
+      "size_bytes": 157955495,
+      "sha256": "6290eb3a8392397737cb3191727b909157621f2b12fcb67523cd3dd2f099d796",
+      "reason": "model_or_role_artifact_binary"
+    },
+    {
+      "path": "runs/MELD/fold1/seed1475/calibration/calibration_probabilities.npz",
+      "size_bytes": 994598,
+      "sha256": "0ea1ba16df267dfcdb046241a70dfbd6c6845bf12f1c209d7372edc0e02e1aee",
+      "reason": "full_probability_binary"
+    },
+    {
+      "path": "runs/MELD/fold1/seed1475/training/batch_access.jsonl",
+      "size_bytes": 1269990,
+      "sha256": "68b9db0cea142210d7b314fc9dac7da0f564faab92f6c7026df97d3e1ab10bc2",
+      "reason": "bulk_training_access_or_epoch_log"
+    },
+    {
+      "path": "runs/MELD/fold1/seed1475/training/best.pt",
+      "size_bytes": 142016429,
+      "sha256": "3a2e8b6882a4edad19356e30a7fd30c83b01fca81a8564c9a983ee0c519cc84d",
+      "reason": "model_or_role_artifact_binary"
+    },
+    {
+      "path": "runs/MELD/fold1/seed1475/training/epochs.jsonl",
+      "size_bytes": 687833,
+      "sha256": "0e2d83725f4398f47fa199493aed6442d855e287241b9a26413ef33fe76ffcc8",
+      "reason": "bulk_training_access_or_epoch_log"
+    },
+    {
+      "path": "runs/MELD/fold1/seed1475/training/latest.pt",
+      "size_bytes": 142019781,
+      "sha256": "29182549523432b2ada15f5840b7d37d3d5e309d1b3ea4ed1d7d991a87b2d113",
+      "reason": "model_or_role_artifact_binary"
+    },
+    {
+      "path": "scripts/__pycache__/build_role_artifact.cpython-310.pyc",
+      "size_bytes": 8056,
+      "sha256": "8c38f877b117b40faf2a182f08c332cfc3980898f2d0d17199843d680dca5dd3",
+      "reason": "python_cache"
+    },
+    {
+      "path": "scripts/__pycache__/calibration_only.cpython-310.pyc",
+      "size_bytes": 21487,
+      "sha256": "1f7b552642b7d0be3b2248738f71b5f0e37800d24bf4f727f51d2e2ebfafdf17",
+      "reason": "python_cache"
+    },
+    {
+      "path": "scripts/__pycache__/calibration_only.cpython-313.pyc",
+      "size_bytes": 39465,
+      "sha256": "f4e462942f8ddaaa8f6547fc7e45781f72e93ce32dd8c2780f8770efce9f2342",
+      "reason": "python_cache"
+    },
+    {
+      "path": "scripts/__pycache__/cmerc_runner.cpython-310.pyc",
+      "size_bytes": 25859,
+      "sha256": "b80765993782f614faf5998d62030df86fbb1547044da255d2255114fadaa6ab",
+      "reason": "python_cache"
+    },
+    {
+      "path": "scripts/__pycache__/finalize_pilot.cpython-310.pyc",
+      "size_bytes": 10581,
+      "sha256": "ea6f123021a4ceab07db6209bf923415ae5707e51919cb784511a7b371e109ae",
+      "reason": "python_cache"
+    },
+    {
+      "path": "tests/__pycache__/test_calibration_only.cpython-310-pytest-8.3.5.pyc",
+      "size_bytes": 11839,
+      "sha256": "a7d1ff3d43d4e3cd781ab062dfe6e073291d950259f00cd1358c44133c4d58fb",
+      "reason": "python_cache"
+    },
+    {
+      "path": "tests/__pycache__/test_calibration_only.cpython-313-pytest-9.1.1.pyc",
+      "size_bytes": 41257,
+      "sha256": "3fb435f9162355d2a235bba9550c2084906a220ae06cfe4739524879109cad2b",
+      "reason": "python_cache"
+    },
+    {
+      "path": "tests/__pycache__/test_calibration_only.cpython-313.pyc",
+      "size_bytes": 16829,
+      "sha256": "d80a40b366f99abc161ff6fca0212a8b844ae324e6bf7a54a04136da4d9e3c42",
+      "reason": "python_cache"
+    },
+    {
+      "path": "tests/__pycache__/test_cmerc_runner.cpython-310-pytest-8.3.5.pyc",
+      "size_bytes": 22522,
+      "sha256": "fa5c6233e6be9a575c0d0c3e4b0c21bf3573f71e4d48b0ce4c24744fc955781f",
+      "reason": "python_cache"
+    },
+    {
+      "path": "tests/__pycache__/test_cmerc_runner.cpython-313-pytest-9.1.1.pyc",
+      "size_bytes": 44505,
+      "sha256": "d486f5a545103baa4c784cd90bcf7e1dccc6528449765c8f3816533c03698bd0",
+      "reason": "python_cache"
+    }
+  ],
+  "scientific_boundary": {
+    "evaluation_loader_constructed": false,
+    "evaluation_labels_read": false,
+    "evaluation_forward_run": false,
+    "calibration_oof_is_independent_evaluation": false
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "methods": {
+    "E0": "vanilla",
+    "E1": "global_ts",
+    "E2": "hierarchical_predicted_class_ts",
+    "E3": "unregularized_predicted_class_ts"
+  },
+  "bounds": [
+    0.05,
+    20.0
+  ],
+  "lambda_candidates": [
+    0.001,
+    0.01,
+    0.1,
+    1.0,
+    10.0,
+    100.0
+  ],
+  "cv_folds_requested": 5,
+  "cv_folds_actual": 5,
+  "cv_seed": 20261109,
+  "maxiter": 1000,
+  "dataset": "MELD",
+  "grouping": "episode",
+  "fit_role": "calibration",
+  "fit_n": 1406,
+  "masked_n": 0,
+  "regularizer": "lambda / K * sum((log(T_class) - log(T_global)) ** 2)",
+  "lambda_tie_break": "largest lambda within 1e-12 of minimum utterance-weighted OOF NLL"
+}

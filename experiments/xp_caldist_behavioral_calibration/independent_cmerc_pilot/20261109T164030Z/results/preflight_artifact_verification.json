@@ -1,0 +1,29 @@
+{
+  "status": "passed",
+  "datasets": {
+    "IEMOCAP": {
+      "teacher_checkpoint_sha256": "48b93d53c17fb32331376d8984aaee46293f07b03addeda055cfb6e7b3f7ba7a",
+      "training_role_artifact_sha256": "82399a485cdbd7034cfb0de2326e0767d451c70428949545289cc48c1a2445b3",
+      "difficulty_sha256": "3b53dc2a8baf32ce23df8f4c2793fefef5ac05201f7d99b38c1868def7115149",
+      "teacher_epoch": 80,
+      "teacher_complete": true,
+      "strict_missing_keys": [],
+      "strict_unexpected_keys": [],
+      "difficulty_exact_training_coverage": true,
+      "difficulty_finite": true,
+      "training_dialogues": 84
+    },
+    "MELD": {
+      "teacher_checkpoint_sha256": "5408e7bfb3e3341e4f070775762587c583022844804b8c3b5bbf8d3622b55707",
+      "training_role_artifact_sha256": "3aaf098e1ab71ee93055220f4b996a978242afe4cc2394705f13956b7f665d25",
+      "difficulty_sha256": "ec0dd56f4fec836cbb864c88b274b11c15137700c5d3f87170359db5949fe7a0",
+      "teacher_epoch": 40,
+      "teacher_complete": true,
+      "strict_missing_keys": [],
+      "strict_unexpected_keys": [],
+      "difficulty_exact_training_coverage": true,
+      "difficulty_finite": true,
+      "training_dialogues": 852
+    }
+  }
+}

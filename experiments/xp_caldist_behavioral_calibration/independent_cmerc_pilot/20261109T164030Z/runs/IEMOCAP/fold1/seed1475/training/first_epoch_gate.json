@@ -1,0 +1,135 @@
+{
+  "status": "passed",
+  "epoch": 1,
+  "full_real_epoch": true,
+  "continues_same_optimizer_rng": true,
+  "before_state_sha256": "2aeb62aa0f9d488b60848bc255488cb92ddf457d1bbb2056a8a62fac56c63d75",
+  "after_state_sha256": "a3fad32595aa717ca6a8bce1e3e1d7ae1cae9af409a6397f6b310d2058133755",
+  "before_trainable_parameters_sha256": "527bb3720475e4221be73371746ee7503c4cd09907db5b9c51745961c29f2d47",
+  "after_trainable_parameters_sha256": "cea3abc90c936fedec2e34bfdd1d3fc27fc040498bd28b88f05672a2d267f38a",
+  "all_reported_loss_components_finite": true,
+  "difficulty_exact_training_membership": true,
+  "selected_curriculum_exact_coverage": true,
+  "ratio": 0.15,
+  "capacity_bound_respected": true,
+  "train": {
+    "epoch": 1,
+    "classification_loss": 1.8310482501983643,
+    "rank_loss": 131.6782684326172,
+    "mscl_loss": 6.350228786468506,
+    "cscl_loss": 4.312159538269043,
+    "total_loss": 3.0225589275360107,
+    "supervised_utterances": 569,
+    "optimizer_steps": 1,
+    "exact_curriculum_coverage": true,
+    "accessed_ids": [
+      "Ses03F_impro01",
+      "Ses03M_impro01",
+      "Ses03M_impro04",
+      "Ses03M_script02_1",
+      "Ses04F_impro01",
+      "Ses04F_impro07",
+      "Ses04F_script01_3",
+      "Ses04M_impro02",
+      "Ses04M_script03_1",
+      "Ses05F_impro07",
+      "Ses05F_script03_1",
+      "Ses05M_script02_1"
+    ],
+    "removal_refresh_count": 1,
+    "removal_refresh": [
+      {
+        "model": "Model",
+        "strict": true,
+        "missing": [],
+        "unexpected": []
+      },
+      {
+        "model": "Model_Intra",
+        "strict": true,
+        "missing": [],
+        "unexpected": []
+      },
+      {
+        "model": "Model_Inter",
+        "strict": true,
+        "missing": [],
+        "unexpected": []
+      }
+    ],
+    "direct_unknown_gradient_audit": {
+      "status": "passed",
+      "unknown_nodes_retained": 1,
+      "supervised_path_count": 11,
+      "paths": {
+        "classification": {
+          "excluded_direct_gradient_abs_max": 0.0,
+          "eligible_gradient_abs_sum": 0.9999998807907104,
+          "supervised_count": 569
+        },
+        "rank_text": {
+          "excluded_direct_gradient_abs_max": 0.0,
+          "eligible_gradient_abs_sum": 296.0,
+          "supervised_count": 569
+        },
+        "rank_audio": {
+          "excluded_direct_gradient_abs_max": 0.0,
+          "eligible_gradient_abs_sum": 270.0,
+          "supervised_count": 569
+        },
+        "rank_visual": {
+          "excluded_direct_gradient_abs_max": 0.0,
+          "eligible_gradient_abs_sum": 268.0,
+          "supervised_count": 569
+        },
+        "rank_intra": {
+          "excluded_direct_gradient_abs_max": 0.0,
+          "eligible_gradient_abs_sum": 254.0,
+          "supervised_count": 569
+        },
+        "rank_inter": {
+          "excluded_direct_gradient_abs_max": 0.0,
+          "eligible_gradient_abs_sum": 324.0,
+          "supervised_count": 569
+        },
+        "contrastive_text": {
+          "excluded_direct_gradient_abs_max": 0.0,
+          "eligible_gradient_abs_sum": 21.353515625,
+          "supervised_count": 569
+        },
+        "contrastive_audio": {
+          "excluded_direct_gradient_abs_max": 0.0,
+          "eligible_gradient_abs_sum": 20.20299530029297,
+          "supervised_count": 569
+        },
+        "contrastive_visual": {
+          "excluded_direct_gradient_abs_max": 0.0,
+          "eligible_gradient_abs_sum": 21.64398765563965,
+          "supervised_count": 569
+        },
+        "contrastive_intra": {
+          "excluded_direct_gradient_abs_max": 0.0,
+          "eligible_gradient_abs_sum": 22.623050689697266,
+          "supervised_count": 569
+        },
+        "contrastive_inter": {
+          "excluded_direct_gradient_abs_max": 0.0,
+          "eligible_gradient_abs_sum": 20.76371955871582,
+          "supervised_count": 569
+        }
+      }
+    },
+    "sampler_retries": 0,
+    "max_batch_edges": 606,
+    "max_batch_nodes": 1710
+  },
+  "development": {
+    "count": 474,
+    "accuracy": 0.310126582278481,
+    "weighted_f1": 0.24725630958955094,
+    "nll": 1.751797080039978,
+    "macro_f1": 0.2445534051284354,
+    "weighted_f1_percent_rounded": 24.73,
+    "exact_development_coverage": true
+  }
+}
