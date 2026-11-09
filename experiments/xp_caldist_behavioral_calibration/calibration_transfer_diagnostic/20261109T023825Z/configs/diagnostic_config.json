@@ -1,0 +1,52 @@
+{
+  "experiment": "CMERC Validation-only calibration transfer diagnostic",
+  "created_at_utc": "2026-11-09T02:38:25Z",
+  "exploratory_status": "Motivated by known historical Test transfer behavior; no Test data are read or evaluated here",
+  "datasets": ["IEMOCAP", "MELD"],
+  "seeds": [1475, 67137, 2024, 3407, 42],
+  "classes": {
+    "IEMOCAP": ["happy", "sad", "neutral", "angry", "excited", "frustrated"],
+    "MELD": ["neutral", "surprise", "fear", "sadness", "joy", "disgust", "anger"]
+  },
+  "expected_validation": {
+    "IEMOCAP": {"dialogues": 12, "utterances": 527},
+    "MELD": {"dialogues": 114, "utterances": 1109}
+  },
+  "validation_prediction_template": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/20261107T172302Z/runs/{dataset}/seed{seed}/validation_predictions.npz",
+  "checkpoint_template": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/cmerc/{dataset}_validation_seed{seed}/best.pt",
+  "historical_global_ts_root": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/posthoc_calibration_baselines/20261109T013029Z",
+  "temperature": {
+    "bounds": [0.05, 20.0],
+    "parameterization": "log_temperature",
+    "optimizer": "deterministic bounded scalar minimization with endpoints and T=1 checked",
+    "xatol": 1e-12,
+    "maxiter": 256
+  },
+  "lodo": {"unit": "dialogue_id", "outer_folds": "all dialogues"},
+  "sample_size": {
+    "dialogue_proportions": [0.5, 0.75, 1.0],
+    "repeats": {"0.5": 100, "0.75": 100, "1.0": 1},
+    "dialogue_count_rule": "round-half-up(proportion * dialogue_count)",
+    "base_seed": 20261109
+  },
+  "regularization": {
+    "objective": "validation NLL + lambda * log(T)^2",
+    "lambdas": [0.0, 0.001, 0.01, 0.1, 1.0],
+    "outer_cv": "leave-one-dialogue-out",
+    "inner_cv": "five deterministic dialogue-group folds within each outer training set",
+    "selection_metric": "utterance-weighted inner OOF NLL",
+    "tie_break": "larger lambda within absolute tolerance 1e-12",
+    "outer_holdout_never_used_for_selection": true
+  },
+  "metrics": {"ece_bins": 15, "brier": "multiclass sum of squared probability errors", "nll": "natural log"},
+  "bootstrap": {"unit": "dialogue_id", "repeats": 2000, "base_seed": 20261109, "ci": "paired percentile 95% on fixed OOF predictions"},
+  "small_class_support_threshold": 20,
+  "prohibitions": [
+    "no Test predictions or labels",
+    "no CMERC training or checkpoint modification",
+    "no checkpoint selection",
+    "no classwise temperature fitting",
+    "no behavior-aware calibration or Reliability Score",
+    "no Git commit or push"
+  ]
+}

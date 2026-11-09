@@ -1,0 +1,31 @@
+{
+  "status": "passed",
+  "verified_at_utc": "2026-11-09T02:54:46Z",
+  "checks": {
+    "independent_full_recomputation_byte_exact": true,
+    "all_required_results_present": true,
+    "validation_only_config": true,
+    "no_test_files_read": true,
+    "no_models_retrained": true,
+    "no_checkpoints_modified": true,
+    "no_classwise_temperature_fitted": true,
+    "no_new_test_evaluation": true
+  },
+  "recomputation_mismatches": {},
+  "recomputed_csv_files": [
+    "classwise_calibration.csv",
+    "lodo_oof_predictions.csv",
+    "lodo_temperatures.csv",
+    "paired_bootstrap_oof.csv",
+    "per_dialogue_metrics.csv",
+    "regularization_oof_comparison.csv",
+    "regularization_outer_folds.csv",
+    "temperature_sample_size.csv"
+  ],
+  "limitations": [
+    "Dialogue bootstrap conditions on fixed outer-OOF predictions and does not refit temperature per bootstrap sample.",
+    "LODO and subset-temperature distributions diagnose refitting variability separately.",
+    "All five model seeds share the same Validation dialogues and are not independent datasets.",
+    "The diagnostic was motivated by historical Test behavior and requires an independent future evaluation for any new method claim."
+  ]
+}
