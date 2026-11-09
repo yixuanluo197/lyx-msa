@@ -1,0 +1,6 @@
+protocol,dataset,folds,seeds_per_fold,model_count,empirical_xp04_gpu_hours_per_model,estimated_gpu_hours,estimated_gpu_hours_with_25pct_contingency,best_checkpoint_gb_each,best_checkpoints_total_gb,full_run_artifacts_estimated_gb,basis
+A,IEMOCAP,1,5,5,0.873,3.93,4.91,0.0598,0.3,0.9,XP04 CMERC observed wall time; 0.9 training-pool scaling is planning-only
+A,MELD,1,5,5,0.407,1.83,2.29,0.1421,0.71,2.13,XP04 CMERC observed wall time; 0.9 training-pool scaling is planning-only
+B,IEMOCAP,5,5,25,0.873,19.64,24.55,0.0598,1.49,4.48,XP04 CMERC observed wall time; 0.9 training-pool scaling is planning-only
+B,MELD,5,5,25,0.407,9.16,11.45,0.1421,3.55,10.66,XP04 CMERC observed wall time; 0.9 training-pool scaling is planning-only
+C,external,TBD,TBD,TBD,N/A,N/A,N/A,N/A,N/A,N/A,No locally verified CMERC-compatible external MERC cohort

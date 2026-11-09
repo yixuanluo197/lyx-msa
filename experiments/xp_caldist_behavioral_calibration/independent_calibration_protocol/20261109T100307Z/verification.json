@@ -1,0 +1,44 @@
+{
+  "status": "passed",
+  "scope": "read_only_protocol_design",
+  "counts": {
+    "sample_rows": 21141,
+    "IEMOCAP_samples": 7433,
+    "MELD_samples": 13708,
+    "dialogues": 1583,
+    "sessions": 5,
+    "episodes": 190
+  },
+  "meld_metadata_alignment": {
+    "matched_dialogues": 1432,
+    "matched_utterances": 13708,
+    "mismatches": []
+  },
+  "assertions": {
+    "all_candidate_role_overlaps_zero": true,
+    "all_candidate_roles_have_all_classes": true,
+    "IEMOCAP_expected_utterances": true,
+    "MELD_expected_utterances": true,
+    "MELD_episode_count": true,
+    "no_model_predictions_read": true,
+    "no_test_metrics_read": true,
+    "no_gpu_forward": true,
+    "no_training": true,
+    "no_calibration_fit": true
+  },
+  "limitations": [
+    "Candidate manifests require researcher approval before use.",
+    "Resource estimates exclude queue time and calibration inference artifacts.",
+    "Fixed-prediction historical exposure cannot be undone."
+  ],
+  "independent_verification": {
+    "status": "passed",
+    "required_files": 20,
+    "sample_rows": 21141,
+    "candidate_protocols": 4,
+    "candidate_folds": 12,
+    "source_hashes_recomputed": 11,
+    "role_and_group_overlap_checks": "passed",
+    "class_coverage_checks": "passed"
+  }
+}

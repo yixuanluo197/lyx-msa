@@ -1,0 +1,40 @@
+{
+  "status": "preregistered_design_not_approved",
+  "created_utc": "2026-11-09T10:03:07Z",
+  "random_seed": 20261109,
+  "protocol_b": {
+    "IEMOCAP": {
+      "folds": 5,
+      "evaluation": "one Session",
+      "calibration": "next Session cyclically",
+      "development": "3 dialogues from each remaining Session",
+      "training": "remaining dialogues"
+    },
+    "MELD": {
+      "folds": 5,
+      "atomic_episode_blocks": 10,
+      "evaluation_blocks": 2,
+      "calibration_blocks": 1,
+      "development_blocks": 1,
+      "training_blocks": 6
+    }
+  },
+  "future_methods": [
+    "E0 Vanilla",
+    "E1 Global TS",
+    "E2 strongly regularized hierarchical predicted-class TS",
+    "E3 unregularized classwise TS diagnostic"
+  ],
+  "selection_metric": "Calibration-set grouped-CV NLL",
+  "evaluation_metrics": [
+    "NLL",
+    "multiclass Brier",
+    "ECE15"
+  ],
+  "prohibitions": [
+    "no training",
+    "no GPU forward",
+    "no calibration fitting",
+    "no test prediction metrics"
+  ]
+}
