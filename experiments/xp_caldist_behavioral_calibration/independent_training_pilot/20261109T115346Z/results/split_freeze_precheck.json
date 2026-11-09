@@ -1,0 +1,150 @@
+{
+  "status": "awaiting_iemocap_label_policy",
+  "protocol": "B",
+  "source_status": "candidate_not_approved",
+  "datasets": {
+    "IEMOCAP": {
+      "folds": {
+        "fold1": {
+          "role_counts": {
+            "evaluation": 28,
+            "calibration": 30,
+            "training": 84,
+            "development": 9
+          },
+          "checks": {
+            "dialogue_overlap_zero": true,
+            "calibration_session_isolated": true,
+            "evaluation_session_isolated": true
+          },
+          "prospective_sha256": "01fab15f2969118d84880b85a7ee6e47acf9d54991b5cc465a6fe11cb0b4cde8"
+        },
+        "fold2": {
+          "role_counts": {
+            "training": 80,
+            "development": 9,
+            "evaluation": 30,
+            "calibration": 32
+          },
+          "checks": {
+            "dialogue_overlap_zero": true,
+            "calibration_session_isolated": true,
+            "evaluation_session_isolated": true
+          },
+          "prospective_sha256": "37d823e99fbd0c1bea523dcc5cf2685e6d9630a76f39fdf85c48b97f62ace528"
+        },
+        "fold3": {
+          "role_counts": {
+            "training": 80,
+            "development": 9,
+            "evaluation": 32,
+            "calibration": 30
+          },
+          "checks": {
+            "dialogue_overlap_zero": true,
+            "calibration_session_isolated": true,
+            "evaluation_session_isolated": true
+          },
+          "prospective_sha256": "a989156568cf3f5c227e12e018e4195a2ab546f53dd1d2579f1ad5c8787bc5ba"
+        },
+        "fold4": {
+          "role_counts": {
+            "training": 81,
+            "development": 9,
+            "evaluation": 30,
+            "calibration": 31
+          },
+          "checks": {
+            "dialogue_overlap_zero": true,
+            "calibration_session_isolated": true,
+            "evaluation_session_isolated": true
+          },
+          "prospective_sha256": "412be0354e7b83adbb5f18e2205cd97371b145e1518873d20ae9c536d42c780d"
+        },
+        "fold5": {
+          "role_counts": {
+            "calibration": 28,
+            "training": 83,
+            "development": 9,
+            "evaluation": 31
+          },
+          "checks": {
+            "dialogue_overlap_zero": true,
+            "calibration_session_isolated": true,
+            "evaluation_session_isolated": true
+          },
+          "prospective_sha256": "0fc9be3f016ead8d51ef19b094aa55c42be5739e4ffeb781b2d217484a12fc1c"
+        }
+      }
+    },
+    "MELD": {
+      "folds": {
+        "fold1": {
+          "role_counts": {
+            "training": 852,
+            "evaluation": 286,
+            "development": 141,
+            "calibration": 153
+          },
+          "checks": {
+            "dialogue_overlap_zero": true,
+            "episode_overlap_zero": true
+          },
+          "prospective_sha256": "2c89d2abe2926a313221d221c87f7158d31ce52f79783bbe83f4b884dd6466f7"
+        },
+        "fold2": {
+          "role_counts": {
+            "training": 842,
+            "calibration": 153,
+            "development": 143,
+            "evaluation": 294
+          },
+          "checks": {
+            "dialogue_overlap_zero": true,
+            "episode_overlap_zero": true
+          },
+          "prospective_sha256": "07b13fc58547b715dcbe5f3ef43dc1db6d33133c9d93b049658663714f686ec7"
+        },
+        "fold3": {
+          "role_counts": {
+            "calibration": 143,
+            "evaluation": 296,
+            "training": 855,
+            "development": 138
+          },
+          "checks": {
+            "dialogue_overlap_zero": true,
+            "episode_overlap_zero": true
+          },
+          "prospective_sha256": "874b630eb133003c5f7337b234e4486dc0c7924be9ff10e1fd55a7b6df852a35"
+        },
+        "fold4": {
+          "role_counts": {
+            "evaluation": 281,
+            "training": 876,
+            "development": 141,
+            "calibration": 134
+          },
+          "checks": {
+            "dialogue_overlap_zero": true,
+            "episode_overlap_zero": true
+          },
+          "prospective_sha256": "a4ea0df3cc4af55793d613d099d4e8b222220df962ade890935c30152b4ef288"
+        },
+        "fold5": {
+          "role_counts": {
+            "training": 871,
+            "evaluation": 275,
+            "calibration": 143,
+            "development": 143
+          },
+          "checks": {
+            "dialogue_overlap_zero": true,
+            "episode_overlap_zero": true
+          },
+          "prospective_sha256": "1b7df1789d768672f38a305b6fc588e4d1d5cb616350a7544b7eb1a95f2bc0e2"
+        }
+      }
+    }
+  }
+}

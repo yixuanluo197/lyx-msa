@@ -1,0 +1,462 @@
+{
+  "IEMOCAP": {
+    "training": {
+      "dialogues": 84,
+      "utterances": 4216,
+      "min_length": 8,
+      "max_length": 110,
+      "text_dims": [
+        1024,
+        1024,
+        1024,
+        1024
+      ],
+      "audio_dim": 1582,
+      "visual_dim": 342,
+      "qmask_dim": 2,
+      "umask": "one for valid utterances; zero only after collation padding",
+      "dialogue_order_preserved": true,
+      "first_batch_shapes": [
+        [
+          87,
+          16,
+          1024
+        ],
+        [
+          87,
+          16,
+          1024
+        ],
+        [
+          87,
+          16,
+          1024
+        ],
+        [
+          87,
+          16,
+          1024
+        ],
+        [
+          87,
+          16,
+          342
+        ],
+        [
+          87,
+          16,
+          1582
+        ],
+        [
+          87,
+          16,
+          2
+        ],
+        [
+          16,
+          87
+        ],
+        [
+          16,
+          87
+        ]
+      ],
+      "padding_verified": true,
+      "label_access": "allowed_for_role"
+    },
+    "development": {
+      "dialogues": 9,
+      "utterances": 488,
+      "min_length": 28,
+      "max_length": 91,
+      "text_dims": [
+        1024,
+        1024,
+        1024,
+        1024
+      ],
+      "audio_dim": 1582,
+      "visual_dim": 342,
+      "qmask_dim": 2,
+      "umask": "one for valid utterances; zero only after collation padding",
+      "dialogue_order_preserved": true,
+      "first_batch_shapes": [
+        [
+          91,
+          9,
+          1024
+        ],
+        [
+          91,
+          9,
+          1024
+        ],
+        [
+          91,
+          9,
+          1024
+        ],
+        [
+          91,
+          9,
+          1024
+        ],
+        [
+          91,
+          9,
+          342
+        ],
+        [
+          91,
+          9,
+          1582
+        ],
+        [
+          91,
+          9,
+          2
+        ],
+        [
+          9,
+          91
+        ],
+        [
+          9,
+          91
+        ]
+      ],
+      "padding_verified": true,
+      "label_access": "allowed_for_role"
+    },
+    "calibration": {
+      "dialogues": 30,
+      "utterances": 1356,
+      "min_length": 24,
+      "max_length": 74,
+      "text_dims": [
+        1024,
+        1024,
+        1024,
+        1024
+      ],
+      "audio_dim": 1582,
+      "visual_dim": 342,
+      "qmask_dim": 2,
+      "umask": "one for valid utterances; zero only after collation padding",
+      "dialogue_order_preserved": true,
+      "first_batch_shapes": [
+        [
+          74,
+          16,
+          1024
+        ],
+        [
+          74,
+          16,
+          1024
+        ],
+        [
+          74,
+          16,
+          1024
+        ],
+        [
+          74,
+          16,
+          1024
+        ],
+        [
+          74,
+          16,
+          342
+        ],
+        [
+          74,
+          16,
+          1582
+        ],
+        [
+          74,
+          16,
+          2
+        ],
+        [
+          16,
+          74
+        ],
+        [
+          16,
+          74
+        ]
+      ],
+      "padding_verified": true,
+      "label_access": "allowed_for_role"
+    },
+    "evaluation": {
+      "dialogues": 28,
+      "utterances": 1373,
+      "min_length": 26,
+      "max_length": 79,
+      "text_dims": [
+        1024,
+        1024,
+        1024,
+        1024
+      ],
+      "audio_dim": 1582,
+      "visual_dim": 342,
+      "qmask_dim": 2,
+      "umask": "one for valid utterances; zero only after collation padding",
+      "dialogue_order_preserved": true,
+      "first_batch_nonlabel_shapes": [
+        [
+          74,
+          16,
+          1024
+        ],
+        [
+          74,
+          16,
+          342
+        ],
+        [
+          74,
+          16,
+          2
+        ]
+      ],
+      "padding_verified": true,
+      "label_access": "sealed"
+    }
+  },
+  "MELD": {
+    "training": {
+      "dialogues": 852,
+      "utterances": 8176,
+      "min_length": 1,
+      "max_length": 33,
+      "text_dims": [
+        1024,
+        1024,
+        1024,
+        1024
+      ],
+      "audio_dim": 300,
+      "visual_dim": 342,
+      "qmask_dim": 9,
+      "umask": "one for valid utterances; zero only after collation padding",
+      "dialogue_order_preserved": true,
+      "first_batch_shapes": [
+        [
+          20,
+          16,
+          1024
+        ],
+        [
+          20,
+          16,
+          1024
+        ],
+        [
+          20,
+          16,
+          1024
+        ],
+        [
+          20,
+          16,
+          1024
+        ],
+        [
+          20,
+          16,
+          342
+        ],
+        [
+          20,
+          16,
+          300
+        ],
+        [
+          20,
+          16,
+          9
+        ],
+        [
+          16,
+          20
+        ],
+        [
+          16,
+          20
+        ]
+      ],
+      "padding_verified": true,
+      "label_access": "allowed_for_role"
+    },
+    "development": {
+      "dialogues": 141,
+      "utterances": 1363,
+      "min_length": 1,
+      "max_length": 22,
+      "text_dims": [
+        1024,
+        1024,
+        1024,
+        1024
+      ],
+      "audio_dim": 300,
+      "visual_dim": 342,
+      "qmask_dim": 9,
+      "umask": "one for valid utterances; zero only after collation padding",
+      "dialogue_order_preserved": true,
+      "first_batch_shapes": [
+        [
+          19,
+          16,
+          1024
+        ],
+        [
+          19,
+          16,
+          1024
+        ],
+        [
+          19,
+          16,
+          1024
+        ],
+        [
+          19,
+          16,
+          1024
+        ],
+        [
+          19,
+          16,
+          342
+        ],
+        [
+          19,
+          16,
+          300
+        ],
+        [
+          19,
+          16,
+          9
+        ],
+        [
+          16,
+          19
+        ],
+        [
+          16,
+          19
+        ]
+      ],
+      "padding_verified": true,
+      "label_access": "allowed_for_role"
+    },
+    "calibration": {
+      "dialogues": 153,
+      "utterances": 1406,
+      "min_length": 1,
+      "max_length": 24,
+      "text_dims": [
+        1024,
+        1024,
+        1024,
+        1024
+      ],
+      "audio_dim": 300,
+      "visual_dim": 342,
+      "qmask_dim": 9,
+      "umask": "one for valid utterances; zero only after collation padding",
+      "dialogue_order_preserved": true,
+      "first_batch_shapes": [
+        [
+          22,
+          16,
+          1024
+        ],
+        [
+          22,
+          16,
+          1024
+        ],
+        [
+          22,
+          16,
+          1024
+        ],
+        [
+          22,
+          16,
+          1024
+        ],
+        [
+          22,
+          16,
+          342
+        ],
+        [
+          22,
+          16,
+          300
+        ],
+        [
+          22,
+          16,
+          9
+        ],
+        [
+          16,
+          22
+        ],
+        [
+          16,
+          22
+        ]
+      ],
+      "padding_verified": true,
+      "label_access": "allowed_for_role"
+    },
+    "evaluation": {
+      "dialogues": 286,
+      "utterances": 2763,
+      "min_length": 1,
+      "max_length": 23,
+      "text_dims": [
+        1024,
+        1024,
+        1024,
+        1024
+      ],
+      "audio_dim": 300,
+      "visual_dim": 342,
+      "qmask_dim": 9,
+      "umask": "one for valid utterances; zero only after collation padding",
+      "dialogue_order_preserved": true,
+      "first_batch_nonlabel_shapes": [
+        [
+          21,
+          16,
+          1024
+        ],
+        [
+          21,
+          16,
+          342
+        ],
+        [
+          21,
+          16,
+          9
+        ]
+      ],
+      "padding_verified": true,
+      "label_access": "sealed"
+    }
+  }
+}

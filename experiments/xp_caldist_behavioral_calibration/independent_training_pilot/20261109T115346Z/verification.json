@@ -1,0 +1,97 @@
+{
+  "status": "awaiting_required_researcher_decision",
+  "protocol_b_confirmed": true,
+  "approved_manifest_created": false,
+  "iemocap_label_policy_confirmed": false,
+  "training_started": false,
+  "gpu_forward_run": false,
+  "calibration_fit_run": false,
+  "evaluation_labels_read_for_debug": false,
+  "evaluation_forward_run": false,
+  "anomaly_count": 53,
+  "label_summary": {
+    "total": 53,
+    "by_session": {
+      "Ses01": 8,
+      "Ses02": 8,
+      "Ses03": 36,
+      "Ses05": 1
+    },
+    "legacy_happy_total": 648,
+    "masked_happy_total": 595,
+    "raw_six_class_total": 7380,
+    "frozen_total": 7433,
+    "upstream_rule_found": false,
+    "finding": "No preprocessing source or explicit rule was found in HITSZ-HLT/CMERC commit 815c7c0; the repository distributes only the frozen pickle."
+  },
+  "split_precheck_passed": true,
+  "dataloader_fold1_passed": true,
+  "gpu_preflight": {
+    "captured_utc": "2026-11-09T12:04:13Z",
+    "gpus": [
+      {
+        "index": "0",
+        "name": "NVIDIA TITAN Xp",
+        "uuid": "GPU-7ff18ebb-100e-98fe-038b-a98bd4f94248",
+        "memory_total_mib": "12288",
+        "memory_used_mib": "3",
+        "memory_free_mib": "12181",
+        "utilization_percent": "0",
+        "temperature_c": "26",
+        "eligible_now": true
+      },
+      {
+        "index": "1",
+        "name": "NVIDIA TITAN Xp",
+        "uuid": "GPU-eed2f34f-b4c0-7b7a-498e-71a026e30c5a",
+        "memory_total_mib": "12288",
+        "memory_used_mib": "3",
+        "memory_free_mib": "12181",
+        "utilization_percent": "0",
+        "temperature_c": "27",
+        "eligible_now": true
+      },
+      {
+        "index": "2",
+        "name": "NVIDIA TITAN Xp",
+        "uuid": "GPU-d17e4326-9d3b-2025-fbf8-c9b0d16623a0",
+        "memory_total_mib": "12288",
+        "memory_used_mib": "3",
+        "memory_free_mib": "12181",
+        "utilization_percent": "0",
+        "temperature_c": "26",
+        "eligible_now": true
+      },
+      {
+        "index": "3",
+        "name": "NVIDIA TITAN Xp",
+        "uuid": "GPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456",
+        "memory_total_mib": "12288",
+        "memory_used_mib": "3",
+        "memory_free_mib": "12181",
+        "utilization_percent": "0",
+        "temperature_c": "23",
+        "eligible_now": true
+      }
+    ],
+    "compute_processes": [],
+    "max_parallel_jobs": 4,
+    "pilot_plan": [
+      {
+        "task": "IEMOCAP_fold1_seed1475",
+        "host_gpu": 0
+      },
+      {
+        "task": "MELD_fold1_seed1475",
+        "host_gpu": 1
+      }
+    ],
+    "binding": "one process per CUDA_VISIBLE_DEVICES host index; process uses cuda:0",
+    "cpu_limits": {
+      "OMP_NUM_THREADS": 4,
+      "MKL_NUM_THREADS": 4,
+      "num_workers": 0
+    }
+  },
+  "additional_blocker": "XP04 caldiff artifacts include old validation and omit some new-fold training groups; fold-local Training-only difficulty recomputation is required to preserve curriculum without leakage."
+}
