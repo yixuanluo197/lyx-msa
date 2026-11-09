@@ -1,0 +1,61 @@
+{
+  "experiment": "CMERC Hierarchical Predicted-Class Temperature Scaling Pilot",
+  "created_at_utc": "2026-11-09T05:32:05Z",
+  "scope": "Validation-only nested dialogue-level OOF method exploration",
+  "datasets": ["IEMOCAP", "MELD"],
+  "seeds": [1475, 67137, 2024, 3407, 42],
+  "classes": {
+    "IEMOCAP": ["happy", "sad", "neutral", "angry", "excited", "frustrated"],
+    "MELD": ["neutral", "surprise", "fear", "sadness", "joy", "disgust", "anger"]
+  },
+  "expected_validation": {
+    "IEMOCAP": {"dialogues": 12, "utterances": 527},
+    "MELD": {"dialogues": 114, "utterances": 1109}
+  },
+  "validation_prediction_template": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/20261107T172302Z/runs/{dataset}/seed{seed}/validation_predictions.npz",
+  "checkpoint_template": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/cmerc/{dataset}_validation_seed{seed}/best.pt",
+  "effective_config_template": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/20261107T172302Z/runs/{dataset}/seed{seed}/xp04_effective_config.json",
+  "temperature": {
+    "bounds": [0.05, 20.0],
+    "parameterization": "log_temperature",
+    "global_optimizer": "bounded scalar minimization",
+    "classwise_optimizer": "L-BFGS-B with analytic gradient",
+    "maxiter": 512,
+    "ftol": 1e-14,
+    "gtol": 1e-10
+  },
+  "methods": {
+    "E0": "Vanilla CMERC",
+    "E1": "Outer-fold Global Temperature Scaling",
+    "E2": "Outer-fold unregularized predicted-class temperatures",
+    "E3": "Outer-fold hierarchical predicted-class temperatures"
+  },
+  "nested_cv": {
+    "outer": "leave one complete dialogue out",
+    "inner": "five deterministic folds grouped by dialogue",
+    "lambda_candidates": [0.001, 0.01, 0.1, 1.0, 10.0, 100.0],
+    "selection_metric": "utterance-weighted inner OOF NLL",
+    "tie_break": "larger lambda within absolute 1e-12",
+    "base_seed": 20261109
+  },
+  "hierarchical_objective": "mean sample NLL + lambda * mean_over_all_classes((log(T_k)-log(T_global))^2)",
+  "empty_predicted_class": "use outer-training global temperature",
+  "inference_selector": "original predicted class only",
+  "small_support_threshold": 20,
+  "metrics": ["nll", "brier", "ece15", "mce15", "rmsce15", "mean_confidence", "accuracy", "weighted_f1", "macro_f1"],
+  "bootstrap": {
+    "unit": "dialogue_id",
+    "repeats": 2000,
+    "base_seed": 20261109,
+    "comparisons": ["E1-E0", "E3-E1", "E3-E2"],
+    "metrics": ["nll", "brier", "ece15"]
+  },
+  "prohibitions": [
+    "no Test probabilities or labels",
+    "no CMERC retraining or checkpoint modification",
+    "no true-class temperature selection at inference",
+    "no behavior or modality-perturbation features",
+    "no new Test calibration",
+    "no Git commit or push"
+  ]
+}

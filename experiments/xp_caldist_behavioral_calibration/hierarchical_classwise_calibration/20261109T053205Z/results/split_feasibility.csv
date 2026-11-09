@@ -1,0 +1,17 @@
+dataset,criterion,finding,implication
+IEMOCAP,dialogue_id_available,yes,grouped splitting is technically possible
+IEMOCAP,session_or_episode_group_available,IEMOCAP session encoded in dialogue ID,IEMOCAP supports session grouping; MELD supports dialogue grouping
+IEMOCAP,original_training_samples_seen_by_checkpoint,yes,cannot reuse them as independent calibration/evaluation data
+IEMOCAP,validation_used_for_checkpoint_selection,yes,current Validation is exploratory method-development data
+IEMOCAP,historical_test_already_analyzed,yes,historical Test is not a fresh confirmatory evaluation set
+IEMOCAP,unused_model_unseen_pool,no pool identified,current checkpoint cannot support a new independent three-way evaluation
+IEMOCAP,training_split_reallocation_requires_retraining,yes,retrain CMERC after a grouped train/calibration/evaluation redesign
+IEMOCAP,independent_design_path,"new grouped split plus retraining, or external held-out data",required before confirmatory Test claims
+MELD,dialogue_id_available,yes,grouped splitting is technically possible
+MELD,session_or_episode_group_available,dialogue IDs available; episode mapping not established in frozen feature artifacts,IEMOCAP supports session grouping; MELD supports dialogue grouping
+MELD,original_training_samples_seen_by_checkpoint,yes,cannot reuse them as independent calibration/evaluation data
+MELD,validation_used_for_checkpoint_selection,yes,current Validation is exploratory method-development data
+MELD,historical_test_already_analyzed,yes,historical Test is not a fresh confirmatory evaluation set
+MELD,unused_model_unseen_pool,no pool identified,current checkpoint cannot support a new independent three-way evaluation
+MELD,training_split_reallocation_requires_retraining,yes,retrain CMERC after a grouped train/calibration/evaluation redesign
+MELD,independent_design_path,"new grouped split plus retraining, or external held-out data",required before confirmatory Test claims

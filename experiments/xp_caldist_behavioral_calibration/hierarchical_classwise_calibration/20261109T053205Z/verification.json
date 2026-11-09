@@ -1,0 +1,73 @@
+{
+  "status": "passed",
+  "completed_at_utc": "2026-11-09T05:56:45Z",
+  "assertions": {
+    "independent_full_recomputation_byte_exact": true,
+    "validation_only": true,
+    "no_test_files_read": true,
+    "no_model_retraining": true,
+    "no_checkpoint_modification": true,
+    "original_predicted_class_selector": true,
+    "all_argmax_unchanged": true,
+    "all_oof_coverage_exact": true,
+    "no_new_test_evaluation": true
+  },
+  "csv_comparisons": {
+    "predicted_class_support.csv": {
+      "reference_sha256": "26d81b677012a7faea36c2ffe65d5c1ae67aad6ed74c36b246f2ff36a4069163",
+      "recomputed_sha256": "26d81b677012a7faea36c2ffe65d5c1ae67aad6ed74c36b246f2ff36a4069163",
+      "byte_exact": true
+    },
+    "inner_lambda_selection.csv": {
+      "reference_sha256": "fdf0bea64d2417b59276bad1e2d149ca0cff0675dce91bc03656f3a160f47756",
+      "recomputed_sha256": "fdf0bea64d2417b59276bad1e2d149ca0cff0675dce91bc03656f3a160f47756",
+      "byte_exact": true
+    },
+    "outer_fold_temperatures.csv": {
+      "reference_sha256": "1a11b08019a68f3bda1057f55b93d6c0a0a42ad5b818875fd654c9662a1da223",
+      "recomputed_sha256": "1a11b08019a68f3bda1057f55b93d6c0a0a42ad5b818875fd654c9662a1da223",
+      "byte_exact": true
+    },
+    "classwise_temperatures.csv": {
+      "reference_sha256": "146b0ac590e8700043bcd9d607fa605c684057ebda20427f68d6a47f1dd160ff",
+      "recomputed_sha256": "146b0ac590e8700043bcd9d607fa605c684057ebda20427f68d6a47f1dd160ff",
+      "byte_exact": true
+    },
+    "oof_predictions.csv": {
+      "reference_sha256": "2cb805e85cf9d14bbca4c3f3f32c75c316a4ac770cefa1bab2718dfad8f0a598",
+      "recomputed_sha256": "2cb805e85cf9d14bbca4c3f3f32c75c316a4ac770cefa1bab2718dfad8f0a598",
+      "byte_exact": true
+    },
+    "oof_metrics.csv": {
+      "reference_sha256": "bbafb65696e5cd977f456e3b44fb40c143eb0485fd5d55331815f6328459a8ed",
+      "recomputed_sha256": "bbafb65696e5cd977f456e3b44fb40c143eb0485fd5d55331815f6328459a8ed",
+      "byte_exact": true
+    },
+    "five_seed_summary.csv": {
+      "reference_sha256": "8061bbe71fe686f9ad0915116e95a32b27dc0799b0d7b5e185656e5b2e4e1e81",
+      "recomputed_sha256": "8061bbe71fe686f9ad0915116e95a32b27dc0799b0d7b5e185656e5b2e4e1e81",
+      "byte_exact": true
+    },
+    "paired_bootstrap.csv": {
+      "reference_sha256": "a7d9a72a9697a2744a61fbcd496f31f6aee29e7dbc5e3d338a8b194290046c62",
+      "recomputed_sha256": "a7d9a72a9697a2744a61fbcd496f31f6aee29e7dbc5e3d338a8b194290046c62",
+      "byte_exact": true
+    },
+    "split_feasibility.csv": {
+      "reference_sha256": "cdfa44fc8e12d3364b99bf5334c6aabfd296dcb3524589d354a720fa530e8fef",
+      "recomputed_sha256": "cdfa44fc8e12d3364b99bf5334c6aabfd296dcb3524589d354a720fa530e8fef",
+      "byte_exact": true
+    },
+    "classwise_oof_metrics.csv": {
+      "reference_sha256": "37b301cddcbfc03a57d99b2c13fc14b430d76add52d8a185d4008c099d45a031",
+      "recomputed_sha256": "37b301cddcbfc03a57d99b2c13fc14b430d76add52d8a185d4008c099d45a031",
+      "byte_exact": true
+    },
+    "reliability_bins.csv": {
+      "reference_sha256": "34bd5655e78be696bec174d39dffc2864579a3f5def58afc9dd47a19143f024b",
+      "recomputed_sha256": "34bd5655e78be696bec174d39dffc2864579a3f5def58afc9dd47a19143f024b",
+      "byte_exact": true
+    }
+  },
+  "recompute_stdout": "{\n  \"status\": \"complete\",\n  \"row_counts\": {\n    \"predicted_class_support.csv\": 130,\n    \"inner_lambda_selection.csv\": 3780,\n    \"outer_fold_temperatures.csv\": 630,\n    \"classwise_temperatures.csv\": 8700,\n    \"oof_predictions.csv\": 8180,\n    \"oof_metrics.csv\": 40,\n    \"five_seed_summary.csv\": 72,\n    \"paired_bootstrap.csv\": 90,\n    \"classwise_oof_metrics.csv\": 520,\n    \"reliability_bins.csv\": 600,\n    \"split_feasibility.csv\": 16\n  }\n}\n"
+}
