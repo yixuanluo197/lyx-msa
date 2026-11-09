@@ -1,0 +1,76 @@
+{
+  "status": "candidate_not_executed",
+  "protocol": "training_only_fixed_final_epoch_teacher_v1",
+  "author_method": {
+    "model_family": "M3Net",
+    "architecture": "CMERC model_cm.Model causal=False / weight-compatible external M3NET Model",
+    "difficulty_views": [
+      "text_mean_replacement_four_arrays",
+      "audio_mean_replacement",
+      "visual_mean_replacement",
+      "same_speaker_high_frequency_edge_removal",
+      "cross_speaker_high_frequency_edge_removal"
+    ],
+    "gap": "max(log_p_removed_true-log_p_full_true,0)",
+    "speaker_term": "max_active_speaker_index_plus_one"
+  },
+  "protocol_b_amendments": {
+    "access_roles": [
+      "training"
+    ],
+    "selection": "fixed_final_epoch",
+    "checkpoint_selection_labels": null,
+    "difficulty_batch_size": 1,
+    "unknown_label_policy": "retain_in_context_exclude_before_true_class_gather",
+    "primary_denominator": "valid_label_count_plus_speaker_term",
+    "sensitivity_denominator": "total_dialogue_length_plus_speaker_term",
+    "all_invalid_dialogue": "hard_error",
+    "teacher_shared_across_cmerc_seeds": true
+  },
+  "datasets": {
+    "IEMOCAP": {
+      "epochs": 80,
+      "seed": 1475,
+      "dropout": 0.5,
+      "batch_size": 16,
+      "lr": 0.0001,
+      "weight_decay": 3e-05,
+      "num_L": 3,
+      "num_K": 4,
+      "norm": "BN",
+      "cmerc_seeds": [
+        1475,
+        67137,
+        2024,
+        3407,
+        42
+      ]
+    },
+    "MELD": {
+      "epochs": 40,
+      "seed": 67137,
+      "dropout": 0.4,
+      "batch_size": 16,
+      "lr": 0.0001,
+      "weight_decay": 3e-05,
+      "num_L": 3,
+      "num_K": 3,
+      "norm": "BN",
+      "cmerc_seeds": [
+        1475,
+        67137,
+        2024,
+        3407,
+        42
+      ]
+    }
+  },
+  "constraints": {
+    "no_development_access": true,
+    "no_calibration_access": true,
+    "no_evaluation_access": true,
+    "no_historical_checkpoint": true,
+    "no_historical_difficulty": true,
+    "no_gpu_execution_this_round": true
+  }
+}

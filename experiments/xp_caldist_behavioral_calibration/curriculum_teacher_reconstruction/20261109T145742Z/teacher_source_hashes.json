@@ -1,0 +1,40 @@
+{
+  "generated_at": "2026-11-09T15:00:00Z",
+  "external_repository": {
+    "url": "https://github.com/feiyuchen7/M3NET",
+    "audited_commit": "4d0fa88cd4f92c72b053527e877763f54e29ccb2",
+    "remote_head_verified": true,
+    "working_tree_clean": true
+  },
+  "official_cmerc_commit": "815c7c060914f5b55db816c0ba3662b11d08552f",
+  "local_cmerc_commit": "8447d8d1bfca03ca2275d9196e38ce44d20892e3",
+  "files": {
+    "experiments/xp_caldist_behavioral_calibration/independent_training_pilot/20261109T142243Z/approved_split_manifests.json": "6d43928865915fe22a913c98b1165a05ba6e3e8f21d4d4c896cf51eb9c9b62be",
+    "CMERC/docs/UPSTREAM_README.md": "5b02de406be3b0ec68f2ea3de65f3fc2a1b059cb091c98b1b02f15d9a8f4000b",
+    "CMERC/caldiff/cal_diff.py": "7e024fbe7748d90d0f40636c72796a2d46578007fd0e80bdf828b49478dc4d47",
+    "CMERC/model_cm.py": "94acf11e2e9edd1bcd98049eb12d85b3604f8d71d46f64f0c3b8b9837fa12625",
+    "CMERC/dataloader.py": "aac4d51791055fc0ec4176293dd37aa050df84e736fb9d0639dc4938bf67ebcf",
+    "CMERC/clloss.py": "012c5d08f51eaaa99bdbd10d61e3d108275bf3dd44e42767b2e186e5be72ec3f",
+    "CMERC/train_cm.py": "876aaa75b7008b13921bfb330c7681f8db052c50d52aa9ac00f36dd910a670a9",
+    "M3NET-reference/README.md": "a72a0fdcd79dd7a437c36811da34061f392382074ebaebb05d8ef87488311a43",
+    "M3NET-reference/train.py": "0f18208e30b61b52cb0c850c02258e32d0c0f799670e623ed852e3ea17fa9e65",
+    "M3NET-reference/model.py": "ee84329b800e37a8ac652b58aa6f0fc3dee47cb2cf38feda14f5c0de26ec9a82",
+    "experiments/xp_caldist_behavioral_calibration/curriculum_teacher_reconstruction/20261109T145742Z/scripts/generate_fold_local_difficulty.py": "8919231a560d253482a15f40e532089323164f749065cff0e077d51a164b970b",
+    "experiments/xp_caldist_behavioral_calibration/curriculum_teacher_reconstruction/20261109T145742Z/tests/test_fold_local_difficulty.py": "f3cccac3361b95427f52505cf1fa0a83bcc91f005139cefd74da1b07d8d02c05",
+    "experiments/xp_caldist_behavioral_calibration/curriculum_teacher_reconstruction/20261109T145742Z/scripts/verify_m3net_schema.py": "2fcf8bb5835451c0f51d21296f50d6e4954ff7e732dba57fdefec9a3e5f36936"
+  },
+  "git_objects": {
+    "official_cmerc_readme": {
+      "path": "README.md",
+      "sha256": "5b02de406be3b0ec68f2ea3de65f3fc2a1b059cb091c98b1b02f15d9a8f4000b"
+    },
+    "official_cmerc_caldiff": {
+      "path": "caldiff/cal_diff.py",
+      "sha256": "89ac07031971eea8675ec78c888bb350ecf9e6483a110c3762b8e9d329e228a5"
+    },
+    "official_cmerc_model": {
+      "path": "model.py",
+      "sha256": "ee84329b800e37a8ac652b58aa6f0fc3dee47cb2cf38feda14f5c0de26ec9a82"
+    }
+  }
+}

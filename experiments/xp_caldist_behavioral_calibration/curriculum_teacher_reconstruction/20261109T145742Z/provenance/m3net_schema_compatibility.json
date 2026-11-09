@@ -1,0 +1,19 @@
+{
+  "scope": "CPU construction and strict state_dict load only; no forward/training",
+  "results": {
+    "IEMOCAP": {
+      "tensor_count": 85,
+      "missing": [],
+      "unexpected": [],
+      "shape_mismatch": [],
+      "strict_load": true
+    },
+    "MELD": {
+      "tensor_count": 83,
+      "missing": [],
+      "unexpected": [],
+      "shape_mismatch": [],
+      "strict_load": true
+    }
+  }
+}

@@ -1,0 +1,466 @@
+EEEEEEEEEEEEEEEEEEE                                                      [100%]
+==================================== ERRORS ====================================
+____________ ERROR at setup of test_masked_label_is_never_gathered _____________
+
+    @pytest.fixture
+    def mod():
+>       return load_module()
+
+experiments/xp_caldist_behavioral_calibration/curriculum_teacher_reconstruction/20261109T145742Z/tests/test_fold_local_difficulty.py:23:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+experiments/xp_caldist_behavioral_calibration/curriculum_teacher_reconstruction/20261109T145742Z/tests/test_fold_local_difficulty.py:17: in load_module
+    spec.loader.exec_module(module)
+<frozen importlib._bootstrap_external>:879: in exec_module
+    ???
+<frozen importlib._bootstrap_external>:1016: in get_code
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <_frozen_importlib_external.SourceFileLoader object at 0x795fc39685e0>
+path = '/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/curriculum_teacher_reconstruction/20261109T145742Z/scripts/generate_fold_local_difficulty.py'
+
+>   ???
+E   FileNotFoundError: [Errno 2] No such file or directory: '/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/curriculum_teacher_reconstruction/20261109T145742Z/scripts/generate_fold_local_difficulty.py'
+
+<frozen importlib._bootstrap_external>:1073: FileNotFoundError
+__________________ ERROR at setup of test_valid_count_formula __________________
+
+    @pytest.fixture
+    def mod():
+>       return load_module()
+
+experiments/xp_caldist_behavioral_calibration/curriculum_teacher_reconstruction/20261109T145742Z/tests/test_fold_local_difficulty.py:23:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+experiments/xp_caldist_behavioral_calibration/curriculum_teacher_reconstruction/20261109T145742Z/tests/test_fold_local_difficulty.py:17: in load_module
+    spec.loader.exec_module(module)
+<frozen importlib._bootstrap_external>:879: in exec_module
+    ???
+<frozen importlib._bootstrap_external>:1016: in get_code
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <_frozen_importlib_external.SourceFileLoader object at 0x795fc38cf700>
+path = '/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/curriculum_teacher_reconstruction/20261109T145742Z/scripts/generate_fold_local_difficulty.py'
+
+>   ???
+E   FileNotFoundError: [Errno 2] No such file or directory: '/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/curriculum_teacher_reconstruction/20261109T145742Z/scripts/generate_fold_local_difficulty.py'
+
+<frozen importlib._bootstrap_external>:1073: FileNotFoundError
+_____________ ERROR at setup of test_total_length_control_formula ______________
+
+    @pytest.fixture
+    def mod():
+>       return load_module()
+
+experiments/xp_caldist_behavioral_calibration/curriculum_teacher_reconstruction/20261109T145742Z/tests/test_fold_local_difficulty.py:23:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+experiments/xp_caldist_behavioral_calibration/curriculum_teacher_reconstruction/20261109T145742Z/tests/test_fold_local_difficulty.py:17: in load_module
+    spec.loader.exec_module(module)
+<frozen importlib._bootstrap_external>:879: in exec_module
+    ???
+<frozen importlib._bootstrap_external>:1016: in get_code
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <_frozen_importlib_external.SourceFileLoader object at 0x795fc38cf5b0>
+path = '/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/curriculum_teacher_reconstruction/20261109T145742Z/scripts/generate_fold_local_difficulty.py'
+
+>   ???
+E   FileNotFoundError: [Errno 2] No such file or directory: '/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/curriculum_teacher_reconstruction/20261109T145742Z/scripts/generate_fold_local_difficulty.py'
+
+<frozen importlib._bootstrap_external>:1073: FileNotFoundError
+______________ ERROR at setup of test_all_unknown_dialogue_fails _______________
+
+    @pytest.fixture
+    def mod():
+>       return load_module()
+
+experiments/xp_caldist_behavioral_calibration/curriculum_teacher_reconstruction/20261109T145742Z/tests/test_fold_local_difficulty.py:23:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+experiments/xp_caldist_behavioral_calibration/curriculum_teacher_reconstruction/20261109T145742Z/tests/test_fold_local_difficulty.py:17: in load_module
+    spec.loader.exec_module(module)
+<frozen importlib._bootstrap_external>:879: in exec_module
+    ???
+<frozen importlib._bootstrap_external>:1016: in get_code
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <_frozen_importlib_external.SourceFileLoader object at 0x795fc397b910>
+path = '/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/curriculum_teacher_reconstruction/20261109T145742Z/scripts/generate_fold_local_difficulty.py'
+
+>   ???
+E   FileNotFoundError: [Errno 2] No such file or directory: '/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/curriculum_teacher_reconstruction/20261109T145742Z/scripts/generate_fold_local_difficulty.py'
+
+<frozen importlib._bootstrap_external>:1073: FileNotFoundError
+_____________________ ERROR at setup of test_finite_guard ______________________
+
+    @pytest.fixture
+    def mod():
+>       return load_module()
+
+experiments/xp_caldist_behavioral_calibration/curriculum_teacher_reconstruction/20261109T145742Z/tests/test_fold_local_difficulty.py:23:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+experiments/xp_caldist_behavioral_calibration/curriculum_teacher_reconstruction/20261109T145742Z/tests/test_fold_local_difficulty.py:17: in load_module
+    spec.loader.exec_module(module)
+<frozen importlib._bootstrap_external>:879: in exec_module
+    ???
+<frozen importlib._bootstrap_external>:1016: in get_code
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <_frozen_importlib_external.SourceFileLoader object at 0x795fc3978b50>
+path = '/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/curriculum_teacher_reconstruction/20261109T145742Z/scripts/generate_fold_local_difficulty.py'
+
+>   ???
+E   FileNotFoundError: [Errno 2] No such file or directory: '/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/curriculum_teacher_reconstruction/20261109T145742Z/scripts/generate_fold_local_difficulty.py'
+
+<frozen importlib._bootstrap_external>:1073: FileNotFoundError
+________________ ERROR at setup of test_exact_training_coverage ________________
+
+    @pytest.fixture
+    def mod():
+>       return load_module()
+
+experiments/xp_caldist_behavioral_calibration/curriculum_teacher_reconstruction/20261109T145742Z/tests/test_fold_local_difficulty.py:23:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+experiments/xp_caldist_behavioral_calibration/curriculum_teacher_reconstruction/20261109T145742Z/tests/test_fold_local_difficulty.py:17: in load_module
+    spec.loader.exec_module(module)
+<frozen importlib._bootstrap_external>:879: in exec_module
+    ???
+<frozen importlib._bootstrap_external>:1016: in get_code
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <_frozen_importlib_external.SourceFileLoader object at 0x795fc3979090>
+path = '/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/curriculum_teacher_reconstruction/20261109T145742Z/scripts/generate_fold_local_difficulty.py'
+
+>   ???
+E   FileNotFoundError: [Errno 2] No such file or directory: '/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/curriculum_teacher_reconstruction/20261109T145742Z/scripts/generate_fold_local_difficulty.py'
+
+<frozen importlib._bootstrap_external>:1073: FileNotFoundError
+_______ ERROR at setup of test_training_role_extraction_excludes_heldout _______
+
+    @pytest.fixture
+    def mod():
+>       return load_module()
+
+experiments/xp_caldist_behavioral_calibration/curriculum_teacher_reconstruction/20261109T145742Z/tests/test_fold_local_difficulty.py:23:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+experiments/xp_caldist_behavioral_calibration/curriculum_teacher_reconstruction/20261109T145742Z/tests/test_fold_local_difficulty.py:17: in load_module
+    spec.loader.exec_module(module)
+<frozen importlib._bootstrap_external>:879: in exec_module
+    ???
+<frozen importlib._bootstrap_external>:1016: in get_code
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <_frozen_importlib_external.SourceFileLoader object at 0x795fc38cf6a0>
+path = '/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/curriculum_teacher_reconstruction/20261109T145742Z/scripts/generate_fold_local_difficulty.py'
+
+>   ???
+E   FileNotFoundError: [Errno 2] No such file or directory: '/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/curriculum_teacher_reconstruction/20261109T145742Z/scripts/generate_fold_local_difficulty.py'
+
+<frozen importlib._bootstrap_external>:1073: FileNotFoundError
+___________ ERROR at setup of test_reject_requested_nontraining_ids ____________
+
+    @pytest.fixture
+    def mod():
+>       return load_module()
+
+experiments/xp_caldist_behavioral_calibration/curriculum_teacher_reconstruction/20261109T145742Z/tests/test_fold_local_difficulty.py:23:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+experiments/xp_caldist_behavioral_calibration/curriculum_teacher_reconstruction/20261109T145742Z/tests/test_fold_local_difficulty.py:17: in load_module
+    spec.loader.exec_module(module)
+<frozen importlib._bootstrap_external>:879: in exec_module
+    ???
+<frozen importlib._bootstrap_external>:1016: in get_code
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <_frozen_importlib_external.SourceFileLoader object at 0x795fc397aef0>
+path = '/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/curriculum_teacher_reconstruction/20261109T145742Z/scripts/generate_fold_local_difficulty.py'
+
+>   ???
+E   FileNotFoundError: [Errno 2] No such file or directory: '/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/curriculum_teacher_reconstruction/20261109T145742Z/scripts/generate_fold_local_difficulty.py'
+
+<frozen importlib._bootstrap_external>:1073: FileNotFoundError
+______________ ERROR at setup of test_fixed_final_epoch_protocol _______________
+
+    @pytest.fixture
+    def mod():
+>       return load_module()
+
+experiments/xp_caldist_behavioral_calibration/curriculum_teacher_reconstruction/20261109T145742Z/tests/test_fold_local_difficulty.py:23:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+experiments/xp_caldist_behavioral_calibration/curriculum_teacher_reconstruction/20261109T145742Z/tests/test_fold_local_difficulty.py:17: in load_module
+    spec.loader.exec_module(module)
+<frozen importlib._bootstrap_external>:879: in exec_module
+    ???
+<frozen importlib._bootstrap_external>:1016: in get_code
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <_frozen_importlib_external.SourceFileLoader object at 0x795fc379b1c0>
+path = '/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/curriculum_teacher_reconstruction/20261109T145742Z/scripts/generate_fold_local_difficulty.py'
+
+>   ???
+E   FileNotFoundError: [Errno 2] No such file or directory: '/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/curriculum_teacher_reconstruction/20261109T145742Z/scripts/generate_fold_local_difficulty.py'
+
+<frozen importlib._bootstrap_external>:1073: FileNotFoundError
+______ ERROR at setup of test_strict_checkpoint_loading_and_architecture _______
+
+    @pytest.fixture
+    def mod():
+>       return load_module()
+
+experiments/xp_caldist_behavioral_calibration/curriculum_teacher_reconstruction/20261109T145742Z/tests/test_fold_local_difficulty.py:23:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+experiments/xp_caldist_behavioral_calibration/curriculum_teacher_reconstruction/20261109T145742Z/tests/test_fold_local_difficulty.py:17: in load_module
+    spec.loader.exec_module(module)
+<frozen importlib._bootstrap_external>:879: in exec_module
+    ???
+<frozen importlib._bootstrap_external>:1016: in get_code
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <_frozen_importlib_external.SourceFileLoader object at 0x795fc3969f90>
+path = '/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/curriculum_teacher_reconstruction/20261109T145742Z/scripts/generate_fold_local_difficulty.py'
+
+>   ???
+E   FileNotFoundError: [Errno 2] No such file or directory: '/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/curriculum_teacher_reconstruction/20261109T145742Z/scripts/generate_fold_local_difficulty.py'
+
+<frozen importlib._bootstrap_external>:1073: FileNotFoundError
+___________ ERROR at setup of test_checkpoint_architecture_mismatch ____________
+
+    @pytest.fixture
+    def mod():
+>       return load_module()
+
+experiments/xp_caldist_behavioral_calibration/curriculum_teacher_reconstruction/20261109T145742Z/tests/test_fold_local_difficulty.py:23:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+experiments/xp_caldist_behavioral_calibration/curriculum_teacher_reconstruction/20261109T145742Z/tests/test_fold_local_difficulty.py:17: in load_module
+    spec.loader.exec_module(module)
+<frozen importlib._bootstrap_external>:879: in exec_module
+    ???
+<frozen importlib._bootstrap_external>:1016: in get_code
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <_frozen_importlib_external.SourceFileLoader object at 0x795fc38ce5c0>
+path = '/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/curriculum_teacher_reconstruction/20261109T145742Z/scripts/generate_fold_local_difficulty.py'
+
+>   ???
+E   FileNotFoundError: [Errno 2] No such file or directory: '/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/curriculum_teacher_reconstruction/20261109T145742Z/scripts/generate_fold_local_difficulty.py'
+
+<frozen importlib._bootstrap_external>:1073: FileNotFoundError
+____________ ERROR at setup of test_checkpoint_final_epoch_mismatch ____________
+
+    @pytest.fixture
+    def mod():
+>       return load_module()
+
+experiments/xp_caldist_behavioral_calibration/curriculum_teacher_reconstruction/20261109T145742Z/tests/test_fold_local_difficulty.py:23:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+experiments/xp_caldist_behavioral_calibration/curriculum_teacher_reconstruction/20261109T145742Z/tests/test_fold_local_difficulty.py:17: in load_module
+    spec.loader.exec_module(module)
+<frozen importlib._bootstrap_external>:879: in exec_module
+    ???
+<frozen importlib._bootstrap_external>:1016: in get_code
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <_frozen_importlib_external.SourceFileLoader object at 0x795fc3790550>
+path = '/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/curriculum_teacher_reconstruction/20261109T145742Z/scripts/generate_fold_local_difficulty.py'
+
+>   ???
+E   FileNotFoundError: [Errno 2] No such file or directory: '/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/curriculum_teacher_reconstruction/20261109T145742Z/scripts/generate_fold_local_difficulty.py'
+
+<frozen importlib._bootstrap_external>:1073: FileNotFoundError
+_________ ERROR at setup of test_batch_partition_invariance_of_reducer _________
+
+    @pytest.fixture
+    def mod():
+>       return load_module()
+
+experiments/xp_caldist_behavioral_calibration/curriculum_teacher_reconstruction/20261109T145742Z/tests/test_fold_local_difficulty.py:23:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+experiments/xp_caldist_behavioral_calibration/curriculum_teacher_reconstruction/20261109T145742Z/tests/test_fold_local_difficulty.py:17: in load_module
+    spec.loader.exec_module(module)
+<frozen importlib._bootstrap_external>:879: in exec_module
+    ???
+<frozen importlib._bootstrap_external>:1016: in get_code
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <_frozen_importlib_external.SourceFileLoader object at 0x795fc3798760>
+path = '/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/curriculum_teacher_reconstruction/20261109T145742Z/scripts/generate_fold_local_difficulty.py'
+
+>   ???
+E   FileNotFoundError: [Errno 2] No such file or directory: '/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/curriculum_teacher_reconstruction/20261109T145742Z/scripts/generate_fold_local_difficulty.py'
+
+<frozen importlib._bootstrap_external>:1073: FileNotFoundError
+____________ ERROR at setup of test_speaker_term_uses_full_context _____________
+
+    @pytest.fixture
+    def mod():
+>       return load_module()
+
+experiments/xp_caldist_behavioral_calibration/curriculum_teacher_reconstruction/20261109T145742Z/tests/test_fold_local_difficulty.py:23:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+experiments/xp_caldist_behavioral_calibration/curriculum_teacher_reconstruction/20261109T145742Z/tests/test_fold_local_difficulty.py:17: in load_module
+    spec.loader.exec_module(module)
+<frozen importlib._bootstrap_external>:879: in exec_module
+    ???
+<frozen importlib._bootstrap_external>:1016: in get_code
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <_frozen_importlib_external.SourceFileLoader object at 0x795fc3792380>
+path = '/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/curriculum_teacher_reconstruction/20261109T145742Z/scripts/generate_fold_local_difficulty.py'
+
+>   ???
+E   FileNotFoundError: [Errno 2] No such file or directory: '/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/curriculum_teacher_reconstruction/20261109T145742Z/scripts/generate_fold_local_difficulty.py'
+
+<frozen importlib._bootstrap_external>:1073: FileNotFoundError
+_ ERROR at setup of test_curriculum_sampler_only_selects_training_and_keeps_source_order _
+
+    @pytest.fixture
+    def mod():
+>       return load_module()
+
+experiments/xp_caldist_behavioral_calibration/curriculum_teacher_reconstruction/20261109T145742Z/tests/test_fold_local_difficulty.py:23:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+experiments/xp_caldist_behavioral_calibration/curriculum_teacher_reconstruction/20261109T145742Z/tests/test_fold_local_difficulty.py:17: in load_module
+    spec.loader.exec_module(module)
+<frozen importlib._bootstrap_external>:879: in exec_module
+    ???
+<frozen importlib._bootstrap_external>:1016: in get_code
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <_frozen_importlib_external.SourceFileLoader object at 0x7960e7df6fb0>
+path = '/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/curriculum_teacher_reconstruction/20261109T145742Z/scripts/generate_fold_local_difficulty.py'
+
+>   ???
+E   FileNotFoundError: [Errno 2] No such file or directory: '/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/curriculum_teacher_reconstruction/20261109T145742Z/scripts/generate_fold_local_difficulty.py'
+
+<frozen importlib._bootstrap_external>:1073: FileNotFoundError
+____________ ERROR at setup of test_context_tensors_are_not_mutated ____________
+
+    @pytest.fixture
+    def mod():
+>       return load_module()
+
+experiments/xp_caldist_behavioral_calibration/curriculum_teacher_reconstruction/20261109T145742Z/tests/test_fold_local_difficulty.py:23:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+experiments/xp_caldist_behavioral_calibration/curriculum_teacher_reconstruction/20261109T145742Z/tests/test_fold_local_difficulty.py:17: in load_module
+    spec.loader.exec_module(module)
+<frozen importlib._bootstrap_external>:879: in exec_module
+    ???
+<frozen importlib._bootstrap_external>:1016: in get_code
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <_frozen_importlib_external.SourceFileLoader object at 0x795fc3792d70>
+path = '/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/curriculum_teacher_reconstruction/20261109T145742Z/scripts/generate_fold_local_difficulty.py'
+
+>   ???
+E   FileNotFoundError: [Errno 2] No such file or directory: '/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/curriculum_teacher_reconstruction/20261109T145742Z/scripts/generate_fold_local_difficulty.py'
+
+<frozen importlib._bootstrap_external>:1073: FileNotFoundError
+_____________ ERROR at setup of test_artifact_hash_is_reproducible _____________
+
+    @pytest.fixture
+    def mod():
+>       return load_module()
+
+experiments/xp_caldist_behavioral_calibration/curriculum_teacher_reconstruction/20261109T145742Z/tests/test_fold_local_difficulty.py:23:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+experiments/xp_caldist_behavioral_calibration/curriculum_teacher_reconstruction/20261109T145742Z/tests/test_fold_local_difficulty.py:17: in load_module
+    spec.loader.exec_module(module)
+<frozen importlib._bootstrap_external>:879: in exec_module
+    ???
+<frozen importlib._bootstrap_external>:1016: in get_code
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <_frozen_importlib_external.SourceFileLoader object at 0x795fc37a8160>
+path = '/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/curriculum_teacher_reconstruction/20261109T145742Z/scripts/generate_fold_local_difficulty.py'
+
+>   ???
+E   FileNotFoundError: [Errno 2] No such file or directory: '/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/curriculum_teacher_reconstruction/20261109T145742Z/scripts/generate_fold_local_difficulty.py'
+
+<frozen importlib._bootstrap_external>:1073: FileNotFoundError
+__________________ ERROR at setup of test_manifest_hash_guard __________________
+
+    @pytest.fixture
+    def mod():
+>       return load_module()
+
+experiments/xp_caldist_behavioral_calibration/curriculum_teacher_reconstruction/20261109T145742Z/tests/test_fold_local_difficulty.py:23:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+experiments/xp_caldist_behavioral_calibration/curriculum_teacher_reconstruction/20261109T145742Z/tests/test_fold_local_difficulty.py:17: in load_module
+    spec.loader.exec_module(module)
+<frozen importlib._bootstrap_external>:879: in exec_module
+    ???
+<frozen importlib._bootstrap_external>:1016: in get_code
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <_frozen_importlib_external.SourceFileLoader object at 0x795fc37929b0>
+path = '/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/curriculum_teacher_reconstruction/20261109T145742Z/scripts/generate_fold_local_difficulty.py'
+
+>   ???
+E   FileNotFoundError: [Errno 2] No such file or directory: '/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/curriculum_teacher_reconstruction/20261109T145742Z/scripts/generate_fold_local_difficulty.py'
+
+<frozen importlib._bootstrap_external>:1073: FileNotFoundError
+____________ ERROR at setup of test_original_tie_gradient_semantics ____________
+
+    @pytest.fixture
+    def mod():
+>       return load_module()
+
+experiments/xp_caldist_behavioral_calibration/curriculum_teacher_reconstruction/20261109T145742Z/tests/test_fold_local_difficulty.py:23:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+experiments/xp_caldist_behavioral_calibration/curriculum_teacher_reconstruction/20261109T145742Z/tests/test_fold_local_difficulty.py:17: in load_module
+    spec.loader.exec_module(module)
+<frozen importlib._bootstrap_external>:879: in exec_module
+    ???
+<frozen importlib._bootstrap_external>:1016: in get_code
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <_frozen_importlib_external.SourceFileLoader object at 0x795fc38cf9d0>
+path = '/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/curriculum_teacher_reconstruction/20261109T145742Z/scripts/generate_fold_local_difficulty.py'
+
+>   ???
+E   FileNotFoundError: [Errno 2] No such file or directory: '/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/curriculum_teacher_reconstruction/20261109T145742Z/scripts/generate_fold_local_difficulty.py'
+
+<frozen importlib._bootstrap_external>:1073: FileNotFoundError
+=============================== warnings summary ===============================
+../../../../home/yangbin/miniconda3/envs/msa_extract/lib/python3.10/site-packages/torch/cuda/__init__.py:61
+  /home/yangbin/miniconda3/envs/msa_extract/lib/python3.10/site-packages/torch/cuda/__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+    import pynvml  # type: ignore[import]
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+ERROR experiments/xp_caldist_behavioral_calibration/curriculum_teacher_reconstruction/20261109T145742Z/tests/test_fold_local_difficulty.py::test_masked_label_is_never_gathered
+ERROR experiments/xp_caldist_behavioral_calibration/curriculum_teacher_reconstruction/20261109T145742Z/tests/test_fold_local_difficulty.py::test_valid_count_formula
+ERROR experiments/xp_caldist_behavioral_calibration/curriculum_teacher_reconstruction/20261109T145742Z/tests/test_fold_local_difficulty.py::test_total_length_control_formula
+ERROR experiments/xp_caldist_behavioral_calibration/curriculum_teacher_reconstruction/20261109T145742Z/tests/test_fold_local_difficulty.py::test_all_unknown_dialogue_fails
+ERROR experiments/xp_caldist_behavioral_calibration/curriculum_teacher_reconstruction/20261109T145742Z/tests/test_fold_local_difficulty.py::test_finite_guard
+ERROR experiments/xp_caldist_behavioral_calibration/curriculum_teacher_reconstruction/20261109T145742Z/tests/test_fold_local_difficulty.py::test_exact_training_coverage
+ERROR experiments/xp_caldist_behavioral_calibration/curriculum_teacher_reconstruction/20261109T145742Z/tests/test_fold_local_difficulty.py::test_training_role_extraction_excludes_heldout
+ERROR experiments/xp_caldist_behavioral_calibration/curriculum_teacher_reconstruction/20261109T145742Z/tests/test_fold_local_difficulty.py::test_reject_requested_nontraining_ids
+ERROR experiments/xp_caldist_behavioral_calibration/curriculum_teacher_reconstruction/20261109T145742Z/tests/test_fold_local_difficulty.py::test_fixed_final_epoch_protocol
+ERROR experiments/xp_caldist_behavioral_calibration/curriculum_teacher_reconstruction/20261109T145742Z/tests/test_fold_local_difficulty.py::test_strict_checkpoint_loading_and_architecture
+ERROR experiments/xp_caldist_behavioral_calibration/curriculum_teacher_reconstruction/20261109T145742Z/tests/test_fold_local_difficulty.py::test_checkpoint_architecture_mismatch
+ERROR experiments/xp_caldist_behavioral_calibration/curriculum_teacher_reconstruction/20261109T145742Z/tests/test_fold_local_difficulty.py::test_checkpoint_final_epoch_mismatch
+ERROR experiments/xp_caldist_behavioral_calibration/curriculum_teacher_reconstruction/20261109T145742Z/tests/test_fold_local_difficulty.py::test_batch_partition_invariance_of_reducer
+ERROR experiments/xp_caldist_behavioral_calibration/curriculum_teacher_reconstruction/20261109T145742Z/tests/test_fold_local_difficulty.py::test_speaker_term_uses_full_context
+ERROR experiments/xp_caldist_behavioral_calibration/curriculum_teacher_reconstruction/20261109T145742Z/tests/test_fold_local_difficulty.py::test_curriculum_sampler_only_selects_training_and_keeps_source_order
+ERROR experiments/xp_caldist_behavioral_calibration/curriculum_teacher_reconstruction/20261109T145742Z/tests/test_fold_local_difficulty.py::test_context_tensors_are_not_mutated
+ERROR experiments/xp_caldist_behavioral_calibration/curriculum_teacher_reconstruction/20261109T145742Z/tests/test_fold_local_difficulty.py::test_artifact_hash_is_reproducible
+ERROR experiments/xp_caldist_behavioral_calibration/curriculum_teacher_reconstruction/20261109T145742Z/tests/test_fold_local_difficulty.py::test_manifest_hash_guard
+ERROR experiments/xp_caldist_behavioral_calibration/curriculum_teacher_reconstruction/20261109T145742Z/tests/test_fold_local_difficulty.py::test_original_tie_gradient_semantics
+1 warning, 19 errors in 1.75s

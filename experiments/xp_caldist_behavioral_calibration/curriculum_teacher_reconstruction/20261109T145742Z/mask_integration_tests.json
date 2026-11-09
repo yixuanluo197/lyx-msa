@@ -1,0 +1,48 @@
+{
+  "status": "partial_integration_gate",
+  "cpu_only": true,
+  "gpu_training_started": false,
+  "new_core": {
+    "tests": 20,
+    "passed": 20,
+    "log": "logs/test_green.log",
+    "covers": [
+      "mask_before_true_class_gather",
+      "valid_and_total_denominators",
+      "all_invalid_hard_error",
+      "strict_checkpoint_and_architecture",
+      "training_only_ids",
+      "exact_coverage",
+      "batch_partition_reducer",
+      "curriculum_training_only",
+      "context_preservation",
+      "hash_reproducibility",
+      "xp04_tie_gradient",
+      "mock_six_forward_role_scoped_generator"
+    ]
+  },
+  "prior_helper": {
+    "tests": 5,
+    "passed": 5,
+    "log": "logs/prior_mask_tests.log"
+  },
+  "new_finding": {
+    "prior_helper_rank_tie_gradient_parity": false,
+    "amended_core_parity_test": true
+  },
+  "open_full_runner_gates": [
+    "all_true_loss_and_gradient_parity",
+    "mixed_sentinel_all_loss_paths",
+    "real_CKSCL_backward",
+    "empty_and_singleton_optimizer_state",
+    "role_access_tripwires",
+    "checkpoint_resume_parity"
+  ],
+  "real_schema_compatibility": {
+    "path": "provenance/m3net_schema_compatibility.json",
+    "IEMOCAP_tensors": 85,
+    "MELD_tensors": 83,
+    "strict_load": true,
+    "forward_or_training": false
+  }
+}
