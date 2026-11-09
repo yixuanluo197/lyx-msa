@@ -1,0 +1,11 @@
+# Training-only Teacher Runner Audit
+
+The gate passed. The runner accepts only the approved manifest, one dataset/fold, and a role-scoped Training artifact. It never constructs Development, Calibration, Evaluation, or historical Test loaders. The immutable approved-manifest SHA-256 is `6d43928865915fe22a913c98b1165a05ba6e3e8f21d4d4c896cf51eb9c9b62be`.
+
+The IEMOCAP artifact contains exactly 84 Training dialogues and 4,216 utterances. Twenty-three of the 53 manifest-wide `xxx` utterances occur in Fold 1 Training; they remain in every feature tensor, qmask, umask, and graph input, while their labels are replaced by an independent `-100` sentinel and excluded before NLL. The MELD artifact contains exactly 852 Training dialogues and 8,176 utterances. The extractor necessarily deserializes the monolithic upstream pickle, but it indexes and serializes only approved Training IDs; the Teacher process itself receives only the role-scoped artifact.
+
+Every batch is checked before model forward. `batch_access.jsonl` records IDs, lengths, role, edge count, and node count. Each epoch must access every Training dialogue exactly once and must contain no duplicate or non-Training ID. The final access audits report `rejected_ids=[]` and exact coverage in all 80 IEMOCAP and 40 MELD epochs.
+
+The first launch exposed a missing XP04 batching invariant: plain shuffle can exceed the frozen M³Net graph capacities (`hyperedge_weight=1000`, `EW_weight=5200`). That partial run was stopped and retained under `teacher_failed_legacy_capacity_20261109T1602Z` / `teacher_interrupted_legacy_capacity_20261109T1602Z`. The corrected runner copies XP04's length-only `CapacitySafeBatchSampler`, keeps batch size 16, rebuilds its private generator with `seed + epoch`, and preserves every Training dialogue once per epoch. Both formal Teachers were restarted from random initialization; no partial checkpoint was resumed.
+
+Verification: 56 combined unit tests pass in the XP04 environment. They cover manifest hashes, canonical MELD ID mapping, malformed held-out feature tripwires, unknown masking and backward, exact coverage, capacity-sampler AST parity, pre-forward logging, fixed endpoint metadata, and generator strict-load compatibility.

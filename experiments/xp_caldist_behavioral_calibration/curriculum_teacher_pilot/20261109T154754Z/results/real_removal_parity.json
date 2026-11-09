@@ -1,0 +1,532 @@
+{
+  "status": "passed",
+  "scope": "real_model_batch1_six_view_inference_parity_only",
+  "trained_teacher": false,
+  "historical_checkpoint_access": false,
+  "weights": "fresh_seeded_initialization_strict_copied_to_eight_real_models",
+  "dataset": "IEMOCAP",
+  "fold": "fold1",
+  "role": "training",
+  "dialogue_id": "Ses03F_impro03",
+  "batch_size": 1,
+  "context_length": 35,
+  "known_label_count": 27,
+  "unknown_label_count": 8,
+  "unknown_rows": [
+    {
+      "dialogue_id": "Ses03F_impro03",
+      "utterance_index": 1,
+      "utterance_id": "Ses03F_impro03_F000",
+      "session_id": "Ses03",
+      "raw_primary_label": "xxx",
+      "frozen_label": "happy"
+    },
+    {
+      "dialogue_id": "Ses03F_impro03",
+      "utterance_index": 4,
+      "utterance_id": "Ses03F_impro03_M003",
+      "session_id": "Ses03",
+      "raw_primary_label": "xxx",
+      "frozen_label": "happy"
+    },
+    {
+      "dialogue_id": "Ses03F_impro03",
+      "utterance_index": 7,
+      "utterance_id": "Ses03F_impro03_F003",
+      "session_id": "Ses03",
+      "raw_primary_label": "xxx",
+      "frozen_label": "happy"
+    },
+    {
+      "dialogue_id": "Ses03F_impro03",
+      "utterance_index": 11,
+      "utterance_id": "Ses03F_impro03_M008",
+      "session_id": "Ses03",
+      "raw_primary_label": "xxx",
+      "frozen_label": "happy"
+    },
+    {
+      "dialogue_id": "Ses03F_impro03",
+      "utterance_index": 17,
+      "utterance_id": "Ses03F_impro03_F010",
+      "session_id": "Ses03",
+      "raw_primary_label": "xxx",
+      "frozen_label": "happy"
+    },
+    {
+      "dialogue_id": "Ses03F_impro03",
+      "utterance_index": 22,
+      "utterance_id": "Ses03F_impro03_M013",
+      "session_id": "Ses03",
+      "raw_primary_label": "xxx",
+      "frozen_label": "happy"
+    },
+    {
+      "dialogue_id": "Ses03F_impro03",
+      "utterance_index": 29,
+      "utterance_id": "Ses03F_impro03_M016",
+      "session_id": "Ses03",
+      "raw_primary_label": "xxx",
+      "frozen_label": "happy"
+    },
+    {
+      "dialogue_id": "Ses03F_impro03",
+      "utterance_index": 32,
+      "utterance_id": "Ses03F_impro03_M019",
+      "session_id": "Ses03",
+      "raw_primary_label": "xxx",
+      "frozen_label": "happy"
+    }
+  ],
+  "unknown_context_preserved": true,
+  "unknown_sentinel_minus100_invariance": true,
+  "tolerance_absolute": 1e-06,
+  "tolerance_relative": 1e-05,
+  "comparison_rule": "abs(adapter-reference) <= atol + rtol*abs(reference)",
+  "six_raw_logits": {
+    "full": {
+      "shape": [
+        35,
+        6
+      ],
+      "max_absolute_error": 8.940696716308594e-08,
+      "effective_threshold_at_max_error": 3.4827326834201815e-06,
+      "minimum_effective_threshold": 1.0165451411157846e-06,
+      "maximum_effective_threshold": 4.033330142498017e-06,
+      "max_error_to_threshold_ratio": 0.029476460624209055,
+      "tolerance_absolute": 1e-06,
+      "tolerance_relative": 1e-05,
+      "passed": true
+    },
+    "text": {
+      "shape": [
+        35,
+        6
+      ],
+      "max_absolute_error": 8.940696716308594e-08,
+      "effective_threshold_at_max_error": 2.9833151996135717e-06,
+      "minimum_effective_threshold": 1.0028154533356427e-06,
+      "maximum_effective_threshold": 3.9904961585998535e-06,
+      "max_error_to_threshold_ratio": 0.03331550309817854,
+      "tolerance_absolute": 1e-06,
+      "tolerance_relative": 1e-05,
+      "passed": true
+    },
+    "audio": {
+      "shape": [
+        35,
+        6
+      ],
+      "max_absolute_error": 7.450580596923828e-08,
+      "effective_threshold_at_max_error": 2.2966987490653994e-06,
+      "minimum_effective_threshold": 1.10628174059093e-06,
+      "maximum_effective_threshold": 3.417493909597397e-06,
+      "max_error_to_threshold_ratio": 0.03244039123527066,
+      "tolerance_absolute": 1e-06,
+      "tolerance_relative": 1e-05,
+      "passed": true
+    },
+    "visual": {
+      "shape": [
+        35,
+        6
+      ],
+      "max_absolute_error": 7.450580596923828e-08,
+      "effective_threshold_at_max_error": 3.206390500068665e-06,
+      "minimum_effective_threshold": 1.0085186399519442e-06,
+      "maximum_effective_threshold": 3.961562871932984e-06,
+      "max_error_to_threshold_ratio": 0.027648998980894766,
+      "tolerance_absolute": 1e-06,
+      "tolerance_relative": 1e-05,
+      "passed": true
+    },
+    "intra": {
+      "shape": [
+        35,
+        6
+      ],
+      "max_absolute_error": 1.1920928955078125e-07,
+      "effective_threshold_at_max_error": 2.425124406814575e-06,
+      "minimum_effective_threshold": 1.0734260119497776e-06,
+      "maximum_effective_threshold": 4.975650668144226e-06,
+      "max_error_to_threshold_ratio": 0.04915594813025029,
+      "tolerance_absolute": 1e-06,
+      "tolerance_relative": 1e-05,
+      "passed": true
+    },
+    "inter": {
+      "shape": [
+        35,
+        6
+      ],
+      "max_absolute_error": 5.960464477539063e-08,
+      "effective_threshold_at_max_error": 2.3929761946201328e-06,
+      "minimum_effective_threshold": 1.00713475048542e-06,
+      "maximum_effective_threshold": 3.0716826617717743e-06,
+      "max_error_to_threshold_ratio": 0.03994160490763964,
+      "tolerance_absolute": 1e-06,
+      "tolerance_relative": 1e-05,
+      "passed": true
+    }
+  },
+  "six_log_probabilities": {
+    "full": {
+      "shape": [
+        35,
+        6
+      ],
+      "max_absolute_error": 2.384185791015625e-07,
+      "effective_threshold_at_max_error": 2.1322787761688235e-05,
+      "minimum_effective_threshold": 1.6198494195938112e-05,
+      "maximum_effective_threshold": 2.1587897300720216e-05,
+      "max_error_to_threshold_ratio": 0.011713226390170804,
+      "tolerance_absolute": 1e-06,
+      "tolerance_relative": 1e-05,
+      "passed": true
+    },
+    "text": {
+      "shape": [
+        35,
+        6
+      ],
+      "max_absolute_error": 2.384185791015625e-07,
+      "effective_threshold_at_max_error": 2.1085649490356447e-05,
+      "minimum_effective_threshold": 1.6228209495544435e-05,
+      "maximum_effective_threshold": 2.157504653930664e-05,
+      "max_error_to_threshold_ratio": 0.011868605892425756,
+      "tolerance_absolute": 1e-06,
+      "tolerance_relative": 1e-05,
+      "passed": true
+    },
+    "audio": {
+      "shape": [
+        35,
+        6
+      ],
+      "max_absolute_error": 2.384185791015625e-07,
+      "effective_threshold_at_max_error": 1.995664215087891e-05,
+      "minimum_effective_threshold": 1.714008665084839e-05,
+      "maximum_effective_threshold": 2.100109672546387e-05,
+      "max_error_to_threshold_ratio": 0.01382233836119509,
+      "tolerance_absolute": 1e-06,
+      "tolerance_relative": 1e-05,
+      "passed": true
+    },
+    "visual": {
+      "shape": [
+        35,
+        6
+      ],
+      "max_absolute_error": 2.384185791015625e-07,
+      "effective_threshold_at_max_error": 2.1245947837829593e-05,
+      "minimum_effective_threshold": 1.6176262855529784e-05,
+      "maximum_effective_threshold": 2.152176952362061e-05,
+      "max_error_to_threshold_ratio": 0.013656785372446622,
+      "tolerance_absolute": 1e-06,
+      "tolerance_relative": 1e-05,
+      "passed": true
+    },
+    "intra": {
+      "shape": [
+        35,
+        6
+      ],
+      "max_absolute_error": 2.384185791015625e-07,
+      "effective_threshold_at_max_error": 2.1561959743499757e-05,
+      "minimum_effective_threshold": 1.488891100883484e-05,
+      "maximum_effective_threshold": 2.2423621177673344e-05,
+      "max_error_to_threshold_ratio": 0.014814928066709367,
+      "tolerance_absolute": 1e-06,
+      "tolerance_relative": 1e-05,
+      "passed": true
+    },
+    "inter": {
+      "shape": [
+        35,
+        6
+      ],
+      "max_absolute_error": 1.1920928955078125e-07,
+      "effective_threshold_at_max_error": 1.9855265378952028e-05,
+      "minimum_effective_threshold": 1.7224296092987063e-05,
+      "maximum_effective_threshold": 2.0975337982177735e-05,
+      "max_error_to_threshold_ratio": 0.006785729621463229,
+      "tolerance_absolute": 1e-06,
+      "tolerance_relative": 1e-05,
+      "passed": true
+    }
+  },
+  "difficulty_decomposition": {
+    "text_gap": {
+      "reference": 0.08133924007415771,
+      "adapter": 0.08133971691131592,
+      "shape": [],
+      "max_absolute_error": 4.76837158203125e-07,
+      "effective_threshold_at_max_error": 1.8133924007415772e-06,
+      "minimum_effective_threshold": 1.8133924007415772e-06,
+      "maximum_effective_threshold": 1.8133924007415772e-06,
+      "max_error_to_threshold_ratio": 0.2629531027085616,
+      "tolerance_absolute": 1e-06,
+      "tolerance_relative": 1e-05,
+      "passed": true
+    },
+    "audio_gap": {
+      "reference": 0.3926485776901245,
+      "adapter": 0.39264845848083496,
+      "shape": [],
+      "max_absolute_error": 1.1920928955078125e-07,
+      "effective_threshold_at_max_error": 4.926485776901245e-06,
+      "minimum_effective_threshold": 4.926485776901245e-06,
+      "maximum_effective_threshold": 4.926485776901245e-06,
+      "max_error_to_threshold_ratio": 0.024197631932627597,
+      "tolerance_absolute": 1e-06,
+      "tolerance_relative": 1e-05,
+      "passed": true
+    },
+    "visual_gap": {
+      "reference": 0.11735153198242188,
+      "adapter": 0.11735165119171143,
+      "shape": [],
+      "max_absolute_error": 1.1920928955078125e-07,
+      "effective_threshold_at_max_error": 2.1735153198242188e-06,
+      "minimum_effective_threshold": 2.1735153198242188e-06,
+      "maximum_effective_threshold": 2.1735153198242188e-06,
+      "max_error_to_threshold_ratio": 0.054846307483317945,
+      "tolerance_absolute": 1e-06,
+      "tolerance_relative": 1e-05,
+      "passed": true
+    },
+    "intra_gap": {
+      "reference": 0.8556551933288574,
+      "adapter": 0.8556550741195679,
+      "shape": [],
+      "max_absolute_error": 1.1920928955078125e-07,
+      "effective_threshold_at_max_error": 9.556551933288576e-06,
+      "minimum_effective_threshold": 9.556551933288576e-06,
+      "maximum_effective_threshold": 9.556551933288576e-06,
+      "max_error_to_threshold_ratio": 0.012474090067520751,
+      "tolerance_absolute": 1e-06,
+      "tolerance_relative": 1e-05,
+      "passed": true
+    },
+    "inter_gap": {
+      "reference": 1.0034992694854736,
+      "adapter": 1.0034995079040527,
+      "shape": [],
+      "max_absolute_error": 2.384185791015625e-07,
+      "effective_threshold_at_max_error": 1.1034992694854737e-05,
+      "minimum_effective_threshold": 1.1034992694854737e-05,
+      "maximum_effective_threshold": 1.1034992694854737e-05,
+      "max_error_to_threshold_ratio": 0.02160568526816782,
+      "tolerance_absolute": 1e-06,
+      "tolerance_relative": 1e-05,
+      "passed": true
+    },
+    "valid_label_count": {
+      "reference": 27,
+      "adapter": 27,
+      "shape": [],
+      "max_absolute_error": 0.0,
+      "effective_threshold_at_max_error": 0.00027100000000000003,
+      "minimum_effective_threshold": 0.00027100000000000003,
+      "maximum_effective_threshold": 0.00027100000000000003,
+      "max_error_to_threshold_ratio": 0.0,
+      "tolerance_absolute": 1e-06,
+      "tolerance_relative": 1e-05,
+      "passed": true
+    },
+    "total_length": {
+      "reference": 35,
+      "adapter": 35,
+      "shape": [],
+      "max_absolute_error": 0.0,
+      "effective_threshold_at_max_error": 0.0003510000000000001,
+      "minimum_effective_threshold": 0.0003510000000000001,
+      "maximum_effective_threshold": 0.0003510000000000001,
+      "max_error_to_threshold_ratio": 0.0,
+      "tolerance_absolute": 1e-06,
+      "tolerance_relative": 1e-05,
+      "passed": true
+    },
+    "speaker_term": {
+      "reference": 2,
+      "adapter": 2.0,
+      "shape": [],
+      "max_absolute_error": 0.0,
+      "effective_threshold_at_max_error": 2.1000000000000002e-05,
+      "minimum_effective_threshold": 2.1000000000000002e-05,
+      "maximum_effective_threshold": 2.1000000000000002e-05,
+      "max_error_to_threshold_ratio": 0.0,
+      "tolerance_absolute": 1e-06,
+      "tolerance_relative": 1e-05,
+      "passed": true
+    },
+    "total_gap": {
+      "reference": 2.450493812561035,
+      "adapter": 2.450494408607483,
+      "shape": [],
+      "max_absolute_error": 5.960464477539062e-07,
+      "effective_threshold_at_max_error": 2.5504938125610356e-05,
+      "minimum_effective_threshold": 2.5504938125610356e-05,
+      "maximum_effective_threshold": 2.5504938125610356e-05,
+      "max_error_to_threshold_ratio": 0.02336984488330894,
+      "tolerance_absolute": 1e-06,
+      "tolerance_relative": 1e-05,
+      "passed": true
+    },
+    "final_difficulty": {
+      "reference": 0.153465303881415,
+      "adapter": 0.15346532443474079,
+      "shape": [],
+      "max_absolute_error": 2.055332579131708e-08,
+      "effective_threshold_at_max_error": 2.53465303881415e-06,
+      "minimum_effective_threshold": 2.53465303881415e-06,
+      "maximum_effective_threshold": 2.53465303881415e-06,
+      "max_error_to_threshold_ratio": 0.008108930680679298,
+      "tolerance_absolute": 1e-06,
+      "tolerance_relative": 1e-05,
+      "passed": true
+    },
+    "difficulty_total_length": {
+      "reference": 0.12028361655570366,
+      "adapter": 0.1202836326650671,
+      "shape": [],
+      "max_absolute_error": 1.610936344043079e-08,
+      "effective_threshold_at_max_error": 2.202836165557037e-06,
+      "minimum_effective_threshold": 2.202836165557037e-06,
+      "maximum_effective_threshold": 2.202836165557037e-06,
+      "max_error_to_threshold_ratio": 0.007313010242119924,
+      "tolerance_absolute": 1e-06,
+      "tolerance_relative": 1e-05,
+      "passed": true
+    }
+  },
+  "strict_state_loads": [
+    {
+      "class": "Model",
+      "strict": true,
+      "missing_keys": [],
+      "unexpected_keys": []
+    },
+    {
+      "class": "Model",
+      "strict": true,
+      "missing_keys": [],
+      "unexpected_keys": []
+    },
+    {
+      "class": "Model_Intra",
+      "strict": true,
+      "missing_keys": [],
+      "unexpected_keys": []
+    },
+    {
+      "class": "Model_Inter",
+      "strict": true,
+      "missing_keys": [],
+      "unexpected_keys": []
+    },
+    {
+      "class": "Model",
+      "strict": true,
+      "missing_keys": [],
+      "unexpected_keys": []
+    },
+    {
+      "class": "Model",
+      "strict": true,
+      "missing_keys": [],
+      "unexpected_keys": []
+    },
+    {
+      "class": "Model_Intra",
+      "strict": true,
+      "missing_keys": [],
+      "unexpected_keys": []
+    },
+    {
+      "class": "Model_Inter",
+      "strict": true,
+      "missing_keys": [],
+      "unexpected_keys": []
+    }
+  ],
+  "model_state_unchanged": true,
+  "source_unchanged": true,
+  "seed": 1475,
+  "architecture": {
+    "model_family": "M3Net",
+    "implementation": "CMERC_model_cm_Model",
+    "dataset": "IEMOCAP",
+    "base_model": "GRU",
+    "graph_type": "hyper",
+    "graph_construct": "direct",
+    "multi_modal": true,
+    "mm_fusion_mthd": "concat_DHT",
+    "modals": "avl",
+    "norm": "BN",
+    "num_L": 3,
+    "num_K": 4,
+    "causal": false
+  },
+  "author_reference": {
+    "author_source_sha256": "7e024fbe7748d90d0f40636c72796a2d46578007fd0e80bdf828b49478dc4d47",
+    "forward_calls": [
+      "model",
+      "model_mm",
+      "model_mm",
+      "model_mm",
+      "model_intra",
+      "model_inter"
+    ],
+    "forward_source_lines": [
+      322,
+      341,
+      342,
+      343,
+      346,
+      347
+    ],
+    "mean_replacement_assignments": [
+      "mask_features",
+      "mask_textf1",
+      "mask_textf2",
+      "mask_textf3",
+      "mask_textf4",
+      "mask_acouf",
+      "mask_visuf"
+    ],
+    "extracted_ast_sha256": "664b6207f8daa67e6d1d3275f0a4f9077fe6461c40e2c33a228dbb76fa224b31"
+  },
+  "compatibility_shim": {
+    "applied": true,
+    "calls": 0,
+    "kind": "unused_PyG_topk_import_symbol"
+  },
+  "source_root": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/code",
+  "source_file_sha256": {
+    "model_cm.py": "94acf11e2e9edd1bcd98049eb12d85b3604f8d71d46f64f0c3b8b9837fa12625",
+    "model_hyper.py": "fb9ef2ee268afa697474c9199d2136a7519b5226adb4abeec4a9cf1aea678aba",
+    "HypergraphConv.py": "9297a572e1763a74c7984eb75dfb15fa8143bf131a44cf50433c307ef7f3b5d2",
+    "high_fre_conv.py": "f4414c019ca7f656a662698bb9615bf15ac6325a73caa06ff487e158f58f39df",
+    "model_GCN.py": "830d401ff3e4b30298199b927a0bad3a9056400429506abcc2d66a7db8b76f9f",
+    "causal_graph.py": "3dd761b05cca95afa7b2f7b70e4640ee3ccfbb5726c3d705c0808468f7181da3"
+  },
+  "script_sha256": "66e5721f2a3367575a6c4715a3d3e297376c6c9b6b2f9db38b5f18ae663d695d",
+  "adapter_sha256": "8919231a560d253482a15f40e532089323164f749065cff0e077d51a164b970b",
+  "approved_manifest_sha256": "6d43928865915fe22a913c98b1165a05ba6e3e8f21d4d4c896cf51eb9c9b62be",
+  "training_role_artifact": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/curriculum_teacher_pilot/20261109T154754Z/runs/IEMOCAP/fold1/training_role_artifact.pt",
+  "training_role_artifact_sha256": "82399a485cdbd7034cfb0de2326e0767d451c70428949545289cc48c1a2445b3",
+  "environment": {
+    "python": "/data2/yb/conda_envs/cmerc-xp-repro/bin/python",
+    "torch": "1.13.1+cu117",
+    "cuda_runtime": "11.7",
+    "device": "cuda:0",
+    "CUDA_VISIBLE_DEVICES": "GPU-7ff18ebb-100e-98fe-038b-a98bd4f94248",
+    "pid": 898768
+  },
+  "gpu_before": "0, GPU-7ff18ebb-100e-98fe-038b-a98bd4f94248, 3 MiB, 12288 MiB, 0 %\n1, GPU-eed2f34f-b4c0-7b7a-498e-71a026e30c5a, 3 MiB, 12288 MiB, 0 %\n2, GPU-d17e4326-9d3b-2025-fbf8-c9b0d16623a0, 3 MiB, 12288 MiB, 0 %\n3, GPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456, 3 MiB, 12288 MiB, 0 %\n",
+  "gpu_during": "0, GPU-7ff18ebb-100e-98fe-038b-a98bd4f94248, 607 MiB, 12288 MiB, 8 %\n1, GPU-eed2f34f-b4c0-7b7a-498e-71a026e30c5a, 3 MiB, 12288 MiB, 0 %\n2, GPU-d17e4326-9d3b-2025-fbf8-c9b0d16623a0, 3 MiB, 12288 MiB, 0 %\n3, GPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456, 3 MiB, 12288 MiB, 0 %\n",
+  "gpu_processes": "898768, GPU-7ff18ebb-100e-98fe-038b-a98bd4f94248, 602 MiB\n",
+  "peak_cuda_allocated_bytes": 263618560,
+  "score_artifact_sha256": "58aa33c02c4d74ef902f4ee515df4778928ae383170b107539e5abe7f3ae21ce"
+}

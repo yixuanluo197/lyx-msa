@@ -1,0 +1,48 @@
+{
+  "status": "passed",
+  "manifest_sha256": "6d43928865915fe22a913c98b1165a05ba6e3e8f21d4d4c896cf51eb9c9b62be",
+  "datasets": {
+    "IEMOCAP": {
+      "training_dialogues": 84,
+      "training_utterances": 4216,
+      "unknown_masked": 23,
+      "epochs": 80,
+      "checkpoint_sha256": "48b93d53c17fb32331376d8984aaee46293f07b03addeda055cfb6e7b3f7ba7a",
+      "checkpoint_tensor_count": 85,
+      "difficulty_sha256": "3b53dc2a8baf32ce23df8f4c2793fefef5ac05201f7d99b38c1868def7115149",
+      "probabilities_sha256": "070990b711f9a83394d4bfa3e4782361b06922d3754f9b7915a5cc7db000a303",
+      "difficulty_min": 0.09688751875526375,
+      "difficulty_mean": 0.3499330525707151,
+      "difficulty_max": 0.8411378966910499,
+      "max_sampler_retries": 1,
+      "max_batch_edges": 1000,
+      "max_batch_nodes": 2856,
+      "roles_excluded": [
+        "development",
+        "calibration",
+        "evaluation"
+      ]
+    },
+    "MELD": {
+      "training_dialogues": 852,
+      "training_utterances": 8176,
+      "unknown_masked": 0,
+      "epochs": 40,
+      "checkpoint_sha256": "5408e7bfb3e3341e4f070775762587c583022844804b8c3b5bbf8d3622b55707",
+      "checkpoint_tensor_count": 83,
+      "difficulty_sha256": "ec0dd56f4fec836cbb864c88b274b11c15137700c5d3f87170359db5949fe7a0",
+      "probabilities_sha256": "d6af0bec5d26ad8f98fa22b34db126c623e0f2489abb31a2f78aa0747bffc677",
+      "difficulty_min": 0.12736241634075457,
+      "difficulty_mean": 0.34692031685883457,
+      "difficulty_max": 0.6869605258107185,
+      "max_sampler_retries": 0,
+      "max_batch_edges": 289,
+      "max_batch_nodes": 723,
+      "roles_excluded": [
+        "development",
+        "calibration",
+        "evaluation"
+      ]
+    }
+  }
+}

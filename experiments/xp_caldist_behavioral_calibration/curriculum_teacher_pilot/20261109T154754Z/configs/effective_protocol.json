@@ -1,0 +1,76 @@
+{
+  "status": "preregistered_before_gate_execution",
+  "approved_manifest": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/curriculum_teacher_pilot/20261109T154754Z/configs/approved_split_manifests.reference.json",
+  "approved_manifest_sha256": "6d43928865915fe22a913c98b1165a05ba6e3e8f21d4d4c896cf51eb9c9b62be",
+  "frozen_source_root": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/curriculum_teacher_pilot/20261109T154754Z/source_snapshot",
+  "source_manifest": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/curriculum_teacher_pilot/20261109T154754Z/provenance/source_manifest.json",
+  "source_manifest_sha256": "12cea7b403ea580aab044072d14d335b2dee9b810b2038c56cbd8988d2e3c5bb",
+  "teacher_protocol_sha256": "4e721814440ba8bf26f98a6f1dd4b1affd4422b504471b58a201cd71d58a5198",
+  "fold": "fold1",
+  "access_roles": [
+    "training"
+  ],
+  "selection": "fixed_final_epoch",
+  "difficulty_batch_size": 1,
+  "evaluation_access": false,
+  "development_access": false,
+  "calibration_access": false,
+  "primary_difficulty_denominator": "valid_label_count_plus_speaker_term",
+  "sensitivity_denominator": "total_length_plus_speaker_term",
+  "tolerance": {
+    "atol": 1e-06,
+    "rtol": 1e-05
+  },
+  "datasets": {
+    "IEMOCAP": {
+      "seed": 1475,
+      "epochs": 80,
+      "batch_size": 16,
+      "dropout": 0.5,
+      "optimizer": "Adam",
+      "lr": 0.0001,
+      "weight_decay": 3e-05,
+      "norm": "BN",
+      "num_L": 3,
+      "num_K": 4,
+      "unknown_policy": "mask",
+      "batch_policy": "capacity_safe",
+      "edge_capacity": 1000,
+      "node_capacity": 5200,
+      "batch_max_retries": 10000,
+      "loader_rng_policy": "continuous"
+    },
+    "MELD": {
+      "seed": 67137,
+      "epochs": 40,
+      "batch_size": 16,
+      "dropout": 0.4,
+      "optimizer": "Adam",
+      "lr": 0.0001,
+      "weight_decay": 3e-05,
+      "norm": "BN",
+      "num_L": 3,
+      "num_K": 3,
+      "unknown_policy": "none",
+      "batch_policy": "capacity_safe",
+      "edge_capacity": 1000,
+      "node_capacity": 5200,
+      "batch_max_retries": 10000,
+      "loader_rng_policy": "continuous"
+    }
+  },
+  "runtime": {
+    "max_parallel_gpu_jobs": 2,
+    "ddp": false,
+    "omp_num_threads": 4,
+    "mkl_num_threads": 4,
+    "num_workers": 0
+  },
+  "stop_after": "two_teacher_pilots_and_fold_local_difficulty_no_cmerc_training",
+  "capacity_amendment": {
+    "source": "XP04 frozen train_cm.py CapacitySafeBatchSampler",
+    "trigger": "preflight formal IEMOCAP epoch11 legacy-shuffle device assert",
+    "selection_data": "dialogue lengths only",
+    "batch_size_unchanged": true
+  }
+}

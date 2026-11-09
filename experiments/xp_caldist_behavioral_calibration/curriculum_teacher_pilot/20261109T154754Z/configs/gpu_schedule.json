@@ -1,0 +1,67 @@
+{
+  "status": "approved_to_launch_after_A_B_gates",
+  "gates": {
+    "teacher_runner": true,
+    "real_removal_adapter_parity": true
+  },
+  "assignments": [
+    {
+      "dataset": "IEMOCAP",
+      "fold": "fold1",
+      "seed": 1475,
+      "host_gpu": 0,
+      "visible_device": "cuda:0",
+      "epochs": 80
+    },
+    {
+      "dataset": "MELD",
+      "fold": "fold1",
+      "seed": 67137,
+      "host_gpu": 1,
+      "visible_device": "cuda:0",
+      "epochs": 40
+    }
+  ],
+  "unused_host_gpus": [
+    2,
+    3
+  ],
+  "ddp": false,
+  "max_parallel": 2,
+  "cpu_threads_per_job": 4,
+  "num_workers": 0,
+  "gpu_snapshot": [
+    {
+      "index": 0,
+      "uuid": "GPU-7ff18ebb-100e-98fe-038b-a98bd4f94248",
+      "name": "NVIDIA TITAN Xp",
+      "memory_total_mib": 12288,
+      "memory_used_mib": 3,
+      "utilization_percent": 0
+    },
+    {
+      "index": 1,
+      "uuid": "GPU-eed2f34f-b4c0-7b7a-498e-71a026e30c5a",
+      "name": "NVIDIA TITAN Xp",
+      "memory_total_mib": 12288,
+      "memory_used_mib": 3,
+      "utilization_percent": 0
+    },
+    {
+      "index": 2,
+      "uuid": "GPU-d17e4326-9d3b-2025-fbf8-c9b0d16623a0",
+      "name": "NVIDIA TITAN Xp",
+      "memory_total_mib": 12288,
+      "memory_used_mib": 3,
+      "utilization_percent": 0
+    },
+    {
+      "index": 3,
+      "uuid": "GPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456",
+      "name": "NVIDIA TITAN Xp",
+      "memory_total_mib": 12288,
+      "memory_used_mib": 3,
+      "utilization_percent": 0
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "status": "passed",
+  "datasets": {
+    "IEMOCAP": {
+      "difficulty_ids_exact_training": true,
+      "schedule_checks": [
+        {
+          "ratio": 0.15,
+          "selected_count": 12,
+          "training_only": true,
+          "source_order_restored": true
+        },
+        {
+          "ratio": 0.25,
+          "selected_count": 21,
+          "training_only": true,
+          "source_order_restored": true
+        },
+        {
+          "ratio": 0.5,
+          "selected_count": 42,
+          "training_only": true,
+          "source_order_restored": true
+        },
+        {
+          "ratio": 0.75,
+          "selected_count": 63,
+          "training_only": true,
+          "source_order_restored": true
+        },
+        {
+          "ratio": 1.0,
+          "selected_count": 84,
+          "training_only": true,
+          "source_order_restored": true
+        }
+      ]
+    },
+    "MELD": {
+      "difficulty_ids_exact_training": true,
+      "schedule_checks": [
+        {
+          "ratio": 0.15,
+          "selected_count": 127,
+          "training_only": true,
+          "source_order_restored": true
+        },
+        {
+          "ratio": 0.25,
+          "selected_count": 213,
+          "training_only": true,
+          "source_order_restored": true
+        },
+        {
+          "ratio": 0.5,
+          "selected_count": 426,
+          "training_only": true,
+          "source_order_restored": true
+        },
+        {
+          "ratio": 0.75,
+          "selected_count": 639,
+          "training_only": true,
+          "source_order_restored": true
+        },
+        {
+          "ratio": 1.0,
+          "selected_count": 852,
+          "training_only": true,
+          "source_order_restored": true
+        }
+      ]
+    }
+  }
+}

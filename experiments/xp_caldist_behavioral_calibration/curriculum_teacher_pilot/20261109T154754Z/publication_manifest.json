@@ -1,0 +1,363 @@
+{
+  "schema": "cmerc_teacher_pilot_github_publication_v1",
+  "repository": "https://github.com/yixuanluo197/lyx-msa",
+  "target_branch": "main",
+  "source_experiment_root": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/curriculum_teacher_pilot/20261109T154754Z",
+  "published_root": "experiments/xp_caldist_behavioral_calibration/curriculum_teacher_pilot/20261109T154754Z",
+  "policy": "reports, reproducibility code, compact metadata and JSON evidence; no model weights, role features, NPZ probabilities, caches, or bulk logs",
+  "included_files": [
+    {
+      "path": "CMERC_MASK_RUNNER_FINAL_AUDIT.md",
+      "size_bytes": 1396,
+      "sha256": "6c9282de91568147b4f844a92ef2ec4941b8d3261bd95550fafbf8f3edb3b5dd"
+    },
+    {
+      "path": "FINAL_TEACHER_PILOT_DECISION.md",
+      "size_bytes": 2203,
+      "sha256": "21acb83032aa725b3f8a3bb656fc8db6dde785fdca958021e7f497969ddd043e"
+    },
+    {
+      "path": "FOLD_LOCAL_DIFFICULTY_REPORT.md",
+      "size_bytes": 1456,
+      "sha256": "a736d5a0ebc60fc0dc60c8e793ba7db8f7e1f55f1fc7ae8b112c05963566d0ef"
+    },
+    {
+      "path": "GITHUB_DELIVERY.md",
+      "size_bytes": 1840,
+      "sha256": "f4a5afb9c42bfbc486197932c42eae9d0fc17b78f39ef33ab4263f4308ec0cdf"
+    },
+    {
+      "path": "GPU_EXECUTION_REPORT.md",
+      "size_bytes": 1112,
+      "sha256": "0119176a0dafbbddfefabd6511c0890256ff51403929c179db5300c4eb489577"
+    },
+    {
+      "path": "IEMOCAP_TEACHER_PILOT.md",
+      "size_bytes": 1063,
+      "sha256": "a73791dc88254afea09c16afb00d3966b274aa23b2ebe36f7cb5613a8cca348f"
+    },
+    {
+      "path": "MELD_TEACHER_PILOT.md",
+      "size_bytes": 918,
+      "sha256": "718b148998c62dcdf5aac34acc3809845de64f00c4009256cd6e2753d1e766eb"
+    },
+    {
+      "path": "REAL_REMOVAL_ADAPTER_PARITY.md",
+      "size_bytes": 1620,
+      "sha256": "ec705ae5eb8cdcd61fafc6c6f7e6cdc146ca457e9669c207a9018f70ae5c516c"
+    },
+    {
+      "path": "TEACHER_RUNNER_AUDIT.md",
+      "size_bytes": 2233,
+      "sha256": "70d72a3eea251933c5fd6a3e8bcdb05fe59629215b0add7d1a74262723cafd10"
+    },
+    {
+      "path": "configs/approved_split_manifests.reference.json",
+      "size_bytes": 351003,
+      "sha256": "6d43928865915fe22a913c98b1165a05ba6e3e8f21d4d4c896cf51eb9c9b62be"
+    },
+    {
+      "path": "configs/effective_protocol.json",
+      "size_bytes": 2658,
+      "sha256": "da04e5b20b63b7eacc86d36d66a03d9737d4158e059e67d83c42b798bc21655a"
+    },
+    {
+      "path": "configs/gpu_schedule.json",
+      "size_bytes": 1483,
+      "sha256": "d87f6c974eef21f88a9f8421edc5ab34a2b61ed13013597c39d14f8ce9a65534"
+    },
+    {
+      "path": "configs/teacher_protocol.json",
+      "size_bytes": 2552,
+      "sha256": "90767a79446fe431dba683fc6c44b659422817d4cfdb097489e9b9f2997d92ae"
+    },
+    {
+      "path": "provenance/source_hashes.json",
+      "size_bytes": 17901,
+      "sha256": "d6c00ed36ccc46fcda5e198462d899ae4e8282a2da6225267b14aaeb94f79d56"
+    },
+    {
+      "path": "provenance/source_manifest.json",
+      "size_bytes": 1455,
+      "sha256": "7ffd6e0ce52937d4a15d7a372cf67cd3d3c44c4717b1283027a67ca8043c7b0c"
+    },
+    {
+      "path": "results/IEMOCAP_fold1_difficulty.json",
+      "size_bytes": 54142,
+      "sha256": "3b53dc2a8baf32ce23df8f4c2793fefef5ac05201f7d99b38c1868def7115149"
+    },
+    {
+      "path": "results/MELD_fold1_difficulty.json",
+      "size_bytes": 516269,
+      "sha256": "ec0dd56f4fec836cbb864c88b274b11c15137700c5d3f87170359db5949fe7a0"
+    },
+    {
+      "path": "results/curriculum_sampler_audit.json",
+      "size_bytes": 1759,
+      "sha256": "06cf3e78415831fceb7a10c433cd61e517369578b77e5fc3e2b594758ecde4ad"
+    },
+    {
+      "path": "results/final_artifact_verification.json",
+      "size_bytes": 1716,
+      "sha256": "fea0cb6e3a173146753a85439491e6350a70b0c842f3c0035f2a9ac61d1735be"
+    },
+    {
+      "path": "results/legacy_batch_failure_diagnosis.json",
+      "size_bytes": 632,
+      "sha256": "a0a24c15210edd5fae76a9913544794d708c0d82a4e25a45e9b63a538aa07a90"
+    },
+    {
+      "path": "results/mask_runner_audit.json",
+      "size_bytes": 2537,
+      "sha256": "f1618ad440e700461480f2fb2eb3b6fdf9fc8d5a66e837bbf3dc1f1dd61d9470"
+    },
+    {
+      "path": "results/real_removal_parity.json",
+      "size_bytes": 17933,
+      "sha256": "ebab1596951f93d7cb6bc1d2440ab6e54faf7be3de139f389178bb21e1bdd150"
+    },
+    {
+      "path": "results/strict_checkpoint_reload.json",
+      "size_bytes": 730,
+      "sha256": "415fdb1a92827e1e1f6cd44e543e17882b0298b3752cdcbeefb052e004dd2384"
+    },
+    {
+      "path": "runs/IEMOCAP/fold1/teacher/access_audit.json",
+      "size_bytes": 206114,
+      "sha256": "d5ed39f4d0802ebd50d3a47b5a3c1943444d60d3b9a7c4a27c50741c2c62c008"
+    },
+    {
+      "path": "runs/IEMOCAP/fold1/teacher/artifact_audit.json",
+      "size_bytes": 213,
+      "sha256": "6ca6f9f0f57a0e62380bd149f0750967dba0b129e51fbfc5f917d73569ec27de"
+    },
+    {
+      "path": "runs/IEMOCAP/fold1/teacher/effective_config.json",
+      "size_bytes": 553,
+      "sha256": "3398b20e18210108e616e1fbae2378ee5cfbbbcdbd034463742585d2d3df1b87"
+    },
+    {
+      "path": "runs/IEMOCAP/fold1/teacher/epochs.jsonl",
+      "size_bytes": 158988,
+      "sha256": "8c5f5246c155226bd052496fb4886e81947ba888b6ee2f882c038e2e265e124d"
+    },
+    {
+      "path": "runs/IEMOCAP/fold1/teacher/provenance.json",
+      "size_bytes": 6907,
+      "sha256": "ad924b368627e159a1fd238a41ca0eba05ffa1bd8b669428a23a7cd1c1759524"
+    },
+    {
+      "path": "runs/IEMOCAP/fold1/teacher/teacher_checkpoint_metadata.json",
+      "size_bytes": 11043,
+      "sha256": "385d958b7b0e9657e77f19410e7327dc7d18263068bfea71eb07fd630e3b2eb2"
+    },
+    {
+      "path": "runs/IEMOCAP/fold1/training_role_artifact.pt.json",
+      "size_bytes": 5973,
+      "sha256": "a938133ef45855337413534656a20722d00ccd3b2b4eaa634f83408c0ea564b7"
+    },
+    {
+      "path": "runs/MELD/fold1/teacher/access_audit.json",
+      "size_bytes": 974373,
+      "sha256": "7a4b23501b880ef142123d10298bf364036ef1fcec5932fde71b75396a6768cf"
+    },
+    {
+      "path": "runs/MELD/fold1/teacher/artifact_audit.json",
+      "size_bytes": 210,
+      "sha256": "5aa9e14783a8b50f0d07ad62f6402772efc3e9406e290b6133b0a18daf4cbb55"
+    },
+    {
+      "path": "runs/MELD/fold1/teacher/effective_config.json",
+      "size_bytes": 556,
+      "sha256": "9eb95bf55472bdf83f92b73c613216fcd2d7145e296f30b20e15883c39fe2e6e"
+    },
+    {
+      "path": "runs/MELD/fold1/teacher/epochs.jsonl",
+      "size_bytes": 667433,
+      "sha256": "c0a89fff02097b99405d9b10b082026ff2af98337dbaca54dedbcb06d8766345"
+    },
+    {
+      "path": "runs/MELD/fold1/teacher/provenance.json",
+      "size_bytes": 42445,
+      "sha256": "1579487a778577d1f419c412e2368465dec5407e981d9405b8d3e112663dc868"
+    },
+    {
+      "path": "runs/MELD/fold1/teacher/teacher_checkpoint_metadata.json",
+      "size_bytes": 67418,
+      "sha256": "29dfe0886cf15925b787bee7622d011daf0d626bab94159155cbb02d9389d4fe"
+    },
+    {
+      "path": "runs/MELD/fold1/training_role_artifact.pt.json",
+      "size_bytes": 44844,
+      "sha256": "38abd10637c34546e50495f133c10cf6d0da27d3c99a0c2eebfcaf27c9b87721"
+    },
+    {
+      "path": "scripts/build_training_role_artifact.py",
+      "size_bytes": 7238,
+      "sha256": "c8ca8c15040433124ae69ac88036cadc41d8261f6571344cf3264f11698a1bf2"
+    },
+    {
+      "path": "scripts/generate_fold_local_difficulty.py",
+      "size_bytes": 21318,
+      "sha256": "2ec336b5cf67be916748112a27dbafb9c5e2dafaba87d5c05c0815811fc4bdde"
+    },
+    {
+      "path": "scripts/protocol_b_mask_runner.py",
+      "size_bytes": 13548,
+      "sha256": "dcc954ab033a642eb52472007c4d29f881647f696dfa7083f6ce33f26d53bf81"
+    },
+    {
+      "path": "scripts/real_removal_parity.py",
+      "size_bytes": 21027,
+      "sha256": "66e5721f2a3367575a6c4715a3d3e297376c6c9b6b2f9db38b5f18ae663d695d"
+    },
+    {
+      "path": "scripts/teacher_runner.py",
+      "size_bytes": 25894,
+      "sha256": "fb92aa8cb3572d45ba4e959a17e72f91f4879588c3a729efab48c14eed8b3330"
+    },
+    {
+      "path": "scripts/verify_final_artifacts.py",
+      "size_bytes": 5641,
+      "sha256": "548c45310ad1f3accb0a862ad043ef64447be497f76950982e45bfd15650708b"
+    },
+    {
+      "path": "source_snapshot/HypergraphConv.py",
+      "size_bytes": 7795,
+      "sha256": "9297a572e1763a74c7984eb75dfb15fa8143bf131a44cf50433c307ef7f3b5d2"
+    },
+    {
+      "path": "source_snapshot/cal_diff.py",
+      "size_bytes": 40446,
+      "sha256": "7e024fbe7748d90d0f40636c72796a2d46578007fd0e80bdf828b49478dc4d47"
+    },
+    {
+      "path": "source_snapshot/causal_graph.py",
+      "size_bytes": 5367,
+      "sha256": "3dd761b05cca95afa7b2f7b70e4640ee3ccfbb5726c3d705c0808468f7181da3"
+    },
+    {
+      "path": "source_snapshot/clloss.py",
+      "size_bytes": 14384,
+      "sha256": "012c5d08f51eaaa99bdbd10d61e3d108275bf3dd44e42767b2e186e5be72ec3f"
+    },
+    {
+      "path": "source_snapshot/dataloader.py",
+      "size_bytes": 10492,
+      "sha256": "337a7dc92d9e69e4f8854a8031197085ffca84cdc08b070b6ef5b05ebb6f3390"
+    },
+    {
+      "path": "source_snapshot/high_fre_conv.py",
+      "size_bytes": 1526,
+      "sha256": "f4414c019ca7f656a662698bb9615bf15ac6325a73caa06ff487e158f58f39df"
+    },
+    {
+      "path": "source_snapshot/model_GCN.py",
+      "size_bytes": 22167,
+      "sha256": "830d401ff3e4b30298199b927a0bad3a9056400429506abcc2d66a7db8b76f9f"
+    },
+    {
+      "path": "source_snapshot/model_cm.py",
+      "size_bytes": 75667,
+      "sha256": "94acf11e2e9edd1bcd98049eb12d85b3604f8d71d46f64f0c3b8b9837fa12625"
+    },
+    {
+      "path": "source_snapshot/model_hyper.py",
+      "size_bytes": 17571,
+      "sha256": "fb9ef2ee268afa697474c9199d2136a7519b5226adb4abeec4a9cf1aea678aba"
+    },
+    {
+      "path": "source_snapshot/train_cm.py",
+      "size_bytes": 74480,
+      "sha256": "67fa7e48a3ecfda9f011d1df3344b68cc9eaa3fdb105a23a117684b1a669a3a0"
+    },
+    {
+      "path": "tests/test_mask_runner.py",
+      "size_bytes": 12909,
+      "sha256": "53570212b041432edd53cd1c462741d1b3e2618aaf46f920652e58105712f992"
+    },
+    {
+      "path": "tests/test_real_removal_parity.py",
+      "size_bytes": 2920,
+      "sha256": "f00ed80d70be44d8ffb2523e8ce17868c0ff31eccc931f8994f999161301d79c"
+    },
+    {
+      "path": "tests/test_teacher_runner.py",
+      "size_bytes": 16475,
+      "sha256": "b4f088d074d3c3fdedc79616ebb322f1e72e71b0975bd4b1737416655b45e8b6"
+    },
+    {
+      "path": "verification.json",
+      "size_bytes": 8833,
+      "sha256": "b997591753e82f4e7f233be57edf24206bfc6354d620e604d42eee8d9462ce21"
+    }
+  ],
+  "excluded_large_artifacts": [
+    {
+      "path": "runs/IEMOCAP/fold1/training_role_artifact.pt",
+      "size_bytes": 101846471,
+      "sha256": "82399a485cdbd7034cfb0de2326e0767d451c70428949545289cc48c1a2445b3",
+      "reason": "large binary/local-only artifact"
+    },
+    {
+      "path": "runs/MELD/fold1/training_role_artifact.pt",
+      "size_bytes": 157920167,
+      "sha256": "3aaf098e1ab71ee93055220f4b996a978242afe4cc2394705f13956b7f665d25",
+      "reason": "large binary/local-only artifact"
+    },
+    {
+      "path": "runs/IEMOCAP/fold1/teacher/teacher_final.pt",
+      "size_bytes": 59759697,
+      "sha256": "48b93d53c17fb32331376d8984aaee46293f07b03addeda055cfb6e7b3f7ba7a",
+      "reason": "large binary/local-only artifact"
+    },
+    {
+      "path": "runs/MELD/fold1/teacher/teacher_final.pt",
+      "size_bytes": 142044781,
+      "sha256": "5408e7bfb3e3341e4f070775762587c583022844804b8c3b5bbf8d3622b55707",
+      "reason": "large binary/local-only artifact"
+    },
+    {
+      "path": "results/IEMOCAP_fold1_six_view_probabilities.npz",
+      "size_bytes": 584291,
+      "sha256": "070990b711f9a83394d4bfa3e4782361b06922d3754f9b7915a5cc7db000a303",
+      "reason": "large binary/local-only artifact"
+    },
+    {
+      "path": "results/MELD_fold1_six_view_probabilities.npz",
+      "size_bytes": 1218414,
+      "sha256": "d6af0bec5d26ad8f98fa22b34db126c623e0f2489abb31a2f78aa0747bffc677",
+      "reason": "large binary/local-only artifact"
+    },
+    {
+      "path": "results/real_removal_parity.pt",
+      "size_bytes": 26709,
+      "sha256": "58aa33c02c4d74ef902f4ee515df4778928ae383170b107539e5abe7f3ae21ce",
+      "reason": "large binary/local-only artifact"
+    },
+    {
+      "path": "runs/IEMOCAP/fold1/teacher_failed_legacy_capacity_20261109T1602Z/teacher_latest.pt",
+      "size_bytes": 59759505,
+      "sha256": "e09d1e1ed68a7aff505b7171f1401a629da52fae2faf3460ec0561be1e3c3f1c",
+      "reason": "large binary/local-only artifact"
+    },
+    {
+      "path": "runs/MELD/fold1/teacher_interrupted_legacy_capacity_20261109T1602Z/teacher_latest.pt",
+      "size_bytes": 142044589,
+      "sha256": "811373c183808ba75547b3b989cdda9ae701d99e5ed88031c7ad88dfad2f235e",
+      "reason": "large binary/local-only artifact"
+    }
+  ],
+  "excluded_patterns": [
+    "logs/**",
+    "**/__pycache__/**",
+    "runs/**/batch_access.jsonl",
+    "runs/**/*legacy_capacity*/**",
+    "*.pt",
+    "*.npz"
+  ],
+  "local_verification_status": "passed",
+  "unit_tests": "56 passed in source workspace and clean delivery clone",
+  "cmerc_training_started": false,
+  "evaluation_forward_started": false
+}

@@ -1,0 +1,239 @@
+{
+  "schema": "cmerc_fold_local_teacher_pilot_verification_v1",
+  "generated_at_utc": "2026-11-09T16:21:35.084058+00:00",
+  "status": "passed",
+  "output_root": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/curriculum_teacher_pilot/20261109T154754Z",
+  "scope": {
+    "teachers_started": 2,
+    "teachers_completed": 2,
+    "additional_teachers_started": 0,
+    "cmerc_models_started": 0,
+    "evaluation_forward_runs": 0,
+    "development_or_calibration_teacher_selection": false
+  },
+  "immutable_manifest": {
+    "path": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/independent_training_pilot/20261109T142243Z/approved_split_manifests.json",
+    "sha256": "6d43928865915fe22a913c98b1165a05ba6e3e8f21d4d4c896cf51eb9c9b62be",
+    "reference_copy_sha256": "6d43928865915fe22a913c98b1165a05ba6e3e8f21d4d4c896cf51eb9c9b62be",
+    "unchanged": true
+  },
+  "gates": {
+    "training_only_teacher_runner": {
+      "status": "passed",
+      "evidence": "runs/*/fold1/teacher/access_audit.json"
+    },
+    "real_model_batch1_removal_parity": {
+      "status": "passed",
+      "atol": 1e-06,
+      "rtol": 1e-05,
+      "real_dialogue": "Ses03F_impro03",
+      "utterances": 35,
+      "valid_labels": 27,
+      "unknown_labels": 8,
+      "unknown_sentinel_invariance": true,
+      "evidence": "results/real_removal_parity.json"
+    },
+    "mask_aware_difficulty": {
+      "status": "passed",
+      "formula": "(total_gap + speaker_term) / (valid_label_count + speaker_term)",
+      "batch_size": 1,
+      "views": [
+        "text",
+        "audio",
+        "visual",
+        "intra",
+        "inter"
+      ]
+    },
+    "mask_runner": {
+      "status": "passed",
+      "label_dependent_paths_tested": 11,
+      "paths": [
+        "classification_nll",
+        "rank_text",
+        "rank_audio",
+        "rank_visual",
+        "rank_intra",
+        "rank_inter",
+        "mscl_ta",
+        "mscl_tv",
+        "mscl_av",
+        "cscl_intra",
+        "cscl_inter"
+      ],
+      "real_tensor_backward": true,
+      "masked_direct_gradient_zero": true,
+      "valid_gradient_nonzero": true,
+      "empty_supervision_batch": true,
+      "singleton_contrastive_batch": true,
+      "development_metrics_mask": true,
+      "unknown_context_preserved": true,
+      "evidence": "results/mask_runner_audit.json"
+    },
+    "strict_checkpoint_reload": {
+      "status": "passed",
+      "evidence": "results/strict_checkpoint_reload.json"
+    },
+    "curriculum_sampler": {
+      "status": "passed",
+      "evidence": "results/curriculum_sampler_audit.json"
+    },
+    "artifact_recalculation": {
+      "status": "passed",
+      "evidence": "results/final_artifact_verification.json"
+    }
+  },
+  "datasets": {
+    "IEMOCAP": {
+      "status": "passed",
+      "fixed_final_epoch_completed": true,
+      "epoch_count": 80,
+      "random_initialization": true,
+      "initialization_state_sha256": "2aeb62aa0f9d488b60848bc255488cb92ddf457d1bbb2056a8a62fac56c63d75",
+      "final_checkpoint_sha256": "48b93d53c17fb32331376d8984aaee46293f07b03addeda055cfb6e7b3f7ba7a",
+      "strict_reload_passed": true,
+      "requested_dialogue_count": 84,
+      "accessed_dialogue_count": 84,
+      "exact_training_coverage": true,
+      "rejected_ids": [],
+      "roles_accessed": [
+        "training"
+      ],
+      "development_calibration_evaluation_excluded": true,
+      "training_utterances": 4216,
+      "unknown_masked": 23,
+      "difficulty_exact_training_ids": true,
+      "difficulty_sha256": "3b53dc2a8baf32ce23df8f4c2793fefef5ac05201f7d99b38c1868def7115149",
+      "six_view_probabilities_sha256": "070990b711f9a83394d4bfa3e4782361b06922d3754f9b7915a5cc7db000a303",
+      "curriculum_sampler_training_only": true,
+      "gpu_uuid": "GPU-7ff18ebb-100e-98fe-038b-a98bd4f94248",
+      "elapsed_seconds": 339.0894297120394,
+      "peak_allocated_bytes": 6515353088,
+      "peak_reserved_bytes": 12383682560
+    },
+    "MELD": {
+      "status": "passed",
+      "fixed_final_epoch_completed": true,
+      "epoch_count": 40,
+      "random_initialization": true,
+      "initialization_state_sha256": "d47390565f47a0032aa97d2c1fc60af399bdd158d9ecdcde1172cbb148261918",
+      "final_checkpoint_sha256": "5408e7bfb3e3341e4f070775762587c583022844804b8c3b5bbf8d3622b55707",
+      "strict_reload_passed": true,
+      "requested_dialogue_count": 852,
+      "accessed_dialogue_count": 852,
+      "exact_training_coverage": true,
+      "rejected_ids": [],
+      "roles_accessed": [
+        "training"
+      ],
+      "development_calibration_evaluation_excluded": true,
+      "training_utterances": 8176,
+      "unknown_masked": 0,
+      "difficulty_exact_training_ids": true,
+      "difficulty_sha256": "ec0dd56f4fec836cbb864c88b274b11c15137700c5d3f87170359db5949fe7a0",
+      "six_view_probabilities_sha256": "d6af0bec5d26ad8f98fa22b34db126c623e0f2489abb31a2f78aa0747bffc677",
+      "curriculum_sampler_training_only": true,
+      "gpu_uuid": "GPU-eed2f34f-b4c0-7b7a-498e-71a026e30c5a",
+      "elapsed_seconds": 164.99654382804874,
+      "peak_allocated_bytes": 567781888,
+      "peak_reserved_bytes": 775946240
+    }
+  },
+  "verification_commands": {
+    "unit_tests": {
+      "status": "passed",
+      "count": 56,
+      "log": "logs/final_unit_tests_xp04_env.log"
+    },
+    "python_compile": {
+      "status": "passed",
+      "scope": "scripts/*.py tests/*.py"
+    },
+    "source_data_sha256_crosscheck": {
+      "status": "passed",
+      "evidence": "provenance/source_hashes.json"
+    }
+  },
+  "transparent_recovery": {
+    "initial_formal_launch_status": "quarantined_and_restarted",
+    "cause": "plain shuffle emitted a batch exceeding the frozen M3Net graph capacities",
+    "fix": "XP04-equivalent length-only CapacitySafeBatchSampler; batch_size remained 16",
+    "partial_checkpoints_resumed": false,
+    "quarantined_runs": [
+      "runs/IEMOCAP/fold1/teacher_failed_legacy_capacity_20261109T1602Z",
+      "runs/MELD/fold1/teacher_interrupted_legacy_capacity_20261109T1602Z"
+    ],
+    "evidence": "results/legacy_batch_failure_diagnosis.json"
+  },
+  "resource_summary": {
+    "successful_teacher_gpu_hours": 0.14002388153891338,
+    "parallel_training_wall_seconds": 339.0894297120394,
+    "gpus_used": 2,
+    "ddp": false,
+    "omp_num_threads": 4,
+    "mkl_num_threads": 4,
+    "num_workers": 0
+  },
+  "deliverables": {
+    "TEACHER_RUNNER_AUDIT.md": {
+      "sha256": "70d72a3eea251933c5fd6a3e8bcdb05fe59629215b0add7d1a74262723cafd10",
+      "size_bytes": 2233
+    },
+    "REAL_REMOVAL_ADAPTER_PARITY.md": {
+      "sha256": "ec705ae5eb8cdcd61fafc6c6f7e6cdc146ca457e9669c207a9018f70ae5c516c",
+      "size_bytes": 1620
+    },
+    "IEMOCAP_TEACHER_PILOT.md": {
+      "sha256": "a73791dc88254afea09c16afb00d3966b274aa23b2ebe36f7cb5613a8cca348f",
+      "size_bytes": 1063
+    },
+    "MELD_TEACHER_PILOT.md": {
+      "sha256": "718b148998c62dcdf5aac34acc3809845de64f00c4009256cd6e2753d1e766eb",
+      "size_bytes": 918
+    },
+    "FOLD_LOCAL_DIFFICULTY_REPORT.md": {
+      "sha256": "a736d5a0ebc60fc0dc60c8e793ba7db8f7e1f55f1fc7ae8b112c05963566d0ef",
+      "size_bytes": 1456
+    },
+    "CMERC_MASK_RUNNER_FINAL_AUDIT.md": {
+      "sha256": "6c9282de91568147b4f844a92ef2ec4941b8d3261bd95550fafbf8f3edb3b5dd",
+      "size_bytes": 1396
+    },
+    "GPU_EXECUTION_REPORT.md": {
+      "sha256": "0119176a0dafbbddfefabd6511c0890256ff51403929c179db5300c4eb489577",
+      "size_bytes": 1112
+    },
+    "FINAL_TEACHER_PILOT_DECISION.md": {
+      "sha256": "21acb83032aa725b3f8a3bb656fc8db6dde785fdca958021e7f497969ddd043e",
+      "size_bytes": 2203
+    },
+    "source_hashes.json": {
+      "sha256": "d6c00ed36ccc46fcda5e198462d899ae4e8282a2da6225267b14aaeb94f79d56",
+      "size_bytes": 17901
+    }
+  },
+  "source_hashes_sha256": "d6c00ed36ccc46fcda5e198462d899ae4e8282a2da6225267b14aaeb94f79d56",
+  "limitations": [
+    "The mask lane uses real tensor backward and frozen contrastive kernels; it does not execute a full CMERC training epoch.",
+    "Full CMERC Pilot Runner integration must re-run the mask audit when that runner is instantiated.",
+    "The role-artifact builder deserializes monolithic upstream feature files, then serializes only approved Training IDs; Teacher processes see only the role-scoped artifacts."
+  ],
+  "decision": {
+    "ready_for_two_cmerc_pilots": true,
+    "conditions": [
+      "reuse audited capacity-safe batching",
+      "reuse supervision-mask adapter",
+      "keep approved manifest immutable",
+      "do not access Evaluation during Pilot training/calibration"
+    ],
+    "cmerc_started_in_this_stage": false
+  },
+  "public_delivery_self_containment": {
+    "status": "passed",
+    "frozen_reference_files": [
+      "source_snapshot/train_cm.py",
+      "source_snapshot/cal_diff.py"
+    ],
+    "purpose": "public tests do not depend on an untracked local CMERC checkout"
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "status": "passed",
+  "scope": "synthetic CPU tensor runner integration; no CMERC training",
+  "torch_version": "2.7.1+cu118",
+  "device": "cpu",
+  "full_rows": 8,
+  "eligible_rows": 6,
+  "unknown_rows": 2,
+  "label_dependent_paths": {
+    "classification": {
+      "value": 1.1618889570236206,
+      "excluded_direct_gradient_abs_max": 0.0,
+      "eligible_gradient_abs_sum": 1.0
+    },
+    "rank_text": {
+      "value": 3.7553224563598633,
+      "excluded_direct_gradient_abs_max": 0.0,
+      "eligible_gradient_abs_sum": 3.0
+    },
+    "rank_audio": {
+      "value": 0.37257468700408936,
+      "excluded_direct_gradient_abs_max": 0.0,
+      "eligible_gradient_abs_sum": 1.0
+    },
+    "rank_visual": {
+      "value": 0.250737726688385,
+      "excluded_direct_gradient_abs_max": 0.0,
+      "eligible_gradient_abs_sum": 2.0
+    },
+    "rank_intra": {
+      "value": 3.2897045612335205,
+      "excluded_direct_gradient_abs_max": 0.0,
+      "eligible_gradient_abs_sum": 4.0
+    },
+    "rank_inter": {
+      "value": 1.8586190938949585,
+      "excluded_direct_gradient_abs_max": 0.0,
+      "eligible_gradient_abs_sum": 5.0
+    },
+    "MSCL_text": {
+      "value": 0.9039875864982605,
+      "excluded_direct_gradient_abs_max": 0.0,
+      "eligible_gradient_abs_sum": 12.293435096740723
+    },
+    "MSCL_audio": {
+      "value": 0.9039875864982605,
+      "excluded_direct_gradient_abs_max": 0.0,
+      "eligible_gradient_abs_sum": 12.293435096740723
+    },
+    "MSCL_visual": {
+      "value": 0.027338070794939995,
+      "excluded_direct_gradient_abs_max": 0.0,
+      "eligible_gradient_abs_sum": 0.785398006439209
+    },
+    "CSCL_intra": {
+      "value": 7.970419406890869,
+      "excluded_direct_gradient_abs_max": 0.0,
+      "eligible_gradient_abs_sum": 48.176292419433594
+    },
+    "CSCL_inter": {
+      "value": 17.301280975341797,
+      "excluded_direct_gradient_abs_max": 0.0,
+      "eligible_gradient_abs_sum": 8.55793285369873
+    }
+  },
+  "teachers_detached": true,
+  "total_loss": 2.5648744106292725,
+  "frozen_sources_sha256": {
+    "clloss.py": "012c5d08f51eaaa99bdbd10d61e3d108275bf3dd44e42767b2e186e5be72ec3f",
+    "train_cm.py": "67fa7e48a3ecfda9f011d1df3344b68cc9eaa3fdb105a23a117684b1a669a3a0"
+  },
+  "contrastive_runtime_source": "source_snapshot/clloss.py",
+  "limitations": [
+    "Full frozen CMERC graph forward is not exercised by this audit.",
+    "Caller must pass complete Training labels when constructing class weights.",
+    "Forward closures must preserve original dialogue features and structure."
+  ]
+}

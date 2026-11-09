@@ -1,0 +1,328 @@
+{
+  "schema": "cmerc_teacher_pilot_source_hashes_v1",
+  "output_root": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/curriculum_teacher_pilot/20261109T154754Z",
+  "hash_algorithm": "SHA-256",
+  "categories": {
+    "approved_manifest": [
+      {
+        "path": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/independent_training_pilot/20261109T142243Z/approved_split_manifests.json",
+        "size_bytes": 351003,
+        "sha256": "6d43928865915fe22a913c98b1165a05ba6e3e8f21d4d4c896cf51eb9c9b62be"
+      },
+      {
+        "path": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/curriculum_teacher_pilot/20261109T154754Z/configs/approved_split_manifests.reference.json",
+        "size_bytes": 351003,
+        "sha256": "6d43928865915fe22a913c98b1165a05ba6e3e8f21d4d4c896cf51eb9c9b62be"
+      }
+    ],
+    "source_data": [
+      {
+        "path": "/data2/yb/paper/05_reproduction/external_repos/CMERC/data/IEMOCAP_features.pkl",
+        "size_bytes": 72216498,
+        "sha256": "ceb5cc9a45d1792998438e27f86a12642320aa6315546e4425316140ea503fb3"
+      },
+      {
+        "path": "/data2/yb/paper/05_reproduction/external_repos/CMERC/data/iemocap_features_roberta.pkl",
+        "size_bytes": 124438886,
+        "sha256": "4bd60c581a5b7c70e217e18439f741b191605fbd6f2cf4dc1a6dcb7fcaa18f06"
+      },
+      {
+        "path": "/data2/yb/paper/05_reproduction/external_repos/CMERC/data/MELD_features_raw1.pkl",
+        "size_bytes": 88193675,
+        "sha256": "d043b3ec1813c8917e2067af01e933ff0892d33d19d93595098aaf88c4b200b0"
+      },
+      {
+        "path": "/data2/yb/paper/05_reproduction/external_repos/CMERC/data/meld_features_roberta.pkl",
+        "size_bytes": 229654413,
+        "sha256": "58b2bdadc2eaec6abb40ac0cb3ffa3f31e929d636ece8197aecf1ca373a92951"
+      }
+    ],
+    "frozen_source": [
+      {
+        "path": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/curriculum_teacher_pilot/20261109T154754Z/source_snapshot/HypergraphConv.py",
+        "size_bytes": 7795,
+        "sha256": "9297a572e1763a74c7984eb75dfb15fa8143bf131a44cf50433c307ef7f3b5d2"
+      },
+      {
+        "path": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/curriculum_teacher_pilot/20261109T154754Z/source_snapshot/cal_diff.py",
+        "size_bytes": 40446,
+        "sha256": "7e024fbe7748d90d0f40636c72796a2d46578007fd0e80bdf828b49478dc4d47"
+      },
+      {
+        "path": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/curriculum_teacher_pilot/20261109T154754Z/source_snapshot/causal_graph.py",
+        "size_bytes": 5367,
+        "sha256": "3dd761b05cca95afa7b2f7b70e4640ee3ccfbb5726c3d705c0808468f7181da3"
+      },
+      {
+        "path": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/curriculum_teacher_pilot/20261109T154754Z/source_snapshot/clloss.py",
+        "size_bytes": 14384,
+        "sha256": "012c5d08f51eaaa99bdbd10d61e3d108275bf3dd44e42767b2e186e5be72ec3f"
+      },
+      {
+        "path": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/curriculum_teacher_pilot/20261109T154754Z/source_snapshot/dataloader.py",
+        "size_bytes": 10492,
+        "sha256": "337a7dc92d9e69e4f8854a8031197085ffca84cdc08b070b6ef5b05ebb6f3390"
+      },
+      {
+        "path": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/curriculum_teacher_pilot/20261109T154754Z/source_snapshot/high_fre_conv.py",
+        "size_bytes": 1526,
+        "sha256": "f4414c019ca7f656a662698bb9615bf15ac6325a73caa06ff487e158f58f39df"
+      },
+      {
+        "path": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/curriculum_teacher_pilot/20261109T154754Z/source_snapshot/model_GCN.py",
+        "size_bytes": 22167,
+        "sha256": "830d401ff3e4b30298199b927a0bad3a9056400429506abcc2d66a7db8b76f9f"
+      },
+      {
+        "path": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/curriculum_teacher_pilot/20261109T154754Z/source_snapshot/model_cm.py",
+        "size_bytes": 75667,
+        "sha256": "94acf11e2e9edd1bcd98049eb12d85b3604f8d71d46f64f0c3b8b9837fa12625"
+      },
+      {
+        "path": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/curriculum_teacher_pilot/20261109T154754Z/source_snapshot/model_hyper.py",
+        "size_bytes": 17571,
+        "sha256": "fb9ef2ee268afa697474c9199d2136a7519b5226adb4abeec4a9cf1aea678aba"
+      },
+      {
+        "path": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/curriculum_teacher_pilot/20261109T154754Z/source_snapshot/train_cm.py",
+        "size_bytes": 74480,
+        "sha256": "67fa7e48a3ecfda9f011d1df3344b68cc9eaa3fdb105a23a117684b1a669a3a0"
+      }
+    ],
+    "experiment_code": [
+      {
+        "path": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/curriculum_teacher_pilot/20261109T154754Z/scripts/build_training_role_artifact.py",
+        "size_bytes": 7238,
+        "sha256": "c8ca8c15040433124ae69ac88036cadc41d8261f6571344cf3264f11698a1bf2"
+      },
+      {
+        "path": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/curriculum_teacher_pilot/20261109T154754Z/scripts/generate_fold_local_difficulty.py",
+        "size_bytes": 21318,
+        "sha256": "2ec336b5cf67be916748112a27dbafb9c5e2dafaba87d5c05c0815811fc4bdde"
+      },
+      {
+        "path": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/curriculum_teacher_pilot/20261109T154754Z/scripts/protocol_b_mask_runner.py",
+        "size_bytes": 13548,
+        "sha256": "dcc954ab033a642eb52472007c4d29f881647f696dfa7083f6ce33f26d53bf81"
+      },
+      {
+        "path": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/curriculum_teacher_pilot/20261109T154754Z/scripts/real_removal_parity.py",
+        "size_bytes": 21027,
+        "sha256": "66e5721f2a3367575a6c4715a3d3e297376c6c9b6b2f9db38b5f18ae663d695d"
+      },
+      {
+        "path": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/curriculum_teacher_pilot/20261109T154754Z/scripts/teacher_runner.py",
+        "size_bytes": 25894,
+        "sha256": "fb92aa8cb3572d45ba4e959a17e72f91f4879588c3a729efab48c14eed8b3330"
+      },
+      {
+        "path": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/curriculum_teacher_pilot/20261109T154754Z/scripts/verify_final_artifacts.py",
+        "size_bytes": 5641,
+        "sha256": "548c45310ad1f3accb0a862ad043ef64447be497f76950982e45bfd15650708b"
+      },
+      {
+        "path": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/curriculum_teacher_pilot/20261109T154754Z/tests/test_mask_runner.py",
+        "size_bytes": 12909,
+        "sha256": "53570212b041432edd53cd1c462741d1b3e2618aaf46f920652e58105712f992"
+      },
+      {
+        "path": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/curriculum_teacher_pilot/20261109T154754Z/tests/test_real_removal_parity.py",
+        "size_bytes": 2920,
+        "sha256": "f00ed80d70be44d8ffb2523e8ce17868c0ff31eccc931f8994f999161301d79c"
+      },
+      {
+        "path": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/curriculum_teacher_pilot/20261109T154754Z/tests/test_teacher_runner.py",
+        "size_bytes": 16475,
+        "sha256": "b4f088d074d3c3fdedc79616ebb322f1e72e71b0975bd4b1737416655b45e8b6"
+      }
+    ],
+    "configs": [
+      {
+        "path": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/curriculum_teacher_pilot/20261109T154754Z/configs/approved_split_manifests.reference.json",
+        "size_bytes": 351003,
+        "sha256": "6d43928865915fe22a913c98b1165a05ba6e3e8f21d4d4c896cf51eb9c9b62be"
+      },
+      {
+        "path": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/curriculum_teacher_pilot/20261109T154754Z/configs/effective_protocol.json",
+        "size_bytes": 2658,
+        "sha256": "da04e5b20b63b7eacc86d36d66a03d9737d4158e059e67d83c42b798bc21655a"
+      },
+      {
+        "path": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/curriculum_teacher_pilot/20261109T154754Z/configs/gpu_schedule.json",
+        "size_bytes": 1483,
+        "sha256": "d87f6c974eef21f88a9f8421edc5ab34a2b61ed13013597c39d14f8ce9a65534"
+      },
+      {
+        "path": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/curriculum_teacher_pilot/20261109T154754Z/configs/teacher_protocol.json",
+        "size_bytes": 2552,
+        "sha256": "90767a79446fe431dba683fc6c44b659422817d4cfdb097489e9b9f2997d92ae"
+      }
+    ],
+    "role_artifacts": [
+      {
+        "path": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/curriculum_teacher_pilot/20261109T154754Z/runs/IEMOCAP/fold1/training_role_artifact.pt",
+        "size_bytes": 101846471,
+        "sha256": "82399a485cdbd7034cfb0de2326e0767d451c70428949545289cc48c1a2445b3"
+      },
+      {
+        "path": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/curriculum_teacher_pilot/20261109T154754Z/runs/IEMOCAP/fold1/training_role_artifact.pt.json",
+        "size_bytes": 5973,
+        "sha256": "a938133ef45855337413534656a20722d00ccd3b2b4eaa634f83408c0ea564b7"
+      },
+      {
+        "path": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/curriculum_teacher_pilot/20261109T154754Z/runs/MELD/fold1/training_role_artifact.pt",
+        "size_bytes": 157920167,
+        "sha256": "3aaf098e1ab71ee93055220f4b996a978242afe4cc2394705f13956b7f665d25"
+      },
+      {
+        "path": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/curriculum_teacher_pilot/20261109T154754Z/runs/MELD/fold1/training_role_artifact.pt.json",
+        "size_bytes": 44844,
+        "sha256": "38abd10637c34546e50495f133c10cf6d0da27d3c99a0c2eebfcaf27c9b87721"
+      }
+    ],
+    "formal_teacher_checkpoints": [
+      {
+        "path": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/curriculum_teacher_pilot/20261109T154754Z/runs/IEMOCAP/fold1/teacher/teacher_final.pt",
+        "size_bytes": 59759697,
+        "sha256": "48b93d53c17fb32331376d8984aaee46293f07b03addeda055cfb6e7b3f7ba7a"
+      },
+      {
+        "path": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/curriculum_teacher_pilot/20261109T154754Z/runs/MELD/fold1/teacher/teacher_final.pt",
+        "size_bytes": 142044781,
+        "sha256": "5408e7bfb3e3341e4f070775762587c583022844804b8c3b5bbf8d3622b55707"
+      }
+    ],
+    "difficulty_outputs": [
+      {
+        "path": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/curriculum_teacher_pilot/20261109T154754Z/results/IEMOCAP_fold1_difficulty.json",
+        "size_bytes": 54142,
+        "sha256": "3b53dc2a8baf32ce23df8f4c2793fefef5ac05201f7d99b38c1868def7115149"
+      },
+      {
+        "path": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/curriculum_teacher_pilot/20261109T154754Z/results/IEMOCAP_fold1_six_view_probabilities.npz",
+        "size_bytes": 584291,
+        "sha256": "070990b711f9a83394d4bfa3e4782361b06922d3754f9b7915a5cc7db000a303"
+      },
+      {
+        "path": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/curriculum_teacher_pilot/20261109T154754Z/results/MELD_fold1_difficulty.json",
+        "size_bytes": 516269,
+        "sha256": "ec0dd56f4fec836cbb864c88b274b11c15137700c5d3f87170359db5949fe7a0"
+      },
+      {
+        "path": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/curriculum_teacher_pilot/20261109T154754Z/results/MELD_fold1_six_view_probabilities.npz",
+        "size_bytes": 1218414,
+        "sha256": "d6af0bec5d26ad8f98fa22b34db126c623e0f2489abb31a2f78aa0747bffc677"
+      }
+    ],
+    "verification_evidence": [
+      {
+        "path": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/curriculum_teacher_pilot/20261109T154754Z/results/real_removal_parity.json",
+        "size_bytes": 17933,
+        "sha256": "ebab1596951f93d7cb6bc1d2440ab6e54faf7be3de139f389178bb21e1bdd150"
+      },
+      {
+        "path": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/curriculum_teacher_pilot/20261109T154754Z/results/real_removal_parity.pt",
+        "size_bytes": 26709,
+        "sha256": "58aa33c02c4d74ef902f4ee515df4778928ae383170b107539e5abe7f3ae21ce"
+      },
+      {
+        "path": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/curriculum_teacher_pilot/20261109T154754Z/results/mask_runner_audit.json",
+        "size_bytes": 2537,
+        "sha256": "f1618ad440e700461480f2fb2eb3b6fdf9fc8d5a66e837bbf3dc1f1dd61d9470"
+      },
+      {
+        "path": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/curriculum_teacher_pilot/20261109T154754Z/results/final_artifact_verification.json",
+        "size_bytes": 1716,
+        "sha256": "fea0cb6e3a173146753a85439491e6350a70b0c842f3c0035f2a9ac61d1735be"
+      },
+      {
+        "path": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/curriculum_teacher_pilot/20261109T154754Z/results/strict_checkpoint_reload.json",
+        "size_bytes": 730,
+        "sha256": "415fdb1a92827e1e1f6cd44e543e17882b0298b3752cdcbeefb052e004dd2384"
+      },
+      {
+        "path": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/curriculum_teacher_pilot/20261109T154754Z/results/curriculum_sampler_audit.json",
+        "size_bytes": 1759,
+        "sha256": "06cf3e78415831fceb7a10c433cd61e517369578b77e5fc3e2b594758ecde4ad"
+      },
+      {
+        "path": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/curriculum_teacher_pilot/20261109T154754Z/results/legacy_batch_failure_diagnosis.json",
+        "size_bytes": 632,
+        "sha256": "a0a24c15210edd5fae76a9913544794d708c0d82a4e25a45e9b63a538aa07a90"
+      }
+    ],
+    "reports": [
+      {
+        "path": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/curriculum_teacher_pilot/20261109T154754Z/CMERC_MASK_RUNNER_FINAL_AUDIT.md",
+        "size_bytes": 1396,
+        "sha256": "6c9282de91568147b4f844a92ef2ec4941b8d3261bd95550fafbf8f3edb3b5dd"
+      },
+      {
+        "path": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/curriculum_teacher_pilot/20261109T154754Z/FINAL_TEACHER_PILOT_DECISION.md",
+        "size_bytes": 2203,
+        "sha256": "21acb83032aa725b3f8a3bb656fc8db6dde785fdca958021e7f497969ddd043e"
+      },
+      {
+        "path": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/curriculum_teacher_pilot/20261109T154754Z/FOLD_LOCAL_DIFFICULTY_REPORT.md",
+        "size_bytes": 1456,
+        "sha256": "a736d5a0ebc60fc0dc60c8e793ba7db8f7e1f55f1fc7ae8b112c05963566d0ef"
+      },
+      {
+        "path": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/curriculum_teacher_pilot/20261109T154754Z/GITHUB_DELIVERY.md",
+        "size_bytes": 1840,
+        "sha256": "f4a5afb9c42bfbc486197932c42eae9d0fc17b78f39ef33ab4263f4308ec0cdf"
+      },
+      {
+        "path": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/curriculum_teacher_pilot/20261109T154754Z/GPU_EXECUTION_REPORT.md",
+        "size_bytes": 1112,
+        "sha256": "0119176a0dafbbddfefabd6511c0890256ff51403929c179db5300c4eb489577"
+      },
+      {
+        "path": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/curriculum_teacher_pilot/20261109T154754Z/IEMOCAP_TEACHER_PILOT.md",
+        "size_bytes": 1063,
+        "sha256": "a73791dc88254afea09c16afb00d3966b274aa23b2ebe36f7cb5613a8cca348f"
+      },
+      {
+        "path": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/curriculum_teacher_pilot/20261109T154754Z/MELD_TEACHER_PILOT.md",
+        "size_bytes": 918,
+        "sha256": "718b148998c62dcdf5aac34acc3809845de64f00c4009256cd6e2753d1e766eb"
+      },
+      {
+        "path": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/curriculum_teacher_pilot/20261109T154754Z/REAL_REMOVAL_ADAPTER_PARITY.md",
+        "size_bytes": 1620,
+        "sha256": "ec705ae5eb8cdcd61fafc6c6f7e6cdc146ca457e9669c207a9018f70ae5c516c"
+      },
+      {
+        "path": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/curriculum_teacher_pilot/20261109T154754Z/TEACHER_RUNNER_AUDIT.md",
+        "size_bytes": 2233,
+        "sha256": "70d72a3eea251933c5fd6a3e8bcdb05fe59629215b0add7d1a74262723cafd10"
+      }
+    ]
+  },
+  "formal_result_policy": {
+    "included_teacher_directories": [
+      "runs/IEMOCAP/fold1/teacher",
+      "runs/MELD/fold1/teacher"
+    ],
+    "excluded_quarantined_runs": [
+      "runs/IEMOCAP/fold1/teacher_failed_legacy_capacity_20261109T1602Z",
+      "runs/MELD/fold1/teacher_interrupted_legacy_capacity_20261109T1602Z"
+    ],
+    "quarantined_checkpoints_not_resumed": true
+  },
+  "source_data_hash_crosscheck": {
+    "passed": true,
+    "actual": {
+      "IEMOCAP_features.pkl": "ceb5cc9a45d1792998438e27f86a12642320aa6315546e4425316140ea503fb3",
+      "iemocap_features_roberta.pkl": "4bd60c581a5b7c70e217e18439f741b191605fbd6f2cf4dc1a6dcb7fcaa18f06",
+      "MELD_features_raw1.pkl": "d043b3ec1813c8917e2067af01e933ff0892d33d19d93595098aaf88c4b200b0",
+      "meld_features_roberta.pkl": "58b2bdadc2eaec6abb40ac0cb3ffa3f31e929d636ece8197aecf1ca373a92951"
+    },
+    "recorded": {
+      "IEMOCAP_features.pkl": "ceb5cc9a45d1792998438e27f86a12642320aa6315546e4425316140ea503fb3",
+      "iemocap_features_roberta.pkl": "4bd60c581a5b7c70e217e18439f741b191605fbd6f2cf4dc1a6dcb7fcaa18f06",
+      "MELD_features_raw1.pkl": "d043b3ec1813c8917e2067af01e933ff0892d33d19d93595098aaf88c4b200b0",
+      "meld_features_roberta.pkl": "58b2bdadc2eaec6abb40ac0cb3ffa3f31e929d636ece8197aecf1ca373a92951"
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "status": "diagnosed",
+  "root_cause": "plain shuffle emitted a batch exceeding frozen M3Net fixed graph capacities",
+  "evidence": {
+    "IEMOCAP_completed_epochs_before_failure": 10,
+    "MELD_completed_epochs_before_protocol_stop": 25,
+    "exception": "CUDA device-side assert in high_fre_conv propagation",
+    "frozen_capacities": {
+      "hyperedge_weight": 1000,
+      "EW_weight": 5200
+    }
+  },
+  "action": "quarantined both invalid legacy-batching partial runs; implement exact XP04 capacity_safe sampler and restart both from random initialization",
+  "no_batch_size_change": true,
+  "no_checkpoint_resume": true
+}

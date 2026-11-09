@@ -1,0 +1,27 @@
+{
+  "epochs": 80,
+  "seed": 1475,
+  "dropout": 0.5,
+  "batch_size": 16,
+  "lr": 0.0001,
+  "weight_decay": 3e-05,
+  "num_L": 3,
+  "num_K": 4,
+  "norm": "BN",
+  "batch_policy": "capacity_safe",
+  "edge_capacity": 1000,
+  "node_capacity": 5200,
+  "batch_max_retries": 10000,
+  "selection": "fixed_final_epoch",
+  "access_roles": [
+    "training"
+  ],
+  "initialization": "random",
+  "optimizer": "Adam",
+  "class_weight": false,
+  "loss": "unweighted_NLL",
+  "shuffle": true,
+  "drop_last": false,
+  "num_workers": 0,
+  "loader_rng_policy": "continuous"
+}
