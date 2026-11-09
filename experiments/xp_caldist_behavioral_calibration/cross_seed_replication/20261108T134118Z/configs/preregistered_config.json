@@ -1,0 +1,115 @@
+{
+  "stage": "cross_seed_modality_evidence_sensitivity_and_correctness_incremental_value",
+  "created_at_utc": "2026-11-08T13:41:18Z",
+  "historical_pilot": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/20261107T172302Z",
+  "historical_evidence_sensitivity": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z",
+  "xp04": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z",
+  "datasets": ["IEMOCAP", "MELD"],
+  "seeds": [1475, 67137, 2024, 3407, 42],
+  "anchors_reused_without_rerun": {"IEMOCAP": 1475, "MELD": 67137},
+  "new_runs": {
+    "IEMOCAP": [67137, 2024, 3407, 42],
+    "MELD": [1475, 2024, 3407, 42]
+  },
+  "validation_sizes": {
+    "IEMOCAP": {"dialogues": 12, "utterances": 527},
+    "MELD": {"dialogues": 114, "utterances": 1109}
+  },
+  "mean_reference_conditions": {
+    "overall_targets": ["T-All", "A", "V"],
+    "overall_rho": [0.5, 1.0],
+    "text_array_targets": ["T1", "T2", "T3", "T4"],
+    "text_array_rho": [1.0],
+    "formula": "train_mean + (1-rho)*(x-train_mean)",
+    "repeats": 1
+  },
+  "donor_reference_conditions": {
+    "targets": ["T-All", "A", "V"],
+    "rho": [1.0],
+    "repeats": 5,
+    "formula": "(1-rho)*x + rho*x_train_donor",
+    "pool": "all non-padding utterances from the same dataset Training Split, including stored all-zero modality vectors",
+    "selection": "one donor index sampled uniformly with replacement for each target validation utterance and repeat; no labels used",
+    "rng": "numpy PCG64(first128bitsBigEndian(SHA256(canonicalJSON[dataset,dialogue_id,utterance_index,target,rho,repeat,donor]))); model seed is intentionally excluded so every model seed receives the same donor for the same validation target",
+    "text_all_alignment": "the same donor dialogue and utterance supplies T1,T2,T3,T4",
+    "donor_missingness": "save whether the selected donor modality is all zero and report Visual donor results for all donors and separately for visual-present versus visual-missing donors; do not post-hoc remove zero donors from the preregistered main donor pool",
+    "interpretation": "distribution-reference sensitivity control, not an emotionally neutral replacement"
+  },
+  "text_arrays": {
+    "meaning": "four stored RoBERTa feature arrays in dataloader order; encoder-layer identities are not established",
+    "T1": [0], "T2": [1], "T3": [2], "T4": [3], "T-All": [0, 1, 2, 3]
+  },
+  "visual_missingness": {
+    "definition": "all 342 stored visual dimensions exactly zero",
+    "expected_counts": {"IEMOCAP": 1, "MELD": 95},
+    "handling": "retain the sample and original visual input/probability; mark inactive for V mean and donor interventions; analyze visual_present and visual_missing separately"
+  },
+  "inference": {
+    "split": "validation",
+    "dtype": "float32",
+    "eval": true,
+    "batch_size": 16,
+    "backend": "aten",
+    "preserve_original_batch_order_padding_masks_graph": true,
+    "one_target_utterance_at_a_time": true,
+    "complete_dialogue_forward": true,
+    "atol": 1e-6,
+    "rtol": 1e-5,
+    "no_grad": true,
+    "checkpoint_selection": "XP04 validation-selected best.pt"
+  },
+  "statistics": {
+    "feature_reference_split": "train",
+    "padding_excluded": true,
+    "bootstrap_unit": "dialogue_id",
+    "bootstrap_repeats": 2000,
+    "bootstrap_seed": 20261108,
+    "ci": "paired percentile 95% on fixed OOF scores; logistic models are not refit inside bootstrap",
+    "seed_aggregation": "report every model seed independently, sample mean and sample SD across five seeds, and direction consistency; do not pool duplicate validation utterances across model seeds"
+  },
+  "correctness_prediction": {
+    "target": "original_prediction equals ground_truth",
+    "cross_validation": "leave-one-dialogue-out independently within each dataset and model seed",
+    "standardization": "fit on each training fold only",
+    "model": "LogisticRegression L2 C=1 fixed, no hyperparameter search",
+    "primary_strength": 0.5,
+    "confidence_only": ["max_probability"],
+    "strict_probability_baseline": ["max_probability", "predictive_entropy", "top1_top2_margin"],
+    "sensitivity_triplet": ["prediction_flip", "absolute_confidence_change", "js_divergence"],
+    "models": [
+      "confidence_only",
+      "strict_probability_baseline",
+      "confidence_plus_text",
+      "confidence_plus_audio",
+      "confidence_plus_visual",
+      "confidence_plus_text_audio_visual",
+      "strict_plus_text",
+      "strict_plus_audio",
+      "strict_plus_visual",
+      "strict_plus_text_audio_visual"
+    ],
+    "donor_models": "evaluated independently and never mixed with mean-reference primary features",
+    "metrics": ["auroc_success", "auprc_success", "binary_brier", "binary_nll"]
+  },
+  "historical_joint_diagnostics": {
+    "anchor_only": "join prior light perturbation observations only where historically available; do not fabricate missing Seed observations",
+    "analysis": ["rank/correlation", "stable-under-light-but-sensitive-under-medium", "correct-sensitive", "high-confidence-stable-wrong"]
+  },
+  "figures": {
+    "formats": ["svg", "pdf", "png"],
+    "data": "real Validation predictions only",
+    "uncertainty": "2000 dialogue-level paired bootstrap where applicable",
+    "palette": "colorblind-safe"
+  },
+  "decision_gate": {
+    "A": "cross-seed sensitivity ranking unstable: pause ranking-based Reliability Score",
+    "B": "sensitivity stable but no correctness increment: study dependence/bias/class specificity",
+    "C": "sensitivity stable and adds correctness information: eligible for separately preregistered calibration stage",
+    "D": "only dataset/modality-specific evidence: use conditional rather than universal reliability design"
+  },
+  "prohibited": [
+    "CMERC training", "Test Split inference or metrics", "checkpoint reselection",
+    "joint-modality input interventions", "Reliability Score fitting", "Temperature Scaling",
+    "historical experiment modification", "automatic follow-on experiments"
+  ]
+}

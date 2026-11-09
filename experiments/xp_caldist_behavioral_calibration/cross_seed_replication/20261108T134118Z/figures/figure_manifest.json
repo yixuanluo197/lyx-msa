@@ -1,0 +1,71 @@
+{
+  "real_validation_results_only": true,
+  "figure_groups": [
+    {
+      "name": "cross_seed_modality_dependence",
+      "sources": [
+        "results/per_seed_sensitivity.csv"
+      ],
+      "outputs": [
+        "figures/cross_seed_modality_dependence.svg",
+        "figures/cross_seed_modality_dependence.pdf",
+        "figures/cross_seed_modality_dependence.png"
+      ]
+    },
+    {
+      "name": "dataset_modality_comparison",
+      "sources": [
+        "results/per_seed_sensitivity.csv"
+      ],
+      "outputs": [
+        "figures/dataset_modality_comparison.svg",
+        "figures/dataset_modality_comparison.pdf",
+        "figures/dataset_modality_comparison.png"
+      ]
+    },
+    {
+      "name": "mean_vs_donor_reference",
+      "sources": [
+        "results/per_seed_sensitivity.csv"
+      ],
+      "outputs": [
+        "figures/mean_vs_donor_reference.svg",
+        "figures/mean_vs_donor_reference.pdf",
+        "figures/mean_vs_donor_reference.png"
+      ]
+    },
+    {
+      "name": "modality_flip_distributions",
+      "sources": [
+        "results/per_utterance_sensitivity.csv"
+      ],
+      "outputs": [
+        "figures/modality_flip_distributions.svg",
+        "figures/modality_flip_distributions.pdf",
+        "figures/modality_flip_distributions.png"
+      ]
+    },
+    {
+      "name": "correct_wrong_behavior",
+      "sources": [
+        "results/per_utterance_sensitivity.csv"
+      ],
+      "outputs": [
+        "figures/correct_wrong_behavior.svg",
+        "figures/correct_wrong_behavior.pdf",
+        "figures/correct_wrong_behavior.png"
+      ]
+    },
+    {
+      "name": "oof_correctness_comparison",
+      "sources": [
+        "results/correctness_oof_metrics.csv"
+      ],
+      "outputs": [
+        "figures/oof_correctness_comparison.svg",
+        "figures/oof_correctness_comparison.pdf",
+        "figures/oof_correctness_comparison.png"
+      ]
+    }
+  ]
+}

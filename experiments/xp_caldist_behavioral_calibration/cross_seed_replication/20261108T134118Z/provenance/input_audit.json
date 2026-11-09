@@ -1,0 +1,54 @@
+{
+  "status": "passed",
+  "completed_at_utc": "2026-11-08T13:42:54Z",
+  "scope": "read-only historical, checkpoint, split, train-statistics, donor-alignment, resource audit",
+  "historical_manifests": {
+    "20261107T172302Z": {"entries": 151, "all_sha256_match": true, "verification_status": "passed"},
+    "20261108T095843Z": {"entries": 429, "all_sha256_match": true, "verification_status": "passed"}
+  },
+  "checkpoints": {
+    "IEMOCAP": {
+      "1475": "2c0d1a7a39627e12d1244d23a225ad3da03bbce071a118909921a547a2bfd106",
+      "67137": "1b4b91bc683de99264a7b446b84187bae3b982f1ff7c73b552e3c8e3f82eedf3",
+      "2024": "80ee239060ae1afa3f8c49d7c99d38db8e91fb1d706c7f95087b9e6c025ebf96",
+      "3407": "e4978c68e4119309d371152aeec469149c3fdd8989078182fb348c6db7e4f0ed",
+      "42": "f896b657e62110dcb7b5de033df8f81f485ec037e922cca8ad8ebc48d74b43fa"
+    },
+    "MELD": {
+      "1475": "263145b6a2057624e55791eb8c68c6d3de8a353af46a2b2f234e977588655601",
+      "67137": "3f79f9eb3547e35ac15ad7ff4345d9b873d0c884a6f3a1ce60a7a7e47077e701",
+      "2024": "59c6f3fa544b59bcdc79d14bbe8ee17772a4900b15f4d32ef088971e59c9d0df",
+      "3407": "0c0ccae216958f22d6c58d8d4d5a566ef61e22a81a29c0f815d7b7e180404562",
+      "42": "e14f4c855e277cca5d256f0e2a3e4048b0a407035be9c28a5de0a3451721026b"
+    }
+  },
+  "checkpoint_checks": {"count": 10, "torch_load": true, "protocol_validation": true, "finite_state": true, "selection_protocol": "validation"},
+  "splits": {
+    "IEMOCAP": {"hash": "d1ae10a27d20d9ee0bf81b9c884073d037a4362e2ba8b9f3f6720902d2502d62", "train_dialogues": 108, "train_utterances": 5283, "validation_dialogues": 12, "validation_utterances": 527, "test_dialogues": 31},
+    "MELD": {"hash": "5317189c62939f28801eadf558763bd901cae04544ae829ebd45d1dd057055b8", "train_dialogues": 1038, "train_utterances": 9989, "validation_dialogues": 114, "validation_utterances": 1109, "test_dialogues": 280}
+  },
+  "split_checks": {"same_within_dataset_across_five_seeds": true, "pairwise_disjoint": true, "validation_metadata_identical_across_seeds": true},
+  "train_statistics": {
+    "IEMOCAP": {"sha256": "ddb2e2ffd87acbef1b9f740c1bf42be215091433c47d1dc20445ab535f4dd52d", "independent_recompute_max_abs_error": 0.0},
+    "MELD": {"sha256": "b7e0cbd5388ae813d98d347e75ac9aaa94a3492283c9febb89728aef2020656c", "independent_recompute_max_abs_error": 0.0}
+  },
+  "donor_alignment": {
+    "IEMOCAP": {"unique_train_utterances": 5283, "cross_array_length_mismatches": 0, "duplicate_ids": 0, "zero_visual_donors": 20, "zero_audio_donors": 0},
+    "MELD": {"unique_train_utterances": 9989, "cross_array_length_mismatches": 0, "duplicate_ids": 0, "zero_visual_donors": 3407, "zero_audio_donors": 1},
+    "train_validation_disjoint": true,
+    "text_all_same_donor_feasible": true
+  },
+  "validation_missing_visual": {"IEMOCAP": 1, "MELD": 95},
+  "anchor_reuse": {"required_main_conditions_present": 20, "baseline_exactly_matches_previous_validation_predictions": true, "donor_requires_new_execution": true},
+  "resources": {
+    "host": "user23",
+    "gpu_count": 4,
+    "gpu_model": "NVIDIA TITAN Xp",
+    "all_gpus_idle_at_audit": true,
+    "historical_gpu": {"host_index": 3, "uuid": "GPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456"},
+    "data1_free_bytes": 80373198848,
+    "data2_free_bytes": 145152516096
+  },
+  "test_split_used_for_analysis": false,
+  "files_modified_during_audit": false
+}

@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/cross_seed_replication/20261108T134118Z/scripts/run_cross_seed.py", line 295, in <module>
+    run(arguments.dataset, arguments.seed, arguments.phase)
+  File "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/cross_seed_replication/20261108T134118Z/scripts/run_cross_seed.py", line 126, in run
+    missing = np.asarray([np.all(np.asarray(validation.videoVisual[str(dialogue)][int(index)]) == 0)
+  File "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/cross_seed_replication/20261108T134118Z/scripts/run_cross_seed.py", line 126, in <listcomp>
+    missing = np.asarray([np.all(np.asarray(validation.videoVisual[str(dialogue)][int(index)]) == 0)
+KeyError: '1039'

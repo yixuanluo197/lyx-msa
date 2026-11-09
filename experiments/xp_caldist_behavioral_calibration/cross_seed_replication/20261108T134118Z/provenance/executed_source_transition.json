@@ -1,0 +1,13 @@
+{
+  "reason": "MELD validation dialogue IDs are serialized as strings in saved baseline files but native feature dictionaries use integer keys.",
+  "change": "Added collision-checked native_key_map and mapped serialized IDs to native keys before feature lookup.",
+  "scientific_protocol_changed": false,
+  "affected_completed_runs": "MELD runs use the fixed runner. IEMOCAP completed before and after the fix; its native keys are strings, so the changed path is behaviorally inert for IEMOCAP.",
+  "pre_fix_runner_sha256": "4d30d4da24ea6b289cbbef76cff7cd859adb28123d1dc5e50d4caccdb72f4f4a",
+  "post_fix_runner_sha256": "db044c8e0485f4d4f241c38c49d140a52d65e9917c8c472371159fd94600e8b2",
+  "failed_attempt_artifact": "logs/failure_MELD_1475_main_1794153280.txt",
+  "regression_evidence": [
+    "test_native_key_map_recovers_integer_keys",
+    "read-only MELD smoke: 1109 rows, 95 missing visual, native key type int"
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "checkpoint": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/cmerc/IEMOCAP_validation_seed1475/best.pt",
+  "checkpoint_sha256": "2c0d1a7a39627e12d1244d23a225ad3da03bbce071a118909921a547a2bfd106",
+  "conditions": {
+    "donor_A_rho1p00": "fedcd327fe131ca6d302923f444d7c69fa254dcca7d86f6b08c7fd7076793dbe",
+    "donor_T-All_rho1p00": "6b751a72c4176e3fecbc966bd93472219269a83fea222565c376c3a90c985e8d",
+    "donor_V_rho1p00": "1ff72cfac0f0f9f6f81ac0be63fe3c28909ff563a43c6668b7a0f56e1a8282c0"
+  },
+  "config_sha256": "5ac6809187f7b81e6554772e6e4a614b7c40b4ed375ca31e46fa4666e0ef0e14",
+  "dataset": "IEMOCAP",
+  "gpu_visible": "0",
+  "gradients_absent": true,
+  "inputs_restored_exact": true,
+  "parameters_and_buffers_unchanged": true,
+  "parity_checks": [
+    {
+      "batch": 0,
+      "cache_log_error": 1.9073486328125e-06,
+      "historical_log_error": 1.9073486328125e-06,
+      "kind": "original"
+    },
+    {
+      "batch": 0,
+      "cache_log_error": 1.9073486328125e-06,
+      "kind": "donor_T-All_rho1p00"
+    },
+    {
+      "batch": 0,
+      "cache_log_error": 3.814697265625e-06,
+      "kind": "donor_A_rho1p00"
+    },
+    {
+      "batch": 0,
+      "cache_log_error": 3.814697265625e-06,
+      "kind": "donor_V_rho1p00"
+    }
+  ],
+  "passed": true,
+  "phase": "donor",
+  "resource_snapshot": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/cross_seed_replication/20261108T134118Z/runs/IEMOCAP/seed1475/resource_snapshot_donor.json",
+  "resource_snapshot_sha256": "b2e1fa39d076eca5898f178f2fb60c0c485fc639f3ea4aeb11554666ccfbb885",
+  "runner_sha256": "4d30d4da24ea6b289cbbef76cff7cd859adb28123d1dc5e50d4caccdb72f4f4a",
+  "seconds": 381.2038096120814,
+  "seed": 1475,
+  "server": "user23",
+  "skipped_visual_missing": 5,
+  "split": "validation",
+  "target_forwards": 7900,
+  "test_inference": false,
+  "train_statistics": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/20261107T172302Z/provenance/IEMOCAP_train_statistics.npz",
+  "train_statistics_sha256": "ddb2e2ffd87acbef1b9f740c1bf42be215091433c47d1dc20445ab535f4dd52d",
+  "validation_baseline": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/20261107T172302Z/runs/IEMOCAP/seed1475/validation_predictions.npz",
+  "validation_baseline_sha256": "656a1fcc20d181b1c29c1640ab9a6f599474dfb839f03c1ec2495b8e6036629c"
+}

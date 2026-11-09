@@ -1,0 +1,478 @@
+{
+  "checkpoint": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/cmerc/MELD_validation_seed2024/best.pt",
+  "checkpoint_sha256": "59c6f3fa544b59bcdc79d14bbe8ee17772a4900b15f4d32ef088971e59c9d0df",
+  "conditions": {
+    "decay_A_rho0p50": "15c972fad4793a8786d5c9f7f9d888a5b547abb11daf0d68fe39c8998519c479",
+    "decay_A_rho1p00": "2e05591533b1dd277c5ed6d9060bf9d0b80576de152a47163680760865d01845",
+    "decay_T-All_rho0p50": "d9c240fb7adf7ea2da80febaf48c16c1d384a08666e8c68d47df7d0739e39e7f",
+    "decay_T-All_rho1p00": "e602829485cc267f1ebbb726d8ce568f3052500fc3bc02099d288550a7cf4c01",
+    "decay_T1_rho1p00": "2a3f47753b67f2465771a4498c7d7d830255b183de2c7e4c5d8c19b72e6a735d",
+    "decay_T2_rho1p00": "9e6cfbae534f360bc7dbd527a0f48422e361789ab2bc2f6701a498960f7a768b",
+    "decay_T3_rho1p00": "ceb33c127b555ac543219aa0b79b659b33f8580ed1345c4c677cf15718fb1545",
+    "decay_T4_rho1p00": "c16e105bd99061b274926e69c817582ee5cb7c7970b08d142066d2bb988f12af",
+    "decay_V_rho0p50": "9a37338a0a0264b27c14ff03f0152b8c2b822fb4aa72a37a1e42fdfb98ea29a8",
+    "decay_V_rho1p00": "210d640f48f97777a1c30db2db0617bcfdb42593aa66670c8238d0a649e5abbb"
+  },
+  "config_sha256": "5ac6809187f7b81e6554772e6e4a614b7c40b4ed375ca31e46fa4666e0ef0e14",
+  "dataset": "MELD",
+  "gpu_visible": "2",
+  "gradients_absent": true,
+  "inputs_restored_exact": true,
+  "parameters_and_buffers_unchanged": true,
+  "parity_checks": [
+    {
+      "batch": 0,
+      "cache_log_error": 4.76837158203125e-07,
+      "historical_log_error": 4.76837158203125e-07,
+      "kind": "original"
+    },
+    {
+      "batch": 0,
+      "cache_log_error": 4.76837158203125e-07,
+      "kind": "decay_T-All_rho0p50"
+    },
+    {
+      "batch": 0,
+      "cache_log_error": 4.76837158203125e-07,
+      "kind": "decay_T-All_rho1p00"
+    },
+    {
+      "batch": 0,
+      "cache_log_error": 4.76837158203125e-07,
+      "kind": "decay_A_rho0p50"
+    },
+    {
+      "batch": 0,
+      "cache_log_error": 4.76837158203125e-07,
+      "kind": "decay_A_rho1p00"
+    },
+    {
+      "batch": 0,
+      "cache_log_error": 4.76837158203125e-07,
+      "kind": "decay_V_rho0p50"
+    },
+    {
+      "batch": 0,
+      "cache_log_error": 4.76837158203125e-07,
+      "kind": "decay_V_rho1p00"
+    },
+    {
+      "batch": 0,
+      "cache_log_error": 4.76837158203125e-07,
+      "kind": "decay_T1_rho1p00"
+    },
+    {
+      "batch": 0,
+      "cache_log_error": 4.76837158203125e-07,
+      "kind": "decay_T2_rho1p00"
+    },
+    {
+      "batch": 0,
+      "cache_log_error": 4.76837158203125e-07,
+      "kind": "decay_T3_rho1p00"
+    },
+    {
+      "batch": 0,
+      "cache_log_error": 4.76837158203125e-07,
+      "kind": "decay_T4_rho1p00"
+    },
+    {
+      "batch": 1,
+      "cache_log_error": 4.76837158203125e-07,
+      "historical_log_error": 4.76837158203125e-07,
+      "kind": "original"
+    },
+    {
+      "batch": 1,
+      "cache_log_error": 4.76837158203125e-07,
+      "kind": "decay_T-All_rho0p50"
+    },
+    {
+      "batch": 1,
+      "cache_log_error": 4.76837158203125e-07,
+      "kind": "decay_T-All_rho1p00"
+    },
+    {
+      "batch": 1,
+      "cache_log_error": 4.76837158203125e-07,
+      "kind": "decay_A_rho0p50"
+    },
+    {
+      "batch": 1,
+      "cache_log_error": 4.76837158203125e-07,
+      "kind": "decay_A_rho1p00"
+    },
+    {
+      "batch": 1,
+      "cache_log_error": 4.76837158203125e-07,
+      "kind": "decay_V_rho0p50"
+    },
+    {
+      "batch": 1,
+      "cache_log_error": 4.76837158203125e-07,
+      "kind": "decay_V_rho1p00"
+    },
+    {
+      "batch": 1,
+      "cache_log_error": 4.76837158203125e-07,
+      "kind": "decay_T1_rho1p00"
+    },
+    {
+      "batch": 1,
+      "cache_log_error": 4.76837158203125e-07,
+      "kind": "decay_T2_rho1p00"
+    },
+    {
+      "batch": 1,
+      "cache_log_error": 4.76837158203125e-07,
+      "kind": "decay_T3_rho1p00"
+    },
+    {
+      "batch": 1,
+      "cache_log_error": 4.76837158203125e-07,
+      "kind": "decay_T4_rho1p00"
+    },
+    {
+      "batch": 2,
+      "cache_log_error": 4.76837158203125e-07,
+      "historical_log_error": 4.76837158203125e-07,
+      "kind": "original"
+    },
+    {
+      "batch": 2,
+      "cache_log_error": 4.76837158203125e-07,
+      "kind": "decay_T-All_rho0p50"
+    },
+    {
+      "batch": 2,
+      "cache_log_error": 4.76837158203125e-07,
+      "kind": "decay_T-All_rho1p00"
+    },
+    {
+      "batch": 2,
+      "cache_log_error": 4.76837158203125e-07,
+      "kind": "decay_A_rho0p50"
+    },
+    {
+      "batch": 2,
+      "cache_log_error": 4.76837158203125e-07,
+      "kind": "decay_A_rho1p00"
+    },
+    {
+      "batch": 2,
+      "cache_log_error": 4.76837158203125e-07,
+      "kind": "decay_V_rho0p50"
+    },
+    {
+      "batch": 2,
+      "cache_log_error": 4.76837158203125e-07,
+      "kind": "decay_V_rho1p00"
+    },
+    {
+      "batch": 2,
+      "cache_log_error": 4.76837158203125e-07,
+      "kind": "decay_T1_rho1p00"
+    },
+    {
+      "batch": 2,
+      "cache_log_error": 4.76837158203125e-07,
+      "kind": "decay_T2_rho1p00"
+    },
+    {
+      "batch": 2,
+      "cache_log_error": 4.76837158203125e-07,
+      "kind": "decay_T3_rho1p00"
+    },
+    {
+      "batch": 2,
+      "cache_log_error": 4.76837158203125e-07,
+      "kind": "decay_T4_rho1p00"
+    },
+    {
+      "batch": 3,
+      "cache_log_error": 4.76837158203125e-07,
+      "historical_log_error": 4.76837158203125e-07,
+      "kind": "original"
+    },
+    {
+      "batch": 3,
+      "cache_log_error": 4.76837158203125e-07,
+      "kind": "decay_T-All_rho0p50"
+    },
+    {
+      "batch": 3,
+      "cache_log_error": 4.76837158203125e-07,
+      "kind": "decay_T-All_rho1p00"
+    },
+    {
+      "batch": 3,
+      "cache_log_error": 4.76837158203125e-07,
+      "kind": "decay_A_rho0p50"
+    },
+    {
+      "batch": 3,
+      "cache_log_error": 4.76837158203125e-07,
+      "kind": "decay_A_rho1p00"
+    },
+    {
+      "batch": 3,
+      "cache_log_error": 4.76837158203125e-07,
+      "kind": "decay_V_rho0p50"
+    },
+    {
+      "batch": 3,
+      "cache_log_error": 4.76837158203125e-07,
+      "kind": "decay_V_rho1p00"
+    },
+    {
+      "batch": 3,
+      "cache_log_error": 4.76837158203125e-07,
+      "kind": "decay_T1_rho1p00"
+    },
+    {
+      "batch": 3,
+      "cache_log_error": 4.76837158203125e-07,
+      "kind": "decay_T2_rho1p00"
+    },
+    {
+      "batch": 3,
+      "cache_log_error": 4.76837158203125e-07,
+      "kind": "decay_T3_rho1p00"
+    },
+    {
+      "batch": 3,
+      "cache_log_error": 4.76837158203125e-07,
+      "kind": "decay_T4_rho1p00"
+    },
+    {
+      "batch": 4,
+      "cache_log_error": 4.76837158203125e-07,
+      "historical_log_error": 4.76837158203125e-07,
+      "kind": "original"
+    },
+    {
+      "batch": 4,
+      "cache_log_error": 4.76837158203125e-07,
+      "kind": "decay_T-All_rho0p50"
+    },
+    {
+      "batch": 4,
+      "cache_log_error": 4.76837158203125e-07,
+      "kind": "decay_T-All_rho1p00"
+    },
+    {
+      "batch": 4,
+      "cache_log_error": 7.152557373046875e-07,
+      "kind": "decay_A_rho0p50"
+    },
+    {
+      "batch": 4,
+      "cache_log_error": 4.76837158203125e-07,
+      "kind": "decay_A_rho1p00"
+    },
+    {
+      "batch": 4,
+      "cache_log_error": 4.76837158203125e-07,
+      "kind": "decay_V_rho0p50"
+    },
+    {
+      "batch": 4,
+      "cache_log_error": 4.76837158203125e-07,
+      "kind": "decay_V_rho1p00"
+    },
+    {
+      "batch": 4,
+      "cache_log_error": 4.76837158203125e-07,
+      "kind": "decay_T1_rho1p00"
+    },
+    {
+      "batch": 4,
+      "cache_log_error": 4.76837158203125e-07,
+      "kind": "decay_T2_rho1p00"
+    },
+    {
+      "batch": 4,
+      "cache_log_error": 4.76837158203125e-07,
+      "kind": "decay_T3_rho1p00"
+    },
+    {
+      "batch": 4,
+      "cache_log_error": 4.76837158203125e-07,
+      "kind": "decay_T4_rho1p00"
+    },
+    {
+      "batch": 5,
+      "cache_log_error": 4.76837158203125e-07,
+      "historical_log_error": 4.76837158203125e-07,
+      "kind": "original"
+    },
+    {
+      "batch": 5,
+      "cache_log_error": 4.76837158203125e-07,
+      "kind": "decay_T-All_rho0p50"
+    },
+    {
+      "batch": 5,
+      "cache_log_error": 4.76837158203125e-07,
+      "kind": "decay_T-All_rho1p00"
+    },
+    {
+      "batch": 5,
+      "cache_log_error": 4.76837158203125e-07,
+      "kind": "decay_A_rho0p50"
+    },
+    {
+      "batch": 5,
+      "cache_log_error": 4.76837158203125e-07,
+      "kind": "decay_A_rho1p00"
+    },
+    {
+      "batch": 5,
+      "cache_log_error": 4.76837158203125e-07,
+      "kind": "decay_V_rho0p50"
+    },
+    {
+      "batch": 5,
+      "cache_log_error": 4.76837158203125e-07,
+      "kind": "decay_V_rho1p00"
+    },
+    {
+      "batch": 5,
+      "cache_log_error": 4.76837158203125e-07,
+      "kind": "decay_T1_rho1p00"
+    },
+    {
+      "batch": 5,
+      "cache_log_error": 4.76837158203125e-07,
+      "kind": "decay_T2_rho1p00"
+    },
+    {
+      "batch": 5,
+      "cache_log_error": 4.76837158203125e-07,
+      "kind": "decay_T3_rho1p00"
+    },
+    {
+      "batch": 5,
+      "cache_log_error": 4.76837158203125e-07,
+      "kind": "decay_T4_rho1p00"
+    },
+    {
+      "batch": 6,
+      "cache_log_error": 4.76837158203125e-07,
+      "historical_log_error": 4.76837158203125e-07,
+      "kind": "original"
+    },
+    {
+      "batch": 6,
+      "cache_log_error": 4.76837158203125e-07,
+      "kind": "decay_T-All_rho0p50"
+    },
+    {
+      "batch": 6,
+      "cache_log_error": 4.76837158203125e-07,
+      "kind": "decay_T-All_rho1p00"
+    },
+    {
+      "batch": 6,
+      "cache_log_error": 4.76837158203125e-07,
+      "kind": "decay_A_rho0p50"
+    },
+    {
+      "batch": 6,
+      "cache_log_error": 4.76837158203125e-07,
+      "kind": "decay_A_rho1p00"
+    },
+    {
+      "batch": 6,
+      "cache_log_error": 4.76837158203125e-07,
+      "kind": "decay_V_rho0p50"
+    },
+    {
+      "batch": 6,
+      "cache_log_error": 4.76837158203125e-07,
+      "kind": "decay_V_rho1p00"
+    },
+    {
+      "batch": 6,
+      "cache_log_error": 4.76837158203125e-07,
+      "kind": "decay_T1_rho1p00"
+    },
+    {
+      "batch": 6,
+      "cache_log_error": 4.76837158203125e-07,
+      "kind": "decay_T2_rho1p00"
+    },
+    {
+      "batch": 6,
+      "cache_log_error": 4.76837158203125e-07,
+      "kind": "decay_T3_rho1p00"
+    },
+    {
+      "batch": 6,
+      "cache_log_error": 4.76837158203125e-07,
+      "kind": "decay_T4_rho1p00"
+    },
+    {
+      "batch": 7,
+      "cache_log_error": 2.384185791015625e-07,
+      "historical_log_error": 2.384185791015625e-07,
+      "kind": "original"
+    },
+    {
+      "batch": 7,
+      "cache_log_error": 2.384185791015625e-07,
+      "kind": "decay_T-All_rho0p50"
+    },
+    {
+      "batch": 7,
+      "cache_log_error": 2.384185791015625e-07,
+      "kind": "decay_T-All_rho1p00"
+    },
+    {
+      "batch": 7,
+      "cache_log_error": 2.384185791015625e-07,
+      "kind": "decay_A_rho0p50"
+    },
+    {
+      "batch": 7,
+      "cache_log_error": 4.76837158203125e-07,
+      "kind": "decay_A_rho1p00"
+    },
+    {
+      "batch": 7,
+      "cache_log_error": 2.384185791015625e-07,
+      "kind": "decay_T1_rho1p00"
+    },
+    {
+      "batch": 7,
+      "cache_log_error": 2.384185791015625e-07,
+      "kind": "decay_T2_rho1p00"
+    },
+    {
+      "batch": 7,
+      "cache_log_error": 4.76837158203125e-07,
+      "kind": "decay_T3_rho1p00"
+    },
+    {
+      "batch": 7,
+      "cache_log_error": 4.76837158203125e-07,
+      "kind": "decay_T4_rho1p00"
+    }
+  ],
+  "passed": true,
+  "phase": "main",
+  "resource_snapshot": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/cross_seed_replication/20261108T134118Z/runs/MELD/seed2024/resource_snapshot_main.json",
+  "resource_snapshot_sha256": "05c98f8fd9b89dc637c80c515d7e56ff40df17084ca8a9542bb07fa7366c7edb",
+  "runner_sha256": "db044c8e0485f4d4f241c38c49d140a52d65e9917c8c472371159fd94600e8b2",
+  "seconds": 141.7680356199853,
+  "seed": 2024,
+  "server": "user23",
+  "skipped_visual_missing": 190,
+  "split": "validation",
+  "target_forwards": 10900,
+  "test_inference": false,
+  "train_statistics": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/20261107T172302Z/provenance/MELD_train_statistics.npz",
+  "train_statistics_sha256": "b7e0cbd5388ae813d98d347e75ac9aaa94a3492283c9febb89728aef2020656c",
+  "validation_baseline": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/20261107T172302Z/runs/MELD/seed2024/validation_predictions.npz",
+  "validation_baseline_sha256": "664e4bd156df761ce09f3326919b12f60f927de60c292a6aef7f4ef4d7c25cd7"
+}
