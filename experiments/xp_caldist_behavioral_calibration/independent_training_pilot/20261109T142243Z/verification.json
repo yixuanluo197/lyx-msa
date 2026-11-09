@@ -1,0 +1,58 @@
+{
+  "status": "blocked_before_training_by_preregistered_caldiff_fidelity_gate",
+  "manifest": {
+    "approved": true,
+    "file_sha256": "6d43928865915fe22a913c98b1165a05ba6e3e8f21d4d4c896cf51eb9c9b62be",
+    "content_sha256": "a30d64a9bae6d5f2b49ec54dbeb4073ceea29a6f12a630cb2e28b221705f9bde",
+    "candidate_assignments_exact": true,
+    "block_assignment_exact": true,
+    "all_isolation_checks_passed": true,
+    "class_coverage_passed": true
+  },
+  "label_policy": {
+    "policy": "unknown_label_mask",
+    "mask_count": 53,
+    "alignment_passed": true,
+    "dialogue_context_retained": true,
+    "original_pickle_modified": false
+  },
+  "mask_core": {
+    "test_count": 5,
+    "passed": 5,
+    "ground_truth_paths": [
+      "classification",
+      "rank_5_views",
+      "MSCL_3_views",
+      "CSCL_2_views",
+      "fold_local_class_weights"
+    ],
+    "training_runner_integration": "not_performed_due_earlier_caldiff_stop_gate"
+  },
+  "caldiff": {
+    "faithful_fold_local_generation": false,
+    "artifact_generated": false,
+    "blocker": "XP04 frozen source lacks generator provenance; upstream requires an unidentified trained M3Net teacher and published commands cannot reproduce complete author artifacts",
+    "current_helper_tests_passed": 4,
+    "current_helper_tests_do_not_resolve_teacher_provenance": true
+  },
+  "execution": {
+    "model_initialization_count": 0,
+    "optimizer_steps": 0,
+    "gpu_training_jobs_launched": 0,
+    "gpu_hours": 0.0,
+    "checkpoints_created": 0,
+    "calibration_fit_run": false,
+    "evaluation_loader_constructed": false,
+    "evaluation_label_accessed_for_manifest_class_support_audit": true,
+    "evaluation_label_accessed_by_training_or_calibration": false,
+    "evaluation_forward_run": false,
+    "remaining_48_started": false
+  },
+  "source_hashes_recomputed": true,
+  "independent_verifier": {
+    "candidate_assignments_and_groups_exact": true,
+    "mask_ids_and_indices_aligned_without_label_values": true,
+    "cpu_tests_passed": "9/9",
+    "stop_under_explicit_fidelity_gate_warranted": true
+  }
+}

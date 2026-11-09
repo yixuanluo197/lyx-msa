@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "policy": "independent_supervision_mask",
+  "mask_total": 53,
+  "dialogues_with_masked_utterances": 16,
+  "fold1_mask_counts": {
+    "training": 23,
+    "development": 14,
+    "calibration": 8,
+    "evaluation": 8
+  },
+  "dialogue_lengths_unchanged": true,
+  "features_unchanged": true,
+  "qmask_umask_policy": "constructed from original speakers/lengths; supervision mask is separate",
+  "frozen_feature_sha256": "ceb5cc9a45d1792998438e27f86a12642320aa6315546e4425316140ea503fb3",
+  "source_structure_hash_before": "d1d5c29ba9813ed8ad13ee33554b198a475dad0187b04b12cede83566455bfb2",
+  "source_structure_hash_after": "d1d5c29ba9813ed8ad13ee33554b198a475dad0187b04b12cede83566455bfb2"
+}
