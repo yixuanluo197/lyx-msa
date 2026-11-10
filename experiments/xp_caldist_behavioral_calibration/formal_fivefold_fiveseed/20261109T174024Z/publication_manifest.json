@@ -1,0 +1,309 @@
+{
+  "schema": "lyx-msa-publication-manifest-v1",
+  "repository": "https://github.com/yixuanluo197/lyx-msa",
+  "target_branch": "main",
+  "source_experiment_root": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/formal_fivefold_fiveseed/20261109T174024Z",
+  "published_root": "experiments/xp_caldist_behavioral_calibration/formal_fivefold_fiveseed/20261109T174024Z",
+  "policy": "Publish reviewable protocol, implementation, tests, compact scientific results, OOF diagnostics, reports, and verification metadata; retain checkpoints, bulk probability arrays, caches, and runtime state on the experiment server.",
+  "included_file_count": 50,
+  "included_size_bytes": 62298434,
+  "excluded_file_count": 1153,
+  "excluded_size_bytes": 13161007361,
+  "included_files": [
+    {
+      "path": "APPROVED_PROTOCOL.md",
+      "size_bytes": 714,
+      "sha256": "49c994625213ecf916a38e7a89a4280f968f82e33be2cc6f9a67fa94e9445cf0"
+    },
+    {
+      "path": "GITHUB_DELIVERY.md",
+      "size_bytes": 2062,
+      "sha256": "f56e876909b30cbe4a2d1c8e707fd143b0ab303fb8951a71503096c7c57f00dd"
+    },
+    {
+      "path": "configs/approved_split_manifests.json",
+      "size_bytes": 351003,
+      "sha256": "6d43928865915fe22a913c98b1165a05ba6e3e8f21d4d4c896cf51eb9c9b62be"
+    },
+    {
+      "path": "configs/formal_protocol.json",
+      "size_bytes": 2310,
+      "sha256": "736d713aa5a1f8b404264a7840c4e23259e5cfa163cd8a12ccc18bfec4093a54"
+    },
+    {
+      "path": "configs/teacher_protocol.json",
+      "size_bytes": 2552,
+      "sha256": "90767a79446fe431dba683fc6c44b659422817d4cfdb097489e9b9f2997d92ae"
+    },
+    {
+      "path": "provenance/source_hashes.json",
+      "size_bytes": 43459,
+      "sha256": "22e224b989ffe1b93fb11c3ef9677d4f4a2ee1d9552a44a32c7da688114f2604"
+    },
+    {
+      "path": "provenance/teacher_source_manifest.json",
+      "size_bytes": 1455,
+      "sha256": "7ffd6e0ce52937d4a15d7a372cf67cd3d3c44c4717b1283027a67ca8043c7b0c"
+    },
+    {
+      "path": "reports/CALIBRATION_REPORT.md",
+      "size_bytes": 1527,
+      "sha256": "38ce03c7db295574388d91a944d91365556d8027877200773ba4d3633c226b6f"
+    },
+    {
+      "path": "reports/CMERC_TRAINING_REPORT.md",
+      "size_bytes": 788,
+      "sha256": "18cd85229300aafacba36cf94d6ae60d06cc387bd66ce7852c46633515820bba"
+    },
+    {
+      "path": "reports/DIFFICULTY_COMPLETION_REPORT.md",
+      "size_bytes": 669,
+      "sha256": "9d915fe4c18c75921276aa6fb92d57a98884e101b4d10a164965be5205a404b1"
+    },
+    {
+      "path": "reports/EVALUATION_READINESS_REPORT.md",
+      "size_bytes": 669,
+      "sha256": "23db56162d4cd3b57b467bb4482b131ab45ace49297e5027d294bb9e783bc764"
+    },
+    {
+      "path": "reports/FINAL_TRAINING_DECISION.md",
+      "size_bytes": 1158,
+      "sha256": "c267b09d4a5fa51866ec7ba3af874245a73955e6c5a8a0361c4e181a65a9fc6b"
+    },
+    {
+      "path": "reports/GPU_SCHEDULING_REPORT.md",
+      "size_bytes": 835,
+      "sha256": "a4f12ea853d5d5b0370de17ce09f2d6f1e53aece804c0fa49ffd86f2fc05da99"
+    },
+    {
+      "path": "reports/TEACHER_COMPLETION_REPORT.md",
+      "size_bytes": 572,
+      "sha256": "68e41e8eb67933eda7facff8c35fcdabf46d9fd1b0b50ea57ea42fd2b2b3bab7"
+    },
+    {
+      "path": "results/calibration_metrics.csv",
+      "size_bytes": 43108,
+      "sha256": "245ed563c29d995042c11968d260646183a7a15a0b8eaa076d6880459b40cc76"
+    },
+    {
+      "path": "results/calibration_parameters.csv",
+      "size_bytes": 959139,
+      "sha256": "aa5bac2544d6c53a8e88b5462ad5e1dd94fa7efbcac55c5dececc5fc5aeda7dc"
+    },
+    {
+      "path": "results/cmerc_runs.csv",
+      "size_bytes": 24813,
+      "sha256": "e3dbde0e4ed0eee610ee72790dda08a70c07acb2d44186e7cf178ddc4dec6364"
+    },
+    {
+      "path": "results/development_metrics.csv",
+      "size_bytes": 337432,
+      "sha256": "a50c4c271a07dbe83f01fe7a7d893fd23b195a0bbdd1c48433bf52faa63b42be"
+    },
+    {
+      "path": "results/difficulty_manifest.csv",
+      "size_bytes": 2131,
+      "sha256": "d85ab8c7bb03b48bb04f7febc41106ab2704097792b80972e201993241b51662"
+    },
+    {
+      "path": "results/final_verification/evaluation_readiness_manifest.json",
+      "size_bytes": 1705371,
+      "sha256": "c54f1529a282dcf78d090568e42caa8644b447f0d2236c728f0e7c759bef43a1"
+    },
+    {
+      "path": "results/final_verification/report_data.json",
+      "size_bytes": 2959912,
+      "sha256": "b88cc9d1c3b65d18011420a52612da5a3fbf8834724fbe2a2fa16792b8841289"
+    },
+    {
+      "path": "results/final_verification/source_hashes.json",
+      "size_bytes": 43459,
+      "sha256": "22e224b989ffe1b93fb11c3ef9677d4f4a2ee1d9552a44a32c7da688114f2604"
+    },
+    {
+      "path": "results/final_verification/verification.json",
+      "size_bytes": 80612,
+      "sha256": "d467300fcb04c4fe122d06f3a5a1be7de2884cf924c0eeb9652b0e747558266a"
+    },
+    {
+      "path": "results/finalizer_calibration_replay_smoke_test.json",
+      "size_bytes": 298,
+      "sha256": "791cae8fbfe373bd16f6760acd9ad232c42ef0fe1d9f09188a50c587561bf33c"
+    },
+    {
+      "path": "results/finalizer_historical_smoke_test.json",
+      "size_bytes": 1031,
+      "sha256": "92a2a0e31fbd3be3f34ab3faf96397557fdf3a25275085cf95e7aa98346d01c9"
+    },
+    {
+      "path": "results/gpu_resource_summary.csv",
+      "size_bytes": 17382,
+      "sha256": "013e138bb5a76e9f813a34083d08dd4ef6ac608aa8564974b9f69fed5a6e7491"
+    },
+    {
+      "path": "results/grouped_oof_predictions.csv",
+      "size_bytes": 55412888,
+      "sha256": "05af409f4551d7425afb800131dcf6293c3f970cf428d3ff2dc868c011c397da"
+    },
+    {
+      "path": "results/pilot_calibration_replay_verification.json",
+      "size_bytes": 667,
+      "sha256": "dd03e5ecf77e3f58848d6a3284da91aed5421ee3866a95ce273f14e752d7feb4"
+    },
+    {
+      "path": "results/pilot_seed_equivalence.json",
+      "size_bytes": 814,
+      "sha256": "e160d17b9349d8a4715ddd6f5637b18852f0ed8b5fe063c12908a7bff7d1e861"
+    },
+    {
+      "path": "results/shared_role_artifact_verification.json",
+      "size_bytes": 103,
+      "sha256": "6677d691ce5faf8bfeb6b78be3cb85f00d93b1e0c3b726de701e2df99926c333"
+    },
+    {
+      "path": "results/shared_role_artifacts.csv",
+      "size_bytes": 8757,
+      "sha256": "c5d7c3b1d5dc43e906b362c95fd5e53723a3d9cae131cc665423c77f0f133a83"
+    },
+    {
+      "path": "results/teacher_runs.csv",
+      "size_bytes": 3424,
+      "sha256": "c897fbe2092a00d2ce37f82fbcba46bff1beeb1207fe125253914a91867ddb5b"
+    },
+    {
+      "path": "scripts/FINALIZER_USAGE.md",
+      "size_bytes": 2585,
+      "sha256": "fd0a530b35d68a7f6e76a0332a55360f83752cadd4c810d40322ed82d3e0079d"
+    },
+    {
+      "path": "scripts/build_role_artifact.py",
+      "size_bytes": 8596,
+      "sha256": "0625c3b255edd7aa605796f080bc29d18ae9b975b57df8b7a5f2928e08741cb1"
+    },
+    {
+      "path": "scripts/build_training_role_artifact.py",
+      "size_bytes": 7238,
+      "sha256": "c8ca8c15040433124ae69ac88036cadc41d8261f6571344cf3264f11698a1bf2"
+    },
+    {
+      "path": "scripts/calibration_only.py",
+      "size_bytes": 25091,
+      "sha256": "4316c1f3b30bd695fabad241d884da85a506635523fa1e71c51bbf462f18c275"
+    },
+    {
+      "path": "scripts/cmerc_runner.py",
+      "size_bytes": 31823,
+      "sha256": "bc28a815dc2df3d085dd579e99b3bc6e66f009187f7b01d2e2296a66779ed093"
+    },
+    {
+      "path": "scripts/finalize_after_scheduler.sh",
+      "size_bytes": 1038,
+      "sha256": "3f172868c00a7ae25564d557fd9f6c1d1a4f0c51d0c0c515031731b6fcca665f"
+    },
+    {
+      "path": "scripts/finalize_formal.py",
+      "size_bytes": 25366,
+      "sha256": "5bd695f5ffc6a7c7fba63a7d5a1ad96285b3d1fd8b52e3d59a8f516afd69615b"
+    },
+    {
+      "path": "scripts/formal_scheduler.py",
+      "size_bytes": 22854,
+      "sha256": "94f51e1d5bbc4af52822fbd736ce711145d79fb99cd89abc71be3bfa00307f0c"
+    },
+    {
+      "path": "scripts/generate_fold_local_difficulty.py",
+      "size_bytes": 21722,
+      "sha256": "7be3b49cfc335db27639eebd7803e5981be171bbaac453ad4ad808b10198bcfc"
+    },
+    {
+      "path": "scripts/protocol_b_mask_runner.py",
+      "size_bytes": 13548,
+      "sha256": "dcc954ab033a642eb52472007c4d29f881647f696dfa7083f6ce33f26d53bf81"
+    },
+    {
+      "path": "scripts/supervise_formal.sh",
+      "size_bytes": 2096,
+      "sha256": "db21b1020675fa79e9c7b391cc68260c84566586281523659b22ca219e37d2fe"
+    },
+    {
+      "path": "scripts/teacher_runner.py",
+      "size_bytes": 25894,
+      "sha256": "fb92aa8cb3572d45ba4e959a17e72f91f4879588c3a729efab48c14eed8b3330"
+    },
+    {
+      "path": "tests/test_calibration_fit_curves.py",
+      "size_bytes": 1554,
+      "sha256": "c4c79a3556d26efd13a08818c53a36a292588e1549c4290fabf136b6910ecb6c"
+    },
+    {
+      "path": "tests/test_difficulty_no_overwrite.py",
+      "size_bytes": 1221,
+      "sha256": "71d59eedc87af5d42b522e2b545772ef7227dfd8288f379a8eadddcc01cc9874"
+    },
+    {
+      "path": "tests/test_finalize_formal.py",
+      "size_bytes": 2562,
+      "sha256": "978ed38117a102090c57657d15eb9bb979ae10a6af8954458f272c27e1f17384"
+    },
+    {
+      "path": "tests/test_formal_scheduler.py",
+      "size_bytes": 11943,
+      "sha256": "1ae2466c522f73bd9efd8cf17dc84e979770a7b74cdc0b1a5965a354397cbe65"
+    },
+    {
+      "path": "tests/test_formal_seed_parameterization.py",
+      "size_bytes": 1577,
+      "sha256": "0f4234017aef92ee9b8f684bd08345ace9a0d3ac4fe4e486dbd6f3cba3b9ee45"
+    },
+    {
+      "path": "verification.json",
+      "size_bytes": 80612,
+      "sha256": "d467300fcb04c4fe122d06f3a5a1be7de2884cf924c0eeb9652b0e747558266a"
+    }
+  ],
+  "excluded_categories": {
+    "runtime_logs": {
+      "file_count": 14,
+      "size_bytes": 3223
+    },
+    "duplicate_final_verification_tables": {
+      "file_count": 8,
+      "size_bytes": 56800317
+    },
+    "other_runtime_artifacts": {
+      "file_count": 4,
+      "size_bytes": 54720
+    },
+    "large_shared_role_artifacts": {
+      "file_count": 40,
+      "size_bytes": 678582
+    },
+    "model_and_training_state": {
+      "file_count": 136,
+      "size_bytes": 12925229412
+    },
+    "python_cache": {
+      "file_count": 22,
+      "size_bytes": 397401
+    },
+    "scheduler_and_attempt_state": {
+      "file_count": 873,
+      "size_bytes": 125747382
+    },
+    "probability_arrays": {
+      "file_count": 56,
+      "size_bytes": 52096324
+    }
+  },
+  "scientific_boundary": {
+    "teachers_verified": 10,
+    "difficulties_verified": 10,
+    "cmerc_models_verified": 50,
+    "calibrations_verified": 50,
+    "evaluation_forward_executed": false,
+    "evaluation_labels_read": false,
+    "evaluation_artifacts_opened": false,
+    "calibration_oof_is_independent_evaluation": false,
+    "weights_published": false
+  }
+}

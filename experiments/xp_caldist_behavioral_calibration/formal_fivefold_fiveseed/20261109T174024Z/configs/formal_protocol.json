@@ -1,0 +1,101 @@
+{
+  "schema": "cmerc_protocol_b_formal_fivefold_fiveseed_v1",
+  "status": "frozen_before_training",
+  "manifest": {
+    "path": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/formal_fivefold_fiveseed/20261109T174024Z/configs/approved_split_manifests.json",
+    "sha256": "6d43928865915fe22a913c98b1165a05ba6e3e8f21d4d4c896cf51eb9c9b62be"
+  },
+  "datasets": [
+    "IEMOCAP",
+    "MELD"
+  ],
+  "folds": [
+    "fold1",
+    "fold2",
+    "fold3",
+    "fold4",
+    "fold5"
+  ],
+  "cmerc_seeds": [
+    1475,
+    67137,
+    2024,
+    3407,
+    42
+  ],
+  "teacher": {
+    "IEMOCAP": {
+      "seed": 1475,
+      "epochs": 80
+    },
+    "MELD": {
+      "seed": 67137,
+      "epochs": 40
+    },
+    "selection": "fixed_final_epoch",
+    "roles": [
+      "training"
+    ]
+  },
+  "difficulty": {
+    "batch_size": 1,
+    "precision": "FP32",
+    "primary_formula": "(total_gap+speaker_term)/(valid_label_count+speaker_term)",
+    "views": [
+      "text",
+      "audio",
+      "visual",
+      "intra",
+      "inter"
+    ]
+  },
+  "cmerc": {
+    "IEMOCAP": {
+      "epochs": 80
+    },
+    "MELD": {
+      "epochs": 40
+    },
+    "batch_size": 16,
+    "precision": "FP32",
+    "selection": "development_weighted_f1_rounded_2dp_percent",
+    "tie_policy": "earliest_epoch",
+    "resume_on_failure": false
+  },
+  "calibration": {
+    "methods": [
+      "E0",
+      "E1",
+      "E2",
+      "E3"
+    ],
+    "grouped_cv_seed": 20261109,
+    "lambda_candidates": [
+      0.001,
+      0.01,
+      0.1,
+      1.0,
+      10.0,
+      100.0
+    ],
+    "selection_metric": "calibration_grouped_oof_nll"
+  },
+  "evaluation": {
+    "artifact_built": false,
+    "loader_built": false,
+    "labels_read": false,
+    "forward_run": false,
+    "metrics_computed": false
+  },
+  "pilot_references": {
+    "IEMOCAP": "experiments/xp_caldist_behavioral_calibration/independent_cmerc_pilot/20261109T164030Z/runs/IEMOCAP/fold1/seed1475",
+    "MELD": "experiments/xp_caldist_behavioral_calibration/independent_cmerc_pilot/20261109T164030Z/runs/MELD/fold1/seed1475"
+  },
+  "disk_dispatch_min_free_gib": 50,
+  "gpu_uuid_whitelist": [
+    "GPU-7ff18ebb-100e-98fe-038b-a98bd4f94248",
+    "GPU-eed2f34f-b4c0-7b7a-498e-71a026e30c5a",
+    "GPU-d17e4326-9d3b-2025-fbf8-c9b0d16623a0",
+    "GPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456"
+  ]
+}

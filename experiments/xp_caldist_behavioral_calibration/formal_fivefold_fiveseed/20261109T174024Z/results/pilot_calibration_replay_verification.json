@@ -1,0 +1,24 @@
+{
+  "status": "passed",
+  "datasets": {
+    "IEMOCAP": {
+      "parameters_exact_after_removing_fit_curve": true,
+      "curve_lengths": {
+        "E1": 20,
+        "E2": 8,
+        "E3": 14
+      },
+      "source_npz_sha256": "45a02a2031f80e3004455d12732cff7d41a3ea9d8b4c1864769a83d622487291"
+    },
+    "MELD": {
+      "parameters_exact_after_removing_fit_curve": true,
+      "curve_lengths": {
+        "E1": 17,
+        "E2": 20,
+        "E3": 28
+      },
+      "source_npz_sha256": "0ea1ba16df267dfcdb046241a70dfbd6c6845bf12f1c209d7372edc0e02e1aee"
+    }
+  },
+  "note": "offline deterministic replay from frozen Calibration NPZ; no model or Evaluation forward"
+}

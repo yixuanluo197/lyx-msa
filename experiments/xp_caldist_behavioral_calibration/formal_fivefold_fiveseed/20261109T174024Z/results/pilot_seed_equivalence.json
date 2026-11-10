@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "formal_change": "explicit preregistered CMERC seed parameter",
+  "seed": 1475,
+  "effective_config_equal_to_pilot": true,
+  "tests": "7 passed",
+  "datasets": {
+    "IEMOCAP": {
+      "pilot_initialization_sha256": "2aeb62aa0f9d488b60848bc255488cb92ddf457d1bbb2056a8a62fac56c63d75",
+      "formal_runner_initialization_sha256": "2aeb62aa0f9d488b60848bc255488cb92ddf457d1bbb2056a8a62fac56c63d75",
+      "matches": true
+    },
+    "MELD": {
+      "pilot_initialization_sha256": "85985e96d8f8c95a5023bfa78500ec9a618e2152705ad5ac18fd4b81dcd53ad5",
+      "formal_runner_initialization_sha256": "85985e96d8f8c95a5023bfa78500ec9a618e2152705ad5ac18fd4b81dcd53ad5",
+      "matches": true
+    }
+  },
+  "decision": "historical fold1 seed1475 Pilot checkpoints remain valid and are not retrained"
+}

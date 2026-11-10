@@ -1,0 +1,40 @@
+{
+  "status": "passed",
+  "checks": [
+    {
+      "dataset": "IEMOCAP",
+      "epochs": 80,
+      "best_epoch": 79,
+      "difficulty": {
+        "count": 84,
+        "exact_training_coverage": true,
+        "formula_recomputed": true,
+        "mean": 0.3499330525707151
+      },
+      "teacher_strict_reload": {
+        "strict_reload": true,
+        "device": "cpu",
+        "forward_executed": false,
+        "model_state_sha256": "5b1b986e3367bfec4944e97023758e70bc66aaa0721a78346414fb984f8778ce"
+      }
+    },
+    {
+      "dataset": "MELD",
+      "epochs": 40,
+      "best_epoch": 14,
+      "difficulty": {
+        "count": 852,
+        "exact_training_coverage": true,
+        "formula_recomputed": true,
+        "mean": 0.34692031685883457
+      },
+      "teacher_strict_reload": {
+        "strict_reload": true,
+        "device": "cpu",
+        "forward_executed": false,
+        "model_state_sha256": "ac00d214212c4e87c6b295444e731aa4e42ad61d4b10cc8100e529c1a4cc6b85"
+      }
+    }
+  ],
+  "evaluation_data_read": false
+}
