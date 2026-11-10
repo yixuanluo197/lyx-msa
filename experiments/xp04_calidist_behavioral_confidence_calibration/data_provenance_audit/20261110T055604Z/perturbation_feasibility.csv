@@ -1,0 +1,13 @@
+perturbation,required_data,available,dataset_scope,recommended_location,decision
+irrelevant_question,raw text,yes,IEMOCAP+MELD,raw text then RoBERTa re-encoding,"FEASIBLE after rebuilding encoder provenance"
+assertion,raw text,yes,IEMOCAP+MELD,raw text then RoBERTa re-encoding,"FEASIBLE after rebuilding encoder provenance"
+probe,raw text,yes,IEMOCAP+MELD,raw text then RoBERTa re-encoding,"FEASIBLE after rebuilding encoder provenance"
+sample_corruption,raw text,yes,IEMOCAP+MELD,raw text then RoBERTa re-encoding,"FEASIBLE after rebuilding encoder provenance"
+text_gaussian_noise,text features,yes,IEMOCAP+MELD,T1-T4 feature space,FEASIBLE_NOW
+text_feature_dropout,text features,yes,IEMOCAP+MELD,T1-T4 feature space,FEASIBLE_NOW
+audio_pitch_shift,raw audio,partial,IEMOCAP candidate WAV + MELD candidate MP4 audio,audio signal before feature extraction,"BLOCKED for exact XP04; raw provenance/extractor missing"
+audio_timbre,raw audio,partial,IEMOCAP candidate WAV + MELD candidate MP4 audio,audio signal before feature extraction,"BLOCKED for exact XP04; raw provenance/extractor missing"
+audio_feature_dropout,audio features,yes,IEMOCAP+MELD,opaque feature space,FEASIBLE_NOW
+facial_dynamics_smoothing,video frames,partial,IEMOCAP candidate AVI + MELD candidate MP4,video space before feature extraction,"BLOCKED for exact XP04; extracted frames/tracks and visual extractor missing"
+local_face_occlusion,video frames,partial,IEMOCAP candidate AVI + MELD candidate MP4,video space before feature extraction,"BLOCKED for exact XP04; extracted frames/regions and visual extractor missing"
+visual_feature_dropout,visual features,yes,IEMOCAP+MELD,opaque feature space,FEASIBLE_NOW

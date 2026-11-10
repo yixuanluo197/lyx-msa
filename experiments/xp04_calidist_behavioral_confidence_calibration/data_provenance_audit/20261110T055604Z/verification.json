@@ -1,0 +1,37 @@
+{
+  "audit_timestamp_utc": "2026-11-10T05:56:04Z",
+  "scope": "XP04 read-only data provenance and feature extraction audit",
+  "status": "PASS_WITH_DOCUMENTED_PROVENANCE_GAPS",
+  "checks": {
+    "all_required_reports_exist": true,
+    "all_required_csv_exist": true,
+    "alignment_row_count": 21141,
+    "iemocap_alignment_rows": 7433,
+    "meld_alignment_rows": 13708,
+    "all_internal_feature_lengths_match": true,
+    "all_internal_raw_roberta_text_match": true,
+    "candidate_raw_text_mismatch_count": 1,
+    "iemocap_unknown_label_remap_count": 53,
+    "checkpoint_inventory_count": 20,
+    "checkpoint_inventory_all_readable": true,
+    "checkpoint_sha256_recomputed_match_count": 20,
+    "feature_pickle_inventory_count": 4,
+    "source_hash_entry_count": 29
+  },
+  "expected": {
+    "alignment_row_count": 21141,
+    "iemocap_alignment_rows": 7433,
+    "meld_alignment_rows": 13708,
+    "candidate_raw_text_mismatch_count": 1,
+    "iemocap_unknown_label_remap_count": 53,
+    "checkpoint_inventory_count": 20,
+    "checkpoint_sha256_recomputed_match_count": 20,
+    "feature_pickle_inventory_count": 4
+  },
+  "limitations": [
+    "Exact released RoBERTa pickle to producer checkpoint/Fairseq-version linkage is UNVERIFIED.",
+    "Audio and visual raw-to-feature extraction code/manifests are MISSING.",
+    "Local IEMOCAP and MELD raw collections are candidates, not XP04 runtime dependencies.",
+    "Media codec/header checks were sampled; large media were not fully decoded or hashed."
+  ]
+}
