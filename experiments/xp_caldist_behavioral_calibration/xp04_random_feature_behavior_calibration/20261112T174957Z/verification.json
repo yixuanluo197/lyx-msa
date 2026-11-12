@@ -1,0 +1,327 @@
+{
+  "stage": "baseline_and_feature_audit",
+  "status": "stopped_on_id_mismatch",
+  "pilot_started": false,
+  "full_perturbation_started": false,
+  "checkpoint_count": 10,
+  "historical_prediction_files": 10,
+  "later_validation_prediction_files": 10,
+  "results": {
+    "IEMOCAP": {
+      "splits": [
+        {
+          "seed": 1475,
+          "train_dialogues": 108,
+          "validation_dialogues": 12,
+          "test_dialogues": 31,
+          "historical_utterances": 1623,
+          "historical_dialogues": 31,
+          "historical_validation_overlap": 0,
+          "historical_test_overlap": 31,
+          "later_utterances": 527,
+          "later_dialogues": 12,
+          "later_validation_overlap": 12,
+          "later_test_overlap": 0,
+          "historical_is_test": true,
+          "later_is_validation": true
+        },
+        {
+          "seed": 67137,
+          "train_dialogues": 108,
+          "validation_dialogues": 12,
+          "test_dialogues": 31,
+          "historical_utterances": 1623,
+          "historical_dialogues": 31,
+          "historical_validation_overlap": 0,
+          "historical_test_overlap": 31,
+          "later_utterances": 527,
+          "later_dialogues": 12,
+          "later_validation_overlap": 12,
+          "later_test_overlap": 0,
+          "historical_is_test": true,
+          "later_is_validation": true
+        },
+        {
+          "seed": 2024,
+          "train_dialogues": 108,
+          "validation_dialogues": 12,
+          "test_dialogues": 31,
+          "historical_utterances": 1623,
+          "historical_dialogues": 31,
+          "historical_validation_overlap": 0,
+          "historical_test_overlap": 31,
+          "later_utterances": 527,
+          "later_dialogues": 12,
+          "later_validation_overlap": 12,
+          "later_test_overlap": 0,
+          "historical_is_test": true,
+          "later_is_validation": true
+        },
+        {
+          "seed": 3407,
+          "train_dialogues": 108,
+          "validation_dialogues": 12,
+          "test_dialogues": 31,
+          "historical_utterances": 1623,
+          "historical_dialogues": 31,
+          "historical_validation_overlap": 0,
+          "historical_test_overlap": 31,
+          "later_utterances": 527,
+          "later_dialogues": 12,
+          "later_validation_overlap": 12,
+          "later_test_overlap": 0,
+          "historical_is_test": true,
+          "later_is_validation": true
+        },
+        {
+          "seed": 42,
+          "train_dialogues": 108,
+          "validation_dialogues": 12,
+          "test_dialogues": 31,
+          "historical_utterances": 1623,
+          "historical_dialogues": 31,
+          "historical_validation_overlap": 0,
+          "historical_test_overlap": 31,
+          "later_utterances": 527,
+          "later_dialogues": 12,
+          "later_validation_overlap": 12,
+          "later_test_overlap": 0,
+          "historical_is_test": true,
+          "later_is_validation": true
+        }
+      ],
+      "features": {
+        "audio": {
+          "train": {
+            "dimension": 1582,
+            "utterances": 5283,
+            "all_zero": 0
+          },
+          "validation": {
+            "dimension": 1582,
+            "utterances": 527,
+            "all_zero": 0
+          }
+        },
+        "visual": {
+          "train": {
+            "dimension": 342,
+            "utterances": 5283,
+            "all_zero": 20
+          },
+          "validation": {
+            "dimension": 342,
+            "utterances": 527,
+            "all_zero": 1
+          }
+        },
+        "T1": {
+          "train": {
+            "dimension": 1024,
+            "utterances": 5283,
+            "all_zero": 0
+          },
+          "validation": {
+            "dimension": 1024,
+            "utterances": 527,
+            "all_zero": 0
+          }
+        },
+        "T2": {
+          "train": {
+            "dimension": 1024,
+            "utterances": 5283,
+            "all_zero": 0
+          },
+          "validation": {
+            "dimension": 1024,
+            "utterances": 527,
+            "all_zero": 0
+          }
+        },
+        "T3": {
+          "train": {
+            "dimension": 1024,
+            "utterances": 5283,
+            "all_zero": 0
+          },
+          "validation": {
+            "dimension": 1024,
+            "utterances": 527,
+            "all_zero": 0
+          }
+        },
+        "T4": {
+          "train": {
+            "dimension": 1024,
+            "utterances": 5283,
+            "all_zero": 0
+          },
+          "validation": {
+            "dimension": 1024,
+            "utterances": 527,
+            "all_zero": 0
+          }
+        }
+      }
+    },
+    "MELD": {
+      "splits": [
+        {
+          "seed": 1475,
+          "train_dialogues": 1038,
+          "validation_dialogues": 114,
+          "test_dialogues": 280,
+          "historical_utterances": 2610,
+          "historical_dialogues": 280,
+          "historical_validation_overlap": 0,
+          "historical_test_overlap": 280,
+          "later_utterances": 1109,
+          "later_dialogues": 114,
+          "later_validation_overlap": 114,
+          "later_test_overlap": 0,
+          "historical_is_test": true,
+          "later_is_validation": true
+        },
+        {
+          "seed": 67137,
+          "train_dialogues": 1038,
+          "validation_dialogues": 114,
+          "test_dialogues": 280,
+          "historical_utterances": 2610,
+          "historical_dialogues": 280,
+          "historical_validation_overlap": 0,
+          "historical_test_overlap": 280,
+          "later_utterances": 1109,
+          "later_dialogues": 114,
+          "later_validation_overlap": 114,
+          "later_test_overlap": 0,
+          "historical_is_test": true,
+          "later_is_validation": true
+        },
+        {
+          "seed": 2024,
+          "train_dialogues": 1038,
+          "validation_dialogues": 114,
+          "test_dialogues": 280,
+          "historical_utterances": 2610,
+          "historical_dialogues": 280,
+          "historical_validation_overlap": 0,
+          "historical_test_overlap": 280,
+          "later_utterances": 1109,
+          "later_dialogues": 114,
+          "later_validation_overlap": 114,
+          "later_test_overlap": 0,
+          "historical_is_test": true,
+          "later_is_validation": true
+        },
+        {
+          "seed": 3407,
+          "train_dialogues": 1038,
+          "validation_dialogues": 114,
+          "test_dialogues": 280,
+          "historical_utterances": 2610,
+          "historical_dialogues": 280,
+          "historical_validation_overlap": 0,
+          "historical_test_overlap": 280,
+          "later_utterances": 1109,
+          "later_dialogues": 114,
+          "later_validation_overlap": 114,
+          "later_test_overlap": 0,
+          "historical_is_test": true,
+          "later_is_validation": true
+        },
+        {
+          "seed": 42,
+          "train_dialogues": 1038,
+          "validation_dialogues": 114,
+          "test_dialogues": 280,
+          "historical_utterances": 2610,
+          "historical_dialogues": 280,
+          "historical_validation_overlap": 0,
+          "historical_test_overlap": 280,
+          "later_utterances": 1109,
+          "later_dialogues": 114,
+          "later_validation_overlap": 114,
+          "later_test_overlap": 0,
+          "historical_is_test": true,
+          "later_is_validation": true
+        }
+      ],
+      "features": {
+        "audio": {
+          "train": {
+            "dimension": 300,
+            "utterances": 9989,
+            "all_zero": 1
+          },
+          "validation": {
+            "dimension": 300,
+            "utterances": 1109,
+            "all_zero": 0
+          }
+        },
+        "visual": {
+          "train": {
+            "dimension": 342,
+            "utterances": 9989,
+            "all_zero": 3407
+          },
+          "validation": {
+            "dimension": 342,
+            "utterances": 1109,
+            "all_zero": 95
+          }
+        },
+        "T1": {
+          "train": {
+            "dimension": 1024,
+            "utterances": 9989,
+            "all_zero": 0
+          },
+          "validation": {
+            "dimension": 1024,
+            "utterances": 1109,
+            "all_zero": 0
+          }
+        },
+        "T2": {
+          "train": {
+            "dimension": 1024,
+            "utterances": 9989,
+            "all_zero": 0
+          },
+          "validation": {
+            "dimension": 1024,
+            "utterances": 1109,
+            "all_zero": 0
+          }
+        },
+        "T3": {
+          "train": {
+            "dimension": 1024,
+            "utterances": 9989,
+            "all_zero": 0
+          },
+          "validation": {
+            "dimension": 1024,
+            "utterances": 1109,
+            "all_zero": 0
+          }
+        },
+        "T4": {
+          "train": {
+            "dimension": 1024,
+            "utterances": 9989,
+            "all_zero": 0
+          },
+          "validation": {
+            "dimension": 1024,
+            "utterances": 1109,
+            "all_zero": 0
+          }
+        }
+      }
+    }
+  }
+}
