@@ -1,0 +1,56 @@
+{
+  "status": "completed",
+  "source_files": {
+    "pilot/20261113T025053Z/original_predictions.csv": "b7f0ac876dc29db0570cf683a4526bb374b5d318d65d3ad8eab6c584aa4ed879",
+    "pilot/20261113T025053Z/oof_calibration_predictions.csv": "62d92d69629c9b04560172f8e4870721e94a8f94cd825443d38792ba16b6ceb2",
+    "pilot/20261113T025053Z/calibration_metrics.csv": "29cf0b5100fffd4ce26e07f81d520c900d5df4999b0db27bfe78e9764dd0291e"
+  },
+  "datasets": {
+    "IEMOCAP": {
+      "utterances": 527,
+      "dialogues": 12,
+      "accuracy": 0.6603415559772297,
+      "mean_e0_confidence": 0.7278754242344192,
+      "mean_e1_confidence": 0.6585201997811438,
+      "e0_gap": -0.06753386825718954,
+      "e0_gap_dialogue_bootstrap_ci95": [
+        -0.16984521743480108,
+        0.022152168111877122
+      ],
+      "e1_gap_dialogue_bootstrap_ci95": [
+        -0.09496854983329074,
+        0.08202612583199957
+      ],
+      "roc_auc_correctness_from_e0_confidence": 0.6451871829448405,
+      "roc_auc_correctness_from_e1_confidence": 0.5977011494252874,
+      "e0_ece15_verified": 0.10496702620607627,
+      "e1_ece15_verified": 0.08977349278486606
+    },
+    "MELD": {
+      "utterances": 1109,
+      "dialogues": 114,
+      "accuracy": 0.6690712353471596,
+      "mean_e0_confidence": 0.4683968813651526,
+      "mean_e1_confidence": 0.669034570889237,
+      "e0_gap": 0.200674353982007,
+      "e0_gap_dialogue_bootstrap_ci95": [
+        0.17159713866694074,
+        0.22924064428418495
+      ],
+      "e1_gap_dialogue_bootstrap_ci95": [
+        -0.028875028313094808,
+        0.02843549412935048
+      ],
+      "roc_auc_correctness_from_e0_confidence": 0.7298853529381523,
+      "roc_auc_correctness_from_e1_confidence": 0.7266244115249307,
+      "e0_ece15_verified": 0.20136293427593754,
+      "e1_ece15_verified": 0.04323002366758464
+    }
+  },
+  "plots": [
+    "figures/classwise_mean_confidence.pdf",
+    "figures/correct_wrong_distributions.pdf",
+    "figures/e0_e1_confidence_shift.pdf",
+    "figures/reliability_diagram.pdf"
+  ]
+}
