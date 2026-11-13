@@ -1,0 +1,2966 @@
+[
+  {
+    "dataset": "IEMOCAP",
+    "fold": 0,
+    "method": "E1",
+    "train_dialogues": [
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_out_dialogues": [
+      "Ses01F_impro02"
+    ],
+    "intercept": -0.9705789690072599,
+    "coefficient": 2.267518747115544
+  },
+  {
+    "dataset": "IEMOCAP",
+    "fold": 1,
+    "method": "E1",
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_out_dialogues": [
+      "Ses01M_script03_1"
+    ],
+    "intercept": -1.0317966445013809,
+    "coefficient": 2.256412082796429
+  },
+  {
+    "dataset": "IEMOCAP",
+    "fold": 2,
+    "method": "E1",
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_out_dialogues": [
+      "Ses02F_impro06"
+    ],
+    "intercept": -1.326191673105881,
+    "coefficient": 2.9585875715042778
+  },
+  {
+    "dataset": "IEMOCAP",
+    "fold": 3,
+    "method": "E1",
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_out_dialogues": [
+      "Ses02F_script01_3"
+    ],
+    "intercept": -0.779034374115707,
+    "coefficient": 1.9484985987022458
+  },
+  {
+    "dataset": "IEMOCAP",
+    "fold": 4,
+    "method": "E1",
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_out_dialogues": [
+      "Ses02F_script03_1"
+    ],
+    "intercept": -0.6115744916446226,
+    "coefficient": 1.8607806123003146
+  },
+  {
+    "dataset": "IEMOCAP",
+    "fold": 5,
+    "method": "E1",
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_out_dialogues": [
+      "Ses02M_impro01"
+    ],
+    "intercept": -0.9458871138138901,
+    "coefficient": 2.194665109897904
+  },
+  {
+    "dataset": "IEMOCAP",
+    "fold": 6,
+    "method": "E1",
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_out_dialogues": [
+      "Ses02M_impro07"
+    ],
+    "intercept": -0.9336499024893877,
+    "coefficient": 2.280935635127668
+  },
+  {
+    "dataset": "IEMOCAP",
+    "fold": 7,
+    "method": "E1",
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_out_dialogues": [
+      "Ses03F_impro08"
+    ],
+    "intercept": -1.0366761291393491,
+    "coefficient": 2.288398015299622
+  },
+  {
+    "dataset": "IEMOCAP",
+    "fold": 8,
+    "method": "E1",
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_out_dialogues": [
+      "Ses03F_script03_1"
+    ],
+    "intercept": -0.7853286826289722,
+    "coefficient": 2.149465516226578
+  },
+  {
+    "dataset": "IEMOCAP",
+    "fold": 9,
+    "method": "E1",
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_out_dialogues": [
+      "Ses03F_script03_2"
+    ],
+    "intercept": -0.6807739553127746,
+    "coefficient": 1.887907712660067
+  },
+  {
+    "dataset": "IEMOCAP",
+    "fold": 10,
+    "method": "E1",
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses04M_script03_2"
+    ],
+    "held_out_dialogues": [
+      "Ses03M_script01_2"
+    ],
+    "intercept": -0.9042753807737767,
+    "coefficient": 2.17839613906121
+  },
+  {
+    "dataset": "IEMOCAP",
+    "fold": 11,
+    "method": "E1",
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2"
+    ],
+    "held_out_dialogues": [
+      "Ses04M_script03_2"
+    ],
+    "intercept": -0.2860710534665677,
+    "coefficient": 1.2575054458592057
+  },
+  {
+    "dataset": "IEMOCAP",
+    "fold": 0,
+    "method": "E2",
+    "corruption": "dropout",
+    "modality": "audio",
+    "train_dialogues": [
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_out_dialogues": [
+      "Ses01F_impro02"
+    ],
+    "lambda_min": 21.70553820841469,
+    "lambda_max": 45325.42620743755,
+    "alpha": -5.0,
+    "beta": 0.396969696969697,
+    "training_brier": 0.2145123308123301
+  },
+  {
+    "dataset": "IEMOCAP",
+    "fold": 1,
+    "method": "E2",
+    "corruption": "dropout",
+    "modality": "audio",
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_out_dialogues": [
+      "Ses01M_script03_1"
+    ],
+    "lambda_min": 15.829641859046559,
+    "lambda_max": 45325.42620743755,
+    "alpha": -5.0,
+    "beta": 0.3474747474747475,
+    "training_brier": 0.21632713162847778
+  },
+  {
+    "dataset": "IEMOCAP",
+    "fold": 2,
+    "method": "E2",
+    "corruption": "dropout",
+    "modality": "audio",
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_out_dialogues": [
+      "Ses02F_impro06"
+    ],
+    "lambda_min": 15.829641859046559,
+    "lambda_max": 45325.42620743755,
+    "alpha": -0.45454545454545503,
+    "beta": 4.9505050505050505,
+    "training_brier": 0.19808234418831738
+  },
+  {
+    "dataset": "IEMOCAP",
+    "fold": 3,
+    "method": "E2",
+    "corruption": "dropout",
+    "modality": "audio",
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_out_dialogues": [
+      "Ses02F_script01_3"
+    ],
+    "lambda_min": 15.829641859046559,
+    "lambda_max": 45325.42620743755,
+    "alpha": -4.898989898989899,
+    "beta": 0.396969696969697,
+    "training_brier": 0.2225920437728979
+  },
+  {
+    "dataset": "IEMOCAP",
+    "fold": 4,
+    "method": "E2",
+    "corruption": "dropout",
+    "modality": "audio",
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_out_dialogues": [
+      "Ses02F_script03_1"
+    ],
+    "lambda_min": 15.829641859046559,
+    "lambda_max": 45325.42620743755,
+    "alpha": -5.0,
+    "beta": 0.396969696969697,
+    "training_brier": 0.2134686120443319
+  },
+  {
+    "dataset": "IEMOCAP",
+    "fold": 5,
+    "method": "E2",
+    "corruption": "dropout",
+    "modality": "audio",
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_out_dialogues": [
+      "Ses02M_impro01"
+    ],
+    "lambda_min": 15.829641859046559,
+    "lambda_max": 45325.42620743755,
+    "alpha": -4.696969696969697,
+    "beta": 0.396969696969697,
+    "training_brier": 0.21497837640635334
+  },
+  {
+    "dataset": "IEMOCAP",
+    "fold": 6,
+    "method": "E2",
+    "corruption": "dropout",
+    "modality": "audio",
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_out_dialogues": [
+      "Ses02M_impro07"
+    ],
+    "lambda_min": 15.829641859046559,
+    "lambda_max": 45325.42620743755,
+    "alpha": -4.898989898989899,
+    "beta": 0.44646464646464656,
+    "training_brier": 0.21266027099700455
+  },
+  {
+    "dataset": "IEMOCAP",
+    "fold": 7,
+    "method": "E2",
+    "corruption": "dropout",
+    "modality": "audio",
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_out_dialogues": [
+      "Ses03F_impro08"
+    ],
+    "lambda_min": 15.829641859046559,
+    "lambda_max": 42161.18950653937,
+    "alpha": -4.595959595959596,
+    "beta": 0.396969696969697,
+    "training_brier": 0.21450186055581094
+  },
+  {
+    "dataset": "IEMOCAP",
+    "fold": 8,
+    "method": "E2",
+    "corruption": "dropout",
+    "modality": "audio",
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_out_dialogues": [
+      "Ses03F_script03_1"
+    ],
+    "lambda_min": 15.829641859046559,
+    "lambda_max": 45325.42620743755,
+    "alpha": -5.0,
+    "beta": 0.44646464646464656,
+    "training_brier": 0.21016770208101257
+  },
+  {
+    "dataset": "IEMOCAP",
+    "fold": 9,
+    "method": "E2",
+    "corruption": "dropout",
+    "modality": "audio",
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_out_dialogues": [
+      "Ses03F_script03_2"
+    ],
+    "lambda_min": 15.829641859046559,
+    "lambda_max": 45325.42620743755,
+    "alpha": -5.0,
+    "beta": 0.396969696969697,
+    "training_brier": 0.21961979667137024
+  },
+  {
+    "dataset": "IEMOCAP",
+    "fold": 10,
+    "method": "E2",
+    "corruption": "dropout",
+    "modality": "audio",
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses04M_script03_2"
+    ],
+    "held_out_dialogues": [
+      "Ses03M_script01_2"
+    ],
+    "lambda_min": 15.829641859046559,
+    "lambda_max": 45325.42620743755,
+    "alpha": -5.0,
+    "beta": 0.396969696969697,
+    "training_brier": 0.2146978471251118
+  },
+  {
+    "dataset": "IEMOCAP",
+    "fold": 11,
+    "method": "E2",
+    "corruption": "dropout",
+    "modality": "audio",
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2"
+    ],
+    "held_out_dialogues": [
+      "Ses04M_script03_2"
+    ],
+    "lambda_min": 15.829641859046559,
+    "lambda_max": 45325.42620743755,
+    "alpha": -4.797979797979798,
+    "beta": 0.396969696969697,
+    "training_brier": 0.23316186074960496
+  },
+  {
+    "dataset": "IEMOCAP",
+    "fold": 0,
+    "method": "E2",
+    "corruption": "dropout",
+    "modality": "joint",
+    "train_dialogues": [
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_out_dialogues": [
+      "Ses01F_impro02"
+    ],
+    "lambda_min": 21.938774605235917,
+    "lambda_max": 362202.0403759784,
+    "alpha": -4.595959595959596,
+    "beta": 0.44646464646464656,
+    "training_brier": 0.21412850195796743
+  },
+  {
+    "dataset": "IEMOCAP",
+    "fold": 1,
+    "method": "E2",
+    "corruption": "dropout",
+    "modality": "joint",
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_out_dialogues": [
+      "Ses01M_script03_1"
+    ],
+    "lambda_min": 16.48067781863339,
+    "lambda_max": 362202.0403759784,
+    "alpha": -4.595959595959596,
+    "beta": 0.396969696969697,
+    "training_brier": 0.21575659010496478
+  },
+  {
+    "dataset": "IEMOCAP",
+    "fold": 2,
+    "method": "E2",
+    "corruption": "dropout",
+    "modality": "joint",
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_out_dialogues": [
+      "Ses02F_impro06"
+    ],
+    "lambda_min": 16.48067781863339,
+    "lambda_max": 362202.0403759784,
+    "alpha": -0.5555555555555554,
+    "beta": 4.653535353535354,
+    "training_brier": 0.1984412880531997
+  },
+  {
+    "dataset": "IEMOCAP",
+    "fold": 3,
+    "method": "E2",
+    "corruption": "dropout",
+    "modality": "joint",
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_out_dialogues": [
+      "Ses02F_script01_3"
+    ],
+    "lambda_min": 16.48067781863339,
+    "lambda_max": 362202.0403759784,
+    "alpha": -4.898989898989899,
+    "beta": 0.396969696969697,
+    "training_brier": 0.22217326383759312
+  },
+  {
+    "dataset": "IEMOCAP",
+    "fold": 4,
+    "method": "E2",
+    "corruption": "dropout",
+    "modality": "joint",
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_out_dialogues": [
+      "Ses02F_script03_1"
+    ],
+    "lambda_min": 16.48067781863339,
+    "lambda_max": 362202.0403759784,
+    "alpha": -4.595959595959596,
+    "beta": 0.44646464646464656,
+    "training_brier": 0.21325438664127663
+  },
+  {
+    "dataset": "IEMOCAP",
+    "fold": 5,
+    "method": "E2",
+    "corruption": "dropout",
+    "modality": "joint",
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_out_dialogues": [
+      "Ses02M_impro01"
+    ],
+    "lambda_min": 16.48067781863339,
+    "lambda_max": 362202.0403759784,
+    "alpha": -4.797979797979798,
+    "beta": 0.396969696969697,
+    "training_brier": 0.21444685763882373
+  },
+  {
+    "dataset": "IEMOCAP",
+    "fold": 6,
+    "method": "E2",
+    "corruption": "dropout",
+    "modality": "joint",
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_out_dialogues": [
+      "Ses02M_impro07"
+    ],
+    "lambda_min": 16.48067781863339,
+    "lambda_max": 362202.0403759784,
+    "alpha": -5.0,
+    "beta": 0.44646464646464656,
+    "training_brier": 0.21224403232168707
+  },
+  {
+    "dataset": "IEMOCAP",
+    "fold": 7,
+    "method": "E2",
+    "corruption": "dropout",
+    "modality": "joint",
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_out_dialogues": [
+      "Ses03F_impro08"
+    ],
+    "lambda_min": 16.48067781863339,
+    "lambda_max": 362202.0403759784,
+    "alpha": -4.696969696969697,
+    "beta": 0.396969696969697,
+    "training_brier": 0.2139918152625765
+  },
+  {
+    "dataset": "IEMOCAP",
+    "fold": 8,
+    "method": "E2",
+    "corruption": "dropout",
+    "modality": "joint",
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_out_dialogues": [
+      "Ses03F_script03_1"
+    ],
+    "lambda_min": 16.48067781863339,
+    "lambda_max": 362202.0403759784,
+    "alpha": -4.595959595959596,
+    "beta": 0.49595959595959604,
+    "training_brier": 0.20998921772938603
+  },
+  {
+    "dataset": "IEMOCAP",
+    "fold": 9,
+    "method": "E2",
+    "corruption": "dropout",
+    "modality": "joint",
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_out_dialogues": [
+      "Ses03F_script03_2"
+    ],
+    "lambda_min": 16.48067781863339,
+    "lambda_max": 362202.0403759784,
+    "alpha": -4.595959595959596,
+    "beta": 0.44646464646464656,
+    "training_brier": 0.21919416704602365
+  },
+  {
+    "dataset": "IEMOCAP",
+    "fold": 10,
+    "method": "E2",
+    "corruption": "dropout",
+    "modality": "joint",
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses04M_script03_2"
+    ],
+    "held_out_dialogues": [
+      "Ses03M_script01_2"
+    ],
+    "lambda_min": 16.48067781863339,
+    "lambda_max": 362202.0403759784,
+    "alpha": -5.0,
+    "beta": 0.396969696969697,
+    "training_brier": 0.21428153349684462
+  },
+  {
+    "dataset": "IEMOCAP",
+    "fold": 11,
+    "method": "E2",
+    "corruption": "dropout",
+    "modality": "joint",
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2"
+    ],
+    "held_out_dialogues": [
+      "Ses04M_script03_2"
+    ],
+    "lambda_min": 16.48067781863339,
+    "lambda_max": 30967.008812967517,
+    "alpha": -4.797979797979798,
+    "beta": 0.396969696969697,
+    "training_brier": 0.2333779973928448
+  },
+  {
+    "dataset": "IEMOCAP",
+    "fold": 0,
+    "method": "E2",
+    "corruption": "dropout",
+    "modality": "text",
+    "train_dialogues": [
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_out_dialogues": [
+      "Ses01F_impro02"
+    ],
+    "lambda_min": 91.92651711698396,
+    "lambda_max": 1429849.4479889562,
+    "alpha": -5.0,
+    "beta": 0.396969696969697,
+    "training_brier": 0.21479698251176943
+  },
+  {
+    "dataset": "IEMOCAP",
+    "fold": 1,
+    "method": "E2",
+    "corruption": "dropout",
+    "modality": "text",
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_out_dialogues": [
+      "Ses01M_script03_1"
+    ],
+    "lambda_min": 91.92651711698396,
+    "lambda_max": 1429849.4479889562,
+    "alpha": -5.0,
+    "beta": 0.3474747474747475,
+    "training_brier": 0.21634961703494246
+  },
+  {
+    "dataset": "IEMOCAP",
+    "fold": 2,
+    "method": "E2",
+    "corruption": "dropout",
+    "modality": "text",
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_out_dialogues": [
+      "Ses02F_impro06"
+    ],
+    "lambda_min": 91.92651711698396,
+    "lambda_max": 939190.2683376737,
+    "alpha": -4.898989898989899,
+    "beta": 0.5454545454545455,
+    "training_brier": 0.19876964610604775
+  },
+  {
+    "dataset": "IEMOCAP",
+    "fold": 3,
+    "method": "E2",
+    "corruption": "dropout",
+    "modality": "text",
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_out_dialogues": [
+      "Ses02F_script01_3"
+    ],
+    "lambda_min": 112.76281910471658,
+    "lambda_max": 1429849.4479889562,
+    "alpha": -4.898989898989899,
+    "beta": 0.396969696969697,
+    "training_brier": 0.22286126351560448
+  },
+  {
+    "dataset": "IEMOCAP",
+    "fold": 4,
+    "method": "E2",
+    "corruption": "dropout",
+    "modality": "text",
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_out_dialogues": [
+      "Ses02F_script03_1"
+    ],
+    "lambda_min": 91.92651711698396,
+    "lambda_max": 1429849.4479889562,
+    "alpha": -5.0,
+    "beta": 0.396969696969697,
+    "training_brier": 0.21389642619874144
+  },
+  {
+    "dataset": "IEMOCAP",
+    "fold": 5,
+    "method": "E2",
+    "corruption": "dropout",
+    "modality": "text",
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_out_dialogues": [
+      "Ses02M_impro01"
+    ],
+    "lambda_min": 91.92651711698396,
+    "lambda_max": 1429849.4479889562,
+    "alpha": -4.797979797979798,
+    "beta": 0.396969696969697,
+    "training_brier": 0.21506759552482108
+  },
+  {
+    "dataset": "IEMOCAP",
+    "fold": 6,
+    "method": "E2",
+    "corruption": "dropout",
+    "modality": "text",
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_out_dialogues": [
+      "Ses02M_impro07"
+    ],
+    "lambda_min": 91.92651711698396,
+    "lambda_max": 1429849.4479889562,
+    "alpha": -5.0,
+    "beta": 0.44646464646464656,
+    "training_brier": 0.21298964900496808
+  },
+  {
+    "dataset": "IEMOCAP",
+    "fold": 7,
+    "method": "E2",
+    "corruption": "dropout",
+    "modality": "text",
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_out_dialogues": [
+      "Ses03F_impro08"
+    ],
+    "lambda_min": 91.92651711698396,
+    "lambda_max": 1429849.4479889562,
+    "alpha": -4.696969696969697,
+    "beta": 0.396969696969697,
+    "training_brier": 0.21461936794759554
+  },
+  {
+    "dataset": "IEMOCAP",
+    "fold": 8,
+    "method": "E2",
+    "corruption": "dropout",
+    "modality": "text",
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_out_dialogues": [
+      "Ses03F_script03_1"
+    ],
+    "lambda_min": 91.92651711698396,
+    "lambda_max": 1429849.4479889562,
+    "alpha": -5.0,
+    "beta": 0.44646464646464656,
+    "training_brier": 0.21057095414051064
+  },
+  {
+    "dataset": "IEMOCAP",
+    "fold": 9,
+    "method": "E2",
+    "corruption": "dropout",
+    "modality": "text",
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_out_dialogues": [
+      "Ses03F_script03_2"
+    ],
+    "lambda_min": 91.92651711698396,
+    "lambda_max": 1429849.4479889562,
+    "alpha": -5.0,
+    "beta": 0.396969696969697,
+    "training_brier": 0.21988672018856664
+  },
+  {
+    "dataset": "IEMOCAP",
+    "fold": 10,
+    "method": "E2",
+    "corruption": "dropout",
+    "modality": "text",
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses04M_script03_2"
+    ],
+    "held_out_dialogues": [
+      "Ses03M_script01_2"
+    ],
+    "lambda_min": 91.92651711698396,
+    "lambda_max": 1429849.4479889562,
+    "alpha": -5.0,
+    "beta": 0.396969696969697,
+    "training_brier": 0.21488595981163763
+  },
+  {
+    "dataset": "IEMOCAP",
+    "fold": 11,
+    "method": "E2",
+    "corruption": "dropout",
+    "modality": "text",
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2"
+    ],
+    "held_out_dialogues": [
+      "Ses04M_script03_2"
+    ],
+    "lambda_min": 91.92651711698396,
+    "lambda_max": 1429849.4479889562,
+    "alpha": -4.898989898989899,
+    "beta": 0.396969696969697,
+    "training_brier": 0.23357014288332265
+  },
+  {
+    "dataset": "IEMOCAP",
+    "fold": 0,
+    "method": "E2",
+    "corruption": "dropout",
+    "modality": "visual",
+    "train_dialogues": [
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_out_dialogues": [
+      "Ses01F_impro02"
+    ],
+    "lambda_min": 473.76055055221553,
+    "lambda_max": 10000000000.0,
+    "alpha": -4.191919191919192,
+    "beta": 0.49595959595959604,
+    "training_brier": 0.214479111258415
+  },
+  {
+    "dataset": "IEMOCAP",
+    "fold": 1,
+    "method": "E2",
+    "corruption": "dropout",
+    "modality": "visual",
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_out_dialogues": [
+      "Ses01M_script03_1"
+    ],
+    "lambda_min": 495.5086347575358,
+    "lambda_max": 10000000000.0,
+    "alpha": -4.696969696969697,
+    "beta": 0.396969696969697,
+    "training_brier": 0.2161936144713553
+  },
+  {
+    "dataset": "IEMOCAP",
+    "fold": 2,
+    "method": "E2",
+    "corruption": "dropout",
+    "modality": "visual",
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_out_dialogues": [
+      "Ses02F_impro06"
+    ],
+    "lambda_min": 473.76055055221553,
+    "lambda_max": 10000000000.0,
+    "alpha": -0.5555555555555554,
+    "beta": 5.0,
+    "training_brier": 0.19896509037733154
+  },
+  {
+    "dataset": "IEMOCAP",
+    "fold": 3,
+    "method": "E2",
+    "corruption": "dropout",
+    "modality": "visual",
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_out_dialogues": [
+      "Ses02F_script01_3"
+    ],
+    "lambda_min": 473.76055055221553,
+    "lambda_max": 10000000000.0,
+    "alpha": -5.0,
+    "beta": 0.396969696969697,
+    "training_brier": 0.22254329877503276
+  },
+  {
+    "dataset": "IEMOCAP",
+    "fold": 4,
+    "method": "E2",
+    "corruption": "dropout",
+    "modality": "visual",
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_out_dialogues": [
+      "Ses02F_script03_1"
+    ],
+    "lambda_min": 473.76055055221553,
+    "lambda_max": 10000000000.0,
+    "alpha": -4.696969696969697,
+    "beta": 0.44646464646464656,
+    "training_brier": 0.2135960639521522
+  },
+  {
+    "dataset": "IEMOCAP",
+    "fold": 5,
+    "method": "E2",
+    "corruption": "dropout",
+    "modality": "visual",
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_out_dialogues": [
+      "Ses02M_impro01"
+    ],
+    "lambda_min": 473.76055055221553,
+    "lambda_max": 10000000000.0,
+    "alpha": -4.898989898989899,
+    "beta": 0.396969696969697,
+    "training_brier": 0.2148417542749078
+  },
+  {
+    "dataset": "IEMOCAP",
+    "fold": 6,
+    "method": "E2",
+    "corruption": "dropout",
+    "modality": "visual",
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_out_dialogues": [
+      "Ses02M_impro07"
+    ],
+    "lambda_min": 473.76055055221553,
+    "lambda_max": 3720236.340092779,
+    "alpha": -5.0,
+    "beta": 0.44646464646464656,
+    "training_brier": 0.21319514949402896
+  },
+  {
+    "dataset": "IEMOCAP",
+    "fold": 7,
+    "method": "E2",
+    "corruption": "dropout",
+    "modality": "visual",
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_out_dialogues": [
+      "Ses03F_impro08"
+    ],
+    "lambda_min": 473.76055055221553,
+    "lambda_max": 10000000000.0,
+    "alpha": -4.797979797979798,
+    "beta": 0.396969696969697,
+    "training_brier": 0.21441897920902067
+  },
+  {
+    "dataset": "IEMOCAP",
+    "fold": 8,
+    "method": "E2",
+    "corruption": "dropout",
+    "modality": "visual",
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_out_dialogues": [
+      "Ses03F_script03_1"
+    ],
+    "lambda_min": 473.76055055221553,
+    "lambda_max": 10000000000.0,
+    "alpha": -4.696969696969697,
+    "beta": 0.49595959595959604,
+    "training_brier": 0.21024481786359214
+  },
+  {
+    "dataset": "IEMOCAP",
+    "fold": 9,
+    "method": "E2",
+    "corruption": "dropout",
+    "modality": "visual",
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_out_dialogues": [
+      "Ses03F_script03_2"
+    ],
+    "lambda_min": 473.76055055221553,
+    "lambda_max": 10000000000.0,
+    "alpha": -4.696969696969697,
+    "beta": 0.44646464646464656,
+    "training_brier": 0.2195457036712739
+  },
+  {
+    "dataset": "IEMOCAP",
+    "fold": 10,
+    "method": "E2",
+    "corruption": "dropout",
+    "modality": "visual",
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses04M_script03_2"
+    ],
+    "held_out_dialogues": [
+      "Ses03M_script01_2"
+    ],
+    "lambda_min": 473.76055055221553,
+    "lambda_max": 10000000000.0,
+    "alpha": -4.595959595959596,
+    "beta": 0.44646464646464656,
+    "training_brier": 0.21463032746913227
+  },
+  {
+    "dataset": "IEMOCAP",
+    "fold": 11,
+    "method": "E2",
+    "corruption": "dropout",
+    "modality": "visual",
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2"
+    ],
+    "held_out_dialogues": [
+      "Ses04M_script03_2"
+    ],
+    "lambda_min": 473.76055055221553,
+    "lambda_max": 10000000000.0,
+    "alpha": -4.898989898989899,
+    "beta": 0.396969696969697,
+    "training_brier": 0.23301728357943266
+  },
+  {
+    "dataset": "IEMOCAP",
+    "fold": 0,
+    "method": "E2",
+    "corruption": "gaussian",
+    "modality": "audio",
+    "train_dialogues": [
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_out_dialogues": [
+      "Ses01F_impro02"
+    ],
+    "lambda_min": 141.27516071058747,
+    "lambda_max": 826643.0748388944,
+    "alpha": -4.898989898989899,
+    "beta": 0.396969696969697,
+    "training_brier": 0.2139182468217398
+  },
+  {
+    "dataset": "IEMOCAP",
+    "fold": 1,
+    "method": "E2",
+    "corruption": "gaussian",
+    "modality": "audio",
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_out_dialogues": [
+      "Ses01M_script03_1"
+    ],
+    "lambda_min": 89.46211473722128,
+    "lambda_max": 826643.0748388944,
+    "alpha": -5.0,
+    "beta": 0.3474747474747475,
+    "training_brier": 0.215387779742912
+  },
+  {
+    "dataset": "IEMOCAP",
+    "fold": 2,
+    "method": "E2",
+    "corruption": "gaussian",
+    "modality": "audio",
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_out_dialogues": [
+      "Ses02F_impro06"
+    ],
+    "lambda_min": 89.46211473722128,
+    "lambda_max": 826643.0748388944,
+    "alpha": -1.6666666666666665,
+    "beta": 1.4858585858585862,
+    "training_brier": 0.19838713099890254
+  },
+  {
+    "dataset": "IEMOCAP",
+    "fold": 3,
+    "method": "E2",
+    "corruption": "gaussian",
+    "modality": "audio",
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_out_dialogues": [
+      "Ses02F_script01_3"
+    ],
+    "lambda_min": 89.46211473722128,
+    "lambda_max": 826643.0748388944,
+    "alpha": -4.696969696969697,
+    "beta": 0.396969696969697,
+    "training_brier": 0.22196409099030998
+  },
+  {
+    "dataset": "IEMOCAP",
+    "fold": 4,
+    "method": "E2",
+    "corruption": "gaussian",
+    "modality": "audio",
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_out_dialogues": [
+      "Ses02F_script03_1"
+    ],
+    "lambda_min": 89.46211473722128,
+    "lambda_max": 826643.0748388944,
+    "alpha": -5.0,
+    "beta": 0.396969696969697,
+    "training_brier": 0.21305161231832748
+  },
+  {
+    "dataset": "IEMOCAP",
+    "fold": 5,
+    "method": "E2",
+    "corruption": "gaussian",
+    "modality": "audio",
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_out_dialogues": [
+      "Ses02M_impro01"
+    ],
+    "lambda_min": 89.46211473722128,
+    "lambda_max": 826643.0748388944,
+    "alpha": -4.595959595959596,
+    "beta": 0.396969696969697,
+    "training_brier": 0.21410605287200793
+  },
+  {
+    "dataset": "IEMOCAP",
+    "fold": 6,
+    "method": "E2",
+    "corruption": "gaussian",
+    "modality": "audio",
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_out_dialogues": [
+      "Ses02M_impro07"
+    ],
+    "lambda_min": 89.46211473722128,
+    "lambda_max": 826643.0748388944,
+    "alpha": -4.797979797979798,
+    "beta": 0.44646464646464656,
+    "training_brier": 0.2121307214340234
+  },
+  {
+    "dataset": "IEMOCAP",
+    "fold": 7,
+    "method": "E2",
+    "corruption": "gaussian",
+    "modality": "audio",
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_out_dialogues": [
+      "Ses03F_impro08"
+    ],
+    "lambda_min": 89.46211473722128,
+    "lambda_max": 826643.0748388944,
+    "alpha": -4.494949494949495,
+    "beta": 0.396969696969697,
+    "training_brier": 0.21358176053935712
+  },
+  {
+    "dataset": "IEMOCAP",
+    "fold": 8,
+    "method": "E2",
+    "corruption": "gaussian",
+    "modality": "audio",
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_out_dialogues": [
+      "Ses03F_script03_1"
+    ],
+    "lambda_min": 89.46211473722128,
+    "lambda_max": 826643.0748388944,
+    "alpha": -5.0,
+    "beta": 0.44646464646464656,
+    "training_brier": 0.2099535977416128
+  },
+  {
+    "dataset": "IEMOCAP",
+    "fold": 9,
+    "method": "E2",
+    "corruption": "gaussian",
+    "modality": "audio",
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_out_dialogues": [
+      "Ses03F_script03_2"
+    ],
+    "lambda_min": 89.46211473722128,
+    "lambda_max": 826643.0748388944,
+    "alpha": -5.0,
+    "beta": 0.396969696969697,
+    "training_brier": 0.2190460309267389
+  },
+  {
+    "dataset": "IEMOCAP",
+    "fold": 10,
+    "method": "E2",
+    "corruption": "gaussian",
+    "modality": "audio",
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses04M_script03_2"
+    ],
+    "held_out_dialogues": [
+      "Ses03M_script01_2"
+    ],
+    "lambda_min": 89.46211473722128,
+    "lambda_max": 826643.0748388944,
+    "alpha": -4.797979797979798,
+    "beta": 0.396969696969697,
+    "training_brier": 0.21402050106872328
+  },
+  {
+    "dataset": "IEMOCAP",
+    "fold": 11,
+    "method": "E2",
+    "corruption": "gaussian",
+    "modality": "audio",
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2"
+    ],
+    "held_out_dialogues": [
+      "Ses04M_script03_2"
+    ],
+    "lambda_min": 89.46211473722128,
+    "lambda_max": 351124.82817673363,
+    "alpha": -5.0,
+    "beta": 0.3474747474747475,
+    "training_brier": 0.2334460202398696
+  },
+  {
+    "dataset": "IEMOCAP",
+    "fold": 0,
+    "method": "E2",
+    "corruption": "gaussian",
+    "modality": "joint",
+    "train_dialogues": [
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_out_dialogues": [
+      "Ses01F_impro02"
+    ],
+    "lambda_min": 146.0901210243402,
+    "lambda_max": 1297317.8587148206,
+    "alpha": -4.393939393939394,
+    "beta": 0.44646464646464656,
+    "training_brier": 0.21390240066722516
+  },
+  {
+    "dataset": "IEMOCAP",
+    "fold": 1,
+    "method": "E2",
+    "corruption": "gaussian",
+    "modality": "joint",
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_out_dialogues": [
+      "Ses01M_script03_1"
+    ],
+    "lambda_min": 88.30985424059512,
+    "lambda_max": 1297317.8587148206,
+    "alpha": -2.676767676767677,
+    "beta": 0.6444444444444445,
+    "training_brier": 0.215257664205951
+  },
+  {
+    "dataset": "IEMOCAP",
+    "fold": 2,
+    "method": "E2",
+    "corruption": "gaussian",
+    "modality": "joint",
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_out_dialogues": [
+      "Ses02F_impro06"
+    ],
+    "lambda_min": 88.30985424059512,
+    "lambda_max": 1297317.8587148206,
+    "alpha": -0.858585858585859,
+    "beta": 2.8717171717171723,
+    "training_brier": 0.19833888363184865
+  },
+  {
+    "dataset": "IEMOCAP",
+    "fold": 3,
+    "method": "E2",
+    "corruption": "gaussian",
+    "modality": "joint",
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_out_dialogues": [
+      "Ses02F_script01_3"
+    ],
+    "lambda_min": 88.30985424059512,
+    "lambda_max": 1297317.8587148206,
+    "alpha": -3.787878787878788,
+    "beta": 0.49595959595959604,
+    "training_brier": 0.22192690403739673
+  },
+  {
+    "dataset": "IEMOCAP",
+    "fold": 4,
+    "method": "E2",
+    "corruption": "gaussian",
+    "modality": "joint",
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_out_dialogues": [
+      "Ses02F_script03_1"
+    ],
+    "lambda_min": 88.30985424059512,
+    "lambda_max": 1297317.8587148206,
+    "alpha": -4.494949494949495,
+    "beta": 0.44646464646464656,
+    "training_brier": 0.21301129102136188
+  },
+  {
+    "dataset": "IEMOCAP",
+    "fold": 5,
+    "method": "E2",
+    "corruption": "gaussian",
+    "modality": "joint",
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_out_dialogues": [
+      "Ses02M_impro01"
+    ],
+    "lambda_min": 88.30985424059512,
+    "lambda_max": 1297317.8587148206,
+    "alpha": -3.686868686868687,
+    "beta": 0.49595959595959604,
+    "training_brier": 0.2141541593369703
+  },
+  {
+    "dataset": "IEMOCAP",
+    "fold": 6,
+    "method": "E2",
+    "corruption": "gaussian",
+    "modality": "joint",
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_out_dialogues": [
+      "Ses02M_impro07"
+    ],
+    "lambda_min": 88.30985424059512,
+    "lambda_max": 1297317.8587148206,
+    "alpha": -4.797979797979798,
+    "beta": 0.44646464646464656,
+    "training_brier": 0.21211582920914765
+  },
+  {
+    "dataset": "IEMOCAP",
+    "fold": 7,
+    "method": "E2",
+    "corruption": "gaussian",
+    "modality": "joint",
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_out_dialogues": [
+      "Ses03F_impro08"
+    ],
+    "lambda_min": 88.30985424059512,
+    "lambda_max": 1297317.8587148206,
+    "alpha": -3.282828282828283,
+    "beta": 0.5454545454545455,
+    "training_brier": 0.21359708339179645
+  },
+  {
+    "dataset": "IEMOCAP",
+    "fold": 8,
+    "method": "E2",
+    "corruption": "gaussian",
+    "modality": "joint",
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_out_dialogues": [
+      "Ses03F_script03_1"
+    ],
+    "lambda_min": 88.30985424059512,
+    "lambda_max": 1297317.8587148206,
+    "alpha": -5.0,
+    "beta": 0.44646464646464656,
+    "training_brier": 0.20990189508446938
+  },
+  {
+    "dataset": "IEMOCAP",
+    "fold": 9,
+    "method": "E2",
+    "corruption": "gaussian",
+    "modality": "joint",
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_out_dialogues": [
+      "Ses03F_script03_2"
+    ],
+    "lambda_min": 88.30985424059512,
+    "lambda_max": 1297317.8587148206,
+    "alpha": -5.0,
+    "beta": 0.396969696969697,
+    "training_brier": 0.21901594503262029
+  },
+  {
+    "dataset": "IEMOCAP",
+    "fold": 10,
+    "method": "E2",
+    "corruption": "gaussian",
+    "modality": "joint",
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses04M_script03_2"
+    ],
+    "held_out_dialogues": [
+      "Ses03M_script01_2"
+    ],
+    "lambda_min": 88.30985424059512,
+    "lambda_max": 1297317.8587148206,
+    "alpha": -3.888888888888889,
+    "beta": 0.49595959595959604,
+    "training_brier": 0.21400364342795786
+  },
+  {
+    "dataset": "IEMOCAP",
+    "fold": 11,
+    "method": "E2",
+    "corruption": "gaussian",
+    "modality": "joint",
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2"
+    ],
+    "held_out_dialogues": [
+      "Ses04M_script03_2"
+    ],
+    "lambda_min": 88.30985424059512,
+    "lambda_max": 908438.1409272758,
+    "alpha": -4.696969696969697,
+    "beta": 0.396969696969697,
+    "training_brier": 0.23272170512032608
+  },
+  {
+    "dataset": "IEMOCAP",
+    "fold": 0,
+    "method": "E2",
+    "corruption": "gaussian",
+    "modality": "text",
+    "train_dialogues": [
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_out_dialogues": [
+      "Ses01F_impro02"
+    ],
+    "lambda_min": 1141.7354466507759,
+    "lambda_max": 265954182.14731523,
+    "alpha": -4.090909090909091,
+    "beta": 0.49595959595959604,
+    "training_brier": 0.21404130686535375
+  },
+  {
+    "dataset": "IEMOCAP",
+    "fold": 1,
+    "method": "E2",
+    "corruption": "gaussian",
+    "modality": "text",
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_out_dialogues": [
+      "Ses01M_script03_1"
+    ],
+    "lambda_min": 1113.0838160759292,
+    "lambda_max": 265954182.14731523,
+    "alpha": -2.272727272727273,
+    "beta": 0.792929292929293,
+    "training_brier": 0.21561025810477022
+  },
+  {
+    "dataset": "IEMOCAP",
+    "fold": 2,
+    "method": "E2",
+    "corruption": "gaussian",
+    "modality": "text",
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_out_dialogues": [
+      "Ses02F_impro06"
+    ],
+    "lambda_min": 1113.0838160759292,
+    "lambda_max": 265954182.14731523,
+    "alpha": -5.0,
+    "beta": 0.5454545454545455,
+    "training_brier": 0.1987526952927297
+  },
+  {
+    "dataset": "IEMOCAP",
+    "fold": 3,
+    "method": "E2",
+    "corruption": "gaussian",
+    "modality": "text",
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_out_dialogues": [
+      "Ses02F_script01_3"
+    ],
+    "lambda_min": 1113.0838160759292,
+    "lambda_max": 265954182.14731523,
+    "alpha": -3.282828282828283,
+    "beta": 0.594949494949495,
+    "training_brier": 0.2220667241244877
+  },
+  {
+    "dataset": "IEMOCAP",
+    "fold": 4,
+    "method": "E2",
+    "corruption": "gaussian",
+    "modality": "text",
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_out_dialogues": [
+      "Ses02F_script03_1"
+    ],
+    "lambda_min": 1113.0838160759292,
+    "lambda_max": 265954182.14731523,
+    "alpha": -3.1818181818181817,
+    "beta": 0.6444444444444445,
+    "training_brier": 0.21315121802933523
+  },
+  {
+    "dataset": "IEMOCAP",
+    "fold": 5,
+    "method": "E2",
+    "corruption": "gaussian",
+    "modality": "text",
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_out_dialogues": [
+      "Ses02M_impro01"
+    ],
+    "lambda_min": 1113.0838160759292,
+    "lambda_max": 265954182.14731523,
+    "alpha": -3.1818181818181817,
+    "beta": 0.594949494949495,
+    "training_brier": 0.21432002341465475
+  },
+  {
+    "dataset": "IEMOCAP",
+    "fold": 6,
+    "method": "E2",
+    "corruption": "gaussian",
+    "modality": "text",
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_out_dialogues": [
+      "Ses02M_impro07"
+    ],
+    "lambda_min": 1113.0838160759292,
+    "lambda_max": 265954182.14731523,
+    "alpha": -0.9595959595959593,
+    "beta": 2.277777777777778,
+    "training_brier": 0.21210466662545663
+  },
+  {
+    "dataset": "IEMOCAP",
+    "fold": 7,
+    "method": "E2",
+    "corruption": "gaussian",
+    "modality": "text",
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_out_dialogues": [
+      "Ses03F_impro08"
+    ],
+    "lambda_min": 1113.0838160759292,
+    "lambda_max": 265954182.14731523,
+    "alpha": -3.383838383838384,
+    "beta": 0.5454545454545455,
+    "training_brier": 0.21389270884575412
+  },
+  {
+    "dataset": "IEMOCAP",
+    "fold": 8,
+    "method": "E2",
+    "corruption": "gaussian",
+    "modality": "text",
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_out_dialogues": [
+      "Ses03F_script03_1"
+    ],
+    "lambda_min": 1113.0838160759292,
+    "lambda_max": 265954182.14731523,
+    "alpha": -4.595959595959596,
+    "beta": 0.49595959595959604,
+    "training_brier": 0.2099275142387973
+  },
+  {
+    "dataset": "IEMOCAP",
+    "fold": 9,
+    "method": "E2",
+    "corruption": "gaussian",
+    "modality": "text",
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_out_dialogues": [
+      "Ses03F_script03_2"
+    ],
+    "lambda_min": 1113.0838160759292,
+    "lambda_max": 265954182.14731523,
+    "alpha": -4.595959595959596,
+    "beta": 0.44646464646464656,
+    "training_brier": 0.21912434081008889
+  },
+  {
+    "dataset": "IEMOCAP",
+    "fold": 10,
+    "method": "E2",
+    "corruption": "gaussian",
+    "modality": "text",
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses04M_script03_2"
+    ],
+    "held_out_dialogues": [
+      "Ses03M_script01_2"
+    ],
+    "lambda_min": 1113.0838160759292,
+    "lambda_max": 265954182.14731523,
+    "alpha": -3.080808080808081,
+    "beta": 0.6444444444444445,
+    "training_brier": 0.21418162525044485
+  },
+  {
+    "dataset": "IEMOCAP",
+    "fold": 11,
+    "method": "E2",
+    "corruption": "gaussian",
+    "modality": "text",
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2"
+    ],
+    "held_out_dialogues": [
+      "Ses04M_script03_2"
+    ],
+    "lambda_min": 1113.0838160759292,
+    "lambda_max": 103366393.04397626,
+    "alpha": -4.797979797979798,
+    "beta": 0.396969696969697,
+    "training_brier": 0.23264805279246498
+  },
+  {
+    "dataset": "IEMOCAP",
+    "fold": 0,
+    "method": "E2",
+    "corruption": "gaussian",
+    "modality": "visual",
+    "train_dialogues": [
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_out_dialogues": [
+      "Ses01F_impro02"
+    ],
+    "lambda_min": 5053.4474190422625,
+    "lambda_max": 10000000000.0,
+    "alpha": -4.191919191919192,
+    "beta": 0.49595959595959604,
+    "training_brier": 0.21448292274458755
+  },
+  {
+    "dataset": "IEMOCAP",
+    "fold": 1,
+    "method": "E2",
+    "corruption": "gaussian",
+    "modality": "visual",
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_out_dialogues": [
+      "Ses01M_script03_1"
+    ],
+    "lambda_min": 5053.4474190422625,
+    "lambda_max": 10000000000.0,
+    "alpha": -0.6565656565656566,
+    "beta": 2.822222222222223,
+    "training_brier": 0.21618464617406327
+  },
+  {
+    "dataset": "IEMOCAP",
+    "fold": 2,
+    "method": "E2",
+    "corruption": "gaussian",
+    "modality": "visual",
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_out_dialogues": [
+      "Ses02F_impro06"
+    ],
+    "lambda_min": 5053.4474190422625,
+    "lambda_max": 10000000000.0,
+    "alpha": -4.292929292929293,
+    "beta": 0.6444444444444445,
+    "training_brier": 0.19896687266119142
+  },
+  {
+    "dataset": "IEMOCAP",
+    "fold": 3,
+    "method": "E2",
+    "corruption": "gaussian",
+    "modality": "visual",
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_out_dialogues": [
+      "Ses02F_script01_3"
+    ],
+    "lambda_min": 5053.4474190422625,
+    "lambda_max": 10000000000.0,
+    "alpha": -5.0,
+    "beta": 0.396969696969697,
+    "training_brier": 0.22254447496290858
+  },
+  {
+    "dataset": "IEMOCAP",
+    "fold": 4,
+    "method": "E2",
+    "corruption": "gaussian",
+    "modality": "visual",
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_out_dialogues": [
+      "Ses02F_script03_1"
+    ],
+    "lambda_min": 5053.4474190422625,
+    "lambda_max": 10000000000.0,
+    "alpha": -4.696969696969697,
+    "beta": 0.44646464646464656,
+    "training_brier": 0.2135941938224151
+  },
+  {
+    "dataset": "IEMOCAP",
+    "fold": 5,
+    "method": "E2",
+    "corruption": "gaussian",
+    "modality": "visual",
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_out_dialogues": [
+      "Ses02M_impro01"
+    ],
+    "lambda_min": 5053.4474190422625,
+    "lambda_max": 10000000000.0,
+    "alpha": -4.898989898989899,
+    "beta": 0.396969696969697,
+    "training_brier": 0.21483781348962355
+  },
+  {
+    "dataset": "IEMOCAP",
+    "fold": 6,
+    "method": "E2",
+    "corruption": "gaussian",
+    "modality": "visual",
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_out_dialogues": [
+      "Ses02M_impro07"
+    ],
+    "lambda_min": 5053.4474190422625,
+    "lambda_max": 203626125.78920418,
+    "alpha": -5.0,
+    "beta": 0.44646464646464656,
+    "training_brier": 0.2125085355544057
+  },
+  {
+    "dataset": "IEMOCAP",
+    "fold": 7,
+    "method": "E2",
+    "corruption": "gaussian",
+    "modality": "visual",
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_out_dialogues": [
+      "Ses03F_impro08"
+    ],
+    "lambda_min": 5053.4474190422625,
+    "lambda_max": 10000000000.0,
+    "alpha": -4.797979797979798,
+    "beta": 0.396969696969697,
+    "training_brier": 0.21441462195377506
+  },
+  {
+    "dataset": "IEMOCAP",
+    "fold": 8,
+    "method": "E2",
+    "corruption": "gaussian",
+    "modality": "visual",
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_out_dialogues": [
+      "Ses03F_script03_1"
+    ],
+    "lambda_min": 5053.4474190422625,
+    "lambda_max": 10000000000.0,
+    "alpha": -4.696969696969697,
+    "beta": 0.49595959595959604,
+    "training_brier": 0.21024516898706222
+  },
+  {
+    "dataset": "IEMOCAP",
+    "fold": 9,
+    "method": "E2",
+    "corruption": "gaussian",
+    "modality": "visual",
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_out_dialogues": [
+      "Ses03F_script03_2"
+    ],
+    "lambda_min": 5053.4474190422625,
+    "lambda_max": 10000000000.0,
+    "alpha": -0.45454545454545503,
+    "beta": 4.604040404040404,
+    "training_brier": 0.21949500195978816
+  },
+  {
+    "dataset": "IEMOCAP",
+    "fold": 10,
+    "method": "E2",
+    "corruption": "gaussian",
+    "modality": "visual",
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses04M_script03_2"
+    ],
+    "held_out_dialogues": [
+      "Ses03M_script01_2"
+    ],
+    "lambda_min": 5053.4474190422625,
+    "lambda_max": 10000000000.0,
+    "alpha": -4.595959595959596,
+    "beta": 0.44646464646464656,
+    "training_brier": 0.21462795096898615
+  },
+  {
+    "dataset": "IEMOCAP",
+    "fold": 11,
+    "method": "E2",
+    "corruption": "gaussian",
+    "modality": "visual",
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2"
+    ],
+    "held_out_dialogues": [
+      "Ses04M_script03_2"
+    ],
+    "lambda_min": 5087.432693816678,
+    "lambda_max": 10000000000.0,
+    "alpha": -4.898989898989899,
+    "beta": 0.396969696969697,
+    "training_brier": 0.2330176940188874
+  }
+]

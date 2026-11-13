@@ -1,0 +1,84 @@
+{
+  "dataset": "IEMOCAP",
+  "seed": 1475,
+  "dialogues": 12,
+  "utterances": 527,
+  "checkpoint": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/cmerc/IEMOCAP_validation_seed1475/best.pt",
+  "checkpoint_sha256": "2c0d1a7a39627e12d1244d23a225ad3da03bbce071a118909921a547a2bfd106",
+  "prior_validation_file": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_caldist_behavioral_calibration/20261107T172302Z/runs/IEMOCAP/seed1475/validation_predictions.npz",
+  "prior_sha256": "656a1fcc20d181b1c29c1640ab9a6f599474dfb839f03c1ec2495b8e6036629c",
+  "parity": {
+    "passed": true,
+    "checks": {
+      "dialogue_ids": {
+        "equal": true
+      },
+      "utterance_indices": {
+        "equal": true
+      },
+      "labels": {
+        "equal": true
+      },
+      "predictions": {
+        "equal": true
+      },
+      "probabilities": {
+        "equal": true,
+        "max_abs_error": 2.980232238769531e-07
+      },
+      "log_probabilities": {
+        "equal": true,
+        "max_abs_error": 2.86102294921875e-06
+      },
+      "argmax": {
+        "equal": true
+      }
+    }
+  },
+  "train_stat_counts": {
+    "text0": 5283,
+    "text1": 5283,
+    "text2": 5283,
+    "text3": 5283,
+    "audio": 5283,
+    "visual": 5283
+  },
+  "gpu": {
+    "host": "user23",
+    "pid": 3785784,
+    "utc": "2026-11-13T02:53:21Z",
+    "gpu": "0, GPU-7ff18ebb-100e-98fe-038b-a98bd4f94248, NVIDIA TITAN Xp, 3 MiB, 12181 MiB, 0 %\n1, GPU-eed2f34f-b4c0-7b7a-498e-71a026e30c5a, NVIDIA TITAN Xp, 3 MiB, 12181 MiB, 0 %\n2, GPU-d17e4326-9d3b-2025-fbf8-c9b0d16623a0, NVIDIA TITAN Xp, 3 MiB, 12181 MiB, 0 %\n3, GPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456, NVIDIA TITAN Xp, 5 MiB, 12179 MiB, 0 %\n",
+    "processes": "",
+    "disks": {
+      "/data1": {
+        "total": 1007919267840,
+        "used": 876806303744,
+        "free": 79885766656
+      },
+      "/data2": {
+        "total": 7541287677952,
+        "used": 7063910137856,
+        "free": 97288507392
+      }
+    },
+    "visible_devices": "3",
+    "python": "/data2/yb/conda_envs/cmerc-xp-repro/bin/python",
+    "python_version": "3.10.13 | packaged by conda-forge | (main, Dec 23 2023, 15:36:39) [GCC 12.3.0]",
+    "command": [
+      "experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/pilot/20261113T025053Z/run_behavior.py",
+      "IEMOCAP"
+    ],
+    "runner_sha256": "de0b49182745b71efca7a59882fbbeb61e3c676b5ec86cf914caca4924665a80",
+    "environment": {
+      "LD_LIBRARY_PATH": "/data2/yb/conda_envs/cmerc-xp-repro/lib/python3.10/site-packages/nvidia/cusparse/lib",
+      "OMP_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "PYTORCH_CUDA_ALLOC_CONF": null
+    }
+  },
+  "target_forwards": 42140,
+  "skipped_visual_targets": 2,
+  "seconds": 2477.553916628007,
+  "completed": true
+}

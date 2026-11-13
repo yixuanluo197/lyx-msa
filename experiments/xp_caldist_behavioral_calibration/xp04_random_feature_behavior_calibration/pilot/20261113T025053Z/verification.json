@@ -1,0 +1,55 @@
+{
+  "status": "completed",
+  "datasets": {
+    "IEMOCAP": {
+      "utterances": 527,
+      "dialogues": 12,
+      "original_rows": 527,
+      "perturbed_rows": 42160,
+      "behavior_rows": 4216,
+      "reliability_rows": 4216,
+      "oof_rows": 5270,
+      "visual_missing_utterances": 1,
+      "oof_folds": 12,
+      "max_original_probability_error": 2.980232238769531e-07,
+      "max_original_log_probability_error": 2.86102294921875e-06,
+      "checkpoint_sha256": "2c0d1a7a39627e12d1244d23a225ad3da03bbce071a118909921a547a2bfd106",
+      "gpu": "0, GPU-7ff18ebb-100e-98fe-038b-a98bd4f94248, NVIDIA TITAN Xp, 3 MiB, 12181 MiB, 0 %\n1, GPU-eed2f34f-b4c0-7b7a-498e-71a026e30c5a, NVIDIA TITAN Xp, 3 MiB, 12181 MiB, 0 %\n2, GPU-d17e4326-9d3b-2025-fbf8-c9b0d16623a0, NVIDIA TITAN Xp, 3 MiB, 12181 MiB, 0 %\n3, GPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456, NVIDIA TITAN Xp, 5 MiB, 12179 MiB, 0 %\n",
+      "seconds": 2477.553916628007
+    },
+    "MELD": {
+      "utterances": 1109,
+      "dialogues": 114,
+      "original_rows": 1109,
+      "perturbed_rows": 88720,
+      "behavior_rows": 8872,
+      "reliability_rows": 8872,
+      "oof_rows": 11090,
+      "visual_missing_utterances": 95,
+      "oof_folds": 5,
+      "max_original_probability_error": 1.7881393432617188e-07,
+      "max_original_log_probability_error": 4.76837158203125e-07,
+      "checkpoint_sha256": "263145b6a2057624e55791eb8c68c6d3de8a353af46a2b2f234e977588655601",
+      "gpu": "0, GPU-7ff18ebb-100e-98fe-038b-a98bd4f94248, NVIDIA TITAN Xp, 5 MiB, 12179 MiB, 0 %\n1, GPU-eed2f34f-b4c0-7b7a-498e-71a026e30c5a, NVIDIA TITAN Xp, 3 MiB, 12181 MiB, 0 %\n2, GPU-d17e4326-9d3b-2025-fbf8-c9b0d16623a0, NVIDIA TITAN Xp, 3 MiB, 12181 MiB, 0 %\n3, GPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456, NVIDIA TITAN Xp, 1611 MiB, 10573 MiB, 76 %\n",
+      "seconds": 940.4933754880913
+    }
+  },
+  "official_calidist_commit": "aa490893831c5c27a891e8d28c9da38b7e7f6057",
+  "no_training": true,
+  "no_test_labels_used": true,
+  "no_temperature_scaling": true,
+  "independent_verification": {
+    "IEMOCAP": {
+      "official_formula_spot_checks": 24,
+      "fold_confidence_predictions_checked": 4743,
+      "folds": 12,
+      "all_passed": true
+    },
+    "MELD": {
+      "official_formula_spot_checks": 24,
+      "fold_confidence_predictions_checked": 9981,
+      "folds": 5,
+      "all_passed": true
+    }
+  }
+}

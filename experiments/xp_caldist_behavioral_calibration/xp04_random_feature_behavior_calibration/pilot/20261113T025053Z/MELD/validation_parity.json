@@ -1,0 +1,84 @@
+{
+  "dataset": "MELD",
+  "seed": 1475,
+  "dialogues": 114,
+  "utterances": 1109,
+  "checkpoint": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/cmerc/MELD_validation_seed1475/best.pt",
+  "checkpoint_sha256": "263145b6a2057624e55791eb8c68c6d3de8a353af46a2b2f234e977588655601",
+  "prior_validation_file": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_caldist_behavioral_calibration/20261107T172302Z/runs/MELD/seed1475/validation_predictions.npz",
+  "prior_sha256": "5e00fad457f725203cf32489a7ffd334a28a227c8f5727a305494b59b4f22a2f",
+  "parity": {
+    "passed": true,
+    "checks": {
+      "dialogue_ids": {
+        "equal": true
+      },
+      "utterance_indices": {
+        "equal": true
+      },
+      "labels": {
+        "equal": true
+      },
+      "predictions": {
+        "equal": true
+      },
+      "probabilities": {
+        "equal": true,
+        "max_abs_error": 1.7881393432617188e-07
+      },
+      "log_probabilities": {
+        "equal": true,
+        "max_abs_error": 4.76837158203125e-07
+      },
+      "argmax": {
+        "equal": true
+      }
+    }
+  },
+  "train_stat_counts": {
+    "text0": 9989,
+    "text1": 9989,
+    "text2": 9989,
+    "text3": 9989,
+    "audio": 9989,
+    "visual": 9989
+  },
+  "gpu": {
+    "host": "user23",
+    "pid": 3793955,
+    "utc": "2026-11-13T02:59:23Z",
+    "gpu": "0, GPU-7ff18ebb-100e-98fe-038b-a98bd4f94248, NVIDIA TITAN Xp, 5 MiB, 12179 MiB, 0 %\n1, GPU-eed2f34f-b4c0-7b7a-498e-71a026e30c5a, NVIDIA TITAN Xp, 3 MiB, 12181 MiB, 0 %\n2, GPU-d17e4326-9d3b-2025-fbf8-c9b0d16623a0, NVIDIA TITAN Xp, 3 MiB, 12181 MiB, 0 %\n3, GPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456, NVIDIA TITAN Xp, 1611 MiB, 10573 MiB, 76 %\n",
+    "processes": "GPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456, 3785784, /data2/yb/conda_envs/cmerc-xp-repro/bin/python, 1606 MiB\n",
+    "disks": {
+      "/data1": {
+        "total": 1007919267840,
+        "used": 876806303744,
+        "free": 79885766656
+      },
+      "/data2": {
+        "total": 7541287677952,
+        "used": 7063918305280,
+        "free": 97280339968
+      }
+    },
+    "visible_devices": "0",
+    "python": "/data2/yb/conda_envs/cmerc-xp-repro/bin/python",
+    "python_version": "3.10.13 | packaged by conda-forge | (main, Dec 23 2023, 15:36:39) [GCC 12.3.0]",
+    "command": [
+      "experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/pilot/20261113T025053Z/run_behavior.py",
+      "MELD"
+    ],
+    "runner_sha256": "de0b49182745b71efca7a59882fbbeb61e3c676b5ec86cf914caca4924665a80",
+    "environment": {
+      "LD_LIBRARY_PATH": "/data2/yb/conda_envs/cmerc-xp-repro/lib/python3.10/site-packages/nvidia/cusparse/lib",
+      "OMP_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "PYTORCH_CUDA_ALLOC_CONF": null
+    }
+  },
+  "target_forwards": 86820,
+  "skipped_visual_targets": 190,
+  "seconds": 940.4933754880913,
+  "completed": true
+}
