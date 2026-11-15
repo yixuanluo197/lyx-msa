@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "tests": 6,
+  "command": "python -m unittest test_conditional -v",
+  "checks": [
+    "train_only_scaling",
+    "constant_and_unseen_rare_indicator",
+    "serialized_formula",
+    "offset_off_exact_fallback",
+    "objective_finite_difference_gradient",
+    "candidate_tie_priority",
+    "inner_group_separation_and_pooled_brier"
+  ],
+  "formal_analysis_run": false
+}

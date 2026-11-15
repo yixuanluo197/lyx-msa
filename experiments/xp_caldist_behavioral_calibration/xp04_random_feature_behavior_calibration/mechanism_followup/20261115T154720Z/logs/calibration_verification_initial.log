@@ -1,0 +1,11 @@
+Preserved initial failed verification traceback, reconstructed verbatim from the captured first-run log output after the active log was reused. First command exit code: 1.
+Traceback (most recent call last):
+  File "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/mechanism_followup/20261115T154720Z/scripts/verify_calibration.py", line 424, in <module>
+    main()
+  File "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/mechanism_followup/20261115T154720Z/scripts/verify_calibration.py", line 394, in main
+    verify_folds(features,predictions,audit)
+  File "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/mechanism_followup/20261115T154720Z/scripts/verify_calibration.py", line 244, in verify_folds
+    pool[method][index, iho] = reconstructed(hi, ti, fit, audit)
+  File "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/mechanism_followup/20261115T154720Z/scripts/verify_calibration.py", line 121, in reconstructed
+    assert error < 2e-5, ("LR stationarity", error, fit["C"], cols)
+AssertionError: ('LR stationarity', 4.2072349485437754e-05, 0.1, ['logit_C', 'margin', 'normalized_entropy', 'pred_class_1', 'pred_class_2', 'pred_class_3', 'pred_class_4', 'pred_class_5', 'gaussian_D', 'gaussian_A', 'dropout_D', 'dropout_A'])

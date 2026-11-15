@@ -1,0 +1,52 @@
+{
+  "status": "completed",
+  "all_passed": true,
+  "purpose": "bounded exploratory repeatability and conditional-calibration mechanism follow-up",
+  "seeds": [
+    1475,
+    67137,
+    2024,
+    3407,
+    42
+  ],
+  "datasets": {
+    "IEMOCAP": {
+      "n_per_seed": 527,
+      "dialogues": 12
+    },
+    "MELD": {
+      "n_per_seed": 1109,
+      "dialogues": 114
+    }
+  },
+  "diagnostic": {
+    "all_passed": true,
+    "utterances": 8180,
+    "source_perturbations": 163600,
+    "full_response_groups": 16360,
+    "split_response_groups": 49080,
+    "evidence": "diagnostic/verification.json"
+  },
+  "calibration": {
+    "all_passed": true,
+    "oof_rows": 73620,
+    "per_seed_metrics": 90,
+    "bootstrap_rows": 60,
+    "serialized_fits_reconstructed": 21420,
+    "evidence": "calibration/independent_verification.json"
+  },
+  "no_new_model_inference": true,
+  "no_new_perturbations": true,
+  "test_labels_used": false,
+  "temperature_scaling": false,
+  "independent_confirmation": false,
+  "primary_method": "S_DA",
+  "primary_reference": "S",
+  "meets_continuation_criteria": {
+    "IEMOCAP": false,
+    "MELD": false
+  },
+  "numerical_sensitivity_preserves_primary_direction_and_seed_counts": true,
+  "diagnostic_uploaded_commit": "d1a37a2f1044c9232ede987e806dac6559900829",
+  "final_report": "FINAL_MECHANISM_REPORT.md"
+}
