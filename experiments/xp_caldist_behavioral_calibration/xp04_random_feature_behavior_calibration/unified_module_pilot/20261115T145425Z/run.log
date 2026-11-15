@@ -1,0 +1,32 @@
+{"dataset": "IEMOCAP", "outer_fold_done": 1, "outer_folds": 12}
+{"dataset": "IEMOCAP", "outer_fold_done": 2, "outer_folds": 12}
+{"dataset": "IEMOCAP", "outer_fold_done": 3, "outer_folds": 12}
+{"dataset": "IEMOCAP", "outer_fold_done": 4, "outer_folds": 12}
+{"dataset": "IEMOCAP", "outer_fold_done": 5, "outer_folds": 12}
+{"dataset": "IEMOCAP", "outer_fold_done": 6, "outer_folds": 12}
+{"dataset": "IEMOCAP", "outer_fold_done": 7, "outer_folds": 12}
+{"dataset": "IEMOCAP", "outer_fold_done": 8, "outer_folds": 12}
+{"dataset": "IEMOCAP", "outer_fold_done": 9, "outer_folds": 12}
+{"dataset": "IEMOCAP", "outer_fold_done": 10, "outer_folds": 12}
+{"dataset": "IEMOCAP", "outer_fold_done": 11, "outer_folds": 12}
+{"dataset": "IEMOCAP", "outer_fold_done": 12, "outer_folds": 12}
+{"dataset": "MELD", "outer_fold_done": 1, "outer_folds": 5}
+{"dataset": "MELD", "outer_fold_done": 2, "outer_folds": 5}
+{"dataset": "MELD", "outer_fold_done": 3, "outer_folds": 5}
+{"dataset": "MELD", "outer_fold_done": 4, "outer_folds": 5}
+{"dataset": "MELD", "outer_fold_done": 5, "outer_folds": 5}
+dataset     method    ece15  binary_brier  binary_nll  correctness_auc
+IEMOCAP       XP04 0.104967      0.222303    0.719513         0.645187
+IEMOCAP         E1 0.089773      0.221210    0.637064         0.597701
+IEMOCAP         L0 0.058364      0.228836    0.674763         0.578084
+IEMOCAP E1_MUDELTA 0.084563      0.224643    0.647327         0.594795
+IEMOCAP      E1_DA 0.089773      0.221210    0.637064         0.597701
+IEMOCAP L0_MUDELTA 0.061259      0.232535    0.685670         0.571630
+IEMOCAP      L0_DA 0.058364      0.228836    0.674763         0.578084
+   MELD       XP04 0.201363      0.233420    0.659452         0.729885
+   MELD         E1 0.043230      0.192764    0.568583         0.726624
+   MELD         L0 0.025599      0.190762    0.563799         0.726624
+   MELD E1_MUDELTA 0.045294      0.193888    0.570534         0.720617
+   MELD      E1_DA 0.042250      0.192865    0.568505         0.725449
+   MELD L0_MUDELTA 0.024813      0.192512    0.567458         0.721068
+   MELD      L0_DA 0.023249      0.191104    0.564499         0.725593

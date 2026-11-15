@@ -1,0 +1,1 @@
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 CUDA_VISIBLE_DEVICES='' /data2/yb/conda_envs/cmerc-xp-repro/bin/python -u run_experiment.py > run.log 2>&1

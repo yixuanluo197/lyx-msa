@@ -1,0 +1,77 @@
+{
+  "status": "completed",
+  "primary_method": "E1_DA",
+  "datasets": {
+    "IEMOCAP": {
+      "utterances": 527,
+      "dialogues": 12,
+      "outer_folds": 12,
+      "visual_missing_retained": 1,
+      "e1_parity_max_error": 5.551115123125783e-17,
+      "l0_parity_max_error": 2.220446049250313e-16,
+      "inner_group_disjoint": true,
+      "one_record_per_utterance": true
+    },
+    "MELD": {
+      "utterances": 1109,
+      "dialogues": 114,
+      "outer_folds": 5,
+      "visual_missing_retained": 95,
+      "e1_parity_max_error": 1.1102230246251565e-16,
+      "l0_parity_max_error": 2.220446049250313e-16,
+      "inner_group_disjoint": true,
+      "one_record_per_utterance": true
+    }
+  },
+  "cpu_only": true,
+  "new_gpu_inference": false,
+  "new_perturbations": false,
+  "cmerc_weights_changed": false,
+  "temperature_scaling": false,
+  "test_labels_used": false,
+  "seconds": 12.664661407470703,
+  "source_hashes_unchanged": true,
+  "running_code_hashes_unchanged": true,
+  "independent_verification": {
+    "passed": true,
+    "outer_predictions_reconstructed": 9816,
+    "inner_candidate_predictions_reconstructed": 163728,
+    "inner_candidate_fits_checked": 1360,
+    "outer_max_abs_reconstruction_error": 1.3100631690576847e-14,
+    "metric_rows_recomputed": 14,
+    "cluster_weight_equivalence_checks": 60,
+    "inner_selections_recomputed": 68,
+    "sources_and_running_code_unchanged": true
+  },
+  "decision": {
+    "IEMOCAP": {
+      "primary_point_estimate_gate_passed": true,
+      "outer_folds_behavior_off": 12,
+      "outer_folds": 12,
+      "behavior_increment_established": false,
+      "main_vs_xp04_bootstrap_all_three_ci_below_zero": false
+    },
+    "MELD": {
+      "primary_point_estimate_gate_passed": true,
+      "outer_folds_behavior_off": 0,
+      "outer_folds": 5,
+      "behavior_increment_established": false,
+      "main_vs_xp04_bootstrap_all_three_ci_below_zero": true
+    }
+  },
+  "unit_tests": {
+    "passed": 4,
+    "checks": [
+      "analytic gradient",
+      "off recovers base",
+      "outer-held-data isolation",
+      "optimizer stationarity"
+    ]
+  },
+  "numerical_recovery": {
+    "initial_solver": "L-BFGS-B line search failure",
+    "final_solver": "damped Newton exact Hessian",
+    "scientific_protocol_changed": false,
+    "failure_logs_preserved": true
+  }
+}

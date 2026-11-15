@@ -1,0 +1,25 @@
+{"dataset": "IEMOCAP", "outer_fold_done": 1, "outer_folds": 12}
+{"dataset": "IEMOCAP", "outer_fold_done": 2, "outer_folds": 12}
+{"dataset": "IEMOCAP", "outer_fold_done": 3, "outer_folds": 12}
+{"dataset": "IEMOCAP", "outer_fold_done": 4, "outer_folds": 12}
+{"dataset": "IEMOCAP", "outer_fold_done": 5, "outer_folds": 12}
+{"dataset": "IEMOCAP", "outer_fold_done": 6, "outer_folds": 12}
+{"dataset": "IEMOCAP", "outer_fold_done": 7, "outer_folds": 12}
+{"dataset": "IEMOCAP", "outer_fold_done": 8, "outer_folds": 12}
+{"dataset": "IEMOCAP", "outer_fold_done": 9, "outer_folds": 12}
+{"dataset": "IEMOCAP", "outer_fold_done": 10, "outer_folds": 12}
+{"dataset": "IEMOCAP", "outer_fold_done": 11, "outer_folds": 12}
+{"dataset": "IEMOCAP", "outer_fold_done": 12, "outer_folds": 12}
+{"dataset": "MELD", "outer_fold_done": 1, "outer_folds": 5}
+Traceback (most recent call last):
+  File "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/unified_module_pilot/20261115T145425Z/run_experiment.py", line 268, in <module>
+    main()
+  File "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/unified_module_pilot/20261115T145425Z/run_experiment.py", line 248, in main
+    result = run_dataset(dataset, feature, config)
+  File "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/unified_module_pilot/20261115T145425Z/run_experiment.py", line 162, in run_dataset
+    fitted = fit_nested_fold(c[train], b[train], y[train], groups[train], base)
+  File "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/unified_module_pilot/20261115T145425Z/calibration_core.py", line 114, in fit_nested_fold
+    cp = fit_correction(b_train[tr], offset_train, y_train[tr], lam)
+  File "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/unified_module_pilot/20261115T145425Z/calibration_core.py", line 85, in fit_correction
+    assert result.success, result.message
+AssertionError: ABNORMAL_TERMINATION_IN_LNSRCH
