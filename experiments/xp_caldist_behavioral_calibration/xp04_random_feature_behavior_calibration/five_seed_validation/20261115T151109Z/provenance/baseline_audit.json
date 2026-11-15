@@ -1,0 +1,89 @@
+{
+  "passed": true,
+  "source_files": 50,
+  "checkpoints": [
+    {
+      "dataset": "IEMOCAP",
+      "seed": 1475,
+      "utterances": 527,
+      "dialogues": 12,
+      "checkpoint_sha256": "2c0d1a7a39627e12d1244d23a225ad3da03bbce071a118909921a547a2bfd106",
+      "validation_sha256": "656a1fcc20d181b1c29c1640ab9a6f599474dfb839f03c1ec2495b8e6036629c"
+    },
+    {
+      "dataset": "IEMOCAP",
+      "seed": 67137,
+      "utterances": 527,
+      "dialogues": 12,
+      "checkpoint_sha256": "1b4b91bc683de99264a7b446b84187bae3b982f1ff7c73b552e3c8e3f82eedf3",
+      "validation_sha256": "68f08248594ea5fe4ff0f4c7f11ca4a813c607f3416d31ee9e54c92356462967"
+    },
+    {
+      "dataset": "IEMOCAP",
+      "seed": 2024,
+      "utterances": 527,
+      "dialogues": 12,
+      "checkpoint_sha256": "80ee239060ae1afa3f8c49d7c99d38db8e91fb1d706c7f95087b9e6c025ebf96",
+      "validation_sha256": "93ab3a130dbf5e9c50b53afc3674455fdf28bb2ceae2cf1097e1424da2659aa3"
+    },
+    {
+      "dataset": "IEMOCAP",
+      "seed": 3407,
+      "utterances": 527,
+      "dialogues": 12,
+      "checkpoint_sha256": "e4978c68e4119309d371152aeec469149c3fdd8989078182fb348c6db7e4f0ed",
+      "validation_sha256": "39bd02e4ab0a88f9b04cd862c19a3d8f6a2a50cc4dc1b5eaba52d975e0d6c0a9"
+    },
+    {
+      "dataset": "IEMOCAP",
+      "seed": 42,
+      "utterances": 527,
+      "dialogues": 12,
+      "checkpoint_sha256": "f896b657e62110dcb7b5de033df8f81f485ec037e922cca8ad8ebc48d74b43fa",
+      "validation_sha256": "16a8ec427a862cadfa1351f2f375fd9f58d894ed483b13459637c2b99ee85b42"
+    },
+    {
+      "dataset": "MELD",
+      "seed": 1475,
+      "utterances": 1109,
+      "dialogues": 114,
+      "checkpoint_sha256": "263145b6a2057624e55791eb8c68c6d3de8a353af46a2b2f234e977588655601",
+      "validation_sha256": "5e00fad457f725203cf32489a7ffd334a28a227c8f5727a305494b59b4f22a2f"
+    },
+    {
+      "dataset": "MELD",
+      "seed": 67137,
+      "utterances": 1109,
+      "dialogues": 114,
+      "checkpoint_sha256": "3f79f9eb3547e35ac15ad7ff4345d9b873d0c884a6f3a1ce60a7a7e47077e701",
+      "validation_sha256": "b8d805b6b2f50948bfd170e153e2aab56871b7f92ad316fdc6bbd0e94283a0a8"
+    },
+    {
+      "dataset": "MELD",
+      "seed": 2024,
+      "utterances": 1109,
+      "dialogues": 114,
+      "checkpoint_sha256": "59c6f3fa544b59bcdc79d14bbe8ee17772a4900b15f4d32ef088971e59c9d0df",
+      "validation_sha256": "664e4bd156df761ce09f3326919b12f60f927de60c292a6aef7f4ef4d7c25cd7"
+    },
+    {
+      "dataset": "MELD",
+      "seed": 3407,
+      "utterances": 1109,
+      "dialogues": 114,
+      "checkpoint_sha256": "0c0ccae216958f22d6c58d8d4d5a566ef61e22a81a29c0f815d7b7e180404562",
+      "validation_sha256": "f180c75eaa975046e996806c4f9dd2ce202e4b35edeffcd911c2b07a1adbcc76"
+    },
+    {
+      "dataset": "MELD",
+      "seed": 42,
+      "utterances": 1109,
+      "dialogues": 114,
+      "checkpoint_sha256": "e14f4c855e277cca5d256f0e2a3e4048b0a407035be9c28a5de0a3451721026b",
+      "validation_sha256": "192b15edefba874f2a75828388b39437962401574bc8fc0af5e23dc10158c7d2"
+    }
+  ],
+  "true_validation_only": true,
+  "cross_seed_ids_labels_equal": true,
+  "test_labels_read": false
+}

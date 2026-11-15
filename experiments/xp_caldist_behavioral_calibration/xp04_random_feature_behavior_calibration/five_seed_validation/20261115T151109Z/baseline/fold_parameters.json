@@ -1,0 +1,6717 @@
+[
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1475,
+    "fold": 0,
+    "train_dialogues": [
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_dialogues": [
+      "Ses01F_impro02"
+    ],
+    "train_n": 497,
+    "held_n": 30,
+    "methods": {
+      "E1": {
+        "name": "E1",
+        "mean": [
+          0.0
+        ],
+        "scale": [
+          1.0
+        ],
+        "coefficient": 2.267518747115544,
+        "intercept": -0.9705789690072599,
+        "iterations": 11
+      },
+      "L0": {
+        "name": "L0",
+        "mean": [
+          1.5320663246482369
+        ],
+        "scale": [
+          1.7374244470724856
+        ],
+        "coefficient": 0.48343406330848954,
+        "intercept": 0.6866745191670304,
+        "iterations": 5
+      }
+    }
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1475,
+    "fold": 1,
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_dialogues": [
+      "Ses01M_script03_1"
+    ],
+    "train_n": 484,
+    "held_n": 43,
+    "methods": {
+      "E1": {
+        "name": "E1",
+        "mean": [
+          0.0
+        ],
+        "scale": [
+          1.0
+        ],
+        "coefficient": 2.256412082796429,
+        "intercept": -1.0317966445013809,
+        "iterations": 11
+      },
+      "L0": {
+        "name": "L0",
+        "mean": [
+          1.610664099485128
+        ],
+        "scale": [
+          1.7408572705017977
+        ],
+        "coefficient": 0.49823817058577,
+        "intercept": 0.6463826260817738,
+        "iterations": 5
+      }
+    }
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1475,
+    "fold": 2,
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_dialogues": [
+      "Ses02F_impro06"
+    ],
+    "train_n": 492,
+    "held_n": 35,
+    "methods": {
+      "E1": {
+        "name": "E1",
+        "mean": [
+          0.0
+        ],
+        "scale": [
+          1.0
+        ],
+        "coefficient": 2.9585875715042778,
+        "intercept": -1.326191673105881,
+        "iterations": 11
+      },
+      "L0": {
+        "name": "L0",
+        "mean": [
+          1.3212627300958812
+        ],
+        "scale": [
+          1.5111145975943774
+        ],
+        "coefficient": 0.8809958363179528,
+        "intercept": 0.8747925373370753,
+        "iterations": 6
+      }
+    }
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1475,
+    "fold": 3,
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_dialogues": [
+      "Ses02F_script01_3"
+    ],
+    "train_n": 497,
+    "held_n": 30,
+    "methods": {
+      "E1": {
+        "name": "E1",
+        "mean": [
+          0.0
+        ],
+        "scale": [
+          1.0
+        ],
+        "coefficient": 1.9484985987022458,
+        "intercept": -0.779034374115707,
+        "iterations": 11
+      },
+      "L0": {
+        "name": "L0",
+        "mean": [
+          1.458269966860035
+        ],
+        "scale": [
+          1.7039596487833901
+        ],
+        "coefficient": 0.3913311914691351,
+        "intercept": 0.6267893247194039,
+        "iterations": 5
+      }
+    }
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1475,
+    "fold": 4,
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_dialogues": [
+      "Ses02F_script03_1"
+    ],
+    "train_n": 476,
+    "held_n": 51,
+    "methods": {
+      "E1": {
+        "name": "E1",
+        "mean": [
+          0.0
+        ],
+        "scale": [
+          1.0
+        ],
+        "coefficient": 1.8607806123003146,
+        "intercept": -0.6115744916446226,
+        "iterations": 10
+      },
+      "L0": {
+        "name": "L0",
+        "mean": [
+          1.6629033024667916
+        ],
+        "scale": [
+          1.72438632537459
+        ],
+        "coefficient": 0.38965846393340414,
+        "intercept": 0.7863806818552392,
+        "iterations": 5
+      }
+    }
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1475,
+    "fold": 5,
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_dialogues": [
+      "Ses02M_impro01"
+    ],
+    "train_n": 480,
+    "held_n": 47,
+    "methods": {
+      "E1": {
+        "name": "E1",
+        "mean": [
+          0.0
+        ],
+        "scale": [
+          1.0
+        ],
+        "coefficient": 2.194665109897904,
+        "intercept": -0.9458871138138901,
+        "iterations": 11
+      },
+      "L0": {
+        "name": "L0",
+        "mean": [
+          1.6178434461376316
+        ],
+        "scale": [
+          1.7441042821056767
+        ],
+        "coefficient": 0.47840075650311864,
+        "intercept": 0.6868671002345217,
+        "iterations": 5
+      }
+    }
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1475,
+    "fold": 6,
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_dialogues": [
+      "Ses02M_impro07"
+    ],
+    "train_n": 474,
+    "held_n": 53,
+    "methods": {
+      "E1": {
+        "name": "E1",
+        "mean": [
+          0.0
+        ],
+        "scale": [
+          1.0
+        ],
+        "coefficient": 2.280935635127668,
+        "intercept": -0.9336499024893877,
+        "iterations": 11
+      },
+      "L0": {
+        "name": "L0",
+        "mean": [
+          1.4910999910302463
+        ],
+        "scale": [
+          1.7511336726716735
+        ],
+        "coefficient": 0.4747421875862035,
+        "intercept": 0.7155741952368876,
+        "iterations": 5
+      }
+    }
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1475,
+    "fold": 7,
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_dialogues": [
+      "Ses03F_impro08"
+    ],
+    "train_n": 480,
+    "held_n": 47,
+    "methods": {
+      "E1": {
+        "name": "E1",
+        "mean": [
+          0.0
+        ],
+        "scale": [
+          1.0
+        ],
+        "coefficient": 2.288398015299622,
+        "intercept": -1.0366761291393491,
+        "iterations": 11
+      },
+      "L0": {
+        "name": "L0",
+        "mean": [
+          1.6245831884121134
+        ],
+        "scale": [
+          1.7358402510102235
+        ],
+        "coefficient": 0.48926455375465305,
+        "intercept": 0.669637470715325,
+        "iterations": 5
+      }
+    }
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1475,
+    "fold": 8,
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_dialogues": [
+      "Ses03F_script03_1"
+    ],
+    "train_n": 509,
+    "held_n": 18,
+    "methods": {
+      "E1": {
+        "name": "E1",
+        "mean": [
+          0.0
+        ],
+        "scale": [
+          1.0
+        ],
+        "coefficient": 2.149465516226578,
+        "intercept": -0.7853286826289722,
+        "iterations": 11
+      },
+      "L0": {
+        "name": "L0",
+        "mean": [
+          1.546556472004472
+        ],
+        "scale": [
+          1.7200376417452563
+        ],
+        "coefficient": 0.43203537947106835,
+        "intercept": 0.789106823956354,
+        "iterations": 5
+      }
+    }
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1475,
+    "fold": 9,
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_dialogues": [
+      "Ses03F_script03_2"
+    ],
+    "train_n": 474,
+    "held_n": 53,
+    "methods": {
+      "E1": {
+        "name": "E1",
+        "mean": [
+          0.0
+        ],
+        "scale": [
+          1.0
+        ],
+        "coefficient": 1.887907712660067,
+        "intercept": -0.6807739553127746,
+        "iterations": 10
+      },
+      "L0": {
+        "name": "L0",
+        "mean": [
+          1.4684790352737367
+        ],
+        "scale": [
+          1.663167382991974
+        ],
+        "coefficient": 0.3715010395190927,
+        "intercept": 0.6895193480264659,
+        "iterations": 5
+      }
+    }
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1475,
+    "fold": 10,
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses04M_script03_2"
+    ],
+    "held_dialogues": [
+      "Ses03M_script01_2"
+    ],
+    "train_n": 501,
+    "held_n": 26,
+    "methods": {
+      "E1": {
+        "name": "E1",
+        "mean": [
+          0.0
+        ],
+        "scale": [
+          1.0
+        ],
+        "coefficient": 2.17839613906121,
+        "intercept": -0.9042753807737767,
+        "iterations": 11
+      },
+      "L0": {
+        "name": "L0",
+        "mean": [
+          1.5725024832209582
+        ],
+        "scale": [
+          1.7211542040499197
+        ],
+        "coefficient": 0.45793303004854774,
+        "intercept": 0.704070366631662,
+        "iterations": 5
+      }
+    }
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 1475,
+    "fold": 11,
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2"
+    ],
+    "held_dialogues": [
+      "Ses04M_script03_2"
+    ],
+    "train_n": 433,
+    "held_n": 94,
+    "methods": {
+      "E1": {
+        "name": "E1",
+        "mean": [
+          0.0
+        ],
+        "scale": [
+          1.0
+        ],
+        "coefficient": 1.2575054458592057,
+        "intercept": -0.2860710534665677,
+        "iterations": 9
+      },
+      "L0": {
+        "name": "L0",
+        "mean": [
+          1.3626240037035169
+        ],
+        "scale": [
+          1.5609438359111298
+        ],
+        "coefficient": 0.19932859127226568,
+        "intercept": 0.6107415109491241,
+        "iterations": 5
+      }
+    }
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 67137,
+    "fold": 0,
+    "train_dialogues": [
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_dialogues": [
+      "Ses01F_impro02"
+    ],
+    "train_n": 497,
+    "held_n": 30,
+    "methods": {
+      "E1": {
+        "name": "E1",
+        "mean": [
+          0.0
+        ],
+        "scale": [
+          1.0
+        ],
+        "coefficient": 1.2033145456030365,
+        "intercept": -0.09091084558413479,
+        "iterations": 9
+      },
+      "L0": {
+        "name": "L0",
+        "mean": [
+          1.696481962425287
+        ],
+        "scale": [
+          1.7883159427248891
+        ],
+        "coefficient": 0.2956538840331158,
+        "intercept": 0.8086455782536218,
+        "iterations": 5
+      }
+    }
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 67137,
+    "fold": 1,
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_dialogues": [
+      "Ses01M_script03_1"
+    ],
+    "train_n": 484,
+    "held_n": 43,
+    "methods": {
+      "E1": {
+        "name": "E1",
+        "mean": [
+          0.0
+        ],
+        "scale": [
+          1.0
+        ],
+        "coefficient": 1.4634798844683539,
+        "intercept": -0.3551827773826252,
+        "iterations": 10
+      },
+      "L0": {
+        "name": "L0",
+        "mean": [
+          1.8565909386173145
+        ],
+        "scale": [
+          1.7659214050204766
+        ],
+        "coefficient": 0.3460685199614253,
+        "intercept": 0.7752780690809928,
+        "iterations": 5
+      }
+    }
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 67137,
+    "fold": 2,
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_dialogues": [
+      "Ses02F_impro06"
+    ],
+    "train_n": 492,
+    "held_n": 35,
+    "methods": {
+      "E1": {
+        "name": "E1",
+        "mean": [
+          0.0
+        ],
+        "scale": [
+          1.0
+        ],
+        "coefficient": 1.8379153275469526,
+        "intercept": -0.43748568409255434,
+        "iterations": 11
+      },
+      "L0": {
+        "name": "L0",
+        "mean": [
+          1.5407363582621942
+        ],
+        "scale": [
+          1.658732319655901
+        ],
+        "coefficient": 0.6071372231142522,
+        "intercept": 0.9612710474828771,
+        "iterations": 6
+      }
+    }
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 67137,
+    "fold": 3,
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_dialogues": [
+      "Ses02F_script01_3"
+    ],
+    "train_n": 497,
+    "held_n": 30,
+    "methods": {
+      "E1": {
+        "name": "E1",
+        "mean": [
+          0.0
+        ],
+        "scale": [
+          1.0
+        ],
+        "coefficient": 0.9083531071597645,
+        "intercept": 0.07182907813757329,
+        "iterations": 9
+      },
+      "L0": {
+        "name": "L0",
+        "mean": [
+          1.5799579494149476
+        ],
+        "scale": [
+          1.64586165142165
+        ],
+        "coefficient": 0.17154630156646195,
+        "intercept": 0.7410860938220661,
+        "iterations": 5
+      }
+    }
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 67137,
+    "fold": 4,
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_dialogues": [
+      "Ses02F_script03_1"
+    ],
+    "train_n": 476,
+    "held_n": 51,
+    "methods": {
+      "E1": {
+        "name": "E1",
+        "mean": [
+          0.0
+        ],
+        "scale": [
+          1.0
+        ],
+        "coefficient": 1.2023469738721235,
+        "intercept": -0.11532186591240742,
+        "iterations": 7
+      },
+      "L0": {
+        "name": "L0",
+        "mean": [
+          1.8996938274662736
+        ],
+        "scale": [
+          1.7516891026584442
+        ],
+        "coefficient": 0.29079195869445246,
+        "intercept": 0.8224135578655659,
+        "iterations": 5
+      }
+    }
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 67137,
+    "fold": 5,
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_dialogues": [
+      "Ses02M_impro01"
+    ],
+    "train_n": 480,
+    "held_n": 47,
+    "methods": {
+      "E1": {
+        "name": "E1",
+        "mean": [
+          0.0
+        ],
+        "scale": [
+          1.0
+        ],
+        "coefficient": 1.247151181187909,
+        "intercept": -0.1252021051174122,
+        "iterations": 10
+      },
+      "L0": {
+        "name": "L0",
+        "mean": [
+          1.7785582849345591
+        ],
+        "scale": [
+          1.8164438871944943
+        ],
+        "coefficient": 0.3073365369164905,
+        "intercept": 0.8168514345488319,
+        "iterations": 5
+      }
+    }
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 67137,
+    "fold": 6,
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_dialogues": [
+      "Ses02M_impro07"
+    ],
+    "train_n": 474,
+    "held_n": 53,
+    "methods": {
+      "E1": {
+        "name": "E1",
+        "mean": [
+          0.0
+        ],
+        "scale": [
+          1.0
+        ],
+        "coefficient": 1.2898381871440234,
+        "intercept": -0.11334566168184108,
+        "iterations": 10
+      },
+      "L0": {
+        "name": "L0",
+        "mean": [
+          1.6340466172799846
+        ],
+        "scale": [
+          1.7960783107258214
+        ],
+        "coefficient": 0.2972910066101535,
+        "intercept": 0.8373221905690487,
+        "iterations": 5
+      }
+    }
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 67137,
+    "fold": 7,
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_dialogues": [
+      "Ses03F_impro08"
+    ],
+    "train_n": 480,
+    "held_n": 47,
+    "methods": {
+      "E1": {
+        "name": "E1",
+        "mean": [
+          0.0
+        ],
+        "scale": [
+          1.0
+        ],
+        "coefficient": 0.997809363540551,
+        "intercept": 0.04888455650466032,
+        "iterations": 7
+      },
+      "L0": {
+        "name": "L0",
+        "mean": [
+          1.8226159975017386
+        ],
+        "scale": [
+          1.79679014602118
+        ],
+        "coefficient": 0.2652790350223308,
+        "intercept": 0.8120121203995189,
+        "iterations": 5
+      }
+    }
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 67137,
+    "fold": 8,
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_dialogues": [
+      "Ses03F_script03_1"
+    ],
+    "train_n": 509,
+    "held_n": 18,
+    "methods": {
+      "E1": {
+        "name": "E1",
+        "mean": [
+          0.0
+        ],
+        "scale": [
+          1.0
+        ],
+        "coefficient": 1.1124107914748615,
+        "intercept": 0.01374194792876866,
+        "iterations": 7
+      },
+      "L0": {
+        "name": "L0",
+        "mean": [
+          1.77274412976925
+        ],
+        "scale": [
+          1.7624358131428008
+        ],
+        "coefficient": 0.2608237686803216,
+        "intercept": 0.8585179026561716,
+        "iterations": 5
+      }
+    }
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 67137,
+    "fold": 9,
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_dialogues": [
+      "Ses03F_script03_2"
+    ],
+    "train_n": 474,
+    "held_n": 53,
+    "methods": {
+      "E1": {
+        "name": "E1",
+        "mean": [
+          0.0
+        ],
+        "scale": [
+          1.0
+        ],
+        "coefficient": 1.2651190242346992,
+        "intercept": -0.18420534482928266,
+        "iterations": 9
+      },
+      "L0": {
+        "name": "L0",
+        "mean": [
+          1.713146248689953
+        ],
+        "scale": [
+          1.7612240023138581
+        ],
+        "coefficient": 0.28668142939541014,
+        "intercept": 0.766231817420017,
+        "iterations": 5
+      }
+    }
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 67137,
+    "fold": 10,
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses04M_script03_2"
+    ],
+    "held_dialogues": [
+      "Ses03M_script01_2"
+    ],
+    "train_n": 501,
+    "held_n": 26,
+    "methods": {
+      "E1": {
+        "name": "E1",
+        "mean": [
+          0.0
+        ],
+        "scale": [
+          1.0
+        ],
+        "coefficient": 1.1534444404129713,
+        "intercept": -0.049635635443678376,
+        "iterations": 8
+      },
+      "L0": {
+        "name": "L0",
+        "mean": [
+          1.786031509767512
+        ],
+        "scale": [
+          1.7730135887934846
+        ],
+        "coefficient": 0.27952300199699714,
+        "intercept": 0.8280072555220517,
+        "iterations": 5
+      }
+    }
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 67137,
+    "fold": 11,
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2"
+    ],
+    "held_dialogues": [
+      "Ses04M_script03_2"
+    ],
+    "train_n": 433,
+    "held_n": 94,
+    "methods": {
+      "E1": {
+        "name": "E1",
+        "mean": [
+          0.0
+        ],
+        "scale": [
+          1.0
+        ],
+        "coefficient": 0.6431476923693731,
+        "intercept": 0.2731393198255936,
+        "iterations": 11
+      },
+      "L0": {
+        "name": "L0",
+        "mean": [
+          1.552716662197306
+        ],
+        "scale": [
+          1.704219569481437
+        ],
+        "coefficient": 0.11485528152796996,
+        "intercept": 0.7409296442705622,
+        "iterations": 5
+      }
+    }
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2024,
+    "fold": 0,
+    "train_dialogues": [
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_dialogues": [
+      "Ses01F_impro02"
+    ],
+    "train_n": 497,
+    "held_n": 30,
+    "methods": {
+      "E1": {
+        "name": "E1",
+        "mean": [
+          0.0
+        ],
+        "scale": [
+          1.0
+        ],
+        "coefficient": 0.954982440407812,
+        "intercept": 0.017585682651222644,
+        "iterations": 10
+      },
+      "L0": {
+        "name": "L0",
+        "mean": [
+          2.7757585472017317
+        ],
+        "scale": [
+          2.9515624197251222
+        ],
+        "coefficient": 0.3044256614957565,
+        "intercept": 0.7909637879446998,
+        "iterations": 5
+      }
+    }
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2024,
+    "fold": 1,
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_dialogues": [
+      "Ses01M_script03_1"
+    ],
+    "train_n": 484,
+    "held_n": 43,
+    "methods": {
+      "E1": {
+        "name": "E1",
+        "mean": [
+          0.0
+        ],
+        "scale": [
+          1.0
+        ],
+        "coefficient": 1.1830736161557662,
+        "intercept": -0.2574747078785607,
+        "iterations": 7
+      },
+      "L0": {
+        "name": "L0",
+        "mean": [
+          2.861822892622256
+        ],
+        "scale": [
+          2.957156609219772
+        ],
+        "coefficient": 0.37087070467047084,
+        "intercept": 0.7120288782611762,
+        "iterations": 5
+      }
+    }
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2024,
+    "fold": 2,
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_dialogues": [
+      "Ses02F_impro06"
+    ],
+    "train_n": 492,
+    "held_n": 35,
+    "methods": {
+      "E1": {
+        "name": "E1",
+        "mean": [
+          0.0
+        ],
+        "scale": [
+          1.0
+        ],
+        "coefficient": 1.463694679638369,
+        "intercept": -0.2978459310116102,
+        "iterations": 10
+      },
+      "L0": {
+        "name": "L0",
+        "mean": [
+          2.5490595291239293
+        ],
+        "scale": [
+          2.900767441964873
+        ],
+        "coefficient": 0.41666438663638933,
+        "intercept": 0.870396339698704,
+        "iterations": 6
+      }
+    }
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2024,
+    "fold": 3,
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_dialogues": [
+      "Ses02F_script01_3"
+    ],
+    "train_n": 497,
+    "held_n": 30,
+    "methods": {
+      "E1": {
+        "name": "E1",
+        "mean": [
+          0.0
+        ],
+        "scale": [
+          1.0
+        ],
+        "coefficient": 0.7676175213270123,
+        "intercept": 0.09942756883123118,
+        "iterations": 10
+      },
+      "L0": {
+        "name": "L0",
+        "mean": [
+          2.5966308273618774
+        ],
+        "scale": [
+          2.910545297958942
+        ],
+        "coefficient": 0.24596401027014886,
+        "intercept": 0.7102554136148118,
+        "iterations": 5
+      }
+    }
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2024,
+    "fold": 4,
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_dialogues": [
+      "Ses02F_script03_1"
+    ],
+    "train_n": 476,
+    "held_n": 51,
+    "methods": {
+      "E1": {
+        "name": "E1",
+        "mean": [
+          0.0
+        ],
+        "scale": [
+          1.0
+        ],
+        "coefficient": 1.098459090754314,
+        "intercept": -0.12312329061496011,
+        "iterations": 10
+      },
+      "L0": {
+        "name": "L0",
+        "mean": [
+          2.9381441072991556
+        ],
+        "scale": [
+          2.9362667614357694
+        ],
+        "coefficient": 0.3263310257644247,
+        "intercept": 0.7874149583617338,
+        "iterations": 5
+      }
+    }
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2024,
+    "fold": 5,
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_dialogues": [
+      "Ses02M_impro01"
+    ],
+    "train_n": 480,
+    "held_n": 47,
+    "methods": {
+      "E1": {
+        "name": "E1",
+        "mean": [
+          0.0
+        ],
+        "scale": [
+          1.0
+        ],
+        "coefficient": 1.0905145065269435,
+        "intercept": -0.09154025866847318,
+        "iterations": 8
+      },
+      "L0": {
+        "name": "L0",
+        "mean": [
+          2.815058976840737
+        ],
+        "scale": [
+          2.991879737623555
+        ],
+        "coefficient": 0.32579307296211957,
+        "intercept": 0.7899985699522722,
+        "iterations": 5
+      }
+    }
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2024,
+    "fold": 6,
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_dialogues": [
+      "Ses02M_impro07"
+    ],
+    "train_n": 474,
+    "held_n": 53,
+    "methods": {
+      "E1": {
+        "name": "E1",
+        "mean": [
+          0.0
+        ],
+        "scale": [
+          1.0
+        ],
+        "coefficient": 1.2542998228868987,
+        "intercept": -0.18131966999397192,
+        "iterations": 8
+      },
+      "L0": {
+        "name": "L0",
+        "mean": [
+          2.1880918121298816
+        ],
+        "scale": [
+          2.3648294933763676
+        ],
+        "coefficient": 0.4453375922191061,
+        "intercept": 0.8197736264561282,
+        "iterations": 6
+      }
+    }
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2024,
+    "fold": 7,
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_dialogues": [
+      "Ses03F_impro08"
+    ],
+    "train_n": 480,
+    "held_n": 47,
+    "methods": {
+      "E1": {
+        "name": "E1",
+        "mean": [
+          0.0
+        ],
+        "scale": [
+          1.0
+        ],
+        "coefficient": 1.0235789963451767,
+        "intercept": -0.047348578906241244,
+        "iterations": 10
+      },
+      "L0": {
+        "name": "L0",
+        "mean": [
+          2.8716715391668135
+        ],
+        "scale": [
+          2.9690029711955384
+        ],
+        "coefficient": 0.3183828460256254,
+        "intercept": 0.7890150863914832,
+        "iterations": 5
+      }
+    }
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2024,
+    "fold": 8,
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_dialogues": [
+      "Ses03F_script03_1"
+    ],
+    "train_n": 509,
+    "held_n": 18,
+    "methods": {
+      "E1": {
+        "name": "E1",
+        "mean": [
+          0.0
+        ],
+        "scale": [
+          1.0
+        ],
+        "coefficient": 0.9533803528318694,
+        "intercept": 0.0798770594407445,
+        "iterations": 10
+      },
+      "L0": {
+        "name": "L0",
+        "mean": [
+          2.761054452810226
+        ],
+        "scale": [
+          2.9201941866943337
+        ],
+        "coefficient": 0.27355906882299796,
+        "intercept": 0.8507241330257662,
+        "iterations": 5
+      }
+    }
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2024,
+    "fold": 9,
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_dialogues": [
+      "Ses03F_script03_2"
+    ],
+    "train_n": 474,
+    "held_n": 53,
+    "methods": {
+      "E1": {
+        "name": "E1",
+        "mean": [
+          0.0
+        ],
+        "scale": [
+          1.0
+        ],
+        "coefficient": 0.7487885189652383,
+        "intercept": 0.16948834114561098,
+        "iterations": 11
+      },
+      "L0": {
+        "name": "L0",
+        "mean": [
+          2.6959063740363365
+        ],
+        "scale": [
+          2.919572667369558
+        ],
+        "coefficient": 0.24129169168423154,
+        "intercept": 0.7716524890309195,
+        "iterations": 5
+      }
+    }
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2024,
+    "fold": 10,
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses04M_script03_2"
+    ],
+    "held_dialogues": [
+      "Ses03M_script01_2"
+    ],
+    "train_n": 501,
+    "held_n": 26,
+    "methods": {
+      "E1": {
+        "name": "E1",
+        "mean": [
+          0.0
+        ],
+        "scale": [
+          1.0
+        ],
+        "coefficient": 0.9642282893737794,
+        "intercept": -0.00899356554605029,
+        "iterations": 10
+      },
+      "L0": {
+        "name": "L0",
+        "mean": [
+          2.7887216213300805
+        ],
+        "scale": [
+          2.933852205250828
+        ],
+        "coefficient": 0.3116722807706335,
+        "intercept": 0.7755806246320602,
+        "iterations": 5
+      }
+    }
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 2024,
+    "fold": 11,
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2"
+    ],
+    "held_dialogues": [
+      "Ses04M_script03_2"
+    ],
+    "train_n": 433,
+    "held_n": 94,
+    "methods": {
+      "E1": {
+        "name": "E1",
+        "mean": [
+          0.0
+        ],
+        "scale": [
+          1.0
+        ],
+        "coefficient": 0.49273555881610276,
+        "intercept": 0.2917517585784644,
+        "iterations": 12
+      },
+      "L0": {
+        "name": "L0",
+        "mean": [
+          2.496637543661866
+        ],
+        "scale": [
+          2.8153819551311687
+        ],
+        "coefficient": 0.1612691649319539,
+        "intercept": 0.6804136452646637,
+        "iterations": 5
+      }
+    }
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "fold": 0,
+    "train_dialogues": [
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_dialogues": [
+      "Ses01F_impro02"
+    ],
+    "train_n": 497,
+    "held_n": 30,
+    "methods": {
+      "E1": {
+        "name": "E1",
+        "mean": [
+          0.0
+        ],
+        "scale": [
+          1.0
+        ],
+        "coefficient": 2.069847324027748,
+        "intercept": -1.0089518135126485,
+        "iterations": 11
+      },
+      "L0": {
+        "name": "L0",
+        "mean": [
+          2.543971364304954
+        ],
+        "scale": [
+          2.603691377295495
+        ],
+        "coefficient": 0.42158885144759883,
+        "intercept": 0.6302566328141169,
+        "iterations": 6
+      }
+    }
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "fold": 1,
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_dialogues": [
+      "Ses01M_script03_1"
+    ],
+    "train_n": 484,
+    "held_n": 43,
+    "methods": {
+      "E1": {
+        "name": "E1",
+        "mean": [
+          0.0
+        ],
+        "scale": [
+          1.0
+        ],
+        "coefficient": 1.9538170079331638,
+        "intercept": -0.9590165756923822,
+        "iterations": 10
+      },
+      "L0": {
+        "name": "L0",
+        "mean": [
+          2.7107730390308964
+        ],
+        "scale": [
+          2.596100115715185
+        ],
+        "coefficient": 0.42095279955218373,
+        "intercept": 0.6241011597662651,
+        "iterations": 6
+      }
+    }
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "fold": 2,
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_dialogues": [
+      "Ses02F_impro06"
+    ],
+    "train_n": 492,
+    "held_n": 35,
+    "methods": {
+      "E1": {
+        "name": "E1",
+        "mean": [
+          0.0
+        ],
+        "scale": [
+          1.0
+        ],
+        "coefficient": 2.4905472750941327,
+        "intercept": -1.2198994873236566,
+        "iterations": 11
+      },
+      "L0": {
+        "name": "L0",
+        "mean": [
+          2.24037014253098
+        ],
+        "scale": [
+          2.3394664809278685
+        ],
+        "coefficient": 0.7059051778334169,
+        "intercept": 0.7767788211155294,
+        "iterations": 5
+      }
+    }
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "fold": 3,
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_dialogues": [
+      "Ses02F_script01_3"
+    ],
+    "train_n": 497,
+    "held_n": 30,
+    "methods": {
+      "E1": {
+        "name": "E1",
+        "mean": [
+          0.0
+        ],
+        "scale": [
+          1.0
+        ],
+        "coefficient": 1.7584207731049415,
+        "intercept": -0.8291308445892936,
+        "iterations": 6
+      },
+      "L0": {
+        "name": "L0",
+        "mean": [
+          2.385116504918646
+        ],
+        "scale": [
+          2.430701254165556
+        ],
+        "coefficient": 0.29816907803849263,
+        "intercept": 0.5531404452470355,
+        "iterations": 6
+      }
+    }
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "fold": 4,
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_dialogues": [
+      "Ses02F_script03_1"
+    ],
+    "train_n": 476,
+    "held_n": 51,
+    "methods": {
+      "E1": {
+        "name": "E1",
+        "mean": [
+          0.0
+        ],
+        "scale": [
+          1.0
+        ],
+        "coefficient": 2.061533212266293,
+        "intercept": -1.0262665635277168,
+        "iterations": 10
+      },
+      "L0": {
+        "name": "L0",
+        "mean": [
+          2.7563214275224603
+        ],
+        "scale": [
+          2.589808380725495
+        ],
+        "coefficient": 0.4120987389661127,
+        "intercept": 0.6529338183904003,
+        "iterations": 5
+      }
+    }
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "fold": 5,
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_dialogues": [
+      "Ses02M_impro01"
+    ],
+    "train_n": 480,
+    "held_n": 47,
+    "methods": {
+      "E1": {
+        "name": "E1",
+        "mean": [
+          0.0
+        ],
+        "scale": [
+          1.0
+        ],
+        "coefficient": 2.014537169841461,
+        "intercept": -0.9598461865901732,
+        "iterations": 10
+      },
+      "L0": {
+        "name": "L0",
+        "mean": [
+          2.6885319698511676
+        ],
+        "scale": [
+          2.624495345345448
+        ],
+        "coefficient": 0.413233810244989,
+        "intercept": 0.6568297360334996,
+        "iterations": 5
+      }
+    }
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "fold": 6,
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_dialogues": [
+      "Ses02M_impro07"
+    ],
+    "train_n": 474,
+    "held_n": 53,
+    "methods": {
+      "E1": {
+        "name": "E1",
+        "mean": [
+          0.0
+        ],
+        "scale": [
+          1.0
+        ],
+        "coefficient": 2.145266843328176,
+        "intercept": -0.9949909497687774,
+        "iterations": 11
+      },
+      "L0": {
+        "name": "L0",
+        "mean": [
+          2.3136910773238824
+        ],
+        "scale": [
+          2.4507171396911507
+        ],
+        "coefficient": 0.43696258893527307,
+        "intercept": 0.679656490912848,
+        "iterations": 5
+      }
+    }
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "fold": 7,
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_dialogues": [
+      "Ses03F_impro08"
+    ],
+    "train_n": 480,
+    "held_n": 47,
+    "methods": {
+      "E1": {
+        "name": "E1",
+        "mean": [
+          0.0
+        ],
+        "scale": [
+          1.0
+        ],
+        "coefficient": 1.8904023396214595,
+        "intercept": -0.9147550185884579,
+        "iterations": 6
+      },
+      "L0": {
+        "name": "L0",
+        "mean": [
+          2.6650878835351524
+        ],
+        "scale": [
+          2.629811765756197
+        ],
+        "coefficient": 0.4137304545088898,
+        "intercept": 0.6004242650362636,
+        "iterations": 6
+      }
+    }
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "fold": 8,
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_dialogues": [
+      "Ses03F_script03_1"
+    ],
+    "train_n": 509,
+    "held_n": 18,
+    "methods": {
+      "E1": {
+        "name": "E1",
+        "mean": [
+          0.0
+        ],
+        "scale": [
+          1.0
+        ],
+        "coefficient": 1.9188888290511719,
+        "intercept": -0.8149539887344742,
+        "iterations": 10
+      },
+      "L0": {
+        "name": "L0",
+        "mean": [
+          2.6009290955867606
+        ],
+        "scale": [
+          2.579365161961285
+        ],
+        "coefficient": 0.36628285239569314,
+        "intercept": 0.7143332700469744,
+        "iterations": 5
+      }
+    }
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "fold": 9,
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_dialogues": [
+      "Ses03F_script03_2"
+    ],
+    "train_n": 474,
+    "held_n": 53,
+    "methods": {
+      "E1": {
+        "name": "E1",
+        "mean": [
+          0.0
+        ],
+        "scale": [
+          1.0
+        ],
+        "coefficient": 1.6441725235077043,
+        "intercept": -0.6436294828213092,
+        "iterations": 10
+      },
+      "L0": {
+        "name": "L0",
+        "mean": [
+          2.56522068563721
+        ],
+        "scale": [
+          2.5841644155877255
+        ],
+        "coefficient": 0.3242958367973586,
+        "intercept": 0.6639924895792904,
+        "iterations": 5
+      }
+    }
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "fold": 10,
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses04M_script03_2"
+    ],
+    "held_dialogues": [
+      "Ses03M_script01_2"
+    ],
+    "train_n": 501,
+    "held_n": 26,
+    "methods": {
+      "E1": {
+        "name": "E1",
+        "mean": [
+          0.0
+        ],
+        "scale": [
+          1.0
+        ],
+        "coefficient": 2.048232893834644,
+        "intercept": -1.0261413726818327,
+        "iterations": 11
+      },
+      "L0": {
+        "name": "L0",
+        "mean": [
+          2.6295897826187287
+        ],
+        "scale": [
+          2.5878530473201367
+        ],
+        "coefficient": 0.42695553593899366,
+        "intercept": 0.616473142783713,
+        "iterations": 5
+      }
+    }
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 3407,
+    "fold": 11,
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2"
+    ],
+    "held_dialogues": [
+      "Ses04M_script03_2"
+    ],
+    "train_n": 433,
+    "held_n": 94,
+    "methods": {
+      "E1": {
+        "name": "E1",
+        "mean": [
+          0.0
+        ],
+        "scale": [
+          1.0
+        ],
+        "coefficient": 1.5512587199099972,
+        "intercept": -0.6408420945876865,
+        "iterations": 5
+      },
+      "L0": {
+        "name": "L0",
+        "mean": [
+          2.419885733233056
+        ],
+        "scale": [
+          2.5891365664527144
+        ],
+        "coefficient": 0.2690372231884319,
+        "intercept": 0.5650927361224496,
+        "iterations": 6
+      }
+    }
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 42,
+    "fold": 0,
+    "train_dialogues": [
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_dialogues": [
+      "Ses01F_impro02"
+    ],
+    "train_n": 497,
+    "held_n": 30,
+    "methods": {
+      "E1": {
+        "name": "E1",
+        "mean": [
+          0.0
+        ],
+        "scale": [
+          1.0
+        ],
+        "coefficient": 1.6767274375313177,
+        "intercept": -0.459765010783815,
+        "iterations": 10
+      },
+      "L0": {
+        "name": "L0",
+        "mean": [
+          0.9784333255780938
+        ],
+        "scale": [
+          1.1847872476211103
+        ],
+        "coefficient": 0.39057078519540434,
+        "intercept": 0.6806571284511242,
+        "iterations": 5
+      }
+    }
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 42,
+    "fold": 1,
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_dialogues": [
+      "Ses01M_script03_1"
+    ],
+    "train_n": 484,
+    "held_n": 43,
+    "methods": {
+      "E1": {
+        "name": "E1",
+        "mean": [
+          0.0
+        ],
+        "scale": [
+          1.0
+        ],
+        "coefficient": 1.714366187892296,
+        "intercept": -0.5419020042946614,
+        "iterations": 10
+      },
+      "L0": {
+        "name": "L0",
+        "mean": [
+          1.1118349445171443
+        ],
+        "scale": [
+          1.2302627534520971
+        ],
+        "coefficient": 0.40796902501134363,
+        "intercept": 0.659472354290846,
+        "iterations": 5
+      }
+    }
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 42,
+    "fold": 2,
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_dialogues": [
+      "Ses02F_impro06"
+    ],
+    "train_n": 492,
+    "held_n": 35,
+    "methods": {
+      "E1": {
+        "name": "E1",
+        "mean": [
+          0.0
+        ],
+        "scale": [
+          1.0
+        ],
+        "coefficient": 2.222826154618615,
+        "intercept": -0.7325449970198158,
+        "iterations": 11
+      },
+      "L0": {
+        "name": "L0",
+        "mean": [
+          0.9574643549297701
+        ],
+        "scale": [
+          1.16359250101265
+        ],
+        "coefficient": 0.5353281527300263,
+        "intercept": 0.7843703708829687,
+        "iterations": 5
+      }
+    }
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 42,
+    "fold": 3,
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_dialogues": [
+      "Ses02F_script01_3"
+    ],
+    "train_n": 497,
+    "held_n": 30,
+    "methods": {
+      "E1": {
+        "name": "E1",
+        "mean": [
+          0.0
+        ],
+        "scale": [
+          1.0
+        ],
+        "coefficient": 1.4532671507782733,
+        "intercept": -0.37292267943790947,
+        "iterations": 11
+      },
+      "L0": {
+        "name": "L0",
+        "mean": [
+          1.046415335274009
+        ],
+        "scale": [
+          1.2110997225573477
+        ],
+        "coefficient": 0.3424785999507241,
+        "intercept": 0.6287815050644945,
+        "iterations": 5
+      }
+    }
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 42,
+    "fold": 4,
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_dialogues": [
+      "Ses02F_script03_1"
+    ],
+    "train_n": 476,
+    "held_n": 51,
+    "methods": {
+      "E1": {
+        "name": "E1",
+        "mean": [
+          0.0
+        ],
+        "scale": [
+          1.0
+        ],
+        "coefficient": 1.2524497475617302,
+        "intercept": -0.10216163705502669,
+        "iterations": 10
+      },
+      "L0": {
+        "name": "L0",
+        "mean": [
+          1.1503909357803406
+        ],
+        "scale": [
+          1.2222289919868612
+        ],
+        "coefficient": 0.30273387527639944,
+        "intercept": 0.784028961352919,
+        "iterations": 5
+      }
+    }
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 42,
+    "fold": 5,
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_dialogues": [
+      "Ses02M_impro01"
+    ],
+    "train_n": 480,
+    "held_n": 47,
+    "methods": {
+      "E1": {
+        "name": "E1",
+        "mean": [
+          0.0
+        ],
+        "scale": [
+          1.0
+        ],
+        "coefficient": 1.6811149044815372,
+        "intercept": -0.516129014117073,
+        "iterations": 10
+      },
+      "L0": {
+        "name": "L0",
+        "mean": [
+          1.0716338942696548
+        ],
+        "scale": [
+          1.2514156532168146
+        ],
+        "coefficient": 0.40560486251249905,
+        "intercept": 0.6461036053387798,
+        "iterations": 5
+      }
+    }
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 42,
+    "fold": 6,
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_dialogues": [
+      "Ses02M_impro07"
+    ],
+    "train_n": 474,
+    "held_n": 53,
+    "methods": {
+      "E1": {
+        "name": "E1",
+        "mean": [
+          0.0
+        ],
+        "scale": [
+          1.0
+        ],
+        "coefficient": 1.8107783087272271,
+        "intercept": -0.5138064210751885,
+        "iterations": 10
+      },
+      "L0": {
+        "name": "L0",
+        "mean": [
+          0.9244102270744757
+        ],
+        "scale": [
+          1.1472985300259722
+        ],
+        "coefficient": 0.434587011184946,
+        "intercept": 0.707924288075717,
+        "iterations": 5
+      }
+    }
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 42,
+    "fold": 7,
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_dialogues": [
+      "Ses03F_impro08"
+    ],
+    "train_n": 480,
+    "held_n": 47,
+    "methods": {
+      "E1": {
+        "name": "E1",
+        "mean": [
+          0.0
+        ],
+        "scale": [
+          1.0
+        ],
+        "coefficient": 1.5553861080269717,
+        "intercept": -0.3872230201199006,
+        "iterations": 10
+      },
+      "L0": {
+        "name": "L0",
+        "mean": [
+          1.1079762750161342
+        ],
+        "scale": [
+          1.246386559189963
+        ],
+        "coefficient": 0.3779668056239543,
+        "intercept": 0.699284965681909,
+        "iterations": 5
+      }
+    }
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 42,
+    "fold": 8,
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_dialogues": [
+      "Ses03F_script03_1"
+    ],
+    "train_n": 509,
+    "held_n": 18,
+    "methods": {
+      "E1": {
+        "name": "E1",
+        "mean": [
+          0.0
+        ],
+        "scale": [
+          1.0
+        ],
+        "coefficient": 1.5928012779687435,
+        "intercept": -0.34548525251256135,
+        "iterations": 10
+      },
+      "L0": {
+        "name": "L0",
+        "mean": [
+          1.073777983973358
+        ],
+        "scale": [
+          1.2181575599767471
+        ],
+        "coefficient": 0.36402901997604714,
+        "intercept": 0.7594290975846247,
+        "iterations": 5
+      }
+    }
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 42,
+    "fold": 9,
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03M_script01_2",
+      "Ses04M_script03_2"
+    ],
+    "held_dialogues": [
+      "Ses03F_script03_2"
+    ],
+    "train_n": 474,
+    "held_n": 53,
+    "methods": {
+      "E1": {
+        "name": "E1",
+        "mean": [
+          0.0
+        ],
+        "scale": [
+          1.0
+        ],
+        "coefficient": 1.1717796098136248,
+        "intercept": -0.0797457727048503,
+        "iterations": 9
+      },
+      "L0": {
+        "name": "L0",
+        "mean": [
+          1.082989189899673
+        ],
+        "scale": [
+          1.2042182116419233
+        ],
+        "coefficient": 0.2850476716592271,
+        "intercept": 0.7365883678228149,
+        "iterations": 5
+      }
+    }
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 42,
+    "fold": 10,
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses04M_script03_2"
+    ],
+    "held_dialogues": [
+      "Ses03M_script01_2"
+    ],
+    "train_n": 501,
+    "held_n": 26,
+    "methods": {
+      "E1": {
+        "name": "E1",
+        "mean": [
+          0.0
+        ],
+        "scale": [
+          1.0
+        ],
+        "coefficient": 1.5115059602171972,
+        "intercept": -0.35014086184975945,
+        "iterations": 11
+      },
+      "L0": {
+        "name": "L0",
+        "mean": [
+          1.0995610722104927
+        ],
+        "scale": [
+          1.2160335042939676
+        ],
+        "coefficient": 0.359450442570023,
+        "intercept": 0.7069390636445473,
+        "iterations": 5
+      }
+    }
+  },
+  {
+    "dataset": "IEMOCAP",
+    "seed": 42,
+    "fold": 11,
+    "train_dialogues": [
+      "Ses01F_impro02",
+      "Ses01M_script03_1",
+      "Ses02F_impro06",
+      "Ses02F_script01_3",
+      "Ses02F_script03_1",
+      "Ses02M_impro01",
+      "Ses02M_impro07",
+      "Ses03F_impro08",
+      "Ses03F_script03_1",
+      "Ses03F_script03_2",
+      "Ses03M_script01_2"
+    ],
+    "held_dialogues": [
+      "Ses04M_script03_2"
+    ],
+    "train_n": 433,
+    "held_n": 94,
+    "methods": {
+      "E1": {
+        "name": "E1",
+        "mean": [
+          0.0
+        ],
+        "scale": [
+          1.0
+        ],
+        "coefficient": 1.3514346432393927,
+        "intercept": -0.34333532595475535,
+        "iterations": 10
+      },
+      "L0": {
+        "name": "L0",
+        "mean": [
+          1.03168043516433
+        ],
+        "scale": [
+          1.1579380234193681
+        ],
+        "coefficient": 0.28746764523322643,
+        "intercept": 0.5867248806245204,
+        "iterations": 6
+      }
+    }
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1475,
+    "fold": 0,
+    "train_dialogues": [
+      "1039",
+      "1040",
+      "1041",
+      "1042",
+      "1043",
+      "1045",
+      "1046",
+      "1048",
+      "1049",
+      "1050",
+      "1051",
+      "1052",
+      "1053",
+      "1054",
+      "1056",
+      "1057",
+      "1059",
+      "1060",
+      "1062",
+      "1063",
+      "1064",
+      "1065",
+      "1066",
+      "1067",
+      "1068",
+      "1069",
+      "1070",
+      "1071",
+      "1072",
+      "1074",
+      "1076",
+      "1077",
+      "1079",
+      "1080",
+      "1082",
+      "1083",
+      "1084",
+      "1086",
+      "1087",
+      "1088",
+      "1089",
+      "1090",
+      "1091",
+      "1092",
+      "1093",
+      "1095",
+      "1096",
+      "1097",
+      "1098",
+      "1101",
+      "1102",
+      "1104",
+      "1105",
+      "1108",
+      "1109",
+      "1110",
+      "1111",
+      "1112",
+      "1113",
+      "1115",
+      "1116",
+      "1118",
+      "1119",
+      "1121",
+      "1122",
+      "1123",
+      "1125",
+      "1126",
+      "1127",
+      "1129",
+      "1130",
+      "1131",
+      "1133",
+      "1134",
+      "1135",
+      "1136",
+      "1137",
+      "1138",
+      "1139",
+      "1140",
+      "1141",
+      "1142",
+      "1143",
+      "1144",
+      "1146",
+      "1147",
+      "1148",
+      "1149",
+      "1150",
+      "1151",
+      "1152"
+    ],
+    "held_dialogues": [
+      "1044",
+      "1047",
+      "1055",
+      "1058",
+      "1061",
+      "1073",
+      "1075",
+      "1078",
+      "1081",
+      "1085",
+      "1094",
+      "1099",
+      "1100",
+      "1103",
+      "1106",
+      "1107",
+      "1114",
+      "1117",
+      "1120",
+      "1124",
+      "1128",
+      "1132",
+      "1145"
+    ],
+    "train_n": 887,
+    "held_n": 222,
+    "methods": {
+      "E1": {
+        "name": "E1",
+        "mean": [
+          0.0
+        ],
+        "scale": [
+          1.0
+        ],
+        "coefficient": 5.194978571639486,
+        "intercept": -1.6865521969786474,
+        "iterations": 12
+      },
+      "L0": {
+        "name": "L0",
+        "mean": [
+          -0.12084817920639367
+        ],
+        "scale": [
+          0.5261179161463816
+        ],
+        "coefficient": 0.9236866046151123,
+        "intercept": 0.825730656339155,
+        "iterations": 6
+      }
+    }
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1475,
+    "fold": 1,
+    "train_dialogues": [
+      "1039",
+      "1040",
+      "1042",
+      "1043",
+      "1044",
+      "1045",
+      "1046",
+      "1047",
+      "1050",
+      "1051",
+      "1053",
+      "1054",
+      "1055",
+      "1056",
+      "1058",
+      "1059",
+      "1060",
+      "1061",
+      "1062",
+      "1063",
+      "1064",
+      "1066",
+      "1067",
+      "1068",
+      "1069",
+      "1070",
+      "1071",
+      "1072",
+      "1073",
+      "1074",
+      "1075",
+      "1076",
+      "1077",
+      "1078",
+      "1079",
+      "1080",
+      "1081",
+      "1082",
+      "1083",
+      "1085",
+      "1086",
+      "1087",
+      "1089",
+      "1090",
+      "1091",
+      "1092",
+      "1093",
+      "1094",
+      "1095",
+      "1096",
+      "1097",
+      "1099",
+      "1100",
+      "1101",
+      "1102",
+      "1103",
+      "1104",
+      "1105",
+      "1106",
+      "1107",
+      "1108",
+      "1109",
+      "1111",
+      "1112",
+      "1113",
+      "1114",
+      "1115",
+      "1116",
+      "1117",
+      "1120",
+      "1122",
+      "1124",
+      "1126",
+      "1127",
+      "1128",
+      "1129",
+      "1130",
+      "1131",
+      "1132",
+      "1135",
+      "1136",
+      "1137",
+      "1141",
+      "1142",
+      "1144",
+      "1145",
+      "1147",
+      "1148",
+      "1149",
+      "1151",
+      "1152"
+    ],
+    "held_dialogues": [
+      "1041",
+      "1048",
+      "1049",
+      "1052",
+      "1057",
+      "1065",
+      "1084",
+      "1088",
+      "1098",
+      "1110",
+      "1118",
+      "1119",
+      "1121",
+      "1123",
+      "1125",
+      "1133",
+      "1134",
+      "1138",
+      "1139",
+      "1140",
+      "1143",
+      "1146",
+      "1150"
+    ],
+    "train_n": 887,
+    "held_n": 222,
+    "methods": {
+      "E1": {
+        "name": "E1",
+        "mean": [
+          0.0
+        ],
+        "scale": [
+          1.0
+        ],
+        "coefficient": 4.593885872502144,
+        "intercept": -1.3741849594681836,
+        "iterations": 12
+      },
+      "L0": {
+        "name": "L0",
+        "mean": [
+          -0.13494692203472275
+        ],
+        "scale": [
+          0.5200832730482896
+        ],
+        "coefficient": 0.801787927911285,
+        "intercept": 0.8269467958533671,
+        "iterations": 6
+      }
+    }
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1475,
+    "fold": 2,
+    "train_dialogues": [
+      "1039",
+      "1041",
+      "1042",
+      "1043",
+      "1044",
+      "1045",
+      "1046",
+      "1047",
+      "1048",
+      "1049",
+      "1050",
+      "1051",
+      "1052",
+      "1053",
+      "1055",
+      "1056",
+      "1057",
+      "1058",
+      "1059",
+      "1060",
+      "1061",
+      "1064",
+      "1065",
+      "1067",
+      "1068",
+      "1069",
+      "1070",
+      "1071",
+      "1073",
+      "1074",
+      "1075",
+      "1078",
+      "1079",
+      "1080",
+      "1081",
+      "1082",
+      "1084",
+      "1085",
+      "1088",
+      "1090",
+      "1091",
+      "1092",
+      "1094",
+      "1095",
+      "1096",
+      "1097",
+      "1098",
+      "1099",
+      "1100",
+      "1101",
+      "1102",
+      "1103",
+      "1104",
+      "1105",
+      "1106",
+      "1107",
+      "1108",
+      "1110",
+      "1112",
+      "1113",
+      "1114",
+      "1116",
+      "1117",
+      "1118",
+      "1119",
+      "1120",
+      "1121",
+      "1122",
+      "1123",
+      "1124",
+      "1125",
+      "1126",
+      "1128",
+      "1129",
+      "1130",
+      "1131",
+      "1132",
+      "1133",
+      "1134",
+      "1138",
+      "1139",
+      "1140",
+      "1142",
+      "1143",
+      "1145",
+      "1146",
+      "1147",
+      "1149",
+      "1150",
+      "1151",
+      "1152"
+    ],
+    "held_dialogues": [
+      "1040",
+      "1054",
+      "1062",
+      "1063",
+      "1066",
+      "1072",
+      "1076",
+      "1077",
+      "1083",
+      "1086",
+      "1087",
+      "1089",
+      "1093",
+      "1109",
+      "1111",
+      "1115",
+      "1127",
+      "1135",
+      "1136",
+      "1137",
+      "1141",
+      "1144",
+      "1148"
+    ],
+    "train_n": 887,
+    "held_n": 222,
+    "methods": {
+      "E1": {
+        "name": "E1",
+        "mean": [
+          0.0
+        ],
+        "scale": [
+          1.0
+        ],
+        "coefficient": 5.283477796242034,
+        "intercept": -1.658764708217075,
+        "iterations": 12
+      },
+      "L0": {
+        "name": "L0",
+        "mean": [
+          -0.14381126415796786
+        ],
+        "scale": [
+          0.5222188057844702
+        ],
+        "coefficient": 0.946366574646011,
+        "intercept": 0.8755252561999806,
+        "iterations": 6
+      }
+    }
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1475,
+    "fold": 3,
+    "train_dialogues": [
+      "1039",
+      "1040",
+      "1041",
+      "1043",
+      "1044",
+      "1045",
+      "1047",
+      "1048",
+      "1049",
+      "1051",
+      "1052",
+      "1054",
+      "1055",
+      "1056",
+      "1057",
+      "1058",
+      "1061",
+      "1062",
+      "1063",
+      "1064",
+      "1065",
+      "1066",
+      "1067",
+      "1069",
+      "1072",
+      "1073",
+      "1075",
+      "1076",
+      "1077",
+      "1078",
+      "1079",
+      "1080",
+      "1081",
+      "1083",
+      "1084",
+      "1085",
+      "1086",
+      "1087",
+      "1088",
+      "1089",
+      "1090",
+      "1092",
+      "1093",
+      "1094",
+      "1096",
+      "1097",
+      "1098",
+      "1099",
+      "1100",
+      "1101",
+      "1103",
+      "1104",
+      "1106",
+      "1107",
+      "1109",
+      "1110",
+      "1111",
+      "1112",
+      "1113",
+      "1114",
+      "1115",
+      "1116",
+      "1117",
+      "1118",
+      "1119",
+      "1120",
+      "1121",
+      "1122",
+      "1123",
+      "1124",
+      "1125",
+      "1127",
+      "1128",
+      "1130",
+      "1132",
+      "1133",
+      "1134",
+      "1135",
+      "1136",
+      "1137",
+      "1138",
+      "1139",
+      "1140",
+      "1141",
+      "1143",
+      "1144",
+      "1145",
+      "1146",
+      "1148",
+      "1150",
+      "1152"
+    ],
+    "held_dialogues": [
+      "1042",
+      "1046",
+      "1050",
+      "1053",
+      "1059",
+      "1060",
+      "1068",
+      "1070",
+      "1071",
+      "1074",
+      "1082",
+      "1091",
+      "1095",
+      "1102",
+      "1105",
+      "1108",
+      "1126",
+      "1129",
+      "1131",
+      "1142",
+      "1147",
+      "1149",
+      "1151"
+    ],
+    "train_n": 887,
+    "held_n": 222,
+    "methods": {
+      "E1": {
+        "name": "E1",
+        "mean": [
+          0.0
+        ],
+        "scale": [
+          1.0
+        ],
+        "coefficient": 5.257449825850811,
+        "intercept": -1.679301605755894,
+        "iterations": 12
+      },
+      "L0": {
+        "name": "L0",
+        "mean": [
+          -0.14495676631476898
+        ],
+        "scale": [
+          0.5282158967227842
+        ],
+        "coefficient": 0.9381243179851851,
+        "intercept": 0.8347995308726909,
+        "iterations": 6
+      }
+    }
+  },
+  {
+    "dataset": "MELD",
+    "seed": 1475,
+    "fold": 4,
+    "train_dialogues": [
+      "1040",
+      "1041",
+      "1042",
+      "1044",
+      "1046",
+      "1047",
+      "1048",
+      "1049",
+      "1050",
+      "1052",
+      "1053",
+      "1054",
+      "1055",
+      "1057",
+      "1058",
+      "1059",
+      "1060",
+      "1061",
+      "1062",
+      "1063",
+      "1065",
+      "1066",
+      "1068",
+      "1070",
+      "1071",
+      "1072",
+      "1073",
+      "1074",
+      "1075",
+      "1076",
+      "1077",
+      "1078",
+      "1081",
+      "1082",
+      "1083",
+      "1084",
+      "1085",
+      "1086",
+      "1087",
+      "1088",
+      "1089",
+      "1091",
+      "1093",
+      "1094",
+      "1095",
+      "1098",
+      "1099",
+      "1100",
+      "1102",
+      "1103",
+      "1105",
+      "1106",
+      "1107",
+      "1108",
+      "1109",
+      "1110",
+      "1111",
+      "1114",
+      "1115",
+      "1117",
+      "1118",
+      "1119",
+      "1120",
+      "1121",
+      "1123",
+      "1124",
+      "1125",
+      "1126",
+      "1127",
+      "1128",
+      "1129",
+      "1131",
+      "1132",
+      "1133",
+      "1134",
+      "1135",
+      "1136",
+      "1137",
+      "1138",
+      "1139",
+      "1140",
+      "1141",
+      "1142",
+      "1143",
+      "1144",
+      "1145",
+      "1146",
+      "1147",
+      "1148",
+      "1149",
+      "1150",
+      "1151"
+    ],
+    "held_dialogues": [
+      "1039",
+      "1043",
+      "1045",
+      "1051",
+      "1056",
+      "1064",
+      "1067",
+      "1069",
+      "1079",
+      "1080",
+      "1090",
+      "1092",
+      "1096",
+      "1097",
+      "1101",
+      "1104",
+      "1112",
+      "1113",
+      "1116",
+      "1122",
+      "1130",
+      "1152"
+    ],
+    "train_n": 888,
+    "held_n": 221,
+    "methods": {
+      "E1": {
+        "name": "E1",
+        "mean": [
+          0.0
+        ],
+        "scale": [
+          1.0
+        ],
+        "coefficient": 4.913735936844518,
+        "intercept": -1.5781194450878844,
+        "iterations": 12
+      },
+      "L0": {
+        "name": "L0",
+        "mean": [
+          -0.13097722556293753
+        ],
+        "scale": [
+          0.5368441435213298
+        ],
+        "coefficient": 0.8702653140881388,
+        "intercept": 0.7798123112835235,
+        "iterations": 6
+      }
+    }
+  },
+  {
+    "dataset": "MELD",
+    "seed": 67137,
+    "fold": 0,
+    "train_dialogues": [
+      "1039",
+      "1040",
+      "1041",
+      "1042",
+      "1043",
+      "1045",
+      "1046",
+      "1048",
+      "1049",
+      "1050",
+      "1051",
+      "1052",
+      "1053",
+      "1054",
+      "1056",
+      "1057",
+      "1059",
+      "1060",
+      "1062",
+      "1063",
+      "1064",
+      "1065",
+      "1066",
+      "1067",
+      "1068",
+      "1069",
+      "1070",
+      "1071",
+      "1072",
+      "1074",
+      "1076",
+      "1077",
+      "1079",
+      "1080",
+      "1082",
+      "1083",
+      "1084",
+      "1086",
+      "1087",
+      "1088",
+      "1089",
+      "1090",
+      "1091",
+      "1092",
+      "1093",
+      "1095",
+      "1096",
+      "1097",
+      "1098",
+      "1101",
+      "1102",
+      "1104",
+      "1105",
+      "1108",
+      "1109",
+      "1110",
+      "1111",
+      "1112",
+      "1113",
+      "1115",
+      "1116",
+      "1118",
+      "1119",
+      "1121",
+      "1122",
+      "1123",
+      "1125",
+      "1126",
+      "1127",
+      "1129",
+      "1130",
+      "1131",
+      "1133",
+      "1134",
+      "1135",
+      "1136",
+      "1137",
+      "1138",
+      "1139",
+      "1140",
+      "1141",
+      "1142",
+      "1143",
+      "1144",
+      "1146",
+      "1147",
+      "1148",
+      "1149",
+      "1150",
+      "1151",
+      "1152"
+    ],
+    "held_dialogues": [
+      "1044",
+      "1047",
+      "1055",
+      "1058",
+      "1061",
+      "1073",
+      "1075",
+      "1078",
+      "1081",
+      "1085",
+      "1094",
+      "1099",
+      "1100",
+      "1103",
+      "1106",
+      "1107",
+      "1114",
+      "1117",
+      "1120",
+      "1124",
+      "1128",
+      "1132",
+      "1145"
+    ],
+    "train_n": 887,
+    "held_n": 222,
+    "methods": {
+      "E1": {
+        "name": "E1",
+        "mean": [
+          0.0
+        ],
+        "scale": [
+          1.0
+        ],
+        "coefficient": 5.36564345419661,
+        "intercept": -1.71357316151176,
+        "iterations": 12
+      },
+      "L0": {
+        "name": "L0",
+        "mean": [
+          -0.16357859450697365
+        ],
+        "scale": [
+          0.534722081451431
+        ],
+        "coefficient": 0.9681321718941377,
+        "intercept": 0.8305137684193413,
+        "iterations": 6
+      }
+    }
+  },
+  {
+    "dataset": "MELD",
+    "seed": 67137,
+    "fold": 1,
+    "train_dialogues": [
+      "1039",
+      "1040",
+      "1042",
+      "1043",
+      "1044",
+      "1045",
+      "1046",
+      "1047",
+      "1050",
+      "1051",
+      "1053",
+      "1054",
+      "1055",
+      "1056",
+      "1058",
+      "1059",
+      "1060",
+      "1061",
+      "1062",
+      "1063",
+      "1064",
+      "1066",
+      "1067",
+      "1068",
+      "1069",
+      "1070",
+      "1071",
+      "1072",
+      "1073",
+      "1074",
+      "1075",
+      "1076",
+      "1077",
+      "1078",
+      "1079",
+      "1080",
+      "1081",
+      "1082",
+      "1083",
+      "1085",
+      "1086",
+      "1087",
+      "1089",
+      "1090",
+      "1091",
+      "1092",
+      "1093",
+      "1094",
+      "1095",
+      "1096",
+      "1097",
+      "1099",
+      "1100",
+      "1101",
+      "1102",
+      "1103",
+      "1104",
+      "1105",
+      "1106",
+      "1107",
+      "1108",
+      "1109",
+      "1111",
+      "1112",
+      "1113",
+      "1114",
+      "1115",
+      "1116",
+      "1117",
+      "1120",
+      "1122",
+      "1124",
+      "1126",
+      "1127",
+      "1128",
+      "1129",
+      "1130",
+      "1131",
+      "1132",
+      "1135",
+      "1136",
+      "1137",
+      "1141",
+      "1142",
+      "1144",
+      "1145",
+      "1147",
+      "1148",
+      "1149",
+      "1151",
+      "1152"
+    ],
+    "held_dialogues": [
+      "1041",
+      "1048",
+      "1049",
+      "1052",
+      "1057",
+      "1065",
+      "1084",
+      "1088",
+      "1098",
+      "1110",
+      "1118",
+      "1119",
+      "1121",
+      "1123",
+      "1125",
+      "1133",
+      "1134",
+      "1138",
+      "1139",
+      "1140",
+      "1143",
+      "1146",
+      "1150"
+    ],
+    "train_n": 887,
+    "held_n": 222,
+    "methods": {
+      "E1": {
+        "name": "E1",
+        "mean": [
+          0.0
+        ],
+        "scale": [
+          1.0
+        ],
+        "coefficient": 5.221468134349707,
+        "intercept": -1.6723289246412456,
+        "iterations": 12
+      },
+      "L0": {
+        "name": "L0",
+        "mean": [
+          -0.15913491202917507
+        ],
+        "scale": [
+          0.531086323975744
+        ],
+        "coefficient": 0.9373866383567329,
+        "intercept": 0.8059854329502006,
+        "iterations": 7
+      }
+    }
+  },
+  {
+    "dataset": "MELD",
+    "seed": 67137,
+    "fold": 2,
+    "train_dialogues": [
+      "1039",
+      "1041",
+      "1042",
+      "1043",
+      "1044",
+      "1045",
+      "1046",
+      "1047",
+      "1048",
+      "1049",
+      "1050",
+      "1051",
+      "1052",
+      "1053",
+      "1055",
+      "1056",
+      "1057",
+      "1058",
+      "1059",
+      "1060",
+      "1061",
+      "1064",
+      "1065",
+      "1067",
+      "1068",
+      "1069",
+      "1070",
+      "1071",
+      "1073",
+      "1074",
+      "1075",
+      "1078",
+      "1079",
+      "1080",
+      "1081",
+      "1082",
+      "1084",
+      "1085",
+      "1088",
+      "1090",
+      "1091",
+      "1092",
+      "1094",
+      "1095",
+      "1096",
+      "1097",
+      "1098",
+      "1099",
+      "1100",
+      "1101",
+      "1102",
+      "1103",
+      "1104",
+      "1105",
+      "1106",
+      "1107",
+      "1108",
+      "1110",
+      "1112",
+      "1113",
+      "1114",
+      "1116",
+      "1117",
+      "1118",
+      "1119",
+      "1120",
+      "1121",
+      "1122",
+      "1123",
+      "1124",
+      "1125",
+      "1126",
+      "1128",
+      "1129",
+      "1130",
+      "1131",
+      "1132",
+      "1133",
+      "1134",
+      "1138",
+      "1139",
+      "1140",
+      "1142",
+      "1143",
+      "1145",
+      "1146",
+      "1147",
+      "1149",
+      "1150",
+      "1151",
+      "1152"
+    ],
+    "held_dialogues": [
+      "1040",
+      "1054",
+      "1062",
+      "1063",
+      "1066",
+      "1072",
+      "1076",
+      "1077",
+      "1083",
+      "1086",
+      "1087",
+      "1089",
+      "1093",
+      "1109",
+      "1111",
+      "1115",
+      "1127",
+      "1135",
+      "1136",
+      "1137",
+      "1141",
+      "1144",
+      "1148"
+    ],
+    "train_n": 887,
+    "held_n": 222,
+    "methods": {
+      "E1": {
+        "name": "E1",
+        "mean": [
+          0.0
+        ],
+        "scale": [
+          1.0
+        ],
+        "coefficient": 5.1164327328631805,
+        "intercept": -1.5804244152693232,
+        "iterations": 12
+      },
+      "L0": {
+        "name": "L0",
+        "mean": [
+          -0.1689796487939035
+        ],
+        "scale": [
+          0.5348852387316744
+        ],
+        "coefficient": 0.9168242857100538,
+        "intercept": 0.8368503690878885,
+        "iterations": 7
+      }
+    }
+  },
+  {
+    "dataset": "MELD",
+    "seed": 67137,
+    "fold": 3,
+    "train_dialogues": [
+      "1039",
+      "1040",
+      "1041",
+      "1043",
+      "1044",
+      "1045",
+      "1047",
+      "1048",
+      "1049",
+      "1051",
+      "1052",
+      "1054",
+      "1055",
+      "1056",
+      "1057",
+      "1058",
+      "1061",
+      "1062",
+      "1063",
+      "1064",
+      "1065",
+      "1066",
+      "1067",
+      "1069",
+      "1072",
+      "1073",
+      "1075",
+      "1076",
+      "1077",
+      "1078",
+      "1079",
+      "1080",
+      "1081",
+      "1083",
+      "1084",
+      "1085",
+      "1086",
+      "1087",
+      "1088",
+      "1089",
+      "1090",
+      "1092",
+      "1093",
+      "1094",
+      "1096",
+      "1097",
+      "1098",
+      "1099",
+      "1100",
+      "1101",
+      "1103",
+      "1104",
+      "1106",
+      "1107",
+      "1109",
+      "1110",
+      "1111",
+      "1112",
+      "1113",
+      "1114",
+      "1115",
+      "1116",
+      "1117",
+      "1118",
+      "1119",
+      "1120",
+      "1121",
+      "1122",
+      "1123",
+      "1124",
+      "1125",
+      "1127",
+      "1128",
+      "1130",
+      "1132",
+      "1133",
+      "1134",
+      "1135",
+      "1136",
+      "1137",
+      "1138",
+      "1139",
+      "1140",
+      "1141",
+      "1143",
+      "1144",
+      "1145",
+      "1146",
+      "1148",
+      "1150",
+      "1152"
+    ],
+    "held_dialogues": [
+      "1042",
+      "1046",
+      "1050",
+      "1053",
+      "1059",
+      "1060",
+      "1068",
+      "1070",
+      "1071",
+      "1074",
+      "1082",
+      "1091",
+      "1095",
+      "1102",
+      "1105",
+      "1108",
+      "1126",
+      "1129",
+      "1131",
+      "1142",
+      "1147",
+      "1149",
+      "1151"
+    ],
+    "train_n": 887,
+    "held_n": 222,
+    "methods": {
+      "E1": {
+        "name": "E1",
+        "mean": [
+          0.0
+        ],
+        "scale": [
+          1.0
+        ],
+        "coefficient": 5.311490956089406,
+        "intercept": -1.7098029222835898,
+        "iterations": 12
+      },
+      "L0": {
+        "name": "L0",
+        "mean": [
+          -0.17544708523232344
+        ],
+        "scale": [
+          0.5312960547621958
+        ],
+        "coefficient": 0.9422470314673617,
+        "intercept": 0.7871893448822564,
+        "iterations": 6
+      }
+    }
+  },
+  {
+    "dataset": "MELD",
+    "seed": 67137,
+    "fold": 4,
+    "train_dialogues": [
+      "1040",
+      "1041",
+      "1042",
+      "1044",
+      "1046",
+      "1047",
+      "1048",
+      "1049",
+      "1050",
+      "1052",
+      "1053",
+      "1054",
+      "1055",
+      "1057",
+      "1058",
+      "1059",
+      "1060",
+      "1061",
+      "1062",
+      "1063",
+      "1065",
+      "1066",
+      "1068",
+      "1070",
+      "1071",
+      "1072",
+      "1073",
+      "1074",
+      "1075",
+      "1076",
+      "1077",
+      "1078",
+      "1081",
+      "1082",
+      "1083",
+      "1084",
+      "1085",
+      "1086",
+      "1087",
+      "1088",
+      "1089",
+      "1091",
+      "1093",
+      "1094",
+      "1095",
+      "1098",
+      "1099",
+      "1100",
+      "1102",
+      "1103",
+      "1105",
+      "1106",
+      "1107",
+      "1108",
+      "1109",
+      "1110",
+      "1111",
+      "1114",
+      "1115",
+      "1117",
+      "1118",
+      "1119",
+      "1120",
+      "1121",
+      "1123",
+      "1124",
+      "1125",
+      "1126",
+      "1127",
+      "1128",
+      "1129",
+      "1131",
+      "1132",
+      "1133",
+      "1134",
+      "1135",
+      "1136",
+      "1137",
+      "1138",
+      "1139",
+      "1140",
+      "1141",
+      "1142",
+      "1143",
+      "1144",
+      "1145",
+      "1146",
+      "1147",
+      "1148",
+      "1149",
+      "1150",
+      "1151"
+    ],
+    "held_dialogues": [
+      "1039",
+      "1043",
+      "1045",
+      "1051",
+      "1056",
+      "1064",
+      "1067",
+      "1069",
+      "1079",
+      "1080",
+      "1090",
+      "1092",
+      "1096",
+      "1097",
+      "1101",
+      "1104",
+      "1112",
+      "1113",
+      "1116",
+      "1122",
+      "1130",
+      "1152"
+    ],
+    "train_n": 888,
+    "held_n": 221,
+    "methods": {
+      "E1": {
+        "name": "E1",
+        "mean": [
+          0.0
+        ],
+        "scale": [
+          1.0
+        ],
+        "coefficient": 5.008964769090445,
+        "intercept": -1.6070287995665518,
+        "iterations": 12
+      },
+      "L0": {
+        "name": "L0",
+        "mean": [
+          -0.16515731468360875
+        ],
+        "scale": [
+          0.5446475693837143
+        ],
+        "coefficient": 0.8910014804146851,
+        "intercept": 0.7548159210124251,
+        "iterations": 6
+      }
+    }
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2024,
+    "fold": 0,
+    "train_dialogues": [
+      "1039",
+      "1040",
+      "1041",
+      "1042",
+      "1043",
+      "1045",
+      "1046",
+      "1048",
+      "1049",
+      "1050",
+      "1051",
+      "1052",
+      "1053",
+      "1054",
+      "1056",
+      "1057",
+      "1059",
+      "1060",
+      "1062",
+      "1063",
+      "1064",
+      "1065",
+      "1066",
+      "1067",
+      "1068",
+      "1069",
+      "1070",
+      "1071",
+      "1072",
+      "1074",
+      "1076",
+      "1077",
+      "1079",
+      "1080",
+      "1082",
+      "1083",
+      "1084",
+      "1086",
+      "1087",
+      "1088",
+      "1089",
+      "1090",
+      "1091",
+      "1092",
+      "1093",
+      "1095",
+      "1096",
+      "1097",
+      "1098",
+      "1101",
+      "1102",
+      "1104",
+      "1105",
+      "1108",
+      "1109",
+      "1110",
+      "1111",
+      "1112",
+      "1113",
+      "1115",
+      "1116",
+      "1118",
+      "1119",
+      "1121",
+      "1122",
+      "1123",
+      "1125",
+      "1126",
+      "1127",
+      "1129",
+      "1130",
+      "1131",
+      "1133",
+      "1134",
+      "1135",
+      "1136",
+      "1137",
+      "1138",
+      "1139",
+      "1140",
+      "1141",
+      "1142",
+      "1143",
+      "1144",
+      "1146",
+      "1147",
+      "1148",
+      "1149",
+      "1150",
+      "1151",
+      "1152"
+    ],
+    "held_dialogues": [
+      "1044",
+      "1047",
+      "1055",
+      "1058",
+      "1061",
+      "1073",
+      "1075",
+      "1078",
+      "1081",
+      "1085",
+      "1094",
+      "1099",
+      "1100",
+      "1103",
+      "1106",
+      "1107",
+      "1114",
+      "1117",
+      "1120",
+      "1124",
+      "1128",
+      "1132",
+      "1145"
+    ],
+    "train_n": 887,
+    "held_n": 222,
+    "methods": {
+      "E1": {
+        "name": "E1",
+        "mean": [
+          0.0
+        ],
+        "scale": [
+          1.0
+        ],
+        "coefficient": 5.4799038595836755,
+        "intercept": -1.7218430945428802,
+        "iterations": 12
+      },
+      "L0": {
+        "name": "L0",
+        "mean": [
+          -0.20158286573512463
+        ],
+        "scale": [
+          0.49359598297670687
+        ],
+        "coefficient": 0.9597635019367178,
+        "intercept": 0.8295049705780463,
+        "iterations": 7
+      }
+    }
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2024,
+    "fold": 1,
+    "train_dialogues": [
+      "1039",
+      "1040",
+      "1042",
+      "1043",
+      "1044",
+      "1045",
+      "1046",
+      "1047",
+      "1050",
+      "1051",
+      "1053",
+      "1054",
+      "1055",
+      "1056",
+      "1058",
+      "1059",
+      "1060",
+      "1061",
+      "1062",
+      "1063",
+      "1064",
+      "1066",
+      "1067",
+      "1068",
+      "1069",
+      "1070",
+      "1071",
+      "1072",
+      "1073",
+      "1074",
+      "1075",
+      "1076",
+      "1077",
+      "1078",
+      "1079",
+      "1080",
+      "1081",
+      "1082",
+      "1083",
+      "1085",
+      "1086",
+      "1087",
+      "1089",
+      "1090",
+      "1091",
+      "1092",
+      "1093",
+      "1094",
+      "1095",
+      "1096",
+      "1097",
+      "1099",
+      "1100",
+      "1101",
+      "1102",
+      "1103",
+      "1104",
+      "1105",
+      "1106",
+      "1107",
+      "1108",
+      "1109",
+      "1111",
+      "1112",
+      "1113",
+      "1114",
+      "1115",
+      "1116",
+      "1117",
+      "1120",
+      "1122",
+      "1124",
+      "1126",
+      "1127",
+      "1128",
+      "1129",
+      "1130",
+      "1131",
+      "1132",
+      "1135",
+      "1136",
+      "1137",
+      "1141",
+      "1142",
+      "1144",
+      "1145",
+      "1147",
+      "1148",
+      "1149",
+      "1151",
+      "1152"
+    ],
+    "held_dialogues": [
+      "1041",
+      "1048",
+      "1049",
+      "1052",
+      "1057",
+      "1065",
+      "1084",
+      "1088",
+      "1098",
+      "1110",
+      "1118",
+      "1119",
+      "1121",
+      "1123",
+      "1125",
+      "1133",
+      "1134",
+      "1138",
+      "1139",
+      "1140",
+      "1143",
+      "1146",
+      "1150"
+    ],
+    "train_n": 887,
+    "held_n": 222,
+    "methods": {
+      "E1": {
+        "name": "E1",
+        "mean": [
+          0.0
+        ],
+        "scale": [
+          1.0
+        ],
+        "coefficient": 5.261007326370613,
+        "intercept": -1.5949158462073785,
+        "iterations": 12
+      },
+      "L0": {
+        "name": "L0",
+        "mean": [
+          -0.2020970797410211
+        ],
+        "scale": [
+          0.49027072012443995
+        ],
+        "coefficient": 0.9167702753350369,
+        "intercept": 0.8537448469495932,
+        "iterations": 7
+      }
+    }
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2024,
+    "fold": 2,
+    "train_dialogues": [
+      "1039",
+      "1041",
+      "1042",
+      "1043",
+      "1044",
+      "1045",
+      "1046",
+      "1047",
+      "1048",
+      "1049",
+      "1050",
+      "1051",
+      "1052",
+      "1053",
+      "1055",
+      "1056",
+      "1057",
+      "1058",
+      "1059",
+      "1060",
+      "1061",
+      "1064",
+      "1065",
+      "1067",
+      "1068",
+      "1069",
+      "1070",
+      "1071",
+      "1073",
+      "1074",
+      "1075",
+      "1078",
+      "1079",
+      "1080",
+      "1081",
+      "1082",
+      "1084",
+      "1085",
+      "1088",
+      "1090",
+      "1091",
+      "1092",
+      "1094",
+      "1095",
+      "1096",
+      "1097",
+      "1098",
+      "1099",
+      "1100",
+      "1101",
+      "1102",
+      "1103",
+      "1104",
+      "1105",
+      "1106",
+      "1107",
+      "1108",
+      "1110",
+      "1112",
+      "1113",
+      "1114",
+      "1116",
+      "1117",
+      "1118",
+      "1119",
+      "1120",
+      "1121",
+      "1122",
+      "1123",
+      "1124",
+      "1125",
+      "1126",
+      "1128",
+      "1129",
+      "1130",
+      "1131",
+      "1132",
+      "1133",
+      "1134",
+      "1138",
+      "1139",
+      "1140",
+      "1142",
+      "1143",
+      "1145",
+      "1146",
+      "1147",
+      "1149",
+      "1150",
+      "1151",
+      "1152"
+    ],
+    "held_dialogues": [
+      "1040",
+      "1054",
+      "1062",
+      "1063",
+      "1066",
+      "1072",
+      "1076",
+      "1077",
+      "1083",
+      "1086",
+      "1087",
+      "1089",
+      "1093",
+      "1109",
+      "1111",
+      "1115",
+      "1127",
+      "1135",
+      "1136",
+      "1137",
+      "1141",
+      "1144",
+      "1148"
+    ],
+    "train_n": 887,
+    "held_n": 222,
+    "methods": {
+      "E1": {
+        "name": "E1",
+        "mean": [
+          0.0
+        ],
+        "scale": [
+          1.0
+        ],
+        "coefficient": 5.415918195451624,
+        "intercept": -1.6418284005584018,
+        "iterations": 12
+      },
+      "L0": {
+        "name": "L0",
+        "mean": [
+          -0.20896041917674346
+        ],
+        "scale": [
+          0.49123067165054357
+        ],
+        "coefficient": 0.9531028535372364,
+        "intercept": 0.8749324027345974,
+        "iterations": 7
+      }
+    }
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2024,
+    "fold": 3,
+    "train_dialogues": [
+      "1039",
+      "1040",
+      "1041",
+      "1043",
+      "1044",
+      "1045",
+      "1047",
+      "1048",
+      "1049",
+      "1051",
+      "1052",
+      "1054",
+      "1055",
+      "1056",
+      "1057",
+      "1058",
+      "1061",
+      "1062",
+      "1063",
+      "1064",
+      "1065",
+      "1066",
+      "1067",
+      "1069",
+      "1072",
+      "1073",
+      "1075",
+      "1076",
+      "1077",
+      "1078",
+      "1079",
+      "1080",
+      "1081",
+      "1083",
+      "1084",
+      "1085",
+      "1086",
+      "1087",
+      "1088",
+      "1089",
+      "1090",
+      "1092",
+      "1093",
+      "1094",
+      "1096",
+      "1097",
+      "1098",
+      "1099",
+      "1100",
+      "1101",
+      "1103",
+      "1104",
+      "1106",
+      "1107",
+      "1109",
+      "1110",
+      "1111",
+      "1112",
+      "1113",
+      "1114",
+      "1115",
+      "1116",
+      "1117",
+      "1118",
+      "1119",
+      "1120",
+      "1121",
+      "1122",
+      "1123",
+      "1124",
+      "1125",
+      "1127",
+      "1128",
+      "1130",
+      "1132",
+      "1133",
+      "1134",
+      "1135",
+      "1136",
+      "1137",
+      "1138",
+      "1139",
+      "1140",
+      "1141",
+      "1143",
+      "1144",
+      "1145",
+      "1146",
+      "1148",
+      "1150",
+      "1152"
+    ],
+    "held_dialogues": [
+      "1042",
+      "1046",
+      "1050",
+      "1053",
+      "1059",
+      "1060",
+      "1068",
+      "1070",
+      "1071",
+      "1074",
+      "1082",
+      "1091",
+      "1095",
+      "1102",
+      "1105",
+      "1108",
+      "1126",
+      "1129",
+      "1131",
+      "1142",
+      "1147",
+      "1149",
+      "1151"
+    ],
+    "train_n": 887,
+    "held_n": 222,
+    "methods": {
+      "E1": {
+        "name": "E1",
+        "mean": [
+          0.0
+        ],
+        "scale": [
+          1.0
+        ],
+        "coefficient": 5.580605843469453,
+        "intercept": -1.7451843577796544,
+        "iterations": 12
+      },
+      "L0": {
+        "name": "L0",
+        "mean": [
+          -0.21437755863905317
+        ],
+        "scale": [
+          0.4896327735791796
+        ],
+        "coefficient": 0.9759967583036262,
+        "intercept": 0.836865692634056,
+        "iterations": 6
+      }
+    }
+  },
+  {
+    "dataset": "MELD",
+    "seed": 2024,
+    "fold": 4,
+    "train_dialogues": [
+      "1040",
+      "1041",
+      "1042",
+      "1044",
+      "1046",
+      "1047",
+      "1048",
+      "1049",
+      "1050",
+      "1052",
+      "1053",
+      "1054",
+      "1055",
+      "1057",
+      "1058",
+      "1059",
+      "1060",
+      "1061",
+      "1062",
+      "1063",
+      "1065",
+      "1066",
+      "1068",
+      "1070",
+      "1071",
+      "1072",
+      "1073",
+      "1074",
+      "1075",
+      "1076",
+      "1077",
+      "1078",
+      "1081",
+      "1082",
+      "1083",
+      "1084",
+      "1085",
+      "1086",
+      "1087",
+      "1088",
+      "1089",
+      "1091",
+      "1093",
+      "1094",
+      "1095",
+      "1098",
+      "1099",
+      "1100",
+      "1102",
+      "1103",
+      "1105",
+      "1106",
+      "1107",
+      "1108",
+      "1109",
+      "1110",
+      "1111",
+      "1114",
+      "1115",
+      "1117",
+      "1118",
+      "1119",
+      "1120",
+      "1121",
+      "1123",
+      "1124",
+      "1125",
+      "1126",
+      "1127",
+      "1128",
+      "1129",
+      "1131",
+      "1132",
+      "1133",
+      "1134",
+      "1135",
+      "1136",
+      "1137",
+      "1138",
+      "1139",
+      "1140",
+      "1141",
+      "1142",
+      "1143",
+      "1144",
+      "1145",
+      "1146",
+      "1147",
+      "1148",
+      "1149",
+      "1150",
+      "1151"
+    ],
+    "held_dialogues": [
+      "1039",
+      "1043",
+      "1045",
+      "1051",
+      "1056",
+      "1064",
+      "1067",
+      "1069",
+      "1079",
+      "1080",
+      "1090",
+      "1092",
+      "1096",
+      "1097",
+      "1101",
+      "1104",
+      "1112",
+      "1113",
+      "1116",
+      "1122",
+      "1130",
+      "1152"
+    ],
+    "train_n": 888,
+    "held_n": 221,
+    "methods": {
+      "E1": {
+        "name": "E1",
+        "mean": [
+          0.0
+        ],
+        "scale": [
+          1.0
+        ],
+        "coefficient": 5.461946049567682,
+        "intercept": -1.752763413553968,
+        "iterations": 12
+      },
+      "L0": {
+        "name": "L0",
+        "mean": [
+          -0.20060704975794677
+        ],
+        "scale": [
+          0.4964073760807393
+        ],
+        "coefficient": 0.9515480494542126,
+        "intercept": 0.7853257522134183,
+        "iterations": 6
+      }
+    }
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "fold": 0,
+    "train_dialogues": [
+      "1039",
+      "1040",
+      "1041",
+      "1042",
+      "1043",
+      "1045",
+      "1046",
+      "1048",
+      "1049",
+      "1050",
+      "1051",
+      "1052",
+      "1053",
+      "1054",
+      "1056",
+      "1057",
+      "1059",
+      "1060",
+      "1062",
+      "1063",
+      "1064",
+      "1065",
+      "1066",
+      "1067",
+      "1068",
+      "1069",
+      "1070",
+      "1071",
+      "1072",
+      "1074",
+      "1076",
+      "1077",
+      "1079",
+      "1080",
+      "1082",
+      "1083",
+      "1084",
+      "1086",
+      "1087",
+      "1088",
+      "1089",
+      "1090",
+      "1091",
+      "1092",
+      "1093",
+      "1095",
+      "1096",
+      "1097",
+      "1098",
+      "1101",
+      "1102",
+      "1104",
+      "1105",
+      "1108",
+      "1109",
+      "1110",
+      "1111",
+      "1112",
+      "1113",
+      "1115",
+      "1116",
+      "1118",
+      "1119",
+      "1121",
+      "1122",
+      "1123",
+      "1125",
+      "1126",
+      "1127",
+      "1129",
+      "1130",
+      "1131",
+      "1133",
+      "1134",
+      "1135",
+      "1136",
+      "1137",
+      "1138",
+      "1139",
+      "1140",
+      "1141",
+      "1142",
+      "1143",
+      "1144",
+      "1146",
+      "1147",
+      "1148",
+      "1149",
+      "1150",
+      "1151",
+      "1152"
+    ],
+    "held_dialogues": [
+      "1044",
+      "1047",
+      "1055",
+      "1058",
+      "1061",
+      "1073",
+      "1075",
+      "1078",
+      "1081",
+      "1085",
+      "1094",
+      "1099",
+      "1100",
+      "1103",
+      "1106",
+      "1107",
+      "1114",
+      "1117",
+      "1120",
+      "1124",
+      "1128",
+      "1132",
+      "1145"
+    ],
+    "train_n": 887,
+    "held_n": 222,
+    "methods": {
+      "E1": {
+        "name": "E1",
+        "mean": [
+          0.0
+        ],
+        "scale": [
+          1.0
+        ],
+        "coefficient": 4.35453037167218,
+        "intercept": -1.3795410204734841,
+        "iterations": 12
+      },
+      "L0": {
+        "name": "L0",
+        "mean": [
+          -0.009106138541743681
+        ],
+        "scale": [
+          0.551565090117969
+        ],
+        "coefficient": 0.772325165315801,
+        "intercept": 0.8315590864806566,
+        "iterations": 6
+      }
+    }
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "fold": 1,
+    "train_dialogues": [
+      "1039",
+      "1040",
+      "1042",
+      "1043",
+      "1044",
+      "1045",
+      "1046",
+      "1047",
+      "1050",
+      "1051",
+      "1053",
+      "1054",
+      "1055",
+      "1056",
+      "1058",
+      "1059",
+      "1060",
+      "1061",
+      "1062",
+      "1063",
+      "1064",
+      "1066",
+      "1067",
+      "1068",
+      "1069",
+      "1070",
+      "1071",
+      "1072",
+      "1073",
+      "1074",
+      "1075",
+      "1076",
+      "1077",
+      "1078",
+      "1079",
+      "1080",
+      "1081",
+      "1082",
+      "1083",
+      "1085",
+      "1086",
+      "1087",
+      "1089",
+      "1090",
+      "1091",
+      "1092",
+      "1093",
+      "1094",
+      "1095",
+      "1096",
+      "1097",
+      "1099",
+      "1100",
+      "1101",
+      "1102",
+      "1103",
+      "1104",
+      "1105",
+      "1106",
+      "1107",
+      "1108",
+      "1109",
+      "1111",
+      "1112",
+      "1113",
+      "1114",
+      "1115",
+      "1116",
+      "1117",
+      "1120",
+      "1122",
+      "1124",
+      "1126",
+      "1127",
+      "1128",
+      "1129",
+      "1130",
+      "1131",
+      "1132",
+      "1135",
+      "1136",
+      "1137",
+      "1141",
+      "1142",
+      "1144",
+      "1145",
+      "1147",
+      "1148",
+      "1149",
+      "1151",
+      "1152"
+    ],
+    "held_dialogues": [
+      "1041",
+      "1048",
+      "1049",
+      "1052",
+      "1057",
+      "1065",
+      "1084",
+      "1088",
+      "1098",
+      "1110",
+      "1118",
+      "1119",
+      "1121",
+      "1123",
+      "1125",
+      "1133",
+      "1134",
+      "1138",
+      "1139",
+      "1140",
+      "1143",
+      "1146",
+      "1150"
+    ],
+    "train_n": 887,
+    "held_n": 222,
+    "methods": {
+      "E1": {
+        "name": "E1",
+        "mean": [
+          0.0
+        ],
+        "scale": [
+          1.0
+        ],
+        "coefficient": 4.041994727040284,
+        "intercept": -1.2246662859811681,
+        "iterations": 12
+      },
+      "L0": {
+        "name": "L0",
+        "mean": [
+          -0.009127756593209572
+        ],
+        "scale": [
+          0.5505204358638882
+        ],
+        "coefficient": 0.7118297968361044,
+        "intercept": 0.825011304959772,
+        "iterations": 6
+      }
+    }
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "fold": 2,
+    "train_dialogues": [
+      "1039",
+      "1041",
+      "1042",
+      "1043",
+      "1044",
+      "1045",
+      "1046",
+      "1047",
+      "1048",
+      "1049",
+      "1050",
+      "1051",
+      "1052",
+      "1053",
+      "1055",
+      "1056",
+      "1057",
+      "1058",
+      "1059",
+      "1060",
+      "1061",
+      "1064",
+      "1065",
+      "1067",
+      "1068",
+      "1069",
+      "1070",
+      "1071",
+      "1073",
+      "1074",
+      "1075",
+      "1078",
+      "1079",
+      "1080",
+      "1081",
+      "1082",
+      "1084",
+      "1085",
+      "1088",
+      "1090",
+      "1091",
+      "1092",
+      "1094",
+      "1095",
+      "1096",
+      "1097",
+      "1098",
+      "1099",
+      "1100",
+      "1101",
+      "1102",
+      "1103",
+      "1104",
+      "1105",
+      "1106",
+      "1107",
+      "1108",
+      "1110",
+      "1112",
+      "1113",
+      "1114",
+      "1116",
+      "1117",
+      "1118",
+      "1119",
+      "1120",
+      "1121",
+      "1122",
+      "1123",
+      "1124",
+      "1125",
+      "1126",
+      "1128",
+      "1129",
+      "1130",
+      "1131",
+      "1132",
+      "1133",
+      "1134",
+      "1138",
+      "1139",
+      "1140",
+      "1142",
+      "1143",
+      "1145",
+      "1146",
+      "1147",
+      "1149",
+      "1150",
+      "1151",
+      "1152"
+    ],
+    "held_dialogues": [
+      "1040",
+      "1054",
+      "1062",
+      "1063",
+      "1066",
+      "1072",
+      "1076",
+      "1077",
+      "1083",
+      "1086",
+      "1087",
+      "1089",
+      "1093",
+      "1109",
+      "1111",
+      "1115",
+      "1127",
+      "1135",
+      "1136",
+      "1137",
+      "1141",
+      "1144",
+      "1148"
+    ],
+    "train_n": 887,
+    "held_n": 222,
+    "methods": {
+      "E1": {
+        "name": "E1",
+        "mean": [
+          0.0
+        ],
+        "scale": [
+          1.0
+        ],
+        "coefficient": 4.608687082464477,
+        "intercept": -1.4516772399933886,
+        "iterations": 12
+      },
+      "L0": {
+        "name": "L0",
+        "mean": [
+          -0.020234319376038482
+        ],
+        "scale": [
+          0.5369693253043312
+        ],
+        "coefficient": 0.8114970195396628,
+        "intercept": 0.8822105158497149,
+        "iterations": 6
+      }
+    }
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "fold": 3,
+    "train_dialogues": [
+      "1039",
+      "1040",
+      "1041",
+      "1043",
+      "1044",
+      "1045",
+      "1047",
+      "1048",
+      "1049",
+      "1051",
+      "1052",
+      "1054",
+      "1055",
+      "1056",
+      "1057",
+      "1058",
+      "1061",
+      "1062",
+      "1063",
+      "1064",
+      "1065",
+      "1066",
+      "1067",
+      "1069",
+      "1072",
+      "1073",
+      "1075",
+      "1076",
+      "1077",
+      "1078",
+      "1079",
+      "1080",
+      "1081",
+      "1083",
+      "1084",
+      "1085",
+      "1086",
+      "1087",
+      "1088",
+      "1089",
+      "1090",
+      "1092",
+      "1093",
+      "1094",
+      "1096",
+      "1097",
+      "1098",
+      "1099",
+      "1100",
+      "1101",
+      "1103",
+      "1104",
+      "1106",
+      "1107",
+      "1109",
+      "1110",
+      "1111",
+      "1112",
+      "1113",
+      "1114",
+      "1115",
+      "1116",
+      "1117",
+      "1118",
+      "1119",
+      "1120",
+      "1121",
+      "1122",
+      "1123",
+      "1124",
+      "1125",
+      "1127",
+      "1128",
+      "1130",
+      "1132",
+      "1133",
+      "1134",
+      "1135",
+      "1136",
+      "1137",
+      "1138",
+      "1139",
+      "1140",
+      "1141",
+      "1143",
+      "1144",
+      "1145",
+      "1146",
+      "1148",
+      "1150",
+      "1152"
+    ],
+    "held_dialogues": [
+      "1042",
+      "1046",
+      "1050",
+      "1053",
+      "1059",
+      "1060",
+      "1068",
+      "1070",
+      "1071",
+      "1074",
+      "1082",
+      "1091",
+      "1095",
+      "1102",
+      "1105",
+      "1108",
+      "1126",
+      "1129",
+      "1131",
+      "1142",
+      "1147",
+      "1149",
+      "1151"
+    ],
+    "train_n": 887,
+    "held_n": 222,
+    "methods": {
+      "E1": {
+        "name": "E1",
+        "mean": [
+          0.0
+        ],
+        "scale": [
+          1.0
+        ],
+        "coefficient": 4.38661483738401,
+        "intercept": -1.3727194049947162,
+        "iterations": 12
+      },
+      "L0": {
+        "name": "L0",
+        "mean": [
+          -0.02374953012874379
+        ],
+        "scale": [
+          0.5563084870644752
+        ],
+        "coefficient": 0.7845111071764143,
+        "intercept": 0.8410822316343635,
+        "iterations": 6
+      }
+    }
+  },
+  {
+    "dataset": "MELD",
+    "seed": 3407,
+    "fold": 4,
+    "train_dialogues": [
+      "1040",
+      "1041",
+      "1042",
+      "1044",
+      "1046",
+      "1047",
+      "1048",
+      "1049",
+      "1050",
+      "1052",
+      "1053",
+      "1054",
+      "1055",
+      "1057",
+      "1058",
+      "1059",
+      "1060",
+      "1061",
+      "1062",
+      "1063",
+      "1065",
+      "1066",
+      "1068",
+      "1070",
+      "1071",
+      "1072",
+      "1073",
+      "1074",
+      "1075",
+      "1076",
+      "1077",
+      "1078",
+      "1081",
+      "1082",
+      "1083",
+      "1084",
+      "1085",
+      "1086",
+      "1087",
+      "1088",
+      "1089",
+      "1091",
+      "1093",
+      "1094",
+      "1095",
+      "1098",
+      "1099",
+      "1100",
+      "1102",
+      "1103",
+      "1105",
+      "1106",
+      "1107",
+      "1108",
+      "1109",
+      "1110",
+      "1111",
+      "1114",
+      "1115",
+      "1117",
+      "1118",
+      "1119",
+      "1120",
+      "1121",
+      "1123",
+      "1124",
+      "1125",
+      "1126",
+      "1127",
+      "1128",
+      "1129",
+      "1131",
+      "1132",
+      "1133",
+      "1134",
+      "1135",
+      "1136",
+      "1137",
+      "1138",
+      "1139",
+      "1140",
+      "1141",
+      "1142",
+      "1143",
+      "1144",
+      "1145",
+      "1146",
+      "1147",
+      "1148",
+      "1149",
+      "1150",
+      "1151"
+    ],
+    "held_dialogues": [
+      "1039",
+      "1043",
+      "1045",
+      "1051",
+      "1056",
+      "1064",
+      "1067",
+      "1069",
+      "1079",
+      "1080",
+      "1090",
+      "1092",
+      "1096",
+      "1097",
+      "1101",
+      "1104",
+      "1112",
+      "1113",
+      "1116",
+      "1122",
+      "1130",
+      "1152"
+    ],
+    "train_n": 888,
+    "held_n": 221,
+    "methods": {
+      "E1": {
+        "name": "E1",
+        "mean": [
+          0.0
+        ],
+        "scale": [
+          1.0
+        ],
+        "coefficient": 4.205583100276726,
+        "intercept": -1.327394613332911,
+        "iterations": 12
+      },
+      "L0": {
+        "name": "L0",
+        "mean": [
+          -0.02013244935944505
+        ],
+        "scale": [
+          0.5578996341533788
+        ],
+        "coefficient": 0.7432611801900613,
+        "intercept": 0.7934570297633001,
+        "iterations": 6
+      }
+    }
+  },
+  {
+    "dataset": "MELD",
+    "seed": 42,
+    "fold": 0,
+    "train_dialogues": [
+      "1039",
+      "1040",
+      "1041",
+      "1042",
+      "1043",
+      "1045",
+      "1046",
+      "1048",
+      "1049",
+      "1050",
+      "1051",
+      "1052",
+      "1053",
+      "1054",
+      "1056",
+      "1057",
+      "1059",
+      "1060",
+      "1062",
+      "1063",
+      "1064",
+      "1065",
+      "1066",
+      "1067",
+      "1068",
+      "1069",
+      "1070",
+      "1071",
+      "1072",
+      "1074",
+      "1076",
+      "1077",
+      "1079",
+      "1080",
+      "1082",
+      "1083",
+      "1084",
+      "1086",
+      "1087",
+      "1088",
+      "1089",
+      "1090",
+      "1091",
+      "1092",
+      "1093",
+      "1095",
+      "1096",
+      "1097",
+      "1098",
+      "1101",
+      "1102",
+      "1104",
+      "1105",
+      "1108",
+      "1109",
+      "1110",
+      "1111",
+      "1112",
+      "1113",
+      "1115",
+      "1116",
+      "1118",
+      "1119",
+      "1121",
+      "1122",
+      "1123",
+      "1125",
+      "1126",
+      "1127",
+      "1129",
+      "1130",
+      "1131",
+      "1133",
+      "1134",
+      "1135",
+      "1136",
+      "1137",
+      "1138",
+      "1139",
+      "1140",
+      "1141",
+      "1142",
+      "1143",
+      "1144",
+      "1146",
+      "1147",
+      "1148",
+      "1149",
+      "1150",
+      "1151",
+      "1152"
+    ],
+    "held_dialogues": [
+      "1044",
+      "1047",
+      "1055",
+      "1058",
+      "1061",
+      "1073",
+      "1075",
+      "1078",
+      "1081",
+      "1085",
+      "1094",
+      "1099",
+      "1100",
+      "1103",
+      "1106",
+      "1107",
+      "1114",
+      "1117",
+      "1120",
+      "1124",
+      "1128",
+      "1132",
+      "1145"
+    ],
+    "train_n": 887,
+    "held_n": 222,
+    "methods": {
+      "E1": {
+        "name": "E1",
+        "mean": [
+          0.0
+        ],
+        "scale": [
+          1.0
+        ],
+        "coefficient": 4.932029526051267,
+        "intercept": -1.329059884043638,
+        "iterations": 12
+      },
+      "L0": {
+        "name": "L0",
+        "mean": [
+          -0.2844240180980648
+        ],
+        "scale": [
+          0.4863364873970383
+        ],
+        "coefficient": 0.8272800872633864,
+        "intercept": 0.8640756410704861,
+        "iterations": 6
+      }
+    }
+  },
+  {
+    "dataset": "MELD",
+    "seed": 42,
+    "fold": 1,
+    "train_dialogues": [
+      "1039",
+      "1040",
+      "1042",
+      "1043",
+      "1044",
+      "1045",
+      "1046",
+      "1047",
+      "1050",
+      "1051",
+      "1053",
+      "1054",
+      "1055",
+      "1056",
+      "1058",
+      "1059",
+      "1060",
+      "1061",
+      "1062",
+      "1063",
+      "1064",
+      "1066",
+      "1067",
+      "1068",
+      "1069",
+      "1070",
+      "1071",
+      "1072",
+      "1073",
+      "1074",
+      "1075",
+      "1076",
+      "1077",
+      "1078",
+      "1079",
+      "1080",
+      "1081",
+      "1082",
+      "1083",
+      "1085",
+      "1086",
+      "1087",
+      "1089",
+      "1090",
+      "1091",
+      "1092",
+      "1093",
+      "1094",
+      "1095",
+      "1096",
+      "1097",
+      "1099",
+      "1100",
+      "1101",
+      "1102",
+      "1103",
+      "1104",
+      "1105",
+      "1106",
+      "1107",
+      "1108",
+      "1109",
+      "1111",
+      "1112",
+      "1113",
+      "1114",
+      "1115",
+      "1116",
+      "1117",
+      "1120",
+      "1122",
+      "1124",
+      "1126",
+      "1127",
+      "1128",
+      "1129",
+      "1130",
+      "1131",
+      "1132",
+      "1135",
+      "1136",
+      "1137",
+      "1141",
+      "1142",
+      "1144",
+      "1145",
+      "1147",
+      "1148",
+      "1149",
+      "1151",
+      "1152"
+    ],
+    "held_dialogues": [
+      "1041",
+      "1048",
+      "1049",
+      "1052",
+      "1057",
+      "1065",
+      "1084",
+      "1088",
+      "1098",
+      "1110",
+      "1118",
+      "1119",
+      "1121",
+      "1123",
+      "1125",
+      "1133",
+      "1134",
+      "1138",
+      "1139",
+      "1140",
+      "1143",
+      "1146",
+      "1150"
+    ],
+    "train_n": 887,
+    "held_n": 222,
+    "methods": {
+      "E1": {
+        "name": "E1",
+        "mean": [
+          0.0
+        ],
+        "scale": [
+          1.0
+        ],
+        "coefficient": 5.043847068940343,
+        "intercept": -1.4192215428571853,
+        "iterations": 12
+      },
+      "L0": {
+        "name": "L0",
+        "mean": [
+          -0.29356597147101887
+        ],
+        "scale": [
+          0.486319046603255
+        ],
+        "coefficient": 0.8472387269310003,
+        "intercept": 0.8104611795480875,
+        "iterations": 6
+      }
+    }
+  },
+  {
+    "dataset": "MELD",
+    "seed": 42,
+    "fold": 2,
+    "train_dialogues": [
+      "1039",
+      "1041",
+      "1042",
+      "1043",
+      "1044",
+      "1045",
+      "1046",
+      "1047",
+      "1048",
+      "1049",
+      "1050",
+      "1051",
+      "1052",
+      "1053",
+      "1055",
+      "1056",
+      "1057",
+      "1058",
+      "1059",
+      "1060",
+      "1061",
+      "1064",
+      "1065",
+      "1067",
+      "1068",
+      "1069",
+      "1070",
+      "1071",
+      "1073",
+      "1074",
+      "1075",
+      "1078",
+      "1079",
+      "1080",
+      "1081",
+      "1082",
+      "1084",
+      "1085",
+      "1088",
+      "1090",
+      "1091",
+      "1092",
+      "1094",
+      "1095",
+      "1096",
+      "1097",
+      "1098",
+      "1099",
+      "1100",
+      "1101",
+      "1102",
+      "1103",
+      "1104",
+      "1105",
+      "1106",
+      "1107",
+      "1108",
+      "1110",
+      "1112",
+      "1113",
+      "1114",
+      "1116",
+      "1117",
+      "1118",
+      "1119",
+      "1120",
+      "1121",
+      "1122",
+      "1123",
+      "1124",
+      "1125",
+      "1126",
+      "1128",
+      "1129",
+      "1130",
+      "1131",
+      "1132",
+      "1133",
+      "1134",
+      "1138",
+      "1139",
+      "1140",
+      "1142",
+      "1143",
+      "1145",
+      "1146",
+      "1147",
+      "1149",
+      "1150",
+      "1151",
+      "1152"
+    ],
+    "held_dialogues": [
+      "1040",
+      "1054",
+      "1062",
+      "1063",
+      "1066",
+      "1072",
+      "1076",
+      "1077",
+      "1083",
+      "1086",
+      "1087",
+      "1089",
+      "1093",
+      "1109",
+      "1111",
+      "1115",
+      "1127",
+      "1135",
+      "1136",
+      "1137",
+      "1141",
+      "1144",
+      "1148"
+    ],
+    "train_n": 887,
+    "held_n": 222,
+    "methods": {
+      "E1": {
+        "name": "E1",
+        "mean": [
+          0.0
+        ],
+        "scale": [
+          1.0
+        ],
+        "coefficient": 4.615263385328413,
+        "intercept": -1.1556367893070787,
+        "iterations": 12
+      },
+      "L0": {
+        "name": "L0",
+        "mean": [
+          -0.2882167712553092
+        ],
+        "scale": [
+          0.49004437402876305
+        ],
+        "coefficient": 0.7729213477111755,
+        "intercept": 0.8916338305921607,
+        "iterations": 6
+      }
+    }
+  },
+  {
+    "dataset": "MELD",
+    "seed": 42,
+    "fold": 3,
+    "train_dialogues": [
+      "1039",
+      "1040",
+      "1041",
+      "1043",
+      "1044",
+      "1045",
+      "1047",
+      "1048",
+      "1049",
+      "1051",
+      "1052",
+      "1054",
+      "1055",
+      "1056",
+      "1057",
+      "1058",
+      "1061",
+      "1062",
+      "1063",
+      "1064",
+      "1065",
+      "1066",
+      "1067",
+      "1069",
+      "1072",
+      "1073",
+      "1075",
+      "1076",
+      "1077",
+      "1078",
+      "1079",
+      "1080",
+      "1081",
+      "1083",
+      "1084",
+      "1085",
+      "1086",
+      "1087",
+      "1088",
+      "1089",
+      "1090",
+      "1092",
+      "1093",
+      "1094",
+      "1096",
+      "1097",
+      "1098",
+      "1099",
+      "1100",
+      "1101",
+      "1103",
+      "1104",
+      "1106",
+      "1107",
+      "1109",
+      "1110",
+      "1111",
+      "1112",
+      "1113",
+      "1114",
+      "1115",
+      "1116",
+      "1117",
+      "1118",
+      "1119",
+      "1120",
+      "1121",
+      "1122",
+      "1123",
+      "1124",
+      "1125",
+      "1127",
+      "1128",
+      "1130",
+      "1132",
+      "1133",
+      "1134",
+      "1135",
+      "1136",
+      "1137",
+      "1138",
+      "1139",
+      "1140",
+      "1141",
+      "1143",
+      "1144",
+      "1145",
+      "1146",
+      "1148",
+      "1150",
+      "1152"
+    ],
+    "held_dialogues": [
+      "1042",
+      "1046",
+      "1050",
+      "1053",
+      "1059",
+      "1060",
+      "1068",
+      "1070",
+      "1071",
+      "1074",
+      "1082",
+      "1091",
+      "1095",
+      "1102",
+      "1105",
+      "1108",
+      "1126",
+      "1129",
+      "1131",
+      "1142",
+      "1147",
+      "1149",
+      "1151"
+    ],
+    "train_n": 887,
+    "held_n": 222,
+    "methods": {
+      "E1": {
+        "name": "E1",
+        "mean": [
+          0.0
+        ],
+        "scale": [
+          1.0
+        ],
+        "coefficient": 5.054216772473642,
+        "intercept": -1.3893121155439456,
+        "iterations": 12
+      },
+      "L0": {
+        "name": "L0",
+        "mean": [
+          -0.30579717902895215
+        ],
+        "scale": [
+          0.4802796945980663
+        ],
+        "coefficient": 0.8405319489315145,
+        "intercept": 0.8305714326611909,
+        "iterations": 6
+      }
+    }
+  },
+  {
+    "dataset": "MELD",
+    "seed": 42,
+    "fold": 4,
+    "train_dialogues": [
+      "1040",
+      "1041",
+      "1042",
+      "1044",
+      "1046",
+      "1047",
+      "1048",
+      "1049",
+      "1050",
+      "1052",
+      "1053",
+      "1054",
+      "1055",
+      "1057",
+      "1058",
+      "1059",
+      "1060",
+      "1061",
+      "1062",
+      "1063",
+      "1065",
+      "1066",
+      "1068",
+      "1070",
+      "1071",
+      "1072",
+      "1073",
+      "1074",
+      "1075",
+      "1076",
+      "1077",
+      "1078",
+      "1081",
+      "1082",
+      "1083",
+      "1084",
+      "1085",
+      "1086",
+      "1087",
+      "1088",
+      "1089",
+      "1091",
+      "1093",
+      "1094",
+      "1095",
+      "1098",
+      "1099",
+      "1100",
+      "1102",
+      "1103",
+      "1105",
+      "1106",
+      "1107",
+      "1108",
+      "1109",
+      "1110",
+      "1111",
+      "1114",
+      "1115",
+      "1117",
+      "1118",
+      "1119",
+      "1120",
+      "1121",
+      "1123",
+      "1124",
+      "1125",
+      "1126",
+      "1127",
+      "1128",
+      "1129",
+      "1131",
+      "1132",
+      "1133",
+      "1134",
+      "1135",
+      "1136",
+      "1137",
+      "1138",
+      "1139",
+      "1140",
+      "1141",
+      "1142",
+      "1143",
+      "1144",
+      "1145",
+      "1146",
+      "1147",
+      "1148",
+      "1149",
+      "1150",
+      "1151"
+    ],
+    "held_dialogues": [
+      "1039",
+      "1043",
+      "1045",
+      "1051",
+      "1056",
+      "1064",
+      "1067",
+      "1069",
+      "1079",
+      "1080",
+      "1090",
+      "1092",
+      "1096",
+      "1097",
+      "1101",
+      "1104",
+      "1112",
+      "1113",
+      "1116",
+      "1122",
+      "1130",
+      "1152"
+    ],
+    "train_n": 888,
+    "held_n": 221,
+    "methods": {
+      "E1": {
+        "name": "E1",
+        "mean": [
+          0.0
+        ],
+        "scale": [
+          1.0
+        ],
+        "coefficient": 4.86885249953555,
+        "intercept": -1.3448341986382768,
+        "iterations": 12
+      },
+      "L0": {
+        "name": "L0",
+        "mean": [
+          -0.298332357090033
+        ],
+        "scale": [
+          0.4980600145380159
+        ],
+        "coefficient": 0.8168300701671587,
+        "intercept": 0.7987926027595921,
+        "iterations": 6
+      }
+    }
+  }
+]
