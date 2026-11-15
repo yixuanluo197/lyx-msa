@@ -1,0 +1,65 @@
+{
+  "note": "optimizer precision only; not evidence of behavior gain",
+  "comparisons": [
+    {
+      "dataset": "IEMOCAP",
+      "seed": 42,
+      "rows": 527,
+      "max_absolute_confidence_difference": 2.220446049250313e-16
+    },
+    {
+      "dataset": "IEMOCAP",
+      "seed": 1475,
+      "rows": 527,
+      "max_absolute_confidence_difference": 5.551115123125783e-17
+    },
+    {
+      "dataset": "IEMOCAP",
+      "seed": 2024,
+      "rows": 527,
+      "max_absolute_confidence_difference": 2.220446049250313e-16
+    },
+    {
+      "dataset": "IEMOCAP",
+      "seed": 3407,
+      "rows": 527,
+      "max_absolute_confidence_difference": 6.749317845167191e-07
+    },
+    {
+      "dataset": "IEMOCAP",
+      "seed": 67137,
+      "rows": 527,
+      "max_absolute_confidence_difference": 8.502908083185545e-07
+    },
+    {
+      "dataset": "MELD",
+      "seed": 42,
+      "rows": 1109,
+      "max_absolute_confidence_difference": 3.3306690738754696e-16
+    },
+    {
+      "dataset": "MELD",
+      "seed": 1475,
+      "rows": 1109,
+      "max_absolute_confidence_difference": 1.1102230246251565e-16
+    },
+    {
+      "dataset": "MELD",
+      "seed": 2024,
+      "rows": 1109,
+      "max_absolute_confidence_difference": 2.7755575615628914e-16
+    },
+    {
+      "dataset": "MELD",
+      "seed": 3407,
+      "rows": 1109,
+      "max_absolute_confidence_difference": 2.220446049250313e-16
+    },
+    {
+      "dataset": "MELD",
+      "seed": 67137,
+      "rows": 1109,
+      "max_absolute_confidence_difference": 3.3306690738754696e-16
+    }
+  ]
+}

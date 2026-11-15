@@ -1,0 +1,27 @@
+{
+  "status": "completed",
+  "independent_verification_pending": true,
+  "cpu_only": true,
+  "feature_rows": 8180,
+  "oof_rows": 57260,
+  "metric_rows": 70,
+  "outer_folds": 85,
+  "bootstrap_rows": 54,
+  "input_and_code_hashes_unchanged": true,
+  "elapsed_seconds": 53.20744228363037,
+  "methods": [
+    "E0",
+    "E1",
+    "M_joint",
+    "M_mu",
+    "M_delta",
+    "M_gaussian",
+    "M_dropout"
+  ],
+  "primary_method": "M_joint",
+  "training_record_per_utterance": 1,
+  "test_labels_used": false,
+  "cmerc_training": false,
+  "new_perturbations": false,
+  "raw_data_modified": false
+}

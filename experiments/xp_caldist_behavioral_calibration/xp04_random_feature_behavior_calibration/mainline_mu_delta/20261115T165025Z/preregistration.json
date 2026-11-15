@@ -1,0 +1,170 @@
+{
+  "status": "frozen_before_new_scoring_results",
+  "source_five_seed": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/five_seed_validation/20261115T151109Z",
+  "source_pilot": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/pilot/20261113T025053Z",
+  "seeds": [
+    1475,
+    67137,
+    2024,
+    3407,
+    42
+  ],
+  "datasets": {
+    "IEMOCAP": {
+      "utterances": 527,
+      "dialogues": 12,
+      "outer": "LODO12"
+    },
+    "MELD": {
+      "utterances": 1109,
+      "dialogues": 114,
+      "outer": "GroupKFold5"
+    }
+  },
+  "conditions": {
+    "strength": 0.05,
+    "repeats": 10,
+    "corruptions": [
+      "gaussian",
+      "dropout"
+    ],
+    "joint_five_seed": true,
+    "single_modalities_seed1475_only": [
+      "text",
+      "audio",
+      "visual",
+      "joint"
+    ]
+  },
+  "mu": "mean(1[perturbed_prediction != original_prediction] * perturbed_max_confidence)",
+  "delta": "abs(original_confidence - mean(perturbed_max_confidence))",
+  "methods": [
+    "E0",
+    "E1",
+    "M_joint",
+    "M_mu",
+    "M_delta",
+    "M_gaussian",
+    "M_dropout"
+  ],
+  "features": {
+    "M_joint": [
+      "gaussian_mu",
+      "gaussian_delta",
+      "dropout_mu",
+      "dropout_delta"
+    ],
+    "M_mu": [
+      "gaussian_mu",
+      "dropout_mu"
+    ],
+    "M_delta": [
+      "gaussian_delta",
+      "dropout_delta"
+    ],
+    "M_gaussian": [
+      "gaussian_mu",
+      "gaussian_delta"
+    ],
+    "M_dropout": [
+      "dropout_mu",
+      "dropout_delta"
+    ]
+  },
+  "primary_method": "M_joint",
+  "primary_reference": "E1",
+  "score": "R=a+b*C+Z(B) dot w; q=sigmoid(R); R_behavior=Z(B) dot w",
+  "base_input": "raw C, no standardization and no logit transform",
+  "base_regularization": "sklearn C=1; b^2/(2*n) in mean-loss objective",
+  "behavior_regularization_grid": [
+    "off",
+    1.0,
+    0.1,
+    0.01
+  ],
+  "implementation": "sklearn LogisticRegression C=1 on [raw C, StandardScaler(B)/sqrt(n*lambda)], n=current fit training rows; active effective behavior coefficients=sklearn coefficients/sqrt(n*lambda); intercept unpenalized",
+  "optimizer": {
+    "solver": "lbfgs",
+    "max_iter": 2000,
+    "tol": 1e-08,
+    "note": "E1 recomputed with same optimizer precision; report numerical difference to legacy E1, not a new calibration method"
+  },
+  "off": "exact E1 fitted on same training subset; not a large-lambda approximation",
+  "inner": "GroupKFold5 on outer-training Dialogue only; pooled inner OOF Binary Brier selects penalty; tie tolerance1e-12 prefers off then stronger penalty",
+  "joint_comparisons": [
+    [
+      "M_joint",
+      "E1"
+    ],
+    [
+      "M_mu",
+      "E1"
+    ],
+    [
+      "M_delta",
+      "E1"
+    ],
+    [
+      "M_gaussian",
+      "E1"
+    ],
+    [
+      "M_dropout",
+      "E1"
+    ],
+    [
+      "M_joint",
+      "E0"
+    ],
+    [
+      "M_mu",
+      "M_joint"
+    ],
+    [
+      "M_delta",
+      "M_joint"
+    ],
+    [
+      "M_gaussian",
+      "M_dropout"
+    ]
+  ],
+  "bootstrap": {
+    "repeats": 2000,
+    "draw_source": "previous five-seed baseline/bootstrap/{dataset}_dialogue_draws.npz",
+    "unit": "shared Dialogue across seeds",
+    "refit": false
+  },
+  "modality_pilot": "M_joint only, each dataset/seed1475/modality separately fitted; joint must reproduce corresponding main experiment; no selecting primary modality from these OOF scores",
+  "evidence_tiers": {
+    "engineering": "correct target perturbation/mask/RNG already audited; mu/delta and learned score reproducible; all classification labels unchanged",
+    "behavior_response": "quantify flip and confidence response and correctness associations; sensitivity is not correctness",
+    "preliminary_calibration_signal": "primary vs E1 ECE and at least one of Brier/NLL improve in mean; other proper loss does not worsen; improved proper loss improves in >=3/5 seeds; confidence intervals may remain uncertain and are reported",
+    "robust_calibration_support": "requires independent evidence beyond repeatedly inspected Validation; this run cannot establish it",
+    "raw_data_boundary": "measurable behavior or weak exploratory signals can motivate a separate small raw-data mechanism/engineering Pilot; not proof of calibration effectiveness and no automatic raw modification"
+  },
+  "excluded_from_scoring": [
+    "D",
+    "A",
+    "JS",
+    "entropy",
+    "margin",
+    "predicted_class",
+    "random_negative_features",
+    "context perturbation"
+  ],
+  "constraints": [
+    "no CMERC training or GPU inference",
+    "no new feature perturbations",
+    "no Test labels/metrics",
+    "no weights or raw feature edits",
+    "no temperature scaling",
+    "no raw text/WAV/MP4 edits",
+    "no post-OOF winner substitution"
+  ],
+  "completion_batches": [
+    "joint five-seed core score and all original-feature ablations verified and uploaded",
+    "single-modality seed1475 pilot verified and uploaded; integrated feasibility report"
+  ],
+  "source_commit": "c0d4fe6e58d0768dad5ba5464733f914b90a7eb1"
+}

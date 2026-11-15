@@ -1,0 +1,89 @@
+{
+  "all_passed": true,
+  "batch": "joint",
+  "input_precheck": {
+    "joint_rows": 8180,
+    "modality_rows": 6544,
+    "historical_modality_mu_delta_values_matched": 26176,
+    "visual_missing_rows_preserved": true,
+    "joint_modality_seed1475_inputs_identical": true
+  },
+  "oof_predictions_reconstructed": 57260,
+  "inner_candidate_predictions_reconstructed": 1023300,
+  "unique_fits_objective_and_train_scaler_checked": 6482,
+  "nested_selections_recomputed": 425,
+  "metric_rows_recomputed": 70,
+  "bootstrap_rows_recomputed": 54,
+  "literal_cluster_resampling_checks": 630,
+  "max_oof_reconstruction_error": 3.3306690738754696e-16,
+  "C_input_raw_and_unstandardized": true,
+  "only_registered_mu_delta_scoring_features": true,
+  "off_exact_E1_reuse_verified": true,
+  "train_only_standardization_and_dialogue_isolation_verified": true,
+  "accuracy_and_F1_unchanged": true,
+  "source_and_implementation_hashes_verified": true,
+  "parity": {
+    "legacy_e1_max_absolute_difference": 8.502908083185545e-07,
+    "legacy_e1_folds_identical": true,
+    "precision_change_not_behavior_gain": true
+  },
+  "optimizer_accuracy": {
+    "max_mean_objective_gradient": 0.0002942349901839704,
+    "fits_gradient_above_1e_6_diagnostic_only": 3769,
+    "max_independent_refinement_mean_objective_gap": 4.4903526563722096e-08,
+    "max_training_probability_refinement_gap": 0.001214386829938352,
+    "inner_selection_changes_under_refinement": 0,
+    "primary_direction_sensitivity_same_selected_penalty": [
+      {
+        "dataset": "IEMOCAP",
+        "modality": "joint",
+        "metric": "ece15",
+        "reported_mean_difference": -0.0030551470491757314,
+        "refined_same_selected_penalty_mean_difference": -0.0030549860024180796,
+        "difference_sign_unchanged": true
+      },
+      {
+        "dataset": "IEMOCAP",
+        "modality": "joint",
+        "metric": "binary_brier",
+        "reported_mean_difference": 0.0014083682831505962,
+        "refined_same_selected_penalty_mean_difference": 0.0014081592573610135,
+        "difference_sign_unchanged": true
+      },
+      {
+        "dataset": "IEMOCAP",
+        "modality": "joint",
+        "metric": "binary_nll",
+        "reported_mean_difference": 0.0037985574128966302,
+        "refined_same_selected_penalty_mean_difference": 0.003797766798466262,
+        "difference_sign_unchanged": true
+      },
+      {
+        "dataset": "MELD",
+        "modality": "joint",
+        "metric": "ece15",
+        "reported_mean_difference": 0.0016315675004930918,
+        "refined_same_selected_penalty_mean_difference": 0.0016315812743790375,
+        "difference_sign_unchanged": true
+      },
+      {
+        "dataset": "MELD",
+        "modality": "joint",
+        "metric": "binary_brier",
+        "reported_mean_difference": 0.0003401221906194019,
+        "refined_same_selected_penalty_mean_difference": 0.0003401500473161734,
+        "difference_sign_unchanged": true
+      },
+      {
+        "dataset": "MELD",
+        "modality": "joint",
+        "metric": "binary_nll",
+        "reported_mean_difference": 0.0006550608328941942,
+        "refined_same_selected_penalty_mean_difference": 0.000655121572442141,
+        "difference_sign_unchanged": true
+      }
+    ],
+    "original_results_not_replaced": true,
+    "refinement_does_not_establish_new_calibration_method": true
+  }
+}
