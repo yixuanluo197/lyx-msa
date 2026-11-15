@@ -1,0 +1,37 @@
+{
+  "status": "completed_and_independently_verified",
+  "independent_verification_pending": false,
+  "feature_rows": 8180,
+  "response_rows": 16360,
+  "half_response_rows": 49080,
+  "prior_behavior_groups_matched": 16360,
+  "all_model_features_finite": true,
+  "source_hashes_unchanged": true,
+  "no_gpu_or_new_perturbations": true,
+  "no_test_labels": true,
+  "seconds": 38.28784108161926,
+  "independent_verification": {
+    "status": "passed",
+    "static_original_rows": 8180,
+    "response_groups": 16360,
+    "raw_joint_prediction_rows": 163600,
+    "half_response_groups": 49080,
+    "split_correlation_rows": 300,
+    "response_summary_rows": 120,
+    "label_free_random_rows": 8180,
+    "paired_control_ids": 1636,
+    "sources_rehashed": 15,
+    "prior_manifest_inputs_matched": 11,
+    "historical_git_seed1475_sources_matched": 2,
+    "visual_missing_retained": {
+      "IEMOCAP_per_seed": 1,
+      "MELD_per_seed": 95
+    },
+    "all_numeric_features_finite": true,
+    "independent_formula_reconstruction": true,
+    "no_diagnostic_function_imports": true,
+    "seconds": 128.92436003684998,
+    "verifier_sha256": "ef327344a7fb75a3501ae1d53bd90ee0aefb6d7beb6e2f4e8dd1f44e356bcec2"
+  },
+  "all_passed": true
+}

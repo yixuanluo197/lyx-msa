@@ -1,0 +1,50 @@
+{
+  "repository_commit": "e649892ce741d0fd6711c7c53000c4c54eea1d93",
+  "source_verified_complete": {
+    "status": "completed",
+    "all_passed": true,
+    "experiment": "XP04 fixed five-seed joint random-feature behavioral calibration",
+    "primary_method": "E1_DA",
+    "seeds": [
+      1475,
+      67137,
+      2024,
+      3407,
+      42
+    ],
+    "datasets": {
+      "IEMOCAP": {
+        "utterances_per_seed": 527,
+        "dialogues": 12
+      },
+      "MELD": {
+        "utterances_per_seed": 1109,
+        "dialogues": 114
+      }
+    },
+    "baseline_evidence": "baseline/verification.json",
+    "gpu_evidence": "provenance/joint_verification.json",
+    "behavior_evidence": "behavior/verification.json",
+    "original_utterance_rows": 8180,
+    "joint_perturbed_rows": 163600,
+    "new_target_forwards": 130880,
+    "seven_method_oof_rows": 57260,
+    "per_seed_metrics": 70,
+    "bootstrap_comparison_rows": 72,
+    "cmerc_weights_unchanged": true,
+    "test_labels_used": false,
+    "temperature_scaling": false,
+    "raw_data_corruption": false,
+    "primary_beats_XP04_all_metrics_all_seeds": true,
+    "consistent_behavior_increment_over_E1_established": false,
+    "final_report": "FINAL_FIVE_SEED_REPORT.md",
+    "known_limitations": [
+      "shared Validation previously used for checkpoint selection and method design",
+      "Seed1475 used in Pilot method development",
+      "bootstrap conditional on fixed OOF predictions without refit",
+      "exploratory contrasts have no multiplicity adjustment"
+    ],
+    "baseline_uploaded_commit": "74ee78d4fa904665606b58989b66138f5d3526a4"
+  },
+  "frozen_core_sha256": "26fc620ad134610bee9869fbb94001c64b4ea79731183e23d281226abe7939cd"
+}

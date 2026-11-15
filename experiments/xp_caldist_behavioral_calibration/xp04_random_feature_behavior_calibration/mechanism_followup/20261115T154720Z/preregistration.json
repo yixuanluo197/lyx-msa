@@ -1,0 +1,197 @@
+{
+  "status": "preregistered_before_new_results",
+  "purpose": "bounded exploratory mechanism follow-up; not independent confirmation",
+  "source_run": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/five_seed_validation/20261115T151109Z",
+  "seed1475_pilot": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/pilot/20261113T025053Z",
+  "seeds": [
+    1475,
+    67137,
+    2024,
+    3407,
+    42
+  ],
+  "datasets": {
+    "IEMOCAP": {
+      "n": 527,
+      "dialogues": 12,
+      "classes": 6,
+      "outer": "LODO12"
+    },
+    "MELD": {
+      "n": 1109,
+      "dialogues": 114,
+      "classes": 7,
+      "outer": "GroupKFold5"
+    }
+  },
+  "repeat_splits": [
+    [
+      [
+        0,
+        2,
+        4,
+        6,
+        8
+      ],
+      [
+        1,
+        3,
+        5,
+        7,
+        9
+      ]
+    ],
+    [
+      [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    ],
+    [
+      [
+        0,
+        1,
+        4,
+        5,
+        8
+      ],
+      [
+        2,
+        3,
+        6,
+        7,
+        9
+      ]
+    ]
+  ],
+  "zero_threshold": 1e-12,
+  "T_features": [
+    "logit_C"
+  ],
+  "S_features": [
+    "logit_C",
+    "margin",
+    "normalized_entropy",
+    "predicted_class_onehot_drop_first"
+  ],
+  "DA_features": [
+    "gaussian_D",
+    "gaussian_A",
+    "dropout_D",
+    "dropout_A"
+  ],
+  "random_features": 4,
+  "random_key": [
+    "dataset",
+    "dialogue_id",
+    "utterance_index",
+    "capacity_control_seed1475"
+  ],
+  "logit_clip": 1e-06,
+  "methods": [
+    "XP04",
+    "E1",
+    "L0",
+    "T",
+    "T_DA",
+    "S",
+    "S_DA",
+    "S_DA_OFFSET",
+    "S_RAND"
+  ],
+  "primary_method": "S_DA",
+  "primary_comparison": [
+    "S_DA",
+    "S"
+  ],
+  "primary_increment_metric": "binary_brier",
+  "C_grid_tie_order": [
+    0.01,
+    0.1,
+    1.0,
+    10.0
+  ],
+  "offset_lambda_tie_order": [
+    "off",
+    1.0,
+    0.1,
+    0.01
+  ],
+  "inner_cv": "GroupKFold5 on outer-training dialogues only",
+  "selection": "pooled held-inner Brier; tolerance1e-12; prefer off/base then stronger regularization",
+  "joint_candidate_rule": "T/S static grid4; augmented T_DA/S_DA/S_RAND consider corresponding base grid4 plus augmented grid4; off may select any base C; no held-outer labels",
+  "offset_candidate_rule": "all S C grid4 x lambda off/1/.1/.01=16; each inner scaler and S fitted inner-training only; fixed S coefficients while optimizing four correction weights",
+  "optimizer": "sklearn LogisticRegression lbfgs max_iter2000 L2 for static/joint; copied damped Newton core for offset",
+  "bootstrap": {
+    "repeats": 2000,
+    "draws": "reuse prior baseline/bootstrap dataset draws verbatim",
+    "unit": "shared Dialogue across all model seeds",
+    "refit": false
+  },
+  "comparisons": [
+    [
+      "T",
+      "E1"
+    ],
+    [
+      "S",
+      "E1"
+    ],
+    [
+      "S",
+      "T"
+    ],
+    [
+      "T_DA",
+      "T"
+    ],
+    [
+      "S_DA",
+      "S"
+    ],
+    [
+      "S_DA_OFFSET",
+      "S"
+    ],
+    [
+      "S_DA",
+      "S_DA_OFFSET"
+    ],
+    [
+      "S_RAND",
+      "S"
+    ],
+    [
+      "S_DA",
+      "S_RAND"
+    ],
+    [
+      "S_DA",
+      "XP04"
+    ]
+  ],
+  "constraints": [
+    "no Test labels/metrics",
+    "no model inference or retraining",
+    "no new perturbations",
+    "no changed features or model weights",
+    "no temperature scaling",
+    "no raw data processing",
+    "no change after viewing new results"
+  ],
+  "completion_batches": [
+    "repeatability diagnostic verified and uploaded",
+    "conditional/refit calibration verified and uploaded"
+  ],
+  "decision": "recommend further independent study only if S_DA improves Brier and ECE with NLL not worse, at least4/5seed Brier direction and paired interval no obvious reverse risk; otherwise no raw-data stage; all findings exploratory due reused Validation"
+}
