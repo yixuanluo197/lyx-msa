@@ -1,0 +1,25 @@
+{
+  "engineering_fixture_only": true,
+  "formal_five_seed_complete": false,
+  "seed1475_frozen_method_reproduced": true,
+  "datasets": [
+    {
+      "dataset": "IEMOCAP",
+      "utterances": 527,
+      "oof_rows": 3689,
+      "max_prior_oof_error": 1.4432899320127035e-15,
+      "outer_parameters": 72,
+      "nested_selection_decisions": 48
+    },
+    {
+      "dataset": "MELD",
+      "utterances": 1109,
+      "oof_rows": 7763,
+      "max_prior_oof_error": 1.709743457922741e-14,
+      "outer_parameters": 30,
+      "nested_selection_decisions": 20
+    }
+  ],
+  "core_sha256": "26fc620ad134610bee9869fbb94001c64b4ea79731183e23d281226abe7939cd",
+  "python": "/data2/yb/conda_envs/cmerc-xp-repro/bin/python"
+}

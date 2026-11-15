@@ -1,0 +1,20 @@
+{
+  "reviewer": "native subagent /root/nested_calibration_review",
+  "scope": "read-only scripts/analyze_behavior.py, scripts/verify_behavior.py, locked calibration_core.py, preregistration/protocol",
+  "blocking_findings": [],
+  "checks": [
+    "outer and inner Dialogue disjointness",
+    "train-only base/scaler/correction fitting",
+    "per-seed independent fits and frozen seven-method comparisons",
+    "off and regularization tie preference",
+    "bootstrap same Dialogue draws across all seeds; average within-seed differences",
+    "independent verifier reconstruction coverage"
+  ],
+  "limitations": [
+    "Seed1475 used in design",
+    "all seeds share same Validation",
+    "XP04 checkpoint chosen using Validation",
+    "bootstrap holds OOF fits fixed; no refit uncertainty"
+  ],
+  "wording_fix": "behavior strength renamed behavior-branch regularization strength; perturbation strength fixed 0.05"
+}

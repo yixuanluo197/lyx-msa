@@ -1,0 +1,57 @@
+{
+  "host": "user23",
+  "python": "/data2/yb/conda_envs/cmerc-xp-repro/bin/python",
+  "torch": "1.13.1+cu117",
+  "model_eval_mode": true,
+  "cmerc_gradients": false,
+  "threads": 1,
+  "launch_registry": "job_registry.json",
+  "live_process_observations": [
+    {
+      "pid": 282789,
+      "command": "/data2/yb/conda_envs/cmerc-xp-repro/bin/python -u /data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/five_seed_validation/20261115T151109Z/scripts/run_joint.py --dataset IEMOCAP --seed 67137 ",
+      "environment": {
+        "CUDA_VISIBLE_DEVICES": "0",
+        "LD_LIBRARY_PATH": "/data2/yb/conda_envs/cmerc-xp-repro/lib/python3.10/site-packages/nvidia/cusparse/lib",
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1"
+      }
+    },
+    {
+      "pid": 284924,
+      "command": "/data2/yb/conda_envs/cmerc-xp-repro/bin/python -u /data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/five_seed_validation/20261115T151109Z/scripts/run_joint.py --dataset IEMOCAP --seed 2024 ",
+      "environment": {
+        "CUDA_VISIBLE_DEVICES": "0",
+        "LD_LIBRARY_PATH": "/data2/yb/conda_envs/cmerc-xp-repro/lib/python3.10/site-packages/nvidia/cusparse/lib",
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1"
+      }
+    },
+    {
+      "pid": 284926,
+      "command": "/data2/yb/conda_envs/cmerc-xp-repro/bin/python -u /data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/five_seed_validation/20261115T151109Z/scripts/run_joint.py --dataset IEMOCAP --seed 3407 ",
+      "environment": {
+        "CUDA_VISIBLE_DEVICES": "2",
+        "LD_LIBRARY_PATH": "/data2/yb/conda_envs/cmerc-xp-repro/lib/python3.10/site-packages/nvidia/cusparse/lib",
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1"
+      }
+    },
+    {
+      "pid": 284929,
+      "command": "/data2/yb/conda_envs/cmerc-xp-repro/bin/python -u /data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/five_seed_validation/20261115T151109Z/scripts/run_joint.py --dataset IEMOCAP --seed 42 ",
+      "environment": {
+        "CUDA_VISIBLE_DEVICES": "3",
+        "LD_LIBRARY_PATH": "/data2/yb/conda_envs/cmerc-xp-repro/lib/python3.10/site-packages/nvidia/cusparse/lib",
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1"
+      }
+    }
+  ],
+  "reproduction_command_template": "CUDA_VISIBLE_DEVICES=<host_gpu> OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 LD_LIBRARY_PATH=/data2/yb/conda_envs/cmerc-xp-repro/lib/python3.10/site-packages/nvidia/cusparse/lib /data2/yb/conda_envs/cmerc-xp-repro/bin/python scripts/run_joint.py --dataset <dataset> --seed <seed>",
+  "note": "Run in experiment root. Existing partial or completed destinations are refused. Dataset/model source directories are frozen from XP04 audit."
+}

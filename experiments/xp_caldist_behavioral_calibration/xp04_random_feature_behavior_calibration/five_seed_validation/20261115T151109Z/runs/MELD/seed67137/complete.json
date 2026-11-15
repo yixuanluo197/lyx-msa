@@ -1,0 +1,99 @@
+{
+  "status": "completed",
+  "dataset": "MELD",
+  "seed": 67137,
+  "utterances": 1109,
+  "dialogues": 114,
+  "perturbed_rows": 22180,
+  "seconds": 371.27362219407223,
+  "visual_missing_retained": 95,
+  "graph_hook_checks": 44424,
+  "cached_uncached_parity_checks": 24,
+  "target_mask_checks": 228,
+  "weights_unchanged": true,
+  "batch_inputs_restored": true,
+  "source_sha256": {
+    "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/cmerc/MELD_validation_seed67137/best.pt": "3f79f9eb3547e35ac15ad7ff4345d9b873d0c884a6f3a1ce60a7a7e47077e701",
+    "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_caldist_behavioral_calibration/20261107T172302Z/runs/MELD/seed67137/validation_predictions.npz": "b8d805b6b2f50948bfd170e153e2aab56871b7f92ad316fdc6bbd0e94283a0a8",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/five_seed_validation/20261115T151109Z/provenance/MELD_train_statistics.npz": "b7e0cbd5388ae813d98d347e75ac9aaa94a3492283c9febb89728aef2020656c",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/five_seed_validation/20261115T151109Z/scripts/run_joint.py": "cbee9a1b5b2275ff1409ca5323927b4c361fa7e9bd9d923d4fb6b254cda32c6a",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/five_seed_validation/20261115T151109Z/provenance/inference_helpers/run_pilot.py": "de0b49182745b71efca7a59882fbbeb61e3c676b5ec86cf914caca4924665a80",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/five_seed_validation/20261115T151109Z/provenance/inference_helpers/pilot_core.py": "e5d78271d9a7e38c434fe05a0d15bc9b2ee1eeed9b470fb76e62f81fa053f019",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/five_seed_validation/20261115T151109Z/provenance/inference_helpers/graph_index_cache.py": "af5994faa3ccf7560ab65d1797ca181932b438ca463380ce2e7425fdab12b49d"
+  },
+  "parity": {
+    "passed": true,
+    "checks": {
+      "dialogue_ids": {
+        "equal": true
+      },
+      "utterance_indices": {
+        "equal": true
+      },
+      "labels": {
+        "equal": true
+      },
+      "predictions": {
+        "equal": true
+      },
+      "probabilities": {
+        "equal": true,
+        "max_abs_error": 2.384185791015625e-07
+      },
+      "log_probabilities": {
+        "equal": true,
+        "max_abs_error": 4.76837158203125e-07
+      },
+      "argmax": {
+        "equal": true
+      }
+    }
+  },
+  "peak_allocated_mib": 203.154296875,
+  "peak_reserved_mib": 260.0,
+  "graph_cache_stats": {
+    "hyper_hits": 22180,
+    "hyper_misses": 8,
+    "gnn_hits": 22180,
+    "gnn_misses": 8,
+    "gnn_bypasses": 0,
+    "feature_exact_checks": 16
+  },
+  "resource": {
+    "host": "user23",
+    "pid": 282790,
+    "utc": "2026-11-15T15:17:24Z",
+    "gpu": "0, GPU-7ff18ebb-100e-98fe-038b-a98bd4f94248, NVIDIA TITAN Xp, 3 MiB, 12181 MiB, 0 %\n1, GPU-eed2f34f-b4c0-7b7a-498e-71a026e30c5a, NVIDIA TITAN Xp, 3 MiB, 12181 MiB, 0 %\n2, GPU-d17e4326-9d3b-2025-fbf8-c9b0d16623a0, NVIDIA TITAN Xp, 3 MiB, 12181 MiB, 0 %\n3, GPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456, NVIDIA TITAN Xp, 3 MiB, 12181 MiB, 0 %\n",
+    "processes": "",
+    "disks": {
+      "/data1": {
+        "total": 1007919267840,
+        "used": 876806303744,
+        "free": 79885766656
+      },
+      "/data2": {
+        "total": 7541287677952,
+        "used": 7080393531392,
+        "free": 80805113856
+      }
+    },
+    "visible_devices": "1",
+    "python": "/data2/yb/conda_envs/cmerc-xp-repro/bin/python",
+    "python_version": "3.10.13 | packaged by conda-forge | (main, Dec 23 2023, 15:36:39) [GCC 12.3.0]",
+    "command": [
+      "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/five_seed_validation/20261115T151109Z/scripts/run_joint.py",
+      "--dataset",
+      "MELD",
+      "--seed",
+      "67137"
+    ],
+    "runner_sha256": "de0b49182745b71efca7a59882fbbeb61e3c676b5ec86cf914caca4924665a80",
+    "environment": {
+      "LD_LIBRARY_PATH": "/data2/yb/conda_envs/cmerc-xp-repro/lib/python3.10/site-packages/nvidia/cusparse/lib",
+      "OMP_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "PYTORCH_CUDA_ALLOC_CONF": null
+    }
+  }
+}

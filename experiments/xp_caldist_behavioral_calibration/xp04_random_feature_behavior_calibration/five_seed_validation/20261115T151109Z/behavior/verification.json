@@ -1,0 +1,126 @@
+{
+  "status": "completed",
+  "primary_method": "E1_DA",
+  "cpu_only": true,
+  "ten_inputs_complete": true,
+  "one_training_record_per_utterance": true,
+  "temperature_scaling": false,
+  "cmerc_training": false,
+  "test_labels_used": false,
+  "source_hashes_unchanged": true,
+  "running_code_unchanged": true,
+  "elapsed_seconds": 42.7453875541687,
+  "datasets_and_seeds": [
+    {
+      "dataset": "IEMOCAP",
+      "seed": 1475,
+      "utterances": 527,
+      "dialogues": 12,
+      "visual_missing_retained": 1,
+      "prior_base_parity_max_error": 1.4432899320127035e-15,
+      "completed_source_inputs": true
+    },
+    {
+      "dataset": "IEMOCAP",
+      "seed": 67137,
+      "utterances": 527,
+      "dialogues": 12,
+      "visual_missing_retained": 1,
+      "prior_base_parity_max_error": 1.9984014443252818e-15,
+      "completed_source_inputs": true
+    },
+    {
+      "dataset": "IEMOCAP",
+      "seed": 2024,
+      "utterances": 527,
+      "dialogues": 12,
+      "visual_missing_retained": 1,
+      "prior_base_parity_max_error": 4.745093207247919e-13,
+      "completed_source_inputs": true
+    },
+    {
+      "dataset": "IEMOCAP",
+      "seed": 3407,
+      "utterances": 527,
+      "dialogues": 12,
+      "visual_missing_retained": 1,
+      "prior_base_parity_max_error": 1.63202784619898e-14,
+      "completed_source_inputs": true
+    },
+    {
+      "dataset": "IEMOCAP",
+      "seed": 42,
+      "utterances": 527,
+      "dialogues": 12,
+      "visual_missing_retained": 1,
+      "prior_base_parity_max_error": 4.440892098500626e-16,
+      "completed_source_inputs": true
+    },
+    {
+      "dataset": "MELD",
+      "seed": 1475,
+      "utterances": 1109,
+      "dialogues": 114,
+      "visual_missing_retained": 95,
+      "prior_base_parity_max_error": 1.709743457922741e-14,
+      "completed_source_inputs": true
+    },
+    {
+      "dataset": "MELD",
+      "seed": 67137,
+      "utterances": 1109,
+      "dialogues": 114,
+      "visual_missing_retained": 95,
+      "prior_base_parity_max_error": 3.3306690738754696e-16,
+      "completed_source_inputs": true
+    },
+    {
+      "dataset": "MELD",
+      "seed": 2024,
+      "utterances": 1109,
+      "dialogues": 114,
+      "visual_missing_retained": 95,
+      "prior_base_parity_max_error": 2.7755575615628914e-16,
+      "completed_source_inputs": true
+    },
+    {
+      "dataset": "MELD",
+      "seed": 3407,
+      "utterances": 1109,
+      "dialogues": 114,
+      "visual_missing_retained": 95,
+      "prior_base_parity_max_error": 2.220446049250313e-16,
+      "completed_source_inputs": true
+    },
+    {
+      "dataset": "MELD",
+      "seed": 42,
+      "utterances": 1109,
+      "dialogues": 114,
+      "visual_missing_retained": 95,
+      "prior_base_parity_max_error": 3.3306690738754696e-16,
+      "completed_source_inputs": true
+    }
+  ],
+  "metric_rows": 70,
+  "prediction_rows": 57260,
+  "feature_rows": 8180,
+  "independent_verification_pending": false,
+  "independent_verification": {
+    "all_passed": true,
+    "behavior_groups_independently_recomputed": 13088,
+    "outer_predictions_reconstructed": 49080,
+    "inner_candidate_predictions_reconstructed": 818640,
+    "inner_candidate_fits_checked": 6800,
+    "nested_selections_recomputed": 340,
+    "max_outer_reconstruction_error": 3.219646771412954e-14,
+    "metric_rows_recomputed": 70,
+    "per_dialogue_metric_rows_recomputed": 4410,
+    "shared_bootstrap_comparison_rows_recomputed": 72,
+    "literal_dialogue_resampling_checks": 180,
+    "seed1475_all_methods_historical_parity": true,
+    "all_seeds_baseline_three_methods_parity": true,
+    "training_only_scaler_and_correction_objective_verified": true,
+    "source_and_code_hashes_verified": true
+  }
+}
