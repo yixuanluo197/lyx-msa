@@ -4,6 +4,8 @@
 
 ## 当前完成批次
 
+- 总结与后续边界：`FINAL_MAINLINE_REPORT.md`。
+- 单Seed四模态：`modality/MODALITY_PILOT_REPORT.md`，完整OOF、参数与24项bootstrap均保存。
 - 五Seed联合模态：`joint/MAINLINE_RESULTS.md`、`joint/MU_DELTA_ABLATION.md`、`joint/FINAL_MAINLINE_DECISION.md`。
 - 入口协议：`MAINLINE_PROTOCOL.md`、`preregistration.json`。
 - 输入与来源：`inputs/`；完整内外折参数、OOF分数、指标、2000次Dialogue配对bootstrap见`joint/`。
@@ -26,7 +28,7 @@
 
 随机特征扰动确实引起预测与置信度变化：联合扰动五Seed每次翻转率均值，IEMOCAP Gaussian 0.47%、Dropout 1.66%；MELD Gaussian 0.23%、Dropout 1.18%。这支持干扰响应可测，不证明它提供额外可靠性信息。当前.05强度/10重复的原μδ评分没有建立额外校准价值，不能写成校准机制已经成功。
 
-可以据此提出后续单独登记的、小规模面部遮挡/音色处理机制Pilot，检验更具语义或物理含义的干扰是否产生更有用的μ/δ；这是新的探索假设，不能视为当前结果已证明应进入完整原始数据实验。本轮不修改原始数据。原始数据许可及特征重新提取可行性要在后续工程Pilot中核对。
+可以据此提出后续单独登记的、小规模面部遮挡/音色处理机制Pilot，检验更具语义或物理含义的干扰是否产生更有用的μ/δ；这是新的探索假设，不能视为当前结果已证明应进入完整原始数据实验。本轮不修改原始数据。特征重新提取可复现性要在后续工程Pilot中核对。
 
 所有方法只调整原预测正确概率，预测类别和Accuracy/F1不变；所有拟合仅当前训练Dialogue，真实Validation固定；没有Test标签、温度缩放、CMERC训练或权重改变。重复使用Validation仅构成探索性证据，bootstrap不含重新拟合且未作多重比较调整。
 

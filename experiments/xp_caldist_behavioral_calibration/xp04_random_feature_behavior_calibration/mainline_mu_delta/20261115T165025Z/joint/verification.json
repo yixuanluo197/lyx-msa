@@ -1,6 +1,6 @@
 {
   "status": "completed",
-  "independent_verification_pending": true,
+  "independent_verification_pending": false,
   "cpu_only": true,
   "feature_rows": 8180,
   "oof_rows": 57260,
@@ -23,5 +23,7 @@
   "test_labels_used": false,
   "cmerc_training": false,
   "new_perturbations": false,
-  "raw_data_modified": false
+  "raw_data_modified": false,
+  "independent_verification_report": "independent_verification.json",
+  "all_passed": true
 }

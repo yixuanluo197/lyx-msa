@@ -1,0 +1,231 @@
+{
+  "all_passed": true,
+  "batch": "modality",
+  "input_precheck": {
+    "joint_rows": 8180,
+    "modality_rows": 6544,
+    "historical_modality_mu_delta_values_matched": 26176,
+    "visual_missing_rows_preserved": true,
+    "joint_modality_seed1475_inputs_identical": true
+  },
+  "oof_predictions_reconstructed": 19632,
+  "inner_candidate_predictions_reconstructed": 163728,
+  "unique_fits_objective_and_train_scaler_checked": 1347,
+  "nested_selections_recomputed": 68,
+  "metric_rows_recomputed": 24,
+  "bootstrap_rows_recomputed": 24,
+  "literal_cluster_resampling_checks": 216,
+  "max_oof_reconstruction_error": 2.220446049250313e-16,
+  "C_input_raw_and_unstandardized": true,
+  "only_registered_mu_delta_scoring_features": true,
+  "off_exact_E1_reuse_verified": true,
+  "train_only_standardization_and_dialogue_isolation_verified": true,
+  "accuracy_and_F1_unchanged": true,
+  "source_and_implementation_hashes_verified": true,
+  "parity": {
+    "seed1475_joint_oof_rows_identical_to_main_batch": 4908
+  },
+  "optimizer_accuracy": {
+    "max_mean_objective_gradient": 0.0002246559547159372,
+    "fits_gradient_above_1e_6_diagnostic_only": 779,
+    "max_independent_refinement_mean_objective_gap": 2.921431407898467e-08,
+    "max_training_probability_refinement_gap": 0.000906975541922761,
+    "inner_selection_changes_under_refinement": 0,
+    "primary_direction_sensitivity_same_selected_penalty": [
+      {
+        "dataset": "IEMOCAP",
+        "modality": "audio",
+        "metric": "ece15",
+        "reported_mean_difference": -0.0009335379321902398,
+        "refined_same_selected_penalty_mean_difference": -0.0009338610434824202,
+        "difference_sign_unchanged": true
+      },
+      {
+        "dataset": "IEMOCAP",
+        "modality": "audio",
+        "metric": "binary_brier",
+        "reported_mean_difference": 0.002219536320041987,
+        "refined_same_selected_penalty_mean_difference": 0.0022195122010663926,
+        "difference_sign_unchanged": true
+      },
+      {
+        "dataset": "IEMOCAP",
+        "modality": "audio",
+        "metric": "binary_nll",
+        "reported_mean_difference": 0.005683372110298457,
+        "refined_same_selected_penalty_mean_difference": 0.005683841156093883,
+        "difference_sign_unchanged": true
+      },
+      {
+        "dataset": "IEMOCAP",
+        "modality": "joint",
+        "metric": "ece15",
+        "reported_mean_difference": -0.003870791687330455,
+        "refined_same_selected_penalty_mean_difference": -0.0038705995761127987,
+        "difference_sign_unchanged": true
+      },
+      {
+        "dataset": "IEMOCAP",
+        "modality": "joint",
+        "metric": "binary_brier",
+        "reported_mean_difference": 0.0027735176989102384,
+        "refined_same_selected_penalty_mean_difference": 0.002773142838318726,
+        "difference_sign_unchanged": true
+      },
+      {
+        "dataset": "IEMOCAP",
+        "modality": "joint",
+        "metric": "binary_nll",
+        "reported_mean_difference": 0.008375729878619564,
+        "refined_same_selected_penalty_mean_difference": 0.008374970503214785,
+        "difference_sign_unchanged": true
+      },
+      {
+        "dataset": "IEMOCAP",
+        "modality": "text",
+        "metric": "ece15",
+        "reported_mean_difference": -0.009050856139437097,
+        "refined_same_selected_penalty_mean_difference": -0.009050721568854059,
+        "difference_sign_unchanged": true
+      },
+      {
+        "dataset": "IEMOCAP",
+        "modality": "text",
+        "metric": "binary_brier",
+        "reported_mean_difference": 0.0008265366209779523,
+        "refined_same_selected_penalty_mean_difference": 0.0008266762633481473,
+        "difference_sign_unchanged": true
+      },
+      {
+        "dataset": "IEMOCAP",
+        "modality": "text",
+        "metric": "binary_nll",
+        "reported_mean_difference": 0.0018241706134201063,
+        "refined_same_selected_penalty_mean_difference": 0.0018244888110574564,
+        "difference_sign_unchanged": true
+      },
+      {
+        "dataset": "IEMOCAP",
+        "modality": "visual",
+        "metric": "ece15",
+        "reported_mean_difference": -0.018992725414407774,
+        "refined_same_selected_penalty_mean_difference": -0.018992845006894174,
+        "difference_sign_unchanged": true
+      },
+      {
+        "dataset": "IEMOCAP",
+        "modality": "visual",
+        "metric": "binary_brier",
+        "reported_mean_difference": 0.0017269815942380362,
+        "refined_same_selected_penalty_mean_difference": 0.0017269687930160649,
+        "difference_sign_unchanged": true
+      },
+      {
+        "dataset": "IEMOCAP",
+        "modality": "visual",
+        "metric": "binary_nll",
+        "reported_mean_difference": 0.0037784705759146275,
+        "refined_same_selected_penalty_mean_difference": 0.0037784354591265945,
+        "difference_sign_unchanged": true
+      },
+      {
+        "dataset": "MELD",
+        "modality": "audio",
+        "metric": "ece15",
+        "reported_mean_difference": 0.0005007661017622789,
+        "refined_same_selected_penalty_mean_difference": 0.0005011474570187566,
+        "difference_sign_unchanged": true
+      },
+      {
+        "dataset": "MELD",
+        "modality": "audio",
+        "metric": "binary_brier",
+        "reported_mean_difference": 0.0014963088577418238,
+        "refined_same_selected_penalty_mean_difference": 0.00149699043076576,
+        "difference_sign_unchanged": true
+      },
+      {
+        "dataset": "MELD",
+        "modality": "audio",
+        "metric": "binary_nll",
+        "reported_mean_difference": 0.004763144341114023,
+        "refined_same_selected_penalty_mean_difference": 0.004764387473645049,
+        "difference_sign_unchanged": true
+      },
+      {
+        "dataset": "MELD",
+        "modality": "joint",
+        "metric": "ece15",
+        "reported_mean_difference": 0.005789058435960462,
+        "refined_same_selected_penalty_mean_difference": 0.005789086786178774,
+        "difference_sign_unchanged": true
+      },
+      {
+        "dataset": "MELD",
+        "modality": "joint",
+        "metric": "binary_brier",
+        "reported_mean_difference": 0.001400107979957127,
+        "refined_same_selected_penalty_mean_difference": 0.0014001748323901886,
+        "difference_sign_unchanged": true
+      },
+      {
+        "dataset": "MELD",
+        "modality": "joint",
+        "metric": "binary_nll",
+        "reported_mean_difference": 0.0026926201546843,
+        "refined_same_selected_penalty_mean_difference": 0.0026927738195787754,
+        "difference_sign_unchanged": true
+      },
+      {
+        "dataset": "MELD",
+        "modality": "text",
+        "metric": "ece15",
+        "reported_mean_difference": -0.000555751134543557,
+        "refined_same_selected_penalty_mean_difference": -0.0005558042231356974,
+        "difference_sign_unchanged": true
+      },
+      {
+        "dataset": "MELD",
+        "modality": "text",
+        "metric": "binary_brier",
+        "reported_mean_difference": 0.00043303750000456276,
+        "refined_same_selected_penalty_mean_difference": 0.0004330096613141543,
+        "difference_sign_unchanged": true
+      },
+      {
+        "dataset": "MELD",
+        "modality": "text",
+        "metric": "binary_nll",
+        "reported_mean_difference": 0.0006385558330308516,
+        "refined_same_selected_penalty_mean_difference": 0.000638442230730174,
+        "difference_sign_unchanged": true
+      },
+      {
+        "dataset": "MELD",
+        "modality": "visual",
+        "metric": "ece15",
+        "reported_mean_difference": -0.0008151716523215335,
+        "refined_same_selected_penalty_mean_difference": -0.0008142852963778716,
+        "difference_sign_unchanged": true
+      },
+      {
+        "dataset": "MELD",
+        "modality": "visual",
+        "metric": "binary_brier",
+        "reported_mean_difference": -4.9441043339898405e-05,
+        "refined_same_selected_penalty_mean_difference": -4.895358029252672e-05,
+        "difference_sign_unchanged": true
+      },
+      {
+        "dataset": "MELD",
+        "modality": "visual",
+        "metric": "binary_nll",
+        "reported_mean_difference": -8.237450306891603e-05,
+        "refined_same_selected_penalty_mean_difference": -8.132825034656843e-05,
+        "difference_sign_unchanged": true
+      }
+    ],
+    "original_results_not_replaced": true,
+    "refinement_does_not_establish_new_calibration_method": true
+  }
+}
