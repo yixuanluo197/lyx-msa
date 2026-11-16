@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "report_version": "public_redacted_copy",
+  "audit_run": "20261116T170617Z",
+  "repository": "yixuanluo197/lyx-msa",
+  "status": "STOPPED_AT_AUDIT_GATE",
+  "pilot_completed": false,
+  "local_original_report_sha256": {
+    "EXPERIMENT_PROTOCOL.md": "1dddec5f8ecfe179733f80ecbb9f6692f6e9c4f76ee29b4392773019af5f892c",
+    "FEATURE_EXTRACTION_AUDIT.md": "76c96e1663e2ccbadb8934b23f09588ff82d6c122d206b8525f533b524524fa6",
+    "FINAL_RAW_DATA_PILOT_DECISION.md": "4c89fb99a121d51c1b99bfd0038040a9727277e6f688a2b6dbc0fcb805fc27b1",
+    "HISTORICAL_EVIDENCE_REVIEW.md": "69b8d4627eefdf15ab8898ca478a3d851e13faaa58a533a8e43beda0f246b86f",
+    "PERTURBATION_PROTOCOL.md": "1cde332e8328f511199b3b446f509db24fa718b932860d31d25bb137709570e4",
+    "RAW_DATA_AVAILABILITY_AUDIT.md": "85ecdac300c0f2addaba73782dcc779185f71c6abeccd4f51a0b14312d3b77d7",
+    "README.md": "c3b0df44f51102051cb262daadbbda0e6d27841331d7ec4b274f2ce0bb29ac43",
+    "SAMPLE_SELECTION_REPORT.md": "a6d62acbe9bc35f4d0d50c28650572e8cbd39ad50e0864dc2e4267ac608c37ff",
+    "verification.json": "50d3326f567b0989f5a151cc02577bb5f2e4a6e2f70db011fb674e339a36e56a"
+  },
+  "published_file_sha256": {
+    "EXPERIMENT_PROTOCOL.md": "1dddec5f8ecfe179733f80ecbb9f6692f6e9c4f76ee29b4392773019af5f892c",
+    "FEATURE_EXTRACTION_AUDIT.md": "4fe1984a2b8dd9f9be81d51d11533f0b938ced92aa5349672dde79b268fdea03",
+    "FINAL_RAW_DATA_PILOT_DECISION.md": "a07006a74966464e5f2829a83cde03e3fc9329ad4918e215966b74333a9bc484",
+    "HISTORICAL_EVIDENCE_REVIEW.md": "69b8d4627eefdf15ab8898ca478a3d851e13faaa58a533a8e43beda0f246b86f",
+    "PERTURBATION_PROTOCOL.md": "1cde332e8328f511199b3b446f509db24fa718b932860d31d25bb137709570e4",
+    "RAW_DATA_AVAILABILITY_AUDIT.md": "d01e033976a9ef8dc2dddb0c2c0af23702635f2c9b462d110d5853d39c18bc45",
+    "README.md": "36369ea229f156ddadc980d305c83a67bbe9cf79a7afdc898e8c1ac5fae9e3e8",
+    "SAMPLE_SELECTION_REPORT.md": "a6d62acbe9bc35f4d0d50c28650572e8cbd39ad50e0864dc2e4267ac608c37ff",
+    "verification.json": "026ba45392117374f97c9a985847174a14200a2b45d7252626ee428e11bcfa1a"
+  },
+  "manifest_self_excluded": true,
+  "redactions": [
+    "Absolute local data/reference paths replaced with placeholders.",
+    "Public README explains local-only references.",
+    "Audit-time commit/push flag explicitly scoped to the audit."
+  ],
+  "excluded": [
+    "raw text and media",
+    "local_only CSV and per-utterance predictions",
+    "provenance files and machine paths",
+    "model weights and feature files",
+    "audit scripts (report-only delivery)"
+  ]
+}
