@@ -1,0 +1,1184 @@
+{
+  "status": "preflight_passed",
+  "all_passed": true,
+  "input_code_unchanged": true,
+  "cpu_only": true,
+  "new_inference": false,
+  "new_noise": false,
+  "test_labels_used": false,
+  "one_row_per_utterance_condition": true,
+  "conditions_nested": true,
+  "feature_parity": [
+    {
+      "block": 0,
+      "feature": "mu",
+      "max_absolute_error": 0.0
+    },
+    {
+      "block": 0,
+      "feature": "delta",
+      "max_absolute_error": 0.0
+    },
+    {
+      "block": 0,
+      "feature": "js",
+      "max_absolute_error": 0.0
+    },
+    {
+      "block": 0,
+      "feature": "flip_rate",
+      "max_absolute_error": 0.0
+    },
+    {
+      "block": 0,
+      "feature": "confidence_change_mean",
+      "max_absolute_error": 0.0
+    },
+    {
+      "block": 0,
+      "feature": "confidence_change_std",
+      "max_absolute_error": 0.0
+    },
+    {
+      "block": 0,
+      "feature": "mu_left",
+      "max_absolute_error": 0.0
+    },
+    {
+      "block": 0,
+      "feature": "mu_right",
+      "max_absolute_error": 0.0
+    },
+    {
+      "block": 0,
+      "feature": "delta_left",
+      "max_absolute_error": 0.0
+    },
+    {
+      "block": 0,
+      "feature": "delta_right",
+      "max_absolute_error": 0.0
+    },
+    {
+      "block": 0,
+      "feature": "js_left",
+      "max_absolute_error": 0.0
+    },
+    {
+      "block": 0,
+      "feature": "js_right",
+      "max_absolute_error": 0.0
+    },
+    {
+      "block": 1,
+      "feature": "mu",
+      "max_absolute_error": 0.0
+    },
+    {
+      "block": 1,
+      "feature": "delta",
+      "max_absolute_error": 0.0
+    },
+    {
+      "block": 1,
+      "feature": "js",
+      "max_absolute_error": 0.0
+    },
+    {
+      "block": 1,
+      "feature": "flip_rate",
+      "max_absolute_error": 0.0
+    },
+    {
+      "block": 1,
+      "feature": "confidence_change_mean",
+      "max_absolute_error": 0.0
+    },
+    {
+      "block": 1,
+      "feature": "confidence_change_std",
+      "max_absolute_error": 0.0
+    },
+    {
+      "block": 1,
+      "feature": "mu_left",
+      "max_absolute_error": 0.0
+    },
+    {
+      "block": 1,
+      "feature": "mu_right",
+      "max_absolute_error": 0.0
+    },
+    {
+      "block": 1,
+      "feature": "delta_left",
+      "max_absolute_error": 0.0
+    },
+    {
+      "block": 1,
+      "feature": "delta_right",
+      "max_absolute_error": 0.0
+    },
+    {
+      "block": 1,
+      "feature": "js_left",
+      "max_absolute_error": 0.0
+    },
+    {
+      "block": 1,
+      "feature": "js_right",
+      "max_absolute_error": 0.0
+    },
+    {
+      "block": 2,
+      "feature": "mu",
+      "max_absolute_error": 0.0
+    },
+    {
+      "block": 2,
+      "feature": "delta",
+      "max_absolute_error": 0.0
+    },
+    {
+      "block": 2,
+      "feature": "js",
+      "max_absolute_error": 0.0
+    },
+    {
+      "block": 2,
+      "feature": "flip_rate",
+      "max_absolute_error": 0.0
+    },
+    {
+      "block": 2,
+      "feature": "confidence_change_mean",
+      "max_absolute_error": 0.0
+    },
+    {
+      "block": 2,
+      "feature": "confidence_change_std",
+      "max_absolute_error": 0.0
+    },
+    {
+      "block": 2,
+      "feature": "mu_left",
+      "max_absolute_error": 0.0
+    },
+    {
+      "block": 2,
+      "feature": "mu_right",
+      "max_absolute_error": 0.0
+    },
+    {
+      "block": 2,
+      "feature": "delta_left",
+      "max_absolute_error": 0.0
+    },
+    {
+      "block": 2,
+      "feature": "delta_right",
+      "max_absolute_error": 0.0
+    },
+    {
+      "block": 2,
+      "feature": "js_left",
+      "max_absolute_error": 0.0
+    },
+    {
+      "block": 2,
+      "feature": "js_right",
+      "max_absolute_error": 0.0
+    }
+  ],
+  "historical_oof_parity": [
+    {
+      "dataset": "IEMOCAP",
+      "seed": 1475,
+      "condition": "K10_block0",
+      "modality": "text",
+      "repeat_count": 10,
+      "method": "E0",
+      "rows": 527,
+      "max_absolute_error": 0.0,
+      "tolerance": 1e-08
+    },
+    {
+      "dataset": "IEMOCAP",
+      "seed": 1475,
+      "condition": "K10_block0",
+      "modality": "text",
+      "repeat_count": 10,
+      "method": "E1",
+      "rows": 527,
+      "max_absolute_error": 0.0,
+      "tolerance": 1e-08
+    },
+    {
+      "dataset": "IEMOCAP",
+      "seed": 1475,
+      "condition": "K10_block0",
+      "modality": "text",
+      "repeat_count": 10,
+      "method": "M_gaussian",
+      "rows": 527,
+      "max_absolute_error": 0.0,
+      "tolerance": 1e-08
+    },
+    {
+      "dataset": "IEMOCAP",
+      "seed": 1475,
+      "condition": "K10_block0",
+      "modality": "text",
+      "repeat_count": 10,
+      "method": "M_gaussian_mu",
+      "rows": 527,
+      "max_absolute_error": 0.0,
+      "tolerance": 1e-08
+    },
+    {
+      "dataset": "IEMOCAP",
+      "seed": 1475,
+      "condition": "K10_block0",
+      "modality": "text",
+      "repeat_count": 10,
+      "method": "M_gaussian_delta",
+      "rows": 527,
+      "max_absolute_error": 0.0,
+      "tolerance": 1e-08
+    },
+    {
+      "dataset": "MELD",
+      "seed": 1475,
+      "condition": "K10_block0",
+      "modality": "audio",
+      "repeat_count": 10,
+      "method": "E0",
+      "rows": 1109,
+      "max_absolute_error": 0.0,
+      "tolerance": 1e-08
+    },
+    {
+      "dataset": "MELD",
+      "seed": 1475,
+      "condition": "K10_block0",
+      "modality": "audio",
+      "repeat_count": 10,
+      "method": "E1",
+      "rows": 1109,
+      "max_absolute_error": 0.0,
+      "tolerance": 1e-08
+    },
+    {
+      "dataset": "MELD",
+      "seed": 1475,
+      "condition": "K10_block0",
+      "modality": "audio",
+      "repeat_count": 10,
+      "method": "M_gaussian",
+      "rows": 1109,
+      "max_absolute_error": 0.0,
+      "tolerance": 1e-08
+    },
+    {
+      "dataset": "MELD",
+      "seed": 1475,
+      "condition": "K10_block0",
+      "modality": "audio",
+      "repeat_count": 10,
+      "method": "M_gaussian_mu",
+      "rows": 1109,
+      "max_absolute_error": 0.0,
+      "tolerance": 1e-08
+    },
+    {
+      "dataset": "MELD",
+      "seed": 1475,
+      "condition": "K10_block0",
+      "modality": "audio",
+      "repeat_count": 10,
+      "method": "M_gaussian_delta",
+      "rows": 1109,
+      "max_absolute_error": 0.0,
+      "tolerance": 1e-08
+    },
+    {
+      "dataset": "IEMOCAP",
+      "seed": 1475,
+      "condition": "K10_block1",
+      "modality": "text",
+      "repeat_count": 10,
+      "method": "E0",
+      "rows": 527,
+      "max_absolute_error": 0.0,
+      "tolerance": 1e-08
+    },
+    {
+      "dataset": "IEMOCAP",
+      "seed": 1475,
+      "condition": "K10_block1",
+      "modality": "text",
+      "repeat_count": 10,
+      "method": "E1",
+      "rows": 527,
+      "max_absolute_error": 0.0,
+      "tolerance": 1e-08
+    },
+    {
+      "dataset": "IEMOCAP",
+      "seed": 1475,
+      "condition": "K10_block1",
+      "modality": "text",
+      "repeat_count": 10,
+      "method": "M_gaussian",
+      "rows": 527,
+      "max_absolute_error": 0.0,
+      "tolerance": 1e-08
+    },
+    {
+      "dataset": "IEMOCAP",
+      "seed": 1475,
+      "condition": "K10_block1",
+      "modality": "text",
+      "repeat_count": 10,
+      "method": "M_gaussian_mu",
+      "rows": 527,
+      "max_absolute_error": 0.0,
+      "tolerance": 1e-08
+    },
+    {
+      "dataset": "IEMOCAP",
+      "seed": 1475,
+      "condition": "K10_block1",
+      "modality": "text",
+      "repeat_count": 10,
+      "method": "M_gaussian_delta",
+      "rows": 527,
+      "max_absolute_error": 0.0,
+      "tolerance": 1e-08
+    },
+    {
+      "dataset": "MELD",
+      "seed": 1475,
+      "condition": "K10_block1",
+      "modality": "audio",
+      "repeat_count": 10,
+      "method": "E0",
+      "rows": 1109,
+      "max_absolute_error": 0.0,
+      "tolerance": 1e-08
+    },
+    {
+      "dataset": "MELD",
+      "seed": 1475,
+      "condition": "K10_block1",
+      "modality": "audio",
+      "repeat_count": 10,
+      "method": "E1",
+      "rows": 1109,
+      "max_absolute_error": 0.0,
+      "tolerance": 1e-08
+    },
+    {
+      "dataset": "MELD",
+      "seed": 1475,
+      "condition": "K10_block1",
+      "modality": "audio",
+      "repeat_count": 10,
+      "method": "M_gaussian",
+      "rows": 1109,
+      "max_absolute_error": 0.0,
+      "tolerance": 1e-08
+    },
+    {
+      "dataset": "MELD",
+      "seed": 1475,
+      "condition": "K10_block1",
+      "modality": "audio",
+      "repeat_count": 10,
+      "method": "M_gaussian_mu",
+      "rows": 1109,
+      "max_absolute_error": 0.0,
+      "tolerance": 1e-08
+    },
+    {
+      "dataset": "MELD",
+      "seed": 1475,
+      "condition": "K10_block1",
+      "modality": "audio",
+      "repeat_count": 10,
+      "method": "M_gaussian_delta",
+      "rows": 1109,
+      "max_absolute_error": 0.0,
+      "tolerance": 1e-08
+    },
+    {
+      "dataset": "IEMOCAP",
+      "seed": 1475,
+      "condition": "K10_block2",
+      "modality": "text",
+      "repeat_count": 10,
+      "method": "E0",
+      "rows": 527,
+      "max_absolute_error": 0.0,
+      "tolerance": 1e-08
+    },
+    {
+      "dataset": "IEMOCAP",
+      "seed": 1475,
+      "condition": "K10_block2",
+      "modality": "text",
+      "repeat_count": 10,
+      "method": "E1",
+      "rows": 527,
+      "max_absolute_error": 0.0,
+      "tolerance": 1e-08
+    },
+    {
+      "dataset": "IEMOCAP",
+      "seed": 1475,
+      "condition": "K10_block2",
+      "modality": "text",
+      "repeat_count": 10,
+      "method": "M_gaussian",
+      "rows": 527,
+      "max_absolute_error": 0.0,
+      "tolerance": 1e-08
+    },
+    {
+      "dataset": "IEMOCAP",
+      "seed": 1475,
+      "condition": "K10_block2",
+      "modality": "text",
+      "repeat_count": 10,
+      "method": "M_gaussian_mu",
+      "rows": 527,
+      "max_absolute_error": 0.0,
+      "tolerance": 1e-08
+    },
+    {
+      "dataset": "IEMOCAP",
+      "seed": 1475,
+      "condition": "K10_block2",
+      "modality": "text",
+      "repeat_count": 10,
+      "method": "M_gaussian_delta",
+      "rows": 527,
+      "max_absolute_error": 0.0,
+      "tolerance": 1e-08
+    },
+    {
+      "dataset": "MELD",
+      "seed": 1475,
+      "condition": "K10_block2",
+      "modality": "audio",
+      "repeat_count": 10,
+      "method": "E0",
+      "rows": 1109,
+      "max_absolute_error": 0.0,
+      "tolerance": 1e-08
+    },
+    {
+      "dataset": "MELD",
+      "seed": 1475,
+      "condition": "K10_block2",
+      "modality": "audio",
+      "repeat_count": 10,
+      "method": "E1",
+      "rows": 1109,
+      "max_absolute_error": 0.0,
+      "tolerance": 1e-08
+    },
+    {
+      "dataset": "MELD",
+      "seed": 1475,
+      "condition": "K10_block2",
+      "modality": "audio",
+      "repeat_count": 10,
+      "method": "M_gaussian",
+      "rows": 1109,
+      "max_absolute_error": 0.0,
+      "tolerance": 1e-08
+    },
+    {
+      "dataset": "MELD",
+      "seed": 1475,
+      "condition": "K10_block2",
+      "modality": "audio",
+      "repeat_count": 10,
+      "method": "M_gaussian_mu",
+      "rows": 1109,
+      "max_absolute_error": 0.0,
+      "tolerance": 1e-08
+    },
+    {
+      "dataset": "MELD",
+      "seed": 1475,
+      "condition": "K10_block2",
+      "modality": "audio",
+      "repeat_count": 10,
+      "method": "M_gaussian_delta",
+      "rows": 1109,
+      "max_absolute_error": 0.0,
+      "tolerance": 1e-08
+    }
+  ],
+  "historical_metric_parity": [
+    {
+      "dataset": "IEMOCAP",
+      "condition": "K10_block0",
+      "method": "E0",
+      "metric": "ece15",
+      "max_absolute_error": 0.0
+    },
+    {
+      "dataset": "IEMOCAP",
+      "condition": "K10_block0",
+      "method": "E0",
+      "metric": "binary_brier",
+      "max_absolute_error": 0.0
+    },
+    {
+      "dataset": "IEMOCAP",
+      "condition": "K10_block0",
+      "method": "E0",
+      "metric": "binary_nll",
+      "max_absolute_error": 0.0
+    },
+    {
+      "dataset": "IEMOCAP",
+      "condition": "K10_block0",
+      "method": "E1",
+      "metric": "ece15",
+      "max_absolute_error": 0.0
+    },
+    {
+      "dataset": "IEMOCAP",
+      "condition": "K10_block0",
+      "method": "E1",
+      "metric": "binary_brier",
+      "max_absolute_error": 0.0
+    },
+    {
+      "dataset": "IEMOCAP",
+      "condition": "K10_block0",
+      "method": "E1",
+      "metric": "binary_nll",
+      "max_absolute_error": 0.0
+    },
+    {
+      "dataset": "IEMOCAP",
+      "condition": "K10_block0",
+      "method": "M_gaussian",
+      "metric": "ece15",
+      "max_absolute_error": 0.0
+    },
+    {
+      "dataset": "IEMOCAP",
+      "condition": "K10_block0",
+      "method": "M_gaussian",
+      "metric": "binary_brier",
+      "max_absolute_error": 0.0
+    },
+    {
+      "dataset": "IEMOCAP",
+      "condition": "K10_block0",
+      "method": "M_gaussian",
+      "metric": "binary_nll",
+      "max_absolute_error": 0.0
+    },
+    {
+      "dataset": "IEMOCAP",
+      "condition": "K10_block0",
+      "method": "M_gaussian_mu",
+      "metric": "ece15",
+      "max_absolute_error": 0.0
+    },
+    {
+      "dataset": "IEMOCAP",
+      "condition": "K10_block0",
+      "method": "M_gaussian_mu",
+      "metric": "binary_brier",
+      "max_absolute_error": 0.0
+    },
+    {
+      "dataset": "IEMOCAP",
+      "condition": "K10_block0",
+      "method": "M_gaussian_mu",
+      "metric": "binary_nll",
+      "max_absolute_error": 0.0
+    },
+    {
+      "dataset": "IEMOCAP",
+      "condition": "K10_block0",
+      "method": "M_gaussian_delta",
+      "metric": "ece15",
+      "max_absolute_error": 0.0
+    },
+    {
+      "dataset": "IEMOCAP",
+      "condition": "K10_block0",
+      "method": "M_gaussian_delta",
+      "metric": "binary_brier",
+      "max_absolute_error": 0.0
+    },
+    {
+      "dataset": "IEMOCAP",
+      "condition": "K10_block0",
+      "method": "M_gaussian_delta",
+      "metric": "binary_nll",
+      "max_absolute_error": 0.0
+    },
+    {
+      "dataset": "MELD",
+      "condition": "K10_block0",
+      "method": "E0",
+      "metric": "ece15",
+      "max_absolute_error": 0.0
+    },
+    {
+      "dataset": "MELD",
+      "condition": "K10_block0",
+      "method": "E0",
+      "metric": "binary_brier",
+      "max_absolute_error": 0.0
+    },
+    {
+      "dataset": "MELD",
+      "condition": "K10_block0",
+      "method": "E0",
+      "metric": "binary_nll",
+      "max_absolute_error": 0.0
+    },
+    {
+      "dataset": "MELD",
+      "condition": "K10_block0",
+      "method": "E1",
+      "metric": "ece15",
+      "max_absolute_error": 0.0
+    },
+    {
+      "dataset": "MELD",
+      "condition": "K10_block0",
+      "method": "E1",
+      "metric": "binary_brier",
+      "max_absolute_error": 0.0
+    },
+    {
+      "dataset": "MELD",
+      "condition": "K10_block0",
+      "method": "E1",
+      "metric": "binary_nll",
+      "max_absolute_error": 0.0
+    },
+    {
+      "dataset": "MELD",
+      "condition": "K10_block0",
+      "method": "M_gaussian",
+      "metric": "ece15",
+      "max_absolute_error": 0.0
+    },
+    {
+      "dataset": "MELD",
+      "condition": "K10_block0",
+      "method": "M_gaussian",
+      "metric": "binary_brier",
+      "max_absolute_error": 0.0
+    },
+    {
+      "dataset": "MELD",
+      "condition": "K10_block0",
+      "method": "M_gaussian",
+      "metric": "binary_nll",
+      "max_absolute_error": 0.0
+    },
+    {
+      "dataset": "MELD",
+      "condition": "K10_block0",
+      "method": "M_gaussian_mu",
+      "metric": "ece15",
+      "max_absolute_error": 0.0
+    },
+    {
+      "dataset": "MELD",
+      "condition": "K10_block0",
+      "method": "M_gaussian_mu",
+      "metric": "binary_brier",
+      "max_absolute_error": 0.0
+    },
+    {
+      "dataset": "MELD",
+      "condition": "K10_block0",
+      "method": "M_gaussian_mu",
+      "metric": "binary_nll",
+      "max_absolute_error": 0.0
+    },
+    {
+      "dataset": "MELD",
+      "condition": "K10_block0",
+      "method": "M_gaussian_delta",
+      "metric": "ece15",
+      "max_absolute_error": 0.0
+    },
+    {
+      "dataset": "MELD",
+      "condition": "K10_block0",
+      "method": "M_gaussian_delta",
+      "metric": "binary_brier",
+      "max_absolute_error": 0.0
+    },
+    {
+      "dataset": "MELD",
+      "condition": "K10_block0",
+      "method": "M_gaussian_delta",
+      "metric": "binary_nll",
+      "max_absolute_error": 0.0
+    },
+    {
+      "dataset": "IEMOCAP",
+      "condition": "K10_block1",
+      "method": "E0",
+      "metric": "ece15",
+      "max_absolute_error": 0.0
+    },
+    {
+      "dataset": "IEMOCAP",
+      "condition": "K10_block1",
+      "method": "E0",
+      "metric": "binary_brier",
+      "max_absolute_error": 0.0
+    },
+    {
+      "dataset": "IEMOCAP",
+      "condition": "K10_block1",
+      "method": "E0",
+      "metric": "binary_nll",
+      "max_absolute_error": 0.0
+    },
+    {
+      "dataset": "IEMOCAP",
+      "condition": "K10_block1",
+      "method": "E1",
+      "metric": "ece15",
+      "max_absolute_error": 0.0
+    },
+    {
+      "dataset": "IEMOCAP",
+      "condition": "K10_block1",
+      "method": "E1",
+      "metric": "binary_brier",
+      "max_absolute_error": 0.0
+    },
+    {
+      "dataset": "IEMOCAP",
+      "condition": "K10_block1",
+      "method": "E1",
+      "metric": "binary_nll",
+      "max_absolute_error": 0.0
+    },
+    {
+      "dataset": "IEMOCAP",
+      "condition": "K10_block1",
+      "method": "M_gaussian",
+      "metric": "ece15",
+      "max_absolute_error": 0.0
+    },
+    {
+      "dataset": "IEMOCAP",
+      "condition": "K10_block1",
+      "method": "M_gaussian",
+      "metric": "binary_brier",
+      "max_absolute_error": 0.0
+    },
+    {
+      "dataset": "IEMOCAP",
+      "condition": "K10_block1",
+      "method": "M_gaussian",
+      "metric": "binary_nll",
+      "max_absolute_error": 0.0
+    },
+    {
+      "dataset": "IEMOCAP",
+      "condition": "K10_block1",
+      "method": "M_gaussian_mu",
+      "metric": "ece15",
+      "max_absolute_error": 0.0
+    },
+    {
+      "dataset": "IEMOCAP",
+      "condition": "K10_block1",
+      "method": "M_gaussian_mu",
+      "metric": "binary_brier",
+      "max_absolute_error": 0.0
+    },
+    {
+      "dataset": "IEMOCAP",
+      "condition": "K10_block1",
+      "method": "M_gaussian_mu",
+      "metric": "binary_nll",
+      "max_absolute_error": 0.0
+    },
+    {
+      "dataset": "IEMOCAP",
+      "condition": "K10_block1",
+      "method": "M_gaussian_delta",
+      "metric": "ece15",
+      "max_absolute_error": 0.0
+    },
+    {
+      "dataset": "IEMOCAP",
+      "condition": "K10_block1",
+      "method": "M_gaussian_delta",
+      "metric": "binary_brier",
+      "max_absolute_error": 0.0
+    },
+    {
+      "dataset": "IEMOCAP",
+      "condition": "K10_block1",
+      "method": "M_gaussian_delta",
+      "metric": "binary_nll",
+      "max_absolute_error": 0.0
+    },
+    {
+      "dataset": "MELD",
+      "condition": "K10_block1",
+      "method": "E0",
+      "metric": "ece15",
+      "max_absolute_error": 0.0
+    },
+    {
+      "dataset": "MELD",
+      "condition": "K10_block1",
+      "method": "E0",
+      "metric": "binary_brier",
+      "max_absolute_error": 0.0
+    },
+    {
+      "dataset": "MELD",
+      "condition": "K10_block1",
+      "method": "E0",
+      "metric": "binary_nll",
+      "max_absolute_error": 0.0
+    },
+    {
+      "dataset": "MELD",
+      "condition": "K10_block1",
+      "method": "E1",
+      "metric": "ece15",
+      "max_absolute_error": 0.0
+    },
+    {
+      "dataset": "MELD",
+      "condition": "K10_block1",
+      "method": "E1",
+      "metric": "binary_brier",
+      "max_absolute_error": 0.0
+    },
+    {
+      "dataset": "MELD",
+      "condition": "K10_block1",
+      "method": "E1",
+      "metric": "binary_nll",
+      "max_absolute_error": 0.0
+    },
+    {
+      "dataset": "MELD",
+      "condition": "K10_block1",
+      "method": "M_gaussian",
+      "metric": "ece15",
+      "max_absolute_error": 0.0
+    },
+    {
+      "dataset": "MELD",
+      "condition": "K10_block1",
+      "method": "M_gaussian",
+      "metric": "binary_brier",
+      "max_absolute_error": 0.0
+    },
+    {
+      "dataset": "MELD",
+      "condition": "K10_block1",
+      "method": "M_gaussian",
+      "metric": "binary_nll",
+      "max_absolute_error": 0.0
+    },
+    {
+      "dataset": "MELD",
+      "condition": "K10_block1",
+      "method": "M_gaussian_mu",
+      "metric": "ece15",
+      "max_absolute_error": 0.0
+    },
+    {
+      "dataset": "MELD",
+      "condition": "K10_block1",
+      "method": "M_gaussian_mu",
+      "metric": "binary_brier",
+      "max_absolute_error": 0.0
+    },
+    {
+      "dataset": "MELD",
+      "condition": "K10_block1",
+      "method": "M_gaussian_mu",
+      "metric": "binary_nll",
+      "max_absolute_error": 0.0
+    },
+    {
+      "dataset": "MELD",
+      "condition": "K10_block1",
+      "method": "M_gaussian_delta",
+      "metric": "ece15",
+      "max_absolute_error": 0.0
+    },
+    {
+      "dataset": "MELD",
+      "condition": "K10_block1",
+      "method": "M_gaussian_delta",
+      "metric": "binary_brier",
+      "max_absolute_error": 0.0
+    },
+    {
+      "dataset": "MELD",
+      "condition": "K10_block1",
+      "method": "M_gaussian_delta",
+      "metric": "binary_nll",
+      "max_absolute_error": 0.0
+    },
+    {
+      "dataset": "IEMOCAP",
+      "condition": "K10_block2",
+      "method": "E0",
+      "metric": "ece15",
+      "max_absolute_error": 0.0
+    },
+    {
+      "dataset": "IEMOCAP",
+      "condition": "K10_block2",
+      "method": "E0",
+      "metric": "binary_brier",
+      "max_absolute_error": 0.0
+    },
+    {
+      "dataset": "IEMOCAP",
+      "condition": "K10_block2",
+      "method": "E0",
+      "metric": "binary_nll",
+      "max_absolute_error": 0.0
+    },
+    {
+      "dataset": "IEMOCAP",
+      "condition": "K10_block2",
+      "method": "E1",
+      "metric": "ece15",
+      "max_absolute_error": 0.0
+    },
+    {
+      "dataset": "IEMOCAP",
+      "condition": "K10_block2",
+      "method": "E1",
+      "metric": "binary_brier",
+      "max_absolute_error": 0.0
+    },
+    {
+      "dataset": "IEMOCAP",
+      "condition": "K10_block2",
+      "method": "E1",
+      "metric": "binary_nll",
+      "max_absolute_error": 0.0
+    },
+    {
+      "dataset": "IEMOCAP",
+      "condition": "K10_block2",
+      "method": "M_gaussian",
+      "metric": "ece15",
+      "max_absolute_error": 0.0
+    },
+    {
+      "dataset": "IEMOCAP",
+      "condition": "K10_block2",
+      "method": "M_gaussian",
+      "metric": "binary_brier",
+      "max_absolute_error": 0.0
+    },
+    {
+      "dataset": "IEMOCAP",
+      "condition": "K10_block2",
+      "method": "M_gaussian",
+      "metric": "binary_nll",
+      "max_absolute_error": 0.0
+    },
+    {
+      "dataset": "IEMOCAP",
+      "condition": "K10_block2",
+      "method": "M_gaussian_mu",
+      "metric": "ece15",
+      "max_absolute_error": 0.0
+    },
+    {
+      "dataset": "IEMOCAP",
+      "condition": "K10_block2",
+      "method": "M_gaussian_mu",
+      "metric": "binary_brier",
+      "max_absolute_error": 0.0
+    },
+    {
+      "dataset": "IEMOCAP",
+      "condition": "K10_block2",
+      "method": "M_gaussian_mu",
+      "metric": "binary_nll",
+      "max_absolute_error": 0.0
+    },
+    {
+      "dataset": "IEMOCAP",
+      "condition": "K10_block2",
+      "method": "M_gaussian_delta",
+      "metric": "ece15",
+      "max_absolute_error": 0.0
+    },
+    {
+      "dataset": "IEMOCAP",
+      "condition": "K10_block2",
+      "method": "M_gaussian_delta",
+      "metric": "binary_brier",
+      "max_absolute_error": 0.0
+    },
+    {
+      "dataset": "IEMOCAP",
+      "condition": "K10_block2",
+      "method": "M_gaussian_delta",
+      "metric": "binary_nll",
+      "max_absolute_error": 0.0
+    },
+    {
+      "dataset": "MELD",
+      "condition": "K10_block2",
+      "method": "E0",
+      "metric": "ece15",
+      "max_absolute_error": 0.0
+    },
+    {
+      "dataset": "MELD",
+      "condition": "K10_block2",
+      "method": "E0",
+      "metric": "binary_brier",
+      "max_absolute_error": 0.0
+    },
+    {
+      "dataset": "MELD",
+      "condition": "K10_block2",
+      "method": "E0",
+      "metric": "binary_nll",
+      "max_absolute_error": 0.0
+    },
+    {
+      "dataset": "MELD",
+      "condition": "K10_block2",
+      "method": "E1",
+      "metric": "ece15",
+      "max_absolute_error": 0.0
+    },
+    {
+      "dataset": "MELD",
+      "condition": "K10_block2",
+      "method": "E1",
+      "metric": "binary_brier",
+      "max_absolute_error": 0.0
+    },
+    {
+      "dataset": "MELD",
+      "condition": "K10_block2",
+      "method": "E1",
+      "metric": "binary_nll",
+      "max_absolute_error": 0.0
+    },
+    {
+      "dataset": "MELD",
+      "condition": "K10_block2",
+      "method": "M_gaussian",
+      "metric": "ece15",
+      "max_absolute_error": 0.0
+    },
+    {
+      "dataset": "MELD",
+      "condition": "K10_block2",
+      "method": "M_gaussian",
+      "metric": "binary_brier",
+      "max_absolute_error": 0.0
+    },
+    {
+      "dataset": "MELD",
+      "condition": "K10_block2",
+      "method": "M_gaussian",
+      "metric": "binary_nll",
+      "max_absolute_error": 0.0
+    },
+    {
+      "dataset": "MELD",
+      "condition": "K10_block2",
+      "method": "M_gaussian_mu",
+      "metric": "ece15",
+      "max_absolute_error": 0.0
+    },
+    {
+      "dataset": "MELD",
+      "condition": "K10_block2",
+      "method": "M_gaussian_mu",
+      "metric": "binary_brier",
+      "max_absolute_error": 0.0
+    },
+    {
+      "dataset": "MELD",
+      "condition": "K10_block2",
+      "method": "M_gaussian_mu",
+      "metric": "binary_nll",
+      "max_absolute_error": 0.0
+    },
+    {
+      "dataset": "MELD",
+      "condition": "K10_block2",
+      "method": "M_gaussian_delta",
+      "metric": "ece15",
+      "max_absolute_error": 0.0
+    },
+    {
+      "dataset": "MELD",
+      "condition": "K10_block2",
+      "method": "M_gaussian_delta",
+      "metric": "binary_brier",
+      "max_absolute_error": 0.0
+    },
+    {
+      "dataset": "MELD",
+      "condition": "K10_block2",
+      "method": "M_gaussian_delta",
+      "metric": "binary_nll",
+      "max_absolute_error": 0.0
+    }
+  ],
+  "output_rows": {
+    "behavior_features": 4908,
+    "feature_matrix": 4908,
+    "measurement_summary": 6,
+    "split_half_stability": 18,
+    "oof_predictions": 24540,
+    "calibration_metrics": 30,
+    "inner_cv_results": 612,
+    "confidence_shift": 60
+  },
+  "output_sha256": {
+    "behavior_features.csv": "6702675c85d8184e392868237f6e6a319dbb3de6b988e28085c7241650776121",
+    "feature_matrix.csv": "6702675c85d8184e392868237f6e6a319dbb3de6b988e28085c7241650776121",
+    "measurement_summary.csv": "467584859fc31fb80224be32d4cd7b01033f0ec631074cd07e98d5be0b491db3",
+    "split_half_stability.csv": "849fd955862c72c6f509848f796c1303b33a26cf07b14a51c6e15fc8341145b0",
+    "oof_predictions.csv": "b265b4be645098725f8271a5dbd5a14fdbcfd2fa7be10825134cc5199309d636",
+    "calibration_metrics.csv": "929918b541bf345d889418a1434fa5dc40f9c071e1df61b7755b9b7207b4a992",
+    "inner_cv_results.csv": "fc32c71d6af91c8e156310885e280741c164c6a04cf143e071ae6ff23602a37b",
+    "confidence_shift.csv": "4dcd96676d23ec90a8a62cdac062d831756491e40b93268dae086880fa071ff3"
+  },
+  "elapsed_seconds": 26.059541940689087,
+  "environment": {
+    "python": "/data2/yb/conda_envs/cmerc-xp-repro/bin/python",
+    "host": "user23",
+    "numpy": "1.26.4",
+    "pandas": "1.5.3"
+  }
+}

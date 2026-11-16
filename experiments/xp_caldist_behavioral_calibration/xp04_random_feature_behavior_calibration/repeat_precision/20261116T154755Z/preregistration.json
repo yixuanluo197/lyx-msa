@@ -1,0 +1,171 @@
+{
+  "created_at": "2026-11-16T15:49:15.337963+00:00",
+  "status": "registered_before_new_30repeat_analysis",
+  "seed": 1475,
+  "checkpoint_run": "20261016T050823Z",
+  "datasets": {
+    "IEMOCAP": {
+      "modality": "text",
+      "utterances": 527,
+      "dialogues": 12,
+      "visual_missing": 1
+    },
+    "MELD": {
+      "modality": "audio",
+      "utterances": 1109,
+      "dialogues": 114,
+      "visual_missing": 95
+    }
+  },
+  "corruption": "gaussian",
+  "strength": 0.05,
+  "source_candidate": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/candidate_confirmation/20261116T125737Z",
+  "source_pilot": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/pilot/20261113T025053Z",
+  "source_five_seed": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/five_seed_validation/20261115T151109Z",
+  "source_mainline": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/mainline_mu_delta/20261115T165025Z",
+  "conditions": {
+    "K10_block0": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "K10_block1": [
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "K10_block2": [
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29
+    ],
+    "K30_pooled": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29
+    ]
+  },
+  "primary_condition": "K30_pooled",
+  "historical_reference_condition": "K10_block0",
+  "methods": [
+    "E0",
+    "E1",
+    "M_gaussian",
+    "M_gaussian_mu",
+    "M_gaussian_delta"
+  ],
+  "primary_method": "M_gaussian",
+  "features": {
+    "M_gaussian": [
+      "gaussian_mu",
+      "gaussian_delta"
+    ],
+    "M_gaussian_mu": [
+      "gaussian_mu"
+    ],
+    "M_gaussian_delta": [
+      "gaussian_delta"
+    ]
+  },
+  "penalties": [
+    "off",
+    1.0,
+    0.1,
+    0.01
+  ],
+  "confidence_input": "raw_C_exact_historical",
+  "outer": "historical_same_dialogue_folds_LODO12_and_GroupKFold5",
+  "inner": "historical_GroupKFold5_train_only_scaler_and_Brier_fixed_penalty_grid",
+  "bootstrap_repeats": 2000,
+  "bootstrap": "reuse_historical_shared_dialogue_draws_no_refit; pair_K30_vs_E1_and_K10_eachblock; include_ablations; no_seed_population_CI",
+  "mu": "mean(1[perturbed_prediction != original_prediction] * perturbed_max_confidence)",
+  "delta": "abs(C - mean(perturbed_max_confidence))",
+  "delta_aggregation": "recompute_from_all_30_probabilities; never average_10repeat_deltas",
+  "js": "diagnostic_only",
+  "measurement": [
+    "split_half_5_vs_5_for_each_K10; fixed_global_0to14_vs15to29_for_K30",
+    "per_utterance_confidence_mean_standard_error_sample_sd_ddof1_div_sqrtK; not_standard_error_of_delta",
+    "mu_nonzero_coverage_and_tie_fraction",
+    "all_K10_blocks_reported_no_bestblock_selection",
+    "fixed_OOF_dialogue_omission_influence_for_primary_comparisons"
+  ],
+  "comparisons": [
+    "K30_M_gaussian_vs_E1",
+    "K30_M_gaussian_vs_K10_block0_M_gaussian_primary_repeat_comparison",
+    "K30_M_gaussian_vs_each_other_K10_block_descriptive",
+    "M_gaussian_vs_M_gaussian_mu_and_M_gaussian_delta_secondary"
+  ],
+  "limitations": [
+    "single_model_seed1475_only; cannot establish_cross_seed_generalization",
+    "same_explored_Validation_checkpoint_selection_and_candidate_selection",
+    "K30_reuses_all_three_K10_blocks; nested_conditions_not_independent_replicates",
+    "one_K30_set_only; 15vs15_agreement_is_diagnostic_not_independent_30repeat_reproducibility",
+    "fixed_OOF_dialogue_bootstrap_excludes_refitting_and_random_repeat_uncertainty",
+    "exploratory_multiple_comparisons_uncorrected"
+  ],
+  "next_step": "only_if_measurement_and_incremental_calibration_improve_consider_separate_authorization_to_extend_other_seeds; otherwise_stop_this_precision_branch",
+  "excluded": [
+    "new_GPU_inference",
+    "CMERC_training_or_model_changes",
+    "new_feature_perturbations",
+    "raw_data_processing",
+    "test_use",
+    "strength_search",
+    "20repeat_search",
+    "JS_class_or_interaction_calibration_inputs",
+    "overwriting_prior_10repeat_reports"
+  ],
+  "expected_unique_originals": 1636,
+  "expected_selected_raw_rows": 49080,
+  "expected_feature_rows": 6544,
+  "expected_oof_rows": 32720,
+  "expected_metric_rows": 40
+}

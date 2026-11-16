@@ -1,0 +1,36 @@
+{
+  "status": "passed",
+  "all_passed": true,
+  "stage": "preflight",
+  "checks": {
+    "source": {
+      "immutable_historical_hashes_checked": 337,
+      "frozen_calibrator_sha256": "c7b70683b2cb24a60bda5e7739a8b608c424137a3caacfb3c6b17637c83256e5",
+      "single_model_seed": 1475,
+      "no_new_inference_required": true
+    },
+    "raw": {
+      "selected_raw_rows": 49080,
+      "one_utterance_per_condition_records": 6544,
+      "historical_K10_behavior_all_blocks_recomputed": 4908,
+      "K30_delta_max_difference_from_wrong_mean_block_delta": 0.0005777021642158209,
+      "global_rng_repeats_exact_0_to_29": true,
+      "selected_source_files": [
+        "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/pilot/20261113T025053Z/IEMOCAP/perturbed_predictions.csv",
+        "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/candidate_confirmation/20261116T125737Z/runs/IEMOCAP/seed1475/block1/perturbed_predictions.csv",
+        "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/candidate_confirmation/20261116T125737Z/runs/IEMOCAP/seed1475/block2/perturbed_predictions.csv",
+        "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/pilot/20261113T025053Z/MELD/perturbed_predictions.csv",
+        "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/candidate_confirmation/20261116T125737Z/runs/MELD/seed1475/block1/perturbed_predictions.csv",
+        "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/candidate_confirmation/20261116T125737Z/runs/MELD/seed1475/block2/perturbed_predictions.csv"
+      ]
+    },
+    "historical_K10_fit_reproduction": {
+      "outer_folds": 51,
+      "inner_predictions_replayed": 368388,
+      "nested_selections": 153,
+      "oof_predictions_replayed": 24540,
+      "historical_K10_parity_predictions": 24540
+    }
+  },
+  "scope": "Input/formula/history preflight only. New K30 fits and scientific conclusions not yet verified."
+}

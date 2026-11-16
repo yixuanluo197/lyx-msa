@@ -1,0 +1,51 @@
+{
+  "status": "passed",
+  "all_passed": true,
+  "stage": "full",
+  "checks": {
+    "source": {
+      "immutable_historical_hashes_checked": 337,
+      "frozen_calibrator_sha256": "c7b70683b2cb24a60bda5e7739a8b608c424137a3caacfb3c6b17637c83256e5",
+      "single_model_seed": 1475,
+      "no_new_inference_required": true
+    },
+    "raw": {
+      "selected_raw_rows": 49080,
+      "one_utterance_per_condition_records": 6544,
+      "historical_K10_behavior_all_blocks_recomputed": 4908,
+      "K30_delta_max_difference_from_wrong_mean_block_delta": 0.0005777021642158209,
+      "global_rng_repeats_exact_0_to_29": true,
+      "selected_source_files": [
+        "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/pilot/20261113T025053Z/IEMOCAP/perturbed_predictions.csv",
+        "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/candidate_confirmation/20261116T125737Z/runs/IEMOCAP/seed1475/block1/perturbed_predictions.csv",
+        "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/candidate_confirmation/20261116T125737Z/runs/IEMOCAP/seed1475/block2/perturbed_predictions.csv",
+        "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/pilot/20261113T025053Z/MELD/perturbed_predictions.csv",
+        "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/candidate_confirmation/20261116T125737Z/runs/MELD/seed1475/block1/perturbed_predictions.csv",
+        "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/candidate_confirmation/20261116T125737Z/runs/MELD/seed1475/block2/perturbed_predictions.csv"
+      ]
+    },
+    "calibration": {
+      "outer_folds": 68,
+      "inner_predictions_replayed": 491184,
+      "nested_selections": 204,
+      "oof_predictions_replayed": 32720,
+      "historical_K10_parity_predictions": 24540
+    },
+    "diagnostics": {
+      "measurement_and_stability_shift_rows_recomputed": 112,
+      "sample_std_ddof1_and_standard_error_of_mean_not_delta": true,
+      "5_vs5_and15_vs15_fixed_halves": true,
+      "sparse_mu_zero_and_ties_reported": true
+    },
+    "bootstrap_and_influence": {
+      "paired_historical_2000_dialogue_bootstrap_rows_recomputed": 234,
+      "literal_first_draw_checks": 120,
+      "fixed_OOF_dialogue_omission_rows_recomputed": 2646,
+      "concentration_summary_rows": 42,
+      "nested_conditions_not_independent_replicates": true,
+      "no_refitting_or_seed_population_inference": true
+    },
+    "delivered_inputs_exactly_reproduce_saved_source": true,
+    "analysis_output_hashes_verified": 11
+  }
+}

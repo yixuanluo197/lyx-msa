@@ -1,0 +1,95 @@
+{
+  "status": "completed",
+  "all_passed": true,
+  "completed_at": "2026-11-16T16:00:49.087694+00:00",
+  "scope": "single Seed1475 Gaussian0.05 10-versus30 repeats precision sensitivity; true Validation",
+  "unit_tests_passed": 13,
+  "scripts_compiled": true,
+  "cpu_only": true,
+  "new_gpu_forwards": 0,
+  "new_perturbations": 0,
+  "new_cmerc_training": false,
+  "test_use": false,
+  "original_features_modified": false,
+  "conditions": [
+    "K10_block0",
+    "K10_block1",
+    "K10_block2",
+    "K30_pooled"
+  ],
+  "one_row_per_utterance_condition": true,
+  "K30_delta_recomputed_not_mean_K10_delta": true,
+  "all_K10_history_reproduced": true,
+  "output_rows": {
+    "behavior_features": 6544,
+    "feature_matrix": 6544,
+    "measurement_summary": 8,
+    "split_half_stability": 24,
+    "oof_predictions": 32720,
+    "calibration_metrics": 40,
+    "inner_cv_results": 816,
+    "confidence_shift": 80,
+    "bootstrap_results": 234,
+    "dialogue_influence": 2646,
+    "dialogue_concentration_summary": 42
+  },
+  "immutable_historical_hashes_unchanged": 337,
+  "frozen_scripts_unchanged": 7,
+  "independent_verification": {
+    "status": "passed",
+    "all_passed": true,
+    "stage": "full",
+    "checks": {
+      "source": {
+        "immutable_historical_hashes_checked": 337,
+        "frozen_calibrator_sha256": "c7b70683b2cb24a60bda5e7739a8b608c424137a3caacfb3c6b17637c83256e5",
+        "single_model_seed": 1475,
+        "no_new_inference_required": true
+      },
+      "raw": {
+        "selected_raw_rows": 49080,
+        "one_utterance_per_condition_records": 6544,
+        "historical_K10_behavior_all_blocks_recomputed": 4908,
+        "K30_delta_max_difference_from_wrong_mean_block_delta": 0.0005777021642158209,
+        "global_rng_repeats_exact_0_to_29": true,
+        "selected_source_files": [
+          "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/pilot/20261113T025053Z/IEMOCAP/perturbed_predictions.csv",
+          "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/candidate_confirmation/20261116T125737Z/runs/IEMOCAP/seed1475/block1/perturbed_predictions.csv",
+          "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/candidate_confirmation/20261116T125737Z/runs/IEMOCAP/seed1475/block2/perturbed_predictions.csv",
+          "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/pilot/20261113T025053Z/MELD/perturbed_predictions.csv",
+          "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/candidate_confirmation/20261116T125737Z/runs/MELD/seed1475/block1/perturbed_predictions.csv",
+          "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/candidate_confirmation/20261116T125737Z/runs/MELD/seed1475/block2/perturbed_predictions.csv"
+        ]
+      },
+      "calibration": {
+        "outer_folds": 68,
+        "inner_predictions_replayed": 491184,
+        "nested_selections": 204,
+        "oof_predictions_replayed": 32720,
+        "historical_K10_parity_predictions": 24540
+      },
+      "diagnostics": {
+        "measurement_and_stability_shift_rows_recomputed": 112,
+        "sample_std_ddof1_and_standard_error_of_mean_not_delta": true,
+        "5_vs5_and15_vs15_fixed_halves": true,
+        "sparse_mu_zero_and_ties_reported": true
+      },
+      "bootstrap_and_influence": {
+        "paired_historical_2000_dialogue_bootstrap_rows_recomputed": 234,
+        "literal_first_draw_checks": 120,
+        "fixed_OOF_dialogue_omission_rows_recomputed": 2646,
+        "concentration_summary_rows": 42,
+        "nested_conditions_not_independent_replicates": true,
+        "no_refitting_or_seed_population_inference": true
+      },
+      "delivered_inputs_exactly_reproduce_saved_source": true,
+      "analysis_output_hashes_verified": 11
+    }
+  },
+  "measurement_conclusion": "Confidence mean SE decreased; no consistent gain in delta split-half ranking, mu coverage remains1/527 and4/1109",
+  "calibration_conclusion": "IEMOCAP ECE improves but proper losses worsen and change confined to one held Dialogue; MELD proper losses improve but ECE worsens; no synchronous primary criterion gain",
+  "cross_seed_conclusion_not_claimed": true,
+  "independent_30repeat_reproducibility_not_claimed": true,
+  "automatic_next_experiments": false,
+  "github_delivery": "prepared; remote commit equality verified separately at final delivery"
+}
