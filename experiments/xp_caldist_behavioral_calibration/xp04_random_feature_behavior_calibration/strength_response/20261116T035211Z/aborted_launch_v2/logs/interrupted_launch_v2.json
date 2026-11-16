@@ -1,0 +1,110 @@
+{
+  "reason": "Independent preflight identified original probabilities must be exact historical .05 Pilot baseline across strengths (earlier Validation NPZ differs by <=1.788e-7 GPU roundoff). Switch canonical reference, preserve partial outputs and rerun.",
+  "pids": [
+    1594660,
+    1594681,
+    1594682,
+    1594683,
+    1594684
+  ],
+  "queue_status": {
+    "updated_at": "2026-11-16T04:02:42.917701+00:00",
+    "runs": [
+      {
+        "dataset": "MELD",
+        "modality": "text",
+        "gpu": 0,
+        "gpu_uuid": "GPU-7ff18ebb-100e-98fe-038b-a98bd4f94248",
+        "pid": 1594681,
+        "command": [
+          "/data2/yb/conda_envs/cmerc-xp-repro/bin/python",
+          "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/strength_response/20261116T035211Z/scripts/run_strength.py",
+          "--dataset",
+          "MELD",
+          "--modality",
+          "text"
+        ],
+        "started_at": "2026-11-16T04:01:51.095976+00:00",
+        "status": "running"
+      },
+      {
+        "dataset": "MELD",
+        "modality": "audio",
+        "gpu": 1,
+        "gpu_uuid": "GPU-eed2f34f-b4c0-7b7a-498e-71a026e30c5a",
+        "pid": 1594682,
+        "command": [
+          "/data2/yb/conda_envs/cmerc-xp-repro/bin/python",
+          "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/strength_response/20261116T035211Z/scripts/run_strength.py",
+          "--dataset",
+          "MELD",
+          "--modality",
+          "audio"
+        ],
+        "started_at": "2026-11-16T04:01:51.096623+00:00",
+        "status": "running"
+      },
+      {
+        "dataset": "MELD",
+        "modality": "visual",
+        "gpu": 2,
+        "gpu_uuid": "GPU-d17e4326-9d3b-2025-fbf8-c9b0d16623a0",
+        "pid": 1594683,
+        "command": [
+          "/data2/yb/conda_envs/cmerc-xp-repro/bin/python",
+          "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/strength_response/20261116T035211Z/scripts/run_strength.py",
+          "--dataset",
+          "MELD",
+          "--modality",
+          "visual"
+        ],
+        "started_at": "2026-11-16T04:01:51.097342+00:00",
+        "status": "running"
+      },
+      {
+        "dataset": "MELD",
+        "modality": "joint",
+        "gpu": 3,
+        "gpu_uuid": "GPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456",
+        "pid": 1594684,
+        "command": [
+          "/data2/yb/conda_envs/cmerc-xp-repro/bin/python",
+          "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/strength_response/20261116T035211Z/scripts/run_strength.py",
+          "--dataset",
+          "MELD",
+          "--modality",
+          "joint"
+        ],
+        "started_at": "2026-11-16T04:01:51.098328+00:00",
+        "status": "running"
+      }
+    ],
+    "remaining": {
+      "0": [
+        [
+          "IEMOCAP",
+          "text"
+        ]
+      ],
+      "1": [
+        [
+          "IEMOCAP",
+          "audio"
+        ]
+      ],
+      "2": [
+        [
+          "IEMOCAP",
+          "visual"
+        ]
+      ],
+      "3": [
+        [
+          "IEMOCAP",
+          "joint"
+        ]
+      ]
+    },
+    "active": 4
+  }
+}

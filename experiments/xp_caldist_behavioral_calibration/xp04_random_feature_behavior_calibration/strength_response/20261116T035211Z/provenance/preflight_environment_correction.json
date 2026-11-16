@@ -1,0 +1,9 @@
+{
+  "recorded_at": "2026-11-16T03:59:35.669235+00:00",
+  "failed_smoke": "runs/MELD/joint/smoke (preserved or versioned by inference owner)",
+  "observation": "Baseline probability parity passed but exact identical-input output equality failed; torch-sparse warned missing libcusparse.so.11.",
+  "historical_LD_LIBRARY_PATH": "/data2/yb/conda_envs/cmerc-xp-repro/lib/python3.10/site-packages/nvidia/cusparse/lib",
+  "initial_smoke_LD_LIBRARY_PATH": null,
+  "correction": "Restore historical LD_LIBRARY_PATH before further GPU checks/formal runs. Measure repeated cached/uncached outputs and preserve evidence; do not assume environmental correction guarantees bitwise determinism.",
+  "formal_inference_started": false
+}

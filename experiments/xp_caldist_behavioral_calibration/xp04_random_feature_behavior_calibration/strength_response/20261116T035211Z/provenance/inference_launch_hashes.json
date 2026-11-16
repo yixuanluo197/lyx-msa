@@ -1,0 +1,19 @@
+{
+  "created_at": "2026-11-16T04:05:35.867938+00:00",
+  "files": {
+    "scripts/run_strength.py": "dddab14a2af2fbefba7745951f5bccb88c3745934a21a84a2c50374416625d74",
+    "scripts/launch_inference.py": "d67d643bcc7fe6dcbf5cb7597d4ab1f05a7b74c1664e7224bf8156f31f5935aa",
+    "preregistration.json": "bd9788d9a232de048fb15ead2ba4ce9a05f414d3275a50c643717ae66f467227",
+    "EXPERIMENT_PLAN.md": "abed680aedf075506c8527ea5d497d50a0d3e4b6fa4b7d9fbabf1b02d4e82e4c",
+    "provenance/inference_helpers/graph_index_cache.py": "af5994faa3ccf7560ab65d1797ca181932b438ca463380ce2e7425fdab12b49d",
+    "provenance/inference_helpers/pilot_core.py": "e5d78271d9a7e38c434fe05a0d15bc9b2ee1eeed9b470fb76e62f81fa053f019",
+    "provenance/inference_helpers/run_pilot.py": "de0b49182745b71efca7a59882fbbeb61e3c676b5ec86cf914caca4924665a80"
+  },
+  "independent_preflight": "results/preflight_verification_v2.json",
+  "smoke_completed_both_datasets": true,
+  "gpu_replay_policy": "exact RNG/features and canonical C/P; historical output atol1e-6 rtol1e-5 with identical argmax; bitwise output flag separately disclosed",
+  "excluded_interrupted_launches": [
+    "aborted_launch_v1",
+    "aborted_launch_v2"
+  ]
+}

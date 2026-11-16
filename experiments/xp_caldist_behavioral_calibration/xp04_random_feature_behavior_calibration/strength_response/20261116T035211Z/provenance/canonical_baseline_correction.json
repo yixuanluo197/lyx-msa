@@ -1,0 +1,10 @@
+{
+  "utc": "2026-11-16T04:04:31.972565+00:00",
+  "canonical_source": "source_pilot/{dataset}/original_predictions.npz and matching CSV",
+  "reason": "Use exactly the same C and original P for old0.05 and new0.10; earlier validation NPZ differs only due GPU FP32 roundoff, but was not selected as scientificbaseline.",
+  "largest_observed_difference": 1.7881393432617188e-07,
+  "handling": "All interrupted formal partial outputs moved to aborted_launch_v2, excluded completely from analysis. No partial output reused. Source selection fixed before reported full runs.",
+  "scientific_conditions_changed": false,
+  "previous_runner_sha256": "274bb95089ba92ddd381652fa8ba03a449e612b4df0a50afe561e86e9fcfff54",
+  "previous_code_copy": "provenance/runner_before_canonical_reference_fix.py"
+}

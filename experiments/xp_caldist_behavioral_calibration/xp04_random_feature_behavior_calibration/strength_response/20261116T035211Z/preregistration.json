@@ -1,0 +1,81 @@
+{
+  "created_at": "2026-11-16T03:53:01.508721+00:00",
+  "status": "preregistered_before_inference",
+  "seed": 1475,
+  "datasets": {
+    "IEMOCAP": {
+      "utterances": 527,
+      "dialogues": 12,
+      "visual_missing": 1,
+      "train_count": 5283
+    },
+    "MELD": {
+      "utterances": 1109,
+      "dialogues": 114,
+      "visual_missing": 95,
+      "train_count": 9989
+    }
+  },
+  "modalities": [
+    "text",
+    "audio",
+    "visual",
+    "joint"
+  ],
+  "reference_strength": 0.05,
+  "new_strength": 0.1,
+  "corruptions": [
+    "gaussian",
+    "dropout"
+  ],
+  "repeats": 10,
+  "source_pilot": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/pilot/20261113T025053Z",
+  "source_five_seed": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/five_seed_validation/20261115T151109Z",
+  "source_mainline": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/mainline_mu_delta/20261115T165025Z",
+  "methods": [
+    "E0",
+    "E1",
+    "M_joint",
+    "M_gaussian",
+    "M_dropout"
+  ],
+  "primary_behavior_method": "M_joint",
+  "penalties": [
+    "off",
+    1.0,
+    0.1,
+    0.01
+  ],
+  "outer": "reuse_seed1475_historical_dialogue_folds_LODO12_and_GroupKFold5",
+  "inner": "GroupKFold5_pooled_binary_Brier_training_dialogues_only",
+  "bootstrap_repeats": 2000,
+  "rng": "unchanged historical PCG64 SHA256 canonical [dataset,1475,dialogue,utterance,feature_array,corruption,strength,repeat]; different strengths independent deterministic streams; same key across modality conditions",
+  "normalization": "perturb raw extracted model inputs before original model normalization",
+  "mu": "mean(1[perturbed_pred != original_pred] * perturbed_max_confidence)",
+  "delta": "abs(original_confidence - mean(perturbed_max_confidence))",
+  "js": "mean JS(original_probability,perturbed_probability), diagnosis only",
+  "primary_endpoints": [
+    "top_label_ECE15",
+    "binary_Brier",
+    "binary_NLL"
+  ],
+  "analysis": [
+    "strength_and_modality_response",
+    "nonzero_mu_coverage",
+    "10repeat_spearman_split_half_with_zeros_disclosed",
+    "raw_behavior_correctness_AUC_fixed_positive_is_error",
+    "same_dialogue_near_confidence_matching_abs_C_difference_at_most_0.02",
+    "same_OOF_calibrator_each_strength_all_reported",
+    "shared_dialogue_paired_bootstrap_no_refit"
+  ],
+  "excluded": [
+    "test_data_or_labels",
+    "CMERC_training",
+    "temperature_scaling",
+    "raw_data_modification",
+    "automatic_strength_0.2",
+    "strength_selection_using_outer_OOF"
+  ],
+  "expected_new_prediction_rows": 130880,
+  "scope": "single seed sensitivity experiment; no confirmatory claim or five-seed inference"
+}

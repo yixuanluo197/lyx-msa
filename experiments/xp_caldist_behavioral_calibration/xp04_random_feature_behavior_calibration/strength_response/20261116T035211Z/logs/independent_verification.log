@@ -1,0 +1,81 @@
+{
+  "status": "passed",
+  "all_passed": true,
+  "stage": "full",
+  "checks": {
+    "protocol": {
+      "seed": 1475,
+      "reference_strength": 0.05,
+      "new_strength": 0.1,
+      "repeats": 10
+    },
+    "historical_hashes": {
+      "historical_sources_unchanged": 17
+    },
+    "source_review": {
+      "live_inference_source_sha256": "dddab14a2af2fbefba7745951f5bccb88c3745934a21a84a2c50374416625d74",
+      "validation_only_executable_dataset_calls": [
+        "validation"
+      ],
+      "no_training_or_Test_inference_call": true,
+      "frozen_mainline_core_sha256": "c7b70683b2cb24a60bda5e7739a8b608c424137a3caacfb3c6b17637c83256e5",
+      "review_basis": "Static executable-path review plus runtime smoke evidence; dormant historical helper Test definitions are not called."
+    },
+    "inference": {
+      "independently_checked_runs": [
+        "IEMOCAP/text",
+        "IEMOCAP/audio",
+        "IEMOCAP/visual",
+        "IEMOCAP/joint",
+        "MELD/text",
+        "MELD/audio",
+        "MELD/visual",
+        "MELD/joint"
+      ],
+      "full_weight_graph_mask_restore_and_cache_parity": true,
+      "raw_input_only_perturbation_and_validation_split": true
+    },
+    "raw_behavior": {
+      "raw_probability_rows_recomputed": 261760,
+      "rows_by_dataset_strength": {
+        "IEMOCAP_0.05": 42160,
+        "IEMOCAP_0.1": 42160,
+        "MELD_0.05": 88720,
+        "MELD_0.1": 88720
+      },
+      "condition_pairs": 16,
+      "historical_features_reproduced": 13088,
+      "mu_is_confidence_weighted_flip_not_flip_rate": true,
+      "zero_visual_rows_retained": {
+        "IEMOCAP": 1,
+        "MELD": 95
+      }
+    },
+    "calibration": {
+      "oof_predictions_replayed": 65440,
+      "inner_candidate_predictions_replayed": 982368,
+      "nested_penalty_selections_recomputed": 408,
+      "historical_outer_folds": 17,
+      "metrics_recomputed": 80,
+      "unchanged_classification": true,
+      "train_only_scaling_and_dialogue_grouping": true,
+      "off_exact_E1": true,
+      "historical_E1_and_005_Mjoint_modality_parity": true,
+      "historical_oof_max_absolute_error": 6.330214130656486e-12,
+      "historical_oof_absolute_tolerance": 1e-08
+    },
+    "diagnostics": {
+      "summary_and_stability_rows_recomputed": 240,
+      "matched_pair_rows_checked": 5880,
+      "same_dialogue_C_caliper_and_no_reuse": true,
+      "positive_error_AUC_direction_fixed": true
+    },
+    "bootstrap": {
+      "bootstrap_rows_recomputed": 648,
+      "literal_resampling_metric_checks": 240,
+      "shared_historical_2000_dialogue_draws": true,
+      "no_refit": true
+    }
+  },
+  "verification_output": "results/independent_verification.json"
+}

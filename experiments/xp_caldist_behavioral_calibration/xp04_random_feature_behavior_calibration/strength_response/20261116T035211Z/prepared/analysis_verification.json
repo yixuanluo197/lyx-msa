@@ -1,0 +1,70 @@
+{
+  "source_rows": [
+    {
+      "dataset": "IEMOCAP",
+      "strength": 0.05,
+      "modality": "all",
+      "path": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/pilot/20261113T025053Z/IEMOCAP/perturbed_predictions.csv",
+      "raw_rows": 42160
+    },
+    {
+      "dataset": "MELD",
+      "strength": 0.05,
+      "modality": "all",
+      "path": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/pilot/20261113T025053Z/MELD/perturbed_predictions.csv",
+      "raw_rows": 88720
+    }
+  ],
+  "historical_feature_max_errors": {
+    "gaussian_mu": 5.551115123125783e-17,
+    "gaussian_delta": 3.3306690738754696e-16,
+    "dropout_mu": 5.551115123125783e-17,
+    "dropout_delta": 4.440892098500626e-16
+  },
+  "raw_rows": 130880,
+  "status": "historical_prepared",
+  "all_passed": true,
+  "independent_verification_pending": true,
+  "output_rows": {
+    "original_predictions": 1636,
+    "behavior_features": 13088,
+    "feature_matrix": 6544,
+    "behavior_summary": 24,
+    "split_half_stability": 96,
+    "conditional_diagnostic": 384,
+    "matched_correct_wrong": 2940,
+    "matched_statistics": 96
+  },
+  "output_sha256": {
+    "original_predictions.csv": "a60a6af41408bc6fd65e964967c86073a866de210eec0cc89df52a10542679ed",
+    "behavior_features.csv": "991e2ac15783c89c6ffa743844df09a7f9ec54ce064e1e6a7850aaeeda94f397",
+    "feature_matrix.csv": "e833fd18622f0cf9d6772dc57af40e40503b796a753832e3afdbbfbbde310436",
+    "behavior_summary.csv": "607223e4ef8550410589835b484e4b48858385996a5e4d414f1abc4a18a475cd",
+    "split_half_stability.csv": "9141b539dc40fd18f532e28135a941f43da4b104d495aea2e8cbf5bc42760254",
+    "conditional_diagnostic.csv": "5149f5f5497752df5dc819f16526382d5c9f1afbd0be977907dd5b86f8dfb0df",
+    "matched_correct_wrong.csv": "70ac3d874237db92ec29d537d735c0577e26c65f798d161b3ff5d761277c7af6",
+    "matched_statistics.csv": "d1bc47e5083c1ea7c69bb89fd0863a23f06c1b4a05ddc9b3abc03e9d21e66b80"
+  },
+  "one_utterance_per_condition": true,
+  "input_code_unchanged": true,
+  "cpu_only": true,
+  "test_labels_used": false,
+  "cmerc_training": false,
+  "no_js_scoring": true,
+  "no_interactions": true,
+  "original_prediction_argmax_preserved": true,
+  "confidence_change_std_ddof": 0,
+  "js_log_base": "natural",
+  "bootstrap": "2000 shared historical dialogue draws; exploratory; no refit",
+  "matching": "same dialogue; abs rawC distance <=0.02; maximum cardinality then minimum distance; behavior independent",
+  "strengths_paired_at_utterance_level_only": true,
+  "independent_noise_streams_across_strengths": true,
+  "fitting_order": "exact historical modality_features.csv order within dataset/modality",
+  "elapsed_seconds": 27.092583179473877,
+  "environment": {
+    "python": "/data2/yb/conda_envs/cmerc-xp-repro/bin/python",
+    "host": "user23",
+    "numpy": "1.26.4",
+    "pandas": "1.5.3"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "rows": 88720,
+  "file": "perturbation_audit.csv",
+  "sha256": "a9792375bee7b8bf923005f7dd1063e6cbdff8aca0b792bb5107f553f29bdb63",
+  "strength": 0.1,
+  "dropout_requested_count": "round(0.1 * count(training_std > 0))",
+  "actual_changed_count_note": "May be smaller when the original equals the replacement training mean or FP32 rounds noise away.",
+  "stdzero_unchanged": true,
+  "rng": "historical SHA256 first16 big-endian canonical JSON PCG64"
+}

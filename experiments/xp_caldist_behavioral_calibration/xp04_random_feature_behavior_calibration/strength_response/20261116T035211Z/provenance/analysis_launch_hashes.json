@@ -1,0 +1,22 @@
+{
+  "utc": "2026-11-16T04:29:12.825525+00:00",
+  "files": {
+    "scripts/analyze_strength.py": "6dbc0de9a5be5d6140c51c8dfdc69ca60cad16e4832cf4b7d664d569aea347c2",
+    "scripts/build_reports.py": "430cb8ed714b2b49cca0406b3be67ebfea98c32850db3f35016e87f3ef9075f3",
+    "scripts/launch_inference.py": "d67d643bcc7fe6dcbf5cb7597d4ab1f05a7b74c1664e7224bf8156f31f5935aa",
+    "scripts/mainline_core.py": "c7b70683b2cb24a60bda5e7739a8b608c424137a3caacfb3c6b17637c83256e5",
+    "scripts/plot_strength.py": "29d4469c12e3bea41595f4a9353e6d903ae76fc7ec645ff520368b55f7e5db3f",
+    "scripts/run_analysis_pipeline.py": "c4108390e03b8d6c2472e0ba38cd1bea81178fea284c9f601eb98bdb8be09b39",
+    "scripts/run_strength.py": "dddab14a2af2fbefba7745951f5bccb88c3745934a21a84a2c50374416625d74",
+    "scripts/summarize_decision.py": "9cd96bdfa7f7420173893c84789f1e835cdabf3e72cb7bd272b8ffeb0523cec0",
+    "scripts/test_analysis.py": "c38d8020a58c8d36da29bfe68fddd9f4b5fb06df9a86ac44eb4bdf7871f7d35f",
+    "scripts/test_strength.py": "46ef675acdad68d49d25f186ada55ce446b4c625e7d47f67e707cb0400d238d4",
+    "scripts/verify_delivery.py": "24253b3c8eec07e8c12bada4a8a0e24e0c8da29e60f959453ae7e132936a5e63",
+    "scripts/verify_strength.py": "1b2776f9a0f2833651a50f6ded0c4964ffc7aa84fb6c21ec7d27fc8985d251de"
+  },
+  "stage": "before all-strength CPU analysis",
+  "documentation_updates_since_historical_prepare": [
+    "Explicitly state matching rows reused across conditions are not independent",
+    "State bootstrap does not separately resample random corruption repeats; no analysis or fitting algorithm changed"
+  ]
+}

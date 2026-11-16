@@ -1,0 +1,10 @@
+{
+  "utc": "2026-11-16T03:54:02.911123+00:00",
+  "host": "user23",
+  "model_server": "local; same XP04 checkpoint/data host as previous runs",
+  "git_head": "77786a7faeda5c39f08eed5444aca2394620cb84",
+  "git_status": "?? CODEX_CAUSAL_CMERC_VERIFICATION_PROMPT.txt\n?? pytest-of-yangbin/\n",
+  "gpu_before": "index, uuid, name, memory.free [MiB], utilization.gpu [%]\n0, GPU-7ff18ebb-100e-98fe-038b-a98bd4f94248, NVIDIA TITAN Xp, 12181 MiB, 0 %\n1, GPU-eed2f34f-b4c0-7b7a-498e-71a026e30c5a, NVIDIA TITAN Xp, 12181 MiB, 0 %\n2, GPU-d17e4326-9d3b-2025-fbf8-c9b0d16623a0, NVIDIA TITAN Xp, 12181 MiB, 0 %\n3, GPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456, NVIDIA TITAN Xp, 12181 MiB, 0 %\n",
+  "unchanged_configuration": "original batch16 / FP32 / ATen / frozen weights",
+  "same_gpu_concurrency_decision": "Historical Pilot recorded saturation with two concurrent runs on GPU3; use one task per idle local GPU, reassess actual throughput."
+}

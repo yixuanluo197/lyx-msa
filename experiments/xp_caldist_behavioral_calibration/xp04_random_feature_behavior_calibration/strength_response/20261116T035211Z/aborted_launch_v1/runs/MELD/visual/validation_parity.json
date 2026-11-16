@@ -1,0 +1,28 @@
+{
+  "passed": true,
+  "checks": {
+    "dialogue_ids": {
+      "equal": true
+    },
+    "utterance_indices": {
+      "equal": true
+    },
+    "labels": {
+      "equal": true
+    },
+    "predictions": {
+      "equal": true
+    },
+    "probabilities": {
+      "equal": true,
+      "max_abs_error": 1.4901161193847656e-07
+    },
+    "log_probabilities": {
+      "equal": true,
+      "max_abs_error": 4.76837158203125e-07
+    },
+    "argmax": {
+      "equal": true
+    }
+  }
+}

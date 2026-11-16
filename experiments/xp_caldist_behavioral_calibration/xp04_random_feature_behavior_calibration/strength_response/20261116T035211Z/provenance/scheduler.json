@@ -1,0 +1,70 @@
+{
+  "pid": 1601865,
+  "created_at": "2026-11-16T04:05:35.955534+00:00",
+  "server": "local",
+  "gpu_inventory": {
+    "0": {
+      "uuid": "GPU-7ff18ebb-100e-98fe-038b-a98bd4f94248",
+      "free_mib": 11315,
+      "utilization": 78
+    },
+    "1": {
+      "uuid": "GPU-eed2f34f-b4c0-7b7a-498e-71a026e30c5a",
+      "free_mib": 11315,
+      "utilization": 75
+    },
+    "2": {
+      "uuid": "GPU-d17e4326-9d3b-2025-fbf8-c9b0d16623a0",
+      "free_mib": 11315,
+      "utilization": 74
+    },
+    "3": {
+      "uuid": "GPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456",
+      "free_mib": 11315,
+      "utilization": 77
+    }
+  },
+  "queues": {
+    "0": [
+      [
+        "MELD",
+        "text"
+      ],
+      [
+        "IEMOCAP",
+        "text"
+      ]
+    ],
+    "1": [
+      [
+        "MELD",
+        "audio"
+      ],
+      [
+        "IEMOCAP",
+        "audio"
+      ]
+    ],
+    "2": [
+      [
+        "MELD",
+        "visual"
+      ],
+      [
+        "IEMOCAP",
+        "visual"
+      ]
+    ],
+    "3": [
+      [
+        "MELD",
+        "joint"
+      ],
+      [
+        "IEMOCAP",
+        "joint"
+      ]
+    ]
+  },
+  "concurrency_reason": "Prior same-card dual jobs saturated compute; one task per idle card."
+}

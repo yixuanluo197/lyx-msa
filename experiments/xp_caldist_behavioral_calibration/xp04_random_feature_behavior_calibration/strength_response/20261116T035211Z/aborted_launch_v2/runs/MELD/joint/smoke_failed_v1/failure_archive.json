@@ -1,0 +1,17 @@
+{
+  "status": "failed_exact_bitwise_replay_gate",
+  "original_runner_sha256": "73195b6acf8c166c49ae273978c8d9b8bdaa88043f92981e7675546ed23c4905",
+  "files_sha256": {
+    "run_strength_failed_v1.py": "73195b6acf8c166c49ae273978c8d9b8bdaa88043f92981e7675546ed23c4905",
+    "perturbed_predictions.csv": "52a54406e8dfbda113286ecb1b84a2dd91067dc9dd08241213849d77ebe50a10",
+    "resource_before.json": "f7e32a0e97be960430a333d5dc159006e348927624ed186c26bde10439de34d9",
+    "effective_config.json": "c4b781c47d57fee9cde4f84f03a20c7f51b54666e448dbbcd49c97ba5e593902",
+    "smoke_MELD_joint_failed_v1.log": "abf089218dff76760950fa87068b10c9c5e41af18b5b07db2b57f520ade1cf3c",
+    "source_hashes_before.json": "eb9b027aaf7966e950ce0c066d5ad8278d039846d314a92c5bb65591270e3148",
+    "perturbation_audit.csv": "40825e4a8ce23b322e4445c1af2842e64c0e1c636bed0aae969f06dc0c28bac6",
+    "fresh_validation_predictions.npz": "f4c17854ab8e0bb21a81371113823372e7fbb420713d47e1e744f318a52625b8",
+    "original_predictions.csv": "866fe2b7db1188669d59dee4f6a7a992c70d6a307508c2ef5d6b35d83a88cac6",
+    "validation_parity.json": "e2c7753b2b2c8159bb19cd8b5c216f545431db2fc216dd6b70149f2be7715fa8"
+  },
+  "note": "Original smoke failed torch.equal replay assertion after full Validation tolerance parity passed; LD_LIBRARY_PATH was absent. Artifacts and log preserved before runner modification."
+}

@@ -1,0 +1,9 @@
+/data2/yb/conda_envs/cmerc-xp-repro/lib/python3.10/site-packages/torch_geometric/typing.py:101: UserWarning: An issue occurred while importing 'torch-sparse'. Disabling its usage. Stacktrace: libcusparse.so.11: cannot open shared object file: No such file or directory
+  warnings.warn(f"An issue occurred while importing 'torch-sparse'. "
+construct hyper
+Traceback (most recent call last):
+  File "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/strength_response/20261116T035211Z/scripts/run_strength.py", line 343, in <module>
+    run(parser.parse_args())
+  File "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/strength_response/20261116T035211Z/scripts/run_strength.py", line 265, in run
+    assert torch.equal(replay, all_logp), 'Identical-input repeatability failed'
+AssertionError: Identical-input repeatability failed

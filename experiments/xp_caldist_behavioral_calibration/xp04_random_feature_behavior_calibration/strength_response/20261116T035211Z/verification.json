@@ -1,0 +1,63 @@
+{
+  "status": "completed",
+  "all_passed": true,
+  "completed_at": "2026-11-16T04:40:01.640299+00:00",
+  "seed": 1475,
+  "datasets": {
+    "IEMOCAP": {
+      "utterances": 527,
+      "dialogues": 12
+    },
+    "MELD": {
+      "utterances": 1109,
+      "dialogues": 114
+    }
+  },
+  "strengths": [
+    0.05,
+    0.1
+  ],
+  "reference_strength": 0.05,
+  "new_strength": 0.1,
+  "repeats": 10,
+  "modalities": [
+    "text",
+    "audio",
+    "visual",
+    "joint"
+  ],
+  "gpu_completed_runs": 8,
+  "new_perturbed_prediction_rows": 130880,
+  "actual_target_forwards": 128960,
+  "historical_and_new_probability_rows_independently_recomputed": 261760,
+  "behavior_rows": 26176,
+  "feature_rows": 13088,
+  "oof_rows": 65440,
+  "metric_rows": 80,
+  "outer_dialogue_fold_definitions": 17,
+  "outer_condition_fits": 136,
+  "nested_behavior_selections": 408,
+  "inner_candidate_predictions_replayed": 982368,
+  "bootstrap_rows_recomputed": 648,
+  "unit_tests_passed": 16,
+  "independent_verification": "results/independent_verification.json",
+  "analysis_verification": "results/analysis_verification.json",
+  "prior_original_C_and_P_exactly_shared_across_strengths": true,
+  "train_only_corruption_statistics": true,
+  "train_only_OOF_scaling_and_fitting": true,
+  "class_predictions_accuracy_F1_unchanged": true,
+  "weights_original_features_and_masks_unchanged": true,
+  "test_labels_used": false,
+  "cmerc_training": false,
+  "temperature_scaling": false,
+  "new_dependencies_installed": false,
+  "raw_data_modified": false,
+  "automatic_additional_experiments": false,
+  "excluded_failed_launches": [
+    "aborted_launch_v1",
+    "aborted_launch_v2"
+  ],
+  "numeric_reproducibility": "Exact RNG keys and feature bytes; CUDA outputs evaluated with historical tolerance and identical classes, explicit non-bitwise flags.",
+  "scientific_result": "Stronger perturbation increases response; no new0.10 registered condition improves all three calibration point estimates vsE1. Main joint model does not establish incremental calibration benefit.",
+  "uncertainty": "SingleSeed reusedValidation; sharedDialogue bootstrap2000 conditional on savedrepeat summaries/OOF/no refit; exploratory unadjusted intervals."
+}

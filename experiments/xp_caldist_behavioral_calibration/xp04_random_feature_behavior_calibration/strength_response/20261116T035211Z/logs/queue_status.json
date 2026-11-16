@@ -1,0 +1,172 @@
+{
+  "updated_at": "2026-11-16T04:33:32.616195+00:00",
+  "runs": [
+    {
+      "dataset": "MELD",
+      "modality": "text",
+      "gpu": 0,
+      "gpu_uuid": "GPU-7ff18ebb-100e-98fe-038b-a98bd4f94248",
+      "pid": 1601871,
+      "command": [
+        "/data2/yb/conda_envs/cmerc-xp-repro/bin/python",
+        "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/strength_response/20261116T035211Z/scripts/run_strength.py",
+        "--dataset",
+        "MELD",
+        "--modality",
+        "text"
+      ],
+      "started_at": "2026-11-16T04:05:36.003150+00:00",
+      "status": "completed",
+      "exit_code": 0,
+      "ended_at": "2026-11-16T04:15:18.966742+00:00",
+      "complete_exists": true
+    },
+    {
+      "dataset": "MELD",
+      "modality": "audio",
+      "gpu": 1,
+      "gpu_uuid": "GPU-eed2f34f-b4c0-7b7a-498e-71a026e30c5a",
+      "pid": 1601872,
+      "command": [
+        "/data2/yb/conda_envs/cmerc-xp-repro/bin/python",
+        "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/strength_response/20261116T035211Z/scripts/run_strength.py",
+        "--dataset",
+        "MELD",
+        "--modality",
+        "audio"
+      ],
+      "started_at": "2026-11-16T04:05:36.004291+00:00",
+      "status": "completed",
+      "exit_code": 0,
+      "ended_at": "2026-11-16T04:14:11.225097+00:00",
+      "complete_exists": true
+    },
+    {
+      "dataset": "MELD",
+      "modality": "visual",
+      "gpu": 2,
+      "gpu_uuid": "GPU-d17e4326-9d3b-2025-fbf8-c9b0d16623a0",
+      "pid": 1601873,
+      "command": [
+        "/data2/yb/conda_envs/cmerc-xp-repro/bin/python",
+        "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/strength_response/20261116T035211Z/scripts/run_strength.py",
+        "--dataset",
+        "MELD",
+        "--modality",
+        "visual"
+      ],
+      "started_at": "2026-11-16T04:05:36.005719+00:00",
+      "status": "completed",
+      "exit_code": 0,
+      "ended_at": "2026-11-16T04:13:25.108900+00:00",
+      "complete_exists": true
+    },
+    {
+      "dataset": "MELD",
+      "modality": "joint",
+      "gpu": 3,
+      "gpu_uuid": "GPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456",
+      "pid": 1601874,
+      "command": [
+        "/data2/yb/conda_envs/cmerc-xp-repro/bin/python",
+        "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/strength_response/20261116T035211Z/scripts/run_strength.py",
+        "--dataset",
+        "MELD",
+        "--modality",
+        "joint"
+      ],
+      "started_at": "2026-11-16T04:05:36.006993+00:00",
+      "status": "completed",
+      "exit_code": 0,
+      "ended_at": "2026-11-16T04:16:02.269026+00:00",
+      "complete_exists": true
+    },
+    {
+      "dataset": "IEMOCAP",
+      "modality": "visual",
+      "gpu": 2,
+      "gpu_uuid": "GPU-d17e4326-9d3b-2025-fbf8-c9b0d16623a0",
+      "pid": 1614920,
+      "command": [
+        "/data2/yb/conda_envs/cmerc-xp-repro/bin/python",
+        "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/strength_response/20261116T035211Z/scripts/run_strength.py",
+        "--dataset",
+        "IEMOCAP",
+        "--modality",
+        "visual"
+      ],
+      "started_at": "2026-11-16T04:13:25.110191+00:00",
+      "status": "completed",
+      "exit_code": 0,
+      "ended_at": "2026-11-16T04:30:34.780063+00:00",
+      "complete_exists": true
+    },
+    {
+      "dataset": "IEMOCAP",
+      "modality": "audio",
+      "gpu": 1,
+      "gpu_uuid": "GPU-eed2f34f-b4c0-7b7a-498e-71a026e30c5a",
+      "pid": 1616181,
+      "command": [
+        "/data2/yb/conda_envs/cmerc-xp-repro/bin/python",
+        "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/strength_response/20261116T035211Z/scripts/run_strength.py",
+        "--dataset",
+        "IEMOCAP",
+        "--modality",
+        "audio"
+      ],
+      "started_at": "2026-11-16T04:14:11.226580+00:00",
+      "status": "completed",
+      "exit_code": 0,
+      "ended_at": "2026-11-16T04:31:20.957263+00:00",
+      "complete_exists": true
+    },
+    {
+      "dataset": "IEMOCAP",
+      "modality": "text",
+      "gpu": 0,
+      "gpu_uuid": "GPU-7ff18ebb-100e-98fe-038b-a98bd4f94248",
+      "pid": 1617998,
+      "command": [
+        "/data2/yb/conda_envs/cmerc-xp-repro/bin/python",
+        "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/strength_response/20261116T035211Z/scripts/run_strength.py",
+        "--dataset",
+        "IEMOCAP",
+        "--modality",
+        "text"
+      ],
+      "started_at": "2026-11-16T04:15:18.968172+00:00",
+      "status": "completed",
+      "exit_code": 0,
+      "ended_at": "2026-11-16T04:32:49.798327+00:00",
+      "complete_exists": true
+    },
+    {
+      "dataset": "IEMOCAP",
+      "modality": "joint",
+      "gpu": 3,
+      "gpu_uuid": "GPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456",
+      "pid": 1619161,
+      "command": [
+        "/data2/yb/conda_envs/cmerc-xp-repro/bin/python",
+        "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/strength_response/20261116T035211Z/scripts/run_strength.py",
+        "--dataset",
+        "IEMOCAP",
+        "--modality",
+        "joint"
+      ],
+      "started_at": "2026-11-16T04:16:02.270322+00:00",
+      "status": "completed",
+      "exit_code": 0,
+      "ended_at": "2026-11-16T04:33:32.616033+00:00",
+      "complete_exists": true
+    }
+  ],
+  "remaining": {
+    "0": [],
+    "1": [],
+    "2": [],
+    "3": []
+  },
+  "active": 0
+}

@@ -1,0 +1,41 @@
+behavior verified IEMOCAP strength=0.05 modality=all: 42160 repeats
+behavior verified IEMOCAP strength=0.1 modality=text: 10540 repeats
+behavior verified IEMOCAP strength=0.1 modality=audio: 10540 repeats
+behavior verified IEMOCAP strength=0.1 modality=visual: 10540 repeats
+behavior verified IEMOCAP strength=0.1 modality=joint: 10540 repeats
+behavior verified MELD strength=0.05 modality=all: 88720 repeats
+behavior verified MELD strength=0.1 modality=text: 22180 repeats
+behavior verified MELD strength=0.1 modality=audio: 22180 repeats
+behavior verified MELD strength=0.1 modality=visual: 22180 repeats
+behavior verified MELD strength=0.1 modality=joint: 22180 repeats
+OOF complete IEMOCAP_text_strength0.05: 2635 rows
+OOF complete IEMOCAP_audio_strength0.05: 2635 rows
+OOF complete IEMOCAP_visual_strength0.05: 2635 rows
+OOF complete IEMOCAP_joint_strength0.05: 2635 rows
+OOF complete MELD_text_strength0.05: 5545 rows
+OOF complete MELD_audio_strength0.05: 5545 rows
+OOF complete MELD_visual_strength0.05: 5545 rows
+OOF complete MELD_joint_strength0.05: 5545 rows
+OOF complete IEMOCAP_text_strength0.10: 2635 rows
+OOF complete IEMOCAP_audio_strength0.10: 2635 rows
+OOF complete IEMOCAP_visual_strength0.10: 2635 rows
+OOF complete IEMOCAP_joint_strength0.10: 2635 rows
+OOF complete MELD_text_strength0.10: 5545 rows
+OOF complete MELD_audio_strength0.10: 5545 rows
+OOF complete MELD_visual_strength0.10: 5545 rows
+OOF complete MELD_joint_strength0.10: 5545 rows
+original_predictions.csv: 1636 rows
+behavior_features.csv: 26176 rows
+feature_matrix.csv: 13088 rows
+behavior_summary.csv: 48 rows
+split_half_stability.csv: 192 rows
+conditional_diagnostic.csv: 768 rows
+matched_correct_wrong.csv: 5880 rows
+matched_statistics.csv: 192 rows
+response_bootstrap.csv: 432 rows
+oof_predictions.csv: 65440 rows
+calibration_metrics.csv: 80 rows
+confidence_shift.csv: 160 rows
+inner_cv_results.csv: 1632 rows
+bootstrap_results.csv: 216 rows
+Analysis complete; elapsed 106.2s

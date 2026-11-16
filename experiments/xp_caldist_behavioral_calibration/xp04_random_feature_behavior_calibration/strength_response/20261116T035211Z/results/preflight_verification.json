@@ -1,0 +1,27 @@
+{
+  "status": "failed",
+  "all_passed": false,
+  "stage": "preflight",
+  "checks": {
+    "protocol": {
+      "seed": 1475,
+      "reference_strength": 0.05,
+      "new_strength": 0.1,
+      "repeats": 10
+    },
+    "historical_hashes": {
+      "historical_sources_unchanged": 17
+    },
+    "source_review": {
+      "live_inference_source_sha256": "274bb95089ba92ddd381652fa8ba03a449e612b4df0a50afe561e86e9fcfff54",
+      "validation_only_executable_dataset_calls": [
+        "validation"
+      ],
+      "no_training_or_Test_inference_call": true,
+      "frozen_mainline_core_sha256": "c7b70683b2cb24a60bda5e7739a8b608c424137a3caacfb3c6b17637c83256e5",
+      "review_basis": "Static executable-path review plus runtime smoke evidence; dormant historical helper Test definitions are not called."
+    }
+  },
+  "error": "AssertionError: 1.7881393432617188e-07",
+  "traceback": "Traceback (most recent call last):\n  File \"/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/strength_response/20261116T035211Z/scripts/verify_strength.py\", line 438, in main\n    result['checks']['inference']=inference_audit(root,smoke=args.stage=='preflight')\n  File \"/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/strength_response/20261116T035211Z/scripts/verify_strength.py\", line 247, in inference_audit\n    for col in ['label','prediction','confidence']: close(pair[col],pair[col+'_old'],0)\n  File \"/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/strength_response/20261116T035211Z/scripts/verify_strength.py\", line 49, in close\n    assert np.allclose(a,b,rtol=0,atol=atol),float(np.max(np.abs(a-b)))\nAssertionError: 1.7881393432617188e-07\n"
+}
