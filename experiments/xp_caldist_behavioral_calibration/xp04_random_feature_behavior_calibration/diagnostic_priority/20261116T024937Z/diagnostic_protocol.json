@@ -1,0 +1,75 @@
+{
+  "status": "fixed_before_new_diagnostic_statistics",
+  "source_interaction": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/confidence_interaction/20261116T013631Z",
+  "source_mainline": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/mainline_mu_delta/20261115T165025Z",
+  "source_mechanism": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/mechanism_followup/20261115T154720Z",
+  "source_five_seed": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/five_seed_validation/20261115T151109Z",
+  "seeds": [
+    1475,
+    67137,
+    2024,
+    3407,
+    42
+  ],
+  "datasets": {
+    "IEMOCAP": {
+      "utterances": 527,
+      "dialogues": 12
+    },
+    "MELD": {
+      "utterances": 1109,
+      "dialogues": 114
+    }
+  },
+  "corruptions": [
+    "gaussian",
+    "dropout"
+  ],
+  "measures": [
+    "mu",
+    "delta"
+  ],
+  "conditions": {
+    "modality": "joint",
+    "strength": 0.05,
+    "repeats": 10
+  },
+  "confidence_bins": [
+    0,
+    0.4,
+    0.6,
+    0.8,
+    1.0
+  ],
+  "sparse_bin_rule": "Flag insufficient_support if correct<10 or wrong<10 or dialogues<3. Retain all rows, no selecting winners.",
+  "matching": {
+    "caliper": 0.02,
+    "within": "dataset,seed,dialogue_id",
+    "replacement": false,
+    "algorithm": "Sort each class by utterance_index. Hungarian linear_sum_assignment: real edge cost=abs(C_correct-C_wrong) if <=.02 else1e6; n_correct dummy columns each cost 1+(min(n_correct,n_wrong)+1)*.02. Maximizes valid pair count before minimizing total confidence distance. No behavior values used to match.",
+    "direction": "wrong behavior minus correct behavior; no assumed error sensitivity",
+    "tie_win": "P(wrong>correct)+0.5*P(tie); report tie fraction",
+    "support_flag": "Flag low support if pairs<10 or matched Dialogues<3; report all results."
+  },
+  "bootstrap": {
+    "resamples": 2000,
+    "unit": "same frozen Dialogue draws across five seeds, metric computed separately per seed then averaged",
+    "paired_statistic": "mean(wrong_behavior-correct_behavior) over matched pairs per seed; Dialogue resampling weights all its pairs",
+    "invalid_draws": "If any seed has zero matched pairs in a resample, that resample is invalid; never silently drop missing seeds. Report valid draw count.",
+    "confidence": "percentile95%, exploratory, no refit or multiple-comparison adjustment"
+  },
+  "stability": "Recompute Spearman and Pearson from three existing 5/5 splits for mu/delta. First average available split correlations per model seed, then mean and sampleSD across five seeds. Fifteen splits are not independent datasets. Constant vectors unestimable, CSV NA.",
+  "noise_diagnostic": "Existing confidence_change_std is ddof=0 over10 repeats: sample_sd=pop_sd*sqrt(10/9), SE(mean signed confidence change)=pop_sd/sqrt(9). delta=abs(mean signed change), so ratio delta/SE describes signal/noise only; it is not a confidence interval or a test for absolute delta. Zero SE flagged and ratio NA.",
+  "unconditional_risk_auc": "ROC AUC using mu/delta as larger-is-error scores. Chance .5, reverse directions reported without data-driven flipping. Descriptive association, not calibration gain.",
+  "prioritization": "Root ranks measurement-repeats validation vs modality confirmation vs more scoring complexity vs raw-data experiments, using documented stability/sparsity/conditional support; no automatic GPU tasks or new calibrator.",
+  "constraints": [
+    "No new CMERC inference/training/weights",
+    "No new perturbations or repeat-count changes",
+    "No Test labels",
+    "No temperature scaling",
+    "No raw data/features edits",
+    "No reliability mapping fitting or model selection",
+    "Conditional bins/matching are approximate descriptions, not proof of conditional independence or unseen calibration benefit",
+    "Repeatedly inspected Validation remains exploratory"
+  ]
+}

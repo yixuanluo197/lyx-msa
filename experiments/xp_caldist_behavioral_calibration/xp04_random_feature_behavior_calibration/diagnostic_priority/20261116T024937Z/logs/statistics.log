@@ -1,0 +1,30 @@
+......./data2/yb/conda_envs/cmerc-xp-repro/lib/python3.10/site-packages/pandas/core/dtypes/cast.py:1641: DeprecationWarning: np.find_common_type is deprecated.  Please use `np.result_type` or `np.promote_types`.
+See https://numpy.org/devdocs/release/1.25.0-notes.html and the docs for more information.  (Deprecated NumPy 1.25)
+  return np.find_common_type(types, [])
+/data2/yb/conda_envs/cmerc-xp-repro/lib/python3.10/site-packages/pandas/core/dtypes/cast.py:1641: DeprecationWarning: np.find_common_type is deprecated.  Please use `np.result_type` or `np.promote_types`.
+See https://numpy.org/devdocs/release/1.25.0-notes.html and the docs for more information.  (Deprecated NumPy 1.25)
+  return np.find_common_type(types, [])
+.../data2/yb/conda_envs/cmerc-xp-repro/lib/python3.10/site-packages/pandas/core/dtypes/cast.py:1641: DeprecationWarning: np.find_common_type is deprecated.  Please use `np.result_type` or `np.promote_types`.
+See https://numpy.org/devdocs/release/1.25.0-notes.html and the docs for more information.  (Deprecated NumPy 1.25)
+  return np.find_common_type(types, [])
+.
+----------------------------------------------------------------------
+Ran 11 tests in 0.069s
+
+OK
+distributions.csv: 180 rows
+fixed_confidence_bins.csv: 160 rows
+unconditional_risk_auc.csv: 40 rows
+distribution_seed_summary.csv: 36 rows
+unconditional_risk_auc_summary.csv: 8 rows
+split_correlations.csv: 120 rows
+stability_seed.csv: 40 rows
+stability_summary.csv: 8 rows
+measurement_noise.csv: 16360 rows
+measurement_noise_summary.csv: 60 rows
+matched_pairs.csv: 1279 rows
+matched_seed_statistics.csv: 40 rows
+matched_bootstrap.csv: 8 rows
+matched_bootstrap_draws.csv: 16000 rows
+matched_coverage.csv: 10 rows
+Descriptive statistics complete; fixed larger-is-error direction; no fitting or new sampling.

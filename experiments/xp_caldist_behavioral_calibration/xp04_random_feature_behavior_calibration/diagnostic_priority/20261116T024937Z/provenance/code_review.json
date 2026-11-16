@@ -1,0 +1,25 @@
+{
+  "all_passed": true,
+  "reviewer": "root",
+  "specification": [
+    "fixed_existing_data_scope",
+    "SE_ddof0_to_mean_denominator_sqrt9",
+    "seed_first_split_summaries",
+    "behavior_blind_within_dialogue_caliper_matching",
+    "shared_cluster_draws_equal_seed_weighting",
+    "fixed_bins_and_no_direction_flipping"
+  ],
+  "quality": [
+    "unit_brute_matching_optimum",
+    "constant_and_empty_support_NA",
+    "no_replacement_and_C_balance_coverage",
+    "refuse_overwrite_and_formal_gate",
+    "before_after_snapshot"
+  ],
+  "source_hashes": {
+    "scripts/build_inputs.py": "91f583dc140de46a1c373449ea4c2eb1509239353e26dfae329c10a5aecf4df1",
+    "scripts/diagnose.py": "986a3d6254f53045551df9609e6457239bae6bbd914bd66375569e96809aea65",
+    "scripts/test_diagnostics.py": "8e8ea5be10afbaaad49ac39655e6a905bd10c6ab322b1c380f1af7d03fcb9b82",
+    "scripts/verify_diagnostics.py": "2985a3b07ca15aa4703ac9bd2897869fd1181b3d7c00be849b1f052f2f34c66d"
+  }
+}

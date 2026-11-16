@@ -1,0 +1,58 @@
+{
+  "selftests": {
+    "matching_bruteforce_cases": 85,
+    "auc_direction_cases": 3,
+    "constant_correlation_cases": 2,
+    "noise_identity_cases": 1,
+    "fixed_bin_boundaries": 6,
+    "seed_equal_weight_and_invalid_cases": 2
+  },
+  "verifier_sha256": "2985a3b07ca15aa4703ac9bd2897869fd1181b3d7c00be849b1f052f2f34c66d",
+  "independence": "Does not import diagnose.py; DP matching and rank-sum AUC independently recomputed.",
+  "status": "failed",
+  "error": "AssertionError(\"mu_is_original_flip_rate_gaussian: {'n': 8180, 'max_absolute_error': 0.5564909445824066}\")",
+  "checks": [
+    {
+      "name": "canonical_8180_rows",
+      "passed": true
+    },
+    {
+      "name": "canonical_unique_keys",
+      "passed": true
+    },
+    {
+      "name": "split_49080_rows",
+      "passed": true
+    },
+    {
+      "name": "seeds_frozen",
+      "passed": true
+    },
+    {
+      "name": "correct_matches_labels",
+      "passed": true
+    },
+    {
+      "name": "confidence_in_unit_interval",
+      "passed": true
+    },
+    {
+      "name": "delta_abs_signed_change_gaussian",
+      "passed": true,
+      "detail": {
+        "n": 8180,
+        "max_absolute_error": 0.0
+      }
+    },
+    {
+      "name": "mu_is_original_flip_rate_gaussian",
+      "passed": false,
+      "detail": {
+        "n": 8180,
+        "max_absolute_error": 0.5564909445824066
+      }
+    }
+  ],
+  "passed_checks": 7,
+  "failed_checks": 1
+}

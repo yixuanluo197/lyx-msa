@@ -1,0 +1,59 @@
+{
+  "all_passed": true,
+  "inputs_verification_all_passed": true,
+  "protocol_inputs_scripts_unchanged": true,
+  "output_rows": {
+    "distributions": 180,
+    "fixed_confidence_bins": 160,
+    "unconditional_risk_auc": 40,
+    "distribution_seed_summary": 36,
+    "unconditional_risk_auc_summary": 8,
+    "split_correlations": 120,
+    "stability_seed": 40,
+    "stability_summary": 8,
+    "measurement_noise": 16360,
+    "measurement_noise_summary": 60,
+    "matched_pairs": 1279,
+    "matched_seed_statistics": 40,
+    "matched_bootstrap": 8,
+    "matched_bootstrap_draws": 16000,
+    "matched_coverage": 10
+  },
+  "output_sha256": {
+    "distributions.csv": "ddc22ccfc75c1fc0d594e86c4c633c3c80a353c0bf16c814c72ef72a612d0182",
+    "fixed_confidence_bins.csv": "ec79c138af02270633d5dedc3d1630d00ef08794cb519d18e17ef88434103b3f",
+    "unconditional_risk_auc.csv": "09418e3f7d11463b0c3d28abb7494d48d0fb2e4c5ade462e60670439dc1ae540",
+    "distribution_seed_summary.csv": "0987644349864fd264d095909f99cc00f0b4db3f9f4f0bb9b54ec9b896b7c781",
+    "unconditional_risk_auc_summary.csv": "2e307dafd43ea2ea23dfeda7e5258076a0ae53cab8ad6005dbb1c171190ee469",
+    "split_correlations.csv": "b79e70abb8b48bdac5d3449c1fbe6334d6846a9f05a1dc75ad6668117b39d517",
+    "stability_seed.csv": "29d43b87ee2f442e2569e12531a4eece2773501d803ba45a96307b28d3dbcbab",
+    "stability_summary.csv": "544c91025c5c3e6547917c11527e2e39898e234bf448aa3d630e477b6a182bb1",
+    "measurement_noise.csv": "0a359b756aa81e97e83dbce37e9b58083f636b273511156e502f0efb96c47d44",
+    "measurement_noise_summary.csv": "d480cfe467313ec8c19f68c86c9725b2cd2ab0e8351a8e3f45bb63707e4addb9",
+    "matched_pairs.csv": "41b97cc701d35bd1e7efed935c62893b159b40a58f57678f6ab7ef02fa11d1f2",
+    "matched_seed_statistics.csv": "80af03805e91a397e85e9333ba9d15d726a0753c30c08755bbb78a2ce51c6c74",
+    "matched_bootstrap.csv": "f6f3cdcde788f58bbaad77d29951da29164fdd291e5003f957da115e9facd0a6",
+    "matched_bootstrap_draws.csv": "84cbf3c7b81f862ee74acb439751ac1dfa23e92bd7c5612bf40234e5f3d5693d",
+    "matched_coverage.csv": "c3ed1ae2dd340d929618f8fefbb828687204541849d91de1d90b99b3626f1f62"
+  },
+  "environment": {
+    "python": "3.10.13 | packaged by conda-forge | (main, Dec 23 2023, 15:36:39) [GCC 12.3.0]",
+    "executable": "/data2/yb/conda_envs/cmerc-xp-repro/bin/python",
+    "platform": "Linux-6.8.0-60-generic-x86_64-with-glibc2.39",
+    "numpy": "1.26.4",
+    "pandas": "1.5.3",
+    "scipy": "1.11.4",
+    "threads": {
+      "OPENBLAS_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1"
+    }
+  },
+  "completed_at": "2026-11-16T03:03:33.579635+00:00",
+  "no_new_inference": true,
+  "no_new_noise": true,
+  "no_fitting": true,
+  "no_test_labels": true,
+  "sd_convention": "population ddof0 over10; sample_sd=pop_sd*sqrt(10/9); signed_mean_SE=pop_sd/sqrt9",
+  "interpretation": "Exploratory descriptive statistics; delta/SE is not a delta CI or p-value; no direction flipping"
+}
