@@ -1,0 +1,205 @@
+{
+  "all_passed": true,
+  "batch": "interaction",
+  "input_precheck": {
+    "joint_rows": 8180,
+    "one_original_record_per_utterance_and_seed": true,
+    "exact_historical_input_sha256": "ffb2c828c7b718794bd810b4ab29e7a79631f6916e23785b1b21ef21b94cbe56",
+    "no_new_primitive_inputs": true,
+    "historical_behavior_values_matched": 32720,
+    "visual_missing_rows_preserved": true
+  },
+  "oof_predictions_reconstructed": 32720,
+  "inner_candidate_predictions_reconstructed": 409320,
+  "unique_fits_objective_and_train_scaler_checked": 2871,
+  "nested_selections_recomputed": 170,
+  "metric_rows_recomputed": 40,
+  "bootstrap_rows_recomputed": 24,
+  "literal_cluster_resampling_checks": 360,
+  "max_oof_reconstruction_error": 2.220446049250313e-16,
+  "C_input_raw_and_unstandardized": true,
+  "only_registered_mu_delta_scoring_features": true,
+  "off_exact_E1_reuse_verified": true,
+  "train_only_standardization_and_dialogue_isolation_verified": true,
+  "accuracy_and_F1_unchanged": true,
+  "source_and_implementation_hashes_verified": true,
+  "parity": {
+    "E0": {
+      "rows": 8180,
+      "max_absolute_confidence_difference": 0.0,
+      "folds_identical": true
+    },
+    "E1": {
+      "rows": 8180,
+      "max_absolute_confidence_difference": 0.0,
+      "folds_identical": true
+    },
+    "M_joint": {
+      "rows": 8180,
+      "max_absolute_confidence_difference": 0.0,
+      "folds_identical": true
+    }
+  },
+  "primary_signal_independently_recomputed": [
+    {
+      "dataset": "IEMOCAP",
+      "candidate": "M_interaction",
+      "reference": "E1",
+      "mean_differences": {
+        "ece15": -0.0038382077939489085,
+        "binary_brier": 0.0007054184026725474,
+        "binary_nll": 0.00177553193652511
+      },
+      "improving_seed_counts": {
+        "ece15": 3,
+        "binary_brier": 1,
+        "binary_nll": 1
+      },
+      "preliminary_signal": false,
+      "ece_lower_but_full_signal_absent": true,
+      "exploratory_validation_only": true
+    },
+    {
+      "dataset": "MELD",
+      "candidate": "M_interaction",
+      "reference": "E1",
+      "mean_differences": {
+        "ece15": 0.0018675286943906466,
+        "binary_brier": 0.0005675175559854195,
+        "binary_nll": 0.0012004159534583225
+      },
+      "improving_seed_counts": {
+        "ece15": 0,
+        "binary_brier": 0,
+        "binary_nll": 0
+      },
+      "preliminary_signal": false,
+      "ece_lower_but_full_signal_absent": false,
+      "exploratory_validation_only": true
+    }
+  ],
+  "refined_primary_signal_same_selected_penalty": [
+    {
+      "dataset": "IEMOCAP",
+      "candidate": "M_interaction",
+      "reference": "E1",
+      "mean_differences": {
+        "ece15": -0.0038377268189191322,
+        "binary_brier": 0.0007056685908760629,
+        "binary_nll": 0.0017762022878049732
+      },
+      "improving_seed_counts": {
+        "ece15": 3,
+        "binary_brier": 1,
+        "binary_nll": 1
+      },
+      "preliminary_signal": false,
+      "ece_lower_but_full_signal_absent": true,
+      "exploratory_validation_only": true
+    },
+    {
+      "dataset": "MELD",
+      "candidate": "M_interaction",
+      "reference": "E1",
+      "mean_differences": {
+        "ece15": 0.0018674748860909765,
+        "binary_brier": 0.000567454799221151,
+        "binary_nll": 0.001200228421114602
+      },
+      "improving_seed_counts": {
+        "ece15": 0,
+        "binary_brier": 0,
+        "binary_nll": 0
+      },
+      "preliminary_signal": false,
+      "ece_lower_but_full_signal_absent": false,
+      "exploratory_validation_only": true
+    }
+  ],
+  "fixed_raw_C_diagnostic_rows_recomputed": 320,
+  "outer_folds_checked": 85,
+  "interaction_train_only_scalers_verified": true,
+  "optimizer_accuracy": {
+    "max_mean_objective_gradient": 0.00021107118512072795,
+    "fits_gradient_above_1e_6_diagnostic_only": 2207,
+    "max_independent_refinement_mean_objective_gap": 3.5736722359125395e-08,
+    "max_training_probability_refinement_gap": 0.0007960479403775755,
+    "inner_selection_changes_under_refinement": 0,
+    "primary_direction_sensitivity_same_selected_penalty": [
+      {
+        "dataset": "IEMOCAP",
+        "modality": "joint",
+        "metric": "ece15",
+        "candidate": "M_interaction",
+        "reference": "E1",
+        "reported_mean_difference": -0.0038382077939489085,
+        "reported_improving_seeds": 3,
+        "refined_improving_seeds": 3,
+        "refined_same_selected_penalty_mean_difference": -0.0038377268189191322,
+        "difference_sign_unchanged": true
+      },
+      {
+        "dataset": "IEMOCAP",
+        "modality": "joint",
+        "metric": "binary_brier",
+        "candidate": "M_interaction",
+        "reference": "E1",
+        "reported_mean_difference": 0.0007054184026725474,
+        "reported_improving_seeds": 1,
+        "refined_improving_seeds": 1,
+        "refined_same_selected_penalty_mean_difference": 0.0007056685908760629,
+        "difference_sign_unchanged": true
+      },
+      {
+        "dataset": "IEMOCAP",
+        "modality": "joint",
+        "metric": "binary_nll",
+        "candidate": "M_interaction",
+        "reference": "E1",
+        "reported_mean_difference": 0.00177553193652511,
+        "reported_improving_seeds": 1,
+        "refined_improving_seeds": 1,
+        "refined_same_selected_penalty_mean_difference": 0.0017762022878049732,
+        "difference_sign_unchanged": true
+      },
+      {
+        "dataset": "MELD",
+        "modality": "joint",
+        "metric": "ece15",
+        "candidate": "M_interaction",
+        "reference": "E1",
+        "reported_mean_difference": 0.0018675286943906466,
+        "reported_improving_seeds": 0,
+        "refined_improving_seeds": 0,
+        "refined_same_selected_penalty_mean_difference": 0.0018674748860909765,
+        "difference_sign_unchanged": true
+      },
+      {
+        "dataset": "MELD",
+        "modality": "joint",
+        "metric": "binary_brier",
+        "candidate": "M_interaction",
+        "reference": "E1",
+        "reported_mean_difference": 0.0005675175559854195,
+        "reported_improving_seeds": 0,
+        "refined_improving_seeds": 0,
+        "refined_same_selected_penalty_mean_difference": 0.000567454799221151,
+        "difference_sign_unchanged": true
+      },
+      {
+        "dataset": "MELD",
+        "modality": "joint",
+        "metric": "binary_nll",
+        "candidate": "M_interaction",
+        "reference": "E1",
+        "reported_mean_difference": 0.0012004159534583225,
+        "reported_improving_seeds": 0,
+        "refined_improving_seeds": 0,
+        "refined_same_selected_penalty_mean_difference": 0.001200228421114602,
+        "difference_sign_unchanged": true
+      }
+    ],
+    "original_results_not_replaced": true,
+    "refinement_does_not_establish_new_calibration_method": true
+  }
+}

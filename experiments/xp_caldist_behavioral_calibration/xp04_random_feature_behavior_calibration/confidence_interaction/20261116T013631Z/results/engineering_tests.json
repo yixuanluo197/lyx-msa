@@ -1,0 +1,25 @@
+{
+  "initial_red": {
+    "exit_code": 1,
+    "tests": 8,
+    "failures": 8,
+    "reason": "Missing interaction implementation",
+    "observation": "Initial execution tool transcript; replay stored separately"
+  },
+  "red_replay": {
+    "exit_code": 1,
+    "log": "logs/engineering_tests_red_replay.log"
+  },
+  "green": {
+    "exit_code": 0,
+    "tests": 8,
+    "failures": 0,
+    "log": "logs/engineering_tests_passed.log"
+  },
+  "source_hashes": {
+    "scripts/build_inputs.py": "c8d7c3d342c33607e021fb9c94d5bcd67c4d0ecc0b05f69f89382373a055341f",
+    "scripts/interaction_core.py": "2474db0bba8212e84c1fc91d2e4b3eed73b87ebb403eb1ceae9f07289b7a2d3b",
+    "scripts/run_interaction.py": "f05b433915b2bfcfb2845da7f37240f7734477ba2e94267619974b80531830b3",
+    "scripts/test_interaction.py": "d8182bdbd07dc537b2a10516eeaf9ab20caf13e01146e3771221e9e82de5bc30"
+  }
+}

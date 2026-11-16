@@ -1,0 +1,118 @@
+{
+  "status": "preregistered_before_interaction_results",
+  "source_mainline": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/mainline_mu_delta/20261115T165025Z",
+  "source_five_seed": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/five_seed_validation/20261115T151109Z",
+  "source_commit": "4213cad8c8186bf18b1c1617363811641d5bf120",
+  "seeds": [
+    1475,
+    67137,
+    2024,
+    3407,
+    42
+  ],
+  "datasets": {
+    "IEMOCAP": {
+      "utterances": 527,
+      "dialogues": 12,
+      "outer": "LODO12"
+    },
+    "MELD": {
+      "utterances": 1109,
+      "dialogues": 114,
+      "outer": "GroupKFold5"
+    }
+  },
+  "methods": [
+    "E0",
+    "E1",
+    "M_joint",
+    "M_interaction"
+  ],
+  "primary_method": "M_interaction",
+  "primary_reference": "E1",
+  "behavior_features": [
+    "gaussian_mu",
+    "gaussian_delta",
+    "dropout_mu",
+    "dropout_delta"
+  ],
+  "mu": "mean(1[prediction_prime != prediction_original] * max_probability_prime)",
+  "delta": "abs(C - mean(max_probability_prime))",
+  "transform": "Each fit training rows only: c0=mean(C); Z=StandardScaler(B); H=(C-c0)*Z; T=StandardScaler(H). M_joint uses Z; M_interaction uses concatenated Z,T. C stays raw. Constant B produces zero Z and zero corresponding interaction.",
+  "score": "R=a+b*C+Z@w+T@v; q=sigmoid(R). Save base, additive, interaction and total behavioral scores. M_joint v absent. E0 q=C. E1 w/v absent.",
+  "regularization": "For n current training rows fit sklearn LogisticRegression C=1 on [raw C, U/sqrt(n*lambda)]; equivalent mean NLL + b^2/(2n)+lambda*(||w||^2+||v||^2)/2. Intercept unpenalized. One shared lambda for all behavioral coefficients; no separate interaction search.",
+  "penalties": [
+    "off",
+    1.0,
+    0.1,
+    0.01
+  ],
+  "off": "Exact same fitted E1 object; no proxy large lambda.",
+  "optimizer": {
+    "C": 1.0,
+    "solver": "lbfgs",
+    "max_iter": 2000,
+    "tol": 1e-08
+  },
+  "inner": "GroupKFold5 only outer training Dialogues, each inner scaler and C centering refitted. Pooled held-out Binary Brier selects penalty. Tie1e-12 prefers off then stronger regularization.",
+  "comparisons": [
+    [
+      "M_interaction",
+      "E1"
+    ],
+    [
+      "M_interaction",
+      "M_joint"
+    ],
+    [
+      "M_interaction",
+      "E0"
+    ],
+    [
+      "M_joint",
+      "E1"
+    ]
+  ],
+  "bootstrap": {
+    "repeats": 2000,
+    "draws": "reuse source_five_seed/baseline/bootstrap/{dataset}_dialogue_draws.npz",
+    "unit": "shared Dialogue draws across seeds; mean per-seed metric differences",
+    "refit": false,
+    "multiple_comparison_adjustment": false
+  },
+  "conditions": {
+    "modality": "joint",
+    "corruptions": [
+      "gaussian",
+      "dropout"
+    ],
+    "strength": 0.05,
+    "repeats": 10,
+    "new_inference": false
+  },
+  "confidence_diagnostic_bins": [
+    0.0,
+    0.4,
+    0.6,
+    0.8,
+    1.0
+  ],
+  "preliminary_signal": "Relative E1: mean ECE lower; at least one proper loss lower and other not increased; improving proper loss lower in >=3/5 seeds. Report ECE-only gains separately without promoting to full success.",
+  "constraints": [
+    "No CMERC training/weight edits or GPU inference",
+    "No new perturbations or change in strength/repeat count",
+    "No Test labels/metrics",
+    "No raw feature/text/WAV/MP4 edits",
+    "No temperature scaling",
+    "No D/A/JS/entropy/margin/class features",
+    "No alternative interaction variants or post-OOF hyperparameter expansion",
+    "No independent-confirmation claim from repeatedly inspected Validation"
+  ],
+  "expected": {
+    "input_rows": 8180,
+    "oof_rows": 32720,
+    "per_seed_metrics": 40,
+    "outer_folds": 85,
+    "bootstrap_rows": 24
+  }
+}

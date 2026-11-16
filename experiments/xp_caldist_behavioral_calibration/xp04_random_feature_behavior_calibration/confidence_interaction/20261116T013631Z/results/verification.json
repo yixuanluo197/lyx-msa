@@ -1,0 +1,29 @@
+{
+  "status": "completed",
+  "independent_verification_pending": false,
+  "cpu_only": true,
+  "feature_rows": 8180,
+  "oof_rows": 32720,
+  "metric_rows": 40,
+  "outer_folds": 85,
+  "bootstrap_rows": 24,
+  "input_and_code_hashes_unchanged": true,
+  "historical_parity_passed": true,
+  "confidence_finite": true,
+  "predicted_classes_unchanged": true,
+  "elapsed_seconds": 24.79639482498169,
+  "methods": [
+    "E0",
+    "E1",
+    "M_joint",
+    "M_interaction"
+  ],
+  "primary_method": "M_interaction",
+  "training_record_per_utterance": 1,
+  "test_labels_used": false,
+  "cmerc_training": false,
+  "new_perturbations": false,
+  "raw_data_modified": false,
+  "independent_verification_report": "independent_verification.json",
+  "all_passed": true
+}

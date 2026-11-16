@@ -1,0 +1,31 @@
+{
+  "all_passed": true,
+  "status": "completed",
+  "scope": "one fixed confidence x original mu/delta interaction variant",
+  "engineering_tests": 8,
+  "input_rows": 8180,
+  "oof_rows": 32720,
+  "metric_rows": 40,
+  "outer_folds": 85,
+  "bootstrap_rows": 24,
+  "source_and_code_unchanged": true,
+  "independent_verification_passed": true,
+  "historical_E1_and_M_joint_parity_passed": true,
+  "predicted_classes_accuracy_F1_unchanged": true,
+  "preliminary_signal": {
+    "IEMOCAP": false,
+    "MELD": false
+  },
+  "ece_only_mean_improvement_vs_E1": {
+    "IEMOCAP": true,
+    "MELD": false
+  },
+  "no_gpu_inference": true,
+  "no_new_perturbations": true,
+  "no_cmerc_training": true,
+  "no_test_labels": true,
+  "no_raw_data_or_feature_edits": true,
+  "no_temperature_scaling": true,
+  "additional_repeats_not_executed": true,
+  "independent_confirmation": false
+}

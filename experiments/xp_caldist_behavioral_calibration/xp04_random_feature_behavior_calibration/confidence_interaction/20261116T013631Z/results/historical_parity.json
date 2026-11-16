@@ -1,0 +1,207 @@
+{
+  "target_absolute_tolerance": 1e-10,
+  "all_passed": true,
+  "note": "Historical optimizer differences are reported separately and cannot count as interaction gains.",
+  "comparisons": [
+    {
+      "dataset": "IEMOCAP",
+      "seed": 42,
+      "method": "E1",
+      "rows": 527,
+      "max_absolute_confidence_difference": 0.0,
+      "mean_absolute_confidence_difference": 0.0,
+      "rows_exceeding_target": 0,
+      "passed": true
+    },
+    {
+      "dataset": "IEMOCAP",
+      "seed": 1475,
+      "method": "E1",
+      "rows": 527,
+      "max_absolute_confidence_difference": 5.551115123125783e-17,
+      "mean_absolute_confidence_difference": 6.320055168644155e-19,
+      "rows_exceeding_target": 0,
+      "passed": true
+    },
+    {
+      "dataset": "IEMOCAP",
+      "seed": 2024,
+      "method": "E1",
+      "rows": 527,
+      "max_absolute_confidence_difference": 0.0,
+      "mean_absolute_confidence_difference": 0.0,
+      "rows_exceeding_target": 0,
+      "passed": true
+    },
+    {
+      "dataset": "IEMOCAP",
+      "seed": 3407,
+      "method": "E1",
+      "rows": 527,
+      "max_absolute_confidence_difference": 5.551115123125783e-17,
+      "mean_absolute_confidence_difference": 8.426740224858873e-19,
+      "rows_exceeding_target": 0,
+      "passed": true
+    },
+    {
+      "dataset": "IEMOCAP",
+      "seed": 67137,
+      "method": "E1",
+      "rows": 527,
+      "max_absolute_confidence_difference": 0.0,
+      "mean_absolute_confidence_difference": 0.0,
+      "rows_exceeding_target": 0,
+      "passed": true
+    },
+    {
+      "dataset": "MELD",
+      "seed": 42,
+      "method": "E1",
+      "rows": 1109,
+      "max_absolute_confidence_difference": 5.551115123125783e-17,
+      "mean_absolute_confidence_difference": 2.402646762038211e-18,
+      "rows_exceeding_target": 0,
+      "passed": true
+    },
+    {
+      "dataset": "MELD",
+      "seed": 1475,
+      "method": "E1",
+      "rows": 1109,
+      "max_absolute_confidence_difference": 1.1102230246251565e-16,
+      "mean_absolute_confidence_difference": 3.453804720429928e-18,
+      "rows_exceeding_target": 0,
+      "passed": true
+    },
+    {
+      "dataset": "MELD",
+      "seed": 2024,
+      "method": "E1",
+      "rows": 1109,
+      "max_absolute_confidence_difference": 1.1102230246251565e-16,
+      "mean_absolute_confidence_difference": 3.603970143057316e-18,
+      "rows_exceeding_target": 0,
+      "passed": true
+    },
+    {
+      "dataset": "MELD",
+      "seed": 3407,
+      "method": "E1",
+      "rows": 1109,
+      "max_absolute_confidence_difference": 5.551115123125783e-17,
+      "mean_absolute_confidence_difference": 2.552812184665599e-18,
+      "rows_exceeding_target": 0,
+      "passed": true
+    },
+    {
+      "dataset": "MELD",
+      "seed": 67137,
+      "method": "E1",
+      "rows": 1109,
+      "max_absolute_confidence_difference": 1.1102230246251565e-16,
+      "mean_absolute_confidence_difference": 3.654025283933112e-18,
+      "rows_exceeding_target": 0,
+      "passed": true
+    },
+    {
+      "dataset": "IEMOCAP",
+      "seed": 42,
+      "method": "M_joint",
+      "rows": 527,
+      "max_absolute_confidence_difference": 1.1102230246251565e-16,
+      "mean_absolute_confidence_difference": 3.1600275843220774e-19,
+      "rows_exceeding_target": 0,
+      "passed": true
+    },
+    {
+      "dataset": "IEMOCAP",
+      "seed": 1475,
+      "method": "M_joint",
+      "rows": 527,
+      "max_absolute_confidence_difference": 6.938893903907228e-17,
+      "mean_absolute_confidence_difference": 8.031736776818614e-19,
+      "rows_exceeding_target": 0,
+      "passed": true
+    },
+    {
+      "dataset": "IEMOCAP",
+      "seed": 2024,
+      "method": "M_joint",
+      "rows": 527,
+      "max_absolute_confidence_difference": 0.0,
+      "mean_absolute_confidence_difference": 0.0,
+      "rows_exceeding_target": 0,
+      "passed": true
+    },
+    {
+      "dataset": "IEMOCAP",
+      "seed": 3407,
+      "method": "M_joint",
+      "rows": 527,
+      "max_absolute_confidence_difference": 5.551115123125783e-17,
+      "mean_absolute_confidence_difference": 1.1586767809180951e-18,
+      "rows_exceeding_target": 0,
+      "passed": true
+    },
+    {
+      "dataset": "IEMOCAP",
+      "seed": 67137,
+      "method": "M_joint",
+      "rows": 527,
+      "max_absolute_confidence_difference": 0.0,
+      "mean_absolute_confidence_difference": 0.0,
+      "rows_exceeding_target": 0,
+      "passed": true
+    },
+    {
+      "dataset": "MELD",
+      "seed": 42,
+      "method": "M_joint",
+      "rows": 1109,
+      "max_absolute_confidence_difference": 5.551115123125783e-17,
+      "mean_absolute_confidence_difference": 2.402646762038211e-18,
+      "rows_exceeding_target": 0,
+      "passed": true
+    },
+    {
+      "dataset": "MELD",
+      "seed": 1475,
+      "method": "M_joint",
+      "rows": 1109,
+      "max_absolute_confidence_difference": 1.1102230246251565e-16,
+      "mean_absolute_confidence_difference": 3.5320158780483595e-18,
+      "rows_exceeding_target": 0,
+      "passed": true
+    },
+    {
+      "dataset": "MELD",
+      "seed": 2024,
+      "method": "M_joint",
+      "rows": 1109,
+      "max_absolute_confidence_difference": 1.1102230246251565e-16,
+      "mean_absolute_confidence_difference": 4.054466410939481e-18,
+      "rows_exceeding_target": 0,
+      "passed": true
+    },
+    {
+      "dataset": "MELD",
+      "seed": 3407,
+      "method": "M_joint",
+      "rows": 1109,
+      "max_absolute_confidence_difference": 5.551115123125783e-17,
+      "mean_absolute_confidence_difference": 2.552812184665599e-18,
+      "rows_exceeding_target": 0,
+      "passed": true
+    },
+    {
+      "dataset": "MELD",
+      "seed": 67137,
+      "method": "M_joint",
+      "rows": 1109,
+      "max_absolute_confidence_difference": 1.1102230246251565e-16,
+      "mean_absolute_confidence_difference": 3.603970143057316e-18,
+      "rows_exceeding_target": 0,
+      "passed": true
+    }
+  ]
+}
