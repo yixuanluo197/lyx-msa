@@ -1,0 +1,109 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "dataset": "IEMOCAP",
+      "seed": 1475,
+      "checkpoint": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/cmerc/IEMOCAP_validation_seed1475/best.pt",
+      "checkpoint_sha256": "2c0d1a7a39627e12d1244d23a225ad3da03bbce071a118909921a547a2bfd106",
+      "validation_utterances": 527,
+      "validation_dialogues": 12,
+      "same_ids_labels_across_seeds": true,
+      "train_validation_test_ids_disjoint": true
+    },
+    {
+      "dataset": "IEMOCAP",
+      "seed": 67137,
+      "checkpoint": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/cmerc/IEMOCAP_validation_seed67137/best.pt",
+      "checkpoint_sha256": "1b4b91bc683de99264a7b446b84187bae3b982f1ff7c73b552e3c8e3f82eedf3",
+      "validation_utterances": 527,
+      "validation_dialogues": 12,
+      "same_ids_labels_across_seeds": true,
+      "train_validation_test_ids_disjoint": true
+    },
+    {
+      "dataset": "IEMOCAP",
+      "seed": 2024,
+      "checkpoint": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/cmerc/IEMOCAP_validation_seed2024/best.pt",
+      "checkpoint_sha256": "80ee239060ae1afa3f8c49d7c99d38db8e91fb1d706c7f95087b9e6c025ebf96",
+      "validation_utterances": 527,
+      "validation_dialogues": 12,
+      "same_ids_labels_across_seeds": true,
+      "train_validation_test_ids_disjoint": true
+    },
+    {
+      "dataset": "IEMOCAP",
+      "seed": 3407,
+      "checkpoint": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/cmerc/IEMOCAP_validation_seed3407/best.pt",
+      "checkpoint_sha256": "e4978c68e4119309d371152aeec469149c3fdd8989078182fb348c6db7e4f0ed",
+      "validation_utterances": 527,
+      "validation_dialogues": 12,
+      "same_ids_labels_across_seeds": true,
+      "train_validation_test_ids_disjoint": true
+    },
+    {
+      "dataset": "IEMOCAP",
+      "seed": 42,
+      "checkpoint": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/cmerc/IEMOCAP_validation_seed42/best.pt",
+      "checkpoint_sha256": "f896b657e62110dcb7b5de033df8f81f485ec037e922cca8ad8ebc48d74b43fa",
+      "validation_utterances": 527,
+      "validation_dialogues": 12,
+      "same_ids_labels_across_seeds": true,
+      "train_validation_test_ids_disjoint": true
+    },
+    {
+      "dataset": "MELD",
+      "seed": 1475,
+      "checkpoint": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/cmerc/MELD_validation_seed1475/best.pt",
+      "checkpoint_sha256": "263145b6a2057624e55791eb8c68c6d3de8a353af46a2b2f234e977588655601",
+      "validation_utterances": 1109,
+      "validation_dialogues": 114,
+      "same_ids_labels_across_seeds": true,
+      "train_validation_test_ids_disjoint": true
+    },
+    {
+      "dataset": "MELD",
+      "seed": 67137,
+      "checkpoint": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/cmerc/MELD_validation_seed67137/best.pt",
+      "checkpoint_sha256": "3f79f9eb3547e35ac15ad7ff4345d9b873d0c884a6f3a1ce60a7a7e47077e701",
+      "validation_utterances": 1109,
+      "validation_dialogues": 114,
+      "same_ids_labels_across_seeds": true,
+      "train_validation_test_ids_disjoint": true
+    },
+    {
+      "dataset": "MELD",
+      "seed": 2024,
+      "checkpoint": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/cmerc/MELD_validation_seed2024/best.pt",
+      "checkpoint_sha256": "59c6f3fa544b59bcdc79d14bbe8ee17772a4900b15f4d32ef088971e59c9d0df",
+      "validation_utterances": 1109,
+      "validation_dialogues": 114,
+      "same_ids_labels_across_seeds": true,
+      "train_validation_test_ids_disjoint": true
+    },
+    {
+      "dataset": "MELD",
+      "seed": 3407,
+      "checkpoint": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/cmerc/MELD_validation_seed3407/best.pt",
+      "checkpoint_sha256": "0c0ccae216958f22d6c58d8d4d5a566ef61e22a81a29c0f815d7b7e180404562",
+      "validation_utterances": 1109,
+      "validation_dialogues": 114,
+      "same_ids_labels_across_seeds": true,
+      "train_validation_test_ids_disjoint": true
+    },
+    {
+      "dataset": "MELD",
+      "seed": 42,
+      "checkpoint": "/data2/yb/paper/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/cmerc/MELD_validation_seed42/best.pt",
+      "checkpoint_sha256": "e14f4c855e277cca5d256f0e2a3e4048b0a407035be9c28a5de0a3451721026b",
+      "validation_utterances": 1109,
+      "validation_dialogues": 114,
+      "same_ids_labels_across_seeds": true,
+      "train_validation_test_ids_disjoint": true
+    }
+  ],
+  "training_statistics_hash_match": true,
+  "raw_features_checkpoint_source_hash_count": 76,
+  "test_labels_read": false,
+  "data_files_hashed_only_not_deserialized_by_this_audit": true
+}

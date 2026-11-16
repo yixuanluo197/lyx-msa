@@ -1,0 +1,111 @@
+{
+  "pid": 2483274,
+  "created_at": "2026-11-16T13:05:18.448883+00:00",
+  "server": "local",
+  "gpu_inventory": {
+    "0": {
+      "uuid": "GPU-7ff18ebb-100e-98fe-038b-a98bd4f94248",
+      "free_mib": 12181,
+      "utilization": 0
+    },
+    "1": {
+      "uuid": "GPU-eed2f34f-b4c0-7b7a-498e-71a026e30c5a",
+      "free_mib": 12181,
+      "utilization": 0
+    },
+    "2": {
+      "uuid": "GPU-d17e4326-9d3b-2025-fbf8-c9b0d16623a0",
+      "free_mib": 12181,
+      "utilization": 0
+    },
+    "3": {
+      "uuid": "GPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456",
+      "free_mib": 12181,
+      "utilization": 0
+    }
+  },
+  "healthy_gpu_indices": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "jobs": [
+    {
+      "dataset": "MELD",
+      "seed": 67137,
+      "block": 0,
+      "modality": "audio"
+    },
+    {
+      "dataset": "MELD",
+      "seed": 2024,
+      "block": 0,
+      "modality": "audio"
+    },
+    {
+      "dataset": "MELD",
+      "seed": 3407,
+      "block": 0,
+      "modality": "audio"
+    },
+    {
+      "dataset": "MELD",
+      "seed": 42,
+      "block": 0,
+      "modality": "audio"
+    },
+    {
+      "dataset": "MELD",
+      "seed": 1475,
+      "block": 1,
+      "modality": "audio"
+    },
+    {
+      "dataset": "MELD",
+      "seed": 1475,
+      "block": 2,
+      "modality": "audio"
+    },
+    {
+      "dataset": "IEMOCAP",
+      "seed": 67137,
+      "block": 0,
+      "modality": "text"
+    },
+    {
+      "dataset": "IEMOCAP",
+      "seed": 2024,
+      "block": 0,
+      "modality": "text"
+    },
+    {
+      "dataset": "IEMOCAP",
+      "seed": 3407,
+      "block": 0,
+      "modality": "text"
+    },
+    {
+      "dataset": "IEMOCAP",
+      "seed": 42,
+      "block": 0,
+      "modality": "text"
+    },
+    {
+      "dataset": "IEMOCAP",
+      "seed": 1475,
+      "block": 1,
+      "modality": "text"
+    },
+    {
+      "dataset": "IEMOCAP",
+      "seed": 1475,
+      "block": 2,
+      "modality": "text"
+    }
+  ],
+  "preflight_file": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/candidate_confirmation/20261116T125737Z/results/independent_preflight.json",
+  "concurrency_reason": "Historical strength_response queue found same-card dual inference saturates compute; one job per healthy local card, free memory rechecked before each launch.",
+  "historical_evidence": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/strength_response/20261116T035211Z/provenance/scheduler.json",
+  "minimum_free_mib": 4000
+}

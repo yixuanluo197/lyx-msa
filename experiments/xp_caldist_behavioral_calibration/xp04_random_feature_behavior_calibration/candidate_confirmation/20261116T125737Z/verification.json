@@ -1,0 +1,119 @@
+{
+  "status": "completed",
+  "all_passed": true,
+  "completed_at": "2026-11-16T13:22:51.249878+00:00",
+  "checkpoint_run": "20261016T050823Z",
+  "scope": "fixed two single-modality Gaussian candidates; five model seeds plus two independent seed1475 random blocks; true Validation only",
+  "completed_new_gpu_runs": 12,
+  "new_prediction_rows": 98160,
+  "raw_rows_including_reused_pilot": 114520,
+  "unit_tests_passed": 22,
+  "scripts_compiled": true,
+  "output_rows": {
+    "original_predictions": 11452,
+    "behavior_features": 11452,
+    "feature_matrix": 11452,
+    "behavior_summary": 42,
+    "split_half_stability": 42,
+    "conditional_behavior": 193,
+    "cross_block_stability": 18,
+    "oof_predictions": 57260,
+    "calibration_metrics": 70,
+    "confidence_shift": 140,
+    "inner_cv_results": 1428,
+    "per_dialogue_results": 4410,
+    "aggregate_metrics": 10,
+    "behavior_selection_counts": 85,
+    "random_block_comparison": 30,
+    "dialogue_influence": 9072,
+    "dialogue_concentration_summary": 144,
+    "bootstrap_results": 432
+  },
+  "independent_verification": {
+    "status": "passed",
+    "all_passed": true,
+    "stage": "full",
+    "checks": {
+      "source": {
+        "validation_only_executable_dataset_calls": [
+          "validation"
+        ],
+        "no_training_or_Test_inference_call": true,
+        "immutable_input_hashes_checked": 76,
+        "training_statistics_sha256": {
+          "IEMOCAP": "ddb2e2ffd87acbef1b9f740c1bf42be215091433c47d1dc20445ab535f4dd52d",
+          "MELD": "b7e0cbd5388ae813d98d347e75ac9aaa94a3492283c9febb89728aef2020656c"
+        },
+        "runner_sha256": "cc263e1279563f3ccaa0a1b5f50d4211364b2d88490138d10162e90aaeb32f2c",
+        "core_sha256": "c7b70683b2cb24a60bda5e7739a8b608c424137a3caacfb3c6b17637c83256e5"
+      },
+      "inference": {
+        "completed_runs": [
+          "IEMOCAP/seed1475/block1",
+          "IEMOCAP/seed1475/block2",
+          "IEMOCAP/seed2024/block0",
+          "IEMOCAP/seed3407/block0",
+          "IEMOCAP/seed42/block0",
+          "IEMOCAP/seed67137/block0",
+          "MELD/seed1475/block1",
+          "MELD/seed1475/block2",
+          "MELD/seed2024/block0",
+          "MELD/seed3407/block0",
+          "MELD/seed42/block0",
+          "MELD/seed67137/block0"
+        ],
+        "new_prediction_rows": 98160,
+        "cross_seed_vector_bytes_groups": 32170,
+        "independent_block_rng_vector_groups": 3217,
+        "weight_graph_mask_restore_parity": true,
+        "historical1475_vector_bytes_not_recorded": "Historical keys/formula/stats verified, exact input bytes compared among four new model seeds."
+      },
+      "raw_behavior": {
+        "raw_probability_rows_recomputed": 114520,
+        "utterance_behavior_records": 11452,
+        "confidence_weighted_mu_and_original_delta": true
+      },
+      "calibration": {
+        "outer_folds_replayed": 119,
+        "oof_predictions_replayed": 57260,
+        "inner_predictions_replayed": 859572,
+        "nested_penalty_selections_recomputed": 357,
+        "historical1475_candidate_rows_reproduced": 1636,
+        "historical_max_absolute_error": 0,
+        "train_only_scalers_dialogue_grouping_off_exact_E1": true,
+        "metrics_recomputed": 70
+      },
+      "diagnostics": {
+        "diagnostic_aggregate_confidence_shift_dialogue_rows_recomputed": 5022,
+        "sample_std_ddof1_and_paired_improvement_counts": true,
+        "blocks_analyzed_separately": true
+      },
+      "concentration_and_random_blocks": {
+        "cross_block_rank_stability_rows_recomputed": 18,
+        "fixed_OOF_dialogue_influence_rows_recomputed": 9072,
+        "concentration_summary_rows_recomputed": 144,
+        "no_refit_or_RNG_block_pooling": true,
+        "mean_across_seeds_uses_same_dialogue_omission": true
+      },
+      "bootstrap": {
+        "bootstrap_rows_recomputed": 432,
+        "literal_first_draw_checks": 210,
+        "shared_2000_historical_dialogue_draws": true,
+        "seeds_not_independent_bootstrap_units": true,
+        "no_refit_and_no_RNG_block_pooling": true
+      }
+    }
+  },
+  "classification_predictions_unchanged_by_calibration": true,
+  "test_evaluation_or_fitting": false,
+  "cmerc_training": false,
+  "original_features_modified": false,
+  "temperature_scaling": false,
+  "js_class_interaction_calibration_inputs": false,
+  "blocks_pooled_into_30_repeats": false,
+  "immutable_source_hashes_before_after_equal": true,
+  "all_registered_conditions_reported": true,
+  "conclusion": "local ECE/seed1475 signals retained; cross-model-seed incremental calibration over E1 not established",
+  "next_stage_automatic_execution": false,
+  "github_delivery": "prepared after this audit; remote commit verification reported in final response"
+}

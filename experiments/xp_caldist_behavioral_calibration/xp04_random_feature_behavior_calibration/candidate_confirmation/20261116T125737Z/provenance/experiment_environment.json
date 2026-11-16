@@ -1,0 +1,18 @@
+{
+  "python": "/data2/yb/conda_envs/cmerc-xp-repro/bin/python",
+  "version": "3.10.13 | packaged by conda-forge | (main, Dec 23 2023, 15:36:39) [GCC 12.3.0]",
+  "host": "user23",
+  "packages": {
+    "torch": "1.13.1+cu117",
+    "numpy": "1.26.4",
+    "pandas": "1.5.3",
+    "scipy": "1.11.4",
+    "scikit-learn": "1.3.2"
+  },
+  "thread_policy": {
+    "OMP_NUM_THREADS": 1,
+    "MKL_NUM_THREADS": 1,
+    "OPENBLAS_NUM_THREADS": 1
+  },
+  "cuda_library": "/data2/yb/conda_envs/cmerc-xp-repro/lib/python3.10/site-packages/nvidia/cusparse/lib"
+}

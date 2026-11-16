@@ -1,0 +1,27 @@
+test_disjoint_repeat_blocks_and_local_index_mapping (test_candidate.CandidateTests) ... ok
+test_gaussian_matches_historical_rng_and_arithmetic (test_candidate.CandidateTests) ... ok
+test_identical_feature_bytes_across_model_seeds (test_candidate.CandidateTests) ... ok
+test_launcher_matrix_has_exact_preregistered_jobs (test_candidate.CandidateTests) ... ok
+test_prediction_and_audit_writer_schema_contains_block (test_candidate.CandidateTests) ... ok
+test_refuses_overwrite_before_loading_or_inference (test_candidate.CandidateTests) ... ok
+test_reject_other_corruption_and_bad_stat_shape (test_candidate.CandidateTests) ... ok
+test_target_masks_context_padding_and_restore (test_candidate.CandidateTests) ... ok
+test_text_all_four_arrays_independent (test_candidate.CandidateTests) ... ok
+test_training_zero_std_unchanged_and_input_untouched (test_candidate.CandidateTests) ... ok
+test_ablation_features_exclude_js_classes_and_other_modality (test_candidate_analysis.AnalysisTests) ... ok
+test_argmax_rejected (test_candidate_analysis.AnalysisTests) ... ok
+test_bootstrap_is_group_resampling_with_unequal_sizes (test_candidate_analysis.AnalysisTests) ... ok
+test_condition_metadata_is_json_serializable (test_candidate_analysis.AnalysisTests) ... ok
+test_cross_block_pairs_by_id_and_preserves_undefined_correlation (test_candidate_analysis.AnalysisTests) ... ok
+test_delta_is_absolute_mean_change_not_std (test_candidate_analysis.AnalysisTests) ... ok
+test_dialogue_concentration_detects_single_dialogue_dependence (test_candidate_analysis.AnalysisTests) ... ok
+test_identity_probabilities_have_zero_response (test_candidate_analysis.AnalysisTests) ... ok
+test_mu_is_confidence_weighted_not_flip_rate (test_candidate_analysis.AnalysisTests) ... ok
+test_off_path_reuses_e1_exactly (test_candidate_analysis.AnalysisTests) ... ok
+test_probability_sum_rejected (test_candidate_analysis.AnalysisTests) ... ok
+test_top_label_ece_boundaries_include_one (test_candidate_analysis.AnalysisTests) ... ok
+
+----------------------------------------------------------------------
+Ran 22 tests in 1.172s
+
+OK

@@ -1,0 +1,113 @@
+{
+  "status": "passed",
+  "all_passed": true,
+  "stage": "preflight",
+  "checks": {
+    "source": {
+      "validation_only_executable_dataset_calls": [
+        "validation"
+      ],
+      "no_training_or_Test_inference_call": true,
+      "immutable_input_hashes_checked": 76,
+      "training_statistics_sha256": {
+        "IEMOCAP": "ddb2e2ffd87acbef1b9f740c1bf42be215091433c47d1dc20445ab535f4dd52d",
+        "MELD": "b7e0cbd5388ae813d98d347e75ac9aaa94a3492283c9febb89728aef2020656c"
+      },
+      "runner_sha256": "cc263e1279563f3ccaa0a1b5f50d4211364b2d88490138d10162e90aaeb32f2c",
+      "core_sha256": "c7b70683b2cb24a60bda5e7739a8b608c424137a3caacfb3c6b17637c83256e5"
+    },
+    "inference": {
+      "completed_runs": [
+        "IEMOCAP/seed67137/block0/smoke",
+        "MELD/seed1475/block1/smoke"
+      ],
+      "new_prediction_rows": 20,
+      "cross_seed_vector_bytes_groups": 40,
+      "independent_block_rng_vector_groups": 0,
+      "weight_graph_mask_restore_parity": true,
+      "historical1475_vector_bytes_not_recorded": "Historical keys/formula/stats verified, exact input bytes compared among four new model seeds."
+    },
+    "raw_behavior": {
+      "raw_probability_rows_recomputed": 16360,
+      "utterance_behavior_records": 1636,
+      "confidence_weighted_mu_and_original_delta": true
+    },
+    "calibration": {
+      "outer_folds_replayed": 17,
+      "oof_predictions_replayed": 8180,
+      "inner_predictions_replayed": 122796,
+      "nested_penalty_selections_recomputed": 51,
+      "historical1475_candidate_rows_reproduced": 1636,
+      "historical_max_absolute_error": 0,
+      "train_only_scalers_dialogue_grouping_off_exact_E1": true,
+      "metrics_recomputed": 10
+    },
+    "diagnostics": {
+      "diagnostic_aggregate_confidence_shift_dialogue_rows_recomputed": 731,
+      "sample_std_ddof1_and_paired_improvement_counts": true,
+      "blocks_analyzed_separately": true
+    },
+    "bootstrap": {
+      "bootstrap_rows_recomputed": 54,
+      "literal_first_draw_checks": 30,
+      "shared_2000_historical_dialogue_draws": true,
+      "seeds_not_independent_bootstrap_units": true,
+      "no_refit_and_no_RNG_block_pooling": true
+    }
+  },
+  "prior_verification": {
+    "status": "passed",
+    "all_passed": true,
+    "stage": "smoke",
+    "checks": {
+      "source": {
+        "validation_only_executable_dataset_calls": [
+          "validation"
+        ],
+        "no_training_or_Test_inference_call": true,
+        "immutable_input_hashes_checked": 76,
+        "training_statistics_sha256": {
+          "IEMOCAP": "ddb2e2ffd87acbef1b9f740c1bf42be215091433c47d1dc20445ab535f4dd52d",
+          "MELD": "b7e0cbd5388ae813d98d347e75ac9aaa94a3492283c9febb89728aef2020656c"
+        },
+        "runner_sha256": "cc263e1279563f3ccaa0a1b5f50d4211364b2d88490138d10162e90aaeb32f2c",
+        "core_sha256": "c7b70683b2cb24a60bda5e7739a8b608c424137a3caacfb3c6b17637c83256e5"
+      },
+      "inference": {
+        "completed_runs": [
+          "IEMOCAP/seed67137/block0/smoke",
+          "MELD/seed1475/block1/smoke"
+        ],
+        "new_prediction_rows": 20,
+        "cross_seed_vector_bytes_groups": 40,
+        "independent_block_rng_vector_groups": 0,
+        "weight_graph_mask_restore_parity": true,
+        "historical1475_vector_bytes_not_recorded": "Historical keys/formula/stats verified, exact input bytes compared among four new model seeds."
+      }
+    },
+    "prior_verification": {
+      "status": "failed",
+      "all_passed": false,
+      "stage": "smoke",
+      "checks": {
+        "source": {
+          "validation_only_executable_dataset_calls": [
+            "validation"
+          ],
+          "no_training_or_Test_inference_call": true,
+          "immutable_input_hashes_checked": 76,
+          "training_statistics_sha256": {
+            "IEMOCAP": "ddb2e2ffd87acbef1b9f740c1bf42be215091433c47d1dc20445ab535f4dd52d",
+            "MELD": "b7e0cbd5388ae813d98d347e75ac9aaa94a3492283c9febb89728aef2020656c"
+          },
+          "runner_sha256": "cc263e1279563f3ccaa0a1b5f50d4211364b2d88490138d10162e90aaeb32f2c",
+          "core_sha256": "c7b70683b2cb24a60bda5e7739a8b608c424137a3caacfb3c6b17637c83256e5"
+        }
+      },
+      "error": "AssertionError: ",
+      "traceback": "Traceback (most recent call last):\n  File \"/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/candidate_confirmation/20261116T125737Z/scripts/verify_candidates.py\", line 321, in main\n    result['checks']['inference']=inference_audit(root,config,smoke=args.stage!='full')\n  File \"/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/candidate_confirmation/20261116T125737Z/scripts/verify_candidates.py\", line 219, in inference_audit\n    assert set(original.dialogue_id)==valid\nAssertionError\n"
+    },
+    "formal_results_not_claimed": true
+  },
+  "formal_results_not_claimed": true
+}

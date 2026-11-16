@@ -1,0 +1,26 @@
+Validated raw IEMOCAP seed=1475 block=0 rows=5270
+Validated raw MELD seed=1475 block=0 rows=11090
+Traceback (most recent call last):
+  File "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/candidate_confirmation/20261116T125737Z/scripts/analyze_candidates.py", line 354, in <module>
+    if __name__=='__main__':main()
+  File "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/candidate_confirmation/20261116T125737Z/scripts/analyze_candidates.py", line 341, in main
+    fitted,parity=run_calibration(root,config,features,destination);tables.update(fitted)
+  File "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/candidate_confirmation/20261116T125737Z/scripts/analyze_candidates.py", line 226, in run_calibration
+    dump(destination/'fold_parameters'/f'{tag}.json',params)
+  File "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/candidate_confirmation/20261116T125737Z/scripts/mainline_core.py", line 31, in dump
+    path.write_text(json.dumps(value,ensure_ascii=False,indent=2,allow_nan=False)+'\n')
+  File "/data2/yb/conda_envs/cmerc-xp-repro/lib/python3.10/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+  File "/data2/yb/conda_envs/cmerc-xp-repro/lib/python3.10/json/encoder.py", line 201, in encode
+    chunks = list(chunks)
+  File "/data2/yb/conda_envs/cmerc-xp-repro/lib/python3.10/json/encoder.py", line 429, in _iterencode
+    yield from _iterencode_list(o, _current_indent_level)
+  File "/data2/yb/conda_envs/cmerc-xp-repro/lib/python3.10/json/encoder.py", line 325, in _iterencode_list
+    yield from chunks
+  File "/data2/yb/conda_envs/cmerc-xp-repro/lib/python3.10/json/encoder.py", line 405, in _iterencode_dict
+    yield from chunks
+  File "/data2/yb/conda_envs/cmerc-xp-repro/lib/python3.10/json/encoder.py", line 438, in _iterencode
+    o = _default(o)
+  File "/data2/yb/conda_envs/cmerc-xp-repro/lib/python3.10/json/encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type int64 is not JSON serializable

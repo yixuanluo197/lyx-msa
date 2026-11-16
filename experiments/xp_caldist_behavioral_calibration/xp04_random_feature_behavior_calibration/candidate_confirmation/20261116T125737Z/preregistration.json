@@ -1,0 +1,158 @@
+{
+  "created_at": "2026-11-16T12:58:26.845151+00:00",
+  "status": "preregistered_before_new_inference",
+  "checkpoint_run": "20261016T050823Z",
+  "server": "local",
+  "seeds": [
+    1475,
+    67137,
+    2024,
+    3407,
+    42
+  ],
+  "new_model_seeds": [
+    67137,
+    2024,
+    3407,
+    42
+  ],
+  "datasets": {
+    "IEMOCAP": {
+      "modality": "text",
+      "utterances": 527,
+      "dialogues": 12,
+      "visual_missing": 1,
+      "train_count": 5283
+    },
+    "MELD": {
+      "modality": "audio",
+      "utterances": 1109,
+      "dialogues": 114,
+      "visual_missing": 95,
+      "train_count": 9989
+    }
+  },
+  "corruptions": [
+    "gaussian"
+  ],
+  "strength": 0.05,
+  "repeats": 10,
+  "blocks": {
+    "0": {
+      "model_seeds": [
+        1475,
+        67137,
+        2024,
+        3407,
+        42
+      ],
+      "rng_repeat_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "seed1475_source": "historical_pilot"
+    },
+    "1": {
+      "model_seeds": [
+        1475
+      ],
+      "rng_repeat_ids": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ]
+    },
+    "2": {
+      "model_seeds": [
+        1475
+      ],
+      "rng_repeat_ids": [
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29
+      ]
+    }
+  },
+  "rng_seed": 1475,
+  "rng": "PCG64 SHA256 canonical [dataset,1475,dialogue,utterance,feature_array,gaussian,0.05,rng_repeat_id]; same input bytes across model seeds; independent disjoint repeat blocks",
+  "source_pilot": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/pilot/20261113T025053Z",
+  "source_five_seed": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/five_seed_validation/20261115T151109Z",
+  "source_mainline": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/mainline_mu_delta/20261115T165025Z",
+  "source_strength": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/strength_response/20261116T035211Z",
+  "methods": [
+    "E0",
+    "E1",
+    "M_gaussian",
+    "M_gaussian_mu",
+    "M_gaussian_delta"
+  ],
+  "primary_behavior_method": "M_gaussian",
+  "features": {
+    "M_gaussian": [
+      "gaussian_mu",
+      "gaussian_delta"
+    ],
+    "M_gaussian_mu": [
+      "gaussian_mu"
+    ],
+    "M_gaussian_delta": [
+      "gaussian_delta"
+    ]
+  },
+  "penalties": [
+    "off",
+    1.0,
+    0.1,
+    0.01
+  ],
+  "outer": "reuse_historical_dialogue_fold_membership_and_feature_row_order_per_seed",
+  "inner": "GroupKFold5_training_dialogues_only_pooled_binary_Brier; fixed historical penalty grid",
+  "bootstrap_repeats": 2000,
+  "bootstrap": "reuse_historical_dialogue_draws_shared_across_seeds; aggregate_seed_metric_difference_per_draw; no_refit",
+  "mu": "mean(1[perturbed_prediction!=original_prediction]*perturbed_max_confidence)",
+  "delta": "abs(original_confidence-mean(perturbed_max_confidence))",
+  "js": "diagnostic only; never a calibration input",
+  "primary_endpoints": [
+    "top_label_ECE15",
+    "binary_Brier",
+    "binary_NLL"
+  ],
+  "decision": "ECE improvement + at least one proper loss improvement, no material degradation of remaining loss, majority-seed consistency, no clear reverse bootstrap risk, not concentrated in few dialogues; descriptive effect sizes/CIs disclosed without posthoc numerical margins",
+  "limitations": [
+    "candidates chosen after historical Validation exploration; additional seeds and RNG blocks are robustness checks, not independent-data confirmation",
+    "checkpoint selection and repeated method exploration used Validation",
+    "bootstrap excludes refitting and random perturbation uncertainty; multiple comparisons exploratory"
+  ],
+  "excluded": [
+    "test_evaluation_or_labels",
+    "raw_data_modification",
+    "CMERC_training",
+    "new_strength_search",
+    "JS_or_class_or_interaction_inputs",
+    "merging_blocks_into_30repeat_primary"
+  ],
+  "expected_new_jobs": 12,
+  "expected_new_prediction_rows": 98160
+}

@@ -1,0 +1,144 @@
+{
+  "source_counts": [
+    {
+      "dataset": "IEMOCAP",
+      "seed": 1475,
+      "block": 0,
+      "path": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/pilot/20261113T025053Z/IEMOCAP/perturbed_predictions.csv",
+      "rows": 5270
+    },
+    {
+      "dataset": "MELD",
+      "seed": 1475,
+      "block": 0,
+      "path": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/pilot/20261113T025053Z/MELD/perturbed_predictions.csv",
+      "rows": 11090
+    }
+  ],
+  "historical_feature_parity": [
+    {
+      "dataset": "IEMOCAP",
+      "feature": "gaussian_mu",
+      "max_absolute_error": 5.551115123125783e-17
+    },
+    {
+      "dataset": "IEMOCAP",
+      "feature": "gaussian_delta",
+      "max_absolute_error": 3.3306690738754696e-16
+    },
+    {
+      "dataset": "MELD",
+      "feature": "gaussian_mu",
+      "max_absolute_error": 2.7755575615628914e-17
+    },
+    {
+      "dataset": "MELD",
+      "feature": "gaussian_delta",
+      "max_absolute_error": 1.1102230246251565e-16
+    }
+  ],
+  "status": "historical_preflight_passed",
+  "all_passed": true,
+  "historical_oof_parity": [
+    {
+      "dataset": "IEMOCAP",
+      "seed": 1475,
+      "block": 0,
+      "modality": "text",
+      "strength": 0.05,
+      "method": "E1",
+      "rows": 527,
+      "max_absolute_error": 2.220446049250313e-16,
+      "tolerance": 1e-08
+    },
+    {
+      "dataset": "IEMOCAP",
+      "seed": 1475,
+      "block": 0,
+      "modality": "text",
+      "strength": 0.05,
+      "method": "M_gaussian",
+      "rows": 527,
+      "max_absolute_error": 0.0,
+      "tolerance": 1e-08
+    },
+    {
+      "dataset": "MELD",
+      "seed": 1475,
+      "block": 0,
+      "modality": "audio",
+      "strength": 0.05,
+      "method": "E1",
+      "rows": 1109,
+      "max_absolute_error": 3.3306690738754696e-16,
+      "tolerance": 1e-08
+    },
+    {
+      "dataset": "MELD",
+      "seed": 1475,
+      "block": 0,
+      "modality": "audio",
+      "strength": 0.05,
+      "method": "M_gaussian",
+      "rows": 1109,
+      "max_absolute_error": 0.0,
+      "tolerance": 1e-08
+    }
+  ],
+  "output_rows": {
+    "original_predictions": 1636,
+    "behavior_features": 1636,
+    "feature_matrix": 1636,
+    "behavior_summary": 6,
+    "split_half_stability": 6,
+    "conditional_behavior": 28,
+    "cross_block_stability": 0,
+    "oof_predictions": 8180,
+    "calibration_metrics": 10,
+    "confidence_shift": 20,
+    "inner_cv_results": 204,
+    "per_dialogue_results": 630,
+    "aggregate_metrics": 10,
+    "behavior_selection_counts": 11,
+    "random_block_comparison": 10,
+    "dialogue_influence": 1134,
+    "dialogue_concentration_summary": 18,
+    "bootstrap_results": 54
+  },
+  "output_sha256": {
+    "original_predictions.csv": "86c13bac7b334880f6f12a2c535026863a71397bc3dee13c6b0c0e05bfb639d3",
+    "behavior_features.csv": "f603da907f3f61d8bd7ae4d3a4d1d46b28c846a15afce0b7e60d7b8f75859603",
+    "feature_matrix.csv": "fdb2e954ee50999c29490de033bf1b9c45cb8f4fc9b4dca65510e4c73980a328",
+    "behavior_summary.csv": "2fad7b9d3dd68e3388484e51d92943d19066a297dc19f329c93ffbce6a79bd1b",
+    "split_half_stability.csv": "7d876bcd4bd77333e13100d9ca7310e8cb4a557fbee9327bcef94beda7524f2b",
+    "conditional_behavior.csv": "b4c4c0bc33a20447f651d061c2f0966a729ccd65409b0475791c1267489356e7",
+    "cross_block_stability.csv": "231fca5a9abbd43d23f01de845be291448507f4565df6cbe6f1a79c8355cc5e4",
+    "oof_predictions.csv": "80e64fd730f81735e2d07c92a58ddb4e4565551f1e22787d4d351e1674151aca",
+    "calibration_metrics.csv": "a03b178657bb932fb6f760e4ff55c2fb55d93834940be445b5c6d096f3641999",
+    "confidence_shift.csv": "6f6ea893ff74375958357566f0b774b22335df1dd558b7d0feefd1183cf31857",
+    "inner_cv_results.csv": "36d18863c79d47ea980c4bde6006f7c93543ed2720e2f1c0bcade1354a35e18e",
+    "per_dialogue_results.csv": "0ef7285b87e4a12c31f8d95255048d892a5ec15b4f99492278c128bed93e5d09",
+    "aggregate_metrics.csv": "31292b928172d9877f604819342031b47189d66fed8572e2fcfb5588c67e24a0",
+    "behavior_selection_counts.csv": "dc394ca93fdd00afdbdfbabe08c94f2bb4425f026d0d78e227937e5709d6496c",
+    "random_block_comparison.csv": "aec1ff59cd55eca9121668e2ee44264d9b7af9fae8787c6218bfcab5cd846807",
+    "dialogue_influence.csv": "b4d312498074ecb6e8fe6947c69aab239990e879481aed94bb989abdd91c64c5",
+    "dialogue_concentration_summary.csv": "d1950db69941d57005f1d744495a79963b12d35286431eaf85169eb73d092ee4",
+    "bootstrap_results.csv": "0bbbb7cdbc08850ec74d2e231f679cf5db15a422364d757dde83f9998f53930c"
+  },
+  "input_code_unchanged": true,
+  "cpu_only": true,
+  "test_labels_used": false,
+  "cmerc_training": false,
+  "one_utterance_per_seed_block": true,
+  "blocks_not_pooled": true,
+  "no_js_or_class_inputs": true,
+  "bootstrap_refit": false,
+  "bootstrap_shared_across_seeds": true,
+  "elapsed_seconds": 14.184062004089355,
+  "environment": {
+    "python": "/data2/yb/conda_envs/cmerc-xp-repro/bin/python",
+    "host": "user23",
+    "numpy": "1.26.4",
+    "pandas": "1.5.3"
+  }
+}

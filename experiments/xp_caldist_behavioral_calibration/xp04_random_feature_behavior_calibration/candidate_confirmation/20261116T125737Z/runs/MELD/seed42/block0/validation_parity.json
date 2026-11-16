@@ -1,0 +1,37 @@
+{
+  "passed": true,
+  "checks": {
+    "dialogue_ids": {
+      "equal": true
+    },
+    "utterance_indices": {
+      "equal": true
+    },
+    "labels": {
+      "equal": true
+    },
+    "predictions": {
+      "equal": true
+    },
+    "probabilities": {
+      "equal": true,
+      "max_abs_error": 2.384185791015625e-07
+    },
+    "log_probabilities": {
+      "equal": true,
+      "max_abs_error": 9.5367431640625e-07
+    },
+    "argmax": {
+      "equal": true
+    }
+  },
+  "canonical_original": {
+    "passed": true,
+    "rows": 1109,
+    "csv": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/five_seed_validation/20261115T151109Z/runs/MELD/seed42/original_predictions.csv",
+    "csv_sha256": "816daf2b4db02cd25b1e0b3d33abde8426209ed4e06c228a8d8465d6f0ce24ae",
+    "probabilities_exact_equal": true,
+    "log_probabilities_exact_equal": true,
+    "metadata_exact_equal": true
+  }
+}
