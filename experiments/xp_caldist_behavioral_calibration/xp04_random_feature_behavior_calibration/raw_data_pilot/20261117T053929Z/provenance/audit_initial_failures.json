@@ -1,0 +1,19 @@
+{
+  "at": "2026-11-17T05:48:29.148060+00:00",
+  "failures": [
+    {
+      "script": "audit_text_inputs.py",
+      "sha256_before_fix": "1c6f4e6de58dc735c37b7585ae07cea01b161afe2569aeb4866b1a9f5df99452",
+      "status": "FAILED_BEFORE_ANY_EXTRACTION_OR_MODEL_LOAD",
+      "reason": "ZIP contains a directory entry plus 4 pkl files; initial assertion wrongly counted directories as data files"
+    },
+    {
+      "script": "recheck_reference_sources.py",
+      "sha256_before_fix": "16d12eb9deee4b7c9a6ac29beeb18b9fc45bffd4bbfb65d6eb2d58c7138afe86",
+      "status": "FAILED_BEFORE_ANY_EXTRACTION_OR_MODEL_LOAD",
+      "reason": "Historical source manifest has source_url and url schemas; initial reader assumed source_url only"
+    }
+  ],
+  "validation_target_values_opened": false,
+  "checkpoint_deserialized": false
+}

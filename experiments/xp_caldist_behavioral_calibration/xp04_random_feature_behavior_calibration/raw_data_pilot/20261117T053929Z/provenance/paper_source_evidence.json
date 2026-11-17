@@ -1,0 +1,235 @@
+{
+  "checked_at": "2026-11-17T05:45:03.705532+00:00",
+  "scope": "Official papers and source code only. No dataset, Validation features, Test labels, model loading, feature extraction or large weights.",
+  "official_commits": {
+    "HITSZ-HLT/CMERC": "815c7c060914f5b55db816c0ba3662b11d08552f",
+    "declare-lab/conv-emotion": "6128ca20e9c736605cce7e99d5d95db0356c35f5"
+  },
+  "sources": [
+    {
+      "url": "https://raw.githubusercontent.com/HITSZ-HLT/CMERC/815c7c060914f5b55db816c0ba3662b11d08552f/README.md",
+      "final_url": "https://raw.githubusercontent.com/HITSZ-HLT/CMERC/815c7c060914f5b55db816c0ba3662b11d08552f/README.md",
+      "path": "LOCAL_RUN/sources/paper_evidence/CMERC_README.md",
+      "sha256": "5b02de406be3b0ec68f2ea3de65f3fc2a1b059cb091c98b1b02f15d9a8f4000b",
+      "bytes": 6438,
+      "content_type": "text/plain; charset=utf-8"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/declare-lab/conv-emotion/6128ca20e9c736605cce7e99d5d95db0356c35f5/COSMIC/feature-extraction/README.md",
+      "final_url": "https://raw.githubusercontent.com/declare-lab/conv-emotion/6128ca20e9c736605cce7e99d5d95db0356c35f5/COSMIC/feature-extraction/README.md",
+      "path": "LOCAL_RUN/sources/paper_evidence/COSMIC_FEATURE_EXTRACTION_README.md",
+      "sha256": "89592b4b96d1816ead58a94785327e82c96d9fe6f58d0ac783172abe3a8f7de5",
+      "bytes": 1518,
+      "content_type": "text/plain; charset=utf-8"
+    },
+    {
+      "url": "https://aclanthology.org/2020.findings-emnlp.224.pdf",
+      "final_url": "https://aclanthology.org/2020.findings-emnlp.224.pdf",
+      "path": "LOCAL_RUN/sources/paper_evidence/COSMIC_PAPER.pdf",
+      "sha256": "54298527d3d85183b8df2245c820989c2ecfb5c2fb6744c27935d5b3d71e19ab",
+      "bytes": 1240258,
+      "content_type": "application/pdf"
+    }
+  ],
+  "failures": [
+    {
+      "url": "https://dl.acm.org/doi/10.1145/3664647.3681515",
+      "status": "403 via web tool"
+    },
+    {
+      "url": "https://openreview.net/pdf?id=9KJsCWEJVe",
+      "status": "browser verification; search cache available but not treated as final published PDF"
+    },
+    {
+      "url": "https://openreview.net/attachment?id=9KJsCWEJVe&name=supplementary_material",
+      "status": "browser verification; supplementary not inspected"
+    },
+    {
+      "url": "https://www.atailab.cn/seminar2024Fall/pdf/2024_MM_Multimodal%20Emotion%20Recognition%20Calibration%20in%20Conversations.pdf",
+      "status": "web open timeout; not downloaded; existing local final paper used"
+    }
+  ],
+  "local_final_paper": {
+    "path": "/LOCAL/lyx-msa/sources/CMERC_ACMMM2024.pdf",
+    "sha256": "8b4133721eb6020eadc470ad15b6337ee2c06772404dd34f29dc4364351905e0",
+    "bytes": 3917529,
+    "pages": 10,
+    "metadata": {
+      "/Keywords": "Multimodal Conversational Emotion Recognition, Confidence Calibration, Curriculum Learning, Contrastive Learning",
+      "/Creator": "LaTeX with acmart 2024/01/21 v2.02 Typesetting articles for the Association for Computing Machinery and hyperref 2024-01-20 v7.01h Hypertext links for LaTeX",
+      "/ModDate": "D:20241218033113-08'00'",
+      "/Trapped": "/False",
+      "/CreationDate": "D:20240827012039Z",
+      "/Producer": "pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) kpathsea version 6.4.0; modified using iText 4.2.0 by 1T3XT",
+      "/Subject": "-  Information systems  ->  Multimedia information systems.Sentiment analysis.Clustering and classification.-  Computing methodologies  ->  Discourse, dialogue and pragmatics.",
+      "/PDFVersion": "1.5",
+      "/PTEX.Fullbanner": "This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) kpathsea version 6.4.0",
+      "/Author": "Geng Tu",
+      "/Title": "Multimodal Emotion Recognition Calibration in Conversations"
+    },
+    "canonical_doi": "https://doi.org/10.1145/3664647.3681515",
+    "download_origin": "not recorded by this worker; existing archive reused",
+    "feature_representation": {
+      "pdf_page_1based": 3,
+      "pypdf_lines_1based": [
+        36,
+        41
+      ],
+      "paraphrase": "Section 3.2 attributes text extraction to Ghosal et al. [9] and describes normalization and averaging of the final four layers. It does not identify an encoder checkpoint or explicitly say that the released, untuned pretrained encoder was used.",
+      "quote": "we employ layer normalization and average operation on the last four hidden layers of the Roberta model [32] to obtain textual features.",
+      "quote_word_count": 22
+    },
+    "reference_9": {
+      "pdf_page_1based": 9,
+      "pypdf_lines_1based": [
+        39,
+        41
+      ],
+      "identity": "Ghosal et al. 2020 COSMIC, Findings of EMNLP pp2470-2481"
+    },
+    "fine_tun_substring_hits": 0,
+    "interpretation_limit": "Zero literal fine-tun substring hits alone is not proof of the absence of task adaptation. Positive evidence is the cited COSMIC procedure, not a claim of actual CMERC run identity."
+  },
+  "cosmic_paper": {
+    "url": "https://aclanthology.org/2020.findings-emnlp.224.pdf",
+    "section": "3.2 Context Independent Feature Extraction",
+    "pdf_page_1based": 3,
+    "printed_page": 2472,
+    "web_pdf_lines": [
+      173,
+      192
+    ],
+    "paraphrase": "The paper trains an emotion sentence classifier and, after fine-tuning, takes the first special-token activations from the last four layers and averages them into 1024 dimensions.",
+    "quote": "We first fine-tune the RoBERTa Large model for emotion label prediction from the transcript of the utterances.",
+    "quote_word_count": 17,
+    "local_verified_page": 3,
+    "pypdf_locations": [
+      {
+        "line_1based": 38,
+        "text": "3.2 Context Independent Feature Extraction"
+      },
+      {
+        "line_1based": 52,
+        "text": "tion task. A special token [CLS ] is appended at"
+      },
+      {
+        "line_1based": 54,
+        "text": "sequence for the model: [CLS ],x 1,x 2,...,x N."
+      },
+      {
+        "line_1based": 57,
+        "text": "[CLS ] token is then used in a small feedforward"
+      },
+      {
+        "line_1based": 60,
+        "text": "label classiﬁcation, we pass the [CLS ] appended"
+      },
+      {
+        "line_1based": 62,
+        "text": "vations from the ﬁnal four layers corresponding to"
+      },
+      {
+        "line_1based": 63,
+        "text": "the [CLS ] token. These four vectors are then av-"
+      }
+    ],
+    "pdf_sha256": "54298527d3d85183b8df2245c820989c2ecfb5c2fb6744c27935d5b3d71e19ab"
+  },
+  "download_classification": [
+    {
+      "source": "CMERC README",
+      "lines_1based": [
+        19,
+        20
+      ],
+      "url": "https://www.dropbox.com/scl/fo/veblbniqjrp3iv3fs3z6p/AEzkNgWqPHHzldBZ0zEzr2Y?rlkey=yhlr653c0vnvaf1krpdkla36u&e=1&dl=0",
+      "class": "precomputed multimodal feature files",
+      "not_demonstrated": "encoder checkpoint"
+    },
+    {
+      "source": "CMERC README",
+      "lines_1based": [
+        22,
+        23
+      ],
+      "url": "https://drive.google.com/drive/folders/1ty0XonRQG-DOyNLASHd9bkothMlBwjI8?usp=sharing",
+      "class": "downstream IEMOCAP_checkpoint.pkl and MELD_checkpoint.pkl; README evaluation targets CMERC/M3Net",
+      "not_demonstrated": "RoBERTa encoder task fine-tuning weights"
+    },
+    {
+      "source": "COSMIC feature-extraction README",
+      "lines_1based": [
+        9,
+        15
+      ],
+      "url": "https://dl.fbaipublicfiles.com/fairseq/models/roberta.large.tar.gz",
+      "class": "pretrained initializer before dataset fine-tuning",
+      "not_demonstrated": "dataset-fine-tuned encoder"
+    },
+    {
+      "source": "COSMIC feature-extraction README",
+      "lines_1based": [
+        20,
+        20
+      ],
+      "url": "https://drive.google.com/file/d/1TQYQYCoPtdXN2rQ1mR2jisjUztmOzfZr/view?usp=sharing",
+      "class": "features used in experiments, per README; archive interior not downloaded in this worker",
+      "not_demonstrated": "encoder weights"
+    },
+    {
+      "source": "COSMIC feature-extraction README",
+      "lines_1based": [
+        3,
+        3
+      ],
+      "url": "https://drive.google.com/file/d/1vNi4TViLKX_V_wGVXfhpvKimqMjhGBNX/view?usp=sharing",
+      "class": "COMET commonsense model and processed data, not RoBERTa"
+    }
+  ],
+  "decision": {
+    "paper_explicitly_authorizes_untuned_public_roberta_as_actual_extractor": false,
+    "dataset_finetuned_encoder_required_by_cosmic_reference": true,
+    "cosmic_equals_actual_cmerc_producer_proven": false,
+    "actual_cmerc_encoder_found_by_this_worker": false,
+    "allowed_next_action": "Do not run feature extraction using a substituted untuned encoder unless the task scope is changed; seek actual per-dataset encoder/checkpoint provenance."
+  },
+  "resource_metadata_checks": [
+    {
+      "url": "https://drive.google.com/file/d/1TQYQYCoPtdXN2rQ1mR2jisjUztmOzfZr/view?usp=sharing",
+      "method": "anonymous urllib HTML GET with Mozilla User-Agent",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "received_html_bytes": 87013,
+      "title": "erc-training.zip - Google Drive",
+      "archive_downloaded": false,
+      "archive_interior_listed": false,
+      "limit": "README calls this experimental features. Visible archive name alone cannot exclude additional weights inside. No claim of exhaustive encoder absence in this uninspected ZIP."
+    },
+    {
+      "url": "https://drive.google.com/drive/folders/1ty0XonRQG-DOyNLASHd9bkothMlBwjI8?usp=sharing",
+      "method": "anonymous urllib HTML GET",
+      "status": "ERROR",
+      "error": "URLError: SSL handshake timed out",
+      "contents_listed": false
+    },
+    {
+      "url": "https://www.dropbox.com/scl/fo/veblbniqjrp3iv3fs3z6p/AEzkNgWqPHHzldBZ0zEzr2Y?rlkey=yhlr653c0vnvaf1krpdkla36u&e=1&dl=0",
+      "method": "anonymous urllib HTML GET",
+      "status": "ERROR",
+      "error": "URLError: Tunnel connection failed 502 Bad Gateway",
+      "contents_listed": false
+    }
+  ],
+  "execution_failures": [
+    {
+      "operation": "pdftotext local final paper",
+      "error": "binary not installed",
+      "recovery": "existing installed pypdf used; no new dependency installed"
+    },
+    {
+      "operation": "GitHub recursive trees API urllib request",
+      "error": "BrokenPipeError from network",
+      "recovery": "specific pinned raw files and repository web listing used; not an exhaustive current tree audit in this worker"
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "comparisons": [
+    {
+      "dataset": "IEMOCAP",
+      "file": "iemocap_features_roberta.pkl",
+      "COSMIC_header": {
+        "bytes": 124438886,
+        "CRC32_hex": "c5e7cb82"
+      },
+      "CMERC_header": {
+        "bytes": 124438886,
+        "CRC32_hex": "c5e7cb82"
+      },
+      "header_size_and_CRC32_match": true,
+      "COSMIC_payload_SHA256_measured": false
+    },
+    {
+      "dataset": "MELD",
+      "file": "meld_features_roberta.pkl",
+      "COSMIC_header": {
+        "bytes": 229654413,
+        "CRC32_hex": "6e6c53de"
+      },
+      "CMERC_header": {
+        "bytes": 229654413,
+        "CRC32_hex": "6e6c53de"
+      },
+      "header_size_and_CRC32_match": true,
+      "COSMIC_payload_SHA256_measured": false
+    }
+  ],
+  "interpretation": "Matching size and CRC32 are strong package-metadata consistency evidence, not a SHA256 identity proof or encoder provenance. No feature payload was downloaded/decompressed or used."
+}

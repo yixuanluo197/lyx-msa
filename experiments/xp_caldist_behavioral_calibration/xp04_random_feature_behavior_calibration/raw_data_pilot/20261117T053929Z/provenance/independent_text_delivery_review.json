@@ -1,0 +1,1372 @@
+{
+  "status": "APPROVED",
+  "reviewed_at": "2026-11-17T06:11:38.029206+00:00",
+  "review_scope": "Independent report/status/source-metadata review. Original data pickle, weights, dataset text, feature arrays and ZIP payloads were not opened; no extraction, tokenization, training, mapping, inference, network access or Git operation. Historical source/report/JSON hashes were independently rechecked. Original binary-asset invariance relies on root byte-hash verification, not additional binary access by reviewer.",
+  "scientific_status": {
+    "IEMOCAP": "BLOCKED_SOURCE_RECOVERY / NOT_RUN",
+    "MELD": "BLOCKED_SOURCE_RECOVERY / NOT_RUN"
+  },
+  "check_count": 269,
+  "checks": [
+    {
+      "check": "report_present:ROBERTA_SOURCE_RECOVERY.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "report_present:IEMOCAP_TEXT_CLEAN_PARITY.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "report_present:MELD_TEXT_CLEAN_PARITY.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "report_present:XP04_TEXT_PROBABILITY_PARITY.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "report_present:FINAL_TEXT_RECOVERY_DECISION.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "report_present:README.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "eight_status_rows",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "IEMOCAP_blocked_not_numeric_failure",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "IEMOCAP_no_Val_values_or_encoder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "IEMOCAP_fixed_effective_split",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "IEMOCAP_no_original_text_or_values",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "IEMOCAP_probability_notrun_null",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "IEMOCAP_layer1_order",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "IEMOCAP_layer1_shape_expected_only",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "IEMOCAP_layer1_numeric_absent",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "IEMOCAP_layer2_order",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "IEMOCAP_layer2_shape_expected_only",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "IEMOCAP_layer2_numeric_absent",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "IEMOCAP_layer3_order",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "IEMOCAP_layer3_shape_expected_only",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "IEMOCAP_layer3_numeric_absent",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "IEMOCAP_layer4_order",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "IEMOCAP_layer4_shape_expected_only",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "IEMOCAP_layer4_numeric_absent",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "MELD_blocked_not_numeric_failure",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "MELD_no_Val_values_or_encoder",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "MELD_fixed_effective_split",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "MELD_no_original_text_or_values",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "MELD_probability_notrun_null",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "MELD_layer1_order",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "MELD_layer1_shape_expected_only",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "MELD_layer1_numeric_absent",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "MELD_layer2_order",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "MELD_layer2_shape_expected_only",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "MELD_layer2_numeric_absent",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "MELD_layer3_order",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "MELD_layer3_shape_expected_only",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "MELD_layer3_numeric_absent",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "MELD_layer4_order",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "MELD_layer4_shape_expected_only",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "MELD_layer4_numeric_absent",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "delivery_pass_distinguished",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "root_checks_all_pass",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "all_forbidden_execution_zero",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "CMERC_not_explicitly_untuned",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "COSMIC_finetuning_not_actual_identity",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "COSMIC_tail_only_128KiB",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "COSMIC_all_36_directory_entries",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "COSMIC_no_payload_or_models",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "IEMOCAP_CRC_not_SHA_identity",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "MELD_CRC_not_SHA_identity",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "BN_not_pickle_normalization",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "markdown_link:ROBERTA_SOURCE_RECOVERY.md:provenance/paper_source_evidence.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "markdown_link:ROBERTA_SOURCE_RECOVERY.md:provenance/local_weight_asset_audit.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "markdown_link:ROBERTA_SOURCE_RECOVERY.md:provenance/cosmic_archive_directory.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "markdown_link:ROBERTA_SOURCE_RECOVERY.md:provenance/cosmic_cmerc_zip_metadata_comparison.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "markdown_link:ROBERTA_SOURCE_RECOVERY.md:provenance/public_resource_probe.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "markdown_link:IEMOCAP_TEXT_CLEAN_PARITY.md:configs/TEXT_RECOVERY_PROTOCOL.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "markdown_link:IEMOCAP_TEXT_CLEAN_PARITY.md:layer_comparison.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "markdown_link:IEMOCAP_TEXT_CLEAN_PARITY.md:provenance/text_parity_status.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "markdown_link:IEMOCAP_TEXT_CLEAN_PARITY.md:ROBERTA_SOURCE_RECOVERY.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "markdown_link:MELD_TEXT_CLEAN_PARITY.md:configs/TEXT_RECOVERY_PROTOCOL.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "markdown_link:MELD_TEXT_CLEAN_PARITY.md:layer_comparison.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "markdown_link:MELD_TEXT_CLEAN_PARITY.md:provenance/text_parity_status.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "markdown_link:MELD_TEXT_CLEAN_PARITY.md:ROBERTA_SOURCE_RECOVERY.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "markdown_link:XP04_TEXT_PROBABILITY_PARITY.md:ROBERTA_SOURCE_RECOVERY.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "markdown_link:XP04_TEXT_PROBABILITY_PARITY.md:provenance/text_parity_status.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "markdown_link:FINAL_TEXT_RECOVERY_DECISION.md:ROBERTA_SOURCE_RECOVERY.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "markdown_link:FINAL_TEXT_RECOVERY_DECISION.md:IEMOCAP_TEXT_CLEAN_PARITY.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "markdown_link:FINAL_TEXT_RECOVERY_DECISION.md:MELD_TEXT_CLEAN_PARITY.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "markdown_link:FINAL_TEXT_RECOVERY_DECISION.md:XP04_TEXT_PROBABILITY_PARITY.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "markdown_link:FINAL_TEXT_RECOVERY_DECISION.md:verification.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "markdown_link:README.md:FINAL_TEXT_RECOVERY_DECISION.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "markdown_link:README.md:layer_comparison.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261116T174410Z/verification.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261116T174410Z/MMD_FN_FEATURE_RELATIONSHIP.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261116T174410Z/CLEAN_FEATURE_PARITY_REPORT.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261116T174410Z/UPSTREAM_FEATURE_PROVENANCE.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261116T174410Z/OPENSMILE_PIPELINE_AUDIT.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261116T174410Z/ROBERTA_PIPELINE_AUDIT.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261116T174410Z/FINAL_UPSTREAM_AUDIT_DECISION.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261116T174410Z/README.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261116T174410Z/scripts/compare_official_features.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261116T174410Z/scripts/verify_upstream_audit.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261116T174410Z/provenance/xp04_anchor_hashes_before.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261116T174410Z/provenance/mmdfn_source_export.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261116T174410Z/provenance/cmerc_m3net_sources.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261116T174410Z/provenance/roberta_sources.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261116T174410Z/provenance/cmerc_download.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261116T174410Z/provenance/audio_sources.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261116T174410Z/provenance/m3net_download.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261116T174410Z/provenance/validation_audio_value_summary.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261116T174410Z/provenance/xp04_anchor_hashes_after.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261116T174410Z/provenance/dropbox_probe.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261116T174410Z/provenance/artifact_hashes.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261116T174410Z/provenance/official_feature_comparison.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261116T174410Z/provenance/clean_parity_metrics.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261116T174410Z/provenance/mmdfn_audit.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261116T174410Z/sources/roberta/issues_page1.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261116T174410Z/sources/roberta/roberta_issue_search.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261116T174410Z/sources/roberta/full_tree.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261116T174410Z/sources/roberta/ROOT_README.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261116T174410Z/sources/roberta/additional_sources.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261116T174410Z/sources/roberta/download_probe.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261116T174410Z/sources/roberta/commit.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261116T174410Z/sources/roberta/roberta_feature_extract_iemocap.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261116T174410Z/sources/roberta/releases.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261116T174410Z/sources/roberta/fbaipublic_encoder.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261116T174410Z/sources/roberta/tree.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261116T174410Z/sources/roberta/encoder.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261116T174410Z/sources/roberta/multiprocessing_bpe_encoder.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261116T174410Z/sources/roberta/roberta_init_meld.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261116T174410Z/sources/roberta/README.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261116T174410Z/sources/roberta/roberta_feature_extract_meld.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261116T174410Z/sources/roberta/train.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261116T174410Z/sources/roberta/roberta_init_iemocap.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261116T174410Z/sources/roberta/repo_metadata.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261116T174410Z/sources/audio/meld_audio_baseline_history.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261116T174410Z/sources/audio/HITSZ-HLT__CMERC__README.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261116T174410Z/sources/audio/declare-lab__MELD__README.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261116T174410Z/sources/audio/feiyuchen7__M3NET__train.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261116T174410Z/sources/audio/MELD_baseline_historical_5401f54cef64508e648abfa5cc3f615b7f56ec48.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261116T174410Z/sources/audio/declare-lab__MELD__baseline__baseline.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261116T174410Z/sources/audio/source_download_manifest.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261116T174410Z/sources/audio/HITSZ-HLT__CMERC__train.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261116T174410Z/sources/audio/HITSZ-HLT__CMERC__dataloader.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261116T174410Z/sources/audio/declare-lab__MELD__baseline__data_helpers.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261116T174410Z/sources/audio/feiyuchen7__M3NET__dataloader.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261116T174410Z/sources/audio/feiyuchen7__M3NET__README.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261116T174410Z/sources/mmdfn/README.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261116T174410Z/sources/mmdfn/code/run_train_erc.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261116T174410Z/sources/mmdfn/code/dataloader.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261116T174410Z/sources/mmdfn/code/model_GCN.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261116T174410Z/sources/mmdfn/code/model_mm.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261116T174410Z/sources/mmdfn/code/model.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261116T174410Z/sources/mmdfn/code/model_fusion.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261116T174410Z/sources/mmdfn/code/loss.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261116T174410Z/sources/audio/m3net_supp_mineru/m3net_supp.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261116T174410Z/sources/cmerc_m3net/M3NET/dataloader.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261116T174410Z/sources/cmerc_m3net/M3NET/tree.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261116T174410Z/sources/cmerc_m3net/M3NET/README.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261116T174410Z/sources/cmerc_m3net/M3NET/train.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261116T174410Z/sources/cmerc_m3net/CMERC/dataloader.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261116T174410Z/sources/cmerc_m3net/CMERC/tree.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261116T174410Z/sources/cmerc_m3net/CMERC/train_cm.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261116T174410Z/sources/cmerc_m3net/CMERC/README.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261116T174410Z/sources/cmerc_m3net/CMERC/model_cm.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261116T174410Z/sources/cmerc_m3net/CMERC/train.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261117T024213Z/verification.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261117T024213Z/IEMOCAP_FEATURE_RECONSTRUCTION.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261117T024213Z/EXPERIMENT_PROTOCOL.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261117T024213Z/CONVERTER_METHOD_COMPARISON.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261117T024213Z/XP04_PROBABILITY_PARITY_REPORT.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261117T024213Z/MELD_CLEAN_PARITY_REPORT.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261117T024213Z/IEMOCAP_CLEAN_PARITY_REPORT.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261117T024213Z/FINAL_RECONSTRUCTION_DECISION.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261117T024213Z/README.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261117T024213Z/MELD_FEATURE_RECONSTRUCTION.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261117T024213Z/scripts/evaluate_clean_reconstruction.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261117T024213Z/scripts/extract_iemocap_candidates.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261117T024213Z/scripts/run_xp04_probability_parity.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261117T024213Z/scripts/extract_meld_candidates.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261117T024213Z/scripts/verify_delivery.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261117T024213Z/scripts/converter_core.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261117T024213Z/scripts/run_converter_cv.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261117T024213Z/scripts/recheck_meld_probe.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261117T024213Z/scripts/test_converter_core.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261117T024213Z/scripts/test_evaluate_clean_reconstruction.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261117T024213Z/scripts/write_global_delivery.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261117T024213Z/scripts/run_meld_validation_once.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261117T024213Z/scripts/run_full_ridge_extension.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261117T024213Z/scripts/build_pair_manifests.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261117T024213Z/configs/reconstruction_protocol_v1.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261117T024213Z/configs/reconstruction_protocol.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261117T024213Z/provenance/iemocap_extraction_validation_guard_tests.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261117T024213Z/provenance/meld_extraction_validation_process.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261117T024213Z/provenance/MELD_feature_gate.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261117T024213Z/provenance/IEMOCAP_validation_evaluation_marker.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261117T024213Z/provenance/MELD_frontend_shutdown_failure.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261117T024213Z/provenance/iemocap_extraction_execution_environment.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261117T024213Z/provenance/MELD_frontend_cv.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261117T024213Z/provenance/meld_extraction_probe_verification.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261117T024213Z/provenance/MELD_model_selection.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261117T024213Z/provenance/iemocap_extraction_train_smoke_3_run.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261117T024213Z/provenance/train_missing_media_recovery.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261117T024213Z/provenance/independent_final_report_review.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261117T024213Z/provenance/local_original_converter_asset_search.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261117T024213Z/provenance/meld_extraction_validation_launch.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261117T024213Z/provenance/iemocap_extraction_validation_run.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261117T024213Z/provenance/missing_media_candidate_qc.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261117T024213Z/provenance/MELD_model_lock.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261117T024213Z/provenance/iemocap_extraction_configs_initial_wrapper_debug.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261117T024213Z/provenance/protocol_frozen.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261117T024213Z/provenance/IEMOCAP_model_selection_final.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261117T024213Z/provenance/input_hashes_before.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261117T024213Z/provenance/media_missing_initial.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261117T024213Z/provenance/meld_extraction_train_launch.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261117T024213Z/provenance/meld_extraction_validation.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261117T024213Z/provenance/IEMOCAP_frontend_cv_progress.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261117T024213Z/provenance/meld_extraction_validation_verification.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261117T024213Z/provenance/IEMOCAP_model_lock.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261117T024213Z/provenance/IEMOCAP_feature_gate.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261117T024213Z/provenance/converter_code_versions.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261117T024213Z/provenance/iemocap_extraction_validation_verification.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261117T024213Z/provenance/MELD_models_synthetic_tests.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261117T024213Z/provenance/iemocap_extraction_configs.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261117T024213Z/provenance/meld_extraction_smoke.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261117T024213Z/provenance/IEMOCAP_full_ridge_synthetic_tests.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261117T024213Z/provenance/meld_extraction_float_amplitude_control.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261117T024213Z/provenance/xp04_probability_adapter_audit.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261117T024213Z/provenance/run_converter_cv_v1_shutdown_failure.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261117T024213Z/provenance/MELD_frontend_synthetic_tests.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261117T024213Z/provenance/iemocap_extraction_code_versions.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261117T024213Z/provenance/data_manifest_audit.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261117T024213Z/provenance/IEMOCAP_full_ridge_progress.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261117T024213Z/provenance/IEMOCAP_frontend_synthetic_tests.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261117T024213Z/provenance/protocol_revisions.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261117T024213Z/provenance/MELD_validation_evaluation_marker.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261117T024213Z/provenance/media_missing_archive_search.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261117T024213Z/provenance/meld_train_scale300.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261117T024213Z/provenance/IEMOCAP_model_selection.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261117T024213Z/provenance/asset_reuse_and_scope.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261117T024213Z/provenance/IEMOCAP_frontend_cv.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261117T024213Z/provenance/artifact_hashes_final.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261117T024213Z/provenance/cv_runner_versions.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261117T024213Z/provenance/protocol_frozen_v1.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261117T024213Z/provenance/meld_extraction_initial_failed_preflight.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261117T024213Z/provenance/iemocap_extraction_train_verification.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261117T024213Z/provenance/MELD_clean_feature_metrics.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261117T024213Z/provenance/iemocap_extraction_train_run.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261117T024213Z/provenance/history_hashes_before.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261117T024213Z/provenance/MELD_frontend_cv_progress.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261117T024213Z/provenance/meld_extraction_probe_recheck.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261117T024213Z/provenance/data_manifest_verification.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261117T024213Z/provenance/independent_train_boundary_review.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261117T024213Z/provenance/IEMOCAP_models_synthetic_tests.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261117T024213Z/provenance/MELD_model_selection_final.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261117T024213Z/provenance/meld_extraction_float_interface.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261117T024213Z/provenance/MELD_full_ridge_synthetic_tests.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261117T024213Z/provenance/IEMOCAP_clean_feature_metrics.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261117T024213Z/provenance/meld_extraction_probe.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261117T024213Z/provenance/meld_extraction_train.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261117T024213Z/provenance/raw_train_validation_archive_hashes.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261117T024213Z/provenance/MELD_full_ridge_progress.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261117T024213Z/provenance/final_probability_gate_verification.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261117T024213Z/provenance/meld_extraction_train_verification.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261117T024213Z/provenance/codeversions/correlation_guard_prechange_snapshot.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261117T024213Z/provenance/codeversions/evaluate_clean_reconstruction.before_corr_guard.a62fa3b1d98af5e1d2311eaf9795b71ddcf7e6c5e361a3502c42aa8b0090c313.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261117T024213Z/configs/meld/feature_fields.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261117T024213Z/configs/meld/manifest.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261117T024213Z/configs/code_versions/run_converter_cv_v1.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261117T024213Z/configs/code_versions/run_converter_cv_v2.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261117T024213Z/configs/code_versions/converter_core_pre_fullridge.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261117T024213Z/configs/code_versions/test_converter_core_pre_fullridge.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261117T024213Z/configs/iemocap/README.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "history_source_unchanged:20261117T024213Z/configs/iemocap/code_versions/extract_iemocap_candidates.train_v1.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "pinned_reference_hash:roberta_init_iemocap.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "pinned_reference_hash:roberta_init_meld.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "pinned_reference_hash:roberta_train_iemocap.sh",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "pinned_reference_hash:roberta_train_meld.sh",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "pinned_reference_hash:roberta_feature_extract_iemocap.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "pinned_reference_hash:roberta_feature_extract_meld.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "pinned_reference_hash:README.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "pinned_reference_hash:ROOT_README.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "pinned_reference_hash:roberta_preprocess_iemocap.sh",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "pinned_reference_hash:roberta_preprocess_meld.sh",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "pinned_reference_hash:multiprocessing_bpe_encoder.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "pinned_reference_hash:train.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "reference_not_executed",
+      "passed": true,
+      "detail": null
+    }
+  ],
+  "failed_checks": [],
+  "issues": [],
+  "historical_source_report_files_rehashed": 182,
+  "report_sha256": {
+    "ROBERTA_SOURCE_RECOVERY.md": "0b03a7638cd722ad9962f8c7659b1ddcf6da220208bdec310909f550316b9e8b",
+    "IEMOCAP_TEXT_CLEAN_PARITY.md": "c333ea99e2fb94a6e428924f99813384fba7390bcf1dd854b64000aded3366a7",
+    "MELD_TEXT_CLEAN_PARITY.md": "817d6dc549f6ab16631176016e5db33e42d265a9d76406fecdc0c26c918298f4",
+    "XP04_TEXT_PROBABILITY_PARITY.md": "783e29dc37e812ba8ff9f40200943a20f323e8ffc3932962e36ba5cd23eee7d4",
+    "FINAL_TEXT_RECOVERY_DECISION.md": "82bfe4c3d9e58769c3ad1a62112d91ea683f41db7843d8570d40c3f00e645bdd",
+    "README.md": "1d2d0b4d02b1cd8cfd00970a7e2867dc2d02ae2bed8d7f9159d55711d9b59931"
+  },
+  "status_sha256": "69428b4b79901adb4f58a3db620cb7f74020b77725f51d59e56093d5199ffbc3",
+  "layer_comparison_sha256": "df6629e4b101ea0dc3fec75d5d865a6d288854513a336fafbd459e26a8eda74f",
+  "root_verification_sha256_at_review": "caeb88cd75595b774808fbd7e111411322ac57906483afa3e88f5829fd7bd699",
+  "artifact_manifest_refresh_required_after_adding_review": true
+}

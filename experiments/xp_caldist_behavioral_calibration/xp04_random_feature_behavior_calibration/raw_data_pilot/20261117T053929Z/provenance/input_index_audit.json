@@ -1,0 +1,112 @@
+{
+  "status": "PASS_IDENTITY_AND_INDEX_AUDIT_ONLY",
+  "checked_at": "2026-11-17T05:48:35.919847+00:00",
+  "datasets": {
+    "IEMOCAP": {
+      "seed": 1475,
+      "validation_rows": 527,
+      "validation_dialogues": 12,
+      "effective_config": "/LOCAL/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/configs/effective/IEMOCAP_cmerc_validation_seed1475.json",
+      "config_sha256": "59e40ae7b7d63bb5f56806eedefb2f70c6797095455f63c083917b1141275369",
+      "checkpoint": "/LOCAL/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/cmerc/IEMOCAP_validation_seed1475/best.pt",
+      "checkpoint_sha256": "2c0d1a7a39627e12d1244d23a225ad3da03bbce071a118909921a547a2bfd106",
+      "reference_features": "/LOCAL/PROJECTS/05_reproduction/external_repos/CMERC/data/iemocap_features_roberta.pkl",
+      "reference_sha256": "4bd60c581a5b7c70e217e18439f741b191605fbd6f2cf4dc1a6dcb7fcaa18f06",
+      "matches_previously_verified_official_file": true,
+      "reference_shape_from_anchored_prior_audit": [
+        [
+          527,
+          1024
+        ],
+        [
+          527,
+          1024
+        ],
+        [
+          527,
+          1024
+        ],
+        [
+          527,
+          1024
+        ]
+      ],
+      "target_values_opened_this_round": false,
+      "original_text_opened_this_round": false,
+      "validation_ids_source": "/LOCAL/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261117T024213Z/local_only/IEMOCAP/manifest_validation.csv",
+      "validation_ids_source_sha256": "9f87f720d66ba916d4e5ee105bb326aa2867181b198ca2ebb4a7b4d4624c0080",
+      "private_manifest_sha256": "cf6867970d70aad3a681450978c0f68e0225378638e29b260632cdc5414fb706",
+      "new_reference_shape_measurement": false
+    },
+    "MELD": {
+      "seed": 67137,
+      "validation_rows": 1109,
+      "validation_dialogues": 114,
+      "effective_config": "/LOCAL/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/configs/effective/MELD_cmerc_validation_seed67137.json",
+      "config_sha256": "5d6271460c882dc34bf55bbcdec96afd09bb6b963c238745e04a54fb20515f68",
+      "checkpoint": "/LOCAL/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/cmerc/MELD_validation_seed67137/best.pt",
+      "checkpoint_sha256": "3f79f9eb3547e35ac15ad7ff4345d9b873d0c884a6f3a1ce60a7a7e47077e701",
+      "reference_features": "/LOCAL/PROJECTS/05_reproduction/external_repos/CMERC/data/meld_features_roberta.pkl",
+      "reference_sha256": "58b2bdadc2eaec6abb40ac0cb3ffa3f31e929d636ece8197aecf1ca373a92951",
+      "matches_previously_verified_official_file": true,
+      "reference_shape_from_anchored_prior_audit": [
+        [
+          1109,
+          1024
+        ],
+        [
+          1109,
+          1024
+        ],
+        [
+          1109,
+          1024
+        ],
+        [
+          1109,
+          1024
+        ]
+      ],
+      "target_values_opened_this_round": false,
+      "original_text_opened_this_round": false,
+      "validation_ids_source": "/LOCAL/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261117T024213Z/local_only/MELD/manifest_validation.csv",
+      "validation_ids_source_sha256": "61f666f7969665e20cae51f4886349d8ee0d9c1053e7bad3ffb2bbf84f0e610b",
+      "private_manifest_sha256": "8f56f0075e22e941885140ab5eb28edff1b33de832347f7095ab0994ae0beb0f",
+      "new_reference_shape_measurement": false
+    }
+  },
+  "official_archive_members": [
+    {
+      "name": "/",
+      "bytes": 0,
+      "is_directory": true
+    },
+    {
+      "name": "IEMOCAP_features.pkl",
+      "bytes": 72216498,
+      "is_directory": false
+    },
+    {
+      "name": "MELD_features_raw1.pkl",
+      "bytes": 88193675,
+      "is_directory": false
+    },
+    {
+      "name": "meld_features_roberta.pkl",
+      "bytes": 229654413,
+      "is_directory": false
+    },
+    {
+      "name": "iemocap_features_roberta.pkl",
+      "bytes": 124438886,
+      "is_directory": false
+    }
+  ],
+  "official_archive_contains_encoder_weights": false,
+  "reference_value_arrays_loaded": false,
+  "text_or_feature_extraction_runs": 0,
+  "checkpoint_deserialized": false,
+  "test_slots_or_labels_indexed": false,
+  "historical_artifacts_anchored": 182,
+  "git_head": "d7f3ca2d3c8989e472afc8bf616fcbf06d0375f8"
+}

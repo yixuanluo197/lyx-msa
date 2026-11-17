@@ -1,0 +1,269 @@
+{
+  "audit_type": "read_only_local_weight_asset_inventory",
+  "recorded_at_utc": "2026-11-17T05:52:25.953486+00:00",
+  "conclusion": "No encoder checkpoint proven to have produced CMERC/XP04 IEMOCAP or MELD four-layer RoBERTa features was found in the inspected scope.",
+  "scan_method": "rg --files -uuu filename inventory, then bounded known configuration/source inspection and SHA-256 byte hashing; no model parameter loading",
+  "scan_scopes": [
+    {
+      "roots": [
+        "/LOCAL/PROJECTS",
+        "/LOCAL/USER/.cache",
+        "/LOCAL/MELD_ASSETS"
+      ],
+      "combined_enumerated_file_paths": 803480,
+      "note": "Combined count from initial inventory; overlaps with later explicit roots are not deduplicated globally."
+    },
+    {
+      "root": "/LOCAL/DATA/OpenDataLab___IEMOCAP",
+      "exists": false,
+      "enumerated_file_paths": 0
+    },
+    {
+      "root": "/LOCAL/DATA/multimodalERC",
+      "enumerated_file_paths": 51309,
+      "reason": "Explicit asset paths cited by already inspected paper-workspace experiment records."
+    },
+    {
+      "root": "/LOCAL/DATA/models",
+      "enumerated_file_paths": 17,
+      "top_level_assets": [
+        "Qwen-1_8B"
+      ]
+    },
+    {
+      "root": "/LOCAL/PROJECTS_runtime_models",
+      "enumerated_file_paths": 1397,
+      "top_level_assets": [
+        "osram_mosei_node_root_ab_local_20261105",
+        "osram_mosi_local_cmerc_20261105",
+        "osram_mosi_topblocks_stage2_20261105",
+        "whisper"
+      ]
+    },
+    {
+      "root": "/LOCAL/DATA/msa_strict_meld",
+      "enumerated_file_paths": 139684,
+      "relevant_hit": "model_cache/roberta-base; configuration is 768-dimensional 12-layer RobertaForMaskedLM, not target RoBERTa-large"
+    }
+  ],
+  "filename_search_results": {
+    "checkpoint_best_pt_hits": 0,
+    "roberta_large_tar_gz_hits": 0,
+    "paper_roberta_cosmic_conv_emotion_named_weight_paths": 30,
+    "paper_roberta_cosmic_conv_emotion_weight_groups": {
+      "frozen_roberta_mlp_jepa_20260812_downstream_heads": 22,
+      "roberta_large_utterance_causal_20260805_self_trained_checkpoints": 8
+    },
+    "paper_all_pt_bin_safetensors_ckpt_pth_filename_count": 4291,
+    "multimodalerc_all_pt_bin_safetensors_ckpt_pth_filename_count": 2940,
+    "scope_note": "Broad-name counts include unrelated models and historical test-associated checkpoint filenames; no Test data or model parameters were inspected."
+  },
+  "major_weight_files": [
+    {
+      "path": "/LOCAL/USER/.cache/huggingface/hub/models--roberta-large/snapshots/722cf37b1afa9454edce342e7895e588b6ff1d59/model.safetensors",
+      "bytes": 1421700479,
+      "sha256": "047c85f0b96269cd62e6f732644f067004eebd95af5b5d35965ae2528f13bf38",
+      "identity": "Public Hugging Face roberta-large pretrained masked-language-model cache",
+      "cm_erc_production_encoder_proven": false
+    },
+    {
+      "path": "/LOCAL/DATA/multimodalERC/IEMOCAP/Dataset/Data/fine_tuned_roberta_iemo/iemocap_text_encoder.pth",
+      "bytes": 1428070687,
+      "sha256": "874ee62a61f6d4cb284957e4abfcd502a8eda26177332d4f8734a5a64655cf99",
+      "identity": "Locally trained Hugging Face TextClassifier; local generation code adds nine speaker special tokens and resizes embeddings",
+      "cm_erc_production_encoder_proven": false
+    },
+    {
+      "path": "/LOCAL/DATA/multimodalERC/IEMOCAP/Text_only_officialsplit/reproductions/exact_legacy_6836_20260722/run_01_seed2025_gpu1/best_iemocap_text_only.pt",
+      "bytes": 1427957245,
+      "sha256": "6e50cf9565e855b9ea533faee4c75afaba513a3103436c327ab33044c28ba50a",
+      "identity": "Local 2026-07 Hugging Face IEMOCAP fine-tuning experiment, seed 2025, max_length 511",
+      "cm_erc_production_encoder_proven": false
+    },
+    {
+      "path": "/LOCAL/DATA/multimodalERC/MELD/Model/runs/roberta_large_ft_current_fair_s42/best_roberta_text_only.pt",
+      "bytes": 1425873149,
+      "sha256": "a12a4505d09e75db1abe0e0e0def5e85fdf711f016b5956f62eee0ed6d480285",
+      "identity": "Local 2026-07 Hugging Face MELD experiment; seed 42, mask pooling, current-utterance context",
+      "cm_erc_production_encoder_proven": false
+    }
+  ],
+  "huggingface_pretrained_cache": {
+    "snapshot": "/LOCAL/USER/.cache/huggingface/hub/models--roberta-large/snapshots/722cf37b1afa9454edce342e7895e588b6ff1d59",
+    "refs_main": "722cf37b1afa9454edce342e7895e588b6ff1d59",
+    "config": {
+      "architectures": [
+        "RobertaForMaskedLM"
+      ],
+      "hidden_size": 1024,
+      "num_hidden_layers": 24,
+      "num_attention_heads": 16,
+      "vocab_size": 50265,
+      "max_position_embeddings": 514,
+      "bos_token_id": 0,
+      "pad_token_id": 1,
+      "eos_token_id": 2
+    },
+    "files": [
+      {
+        "name": "config.json",
+        "bytes": 482,
+        "sha256": "82ba49810e6441735e696033ac2512ee09da555507b2917ac3865b202d592cc3"
+      },
+      {
+        "name": "merges.txt",
+        "bytes": 456318,
+        "sha256": "1ce1664773c50f3e0cc8842619a93edc4624525b728b188a9e0be33b7726adc5"
+      },
+      {
+        "name": "vocab.json",
+        "bytes": 898823,
+        "sha256": "9e7f63c2d15d666b52e21d250d2e513b87c9b713cfa6987a82ed89e5e6e50655"
+      },
+      {
+        "name": "tokenizer.json",
+        "bytes": 1355863,
+        "sha256": "847bbeab6174d66a88898f729d52fa8d355fafe1bea101cf960dd404581df70e"
+      },
+      {
+        "name": "tokenizer_config.json",
+        "bytes": 25,
+        "sha256": "994f46754c5bf4014f1aa92d34b1374319c3a6b3f702105cd5b742beaecd18ce"
+      }
+    ],
+    "interpretation": "Merges file hash equals COSMIC vocab.bpe; tokenizer-component equality does not establish encoder-weight equality or CMERC feature provenance."
+  },
+  "cosmic_reference_assets": {
+    "root": "/LOCAL/PROJECTS/05_reproduction/external_repos/code_references/erc_task_modules/conv-emotion/COSMIC/feature-extraction",
+    "missing_relative_paths": [
+      "checkpoints/iemocap/checkpoint_best.pt",
+      "checkpoints/meld/checkpoint_best.pt",
+      "roberta.large/model.pt",
+      "iemocap-bin",
+      "meld-bin"
+    ],
+    "present_assets": [
+      {
+        "name": "encoder.json",
+        "sha256": "196139668be63f3b5d6574427317ae82f612a97c5d1cdaf36ed2256dbf636783"
+      },
+      {
+        "name": "vocab.bpe",
+        "sha256": "1ce1664773c50f3e0cc8842619a93edc4624525b728b188a9e0be33b7726adc5"
+      },
+      {
+        "name": "dict.txt",
+        "sha256": "2c31c5b236661067fe8626775eb995ef5fe808ac87d2ad4a6ddbef68550f5cc6"
+      }
+    ]
+  },
+  "fairseq_environment_inventory": {
+    "env_root": "/LOCAL/USER/miniconda3/envs",
+    "environments": [
+      "TEXT_repro",
+      "adodas",
+      "comp-repro",
+      "icerberg",
+      "msa_extract",
+      "msa_vision",
+      "mse_adapter",
+      "multimodalerc310",
+      "sdt-repro"
+    ],
+    "method": "Glob lib/python*/site-packages/fairseq* and fairseq*.dist-info/METADATA; no imports",
+    "fairseq_path_matches": [],
+    "fairseq_cache_path": "/LOCAL/USER/.cache/fairseq",
+    "fairseq_cache_exists": false,
+    "torch_checkpoint_cache_names": [
+      "20180402-114759-vggface2.pt"
+    ],
+    "limitation": "Current package-path absence does not determine historical Fairseq version, cover editable installations outside checked paths, or establish absence on another server."
+  },
+  "self_trained_weight_exclusion_evidence": [
+    {
+      "path": "/LOCAL/DATA/multimodalERC/IEMOCAP/Dataset/extract_all_features.py",
+      "line_anchors": [
+        197,
+        199,
+        200,
+        206,
+        207,
+        293,
+        298,
+        305,
+        310
+      ],
+      "finding": "HF tokenizer, nine speaker tokens, resized embeddings, locally generated TextClassifier checkpoint; no CMERC/COSMIC release provenance."
+    },
+    {
+      "path": "/LOCAL/DATA/multimodalERC/IEMOCAP/Text_only_officialsplit/reproductions/exact_legacy_6836_20260722/run_01_seed2025_gpu1/metrics.json",
+      "field": "args",
+      "finding": {
+        "model_name": "/LOCAL/USER/.cache/huggingface/hub/models--roberta-large/snapshots/722cf37b1afa9454edce342e7895e588b6ff1d59",
+        "seed": 2025,
+        "max_length": 511,
+        "batch_size": 8,
+        "grad_accum_steps": 2,
+        "lr": 1e-05
+      }
+    },
+    {
+      "path": "/LOCAL/DATA/multimodalERC/MELD/Model/runs/roberta_large_ft_current_fair_s42/metrics.json",
+      "field": "args",
+      "finding": {
+        "model_name": "/LOCAL/USER/.cache/huggingface/hub/models--roberta-large/snapshots/722cf37b1afa9454edce342e7895e588b6ff1d59",
+        "seed": 42,
+        "max_length": 511,
+        "pooling": "mask",
+        "context_mode": "current",
+        "lr": 1e-06,
+        "head_lr": 5e-05,
+        "init_text_encoder_checkpoint": null
+      }
+    },
+    {
+      "path": "/LOCAL/PROJECTS/experiments/frozen_roberta_mlp_jepa_20260812/experiment.md",
+      "line_anchors": [
+        17,
+        18,
+        20,
+        22
+      ],
+      "finding": "Explicitly cites local exact_legacy IEMOCAP encoder; its saved adapter checkpoints are downstream heads, not the original encoder."
+    },
+    {
+      "path": "/LOCAL/PROJECTS/experiments/roberta_large_utterance_causal/train_utterance_roberta.py",
+      "line_anchors": [
+        76,
+        154,
+        156,
+        162,
+        247,
+        278,
+        296
+      ],
+      "finding": "Initializes HF backbone, locally trains classifier and saves its own state_dict with first-token pooling."
+    }
+  ],
+  "known_missing_required_objects": [
+    "IEMOCAP encoder checkpoint with verifiable provenance linking it to CMERC released four-layer features",
+    "MELD encoder checkpoint with equivalent provenance",
+    "Historical Fairseq version and production-run evidence binding encoder, dictionary, tokenizer, preprocessing and feature release"
+  ],
+  "limits": [
+    "Filename inventory is not forensic identification of every unnamed binary.",
+    "No private author storage or remote server was scanned.",
+    "No unknown pickle/checkpoint was deserialized and no parameter tensors were inspected.",
+    "Historical aggregate metadata files were opened only for configuration/args; no per-sample Test content or labels were accessed.",
+    "Weights with matching dimensions, similar names, or a task-specific local training history are not accepted as production-equivalent."
+  ],
+  "boundaries": {
+    "model_parameters_loaded": false,
+    "test_samples_or_labels_accessed": false,
+    "features_extracted": false,
+    "downloads": false,
+    "git_operations": false,
+    "project_files_written_during_original_inventory": false,
+    "this_archive_is_only_followup_write": true
+  }
+}
