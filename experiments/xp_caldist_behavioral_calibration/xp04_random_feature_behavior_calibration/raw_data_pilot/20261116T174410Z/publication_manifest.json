@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "report_version": "public_redacted_copy",
+  "audit_run": "20261116T174410Z",
+  "repository": "yixuanluo197/lyx-msa",
+  "prepared_at_utc": "2026-11-17T00:41:36.362229+00:00",
+  "status": "UPSTREAM_AUDIT_COMPLETE_WITH_BLOCKERS",
+  "clean_feature_parity": "NOT_RUN",
+  "local_original_report_and_evidence_sha256": {
+    "CLEAN_FEATURE_PARITY_REPORT.md": "ee26b5c3cf7a9d1b8b5718786cfb590fc2f493993c76be99c9d49b192336b801",
+    "FINAL_UPSTREAM_AUDIT_DECISION.md": "2af26da77f64977261cd3aabe2ca389ecf675ec2152bd6ab3f90eb81933c8521",
+    "MMD_FN_FEATURE_RELATIONSHIP.md": "b5109bda588a0c6d404a67a1e10f0021f9ad1f6a4d126ff68d7fa4640ab0b748",
+    "OPENSMILE_PIPELINE_AUDIT.md": "92195862af50852d09df6dbcaf6a0cabb00ec22dfe337151679fe6c0e1fd8dc8",
+    "README.md": "b488f29f5e8b854e54417ba3cfd8139457589d8d41e0ca5bcf2b3a898df56a0b",
+    "ROBERTA_PIPELINE_AUDIT.md": "0f9e6ed8d32316dc4927d0a8b4b49f181d5914b8a994889b53245b1f20f42012",
+    "UPSTREAM_FEATURE_PROVENANCE.md": "c71af62524d4854c3593bbb2a29d6037914a847ba9472152a96f5448d40a4855",
+    "verification.json": "3d56b478a1bfa8051ef4f210881be527d4252d67e09b0adebff82d0342c984e9",
+    "provenance/clean_parity_metrics.json": "470bc58cb651e26570c6f86892677fca18b7758b5bbc276afbf97c8c294ccb84",
+    "provenance/official_feature_comparison.json": "eff189abff00bcf57dccd4bde5938a73b7a3a90725b2de90074317e874d0e1bb",
+    "provenance/roberta_sources.json": "7d56c301e0a2885918edadc826f3866bb2f9baebe91c6e7ebf642098c7f81445",
+    "provenance/audio_sources.json": "4666dd4b84a4bdb97dc33894dd4c096dfb919b0d026b4ef1f192223dd419eb39",
+    "provenance/mmdfn_audit.json": "ce15ff1bf81df6fefa5581ca230346b4f80464382c2d3aa7b248b74614cec7b2",
+    "provenance/cmerc_m3net_sources.json": "f468e471cfa460f53ff8667ed6c02ea4ee8d6ebbd315346843da1149608fe407"
+  },
+  "published_file_sha256": {
+    "CLEAN_FEATURE_PARITY_REPORT.md": "7d8c8678da192bffdec19ebf51b50996474806bed9f31498a1644761db23ab3a",
+    "FINAL_UPSTREAM_AUDIT_DECISION.md": "3e98fadca9151f2b2300a6fb7e13e9550e44207a6647135f62be08bd444f713f",
+    "MMD_FN_FEATURE_RELATIONSHIP.md": "5c992550656ed5754e1df28368962a13a54c5eb0d059f4ef378b2534b30c0dc8",
+    "OPENSMILE_PIPELINE_AUDIT.md": "9504dceabed368208b753c5cd81604c0abf9f51865e4acbd4f651c88780d90bc",
+    "README.md": "dacf0690947e9f13e13c47f2c5cb8665305b75d4ef8cbdf2fcdf217550ff8842",
+    "ROBERTA_PIPELINE_AUDIT.md": "2192277e457aa795f90adbf1b5a6dcfbf91e850954723f2f7ea852aafd3567e5",
+    "UPSTREAM_FEATURE_PROVENANCE.md": "fa6f13dd7bc253d71bea6cbfe7674a6e6a366795deeb11c01f0457248cf905ba",
+    "clean_parity_metrics.json": "470bc58cb651e26570c6f86892677fca18b7758b5bbc276afbf97c8c294ccb84",
+    "source_summary.json": "fc5b25321062f80d45576a2736fc4d3c97a324875d8b8112adaaeaf83666716f",
+    "verification.json": "90fd9c38afac507a1a1baf2e61b22813f5baddddd3ffad71c49842d709446e19"
+  },
+  "manifest_self_excluded": true,
+  "redactions": [
+    "Absolute local paths replaced with placeholders.",
+    "Audit-time Git counts explicitly scoped to the audit.",
+    "Public README explains local-only evidence references.",
+    "Source summary includes selected version/hash/schema fields only."
+  ],
+  "excluded": [
+    "raw text, audio and per-utterance data",
+    "official feature archives and pickle files",
+    "model weights and feature arrays",
+    "local-only provenance logs, source mirrors and full papers"
+  ]
+}

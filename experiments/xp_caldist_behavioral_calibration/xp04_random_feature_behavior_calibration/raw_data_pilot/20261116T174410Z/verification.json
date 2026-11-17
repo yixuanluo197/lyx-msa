@@ -1,0 +1,43 @@
+{
+  "status": "UPSTREAM_AUDIT_COMPLETE_WITH_BLOCKERS",
+  "evidence_verification": "PASS",
+  "verified_at": "2026-11-16T17:53:37.647768+00:00",
+  "official_feature_artifact_identity": "PASS",
+  "original_producer_chain_complete": false,
+  "clean_feature_parity": "NOT_RUN",
+  "clean_prediction_parity": "NOT_RUN",
+  "checks": {
+    "official_archives_downloaded_and_rehashed": 2,
+    "official_file_xp04_matches": 8,
+    "mmdfn_base_file_matches": 2,
+    "roberta_local_upstream_matches": 14,
+    "tokenizer_official_matches": 3,
+    "audio_evidence_artifacts_rehashed": 32,
+    "xp04_anchor_hashes_unchanged": 6,
+    "previous_audit_artifact_hashes_unchanged": 28,
+    "required_reports_present": 5,
+    "python_ast_compile": true,
+    "local_report_links_checked": 10,
+    "iemocap_stored_validation_rows": 647,
+    "iemocap_effective_validation_rows": 527,
+    "iemocap_effective_validation_dialogues_in_stored_encoder_train": 11,
+    "test_labels_indexed": 0,
+    "clean_extracted_samples": 0,
+    "model_forwards": 0,
+    "perturbations": 0,
+    "training_runs": 0,
+    "git_commits_during_audit": 0,
+    "git_pushes_during_audit": 0
+  },
+  "limitations": [
+    "Artifact hash equality does not prove raw-to-feature numerical parity.",
+    "Missing dataset-finetuned RoBERTa encoder checkpoints and Fairseq production version.",
+    "M3NET supplement/code IS10/IS13 conflict remains unresolved.",
+    "Missing original audio tool/configuration and exact MELD 300-dimensional producer.",
+    "IEMOCAP upstream/downstream split overlap is a conditional representation-training risk; original run manifest absent.",
+    "Shared containers deserialize all splits, but Test labels are not indexed or used.",
+    "No standalone lint/typechecker used for this evidence-only change; scripts executed and AST/compile checked."
+  ],
+  "scope": "Public summary of the 2026-11-16 upstream provenance audit; numerical clean parity remains NOT_RUN.",
+  "publication_note": "Public report copy subsequently published at researcher request; local audit snapshot remains unchanged."
+}

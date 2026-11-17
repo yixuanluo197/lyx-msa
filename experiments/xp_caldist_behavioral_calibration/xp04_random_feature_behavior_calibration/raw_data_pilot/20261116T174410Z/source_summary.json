@@ -1,0 +1,978 @@
+{
+  "audit_run": "20261116T174410Z",
+  "scope": "Public source/version/hash and structural summaries; no raw data or per-utterance values.",
+  "official_sources": {
+    "HITSZ-HLT/CMERC": {
+      "commit": "815c7c060914f5b55db816c0ba3662b11d08552f",
+      "default_branch": "master",
+      "files": {
+        "dataloader.py": "7ff80e8e2de73aa228effb4df56a5168c05068e8fa585a06d2e8b813e2aa4f95",
+        "train_cm.py": "fd3dbe7dc5e6c50ee5e884ce34e6f434aeb765059b9760c9b5cc8fb17a439717",
+        "README.md": "5b02de406be3b0ec68f2ea3de65f3fc2a1b059cb091c98b1b02f15d9a8f4000b",
+        "model_cm.py": "f08a6673649029ca0889b89dcc1ce47cb8a88126e023d46ee1cb874f6945a216",
+        "train.py": "35a18a2bf33d8e3e0d8459955b1f0ce525d4f28970f9af801fb27087bcf02ad7"
+      }
+    },
+    "feiyuchen7/M3NET": {
+      "commit": "4d0fa88cd4f92c72b053527e877763f54e29ccb2",
+      "default_branch": "main",
+      "files": {
+        "dataloader.py": "e5781a021982fee81fa85a52bc12a2f76267cff4d7f2d8290caffde668431129",
+        "README.md": "a72a0fdcd79dd7a437c36811da34061f392382074ebaebb05d8ef87488311a43",
+        "train.py": "0f18208e30b61b52cb0c850c02258e32d0c0f799670e623ed852e3ea17fa9e65"
+      }
+    }
+  },
+  "official_archives": [
+    {
+      "source": "CMERC",
+      "requested_url": "https://www.dropbox.com/scl/fo/veblbniqjrp3iv3fs3z6p/AEzkNgWqPHHzldBZ0zEzr2Y?rlkey=yhlr653c0vnvaf1krpdkla36u&e=1&dl=1",
+      "status": 200,
+      "bytes": 514504220,
+      "archive_sha256": "716e24a9852d2babfcd7bab977b94fe0a59b78aa3f8a9ab568215e1236f8b627"
+    },
+    {
+      "source": "M3NET",
+      "requested_url": "https://www.dropbox.com/sh/4b21lympehwdg4l/AADXMURD5uCECN_pvvJpCAy9a?dl=1",
+      "status": 200,
+      "bytes": 514504220,
+      "archive_sha256": "716e24a9852d2babfcd7bab977b94fe0a59b78aa3f8a9ab568215e1236f8b627"
+    }
+  ],
+  "official_file_comparisons": {
+    "CMERC": [
+      {
+        "file": "IEMOCAP_features.pkl",
+        "archive_member": "IEMOCAP_features.pkl",
+        "bytes": 72216498,
+        "official_sha256": "ceb5cc9a45d1792998438e27f86a12642320aa6315546e4425316140ea503fb3",
+        "local_sha256": "ceb5cc9a45d1792998438e27f86a12642320aa6315546e4425316140ea503fb3",
+        "byte_identical": true
+      },
+      {
+        "file": "iemocap_features_roberta.pkl",
+        "archive_member": "iemocap_features_roberta.pkl",
+        "bytes": 124438886,
+        "official_sha256": "4bd60c581a5b7c70e217e18439f741b191605fbd6f2cf4dc1a6dcb7fcaa18f06",
+        "local_sha256": "4bd60c581a5b7c70e217e18439f741b191605fbd6f2cf4dc1a6dcb7fcaa18f06",
+        "byte_identical": true
+      },
+      {
+        "file": "MELD_features_raw1.pkl",
+        "archive_member": "MELD_features_raw1.pkl",
+        "bytes": 88193675,
+        "official_sha256": "d043b3ec1813c8917e2067af01e933ff0892d33d19d93595098aaf88c4b200b0",
+        "local_sha256": "d043b3ec1813c8917e2067af01e933ff0892d33d19d93595098aaf88c4b200b0",
+        "byte_identical": true
+      },
+      {
+        "file": "meld_features_roberta.pkl",
+        "archive_member": "meld_features_roberta.pkl",
+        "bytes": 229654413,
+        "official_sha256": "58b2bdadc2eaec6abb40ac0cb3ffa3f31e929d636ece8197aecf1ca373a92951",
+        "local_sha256": "58b2bdadc2eaec6abb40ac0cb3ffa3f31e929d636ece8197aecf1ca373a92951",
+        "byte_identical": true
+      }
+    ],
+    "M3NET": [
+      {
+        "file": "IEMOCAP_features.pkl",
+        "archive_member": "IEMOCAP_features.pkl",
+        "bytes": 72216498,
+        "official_sha256": "ceb5cc9a45d1792998438e27f86a12642320aa6315546e4425316140ea503fb3",
+        "local_sha256": "ceb5cc9a45d1792998438e27f86a12642320aa6315546e4425316140ea503fb3",
+        "byte_identical": true
+      },
+      {
+        "file": "iemocap_features_roberta.pkl",
+        "archive_member": "iemocap_features_roberta.pkl",
+        "bytes": 124438886,
+        "official_sha256": "4bd60c581a5b7c70e217e18439f741b191605fbd6f2cf4dc1a6dcb7fcaa18f06",
+        "local_sha256": "4bd60c581a5b7c70e217e18439f741b191605fbd6f2cf4dc1a6dcb7fcaa18f06",
+        "byte_identical": true
+      },
+      {
+        "file": "MELD_features_raw1.pkl",
+        "archive_member": "MELD_features_raw1.pkl",
+        "bytes": 88193675,
+        "official_sha256": "d043b3ec1813c8917e2067af01e933ff0892d33d19d93595098aaf88c4b200b0",
+        "local_sha256": "d043b3ec1813c8917e2067af01e933ff0892d33d19d93595098aaf88c4b200b0",
+        "byte_identical": true
+      },
+      {
+        "file": "meld_features_roberta.pkl",
+        "archive_member": "meld_features_roberta.pkl",
+        "bytes": 229654413,
+        "official_sha256": "58b2bdadc2eaec6abb40ac0cb3ffa3f31e929d636ece8197aecf1ca373a92951",
+        "local_sha256": "58b2bdadc2eaec6abb40ac0cb3ffa3f31e929d636ece8197aecf1ca373a92951",
+        "byte_identical": true
+      }
+    ]
+  },
+  "schemas_and_split_counts": {
+    "IEMOCAP_features.pkl": {
+      "container_type": "list",
+      "container_length": 9,
+      "slots": [
+        {
+          "index": 0,
+          "type": "dict",
+          "length": 151
+        },
+        {
+          "index": 1,
+          "type": "dict",
+          "length": 151
+        },
+        {
+          "index": 2,
+          "type": "dict",
+          "length": 151
+        },
+        {
+          "index": 3,
+          "type": "dict",
+          "length": 151
+        },
+        {
+          "index": 4,
+          "type": "dict",
+          "length": 151
+        },
+        {
+          "index": 5,
+          "type": "dict",
+          "length": 151
+        },
+        {
+          "index": 6,
+          "type": "dict",
+          "length": 151
+        },
+        {
+          "index": 7,
+          "type": "list",
+          "length": 120
+        },
+        {
+          "index": 8,
+          "type": "list",
+          "length": 31
+        }
+      ],
+      "dialogues": 151,
+      "utterances": 7433,
+      "features": {
+        "legacy_text": {
+          "row_shapes": [
+            [
+              100
+            ]
+          ],
+          "dtypes": [
+            "float32"
+          ]
+        },
+        "audio": {
+          "row_shapes": [
+            [
+              1582
+            ]
+          ],
+          "dtypes": [
+            "float32"
+          ]
+        },
+        "visual": {
+          "row_shapes": [
+            [
+              342
+            ]
+          ],
+          "dtypes": [
+            "float64"
+          ]
+        }
+      },
+      "stored_splits": {
+        "train": {
+          "dialogues": 120,
+          "utterances": 5810,
+          "same_ids_as_xp04_effective": false,
+          "xp04_overlaps": {
+            "train": 108,
+            "validation": 12,
+            "test": 0
+          }
+        },
+        "test": {
+          "dialogues": 31,
+          "utterances": 1623,
+          "same_ids_as_xp04_effective": true,
+          "xp04_overlaps": {
+            "train": 0,
+            "validation": 0,
+            "test": 31
+          }
+        }
+      },
+      "xp04_effective_splits": {
+        "train": {
+          "dialogues": 108,
+          "utterances": 5283
+        },
+        "validation": {
+          "dialogues": 12,
+          "utterances": 527
+        },
+        "test": {
+          "dialogues": 31,
+          "utterances": 1623
+        }
+      },
+      "test_labels_indexed": false
+    },
+    "iemocap_features_roberta.pkl": {
+      "container_type": "list",
+      "container_length": 10,
+      "slots": [
+        {
+          "index": 0,
+          "type": "dict",
+          "length": 151
+        },
+        {
+          "index": 1,
+          "type": "dict",
+          "length": 151
+        },
+        {
+          "index": 2,
+          "type": "dict",
+          "length": 151
+        },
+        {
+          "index": 3,
+          "type": "dict",
+          "length": 151
+        },
+        {
+          "index": 4,
+          "type": "dict",
+          "length": 151
+        },
+        {
+          "index": 5,
+          "type": "dict",
+          "length": 151
+        },
+        {
+          "index": 6,
+          "type": "dict",
+          "length": 151
+        },
+        {
+          "index": 7,
+          "type": "list",
+          "length": 108
+        },
+        {
+          "index": 8,
+          "type": "list",
+          "length": 31
+        },
+        {
+          "index": 9,
+          "type": "list",
+          "length": 12
+        }
+      ],
+      "dialogues": 151,
+      "utterances": 7433,
+      "features": {
+        "T1": {
+          "row_shapes": [
+            [
+              1024
+            ]
+          ],
+          "dtypes": [
+            "float32"
+          ]
+        },
+        "T2": {
+          "row_shapes": [
+            [
+              1024
+            ]
+          ],
+          "dtypes": [
+            "float32"
+          ]
+        },
+        "T3": {
+          "row_shapes": [
+            [
+              1024
+            ]
+          ],
+          "dtypes": [
+            "float32"
+          ]
+        },
+        "T4": {
+          "row_shapes": [
+            [
+              1024
+            ]
+          ],
+          "dtypes": [
+            "float32"
+          ]
+        }
+      },
+      "stored_splits": {
+        "train": {
+          "dialogues": 108,
+          "utterances": 5163,
+          "same_ids_as_xp04_effective": false,
+          "xp04_overlaps": {
+            "train": 97,
+            "validation": 11,
+            "test": 0
+          }
+        },
+        "test": {
+          "dialogues": 31,
+          "utterances": 1623,
+          "same_ids_as_xp04_effective": true,
+          "xp04_overlaps": {
+            "train": 0,
+            "validation": 0,
+            "test": 31
+          }
+        },
+        "validation": {
+          "dialogues": 12,
+          "utterances": 647,
+          "same_ids_as_xp04_effective": false,
+          "xp04_overlaps": {
+            "train": 11,
+            "validation": 1,
+            "test": 0
+          }
+        }
+      },
+      "xp04_effective_splits": {
+        "train": {
+          "dialogues": 108,
+          "utterances": 5283
+        },
+        "validation": {
+          "dialogues": 12,
+          "utterances": 527
+        },
+        "test": {
+          "dialogues": 31,
+          "utterances": 1623
+        }
+      },
+      "test_labels_indexed": false
+    },
+    "MELD_features_raw1.pkl": {
+      "container_type": "list",
+      "container_length": 10,
+      "slots": [
+        {
+          "index": 0,
+          "type": "dict",
+          "length": 1432
+        },
+        {
+          "index": 1,
+          "type": "dict",
+          "length": 1432
+        },
+        {
+          "index": 2,
+          "type": "dict",
+          "length": 1432
+        },
+        {
+          "index": 3,
+          "type": "dict",
+          "length": 1432
+        },
+        {
+          "index": 4,
+          "type": "dict",
+          "length": 1432
+        },
+        {
+          "index": 5,
+          "type": "dict",
+          "length": 1432
+        },
+        {
+          "index": 6,
+          "type": "dict",
+          "length": 1432
+        },
+        {
+          "index": 7,
+          "type": "set",
+          "length": 1152
+        },
+        {
+          "index": 8,
+          "type": "set",
+          "length": 280
+        },
+        {
+          "index": 9,
+          "type": "NoneType",
+          "length": null
+        }
+      ],
+      "dialogues": 1432,
+      "utterances": 13708,
+      "features": {
+        "legacy_text": {
+          "row_shapes": [
+            [
+              600
+            ]
+          ],
+          "dtypes": [
+            "float32"
+          ]
+        },
+        "audio": {
+          "row_shapes": [
+            [
+              300
+            ]
+          ],
+          "dtypes": [
+            "float32"
+          ]
+        },
+        "visual": {
+          "row_shapes": [
+            [
+              342
+            ]
+          ],
+          "dtypes": [
+            "float32",
+            "float64"
+          ]
+        }
+      },
+      "stored_splits": {
+        "train": {
+          "dialogues": 1152,
+          "utterances": 11098,
+          "same_ids_as_xp04_effective": false,
+          "xp04_overlaps": {
+            "train": 1038,
+            "validation": 114,
+            "test": 0
+          }
+        },
+        "test": {
+          "dialogues": 280,
+          "utterances": 2610,
+          "same_ids_as_xp04_effective": true,
+          "xp04_overlaps": {
+            "train": 0,
+            "validation": 0,
+            "test": 280
+          }
+        }
+      },
+      "xp04_effective_splits": {
+        "train": {
+          "dialogues": 1038,
+          "utterances": 9989
+        },
+        "validation": {
+          "dialogues": 114,
+          "utterances": 1109
+        },
+        "test": {
+          "dialogues": 280,
+          "utterances": 2610
+        }
+      },
+      "test_labels_indexed": false
+    },
+    "meld_features_roberta.pkl": {
+      "container_type": "list",
+      "container_length": 11,
+      "slots": [
+        {
+          "index": 0,
+          "type": "dict",
+          "length": 1432
+        },
+        {
+          "index": 1,
+          "type": "dict",
+          "length": 1432
+        },
+        {
+          "index": 2,
+          "type": "dict",
+          "length": 1432
+        },
+        {
+          "index": 3,
+          "type": "dict",
+          "length": 1432
+        },
+        {
+          "index": 4,
+          "type": "dict",
+          "length": 1432
+        },
+        {
+          "index": 5,
+          "type": "dict",
+          "length": 1432
+        },
+        {
+          "index": 6,
+          "type": "dict",
+          "length": 1432
+        },
+        {
+          "index": 7,
+          "type": "dict",
+          "length": 1432
+        },
+        {
+          "index": 8,
+          "type": "list",
+          "length": 1038
+        },
+        {
+          "index": 9,
+          "type": "list",
+          "length": 280
+        },
+        {
+          "index": 10,
+          "type": "list",
+          "length": 114
+        }
+      ],
+      "dialogues": 1432,
+      "utterances": 13708,
+      "features": {
+        "T1": {
+          "row_shapes": [
+            [
+              1024
+            ]
+          ],
+          "dtypes": [
+            "float32"
+          ]
+        },
+        "T2": {
+          "row_shapes": [
+            [
+              1024
+            ]
+          ],
+          "dtypes": [
+            "float32"
+          ]
+        },
+        "T3": {
+          "row_shapes": [
+            [
+              1024
+            ]
+          ],
+          "dtypes": [
+            "float32"
+          ]
+        },
+        "T4": {
+          "row_shapes": [
+            [
+              1024
+            ]
+          ],
+          "dtypes": [
+            "float32"
+          ]
+        }
+      },
+      "stored_splits": {
+        "train": {
+          "dialogues": 1038,
+          "utterances": 9989,
+          "same_ids_as_xp04_effective": true,
+          "xp04_overlaps": {
+            "train": 1038,
+            "validation": 0,
+            "test": 0
+          }
+        },
+        "test": {
+          "dialogues": 280,
+          "utterances": 2610,
+          "same_ids_as_xp04_effective": true,
+          "xp04_overlaps": {
+            "train": 0,
+            "validation": 0,
+            "test": 280
+          }
+        },
+        "validation": {
+          "dialogues": 114,
+          "utterances": 1109,
+          "same_ids_as_xp04_effective": true,
+          "xp04_overlaps": {
+            "train": 0,
+            "validation": 114,
+            "test": 0
+          }
+        }
+      },
+      "xp04_effective_splits": {
+        "train": {
+          "dialogues": 1038,
+          "utterances": 9989
+        },
+        "validation": {
+          "dialogues": 114,
+          "utterances": 1109
+        },
+        "test": {
+          "dialogues": 280,
+          "utterances": 2610
+        }
+      },
+      "test_labels_indexed": false
+    }
+  },
+  "roberta": {
+    "repository": "declare-lab/conv-emotion",
+    "commit": "6128ca20e9c736605cce7e99d5d95db0356c35f5",
+    "original_finetuned_encoder_found": false,
+    "files": [
+      {
+        "file": "roberta_init_iemocap.py",
+        "source_url": "https://raw.githubusercontent.com/declare-lab/conv-emotion/6128ca20e9c736605cce7e99d5d95db0356c35f5/COSMIC/feature-extraction/roberta_init_iemocap.py",
+        "commit_url": "https://github.com/declare-lab/conv-emotion/blob/6128ca20e9c736605cce7e99d5d95db0356c35f5/COSMIC/feature-extraction/roberta_init_iemocap.py",
+        "sha256": "06b576af65c97a08eddfaedf828b44d91570bb3e754204056c401c2931f8ce1b",
+        "size": 606,
+        "local_equal": true
+      },
+      {
+        "file": "roberta_init_meld.py",
+        "source_url": "https://raw.githubusercontent.com/declare-lab/conv-emotion/6128ca20e9c736605cce7e99d5d95db0356c35f5/COSMIC/feature-extraction/roberta_init_meld.py",
+        "commit_url": "https://github.com/declare-lab/conv-emotion/blob/6128ca20e9c736605cce7e99d5d95db0356c35f5/COSMIC/feature-extraction/roberta_init_meld.py",
+        "sha256": "f05a4e0e156c730a0a495d80590fa9f65aa620e86bb98036ac4206d4efe14cfd",
+        "size": 681,
+        "local_equal": true
+      },
+      {
+        "file": "roberta_train_iemocap.sh",
+        "source_url": "https://raw.githubusercontent.com/declare-lab/conv-emotion/6128ca20e9c736605cce7e99d5d95db0356c35f5/COSMIC/feature-extraction/roberta_train_iemocap.sh",
+        "commit_url": "https://github.com/declare-lab/conv-emotion/blob/6128ca20e9c736605cce7e99d5d95db0356c35f5/COSMIC/feature-extraction/roberta_train_iemocap.sh",
+        "sha256": "6f818931875b96904aea9822d58123ed99411cceb0ee5eadaf8a3e7d96ac74bc",
+        "size": 1404,
+        "local_equal": true
+      },
+      {
+        "file": "roberta_train_meld.sh",
+        "source_url": "https://raw.githubusercontent.com/declare-lab/conv-emotion/6128ca20e9c736605cce7e99d5d95db0356c35f5/COSMIC/feature-extraction/roberta_train_meld.sh",
+        "commit_url": "https://github.com/declare-lab/conv-emotion/blob/6128ca20e9c736605cce7e99d5d95db0356c35f5/COSMIC/feature-extraction/roberta_train_meld.sh",
+        "sha256": "a0224f410d31365a85be59ef672aee7b4486b1a28dd19d9904faa407db40a6dc",
+        "size": 1388,
+        "local_equal": true
+      },
+      {
+        "file": "roberta_feature_extract_iemocap.py",
+        "source_url": "https://raw.githubusercontent.com/declare-lab/conv-emotion/6128ca20e9c736605cce7e99d5d95db0356c35f5/COSMIC/feature-extraction/roberta_feature_extract_iemocap.py",
+        "commit_url": "https://github.com/declare-lab/conv-emotion/blob/6128ca20e9c736605cce7e99d5d95db0356c35f5/COSMIC/feature-extraction/roberta_feature_extract_iemocap.py",
+        "sha256": "f995e79b32182416330903056354a9a73ece111cd2c88c285800abda33d08481",
+        "size": 1204,
+        "local_equal": true
+      },
+      {
+        "file": "roberta_feature_extract_meld.py",
+        "source_url": "https://raw.githubusercontent.com/declare-lab/conv-emotion/6128ca20e9c736605cce7e99d5d95db0356c35f5/COSMIC/feature-extraction/roberta_feature_extract_meld.py",
+        "commit_url": "https://github.com/declare-lab/conv-emotion/blob/6128ca20e9c736605cce7e99d5d95db0356c35f5/COSMIC/feature-extraction/roberta_feature_extract_meld.py",
+        "sha256": "733e109e72ed22b7ca34a8ca488b30229c8e17d6c3f95b3828646f2469f5f5d4",
+        "size": 1317,
+        "local_equal": true
+      },
+      {
+        "file": "README.md",
+        "source_url": "https://raw.githubusercontent.com/declare-lab/conv-emotion/6128ca20e9c736605cce7e99d5d95db0356c35f5/COSMIC/feature-extraction/README.md",
+        "commit_url": "https://github.com/declare-lab/conv-emotion/blob/6128ca20e9c736605cce7e99d5d95db0356c35f5/COSMIC/feature-extraction/README.md",
+        "sha256": "89592b4b96d1816ead58a94785327e82c96d9fe6f58d0ac783172abe3a8f7de5",
+        "size": 1518,
+        "local_equal": true
+      },
+      {
+        "file": "encoder.json",
+        "source_url": "https://raw.githubusercontent.com/declare-lab/conv-emotion/6128ca20e9c736605cce7e99d5d95db0356c35f5/COSMIC/feature-extraction/encoder.json",
+        "commit_url": "https://github.com/declare-lab/conv-emotion/blob/6128ca20e9c736605cce7e99d5d95db0356c35f5/COSMIC/feature-extraction/encoder.json",
+        "sha256": "196139668be63f3b5d6574427317ae82f612a97c5d1cdaf36ed2256dbf636783",
+        "size": 1042301,
+        "local_equal": true
+      },
+      {
+        "file": "vocab.bpe",
+        "source_url": "https://raw.githubusercontent.com/declare-lab/conv-emotion/6128ca20e9c736605cce7e99d5d95db0356c35f5/COSMIC/feature-extraction/vocab.bpe",
+        "commit_url": "https://github.com/declare-lab/conv-emotion/blob/6128ca20e9c736605cce7e99d5d95db0356c35f5/COSMIC/feature-extraction/vocab.bpe",
+        "sha256": "1ce1664773c50f3e0cc8842619a93edc4624525b728b188a9e0be33b7726adc5",
+        "size": 456318,
+        "local_equal": true
+      },
+      {
+        "file": "dict.txt",
+        "source_url": "https://raw.githubusercontent.com/declare-lab/conv-emotion/6128ca20e9c736605cce7e99d5d95db0356c35f5/COSMIC/feature-extraction/dict.txt",
+        "commit_url": "https://github.com/declare-lab/conv-emotion/blob/6128ca20e9c736605cce7e99d5d95db0356c35f5/COSMIC/feature-extraction/dict.txt",
+        "sha256": "2c31c5b236661067fe8626775eb995ef5fe808ac87d2ad4a6ddbef68550f5cc6",
+        "size": 603290,
+        "local_equal": true
+      },
+      {
+        "file": "README.md",
+        "source_url": "https://raw.githubusercontent.com/declare-lab/conv-emotion/6128ca20e9c736605cce7e99d5d95db0356c35f5/README.md",
+        "sha256": "cb5516ba2c8d1199683214c1611185847873c6be17a1add418c740ca20fd9074",
+        "size": 27004
+      },
+      {
+        "file": "roberta_preprocess_iemocap.sh",
+        "url": "https://raw.githubusercontent.com/declare-lab/conv-emotion/6128ca20e9c736605cce7e99d5d95db0356c35f5/COSMIC/feature-extraction/roberta_preprocess_iemocap.sh",
+        "sha256": "c59402f0282665da34793dfca41cc24e4908fea1b3eede7bf27549eebe5021f7",
+        "local_equal": true
+      },
+      {
+        "file": "roberta_preprocess_meld.sh",
+        "url": "https://raw.githubusercontent.com/declare-lab/conv-emotion/6128ca20e9c736605cce7e99d5d95db0356c35f5/COSMIC/feature-extraction/roberta_preprocess_meld.sh",
+        "sha256": "df5cadbf97dfb9447413f7f92038a2530c80d6bc9fe5bdaf862d369b3717c673",
+        "local_equal": true
+      },
+      {
+        "file": "multiprocessing_bpe_encoder.py",
+        "url": "https://raw.githubusercontent.com/declare-lab/conv-emotion/6128ca20e9c736605cce7e99d5d95db0356c35f5/COSMIC/feature-extraction/multiprocessing_bpe_encoder.py",
+        "sha256": "f5ab4e88436726981f191a45a5b862ea05ec8788efa3050cf3680189f338059d",
+        "local_equal": true
+      },
+      {
+        "file": "train.py",
+        "url": "https://raw.githubusercontent.com/declare-lab/conv-emotion/6128ca20e9c736605cce7e99d5d95db0356c35f5/COSMIC/feature-extraction/train.py",
+        "sha256": "4d394f3c0b873cb5fdd920d4e43837abc8a8179f699d484c914c8544d570a655",
+        "local_equal": true
+      }
+    ]
+  },
+  "audio_sources": [
+    {
+      "repo": "feiyuchen7/M3NET",
+      "commit": "4d0fa88cd4f92c72b053527e877763f54e29ccb2",
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/feiyuchen7/M3NET/4d0fa88cd4f92c72b053527e877763f54e29ccb2/README.md",
+      "sha256": "a72a0fdcd79dd7a437c36811da34061f392382074ebaebb05d8ef87488311a43",
+      "bytes": 2648
+    },
+    {
+      "repo": "feiyuchen7/M3NET",
+      "commit": "4d0fa88cd4f92c72b053527e877763f54e29ccb2",
+      "path": "dataloader.py",
+      "url": "https://raw.githubusercontent.com/feiyuchen7/M3NET/4d0fa88cd4f92c72b053527e877763f54e29ccb2/dataloader.py",
+      "sha256": "e5781a021982fee81fa85a52bc12a2f76267cff4d7f2d8290caffde668431129",
+      "bytes": 3825
+    },
+    {
+      "repo": "feiyuchen7/M3NET",
+      "commit": "4d0fa88cd4f92c72b053527e877763f54e29ccb2",
+      "path": "train.py",
+      "url": "https://raw.githubusercontent.com/feiyuchen7/M3NET/4d0fa88cd4f92c72b053527e877763f54e29ccb2/train.py",
+      "sha256": "0f18208e30b61b52cb0c850c02258e32d0c0f799670e623ed852e3ea17fa9e65",
+      "bytes": 24367
+    },
+    {
+      "repo": "HITSZ-HLT/CMERC",
+      "commit": "815c7c060914f5b55db816c0ba3662b11d08552f",
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/HITSZ-HLT/CMERC/815c7c060914f5b55db816c0ba3662b11d08552f/README.md",
+      "sha256": "5b02de406be3b0ec68f2ea3de65f3fc2a1b059cb091c98b1b02f15d9a8f4000b",
+      "bytes": 6438
+    },
+    {
+      "repo": "HITSZ-HLT/CMERC",
+      "commit": "815c7c060914f5b55db816c0ba3662b11d08552f",
+      "path": "dataloader.py",
+      "url": "https://raw.githubusercontent.com/HITSZ-HLT/CMERC/815c7c060914f5b55db816c0ba3662b11d08552f/dataloader.py",
+      "sha256": "7ff80e8e2de73aa228effb4df56a5168c05068e8fa585a06d2e8b813e2aa4f95",
+      "bytes": 5343
+    },
+    {
+      "repo": "HITSZ-HLT/CMERC",
+      "commit": "815c7c060914f5b55db816c0ba3662b11d08552f",
+      "path": "train.py",
+      "url": "https://raw.githubusercontent.com/HITSZ-HLT/CMERC/815c7c060914f5b55db816c0ba3662b11d08552f/train.py",
+      "sha256": "35a18a2bf33d8e3e0d8459955b1f0ce525d4f28970f9af801fb27087bcf02ad7",
+      "bytes": 24415
+    },
+    {
+      "repo": "declare-lab/MELD",
+      "commit": "e8cedf27b5d2877e198332c957127e16eb214afe",
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/declare-lab/MELD/e8cedf27b5d2877e198332c957127e16eb214afe/README.md",
+      "sha256": "8f660c8aaf0491230050be74863a6b704ff569e913460f0e7250aa5186f85a00",
+      "bytes": 33255
+    },
+    {
+      "repo": "declare-lab/MELD",
+      "commit": "e8cedf27b5d2877e198332c957127e16eb214afe",
+      "path": "baseline/baseline.py",
+      "url": "https://raw.githubusercontent.com/declare-lab/MELD/e8cedf27b5d2877e198332c957127e16eb214afe/baseline/baseline.py",
+      "sha256": "6f3885af6b725bde6c15f5e14e808478a2867866e7ce75e97f66eb57e70fd425",
+      "bytes": 10573
+    },
+    {
+      "repo": "declare-lab/MELD",
+      "commit": "e8cedf27b5d2877e198332c957127e16eb214afe",
+      "path": "baseline/data_helpers.py",
+      "url": "https://raw.githubusercontent.com/declare-lab/MELD/e8cedf27b5d2877e198332c957127e16eb214afe/baseline/data_helpers.py",
+      "sha256": "7a7bacab124efa70da95c8c97c2a359764cfd3c1d76db5437873760be1d13a4b",
+      "bytes": 9421
+    },
+    {
+      "repo": "audeering/opensmile",
+      "commit": "055dda577c82383f8239663e5ac6c58d25b504db",
+      "path": "config/is09-13/IS10_paraling.conf",
+      "url": "https://raw.githubusercontent.com/audeering/opensmile/055dda577c82383f8239663e5ac6c58d25b504db/config/is09-13/IS10_paraling.conf",
+      "sha256": "797eb7c3b912540cb5f8f8d5963151a706a60c00b50de5706a77f1976b96e0f5",
+      "bytes": 2189
+    },
+    {
+      "repo": "audeering/opensmile",
+      "commit": "055dda577c82383f8239663e5ac6c58d25b504db",
+      "path": "config/is09-13/IS13_ComParE.conf",
+      "url": "https://raw.githubusercontent.com/audeering/opensmile/055dda577c82383f8239663e5ac6c58d25b504db/config/is09-13/IS13_ComParE.conf",
+      "sha256": "c3550ca81e7d7c32194e05b61c9a36427b302832e29cc894cc24706c44de51f2",
+      "bytes": 1669
+    },
+    {
+      "repo": "audeering/opensmile",
+      "commit": "055dda577c82383f8239663e5ac6c58d25b504db",
+      "path": "config/is09-13/IS13_ComParE_core.lld.conf.inc",
+      "url": "https://raw.githubusercontent.com/audeering/opensmile/055dda577c82383f8239663e5ac6c58d25b504db/config/is09-13/IS13_ComParE_core.lld.conf.inc",
+      "sha256": "5c4af86d06b6529fee177939167ad2d6738029b52bd6bab75c7795194a93443a",
+      "bytes": 9774
+    },
+    {
+      "repo": "audeering/opensmile",
+      "commit": "055dda577c82383f8239663e5ac6c58d25b504db",
+      "path": "config/is09-13/IS13_ComParE_core.func.conf.inc",
+      "url": "https://raw.githubusercontent.com/audeering/opensmile/055dda577c82383f8239663e5ac6c58d25b504db/config/is09-13/IS13_ComParE_core.func.conf.inc",
+      "sha256": "a5d467afabd45054ff8dc760884c79764c32ea3a7fab1881e4e07b2396c16ce6",
+      "bytes": 9767
+    },
+    {
+      "repo": "audeering/opensmile",
+      "commit": "055dda577c82383f8239663e5ac6c58d25b504db",
+      "path": "config/is09-13/IS10_paraling_core.lld.conf.inc",
+      "url": "https://raw.githubusercontent.com/audeering/opensmile/055dda577c82383f8239663e5ac6c58d25b504db/config/is09-13/IS10_paraling_core.lld.conf.inc",
+      "sha256": "8179a9725904ee334ecd0f3f5c8d4cadc1655ff06ca10c67e15da585a1d9a4d7",
+      "bytes": 7372
+    },
+    {
+      "repo": "audeering/opensmile",
+      "commit": "055dda577c82383f8239663e5ac6c58d25b504db",
+      "path": "config/is09-13/IS10_paraling_core.func.conf.inc",
+      "url": "https://raw.githubusercontent.com/audeering/opensmile/055dda577c82383f8239663e5ac6c58d25b504db/config/is09-13/IS10_paraling_core.func.conf.inc",
+      "sha256": "ac45cdbc3a928c513254d85262da80e767fb32064f7d5c3268a3fad87429aa3f",
+      "bytes": 5335
+    },
+    {
+      "repo": "audeering/opensmile",
+      "commit": "055dda577c82383f8239663e5ac6c58d25b504db",
+      "path": "config/is09-13/IS10_paraling_compat.conf",
+      "url": "https://raw.githubusercontent.com/audeering/opensmile/055dda577c82383f8239663e5ac6c58d25b504db/config/is09-13/IS10_paraling_compat.conf",
+      "sha256": "75e28f7ad5de545fa68b9e392aa3def37f10aa8e8c4e736883ab8a14dd107973",
+      "bytes": 13766
+    },
+    {
+      "repo": "audeering/opensmile",
+      "commit": "055dda577c82383f8239663e5ac6c58d25b504db",
+      "path": "config/shared/standard_wave_input.conf.inc",
+      "url": "https://raw.githubusercontent.com/audeering/opensmile/055dda577c82383f8239663e5ac6c58d25b504db/config/shared/standard_wave_input.conf.inc",
+      "sha256": "f7d3be1bd36c434e0681219f8c9be584f189028638cfeaecec39de50b1caef75",
+      "bytes": 875
+    },
+    {
+      "repo": "audeering/opensmile",
+      "commit": "055dda577c82383f8239663e5ac6c58d25b504db",
+      "path": "config/shared/FrameModeFunctionals.conf.inc",
+      "url": "https://raw.githubusercontent.com/audeering/opensmile/055dda577c82383f8239663e5ac6c58d25b504db/config/shared/FrameModeFunctionals.conf.inc",
+      "sha256": "fcf898b98f3a424135c1325c3acd18326606bb56887dabc76878c8102a3e23db",
+      "bytes": 360
+    },
+    {
+      "repo": "audeering/opensmile",
+      "commit": "055dda577c82383f8239663e5ac6c58d25b504db",
+      "path": "doc/sphinx/get-started.rst",
+      "url": "https://raw.githubusercontent.com/audeering/opensmile/055dda577c82383f8239663e5ac6c58d25b504db/doc/sphinx/get-started.rst",
+      "sha256": "dfbda4d0e816810ae5c6d0fe9c61b22e003fe59f6d2b893c4de0bb2d8bbf1a7e",
+      "bytes": 69704
+    },
+    {
+      "url": "https://openaccess.thecvf.com/content/CVPR2023/papers/Chen_Multivariate_Multi-Frequency_and_Multimodal_Rethinking_Graph_Neural_Networks_for_Emotion_CVPR_2023_paper.pdf",
+      "sha256": "2fb2972c46e24e6010b97b92768d095937ece557bd9fa804ec027a028f2c623d",
+      "bytes": 786454
+    },
+    {
+      "url": "https://openaccess.thecvf.com/content/CVPR2023/supplemental/Chen_Multivariate_Multi-Frequency_and_CVPR_2023_supplemental.pdf",
+      "sha256": "088844e1d0d255fb40a5525c28aef4fad9f3b9fb1e713a3c601c7dfce180b02b",
+      "bytes": 189958
+    },
+    {
+      "url": "https://aclanthology.org/P19-1050.pdf",
+      "sha256": "5cff32bd32322dcbbc614062e46b3c07b5c325b5269ba9981858a7206d41777d",
+      "bytes": 2950595
+    },
+    {
+      "url": "https://www.isca-archive.org/interspeech_2013/schuller13_interspeech.pdf",
+      "sha256": "65ba82293b1aadf60efeb4f592ecdad2b72e080f2ae2d4ed4787e88d92015139",
+      "bytes": 222514
+    },
+    {
+      "url": "https://raw.githubusercontent.com/declare-lab/MELD/5401f54cef64508e648abfa5cc3f615b7f56ec48/baseline/baseline.py",
+      "sha256": "bf584c2e278c6a11e5b7a6b6d84264796652f3c979452a949ce5be931f1e0c60",
+      "bytes": 10576
+    }
+  ],
+  "mmdfn": {
+    "repository": "https://github.com/zerohd4869/MM-DFN",
+    "commit": "da970366069247e05de3b9298f1e1bbc5c77a187",
+    "files": [
+      {
+        "name": "IEMOCAP_features.pkl",
+        "bytes": 72216498,
+        "sha256": "ceb5cc9a45d1792998438e27f86a12642320aa6315546e4425316140ea503fb3",
+        "all_available_copies_byte_identical": true
+      },
+      {
+        "name": "MELD_features_raw1.pkl",
+        "bytes": 88193675,
+        "sha256": "d043b3ec1813c8917e2067af01e933ff0892d33d19d93595098aaf88c4b200b0",
+        "all_available_copies_byte_identical": true
+      }
+    ]
+  },
+  "interpretation": "Published artifact identity is verified; original producer chain and numerical clean parity are not verified."
+}
