@@ -1,0 +1,130 @@
+{
+  "audit_utc": "2026-11-17T01:53:02.667580+00:00",
+  "status": "BLOCKED_NO_PROVENANCE_CLOSED_IEMOCAP_EXTRACTOR",
+  "scope": "IEMOCAP producer provenance only; no label containers indexed; no WAV feature extraction; no candidate config runs",
+  "fixed_repository_versions": {
+    "MMGCN": "85732d984f70c1c84dd47c81aa97f1271397b899",
+    "M3NET": "4d0fa88cd4f92c72b053527e877763f54e29ccb2",
+    "conv-emotion": "6128ca20e9c736605cce7e99d5d95db0356c35f5",
+    "MUStARD": "b34b5134beeec42a36cdac79330637de9cc9894e"
+  },
+  "repository_search_coverage": {
+    "mmgcn_commits": 1,
+    "mmgcn_tree_truncated": false,
+    "mmgcn_issue_records_all_states": 11,
+    "m3net_commits": 15,
+    "m3net_tree_snapshots": 15,
+    "m3net_union_paths": [
+      "HypergraphConv.py",
+      "README.md",
+      "dataloader.py",
+      "high_fre_conv.py",
+      "model.py",
+      "model_GCN.py",
+      "model_hyper.py",
+      "train.py"
+    ],
+    "m3net_issue_records_all_states": 12,
+    "comment_pages": "all nonzero-comment issues, per_page100; all replies count below100; no user contacts sent"
+  },
+  "primary_findings": [
+    {
+      "source": "MMGCN ACL final p5 printed5670 section4.2 and arXivv1 p5 section4.2",
+      "finding": "OpenSMILE IS10 family explicitly stated; no original version/config hash/command/normalizer"
+    },
+    {
+      "source": "MMGCN train.py lines333-334 dataloader.py lines9-21",
+      "finding": "consumer names1582 asIS10; loads precomputed videoAudio unchanged except FloatTensor"
+    },
+    {
+      "source": "M3NET main p6 printed10766 section4.2 and supplementp1 sectionA",
+      "finding": "pre-extracted; appendix calls IEMOCAPIS13 and MELDIS10; no code mapping6373to1582 found"
+    },
+    {
+      "source": "https://github.com/feiyuchen7/M3NET/issues/4#issuecomment-1722689346",
+      "author": "feiyuchen7",
+      "author_association": "OWNER",
+      "finding": "author explicitly states no own feature extraction"
+    },
+    {
+      "source": "https://github.com/feiyuchen7/M3NET/issues/2#issuecomment-1603643903",
+      "author": "feiyuchen7",
+      "author_association": "OWNER",
+      "finding": "historical IEMOCAP A/V/T100/512/1024 statement conflicts with currentconsumer1582/342; not an extractor record"
+    },
+    {
+      "source": "MMGCN issues2,3,11",
+      "finding": "requests for feature extraction scripts; no author production configuration in captured replies; issue3 dimensional correction from nonauthor"
+    },
+    {
+      "source": "CMN N18-1193 p4 printed2125 section4.1.2",
+      "finding": "IS13ComParE6373 Z-standardization FC100 is distinctbranch; no scaler statistics recovered"
+    },
+    {
+      "source": "DialogueRNN arXiv1811.00405v4 p2 section3.2",
+      "finding": "adopts CMN audio process; no evidence of relation to MMGCN1582"
+    },
+    {
+      "source": "ICON D18-1280 p3 section4.1.2",
+      "finding": "IS13ComParE6373 MinMax L2 selection is distinctbranch; no evidence of relation to MMGCN1582"
+    },
+    {
+      "source": "conv-emotion Discussion49 author redirect MUStARD",
+      "finding": "MUStARD actualaudio extractor useslibrosa MFCC/Mel/deltas/centroid notXP04IS10; excluded"
+    },
+    {
+      "source": "IEMOCAP originalpaperp10,p11",
+      "finding": "recording48kHz dualspeaker microphones; manualturnsegmentation; does not establish downstreamextractorinput"
+    }
+  ],
+  "remaining_unknowns": [
+    "originalOpenSMILEversionbinarybuild",
+    "exactIS10orcompatoremobaseconfigurationandincludehashes",
+    "rawWAVchoiceandsegmentationboundary",
+    "producerresamplingandchannelhandling",
+    "featurefieldnamesandorder",
+    "externalnormalizationtypefitpopulationandstatistics",
+    "nanmissingandzerohandling",
+    "producercommandandlog"
+  ],
+  "parity_gate": {
+    "trusted_original_chain_found": false,
+    "clean_feature_extraction_authorized_by_evidence": false,
+    "clean_feature_extraction_executed": false,
+    "cm_model_inference_executed": false,
+    "reason": "IS10family evidence does not specify actual numeric producer; existing1582identity onlyprovesartifactlineage"
+  },
+  "failures_or_exclusions": [
+    {
+      "operation": "pdftotext",
+      "result": "binarynotinstalled; recoveredwithalreadyavailablePyMuPDF; nodependencyinstallation"
+    },
+    {
+      "operation": "webfind MMGCN PDF",
+      "result": "webtool400timeout; directprimaryPDF200andlocalpageextractionused"
+    },
+    {
+      "operation": "webopen M3NET supplemental",
+      "result": "403; immutable prior officialPDFreusedwithhashcheck"
+    },
+    {
+      "operation": "MUStARD candidate",
+      "result": "excludedlibrosabranchwith283stackedfeaturechannels,notOpenSMILE1582"
+    },
+    {
+      "operation": "CMN DialogueRNN ICON normalizationtransfer",
+      "result": "excludedasunsupportedidentityinference"
+    }
+  ],
+  "restricted_actions": {
+    "test_label_use": false,
+    "training": false,
+    "raw_audio_perturbation": false,
+    "feature_extraction": false,
+    "git_commit": false,
+    "git_push": false,
+    "author_contacts": false
+  },
+  "evidence_stage": "source audit before separately authorized publication",
+  "full_source_snapshots": "LOCAL_ONLY; public source hashes in source_catalog.json"
+}

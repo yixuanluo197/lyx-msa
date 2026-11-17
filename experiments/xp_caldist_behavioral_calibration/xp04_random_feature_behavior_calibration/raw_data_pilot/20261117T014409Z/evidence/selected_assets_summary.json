@@ -1,0 +1,70 @@
+{
+  "asset_inspection": {
+    "emotion": {
+      "path": "audio_embeddings_feature_selection_emotion.pkl",
+      "sha256": "0cda206983988ab61de5b30ec32b8ac652e133f84cda4d3d8105a2db8fea363e",
+      "container": "list of 3 plain feature dictionaries",
+      "split_counts": [
+        9989,
+        1109,
+        2610
+      ],
+      "validation_shape": [
+        1109,
+        1611
+      ],
+      "validation_dtype": "float64",
+      "validation_nonfinite": 0,
+      "validation_min": 0.0,
+      "validation_max": 1.0000000000000002,
+      "feature_names_or_selector_object_present": false,
+      "unique_column_signatures": 1611,
+      "constant_column_count": 0,
+      "all_zero_column_count": 0,
+      "duplicate_signature_groups": 0,
+      "duplicate_columns_beyond_first": 0,
+      "validation_rows_with_min_zero": 1109,
+      "validation_rows_with_max_one": 603
+    },
+    "sentiment": {
+      "path": "audio_embeddings_feature_selection_sentiment.pkl",
+      "sha256": "a6c2c5d1ddd9fb0dcf1992702c5cd275afb227ff14b907f7d11ae3333cdf2097",
+      "container": "list of 3 plain feature dictionaries",
+      "split_counts": [
+        9989,
+        1109,
+        2610
+      ],
+      "validation_shape": [
+        1109,
+        1422
+      ],
+      "validation_dtype": "float64",
+      "validation_nonfinite": 0,
+      "validation_min": 0.0,
+      "validation_max": 1.0000000000000002,
+      "feature_names_or_selector_object_present": false,
+      "unique_column_signatures": 1422,
+      "constant_column_count": 0,
+      "all_zero_column_count": 0,
+      "duplicate_signature_groups": 0,
+      "duplicate_columns_beyond_first": 0,
+      "validation_rows_with_min_zero": 1109,
+      "validation_rows_with_max_one": 551
+    }
+  },
+  "validation_column_equality": {
+    "checked_utterances": 1109,
+    "labels_accessed": false,
+    "criterion": "same dtype and byte-identical column values across all original validation IDs",
+    "common_distinct_column_signatures": 1135,
+    "equal_column_pairs": 1135,
+    "emotion_columns_in_equal_pairs": 1135,
+    "sentiment_columns_in_equal_pairs": 1135,
+    "one_to_one_shared_signatures": 1135,
+    "can_identify_original_6373_columns": false,
+    "interpretation": "Empirical shared output coordinates, not recovery of names, original indices, scaler, selector or production algorithm."
+  },
+  "new_extraction": false,
+  "training": false
+}

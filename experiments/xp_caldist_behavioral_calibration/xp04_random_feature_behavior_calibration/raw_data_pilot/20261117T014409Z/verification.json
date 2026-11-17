@@ -1,0 +1,28 @@
+{
+  "status": "SOURCE_AUDIT_COMPLETE_RAW_CLEAN_PARITY_BLOCKED",
+  "verified_at": "2026-11-17T01:59:09.303548+00:00",
+  "checks_passed": 387,
+  "checks_failed": 0,
+  "historical_artifacts_unchanged": 130,
+  "frozen_inputs_unchanged": 8,
+  "raw_feature_extraction_runs": 0,
+  "cmerc_inference_runs": 0,
+  "training_runs": 0,
+  "perturbation_runs": 0,
+  "test_labels_used": false,
+  "git_commit_created": false,
+  "git_push_executed": false,
+  "raw_clean_parity": {
+    "MELD": null,
+    "IEMOCAP": null
+  },
+  "prior_meld_selected1611_to300_reused": true,
+  "completed_scope": "Source recovery, static asset/version audits, fixed Validation candidates and stream metadata",
+  "unmet_prerequisites": "Original producer config/build/preprocessing; MELD original selector/transform and scaler; IEMOCAP original postprocessing",
+  "artifact_manifest_sha256": "5cdecbf31d4108a8f53659cbe4cbc4425aed295745d793e4c1777f02cfea31f6",
+  "evidence_stage": "source audit before separately authorized report publication",
+  "local_verification_sha256": "c89b955c328f7b34ff2c67e3a709400bb43859005490fa702859859936cb6e99",
+  "local_artifact_manifest": "LOCAL_ONLY/provenance/artifact_hashes.json",
+  "publication_authorization": "Subsequent user request: 上传到lyx的github",
+  "per_media_checks": "Individual checks retained locally; public count preserved"
+}

@@ -1,0 +1,190 @@
+{
+  "source_repo": "https://github.com/audeering/opensmile",
+  "official_versions": [
+    {
+      "tag": "v3.0.0",
+      "archive_url": "https://codeload.github.com/audeering/opensmile/tar.gz/refs/tags/v3.0.0",
+      "archive_bytes": 4811100,
+      "archive_sha256": "0f7a91276a647c4558211b7a635b8aa41f2418f84b603e76c9b363f848cbbb73",
+      "files_audited": 43
+    },
+    {
+      "tag": "v3.0.1",
+      "archive_url": "https://codeload.github.com/audeering/opensmile/tar.gz/refs/tags/v3.0.1",
+      "archive_bytes": 4776121,
+      "archive_sha256": "b8e5d69d6c3d729eb6e7825e2bd913c819e61315524a739b245069dcaed0d8c3",
+      "files_audited": 44
+    },
+    {
+      "tag": "v3.0.2",
+      "archive_url": "https://codeload.github.com/audeering/opensmile/tar.gz/refs/tags/v3.0.2",
+      "archive_bytes": 4788935,
+      "archive_sha256": "b423c785c948e6e8d5b84c002419875ba456f048f5f86ce29f5e21bba9ef5bdd",
+      "files_audited": 44
+    }
+  ],
+  "key_file_comparison": {
+    "config/is09-13/IS10_paraling.conf": {
+      "sha256_by_version": {
+        "v3.0.0": "797eb7c3b912540cb5f8f8d5963151a706a60c00b50de5706a77f1976b96e0f5",
+        "v3.0.1": "797eb7c3b912540cb5f8f8d5963151a706a60c00b50de5706a77f1976b96e0f5",
+        "v3.0.2": "797eb7c3b912540cb5f8f8d5963151a706a60c00b50de5706a77f1976b96e0f5"
+      },
+      "identical_across_three_versions": true
+    },
+    "config/is09-13/IS10_paraling_compat.conf": {
+      "sha256_by_version": {
+        "v3.0.0": "75e28f7ad5de545fa68b9e392aa3def37f10aa8e8c4e736883ab8a14dd107973",
+        "v3.0.1": "75e28f7ad5de545fa68b9e392aa3def37f10aa8e8c4e736883ab8a14dd107973",
+        "v3.0.2": "75e28f7ad5de545fa68b9e392aa3def37f10aa8e8c4e736883ab8a14dd107973"
+      },
+      "identical_across_three_versions": true
+    },
+    "config/is09-13/IS10_paraling_core.lld.conf.inc": {
+      "sha256_by_version": {
+        "v3.0.0": "8179a9725904ee334ecd0f3f5c8d4cadc1655ff06ca10c67e15da585a1d9a4d7",
+        "v3.0.1": "8179a9725904ee334ecd0f3f5c8d4cadc1655ff06ca10c67e15da585a1d9a4d7",
+        "v3.0.2": "8179a9725904ee334ecd0f3f5c8d4cadc1655ff06ca10c67e15da585a1d9a4d7"
+      },
+      "identical_across_three_versions": true
+    },
+    "config/is09-13/IS10_paraling_core.func.conf.inc": {
+      "sha256_by_version": {
+        "v3.0.0": "ac45cdbc3a928c513254d85262da80e767fb32064f7d5c3268a3fad87429aa3f",
+        "v3.0.1": "ac45cdbc3a928c513254d85262da80e767fb32064f7d5c3268a3fad87429aa3f",
+        "v3.0.2": "ac45cdbc3a928c513254d85262da80e767fb32064f7d5c3268a3fad87429aa3f"
+      },
+      "identical_across_three_versions": true
+    },
+    "config/is09-13/IS13_ComParE.conf": {
+      "sha256_by_version": {
+        "v3.0.0": "c3550ca81e7d7c32194e05b61c9a36427b302832e29cc894cc24706c44de51f2",
+        "v3.0.1": "c3550ca81e7d7c32194e05b61c9a36427b302832e29cc894cc24706c44de51f2",
+        "v3.0.2": "c3550ca81e7d7c32194e05b61c9a36427b302832e29cc894cc24706c44de51f2"
+      },
+      "identical_across_three_versions": true
+    },
+    "config/is09-13/IS13_ComParE_core.lld.conf.inc": {
+      "sha256_by_version": {
+        "v3.0.0": "5c4af86d06b6529fee177939167ad2d6738029b52bd6bab75c7795194a93443a",
+        "v3.0.1": "5c4af86d06b6529fee177939167ad2d6738029b52bd6bab75c7795194a93443a",
+        "v3.0.2": "5c4af86d06b6529fee177939167ad2d6738029b52bd6bab75c7795194a93443a"
+      },
+      "identical_across_three_versions": true
+    },
+    "config/is09-13/IS13_ComParE_core.func.conf.inc": {
+      "sha256_by_version": {
+        "v3.0.0": "a5d467afabd45054ff8dc760884c79764c32ea3a7fab1881e4e07b2396c16ce6",
+        "v3.0.1": "a5d467afabd45054ff8dc760884c79764c32ea3a7fab1881e4e07b2396c16ce6",
+        "v3.0.2": "a5d467afabd45054ff8dc760884c79764c32ea3a7fab1881e4e07b2396c16ce6"
+      },
+      "identical_across_three_versions": true
+    },
+    "config/emobase/emobase2010.conf": {
+      "sha256_by_version": {
+        "v3.0.0": "e8550e5b49f7ed26457bafddd1752cd978f0d04685d4f6fdb14257ef72fe4fe7",
+        "v3.0.1": "e8550e5b49f7ed26457bafddd1752cd978f0d04685d4f6fdb14257ef72fe4fe7",
+        "v3.0.2": "e8550e5b49f7ed26457bafddd1752cd978f0d04685d4f6fdb14257ef72fe4fe7"
+      },
+      "identical_across_three_versions": true
+    },
+    "config/shared/standard_wave_input.conf.inc": {
+      "sha256_by_version": {
+        "v3.0.0": "f7d3be1bd36c434e0681219f8c9be584f189028638cfeaecec39de50b1caef75",
+        "v3.0.1": "f7d3be1bd36c434e0681219f8c9be584f189028638cfeaecec39de50b1caef75",
+        "v3.0.2": "f7d3be1bd36c434e0681219f8c9be584f189028638cfeaecec39de50b1caef75"
+      },
+      "identical_across_three_versions": true
+    },
+    "config/compare16/ComParE_2016.conf": {
+      "sha256_by_version": {
+        "v3.0.0": "4baf8b75324db30e632a2935ab469058d54cd1c7b1806d5cc220dc7b124c454c",
+        "v3.0.1": "4baf8b75324db30e632a2935ab469058d54cd1c7b1806d5cc220dc7b124c454c",
+        "v3.0.2": "4baf8b75324db30e632a2935ab469058d54cd1c7b1806d5cc220dc7b124c454c"
+      },
+      "identical_across_three_versions": true
+    },
+    "src/dspcore/transformFft.cpp": {
+      "sha256_by_version": {
+        "v3.0.0": "4d2694b5119b234f374d23a003a241b20d7dec4df331db9e25757fcd1c1777ea",
+        "v3.0.1": "3a2de37e1419410a13f14dbee09d995ff279219a0b7b147cd02f37f5f2e5d550",
+        "v3.0.2": "3a2de37e1419410a13f14dbee09d995ff279219a0b7b147cd02f37f5f2e5d550"
+      },
+      "identical_across_three_versions": false
+    },
+    "config/shared/FrameModeFunctionals.conf.inc": {
+      "sha256_by_version": {
+        "v3.0.0": "fcf898b98f3a424135c1325c3acd18326606bb56887dabc76878c8102a3e23db",
+        "v3.0.1": "fcf898b98f3a424135c1325c3acd18326606bb56887dabc76878c8102a3e23db",
+        "v3.0.2": "fcf898b98f3a424135c1325c3acd18326606bb56887dabc76878c8102a3e23db"
+      },
+      "identical_across_three_versions": true
+    },
+    "config/shared/standard_data_output.conf.inc": {
+      "sha256_by_version": {
+        "v3.0.0": "901c26e20f6926506548feda693150e7c63e02ddfb6da278b0446e84888d504d",
+        "v3.0.1": "901c26e20f6926506548feda693150e7c63e02ddfb6da278b0446e84888d504d",
+        "v3.0.2": "901c26e20f6926506548feda693150e7c63e02ddfb6da278b0446e84888d504d"
+      },
+      "identical_across_three_versions": true
+    }
+  },
+  "installed_candidate": {
+    "python_distribution_version": "2.6.0",
+    "engine_version_independently_executed": false,
+    "is10_enum_default": "is09-13/IS10_paraling_compat",
+    "noncompat_top_level_is10_present": false,
+    "xp04_production_provenance_established": false
+  },
+  "installed_binary_static_metadata": {
+    "bytes": 2376360,
+    "sha256": "7d708bd3e02ec29d1fdc94e8b60595a65052d6f955b96bb7c88b181d65d81231",
+    "static_version_literal": "3.0.1",
+    "static_build_date_literal": "2023-10-19T14:14:02Z",
+    "shared_library_executed": false,
+    "xp04_production_relation_established": false
+  },
+  "official_2_1_or_2_3_package_recovered": false,
+  "historical_pointer_reliability": "third-party report linking an official-domain 2.3.0 download endpoint; not original release attestation",
+  "bounded_search_responses": [
+    {
+      "url": "https://audeering.github.io/opensmile/get-started.html",
+      "response_url": "https://audeering.github.io/opensmile/get-started.html",
+      "http_status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "content_disposition": null,
+      "bytes": 149724,
+      "sha256": "51acab25240b48dd78fc6d8feb467fae14d311f2c75857130a1fdfaed465d50f"
+    },
+    {
+      "url": "https://github.com/audeering/opensmile/releases",
+      "response_url": "https://github.com/audeering/opensmile/releases",
+      "http_status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "content_disposition": null,
+      "bytes": 216476,
+      "sha256": "eab8514b542daf5b02e99aa32662c736d4a61b4c28aff76ea8e6f6113d79ea5b"
+    },
+    {
+      "url": "https://api.github.com/repos/aria2/aria2/issues/1118",
+      "response_url": "https://api.github.com/repos/aria2/aria2/issues/1118",
+      "http_status": 200,
+      "content_type": "application/json; charset=utf-8",
+      "content_disposition": null,
+      "bytes": 2771,
+      "sha256": "87b3291b7390f85b35e222caf3d6135ea1632acf682a2d03afe53ff39e3639ea"
+    },
+    {
+      "url": "https://audeering.com/download/1318/",
+      "response_url": "https://www.audeering.com/download/1318/",
+      "http_status": 404,
+      "content_type": "text/html; charset=UTF-8",
+      "content_disposition": null,
+      "bytes": 193286,
+      "sha256": "09978db928856c60d13334377ac360d1825b827832c323c9bf7c1f61f51fb6af"
+    }
+  ],
+  "extractor_executed": false,
+  "raw_audio_read": false,
+  "test_labels_accessed": false
+}

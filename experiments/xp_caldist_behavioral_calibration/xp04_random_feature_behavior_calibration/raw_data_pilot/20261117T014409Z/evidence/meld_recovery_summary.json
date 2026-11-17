@@ -1,0 +1,76 @@
+{
+  "checked_at": "2026-11-17T01:53:47.342636+00:00",
+  "result": "PARTIAL_RECOVERY_FRONTEND_BLOCKED",
+  "official_repository": {
+    "url": "https://github.com/declare-lab/MELD",
+    "master_head": "e8cedf27b5d2877e198332c957127e16eb214afe",
+    "master_commits": 164,
+    "all_refs_commits": 173,
+    "nonlabel_text_or_code_blobs": 105,
+    "historical_notebook_code_blobs": 3,
+    "historical_paths": 61,
+    "annotation_csv_values_read": false,
+    "notebook_outputs_read": false,
+    "code_frontend_or_selector_found": false
+  },
+  "issues": {
+    "issues_and_pull_requests_returned": 57,
+    "comment_count": 96,
+    "page_size": 100,
+    "pagination_exhausted": true,
+    "new_author_contact": false,
+    "original_selector_or_statistics_found": false,
+    "pca_vs_svm_claim_conflict": true
+  },
+  "paper_versions": {
+    "versions_checked": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "is13_compare_explicit_versions": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "voice_intensity_threshold_z_standardization_versions": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "svm_l2_versions": [
+      5,
+      6
+    ],
+    "exact_version_config_hash_found": false,
+    "z_standardization_scope_threshold_and_statistics_found": false,
+    "v6_source_is13_comment_line": 520,
+    "v6_source_selector_or_supplementary_asset_found": false
+  },
+  "original_selector_found": false,
+  "selector_indices_found": false,
+  "normalization_parameters_found": false,
+  "raw_wav_to_1611_recovered": false,
+  "new_raw_feature_extraction_executed": false,
+  "new_gru_parity_executed": false,
+  "new_cmerc_inference_executed": false,
+  "test_labels_accessed": false,
+  "new_training_executed": false,
+  "audio_perturbations_executed": false,
+  "git_commit_or_push_executed": false,
+  "known_encoder_parity_from_prior_audit": {
+    "audit": "20261117T010744Z",
+    "validation_dialogues": 3,
+    "validation_utterances": 24,
+    "max_absolute_error": 1.1920928955078125e-06,
+    "mean_absolute_error": 4.268819692596379e-08,
+    "not_repeated_this_round": true
+  },
+  "evidence_stage": "source audit before this separately authorized publication"
+}
