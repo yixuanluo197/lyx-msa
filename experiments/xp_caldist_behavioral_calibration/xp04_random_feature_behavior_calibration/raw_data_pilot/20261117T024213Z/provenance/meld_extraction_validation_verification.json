@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "checks": {
+    "all_locked_inputs_unchanged": true,
+    "shape1109x6373": true,
+    "valid_mask_shape_and_dtype": true,
+    "mask_matches_finite": true,
+    "valid_rows1108": true,
+    "invalid_rows_all_nan": true,
+    "only_expected_missing_dev110_utt7": true
+  },
+  "invalid_full_row_indices": [
+    1084
+  ],
+  "feature_sha256": "59cfdaea810e6b0f316c17cc922068e017d5b9af6ec985afad2277f86c163015",
+  "valid_mask_sha256": "b4d3b8aa72b37c13fb897149c006b65ad2c7e1beddc93d08fa73bf801efdad24",
+  "launch_record_sha256": "408caea7e0391ab503b93121f4d1cb40889452d88eb69d904a99b08b7383ead1",
+  "frozen_model_lock_sha256": "49a8ef9b5a52e34d80d253703bbf1624156b4e849db420fde6459d7c4bd2988b",
+  "validation_targets_read": false,
+  "test_read": false,
+  "converter_or_model_fitted": false,
+  "cmERC_forward": false,
+  "single_locked_candidate_only": true
+}

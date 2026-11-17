@@ -1,0 +1,1648 @@
+{
+  "status": "PASS_WITH_DOCUMENTED_LIMITATIONS",
+  "reviewed_at": "2026-11-17T03:18:05.038736+00:00",
+  "scope": "Train boundary/index/hash/scaler verification only; no Validation feature or target arrays opened; no new numerical model evaluation",
+  "checks": [
+    {
+      "name": "IEMOCAP_manifest_counts",
+      "pass_": true,
+      "details": null
+    },
+    {
+      "name": "IEMOCAP_effective_train_dialogue_order",
+      "pass_": true,
+      "details": null
+    },
+    {
+      "name": "IEMOCAP_effective_validation_dialogue_order",
+      "pass_": true,
+      "details": null
+    },
+    {
+      "name": "IEMOCAP_train_val_dialogues_disjoint",
+      "pass_": true,
+      "details": null
+    },
+    {
+      "name": "IEMOCAP_Train_target_and_groups_shape",
+      "pass_": true,
+      "details": null
+    },
+    {
+      "name": "IEMOCAP_train_complete_unique_rowindices",
+      "pass_": true,
+      "details": null
+    },
+    {
+      "name": "IEMOCAP_validation_complete_unique_rowindices",
+      "pass_": true,
+      "details": null
+    },
+    {
+      "name": "IEMOCAP_frontend_fold_hash",
+      "pass_": true,
+      "details": null
+    },
+    {
+      "name": "IEMOCAP_frontend_used_only_train",
+      "pass_": true,
+      "details": null
+    },
+    {
+      "name": "IEMOCAP_frontend_fold_0_group_and_row_disjoint",
+      "pass_": true,
+      "details": null
+    },
+    {
+      "name": "IEMOCAP_frontend_fold_1_group_and_row_disjoint",
+      "pass_": true,
+      "details": null
+    },
+    {
+      "name": "IEMOCAP_frontend_fold_2_group_and_row_disjoint",
+      "pass_": true,
+      "details": null
+    },
+    {
+      "name": "IEMOCAP_frontend_OOF_exactly_once",
+      "pass_": true,
+      "details": null
+    },
+    {
+      "name": "IEMOCAP_models_fold_hash",
+      "pass_": true,
+      "details": null
+    },
+    {
+      "name": "IEMOCAP_models_used_only_train",
+      "pass_": true,
+      "details": null
+    },
+    {
+      "name": "IEMOCAP_models_fold_0_group_and_row_disjoint",
+      "pass_": true,
+      "details": null
+    },
+    {
+      "name": "IEMOCAP_models_fold_1_group_and_row_disjoint",
+      "pass_": true,
+      "details": null
+    },
+    {
+      "name": "IEMOCAP_models_fold_2_group_and_row_disjoint",
+      "pass_": true,
+      "details": null
+    },
+    {
+      "name": "IEMOCAP_models_OOF_exactly_once",
+      "pass_": true,
+      "details": null
+    },
+    {
+      "name": "IEMOCAP_model_used_rows_equal_finite_mask",
+      "pass_": true,
+      "details": null
+    },
+    {
+      "name": "IEMOCAP_final_original_folds",
+      "pass_": true,
+      "details": null
+    },
+    {
+      "name": "IEMOCAP_independent_selection_rule",
+      "pass_": true,
+      "details": null
+    },
+    {
+      "name": "IEMOCAP_selected_scores_consistent",
+      "pass_": true,
+      "details": null
+    },
+    {
+      "name": "IEMOCAP_original_converter_retained",
+      "pass_": true,
+      "details": null
+    },
+    {
+      "name": "IEMOCAP_final_model_sha256",
+      "pass_": true,
+      "details": null
+    },
+    {
+      "name": "IEMOCAP_final_train_scale_sha256",
+      "pass_": true,
+      "details": null
+    },
+    {
+      "name": "IEMOCAP_final_OOF_hash",
+      "pass_": true,
+      "details": null
+    },
+    {
+      "name": "IEMOCAP_lock_final_selection_hash",
+      "pass_": true,
+      "details": null
+    },
+    {
+      "name": "IEMOCAP_converter_metadata_dimensions",
+      "pass_": true,
+      "details": null
+    },
+    {
+      "name": "IEMOCAP_fold_scaler_hash_0",
+      "pass_": true,
+      "details": null
+    },
+    {
+      "name": "IEMOCAP_scaler_fit_indices_0",
+      "pass_": true,
+      "details": null
+    },
+    {
+      "name": "IEMOCAP_independent_fit_only_scaler_columns_0",
+      "pass_": true,
+      "details": {
+        "x_mean": 0.0,
+        "x_std": 0.0,
+        "y_mean": 0.0,
+        "y_std": 0.0,
+        "metric_target_scale": 0.0
+      }
+    },
+    {
+      "name": "IEMOCAP_fold_scaler_hash_1",
+      "pass_": true,
+      "details": null
+    },
+    {
+      "name": "IEMOCAP_scaler_fit_indices_1",
+      "pass_": true,
+      "details": null
+    },
+    {
+      "name": "IEMOCAP_independent_fit_only_scaler_columns_1",
+      "pass_": true,
+      "details": {
+        "x_mean": 0.0,
+        "x_std": 0.0,
+        "y_mean": 0.0,
+        "y_std": 0.0,
+        "metric_target_scale": 0.0
+      }
+    },
+    {
+      "name": "IEMOCAP_fold_scaler_hash_2",
+      "pass_": true,
+      "details": null
+    },
+    {
+      "name": "IEMOCAP_scaler_fit_indices_2",
+      "pass_": true,
+      "details": null
+    },
+    {
+      "name": "IEMOCAP_independent_fit_only_scaler_columns_2",
+      "pass_": true,
+      "details": {
+        "x_mean": 0.0,
+        "x_std": 0.0,
+        "y_mean": 0.0,
+        "y_std": 0.0,
+        "metric_target_scale": 0.0
+      }
+    },
+    {
+      "name": "IEMOCAP_validation_extraction_after_lock",
+      "pass_": true,
+      "details": null
+    },
+    {
+      "name": "MELD_manifest_counts",
+      "pass_": true,
+      "details": null
+    },
+    {
+      "name": "MELD_effective_train_dialogue_order",
+      "pass_": true,
+      "details": null
+    },
+    {
+      "name": "MELD_effective_validation_dialogue_order",
+      "pass_": true,
+      "details": null
+    },
+    {
+      "name": "MELD_train_val_dialogues_disjoint",
+      "pass_": true,
+      "details": null
+    },
+    {
+      "name": "MELD_Train_target_and_groups_shape",
+      "pass_": true,
+      "details": null
+    },
+    {
+      "name": "MELD_train_complete_unique_rowindices",
+      "pass_": true,
+      "details": null
+    },
+    {
+      "name": "MELD_validation_complete_unique_rowindices",
+      "pass_": true,
+      "details": null
+    },
+    {
+      "name": "MELD_frontend_fold_hash",
+      "pass_": true,
+      "details": null
+    },
+    {
+      "name": "MELD_frontend_used_only_train",
+      "pass_": true,
+      "details": null
+    },
+    {
+      "name": "MELD_frontend_fold_0_group_and_row_disjoint",
+      "pass_": true,
+      "details": null
+    },
+    {
+      "name": "MELD_frontend_fold_1_group_and_row_disjoint",
+      "pass_": true,
+      "details": null
+    },
+    {
+      "name": "MELD_frontend_fold_2_group_and_row_disjoint",
+      "pass_": true,
+      "details": null
+    },
+    {
+      "name": "MELD_frontend_OOF_exactly_once",
+      "pass_": true,
+      "details": null
+    },
+    {
+      "name": "MELD_models_fold_hash",
+      "pass_": true,
+      "details": null
+    },
+    {
+      "name": "MELD_models_used_only_train",
+      "pass_": true,
+      "details": null
+    },
+    {
+      "name": "MELD_models_fold_0_group_and_row_disjoint",
+      "pass_": true,
+      "details": null
+    },
+    {
+      "name": "MELD_models_fold_1_group_and_row_disjoint",
+      "pass_": true,
+      "details": null
+    },
+    {
+      "name": "MELD_models_fold_2_group_and_row_disjoint",
+      "pass_": true,
+      "details": null
+    },
+    {
+      "name": "MELD_models_OOF_exactly_once",
+      "pass_": true,
+      "details": null
+    },
+    {
+      "name": "MELD_model_used_rows_equal_finite_mask",
+      "pass_": true,
+      "details": null
+    },
+    {
+      "name": "MELD_final_original_folds",
+      "pass_": true,
+      "details": null
+    },
+    {
+      "name": "MELD_independent_selection_rule",
+      "pass_": true,
+      "details": null
+    },
+    {
+      "name": "MELD_selected_scores_consistent",
+      "pass_": true,
+      "details": null
+    },
+    {
+      "name": "MELD_original_converter_retained",
+      "pass_": true,
+      "details": null
+    },
+    {
+      "name": "MELD_final_model_sha256",
+      "pass_": true,
+      "details": null
+    },
+    {
+      "name": "MELD_final_train_scale_sha256",
+      "pass_": true,
+      "details": null
+    },
+    {
+      "name": "MELD_final_OOF_hash",
+      "pass_": true,
+      "details": null
+    },
+    {
+      "name": "MELD_lock_final_selection_hash",
+      "pass_": true,
+      "details": null
+    },
+    {
+      "name": "MELD_converter_metadata_dimensions",
+      "pass_": true,
+      "details": null
+    },
+    {
+      "name": "MELD_fold_scaler_hash_0",
+      "pass_": true,
+      "details": null
+    },
+    {
+      "name": "MELD_scaler_fit_indices_0",
+      "pass_": true,
+      "details": null
+    },
+    {
+      "name": "MELD_independent_fit_only_scaler_columns_0",
+      "pass_": true,
+      "details": {
+        "x_mean": 0.0,
+        "x_std": 0.0,
+        "y_mean": 0.0,
+        "y_std": 0.0,
+        "metric_target_scale": 0.0
+      }
+    },
+    {
+      "name": "MELD_fold_scaler_hash_1",
+      "pass_": true,
+      "details": null
+    },
+    {
+      "name": "MELD_scaler_fit_indices_1",
+      "pass_": true,
+      "details": null
+    },
+    {
+      "name": "MELD_independent_fit_only_scaler_columns_1",
+      "pass_": true,
+      "details": {
+        "x_mean": 0.0,
+        "x_std": 0.0,
+        "y_mean": 0.0,
+        "y_std": 0.0,
+        "metric_target_scale": 0.0
+      }
+    },
+    {
+      "name": "MELD_fold_scaler_hash_2",
+      "pass_": true,
+      "details": null
+    },
+    {
+      "name": "MELD_scaler_fit_indices_2",
+      "pass_": true,
+      "details": null
+    },
+    {
+      "name": "MELD_independent_fit_only_scaler_columns_2",
+      "pass_": true,
+      "details": {
+        "x_mean": 0.0,
+        "x_std": 0.0,
+        "y_mean": 0.0,
+        "y_std": 0.0,
+        "metric_target_scale": 0.0
+      }
+    },
+    {
+      "name": "all_recorded_input_hashes_match_current_or_saved_version",
+      "pass_": true,
+      "details": []
+    },
+    {
+      "name": "build_pair_manifests.py_no_CMERC_or_torch_import",
+      "pass_": true,
+      "details": [
+        "concurrent.futures",
+        "csv",
+        "hashlib",
+        "json",
+        "pickle",
+        "platform",
+        "collections",
+        "pathlib",
+        "numpy"
+      ]
+    },
+    {
+      "name": "run_converter_cv.py_no_CMERC_or_torch_import",
+      "pass_": true,
+      "details": [
+        "__future__",
+        "os",
+        "argparse",
+        "csv",
+        "hashlib",
+        "json",
+        "pickle",
+        "subprocess",
+        "sys",
+        "datetime",
+        "pathlib",
+        "numpy",
+        "sklearn.model_selection",
+        "converter_core"
+      ]
+    },
+    {
+      "name": "run_full_ridge_extension.py_no_CMERC_or_torch_import",
+      "pass_": true,
+      "details": [
+        "__future__",
+        "os",
+        "argparse",
+        "copy",
+        "hashlib",
+        "json",
+        "pickle",
+        "resource",
+        "subprocess",
+        "sys",
+        "pathlib",
+        "numpy",
+        "converter_core",
+        "run_converter_cv"
+      ]
+    },
+    {
+      "name": "converter_core.py_no_CMERC_or_torch_import",
+      "pass_": true,
+      "details": [
+        "__future__",
+        "numpy",
+        "hashlib",
+        "sklearn.utils.extmath",
+        "scipy.linalg",
+        "scipy.stats"
+      ]
+    },
+    {
+      "name": "train_loader_path_guard_present",
+      "pass_": true,
+      "details": null
+    },
+    {
+      "name": "MELD_missing_train_row_preserved",
+      "pass_": true,
+      "details": null
+    },
+    {
+      "name": "MELD_missing_validation_row_preserved",
+      "pass_": true,
+      "details": null
+    },
+    {
+      "name": "missing_media_candidate_qc.json_rejected_corrupt_media",
+      "pass_": true,
+      "details": null
+    },
+    {
+      "name": "train_missing_media_recovery.json_rejected_corrupt_media",
+      "pass_": true,
+      "details": null
+    },
+    {
+      "name": "CMERC_inference_guard_before_model_load",
+      "pass_": true,
+      "details": null
+    },
+    {
+      "name": "CMERC_probability_output_absent_at_review",
+      "pass_": true,
+      "details": {
+        "IEMOCAP": true,
+        "MELD": true
+      }
+    }
+  ],
+  "check_count": 89,
+  "issues": [],
+  "datasets": {
+    "IEMOCAP": {
+      "total_train": 5283,
+      "total_validation": 527,
+      "train_groups": 108,
+      "validation_groups": 12,
+      "training_pairs_used": 5283,
+      "excluded_train_rows": [],
+      "selected": {
+        "candidate": "is10",
+        "transform": "none",
+        "method": "diagonal_affine"
+      },
+      "selected_train_cv_score": 0.10158336543093238,
+      "CV": {
+        "frontend": {
+          "sha256": "1afd5cb6e223fa2f00d7f30543513670ae21eebe2d5f49df6b3a887c1eeeca01",
+          "used_rows": 5283,
+          "folds": [
+            {
+              "fold": 0,
+              "fit_rows": 3527,
+              "held_rows": 1756,
+              "fit_groups": 72,
+              "held_groups": 36
+            },
+            {
+              "fold": 1,
+              "fit_rows": 3519,
+              "held_rows": 1764,
+              "fit_groups": 72,
+              "held_groups": 36
+            },
+            {
+              "fold": 2,
+              "fit_rows": 3520,
+              "held_rows": 1763,
+              "fit_groups": 72,
+              "held_groups": 36
+            }
+          ]
+        },
+        "models": {
+          "sha256": "1afd5cb6e223fa2f00d7f30543513670ae21eebe2d5f49df6b3a887c1eeeca01",
+          "used_rows": 5283,
+          "folds": [
+            {
+              "fold": 0,
+              "fit_rows": 3527,
+              "held_rows": 1756,
+              "fit_groups": 72,
+              "held_groups": 36
+            },
+            {
+              "fold": 1,
+              "fit_rows": 3519,
+              "held_rows": 1764,
+              "fit_groups": 72,
+              "held_groups": 36
+            },
+            {
+              "fold": 2,
+              "fit_rows": 3520,
+              "held_rows": 1763,
+              "fit_groups": 72,
+              "held_groups": 36
+            }
+          ]
+        }
+      },
+      "scaler_fit_statistics_spot_checks": [
+        {
+          "fold": 0,
+          "sampled_input_columns": [
+            0,
+            98,
+            197,
+            296,
+            395,
+            494,
+            592,
+            691,
+            790,
+            889,
+            988,
+            1086,
+            1185,
+            1284,
+            1383,
+            1482,
+            1581
+          ],
+          "sampled_target_columns": [
+            0,
+            98,
+            197,
+            296,
+            395,
+            494,
+            592,
+            691,
+            790,
+            889,
+            988,
+            1086,
+            1185,
+            1284,
+            1383,
+            1482,
+            1581
+          ],
+          "max_abs_errors": {
+            "x_mean": 0.0,
+            "x_std": 0.0,
+            "y_mean": 0.0,
+            "y_std": 0.0,
+            "metric_target_scale": 0.0
+          }
+        },
+        {
+          "fold": 1,
+          "sampled_input_columns": [
+            0,
+            98,
+            197,
+            296,
+            395,
+            494,
+            592,
+            691,
+            790,
+            889,
+            988,
+            1086,
+            1185,
+            1284,
+            1383,
+            1482,
+            1581
+          ],
+          "sampled_target_columns": [
+            0,
+            98,
+            197,
+            296,
+            395,
+            494,
+            592,
+            691,
+            790,
+            889,
+            988,
+            1086,
+            1185,
+            1284,
+            1383,
+            1482,
+            1581
+          ],
+          "max_abs_errors": {
+            "x_mean": 0.0,
+            "x_std": 0.0,
+            "y_mean": 0.0,
+            "y_std": 0.0,
+            "metric_target_scale": 0.0
+          }
+        },
+        {
+          "fold": 2,
+          "sampled_input_columns": [
+            0,
+            98,
+            197,
+            296,
+            395,
+            494,
+            592,
+            691,
+            790,
+            889,
+            988,
+            1086,
+            1185,
+            1284,
+            1383,
+            1482,
+            1581
+          ],
+          "sampled_target_columns": [
+            0,
+            98,
+            197,
+            296,
+            395,
+            494,
+            592,
+            691,
+            790,
+            889,
+            988,
+            1086,
+            1185,
+            1284,
+            1383,
+            1482,
+            1581
+          ],
+          "max_abs_errors": {
+            "x_mean": 0.0,
+            "x_std": 0.0,
+            "y_mean": 0.0,
+            "y_std": 0.0,
+            "metric_target_scale": 0.0
+          }
+        }
+      ],
+      "media_missing_rows": [],
+      "chronology": {
+        "model_locked_epoch": 1794885126.885375,
+        "extraction_start_epoch": 1794885294.954079,
+        "after_lock": true
+      },
+      "final_train_oof_gate": {
+        "pass": false,
+        "checks": {
+          "full_train_coverage": true,
+          "finite": true,
+          "allclose": false,
+          "MAE": false,
+          "train_scaled_RMSE": false,
+          "mean_cosine": false,
+          "min_cosine": false,
+          "correlation_p05": false
+        },
+        "scope": "Train OOF stop-complexity diagnostic; not independent Validation acceptance"
+      }
+    },
+    "MELD": {
+      "total_train": 9989,
+      "total_validation": 1109,
+      "train_groups": 1038,
+      "validation_groups": 114,
+      "training_pairs_used": 9988,
+      "excluded_train_rows": [
+        1165
+      ],
+      "selected": {
+        "candidate": "ffmpegmono_16k_none",
+        "transform": "none",
+        "method": "best_column_affine"
+      },
+      "selected_train_cv_score": 0.4831288527939324,
+      "CV": {
+        "frontend": {
+          "sha256": "ec141bd097de8ae79b105501e4fcf3234d518425870eba881a46a879db1dca8e",
+          "used_rows": 256,
+          "folds": [
+            {
+              "fold": 0,
+              "fit_rows": 170,
+              "held_rows": 86,
+              "fit_groups": 170,
+              "held_groups": 86
+            },
+            {
+              "fold": 1,
+              "fit_rows": 171,
+              "held_rows": 85,
+              "fit_groups": 171,
+              "held_groups": 85
+            },
+            {
+              "fold": 2,
+              "fit_rows": 171,
+              "held_rows": 85,
+              "fit_groups": 171,
+              "held_groups": 85
+            }
+          ]
+        },
+        "models": {
+          "sha256": "faf6e93da16c68562d73794d8eda8dd580ae2e2bd1b09aeb3954157abf737a84",
+          "used_rows": 9988,
+          "folds": [
+            {
+              "fold": 0,
+              "fit_rows": 6658,
+              "held_rows": 3330,
+              "fit_groups": 692,
+              "held_groups": 346
+            },
+            {
+              "fold": 1,
+              "fit_rows": 6659,
+              "held_rows": 3329,
+              "fit_groups": 692,
+              "held_groups": 346
+            },
+            {
+              "fold": 2,
+              "fit_rows": 6659,
+              "held_rows": 3329,
+              "fit_groups": 692,
+              "held_groups": 346
+            }
+          ]
+        }
+      },
+      "scaler_fit_statistics_spot_checks": [
+        {
+          "fold": 0,
+          "sampled_input_columns": [
+            0,
+            398,
+            796,
+            1194,
+            1593,
+            1991,
+            2389,
+            2787,
+            3186,
+            3584,
+            3982,
+            4380,
+            4779,
+            5177,
+            5575,
+            5973,
+            6372
+          ],
+          "sampled_target_columns": [
+            0,
+            100,
+            201,
+            301,
+            402,
+            503,
+            603,
+            704,
+            805,
+            905,
+            1006,
+            1106,
+            1207,
+            1308,
+            1408,
+            1509,
+            1610
+          ],
+          "max_abs_errors": {
+            "x_mean": 0.0,
+            "x_std": 0.0,
+            "y_mean": 0.0,
+            "y_std": 0.0,
+            "metric_target_scale": 0.0
+          }
+        },
+        {
+          "fold": 1,
+          "sampled_input_columns": [
+            0,
+            398,
+            796,
+            1194,
+            1593,
+            1991,
+            2389,
+            2787,
+            3186,
+            3584,
+            3982,
+            4380,
+            4779,
+            5177,
+            5575,
+            5973,
+            6372
+          ],
+          "sampled_target_columns": [
+            0,
+            100,
+            201,
+            301,
+            402,
+            503,
+            603,
+            704,
+            805,
+            905,
+            1006,
+            1106,
+            1207,
+            1308,
+            1408,
+            1509,
+            1610
+          ],
+          "max_abs_errors": {
+            "x_mean": 0.0,
+            "x_std": 0.0,
+            "y_mean": 0.0,
+            "y_std": 0.0,
+            "metric_target_scale": 0.0
+          }
+        },
+        {
+          "fold": 2,
+          "sampled_input_columns": [
+            0,
+            398,
+            796,
+            1194,
+            1593,
+            1991,
+            2389,
+            2787,
+            3186,
+            3584,
+            3982,
+            4380,
+            4779,
+            5177,
+            5575,
+            5973,
+            6372
+          ],
+          "sampled_target_columns": [
+            0,
+            100,
+            201,
+            301,
+            402,
+            503,
+            603,
+            704,
+            805,
+            905,
+            1006,
+            1106,
+            1207,
+            1308,
+            1408,
+            1509,
+            1610
+          ],
+          "max_abs_errors": {
+            "x_mean": 0.0,
+            "x_std": 0.0,
+            "y_mean": 0.0,
+            "y_std": 0.0,
+            "metric_target_scale": 0.0
+          }
+        }
+      ],
+      "media_missing_rows": [
+        {
+          "row_index": "1165",
+          "dialogue_id": "125",
+          "raw_utterance_id": "3",
+          "media_exists": "False"
+        },
+        {
+          "row_index": "1084",
+          "dialogue_id": "1149",
+          "raw_utterance_id": "7",
+          "media_exists": "False"
+        }
+      ],
+      "chronology": null,
+      "final_train_oof_gate": {
+        "pass": false,
+        "checks": {
+          "full_train_coverage": false,
+          "finite": true,
+          "allclose": false,
+          "MAE": false,
+          "train_scaled_RMSE": false,
+          "mean_cosine": false,
+          "min_cosine": false,
+          "correlation_p05": false
+        },
+        "scope": "Train OOF stop-complexity diagnostic; not independent Validation acceptance"
+      }
+    }
+  },
+  "recorded_input_hash_checks": [
+    {
+      "record": "IEMOCAP_frontend_cv",
+      "path": "LOCAL_RUN/configs/reconstruction_protocol.json",
+      "expected_sha256": "a6874d0013a8609ea02005c1283f240d75b36439f52f34fc59575225bfa3d3df",
+      "current_sha256": "02377d045ceeb34932eabbb227a72712707f8c7704be483206e13aaef644a9b2",
+      "status": "SAVED_SNAPSHOT_MATCH",
+      "matching_snapshots": [
+        "configs/reconstruction_protocol_v1.json"
+      ]
+    },
+    {
+      "record": "IEMOCAP_frontend_cv",
+      "path": "LOCAL_RUN/local_only/IEMOCAP/target_train.npy",
+      "expected_sha256": "01d3d873da56d9f57bf77cc74cd9f5bc31afc19b004bfa606d91e2bb69538db1",
+      "current_sha256": "01d3d873da56d9f57bf77cc74cd9f5bc31afc19b004bfa606d91e2bb69538db1",
+      "status": "CURRENT_MATCH",
+      "matching_snapshots": []
+    },
+    {
+      "record": "IEMOCAP_frontend_cv",
+      "path": "LOCAL_RUN/local_only/IEMOCAP/groups_train.npy",
+      "expected_sha256": "6b5ed3ad1735b45978cf232516b60a966749234a4cdba89f76f1599a644fb5d8",
+      "current_sha256": "6b5ed3ad1735b45978cf232516b60a966749234a4cdba89f76f1599a644fb5d8",
+      "status": "CURRENT_MATCH",
+      "matching_snapshots": []
+    },
+    {
+      "record": "IEMOCAP_frontend_cv",
+      "path": "LOCAL_RUN/local_only/IEMOCAP/manifest_train.csv",
+      "expected_sha256": "9c9eb0337e4ec611a744562dc7821309261a2236e8fc190748acd695485ecf70",
+      "current_sha256": "9c9eb0337e4ec611a744562dc7821309261a2236e8fc190748acd695485ecf70",
+      "status": "CURRENT_MATCH",
+      "matching_snapshots": []
+    },
+    {
+      "record": "IEMOCAP_frontend_cv",
+      "path": "LOCAL_RUN/scripts/run_converter_cv.py",
+      "expected_sha256": "a889188edddc49016784e3fef80f98a71aedf55242b89caf9aea0ca298692453",
+      "current_sha256": "a889188edddc49016784e3fef80f98a71aedf55242b89caf9aea0ca298692453",
+      "status": "CURRENT_MATCH",
+      "matching_snapshots": []
+    },
+    {
+      "record": "IEMOCAP_frontend_cv",
+      "path": "LOCAL_RUN/scripts/converter_core.py",
+      "expected_sha256": "aa3c78bd675b7c503ec80421d688509317a28ea00ba20846b9d635b73debc961",
+      "current_sha256": "afe198de532a40063f8763f5331c9f1641b1749ab3bd2971987186c7b8d721e8",
+      "status": "SAVED_SNAPSHOT_MATCH",
+      "matching_snapshots": [
+        "configs/code_versions/converter_core_pre_fullridge.py"
+      ]
+    },
+    {
+      "record": "IEMOCAP_frontend_cv",
+      "path": "LOCAL_RUN/local_only/IEMOCAP/candidates/is10/train.npy",
+      "expected_sha256": "bfcf88611502a2c1e959879cee3cd4cca85095d28b4feb58f07d06c65647187e",
+      "current_sha256": "bfcf88611502a2c1e959879cee3cd4cca85095d28b4feb58f07d06c65647187e",
+      "status": "CURRENT_MATCH",
+      "matching_snapshots": []
+    },
+    {
+      "record": "IEMOCAP_frontend_cv",
+      "path": "LOCAL_RUN/local_only/IEMOCAP/candidates/is10/train_valid.npy",
+      "expected_sha256": "694768596688ccb75b0155fc7808b9dfc1dc053413621559bd7c2dea9fc7a7d9",
+      "current_sha256": "694768596688ccb75b0155fc7808b9dfc1dc053413621559bd7c2dea9fc7a7d9",
+      "status": "CURRENT_MATCH",
+      "matching_snapshots": []
+    },
+    {
+      "record": "IEMOCAP_frontend_cv",
+      "path": "LOCAL_RUN/local_only/IEMOCAP/candidates/is10_compat/train.npy",
+      "expected_sha256": "a0263245fd02ec4eac45956a2c078058fcac2f4fa7ffc859a3d8a2921f15277b",
+      "current_sha256": "a0263245fd02ec4eac45956a2c078058fcac2f4fa7ffc859a3d8a2921f15277b",
+      "status": "CURRENT_MATCH",
+      "matching_snapshots": []
+    },
+    {
+      "record": "IEMOCAP_frontend_cv",
+      "path": "LOCAL_RUN/local_only/IEMOCAP/candidates/is10_compat/train_valid.npy",
+      "expected_sha256": "694768596688ccb75b0155fc7808b9dfc1dc053413621559bd7c2dea9fc7a7d9",
+      "current_sha256": "694768596688ccb75b0155fc7808b9dfc1dc053413621559bd7c2dea9fc7a7d9",
+      "status": "CURRENT_MATCH",
+      "matching_snapshots": []
+    },
+    {
+      "record": "IEMOCAP_frontend_cv",
+      "path": "LOCAL_RUN/local_only/IEMOCAP/candidates/emobase2010/train.npy",
+      "expected_sha256": "56f7ffb899fe9925ba749b760e12cd424e43dc2e049b57b75f649adb0e0278f5",
+      "current_sha256": "56f7ffb899fe9925ba749b760e12cd424e43dc2e049b57b75f649adb0e0278f5",
+      "status": "CURRENT_MATCH",
+      "matching_snapshots": []
+    },
+    {
+      "record": "IEMOCAP_frontend_cv",
+      "path": "LOCAL_RUN/local_only/IEMOCAP/candidates/emobase2010/train_valid.npy",
+      "expected_sha256": "694768596688ccb75b0155fc7808b9dfc1dc053413621559bd7c2dea9fc7a7d9",
+      "current_sha256": "694768596688ccb75b0155fc7808b9dfc1dc053413621559bd7c2dea9fc7a7d9",
+      "status": "CURRENT_MATCH",
+      "matching_snapshots": []
+    },
+    {
+      "record": "IEMOCAP_model_selection",
+      "path": "LOCAL_RUN/configs/reconstruction_protocol.json",
+      "expected_sha256": "a6874d0013a8609ea02005c1283f240d75b36439f52f34fc59575225bfa3d3df",
+      "current_sha256": "02377d045ceeb34932eabbb227a72712707f8c7704be483206e13aaef644a9b2",
+      "status": "SAVED_SNAPSHOT_MATCH",
+      "matching_snapshots": [
+        "configs/reconstruction_protocol_v1.json"
+      ]
+    },
+    {
+      "record": "IEMOCAP_model_selection",
+      "path": "LOCAL_RUN/local_only/IEMOCAP/target_train.npy",
+      "expected_sha256": "01d3d873da56d9f57bf77cc74cd9f5bc31afc19b004bfa606d91e2bb69538db1",
+      "current_sha256": "01d3d873da56d9f57bf77cc74cd9f5bc31afc19b004bfa606d91e2bb69538db1",
+      "status": "CURRENT_MATCH",
+      "matching_snapshots": []
+    },
+    {
+      "record": "IEMOCAP_model_selection",
+      "path": "LOCAL_RUN/local_only/IEMOCAP/groups_train.npy",
+      "expected_sha256": "6b5ed3ad1735b45978cf232516b60a966749234a4cdba89f76f1599a644fb5d8",
+      "current_sha256": "6b5ed3ad1735b45978cf232516b60a966749234a4cdba89f76f1599a644fb5d8",
+      "status": "CURRENT_MATCH",
+      "matching_snapshots": []
+    },
+    {
+      "record": "IEMOCAP_model_selection",
+      "path": "LOCAL_RUN/local_only/IEMOCAP/manifest_train.csv",
+      "expected_sha256": "9c9eb0337e4ec611a744562dc7821309261a2236e8fc190748acd695485ecf70",
+      "current_sha256": "9c9eb0337e4ec611a744562dc7821309261a2236e8fc190748acd695485ecf70",
+      "status": "CURRENT_MATCH",
+      "matching_snapshots": []
+    },
+    {
+      "record": "IEMOCAP_model_selection",
+      "path": "LOCAL_RUN/scripts/run_converter_cv.py",
+      "expected_sha256": "a889188edddc49016784e3fef80f98a71aedf55242b89caf9aea0ca298692453",
+      "current_sha256": "a889188edddc49016784e3fef80f98a71aedf55242b89caf9aea0ca298692453",
+      "status": "CURRENT_MATCH",
+      "matching_snapshots": []
+    },
+    {
+      "record": "IEMOCAP_model_selection",
+      "path": "LOCAL_RUN/scripts/converter_core.py",
+      "expected_sha256": "aa3c78bd675b7c503ec80421d688509317a28ea00ba20846b9d635b73debc961",
+      "current_sha256": "afe198de532a40063f8763f5331c9f1641b1749ab3bd2971987186c7b8d721e8",
+      "status": "SAVED_SNAPSHOT_MATCH",
+      "matching_snapshots": [
+        "configs/code_versions/converter_core_pre_fullridge.py"
+      ]
+    },
+    {
+      "record": "IEMOCAP_model_selection",
+      "path": "LOCAL_RUN/provenance/IEMOCAP_frontend_cv.json",
+      "expected_sha256": "0f7b1ab2d04dd50d6e1439da4adb89c4c1f7e79ccf8815d5b2e59b1e349ef46b",
+      "current_sha256": "0f7b1ab2d04dd50d6e1439da4adb89c4c1f7e79ccf8815d5b2e59b1e349ef46b",
+      "status": "CURRENT_MATCH",
+      "matching_snapshots": []
+    },
+    {
+      "record": "IEMOCAP_model_selection",
+      "path": "LOCAL_RUN/local_only/IEMOCAP/candidates/is10/train.npy",
+      "expected_sha256": "bfcf88611502a2c1e959879cee3cd4cca85095d28b4feb58f07d06c65647187e",
+      "current_sha256": "bfcf88611502a2c1e959879cee3cd4cca85095d28b4feb58f07d06c65647187e",
+      "status": "CURRENT_MATCH",
+      "matching_snapshots": []
+    },
+    {
+      "record": "IEMOCAP_model_selection",
+      "path": "LOCAL_RUN/local_only/IEMOCAP/candidates/is10/train_valid.npy",
+      "expected_sha256": "694768596688ccb75b0155fc7808b9dfc1dc053413621559bd7c2dea9fc7a7d9",
+      "current_sha256": "694768596688ccb75b0155fc7808b9dfc1dc053413621559bd7c2dea9fc7a7d9",
+      "status": "CURRENT_MATCH",
+      "matching_snapshots": []
+    },
+    {
+      "record": "IEMOCAP_model_selection_final",
+      "path": "LOCAL_RUN/configs/reconstruction_protocol.json",
+      "expected_sha256": "02377d045ceeb34932eabbb227a72712707f8c7704be483206e13aaef644a9b2",
+      "current_sha256": "02377d045ceeb34932eabbb227a72712707f8c7704be483206e13aaef644a9b2",
+      "status": "CURRENT_MATCH",
+      "matching_snapshots": []
+    },
+    {
+      "record": "IEMOCAP_model_selection_final",
+      "path": "LOCAL_RUN/provenance/IEMOCAP_model_selection.json",
+      "expected_sha256": "aa228704c45767602416d88091feb96a598d3cada9c4c4754e684abb2bd898d6",
+      "current_sha256": "aa228704c45767602416d88091feb96a598d3cada9c4c4754e684abb2bd898d6",
+      "status": "CURRENT_MATCH",
+      "matching_snapshots": []
+    },
+    {
+      "record": "IEMOCAP_model_selection_final",
+      "path": "LOCAL_RUN/local_only/IEMOCAP/target_train.npy",
+      "expected_sha256": "01d3d873da56d9f57bf77cc74cd9f5bc31afc19b004bfa606d91e2bb69538db1",
+      "current_sha256": "01d3d873da56d9f57bf77cc74cd9f5bc31afc19b004bfa606d91e2bb69538db1",
+      "status": "CURRENT_MATCH",
+      "matching_snapshots": []
+    },
+    {
+      "record": "IEMOCAP_model_selection_final",
+      "path": "LOCAL_RUN/local_only/IEMOCAP/groups_train.npy",
+      "expected_sha256": "6b5ed3ad1735b45978cf232516b60a966749234a4cdba89f76f1599a644fb5d8",
+      "current_sha256": "6b5ed3ad1735b45978cf232516b60a966749234a4cdba89f76f1599a644fb5d8",
+      "status": "CURRENT_MATCH",
+      "matching_snapshots": []
+    },
+    {
+      "record": "IEMOCAP_model_selection_final",
+      "path": "LOCAL_RUN/local_only/IEMOCAP/candidates/is10/train.npy",
+      "expected_sha256": "bfcf88611502a2c1e959879cee3cd4cca85095d28b4feb58f07d06c65647187e",
+      "current_sha256": "bfcf88611502a2c1e959879cee3cd4cca85095d28b4feb58f07d06c65647187e",
+      "status": "CURRENT_MATCH",
+      "matching_snapshots": []
+    },
+    {
+      "record": "IEMOCAP_model_selection_final",
+      "path": "LOCAL_RUN/local_only/IEMOCAP/manifest_train.csv",
+      "expected_sha256": "9c9eb0337e4ec611a744562dc7821309261a2236e8fc190748acd695485ecf70",
+      "current_sha256": "9c9eb0337e4ec611a744562dc7821309261a2236e8fc190748acd695485ecf70",
+      "status": "CURRENT_MATCH",
+      "matching_snapshots": []
+    },
+    {
+      "record": "IEMOCAP_model_selection_final",
+      "path": "LOCAL_RUN/local_only/IEMOCAP/models_used_train_indices.npy",
+      "expected_sha256": "8b915ba0b1c4204a6380f1a2cc6a41d0241972b3b0ebde311f7c1d34005f6cad",
+      "current_sha256": "8b915ba0b1c4204a6380f1a2cc6a41d0241972b3b0ebde311f7c1d34005f6cad",
+      "status": "CURRENT_MATCH",
+      "matching_snapshots": []
+    },
+    {
+      "record": "IEMOCAP_model_selection_final",
+      "path": "LOCAL_RUN/scripts/run_full_ridge_extension.py",
+      "expected_sha256": "c0733ead972e899c36d1de44e105f212ac3979a38d16f7cef8f65ccf7960052a",
+      "current_sha256": "c0733ead972e899c36d1de44e105f212ac3979a38d16f7cef8f65ccf7960052a",
+      "status": "CURRENT_MATCH",
+      "matching_snapshots": []
+    },
+    {
+      "record": "IEMOCAP_model_selection_final",
+      "path": "LOCAL_RUN/scripts/converter_core.py",
+      "expected_sha256": "afe198de532a40063f8763f5331c9f1641b1749ab3bd2971987186c7b8d721e8",
+      "current_sha256": "afe198de532a40063f8763f5331c9f1641b1749ab3bd2971987186c7b8d721e8",
+      "status": "CURRENT_MATCH",
+      "matching_snapshots": []
+    },
+    {
+      "record": "IEMOCAP_model_selection_final",
+      "path": "LOCAL_RUN/scripts/run_converter_cv.py",
+      "expected_sha256": "a889188edddc49016784e3fef80f98a71aedf55242b89caf9aea0ca298692453",
+      "current_sha256": "a889188edddc49016784e3fef80f98a71aedf55242b89caf9aea0ca298692453",
+      "status": "CURRENT_MATCH",
+      "matching_snapshots": []
+    },
+    {
+      "record": "MELD_frontend_cv",
+      "path": "LOCAL_RUN/configs/reconstruction_protocol.json",
+      "expected_sha256": "a6874d0013a8609ea02005c1283f240d75b36439f52f34fc59575225bfa3d3df",
+      "current_sha256": "02377d045ceeb34932eabbb227a72712707f8c7704be483206e13aaef644a9b2",
+      "status": "SAVED_SNAPSHOT_MATCH",
+      "matching_snapshots": [
+        "configs/reconstruction_protocol_v1.json"
+      ]
+    },
+    {
+      "record": "MELD_frontend_cv",
+      "path": "LOCAL_RUN/local_only/MELD/target_train.npy",
+      "expected_sha256": "d35161bc49dce789cde5e037dda9e9bd8f0e002cdac62a543998f8c8836e47fa",
+      "current_sha256": "d35161bc49dce789cde5e037dda9e9bd8f0e002cdac62a543998f8c8836e47fa",
+      "status": "CURRENT_MATCH",
+      "matching_snapshots": []
+    },
+    {
+      "record": "MELD_frontend_cv",
+      "path": "LOCAL_RUN/local_only/MELD/groups_train.npy",
+      "expected_sha256": "a452d439a53fac1c9f611d0b7e5f1e5287b222f1090c38acfa00cd68e438220f",
+      "current_sha256": "a452d439a53fac1c9f611d0b7e5f1e5287b222f1090c38acfa00cd68e438220f",
+      "status": "CURRENT_MATCH",
+      "matching_snapshots": []
+    },
+    {
+      "record": "MELD_frontend_cv",
+      "path": "LOCAL_RUN/local_only/MELD/manifest_train.csv",
+      "expected_sha256": "e26008114645a013e86bd54030efc0d15c65dd863f05a83e4887f20cb5cccbd0",
+      "current_sha256": "e26008114645a013e86bd54030efc0d15c65dd863f05a83e4887f20cb5cccbd0",
+      "status": "CURRENT_MATCH",
+      "matching_snapshots": []
+    },
+    {
+      "record": "MELD_frontend_cv",
+      "path": "LOCAL_RUN/scripts/run_converter_cv.py",
+      "expected_sha256": "e32b7ce541b75d5e2ce919d27c57c58c6079545f8ff9d4b3dd3f752b7f49222f",
+      "current_sha256": "a889188edddc49016784e3fef80f98a71aedf55242b89caf9aea0ca298692453",
+      "status": "SAVED_SNAPSHOT_MATCH",
+      "matching_snapshots": [
+        "configs/code_versions/run_converter_cv_v1.py"
+      ]
+    },
+    {
+      "record": "MELD_frontend_cv",
+      "path": "LOCAL_RUN/scripts/converter_core.py",
+      "expected_sha256": "aa3c78bd675b7c503ec80421d688509317a28ea00ba20846b9d635b73debc961",
+      "current_sha256": "afe198de532a40063f8763f5331c9f1641b1749ab3bd2971987186c7b8d721e8",
+      "status": "SAVED_SNAPSHOT_MATCH",
+      "matching_snapshots": [
+        "configs/code_versions/converter_core_pre_fullridge.py"
+      ]
+    },
+    {
+      "record": "MELD_frontend_cv",
+      "path": "LOCAL_RUN/local_only/MELD/candidates/subset_indices.npy",
+      "expected_sha256": "5042e18dcc91002d1cff5897d44163acd074db4564a2084a6ad8545109b97bca",
+      "current_sha256": "5042e18dcc91002d1cff5897d44163acd074db4564a2084a6ad8545109b97bca",
+      "status": "CURRENT_MATCH",
+      "matching_snapshots": []
+    },
+    {
+      "record": "MELD_frontend_cv",
+      "path": "LOCAL_RUN/local_only/MELD/candidates/ffmpegmono_16k_none/probe.npy",
+      "expected_sha256": "0fb546ad0b92ec6d5430978b72846d3fa359e3a3983c0f0cd60ac6c98282001d",
+      "current_sha256": "0fb546ad0b92ec6d5430978b72846d3fa359e3a3983c0f0cd60ac6c98282001d",
+      "status": "CURRENT_MATCH",
+      "matching_snapshots": []
+    },
+    {
+      "record": "MELD_frontend_cv",
+      "path": "LOCAL_RUN/local_only/MELD/candidates/ffmpegmono_16k_zscore/probe.npy",
+      "expected_sha256": "7c884a086125d7546976ac6358ebcd6a872b2766e0f4750b3a4f55022ab25cfc",
+      "current_sha256": "7c884a086125d7546976ac6358ebcd6a872b2766e0f4750b3a4f55022ab25cfc",
+      "status": "CURRENT_MATCH",
+      "matching_snapshots": []
+    },
+    {
+      "record": "MELD_frontend_cv",
+      "path": "LOCAL_RUN/local_only/MELD/candidates/ffmpegmono_native48k_none/probe.npy",
+      "expected_sha256": "9f0d24411d61d2c999f67024a68e3990867aaeb6c2568869cf9e3ac328a4188a",
+      "current_sha256": "9f0d24411d61d2c999f67024a68e3990867aaeb6c2568869cf9e3ac328a4188a",
+      "status": "CURRENT_MATCH",
+      "matching_snapshots": []
+    },
+    {
+      "record": "MELD_frontend_cv",
+      "path": "LOCAL_RUN/local_only/MELD/candidates/ffmpegmono_native48k_zscore/probe.npy",
+      "expected_sha256": "0ce90e032a29109f0517086c37750829380f964156f817bdd9d1a078c636f88b",
+      "current_sha256": "0ce90e032a29109f0517086c37750829380f964156f817bdd9d1a078c636f88b",
+      "status": "CURRENT_MATCH",
+      "matching_snapshots": []
+    },
+    {
+      "record": "MELD_frontend_cv",
+      "path": "LOCAL_RUN/local_only/MELD/candidates/meanall_16k_none/probe.npy",
+      "expected_sha256": "2f8096ee42998365a5cd84c21b39b2367d7dad270d65c7c0397dae58f69b28d5",
+      "current_sha256": "2f8096ee42998365a5cd84c21b39b2367d7dad270d65c7c0397dae58f69b28d5",
+      "status": "CURRENT_MATCH",
+      "matching_snapshots": []
+    },
+    {
+      "record": "MELD_frontend_cv",
+      "path": "LOCAL_RUN/local_only/MELD/candidates/meanall_16k_zscore/probe.npy",
+      "expected_sha256": "ede628a857cf8943457102fac66565efedd307941693bd210eabfb3f1779089b",
+      "current_sha256": "ede628a857cf8943457102fac66565efedd307941693bd210eabfb3f1779089b",
+      "status": "CURRENT_MATCH",
+      "matching_snapshots": []
+    },
+    {
+      "record": "MELD_frontend_cv",
+      "path": "LOCAL_RUN/local_only/MELD/candidates/meanall_native48k_none/probe.npy",
+      "expected_sha256": "76a7a2903a386f395a1293d69404a61fe9927ae41dc93cf952d322ed99c4c096",
+      "current_sha256": "76a7a2903a386f395a1293d69404a61fe9927ae41dc93cf952d322ed99c4c096",
+      "status": "CURRENT_MATCH",
+      "matching_snapshots": []
+    },
+    {
+      "record": "MELD_frontend_cv",
+      "path": "LOCAL_RUN/local_only/MELD/candidates/meanall_native48k_zscore/probe.npy",
+      "expected_sha256": "7b49fdffd2471f9f5394969efe360104cd9fcc29ccbb9f99a10376231471eef0",
+      "current_sha256": "7b49fdffd2471f9f5394969efe360104cd9fcc29ccbb9f99a10376231471eef0",
+      "status": "CURRENT_MATCH",
+      "matching_snapshots": []
+    },
+    {
+      "record": "MELD_model_selection",
+      "path": "LOCAL_RUN/configs/reconstruction_protocol.json",
+      "expected_sha256": "02377d045ceeb34932eabbb227a72712707f8c7704be483206e13aaef644a9b2",
+      "current_sha256": "02377d045ceeb34932eabbb227a72712707f8c7704be483206e13aaef644a9b2",
+      "status": "CURRENT_MATCH",
+      "matching_snapshots": []
+    },
+    {
+      "record": "MELD_model_selection",
+      "path": "LOCAL_RUN/local_only/MELD/target_train.npy",
+      "expected_sha256": "d35161bc49dce789cde5e037dda9e9bd8f0e002cdac62a543998f8c8836e47fa",
+      "current_sha256": "d35161bc49dce789cde5e037dda9e9bd8f0e002cdac62a543998f8c8836e47fa",
+      "status": "CURRENT_MATCH",
+      "matching_snapshots": []
+    },
+    {
+      "record": "MELD_model_selection",
+      "path": "LOCAL_RUN/local_only/MELD/groups_train.npy",
+      "expected_sha256": "a452d439a53fac1c9f611d0b7e5f1e5287b222f1090c38acfa00cd68e438220f",
+      "current_sha256": "a452d439a53fac1c9f611d0b7e5f1e5287b222f1090c38acfa00cd68e438220f",
+      "status": "CURRENT_MATCH",
+      "matching_snapshots": []
+    },
+    {
+      "record": "MELD_model_selection",
+      "path": "LOCAL_RUN/local_only/MELD/manifest_train.csv",
+      "expected_sha256": "e26008114645a013e86bd54030efc0d15c65dd863f05a83e4887f20cb5cccbd0",
+      "current_sha256": "e26008114645a013e86bd54030efc0d15c65dd863f05a83e4887f20cb5cccbd0",
+      "status": "CURRENT_MATCH",
+      "matching_snapshots": []
+    },
+    {
+      "record": "MELD_model_selection",
+      "path": "LOCAL_RUN/scripts/run_converter_cv.py",
+      "expected_sha256": "a889188edddc49016784e3fef80f98a71aedf55242b89caf9aea0ca298692453",
+      "current_sha256": "a889188edddc49016784e3fef80f98a71aedf55242b89caf9aea0ca298692453",
+      "status": "CURRENT_MATCH",
+      "matching_snapshots": []
+    },
+    {
+      "record": "MELD_model_selection",
+      "path": "LOCAL_RUN/scripts/converter_core.py",
+      "expected_sha256": "afe198de532a40063f8763f5331c9f1641b1749ab3bd2971987186c7b8d721e8",
+      "current_sha256": "afe198de532a40063f8763f5331c9f1641b1749ab3bd2971987186c7b8d721e8",
+      "status": "CURRENT_MATCH",
+      "matching_snapshots": []
+    },
+    {
+      "record": "MELD_model_selection",
+      "path": "LOCAL_RUN/provenance/MELD_frontend_cv.json",
+      "expected_sha256": "214089c174ca5c10806a7362ec55c1bc1690c0a13ef4c591890cf3587ab08bd8",
+      "current_sha256": "214089c174ca5c10806a7362ec55c1bc1690c0a13ef4c591890cf3587ab08bd8",
+      "status": "CURRENT_MATCH",
+      "matching_snapshots": []
+    },
+    {
+      "record": "MELD_model_selection",
+      "path": "LOCAL_RUN/local_only/MELD/candidates/ffmpegmono_16k_none/train.npy",
+      "expected_sha256": "0f84e7b2b6b79a08ded59077425e3a80d258b809022172ac6181633019351a4e",
+      "current_sha256": "0f84e7b2b6b79a08ded59077425e3a80d258b809022172ac6181633019351a4e",
+      "status": "CURRENT_MATCH",
+      "matching_snapshots": []
+    },
+    {
+      "record": "MELD_model_selection",
+      "path": "LOCAL_RUN/local_only/MELD/candidates/ffmpegmono_16k_none/train_valid.npy",
+      "expected_sha256": "c449cf14fada0c87a7b4bb982a8883c3be209940f151278851bfc502de413d7b",
+      "current_sha256": "c449cf14fada0c87a7b4bb982a8883c3be209940f151278851bfc502de413d7b",
+      "status": "CURRENT_MATCH",
+      "matching_snapshots": []
+    },
+    {
+      "record": "MELD_model_selection_final",
+      "path": "LOCAL_RUN/configs/reconstruction_protocol.json",
+      "expected_sha256": "02377d045ceeb34932eabbb227a72712707f8c7704be483206e13aaef644a9b2",
+      "current_sha256": "02377d045ceeb34932eabbb227a72712707f8c7704be483206e13aaef644a9b2",
+      "status": "CURRENT_MATCH",
+      "matching_snapshots": []
+    },
+    {
+      "record": "MELD_model_selection_final",
+      "path": "LOCAL_RUN/provenance/MELD_model_selection.json",
+      "expected_sha256": "245eeeefd87549bdc4a0a468723081186dda2584365791639a1225ceb90d02e4",
+      "current_sha256": "245eeeefd87549bdc4a0a468723081186dda2584365791639a1225ceb90d02e4",
+      "status": "CURRENT_MATCH",
+      "matching_snapshots": []
+    },
+    {
+      "record": "MELD_model_selection_final",
+      "path": "LOCAL_RUN/local_only/MELD/target_train.npy",
+      "expected_sha256": "d35161bc49dce789cde5e037dda9e9bd8f0e002cdac62a543998f8c8836e47fa",
+      "current_sha256": "d35161bc49dce789cde5e037dda9e9bd8f0e002cdac62a543998f8c8836e47fa",
+      "status": "CURRENT_MATCH",
+      "matching_snapshots": []
+    },
+    {
+      "record": "MELD_model_selection_final",
+      "path": "LOCAL_RUN/local_only/MELD/groups_train.npy",
+      "expected_sha256": "a452d439a53fac1c9f611d0b7e5f1e5287b222f1090c38acfa00cd68e438220f",
+      "current_sha256": "a452d439a53fac1c9f611d0b7e5f1e5287b222f1090c38acfa00cd68e438220f",
+      "status": "CURRENT_MATCH",
+      "matching_snapshots": []
+    },
+    {
+      "record": "MELD_model_selection_final",
+      "path": "LOCAL_RUN/local_only/MELD/candidates/ffmpegmono_16k_none/train.npy",
+      "expected_sha256": "0f84e7b2b6b79a08ded59077425e3a80d258b809022172ac6181633019351a4e",
+      "current_sha256": "0f84e7b2b6b79a08ded59077425e3a80d258b809022172ac6181633019351a4e",
+      "status": "CURRENT_MATCH",
+      "matching_snapshots": []
+    },
+    {
+      "record": "MELD_model_selection_final",
+      "path": "LOCAL_RUN/local_only/MELD/manifest_train.csv",
+      "expected_sha256": "e26008114645a013e86bd54030efc0d15c65dd863f05a83e4887f20cb5cccbd0",
+      "current_sha256": "e26008114645a013e86bd54030efc0d15c65dd863f05a83e4887f20cb5cccbd0",
+      "status": "CURRENT_MATCH",
+      "matching_snapshots": []
+    },
+    {
+      "record": "MELD_model_selection_final",
+      "path": "LOCAL_RUN/local_only/MELD/models_used_train_indices.npy",
+      "expected_sha256": "60ee67ae911913588b740ef3d0c6764b2b332487861d02bafda933eb30527f16",
+      "current_sha256": "60ee67ae911913588b740ef3d0c6764b2b332487861d02bafda933eb30527f16",
+      "status": "CURRENT_MATCH",
+      "matching_snapshots": []
+    },
+    {
+      "record": "MELD_model_selection_final",
+      "path": "LOCAL_RUN/scripts/run_full_ridge_extension.py",
+      "expected_sha256": "c0733ead972e899c36d1de44e105f212ac3979a38d16f7cef8f65ccf7960052a",
+      "current_sha256": "c0733ead972e899c36d1de44e105f212ac3979a38d16f7cef8f65ccf7960052a",
+      "status": "CURRENT_MATCH",
+      "matching_snapshots": []
+    },
+    {
+      "record": "MELD_model_selection_final",
+      "path": "LOCAL_RUN/scripts/converter_core.py",
+      "expected_sha256": "afe198de532a40063f8763f5331c9f1641b1749ab3bd2971987186c7b8d721e8",
+      "current_sha256": "afe198de532a40063f8763f5331c9f1641b1749ab3bd2971987186c7b8d721e8",
+      "status": "CURRENT_MATCH",
+      "matching_snapshots": []
+    },
+    {
+      "record": "MELD_model_selection_final",
+      "path": "LOCAL_RUN/scripts/run_converter_cv.py",
+      "expected_sha256": "a889188edddc49016784e3fef80f98a71aedf55242b89caf9aea0ca298692453",
+      "current_sha256": "a889188edddc49016784e3fef80f98a71aedf55242b89caf9aea0ca298692453",
+      "status": "CURRENT_MATCH",
+      "matching_snapshots": []
+    }
+  ],
+  "executed_train_source_inspection": [
+    {
+      "script": "build_pair_manifests.py",
+      "sha256": "40760be77aa2aae0e835049921df9a9034622e9c1b3c8b66be0080b1dbba70ad",
+      "imports": [
+        "concurrent.futures",
+        "csv",
+        "hashlib",
+        "json",
+        "pickle",
+        "platform",
+        "collections",
+        "pathlib",
+        "numpy"
+      ]
+    },
+    {
+      "script": "run_converter_cv.py",
+      "sha256": "a889188edddc49016784e3fef80f98a71aedf55242b89caf9aea0ca298692453",
+      "imports": [
+        "__future__",
+        "os",
+        "argparse",
+        "csv",
+        "hashlib",
+        "json",
+        "pickle",
+        "subprocess",
+        "sys",
+        "datetime",
+        "pathlib",
+        "numpy",
+        "sklearn.model_selection",
+        "converter_core"
+      ]
+    },
+    {
+      "script": "run_full_ridge_extension.py",
+      "sha256": "c0733ead972e899c36d1de44e105f212ac3979a38d16f7cef8f65ccf7960052a",
+      "imports": [
+        "__future__",
+        "os",
+        "argparse",
+        "copy",
+        "hashlib",
+        "json",
+        "pickle",
+        "resource",
+        "subprocess",
+        "sys",
+        "pathlib",
+        "numpy",
+        "converter_core",
+        "run_converter_cv"
+      ]
+    },
+    {
+      "script": "converter_core.py",
+      "sha256": "afe198de532a40063f8763f5331c9f1641b1749ab3bd2971987186c7b8d721e8",
+      "imports": [
+        "__future__",
+        "numpy",
+        "hashlib",
+        "sklearn.utils.extmath",
+        "scipy.linalg",
+        "scipy.stats"
+      ]
+    }
+  ],
+  "observations": [
+    "Initial menu was amended once during Train selection to add full-rank ridge. Version1 protocol and pre-extension sources were retained; it must not be described as fully preregistered from outset.",
+    "MELD frontend was selected on a fixed 256-Train-dialogue probe then models used 9988/9989 Train pairs; no claim that all9989 were available is justified.",
+    "Train CV summaries are model-selection scores, not unbiased generalization estimates. Independent review checks chronology/source/actual index and stored scaler calculations; cannot prove an unrestricted-host global negative about every process."
+  ],
+  "validation_targets_opened_by_review": false,
+  "test_values_opened_by_review": false,
+  "CMERC_executed_by_review": false,
+  "CMERC_inference_boundary_evidence": {
+    "adapter_source_sha256": "beefb368a3ace4de625511cb038155834b55c6627b9000e9a8e9bfbc98bb7900",
+    "gate_precedes_model_import_and_load_by_source": true,
+    "probability_parity_output_directory_absent": {
+      "IEMOCAP": true,
+      "MELD": true
+    },
+    "adapter_preparation_audit_path": "provenance/xp04_probability_adapter_audit.json",
+    "scope_limit": "No full CMERC forward observed in reviewed Train commands/code/artifacts; source plus absence of expected output is supporting evidence, not an unrestricted-host process trace."
+  }
+}

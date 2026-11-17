@@ -1,0 +1,39 @@
+{
+  "snapshotted_at": "2026-11-17T03:06:50.217839+00:00",
+  "reason": "Train-only full-rank ridge extension before Validation access; original model files retained",
+  "pre_extension": [
+    {
+      "source": "experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261117T024213Z/scripts/converter_core.py",
+      "snapshot": "experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261117T024213Z/configs/code_versions/converter_core_pre_fullridge.py",
+      "sha256": "aa3c78bd675b7c503ec80421d688509317a28ea00ba20846b9d635b73debc961"
+    },
+    {
+      "source": "experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261117T024213Z/scripts/test_converter_core.py",
+      "snapshot": "experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261117T024213Z/configs/code_versions/test_converter_core_pre_fullridge.py",
+      "sha256": "6e629b6fcb700a118834ff2bd8da8c2b847ddd1360af8c499fce0a968cce4ca8"
+    },
+    {
+      "source": "experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261117T024213Z/scripts/run_converter_cv.py",
+      "snapshot": "experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261117T024213Z/configs/code_versions/run_converter_cv_v2.py",
+      "sha256": "a889188edddc49016784e3fef80f98a71aedf55242b89caf9aea0ca298692453"
+    }
+  ],
+  "full_rank_extension": [
+    {
+      "source": "experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261117T024213Z/scripts/converter_core.py",
+      "sha256": "afe198de532a40063f8763f5331c9f1641b1749ab3bd2971987186c7b8d721e8"
+    },
+    {
+      "source": "experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261117T024213Z/scripts/test_converter_core.py",
+      "sha256": "ed8ba82d10c3bd56c995475bf3cc29378ad7fe1690ca1cb97400abe2a4632181"
+    },
+    {
+      "source": "experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261117T024213Z/scripts/run_converter_cv.py",
+      "sha256": "a889188edddc49016784e3fef80f98a71aedf55242b89caf9aea0ca298692453"
+    },
+    {
+      "source": "experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261117T024213Z/scripts/run_full_ridge_extension.py",
+      "sha256": "c0733ead972e899c36d1de44e105f212ac3979a38d16f7cef8f65ccf7960052a"
+    }
+  ]
+}

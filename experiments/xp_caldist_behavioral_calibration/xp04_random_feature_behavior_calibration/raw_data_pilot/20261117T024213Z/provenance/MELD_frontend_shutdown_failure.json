@@ -1,0 +1,18 @@
+{
+  "run_pid": 3952521,
+  "exec_session": 19878,
+  "process_exit_code": 120,
+  "failure": "Interpreter final flush called Tee.flush after log stream close; all 64 case summaries, selected OOF and selected JSON were saved before failure.",
+  "numerical_stage_completed": true,
+  "report_status": "COMPLETE",
+  "records": 64,
+  "selected": {
+    "candidate": "ffmpegmono_16k_none",
+    "transform": "none",
+    "method": "best_column_affine"
+  },
+  "source_sha256": "e32b7ce541b75d5e2ce919d27c57c58c6079545f8ff9d4b3dd3f752b7f49222f",
+  "preserved_source": "experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261117T024213Z/provenance/run_converter_cv_v1_shutdown_failure.py",
+  "no_validation_access": true,
+  "fix_changes_numerics": false
+}

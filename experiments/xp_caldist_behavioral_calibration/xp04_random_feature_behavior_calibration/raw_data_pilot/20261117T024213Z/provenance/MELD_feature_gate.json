@@ -1,0 +1,26 @@
+{
+  "datasets": {
+    "MELD": {
+      "passed": false,
+      "clean_feature_parity_passed": false,
+      "validation_independent": true,
+      "full_validation_coverage": false,
+      "fit_effective_train_only": true,
+      "train_dialogue_group_cv_only": true,
+      "model_locked_before_validation": true,
+      "test_used": false,
+      "validation_rows": 1109,
+      "output_width": 300,
+      "rebuilt_audio_sha256": "dfa3b8523feedfa0ce6d07b4bb88e7963dd2a63c957796ea177c4c5d0d3a3127",
+      "manifest_sha256": "61f666f7969665e20cae51f4886349d8ee0d9c1053e7bad3ffb2bbf84f0e610b",
+      "model_lock_sha256": "49a8ef9b5a52e34d80d253703bbf1624156b4e849db420fde6459d7c4bd2988b",
+      "new_validation_untuned": true,
+      "historical_validation_exposure_disclosed": true,
+      "selected1611_parity_passed": false,
+      "context300_parity_passed": false,
+      "full_dialogue_bigru_context": false,
+      "real_lengths_and_order_preserved": true,
+      "padding33_and_masking_preserved": true
+    }
+  }
+}

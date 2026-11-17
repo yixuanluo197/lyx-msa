@@ -1,0 +1,30 @@
+{
+  "checks": {
+    "shape_complete": true,
+    "mask_shape_dtype": true,
+    "mask_equals_finite": true,
+    "finite_count9988": true,
+    "failure_rows_all_nan": true,
+    "single_missing125_3": true,
+    "script_still_start_sha": true,
+    "array_sha_match": true,
+    "mask_sha_match": true
+  },
+  "all_pass": true,
+  "invalid_full_row_indices": [
+    1165
+  ],
+  "failed_records": [
+    {
+      "row_index": 1165,
+      "dialogue_id": 125,
+      "utterance_id": 3,
+      "media_path": "/LOCAL/MELD_ASSETS/raw/MELD/MELD.Raw/train_splits/dia125_utt3.mp4",
+      "media_sha256": null,
+      "conditions": {},
+      "status": "failed",
+      "error": "FileNotFoundError: [Errno 2] No such file or directory: '/LOCAL/MELD_ASSETS/raw/MELD/MELD.Raw/train_splits/dia125_utt3.mp4'"
+    }
+  ],
+  "scope": "Train features only; no targets, Validation or Test used by extractor"
+}

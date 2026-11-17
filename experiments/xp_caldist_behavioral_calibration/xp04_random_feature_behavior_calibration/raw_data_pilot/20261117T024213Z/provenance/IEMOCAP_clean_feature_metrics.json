@@ -1,0 +1,151 @@
+{
+  "dataset": "IEMOCAP",
+  "selected_feature_metrics": {
+    "shape": [
+      527,
+      1582
+    ],
+    "total_scalar_elements": 833714,
+    "jointly_finite_elements": 833714,
+    "nonfinite_target_elements": 0,
+    "nonfinite_prediction_elements": 0,
+    "fully_finite_rows": 527,
+    "nonfinite_rows": 0,
+    "max_absolute_error": 17.91040999362704,
+    "mean_absolute_error": 0.013547293658121474,
+    "rmse": 0.12782490992611947,
+    "cosine_valid_rows": 527,
+    "cosine_undefined_finite_rows": 0,
+    "zero_target_rows": 0,
+    "zero_prediction_rows": 0,
+    "mean_cosine_similarity": 0.9933990796233748,
+    "min_cosine_similarity": 0.2961708938990255,
+    "column_correlation_defined": 1582,
+    "column_correlation_undefined": 0,
+    "column_correlation_quantiles": {
+      "min": 0.6552831888045471,
+      "p05": 0.9567145704613301,
+      "median": 0.9992002260375402,
+      "p95": 0.9999968303600593,
+      "max": 0.9999999999999999
+    },
+    "column_mae_quantiles": {
+      "min": 3.174888020220767e-05,
+      "p05": 0.0003535124778212156,
+      "median": 0.0025638544407240362,
+      "p95": 0.06717801106341863,
+      "max": 0.4826652320363724
+    },
+    "column_rmse_quantiles": {
+      "min": 3.419753211108018e-05,
+      "p05": 0.002929107200776597,
+      "median": 0.041086792124515485,
+      "p95": 0.29103477738725003,
+      "max": 0.8262615969037973
+    },
+    "absolute_column_mean_difference_quantiles": {
+      "min": 2.0854618068173736e-06,
+      "p05": 0.00012041743270226301,
+      "median": 0.001651751406140864,
+      "p95": 0.012673583391227011,
+      "max": 0.06656688998320345
+    },
+    "absolute_column_std_difference_quantiles": {
+      "min": 1.2019834905174775e-06,
+      "p05": 0.00010979881481403276,
+      "median": 0.0017074732275627613,
+      "p95": 0.04764639206403441,
+      "max": 0.8244744130493233
+    },
+    "nonfinite_policy": "count all; finite element errors; wholly finite rows for correlations/distributions/cosine",
+    "train_scale_nrmse_quantiles": {
+      "min": 3.3941681779866306e-05,
+      "p05": 0.002925166851023378,
+      "median": 0.041120300736888715,
+      "p95": 0.29341154702482264,
+      "max": 0.9714261262117792
+    },
+    "train_scale_nrmse_mean": 0.07833020876890662,
+    "train_scale_zero_columns": 0,
+    "global_train_scale_nrmse": 0.12932024710944603,
+    "global_train_scale_nrmse_definition": "sqrt(mean((prediction-target)^2 / supplied_train_scale^2)) over jointly finite entries with positive scale",
+    "column_wasserstein_quantiles": {
+      "min": 3.174888020220767e-05,
+      "p05": 0.00035348276479803476,
+      "median": 0.002438532103824758,
+      "p95": 0.03146450465670288,
+      "max": 0.21228809137339133
+    },
+    "dialogue_count": 12,
+    "dialogue_equal_weight_mae": 0.013464637703302732,
+    "dialogue_equal_nrmse": 0.11438953244156642,
+    "dialogue_equal_nrmse_definition": "arithmetic mean of per-dialogue sqrt(mean((error / supplied_train_scale)^2)); dialogues equally weighted",
+    "correlation_gate_definition": "Target-nonconstant columns have population standard deviation > protocol feature_gate.scale_floor on all wholly finite target Validation rows; prediction population standard deviation <= the same floor is constant. Every target-nonconstant correlation must be defined; p05 is computed on these required columns only. No target-nonconstant columns means the correlation condition is not applicable, while all element-error gates still apply.",
+    "target_nonconstant_dimensions_for_correlation_gate": 1582,
+    "target_nonconstant_but_prediction_constant_dimensions": 0,
+    "target_nonconstant_but_correlation_undefined_dimensions": 0,
+    "required_target_dimension_correlation_p05": 0.9567145704613301,
+    "target_constant_dimensions": 0,
+    "prediction_constant_dimensions": 0,
+    "gate_checks": {
+      "all_finite": true,
+      "full_coverage": true,
+      "all_elements_allclose": false,
+      "mae": false,
+      "train_scaled_rmse": false,
+      "mean_cosine": false,
+      "min_cosine": false,
+      "required_target_correlations_defined": true,
+      "correlation_p05": false
+    },
+    "passed": false
+  },
+  "source_valid_rows": 527,
+  "source_missing_rows": 0,
+  "binding": {
+    "lock_sha256": "788294fb64adc841ba0e12df66a2dd034d52a7ff743b583ea711c5d11867723f",
+    "inputs": {
+      "converter_path": "5afb90cc7f71467ad8a90844a07f133a10c017fd9b58610fbd50f2aade23ca1f",
+      "validation_features_path": "363b9d5c73fbc74441b4c4af2ba21a6b97daa111b669be1591f72d6c56ca76dd",
+      "validation_valid_path": "7dd56adf77eeb3facccaaa99a2de2d3eefa873a6839fe9d9be4f6ad38665f368",
+      "manifest_path": "9f87f720d66ba916d4e5ee105bb326aa2867181b198ca2ebb4a7b4d4624c0080",
+      "protocol_path": "02377d045ceeb34932eabbb227a72712707f8c7704be483206e13aaef644a9b2",
+      "train_scale_path": "0e326cc28b6436815f2742ed3e23fd6fb233a33d4146870b0be97176ac0b4368",
+      "config": "59e40ae7b7d63bb5f56806eedefb2f70c6797095455f63c083917b1141275369",
+      "base": "ceb5cc9a45d1792998438e27f86a12642320aa6315546e4425316140ea503fb3"
+    },
+    "protocol_sha256": "02377d045ceeb34932eabbb227a72712707f8c7704be483206e13aaef644a9b2",
+    "converter_sha256": "5afb90cc7f71467ad8a90844a07f133a10c017fd9b58610fbd50f2aade23ca1f",
+    "converter_core_sha256": "afe198de532a40063f8763f5331c9f1641b1749ab3bd2971987186c7b8d721e8"
+  },
+  "classification": "RECONSTRUCTED_CANDIDATE_NOT_ORIGINAL",
+  "test_used": false,
+  "label_slots_indexed": false,
+  "cmERC_executed": false,
+  "parameters_fitted": false,
+  "validation_feedback_to_selection": false,
+  "historical_validation_exposure_disclosed": true,
+  "feature_gate": {
+    "passed": false,
+    "clean_feature_parity_passed": false,
+    "validation_independent": true,
+    "full_validation_coverage": true,
+    "fit_effective_train_only": true,
+    "train_dialogue_group_cv_only": true,
+    "model_locked_before_validation": true,
+    "test_used": false,
+    "validation_rows": 527,
+    "output_width": 1582,
+    "rebuilt_audio_sha256": "1d5a0ac94facc981dba919e02163a0982321b5a4adf422f0e8a27aff93acce74",
+    "manifest_sha256": "9f87f720d66ba916d4e5ee105bb326aa2867181b198ca2ebb4a7b4d4624c0080",
+    "model_lock_sha256": "788294fb64adc841ba0e12df66a2dd034d52a7ff743b583ea711c5d11867723f",
+    "new_validation_untuned": true,
+    "historical_validation_exposure_disclosed": true
+  },
+  "outputs": {
+    "local_only/IEMOCAP/final_validation/rebuilt_selected_validation.npy": "1d5a0ac94facc981dba919e02163a0982321b5a4adf422f0e8a27aff93acce74",
+    "local_only/IEMOCAP/final_validation/target_val.npy": "a191d3f74d2946bac097ae15de77de2f1c9c58eebb403c582ee5a2c04a822b30",
+    "local_only/IEMOCAP/final_validation/selected_per_dimension.csv": "887884b5cd7b594166607e5f75f53c1f02166e2ed1b40e80e89920d3501812dd",
+    "local_only/IEMOCAP/rebuilt_validation_audio.npy": "1d5a0ac94facc981dba919e02163a0982321b5a4adf422f0e8a27aff93acce74"
+  }
+}

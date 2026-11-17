@@ -1,0 +1,32 @@
+{
+  "status": "COMPLETE",
+  "started_at": "2026-11-17T03:16:13.646569+00:00",
+  "binding": {
+    "lock_sha256": "788294fb64adc841ba0e12df66a2dd034d52a7ff743b583ea711c5d11867723f",
+    "inputs": {
+      "converter_path": "5afb90cc7f71467ad8a90844a07f133a10c017fd9b58610fbd50f2aade23ca1f",
+      "validation_features_path": "363b9d5c73fbc74441b4c4af2ba21a6b97daa111b669be1591f72d6c56ca76dd",
+      "validation_valid_path": "7dd56adf77eeb3facccaaa99a2de2d3eefa873a6839fe9d9be4f6ad38665f368",
+      "manifest_path": "9f87f720d66ba916d4e5ee105bb326aa2867181b198ca2ebb4a7b4d4624c0080",
+      "protocol_path": "02377d045ceeb34932eabbb227a72712707f8c7704be483206e13aaef644a9b2",
+      "train_scale_path": "0e326cc28b6436815f2742ed3e23fd6fb233a33d4146870b0be97176ac0b4368",
+      "config": "59e40ae7b7d63bb5f56806eedefb2f70c6797095455f63c083917b1141275369",
+      "base": "ceb5cc9a45d1792998438e27f86a12642320aa6315546e4425316140ea503fb3"
+    },
+    "protocol_sha256": "02377d045ceeb34932eabbb227a72712707f8c7704be483206e13aaef644a9b2",
+    "converter_sha256": "5afb90cc7f71467ad8a90844a07f133a10c017fd9b58610fbd50f2aade23ca1f",
+    "converter_core_sha256": "afe198de532a40063f8763f5331c9f1641b1749ab3bd2971987186c7b8d721e8"
+  },
+  "attempt": 1,
+  "runner_sha256": "38a160ec191576e9000867b5242fa1841d12765ed0b11418d5a2a8c289ade49f",
+  "core_sha256": "afe198de532a40063f8763f5331c9f1641b1749ab3bd2971987186c7b8d721e8",
+  "previous_failed_attempt": null,
+  "completed_at": "2026-11-17T03:16:14.687025+00:00",
+  "feature_gate_passed": false,
+  "outputs": {
+    "local_only/IEMOCAP/final_validation/rebuilt_selected_validation.npy": "1d5a0ac94facc981dba919e02163a0982321b5a4adf422f0e8a27aff93acce74",
+    "local_only/IEMOCAP/final_validation/target_val.npy": "a191d3f74d2946bac097ae15de77de2f1c9c58eebb403c582ee5a2c04a822b30",
+    "local_only/IEMOCAP/final_validation/selected_per_dimension.csv": "887884b5cd7b594166607e5f75f53c1f02166e2ed1b40e80e89920d3501812dd",
+    "local_only/IEMOCAP/rebuilt_validation_audio.npy": "1d5a0ac94facc981dba919e02163a0982321b5a4adf422f0e8a27aff93acce74"
+  }
+}

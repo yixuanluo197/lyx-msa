@@ -1,0 +1,338 @@
+{
+  "dataset": "MELD",
+  "selected_feature_metrics": {
+    "shape": [
+      1109,
+      1611
+    ],
+    "total_scalar_elements": 1786599,
+    "jointly_finite_elements": 1784988,
+    "nonfinite_target_elements": 0,
+    "nonfinite_prediction_elements": 1611,
+    "fully_finite_rows": 1108,
+    "nonfinite_rows": 1,
+    "max_absolute_error": 2.319467679881958,
+    "mean_absolute_error": 0.06832476573524446,
+    "rmse": 0.11538499116502544,
+    "cosine_valid_rows": 1108,
+    "cosine_undefined_finite_rows": 0,
+    "zero_target_rows": 0,
+    "zero_prediction_rows": 0,
+    "mean_cosine_similarity": 0.9741203276513266,
+    "min_cosine_similarity": 0.7978226350803737,
+    "column_correlation_defined": 1611,
+    "column_correlation_undefined": 0,
+    "column_correlation_quantiles": {
+      "min": 0.06301752572177358,
+      "p05": 0.5276181594830534,
+      "median": 0.9073217804214248,
+      "p95": 0.9941282977963719,
+      "max": 0.9996426607402198
+    },
+    "column_mae_quantiles": {
+      "min": 0.0010023520043288831,
+      "p05": 0.017688370014120103,
+      "median": 0.05319456338583829,
+      "p95": 0.16837738732397434,
+      "max": 0.3949765869614681
+    },
+    "column_rmse_quantiles": {
+      "min": 0.006610202705004465,
+      "p05": 0.03268065057871736,
+      "median": 0.08551953938926041,
+      "p95": 0.20980574031435376,
+      "max": 0.4041818808000494
+    },
+    "absolute_column_mean_difference_quantiles": {
+      "min": 3.2821367606516993e-06,
+      "p05": 0.0007251053758264847,
+      "median": 0.01700321301042007,
+      "p95": 0.12333031202757991,
+      "max": 0.39472951510617366
+    },
+    "absolute_column_std_difference_quantiles": {
+      "min": 5.871011258540282e-05,
+      "p05": 0.006377847035070973,
+      "median": 0.030010363943917456,
+      "p95": 0.10599046808918652,
+      "max": 0.31279267605272254
+    },
+    "nonfinite_policy": "count all; finite element errors; wholly finite rows for correlations/distributions/cosine",
+    "train_scale_nrmse_quantiles": {
+      "min": 0.06870150456897038,
+      "p05": 0.2707458938375541,
+      "median": 0.5765999178613566,
+      "p95": 1.8250778804104093,
+      "max": 12.5404245940929
+    },
+    "train_scale_nrmse_mean": 0.7668224389193435,
+    "train_scale_zero_columns": 0,
+    "global_train_scale_nrmse": 1.0067789961264801,
+    "global_train_scale_nrmse_definition": "sqrt(mean((prediction-target)^2 / supplied_train_scale^2)) over jointly finite entries with positive scale",
+    "column_wasserstein_quantiles": {
+      "min": 0.0009052019276700489,
+      "p05": 0.009319463233122792,
+      "median": 0.03570285560030562,
+      "p95": 0.13602563055908495,
+      "max": 0.39497658696146803
+    },
+    "dialogue_count": 114,
+    "dialogue_equal_weight_mae": 0.06793651586026,
+    "dialogue_equal_nrmse": 1.00093301282871,
+    "dialogue_equal_nrmse_definition": "arithmetic mean of per-dialogue sqrt(mean((error / supplied_train_scale)^2)); dialogues equally weighted",
+    "correlation_gate_definition": "Target-nonconstant columns have population standard deviation > protocol feature_gate.scale_floor on all wholly finite target Validation rows; prediction population standard deviation <= the same floor is constant. Every target-nonconstant correlation must be defined; p05 is computed on these required columns only. No target-nonconstant columns means the correlation condition is not applicable, while all element-error gates still apply.",
+    "target_nonconstant_dimensions_for_correlation_gate": 1611,
+    "target_nonconstant_but_prediction_constant_dimensions": 0,
+    "target_nonconstant_but_correlation_undefined_dimensions": 0,
+    "required_target_dimension_correlation_p05": 0.5276181594830534,
+    "target_constant_dimensions": 0,
+    "prediction_constant_dimensions": 0,
+    "gate_checks": {
+      "all_finite": false,
+      "full_coverage": false,
+      "all_elements_allclose": false,
+      "mae": false,
+      "train_scaled_rmse": false,
+      "mean_cosine": false,
+      "min_cosine": false,
+      "required_target_correlations_defined": true,
+      "correlation_p05": false
+    },
+    "passed": false
+  },
+  "source_valid_rows": 1108,
+  "source_missing_rows": 1,
+  "binding": {
+    "lock_sha256": "49a8ef9b5a52e34d80d253703bbf1624156b4e849db420fde6459d7c4bd2988b",
+    "inputs": {
+      "converter_path": "51af500ea1c62860eb0b1e7191cdd6b13896d2be4c5902ab9e6b19b166ea3bb6",
+      "validation_features_path": "59cfdaea810e6b0f316c17cc922068e017d5b9af6ec985afad2277f86c163015",
+      "validation_valid_path": "b4d3b8aa72b37c13fb897149c006b65ad2c7e1beddc93d08fa73bf801efdad24",
+      "manifest_path": "61f666f7969665e20cae51f4886349d8ee0d9c1053e7bad3ffb2bbf84f0e610b",
+      "protocol_path": "02377d045ceeb34932eabbb227a72712707f8c7704be483206e13aaef644a9b2",
+      "train_scale_path": "7a19604f48f8278aef9a5e7c2318940a1f98ebbbac2d79a1ceff4ed6450b98c5",
+      "train_scale300_path": "d292d7738334d7275367acffd5d55fc5a632913749b5fb01803a7762728bba2a",
+      "config": "5d6271460c882dc34bf55bbcdec96afd09bb6b963c238745e04a54fb20515f68",
+      "base": "d043b3ec1813c8917e2067af01e933ff0892d33d19d93595098aaf88c4b200b0"
+    },
+    "protocol_sha256": "02377d045ceeb34932eabbb227a72712707f8c7704be483206e13aaef644a9b2",
+    "converter_sha256": "51af500ea1c62860eb0b1e7191cdd6b13896d2be4c5902ab9e6b19b166ea3bb6",
+    "converter_core_sha256": "afe198de532a40063f8763f5331c9f1641b1749ab3bd2971987186c7b8d721e8"
+  },
+  "classification": "RECONSTRUCTED_CANDIDATE_NOT_ORIGINAL",
+  "test_used": false,
+  "label_slots_indexed": false,
+  "cmERC_executed": false,
+  "parameters_fitted": false,
+  "validation_feedback_to_selection": false,
+  "historical_validation_exposure_disclosed": true,
+  "context300_feature_metrics": {
+    "shape": [
+      1109,
+      300
+    ],
+    "total_scalar_elements": 332700,
+    "jointly_finite_elements": 329700,
+    "nonfinite_target_elements": 0,
+    "nonfinite_prediction_elements": 3000,
+    "fully_finite_rows": 1099,
+    "nonfinite_rows": 10,
+    "max_absolute_error": 1.500553011894226,
+    "mean_absolute_error": 0.02218877079752358,
+    "rmse": 0.06852869981832242,
+    "cosine_valid_rows": 1099,
+    "cosine_undefined_finite_rows": 0,
+    "zero_target_rows": 0,
+    "zero_prediction_rows": 0,
+    "mean_cosine_similarity": 0.9942740306052705,
+    "min_cosine_similarity": 0.9533984372494309,
+    "column_correlation_defined": 177,
+    "column_correlation_undefined": 123,
+    "column_correlation_quantiles": {
+      "min": 0.19049559794479226,
+      "p05": 0.6538805315471661,
+      "median": 0.9668374094450075,
+      "p95": 0.9965086553202791,
+      "max": 0.9986705877464109
+    },
+    "column_mae_quantiles": {
+      "min": 0.0,
+      "p05": 0.0,
+      "median": 7.810071449696313e-05,
+      "p95": 0.1301377647185006,
+      "max": 0.29823468189724245
+    },
+    "column_rmse_quantiles": {
+      "min": 0.0,
+      "p05": 0.0,
+      "median": 0.0003167545828052155,
+      "p95": 0.1696029560636013,
+      "max": 0.34837457973935654
+    },
+    "absolute_column_mean_difference_quantiles": {
+      "min": 0.0,
+      "p05": 0.0,
+      "median": 2.790370564553779e-05,
+      "p95": 0.09110661130354569,
+      "max": 0.296858080790007
+    },
+    "absolute_column_std_difference_quantiles": {
+      "min": 0.0,
+      "p05": 0.0,
+      "median": 0.0001438197426404904,
+      "p95": 0.06868283497018034,
+      "max": 0.1497083938270608
+    },
+    "nonfinite_policy": "count all; finite element errors; wholly finite rows for correlations/distributions/cosine",
+    "train_scale_nrmse_quantiles": {
+      "min": 0.0,
+      "p05": 0.0,
+      "median": 0.022434842689194975,
+      "p95": 0.5871784335207526,
+      "max": 6.237216993297773
+    },
+    "train_scale_nrmse_mean": 0.16404591702525537,
+    "train_scale_zero_columns": 0,
+    "global_train_scale_nrmse": 0.44332566828062114,
+    "global_train_scale_nrmse_definition": "sqrt(mean((prediction-target)^2 / supplied_train_scale^2)) over jointly finite entries with positive scale",
+    "column_wasserstein_quantiles": {
+      "min": 0.0,
+      "p05": 0.0,
+      "median": 5.202398070213018e-05,
+      "p95": 0.10879523735323407,
+      "max": 0.2968616594550487
+    },
+    "dialogue_count": 114,
+    "dialogue_equal_weight_mae": 0.022480736736082814,
+    "dialogue_equal_nrmse": 0.2694072956882648,
+    "dialogue_equal_nrmse_definition": "arithmetic mean of per-dialogue sqrt(mean((error / supplied_train_scale)^2)); dialogues equally weighted",
+    "correlation_gate_definition": "Target-nonconstant columns have population standard deviation > protocol feature_gate.scale_floor on all wholly finite target Validation rows; prediction population standard deviation <= the same floor is constant. Every target-nonconstant correlation must be defined; p05 is computed on these required columns only. No target-nonconstant columns means the correlation condition is not applicable, while all element-error gates still apply.",
+    "target_nonconstant_dimensions_for_correlation_gate": 177,
+    "target_nonconstant_but_prediction_constant_dimensions": 0,
+    "target_nonconstant_but_correlation_undefined_dimensions": 0,
+    "required_target_dimension_correlation_p05": 0.6538805315471661,
+    "target_constant_dimensions": 123,
+    "prediction_constant_dimensions": 0,
+    "gate_checks": {
+      "all_finite": false,
+      "full_coverage": false,
+      "all_elements_allclose": false,
+      "mae": false,
+      "train_scaled_rmse": false,
+      "mean_cosine": false,
+      "min_cosine": false,
+      "required_target_correlations_defined": true,
+      "correlation_p05": false
+    },
+    "passed": false
+  },
+  "original_bigru": {
+    "tensorflow": "2.14.0",
+    "keras": "2.14.0",
+    "gpu_devices": [],
+    "loaded_compile": false,
+    "original_weights_exact": {
+      "forward/kernel": true,
+      "forward/recurrent_kernel": true,
+      "forward/bias": true,
+      "backward/kernel": true,
+      "backward/recurrent_kernel": true,
+      "backward/bias": true
+    },
+    "training": false,
+    "padding": "right-zero to33, Masking(0), original model, training=False",
+    "completed_dialogues": 113,
+    "missing_context_dialogues": 1,
+    "affected_missing_context_rows": 10,
+    "padding_metrics_separate_from_real_rows": {
+      "shape": [
+        2630,
+        300
+      ],
+      "total_scalar_elements": 789000,
+      "jointly_finite_elements": 789000,
+      "nonfinite_target_elements": 0,
+      "nonfinite_prediction_elements": 0,
+      "fully_finite_rows": 2630,
+      "nonfinite_rows": 0,
+      "max_absolute_error": 0.9999999403953552,
+      "mean_absolute_error": 0.23265383351177601,
+      "rmse": 0.46035680697892684,
+      "cosine_valid_rows": 0,
+      "cosine_undefined_finite_rows": 2630,
+      "zero_target_rows": 0,
+      "zero_prediction_rows": 2630,
+      "mean_cosine_similarity": null,
+      "min_cosine_similarity": null,
+      "column_correlation_defined": 0,
+      "column_correlation_undefined": 300,
+      "column_correlation_quantiles": {
+        "min": null,
+        "p05": null,
+        "median": null,
+        "p95": null,
+        "max": null
+      },
+      "column_mae_quantiles": {
+        "min": 0.0,
+        "p05": 0.0,
+        "median": 0.0,
+        "p95": 0.9878701361231931,
+        "max": 0.9999988302985071
+      },
+      "column_rmse_quantiles": {
+        "min": 0.0,
+        "p05": 0.0,
+        "median": 0.0,
+        "p95": 0.9885613700687645,
+        "max": 0.9999988303041932
+      },
+      "absolute_column_mean_difference_quantiles": {
+        "min": 0.0,
+        "p05": 0.0,
+        "median": 0.0,
+        "p95": 0.9878701361231931,
+        "max": 0.9999988302985071
+      },
+      "absolute_column_std_difference_quantiles": {
+        "min": 0.0,
+        "p05": 0.0,
+        "median": 0.0,
+        "p95": 0.3818858500341443,
+        "max": 0.6471969327349403
+      },
+      "nonfinite_policy": "count all; finite element errors; wholly finite rows for correlations/distributions/cosine"
+    },
+    "dialogue_records_withheld_locally": 114
+  },
+  "feature_gate": {
+    "passed": false,
+    "clean_feature_parity_passed": false,
+    "validation_independent": true,
+    "full_validation_coverage": false,
+    "fit_effective_train_only": true,
+    "train_dialogue_group_cv_only": true,
+    "model_locked_before_validation": true,
+    "test_used": false,
+    "validation_rows": 1109,
+    "output_width": 300,
+    "rebuilt_audio_sha256": "dfa3b8523feedfa0ce6d07b4bb88e7963dd2a63c957796ea177c4c5d0d3a3127",
+    "manifest_sha256": "61f666f7969665e20cae51f4886349d8ee0d9c1053e7bad3ffb2bbf84f0e610b",
+    "model_lock_sha256": "49a8ef9b5a52e34d80d253703bbf1624156b4e849db420fde6459d7c4bd2988b",
+    "new_validation_untuned": true,
+    "historical_validation_exposure_disclosed": true,
+    "selected1611_parity_passed": false,
+    "context300_parity_passed": false,
+    "full_dialogue_bigru_context": false,
+    "real_lengths_and_order_preserved": true,
+    "padding33_and_masking_preserved": true
+  },
+  "outputs": {
+    "local_only/MELD/final_validation/rebuilt_selected_validation.npy": "5ec5fc4de99c07f77b809f10c1e8eb35f4e02265ebe62ef13c2b3a007409f6b8",
+    "local_only/MELD/final_validation/context300_per_dimension.csv": "ad5e5c8d86a96ecfc3f666ff6dc9dcc0e9d8437f4c922af5b86ed5002dd80939",
+    "local_only/MELD/final_validation/target300_val.npy": "733417fa66cd4dff3a2f9c91dd061910f92b03eae82ce04438745edf647b7e6c",
+    "local_only/MELD/final_validation/target_val.npy": "b4bae27d45cf78a64b38e6c61f6c5bf2aaa52fe27b87aa9e41dce09258e14c99",
+    "local_only/MELD/final_validation/selected_per_dimension.csv": "f2f41ca35f2ca114091f73db4c2a7ad1c85501ef273cdcf66d2b29bda5e17097",
+    "local_only/MELD/rebuilt_validation_audio.npy": "dfa3b8523feedfa0ce6d07b4bb88e7963dd2a63c957796ea177c4c5d0d3a3127"
+  }
+}

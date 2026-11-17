@@ -1,0 +1,70 @@
+{
+  "probe_index_count256": true,
+  "sorted_unique_indices": true,
+  "unique_dialogues256": true,
+  "fields6373_unique": true,
+  "conditions8": true,
+  "no_failures": true,
+  "fixed_seed": true,
+  "train_only_manifest": true,
+  "outputs": [
+    {
+      "condition": "meanall_native48k_none",
+      "shape": true,
+      "finite": true,
+      "sha_match": true
+    },
+    {
+      "condition": "meanall_native48k_zscore",
+      "shape": true,
+      "finite": true,
+      "sha_match": true
+    },
+    {
+      "condition": "meanall_16k_none",
+      "shape": true,
+      "finite": true,
+      "sha_match": true
+    },
+    {
+      "condition": "meanall_16k_zscore",
+      "shape": true,
+      "finite": true,
+      "sha_match": true
+    },
+    {
+      "condition": "ffmpegmono_native48k_none",
+      "shape": true,
+      "finite": true,
+      "sha_match": true
+    },
+    {
+      "condition": "ffmpegmono_native48k_zscore",
+      "shape": true,
+      "finite": true,
+      "sha_match": true
+    },
+    {
+      "condition": "ffmpegmono_16k_none",
+      "shape": true,
+      "finite": true,
+      "sha_match": true
+    },
+    {
+      "condition": "ffmpegmono_16k_zscore",
+      "shape": true,
+      "finite": true,
+      "sha_match": true
+    }
+  ],
+  "all_checks_pass": true,
+  "input_channels": {
+    "6": 228,
+    "2": 28
+  },
+  "input_sample_rates": {
+    "48000": 256
+  },
+  "observed_no_label_or_target_read": "Extractor reads only Train manifest metadata/media; no selected features/label files opened.",
+  "script_ast_parse": true
+}

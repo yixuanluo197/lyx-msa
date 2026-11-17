@@ -1,0 +1,108 @@
+{
+  "status": "PASS",
+  "original_launch_hash_gap_retained": true,
+  "new_run_frozen_source_and_config_before_execution": true,
+  "subset_indices_equal": true,
+  "frozen_config_files_unchanged": true,
+  "comparisons": [
+    {
+      "condition": "meanall_native48k_none",
+      "original_sha256": "76a7a2903a386f395a1293d69404a61fe9927ae41dc93cf952d322ed99c4c096",
+      "recheck_sha256": "76a7a2903a386f395a1293d69404a61fe9927ae41dc93cf952d322ed99c4c096",
+      "shape": [
+        256,
+        6373
+      ],
+      "byte_hash_equal": true,
+      "array_bitwise_equal": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "condition": "meanall_native48k_zscore",
+      "original_sha256": "7b49fdffd2471f9f5394969efe360104cd9fcc29ccbb9f99a10376231471eef0",
+      "recheck_sha256": "7b49fdffd2471f9f5394969efe360104cd9fcc29ccbb9f99a10376231471eef0",
+      "shape": [
+        256,
+        6373
+      ],
+      "byte_hash_equal": true,
+      "array_bitwise_equal": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "condition": "meanall_16k_none",
+      "original_sha256": "2f8096ee42998365a5cd84c21b39b2367d7dad270d65c7c0397dae58f69b28d5",
+      "recheck_sha256": "2f8096ee42998365a5cd84c21b39b2367d7dad270d65c7c0397dae58f69b28d5",
+      "shape": [
+        256,
+        6373
+      ],
+      "byte_hash_equal": true,
+      "array_bitwise_equal": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "condition": "meanall_16k_zscore",
+      "original_sha256": "ede628a857cf8943457102fac66565efedd307941693bd210eabfb3f1779089b",
+      "recheck_sha256": "ede628a857cf8943457102fac66565efedd307941693bd210eabfb3f1779089b",
+      "shape": [
+        256,
+        6373
+      ],
+      "byte_hash_equal": true,
+      "array_bitwise_equal": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "condition": "ffmpegmono_native48k_none",
+      "original_sha256": "9f0d24411d61d2c999f67024a68e3990867aaeb6c2568869cf9e3ac328a4188a",
+      "recheck_sha256": "9f0d24411d61d2c999f67024a68e3990867aaeb6c2568869cf9e3ac328a4188a",
+      "shape": [
+        256,
+        6373
+      ],
+      "byte_hash_equal": true,
+      "array_bitwise_equal": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "condition": "ffmpegmono_native48k_zscore",
+      "original_sha256": "0ce90e032a29109f0517086c37750829380f964156f817bdd9d1a078c636f88b",
+      "recheck_sha256": "0ce90e032a29109f0517086c37750829380f964156f817bdd9d1a078c636f88b",
+      "shape": [
+        256,
+        6373
+      ],
+      "byte_hash_equal": true,
+      "array_bitwise_equal": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "condition": "ffmpegmono_16k_none",
+      "original_sha256": "0fb546ad0b92ec6d5430978b72846d3fa359e3a3983c0f0cd60ac6c98282001d",
+      "recheck_sha256": "0fb546ad0b92ec6d5430978b72846d3fa359e3a3983c0f0cd60ac6c98282001d",
+      "shape": [
+        256,
+        6373
+      ],
+      "byte_hash_equal": true,
+      "array_bitwise_equal": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "condition": "ffmpegmono_16k_zscore",
+      "original_sha256": "7c884a086125d7546976ac6358ebcd6a872b2766e0f4750b3a4f55022ab25cfc",
+      "recheck_sha256": "7c884a086125d7546976ac6358ebcd6a872b2766e0f4750b3a4f55022ab25cfc",
+      "shape": [
+        256,
+        6373
+      ],
+      "byte_hash_equal": true,
+      "array_bitwise_equal": true,
+      "max_abs_error": 0.0
+    }
+  ],
+  "frozen_launch_sha256": "280f33c237b26373ce21de9839fdd01e2d3e131f2232197d7a7c4914380c4c6a",
+  "original_extractor_current_sha256": "0bbca3adeb5acc691d4dd6517cb6f1b4a8703ffa439f0bb94f0cd79afada4e67",
+  "scope": "Same256Train utterances and8frozen candidates only; noValidation/Test/targets/training"
+}

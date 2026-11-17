@@ -1,0 +1,234 @@
+{
+  "method_status": "candidate_only_not_original_production_configuration",
+  "python_version": "3.9.18 | packaged by conda-forge | (main, Aug 30 2023, 03:49:32) \n[GCC 12.3.0]",
+  "opensmile_python_version": "2.6.0",
+  "engine_banner_version": "3.0.1",
+  "library_path": "/LOCAL/USER/miniconda3/envs/msa_vision/lib/python3.9/site-packages/opensmile/core/bin/manylinux_2_17_x86_64/libSMILEapi.so",
+  "library_sha256": "7d708bd3e02ec29d1fdc94e8b60595a65052d6f955b96bb7c88b181d65d81231",
+  "source_tag": "v3.0.1",
+  "candidate_configs": {
+    "is10": "LOCAL_RUN/configs/iemocap/official_v3.0.1/is09-13/IS10_paraling.python_external.conf",
+    "is10_compat": "LOCAL_RUN/configs/iemocap/official_v3.0.1/is09-13/IS10_paraling_compat.python_external.conf",
+    "emobase2010": "LOCAL_RUN/configs/iemocap/official_v3.0.1/emobase/emobase2010.python_external.conf"
+  },
+  "config_tree": [
+    {
+      "path": "official_v3.0.1/compare16/ComParE_2016.conf",
+      "sha256": "4baf8b75324db30e632a2935ab469058d54cd1c7b1806d5cc220dc7b124c454c",
+      "bytes": 1756
+    },
+    {
+      "path": "official_v3.0.1/compare16/ComParE_2016_core.func.conf.inc",
+      "sha256": "c0dc62f1285ee0e7cd055571cc722634877958a702e8f40450283289c0b1d468",
+      "bytes": 9819
+    },
+    {
+      "path": "official_v3.0.1/compare16/ComParE_2016_core.lld.conf.inc",
+      "sha256": "aa58f4733990ea9ede4508f76cf38fe00d9bfd5b99e2bd9c0b5139a1cbee5b34",
+      "bytes": 9548
+    },
+    {
+      "path": "official_v3.0.1/emobase/emobase.conf",
+      "sha256": "1e5faa100f1a8ddfb6156e8694cef5641438bb69447a68cf9939eb7e501dd059",
+      "bytes": 9140
+    },
+    {
+      "path": "official_v3.0.1/emobase/emobase2010.conf",
+      "sha256": "e8550e5b49f7ed26457bafddd1752cd978f0d04685d4f6fdb14257ef72fe4fe7",
+      "bytes": 14035
+    },
+    {
+      "path": "official_v3.0.1/emobase/emobase2010.python_external.conf",
+      "sha256": "c816984f04c53d3ae4f28f2140e6f08dfeff3ed6f54de2bab256033274c14473",
+      "bytes": 12846
+    },
+    {
+      "path": "official_v3.0.1/emobase/emobase_live4.conf",
+      "sha256": "bf93ff2c65d2a24adfced7569f2979960d158921caee7a33714505e7dd24e2f3",
+      "bytes": 15708
+    },
+    {
+      "path": "official_v3.0.1/emobase/emobase_live4_batch.conf",
+      "sha256": "8a8944fa25e3f0a204f20b9d79efa414d076ef968814476b544b4f954f4edeb3",
+      "bytes": 15264
+    },
+    {
+      "path": "official_v3.0.1/emobase/emobase_live4_batch_single.conf",
+      "sha256": "84373c175a0ef126c3490f4690d3bd738833ce73bef64ec4009d0c6cbd82e4af",
+      "bytes": 13839
+    },
+    {
+      "path": "official_v3.0.1/is09-13/IS09_emotion.conf",
+      "sha256": "32bd1620918f49e1c0d8fb97eb27783efc9f98419b206c528a70873982a295ad",
+      "bytes": 2666
+    },
+    {
+      "path": "official_v3.0.1/is09-13/IS09_emotion_core.func.conf.inc",
+      "sha256": "888bb780d8f7835e30818a66da6b6f331a9926f8545b6bc4f235ece8e115fafb",
+      "bytes": 2254
+    },
+    {
+      "path": "official_v3.0.1/is09-13/IS09_emotion_core.lld.conf.inc",
+      "sha256": "3143cbc85582599f47487c244164e901b076fb12ad8c005802110b7b640d63de",
+      "bytes": 4962
+    },
+    {
+      "path": "official_v3.0.1/is09-13/IS10_paraling.conf",
+      "sha256": "797eb7c3b912540cb5f8f8d5963151a706a60c00b50de5706a77f1976b96e0f5",
+      "bytes": 2189
+    },
+    {
+      "path": "official_v3.0.1/is09-13/IS10_paraling.python_external.conf",
+      "sha256": "cf96dcd56797dc05813cf27dbc1c9b4a7a9565971e40d2fad9871676d59218c8",
+      "bytes": 2169
+    },
+    {
+      "path": "official_v3.0.1/is09-13/IS10_paraling_compat.conf",
+      "sha256": "75e28f7ad5de545fa68b9e392aa3def37f10aa8e8c4e736883ab8a14dd107973",
+      "bytes": 13766
+    },
+    {
+      "path": "official_v3.0.1/is09-13/IS10_paraling_compat.python_external.conf",
+      "sha256": "7fd33ff3ffe9ceb7d8806b5da35282b608e9e1aab6f97b5a7a9e5aa52e0167bb",
+      "bytes": 13257
+    },
+    {
+      "path": "official_v3.0.1/is09-13/IS10_paraling_core.func.conf.inc",
+      "sha256": "ac45cdbc3a928c513254d85262da80e767fb32064f7d5c3268a3fad87429aa3f",
+      "bytes": 5335
+    },
+    {
+      "path": "official_v3.0.1/is09-13/IS10_paraling_core.lld.conf.inc",
+      "sha256": "8179a9725904ee334ecd0f3f5c8d4cadc1655ff06ca10c67e15da585a1d9a4d7",
+      "bytes": 7372
+    },
+    {
+      "path": "official_v3.0.1/is09-13/IS11_speaker_state.conf",
+      "sha256": "d9c761f208f1020cf3a2fb89884c4fe21e0f3a791d31460b5844778719a12981",
+      "bytes": 16869
+    },
+    {
+      "path": "official_v3.0.1/is09-13/IS12_speaker_trait.conf",
+      "sha256": "5dfbcbc37814720a676af606f34769387503edc90e5de8826c0b672e87b9feae",
+      "bytes": 17643
+    },
+    {
+      "path": "official_v3.0.1/is09-13/IS12_speaker_trait_compat.conf",
+      "sha256": "7190ea3d7938f777a80c8ff4be5ece859ee652fa1fc4c475b86126da845ea966",
+      "bytes": 17971
+    },
+    {
+      "path": "official_v3.0.1/is09-13/IS13_ComParE.conf",
+      "sha256": "c3550ca81e7d7c32194e05b61c9a36427b302832e29cc894cc24706c44de51f2",
+      "bytes": 1669
+    },
+    {
+      "path": "official_v3.0.1/is09-13/IS13_ComParE_Voc.conf",
+      "sha256": "1146f0f9c78679af23f689448635371801c8bc2908ef6df63aa37a4f27497845",
+      "bytes": 5309
+    },
+    {
+      "path": "official_v3.0.1/is09-13/IS13_ComParE_core.func.conf.inc",
+      "sha256": "a5d467afabd45054ff8dc760884c79764c32ea3a7fab1881e4e07b2396c16ce6",
+      "bytes": 9767
+    },
+    {
+      "path": "official_v3.0.1/is09-13/IS13_ComParE_core.lld.conf.inc",
+      "sha256": "5c4af86d06b6529fee177939167ad2d6738029b52bd6bab75c7795194a93443a",
+      "bytes": 9774
+    },
+    {
+      "path": "official_v3.0.1/shared/BufferMode.conf.inc",
+      "sha256": "cada3a58949ec8c7bd1a76900da58fad507b49f87c847064722ad301448d18dd",
+      "bytes": 82
+    },
+    {
+      "path": "official_v3.0.1/shared/BufferModeLive.conf.inc",
+      "sha256": "7d4723a6ab69126f6ffce62ade1d641fcbd4befe3fa93d41f849cbb6ddf243bf",
+      "bytes": 154
+    },
+    {
+      "path": "official_v3.0.1/shared/BufferModeRb.conf.inc",
+      "sha256": "ea9fa31166fef969d7d7c77e8c545994ce9f04238ace225ba4d068d982ea3ac8",
+      "bytes": 106
+    },
+    {
+      "path": "official_v3.0.1/shared/BufferModeRbLag.conf.inc",
+      "sha256": "5f91c78aca4b1b167750806d7e730a0419626977f6d86704451a92a5f3fa1110",
+      "bytes": 136
+    },
+    {
+      "path": "official_v3.0.1/shared/FrameModeFunctionals.conf.inc",
+      "sha256": "fcf898b98f3a424135c1325c3acd18326606bb56887dabc76878c8102a3e23db",
+      "bytes": 360
+    },
+    {
+      "path": "official_v3.0.1/shared/FrameModeFunctionalsLive.conf.inc",
+      "sha256": "58132781ef58f17b7498bd021a41c2b9495e68418cbbbeb906a110825a7a0c60",
+      "bytes": 331
+    },
+    {
+      "path": "official_v3.0.1/shared/arff_targets.conf",
+      "sha256": "26a60904c1d7295cb5217d48a7b98779ff157409f62f896054a871c0da0427c9",
+      "bytes": 1837
+    },
+    {
+      "path": "official_v3.0.1/shared/arff_targets.conf.inc",
+      "sha256": "4f6ab0af1ddd17a8924386434586c7eae8c0e6a611d4b23b0b29a1dd90393c23",
+      "bytes": 1144
+    },
+    {
+      "path": "official_v3.0.1/shared/standard_data_output.conf.inc",
+      "sha256": "901c26e20f6926506548feda693150e7c63e02ddfb6da278b0446e84888d504d",
+      "bytes": 5100
+    },
+    {
+      "path": "official_v3.0.1/shared/standard_data_output_lldonly.conf.inc",
+      "sha256": "5880f6058b94b4f2f17099b965da875d3350b09c620606422af46c297af077fb",
+      "bytes": 2811
+    },
+    {
+      "path": "official_v3.0.1/shared/standard_data_output_no_lld_de.conf.inc",
+      "sha256": "df023a836b81f435b0d98122ec27a211179df40092a4fd484f1bdbe17cd95360",
+      "bytes": 5189
+    },
+    {
+      "path": "official_v3.0.1/shared/standard_external_data_output_single.conf.inc",
+      "sha256": "c2d0b1f3850c0ab030b79f932a028fe996acdb2a8348d3ddb0c2892ea1c2ba7f",
+      "bytes": 773
+    },
+    {
+      "path": "official_v3.0.1/shared/standard_external_wave_input.conf.inc",
+      "sha256": "d87bbef465420abf187342d47115da1eecc2f0e0995c86d112b071bd1dc7cde9",
+      "bytes": 837
+    },
+    {
+      "path": "official_v3.0.1/shared/standard_liveaudio_input.conf.inc",
+      "sha256": "14b8bc5fc983e7f69813ddecf8c679cbc0cc52258cae6b0138ca209d75f7c20f",
+      "bytes": 749
+    },
+    {
+      "path": "official_v3.0.1/shared/standard_result_output.conf.inc",
+      "sha256": "4fdf66b533b3490c344de467a40679590e93240ad7dba199eaeca6bf3aef9c7e",
+      "bytes": 3346
+    },
+    {
+      "path": "official_v3.0.1/shared/standard_wave_input.conf.inc",
+      "sha256": "f7d3be1bd36c434e0681219f8c9be584f189028638cfeaecec39de50b1caef75",
+      "bytes": 875
+    }
+  ],
+  "wrapper_modifications": {
+    "is10_and_compat": "Replace only file source and standard sinks by Python external source/sink includes; compat embeds its cWaveSource instance/section, so remove those and insert external source.",
+    "emobase2010": "Remove cWaveSource/cArffSink instance+sections; add external source and a VectorConcat(func;funcNz;functOnsets) into func_out plus external sink. DSP/functionals preserved."
+  },
+  "decoding": "scipy.io.wavfile.read; signed PCM divided by 2**(bits-1), unsigned8 centered; original float retained; float32 API signal",
+  "sample_rate": 16000,
+  "channel_rule": "require released single-channel utterance WAV (no resampling or downmix)",
+  "amplitude_normalization": "PCM integer-to-unit scaling only; no per-utterance gain, no z-score",
+  "intensity_threshold": null,
+  "silence_trimming": false,
+  "feature_normalization": null,
+  "threads_per_process": 1,
+  "maximum_worker_processes": 6
+}

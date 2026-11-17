@@ -1,0 +1,17 @@
+{
+  "stage": "initial_manual_preflight",
+  "rows_attempted": 1,
+  "dialogue_id": 0,
+  "utterance_id": 0,
+  "assumption_rejected": "six-channel48k requirement derived only from earlier Val24 metadata",
+  "observed": {
+    "codec_name": "aac",
+    "sample_rate": 48000,
+    "channels": 2,
+    "channel_layout": "stereo"
+  },
+  "error": "ValueError: Predeclared six-channel48k candidate incompatible with stereo input",
+  "features_generated": false,
+  "resolution": "Fixed equal_all_channels dynamically using per-input actual channel count; root-approved, candidate grid remains8 conditions",
+  "three_frozen_train_smoke_after_correction": "all3 x8 conditions finite6373D"
+}

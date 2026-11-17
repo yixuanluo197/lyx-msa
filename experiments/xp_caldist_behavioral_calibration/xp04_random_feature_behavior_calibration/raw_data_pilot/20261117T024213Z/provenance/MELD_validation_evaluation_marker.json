@@ -1,0 +1,35 @@
+{
+  "status": "COMPLETE",
+  "started_at": "2026-11-17T03:17:21.005394+00:00",
+  "binding": {
+    "lock_sha256": "49a8ef9b5a52e34d80d253703bbf1624156b4e849db420fde6459d7c4bd2988b",
+    "inputs": {
+      "converter_path": "51af500ea1c62860eb0b1e7191cdd6b13896d2be4c5902ab9e6b19b166ea3bb6",
+      "validation_features_path": "59cfdaea810e6b0f316c17cc922068e017d5b9af6ec985afad2277f86c163015",
+      "validation_valid_path": "b4d3b8aa72b37c13fb897149c006b65ad2c7e1beddc93d08fa73bf801efdad24",
+      "manifest_path": "61f666f7969665e20cae51f4886349d8ee0d9c1053e7bad3ffb2bbf84f0e610b",
+      "protocol_path": "02377d045ceeb34932eabbb227a72712707f8c7704be483206e13aaef644a9b2",
+      "train_scale_path": "7a19604f48f8278aef9a5e7c2318940a1f98ebbbac2d79a1ceff4ed6450b98c5",
+      "train_scale300_path": "d292d7738334d7275367acffd5d55fc5a632913749b5fb01803a7762728bba2a",
+      "config": "5d6271460c882dc34bf55bbcdec96afd09bb6b963c238745e04a54fb20515f68",
+      "base": "d043b3ec1813c8917e2067af01e933ff0892d33d19d93595098aaf88c4b200b0"
+    },
+    "protocol_sha256": "02377d045ceeb34932eabbb227a72712707f8c7704be483206e13aaef644a9b2",
+    "converter_sha256": "51af500ea1c62860eb0b1e7191cdd6b13896d2be4c5902ab9e6b19b166ea3bb6",
+    "converter_core_sha256": "afe198de532a40063f8763f5331c9f1641b1749ab3bd2971987186c7b8d721e8"
+  },
+  "attempt": 1,
+  "runner_sha256": "38a160ec191576e9000867b5242fa1841d12765ed0b11418d5a2a8c289ade49f",
+  "core_sha256": "afe198de532a40063f8763f5331c9f1641b1749ab3bd2971987186c7b8d721e8",
+  "previous_failed_attempt": null,
+  "completed_at": "2026-11-17T03:18:16.274018+00:00",
+  "feature_gate_passed": false,
+  "outputs": {
+    "local_only/MELD/final_validation/rebuilt_selected_validation.npy": "5ec5fc4de99c07f77b809f10c1e8eb35f4e02265ebe62ef13c2b3a007409f6b8",
+    "local_only/MELD/final_validation/context300_per_dimension.csv": "ad5e5c8d86a96ecfc3f666ff6dc9dcc0e9d8437f4c922af5b86ed5002dd80939",
+    "local_only/MELD/final_validation/target300_val.npy": "733417fa66cd4dff3a2f9c91dd061910f92b03eae82ce04438745edf647b7e6c",
+    "local_only/MELD/final_validation/target_val.npy": "b4bae27d45cf78a64b38e6c61f6c5bf2aaa52fe27b87aa9e41dce09258e14c99",
+    "local_only/MELD/final_validation/selected_per_dimension.csv": "f2f41ca35f2ca114091f73db4c2a7ad1c85501ef273cdcf66d2b29bda5e17097",
+    "local_only/MELD/rebuilt_validation_audio.npy": "dfa3b8523feedfa0ce6d07b4bb88e7963dd2a63c957796ea177c4c5d0d3a3127"
+  }
+}

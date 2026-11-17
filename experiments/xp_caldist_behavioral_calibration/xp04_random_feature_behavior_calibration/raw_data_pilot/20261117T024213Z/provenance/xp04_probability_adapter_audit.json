@@ -1,0 +1,144 @@
+{
+  "status": "ADAPTER_PREPARED_NOT_EXECUTED",
+  "created_at_utc": "2026-11-17T02:55:53.647534+00:00",
+  "host": "LOCAL_HOST",
+  "python": "/LOCAL/USER/miniconda3/envs/multimodalerc310/bin/python",
+  "environment": {
+    "torch": "2.2.2+cu121",
+    "torch-geometric": "2.4.0",
+    "torch-scatter": "2.1.2+pt22cu121",
+    "torch-sparse": "0.6.18+pt22cu121",
+    "numpy": "1.24.3"
+  },
+  "new_dependencies_installed": false,
+  "script_sha256": "beefb368a3ace4de625511cb038155834b55c6627b9000e9a8e9bfbc98bb7900",
+  "syntax_compilation_passed": true,
+  "guard_tests": [
+    {
+      "name": "failed_feature_gate_blocks_before_torch_or_data_import",
+      "passed": true,
+      "message": "Feature gate required: IEMOCAP.passed=true"
+    },
+    {
+      "name": "valid_synthetic_iemocap_gate_accepted_without_model_import",
+      "passed": true
+    },
+    {
+      "name": "modified_rebuilt_hash_rejected",
+      "passed": true
+    },
+    {
+      "name": "meld_without_context_gate_rejected",
+      "passed": true
+    },
+    {
+      "name": "complete_synthetic_meld_gate_accepted",
+      "passed": true
+    },
+    {
+      "name": "probability_metric_identical_pass_and_class_drift_fail",
+      "passed": true
+    },
+    {
+      "name": "no_torch_import_or_model_forward_during_guard_tests",
+      "passed": true
+    },
+    {
+      "name": "IEMOCAP_manifest_identity_guard",
+      "passed": true,
+      "rows": 527
+    },
+    {
+      "name": "MELD_manifest_identity_guard",
+      "passed": true,
+      "rows": 1109
+    },
+    {
+      "name": "IEMOCAP_frozen_sources_inputs_hash_guard",
+      "passed": true,
+      "files": 17
+    },
+    {
+      "name": "MELD_frozen_sources_inputs_hash_guard",
+      "passed": true,
+      "files": 17
+    }
+  ],
+  "model_imported": false,
+  "checkpoint_deserialized": false,
+  "model_forward_executed": false,
+  "feature_pickle_deserialized": false,
+  "test_features_or_labels_indexed": false,
+  "historical_inputs": {
+    "IEMOCAP": {
+      "checkpoint": "/LOCAL/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/cmerc/IEMOCAP_validation_seed1475/best.pt",
+      "checkpoint_sha256": "2c0d1a7a39627e12d1244d23a225ad3da03bbce071a118909921a547a2bfd106",
+      "effective_config": "/LOCAL/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/configs/effective/IEMOCAP_cmerc_validation_seed1475.json",
+      "effective_config_sha256": "59e40ae7b7d63bb5f56806eedefb2f70c6797095455f63c083917b1141275369",
+      "validation_baseline": "/LOCAL/lyx-msa/experiments/xp_caldist_behavioral_calibration/20261107T172302Z/runs/IEMOCAP/seed1475/validation_predictions.npz",
+      "validation_baseline_sha256": "656a1fcc20d181b1c29c1640ab9a6f599474dfb839f03c1ec2495b8e6036629c",
+      "all_frozen_hashes_unchanged": true,
+      "frozen_inputs_checked": 17
+    },
+    "MELD": {
+      "checkpoint": "/LOCAL/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/cmerc/MELD_validation_seed67137/best.pt",
+      "checkpoint_sha256": "3f79f9eb3547e35ac15ad7ff4345d9b873d0c884a6f3a1ce60a7a7e47077e701",
+      "effective_config": "/LOCAL/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/configs/effective/MELD_cmerc_validation_seed67137.json",
+      "effective_config_sha256": "5d6271460c882dc34bf55bbcdec96afd09bb6b963c238745e04a54fb20515f68",
+      "validation_baseline": "/LOCAL/lyx-msa/experiments/xp_caldist_behavioral_calibration/20261107T172302Z/runs/MELD/seed67137/validation_predictions.npz",
+      "validation_baseline_sha256": "b8d805b6b2f50948bfd170e153e2aab56871b7f92ad316fdc6bbd0e94283a0a8",
+      "all_frozen_hashes_unchanged": true,
+      "frozen_inputs_checked": 17
+    }
+  },
+  "reuse": {
+    "helper": "/LOCAL/lyx-msa/experiments/xp_caldist_behavioral_calibration/20261107T172302Z/scripts/run_pilot.py",
+    "helper_sha256": "de0b49182745b71efca7a59882fbbeb61e3c676b5ec86cf914caca4924665a80",
+    "forward": "run_pilot.forward",
+    "loader": "run_pilot.loader_for (batch16,shuffleFalse,num_workers0)",
+    "model_loader": "run_pilot.load_model(strict=True,official frozen model,args,checkpoint backend)",
+    "graph_integrity": "run_pilot.GraphGuard",
+    "baseline": "prior genuinely Validation probability array; labels not indexed"
+  },
+  "execution_requirements": {
+    "host": "LOCAL_HOST",
+    "device": "cuda:0 only; official noncausal implementation contains unconditional .cuda() calls",
+    "gpu_selection": "root explicitly selects one healthy physical GPU using CUDA_VISIBLE_DEVICES",
+    "no_forward_before_gate": true,
+    "no_test_dataset": true,
+    "shared_pickle_caveat": "Original official pickle containers include all splits; loaders deserialize those containers but iterate and index only explicit Validation keys. No Test arrays/labels are requested."
+  },
+  "feature_gate_schema": {
+    "datasets": {
+      "DATASET": {
+        "passed": true,
+        "clean_feature_parity_passed": true,
+        "validation_independent": true,
+        "full_validation_coverage": true,
+        "fit_effective_train_only": true,
+        "train_dialogue_group_cv_only": true,
+        "model_locked_before_validation": true,
+        "test_used": false,
+        "validation_rows": "527 (IEMOCAP) or 1109 (MELD)",
+        "output_width": "1582 (IEMOCAP) or 300 (MELD)",
+        "rebuilt_audio_sha256": "SHA-256 of rebuilt_validation_audio.npy",
+        "manifest_sha256": "SHA-256 of manifest_validation.csv",
+        "MELD_only_requirements": [
+          "selected1611_parity_passed",
+          "context300_parity_passed",
+          "full_dialogue_bigru_context",
+          "real_lengths_and_order_preserved",
+          "padding33_and_masking_preserved"
+        ]
+      }
+    }
+  },
+  "outputs": "local_only/<dataset>/probability_parity/{full_probabilities.npz,per_utterance_probability_parity.csv,probability_parity.json}; no labels; all files mode0600",
+  "probability_thresholds": {
+    "maximum_absolute_probability_error": 0.0001,
+    "mean_absolute_probability_error": 1e-05,
+    "predicted_class_agreement": 1.0,
+    "maximum_absolute_confidence_error": 0.0001
+  },
+  "command_template": "CUDA_VISIBLE_DEVICES=<selected physical GPU> /LOCAL/USER/miniconda3/envs/multimodalerc310/bin/python scripts/run_xp04_probability_parity.py --dataset <IEMOCAP|MELD> --rebuilt-validation-audio local_only/<dataset>/rebuilt_validation_audio.npy --manifest local_only/<dataset>/manifest_validation.csv --feature-gate provenance/feature_gate.json --device cuda:0"
+}

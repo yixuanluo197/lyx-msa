@@ -1,0 +1,147 @@
+{
+  "created_at": "2026-11-17T02:49:16.174024+00:00",
+  "version": 1,
+  "datasets": {
+    "IEMOCAP": {
+      "seed": 1475,
+      "expected_train": 5283,
+      "expected_validation": 527,
+      "candidate_configs": [
+        "IS10_paraling",
+        "IS10_paraling_compat",
+        "emobase2010"
+      ],
+      "input_dimensions": 1582,
+      "target_dimensions": 1582
+    },
+    "MELD": {
+      "seed": 67137,
+      "expected_train": 9989,
+      "expected_validation": 1109,
+      "candidate_config": "IS13_ComParE",
+      "input_dimensions": 6373,
+      "target_dimensions": 1611,
+      "frontend_probe_rows": 256,
+      "probe_selection": "seed67137 shuffled Train Dialogue IDs, one random Train utterance per dialogue; no target-value/label selection",
+      "mixdowns": [
+        "equal_all_channels",
+        "ffmpeg_mono"
+      ],
+      "sampling_rates": [
+        48000,
+        16000
+      ],
+      "waveform_transforms": [
+        "none",
+        "per_utterance_zscore"
+      ],
+      "intensity_threshold": "none; unknown historical threshold is not invented"
+    }
+  },
+  "fit_scope": "XP04 effective Train only; no Test feature or label slots indexed",
+  "validation_access": "Only IDs/media metadata before model_lock; target values and candidate feature extraction deferred to one final evaluation",
+  "historical_validation_exposure": "Prior audits inspected Validation feature summaries and a partial GRU check. This is not a never-seen new dataset; from this protocol onward no Validation feedback drives method or parameter selection. Generic row transforms are a fixed menu, not chosen from new Validation results.",
+  "cv": {
+    "splitter": "GroupKFold",
+    "folds": 3,
+    "groups": "Dialogue ID",
+    "same_folds_for_all_conditions": true,
+    "fit_each_fold_independently": [
+      "column matching",
+      "affine",
+      "speaker affine",
+      "scalers",
+      "rank projection",
+      "ridge"
+    ],
+    "score_primary": "dialogue_equal_normalized_RMSE",
+    "score_scale": "fit-fold target column standard deviation floored at 1e-8",
+    "tie_rule": "Within 1 percent of best choose lowest prespecified complexity, then lexical configuration ID",
+    "scores_are_model_selection_not_unbiased_estimates": true
+  },
+  "stateless_input_transforms": [
+    "none",
+    "row_minmax",
+    "row_zscore",
+    "row_l2"
+  ],
+  "simple_methods_complexity_order": [
+    "identity",
+    "best_column_exact",
+    "diagonal_affine",
+    "speaker_diagonal_affine",
+    "best_column_affine"
+  ],
+  "linear_methods": {
+    "pcr_ranks": [
+      16,
+      64,
+      128
+    ],
+    "ridge_projection_rank": 256,
+    "ridge_alphas": [
+      0.01,
+      1.0,
+      100.0
+    ],
+    "projection_fit_scope": "fold Train only",
+    "random_seed": 424242,
+    "normalization": "fold Train X/Y zscore; target inverse transform from same fold",
+    "max_blas_threads": 8
+  },
+  "stage_order": [
+    "source/assets check",
+    "Train smoke",
+    "MELD frontend probe GroupCV / IEMOCAP full Train simple GroupCV",
+    "selected frontend full Train GroupCV for mapping",
+    "save fitted converter and lock hashes",
+    "one final Validation feature evaluation incl MELD full-context GRU",
+    "only if feature gate passes frozen CMERC probability parity"
+  ],
+  "stop_complexity_rule": "If simple model meets all feature tolerances on all OOF rows, retain simplest qualifying simple method; no needless larger model",
+  "feature_gate": {
+    "full_fixed_validation_coverage_required": true,
+    "all_finite_required": true,
+    "all_elements_allclose": {
+      "atol": 0.0001,
+      "rtol": 0.0001
+    },
+    "MAE_max": 1e-05,
+    "train_scaled_RMSE_max": 0.001,
+    "scale_floor": 1e-08,
+    "mean_nonzero_row_cosine_min": 0.99999,
+    "min_nonzero_row_cosine_min": 0.9999,
+    "nonconstant_dimension_correlation_p05_min": 0.999,
+    "MELD_both_selected1611_and_real_context300_required": true,
+    "padding_reported_separately": true
+  },
+  "probability_gate": {
+    "only_after_feature_gate": true,
+    "maximum_absolute_probability_error": 0.0001,
+    "mean_absolute_probability_error": 1e-05,
+    "argmax_agreement_rate": 1.0,
+    "maximum_absolute_confidence_error": 0.0001
+  },
+  "missing_data": {
+    "retain_all_manifest_rows": true,
+    "train_fit_only_on_real_successful_pairs": true,
+    "frontend_comparison_on_common_valid_rows": true,
+    "missing_validation_prevents_full_pass": true,
+    "MELD_incomplete_dialogue_excluded_from_context_parity_with_full_accounting": true,
+    "no_official_feature_imputation": true
+  },
+  "classification": {
+    "A": "Original author converter provenance + parity; Train-derived exact relation is never A",
+    "B": "Reconstructed Train-fitted method, all fixed Validation feature and probability gates pass",
+    "C": "At least one gate fails, required coverage incomplete, or reconstruction unavailable"
+  },
+  "never": [
+    "retrain CMERC",
+    "Test features/labels",
+    "Validation fit or feedback tuning",
+    "audio perturbation",
+    "other seeds",
+    "overwrite historic assets",
+    "Git commit/push"
+  ]
+}

@@ -1,0 +1,4677 @@
+{
+  "dataset": "IEMOCAP",
+  "stage": "full_rank_ridge_extension",
+  "created_at": "2026-11-17T03:09:28.694616+00:00",
+  "pid": 10453,
+  "command": [
+    "/LOCAL/USER/miniconda3/envs/multimodalerc310/bin/python",
+    "experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261117T024213Z/scripts/run_full_ridge_extension.py",
+    "--dataset",
+    "IEMOCAP",
+    "--out",
+    "LOCAL_RUN"
+  ],
+  "protocol_sha256": "02377d045ceeb34932eabbb227a72712707f8c7704be483206e13aaef644a9b2",
+  "protocol_version": 2,
+  "baseline_selection_protocol_sha256": "a6874d0013a8609ea02005c1283f240d75b36439f52f34fc59575225bfa3d3df",
+  "baseline_selection_sha256": "aa228704c45767602416d88091feb96a598d3cada9c4c4754e684abb2bd898d6",
+  "input_hashes": {
+    "LOCAL_RUN/configs/reconstruction_protocol.json": "02377d045ceeb34932eabbb227a72712707f8c7704be483206e13aaef644a9b2",
+    "LOCAL_RUN/provenance/IEMOCAP_model_selection.json": "aa228704c45767602416d88091feb96a598d3cada9c4c4754e684abb2bd898d6",
+    "LOCAL_RUN/local_only/IEMOCAP/target_train.npy": "01d3d873da56d9f57bf77cc74cd9f5bc31afc19b004bfa606d91e2bb69538db1",
+    "LOCAL_RUN/local_only/IEMOCAP/groups_train.npy": "6b5ed3ad1735b45978cf232516b60a966749234a4cdba89f76f1599a644fb5d8",
+    "LOCAL_RUN/local_only/IEMOCAP/candidates/is10/train.npy": "bfcf88611502a2c1e959879cee3cd4cca85095d28b4feb58f07d06c65647187e",
+    "LOCAL_RUN/local_only/IEMOCAP/manifest_train.csv": "9c9eb0337e4ec611a744562dc7821309261a2236e8fc190748acd695485ecf70",
+    "LOCAL_RUN/local_only/IEMOCAP/models_used_train_indices.npy": "8b915ba0b1c4204a6380f1a2cc6a41d0241972b3b0ebde311f7c1d34005f6cad",
+    "LOCAL_RUN/scripts/run_full_ridge_extension.py": "c0733ead972e899c36d1de44e105f212ac3979a38d16f7cef8f65ccf7960052a",
+    "LOCAL_RUN/scripts/converter_core.py": "afe198de532a40063f8763f5331c9f1641b1749ab3bd2971987186c7b8d721e8",
+    "LOCAL_RUN/scripts/run_converter_cv.py": "a889188edddc49016784e3fef80f98a71aedf55242b89caf9aea0ca298692453"
+  },
+  "no_valuse": true,
+  "no_testuse": true,
+  "selection_only_train": true,
+  "amendment_reason": "Train-stage method coverage review requested full-rank regularized multioutput regression before any new Validation access; initial low-rank-only menu did not test that family",
+  "menu_was_fully_preregistered_initially": false,
+  "cvfoldhash": "1afd5cb6e223fa2f00d7f30543513670ae21eebe2d5f49df6b3a887c1eeeca01",
+  "same_folds_as_original_model_selection": true,
+  "included_train_rows": 5283,
+  "included_train_groups": 108,
+  "excluded_train_indices": [],
+  "frontend_locked": {
+    "candidate": "is10",
+    "transform": "none"
+  },
+  "speaker_key_definition": "raw_utterance_id[:5] + raw_utterance_id.rsplit('_', 1)[1][0]; global Session+gender person, not dialogue-relative speaker_id slot",
+  "blas_threads": 8,
+  "no_svd_executed_for_full_ridge_candidates": true,
+  "scores_are_selection_not_unbiased_estimates": true,
+  "status": "MODEL_LOCKED_FINAL_TRAIN_ONLY",
+  "records": [
+    {
+      "candidate": "is10",
+      "transform": "none",
+      "method": "identity",
+      "complexity": 0,
+      "folds": [
+        {
+          "fold": 0,
+          "shape": [
+            1756,
+            1582
+          ],
+          "total_scalar_elements": 2777992,
+          "jointly_finite_elements": 2777992,
+          "nonfinite_target_elements": 0,
+          "nonfinite_prediction_elements": 0,
+          "fully_finite_rows": 1756,
+          "nonfinite_rows": 0,
+          "max_absolute_error": 28963.14495563507,
+          "mean_absolute_error": 30.33655114595218,
+          "rmse": 204.44596042089103,
+          "cosine_valid_rows": 1756,
+          "cosine_undefined_finite_rows": 0,
+          "zero_target_rows": 0,
+          "zero_prediction_rows": 0,
+          "mean_cosine_similarity": 0.12154364366749386,
+          "min_cosine_similarity": -0.20727017839572623,
+          "column_correlation_defined": 1582,
+          "column_correlation_undefined": 0,
+          "column_correlation_quantiles": {
+            "min": 0.5068549865474434,
+            "p05": 0.9612382539749814,
+            "median": 0.9986985770197414,
+            "p95": 0.999968251656408,
+            "max": 1.0
+          },
+          "column_mae_quantiles": {
+            "min": 0.06649166517134258,
+            "p05": 0.4292861664054939,
+            "median": 1.1815021517638178,
+            "p95": 224.8816878418344,
+            "max": 4246.410211420668
+          },
+          "column_rmse_quantiles": {
+            "min": 0.22066214023575254,
+            "p05": 0.7232890881392604,
+            "median": 1.3531232468479955,
+            "p95": 309.72448653702014,
+            "max": 5854.444558515815
+          },
+          "absolute_column_mean_difference_quantiles": {
+            "min": 0.0003976929142518725,
+            "p05": 0.007023612017994347,
+            "median": 1.088404750933233,
+            "p95": 224.8816878418344,
+            "max": 4246.410211420668
+          },
+          "absolute_column_std_difference_quantiles": {
+            "min": 0.0002779772001828551,
+            "p05": 0.33186467698935596,
+            "median": 0.9685838825613631,
+            "p95": 213.18916227786534,
+            "max": 4030.1987701513785
+          },
+          "nonfinite_policy": "count all; finite element errors; wholly finite rows for correlations/distributions/cosine",
+          "train_scale_nrmse_quantiles": {
+            "min": 0.21558727277631498,
+            "p05": 0.7100125565331055,
+            "median": 1.3736450871576191,
+            "p95": 307.56267708854745,
+            "max": 5923.879844158166
+          },
+          "train_scale_nrmse_mean": 40.91895699155323,
+          "train_scale_zero_columns": 0,
+          "global_train_scale_nrmse": 205.0014731425532,
+          "global_train_scale_nrmse_definition": "sqrt(mean((prediction-target)^2 / supplied_train_scale^2)) over jointly finite entries with positive scale",
+          "dialogue_count": 36,
+          "dialogue_equal_weight_mae": 30.773396782928174,
+          "dialogue_equal_nrmse": 196.52655252468784,
+          "dialogue_equal_nrmse_definition": "arithmetic mean of per-dialogue sqrt(mean((error / supplied_train_scale)^2)); dialogues equally weighted",
+          "n_fit_rows": 3527,
+          "n_fit_groups": 72,
+          "exact_train_column_count": null,
+          "unseen_speaker_fallback_rows": 0
+        },
+        {
+          "fold": 1,
+          "shape": [
+            1764,
+            1582
+          ],
+          "total_scalar_elements": 2790648,
+          "jointly_finite_elements": 2790648,
+          "nonfinite_target_elements": 0,
+          "nonfinite_prediction_elements": 0,
+          "fully_finite_rows": 1764,
+          "nonfinite_rows": 0,
+          "max_absolute_error": 31309.101593017578,
+          "mean_absolute_error": 29.37256309788756,
+          "rmse": 203.76908225599385,
+          "cosine_valid_rows": 1764,
+          "cosine_undefined_finite_rows": 0,
+          "zero_target_rows": 0,
+          "zero_prediction_rows": 0,
+          "mean_cosine_similarity": 0.1042206353048665,
+          "min_cosine_similarity": -0.20393597792629667,
+          "column_correlation_defined": 1582,
+          "column_correlation_undefined": 0,
+          "column_correlation_quantiles": {
+            "min": 0.5788252075477792,
+            "p05": 0.9700920734504506,
+            "median": 0.999999999999923,
+            "p95": 0.999999999999999,
+            "max": 1.0
+          },
+          "column_mae_quantiles": {
+            "min": 0.12628478314040767,
+            "p05": 0.45119754103322335,
+            "median": 1.1890804053612816,
+            "p95": 214.56814356534412,
+            "max": 4261.548276344706
+          },
+          "column_rmse_quantiles": {
+            "min": 0.22224665562958645,
+            "p05": 0.8074270632262007,
+            "median": 1.390177184934152,
+            "p95": 297.7405956828069,
+            "max": 5777.326050324428
+          },
+          "absolute_column_mean_difference_quantiles": {
+            "min": 5.1489949729626914e-05,
+            "p05": 0.0054220365004068235,
+            "median": 1.0696202292308628,
+            "p95": 214.56814356534414,
+            "max": 4261.548276344706
+          },
+          "absolute_column_std_difference_quantiles": {
+            "min": 0.0011232747193935522,
+            "p05": 0.3306363923564951,
+            "median": 0.9859924818254479,
+            "p95": 204.87855980419653,
+            "max": 3900.8574659504707
+          },
+          "nonfinite_policy": "count all; finite element errors; wholly finite rows for correlations/distributions/cosine",
+          "train_scale_nrmse_quantiles": {
+            "min": 0.21780026614614964,
+            "p05": 0.7909218889935057,
+            "median": 1.473188918194533,
+            "p95": 291.8484700428335,
+            "max": 5762.682018770754
+          },
+          "train_scale_nrmse_mean": 39.48159752604242,
+          "train_scale_zero_columns": 0,
+          "global_train_scale_nrmse": 204.49488088044518,
+          "global_train_scale_nrmse_definition": "sqrt(mean((prediction-target)^2 / supplied_train_scale^2)) over jointly finite entries with positive scale",
+          "dialogue_count": 36,
+          "dialogue_equal_weight_mae": 29.688423468863405,
+          "dialogue_equal_nrmse": 201.31536055077353,
+          "dialogue_equal_nrmse_definition": "arithmetic mean of per-dialogue sqrt(mean((error / supplied_train_scale)^2)); dialogues equally weighted",
+          "n_fit_rows": 3519,
+          "n_fit_groups": 72,
+          "exact_train_column_count": null,
+          "unseen_speaker_fallback_rows": 0
+        },
+        {
+          "fold": 2,
+          "shape": [
+            1763,
+            1582
+          ],
+          "total_scalar_elements": 2789066,
+          "jointly_finite_elements": 2789066,
+          "nonfinite_target_elements": 0,
+          "nonfinite_prediction_elements": 0,
+          "fully_finite_rows": 1763,
+          "nonfinite_rows": 0,
+          "max_absolute_error": 38130.572894096375,
+          "mean_absolute_error": 29.44790859507751,
+          "rmse": 190.6554956679008,
+          "cosine_valid_rows": 1763,
+          "cosine_undefined_finite_rows": 0,
+          "zero_target_rows": 0,
+          "zero_prediction_rows": 0,
+          "mean_cosine_similarity": 0.11016136141097488,
+          "min_cosine_similarity": -0.20363813903394,
+          "column_correlation_defined": 1582,
+          "column_correlation_undefined": 0,
+          "column_correlation_quantiles": {
+            "min": 0.7321652116839015,
+            "p05": 0.9737767107411657,
+            "median": 0.9999999999999243,
+            "p95": 0.999999999999999,
+            "max": 1.0
+          },
+          "column_mae_quantiles": {
+            "min": 0.08525868285642846,
+            "p05": 0.41295666570222933,
+            "median": 1.1956823492033175,
+            "p95": 222.18093712722884,
+            "max": 3938.7256205283106
+          },
+          "column_rmse_quantiles": {
+            "min": 0.21539409197335704,
+            "p05": 0.7253881004764915,
+            "median": 1.3693909022144939,
+            "p95": 307.90965517607526,
+            "max": 5490.857732635454
+          },
+          "absolute_column_mean_difference_quantiles": {
+            "min": 0.00023738555650161815,
+            "p05": 0.011344704553607476,
+            "median": 1.113108285597922,
+            "p95": 222.18093712722887,
+            "max": 3938.7256205283106
+          },
+          "absolute_column_std_difference_quantiles": {
+            "min": 0.0012075862620612998,
+            "p05": 0.33432014230639523,
+            "median": 0.9467122067303089,
+            "p95": 212.12561950934384,
+            "max": 3825.6928552112427
+          },
+          "nonfinite_policy": "count all; finite element errors; wholly finite rows for correlations/distributions/cosine",
+          "train_scale_nrmse_quantiles": {
+            "min": 0.19017739243564696,
+            "p05": 0.7141236752107097,
+            "median": 1.3885711272118817,
+            "p95": 304.1961396923975,
+            "max": 5439.620149448119
+          },
+          "train_scale_nrmse_mean": 39.64937110451145,
+          "train_scale_zero_columns": 0,
+          "global_train_scale_nrmse": 187.24798821467985,
+          "global_train_scale_nrmse_definition": "sqrt(mean((prediction-target)^2 / supplied_train_scale^2)) over jointly finite entries with positive scale",
+          "dialogue_count": 36,
+          "dialogue_equal_weight_mae": 29.864006494131104,
+          "dialogue_equal_nrmse": 183.32702225123484,
+          "dialogue_equal_nrmse_definition": "arithmetic mean of per-dialogue sqrt(mean((error / supplied_train_scale)^2)); dialogues equally weighted",
+          "n_fit_rows": 3520,
+          "n_fit_groups": 72,
+          "exact_train_column_count": null,
+          "unseen_speaker_fallback_rows": 0
+        }
+      ],
+      "oof_summary": {
+        "shape": [
+          5283,
+          1582
+        ],
+        "total_scalar_elements": 8357706,
+        "jointly_finite_elements": 8357706,
+        "nonfinite_target_elements": 0,
+        "nonfinite_prediction_elements": 0,
+        "fully_finite_rows": 5283,
+        "nonfinite_rows": 0,
+        "max_absolute_error": 38130.572894096375,
+        "mean_absolute_error": 29.718123787637253,
+        "rmse": 199.71884305483977,
+        "cosine_valid_rows": 5283,
+        "cosine_undefined_finite_rows": 0,
+        "zero_target_rows": 0,
+        "zero_prediction_rows": 0,
+        "mean_cosine_similarity": 0.11196106740970141,
+        "min_cosine_similarity": -0.20727017839572623,
+        "column_correlation_defined": 1582,
+        "column_correlation_undefined": 0,
+        "column_correlation_quantiles": {
+          "min": 0.7246123322372104,
+          "p05": 0.9685672831897425,
+          "median": 0.9995555862081034,
+          "p95": 0.9999893605886696,
+          "max": 0.9999998754083524
+        },
+        "column_mae_quantiles": {
+          "min": 0.09271943580852546,
+          "p05": 0.4310128016211725,
+          "median": 1.1971546529607817,
+          "p95": 220.73745184277757,
+          "max": 4148.78681804243
+        },
+        "column_rmse_quantiles": {
+          "min": 0.22703043669995276,
+          "p05": 0.7881400874699077,
+          "median": 1.3627636331576491,
+          "p95": 305.81352790867186,
+          "max": 5709.5044451721415
+        },
+        "absolute_column_mean_difference_quantiles": {
+          "min": 1.9691301487666495e-06,
+          "p05": 0.002826991384221162,
+          "median": 1.1001806326498924,
+          "p95": 220.7374518427776,
+          "max": 4148.786818042431
+        },
+        "absolute_column_std_difference_quantiles": {
+          "min": 0.0011728025646382534,
+          "p05": 0.339809416404147,
+          "median": 0.973662636950724,
+          "p95": 210.41303713758163,
+          "max": 3922.4975249078143
+        },
+        "nonfinite_policy": "count all; finite element errors; wholly finite rows for correlations/distributions/cosine",
+        "dialogue_count": 108,
+        "dialogue_equal_weight_mae": 30.108608915307556,
+        "global_train_scale_nrmse": 199.0789684811551,
+        "dialogue_equal_nrmse": 193.7229784422321
+      },
+      "score_dialogue_equal_nrmse": 193.7229784422321,
+      "oof_global_train_scale_nrmse": 199.0789684811551,
+      "normalization": "each held-out fold uses only its own fit-fold target std floored at protocol scale_floor",
+      "train_oof_gate": {
+        "pass": false,
+        "checks": {
+          "full_train_coverage": true,
+          "finite": true,
+          "allclose": false,
+          "MAE": false,
+          "train_scaled_RMSE": false,
+          "mean_cosine": false,
+          "min_cosine": false,
+          "correlation_p05": false
+        },
+        "scope": "Train OOF stop-complexity diagnostic; not independent Validation acceptance"
+      }
+    },
+    {
+      "candidate": "is10",
+      "transform": "none",
+      "method": "best_column_exact",
+      "complexity": 1,
+      "folds": [
+        {
+          "fold": 0,
+          "shape": [
+            1756,
+            1582
+          ],
+          "total_scalar_elements": 2777992,
+          "jointly_finite_elements": 2777992,
+          "nonfinite_target_elements": 0,
+          "nonfinite_prediction_elements": 0,
+          "fully_finite_rows": 1756,
+          "nonfinite_rows": 0,
+          "max_absolute_error": 28963.14495563507,
+          "mean_absolute_error": 30.336744479145796,
+          "rmse": 204.44596492927027,
+          "cosine_valid_rows": 1756,
+          "cosine_undefined_finite_rows": 0,
+          "zero_target_rows": 0,
+          "zero_prediction_rows": 0,
+          "mean_cosine_similarity": 0.12154237159718555,
+          "min_cosine_similarity": -0.20727017839572623,
+          "column_correlation_defined": 1582,
+          "column_correlation_undefined": 0,
+          "column_correlation_quantiles": {
+            "min": -0.8662388819692782,
+            "p05": 0.9610691335399331,
+            "median": 0.9986956817143778,
+            "p95": 0.999968251656408,
+            "max": 1.0
+          },
+          "column_mae_quantiles": {
+            "min": 0.06649166517134258,
+            "p05": 0.4292861664054939,
+            "median": 1.1815021517638178,
+            "p95": 224.8816878418344,
+            "max": 4246.410211420668
+          },
+          "column_rmse_quantiles": {
+            "min": 0.22066214023575254,
+            "p05": 0.7232890881392604,
+            "median": 1.3547333127485985,
+            "p95": 309.72448653702014,
+            "max": 5854.444558515815
+          },
+          "absolute_column_mean_difference_quantiles": {
+            "min": 0.0003976929142518725,
+            "p05": 0.007023612017994347,
+            "median": 1.088404750933233,
+            "p95": 224.8816878418344,
+            "max": 4246.410211420668
+          },
+          "absolute_column_std_difference_quantiles": {
+            "min": 0.0002779772001828551,
+            "p05": 0.33144745569949596,
+            "median": 0.9685838825613631,
+            "p95": 213.18916227786534,
+            "max": 4030.1987701513785
+          },
+          "nonfinite_policy": "count all; finite element errors; wholly finite rows for correlations/distributions/cosine",
+          "train_scale_nrmse_quantiles": {
+            "min": 0.21558727277631498,
+            "p05": 0.7100125565331055,
+            "median": 1.376680761767503,
+            "p95": 307.56267708854745,
+            "max": 5923.879844158166
+          },
+          "train_scale_nrmse_mean": 40.91983301646625,
+          "train_scale_zero_columns": 0,
+          "global_train_scale_nrmse": 205.00148115332337,
+          "global_train_scale_nrmse_definition": "sqrt(mean((prediction-target)^2 / supplied_train_scale^2)) over jointly finite entries with positive scale",
+          "dialogue_count": 36,
+          "dialogue_equal_weight_mae": 30.77358587119147,
+          "dialogue_equal_nrmse": 196.52656025516828,
+          "dialogue_equal_nrmse_definition": "arithmetic mean of per-dialogue sqrt(mean((error / supplied_train_scale)^2)); dialogues equally weighted",
+          "n_fit_rows": 3527,
+          "n_fit_groups": 72,
+          "exact_train_column_count": 0,
+          "unseen_speaker_fallback_rows": 0
+        },
+        {
+          "fold": 1,
+          "shape": [
+            1764,
+            1582
+          ],
+          "total_scalar_elements": 2790648,
+          "jointly_finite_elements": 2790648,
+          "nonfinite_target_elements": 0,
+          "nonfinite_prediction_elements": 0,
+          "fully_finite_rows": 1764,
+          "nonfinite_rows": 0,
+          "max_absolute_error": 31309.101593017578,
+          "mean_absolute_error": 29.372563355569376,
+          "rmse": 203.7690821927855,
+          "cosine_valid_rows": 1764,
+          "cosine_undefined_finite_rows": 0,
+          "zero_target_rows": 0,
+          "zero_prediction_rows": 0,
+          "mean_cosine_similarity": 0.10422070797840975,
+          "min_cosine_similarity": -0.2039360583561841,
+          "column_correlation_defined": 1582,
+          "column_correlation_undefined": 0,
+          "column_correlation_quantiles": {
+            "min": 0.5788252075477792,
+            "p05": 0.9692892519452775,
+            "median": 0.999999999999923,
+            "p95": 0.999999999999999,
+            "max": 1.0
+          },
+          "column_mae_quantiles": {
+            "min": 0.12628478314040767,
+            "p05": 0.45119754103322335,
+            "median": 1.1890804053612816,
+            "p95": 214.56814356534412,
+            "max": 4261.548276344706
+          },
+          "column_rmse_quantiles": {
+            "min": 0.22224665562958645,
+            "p05": 0.8074270632262007,
+            "median": 1.3935335483074607,
+            "p95": 297.7405956828069,
+            "max": 5777.326050324428
+          },
+          "absolute_column_mean_difference_quantiles": {
+            "min": 5.1489949729626914e-05,
+            "p05": 0.0054220365004068235,
+            "median": 1.0696202292308628,
+            "p95": 214.56814356534414,
+            "max": 4261.548276344706
+          },
+          "absolute_column_std_difference_quantiles": {
+            "min": 0.0011232747193935522,
+            "p05": 0.3306363923564951,
+            "median": 0.9859924818254479,
+            "p95": 204.87855980419653,
+            "max": 3900.8574659504707
+          },
+          "nonfinite_policy": "count all; finite element errors; wholly finite rows for correlations/distributions/cosine",
+          "train_scale_nrmse_quantiles": {
+            "min": 0.21780026614614964,
+            "p05": 0.7909218889935057,
+            "median": 1.473188918194533,
+            "p95": 291.8484700428335,
+            "max": 5762.682018770754
+          },
+          "train_scale_nrmse_mean": 39.481585263544936,
+          "train_scale_zero_columns": 0,
+          "global_train_scale_nrmse": 204.4948808062367,
+          "global_train_scale_nrmse_definition": "sqrt(mean((prediction-target)^2 / supplied_train_scale^2)) over jointly finite entries with positive scale",
+          "dialogue_count": 36,
+          "dialogue_equal_weight_mae": 29.6884239507974,
+          "dialogue_equal_nrmse": 201.31536049920936,
+          "dialogue_equal_nrmse_definition": "arithmetic mean of per-dialogue sqrt(mean((error / supplied_train_scale)^2)); dialogues equally weighted",
+          "n_fit_rows": 3519,
+          "n_fit_groups": 72,
+          "exact_train_column_count": 0,
+          "unseen_speaker_fallback_rows": 0
+        },
+        {
+          "fold": 2,
+          "shape": [
+            1763,
+            1582
+          ],
+          "total_scalar_elements": 2789066,
+          "jointly_finite_elements": 2789066,
+          "nonfinite_target_elements": 0,
+          "nonfinite_prediction_elements": 0,
+          "fully_finite_rows": 1763,
+          "nonfinite_rows": 0,
+          "max_absolute_error": 38130.572894096375,
+          "mean_absolute_error": 29.447943064190046,
+          "rmse": 190.65549601614393,
+          "cosine_valid_rows": 1763,
+          "cosine_undefined_finite_rows": 0,
+          "zero_target_rows": 0,
+          "zero_prediction_rows": 0,
+          "mean_cosine_similarity": 0.1101610589102009,
+          "min_cosine_similarity": -0.20363813903394,
+          "column_correlation_defined": 1582,
+          "column_correlation_undefined": 0,
+          "column_correlation_quantiles": {
+            "min": -0.3835776340592102,
+            "p05": 0.9720790889105251,
+            "median": 0.9999999999999243,
+            "p95": 0.999999999999999,
+            "max": 1.0
+          },
+          "column_mae_quantiles": {
+            "min": 0.08525868285642846,
+            "p05": 0.41295666570222933,
+            "median": 1.1956823492033175,
+            "p95": 222.18093712722884,
+            "max": 3938.7256205283106
+          },
+          "column_rmse_quantiles": {
+            "min": 0.21539409197335704,
+            "p05": 0.7253881004764915,
+            "median": 1.3693909022144939,
+            "p95": 307.90965517607526,
+            "max": 5490.857732635454
+          },
+          "absolute_column_mean_difference_quantiles": {
+            "min": 0.00023738555650161815,
+            "p05": 0.011344704553607476,
+            "median": 1.113108285597922,
+            "p95": 222.18093712722887,
+            "max": 3938.7256205283106
+          },
+          "absolute_column_std_difference_quantiles": {
+            "min": 0.0012075862620612998,
+            "p05": 0.3272198143676674,
+            "median": 0.9467122067303089,
+            "p95": 212.12561950934384,
+            "max": 3825.6928552112427
+          },
+          "nonfinite_policy": "count all; finite element errors; wholly finite rows for correlations/distributions/cosine",
+          "train_scale_nrmse_quantiles": {
+            "min": 0.19017739243564696,
+            "p05": 0.7139952002986643,
+            "median": 1.3885711272118817,
+            "p95": 304.1961396923975,
+            "max": 5439.620149448119
+          },
+          "train_scale_nrmse_mean": 39.64951578115977,
+          "train_scale_zero_columns": 0,
+          "global_train_scale_nrmse": 187.24798856940862,
+          "global_train_scale_nrmse_definition": "sqrt(mean((prediction-target)^2 / supplied_train_scale^2)) over jointly finite entries with positive scale",
+          "dialogue_count": 36,
+          "dialogue_equal_weight_mae": 29.86404471213441,
+          "dialogue_equal_nrmse": 183.32702281242942,
+          "dialogue_equal_nrmse_definition": "arithmetic mean of per-dialogue sqrt(mean((error / supplied_train_scale)^2)); dialogues equally weighted",
+          "n_fit_rows": 3520,
+          "n_fit_groups": 72,
+          "exact_train_column_count": 0,
+          "unseen_speaker_fallback_rows": 0
+        }
+      ],
+      "oof_summary": {
+        "shape": [
+          5283,
+          1582
+        ],
+        "total_scalar_elements": 8357706,
+        "jointly_finite_elements": 8357706,
+        "nonfinite_target_elements": 0,
+        "nonfinite_prediction_elements": 0,
+        "fully_finite_rows": 5283,
+        "nonfinite_rows": 0,
+        "max_absolute_error": 38130.572894096375,
+        "mean_absolute_error": 29.718199637851857,
+        "rmse": 199.71884467824003,
+        "cosine_valid_rows": 5283,
+        "cosine_undefined_finite_rows": 0,
+        "zero_target_rows": 0,
+        "zero_prediction_rows": 0,
+        "mean_cosine_similarity": 0.11196056790786614,
+        "min_cosine_similarity": -0.20727017839572623,
+        "column_correlation_defined": 1582,
+        "column_correlation_undefined": 0,
+        "column_correlation_quantiles": {
+          "min": -0.5122870065061104,
+          "p05": 0.9685672831897425,
+          "median": 0.9995555862081034,
+          "p95": 0.9999893605886696,
+          "max": 0.9999998754083524
+        },
+        "column_mae_quantiles": {
+          "min": 0.09271943580852546,
+          "p05": 0.4310128016211725,
+          "median": 1.1971546529607817,
+          "p95": 220.73745184277757,
+          "max": 4148.78681804243
+        },
+        "column_rmse_quantiles": {
+          "min": 0.22703043669995276,
+          "p05": 0.7901946547168509,
+          "median": 1.3627636331576491,
+          "p95": 305.81352790867186,
+          "max": 5709.5044451721415
+        },
+        "absolute_column_mean_difference_quantiles": {
+          "min": 1.9691301487666495e-06,
+          "p05": 0.0028703483559874843,
+          "median": 1.1001806326498924,
+          "p95": 220.7374518427776,
+          "max": 4148.786818042431
+        },
+        "absolute_column_std_difference_quantiles": {
+          "min": 0.0011728025646382534,
+          "p05": 0.3371783082708195,
+          "median": 0.9735759747722665,
+          "p95": 210.41303713758163,
+          "max": 3922.4975249078143
+        },
+        "nonfinite_policy": "count all; finite element errors; wholly finite rows for correlations/distributions/cosine",
+        "dialogue_count": 108,
+        "dialogue_equal_weight_mae": 30.108684844707767,
+        "global_train_scale_nrmse": 199.07897130893335,
+        "dialogue_equal_nrmse": 193.7229811889357
+      },
+      "score_dialogue_equal_nrmse": 193.7229811889357,
+      "oof_global_train_scale_nrmse": 199.07897130893335,
+      "normalization": "each held-out fold uses only its own fit-fold target std floored at protocol scale_floor",
+      "train_oof_gate": {
+        "pass": false,
+        "checks": {
+          "full_train_coverage": true,
+          "finite": true,
+          "allclose": false,
+          "MAE": false,
+          "train_scaled_RMSE": false,
+          "mean_cosine": false,
+          "min_cosine": false,
+          "correlation_p05": false
+        },
+        "scope": "Train OOF stop-complexity diagnostic; not independent Validation acceptance"
+      }
+    },
+    {
+      "candidate": "is10",
+      "transform": "none",
+      "method": "diagonal_affine",
+      "complexity": 2,
+      "folds": [
+        {
+          "fold": 0,
+          "shape": [
+            1756,
+            1582
+          ],
+          "total_scalar_elements": 2777992,
+          "jointly_finite_elements": 2777992,
+          "nonfinite_target_elements": 0,
+          "nonfinite_prediction_elements": 0,
+          "fully_finite_rows": 1756,
+          "nonfinite_rows": 0,
+          "max_absolute_error": 62.78680811018773,
+          "mean_absolute_error": 0.011591259143323644,
+          "rmse": 0.13561934451588126,
+          "cosine_valid_rows": 1756,
+          "cosine_undefined_finite_rows": 0,
+          "zero_target_rows": 0,
+          "zero_prediction_rows": 0,
+          "mean_cosine_similarity": 0.9937575776129574,
+          "min_cosine_similarity": 0.1098208902054969,
+          "column_correlation_defined": 1582,
+          "column_correlation_undefined": 0,
+          "column_correlation_quantiles": {
+            "min": 0.5068549865474415,
+            "p05": 0.961238253974982,
+            "median": 0.9986985770197396,
+            "p95": 0.999968251656411,
+            "max": 1.0
+          },
+          "column_mae_quantiles": {
+            "min": 3.176349829942231e-05,
+            "p05": 0.000295888381419503,
+            "median": 0.001788254648546961,
+            "p95": 0.05708258007848796,
+            "max": 0.44791506435494194
+          },
+          "column_rmse_quantiles": {
+            "min": 0.0008712071605249092,
+            "p05": 0.00797942458659889,
+            "median": 0.05138486129893144,
+            "p95": 0.27243020883565217,
+            "max": 1.570507663002576
+          },
+          "absolute_column_mean_difference_quantiles": {
+            "min": 3.890167563080915e-10,
+            "p05": 5.477628443544582e-05,
+            "median": 0.0009084984424952043,
+            "p95": 0.006574777393876248,
+            "max": 0.054928079862430604
+          },
+          "absolute_column_std_difference_quantiles": {
+            "min": 2.2034718716312796e-08,
+            "p05": 4.174117857645988e-05,
+            "median": 0.0009014569529423588,
+            "p95": 0.036996762361469274,
+            "max": 0.9548643932006957
+          },
+          "nonfinite_policy": "count all; finite element errors; wholly finite rows for correlations/distributions/cosine",
+          "train_scale_nrmse_quantiles": {
+            "min": 0.0008491613497391419,
+            "p05": 0.007858234070582809,
+            "median": 0.05172801030594924,
+            "p95": 0.2642944219829572,
+            "max": 1.6755174448777237
+          },
+          "train_scale_nrmse_mean": 0.08452914395458329,
+          "train_scale_zero_columns": 0,
+          "global_train_scale_nrmse": 0.13878208815095328,
+          "global_train_scale_nrmse_definition": "sqrt(mean((prediction-target)^2 / supplied_train_scale^2)) over jointly finite entries with positive scale",
+          "dialogue_count": 36,
+          "dialogue_equal_weight_mae": 0.01105903572254134,
+          "dialogue_equal_nrmse": 0.10861559731678433,
+          "dialogue_equal_nrmse_definition": "arithmetic mean of per-dialogue sqrt(mean((error / supplied_train_scale)^2)); dialogues equally weighted",
+          "n_fit_rows": 3527,
+          "n_fit_groups": 72,
+          "exact_train_column_count": null,
+          "unseen_speaker_fallback_rows": 0
+        },
+        {
+          "fold": 1,
+          "shape": [
+            1764,
+            1582
+          ],
+          "total_scalar_elements": 2790648,
+          "jointly_finite_elements": 2790648,
+          "nonfinite_target_elements": 0,
+          "nonfinite_prediction_elements": 0,
+          "fully_finite_rows": 1764,
+          "nonfinite_rows": 0,
+          "max_absolute_error": 52.91208370850891,
+          "mean_absolute_error": 0.011455418057701111,
+          "rmse": 0.11025259441180861,
+          "cosine_valid_rows": 1764,
+          "cosine_undefined_finite_rows": 0,
+          "zero_target_rows": 0,
+          "zero_prediction_rows": 0,
+          "mean_cosine_similarity": 0.9949879184203114,
+          "min_cosine_similarity": 0.512251681061919,
+          "column_correlation_defined": 1582,
+          "column_correlation_undefined": 0,
+          "column_correlation_quantiles": {
+            "min": 0.5788252075477789,
+            "p05": 0.9700920734504543,
+            "median": 0.9999999999999225,
+            "p95": 0.9999999999999994,
+            "max": 1.0
+          },
+          "column_mae_quantiles": {
+            "min": 5.953160774555259e-07,
+            "p05": 8.075085001709572e-05,
+            "median": 0.0008345366815362693,
+            "p95": 0.05979157865811106,
+            "max": 0.46608149128739174
+          },
+          "column_rmse_quantiles": {
+            "min": 8.264837422992437e-07,
+            "p05": 8.986937814489046e-05,
+            "median": 0.0010502294246208617,
+            "p95": 0.25177343973712135,
+            "max": 1.2664284822267382
+          },
+          "absolute_column_mean_difference_quantiles": {
+            "min": 5.032872648844111e-08,
+            "p05": 2.931056601501846e-05,
+            "median": 0.0004747517368737103,
+            "p95": 0.0067322732143328306,
+            "max": 0.03587716465186518
+          },
+          "absolute_column_std_difference_quantiles": {
+            "min": 7.7653162122715e-08,
+            "p05": 3.1049371208891066e-05,
+            "median": 0.0008516105492240578,
+            "p95": 0.04584908575088906,
+            "max": 0.8416594376487014
+          },
+          "nonfinite_policy": "count all; finite element errors; wholly finite rows for correlations/distributions/cosine",
+          "train_scale_nrmse_quantiles": {
+            "min": 8.091565247493989e-07,
+            "p05": 8.861512792664452e-05,
+            "median": 0.0010515666057821847,
+            "p95": 0.2719960369199479,
+            "max": 1.6279835755362608
+          },
+          "train_scale_nrmse_mean": 0.03799111439593524,
+          "train_scale_zero_columns": 0,
+          "global_train_scale_nrmse": 0.1176915715621833,
+          "global_train_scale_nrmse_definition": "sqrt(mean((prediction-target)^2 / supplied_train_scale^2)) over jointly finite entries with positive scale",
+          "dialogue_count": 36,
+          "dialogue_equal_weight_mae": 0.011298354396461976,
+          "dialogue_equal_nrmse": 0.10172841483220263,
+          "dialogue_equal_nrmse_definition": "arithmetic mean of per-dialogue sqrt(mean((error / supplied_train_scale)^2)); dialogues equally weighted",
+          "n_fit_rows": 3519,
+          "n_fit_groups": 72,
+          "exact_train_column_count": null,
+          "unseen_speaker_fallback_rows": 0
+        },
+        {
+          "fold": 2,
+          "shape": [
+            1763,
+            1582
+          ],
+          "total_scalar_elements": 2789066,
+          "jointly_finite_elements": 2789066,
+          "nonfinite_target_elements": 0,
+          "nonfinite_prediction_elements": 0,
+          "fully_finite_rows": 1763,
+          "nonfinite_rows": 0,
+          "max_absolute_error": 19.726552057373542,
+          "mean_absolute_error": 0.011187371745915812,
+          "rmse": 0.09430325794961594,
+          "cosine_valid_rows": 1763,
+          "cosine_undefined_finite_rows": 0,
+          "zero_target_rows": 0,
+          "zero_prediction_rows": 0,
+          "mean_cosine_similarity": 0.9951074421170618,
+          "min_cosine_similarity": 0.7406421783640013,
+          "column_correlation_defined": 1582,
+          "column_correlation_undefined": 0,
+          "column_correlation_quantiles": {
+            "min": 0.732165211683904,
+            "p05": 0.9737767107411629,
+            "median": 0.9999999999999241,
+            "p95": 0.9999999999999986,
+            "max": 1.0
+          },
+          "column_mae_quantiles": {
+            "min": 6.319348462054649e-07,
+            "p05": 7.946985659017723e-05,
+            "median": 0.0008234833310182825,
+            "p95": 0.05785285449484537,
+            "max": 0.4565751879819336
+          },
+          "column_rmse_quantiles": {
+            "min": 8.949939465723228e-07,
+            "p05": 8.93400491807473e-05,
+            "median": 0.001024492031227945,
+            "p95": 0.228879705126284,
+            "max": 0.7124185257591938
+          },
+          "absolute_column_mean_difference_quantiles": {
+            "min": 2.714148961135976e-08,
+            "p05": 2.8470993764027557e-05,
+            "median": 0.00047401395597522836,
+            "p95": 0.0043087959560927525,
+            "max": 0.030682655015159994
+          },
+          "absolute_column_std_difference_quantiles": {
+            "min": 1.7245356465078743e-07,
+            "p05": 3.3994367042133876e-05,
+            "median": 0.000847867442834993,
+            "p95": 0.03600082299986377,
+            "max": 0.673877901516621
+          },
+          "nonfinite_policy": "count all; finite element errors; wholly finite rows for correlations/distributions/cosine",
+          "train_scale_nrmse_quantiles": {
+            "min": 8.939185545810952e-07,
+            "p05": 8.83613377082866e-05,
+            "median": 0.001035972042382368,
+            "p95": 0.2274820649704606,
+            "max": 0.9934446722341866
+          },
+          "train_scale_nrmse_mean": 0.03103642785000645,
+          "train_scale_zero_columns": 0,
+          "global_train_scale_nrmse": 0.09556135318896689,
+          "global_train_scale_nrmse_definition": "sqrt(mean((prediction-target)^2 / supplied_train_scale^2)) over jointly finite entries with positive scale",
+          "dialogue_count": 36,
+          "dialogue_equal_weight_mae": 0.011202590472693664,
+          "dialogue_equal_nrmse": 0.09440608414381017,
+          "dialogue_equal_nrmse_definition": "arithmetic mean of per-dialogue sqrt(mean((error / supplied_train_scale)^2)); dialogues equally weighted",
+          "n_fit_rows": 3520,
+          "n_fit_groups": 72,
+          "exact_train_column_count": null,
+          "unseen_speaker_fallback_rows": 0
+        }
+      ],
+      "oof_summary": {
+        "shape": [
+          5283,
+          1582
+        ],
+        "total_scalar_elements": 8357706,
+        "jointly_finite_elements": 8357706,
+        "nonfinite_target_elements": 0,
+        "nonfinite_prediction_elements": 0,
+        "fully_finite_rows": 5283,
+        "nonfinite_rows": 0,
+        "max_absolute_error": 62.786807864904404,
+        "mean_absolute_error": 0.011411118952629778,
+        "rmse": 0.11462973970206902,
+        "cosine_valid_rows": 5283,
+        "cosine_undefined_finite_rows": 0,
+        "zero_target_rows": 0,
+        "zero_prediction_rows": 0,
+        "mean_cosine_similarity": 0.9946188557331516,
+        "min_cosine_similarity": 0.10982088905644183,
+        "column_correlation_defined": 1582,
+        "column_correlation_undefined": 0,
+        "column_correlation_quantiles": {
+          "min": 0.4947332727532824,
+          "p05": 0.9672442211515638,
+          "median": 0.9995550630484549,
+          "p95": 0.9999893522866923,
+          "max": 0.9999998751344555
+        },
+        "column_mae_quantiles": {
+          "min": 2.3301802177731205e-05,
+          "p05": 0.0001569242634550793,
+          "median": 0.0011684611317994216,
+          "p95": 0.05822047819827409,
+          "max": 0.4568708420787949
+        },
+        "column_rmse_quantiles": {
+          "min": 0.0005026141587027539,
+          "p05": 0.004673906050717254,
+          "median": 0.029769311080962146,
+          "p95": 0.2559490565200883,
+          "max": 1.0619512811234466
+        },
+        "absolute_column_mean_difference_quantiles": {
+          "min": 6.289371905221497e-10,
+          "p05": 2.5645772398531775e-07,
+          "median": 1.1174236406184205e-05,
+          "p95": 0.00028460745390328544,
+          "max": 0.01347710132386298
+        },
+        "absolute_column_std_difference_quantiles": {
+          "min": 1.6087150300769792e-07,
+          "p05": 1.1038544386143823e-05,
+          "median": 0.000438147777631015,
+          "p95": 0.03429916891230228,
+          "max": 0.27808619963770087
+        },
+        "nonfinite_policy": "count all; finite element errors; wholly finite rows for correlations/distributions/cosine",
+        "dialogue_count": 108,
+        "dialogue_equal_weight_mae": 0.011186659541421324,
+        "global_train_scale_nrmse": 0.11863533507700455,
+        "dialogue_equal_nrmse": 0.10158336543093238
+      },
+      "score_dialogue_equal_nrmse": 0.10158336543093238,
+      "oof_global_train_scale_nrmse": 0.11863533507700455,
+      "normalization": "each held-out fold uses only its own fit-fold target std floored at protocol scale_floor",
+      "train_oof_gate": {
+        "pass": false,
+        "checks": {
+          "full_train_coverage": true,
+          "finite": true,
+          "allclose": false,
+          "MAE": false,
+          "train_scaled_RMSE": false,
+          "mean_cosine": false,
+          "min_cosine": false,
+          "correlation_p05": false
+        },
+        "scope": "Train OOF stop-complexity diagnostic; not independent Validation acceptance"
+      }
+    },
+    {
+      "candidate": "is10",
+      "transform": "none",
+      "method": "speaker_diagonal_affine",
+      "complexity": 3,
+      "folds": [
+        {
+          "fold": 0,
+          "shape": [
+            1756,
+            1582
+          ],
+          "total_scalar_elements": 2777992,
+          "jointly_finite_elements": 2777992,
+          "nonfinite_target_elements": 0,
+          "nonfinite_prediction_elements": 0,
+          "fully_finite_rows": 1756,
+          "nonfinite_rows": 0,
+          "max_absolute_error": 66.49288145305117,
+          "mean_absolute_error": 0.011768076191867276,
+          "rmse": 0.13603459041776184,
+          "cosine_valid_rows": 1756,
+          "cosine_undefined_finite_rows": 0,
+          "zero_target_rows": 0,
+          "zero_prediction_rows": 0,
+          "mean_cosine_similarity": 0.9936838430438824,
+          "min_cosine_similarity": 0.10995002647065272,
+          "column_correlation_defined": 1582,
+          "column_correlation_undefined": 0,
+          "column_correlation_quantiles": {
+            "min": 0.49352593689874563,
+            "p05": 0.960393106419602,
+            "median": 0.998692724518637,
+            "p95": 0.9999682516564509,
+            "max": 0.9999995923678044
+          },
+          "column_mae_quantiles": {
+            "min": 3.176494613773371e-05,
+            "p05": 0.000295891299690492,
+            "median": 0.0017882606939427035,
+            "p95": 0.05706507701020272,
+            "max": 0.44640045534894407
+          },
+          "column_rmse_quantiles": {
+            "min": 0.0008712072058163514,
+            "p05": 0.007979424574833733,
+            "median": 0.05132648074554917,
+            "p95": 0.2664022551100508,
+            "max": 1.664032975383975
+          },
+          "absolute_column_mean_difference_quantiles": {
+            "min": 1.597732918190431e-10,
+            "p05": 5.9242596982142864e-05,
+            "median": 0.0009261925400421388,
+            "p95": 0.006576574280323818,
+            "max": 0.057112831591225
+          },
+          "absolute_column_std_difference_quantiles": {
+            "min": 2.323816783444954e-08,
+            "p05": 4.239649594630635e-05,
+            "median": 0.0009014914531968454,
+            "p95": 0.035506080417055,
+            "max": 1.0453778578810577
+          },
+          "nonfinite_policy": "count all; finite element errors; wholly finite rows for correlations/distributions/cosine",
+          "train_scale_nrmse_quantiles": {
+            "min": 0.0008491613938844887,
+            "p05": 0.00785823405906876,
+            "median": 0.051697773300272906,
+            "p95": 0.2662667361755928,
+            "max": 1.675433912409778
+          },
+          "train_scale_nrmse_mean": 0.08436586405459993,
+          "train_scale_zero_columns": 0,
+          "global_train_scale_nrmse": 0.13843040899692852,
+          "global_train_scale_nrmse_definition": "sqrt(mean((prediction-target)^2 / supplied_train_scale^2)) over jointly finite entries with positive scale",
+          "dialogue_count": 36,
+          "dialogue_equal_weight_mae": 0.011223583219865763,
+          "dialogue_equal_nrmse": 0.10864179213341431,
+          "dialogue_equal_nrmse_definition": "arithmetic mean of per-dialogue sqrt(mean((error / supplied_train_scale)^2)); dialogues equally weighted",
+          "n_fit_rows": 3527,
+          "n_fit_groups": 72,
+          "exact_train_column_count": null,
+          "unseen_speaker_fallback_rows": 0
+        },
+        {
+          "fold": 1,
+          "shape": [
+            1764,
+            1582
+          ],
+          "total_scalar_elements": 2790648,
+          "jointly_finite_elements": 2790648,
+          "nonfinite_target_elements": 0,
+          "nonfinite_prediction_elements": 0,
+          "fully_finite_rows": 1764,
+          "nonfinite_rows": 0,
+          "max_absolute_error": 52.96641365337255,
+          "mean_absolute_error": 0.011856109208614176,
+          "rmse": 0.1135783823300866,
+          "cosine_valid_rows": 1764,
+          "cosine_undefined_finite_rows": 0,
+          "zero_target_rows": 0,
+          "zero_prediction_rows": 0,
+          "mean_cosine_similarity": 0.9947807736395395,
+          "min_cosine_similarity": 0.5130186001946424,
+          "column_correlation_defined": 1582,
+          "column_correlation_undefined": 0,
+          "column_correlation_quantiles": {
+            "min": 0.5642186162235296,
+            "p05": 0.9667563929159219,
+            "median": 0.9999966701070927,
+            "p95": 0.9999999469935531,
+            "max": 0.9999999989794266
+          },
+          "column_mae_quantiles": {
+            "min": 2.5933590039363076e-05,
+            "p05": 0.00018169607712425085,
+            "median": 0.0012322767314171296,
+            "p95": 0.06260780142843349,
+            "max": 0.4680608056085437
+          },
+          "column_rmse_quantiles": {
+            "min": 5.185444567277297e-05,
+            "p05": 0.0003608223198655876,
+            "median": 0.0028270889621606083,
+            "p95": 0.2704369262982013,
+            "max": 1.268968196088257
+          },
+          "absolute_column_mean_difference_quantiles": {
+            "min": 5.629142867721176e-07,
+            "p05": 3.223614940124735e-05,
+            "median": 0.0004770719804003251,
+            "p95": 0.007053153221552574,
+            "max": 0.050474915875142544
+          },
+          "absolute_column_std_difference_quantiles": {
+            "min": 1.6384270773439624e-07,
+            "p05": 3.3705071838796566e-05,
+            "median": 0.0008865736787428968,
+            "p95": 0.045729943556218566,
+            "max": 0.6172246120680441
+          },
+          "nonfinite_policy": "count all; finite element errors; wholly finite rows for correlations/distributions/cosine",
+          "train_scale_nrmse_quantiles": {
+            "min": 5.085104928713199e-05,
+            "p05": 0.00035349497835784985,
+            "median": 0.0028558555583609634,
+            "p95": 0.2850813155437427,
+            "max": 1.6312483571730767
+          },
+          "train_scale_nrmse_mean": 0.04129865875451612,
+          "train_scale_zero_columns": 0,
+          "global_train_scale_nrmse": 0.1222487102616843,
+          "global_train_scale_nrmse_definition": "sqrt(mean((prediction-target)^2 / supplied_train_scale^2)) over jointly finite entries with positive scale",
+          "dialogue_count": 36,
+          "dialogue_equal_weight_mae": 0.011737770621877967,
+          "dialogue_equal_nrmse": 0.10508306109076786,
+          "dialogue_equal_nrmse_definition": "arithmetic mean of per-dialogue sqrt(mean((error / supplied_train_scale)^2)); dialogues equally weighted",
+          "n_fit_rows": 3519,
+          "n_fit_groups": 72,
+          "exact_train_column_count": null,
+          "unseen_speaker_fallback_rows": 0
+        },
+        {
+          "fold": 2,
+          "shape": [
+            1763,
+            1582
+          ],
+          "total_scalar_elements": 2789066,
+          "jointly_finite_elements": 2789066,
+          "nonfinite_target_elements": 0,
+          "nonfinite_prediction_elements": 0,
+          "fully_finite_rows": 1763,
+          "nonfinite_rows": 0,
+          "max_absolute_error": 26.594022251171378,
+          "mean_absolute_error": 0.011894002658749398,
+          "rmse": 0.09591414859829153,
+          "cosine_valid_rows": 1763,
+          "cosine_undefined_finite_rows": 0,
+          "zero_target_rows": 0,
+          "zero_prediction_rows": 0,
+          "mean_cosine_similarity": 0.9950080112713531,
+          "min_cosine_similarity": 0.7271283554636916,
+          "column_correlation_defined": 1582,
+          "column_correlation_undefined": 0,
+          "column_correlation_quantiles": {
+            "min": 0.7272599923470725,
+            "p05": 0.9709753071995554,
+            "median": 0.9999956000055842,
+            "p95": 0.9999999375617044,
+            "max": 0.9999999984524001
+          },
+          "column_mae_quantiles": {
+            "min": 2.4931668870831554e-05,
+            "p05": 0.00020947890477975443,
+            "median": 0.00149108213181813,
+            "p95": 0.05665403253781596,
+            "max": 0.45494769633863236
+          },
+          "column_rmse_quantiles": {
+            "min": 5.511554140897237e-05,
+            "p05": 0.0003851236760827783,
+            "median": 0.003238783187168367,
+            "p95": 0.23238513810102795,
+            "max": 0.7238261374750701
+          },
+          "absolute_column_mean_difference_quantiles": {
+            "min": 6.334373334193621e-08,
+            "p05": 4.20211467757968e-05,
+            "median": 0.0006142917812375741,
+            "p95": 0.0048195593822714135,
+            "max": 0.04156917322594576
+          },
+          "absolute_column_std_difference_quantiles": {
+            "min": 1.7111844197170711e-07,
+            "p05": 4.1973632814529266e-05,
+            "median": 0.0009796888000268567,
+            "p95": 0.03333286322584041,
+            "max": 0.3949449849468978
+          },
+          "nonfinite_policy": "count all; finite element errors; wholly finite rows for correlations/distributions/cosine",
+          "train_scale_nrmse_quantiles": {
+            "min": 5.4862720795806584e-05,
+            "p05": 0.000385177619701744,
+            "median": 0.0032308886136679913,
+            "p95": 0.23327700053325184,
+            "max": 0.9866371005313627
+          },
+          "train_scale_nrmse_mean": 0.03506215224095304,
+          "train_scale_zero_columns": 0,
+          "global_train_scale_nrmse": 0.09714328092004425,
+          "global_train_scale_nrmse_definition": "sqrt(mean((prediction-target)^2 / supplied_train_scale^2)) over jointly finite entries with positive scale",
+          "dialogue_count": 36,
+          "dialogue_equal_weight_mae": 0.011809513026328843,
+          "dialogue_equal_nrmse": 0.09555013699093158,
+          "dialogue_equal_nrmse_definition": "arithmetic mean of per-dialogue sqrt(mean((error / supplied_train_scale)^2)); dialogues equally weighted",
+          "n_fit_rows": 3520,
+          "n_fit_groups": 72,
+          "exact_train_column_count": null,
+          "unseen_speaker_fallback_rows": 0
+        }
+      ],
+      "oof_summary": {
+        "shape": [
+          5283,
+          1582
+        ],
+        "total_scalar_elements": 8357706,
+        "jointly_finite_elements": 8357706,
+        "nonfinite_target_elements": 0,
+        "nonfinite_prediction_elements": 0,
+        "fully_finite_rows": 5283,
+        "nonfinite_rows": 0,
+        "max_absolute_error": 66.49287781119347,
+        "mean_absolute_error": 0.011839492456594143,
+        "rmse": 0.11631116949133928,
+        "cosine_valid_rows": 5283,
+        "cosine_undefined_finite_rows": 0,
+        "zero_target_rows": 0,
+        "zero_prediction_rows": 0,
+        "mean_cosine_similarity": 0.9944920001859924,
+        "min_cosine_similarity": 0.10995002498183681,
+        "column_correlation_defined": 1582,
+        "column_correlation_undefined": 0,
+        "column_correlation_quantiles": {
+          "min": 0.5317089408461164,
+          "p05": 0.9649862692510819,
+          "median": 0.9995517016071983,
+          "p95": 0.9999893120860197,
+          "max": 0.9999998741528137
+        },
+        "column_mae_quantiles": {
+          "min": 2.8541907837018393e-05,
+          "p05": 0.00023632497520247392,
+          "median": 0.0015241567334908822,
+          "p95": 0.058933094969313635,
+          "max": 0.4564851883898878
+        },
+        "column_rmse_quantiles": {
+          "min": 0.0005045957093075543,
+          "p05": 0.004682743088516412,
+          "median": 0.02983618211651346,
+          "p95": 0.26352864684404653,
+          "max": 1.101394718528763
+        },
+        "absolute_column_mean_difference_quantiles": {
+          "min": 2.92093545670169e-08,
+          "p05": 4.750430205537233e-06,
+          "median": 6.947209836228284e-05,
+          "p95": 0.0010195905173221854,
+          "max": 0.012332897592698816
+        },
+        "absolute_column_std_difference_quantiles": {
+          "min": 8.134799589498698e-08,
+          "p05": 1.4483462744541153e-05,
+          "median": 0.0005055652608181305,
+          "p95": 0.034484124878732716,
+          "max": 0.27731800820463226
+        },
+        "nonfinite_policy": "count all; finite element errors; wholly finite rows for correlations/distributions/cosine",
+        "dialogue_count": 108,
+        "dialogue_equal_weight_mae": 0.011590287721239202,
+        "global_train_scale_nrmse": 0.12045235581010981,
+        "dialogue_equal_nrmse": 0.1030916634050379
+      },
+      "score_dialogue_equal_nrmse": 0.1030916634050379,
+      "oof_global_train_scale_nrmse": 0.12045235581010981,
+      "normalization": "each held-out fold uses only its own fit-fold target std floored at protocol scale_floor",
+      "train_oof_gate": {
+        "pass": false,
+        "checks": {
+          "full_train_coverage": true,
+          "finite": true,
+          "allclose": false,
+          "MAE": false,
+          "train_scaled_RMSE": false,
+          "mean_cosine": false,
+          "min_cosine": false,
+          "correlation_p05": false
+        },
+        "scope": "Train OOF stop-complexity diagnostic; not independent Validation acceptance"
+      }
+    },
+    {
+      "candidate": "is10",
+      "transform": "none",
+      "method": "best_column_affine",
+      "complexity": 4,
+      "folds": [
+        {
+          "fold": 0,
+          "shape": [
+            1756,
+            1582
+          ],
+          "total_scalar_elements": 2777992,
+          "jointly_finite_elements": 2777992,
+          "nonfinite_target_elements": 0,
+          "nonfinite_prediction_elements": 0,
+          "fully_finite_rows": 1756,
+          "nonfinite_rows": 0,
+          "max_absolute_error": 62.78680811018786,
+          "mean_absolute_error": 0.011641530787031737,
+          "rmse": 0.1354510011478745,
+          "cosine_valid_rows": 1756,
+          "cosine_undefined_finite_rows": 0,
+          "zero_target_rows": 0,
+          "zero_prediction_rows": 0,
+          "mean_cosine_similarity": 0.9937496100383499,
+          "min_cosine_similarity": 0.10982213984141748,
+          "column_correlation_defined": 1582,
+          "column_correlation_undefined": 0,
+          "column_correlation_quantiles": {
+            "min": 0.5068549865474414,
+            "p05": 0.9610691335399327,
+            "median": 0.9986956817143768,
+            "p95": 0.9999682516564112,
+            "max": 1.0
+          },
+          "column_mae_quantiles": {
+            "min": 3.176349829941889e-05,
+            "p05": 0.0002958883814193938,
+            "median": 0.0017882546485469557,
+            "p95": 0.057082580078488196,
+            "max": 0.4479150643549421
+          },
+          "column_rmse_quantiles": {
+            "min": 0.0008712071605249456,
+            "p05": 0.007979424586598904,
+            "median": 0.05138486129893148,
+            "p95": 0.2724302088356522,
+            "max": 1.5705076630025792
+          },
+          "absolute_column_mean_difference_quantiles": {
+            "min": 3.8901683263592446e-10,
+            "p05": 5.477628443496808e-05,
+            "median": 0.000908498442495102,
+            "p95": 0.006574777393876211,
+            "max": 0.05492807986243074
+          },
+          "absolute_column_std_difference_quantiles": {
+            "min": 2.2034717828134376e-08,
+            "p05": 4.174117857503879e-05,
+            "median": 0.0009014569529419703,
+            "p95": 0.03699676236147093,
+            "max": 0.9548643932006997
+          },
+          "nonfinite_policy": "count all; finite element errors; wholly finite rows for correlations/distributions/cosine",
+          "train_scale_nrmse_quantiles": {
+            "min": 0.0008491613497391774,
+            "p05": 0.007858234070582823,
+            "median": 0.05172801030594927,
+            "p95": 0.2642944219829573,
+            "max": 1.6755174448777237
+          },
+          "train_scale_nrmse_mean": 0.08447669903641053,
+          "train_scale_zero_columns": 0,
+          "global_train_scale_nrmse": 0.13848885981420694,
+          "global_train_scale_nrmse_definition": "sqrt(mean((prediction-target)^2 / supplied_train_scale^2)) over jointly finite entries with positive scale",
+          "dialogue_count": 36,
+          "dialogue_equal_weight_mae": 0.011110559605840552,
+          "dialogue_equal_nrmse": 0.10857124300649106,
+          "dialogue_equal_nrmse_definition": "arithmetic mean of per-dialogue sqrt(mean((error / supplied_train_scale)^2)); dialogues equally weighted",
+          "n_fit_rows": 3527,
+          "n_fit_groups": 72,
+          "exact_train_column_count": 0,
+          "unseen_speaker_fallback_rows": 0
+        },
+        {
+          "fold": 1,
+          "shape": [
+            1764,
+            1582
+          ],
+          "total_scalar_elements": 2790648,
+          "jointly_finite_elements": 2790648,
+          "nonfinite_target_elements": 0,
+          "nonfinite_prediction_elements": 0,
+          "fully_finite_rows": 1764,
+          "nonfinite_rows": 0,
+          "max_absolute_error": 52.91208370850862,
+          "mean_absolute_error": 0.011557154940124709,
+          "rmse": 0.11140790821862769,
+          "cosine_valid_rows": 1764,
+          "cosine_undefined_finite_rows": 0,
+          "zero_target_rows": 0,
+          "zero_prediction_rows": 0,
+          "mean_cosine_similarity": 0.9949252217966952,
+          "min_cosine_similarity": 0.5123111405873126,
+          "column_correlation_defined": 1582,
+          "column_correlation_undefined": 0,
+          "column_correlation_quantiles": {
+            "min": 0.578825207547779,
+            "p05": 0.9692892519452796,
+            "median": 0.9999999999999226,
+            "p95": 0.9999999999999993,
+            "max": 1.0
+          },
+          "column_mae_quantiles": {
+            "min": 5.953160764416607e-07,
+            "p05": 8.075085001678088e-05,
+            "median": 0.0008345366815366368,
+            "p95": 0.0597915786581111,
+            "max": 0.46608149128739207
+          },
+          "column_rmse_quantiles": {
+            "min": 8.264837409031467e-07,
+            "p05": 8.986937814335998e-05,
+            "median": 0.0010502294246193884,
+            "p95": 0.2517734397371219,
+            "max": 1.2664284822267313
+          },
+          "absolute_column_mean_difference_quantiles": {
+            "min": 5.032872636354102e-08,
+            "p05": 2.9310566014795203e-05,
+            "median": 0.0004747517368735993,
+            "p95": 0.0065561268695309045,
+            "max": 0.035877164651865086
+          },
+          "absolute_column_std_difference_quantiles": {
+            "min": 7.765316056840277e-08,
+            "p05": 3.1049371208202726e-05,
+            "median": 0.0008516105492249459,
+            "p95": 0.0458490857508901,
+            "max": 0.5699399700508211
+          },
+          "nonfinite_policy": "count all; finite element errors; wholly finite rows for correlations/distributions/cosine",
+          "train_scale_nrmse_quantiles": {
+            "min": 8.091565233825711e-07,
+            "p05": 8.861512792787151e-05,
+            "median": 0.00105156660578275,
+            "p95": 0.2719960369199478,
+            "max": 1.627983575536252
+          },
+          "train_scale_nrmse_mean": 0.03828576387380956,
+          "train_scale_zero_columns": 0,
+          "global_train_scale_nrmse": 0.11931306240298285,
+          "global_train_scale_nrmse_definition": "sqrt(mean((prediction-target)^2 / supplied_train_scale^2)) over jointly finite entries with positive scale",
+          "dialogue_count": 36,
+          "dialogue_equal_weight_mae": 0.01139400820796275,
+          "dialogue_equal_nrmse": 0.10263852994864738,
+          "dialogue_equal_nrmse_definition": "arithmetic mean of per-dialogue sqrt(mean((error / supplied_train_scale)^2)); dialogues equally weighted",
+          "n_fit_rows": 3519,
+          "n_fit_groups": 72,
+          "exact_train_column_count": 0,
+          "unseen_speaker_fallback_rows": 0
+        },
+        {
+          "fold": 2,
+          "shape": [
+            1763,
+            1582
+          ],
+          "total_scalar_elements": 2789066,
+          "jointly_finite_elements": 2789066,
+          "nonfinite_target_elements": 0,
+          "nonfinite_prediction_elements": 0,
+          "fully_finite_rows": 1763,
+          "nonfinite_rows": 0,
+          "max_absolute_error": 28.237649780871173,
+          "mean_absolute_error": 0.011287500525201105,
+          "rmse": 0.0963929888163798,
+          "cosine_valid_rows": 1763,
+          "cosine_undefined_finite_rows": 0,
+          "zero_target_rows": 0,
+          "zero_prediction_rows": 0,
+          "mean_cosine_similarity": 0.9950281479803119,
+          "min_cosine_similarity": 0.7399071040709396,
+          "column_correlation_defined": 1582,
+          "column_correlation_undefined": 0,
+          "column_correlation_quantiles": {
+            "min": 0.38357763405921186,
+            "p05": 0.972079088910514,
+            "median": 0.9999999999999238,
+            "p95": 0.9999999999999989,
+            "max": 1.0
+          },
+          "column_mae_quantiles": {
+            "min": 6.319348468397342e-07,
+            "p05": 7.946985659019394e-05,
+            "median": 0.0008234833310194196,
+            "p95": 0.05864252204075805,
+            "max": 0.45657518798193397
+          },
+          "column_rmse_quantiles": {
+            "min": 8.949939475005525e-07,
+            "p05": 8.934004918025464e-05,
+            "median": 0.0010244920312282827,
+            "p95": 0.23051664142434372,
+            "max": 0.9498882507542646
+          },
+          "absolute_column_mean_difference_quantiles": {
+            "min": 2.714148977095432e-08,
+            "p05": 2.847099376414604e-05,
+            "median": 0.0004740139559751867,
+            "p95": 0.004325721687812341,
+            "max": 0.030682655015160154
+          },
+          "absolute_column_std_difference_quantiles": {
+            "min": 1.7245356420669822e-07,
+            "p05": 3.399436704538683e-05,
+            "median": 0.0008478674428362698,
+            "p95": 0.035849069423652125,
+            "max": 0.7977249437083035
+          },
+          "nonfinite_policy": "count all; finite element errors; wholly finite rows for correlations/distributions/cosine",
+          "train_scale_nrmse_quantiles": {
+            "min": 8.939185555082096e-07,
+            "p05": 8.836133770825476e-05,
+            "median": 0.0010359720423842949,
+            "p95": 0.22964528670823992,
+            "max": 1.3245885498612713
+          },
+          "train_scale_nrmse_mean": 0.03145125787413647,
+          "train_scale_zero_columns": 0,
+          "global_train_scale_nrmse": 0.09879075915371814,
+          "global_train_scale_nrmse_definition": "sqrt(mean((prediction-target)^2 / supplied_train_scale^2)) over jointly finite entries with positive scale",
+          "dialogue_count": 36,
+          "dialogue_equal_weight_mae": 0.011313430868625017,
+          "dialogue_equal_nrmse": 0.09740952940639278,
+          "dialogue_equal_nrmse_definition": "arithmetic mean of per-dialogue sqrt(mean((error / supplied_train_scale)^2)); dialogues equally weighted",
+          "n_fit_rows": 3520,
+          "n_fit_groups": 72,
+          "exact_train_column_count": 0,
+          "unseen_speaker_fallback_rows": 0
+        }
+      ],
+      "oof_summary": {
+        "shape": [
+          5283,
+          1582
+        ],
+        "total_scalar_elements": 8357706,
+        "jointly_finite_elements": 8357706,
+        "nonfinite_target_elements": 0,
+        "nonfinite_prediction_elements": 0,
+        "fully_finite_rows": 5283,
+        "nonfinite_rows": 0,
+        "max_absolute_error": 62.786807864904404,
+        "mean_absolute_error": 0.011495212820866489,
+        "rmse": 0.11551321494928038,
+        "cosine_valid_rows": 5283,
+        "cosine_undefined_finite_rows": 0,
+        "zero_target_rows": 0,
+        "zero_prediction_rows": 0,
+        "mean_cosine_similarity": 0.9945688115408923,
+        "min_cosine_similarity": 0.10982213869239131,
+        "column_correlation_defined": 1582,
+        "column_correlation_undefined": 0,
+        "column_correlation_quantiles": {
+          "min": 0.5157293717113822,
+          "p05": 0.9672442211515638,
+          "median": 0.9995550630484549,
+          "p95": 0.9999893522866923,
+          "max": 0.9999998751344555
+        },
+        "column_mae_quantiles": {
+          "min": 2.3301802177731205e-05,
+          "p05": 0.0001569242634550793,
+          "median": 0.0011684611317994216,
+          "p95": 0.058660318625471684,
+          "max": 0.4568708420787949
+        },
+        "column_rmse_quantiles": {
+          "min": 0.0005026141587027539,
+          "p05": 0.004673906050717254,
+          "median": 0.029769311080962146,
+          "p95": 0.2559490565200883,
+          "max": 1.0962575458092818
+        },
+        "absolute_column_mean_difference_quantiles": {
+          "min": 6.289371905221497e-10,
+          "p05": 2.5645772398531775e-07,
+          "median": 1.1174236406184205e-05,
+          "p95": 0.00028469616151816454,
+          "max": 0.01347710132386298
+        },
+        "absolute_column_std_difference_quantiles": {
+          "min": 1.6087150300769792e-07,
+          "p05": 1.1038544386143823e-05,
+          "median": 0.000438147777631015,
+          "p95": 0.03429916891230228,
+          "max": 0.27808619963770087
+        },
+        "nonfinite_policy": "count all; finite element errors; wholly finite rows for correlations/distributions/cosine",
+        "dialogue_count": 108,
+        "dialogue_equal_weight_mae": 0.011272665571606952,
+        "global_train_scale_nrmse": 0.11993785273712562,
+        "dialogue_equal_nrmse": 0.10287310078717705
+      },
+      "score_dialogue_equal_nrmse": 0.10287310078717705,
+      "oof_global_train_scale_nrmse": 0.11993785273712562,
+      "normalization": "each held-out fold uses only its own fit-fold target std floored at protocol scale_floor",
+      "train_oof_gate": {
+        "pass": false,
+        "checks": {
+          "full_train_coverage": true,
+          "finite": true,
+          "allclose": false,
+          "MAE": false,
+          "train_scaled_RMSE": false,
+          "mean_cosine": false,
+          "min_cosine": false,
+          "correlation_p05": false
+        },
+        "scope": "Train OOF stop-complexity diagnostic; not independent Validation acceptance"
+      }
+    },
+    {
+      "candidate": "is10",
+      "transform": "none",
+      "method": "pcr",
+      "rank": 16,
+      "alpha": 0.0,
+      "complexity": 5,
+      "folds": [
+        {
+          "fold": 0,
+          "shape": [
+            1756,
+            1582
+          ],
+          "total_scalar_elements": 2777992,
+          "jointly_finite_elements": 2777992,
+          "nonfinite_target_elements": 0,
+          "nonfinite_prediction_elements": 0,
+          "fully_finite_rows": 1756,
+          "nonfinite_rows": 0,
+          "max_absolute_error": 54.42733601305167,
+          "mean_absolute_error": 0.4524748304842094,
+          "rmse": 0.6785133927884687,
+          "cosine_valid_rows": 1756,
+          "cosine_undefined_finite_rows": 0,
+          "zero_target_rows": 0,
+          "zero_prediction_rows": 0,
+          "mean_cosine_similarity": 0.7159575876797978,
+          "min_cosine_similarity": 0.15457214444477513,
+          "column_correlation_defined": 1582,
+          "column_correlation_undefined": 0,
+          "column_correlation_quantiles": {
+            "min": -0.1690661933209674,
+            "p05": 0.2935093653705023,
+            "median": 0.7559362741097206,
+            "p95": 0.9450460120258712,
+            "max": 0.990952156241493
+          },
+          "column_mae_quantiles": {
+            "min": 0.10674986812427009,
+            "p05": 0.2437042700226329,
+            "median": 0.45614237931078705,
+            "p95": 0.6650647089275368,
+            "max": 0.837483423116093
+          },
+          "column_rmse_quantiles": {
+            "min": 0.1421480848170861,
+            "p05": 0.33155583086928875,
+            "median": 0.6560568765741313,
+            "p95": 0.9502370733408293,
+            "max": 1.435601530927085
+          },
+          "absolute_column_mean_difference_quantiles": {
+            "min": 6.411341931493106e-05,
+            "p05": 0.0014283472665110092,
+            "median": 0.01974351527346457,
+            "p95": 0.06700054913200057,
+            "max": 0.14041664332170212
+          },
+          "absolute_column_std_difference_quantiles": {
+            "min": 0.0037679963908392455,
+            "p05": 0.05631229303489354,
+            "median": 0.24479508171850634,
+            "p95": 0.6679197621924752,
+            "max": 1.3221654476348104
+          },
+          "nonfinite_policy": "count all; finite element errors; wholly finite rows for correlations/distributions/cosine",
+          "train_scale_nrmse_quantiles": {
+            "min": 0.14611979876235023,
+            "p05": 0.33132706026824543,
+            "median": 0.6532731177601143,
+            "p95": 0.968671488772117,
+            "max": 1.9847767719065892
+          },
+          "train_scale_nrmse_mean": 0.653876001759234,
+          "train_scale_zero_columns": 0,
+          "global_train_scale_nrmse": 0.6847654804025844,
+          "global_train_scale_nrmse_definition": "sqrt(mean((prediction-target)^2 / supplied_train_scale^2)) over jointly finite entries with positive scale",
+          "dialogue_count": 36,
+          "dialogue_equal_weight_mae": 0.4485987728718073,
+          "dialogue_equal_nrmse": 0.6716658037205795,
+          "dialogue_equal_nrmse_definition": "arithmetic mean of per-dialogue sqrt(mean((error / supplied_train_scale)^2)); dialogues equally weighted",
+          "n_fit_rows": 3527,
+          "n_fit_groups": 72,
+          "exact_train_column_count": null,
+          "unseen_speaker_fallback_rows": 0
+        },
+        {
+          "fold": 1,
+          "shape": [
+            1764,
+            1582
+          ],
+          "total_scalar_elements": 2790648,
+          "jointly_finite_elements": 2790648,
+          "nonfinite_target_elements": 0,
+          "nonfinite_prediction_elements": 0,
+          "fully_finite_rows": 1764,
+          "nonfinite_rows": 0,
+          "max_absolute_error": 67.83053290593963,
+          "mean_absolute_error": 0.4586947363014564,
+          "rmse": 0.6978645483575515,
+          "cosine_valid_rows": 1764,
+          "cosine_undefined_finite_rows": 0,
+          "zero_target_rows": 0,
+          "zero_prediction_rows": 0,
+          "mean_cosine_similarity": 0.707143749772762,
+          "min_cosine_similarity": 0.35255496380818097,
+          "column_correlation_defined": 1582,
+          "column_correlation_undefined": 0,
+          "column_correlation_quantiles": {
+            "min": -0.01759899023558902,
+            "p05": 0.30213256084293977,
+            "median": 0.758652132675504,
+            "p95": 0.9416588476580722,
+            "max": 0.9909756926053571
+          },
+          "column_mae_quantiles": {
+            "min": 0.10457384664526308,
+            "p05": 0.24938145999248285,
+            "median": 0.453308737096098,
+            "p95": 0.6768069502900279,
+            "max": 0.827280986351132
+          },
+          "column_rmse_quantiles": {
+            "min": 0.13501972973975787,
+            "p05": 0.33168069671535655,
+            "median": 0.6559105808135027,
+            "p95": 0.9788308655980285,
+            "max": 1.6620109564063896
+          },
+          "absolute_column_mean_difference_quantiles": {
+            "min": 1.00771702875313e-06,
+            "p05": 0.001981289977233923,
+            "median": 0.020223151040470642,
+            "p95": 0.06265812902921498,
+            "max": 0.10009074783211269
+          },
+          "absolute_column_std_difference_quantiles": {
+            "min": 0.00018034231918040433,
+            "p05": 0.05225623596113911,
+            "median": 0.24399868099441857,
+            "p95": 0.7140244581291907,
+            "max": 1.603803699039644
+          },
+          "nonfinite_policy": "count all; finite element errors; wholly finite rows for correlations/distributions/cosine",
+          "train_scale_nrmse_quantiles": {
+            "min": 0.13511005814077148,
+            "p05": 0.32866979869418556,
+            "median": 0.6500014177218669,
+            "p95": 1.0384139408154753,
+            "max": 5.3277404002587625
+          },
+          "train_scale_nrmse_mean": 0.6809891994269126,
+          "train_scale_zero_columns": 0,
+          "global_train_scale_nrmse": 0.7285855326450265,
+          "global_train_scale_nrmse_definition": "sqrt(mean((prediction-target)^2 / supplied_train_scale^2)) over jointly finite entries with positive scale",
+          "dialogue_count": 36,
+          "dialogue_equal_weight_mae": 0.45885112642730064,
+          "dialogue_equal_nrmse": 0.7134349731289107,
+          "dialogue_equal_nrmse_definition": "arithmetic mean of per-dialogue sqrt(mean((error / supplied_train_scale)^2)); dialogues equally weighted",
+          "n_fit_rows": 3519,
+          "n_fit_groups": 72,
+          "exact_train_column_count": null,
+          "unseen_speaker_fallback_rows": 0
+        },
+        {
+          "fold": 2,
+          "shape": [
+            1763,
+            1582
+          ],
+          "total_scalar_elements": 2789066,
+          "jointly_finite_elements": 2789066,
+          "nonfinite_target_elements": 0,
+          "nonfinite_prediction_elements": 0,
+          "fully_finite_rows": 1763,
+          "nonfinite_rows": 0,
+          "max_absolute_error": 41.730982504983615,
+          "mean_absolute_error": 0.4429554554990089,
+          "rmse": 0.6624892644806994,
+          "cosine_valid_rows": 1763,
+          "cosine_undefined_finite_rows": 0,
+          "zero_target_rows": 0,
+          "zero_prediction_rows": 0,
+          "mean_cosine_similarity": 0.7201129235576647,
+          "min_cosine_similarity": 0.41720930022273833,
+          "column_correlation_defined": 1582,
+          "column_correlation_undefined": 0,
+          "column_correlation_quantiles": {
+            "min": -0.14723117162132757,
+            "p05": 0.3161351215409289,
+            "median": 0.7655315855789384,
+            "p95": 0.9479066863038843,
+            "max": 0.9896726583643214
+          },
+          "column_mae_quantiles": {
+            "min": 0.10436226802570076,
+            "p05": 0.23866234752748086,
+            "median": 0.4437217886581817,
+            "p95": 0.6743710728582866,
+            "max": 0.8426946036616555
+          },
+          "column_rmse_quantiles": {
+            "min": 0.13609991839467933,
+            "p05": 0.3171466157463952,
+            "median": 0.6342558615393186,
+            "p95": 0.9329681625962579,
+            "max": 1.258840099318689
+          },
+          "absolute_column_mean_difference_quantiles": {
+            "min": 1.0349029914424879e-06,
+            "p05": 0.0015435129035875274,
+            "median": 0.019976621910804605,
+            "p95": 0.06869693952991932,
+            "max": 0.187827590915834
+          },
+          "absolute_column_std_difference_quantiles": {
+            "min": 0.0006452894614698002,
+            "p05": 0.048445946583085014,
+            "median": 0.22512396567798465,
+            "p95": 0.667641901249851,
+            "max": 1.1049439561735093
+          },
+          "nonfinite_policy": "count all; finite element errors; wholly finite rows for correlations/distributions/cosine",
+          "train_scale_nrmse_quantiles": {
+            "min": 0.13170438237470883,
+            "p05": 0.31781141353959974,
+            "median": 0.628357949916933,
+            "p95": 0.9455425505277126,
+            "max": 1.7554119448679526
+          },
+          "train_scale_nrmse_mean": 0.6330479509118506,
+          "train_scale_zero_columns": 0,
+          "global_train_scale_nrmse": 0.6634043370079917,
+          "global_train_scale_nrmse_definition": "sqrt(mean((prediction-target)^2 / supplied_train_scale^2)) over jointly finite entries with positive scale",
+          "dialogue_count": 36,
+          "dialogue_equal_weight_mae": 0.44498371883981824,
+          "dialogue_equal_nrmse": 0.6662944807881008,
+          "dialogue_equal_nrmse_definition": "arithmetic mean of per-dialogue sqrt(mean((error / supplied_train_scale)^2)); dialogues equally weighted",
+          "n_fit_rows": 3520,
+          "n_fit_groups": 72,
+          "exact_train_column_count": null,
+          "unseen_speaker_fallback_rows": 0
+        }
+      ],
+      "oof_summary": {
+        "shape": [
+          5283,
+          1582
+        ],
+        "total_scalar_elements": 8357706,
+        "jointly_finite_elements": 8357706,
+        "nonfinite_target_elements": 0,
+        "nonfinite_prediction_elements": 0,
+        "fully_finite_rows": 5283,
+        "nonfinite_rows": 0,
+        "max_absolute_error": 67.83053290471435,
+        "mean_absolute_error": 0.4513749356803207,
+        "rmse": 0.6797814224142312,
+        "cosine_valid_rows": 5283,
+        "cosine_undefined_finite_rows": 0,
+        "zero_target_rows": 0,
+        "zero_prediction_rows": 0,
+        "mean_cosine_similarity": 0.7144013217502971,
+        "min_cosine_similarity": 0.15457214373344366,
+        "column_correlation_defined": 1582,
+        "column_correlation_undefined": 0,
+        "column_correlation_quantiles": {
+          "min": -0.007044346611100721,
+          "p05": 0.2990116602526412,
+          "median": 0.7589758444301131,
+          "p95": 0.9453551128610789,
+          "max": 0.9900320995126557
+        },
+        "column_mae_quantiles": {
+          "min": 0.10906890044248327,
+          "p05": 0.24420879987781777,
+          "median": 0.45158357332547483,
+          "p95": 0.6654000346877403,
+          "max": 0.833156485130271
+        },
+        "column_rmse_quantiles": {
+          "min": 0.14136489460872584,
+          "p05": 0.32639855167036214,
+          "median": 0.6552850439398403,
+          "p95": 0.9473627023205073,
+          "max": 1.0530608676883002
+        },
+        "absolute_column_mean_difference_quantiles": {
+          "min": 1.2168435520633347e-06,
+          "p05": 0.00017185245865385717,
+          "median": 0.002317223327222416,
+          "p95": 0.007389804587234064,
+          "max": 0.017981896871357806
+        },
+        "absolute_column_std_difference_quantiles": {
+          "min": 0.015263305030203789,
+          "p05": 0.057363714532201404,
+          "median": 0.2412143845376108,
+          "p95": 0.6673019528262228,
+          "max": 0.9123273381329752
+        },
+        "nonfinite_policy": "count all; finite element errors; wholly finite rows for correlations/distributions/cosine",
+        "dialogue_count": 108,
+        "dialogue_equal_weight_mae": 0.4508112060441745,
+        "global_train_scale_nrmse": 0.6928007786820884,
+        "dialogue_equal_nrmse": 0.6837984192125304
+      },
+      "score_dialogue_equal_nrmse": 0.6837984192125304,
+      "oof_global_train_scale_nrmse": 0.6928007786820884,
+      "normalization": "each held-out fold uses only its own fit-fold target std floored at protocol scale_floor",
+      "train_oof_gate": {
+        "pass": false,
+        "checks": {
+          "full_train_coverage": true,
+          "finite": true,
+          "allclose": false,
+          "MAE": false,
+          "train_scaled_RMSE": false,
+          "mean_cosine": false,
+          "min_cosine": false,
+          "correlation_p05": false
+        },
+        "scope": "Train OOF stop-complexity diagnostic; not independent Validation acceptance"
+      }
+    },
+    {
+      "candidate": "is10",
+      "transform": "none",
+      "method": "pcr",
+      "rank": 64,
+      "alpha": 0.0,
+      "complexity": 6,
+      "folds": [
+        {
+          "fold": 0,
+          "shape": [
+            1756,
+            1582
+          ],
+          "total_scalar_elements": 2777992,
+          "jointly_finite_elements": 2777992,
+          "nonfinite_target_elements": 0,
+          "nonfinite_prediction_elements": 0,
+          "fully_finite_rows": 1756,
+          "nonfinite_rows": 0,
+          "max_absolute_error": 49.998305613075594,
+          "mean_absolute_error": 0.37176932309414296,
+          "rmse": 0.5637147571880362,
+          "cosine_valid_rows": 1756,
+          "cosine_undefined_finite_rows": 0,
+          "zero_target_rows": 0,
+          "zero_prediction_rows": 0,
+          "mean_cosine_similarity": 0.8137294314593045,
+          "min_cosine_similarity": 0.10517684764087189,
+          "column_correlation_defined": 1582,
+          "column_correlation_undefined": 0,
+          "column_correlation_quantiles": {
+            "min": 0.16913454042981238,
+            "p05": 0.5352396229800956,
+            "median": 0.8512775419714791,
+            "p95": 0.9697743283667163,
+            "max": 0.9967789710981582
+          },
+          "column_mae_quantiles": {
+            "min": 0.06375574221875102,
+            "p05": 0.17663362945138963,
+            "median": 0.3625421913909835,
+            "p95": 0.5804693325855635,
+            "max": 0.7279183147265719
+          },
+          "column_rmse_quantiles": {
+            "min": 0.08449144829624723,
+            "p05": 0.2526167860345342,
+            "median": 0.5221622127314961,
+            "p95": 0.8347072369964696,
+            "max": 1.3696491201289251
+          },
+          "absolute_column_mean_difference_quantiles": {
+            "min": 3.9455998501539136e-06,
+            "p05": 0.0012358652264517877,
+            "median": 0.013492206824270546,
+            "p95": 0.04514846341556994,
+            "max": 0.09391091176438572
+          },
+          "absolute_column_std_difference_quantiles": {
+            "min": 0.0006022361559878675,
+            "p05": 0.023386479203574274,
+            "median": 0.1433591758160132,
+            "p95": 0.4440021279256212,
+            "max": 1.0247294453627036
+          },
+          "nonfinite_policy": "count all; finite element errors; wholly finite rows for correlations/distributions/cosine",
+          "train_scale_nrmse_quantiles": {
+            "min": 0.08656450870152874,
+            "p05": 0.2542619099798078,
+            "median": 0.5203137389410237,
+            "p95": 0.8499691363255076,
+            "max": 1.893594915253862
+          },
+          "train_scale_nrmse_mean": 0.5340531495663476,
+          "train_scale_zero_columns": 0,
+          "global_train_scale_nrmse": 0.5673025436354195,
+          "global_train_scale_nrmse_definition": "sqrt(mean((prediction-target)^2 / supplied_train_scale^2)) over jointly finite entries with positive scale",
+          "dialogue_count": 36,
+          "dialogue_equal_weight_mae": 0.3685426039307036,
+          "dialogue_equal_nrmse": 0.5581602794376387,
+          "dialogue_equal_nrmse_definition": "arithmetic mean of per-dialogue sqrt(mean((error / supplied_train_scale)^2)); dialogues equally weighted",
+          "n_fit_rows": 3527,
+          "n_fit_groups": 72,
+          "exact_train_column_count": null,
+          "unseen_speaker_fallback_rows": 0
+        },
+        {
+          "fold": 1,
+          "shape": [
+            1764,
+            1582
+          ],
+          "total_scalar_elements": 2790648,
+          "jointly_finite_elements": 2790648,
+          "nonfinite_target_elements": 0,
+          "nonfinite_prediction_elements": 0,
+          "fully_finite_rows": 1764,
+          "nonfinite_rows": 0,
+          "max_absolute_error": 63.28732020448591,
+          "mean_absolute_error": 0.37556262845701055,
+          "rmse": 0.5777353091962049,
+          "cosine_valid_rows": 1764,
+          "cosine_undefined_finite_rows": 0,
+          "zero_target_rows": 0,
+          "zero_prediction_rows": 0,
+          "mean_cosine_similarity": 0.8107660417452635,
+          "min_cosine_similarity": 0.36726139596872237,
+          "column_correlation_defined": 1582,
+          "column_correlation_undefined": 0,
+          "column_correlation_quantiles": {
+            "min": 0.14338824262860933,
+            "p05": 0.5333651764759123,
+            "median": 0.8491305983194302,
+            "p95": 0.9690877737540198,
+            "max": 0.9967812954228282
+          },
+          "column_mae_quantiles": {
+            "min": 0.06285492326659597,
+            "p05": 0.17686927921675435,
+            "median": 0.37159526311843727,
+            "p95": 0.5945338926325997,
+            "max": 0.714820877356267
+          },
+          "column_rmse_quantiles": {
+            "min": 0.08177366899595513,
+            "p05": 0.2420723232366262,
+            "median": 0.5362204159205262,
+            "p95": 0.8738590457223558,
+            "max": 1.5431838315090154
+          },
+          "absolute_column_mean_difference_quantiles": {
+            "min": 4.70402334990655e-07,
+            "p05": 0.0011512742008316997,
+            "median": 0.0126354937794189,
+            "p95": 0.04284924291490568,
+            "max": 0.0923950307821808
+          },
+          "absolute_column_std_difference_quantiles": {
+            "min": 0.0005030015242457608,
+            "p05": 0.027758289761514524,
+            "median": 0.1469651190749381,
+            "p95": 0.47021633770782023,
+            "max": 1.4463263212959818
+          },
+          "nonfinite_policy": "count all; finite element errors; wholly finite rows for correlations/distributions/cosine",
+          "train_scale_nrmse_quantiles": {
+            "min": 0.08232061316289689,
+            "p05": 0.23946954835909032,
+            "median": 0.5388413991797212,
+            "p95": 0.8977853148380477,
+            "max": 4.946828306074266
+          },
+          "train_scale_nrmse_mean": 0.5542295240630367,
+          "train_scale_zero_columns": 0,
+          "global_train_scale_nrmse": 0.6034604447844547,
+          "global_train_scale_nrmse_definition": "sqrt(mean((prediction-target)^2 / supplied_train_scale^2)) over jointly finite entries with positive scale",
+          "dialogue_count": 36,
+          "dialogue_equal_weight_mae": 0.3753931950007066,
+          "dialogue_equal_nrmse": 0.5903252940973331,
+          "dialogue_equal_nrmse_definition": "arithmetic mean of per-dialogue sqrt(mean((error / supplied_train_scale)^2)); dialogues equally weighted",
+          "n_fit_rows": 3519,
+          "n_fit_groups": 72,
+          "exact_train_column_count": null,
+          "unseen_speaker_fallback_rows": 0
+        },
+        {
+          "fold": 2,
+          "shape": [
+            1763,
+            1582
+          ],
+          "total_scalar_elements": 2789066,
+          "jointly_finite_elements": 2789066,
+          "nonfinite_target_elements": 0,
+          "nonfinite_prediction_elements": 0,
+          "fully_finite_rows": 1763,
+          "nonfinite_rows": 0,
+          "max_absolute_error": 40.216492501307165,
+          "mean_absolute_error": 0.36308904471307235,
+          "rmse": 0.5501800490637628,
+          "cosine_valid_rows": 1763,
+          "cosine_undefined_finite_rows": 0,
+          "zero_target_rows": 0,
+          "zero_prediction_rows": 0,
+          "mean_cosine_similarity": 0.8162212000792773,
+          "min_cosine_similarity": 0.6063535087383347,
+          "column_correlation_defined": 1582,
+          "column_correlation_undefined": 0,
+          "column_correlation_quantiles": {
+            "min": 0.1613160460594695,
+            "p05": 0.5232129955272629,
+            "median": 0.8580169884210027,
+            "p95": 0.9715438031841214,
+            "max": 0.9963913129630355
+          },
+          "column_mae_quantiles": {
+            "min": 0.06097760396208224,
+            "p05": 0.17415657248873254,
+            "median": 0.3546213690868685,
+            "p95": 0.5844223981804846,
+            "max": 0.7098316169716218
+          },
+          "column_rmse_quantiles": {
+            "min": 0.07938168369607662,
+            "p05": 0.23258625972247096,
+            "median": 0.5034088385192145,
+            "p95": 0.8242282686474549,
+            "max": 1.200161448430981
+          },
+          "absolute_column_mean_difference_quantiles": {
+            "min": 9.783655499786149e-06,
+            "p05": 0.0011636117136904268,
+            "median": 0.013528567012994123,
+            "p95": 0.04541967960200306,
+            "max": 0.08755210077321057
+          },
+          "absolute_column_std_difference_quantiles": {
+            "min": 0.0006704960390763182,
+            "p05": 0.0241185507475491,
+            "median": 0.13867956485625543,
+            "p95": 0.4467144073082613,
+            "max": 0.9983208690205753
+          },
+          "nonfinite_policy": "count all; finite element errors; wholly finite rows for correlations/distributions/cosine",
+          "train_scale_nrmse_quantiles": {
+            "min": 0.07676990908871512,
+            "p05": 0.2323375839558532,
+            "median": 0.49924421840878097,
+            "p95": 0.8373228022966706,
+            "max": 1.5521600270707148
+          },
+          "train_scale_nrmse_mean": 0.5158735355781783,
+          "train_scale_zero_columns": 0,
+          "global_train_scale_nrmse": 0.550854036788695,
+          "global_train_scale_nrmse_definition": "sqrt(mean((prediction-target)^2 / supplied_train_scale^2)) over jointly finite entries with positive scale",
+          "dialogue_count": 36,
+          "dialogue_equal_weight_mae": 0.36475953654578924,
+          "dialogue_equal_nrmse": 0.5533885347081584,
+          "dialogue_equal_nrmse_definition": "arithmetic mean of per-dialogue sqrt(mean((error / supplied_train_scale)^2)); dialogues equally weighted",
+          "n_fit_rows": 3520,
+          "n_fit_groups": 72,
+          "exact_train_column_count": null,
+          "unseen_speaker_fallback_rows": 0
+        }
+      ],
+      "oof_summary": {
+        "shape": [
+          5283,
+          1582
+        ],
+        "total_scalar_elements": 8357706,
+        "jointly_finite_elements": 8357706,
+        "nonfinite_target_elements": 0,
+        "nonfinite_prediction_elements": 0,
+        "fully_finite_rows": 5283,
+        "nonfinite_rows": 0,
+        "max_absolute_error": 63.287320137023926,
+        "mean_absolute_error": 0.3701392000383442,
+        "rmse": 0.5639919156080979,
+        "cosine_valid_rows": 5283,
+        "cosine_undefined_finite_rows": 0,
+        "zero_target_rows": 0,
+        "zero_prediction_rows": 0,
+        "mean_cosine_similarity": 0.8135714849572808,
+        "min_cosine_similarity": 0.10517684603097349,
+        "column_correlation_defined": 1582,
+        "column_correlation_undefined": 0,
+        "column_correlation_quantiles": {
+          "min": 0.15472784551486862,
+          "p05": 0.5305560842994022,
+          "median": 0.850440841324656,
+          "p95": 0.9691210305671011,
+          "max": 0.9966511423466324
+        },
+        "column_mae_quantiles": {
+          "min": 0.06252785983265263,
+          "p05": 0.17774109726166826,
+          "median": 0.3632894532603603,
+          "p95": 0.5850260583883625,
+          "max": 0.7012063238015568
+        },
+        "column_rmse_quantiles": {
+          "min": 0.08190536923704621,
+          "p05": 0.24679091992213517,
+          "median": 0.5224078914822998,
+          "p95": 0.8369764788922645,
+          "max": 0.9938030971308299
+        },
+        "absolute_column_mean_difference_quantiles": {
+          "min": 2.8527187829682776e-06,
+          "p05": 0.00021938839454371586,
+          "median": 0.002756431591032877,
+          "p95": 0.010308625639135862,
+          "max": 0.026658316952714676
+        },
+        "absolute_column_std_difference_quantiles": {
+          "min": 0.005455295520393366,
+          "p05": 0.033109143616607835,
+          "median": 0.15043012551191975,
+          "p95": 0.42898968454038083,
+          "max": 0.7237462066831615
+        },
+        "nonfinite_policy": "count all; finite element errors; wholly finite rows for correlations/distributions/cosine",
+        "dialogue_count": 108,
+        "dialogue_equal_weight_mae": 0.3695651118336802,
+        "global_train_scale_nrmse": 0.5743077231333588,
+        "dialogue_equal_nrmse": 0.5672913694143767
+      },
+      "score_dialogue_equal_nrmse": 0.5672913694143767,
+      "oof_global_train_scale_nrmse": 0.5743077231333588,
+      "normalization": "each held-out fold uses only its own fit-fold target std floored at protocol scale_floor",
+      "train_oof_gate": {
+        "pass": false,
+        "checks": {
+          "full_train_coverage": true,
+          "finite": true,
+          "allclose": false,
+          "MAE": false,
+          "train_scaled_RMSE": false,
+          "mean_cosine": false,
+          "min_cosine": false,
+          "correlation_p05": false
+        },
+        "scope": "Train OOF stop-complexity diagnostic; not independent Validation acceptance"
+      }
+    },
+    {
+      "candidate": "is10",
+      "transform": "none",
+      "method": "pcr",
+      "rank": 128,
+      "alpha": 0.0,
+      "complexity": 7,
+      "folds": [
+        {
+          "fold": 0,
+          "shape": [
+            1756,
+            1582
+          ],
+          "total_scalar_elements": 2777992,
+          "jointly_finite_elements": 2777992,
+          "nonfinite_target_elements": 0,
+          "nonfinite_prediction_elements": 0,
+          "fully_finite_rows": 1756,
+          "nonfinite_rows": 0,
+          "max_absolute_error": 50.744801914262936,
+          "mean_absolute_error": 0.3192131384508559,
+          "rmse": 0.4865282441049438,
+          "cosine_valid_rows": 1756,
+          "cosine_undefined_finite_rows": 0,
+          "zero_target_rows": 0,
+          "zero_prediction_rows": 0,
+          "mean_cosine_similarity": 0.8655651782787326,
+          "min_cosine_similarity": 0.1079269480047775,
+          "column_correlation_defined": 1582,
+          "column_correlation_undefined": 0,
+          "column_correlation_quantiles": {
+            "min": 0.332865779395527,
+            "p05": 0.6946585478344287,
+            "median": 0.8971286451194389,
+            "p95": 0.9774015090638488,
+            "max": 0.9982255732965775
+          },
+          "column_mae_quantiles": {
+            "min": 0.046285775248056805,
+            "p05": 0.14752760066673254,
+            "median": 0.3074643584962337,
+            "p95": 0.4969718072810923,
+            "max": 0.5915751381559309
+          },
+          "column_rmse_quantiles": {
+            "min": 0.0626224031929813,
+            "p05": 0.21425558236100523,
+            "median": 0.43968742273168865,
+            "p95": 0.7166846213466415,
+            "max": 1.351642309605319
+          },
+          "absolute_column_mean_difference_quantiles": {
+            "min": 2.012784867555517e-06,
+            "p05": 0.0009254144265509076,
+            "median": 0.010540437991681584,
+            "p95": 0.0365616585375337,
+            "max": 0.06716609270863688
+          },
+          "absolute_column_std_difference_quantiles": {
+            "min": 3.784375432402953e-05,
+            "p05": 0.014386828640370056,
+            "median": 0.09858382420491968,
+            "p95": 0.29680033145745244,
+            "max": 0.9521021987334242
+          },
+          "nonfinite_policy": "count all; finite element errors; wholly finite rows for correlations/distributions/cosine",
+          "train_scale_nrmse_quantiles": {
+            "min": 0.06424248313900541,
+            "p05": 0.21487419168717584,
+            "median": 0.4406393598105609,
+            "p95": 0.7264310502450083,
+            "max": 1.868699776530865
+          },
+          "train_scale_nrmse_mean": 0.45761436061262445,
+          "train_scale_zero_columns": 0,
+          "global_train_scale_nrmse": 0.489225044343523,
+          "global_train_scale_nrmse_definition": "sqrt(mean((prediction-target)^2 / supplied_train_scale^2)) over jointly finite entries with positive scale",
+          "dialogue_count": 36,
+          "dialogue_equal_weight_mae": 0.31658460123968524,
+          "dialogue_equal_nrmse": 0.482077326920685,
+          "dialogue_equal_nrmse_definition": "arithmetic mean of per-dialogue sqrt(mean((error / supplied_train_scale)^2)); dialogues equally weighted",
+          "n_fit_rows": 3527,
+          "n_fit_groups": 72,
+          "exact_train_column_count": null,
+          "unseen_speaker_fallback_rows": 0
+        },
+        {
+          "fold": 1,
+          "shape": [
+            1764,
+            1582
+          ],
+          "total_scalar_elements": 2790648,
+          "jointly_finite_elements": 2790648,
+          "nonfinite_target_elements": 0,
+          "nonfinite_prediction_elements": 0,
+          "fully_finite_rows": 1764,
+          "nonfinite_rows": 0,
+          "max_absolute_error": 58.15877651527968,
+          "mean_absolute_error": 0.3228879245819671,
+          "rmse": 0.4980031182557902,
+          "cosine_valid_rows": 1764,
+          "cosine_undefined_finite_rows": 0,
+          "zero_target_rows": 0,
+          "zero_prediction_rows": 0,
+          "mean_cosine_similarity": 0.8645889999002893,
+          "min_cosine_similarity": 0.40280406158769794,
+          "column_correlation_defined": 1582,
+          "column_correlation_undefined": 0,
+          "column_correlation_quantiles": {
+            "min": 0.2215297308771705,
+            "p05": 0.6923957334559753,
+            "median": 0.8950093677693169,
+            "p95": 0.9787562465959504,
+            "max": 0.9980493377854595
+          },
+          "column_mae_quantiles": {
+            "min": 0.048138821091540274,
+            "p05": 0.1468238916413433,
+            "median": 0.3132835473903207,
+            "p95": 0.5089138124020056,
+            "max": 0.6142940095358826
+          },
+          "column_rmse_quantiles": {
+            "min": 0.0636544032938165,
+            "p05": 0.2057513295506832,
+            "median": 0.4508495728368755,
+            "p95": 0.7450821885007867,
+            "max": 1.417316524937821
+          },
+          "absolute_column_mean_difference_quantiles": {
+            "min": 1.101319778646151e-05,
+            "p05": 0.0008711056800544872,
+            "median": 0.010050951500433197,
+            "p95": 0.03445277957251371,
+            "max": 0.08787202022559032
+          },
+          "absolute_column_std_difference_quantiles": {
+            "min": 6.255471838079174e-06,
+            "p05": 0.01846481428801718,
+            "median": 0.10067314476702954,
+            "p95": 0.3160747310747065,
+            "max": 1.338881791200092
+          },
+          "nonfinite_policy": "count all; finite element errors; wholly finite rows for correlations/distributions/cosine",
+          "train_scale_nrmse_quantiles": {
+            "min": 0.06408015653455018,
+            "p05": 0.20559898775846908,
+            "median": 0.45568325906810603,
+            "p95": 0.7671271218627369,
+            "max": 4.543348213655948
+          },
+          "train_scale_nrmse_mean": 0.4749326805454873,
+          "train_scale_zero_columns": 0,
+          "global_train_scale_nrmse": 0.520642566850077,
+          "global_train_scale_nrmse_definition": "sqrt(mean((prediction-target)^2 / supplied_train_scale^2)) over jointly finite entries with positive scale",
+          "dialogue_count": 36,
+          "dialogue_equal_weight_mae": 0.32277145576188404,
+          "dialogue_equal_nrmse": 0.5080185088999138,
+          "dialogue_equal_nrmse_definition": "arithmetic mean of per-dialogue sqrt(mean((error / supplied_train_scale)^2)); dialogues equally weighted",
+          "n_fit_rows": 3519,
+          "n_fit_groups": 72,
+          "exact_train_column_count": null,
+          "unseen_speaker_fallback_rows": 0
+        },
+        {
+          "fold": 2,
+          "shape": [
+            1763,
+            1582
+          ],
+          "total_scalar_elements": 2789066,
+          "jointly_finite_elements": 2789066,
+          "nonfinite_target_elements": 0,
+          "nonfinite_prediction_elements": 0,
+          "fully_finite_rows": 1763,
+          "nonfinite_rows": 0,
+          "max_absolute_error": 36.15079565220308,
+          "mean_absolute_error": 0.3122273897838149,
+          "rmse": 0.4738826321411851,
+          "cosine_valid_rows": 1763,
+          "cosine_undefined_finite_rows": 0,
+          "zero_target_rows": 0,
+          "zero_prediction_rows": 0,
+          "mean_cosine_similarity": 0.8675664913078466,
+          "min_cosine_similarity": 0.6283387698129178,
+          "column_correlation_defined": 1582,
+          "column_correlation_undefined": 0,
+          "column_correlation_quantiles": {
+            "min": 0.32802397237150177,
+            "p05": 0.6935535862041087,
+            "median": 0.9028736559373979,
+            "p95": 0.9803220456737503,
+            "max": 0.9979843247949184
+          },
+          "column_mae_quantiles": {
+            "min": 0.04540596474884646,
+            "p05": 0.14190362610797497,
+            "median": 0.2992521915883404,
+            "p95": 0.49587051124317344,
+            "max": 0.6109362146272187
+          },
+          "column_rmse_quantiles": {
+            "min": 0.05917697059637479,
+            "p05": 0.19173233004616308,
+            "median": 0.419793245385354,
+            "p95": 0.7083750125766057,
+            "max": 1.1534725183125991
+          },
+          "absolute_column_mean_difference_quantiles": {
+            "min": 1.069702282593954e-05,
+            "p05": 0.0008715080729993999,
+            "median": 0.009883600399280592,
+            "p95": 0.0358079410856858,
+            "max": 0.07664028383422578
+          },
+          "absolute_column_std_difference_quantiles": {
+            "min": 6.539259421400878e-06,
+            "p05": 0.01742053356323468,
+            "median": 0.09528105440973339,
+            "p95": 0.29658188989020295,
+            "max": 0.8764825259298512
+          },
+          "nonfinite_policy": "count all; finite element errors; wholly finite rows for correlations/distributions/cosine",
+          "train_scale_nrmse_quantiles": {
+            "min": 0.05722996088395887,
+            "p05": 0.18990766468421721,
+            "median": 0.4177164101176763,
+            "p95": 0.7117544719489994,
+            "max": 1.4317417658909455
+          },
+          "train_scale_nrmse_mean": 0.4411244705914162,
+          "train_scale_zero_columns": 0,
+          "global_train_scale_nrmse": 0.47443444412348207,
+          "global_train_scale_nrmse_definition": "sqrt(mean((prediction-target)^2 / supplied_train_scale^2)) over jointly finite entries with positive scale",
+          "dialogue_count": 36,
+          "dialogue_equal_weight_mae": 0.31368808350871913,
+          "dialogue_equal_nrmse": 0.4768514578564894,
+          "dialogue_equal_nrmse_definition": "arithmetic mean of per-dialogue sqrt(mean((error / supplied_train_scale)^2)); dialogues equally weighted",
+          "n_fit_rows": 3520,
+          "n_fit_groups": 72,
+          "exact_train_column_count": null,
+          "unseen_speaker_fallback_rows": 0
+        }
+      ],
+      "oof_summary": {
+        "shape": [
+          5283,
+          1582
+        ],
+        "total_scalar_elements": 8357706,
+        "jointly_finite_elements": 8357706,
+        "nonfinite_target_elements": 0,
+        "nonfinite_prediction_elements": 0,
+        "fully_finite_rows": 5283,
+        "nonfinite_rows": 0,
+        "max_absolute_error": 58.15877628326416,
+        "mean_absolute_error": 0.3181089264117303,
+        "rmse": 0.4862396664860107,
+        "cosine_valid_rows": 5283,
+        "cosine_undefined_finite_rows": 0,
+        "zero_target_rows": 0,
+        "zero_prediction_rows": 0,
+        "mean_cosine_similarity": 0.8659070931393452,
+        "min_cosine_similarity": 0.10792694832548382,
+        "column_correlation_defined": 1582,
+        "column_correlation_undefined": 0,
+        "column_correlation_quantiles": {
+          "min": 0.31688541825971295,
+          "p05": 0.6934505634554661,
+          "median": 0.8974128895723733,
+          "p95": 0.9783406700801783,
+          "max": 0.9980931553945811
+        },
+        "column_mae_quantiles": {
+          "min": 0.04665462406167614,
+          "p05": 0.14568834694740623,
+          "median": 0.3054524775943908,
+          "p95": 0.49564298133850626,
+          "max": 0.5964244975082083
+        },
+        "column_rmse_quantiles": {
+          "min": 0.06184687482850265,
+          "p05": 0.20671719129956703,
+          "median": 0.43924714198413806,
+          "p95": 0.7145075998163313,
+          "max": 0.97538430727747
+        },
+        "absolute_column_mean_difference_quantiles": {
+          "min": 3.875877495230096e-06,
+          "p05": 0.00018675002292303515,
+          "median": 0.0024439551937069782,
+          "p95": 0.00862692458052339,
+          "max": 0.019372348555684198
+        },
+        "absolute_column_std_difference_quantiles": {
+          "min": 0.004191801832586939,
+          "p05": 0.024725211583067876,
+          "median": 0.10235281280172215,
+          "p95": 0.28118929890271005,
+          "max": 0.5897673284692868
+        },
+        "nonfinite_policy": "count all; finite element errors; wholly finite rows for correlations/distributions/cosine",
+        "dialogue_count": 108,
+        "dialogue_equal_weight_mae": 0.3176813801634725,
+        "global_train_scale_nrmse": 0.4951551039863608,
+        "dialogue_equal_nrmse": 0.4889824312256961
+      },
+      "score_dialogue_equal_nrmse": 0.4889824312256961,
+      "oof_global_train_scale_nrmse": 0.4951551039863608,
+      "normalization": "each held-out fold uses only its own fit-fold target std floored at protocol scale_floor",
+      "train_oof_gate": {
+        "pass": false,
+        "checks": {
+          "full_train_coverage": true,
+          "finite": true,
+          "allclose": false,
+          "MAE": false,
+          "train_scaled_RMSE": false,
+          "mean_cosine": false,
+          "min_cosine": false,
+          "correlation_p05": false
+        },
+        "scope": "Train OOF stop-complexity diagnostic; not independent Validation acceptance"
+      }
+    },
+    {
+      "candidate": "is10",
+      "transform": "none",
+      "method": "ridge",
+      "rank": 256,
+      "alpha": 0.01,
+      "complexity": 8,
+      "folds": [
+        {
+          "fold": 0,
+          "shape": [
+            1756,
+            1582
+          ],
+          "total_scalar_elements": 2777992,
+          "jointly_finite_elements": 2777992,
+          "nonfinite_target_elements": 0,
+          "nonfinite_prediction_elements": 0,
+          "fully_finite_rows": 1756,
+          "nonfinite_rows": 0,
+          "max_absolute_error": 50.88337535704247,
+          "mean_absolute_error": 0.25546777998263004,
+          "rmse": 0.3924780493040855,
+          "cosine_valid_rows": 1756,
+          "cosine_undefined_finite_rows": 0,
+          "zero_target_rows": 0,
+          "zero_prediction_rows": 0,
+          "mean_cosine_similarity": 0.9159585415504342,
+          "min_cosine_similarity": 0.12351698888971449,
+          "column_correlation_defined": 1582,
+          "column_correlation_undefined": 0,
+          "column_correlation_quantiles": {
+            "min": 0.40558234663145953,
+            "p05": 0.7819275102615719,
+            "median": 0.938517621716627,
+            "p95": 0.98636762667742,
+            "max": 0.9988853685347743
+          },
+          "column_mae_quantiles": {
+            "min": 0.03598838912059848,
+            "p05": 0.1195044660825654,
+            "median": 0.2477173160191196,
+            "p95": 0.4354789724660931,
+            "max": 0.5399013444426802
+          },
+          "column_rmse_quantiles": {
+            "min": 0.04966349151411761,
+            "p05": 0.1671824504351015,
+            "median": 0.3433629936588137,
+            "p95": 0.6329678974835911,
+            "max": 1.2924749955163677
+          },
+          "absolute_column_mean_difference_quantiles": {
+            "min": 1.1330004030765672e-05,
+            "p05": 0.0005656642082841766,
+            "median": 0.008009297897121069,
+            "p95": 0.026702985112164776,
+            "max": 0.060401041073017185
+          },
+          "absolute_column_std_difference_quantiles": {
+            "min": 2.1327872138154902e-05,
+            "p05": 0.008060999196403424,
+            "median": 0.05805693443173249,
+            "p95": 0.1958960618633388,
+            "max": 0.8018033021733317
+          },
+          "nonfinite_policy": "count all; finite element errors; wholly finite rows for correlations/distributions/cosine",
+          "train_scale_nrmse_quantiles": {
+            "min": 0.050948316473702966,
+            "p05": 0.16938390841987838,
+            "median": 0.3448793914332223,
+            "p95": 0.6239546975796595,
+            "max": 1.7868985885758653
+          },
+          "train_scale_nrmse_mean": 0.36594809169505466,
+          "train_scale_zero_columns": 0,
+          "global_train_scale_nrmse": 0.3945241006525496,
+          "global_train_scale_nrmse_definition": "sqrt(mean((prediction-target)^2 / supplied_train_scale^2)) over jointly finite entries with positive scale",
+          "dialogue_count": 36,
+          "dialogue_equal_weight_mae": 0.2533165319407724,
+          "dialogue_equal_nrmse": 0.38822681155643246,
+          "dialogue_equal_nrmse_definition": "arithmetic mean of per-dialogue sqrt(mean((error / supplied_train_scale)^2)); dialogues equally weighted",
+          "n_fit_rows": 3527,
+          "n_fit_groups": 72,
+          "exact_train_column_count": null,
+          "unseen_speaker_fallback_rows": 0
+        },
+        {
+          "fold": 1,
+          "shape": [
+            1764,
+            1582
+          ],
+          "total_scalar_elements": 2790648,
+          "jointly_finite_elements": 2790648,
+          "nonfinite_target_elements": 0,
+          "nonfinite_prediction_elements": 0,
+          "fully_finite_rows": 1764,
+          "nonfinite_rows": 0,
+          "max_absolute_error": 49.43281321553023,
+          "mean_absolute_error": 0.25879169709548355,
+          "rmse": 0.40160486651920274,
+          "cosine_valid_rows": 1764,
+          "cosine_undefined_finite_rows": 0,
+          "zero_target_rows": 0,
+          "zero_prediction_rows": 0,
+          "mean_cosine_similarity": 0.9162804228812623,
+          "min_cosine_similarity": 0.4919316925556924,
+          "column_correlation_defined": 1582,
+          "column_correlation_undefined": 0,
+          "column_correlation_quantiles": {
+            "min": 0.5166645217838758,
+            "p05": 0.7916255903535454,
+            "median": 0.9375370029478816,
+            "p95": 0.9860061352098662,
+            "max": 0.9988206584744007
+          },
+          "column_mae_quantiles": {
+            "min": 0.03703048072392066,
+            "p05": 0.12169063307842341,
+            "median": 0.2503667971176192,
+            "p95": 0.42251606813075293,
+            "max": 0.5173478078456909
+          },
+          "column_rmse_quantiles": {
+            "min": 0.04938938021107088,
+            "p05": 0.16949342669381268,
+            "median": 0.3522743944191199,
+            "p95": 0.6206019795215786,
+            "max": 1.2048778814026162
+          },
+          "absolute_column_mean_difference_quantiles": {
+            "min": 3.0939834409077216e-05,
+            "p05": 0.0008181813409285522,
+            "median": 0.007860407401951626,
+            "p95": 0.026943743150855355,
+            "max": 0.063082612824798
+          },
+          "absolute_column_std_difference_quantiles": {
+            "min": 0.0007023389351337173,
+            "p05": 0.010129227302235056,
+            "median": 0.061032122931226285,
+            "p95": 0.19903145859216395,
+            "max": 1.1460737911028769
+          },
+          "nonfinite_policy": "count all; finite element errors; wholly finite rows for correlations/distributions/cosine",
+          "train_scale_nrmse_quantiles": {
+            "min": 0.04971972167363446,
+            "p05": 0.16901456070302479,
+            "median": 0.35628006213157604,
+            "p95": 0.624577716854286,
+            "max": 3.862355143558562
+          },
+          "train_scale_nrmse_mean": 0.37908691016046897,
+          "train_scale_zero_columns": 0,
+          "global_train_scale_nrmse": 0.41992612918972716,
+          "global_train_scale_nrmse_definition": "sqrt(mean((prediction-target)^2 / supplied_train_scale^2)) over jointly finite entries with positive scale",
+          "dialogue_count": 36,
+          "dialogue_equal_weight_mae": 0.2585052083389643,
+          "dialogue_equal_nrmse": 0.4070380166313572,
+          "dialogue_equal_nrmse_definition": "arithmetic mean of per-dialogue sqrt(mean((error / supplied_train_scale)^2)); dialogues equally weighted",
+          "n_fit_rows": 3519,
+          "n_fit_groups": 72,
+          "exact_train_column_count": null,
+          "unseen_speaker_fallback_rows": 0
+        },
+        {
+          "fold": 2,
+          "shape": [
+            1763,
+            1582
+          ],
+          "total_scalar_elements": 2789066,
+          "jointly_finite_elements": 2789066,
+          "nonfinite_target_elements": 0,
+          "nonfinite_prediction_elements": 0,
+          "fully_finite_rows": 1763,
+          "nonfinite_rows": 0,
+          "max_absolute_error": 25.432761981235473,
+          "mean_absolute_error": 0.2502250360045477,
+          "rmse": 0.3789016254542013,
+          "cosine_valid_rows": 1763,
+          "cosine_undefined_finite_rows": 0,
+          "zero_target_rows": 0,
+          "zero_prediction_rows": 0,
+          "mean_cosine_similarity": 0.9176958374012572,
+          "min_cosine_similarity": 0.6762054810604113,
+          "column_correlation_defined": 1582,
+          "column_correlation_undefined": 0,
+          "column_correlation_quantiles": {
+            "min": 0.45777220292774967,
+            "p05": 0.7959714184900104,
+            "median": 0.9410309420301941,
+            "p95": 0.9876429373826671,
+            "max": 0.9987510713461499
+          },
+          "column_mae_quantiles": {
+            "min": 0.03546150999783968,
+            "p05": 0.1168916249851207,
+            "median": 0.23987573725026987,
+            "p95": 0.41928997466955703,
+            "max": 0.5234168567361548
+          },
+          "column_rmse_quantiles": {
+            "min": 0.04672437968565496,
+            "p05": 0.1553281209285437,
+            "median": 0.3290637218879115,
+            "p95": 0.6125601708749944,
+            "max": 0.9390337147323851
+          },
+          "absolute_column_mean_difference_quantiles": {
+            "min": 8.701390720757679e-06,
+            "p05": 0.000727607760269408,
+            "median": 0.007623791970567992,
+            "p95": 0.02857513445237657,
+            "max": 0.05738641400355604
+          },
+          "absolute_column_std_difference_quantiles": {
+            "min": 0.000134731575870628,
+            "p05": 0.010437352718818167,
+            "median": 0.055989410172263276,
+            "p95": 0.199238323859699,
+            "max": 0.7767466718244986
+          },
+          "nonfinite_policy": "count all; finite element errors; wholly finite rows for correlations/distributions/cosine",
+          "train_scale_nrmse_quantiles": {
+            "min": 0.04518707860150395,
+            "p05": 0.1534200111452414,
+            "median": 0.3274028349926928,
+            "p95": 0.6074292627768052,
+            "max": 1.3094522492309375
+          },
+          "train_scale_nrmse_mean": 0.34975481869022834,
+          "train_scale_zero_columns": 0,
+          "global_train_scale_nrmse": 0.3788692473591001,
+          "global_train_scale_nrmse_definition": "sqrt(mean((prediction-target)^2 / supplied_train_scale^2)) over jointly finite entries with positive scale",
+          "dialogue_count": 36,
+          "dialogue_equal_weight_mae": 0.25157836613301043,
+          "dialogue_equal_nrmse": 0.38105749362396363,
+          "dialogue_equal_nrmse_definition": "arithmetic mean of per-dialogue sqrt(mean((error / supplied_train_scale)^2)); dialogues equally weighted",
+          "n_fit_rows": 3520,
+          "n_fit_groups": 72,
+          "exact_train_column_count": null,
+          "unseen_speaker_fallback_rows": 0
+        }
+      ],
+      "oof_summary": {
+        "shape": [
+          5283,
+          1582
+        ],
+        "total_scalar_elements": 8357706,
+        "jointly_finite_elements": 8357706,
+        "nonfinite_target_elements": 0,
+        "nonfinite_prediction_elements": 0,
+        "fully_finite_rows": 5283,
+        "nonfinite_rows": 0,
+        "max_absolute_error": 50.883375346660614,
+        "mean_absolute_error": 0.2548280737765818,
+        "rmse": 0.391106286596056,
+        "cosine_valid_rows": 5283,
+        "cosine_undefined_finite_rows": 0,
+        "zero_target_rows": 0,
+        "zero_prediction_rows": 0,
+        "mean_cosine_similarity": 0.9166457744275639,
+        "min_cosine_similarity": 0.12351698898720237,
+        "column_correlation_defined": 1582,
+        "column_correlation_undefined": 0,
+        "column_correlation_quantiles": {
+          "min": 0.5193257099204426,
+          "p05": 0.7904537872668904,
+          "median": 0.9385723524493652,
+          "p95": 0.9862310287966383,
+          "max": 0.9988214608134367
+        },
+        "column_mae_quantiles": {
+          "min": 0.03616749082965721,
+          "p05": 0.12013074437101358,
+          "median": 0.24625995993273408,
+          "p95": 0.4238134462107397,
+          "max": 0.5227533435023431
+        },
+        "column_rmse_quantiles": {
+          "min": 0.04860923396975177,
+          "p05": 0.1655094225682836,
+          "median": 0.34353515118018313,
+          "p95": 0.6182262898484554,
+          "max": 0.8836141165471696
+        },
+        "absolute_column_mean_difference_quantiles": {
+          "min": 1.0955952452831874e-06,
+          "p05": 0.00015807270757837083,
+          "median": 0.0019048112061965609,
+          "p95": 0.007384792799126744,
+          "max": 0.013813620172095644
+        },
+        "absolute_column_std_difference_quantiles": {
+          "min": 0.0018499620548028117,
+          "p05": 0.014365340454868255,
+          "median": 0.059969244974586555,
+          "p95": 0.18219912326011758,
+          "max": 0.46354126149531694
+        },
+        "nonfinite_policy": "count all; finite element errors; wholly finite rows for correlations/distributions/cosine",
+        "dialogue_count": 108,
+        "dialogue_equal_weight_mae": 0.2544667021292582,
+        "global_train_scale_nrmse": 0.3981417757532655,
+        "dialogue_equal_nrmse": 0.3921074406039178
+      },
+      "score_dialogue_equal_nrmse": 0.3921074406039178,
+      "oof_global_train_scale_nrmse": 0.3981417757532655,
+      "normalization": "each held-out fold uses only its own fit-fold target std floored at protocol scale_floor",
+      "train_oof_gate": {
+        "pass": false,
+        "checks": {
+          "full_train_coverage": true,
+          "finite": true,
+          "allclose": false,
+          "MAE": false,
+          "train_scaled_RMSE": false,
+          "mean_cosine": false,
+          "min_cosine": false,
+          "correlation_p05": false
+        },
+        "scope": "Train OOF stop-complexity diagnostic; not independent Validation acceptance"
+      }
+    },
+    {
+      "candidate": "is10",
+      "transform": "none",
+      "method": "ridge",
+      "rank": 256,
+      "alpha": 1.0,
+      "complexity": 9,
+      "folds": [
+        {
+          "fold": 0,
+          "shape": [
+            1756,
+            1582
+          ],
+          "total_scalar_elements": 2777992,
+          "jointly_finite_elements": 2777992,
+          "nonfinite_target_elements": 0,
+          "nonfinite_prediction_elements": 0,
+          "fully_finite_rows": 1756,
+          "nonfinite_rows": 0,
+          "max_absolute_error": 50.88322545355029,
+          "mean_absolute_error": 0.2554622776101279,
+          "rmse": 0.3924764532008846,
+          "cosine_valid_rows": 1756,
+          "cosine_undefined_finite_rows": 0,
+          "zero_target_rows": 0,
+          "zero_prediction_rows": 0,
+          "mean_cosine_similarity": 0.9159587155500287,
+          "min_cosine_similarity": 0.12352036130579756,
+          "column_correlation_defined": 1582,
+          "column_correlation_undefined": 0,
+          "column_correlation_quantiles": {
+            "min": 0.40563251349577795,
+            "p05": 0.7819293778009455,
+            "median": 0.9385167180183169,
+            "p95": 0.9863675888018189,
+            "max": 0.9988853173432596
+          },
+          "column_mae_quantiles": {
+            "min": 0.03598935763534702,
+            "p05": 0.1194991695542408,
+            "median": 0.24771185995214995,
+            "p95": 0.4354661514068513,
+            "max": 0.5398885745109923
+          },
+          "column_rmse_quantiles": {
+            "min": 0.0496649070234071,
+            "p05": 0.1671790127102128,
+            "median": 0.34335901011584835,
+            "p95": 0.6329615613401519,
+            "max": 1.2924745792215193
+          },
+          "absolute_column_mean_difference_quantiles": {
+            "min": 1.4085715996814407e-05,
+            "p05": 0.0005632105243335364,
+            "median": 0.00801351988713787,
+            "p95": 0.02669876265736407,
+            "max": 0.060402198841526415
+          },
+          "absolute_column_std_difference_quantiles": {
+            "min": 2.655539131768414e-05,
+            "p05": 0.008083466793570955,
+            "median": 0.058099051925148304,
+            "p95": 0.19594091956094453,
+            "max": 0.8018983190217978
+          },
+          "nonfinite_policy": "count all; finite element errors; wholly finite rows for correlations/distributions/cosine",
+          "train_scale_nrmse_quantiles": {
+            "min": 0.050949768603085206,
+            "p05": 0.16938812026368377,
+            "median": 0.344881829024058,
+            "p95": 0.6239486848011501,
+            "max": 1.7868980130315184
+          },
+          "train_scale_nrmse_mean": 0.3659473698393651,
+          "train_scale_zero_columns": 0,
+          "global_train_scale_nrmse": 0.3945229111673815,
+          "global_train_scale_nrmse_definition": "sqrt(mean((prediction-target)^2 / supplied_train_scale^2)) over jointly finite entries with positive scale",
+          "dialogue_count": 36,
+          "dialogue_equal_weight_mae": 0.2533111427634619,
+          "dialogue_equal_nrmse": 0.38822597637128303,
+          "dialogue_equal_nrmse_definition": "arithmetic mean of per-dialogue sqrt(mean((error / supplied_train_scale)^2)); dialogues equally weighted",
+          "n_fit_rows": 3527,
+          "n_fit_groups": 72,
+          "exact_train_column_count": null,
+          "unseen_speaker_fallback_rows": 0
+        },
+        {
+          "fold": 1,
+          "shape": [
+            1764,
+            1582
+          ],
+          "total_scalar_elements": 2790648,
+          "jointly_finite_elements": 2790648,
+          "nonfinite_target_elements": 0,
+          "nonfinite_prediction_elements": 0,
+          "fully_finite_rows": 1764,
+          "nonfinite_rows": 0,
+          "max_absolute_error": 49.4360643609367,
+          "mean_absolute_error": 0.25878554805297116,
+          "rmse": 0.4016023380356853,
+          "cosine_valid_rows": 1764,
+          "cosine_undefined_finite_rows": 0,
+          "zero_target_rows": 0,
+          "zero_prediction_rows": 0,
+          "mean_cosine_similarity": 0.9162806166923041,
+          "min_cosine_similarity": 0.49194637499622074,
+          "column_correlation_defined": 1582,
+          "column_correlation_undefined": 0,
+          "column_correlation_quantiles": {
+            "min": 0.5166600292914215,
+            "p05": 0.7916380626529881,
+            "median": 0.9375352720176138,
+            "p95": 0.9860060238516817,
+            "max": 0.9988206578576205
+          },
+          "column_mae_quantiles": {
+            "min": 0.03703060772737859,
+            "p05": 0.12168550623484164,
+            "median": 0.2503682701013115,
+            "p95": 0.4225046615631223,
+            "max": 0.5173291591695304
+          },
+          "column_rmse_quantiles": {
+            "min": 0.04938964464959717,
+            "p05": 0.1694918102074158,
+            "median": 0.3522750281303517,
+            "p95": 0.6206659727538426,
+            "max": 1.2049542465676002
+          },
+          "absolute_column_mean_difference_quantiles": {
+            "min": 3.436268405122844e-05,
+            "p05": 0.0008167841354586267,
+            "median": 0.007865159556071318,
+            "p95": 0.026942901839521517,
+            "max": 0.06307674546579298
+          },
+          "absolute_column_std_difference_quantiles": {
+            "min": 0.0006974473534948622,
+            "p05": 0.01014970109649731,
+            "median": 0.061055413705662254,
+            "p95": 0.19905824159181876,
+            "max": 1.1461580031967793
+          },
+          "nonfinite_policy": "count all; finite element errors; wholly finite rows for correlations/distributions/cosine",
+          "train_scale_nrmse_quantiles": {
+            "min": 0.04971998788086101,
+            "p05": 0.16901167600591854,
+            "median": 0.3562880739069368,
+            "p95": 0.6245602383008082,
+            "max": 3.8625999396431423
+          },
+          "train_scale_nrmse_mean": 0.3790857239287552,
+          "train_scale_zero_columns": 0,
+          "global_train_scale_nrmse": 0.4199258359773914,
+          "global_train_scale_nrmse_definition": "sqrt(mean((prediction-target)^2 / supplied_train_scale^2)) over jointly finite entries with positive scale",
+          "dialogue_count": 36,
+          "dialogue_equal_weight_mae": 0.2584991946242131,
+          "dialogue_equal_nrmse": 0.4070377633640236,
+          "dialogue_equal_nrmse_definition": "arithmetic mean of per-dialogue sqrt(mean((error / supplied_train_scale)^2)); dialogues equally weighted",
+          "n_fit_rows": 3519,
+          "n_fit_groups": 72,
+          "exact_train_column_count": null,
+          "unseen_speaker_fallback_rows": 0
+        },
+        {
+          "fold": 2,
+          "shape": [
+            1763,
+            1582
+          ],
+          "total_scalar_elements": 2789066,
+          "jointly_finite_elements": 2789066,
+          "nonfinite_target_elements": 0,
+          "nonfinite_prediction_elements": 0,
+          "fully_finite_rows": 1763,
+          "nonfinite_rows": 0,
+          "max_absolute_error": 25.434014077980862,
+          "mean_absolute_error": 0.25021934620682285,
+          "rmse": 0.3789010579645447,
+          "cosine_valid_rows": 1763,
+          "cosine_undefined_finite_rows": 0,
+          "zero_target_rows": 0,
+          "zero_prediction_rows": 0,
+          "mean_cosine_similarity": 0.917696027840027,
+          "min_cosine_similarity": 0.6762140082621003,
+          "column_correlation_defined": 1582,
+          "column_correlation_undefined": 0,
+          "column_correlation_quantiles": {
+            "min": 0.45776965152796817,
+            "p05": 0.7959782000763052,
+            "median": 0.941030345150961,
+            "p95": 0.9876420954360606,
+            "max": 0.9987510622807908
+          },
+          "column_mae_quantiles": {
+            "min": 0.03546230511201717,
+            "p05": 0.11688353900837786,
+            "median": 0.23985771366714248,
+            "p95": 0.41925060311079637,
+            "max": 0.5234047793449162
+          },
+          "column_rmse_quantiles": {
+            "min": 0.04672456481526245,
+            "p05": 0.15532860723784364,
+            "median": 0.3290572628096212,
+            "p95": 0.6125562260400447,
+            "max": 0.9390677769628378
+          },
+          "absolute_column_mean_difference_quantiles": {
+            "min": 2.8968024915095036e-06,
+            "p05": 0.0007223771588594937,
+            "median": 0.007622306131693646,
+            "p95": 0.028569504294719213,
+            "max": 0.05738216849936325
+          },
+          "absolute_column_std_difference_quantiles": {
+            "min": 0.00013969231172339391,
+            "p05": 0.010462826229424793,
+            "median": 0.05603163813829942,
+            "p95": 0.19927575701675224,
+            "max": 0.7768024837492925
+          },
+          "nonfinite_policy": "count all; finite element errors; wholly finite rows for correlations/distributions/cosine",
+          "train_scale_nrmse_quantiles": {
+            "min": 0.045187257640073995,
+            "p05": 0.15342020940579007,
+            "median": 0.32740012366660154,
+            "p95": 0.607417108655754,
+            "max": 1.3094997479134454
+          },
+          "train_scale_nrmse_mean": 0.3497547171587554,
+          "train_scale_zero_columns": 0,
+          "global_train_scale_nrmse": 0.37886903444916853,
+          "global_train_scale_nrmse_definition": "sqrt(mean((prediction-target)^2 / supplied_train_scale^2)) over jointly finite entries with positive scale",
+          "dialogue_count": 36,
+          "dialogue_equal_weight_mae": 0.2515726121826453,
+          "dialogue_equal_nrmse": 0.38105731636716317,
+          "dialogue_equal_nrmse_definition": "arithmetic mean of per-dialogue sqrt(mean((error / supplied_train_scale)^2)); dialogues equally weighted",
+          "n_fit_rows": 3520,
+          "n_fit_groups": 72,
+          "exact_train_column_count": null,
+          "unseen_speaker_fallback_rows": 0
+        }
+      ],
+      "oof_summary": {
+        "shape": [
+          5283,
+          1582
+        ],
+        "total_scalar_elements": 8357706,
+        "jointly_finite_elements": 8357706,
+        "nonfinite_target_elements": 0,
+        "nonfinite_prediction_elements": 0,
+        "fully_finite_rows": 5283,
+        "nonfinite_rows": 0,
+        "max_absolute_error": 50.883225440979004,
+        "mean_absolute_error": 0.25482229291908587,
+        "rmse": 0.39110470386430385,
+        "cosine_valid_rows": 5283,
+        "cosine_undefined_finite_rows": 0,
+        "zero_target_rows": 0,
+        "zero_prediction_rows": 0,
+        "mean_cosine_similarity": 0.9166459605346574,
+        "min_cosine_similarity": 0.1235203614780789,
+        "column_correlation_defined": 1582,
+        "column_correlation_undefined": 0,
+        "column_correlation_quantiles": {
+          "min": 0.5193293656841859,
+          "p05": 0.7904590353280706,
+          "median": 0.9385729949279864,
+          "p95": 0.9862314230159883,
+          "max": 0.9988214354213633
+        },
+        "column_mae_quantiles": {
+          "min": 0.03616826157732594,
+          "p05": 0.12013025990011443,
+          "median": 0.246263481584154,
+          "p95": 0.42381417077577793,
+          "max": 0.5227359589976603
+        },
+        "column_rmse_quantiles": {
+          "min": 0.04860986359098317,
+          "p05": 0.16550637050971614,
+          "median": 0.34353311021223765,
+          "p95": 0.618222441295611,
+          "max": 0.8835937074158511
+        },
+        "absolute_column_mean_difference_quantiles": {
+          "min": 8.569286865916376e-07,
+          "p05": 0.00015794600482641814,
+          "median": 0.0019045856123073922,
+          "p95": 0.007382773710339976,
+          "max": 0.013809699965754105
+        },
+        "absolute_column_std_difference_quantiles": {
+          "min": 0.0018551725968913857,
+          "p05": 0.014381811361667685,
+          "median": 0.05999948776181879,
+          "p95": 0.18229761618094042,
+          "max": 0.4636255939958551
+        },
+        "nonfinite_policy": "count all; finite element errors; wholly finite rows for correlations/distributions/cosine",
+        "dialogue_count": 108,
+        "dialogue_equal_weight_mae": 0.25446098317253996,
+        "global_train_scale_nrmse": 0.39814121310464706,
+        "dialogue_equal_nrmse": 0.39210701870082326
+      },
+      "score_dialogue_equal_nrmse": 0.39210701870082326,
+      "oof_global_train_scale_nrmse": 0.39814121310464706,
+      "normalization": "each held-out fold uses only its own fit-fold target std floored at protocol scale_floor",
+      "train_oof_gate": {
+        "pass": false,
+        "checks": {
+          "full_train_coverage": true,
+          "finite": true,
+          "allclose": false,
+          "MAE": false,
+          "train_scaled_RMSE": false,
+          "mean_cosine": false,
+          "min_cosine": false,
+          "correlation_p05": false
+        },
+        "scope": "Train OOF stop-complexity diagnostic; not independent Validation acceptance"
+      }
+    },
+    {
+      "candidate": "is10",
+      "transform": "none",
+      "method": "ridge",
+      "rank": 256,
+      "alpha": 100.0,
+      "complexity": 10,
+      "folds": [
+        {
+          "fold": 0,
+          "shape": [
+            1756,
+            1582
+          ],
+          "total_scalar_elements": 2777992,
+          "jointly_finite_elements": 2777992,
+          "nonfinite_target_elements": 0,
+          "nonfinite_prediction_elements": 0,
+          "fully_finite_rows": 1756,
+          "nonfinite_rows": 0,
+          "max_absolute_error": 50.868727394237034,
+          "mean_absolute_error": 0.25499501335220925,
+          "rmse": 0.39241567345718825,
+          "cosine_valid_rows": 1756,
+          "cosine_undefined_finite_rows": 0,
+          "zero_target_rows": 0,
+          "zero_prediction_rows": 0,
+          "mean_cosine_similarity": 0.915946236301411,
+          "min_cosine_similarity": 0.1238523233791888,
+          "column_correlation_defined": 1582,
+          "column_correlation_undefined": 0,
+          "column_correlation_quantiles": {
+            "min": 0.41051611608054833,
+            "p05": 0.7822331578976781,
+            "median": 0.9384390937174253,
+            "p95": 0.9862789079148784,
+            "max": 0.9988793288365728
+          },
+          "column_mae_quantiles": {
+            "min": 0.036100203785508704,
+            "p05": 0.11919014002023263,
+            "median": 0.24717448470889047,
+            "p95": 0.43427495410749045,
+            "max": 0.5386944641687735
+          },
+          "column_rmse_quantiles": {
+            "min": 0.04982789696233023,
+            "p05": 0.16690636082691657,
+            "median": 0.34324433725433534,
+            "p95": 0.6324017778099128,
+            "max": 1.2924832400485047
+          },
+          "absolute_column_mean_difference_quantiles": {
+            "min": 6.506079811103779e-06,
+            "p05": 0.0006113634567220784,
+            "median": 0.007963010563390393,
+            "p95": 0.026590913454824224,
+            "max": 0.06051343366050924
+          },
+          "absolute_column_std_difference_quantiles": {
+            "min": 0.000437485117418257,
+            "p05": 0.009277189355548077,
+            "median": 0.06281329333898006,
+            "p95": 0.20175284395663837,
+            "max": 0.8111613499808177
+          },
+          "nonfinite_policy": "count all; finite element errors; wholly finite rows for correlations/distributions/cosine",
+          "train_scale_nrmse_quantiles": {
+            "min": 0.0511169751916096,
+            "p05": 0.16941557385786285,
+            "median": 0.3453222056854216,
+            "p95": 0.6234029087030643,
+            "max": 1.7869099869726546
+          },
+          "train_scale_nrmse_mean": 0.365973828451109,
+          "train_scale_zero_columns": 0,
+          "global_train_scale_nrmse": 0.39450233031510235,
+          "global_train_scale_nrmse_definition": "sqrt(mean((prediction-target)^2 / supplied_train_scale^2)) over jointly finite entries with positive scale",
+          "dialogue_count": 36,
+          "dialogue_equal_weight_mae": 0.25285442794685387,
+          "dialogue_equal_nrmse": 0.38823857178208704,
+          "dialogue_equal_nrmse_definition": "arithmetic mean of per-dialogue sqrt(mean((error / supplied_train_scale)^2)); dialogues equally weighted",
+          "n_fit_rows": 3527,
+          "n_fit_groups": 72,
+          "exact_train_column_count": null,
+          "unseen_speaker_fallback_rows": 0
+        },
+        {
+          "fold": 1,
+          "shape": [
+            1764,
+            1582
+          ],
+          "total_scalar_elements": 2790648,
+          "jointly_finite_elements": 2790648,
+          "nonfinite_target_elements": 0,
+          "nonfinite_prediction_elements": 0,
+          "fully_finite_rows": 1764,
+          "nonfinite_rows": 0,
+          "max_absolute_error": 49.75337912380694,
+          "mean_absolute_error": 0.2582574252143879,
+          "rmse": 0.40145619213183614,
+          "cosine_valid_rows": 1764,
+          "cosine_undefined_finite_rows": 0,
+          "zero_target_rows": 0,
+          "zero_prediction_rows": 0,
+          "mean_cosine_similarity": 0.9162693211629187,
+          "min_cosine_similarity": 0.4933544782418715,
+          "column_correlation_defined": 1582,
+          "column_correlation_undefined": 0,
+          "column_correlation_quantiles": {
+            "min": 0.5162184292141044,
+            "p05": 0.7928109896701,
+            "median": 0.937372224430906,
+            "p95": 0.9859859150462137,
+            "max": 0.9988198437202932
+          },
+          "column_mae_quantiles": {
+            "min": 0.03706550215508973,
+            "p05": 0.12125998364411257,
+            "median": 0.2503408899580629,
+            "p95": 0.42141304421649967,
+            "max": 0.5156031482952238
+          },
+          "column_rmse_quantiles": {
+            "min": 0.04943483163795464,
+            "p05": 0.16953536759051052,
+            "median": 0.35260173693453944,
+            "p95": 0.6201275107334931,
+            "max": 1.2124160622892437
+          },
+          "absolute_column_mean_difference_quantiles": {
+            "min": 9.138193662040078e-06,
+            "p05": 0.0008169142051355082,
+            "median": 0.0079859388906256,
+            "p95": 0.027041885365652687,
+            "max": 0.06250736218594942
+          },
+          "absolute_column_std_difference_quantiles": {
+            "min": 6.384181233887176e-06,
+            "p05": 0.010950393949808908,
+            "median": 0.06515784667125163,
+            "p95": 0.2047210786353307,
+            "max": 1.1543751915621738
+          },
+          "nonfinite_policy": "count all; finite element errors; wholly finite rows for correlations/distributions/cosine",
+          "train_scale_nrmse_quantiles": {
+            "min": 0.04976547710293267,
+            "p05": 0.1689012286134021,
+            "median": 0.35669967328915636,
+            "p95": 0.6248849023619292,
+            "max": 3.8865195274931787
+          },
+          "train_scale_nrmse_mean": 0.3790738388498467,
+          "train_scale_zero_columns": 0,
+          "global_train_scale_nrmse": 0.41999796715636195,
+          "global_train_scale_nrmse_definition": "sqrt(mean((prediction-target)^2 / supplied_train_scale^2)) over jointly finite entries with positive scale",
+          "dialogue_count": 36,
+          "dialogue_equal_weight_mae": 0.25798411065616017,
+          "dialogue_equal_nrmse": 0.40711464178397655,
+          "dialogue_equal_nrmse_definition": "arithmetic mean of per-dialogue sqrt(mean((error / supplied_train_scale)^2)); dialogues equally weighted",
+          "n_fit_rows": 3519,
+          "n_fit_groups": 72,
+          "exact_train_column_count": null,
+          "unseen_speaker_fallback_rows": 0
+        },
+        {
+          "fold": 2,
+          "shape": [
+            1763,
+            1582
+          ],
+          "total_scalar_elements": 2789066,
+          "jointly_finite_elements": 2789066,
+          "nonfinite_target_elements": 0,
+          "nonfinite_prediction_elements": 0,
+          "fully_finite_rows": 1763,
+          "nonfinite_rows": 0,
+          "max_absolute_error": 25.55682930308224,
+          "mean_absolute_error": 0.24973303911639627,
+          "rmse": 0.37893933888410236,
+          "cosine_valid_rows": 1763,
+          "cosine_undefined_finite_rows": 0,
+          "zero_target_rows": 0,
+          "zero_prediction_rows": 0,
+          "mean_cosine_similarity": 0.9176855315596414,
+          "min_cosine_similarity": 0.6770263429449211,
+          "column_correlation_defined": 1582,
+          "column_correlation_undefined": 0,
+          "column_correlation_quantiles": {
+            "min": 0.4574956869816308,
+            "p05": 0.7961471660715213,
+            "median": 0.9409913199284304,
+            "p95": 0.9876264321673868,
+            "max": 0.9987489867500132
+          },
+          "column_mae_quantiles": {
+            "min": 0.03555783638410644,
+            "p05": 0.11703333477963959,
+            "median": 0.23914241338696396,
+            "p95": 0.41776123461661535,
+            "max": 0.5222854742586162
+          },
+          "column_rmse_quantiles": {
+            "min": 0.04676597474828506,
+            "p05": 0.15544765145867856,
+            "median": 0.3288970985483983,
+            "p95": 0.612236235088768,
+            "max": 0.9424291167890333
+          },
+          "absolute_column_mean_difference_quantiles": {
+            "min": 7.373560821380409e-06,
+            "p05": 0.0007278531635272656,
+            "median": 0.007582928579557786,
+            "p95": 0.028654843350567102,
+            "max": 0.05696565951993138
+          },
+          "absolute_column_std_difference_quantiles": {
+            "min": 0.0005057805775916524,
+            "p05": 0.012434647287631722,
+            "median": 0.06053397407766048,
+            "p95": 0.20474278638445356,
+            "max": 0.7822587269676573
+          },
+          "nonfinite_policy": "count all; finite element errors; wholly finite rows for correlations/distributions/cosine",
+          "train_scale_nrmse_quantiles": {
+            "min": 0.045227305125154896,
+            "p05": 0.1535056808630426,
+            "median": 0.32727737198199136,
+            "p95": 0.6062856994357391,
+            "max": 1.3141870279618466
+          },
+          "train_scale_nrmse_mean": 0.34983986321239624,
+          "train_scale_zero_columns": 0,
+          "global_train_scale_nrmse": 0.3789419019647212,
+          "global_train_scale_nrmse_definition": "sqrt(mean((prediction-target)^2 / supplied_train_scale^2)) over jointly finite entries with positive scale",
+          "dialogue_count": 36,
+          "dialogue_equal_weight_mae": 0.2510804713402541,
+          "dialogue_equal_nrmse": 0.38113395792222293,
+          "dialogue_equal_nrmse_definition": "arithmetic mean of per-dialogue sqrt(mean((error / supplied_train_scale)^2)); dialogues equally weighted",
+          "n_fit_rows": 3520,
+          "n_fit_groups": 72,
+          "exact_train_column_count": null,
+          "unseen_speaker_fallback_rows": 0
+        }
+      ],
+      "oof_summary": {
+        "shape": [
+          5283,
+          1582
+        ],
+        "total_scalar_elements": 8357706,
+        "jointly_finite_elements": 8357706,
+        "nonfinite_target_elements": 0,
+        "nonfinite_prediction_elements": 0,
+        "fully_finite_rows": 5283,
+        "nonfinite_rows": 0,
+        "max_absolute_error": 50.86872738599777,
+        "mean_absolute_error": 0.2543283531115901,
+        "rmse": 0.39104670580191925,
+        "cosine_valid_rows": 5283,
+        "cosine_undefined_finite_rows": 0,
+        "zero_target_rows": 0,
+        "zero_prediction_rows": 0,
+        "mean_cosine_similarity": 0.9166345382590366,
+        "min_cosine_similarity": 0.12385232335454148,
+        "column_correlation_defined": 1582,
+        "column_correlation_undefined": 0,
+        "column_correlation_quantiles": {
+          "min": 0.5196642877150419,
+          "p05": 0.7909335496536689,
+          "median": 0.9385886053899783,
+          "p95": 0.9862047329041412,
+          "max": 0.9988179737736987
+        },
+        "column_mae_quantiles": {
+          "min": 0.0362627831516769,
+          "p05": 0.12019828260802867,
+          "median": 0.24651315094730092,
+          "p95": 0.4231630872957438,
+          "max": 0.5211148035662535
+        },
+        "column_rmse_quantiles": {
+          "min": 0.04869385942750226,
+          "p05": 0.1652377484596892,
+          "median": 0.3434178830147544,
+          "p95": 0.6180383080839597,
+          "max": 0.8816805439021557
+        },
+        "absolute_column_mean_difference_quantiles": {
+          "min": 4.5571604761693307e-07,
+          "p05": 0.00016068283451445755,
+          "median": 0.0018614155966386247,
+          "p95": 0.007162039839377487,
+          "max": 0.013429449521703055
+        },
+        "absolute_column_std_difference_quantiles": {
+          "min": 0.002371547161746812,
+          "p05": 0.01601870076843926,
+          "median": 0.06445163715126107,
+          "p95": 0.185987795734041,
+          "max": 0.4718396820222065
+        },
+        "nonfinite_policy": "count all; finite element errors; wholly finite rows for correlations/distributions/cosine",
+        "dialogue_count": 108,
+        "dialogue_equal_weight_mae": 0.2539730033109453,
+        "global_train_scale_nrmse": 0.39818297905669575,
+        "dialogue_equal_nrmse": 0.3921623904960955
+      },
+      "score_dialogue_equal_nrmse": 0.3921623904960955,
+      "oof_global_train_scale_nrmse": 0.39818297905669575,
+      "normalization": "each held-out fold uses only its own fit-fold target std floored at protocol scale_floor",
+      "train_oof_gate": {
+        "pass": false,
+        "checks": {
+          "full_train_coverage": true,
+          "finite": true,
+          "allclose": false,
+          "MAE": false,
+          "train_scaled_RMSE": false,
+          "mean_cosine": false,
+          "min_cosine": false,
+          "correlation_p05": false
+        },
+        "scope": "Train OOF stop-complexity diagnostic; not independent Validation acceptance"
+      }
+    },
+    {
+      "candidate": "is10",
+      "transform": "none",
+      "method": "full_ridge",
+      "alpha": 0.01,
+      "complexity": 11,
+      "folds": [
+        {
+          "fold": 0,
+          "shape": [
+            1756,
+            1582
+          ],
+          "total_scalar_elements": 2777992,
+          "jointly_finite_elements": 2777992,
+          "nonfinite_target_elements": 0,
+          "nonfinite_prediction_elements": 0,
+          "fully_finite_rows": 1756,
+          "nonfinite_rows": 0,
+          "max_absolute_error": 58.60890606270185,
+          "mean_absolute_error": 0.025318125070698784,
+          "rmse": 0.15570416672688753,
+          "cosine_valid_rows": 1756,
+          "cosine_undefined_finite_rows": 0,
+          "zero_target_rows": 0,
+          "zero_prediction_rows": 0,
+          "mean_cosine_similarity": 0.9910957234168004,
+          "min_cosine_similarity": 0.1128567627081876,
+          "column_correlation_defined": 1582,
+          "column_correlation_undefined": 0,
+          "column_correlation_quantiles": {
+            "min": 0.44165185896709636,
+            "p05": 0.9395364165511079,
+            "median": 0.9986800220475516,
+            "p95": 0.9999676425185172,
+            "max": 0.9999995895411107
+          },
+          "column_mae_quantiles": {
+            "min": 5.834101877902729e-05,
+            "p05": 0.00031247835571810264,
+            "median": 0.0018244612301689823,
+            "p95": 0.1774540099034794,
+            "max": 0.6151048222855173
+          },
+          "column_rmse_quantiles": {
+            "min": 0.0008742990523895224,
+            "p05": 0.008104994714279909,
+            "median": 0.051605169658196254,
+            "p95": 0.33946690966751103,
+            "max": 1.4850848005244732
+          },
+          "absolute_column_mean_difference_quantiles": {
+            "min": 2.5017663392301603e-07,
+            "p05": 5.9062288420601656e-05,
+            "median": 0.0009578716087170046,
+            "p95": 0.009369548342740439,
+            "max": 0.04157605184466818
+          },
+          "absolute_column_std_difference_quantiles": {
+            "min": 6.302188397810937e-07,
+            "p05": 4.0579428687337356e-05,
+            "median": 0.0008767988986755904,
+            "p95": 0.0231444906947966,
+            "max": 0.8673169295771794
+          },
+          "nonfinite_policy": "count all; finite element errors; wholly finite rows for correlations/distributions/cosine",
+          "train_scale_nrmse_quantiles": {
+            "min": 0.0008521750015867927,
+            "p05": 0.008092496318520348,
+            "median": 0.0518770180364427,
+            "p95": 0.3295019240664643,
+            "max": 1.6783621795007104
+          },
+          "train_scale_nrmse_mean": 0.09338587141693312,
+          "train_scale_zero_columns": 0,
+          "global_train_scale_nrmse": 0.15736276661683254,
+          "global_train_scale_nrmse_definition": "sqrt(mean((prediction-target)^2 / supplied_train_scale^2)) over jointly finite entries with positive scale",
+          "dialogue_count": 36,
+          "dialogue_equal_weight_mae": 0.024622243344414235,
+          "dialogue_equal_nrmse": 0.13292554836420184,
+          "dialogue_equal_nrmse_definition": "arithmetic mean of per-dialogue sqrt(mean((error / supplied_train_scale)^2)); dialogues equally weighted",
+          "n_fit_rows": 3527,
+          "n_fit_groups": 72,
+          "exact_train_column_count": null,
+          "unseen_speaker_fallback_rows": 0
+        },
+        {
+          "fold": 1,
+          "shape": [
+            1764,
+            1582
+          ],
+          "total_scalar_elements": 2790648,
+          "jointly_finite_elements": 2790648,
+          "nonfinite_target_elements": 0,
+          "nonfinite_prediction_elements": 0,
+          "fully_finite_rows": 1764,
+          "nonfinite_rows": 0,
+          "max_absolute_error": 52.497024327362574,
+          "mean_absolute_error": 0.04661367125596935,
+          "rmse": 0.1516439862245062,
+          "cosine_valid_rows": 1764,
+          "cosine_undefined_finite_rows": 0,
+          "zero_target_rows": 0,
+          "zero_prediction_rows": 0,
+          "mean_cosine_similarity": 0.9910583089438553,
+          "min_cosine_similarity": 0.47886124369132954,
+          "column_correlation_defined": 1582,
+          "column_correlation_undefined": 0,
+          "column_correlation_quantiles": {
+            "min": 0.5790179774167812,
+            "p05": 0.9415705842230708,
+            "median": 0.9993504003772733,
+            "p95": 0.9999832532536744,
+            "max": 0.999999802825223
+          },
+          "column_mae_quantiles": {
+            "min": 0.00039284680571897865,
+            "p05": 0.0036363483374272287,
+            "median": 0.022805160811377023,
+            "p95": 0.18876034985340143,
+            "max": 0.6071208091218252
+          },
+          "column_rmse_quantiles": {
+            "min": 0.0006150803728661377,
+            "p05": 0.0056888326995150245,
+            "median": 0.036314981711638314,
+            "p95": 0.36021932886375757,
+            "max": 1.262080209123416
+          },
+          "absolute_column_mean_difference_quantiles": {
+            "min": 1.9417075646649407e-07,
+            "p05": 6.688429646682856e-05,
+            "median": 0.0008133051668477,
+            "p95": 0.008641561468740453,
+            "max": 0.04999384704050319
+          },
+          "absolute_column_std_difference_quantiles": {
+            "min": 1.9314893839883496e-07,
+            "p05": 3.695750703287539e-05,
+            "median": 0.0009791971145283185,
+            "p95": 0.025697761017922913,
+            "max": 0.5647456797935934
+          },
+          "nonfinite_policy": "count all; finite element errors; wholly finite rows for correlations/distributions/cosine",
+          "train_scale_nrmse_quantiles": {
+            "min": 0.0006031784150878743,
+            "p05": 0.005555257836533099,
+            "median": 0.036567457840121886,
+            "p95": 0.37107313932321057,
+            "max": 1.622393905615297
+          },
+          "train_scale_nrmse_mean": 0.08432066461759004,
+          "train_scale_zero_columns": 0,
+          "global_train_scale_nrmse": 0.1592991010273729,
+          "global_train_scale_nrmse_definition": "sqrt(mean((prediction-target)^2 / supplied_train_scale^2)) over jointly finite entries with positive scale",
+          "dialogue_count": 36,
+          "dialogue_equal_weight_mae": 0.046342708764479205,
+          "dialogue_equal_nrmse": 0.14568426986344973,
+          "dialogue_equal_nrmse_definition": "arithmetic mean of per-dialogue sqrt(mean((error / supplied_train_scale)^2)); dialogues equally weighted",
+          "n_fit_rows": 3519,
+          "n_fit_groups": 72,
+          "exact_train_column_count": null,
+          "unseen_speaker_fallback_rows": 0
+        },
+        {
+          "fold": 2,
+          "shape": [
+            1763,
+            1582
+          ],
+          "total_scalar_elements": 2789066,
+          "jointly_finite_elements": 2789066,
+          "nonfinite_target_elements": 0,
+          "nonfinite_prediction_elements": 0,
+          "fully_finite_rows": 1763,
+          "nonfinite_rows": 0,
+          "max_absolute_error": 20.7883342826809,
+          "mean_absolute_error": 0.043489264532706136,
+          "rmse": 0.1311684450003526,
+          "cosine_valid_rows": 1763,
+          "cosine_undefined_finite_rows": 0,
+          "zero_target_rows": 0,
+          "zero_prediction_rows": 0,
+          "mean_cosine_similarity": 0.9915242163647904,
+          "min_cosine_similarity": 0.7220761617057228,
+          "column_correlation_defined": 1582,
+          "column_correlation_undefined": 0,
+          "column_correlation_quantiles": {
+            "min": 0.5198449520598983,
+            "p05": 0.9452295858184506,
+            "median": 0.9995314985043229,
+            "p95": 0.9999889859589602,
+            "max": 0.9999998749776272
+          },
+          "column_mae_quantiles": {
+            "min": 0.0003833692249633024,
+            "p05": 0.003352948289168972,
+            "median": 0.020642639129657858,
+            "p95": 0.17664576465767073,
+            "max": 0.5860540187050998
+          },
+          "column_rmse_quantiles": {
+            "min": 0.0005373749702501245,
+            "p05": 0.004937938046369833,
+            "median": 0.03050000585291649,
+            "p95": 0.3156517093065931,
+            "max": 0.8399988839599284
+          },
+          "absolute_column_mean_difference_quantiles": {
+            "min": 1.1995212542813966e-06,
+            "p05": 6.65325394415807e-05,
+            "median": 0.0009510367626650862,
+            "p95": 0.008867170011177945,
+            "max": 0.04373848299198692
+          },
+          "absolute_column_std_difference_quantiles": {
+            "min": 2.2643127817190134e-07,
+            "p05": 5.37192713452095e-05,
+            "median": 0.0010671765472111683,
+            "p95": 0.02490412561453038,
+            "max": 0.5745489211755462
+          },
+          "nonfinite_policy": "count all; finite element errors; wholly finite rows for correlations/distributions/cosine",
+          "train_scale_nrmse_quantiles": {
+            "min": 0.0005541950386308166,
+            "p05": 0.004948932818764057,
+            "median": 0.03042012098143922,
+            "p95": 0.30807631383458006,
+            "max": 1.1261333538894989
+          },
+          "train_scale_nrmse_mean": 0.06901212316742945,
+          "train_scale_zero_columns": 0,
+          "global_train_scale_nrmse": 0.13158217801698152,
+          "global_train_scale_nrmse_definition": "sqrt(mean((prediction-target)^2 / supplied_train_scale^2)) over jointly finite entries with positive scale",
+          "dialogue_count": 36,
+          "dialogue_equal_weight_mae": 0.04372045835590862,
+          "dialogue_equal_nrmse": 0.13077144638341312,
+          "dialogue_equal_nrmse_definition": "arithmetic mean of per-dialogue sqrt(mean((error / supplied_train_scale)^2)); dialogues equally weighted",
+          "n_fit_rows": 3520,
+          "n_fit_groups": 72,
+          "exact_train_column_count": null,
+          "unseen_speaker_fallback_rows": 0
+        }
+      ],
+      "projection": "none",
+      "protocol_amendment": "Train-only supplemental menu; not preregistered at initial protocol v1",
+      "oof_summary": {
+        "shape": [
+          5283,
+          1582
+        ],
+        "total_scalar_elements": 8357706,
+        "jointly_finite_elements": 8357706,
+        "nonfinite_target_elements": 0,
+        "nonfinite_prediction_elements": 0,
+        "fully_finite_rows": 5283,
+        "nonfinite_rows": 0,
+        "max_absolute_error": 58.608905643224716,
+        "mean_absolute_error": 0.03849265892821935,
+        "rmse": 0.14655457138672193,
+        "cosine_valid_rows": 5283,
+        "cosine_undefined_finite_rows": 0,
+        "zero_target_rows": 0,
+        "zero_prediction_rows": 0,
+        "mean_cosine_similarity": 0.9912262238828353,
+        "min_cosine_similarity": 0.11285676110185489,
+        "column_correlation_defined": 1582,
+        "column_correlation_undefined": 0,
+        "column_correlation_quantiles": {
+          "min": 0.5381666770128557,
+          "p05": 0.9410006835670356,
+          "median": 0.99918130622175,
+          "p95": 0.9999799800746098,
+          "max": 0.9999997644752312
+        },
+        "column_mae_quantiles": {
+          "min": 0.0002828377298368142,
+          "p05": 0.0024334151323955285,
+          "median": 0.015193928107950967,
+          "p95": 0.18322494775775247,
+          "max": 0.5899411736467285
+        },
+        "column_rmse_quantiles": {
+          "min": 0.0006904823062365134,
+          "p05": 0.0064096754753788935,
+          "median": 0.04038766528864422,
+          "p95": 0.3488352523933565,
+          "max": 1.0832640514883265
+        },
+        "absolute_column_mean_difference_quantiles": {
+          "min": 2.522520310471385e-08,
+          "p05": 3.899148537717695e-05,
+          "median": 0.0004926510642836793,
+          "p95": 0.0029739926853318646,
+          "max": 0.014995256172124088
+        },
+        "absolute_column_std_difference_quantiles": {
+          "min": 1.4176534746113134e-07,
+          "p05": 2.6579323304531944e-05,
+          "median": 0.0004345196284080144,
+          "p95": 0.012505359781353139,
+          "max": 0.31470565516103555
+        },
+        "nonfinite_policy": "count all; finite element errors; wholly finite rows for correlations/distributions/cosine",
+        "dialogue_count": 108,
+        "dialogue_equal_weight_mae": 0.038228470154091726,
+        "global_train_scale_nrmse": 0.14993965218095573,
+        "dialogue_equal_nrmse": 0.13646042153702156
+      },
+      "score_dialogue_equal_nrmse": 0.13646042153702156,
+      "oof_global_train_scale_nrmse": 0.14993965218095573,
+      "normalization": "each held-out fold uses only its own fit-fold target std floored at protocol scale_floor",
+      "train_oof_gate": {
+        "pass": false,
+        "checks": {
+          "full_train_coverage": true,
+          "finite": true,
+          "allclose": false,
+          "MAE": false,
+          "train_scaled_RMSE": false,
+          "mean_cosine": false,
+          "min_cosine": false,
+          "correlation_p05": false
+        },
+        "scope": "Train OOF stop-complexity diagnostic; not independent Validation acceptance"
+      }
+    },
+    {
+      "candidate": "is10",
+      "transform": "none",
+      "method": "full_ridge",
+      "alpha": 1.0,
+      "complexity": 12,
+      "folds": [
+        {
+          "fold": 0,
+          "shape": [
+            1756,
+            1582
+          ],
+          "total_scalar_elements": 2777992,
+          "jointly_finite_elements": 2777992,
+          "nonfinite_target_elements": 0,
+          "nonfinite_prediction_elements": 0,
+          "fully_finite_rows": 1756,
+          "nonfinite_rows": 0,
+          "max_absolute_error": 58.52542346518574,
+          "mean_absolute_error": 0.026325670196109627,
+          "rmse": 0.15340651557627283,
+          "cosine_valid_rows": 1756,
+          "cosine_undefined_finite_rows": 0,
+          "zero_target_rows": 0,
+          "zero_prediction_rows": 0,
+          "mean_cosine_similarity": 0.9913974230908532,
+          "min_cosine_similarity": 0.11321198326757854,
+          "column_correlation_defined": 1582,
+          "column_correlation_undefined": 0,
+          "column_correlation_quantiles": {
+            "min": 0.45019260162077923,
+            "p05": 0.9422960524196135,
+            "median": 0.9986653168291855,
+            "p95": 0.9999660463194582,
+            "max": 0.9999983865695704
+          },
+          "column_mae_quantiles": {
+            "min": 0.0005668752143506483,
+            "p05": 0.0010179332243990644,
+            "median": 0.003943431418353807,
+            "p95": 0.16981879727263482,
+            "max": 0.598161423067429
+          },
+          "column_rmse_quantiles": {
+            "min": 0.0018577628717179704,
+            "p05": 0.00834950571618431,
+            "median": 0.05166316147146788,
+            "p95": 0.33411162168731556,
+            "max": 1.4828086593014524
+          },
+          "absolute_column_mean_difference_quantiles": {
+            "min": 8.869755131757362e-09,
+            "p05": 5.4442265172719325e-05,
+            "median": 0.0009656853023708782,
+            "p95": 0.009058040935383283,
+            "max": 0.043691384244470374
+          },
+          "absolute_column_std_difference_quantiles": {
+            "min": 1.4281542588534535e-06,
+            "p05": 8.376091145296251e-05,
+            "median": 0.0008538677073527956,
+            "p95": 0.02363237907133927,
+            "max": 0.8630672226061733
+          },
+          "nonfinite_policy": "count all; finite element errors; wholly finite rows for correlations/distributions/cosine",
+          "train_scale_nrmse_quantiles": {
+            "min": 0.0018976064731781618,
+            "p05": 0.008380215296023681,
+            "median": 0.051911268071610187,
+            "p95": 0.3256469543084475,
+            "max": 1.67788257715183
+          },
+          "train_scale_nrmse_mean": 0.09266443293404356,
+          "train_scale_zero_columns": 0,
+          "global_train_scale_nrmse": 0.15513582355748842,
+          "global_train_scale_nrmse_definition": "sqrt(mean((prediction-target)^2 / supplied_train_scale^2)) over jointly finite entries with positive scale",
+          "dialogue_count": 36,
+          "dialogue_equal_weight_mae": 0.025619330572663808,
+          "dialogue_equal_nrmse": 0.1303683163174802,
+          "dialogue_equal_nrmse_definition": "arithmetic mean of per-dialogue sqrt(mean((error / supplied_train_scale)^2)); dialogues equally weighted",
+          "n_fit_rows": 3527,
+          "n_fit_groups": 72,
+          "exact_train_column_count": null,
+          "unseen_speaker_fallback_rows": 0
+        },
+        {
+          "fold": 1,
+          "shape": [
+            1764,
+            1582
+          ],
+          "total_scalar_elements": 2790648,
+          "jointly_finite_elements": 2790648,
+          "nonfinite_target_elements": 0,
+          "nonfinite_prediction_elements": 0,
+          "fully_finite_rows": 1764,
+          "nonfinite_rows": 0,
+          "max_absolute_error": 52.116329202302936,
+          "mean_absolute_error": 0.04456604107635677,
+          "rmse": 0.14694447038679861,
+          "cosine_valid_rows": 1764,
+          "cosine_undefined_finite_rows": 0,
+          "zero_target_rows": 0,
+          "zero_prediction_rows": 0,
+          "mean_cosine_similarity": 0.9914973732287465,
+          "min_cosine_similarity": 0.4834554713491036,
+          "column_correlation_defined": 1582,
+          "column_correlation_undefined": 0,
+          "column_correlation_quantiles": {
+            "min": 0.580696481002094,
+            "p05": 0.9428868941051818,
+            "median": 0.9994404520449858,
+            "p95": 0.9999839897147405,
+            "max": 0.9999990943229198
+          },
+          "column_mae_quantiles": {
+            "min": 0.0009806690982387765,
+            "p05": 0.003702311877344874,
+            "median": 0.021860942415406964,
+            "p95": 0.18057180336675763,
+            "max": 0.5912281662873732
+          },
+          "column_rmse_quantiles": {
+            "min": 0.0013201564187708273,
+            "p05": 0.005531683976323036,
+            "median": 0.033391392412581794,
+            "p95": 0.35274350663497456,
+            "max": 1.2523278186874167
+          },
+          "absolute_column_mean_difference_quantiles": {
+            "min": 3.5395507587280065e-07,
+            "p05": 5.313175850044562e-05,
+            "median": 0.0005897895438657808,
+            "p95": 0.00826752114961475,
+            "max": 0.046516933777366196
+          },
+          "absolute_column_std_difference_quantiles": {
+            "min": 8.676724327916219e-08,
+            "p05": 0.00010302446705153235,
+            "median": 0.001022903347367543,
+            "p95": 0.02332270243216378,
+            "max": 0.5547094849122113
+          },
+          "nonfinite_policy": "count all; finite element errors; wholly finite rows for correlations/distributions/cosine",
+          "train_scale_nrmse_quantiles": {
+            "min": 0.0013085511859186976,
+            "p05": 0.0055127758716953055,
+            "median": 0.033462489814724786,
+            "p95": 0.36296127356967656,
+            "max": 1.609857286552444
+          },
+          "train_scale_nrmse_mean": 0.08012590919642756,
+          "train_scale_zero_columns": 0,
+          "global_train_scale_nrmse": 0.15455678837184522,
+          "global_train_scale_nrmse_definition": "sqrt(mean((prediction-target)^2 / supplied_train_scale^2)) over jointly finite entries with positive scale",
+          "dialogue_count": 36,
+          "dialogue_equal_weight_mae": 0.044284816935300425,
+          "dialogue_equal_nrmse": 0.14071976171377074,
+          "dialogue_equal_nrmse_definition": "arithmetic mean of per-dialogue sqrt(mean((error / supplied_train_scale)^2)); dialogues equally weighted",
+          "n_fit_rows": 3519,
+          "n_fit_groups": 72,
+          "exact_train_column_count": null,
+          "unseen_speaker_fallback_rows": 0
+        },
+        {
+          "fold": 2,
+          "shape": [
+            1763,
+            1582
+          ],
+          "total_scalar_elements": 2789066,
+          "jointly_finite_elements": 2789066,
+          "nonfinite_target_elements": 0,
+          "nonfinite_prediction_elements": 0,
+          "fully_finite_rows": 1763,
+          "nonfinite_rows": 0,
+          "max_absolute_error": 20.854339335676254,
+          "mean_absolute_error": 0.04223736837543882,
+          "rmse": 0.1284938684965815,
+          "cosine_valid_rows": 1763,
+          "cosine_undefined_finite_rows": 0,
+          "zero_target_rows": 0,
+          "zero_prediction_rows": 0,
+          "mean_cosine_similarity": 0.991866423679804,
+          "min_cosine_similarity": 0.7226624147479773,
+          "column_correlation_defined": 1582,
+          "column_correlation_undefined": 0,
+          "column_correlation_quantiles": {
+            "min": 0.5214875418863334,
+            "p05": 0.9477055152249827,
+            "median": 0.999548565438279,
+            "p95": 0.999988162705549,
+            "max": 0.9999992519978438
+          },
+          "column_mae_quantiles": {
+            "min": 0.000876222683661072,
+            "p05": 0.003509311963932364,
+            "median": 0.020325091114473497,
+            "p95": 0.16936546698953842,
+            "max": 0.5659385902255016
+          },
+          "column_rmse_quantiles": {
+            "min": 0.001254402399927176,
+            "p05": 0.005032343737072261,
+            "median": 0.02987609203916261,
+            "p95": 0.3106492816486508,
+            "max": 0.8288752269728997
+          },
+          "absolute_column_mean_difference_quantiles": {
+            "min": 4.60479663087765e-07,
+            "p05": 9.161859908860226e-05,
+            "median": 0.0010329810871629458,
+            "p95": 0.009132341625574513,
+            "max": 0.0416389966980116
+          },
+          "absolute_column_std_difference_quantiles": {
+            "min": 4.012477594628194e-08,
+            "p05": 0.00012948882388666983,
+            "median": 0.001151543353956952,
+            "p95": 0.026803192975316793,
+            "max": 0.5822063941857742
+          },
+          "nonfinite_policy": "count all; finite element errors; wholly finite rows for correlations/distributions/cosine",
+          "train_scale_nrmse_quantiles": {
+            "min": 0.0012486483281028068,
+            "p05": 0.005116753596793735,
+            "median": 0.029934902701786434,
+            "p95": 0.3031460256465195,
+            "max": 1.1268346715499966
+          },
+          "train_scale_nrmse_mean": 0.06759852986070358,
+          "train_scale_zero_columns": 0,
+          "global_train_scale_nrmse": 0.1289749490164766,
+          "global_train_scale_nrmse_definition": "sqrt(mean((prediction-target)^2 / supplied_train_scale^2)) over jointly finite entries with positive scale",
+          "dialogue_count": 36,
+          "dialogue_equal_weight_mae": 0.042481212980245424,
+          "dialogue_equal_nrmse": 0.12807215391920268,
+          "dialogue_equal_nrmse_definition": "arithmetic mean of per-dialogue sqrt(mean((error / supplied_train_scale)^2)); dialogues equally weighted",
+          "n_fit_rows": 3520,
+          "n_fit_groups": 72,
+          "exact_train_column_count": null,
+          "unseen_speaker_fallback_rows": 0
+        }
+      ],
+      "projection": "none",
+      "protocol_amendment": "Train-only supplemental menu; not preregistered at initial protocol v1",
+      "oof_summary": {
+        "shape": [
+          5283,
+          1582
+        ],
+        "total_scalar_elements": 8357706,
+        "jointly_finite_elements": 8357706,
+        "nonfinite_target_elements": 0,
+        "nonfinite_prediction_elements": 0,
+        "fully_finite_rows": 5283,
+        "nonfinite_rows": 0,
+        "max_absolute_error": 58.52542480826378,
+        "mean_absolute_error": 0.03772607491340282,
+        "rmse": 0.14332437361521969,
+        "cosine_valid_rows": 5283,
+        "cosine_undefined_finite_rows": 0,
+        "zero_target_rows": 0,
+        "zero_prediction_rows": 0,
+        "mean_cosine_similarity": 0.9915873076405664,
+        "min_cosine_similarity": 0.11321198298631951,
+        "column_correlation_defined": 1582,
+        "column_correlation_undefined": 0,
+        "column_correlation_quantiles": {
+          "min": 0.5478728566884925,
+          "p05": 0.9430280136316794,
+          "median": 0.9992199281880478,
+          "p95": 0.9999794918698576,
+          "max": 0.9999988791475376
+        },
+        "column_mae_quantiles": {
+          "min": 0.0008082742320611961,
+          "p05": 0.0028669640382315803,
+          "median": 0.015585929210086922,
+          "p95": 0.17504379161289288,
+          "max": 0.573315468076834
+        },
+        "column_rmse_quantiles": {
+          "min": 0.001501397071126551,
+          "p05": 0.006503361183803738,
+          "median": 0.03950732443051644,
+          "p95": 0.3418475200862999,
+          "max": 1.0752259781010371
+        },
+        "absolute_column_mean_difference_quantiles": {
+          "min": 6.685321480644386e-07,
+          "p05": 3.42451505178574e-05,
+          "median": 0.0004569661325389344,
+          "p95": 0.0028696597109850092,
+          "max": 0.013558923770544547
+        },
+        "absolute_column_std_difference_quantiles": {
+          "min": 4.524982323728111e-06,
+          "p05": 8.38182800856846e-05,
+          "median": 0.0005544266274730703,
+          "p95": 0.01553211306761249,
+          "max": 0.30420178458977587
+        },
+        "nonfinite_policy": "count all; finite element errors; wholly finite rows for correlations/distributions/cosine",
+        "dialogue_count": 108,
+        "dialogue_equal_weight_mae": 0.037461786829134446,
+        "global_train_scale_nrmse": 0.14672049986445612,
+        "dialogue_equal_nrmse": 0.13305341065015122
+      },
+      "score_dialogue_equal_nrmse": 0.13305341065015122,
+      "oof_global_train_scale_nrmse": 0.14672049986445612,
+      "normalization": "each held-out fold uses only its own fit-fold target std floored at protocol scale_floor",
+      "train_oof_gate": {
+        "pass": false,
+        "checks": {
+          "full_train_coverage": true,
+          "finite": true,
+          "allclose": false,
+          "MAE": false,
+          "train_scaled_RMSE": false,
+          "mean_cosine": false,
+          "min_cosine": false,
+          "correlation_p05": false
+        },
+        "scope": "Train OOF stop-complexity diagnostic; not independent Validation acceptance"
+      }
+    },
+    {
+      "candidate": "is10",
+      "transform": "none",
+      "method": "full_ridge",
+      "alpha": 100.0,
+      "complexity": 13,
+      "folds": [
+        {
+          "fold": 0,
+          "shape": [
+            1756,
+            1582
+          ],
+          "total_scalar_elements": 2777992,
+          "jointly_finite_elements": 2777992,
+          "nonfinite_target_elements": 0,
+          "nonfinite_prediction_elements": 0,
+          "fully_finite_rows": 1756,
+          "nonfinite_rows": 0,
+          "max_absolute_error": 51.36304358554826,
+          "mean_absolute_error": 0.06334576393226897,
+          "rmse": 0.15818286002301635,
+          "cosine_valid_rows": 1756,
+          "cosine_undefined_finite_rows": 0,
+          "zero_target_rows": 0,
+          "zero_prediction_rows": 0,
+          "mean_cosine_similarity": 0.9903300870586111,
+          "min_cosine_similarity": 0.11609087282341482,
+          "column_correlation_defined": 1582,
+          "column_correlation_undefined": 0,
+          "column_correlation_quantiles": {
+            "min": 0.5283608625835529,
+            "p05": 0.9464979187189793,
+            "median": 0.9960176009820831,
+            "p95": 0.9987363156501694,
+            "max": 0.9997301460497108
+          },
+          "column_mae_quantiles": {
+            "min": 0.01548412184209531,
+            "p05": 0.031104341421512083,
+            "median": 0.052685957662146204,
+            "p95": 0.14295602809132044,
+            "max": 0.526392363439606
+          },
+          "column_rmse_quantiles": {
+            "min": 0.0245332259881894,
+            "p05": 0.05325702150343905,
+            "median": 0.0899814078834991,
+            "p95": 0.3029646135106519,
+            "max": 1.3198797568902445
+          },
+          "absolute_column_mean_difference_quantiles": {
+            "min": 4.531943527439665e-06,
+            "p05": 0.00018318658956622134,
+            "median": 0.0020518543296648593,
+            "p95": 0.008858897879454774,
+            "max": 0.03978293594453035
+          },
+          "absolute_column_std_difference_quantiles": {
+            "min": 2.594728974125715e-05,
+            "p05": 0.0030074498600176584,
+            "median": 0.01758772886204618,
+            "p95": 0.053064639330251476,
+            "max": 0.6937399948600872
+          },
+          "nonfinite_policy": "count all; finite element errors; wholly finite rows for correlations/distributions/cosine",
+          "train_scale_nrmse_quantiles": {
+            "min": 0.025218700969473824,
+            "p05": 0.05387047822229168,
+            "median": 0.09065783437678052,
+            "p95": 0.30128334164107273,
+            "max": 1.6764309008449034
+          },
+          "train_scale_nrmse_mean": 0.12137702708546859,
+          "train_scale_zero_columns": 0,
+          "global_train_scale_nrmse": 0.16038280337248353,
+          "global_train_scale_nrmse_definition": "sqrt(mean((prediction-target)^2 / supplied_train_scale^2)) over jointly finite entries with positive scale",
+          "dialogue_count": 36,
+          "dialogue_equal_weight_mae": 0.06233132692289242,
+          "dialogue_equal_nrmse": 0.13905062776369992,
+          "dialogue_equal_nrmse_definition": "arithmetic mean of per-dialogue sqrt(mean((error / supplied_train_scale)^2)); dialogues equally weighted",
+          "n_fit_rows": 3527,
+          "n_fit_groups": 72,
+          "exact_train_column_count": null,
+          "unseen_speaker_fallback_rows": 0
+        },
+        {
+          "fold": 1,
+          "shape": [
+            1764,
+            1582
+          ],
+          "total_scalar_elements": 2790648,
+          "jointly_finite_elements": 2790648,
+          "nonfinite_target_elements": 0,
+          "nonfinite_prediction_elements": 0,
+          "fully_finite_rows": 1764,
+          "nonfinite_rows": 0,
+          "max_absolute_error": 39.96278067104204,
+          "mean_absolute_error": 0.06834918116052584,
+          "rmse": 0.14946850402598488,
+          "cosine_valid_rows": 1764,
+          "cosine_undefined_finite_rows": 0,
+          "zero_target_rows": 0,
+          "zero_prediction_rows": 0,
+          "mean_cosine_similarity": 0.990788457579353,
+          "min_cosine_similarity": 0.5335750530256818,
+          "column_correlation_defined": 1582,
+          "column_correlation_undefined": 0,
+          "column_correlation_quantiles": {
+            "min": 0.6281493754545217,
+            "p05": 0.9492578645275874,
+            "median": 0.9969171374013654,
+            "p95": 0.9990052850579882,
+            "max": 0.9996910036449471
+          },
+          "column_mae_quantiles": {
+            "min": 0.01787018219798971,
+            "p05": 0.03345371355322921,
+            "median": 0.05848398439507453,
+            "p95": 0.1475165912665768,
+            "max": 0.5272886659840633
+          },
+          "column_rmse_quantiles": {
+            "min": 0.025138577928914465,
+            "p05": 0.046326244900867085,
+            "median": 0.08125346615072855,
+            "p95": 0.32637419106494436,
+            "max": 0.9777396068745599
+          },
+          "absolute_column_mean_difference_quantiles": {
+            "min": 7.5189989550347724e-06,
+            "p05": 0.00018801751677008493,
+            "median": 0.0018025537772224896,
+            "p95": 0.008095092712676374,
+            "max": 0.03962150937256071
+          },
+          "absolute_column_std_difference_quantiles": {
+            "min": 6.518901728969073e-05,
+            "p05": 0.004057595637376682,
+            "median": 0.019855501517545948,
+            "p95": 0.06368915981363937,
+            "max": 0.362897381204074
+          },
+          "nonfinite_policy": "count all; finite element errors; wholly finite rows for correlations/distributions/cosine",
+          "train_scale_nrmse_quantiles": {
+            "min": 0.025159897514312395,
+            "p05": 0.04659538280200778,
+            "median": 0.08153712604653068,
+            "p95": 0.3314045889573391,
+            "max": 1.256876360159185
+          },
+          "train_scale_nrmse_mean": 0.11248215180376309,
+          "train_scale_zero_columns": 0,
+          "global_train_scale_nrmse": 0.15679618409400595,
+          "global_train_scale_nrmse_definition": "sqrt(mean((prediction-target)^2 / supplied_train_scale^2)) over jointly finite entries with positive scale",
+          "dialogue_count": 36,
+          "dialogue_equal_weight_mae": 0.06807636615639807,
+          "dialogue_equal_nrmse": 0.14470483270155232,
+          "dialogue_equal_nrmse_definition": "arithmetic mean of per-dialogue sqrt(mean((error / supplied_train_scale)^2)); dialogues equally weighted",
+          "n_fit_rows": 3519,
+          "n_fit_groups": 72,
+          "exact_train_column_count": null,
+          "unseen_speaker_fallback_rows": 0
+        },
+        {
+          "fold": 2,
+          "shape": [
+            1763,
+            1582
+          ],
+          "total_scalar_elements": 2789066,
+          "jointly_finite_elements": 2789066,
+          "nonfinite_target_elements": 0,
+          "nonfinite_prediction_elements": 0,
+          "fully_finite_rows": 1763,
+          "nonfinite_rows": 0,
+          "max_absolute_error": 21.317348604568792,
+          "mean_absolute_error": 0.0655406864754585,
+          "rmse": 0.13309298485800425,
+          "cosine_valid_rows": 1763,
+          "cosine_undefined_finite_rows": 0,
+          "zero_target_rows": 0,
+          "zero_prediction_rows": 0,
+          "mean_cosine_similarity": 0.9910843809757129,
+          "min_cosine_similarity": 0.7286130779790314,
+          "column_correlation_defined": 1582,
+          "column_correlation_undefined": 0,
+          "column_correlation_quantiles": {
+            "min": 0.461451076183319,
+            "p05": 0.9525549595522584,
+            "median": 0.9972996056581016,
+            "p95": 0.9990964642107181,
+            "max": 0.9997194847346672
+          },
+          "column_mae_quantiles": {
+            "min": 0.016801288208238983,
+            "p05": 0.03160782410287492,
+            "median": 0.05549515459133425,
+            "p95": 0.1446071965575684,
+            "max": 0.49792930678273223
+          },
+          "column_rmse_quantiles": {
+            "min": 0.022229287835768965,
+            "p05": 0.04236216531381379,
+            "median": 0.0766308207537754,
+            "p95": 0.28894190001615694,
+            "max": 0.8324443329309104
+          },
+          "absolute_column_mean_difference_quantiles": {
+            "min": 4.579813438584934e-06,
+            "p05": 0.00015986734125745356,
+            "median": 0.001989157246497307,
+            "p95": 0.008767330310067942,
+            "max": 0.04829329476691101
+          },
+          "absolute_column_std_difference_quantiles": {
+            "min": 6.941217226708041e-05,
+            "p05": 0.004335092555715948,
+            "median": 0.018788114290405833,
+            "p95": 0.05266379712557237,
+            "max": 0.6576379104271043
+          },
+          "nonfinite_policy": "count all; finite element errors; wholly finite rows for correlations/distributions/cosine",
+          "train_scale_nrmse_quantiles": {
+            "min": 0.02151136209023645,
+            "p05": 0.04178142433321102,
+            "median": 0.07700280652605679,
+            "p95": 0.281799952966072,
+            "max": 1.1608167917874812
+          },
+          "train_scale_nrmse_mean": 0.09941733649871277,
+          "train_scale_zero_columns": 0,
+          "global_train_scale_nrmse": 0.1339125794859065,
+          "global_train_scale_nrmse_definition": "sqrt(mean((prediction-target)^2 / supplied_train_scale^2)) over jointly finite entries with positive scale",
+          "dialogue_count": 36,
+          "dialogue_equal_weight_mae": 0.06583540167429362,
+          "dialogue_equal_nrmse": 0.13343432239212716,
+          "dialogue_equal_nrmse_definition": "arithmetic mean of per-dialogue sqrt(mean((error / supplied_train_scale)^2)); dialogues equally weighted",
+          "n_fit_rows": 3520,
+          "n_fit_groups": 72,
+          "exact_train_column_count": null,
+          "unseen_speaker_fallback_rows": 0
+        }
+      ],
+      "projection": "none",
+      "protocol_amendment": "Train-only supplemental menu; not preregistered at initial protocol v1",
+      "oof_summary": {
+        "shape": [
+          5283,
+          1582
+        ],
+        "total_scalar_elements": 8357706,
+        "jointly_finite_elements": 8357706,
+        "nonfinite_target_elements": 0,
+        "nonfinite_prediction_elements": 0,
+        "fully_finite_rows": 5283,
+        "nonfinite_rows": 0,
+        "max_absolute_error": 51.36304458975792,
+        "mean_absolute_error": 0.06574888270059843,
+        "rmse": 0.14726792622560664,
+        "cosine_valid_rows": 5283,
+        "cosine_undefined_finite_rows": 0,
+        "zero_target_rows": 0,
+        "zero_prediction_rows": 0,
+        "mean_cosine_similarity": 0.9907348543860078,
+        "min_cosine_similarity": 0.11609087383729523,
+        "column_correlation_defined": 1582,
+        "column_correlation_undefined": 0,
+        "column_correlation_quantiles": {
+          "min": 0.5919344261960484,
+          "p05": 0.9498267479267386,
+          "median": 0.9967266980835497,
+          "p95": 0.9988750622506658,
+          "max": 0.9997139098854562
+        },
+        "column_mae_quantiles": {
+          "min": 0.016720384090689187,
+          "p05": 0.03217422801467749,
+          "median": 0.0557527986580507,
+          "p95": 0.1453211641453527,
+          "max": 0.5082463449952114
+        },
+        "column_rmse_quantiles": {
+          "min": 0.023999286927455007,
+          "p05": 0.04842785082334582,
+          "median": 0.0831095791415242,
+          "p95": 0.3104214266582056,
+          "max": 0.9703443920985949
+        },
+        "absolute_column_mean_difference_quantiles": {
+          "min": 6.610542946771519e-07,
+          "p05": 4.343603128587277e-05,
+          "median": 0.0005327619889018732,
+          "p95": 0.0023251532097644453,
+          "max": 0.012176784667730731
+        },
+        "absolute_column_std_difference_quantiles": {
+          "min": 0.0008359894124467804,
+          "p05": 0.0061250130113908625,
+          "median": 0.01862390472872394,
+          "p95": 0.05024332026724027,
+          "max": 0.19428046359680495
+        },
+        "nonfinite_policy": "count all; finite element errors; wholly finite rows for correlations/distributions/cosine",
+        "dialogue_count": 108,
+        "dialogue_equal_weight_mae": 0.06541436492120885,
+        "global_train_scale_nrmse": 0.1508083558682492,
+        "dialogue_equal_nrmse": 0.13906326095245977
+      },
+      "score_dialogue_equal_nrmse": 0.13906326095245977,
+      "oof_global_train_scale_nrmse": 0.1508083558682492,
+      "normalization": "each held-out fold uses only its own fit-fold target std floored at protocol scale_floor",
+      "train_oof_gate": {
+        "pass": false,
+        "checks": {
+          "full_train_coverage": true,
+          "finite": true,
+          "allclose": false,
+          "MAE": false,
+          "train_scaled_RMSE": false,
+          "mean_cosine": false,
+          "min_cosine": false,
+          "correlation_p05": false
+        },
+        "scope": "Train OOF stop-complexity diagnostic; not independent Validation acceptance"
+      }
+    }
+  ],
+  "selected": {
+    "candidate": "is10",
+    "transform": "none",
+    "method": "diagonal_affine"
+  },
+  "selected_score": 0.10158336543093238,
+  "best_numeric_score": 0.10158336543093238,
+  "train_oof_gate": {
+    "pass": false,
+    "checks": {
+      "full_train_coverage": true,
+      "finite": true,
+      "allclose": false,
+      "MAE": false,
+      "train_scaled_RMSE": false,
+      "mean_cosine": false,
+      "min_cosine": false,
+      "correlation_p05": false
+    },
+    "scope": "Train OOF stop-complexity diagnostic; not independent Validation acceptance"
+  },
+  "fold_scalers": [
+    {
+      "fold": 0,
+      "path": "LOCAL_RUN/local_only/IEMOCAP/full_ridge_extension/fold_0_scalers.npz",
+      "sha256": "b0f9818f74429a61fdbbcae5afd21459bc5260ac496e48b901f1c5fd985227b0"
+    },
+    {
+      "fold": 1,
+      "path": "LOCAL_RUN/local_only/IEMOCAP/full_ridge_extension/fold_1_scalers.npz",
+      "sha256": "758f78d9b17fd152444fb870cb72889feeeb2161562d533c7fc6c206ce779f7f"
+    },
+    {
+      "fold": 2,
+      "path": "LOCAL_RUN/local_only/IEMOCAP/full_ridge_extension/fold_2_scalers.npz",
+      "sha256": "03046eb3c3ce25afe677217ff118d63b794b43adf3290a83db78d759ec20f887"
+    }
+  ],
+  "training_feature_shape": [
+    5283,
+    1582
+  ],
+  "training_target_shape": [
+    5283,
+    1582
+  ],
+  "model_path": "LOCAL_RUN/local_only/IEMOCAP/final/converter.pkl",
+  "model_sha256": "5afb90cc7f71467ad8a90844a07f133a10c017fd9b58610fbd50f2aade23ca1f",
+  "train_scale_path": "LOCAL_RUN/local_only/IEMOCAP/final/train_scale.npy",
+  "train_scale_sha256": "0e326cc28b6436815f2742ed3e23fd6fb233a33d4146870b0be97176ac0b4368",
+  "OOF_selected_sha256": "2dc4c9bc71c723a8d6e2d5b6b1943b30fedeb685da57aeb0bcb5620dd676c095",
+  "locked_at": "2026-11-17T03:09:54.261503+00:00",
+  "max_rss_GiB": 0.9648780822753906,
+  "original_model_sha256_unchanged": true,
+  "final_fit_uses_current_protocol_sha256": true
+}

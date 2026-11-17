@@ -1,0 +1,517 @@
+{
+  "audit_directory": "20261117T024213Z",
+  "published_at": "2026-11-17T03:30:45.891582+00:00",
+  "authorization": "Subsequent explicit user request: 上传到lyx的github",
+  "local_source_verification_sha256": "cdcdc1ec16748109c10d312fcc9c5cd9d1da306a4c535cf52f835e36b8fce2c2",
+  "original_local_source_sha256": {
+    "IEMOCAP_FEATURE_RECONSTRUCTION.md": "4190b88e9c07e05fb09e2c94b9c9d81848fb35744af199adf1ec4de55ed0dcb3",
+    "EXPERIMENT_PROTOCOL.md": "b3c92b3e5dffcfd0c22c7a13753942ec567aa36813a56d9ffbd450bb4706a39a",
+    "CONVERTER_METHOD_COMPARISON.md": "aa6c68e6a6d2f772e6806e2659349eb8c4feedc0dab161f180374c9d938d3abf",
+    "XP04_PROBABILITY_PARITY_REPORT.md": "8ec75cf1a411955b822898c6101c55816a09003daeabf848829d6a25028a13b3",
+    "MELD_CLEAN_PARITY_REPORT.md": "a5bb390b4a91a4d8cf34ba74e5b237850dda851a14ec3d369dabe6752e6f3ecb",
+    "IEMOCAP_CLEAN_PARITY_REPORT.md": "366a25aac85425a4c0d65c012ab2550c1fbb02eb524ce3c49dc3d1d29acfc615",
+    "FINAL_RECONSTRUCTION_DECISION.md": "7e782b8036a065db61ad2a23659a88c6111c80844e6473500048f23ab39abc5a",
+    "README.md": "b004cff04d102dcabc4883a07da83bcf0ad160e56f186f23991b8cc7f7127464",
+    "MELD_FEATURE_RECONSTRUCTION.md": "bbb443bc4ba0c64e7137125f4c648a6e13988fbd5dea1900432a74f9b5bae027",
+    "clean_parity_summary.csv": "3aadba245e3a0302bf1e1352ec0766be373f6c0f8ef27cd3662485084b5072aa",
+    "converter_method_comparison.csv": "607a80f1d43903465e3847d607832edaf5f5d82c4f5e2972fe1ab4498bad0f29",
+    "verification.json": "cdcdc1ec16748109c10d312fcc9c5cd9d1da306a4c535cf52f835e36b8fce2c2",
+    "scripts/evaluate_clean_reconstruction.py": "38a160ec191576e9000867b5242fa1841d12765ed0b11418d5a2a8c289ade49f",
+    "scripts/extract_iemocap_candidates.py": "f9d409c83c9e4556646fff19b9fd31ac30f741b000f38311a41f7bff459edcac",
+    "scripts/run_xp04_probability_parity.py": "beefb368a3ace4de625511cb038155834b55c6627b9000e9a8e9bfbc98bb7900",
+    "scripts/extract_meld_candidates.py": "0bbca3adeb5acc691d4dd6517cb6f1b4a8703ffa439f0bb94f0cd79afada4e67",
+    "scripts/verify_delivery.py": "888aa5fe18908cda5a0202fa3f07a3ecbfc04b156fbfad5f3550c107c02fbd65",
+    "scripts/converter_core.py": "afe198de532a40063f8763f5331c9f1641b1749ab3bd2971987186c7b8d721e8",
+    "scripts/run_converter_cv.py": "a889188edddc49016784e3fef80f98a71aedf55242b89caf9aea0ca298692453",
+    "scripts/recheck_meld_probe.py": "dc9750d89ffdceabf7f966fcfda44f6b4ea584f76a9f8f4459eaefadf0d9e4b9",
+    "scripts/test_converter_core.py": "ed8ba82d10c3bd56c995475bf3cc29378ad7fe1690ca1cb97400abe2a4632181",
+    "scripts/test_evaluate_clean_reconstruction.py": "bc4cef36bb3772de51b9f3506a32b02dd74a29835ee319d6d4b107a49f6e1763",
+    "scripts/write_global_delivery.py": "dbab82eb3032f67c875bf28363939a0a79f0e194733b00d7273701ce16147d43",
+    "scripts/run_meld_validation_once.py": "4a49d247b4d87cebabad175e0a68da22d3d527fd3b2b623dbb3dbb8a6d371658",
+    "scripts/run_full_ridge_extension.py": "c0733ead972e899c36d1de44e105f212ac3979a38d16f7cef8f65ccf7960052a",
+    "scripts/build_pair_manifests.py": "40760be77aa2aae0e835049921df9a9034622e9c1b3c8b66be0080b1dbba70ad",
+    "configs/reconstruction_protocol.json": "02377d045ceeb34932eabbb227a72712707f8c7704be483206e13aaef644a9b2",
+    "configs/reconstruction_protocol_v1.json": "a6874d0013a8609ea02005c1283f240d75b36439f52f34fc59575225bfa3d3df",
+    "configs/meld/IS13_source_wrapper.diff": "6522d41f8100c20cbf06eb1ad4e64af9db573fbb528eccb1dfdebce06989439c",
+    "configs/meld/float_wave_amplitude_control.conf": "4eea878b5b251d489d5bd183092278baae6cc982ea72d890a251a9ad9b3467eb",
+    "configs/code_versions/run_converter_cv_v1.py": "e32b7ce541b75d5e2ce919d27c57c58c6079545f8ff9d4b3dd3f752b7f49222f",
+    "configs/code_versions/run_converter_cv_v2.py": "a889188edddc49016784e3fef80f98a71aedf55242b89caf9aea0ca298692453",
+    "configs/code_versions/converter_core_pre_fullridge.py": "aa3c78bd675b7c503ec80421d688509317a28ea00ba20846b9d635b73debc961",
+    "configs/code_versions/test_converter_core_pre_fullridge.py": "6e629b6fcb700a118834ff2bd8da8c2b847ddd1360af8c499fce0a968cce4ca8",
+    "configs/iemocap/code_versions/extract_iemocap_candidates.train_v1.py": "f3ea6b5b8adfbc4b6b48031ce35163ab156194f0c28f6023c7e75f0f5151c10b",
+    "provenance/input_hashes_before.json": "7269c6b34a9bb75f9fb9d2bbded50e4b37a5f4e8f7376a3c05cf3430be160d46",
+    "provenance/protocol_frozen.json": "8b4cd411f08a713c53f41e5155519f93679411023de7c7057077b7823d2b0319",
+    "provenance/protocol_frozen_v1.json": "3740e026cdef49f81392eec31f841cae89b08acee5e1f0dc8aba7ba9db4ddcae",
+    "provenance/protocol_revisions.json": "c8a40f3e9ad32a4d39a28f24c45733dcab16f8cb9170e729b8d9e13b65e6ad54",
+    "provenance/converter_code_versions.json": "c2d4406fa80f16bad62e110f5207b75143e809a571f1ad1509a068a3a0695f0b",
+    "provenance/cv_runner_versions.json": "7f368b6f839e7481aa7dfc616ebf49176f75cc57ecd8c65ae2f824f1f4971c08",
+    "provenance/iemocap_extraction_code_versions.json": "002659bcd3909221b389996941d4f25547f0e49b7d8e6eb7b5abee8f2e78134f",
+    "provenance/iemocap_extraction_configs.json": "cd8dc355acfebfb9c41a8072eec96fd243218c50774468d521a14a6d855870fb",
+    "provenance/iemocap_extraction_execution_environment.json": "d4279d4a338065f1f476078e2af8f7ef432d19dc045fcf178e720bc4478433e9",
+    "provenance/iemocap_extraction_train_verification.json": "605b13dcb89655d643819a33adb842f3b2aa7067d8b9a771ca1d0af67b9953f3",
+    "provenance/iemocap_extraction_validation_guard_tests.json": "79c97d04183bd04bc8b25651171ba6ffc292adda0284949426e4af533cf627ff",
+    "provenance/iemocap_extraction_validation_verification.json": "a4e410f7597342e3897fe3e6e119c2adc015afc1e6eb0e42f9dbabd42b4f1be2",
+    "provenance/meld_extraction_probe_verification.json": "6de75388017f577a9ae281d6a43059776027017697a89b09745cfe34a1d7a75d",
+    "provenance/meld_extraction_probe_recheck.json": "f0532e489c2413220f4b63547365d1e0f459266cbb00a2b16a317f3952242fe5",
+    "provenance/meld_extraction_train_verification.json": "d67a5537be8e8d05542bfbdbb535840d6aab1a228299b45d23c4aadd70d75e22",
+    "provenance/meld_extraction_validation_verification.json": "650b18e9a11d87e50e96aa9c880df71fc39dc2b2ee6e42cae2f8856e37899f7f",
+    "provenance/meld_extraction_float_amplitude_control.json": "9f17ad3556ccc6c95a92d78e4c38d5b3ed7ff245d258005cb24b93956222f94f",
+    "provenance/meld_extraction_float_interface.json": "5af0b485810cab2ee99fc490c06468ee548d2a44f5ea39221108e59632825ba1",
+    "provenance/MELD_frontend_shutdown_failure.json": "4c8c467194b69bc78410555f402e097929928a2663021f0927645ca6b0797af9",
+    "provenance/meld_extraction_initial_failed_preflight.json": "c8d0aacf2b54c4bad5379fccd009dd50b8fc5cf5bf7c88d7b8c514b25507484e",
+    "provenance/missing_media_candidate_qc.json": "29371bd1cf1c9400aac1e31234af722a23f435c030247232e7614de6a14dd9b8",
+    "provenance/train_missing_media_recovery.json": "bf26f13aa977dcdad2ec1a1c0979fecf787700714c47eb773977eebb6cd072a1",
+    "provenance/meld_train_scale300.json": "16a7ef4b4fa89998dc386b94ec0b7415d8203d8b94ce71a457b65d4b68d9bf5c",
+    "provenance/independent_train_boundary_review.json": "6cdf8024d10c8839199e544ed2c36a3db21166f33696397923b735d65b0f9845",
+    "provenance/independent_final_report_review.json": "8ab56c2b5f5a6fb9049d18f27482b0e251d2c4520bd061fcf07cf0e13441a1eb",
+    "provenance/final_probability_gate_verification.json": "ab92c7d7f1c768ea2fba3c460eb15fb9272e67b10ccacf4c248947ff68742514",
+    "provenance/xp04_probability_adapter_audit.json": "dc0dee2c178e9f4e84c9919381b12e38cb307818a9230023d07cadcad8a67f8f",
+    "provenance/IEMOCAP_frontend_cv.json": "0f7b1ab2d04dd50d6e1439da4adb89c4c1f7e79ccf8815d5b2e59b1e349ef46b",
+    "provenance/IEMOCAP_model_selection.json": "aa228704c45767602416d88091feb96a598d3cada9c4c4754e684abb2bd898d6",
+    "provenance/IEMOCAP_model_selection_final.json": "2a754593079b0b4fff83f89a31766a49270b22ad90f9e07345fdc1b0a9d15ed4",
+    "provenance/IEMOCAP_model_lock.json": "788294fb64adc841ba0e12df66a2dd034d52a7ff743b583ea711c5d11867723f",
+    "provenance/IEMOCAP_clean_feature_metrics.json": "24bc8afa4acdcc24ef89f4230c3d0ea9e60baaccef1b555c8702e2b4e78863a2",
+    "provenance/IEMOCAP_feature_gate.json": "039792cc3fce43c9bbfd253cace4be090b78d47c41856ed5ffd1f7835dcb9369",
+    "provenance/IEMOCAP_validation_evaluation_marker.json": "2c27673604f7eaeb5c6ded347aca75b33d6ac8feb10f6a0ef4a88b9ec7d23236",
+    "provenance/IEMOCAP_full_ridge_synthetic_tests.json": "08f7ae4e9188065aa5b7bcb39b75fb3430004fafb2d57ddad09ccf5e1ca959b2",
+    "provenance/MELD_frontend_cv.json": "214089c174ca5c10806a7362ec55c1bc1690c0a13ef4c591890cf3587ab08bd8",
+    "provenance/MELD_model_selection.json": "245eeeefd87549bdc4a0a468723081186dda2584365791639a1225ceb90d02e4",
+    "provenance/MELD_model_selection_final.json": "b8160f2487dca717a4bc033d8ae2b816870e69eac841c559714916eb5bef18d1",
+    "provenance/MELD_model_lock.json": "49a8ef9b5a52e34d80d253703bbf1624156b4e849db420fde6459d7c4bd2988b",
+    "provenance/MELD_clean_feature_metrics.json": "2d3edb12310ccbeaac71d2665f6ef92ff28f6ed6102376b48d70fb7e7dbd3bbb",
+    "provenance/MELD_feature_gate.json": "f670ffb73c40765a3e9179af731c909bcce8d84faee97e04aa4acf3f9e435d0b",
+    "provenance/MELD_validation_evaluation_marker.json": "bfe288d5fe2227d3e423d384ac1b327df24b3b15e0aafaaeab4f93e8f69b8b1a",
+    "provenance/MELD_full_ridge_synthetic_tests.json": "ee3a2320334b4b07fde1b284e1736cd8904a74c70f2e1130ae8d6577e9e7d1ec",
+    "provenance/local_original_converter_asset_search.json": "69149b13f5eb86cfba67f8aa619d2a4cfb3badb6a313b94a476ee5a352b64fd8",
+    "provenance/data_manifest_audit.json": "470e71de0f3006accfcc94f96103b193b21b82476fcab2346015bd905003b113",
+    "configs/iemocap/README.md": "1231883e67c49fbb28d11e05a4050422276f1d71bda8222cea6ae5939143a0af"
+  },
+  "public_edits": "Server paths/hostname redacted; local-only links point to explanatory note; README publication context; MELD dialogue records withheld; scientific results/thresholds retained; wrapper diff uses zero context to avoid whitespace-only context lines (same source include replacement)",
+  "excluded": [
+    "raw media",
+    "feature vectors",
+    "weights and fitted converter binary parameters",
+    "per-utterance manifests and records",
+    "private logs",
+    "source/config mirrors",
+    "server absolute paths"
+  ],
+  "files": [
+    {
+      "path": "CONVERTER_METHOD_COMPARISON.md",
+      "bytes": 15592,
+      "sha256": "aa6c68e6a6d2f772e6806e2659349eb8c4feedc0dab161f180374c9d938d3abf"
+    },
+    {
+      "path": "EXPERIMENT_PROTOCOL.md",
+      "bytes": 2652,
+      "sha256": "b3c92b3e5dffcfd0c22c7a13753942ec567aa36813a56d9ffbd450bb4706a39a"
+    },
+    {
+      "path": "FINAL_RECONSTRUCTION_DECISION.md",
+      "bytes": 6261,
+      "sha256": "7e782b8036a065db61ad2a23659a88c6111c80844e6473500048f23ab39abc5a"
+    },
+    {
+      "path": "IEMOCAP_CLEAN_PARITY_REPORT.md",
+      "bytes": 7564,
+      "sha256": "7ab0bb9b06c574745f1ae78a59b25e072502717031d9c558b7f0bd7a345cb46a"
+    },
+    {
+      "path": "IEMOCAP_FEATURE_RECONSTRUCTION.md",
+      "bytes": 8669,
+      "sha256": "a1de448167adeaf204b275a17f613ebcc0e3abeacd0ca4065f7b5f6b7857bd7f"
+    },
+    {
+      "path": "LOCAL_ONLY.md",
+      "bytes": 838,
+      "sha256": "5492875974fc09195e9d6428eb233cac61524398457b36b211bd2bd85b1d71ea"
+    },
+    {
+      "path": "MELD_CLEAN_PARITY_REPORT.md",
+      "bytes": 8848,
+      "sha256": "a5bb390b4a91a4d8cf34ba74e5b237850dda851a14ec3d369dabe6752e6f3ecb"
+    },
+    {
+      "path": "MELD_FEATURE_RECONSTRUCTION.md",
+      "bytes": 9558,
+      "sha256": "bbb443bc4ba0c64e7137125f4c648a6e13988fbd5dea1900432a74f9b5bae027"
+    },
+    {
+      "path": "PUBLICATION_NOTE.md",
+      "bytes": 2467,
+      "sha256": "1c05dc24e3197471ffcb13d6618c9027513d08d30c8444e2f951e58e20c75c6e"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1469,
+      "sha256": "7bc7ae1bdc6f6bcd579e21f48d904e03f32bbb8347ac8751fe62a32e02a0411f"
+    },
+    {
+      "path": "XP04_PROBABILITY_PARITY_REPORT.md",
+      "bytes": 4076,
+      "sha256": "8ec75cf1a411955b822898c6101c55816a09003daeabf848829d6a25028a13b3"
+    },
+    {
+      "path": "clean_parity_summary.csv",
+      "bytes": 701,
+      "sha256": "01e26eb588cfeb0428be0332ffce9a5e16b1098e38ed8c652e5951e9eba97ba6"
+    },
+    {
+      "path": "configs/code_versions/converter_core_pre_fullridge.py",
+      "bytes": 21847,
+      "sha256": "aa3c78bd675b7c503ec80421d688509317a28ea00ba20846b9d635b73debc961"
+    },
+    {
+      "path": "configs/code_versions/run_converter_cv_v1.py",
+      "bytes": 24880,
+      "sha256": "e32b7ce541b75d5e2ce919d27c57c58c6079545f8ff9d4b3dd3f752b7f49222f"
+    },
+    {
+      "path": "configs/code_versions/run_converter_cv_v2.py",
+      "bytes": 24923,
+      "sha256": "a889188edddc49016784e3fef80f98a71aedf55242b89caf9aea0ca298692453"
+    },
+    {
+      "path": "configs/code_versions/test_converter_core_pre_fullridge.py",
+      "bytes": 8205,
+      "sha256": "6e629b6fcb700a118834ff2bd8da8c2b847ddd1360af8c499fce0a968cce4ca8"
+    },
+    {
+      "path": "configs/iemocap/README.md",
+      "bytes": 2747,
+      "sha256": "7b651f8f20954eea004ad4d54b645bb42af11dd77fc8dc58c40634c191f3a763"
+    },
+    {
+      "path": "configs/iemocap/code_versions/extract_iemocap_candidates.train_v1.py",
+      "bytes": 13942,
+      "sha256": "f3ea6b5b8adfbc4b6b48031ce35163ab156194f0c28f6023c7e75f0f5151c10b"
+    },
+    {
+      "path": "configs/meld/IS13_source_wrapper.diff",
+      "bytes": 155,
+      "sha256": "b835a7dde596e633301b5e35a979c5a444901262dfb03424156210d12a409162"
+    },
+    {
+      "path": "configs/meld/float_wave_amplitude_control.conf",
+      "bytes": 172,
+      "sha256": "4eea878b5b251d489d5bd183092278baae6cc982ea72d890a251a9ad9b3467eb"
+    },
+    {
+      "path": "configs/reconstruction_protocol.json",
+      "bytes": 6037,
+      "sha256": "02377d045ceeb34932eabbb227a72712707f8c7704be483206e13aaef644a9b2"
+    },
+    {
+      "path": "configs/reconstruction_protocol_v1.json",
+      "bytes": 5069,
+      "sha256": "a6874d0013a8609ea02005c1283f240d75b36439f52f34fc59575225bfa3d3df"
+    },
+    {
+      "path": "converter_method_comparison.csv",
+      "bytes": 100006,
+      "sha256": "47cb2a505596d55e829ec1284701090994c903d3f4e69c445317b0a34dff3cde"
+    },
+    {
+      "path": "provenance/IEMOCAP_clean_feature_metrics.json",
+      "bytes": 6892,
+      "sha256": "24bc8afa4acdcc24ef89f4230c3d0ea9e60baaccef1b555c8702e2b4e78863a2"
+    },
+    {
+      "path": "provenance/IEMOCAP_feature_gate.json",
+      "bytes": 785,
+      "sha256": "039792cc3fce43c9bbfd253cace4be090b78d47c41856ed5ffd1f7835dcb9369"
+    },
+    {
+      "path": "provenance/IEMOCAP_frontend_cv.json",
+      "bytes": 758557,
+      "sha256": "b03058f597d88e06decf5e2a1b4b4d97d9b44668c97763a068a7381c6279f82c"
+    },
+    {
+      "path": "provenance/IEMOCAP_full_ridge_synthetic_tests.json",
+      "bytes": 1486,
+      "sha256": "08f7ae4e9188065aa5b7bcb39b75fb3430004fafb2d57ddad09ccf5e1ca959b2"
+    },
+    {
+      "path": "provenance/IEMOCAP_model_lock.json",
+      "bytes": 2193,
+      "sha256": "5d5e4538a1966275f860af90a72c313bac88eb7be211b2aa46a40e8fb709c490"
+    },
+    {
+      "path": "provenance/IEMOCAP_model_selection.json",
+      "bytes": 147404,
+      "sha256": "ac2a6e1fae1335f40674b3d82c9827f07751e2efbe0991ae3fb7ff59f56a55bd"
+    },
+    {
+      "path": "provenance/IEMOCAP_model_selection_final.json",
+      "bytes": 188538,
+      "sha256": "d03af8a062ab048d4d68e0cb8ebf0db329ab86d9d383ca45bb9868e1f04ec284"
+    },
+    {
+      "path": "provenance/IEMOCAP_validation_evaluation_marker.json",
+      "bytes": 2080,
+      "sha256": "2c27673604f7eaeb5c6ded347aca75b33d6ac8feb10f6a0ef4a88b9ec7d23236"
+    },
+    {
+      "path": "provenance/MELD_clean_feature_metrics.json",
+      "bytes": 13722,
+      "sha256": "fd1482dcf2fdac7a5c4eb24c3f5e4f62e57c9ba40df559512ff88c5ad4a62eca"
+    },
+    {
+      "path": "provenance/MELD_feature_gate.json",
+      "bytes": 1006,
+      "sha256": "f670ffb73c40765a3e9179af731c909bcce8d84faee97e04aa4acf3f9e435d0b"
+    },
+    {
+      "path": "provenance/MELD_frontend_cv.json",
+      "bytes": 809364,
+      "sha256": "e386b0a1b47f53e340ccb190d22dfccb2c83822853bb2f3a1e6eaacd16a416b5"
+    },
+    {
+      "path": "provenance/MELD_frontend_shutdown_failure.json",
+      "bytes": 793,
+      "sha256": "4c8c467194b69bc78410555f402e097929928a2663021f0927645ca6b0797af9"
+    },
+    {
+      "path": "provenance/MELD_full_ridge_synthetic_tests.json",
+      "bytes": 1486,
+      "sha256": "ee3a2320334b4b07fde1b284e1736cd8904a74c70f2e1130ae8d6577e9e7d1ec"
+    },
+    {
+      "path": "provenance/MELD_model_lock.json",
+      "bytes": 2362,
+      "sha256": "cfa40198f5284d7b5af6c3d8de9dce21328a708f8f249b9c780230027c7100eb"
+    },
+    {
+      "path": "provenance/MELD_model_selection.json",
+      "bytes": 108679,
+      "sha256": "104fdfe6be530dfda9ab9fba00f76d9582a54232c5c6340201d7a8fea8cf9406"
+    },
+    {
+      "path": "provenance/MELD_model_selection_final.json",
+      "bytes": 149628,
+      "sha256": "18bf08170f28f3f5ac36332f978fae41e2b2bb612980ed5a0d1093e0cd73fefd"
+    },
+    {
+      "path": "provenance/MELD_validation_evaluation_marker.json",
+      "bytes": 2428,
+      "sha256": "bfe288d5fe2227d3e423d384ac1b327df24b3b15e0aafaaeab4f93e8f69b8b1a"
+    },
+    {
+      "path": "provenance/converter_code_versions.json",
+      "bytes": 2645,
+      "sha256": "c2d4406fa80f16bad62e110f5207b75143e809a571f1ad1509a068a3a0695f0b"
+    },
+    {
+      "path": "provenance/cv_runner_versions.json",
+      "bytes": 833,
+      "sha256": "7f368b6f839e7481aa7dfc616ebf49176f75cc57ecd8c65ae2f824f1f4971c08"
+    },
+    {
+      "path": "provenance/data_manifest_audit.json",
+      "bytes": 5887,
+      "sha256": "916456836a87822ec52b58e55ad93eb4ac5fc644c94338eb3f2174ee7d80950e"
+    },
+    {
+      "path": "provenance/final_probability_gate_verification.json",
+      "bytes": 8001,
+      "sha256": "a79dd94beee0cf68ac4c6687190a31c46380a1583f96742f71d6ddaed678c22d"
+    },
+    {
+      "path": "provenance/iemocap_extraction_code_versions.json",
+      "bytes": 605,
+      "sha256": "bd1094be53acfe249e4d40bf7b670fca949651d77ce041c593fb94bd7caf1fb7"
+    },
+    {
+      "path": "provenance/iemocap_extraction_configs.json",
+      "bytes": 9446,
+      "sha256": "ade36529d46a188061cf169554e7da6edf22ec286b5fd9fbf7e422e1064e60e8"
+    },
+    {
+      "path": "provenance/iemocap_extraction_execution_environment.json",
+      "bytes": 1214,
+      "sha256": "b661e4f22abd2a943075a82d1eec5e94533435c1685981a19103cd17d9ecc6f9"
+    },
+    {
+      "path": "provenance/iemocap_extraction_train_verification.json",
+      "bytes": 4860,
+      "sha256": "605b13dcb89655d643819a33adb842f3b2aa7067d8b9a771ca1d0af67b9953f3"
+    },
+    {
+      "path": "provenance/iemocap_extraction_validation_guard_tests.json",
+      "bytes": 1019,
+      "sha256": "79c97d04183bd04bc8b25651171ba6ffc292adda0284949426e4af533cf627ff"
+    },
+    {
+      "path": "provenance/iemocap_extraction_validation_verification.json",
+      "bytes": 2228,
+      "sha256": "8a767b3017b686667a6f4beff277d9817744a53e6f4539ec8793f55cc0684312"
+    },
+    {
+      "path": "provenance/independent_final_report_review.json",
+      "bytes": 10415,
+      "sha256": "8ab56c2b5f5a6fb9049d18f27482b0e251d2c4520bd061fcf07cf0e13441a1eb"
+    },
+    {
+      "path": "provenance/independent_train_boundary_review.json",
+      "bytes": 50160,
+      "sha256": "b23f5591e2e074922d063d7eab47496871edd9db1275e2f363b7254eda6b195f"
+    },
+    {
+      "path": "provenance/input_hashes_before.json",
+      "bytes": 1966,
+      "sha256": "34ba0e770e7db67368b5f08ae80bc8e5fe6e25fb35c11637b8496b1bc27ce7f1"
+    },
+    {
+      "path": "provenance/local_original_converter_asset_search.json",
+      "bytes": 3674,
+      "sha256": "0280ebd34b9852cf35b3d93e014b7bbf6ac1f622315d380a31178c876ce774c8"
+    },
+    {
+      "path": "provenance/meld_extraction_float_amplitude_control.json",
+      "bytes": 441,
+      "sha256": "9f17ad3556ccc6c95a92d78e4c38d5b3ed7ff245d258005cb24b93956222f94f"
+    },
+    {
+      "path": "provenance/meld_extraction_float_interface.json",
+      "bytes": 2265,
+      "sha256": "5af0b485810cab2ee99fc490c06468ee548d2a44f5ea39221108e59632825ba1"
+    },
+    {
+      "path": "provenance/meld_extraction_initial_failed_preflight.json",
+      "bytes": 674,
+      "sha256": "c8d0aacf2b54c4bad5379fccd009dd50b8fc5cf5bf7c88d7b8c514b25507484e"
+    },
+    {
+      "path": "provenance/meld_extraction_probe_recheck.json",
+      "bytes": 3627,
+      "sha256": "f0532e489c2413220f4b63547365d1e0f459266cbb00a2b16a317f3952242fe5"
+    },
+    {
+      "path": "provenance/meld_extraction_probe_verification.json",
+      "bytes": 1532,
+      "sha256": "6de75388017f577a9ae281d6a43059776027017697a89b09745cfe34a1d7a75d"
+    },
+    {
+      "path": "provenance/meld_extraction_train_verification.json",
+      "bytes": 874,
+      "sha256": "3da23f0392c42ad4a81e71c18fd5647f057da383ed3003dbb06dac1dfae0d93e"
+    },
+    {
+      "path": "provenance/meld_extraction_validation_verification.json",
+      "bytes": 871,
+      "sha256": "650b18e9a11d87e50e96aa9c880df71fc39dc2b2ee6e42cae2f8856e37899f7f"
+    },
+    {
+      "path": "provenance/meld_train_scale300.json",
+      "bytes": 494,
+      "sha256": "abb2ba60b11225c89cb8309e7a9bf0c303c79daca85e25f192631a3a1b74c79a"
+    },
+    {
+      "path": "provenance/missing_media_candidate_qc.json",
+      "bytes": 755,
+      "sha256": "7f4b62b4ba5b832cb975a3cd0f9c19dc232888f046a8c9c5b799de4a4c4be683"
+    },
+    {
+      "path": "provenance/protocol_frozen.json",
+      "bytes": 426,
+      "sha256": "8b4cd411f08a713c53f41e5155519f93679411023de7c7057077b7823d2b0319"
+    },
+    {
+      "path": "provenance/protocol_frozen_v1.json",
+      "bytes": 250,
+      "sha256": "3740e026cdef49f81392eec31f841cae89b08acee5e1f0dc8aba7ba9db4ddcae"
+    },
+    {
+      "path": "provenance/protocol_revisions.json",
+      "bytes": 831,
+      "sha256": "c8a40f3e9ad32a4d39a28f24c45733dcab16f8cb9170e729b8d9e13b65e6ad54"
+    },
+    {
+      "path": "provenance/train_missing_media_recovery.json",
+      "bytes": 926,
+      "sha256": "4f34f42cef2fb75871477bc99389f445cdc900d5dec71b266f7093231d5f6af0"
+    },
+    {
+      "path": "provenance/xp04_probability_adapter_audit.json",
+      "bytes": 6450,
+      "sha256": "06e602cfa4624cad9d3264a2a841217d1bcebaf999c9cb6a8cdd8d5911166314"
+    },
+    {
+      "path": "scripts/build_pair_manifests.py",
+      "bytes": 11709,
+      "sha256": "c61ad1431064a44f658125940811a1dd9a196c6dedc1fc89ea9b3a62609262d6"
+    },
+    {
+      "path": "scripts/converter_core.py",
+      "bytes": 24675,
+      "sha256": "afe198de532a40063f8763f5331c9f1641b1749ab3bd2971987186c7b8d721e8"
+    },
+    {
+      "path": "scripts/evaluate_clean_reconstruction.py",
+      "bytes": 25918,
+      "sha256": "cf944f1f910d21aecc47006a04d5a7092568608ca512013baf141eef224053dd"
+    },
+    {
+      "path": "scripts/extract_iemocap_candidates.py",
+      "bytes": 17318,
+      "sha256": "f9d409c83c9e4556646fff19b9fd31ac30f741b000f38311a41f7bff459edcac"
+    },
+    {
+      "path": "scripts/extract_meld_candidates.py",
+      "bytes": 17116,
+      "sha256": "e9e54d87cda631eb630ab99899bca6b8617b6e47dcd9c2308d8eeffd0d46bb97"
+    },
+    {
+      "path": "scripts/recheck_meld_probe.py",
+      "bytes": 4176,
+      "sha256": "dc9750d89ffdceabf7f966fcfda44f6b4ea584f76a9f8f4459eaefadf0d9e4b9"
+    },
+    {
+      "path": "scripts/run_converter_cv.py",
+      "bytes": 24923,
+      "sha256": "a889188edddc49016784e3fef80f98a71aedf55242b89caf9aea0ca298692453"
+    },
+    {
+      "path": "scripts/run_full_ridge_extension.py",
+      "bytes": 15066,
+      "sha256": "c0733ead972e899c36d1de44e105f212ac3979a38d16f7cef8f65ccf7960052a"
+    },
+    {
+      "path": "scripts/run_meld_validation_once.py",
+      "bytes": 4864,
+      "sha256": "4a49d247b4d87cebabad175e0a68da22d3d527fd3b2b623dbb3dbb8a6d371658"
+    },
+    {
+      "path": "scripts/run_xp04_probability_parity.py",
+      "bytes": 16594,
+      "sha256": "cd621bb4e6e0a0abfd614e058b791891f3ffa6d7ee3969c5c73509cda0a5381a"
+    },
+    {
+      "path": "scripts/test_converter_core.py",
+      "bytes": 10040,
+      "sha256": "ed8ba82d10c3bd56c995475bf3cc29378ad7fe1690ca1cb97400abe2a4632181"
+    },
+    {
+      "path": "scripts/test_evaluate_clean_reconstruction.py",
+      "bytes": 6607,
+      "sha256": "bc4cef36bb3772de51b9f3506a32b02dd74a29835ee319d6d4b107a49f6e1763"
+    },
+    {
+      "path": "scripts/verify_delivery.py",
+      "bytes": 10299,
+      "sha256": "990afbfb5b28da9f47430d5f6f0dfb6e0e4a2a443b0f0c5f210f9c272c69fc10"
+    },
+    {
+      "path": "scripts/write_global_delivery.py",
+      "bytes": 9070,
+      "sha256": "dbab82eb3032f67c875bf28363939a0a79f0e194733b00d7273701ce16147d43"
+    },
+    {
+      "path": "verification.json",
+      "bytes": 31848,
+      "sha256": "2d0d10685122913bce295fb77473f874c585f107f6d4e2223fc9617aac6e8933"
+    }
+  ],
+  "manifest_self_integrity": "Git commit provides manifest integrity; manifest itself and publication_verification.json excluded to avoid cycles"
+}

@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "checks": {
+    "valid_lock_selects_only_one_candidate": true,
+    "reject_wrong_dataset": true,
+    "reject_unknown_candidate": true,
+    "reject_wrong_transform": true,
+    "reject_not_train_only": true,
+    "reject_validation_already_opened": true,
+    "reject_not_group_cv": true,
+    "reject_no_timestamp": true,
+    "reject_wrong_protocol_hash": true,
+    "reject_wrong_config_path": true,
+    "reject_wrong_config_hash": true,
+    "reject_wrong_header_hash": true,
+    "reject_wrong_converter_hash": true,
+    "reject_wrong_validation_output": true,
+    "reject_wrong_manifest_path": true,
+    "reject_cli_manifest_mismatch": true,
+    "synthetic_block_only_locked_candidate": true,
+    "synthetic_block_no_error": true
+  },
+  "count": 18,
+  "validation_media_opened": false,
+  "validation_targets_opened": false,
+  "synthetic_hash_function_used": true,
+  "synthetic_waveform_only": true,
+  "extraction_script_sha256": "f9d409c83c9e4556646fff19b9fd31ac30f741b000f38311a41f7bff459edcac"
+}

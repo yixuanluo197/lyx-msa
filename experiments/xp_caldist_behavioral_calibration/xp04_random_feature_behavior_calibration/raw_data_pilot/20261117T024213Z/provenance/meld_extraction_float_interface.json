@@ -1,0 +1,69 @@
+{
+  "checks": [
+    {
+      "row_index": 14,
+      "dialogue_id": 1,
+      "utterance_id": 0,
+      "source_channels": 6,
+      "source_samples": 39595,
+      "external_pcm16_vs_float_wav_of_same_quantized_samples": {
+        "shape": [
+          6373
+        ],
+        "max_abs_error": 442368.0,
+        "mae": 89.78322732454065,
+        "array_equal": false
+      },
+      "unquantized_float_wav_vs_external_pcm16": {
+        "max_abs_error": 1244266496.0,
+        "mae": 363254.73025127576
+      },
+      "decoded_float_sha256": "e540b68c2f8dc5657b07b1c5d10cfc38fc2e482e93377ce2cc644a73af88da67",
+      "float_wave_values_retained_without_clipping": true
+    },
+    {
+      "row_index": 47,
+      "dialogue_id": 4,
+      "utterance_id": 4,
+      "source_channels": 6,
+      "source_samples": 21504,
+      "external_pcm16_vs_float_wav_of_same_quantized_samples": {
+        "shape": [
+          6373
+        ],
+        "max_abs_error": 2176.0,
+        "mae": 0.34403181937755517,
+        "array_equal": false
+      },
+      "unquantized_float_wav_vs_external_pcm16": {
+        "max_abs_error": 57606144.0,
+        "mae": 17770.058461214114
+      },
+      "decoded_float_sha256": "5aa75e166de7eb1b8524c9a89e6868486fd7eb07d93ecd3ec9c4f57c23815ad8",
+      "float_wave_values_retained_without_clipping": true
+    },
+    {
+      "row_index": 85,
+      "dialogue_id": 7,
+      "utterance_id": 1,
+      "source_channels": 6,
+      "source_samples": 65536,
+      "external_pcm16_vs_float_wav_of_same_quantized_samples": {
+        "shape": [
+          6373
+        ],
+        "max_abs_error": 57344.0,
+        "mae": 15.18990961612585,
+        "array_equal": false
+      },
+      "unquantized_float_wav_vs_external_pcm16": {
+        "max_abs_error": 1384644608.0,
+        "mae": 460321.49102027866
+      },
+      "decoded_float_sha256": "b6a81168b6bd76c7dd07e73e238d88b9504767fe20b463d497e7e7260cfea8ac",
+      "float_wave_values_retained_without_clipping": true
+    }
+  ],
+  "interpretation": "Same quantized input controls cWaveSource vs external source. Unquantized float WAV is the frozen candidate interface, not original production.",
+  "candidate_interface": "float32 IEEE WAV -> official cWaveSource; zscore values outside [-1,1] retained, avoiding int16 wrap."
+}

@@ -1,0 +1,122 @@
+{
+  "status": "COMPLETE_WITH_MISSING_MEDIA",
+  "environment": {
+    "python": "3.13.11",
+    "numpy": "2.4.4"
+  },
+  "fieldnames": [
+    "row_index",
+    "dataset",
+    "split",
+    "dialogue_id",
+    "utterance_index",
+    "raw_dialogue_id",
+    "raw_utterance_id",
+    "speaker_id",
+    "media_path",
+    "media_exists",
+    "media_sha256"
+  ],
+  "row_order": "effective split IDs in stored order; each XP04 videoIDs list in stored order",
+  "datasets": {
+    "IEMOCAP": {
+      "seed": 1475,
+      "target_train_shape": [
+        5283,
+        1582
+      ],
+      "target_train_dtype": "float64",
+      "groups_dtype": "<U17",
+      "target_train_finite": true,
+      "train_dialogues": 108,
+      "validation_dialogues": 12,
+      "train_utterances": 5283,
+      "validation_utterances": 527,
+      "train_target_min": -50.597652435302734,
+      "train_target_max": 67.78350830078125,
+      "train_target_zero_rows": 0,
+      "train_media_present": 5283,
+      "train_raw_id_differs_from_array_index": null,
+      "validation_media_present": 527,
+      "validation_raw_id_differs_from_array_index": null
+    },
+    "MELD": {
+      "seed": 67137,
+      "target_train_shape": [
+        9989,
+        1611
+      ],
+      "target_train_dtype": "float64",
+      "groups_dtype": "<U4",
+      "target_train_finite": true,
+      "train_dialogues": 1038,
+      "validation_dialogues": 114,
+      "train_utterances": 9989,
+      "validation_utterances": 1109,
+      "train_target_min": 0.0,
+      "train_target_max": 1.0000000000000002,
+      "train_target_zero_rows": 3,
+      "train_media_present": 9988,
+      "train_raw_id_differs_from_array_index": 441,
+      "validation_media_present": 1108,
+      "validation_raw_id_differs_from_array_index": 10
+    }
+  },
+  "missing_media": [
+    {
+      "dataset": "MELD",
+      "split": "train",
+      "dialogue_id": "125",
+      "raw_utterance_id": 3,
+      "media_path": "/LOCAL/MELD_ASSETS/raw/MELD/MELD.Raw/train_splits/dia125_utt3.mp4"
+    },
+    {
+      "dataset": "MELD",
+      "split": "validation",
+      "dialogue_id": "1149",
+      "raw_utterance_id": 7,
+      "media_path": "/LOCAL/MELD_ASSETS/raw/MELD/MELD.Raw/dev_splits_complete/dia110_utt7.mp4"
+    }
+  ],
+  "source_sha256": {
+    "/LOCAL/MELD_ASSETS/raw/MELD/MELD.Features.Models/features/audio_embeddings_feature_selection_emotion.pkl": "0cda206983988ab61de5b30ec32b8ac652e133f84cda4d3d8105a2db8fea363e",
+    "/LOCAL/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/configs/effective/IEMOCAP_cmerc_validation_seed1475.json": "59e40ae7b7d63bb5f56806eedefb2f70c6797095455f63c083917b1141275369",
+    "/LOCAL/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/code/data/IEMOCAP_features.pkl": "ceb5cc9a45d1792998438e27f86a12642320aa6315546e4425316140ea503fb3",
+    "/LOCAL/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/configs/effective/MELD_cmerc_validation_seed67137.json": "5d6271460c882dc34bf55bbcdec96afd09bb6b963c238745e04a54fb20515f68",
+    "/LOCAL/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/code/data/MELD_features_raw1.pkl": "d043b3ec1813c8917e2067af01e933ff0892d33d19d93595098aaf88c4b200b0",
+    "/LOCAL/MELD_ASSETS/raw/MELD/MELD.Raw/train_sent_emo.csv": "4e3907e95e7ad4fd413a5a58d807dee79ebdb0c16b050cd33c3a3ac35ddb9ebf",
+    "/LOCAL/MELD_ASSETS/raw/MELD/MELD.Raw/dev_sent_emo.csv": "7e306369c2d1625b063132310aa30bc6979fcf0f51c783e903edfcaa1c98b15c",
+    "/LOCAL/MELD_ASSETS/raw/MELD/MELD.Raw/train.tar.gz": "9e21026f1ef3225dcaa690cac7aa93263b7fb20506c6058185ad728f2d800dbe",
+    "/LOCAL/MELD_ASSETS/raw/MELD/MELD.Raw/dev.tar.gz": "49c800042bb5cb87a32b8473eb93f36bf0fad7cc134ddf1a9bc3b7a25ca5c468"
+  },
+  "artifact_sha256": {
+    "local_only/IEMOCAP/manifest_train.csv": "9c9eb0337e4ec611a744562dc7821309261a2236e8fc190748acd695485ecf70",
+    "local_only/IEMOCAP/manifest_validation.csv": "9f87f720d66ba916d4e5ee105bb326aa2867181b198ca2ebb4a7b4d4624c0080",
+    "local_only/IEMOCAP/target_train.npy": "01d3d873da56d9f57bf77cc74cd9f5bc31afc19b004bfa606d91e2bb69538db1",
+    "local_only/IEMOCAP/groups_train.npy": "6b5ed3ad1735b45978cf232516b60a966749234a4cdba89f76f1599a644fb5d8",
+    "local_only/MELD/manifest_train.csv": "e26008114645a013e86bd54030efc0d15c65dd863f05a83e4887f20cb5cccbd0",
+    "local_only/MELD/manifest_validation.csv": "61f666f7969665e20cae51f4886349d8ee0d9c1053e7bad3ffb2bbf84f0e610b",
+    "local_only/MELD/target_train.npy": "d35161bc49dce789cde5e037dda9e9bd8f0e002cdac62a543998f8c8836e47fa",
+    "local_only/MELD/groups_train.npy": "a452d439a53fac1c9f611d0b7e5f1e5287b222f1090c38acfa00cd68e438220f"
+  },
+  "media_files_hashed": 16906,
+  "media_hash_algorithm": "SHA-256 complete file bytes",
+  "targets_exported": "Train only; IEMOCAP XP04 base audio slot 4, MELD official selected emotion slot 0",
+  "shared_pickle_deserialization": true,
+  "test_ids_indexed": false,
+  "test_features_indexed": false,
+  "labels_indexed": false,
+  "validation_target_values_indexed": false,
+  "validation_target_values_exported": false,
+  "media_decode_executed": false,
+  "training_executed": false,
+  "external_upload_executed": false,
+  "missing_media_candidate_qc": "provenance/missing_media_candidate_qc.json",
+  "train_missing_media_recovery": "provenance/train_missing_media_recovery.json",
+  "missing_media_archive_search": "provenance/media_missing_archive_search.json",
+  "raw_train_validation_archive_hashes": "provenance/raw_train_validation_archive_hashes.json",
+  "manifest_independent_verification": "provenance/data_manifest_verification.json",
+  "script_sha256": "40760be77aa2aae0e835049921df9a9034622e9c1b3c8b66be0080b1dbba70ad",
+  "script_compile": "PASS",
+  "media_missing_recovery_decision": "Train125/3 archive member and same-split copy both corrupt, rejected; Validation110/7 absent from existing dev archive. Neither manifest row filled with data from other splits."
+}

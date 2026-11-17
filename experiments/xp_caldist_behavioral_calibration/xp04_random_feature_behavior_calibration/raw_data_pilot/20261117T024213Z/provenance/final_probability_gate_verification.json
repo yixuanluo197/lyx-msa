@@ -1,0 +1,193 @@
+{
+  "status": "VERIFIED_NOT_RUN_FEATURE_GATES_FAILED",
+  "created_at_utc": "2026-11-17T03:20:02.557584+00:00",
+  "scope": "Non-inference guard validation for frozen XP04 only",
+  "model_forward_executed": false,
+  "checkpoint_deserialized": false,
+  "checkpoint_hashes_verified": true,
+  "test_features_or_labels_used": false,
+  "softmax_comparison_executed": false,
+  "reconstruction_gate_inputs": {
+    "IEMOCAP": {
+      "passed": false,
+      "clean_feature_parity_passed": false,
+      "validation_independent": true,
+      "full_validation_coverage": true,
+      "fit_effective_train_only": true,
+      "train_dialogue_group_cv_only": true,
+      "model_locked_before_validation": true,
+      "test_used": false,
+      "validation_rows": 527,
+      "output_width": 1582,
+      "rebuilt_audio_sha256": "1d5a0ac94facc981dba919e02163a0982321b5a4adf422f0e8a27aff93acce74",
+      "manifest_sha256": "9f87f720d66ba916d4e5ee105bb326aa2867181b198ca2ebb4a7b4d4624c0080",
+      "model_lock_sha256": "788294fb64adc841ba0e12df66a2dd034d52a7ff743b583ea711c5d11867723f",
+      "new_validation_untuned": true,
+      "historical_validation_exposure_disclosed": true
+    },
+    "MELD": {
+      "passed": false,
+      "clean_feature_parity_passed": false,
+      "validation_independent": true,
+      "full_validation_coverage": false,
+      "fit_effective_train_only": true,
+      "train_dialogue_group_cv_only": true,
+      "model_locked_before_validation": true,
+      "test_used": false,
+      "validation_rows": 1109,
+      "output_width": 300,
+      "rebuilt_audio_sha256": "dfa3b8523feedfa0ce6d07b4bb88e7963dd2a63c957796ea177c4c5d0d3a3127",
+      "manifest_sha256": "61f666f7969665e20cae51f4886349d8ee0d9c1053e7bad3ffb2bbf84f0e610b",
+      "model_lock_sha256": "49a8ef9b5a52e34d80d253703bbf1624156b4e849db420fde6459d7c4bd2988b",
+      "new_validation_untuned": true,
+      "historical_validation_exposure_disclosed": true,
+      "selected1611_parity_passed": false,
+      "context300_parity_passed": false,
+      "full_dialogue_bigru_context": false,
+      "real_lengths_and_order_preserved": true,
+      "padding33_and_masking_preserved": true
+    }
+  },
+  "feature_gate_detail": {
+    "IEMOCAP": {
+      "selected_shape": [
+        527,
+        1582
+      ],
+      "selected_finite_rows": 527,
+      "selected_nonfinite_rows": 0,
+      "selected_max_absolute_error": 17.91040999362704,
+      "selected_mae": 0.013547293658121474,
+      "selected_gate_checks": {
+        "all_finite": true,
+        "full_coverage": true,
+        "all_elements_allclose": false,
+        "mae": false,
+        "train_scaled_rmse": false,
+        "mean_cosine": false,
+        "min_cosine": false,
+        "required_target_correlations_defined": true,
+        "correlation_p05": false
+      }
+    },
+    "MELD": {
+      "selected_shape": [
+        1109,
+        1611
+      ],
+      "selected_finite_rows": 1108,
+      "selected_nonfinite_rows": 1,
+      "selected_max_absolute_error": 2.319467679881958,
+      "selected_mae": 0.06832476573524446,
+      "selected_gate_checks": {
+        "all_finite": false,
+        "full_coverage": false,
+        "all_elements_allclose": false,
+        "mae": false,
+        "train_scaled_rmse": false,
+        "mean_cosine": false,
+        "min_cosine": false,
+        "required_target_correlations_defined": true,
+        "correlation_p05": false
+      },
+      "context300_shape": [
+        1109,
+        300
+      ],
+      "context300_finite_rows": 1099,
+      "context300_nonfinite_rows": 10,
+      "context300_max_absolute_error": 1.500553011894226,
+      "context300_mae": 0.02218877079752358,
+      "context300_gate_checks": {
+        "all_finite": false,
+        "full_coverage": false,
+        "all_elements_allclose": false,
+        "mae": false,
+        "train_scaled_rmse": false,
+        "mean_cosine": false,
+        "min_cosine": false,
+        "required_target_correlations_defined": true,
+        "correlation_p05": false
+      },
+      "complete_raw_input_dialogues": 113,
+      "incomplete_raw_input_dialogues": 1
+    }
+  },
+  "datasets": {
+    "IEMOCAP": {
+      "execution_status": "NOT_RUN",
+      "guard_test": {
+        "dataset": "IEMOCAP",
+        "status": "EXPECTED_REJECTION",
+        "exception_type": "ValueError",
+        "message": "Feature gate required: IEMOCAP.passed=true",
+        "model_import_attempts": [],
+        "parameter_or_array_open_attempts": [],
+        "model_helper_calls": [],
+        "torch_in_sys_modules": false,
+        "numpy_in_sys_modules": false,
+        "checkpoint_deserialized": false,
+        "feature_arrays_loaded": false,
+        "forward_executed": false
+      },
+      "feature_gate_sha256": "039792cc3fce43c9bbfd253cace4be090b78d47c41856ed5ffd1f7835dcb9369",
+      "clean_feature_metrics_sha256": "24bc8afa4acdcc24ef89f4230c3d0ea9e60baaccef1b555c8702e2b4e78863a2",
+      "probability_metrics": {
+        "maximum_absolute_probability_error": null,
+        "mean_absolute_probability_error": null,
+        "predicted_class_agreement": null,
+        "maximum_absolute_confidence_error": null
+      },
+      "softmax_arrays_generated": false
+    },
+    "MELD": {
+      "execution_status": "NOT_RUN",
+      "guard_test": {
+        "dataset": "MELD",
+        "status": "EXPECTED_REJECTION",
+        "exception_type": "ValueError",
+        "message": "Feature gate required: MELD.passed=true",
+        "model_import_attempts": [],
+        "parameter_or_array_open_attempts": [],
+        "model_helper_calls": [],
+        "torch_in_sys_modules": false,
+        "numpy_in_sys_modules": false,
+        "checkpoint_deserialized": false,
+        "feature_arrays_loaded": false,
+        "forward_executed": false
+      },
+      "feature_gate_sha256": "f670ffb73c40765a3e9179af731c909bcce8d84faee97e04aa4acf3f9e435d0b",
+      "clean_feature_metrics_sha256": "2d3edb12310ccbeaac71d2665f6ef92ff28f6ed6102376b48d70fb7e7dbd3bbb",
+      "probability_metrics": {
+        "maximum_absolute_probability_error": null,
+        "mean_absolute_probability_error": null,
+        "predicted_class_agreement": null,
+        "maximum_absolute_confidence_error": null
+      },
+      "softmax_arrays_generated": false
+    }
+  },
+  "frozen_anchors": {
+    "IEMOCAP": {
+      "checkpoint": "/LOCAL/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/cmerc/IEMOCAP_validation_seed1475/best.pt",
+      "checkpoint_sha256": "2c0d1a7a39627e12d1244d23a225ad3da03bbce071a118909921a547a2bfd106",
+      "effective_config": "/LOCAL/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/configs/effective/IEMOCAP_cmerc_validation_seed1475.json",
+      "effective_config_sha256": "59e40ae7b7d63bb5f56806eedefb2f70c6797095455f63c083917b1141275369",
+      "checkpoint_access": "SHA-256 byte stream only; not deserialized"
+    },
+    "MELD": {
+      "checkpoint": "/LOCAL/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/runs/cmerc/MELD_validation_seed67137/best.pt",
+      "checkpoint_sha256": "3f79f9eb3547e35ac15ad7ff4345d9b873d0c884a6f3a1ce60a7a7e47077e701",
+      "effective_config": "/LOCAL/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/configs/effective/MELD_cmerc_validation_seed67137.json",
+      "effective_config_sha256": "5d6271460c882dc34bf55bbcdec96afd09bb6b963c238745e04a54fb20515f68",
+      "checkpoint_access": "SHA-256 byte stream only; not deserialized"
+    }
+  },
+  "adapter_sha256": "beefb368a3ace4de625511cb038155834b55c6627b9000e9a8e9bfbc98bb7900",
+  "guard_test_design": "Fresh subprocesses deny model framework imports and any parameter/array open. Actual adapter.run called with current failed gates; required ValueError occurs before any denied operation. import_helper sentinel also never called.",
+  "probability_metrics_missingness": "null means NOT_RUN; it must not be interpreted as zero error or class disagreement.",
+  "failure_preserved": true,
+  "cmERC_training_executed": false,
+  "raw_audio_perturbation_executed": false,
+  "git_operations_executed": false
+}

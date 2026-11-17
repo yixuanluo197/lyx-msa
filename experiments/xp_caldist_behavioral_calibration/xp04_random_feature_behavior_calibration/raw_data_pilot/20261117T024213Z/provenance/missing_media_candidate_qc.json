@@ -1,0 +1,17 @@
+{
+  "dataset": "MELD",
+  "split": "train",
+  "raw_dialogue_id": 125,
+  "raw_utterance_id": 3,
+  "candidate_path": "/LOCAL/DATA/msa_strict_meld/videos/train_splits/dia125_utt3.mp4",
+  "candidate_bytes": 1938321,
+  "candidate_sha256": "53f3c4070bc947084a18de66df329d66b98f64140183e82d3e64564d8136004c",
+  "same_split": true,
+  "original_archive_member_identity_verified": false,
+  "ffprobe_returncode": 1,
+  "ffprobe_stdout": "{\n\n}\n",
+  "ffprobe_stderr": "[mov,mp4,m4a,3gp,3g2,mj2 @ 0x6507e8af7740] moov atom not found\n/LOCAL/DATA/msa_strict_meld/videos/train_splits/dia125_utt3.mp4: Invalid data found when processing input\n",
+  "adopted": false,
+  "decision": "REJECTED_CORRUPT_MEDIA",
+  "target_feature_values_used_for_candidate_selection": false
+}

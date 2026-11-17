@@ -1,0 +1,17 @@
+[
+  {
+    "version": "v1",
+    "sha256": "e32b7ce541b75d5e2ce919d27c57c58c6079545f8ff9d4b3dd3f752b7f49222f",
+    "snapshot": "experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261117T024213Z/configs/code_versions/run_converter_cv_v1.py",
+    "run": "MELD frontend",
+    "exit_code": 120,
+    "numerical_outputs_complete": true,
+    "failure": "Interpreter shutdown Tee.flush on closed log; reports/OOF fully saved"
+  },
+  {
+    "version": "v2",
+    "sha256": "a889188edddc49016784e3fef80f98a71aedf55242b89caf9aea0ca298692453",
+    "snapshot": "experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261117T024213Z/scripts/run_converter_cv.py",
+    "change": "Tee.flush skips already closed log stream; no numerical changes"
+  }
+]

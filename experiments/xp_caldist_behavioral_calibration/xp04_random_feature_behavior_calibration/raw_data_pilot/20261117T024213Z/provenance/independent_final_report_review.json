@@ -1,0 +1,419 @@
+{
+  "status": "APPROVED",
+  "reviewed_at": "2026-11-17T03:25:07.868444+00:00",
+  "scope": "Read-only report/JSON/CSV consistency review; no feature extraction, model fitting, real Validation evaluation, CMERC execution or original pickle opening",
+  "scientific_category": {
+    "IEMOCAP": "C",
+    "MELD": "C"
+  },
+  "check_count": 75,
+  "checks": [
+    {
+      "check": "report_exists_MELD_FEATURE_RECONSTRUCTION.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "report_exists_IEMOCAP_FEATURE_RECONSTRUCTION.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "report_exists_CONVERTER_METHOD_COMPARISON.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "report_exists_MELD_CLEAN_PARITY_REPORT.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "report_exists_IEMOCAP_CLEAN_PARITY_REPORT.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "report_exists_XP04_PROBABILITY_PARITY_REPORT.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "report_exists_FINAL_RECONSTRUCTION_DECISION.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "report_exists_README.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "IEMOCAP_single_completed_attempt",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "IEMOCAP_scientific_category_C",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "IEMOCAP_lock_hash_binding",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "IEMOCAP_protocol_hash_binding",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "IEMOCAP_train_only_cv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "IEMOCAP_historical_exposure_disclosed",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "IEMOCAP_v2_before_lock_and_eval",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "IEMOCAP_v2_not_initially_preregistered",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "IEMOCAP_probability_not_run",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "IEMOCAP_probability_all_null",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "IEMOCAP_guard_model_imports_blocked",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "IEMOCAP_1582_summary_shape_counts",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "IEMOCAP_1582_max_abs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "IEMOCAP_1582_MAE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "IEMOCAP_1582_RMSE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "IEMOCAP_1582_train_scaled_RMSE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "IEMOCAP_1582_mean_cosine",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "IEMOCAP_1582_min_cosine",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "IEMOCAP_1582_correlation_p05",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "IEMOCAP_1582_all_nonconstant_corr_defined",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "IEMOCAP_1582_fails_numeric_not_only_coverage",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "MELD_single_completed_attempt",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "MELD_scientific_category_C",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "MELD_lock_hash_binding",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "MELD_protocol_hash_binding",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "MELD_train_only_cv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "MELD_historical_exposure_disclosed",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "MELD_v2_before_lock_and_eval",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "MELD_v2_not_initially_preregistered",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "MELD_probability_not_run",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "MELD_probability_all_null",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "MELD_guard_model_imports_blocked",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "MELD_1611_summary_shape_counts",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "MELD_1611_max_abs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "MELD_1611_MAE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "MELD_1611_RMSE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "MELD_1611_train_scaled_RMSE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "MELD_1611_mean_cosine",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "MELD_1611_min_cosine",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "MELD_1611_correlation_p05",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "MELD_1611_all_nonconstant_corr_defined",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "MELD_1611_fails_numeric_not_only_coverage",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "MELD_300_summary_shape_counts",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "MELD_300_max_abs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "MELD_300_MAE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "MELD_300_RMSE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "MELD_300_train_scaled_RMSE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "MELD_300_mean_cosine",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "MELD_300_min_cosine",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "MELD_300_correlation_p05",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "MELD_300_all_nonconstant_corr_defined",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "MELD_300_fails_numeric_not_only_coverage",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "MELD_missing_one_context_ten_rows",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "MELD_300_fixed_denominator",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "MELD_full_context_accounting",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "MELD_padding_independent_denominator",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "MELD_padding_not_claimed_parity",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "MELD_original_GRU_weights_equal",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "MELD_gate_missing_context_false",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "MELD_300_constant_correlation_accounting",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "verification_delivery_pass_not_scientific_pass",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_cmERC_or_perturbation_in_scope",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "verification_tests_passed",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_git_commit_push",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "report_states_padding_difference",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "report_states_v2_amendment",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "final_retains_failure_and_stops",
+      "passed": true,
+      "detail": null
+    }
+  ],
+  "failed_checks": [],
+  "substantive_issues": [],
+  "minor_issues": [
+    {
+      "location": [
+        "MELD_FEATURE_RECONSTRUCTION.md",
+        "MELD_CLEAN_PARITY_REPORT.md",
+        "verification.json limitations"
+      ],
+      "issue": "Train dia125/utt3 is described as missing media; local audit/QC and FINAL report establish present but corrupt/undecodable media (including unusable fallback). Validation raw110/utt7 is actually absent. Distinguish corrupt Train from missing Validation. No effect on counts, numerical results, C classification or NOT_RUN.",
+      "status": "RESOLVED_BY_ROOT_BEFORE_FINAL_MANIFEST_REFRESH",
+      "resolution": "Root corrected both MELD reports, method comparison and verification generator: working-directory Train absence plus corrupt original/fallback versus truly missing Validation. Scientific data and protocol unchanged."
+    }
+  ],
+  "report_sha256_at_review": {
+    "MELD_FEATURE_RECONSTRUCTION.md": "bbb443bc4ba0c64e7137125f4c648a6e13988fbd5dea1900432a74f9b5bae027",
+    "IEMOCAP_FEATURE_RECONSTRUCTION.md": "4190b88e9c07e05fb09e2c94b9c9d81848fb35744af199adf1ec4de55ed0dcb3",
+    "CONVERTER_METHOD_COMPARISON.md": "aa6c68e6a6d2f772e6806e2659349eb8c4feedc0dab161f180374c9d938d3abf",
+    "MELD_CLEAN_PARITY_REPORT.md": "a5bb390b4a91a4d8cf34ba74e5b237850dda851a14ec3d369dabe6752e6f3ecb",
+    "IEMOCAP_CLEAN_PARITY_REPORT.md": "366a25aac85425a4c0d65c012ab2550c1fbb02eb524ce3c49dc3d1d29acfc615",
+    "XP04_PROBABILITY_PARITY_REPORT.md": "8ec75cf1a411955b822898c6101c55816a09003daeabf848829d6a25028a13b3",
+    "FINAL_RECONSTRUCTION_DECISION.md": "7e782b8036a065db61ad2a23659a88c6111c80844e6473500048f23ab39abc5a",
+    "README.md": "b004cff04d102dcabc4883a07da83bcf0ad160e56f186f23991b8cc7f7127464"
+  },
+  "metadata_sha256_at_review": {
+    "verification.json": "00908d0ffe62831ee58f44b9371997eee7b5dfc9a33ba37268d061dab62fe096",
+    "clean_parity_summary.csv": "3aadba245e3a0302bf1e1352ec0766be373f6c0f8ef27cd3662485084b5072aa",
+    "provenance/final_probability_gate_verification.json": "ab92c7d7f1c768ea2fba3c460eb15fb9272e67b10ccacf4c248947ff68742514"
+  },
+  "artifact_manifest_refresh_required_after_report_edits": true,
+  "remaining_substantive_issues": [],
+  "remaining_minor_issues": []
+}

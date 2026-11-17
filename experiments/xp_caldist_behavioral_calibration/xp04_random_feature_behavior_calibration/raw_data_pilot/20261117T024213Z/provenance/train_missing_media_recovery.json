@@ -1,0 +1,19 @@
+{
+  "dataset": "MELD",
+  "split": "train",
+  "raw_dialogue_id": 125,
+  "raw_utterance_id": 3,
+  "archive": "/LOCAL/MELD_ASSETS/raw/MELD/MELD.Raw/train.tar.gz",
+  "member": "train_splits/dia125_utt3.mp4",
+  "member_size": 1938321,
+  "recovered_path": "LOCAL_RUN/local_only/MELD/recovered_media/dia125_utt3.mp4",
+  "recovered_sha256": "53f3c4070bc947084a18de66df329d66b98f64140183e82d3e64564d8136004c",
+  "ffprobe_returncode": 1,
+  "ffprobe_stdout": "{\n\n}\n",
+  "ffprobe_stderr": "[mov,mp4,m4a,3gp,3g2,mj2 @ 0x5ac0478d7840] moov atom not found\nLOCAL_RUN/local_only/MELD/recovered_media/dia125_utt3.mp4: Invalid data found when processing input\n",
+  "adopted": false,
+  "source": "existing official same-split archive member; original extracted source path left missing",
+  "target_values_used_to_select": false,
+  "same_bytes_as_other_local_same_split_copy": true,
+  "decision": "REJECTED_OFFICIAL_ARCHIVE_MEMBER_CORRUPT"
+}
