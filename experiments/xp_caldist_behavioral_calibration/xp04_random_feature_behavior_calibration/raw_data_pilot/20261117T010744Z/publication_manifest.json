@@ -1,0 +1,70 @@
+{
+  "audit_directory": "20261117T010744Z",
+  "scope": "Reviewed reports and aggregate evidence only",
+  "authorization": "Final user instruction: 完成后上传到github",
+  "original_local_report_sha256": {
+    "README.md": "54f270eec25cb2ad0332cb77229f0056565fbe08ad93d1a44a90da0f1bf18db0",
+    "MELD_OFFICIAL_PACKAGE_AUDIT.md": "465c71f40860a2085a7c41ea26052887d43a5f0964720518c5dc60dbed5b1b2f",
+    "AUDIO_300D_PARITY_REPORT.md": "bbeec4a65c9c5b102752b3473d40f9147fd29ff2c7e8fdac0d73247d12560efa",
+    "BC_LSTM_RECOVERY_REPORT.md": "34b5a54eafc6ad293f5a6cb7a64e79ee1e49ab8d36a628c19cc2d4695905a7fe",
+    "FINAL_MELD_AUDIO_DECISION.md": "4d38551ae2fa4d35f15ac44862c38bbe020b75fb419ac92c16b0e8b52f7d2b6b",
+    "verification.json": "641a3b7cf58695c166b72705b6f3bab35b539f588803555dbb89c3fe4fa1440a"
+  },
+  "files": [
+    {
+      "path": "AUDIO_300D_PARITY_REPORT.md",
+      "bytes": 7912,
+      "sha256": "293d96ba916bc5300d4627341430124b6e526514ef3ff6287b0c3938307de2d3"
+    },
+    {
+      "path": "BC_LSTM_RECOVERY_REPORT.md",
+      "bytes": 9592,
+      "sha256": "3e3e7ea8eea82eaa757c6f6b99a76920cfd329aa3220c93d4801356cfa2e4b3d"
+    },
+    {
+      "path": "FINAL_MELD_AUDIO_DECISION.md",
+      "bytes": 4352,
+      "sha256": "4d38551ae2fa4d35f15ac44862c38bbe020b75fb419ac92c16b0e8b52f7d2b6b"
+    },
+    {
+      "path": "MELD_OFFICIAL_PACKAGE_AUDIT.md",
+      "bytes": 5132,
+      "sha256": "4f049fd99118e57479d0176bfaac97faca2d761197be132ec5b7e848625b9880"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1996,
+      "sha256": "8d6941ef31cf1bce128b9c45e09a71b094d3c4d53a9971a180f70e76bd68b122"
+    },
+    {
+      "path": "evidence/encoder_recovery_summary.json",
+      "bytes": 19882,
+      "sha256": "e4251eee765de695efde23d2eb7affc64aac913b41530c6aa0c0b1fb0a7d771e"
+    },
+    {
+      "path": "evidence/feature_parity_summary.json",
+      "bytes": 4878,
+      "sha256": "29b3084da933905a89ef3117624c6b1efaad2a55998c88da22f6a299cb7b3f40"
+    },
+    {
+      "path": "evidence/package_inventory.json",
+      "bytes": 12221,
+      "sha256": "405db6fe9d027e0e2d3f361bfddcd4e5e26195d7e6b7925c4bb47921d7ce2a1d"
+    },
+    {
+      "path": "verification.json",
+      "bytes": 6445,
+      "sha256": "b96efe3500216b623043cfdce19d0980d97a980ac19e23feec997a9d8214ae7c"
+    }
+  ],
+  "excluded": [
+    "archives",
+    "raw media",
+    "feature vectors",
+    "model weights",
+    "full text",
+    "per-utterance records",
+    "full local source mirrors"
+  ],
+  "self_hash": "Excluded; integrity is provided by the Git commit"
+}

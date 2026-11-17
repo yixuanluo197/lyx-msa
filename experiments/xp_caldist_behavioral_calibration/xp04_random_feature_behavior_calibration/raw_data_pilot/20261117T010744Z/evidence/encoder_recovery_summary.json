@@ -1,0 +1,628 @@
+{
+  "status": "partial_recovery_official_selected1611_to_context300_validation_parity_passed_raw_audio_chain_still_blocked",
+  "source_code": {
+    "repo": "declare-lab/MELD",
+    "commit": "e8cedf27b5d2877e198332c957127e16eb214afe",
+    "baseline_url": "https://github.com/declare-lab/MELD/blob/e8cedf27b5d2877e198332c957127e16eb214afe/baseline/baseline.py",
+    "data_helpers_url": "https://github.com/declare-lab/MELD/blob/e8cedf27b5d2877e198332c957127e16eb214afe/baseline/data_helpers.py"
+  },
+  "models": {
+    "emotion": {
+      "sha256": "2f5a006d853ea6b2e2a7b40750005963e6dd59f16b1072c468e702c84632b2da",
+      "bytes": 19622496,
+      "keras_version": "2.2.0",
+      "backend": "tensorflow",
+      "model_config": {
+        "class_name": "Model",
+        "config": {
+          "name": "model_1",
+          "layers": [
+            {
+              "name": "input_1",
+              "class_name": "InputLayer",
+              "config": {
+                "batch_input_shape": [
+                  null,
+                  33,
+                  1611
+                ],
+                "dtype": "float32",
+                "sparse": false,
+                "name": "input_1"
+              },
+              "inbound_nodes": []
+            },
+            {
+              "name": "masking_1",
+              "class_name": "Masking",
+              "config": {
+                "name": "masking_1",
+                "trainable": true,
+                "mask_value": 0
+              },
+              "inbound_nodes": [
+                [
+                  [
+                    "input_1",
+                    0,
+                    0,
+                    {}
+                  ]
+                ]
+              ]
+            },
+            {
+              "name": "utter",
+              "class_name": "Bidirectional",
+              "config": {
+                "name": "utter",
+                "trainable": true,
+                "layer": {
+                  "class_name": "GRU",
+                  "config": {
+                    "name": "gru_1",
+                    "trainable": true,
+                    "return_sequences": true,
+                    "return_state": false,
+                    "go_backwards": false,
+                    "stateful": false,
+                    "unroll": false,
+                    "units": 150,
+                    "activation": "tanh",
+                    "recurrent_activation": "hard_sigmoid",
+                    "use_bias": true,
+                    "kernel_initializer": {
+                      "class_name": "VarianceScaling",
+                      "config": {
+                        "scale": 1.0,
+                        "mode": "fan_avg",
+                        "distribution": "uniform",
+                        "seed": null
+                      }
+                    },
+                    "recurrent_initializer": {
+                      "class_name": "Orthogonal",
+                      "config": {
+                        "gain": 1.0,
+                        "seed": null
+                      }
+                    },
+                    "bias_initializer": {
+                      "class_name": "Zeros",
+                      "config": {}
+                    },
+                    "kernel_regularizer": null,
+                    "recurrent_regularizer": null,
+                    "bias_regularizer": null,
+                    "activity_regularizer": null,
+                    "kernel_constraint": null,
+                    "recurrent_constraint": null,
+                    "bias_constraint": null,
+                    "dropout": 0.5,
+                    "recurrent_dropout": 0.0,
+                    "implementation": 1,
+                    "reset_after": false
+                  }
+                },
+                "merge_mode": "concat"
+              },
+              "inbound_nodes": [
+                [
+                  [
+                    "masking_1",
+                    0,
+                    0,
+                    {}
+                  ]
+                ]
+              ]
+            },
+            {
+              "name": "time_distributed_1",
+              "class_name": "TimeDistributed",
+              "config": {
+                "name": "time_distributed_1",
+                "trainable": true,
+                "layer": {
+                  "class_name": "Dense",
+                  "config": {
+                    "name": "dense_1",
+                    "trainable": true,
+                    "units": 150,
+                    "activation": "relu",
+                    "use_bias": true,
+                    "kernel_initializer": {
+                      "class_name": "VarianceScaling",
+                      "config": {
+                        "scale": 1.0,
+                        "mode": "fan_avg",
+                        "distribution": "uniform",
+                        "seed": null
+                      }
+                    },
+                    "bias_initializer": {
+                      "class_name": "Zeros",
+                      "config": {}
+                    },
+                    "kernel_regularizer": null,
+                    "bias_regularizer": null,
+                    "activity_regularizer": null,
+                    "kernel_constraint": null,
+                    "bias_constraint": null
+                  }
+                }
+              },
+              "inbound_nodes": [
+                [
+                  [
+                    "utter",
+                    0,
+                    0,
+                    {}
+                  ]
+                ]
+              ]
+            },
+            {
+              "name": "dropout_1",
+              "class_name": "Dropout",
+              "config": {
+                "name": "dropout_1",
+                "trainable": true,
+                "rate": 0.1,
+                "noise_shape": null,
+                "seed": null
+              },
+              "inbound_nodes": [
+                [
+                  [
+                    "time_distributed_1",
+                    0,
+                    0,
+                    {}
+                  ]
+                ]
+              ]
+            },
+            {
+              "name": "time_distributed_2",
+              "class_name": "TimeDistributed",
+              "config": {
+                "name": "time_distributed_2",
+                "trainable": true,
+                "layer": {
+                  "class_name": "Dense",
+                  "config": {
+                    "name": "dense_2",
+                    "trainable": true,
+                    "units": 7,
+                    "activation": "softmax",
+                    "use_bias": true,
+                    "kernel_initializer": {
+                      "class_name": "VarianceScaling",
+                      "config": {
+                        "scale": 1.0,
+                        "mode": "fan_avg",
+                        "distribution": "uniform",
+                        "seed": null
+                      }
+                    },
+                    "bias_initializer": {
+                      "class_name": "Zeros",
+                      "config": {}
+                    },
+                    "kernel_regularizer": null,
+                    "bias_regularizer": null,
+                    "activity_regularizer": null,
+                    "kernel_constraint": null,
+                    "bias_constraint": null
+                  }
+                }
+              },
+              "inbound_nodes": [
+                [
+                  [
+                    "dropout_1",
+                    0,
+                    0,
+                    {}
+                  ]
+                ]
+              ]
+            }
+          ],
+          "input_layers": [
+            [
+              "input_1",
+              0,
+              0
+            ]
+          ],
+          "output_layers": [
+            [
+              "time_distributed_2",
+              0,
+              0
+            ]
+          ]
+        }
+      }
+    },
+    "sentiment": {
+      "sha256": "c6cd9672507b23ae210eafe3d431879b31f9897227cfc5cdcb8134dabffd26da",
+      "bytes": 75633624,
+      "keras_version": "2.2.0",
+      "backend": "tensorflow",
+      "model_config": {
+        "class_name": "Model",
+        "config": {
+          "name": "model_1",
+          "layers": [
+            {
+              "name": "input_1",
+              "class_name": "InputLayer",
+              "config": {
+                "batch_input_shape": [
+                  null,
+                  33,
+                  1422
+                ],
+                "dtype": "float32",
+                "sparse": false,
+                "name": "input_1"
+              },
+              "inbound_nodes": []
+            },
+            {
+              "name": "masking_1",
+              "class_name": "Masking",
+              "config": {
+                "name": "masking_1",
+                "trainable": true,
+                "mask_value": 0
+              },
+              "inbound_nodes": [
+                [
+                  [
+                    "input_1",
+                    0,
+                    0,
+                    {}
+                  ]
+                ]
+              ]
+            },
+            {
+              "name": "bidirectional_1",
+              "class_name": "Bidirectional",
+              "config": {
+                "name": "bidirectional_1",
+                "trainable": true,
+                "layer": {
+                  "class_name": "LSTM",
+                  "config": {
+                    "name": "lstm_1",
+                    "trainable": true,
+                    "return_sequences": true,
+                    "return_state": false,
+                    "go_backwards": false,
+                    "stateful": false,
+                    "unroll": false,
+                    "units": 300,
+                    "activation": "tanh",
+                    "recurrent_activation": "hard_sigmoid",
+                    "use_bias": true,
+                    "kernel_initializer": {
+                      "class_name": "VarianceScaling",
+                      "config": {
+                        "scale": 1.0,
+                        "mode": "fan_avg",
+                        "distribution": "uniform",
+                        "seed": null
+                      }
+                    },
+                    "recurrent_initializer": {
+                      "class_name": "Orthogonal",
+                      "config": {
+                        "gain": 1.0,
+                        "seed": null
+                      }
+                    },
+                    "bias_initializer": {
+                      "class_name": "Zeros",
+                      "config": {}
+                    },
+                    "unit_forget_bias": true,
+                    "kernel_regularizer": null,
+                    "recurrent_regularizer": null,
+                    "bias_regularizer": null,
+                    "activity_regularizer": null,
+                    "kernel_constraint": null,
+                    "recurrent_constraint": null,
+                    "bias_constraint": null,
+                    "dropout": 0.4,
+                    "recurrent_dropout": 0.0,
+                    "implementation": 1
+                  }
+                },
+                "merge_mode": "concat"
+              },
+              "inbound_nodes": [
+                [
+                  [
+                    "masking_1",
+                    0,
+                    0,
+                    {}
+                  ]
+                ]
+              ]
+            },
+            {
+              "name": "utter",
+              "class_name": "Bidirectional",
+              "config": {
+                "name": "utter",
+                "trainable": true,
+                "layer": {
+                  "class_name": "LSTM",
+                  "config": {
+                    "name": "lstm_2",
+                    "trainable": true,
+                    "return_sequences": true,
+                    "return_state": false,
+                    "go_backwards": false,
+                    "stateful": false,
+                    "unroll": false,
+                    "units": 300,
+                    "activation": "tanh",
+                    "recurrent_activation": "hard_sigmoid",
+                    "use_bias": true,
+                    "kernel_initializer": {
+                      "class_name": "VarianceScaling",
+                      "config": {
+                        "scale": 1.0,
+                        "mode": "fan_avg",
+                        "distribution": "uniform",
+                        "seed": null
+                      }
+                    },
+                    "recurrent_initializer": {
+                      "class_name": "Orthogonal",
+                      "config": {
+                        "gain": 1.0,
+                        "seed": null
+                      }
+                    },
+                    "bias_initializer": {
+                      "class_name": "Zeros",
+                      "config": {}
+                    },
+                    "unit_forget_bias": true,
+                    "kernel_regularizer": null,
+                    "recurrent_regularizer": null,
+                    "bias_regularizer": null,
+                    "activity_regularizer": null,
+                    "kernel_constraint": null,
+                    "recurrent_constraint": null,
+                    "bias_constraint": null,
+                    "dropout": 0.4,
+                    "recurrent_dropout": 0.0,
+                    "implementation": 1
+                  }
+                },
+                "merge_mode": "concat"
+              },
+              "inbound_nodes": [
+                [
+                  [
+                    "bidirectional_1",
+                    0,
+                    0,
+                    {}
+                  ]
+                ]
+              ]
+            },
+            {
+              "name": "time_distributed_1",
+              "class_name": "TimeDistributed",
+              "config": {
+                "name": "time_distributed_1",
+                "trainable": true,
+                "layer": {
+                  "class_name": "Dense",
+                  "config": {
+                    "name": "dense_1",
+                    "trainable": true,
+                    "units": 3,
+                    "activation": "softmax",
+                    "use_bias": true,
+                    "kernel_initializer": {
+                      "class_name": "VarianceScaling",
+                      "config": {
+                        "scale": 1.0,
+                        "mode": "fan_avg",
+                        "distribution": "uniform",
+                        "seed": null
+                      }
+                    },
+                    "bias_initializer": {
+                      "class_name": "Zeros",
+                      "config": {}
+                    },
+                    "kernel_regularizer": null,
+                    "bias_regularizer": null,
+                    "activity_regularizer": null,
+                    "kernel_constraint": null,
+                    "bias_constraint": null
+                  }
+                }
+              },
+              "inbound_nodes": [
+                [
+                  [
+                    "utter",
+                    0,
+                    0,
+                    {}
+                  ]
+                ]
+              ]
+            }
+          ],
+          "input_layers": [
+            [
+              "input_1",
+              0,
+              0
+            ]
+          ],
+          "output_layers": [
+            [
+              "time_distributed_1",
+              0,
+              0
+            ]
+          ]
+        }
+      }
+    }
+  },
+  "model_architecture_difference": {
+    "current_github_audio_emotion": "two Bidirectional LSTM(300) layers, utter600",
+    "official_hdf5_audio_emotion": "one Bidirectional GRU(150), utter300, reset_afterFalse, legacy hard_sigmoid",
+    "replacement_weights_used": false
+  },
+  "runtime": {
+    "tensorflow": "2.14.0",
+    "keras": "2.14.0",
+    "gpu_devices": [],
+    "loaded_compile": false,
+    "encoder_input_shape": [
+      null,
+      33,
+      1611
+    ],
+    "encoder_output_shape": [
+      null,
+      33,
+      300
+    ],
+    "hard_sigmoid_probes": [
+      0.0,
+      0.0,
+      0.30000001192092896,
+      0.5,
+      0.699999988079071,
+      1.0,
+      1.0
+    ],
+    "hard_sigmoid_matches_legacy_clip_point2": true,
+    "loaded_gru_weights_exact_to_hdf5": {
+      "forward/kernel": true,
+      "forward/recurrent_kernel": true,
+      "forward/bias": true,
+      "backward/kernel": true,
+      "backward/recurrent_kernel": true,
+      "backward/bias": true
+    },
+    "gru_implementation": 1,
+    "gru_reset_after": false,
+    "padding": "right-zero to33, Masking(0), training=False",
+    "aggregate_real_utterance_metrics": {
+      "shape": [
+        24,
+        300
+      ],
+      "max_abs_error": 1.1920928955078125e-06,
+      "mean_abs_error": 4.268819692596379e-08,
+      "mean_cosine_similarity_nonzero": 0.9999999999999897,
+      "min_cosine_similarity_nonzero": 0.9999999999999802,
+      "allclose_atol_1e-5_rtol_1e-5": true,
+      "allclose_atol_1e-4_rtol_1e-4": true
+    }
+  },
+  "validation_dialogue_count": 3,
+  "validation_real_utterances": 24,
+  "padding_exceptions": [
+    {
+      "real_utterances": 2,
+      "padding_current_allzero": true,
+      "padding_reference_allzero": false,
+      "metrics": {
+        "shape": [
+          31,
+          300
+        ],
+        "max_abs_error": 0.9999983310699463,
+        "mean_abs_error": 0.2008055285612742,
+        "mean_cosine_similarity_nonzero": null,
+        "min_cosine_similarity_nonzero": null,
+        "allclose_atol_1e-5_rtol_1e-5": false,
+        "allclose_atol_1e-4_rtol_1e-4": false
+      }
+    },
+    {
+      "real_utterances": 16,
+      "padding_current_allzero": true,
+      "padding_reference_allzero": false,
+      "metrics": {
+        "shape": [
+          17,
+          300
+        ],
+        "max_abs_error": 0.9999990463256836,
+        "mean_abs_error": 0.2441928904255231,
+        "mean_cosine_similarity_nonzero": null,
+        "min_cosine_similarity_nonzero": null,
+        "allclose_atol_1e-5_rtol_1e-5": false,
+        "allclose_atol_1e-4_rtol_1e-4": false
+      }
+    },
+    {
+      "real_utterances": 6,
+      "padding_current_allzero": true,
+      "padding_reference_allzero": false,
+      "metrics": {
+        "shape": [
+          27,
+          300
+        ],
+        "max_abs_error": 0.9999997019767761,
+        "mean_abs_error": 0.23359034049479913,
+        "mean_cosine_similarity_nonzero": null,
+        "min_cosine_similarity_nonzero": null,
+        "allclose_atol_1e-5_rtol_1e-5": false,
+        "allclose_atol_1e-4_rtol_1e-4": false
+      }
+    }
+  ],
+  "known_limitations": [
+    "Only3 complete Validation dialogues /24 real utterances evaluated; no all-Validation inference.",
+    "CurrentKeras2.14 zeroes padded Bidirectional output rows; historical archive retains final forward state in padding. Real rows pass parity; full33-row tensor parity does not.",
+    "RawWAV->6373 production config/version/order and6373->1611 selector/normalizer absent; cannot perform raw Clean Feature Parity.",
+    "No CMERC inference or probability comparison executed.",
+    "No sentiment runtime; sentiment model statically inspected only."
+  ],
+  "verification": {
+    "hdf5_members_match_tar": true,
+    "original_gru_weights_exact_after_load": true,
+    "legacy_hard_sigmoid_probes_pass": true,
+    "full_padded_tensor_parity": false,
+    "real_rows_parity_atol_1e_minus5_rtol_1e_minus5": true
+  },
+  "readme_and_metadata_schema_selector_check": {
+    "archive_inventory_files": 20,
+    "archive_config_or_selector_members": [],
+    "metadata_pickle_record_field_names": [
+      "dialog",
+      "num_words",
+      "split",
+      "text",
+      "utterance",
+      "y"
+    ],
+    "label_values_or_full_text_exported": false
+  }
+}

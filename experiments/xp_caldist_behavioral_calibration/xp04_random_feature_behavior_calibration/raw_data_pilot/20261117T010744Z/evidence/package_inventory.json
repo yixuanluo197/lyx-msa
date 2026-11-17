@@ -1,0 +1,327 @@
+{
+  "official_source": {
+    "repository": "declare-lab/MELD",
+    "commit": "9abc51ee7903424ffb971297608aa6d3d0de3bfa",
+    "source_url": "https://huggingface.co/datasets/declare-lab/MELD/resolve/9abc51ee7903424ffb971297608aa6d3d0de3bfa/MELD.Features.Models.tar.gz",
+    "bytes": 922694594,
+    "expected_sha256": "59131c6904ab1272912c6ebec7873524e6f90bce842b333bc27f02411718b2c3",
+    "sha256": "59131c6904ab1272912c6ebec7873524e6f90bce842b333bc27f02411718b2c3",
+    "status": "VERIFIED",
+    "download_completed": true,
+    "completed_at": "2026-11-17T01:18:49.483406+00:00",
+    "method": "Fresh initial download prefix plus HTTP 206 range recovery; complete assembled body hash verified."
+  },
+  "failed_attempt": {
+    "bytes": 167314834,
+    "rejected": true,
+    "retained_locally": true
+  },
+  "recovery_ranges": 23,
+  "inventory": {
+    "members": 23,
+    "file_count": 20,
+    "uncompressed_file_bytes": 1170662066,
+    "members_metadata": [
+      {
+        "name": "MELD.Features.Models",
+        "size": 0,
+        "type": "5",
+        "linkname": ""
+      },
+      {
+        "name": "MELD.Features.Models/models",
+        "size": 0,
+        "type": "5",
+        "linkname": ""
+      },
+      {
+        "name": "MELD.Features.Models/models/audio_weights_emotion.hdf5",
+        "size": 19622496,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "MELD.Features.Models/models/text_weights_emotion.hdf5",
+        "size": 43491928,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "MELD.Features.Models/models/bimodal_weights_emotion.hdf5",
+        "size": 7256784,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "MELD.Features.Models/models/text_weights_sentiment.hdf5",
+        "size": 69417568,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "MELD.Features.Models/models/audio_weights_sentiment.hdf5",
+        "size": 75633624,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "MELD.Features.Models/models/bimodal_weights_sentiment.hdf5",
+        "size": 43284384,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "MELD.Features.Models/features",
+        "size": 0,
+        "type": "5",
+        "linkname": ""
+      },
+      {
+        "name": "MELD.Features.Models/features/text_glove_CNN_sentiment.pkl",
+        "size": 6470133,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "MELD.Features.Models/features/text_glove_CNN_emotion.pkl",
+        "size": 6470133,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "MELD.Features.Models/features/text_emotion.pkl",
+        "size": 113517878,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "MELD.Features.Models/features/bimodal_sentiment.pkl",
+        "size": 113517878,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "MELD.Features.Models/features/text_glove_average_emotion.pkl",
+        "size": 17450241,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "MELD.Features.Models/features/audio_embeddings_feature_selection_sentiment.pkl",
+        "size": 156942913,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "MELD.Features.Models/features/data_sentiment.p",
+        "size": 9305067,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "MELD.Features.Models/features/data_emotion.p",
+        "size": 9305133,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "MELD.Features.Models/features/text_glove_average_sentiment.pkl",
+        "size": 17450241,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "MELD.Features.Models/features/audio_sentiment.pkl",
+        "size": 113517878,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "MELD.Features.Models/features/audio_embeddings_feature_selection_emotion.pkl",
+        "size": 177669409,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "MELD.Features.Models/features/text_sentiment.pkl",
+        "size": 113517878,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "MELD.Features.Models/features/audio_emotion.pkl",
+        "size": 56810678,
+        "type": "0",
+        "linkname": ""
+      },
+      {
+        "name": "MELD.Features.Models/README.txt",
+        "size": 9822,
+        "type": "0",
+        "linkname": ""
+      }
+    ]
+  },
+  "members": [
+    {
+      "member": "MELD.Features.Models/models/audio_weights_emotion.hdf5",
+      "bytes": 19622496,
+      "sha256": "2f5a006d853ea6b2e2a7b40750005963e6dd59f16b1072c468e702c84632b2da",
+      "existing_extracted_present": true,
+      "existing_extracted_sha256": "2f5a006d853ea6b2e2a7b40750005963e6dd59f16b1072c468e702c84632b2da",
+      "existing_extracted_matches": true
+    },
+    {
+      "member": "MELD.Features.Models/models/text_weights_emotion.hdf5",
+      "bytes": 43491928,
+      "sha256": "cce6410770eedb2032e29745312baa08907ef29341216c9215b95e03d24e73a1",
+      "existing_extracted_present": true,
+      "existing_extracted_sha256": "cce6410770eedb2032e29745312baa08907ef29341216c9215b95e03d24e73a1",
+      "existing_extracted_matches": true
+    },
+    {
+      "member": "MELD.Features.Models/models/bimodal_weights_emotion.hdf5",
+      "bytes": 7256784,
+      "sha256": "8806138617ec895e786d52fac575e861406a4eecb04d4f727852302b06c85d40",
+      "existing_extracted_present": true,
+      "existing_extracted_sha256": "8806138617ec895e786d52fac575e861406a4eecb04d4f727852302b06c85d40",
+      "existing_extracted_matches": true
+    },
+    {
+      "member": "MELD.Features.Models/models/text_weights_sentiment.hdf5",
+      "bytes": 69417568,
+      "sha256": "f0b7a5969aeeab51fe8d16ef9ab56884df2e3dc563c35706baa9c70f4eab35a3",
+      "existing_extracted_present": true,
+      "existing_extracted_sha256": "f0b7a5969aeeab51fe8d16ef9ab56884df2e3dc563c35706baa9c70f4eab35a3",
+      "existing_extracted_matches": true
+    },
+    {
+      "member": "MELD.Features.Models/models/audio_weights_sentiment.hdf5",
+      "bytes": 75633624,
+      "sha256": "c6cd9672507b23ae210eafe3d431879b31f9897227cfc5cdcb8134dabffd26da",
+      "existing_extracted_present": true,
+      "existing_extracted_sha256": "c6cd9672507b23ae210eafe3d431879b31f9897227cfc5cdcb8134dabffd26da",
+      "existing_extracted_matches": true
+    },
+    {
+      "member": "MELD.Features.Models/models/bimodal_weights_sentiment.hdf5",
+      "bytes": 43284384,
+      "sha256": "ffb415587ea55dc1942bf804c5378d6956751bcf835826ef670908c1122f7b6b",
+      "existing_extracted_present": true,
+      "existing_extracted_sha256": "ffb415587ea55dc1942bf804c5378d6956751bcf835826ef670908c1122f7b6b",
+      "existing_extracted_matches": true
+    },
+    {
+      "member": "MELD.Features.Models/features/text_glove_CNN_sentiment.pkl",
+      "bytes": 6470133,
+      "sha256": "71deee7df80ef90a8a6ef42008da5253b29e7842834d8fb0e755d63528e5949f",
+      "existing_extracted_present": true,
+      "existing_extracted_sha256": "71deee7df80ef90a8a6ef42008da5253b29e7842834d8fb0e755d63528e5949f",
+      "existing_extracted_matches": true
+    },
+    {
+      "member": "MELD.Features.Models/features/text_glove_CNN_emotion.pkl",
+      "bytes": 6470133,
+      "sha256": "2ca99ab1a8185cdb7e7e08b6e4223039f70ae97f07e81ae5d2bed7b1bded0380",
+      "existing_extracted_present": true,
+      "existing_extracted_sha256": "2ca99ab1a8185cdb7e7e08b6e4223039f70ae97f07e81ae5d2bed7b1bded0380",
+      "existing_extracted_matches": true
+    },
+    {
+      "member": "MELD.Features.Models/features/text_emotion.pkl",
+      "bytes": 113517878,
+      "sha256": "1c5f8c9e20f31bebab3d1aff7559a31aedc0692a7bc1b0f4c255949c07c1722b",
+      "existing_extracted_present": true,
+      "existing_extracted_sha256": "1c5f8c9e20f31bebab3d1aff7559a31aedc0692a7bc1b0f4c255949c07c1722b",
+      "existing_extracted_matches": true
+    },
+    {
+      "member": "MELD.Features.Models/features/bimodal_sentiment.pkl",
+      "bytes": 113517878,
+      "sha256": "bc3693180c68d1764b72c205d24963c33095603b4915dc998621cdaf60a7ef04",
+      "existing_extracted_present": true,
+      "existing_extracted_sha256": "bc3693180c68d1764b72c205d24963c33095603b4915dc998621cdaf60a7ef04",
+      "existing_extracted_matches": true
+    },
+    {
+      "member": "MELD.Features.Models/features/text_glove_average_emotion.pkl",
+      "bytes": 17450241,
+      "sha256": "803f22d27bb9af0f3f132e68a2594484560dbf7ad399687210fc9bb3af88642f",
+      "existing_extracted_present": true,
+      "existing_extracted_sha256": "803f22d27bb9af0f3f132e68a2594484560dbf7ad399687210fc9bb3af88642f",
+      "existing_extracted_matches": true
+    },
+    {
+      "member": "MELD.Features.Models/features/audio_embeddings_feature_selection_sentiment.pkl",
+      "bytes": 156942913,
+      "sha256": "a6c2c5d1ddd9fb0dcf1992702c5cd275afb227ff14b907f7d11ae3333cdf2097",
+      "existing_extracted_present": true,
+      "existing_extracted_sha256": "a6c2c5d1ddd9fb0dcf1992702c5cd275afb227ff14b907f7d11ae3333cdf2097",
+      "existing_extracted_matches": true
+    },
+    {
+      "member": "MELD.Features.Models/features/data_sentiment.p",
+      "bytes": 9305067,
+      "sha256": "aa94d190346c4a608ff502a564f079d677bcc2a63a494b70d0705050ecddfef1",
+      "existing_extracted_present": true,
+      "existing_extracted_sha256": "aa94d190346c4a608ff502a564f079d677bcc2a63a494b70d0705050ecddfef1",
+      "existing_extracted_matches": true
+    },
+    {
+      "member": "MELD.Features.Models/features/data_emotion.p",
+      "bytes": 9305133,
+      "sha256": "4c1960a6982cbcf1ab197c3f42c7bcf8499f93d7d918194ff7c4397a4dda0aca",
+      "existing_extracted_present": true,
+      "existing_extracted_sha256": "4c1960a6982cbcf1ab197c3f42c7bcf8499f93d7d918194ff7c4397a4dda0aca",
+      "existing_extracted_matches": true
+    },
+    {
+      "member": "MELD.Features.Models/features/text_glove_average_sentiment.pkl",
+      "bytes": 17450241,
+      "sha256": "ca3ff0e672089de1772092c84f9f7748c81c7e38be6f01420f3a152be93d0327",
+      "existing_extracted_present": true,
+      "existing_extracted_sha256": "ca3ff0e672089de1772092c84f9f7748c81c7e38be6f01420f3a152be93d0327",
+      "existing_extracted_matches": true
+    },
+    {
+      "member": "MELD.Features.Models/features/audio_sentiment.pkl",
+      "bytes": 113517878,
+      "sha256": "624fccf22b20a5501e3469aeec150fa42d4b19742e2eb360e8a34ccca4640dce",
+      "existing_extracted_present": true,
+      "existing_extracted_sha256": "624fccf22b20a5501e3469aeec150fa42d4b19742e2eb360e8a34ccca4640dce",
+      "existing_extracted_matches": true
+    },
+    {
+      "member": "MELD.Features.Models/features/audio_embeddings_feature_selection_emotion.pkl",
+      "bytes": 177669409,
+      "sha256": "0cda206983988ab61de5b30ec32b8ac652e133f84cda4d3d8105a2db8fea363e",
+      "existing_extracted_present": true,
+      "existing_extracted_sha256": "0cda206983988ab61de5b30ec32b8ac652e133f84cda4d3d8105a2db8fea363e",
+      "existing_extracted_matches": true
+    },
+    {
+      "member": "MELD.Features.Models/features/text_sentiment.pkl",
+      "bytes": 113517878,
+      "sha256": "0b597bc6f6b44defe038cf06715319cb5ef06ce91cbb312bcbd0996ade6df9e0",
+      "existing_extracted_present": true,
+      "existing_extracted_sha256": "0b597bc6f6b44defe038cf06715319cb5ef06ce91cbb312bcbd0996ade6df9e0",
+      "existing_extracted_matches": true
+    },
+    {
+      "member": "MELD.Features.Models/features/audio_emotion.pkl",
+      "bytes": 56810678,
+      "sha256": "1507cb7a8b78d58ece92d5e31fba85fddd219efd490407a8e566985be6eeca73",
+      "existing_extracted_present": true,
+      "existing_extracted_sha256": "1507cb7a8b78d58ece92d5e31fba85fddd219efd490407a8e566985be6eeca73",
+      "existing_extracted_matches": true
+    },
+    {
+      "member": "MELD.Features.Models/README.txt",
+      "bytes": 9822,
+      "sha256": "706f8437cab1a41bb777c00ed46ea12eb83d7e4520968367e2a3359cdf9cdb2d",
+      "existing_extracted_present": true,
+      "existing_extracted_sha256": "706f8437cab1a41bb777c00ed46ea12eb83d7e4520968367e2a3359cdf9cdb2d",
+      "existing_extracted_matches": true
+    }
+  ]
+}
