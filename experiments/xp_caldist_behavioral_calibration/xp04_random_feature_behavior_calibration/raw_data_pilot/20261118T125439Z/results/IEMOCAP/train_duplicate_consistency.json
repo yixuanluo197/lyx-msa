@@ -1,0 +1,27 @@
+{
+  "dataset": "IEMOCAP",
+  "official_validation_used": false,
+  "training_changed": false,
+  "partitions": {
+    "fit_indices": {
+      "rows": 4747,
+      "unique_token_sequences": 4152,
+      "repeated_sequence_groups": 234,
+      "rows_in_repeated_groups": 829,
+      "repeated_groups_not_allclose_to_first": 0,
+      "maximum_within_sequence_target_abs_gap": 1.3828277587890625e-05,
+      "empirical_deterministic_mse_lower_bound": 5.230420756751953e-16,
+      "definition": "Duplicate exact token sequences must share a deterministic encoder output; sum within-group squared deviations from group mean / total partition elements. Singletons contribute0. Train-only diagnostic, not Validation compatibility or model selection."
+    },
+    "dev_indices": {
+      "rows": 536,
+      "unique_token_sequences": 495,
+      "repeated_sequence_groups": 16,
+      "rows_in_repeated_groups": 57,
+      "repeated_groups_not_allclose_to_first": 0,
+      "maximum_within_sequence_target_abs_gap": 0.0,
+      "empirical_deterministic_mse_lower_bound": 0.0,
+      "definition": "Duplicate exact token sequences must share a deterministic encoder output; sum within-group squared deviations from group mean / total partition elements. Singletons contribute0. Train-only diagnostic, not Validation compatibility or model selection."
+    }
+  }
+}

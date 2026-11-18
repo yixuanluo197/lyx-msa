@@ -1,0 +1,154 @@
+{
+  "scripts/execute_distillation.py": {
+    "sha256": "750b77e1d20da88976fcff8c4e358d58b429e3f42c1069f101a3cfe2d91f0548",
+    "bytes": 5471
+  },
+  "scripts/prepare_distillation_data.py": {
+    "sha256": "9e833c99f1d4d413eef63f1a8c8c8515aa9d16b0cc9e4bad595015e88c72c6af",
+    "bytes": 11150
+  },
+  "scripts/write_distillation_reports.py": {
+    "sha256": "406a3a367341c7d4fb72ab3b6f038c5db6d0d158dd4699501a098bc43a6be654",
+    "bytes": 9062
+  },
+  "scripts/check_progress.py": {
+    "sha256": "803aa7e3797dc8eddf0f954abaf69ee834df2f7914e629935fbd2451314502d2",
+    "bytes": 917
+  },
+  "scripts/verify_distillation.py": {
+    "sha256": "a00626d5be4dc69bf5c53aac5e98e44d6273b5b7320b6f5fa81ec216d207980e",
+    "bytes": 12871
+  },
+  "scripts/verify_training_checkpoint.py": {
+    "sha256": "e6403e4dd51351d56298660b9c480f5a7fb820d4b9d32c3a350d6605dc7498a7",
+    "bytes": 3001
+  },
+  "scripts/train_student.py": {
+    "sha256": "9a8caa913816d63747e1b79d440a401efa78081134b91c23994929f70a681092",
+    "bytes": 26178
+  },
+  "scripts/complete_existing_runs.py": {
+    "sha256": "2172afe5504acb451e9fc7cafe123fccf0cfd9affae2696a9ce4020fad6b84c9",
+    "bytes": 3633
+  },
+  "scripts/evaluate_student.py": {
+    "sha256": "8db34f010a55625cd910f014412ca8d72dbea94407d073058b36647969352eef",
+    "bytes": 19448
+  },
+  "scripts/analyze_train_duplicates.py": {
+    "sha256": "3eb4f7ef05c3cbe9be1c51829277967b074e5238d7522166d2a2c6d4a532a084",
+    "bytes": 1687
+  },
+  "configs/DISTILLATION_PROTOCOL.json": {
+    "sha256": "8d986e5917ae5c66f2b55e8ae9cae446446da6de267056425d1fb677bf955694",
+    "bytes": 3061
+  },
+  "configs/TOKENIZATION_PROTOCOL.json": {
+    "sha256": "d3b8c9457ff3991a00a73aa44e93013c6b5db7b6730dfc44f45335395b7523dc",
+    "bytes": 3038
+  },
+  "configs/IEMOCAP_TRAIN_PREPARATION.json": {
+    "sha256": "8412aa7009d2872522599ceadbc584acf3983adc7b957a67bd3112728d8a9cb1",
+    "bytes": 2120
+  },
+  "configs/TEXT_RECOVERY_PROTOCOL.json": {
+    "sha256": "e74ff548b9b43d253546d68a6ac9d701c8733097b3519bd6d62c6cbfe6e777bf",
+    "bytes": 3800
+  },
+  "configs/MELD_TRAIN_PREPARATION.json": {
+    "sha256": "feb530664998d6d342f2c0c7f43b05cea6b02708e38679a66f3c38ea2797bbcc",
+    "bytes": 29241
+  },
+  "FINAL_DISTILLATION_DECISION.md": {
+    "sha256": "41a9fe24308ab67ecffdd002755c2f3a256c3b856c9c0d7daa631a7ffb5746c5",
+    "bytes": 1552
+  },
+  "MELD_TEXT_CLEAN_PARITY.md": {
+    "sha256": "da4eded0042b12f453f62df78d7f4d6e55b235126913131e0b7ea695b555b0ee",
+    "bytes": 1112
+  },
+  "DISTILLATION_REPORT.md": {
+    "sha256": "12264b2e0b027064d7bd5f31276297ac171db81224bdee84b44b87deb4205298",
+    "bytes": 3779
+  },
+  "DELIVERY_INDEX.md": {
+    "sha256": "25e892f95534f51574eaf695aa4072523a3582bfe58bdfafc2d1f13abfa0e075",
+    "bytes": 2545
+  },
+  "IEMOCAP_TEXT_CLEAN_PARITY.md": {
+    "sha256": "b1e6a3bbe38c7ababf40f6f514fa7510f9cea0f0e7755808ff854ccdd81aff42",
+    "bytes": 1118
+  },
+  "results/MELD/loss_curve.csv": {
+    "sha256": "10b0e4c3877faf6ccc1293e952db46b375eb6f1225e05db1a5da9da34516b41f",
+    "bytes": 763
+  },
+  "results/MELD/per_layer_metrics.csv": {
+    "sha256": "00166eabafb8aff6aa0cb769559ea0569a51f1eb05d257ccc91815428bf737dc",
+    "bytes": 1307
+  },
+  "results/MELD/per_coordinate_metrics.csv": {
+    "sha256": "a4ce18c77c625d44006cc8e1ce54fc0cff45cb218f8901fea3b50bc405b1f476",
+    "bytes": 955445
+  },
+  "results/IEMOCAP/loss_curve.csv": {
+    "sha256": "07bb9862c084c6d7ba34fb1ec8ab9f697284e86e3411fdb11af1fad3d6b61453",
+    "bytes": 755
+  },
+  "results/IEMOCAP/per_layer_metrics.csv": {
+    "sha256": "2c91f4a25e54f1279b6584dc5f69af636380578fb559f8d5a4e571ce468d1c94",
+    "bytes": 1302
+  },
+  "results/IEMOCAP/per_coordinate_metrics.csv": {
+    "sha256": "f3b5e5c091f416d4e0771bd36e92bfa567c77cc91146f12e6cfc77661fab3a16",
+    "bytes": 957299
+  },
+  "results/smoke_b8_supervisor.json": {
+    "sha256": "9f13f66840f98aba58feb2033aaa344daf93252d24fe2c2819eb8a74b98c04e6",
+    "bytes": 4008
+  },
+  "results/smoke_supervisor.json": {
+    "sha256": "ae5c194b146e6afa62e5d17eaea881e83c47095f3e5f6cb2ccc8111353d0c912",
+    "bytes": 3993
+  },
+  "results/execution_status.json": {
+    "sha256": "10cdac3ca4460b82e02b094a05f32e164bc358eef10b8cc7004b8bd9a7381d6a",
+    "bytes": 4450
+  },
+  "results/MELD/probability_parity.json": {
+    "sha256": "163132c8b20426fd17acd3093d527d2eaf54baa9c6ae8c032d5f20f53729b624",
+    "bytes": 203
+  },
+  "results/MELD/feature_parity.json": {
+    "sha256": "6dd1fda81f881d817d66e15925e62ea4cc87ac7389c0923bd5f37d7e10ba4983",
+    "bytes": 5989
+  },
+  "results/MELD/train_duplicate_consistency.json": {
+    "sha256": "620767ff7628a791764aca6b6097d5cfd522967f8675d9e444b7a4025c3b0425",
+    "bytes": 1372
+  },
+  "results/IEMOCAP/probability_parity.json": {
+    "sha256": "a26eda4cfdbe7e994af43eb6704843c1ae2496109dcbc82bb8bb3e8d544d7d68",
+    "bytes": 206
+  },
+  "results/IEMOCAP/feature_parity.json": {
+    "sha256": "579ab32c85e25368bb502f144a98d41e2dea9b93ddcaf92e1de3a59fce74cef0",
+    "bytes": 5985
+  },
+  "results/IEMOCAP/train_duplicate_consistency.json": {
+    "sha256": "b9e51ffd638f488276a9debbefb6d80b00d7178c43ea6292cf9ff21b1804f48d",
+    "bytes": 1334
+  },
+  "results/loss_curves.png": {
+    "sha256": "36700da747a262ffab7228f520302a2a29c6b933ad20757cf66a5fe935f3b2fd",
+    "bytes": 69840
+  },
+  "results/loss_curves.pdf": {
+    "sha256": "4f9c76186874c881d8f74fb033414710be1d98e88ac102acf33cdbf4684fcc01",
+    "bytes": 18191
+  },
+  "verification.json": {
+    "sha256": "86996b38da510cc41687965ba79eb5a3748fe27c4a95ffe6e690f2a26737ecb0",
+    "bytes": 3898
+  }
+}

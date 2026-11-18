@@ -1,0 +1,93 @@
+{
+  "created_at": "2026-11-18T14:18:24.835964+00:00",
+  "verified": true,
+  "protocol_hash_unchanged": true,
+  "datasets": {
+    "IEMOCAP": {
+      "verified": true,
+      "errors": [],
+      "dataset": "IEMOCAP",
+      "best_model_lock_sha256": "0d915efbe9d16a10bdd2f5fde32d0c1664300ec770675bd9b1934ed36b5ca984",
+      "best_model_dir": "/LOCAL/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/local_only/IEMOCAP/training/best_student",
+      "training": {
+        "completed_epochs": 10,
+        "best_epoch": 8,
+        "best_inner_dev_mse": 0.0427955728079771,
+        "global_steps": 2970
+      },
+      "feature_gate_passed": false,
+      "probability_status": "NOT_RUN_FEATURE_GATE_FAILED",
+      "final_feature_rows": 527,
+      "train_manifest": "/LOCAL/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/local_only/IEMOCAP/train_manifest.csv",
+      "train_rows": 5283
+    },
+    "MELD": {
+      "verified": true,
+      "errors": [],
+      "dataset": "MELD",
+      "best_model_lock_sha256": "775300d511b7bbbd5a77006d3f5ab5a3c618de1c46af98a7f6f2711551e9c552",
+      "best_model_dir": "/LOCAL/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/local_only/MELD/training/best_student",
+      "training": {
+        "completed_epochs": 10,
+        "best_epoch": 8,
+        "best_inner_dev_mse": 0.035225588153864805,
+        "global_steps": 5620
+      },
+      "feature_gate_passed": false,
+      "probability_status": "NOT_RUN_FEATURE_GATE_FAILED",
+      "final_feature_rows": 1109,
+      "train_manifest": "/LOCAL/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/local_only/MELD/train_manifest.csv",
+      "train_rows": 9989
+    }
+  },
+  "original_input_integrity_errors": [],
+  "report_errors": [],
+  "gates_are_not_research_success": true,
+  "scope": {
+    "CMERC_retrained": false,
+    "Test_used": false,
+    "raw_perturbation_performed": false
+  },
+  "interpretation": "verified=true means complete, honest, internally consistent artifacts; feature gates may fail",
+  "training_checkpoint_integrity": {
+    "IEMOCAP": {
+      "dataset": "IEMOCAP",
+      "verified": true,
+      "checkpoint_sha256": "f9958e892ee23c9ba511266a9645bacf7b703939fd33ca1c9ba0311bfbc1c168",
+      "checkpoint_bytes": 4252261242,
+      "completed_epoch": 10,
+      "attempted_global_steps": 2970,
+      "actual_optimizer_steps_min": 2969,
+      "actual_optimizer_steps_max": 2969,
+      "model_tensor_count": 389,
+      "all_model_and_optimizer_tensors_finite": true,
+      "optimizer_parameter_states": 389,
+      "per_rank_RNG_states": 2,
+      "per_rank_loader_RNG_states": 2,
+      "scaler_state_present": true,
+      "latest_is_final_epoch_not_selected_best": true,
+      "no_Validation_or_Test_read": true
+    },
+    "MELD": {
+      "dataset": "MELD",
+      "verified": true,
+      "checkpoint_sha256": "16418bd07575b3289e05d0a6b6ab4391d67f7a1dcb254c9f4737225339542ad8",
+      "checkpoint_bytes": 4252261242,
+      "completed_epoch": 10,
+      "attempted_global_steps": 5620,
+      "actual_optimizer_steps_min": 5619,
+      "actual_optimizer_steps_max": 5619,
+      "model_tensor_count": 389,
+      "all_model_and_optimizer_tensors_finite": true,
+      "optimizer_parameter_states": 389,
+      "per_rank_RNG_states": 2,
+      "per_rank_loader_RNG_states": 2,
+      "scaler_state_present": true,
+      "latest_is_final_epoch_not_selected_best": true,
+      "no_Validation_or_Test_read": true
+    }
+  },
+  "checkpoint_integrity_verified": true,
+  "completed_at": "2026-11-18T14:19:02.132750+00:00",
+  "final_git_head": "9849fc9f6654f37a23b798b8741c0c5cfc7307f8"
+}

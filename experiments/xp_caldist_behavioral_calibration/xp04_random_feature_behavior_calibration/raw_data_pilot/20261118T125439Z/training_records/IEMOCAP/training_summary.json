@@ -1,0 +1,39 @@
+{
+  "dataset": "IEMOCAP",
+  "completed_epochs": 10,
+  "best_epoch": 8,
+  "best_inner_dev_mse": 0.0427955728079771,
+  "global_steps": 2970,
+  "early_stopped": true,
+  "training_complete": true,
+  "smoke_only": false,
+  "elapsed_seconds": 2454.738187602954,
+  "memory_by_rank": [
+    {
+      "rank": 0,
+      "local_rank": 0,
+      "peak_allocated_gib": 7.253189563751221,
+      "peak_reserved_gib": 7.45703125,
+      "device": "NVIDIA TITAN Xp"
+    },
+    {
+      "rank": 1,
+      "local_rank": 1,
+      "peak_allocated_gib": 7.253249645233154,
+      "peak_reserved_gib": 7.45703125,
+      "device": "NVIDIA TITAN Xp"
+    }
+  ],
+  "gradient_update_check": {
+    "probe_parameter": "encoder.layer.23.attention.self.query.weight",
+    "gradient_present": true,
+    "gradient_all_finite": true,
+    "gradient_l2": 0.03437722846865654,
+    "maximum_parameter_update": 1.004338264465332e-05,
+    "optimizer_step_skipped": false,
+    "grad_norm_before_clip": 2.635686159133911
+  },
+  "official_validation_accessed": false,
+  "test_accessed": false,
+  "completed_utc": "2026-11-18T13:48:52.626763+00:00"
+}

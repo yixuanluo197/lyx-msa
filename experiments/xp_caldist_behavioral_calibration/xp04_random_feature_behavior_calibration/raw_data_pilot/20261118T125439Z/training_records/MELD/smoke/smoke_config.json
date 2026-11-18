@@ -1,0 +1,60 @@
+{
+  "data": "/LOCAL/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/local_only/MELD/train_prepared.pt",
+  "pretrained": "/LOCAL_HOME/.cache/huggingface/hub/models--roberta-large/snapshots/722cf37b1afa9454edce342e7895e588b6ff1d59",
+  "run_dir": "/LOCAL/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/local_only/MELD/smoke",
+  "tokenizer": "/LOCAL/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/local_only/tokenizer",
+  "dataset": "MELD",
+  "seed": 67137,
+  "micro_batch_size": 2,
+  "gradient_accumulation_steps": 4,
+  "eval_batch_size": 1,
+  "epochs": 10,
+  "patience": 2,
+  "min_delta": 0.0,
+  "learning_rate": 1e-05,
+  "weight_decay": 0.01,
+  "max_grad_norm": 1.0,
+  "workers": 0,
+  "threads": 2,
+  "log_every": 20,
+  "resume": false,
+  "smoke_steps": 2,
+  "data_sha256": "d4bccdf9b877bf16bfe3ce3dc4d8d42f143a67862c6d1da7fd63c1f025ff634c",
+  "code_sha256": "9a8caa913816d63747e1b79d440a401efa78081134b91c23994929f70a681092",
+  "hostname": "LOCAL_HOST",
+  "world_size": 2,
+  "effective_batch_size": 16,
+  "precision": {
+    "training": "fp16 autocast, FP32 parameters/AdamW states",
+    "inner_dev": "FP32"
+  },
+  "loss": "mean of four layer BOS MSE; no target normalization; no emotion labels",
+  "layer_order": [
+    -1,
+    -2,
+    -3,
+    -4
+  ],
+  "fit_samples": 32,
+  "dev_samples": 4,
+  "distributed_train_padding": 0,
+  "initial_loading_info": {
+    "missing_keys": [],
+    "unexpected_keys": [
+      "lm_head.bias",
+      "lm_head.dense.bias",
+      "lm_head.dense.weight",
+      "lm_head.layer_norm.bias",
+      "lm_head.layer_norm.weight"
+    ],
+    "mismatched_keys": [],
+    "error_msgs": []
+  },
+  "encoder_parameter_count": 354310144,
+  "trainable_parameter_count": 354310144,
+  "all_encoder_parameters_trainable": true,
+  "initial_amp_loss_scale": 4096.0,
+  "resume_semantics": "complete epoch boundary; model, optimizer, scaler, per-rank RNG, loader RNG",
+  "scheduler": null,
+  "start_utc": "2026-11-18T13:06:38.158953+00:00"
+}

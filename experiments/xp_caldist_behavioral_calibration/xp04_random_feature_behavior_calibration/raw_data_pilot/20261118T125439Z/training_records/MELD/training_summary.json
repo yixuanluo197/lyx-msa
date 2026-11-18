@@ -1,0 +1,39 @@
+{
+  "dataset": "MELD",
+  "completed_epochs": 10,
+  "best_epoch": 8,
+  "best_inner_dev_mse": 0.035225588153864805,
+  "global_steps": 5620,
+  "early_stopped": true,
+  "training_complete": true,
+  "smoke_only": false,
+  "elapsed_seconds": 4138.961488717934,
+  "memory_by_rank": [
+    {
+      "rank": 0,
+      "local_rank": 0,
+      "peak_allocated_gib": 7.233665943145752,
+      "peak_reserved_gib": 7.455078125,
+      "device": "NVIDIA TITAN Xp"
+    },
+    {
+      "rank": 1,
+      "local_rank": 1,
+      "peak_allocated_gib": 7.233665943145752,
+      "peak_reserved_gib": 7.455078125,
+      "device": "NVIDIA TITAN Xp"
+    }
+  ],
+  "gradient_update_check": {
+    "probe_parameter": "encoder.layer.23.attention.self.query.weight",
+    "gradient_present": true,
+    "gradient_all_finite": true,
+    "gradient_l2": 0.02001313306391239,
+    "maximum_parameter_update": 1.0073184967041016e-05,
+    "optimizer_step_skipped": false,
+    "grad_norm_before_clip": 2.6722331047058105
+  },
+  "official_validation_accessed": false,
+  "test_accessed": false,
+  "completed_utc": "2026-11-18T14:17:00.635991+00:00"
+}

@@ -1,0 +1,100 @@
+{
+  "experiment": "XP04 dual dataset RoBERTa feature distillation",
+  "created_at": "2026-11-18T12:58:19.094409+00:00",
+  "server": "LOCAL_HOST",
+  "python": "/LOCAL_HOME/miniconda3/envs/TEXT_repro/bin/python",
+  "datasets": {
+    "IEMOCAP": {
+      "seed": 1475,
+      "effective_train": 5283,
+      "validation": 527,
+      "target_slots": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "gpus": [
+        0,
+        1
+      ],
+      "port": 29651
+    },
+    "MELD": {
+      "seed": 67137,
+      "effective_train": 9989,
+      "validation": 1109,
+      "target_slots": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "gpus": [
+        2,
+        3
+      ],
+      "port": 29652
+    }
+  },
+  "pretrained": "/LOCAL_HOME/.cache/huggingface/hub/models--roberta-large/snapshots/722cf37b1afa9454edce342e7895e588b6ff1d59",
+  "encoder": "RobertaModel without pooler/classification head, all backbone parameters trainable",
+  "hidden_offsets": [
+    -1,
+    -2,
+    -3,
+    -4
+  ],
+  "pooling": "BOS position0",
+  "loss": "mean MSE over all four original-scale 1024d target layers",
+  "optimizer": {
+    "name": "AdamW",
+    "lr": 1e-05,
+    "weight_decay": 0.01,
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "eps": 1e-08
+  },
+  "max_epochs": 10,
+  "early_stopping": {
+    "split": "10 percent effective Train dialogues held out, seeded without labels",
+    "patience": 2,
+    "min_delta": 0,
+    "metric": "sample weighted eval MSE; minimum wins",
+    "refit_full_train": false
+  },
+  "batch": {
+    "initial_micro_batch_per_rank": 2,
+    "gradient_accumulation": 4,
+    "world_size_per_student": 2,
+    "effective_global_batch": 16,
+    "adjustment": "Train-only OOM/capacity profile before formal training; record actual batch",
+    "actual_micro_batch_per_rank": 4,
+    "actual_gradient_accumulation": 2,
+    "selection_evidence": "Train-only smoke micro2 accumulation4 and micro8 accumulation1 both passed; longest Train sequences, peak7.21GiB. Choose micro4 accumulation2 to retain gradient accumulation and reduce microbatch overhead; no official Validation accessed."
+  },
+  "gradient_checkpointing": true,
+  "gradient_clip_norm": 1.0,
+  "precision": {
+    "train": "float16 autocast with dynamic GradScaler; fp32 model/optimizer",
+    "inner_dev_and_final": "fp32 eval"
+  },
+  "max_length_including_special_tokens": 512,
+  "truncation": "right, fixed before officialValidation",
+  "label_usage": "none",
+  "test_usage": "none",
+  "official_validation": "one final evaluation after locked training; never model selection",
+  "parity_protocol_sha256": "e74ff548b9b43d253546d68a6ac9d701c8733097b3519bd6d62c6cbfe6e777bf",
+  "protocol_override": "Current explicit user authorizes distillation/new finetuning; old original-producer/no-new-finetuning prerequisite superseded. Feature and probability numerical gates unchanged.",
+  "forbidden": [
+    "CMERC training",
+    "text perturbation",
+    "audio/visual processing",
+    "Test data/labels",
+    "target normalization",
+    "affine/regression converter",
+    "Git commit/push"
+  ]
+}

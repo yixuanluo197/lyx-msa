@@ -1,0 +1,20 @@
+{
+  "reviewed_at": "2026-11-18T16:23:11.627377+00:00",
+  "review_type": "independent read-only public-copy privacy and scientific-state review",
+  "passed": true,
+  "private_assets_found": false,
+  "local_paths_or_credentials_found": false,
+  "training_history_exactly_matches_original": true,
+  "feature_layer_metrics_exactly_match_original": true,
+  "counts": {
+    "IEMOCAP_validation": 527,
+    "MELD_validation": 1109,
+    "epochs_each": 10,
+    "best_epoch_each": 8,
+    "feature_layers_passed_each": 0
+  },
+  "probability_status": "NOT_RUN_FEATURE_GATE_FAILED",
+  "scope": "No raw Validation targets read and no training or evaluation rerun. Publication verification file generated after review.",
+  "per_layer_and_per_coordinate_csv_parsed_fields_match_original": true,
+  "post_review_formatting": "CSV line endings normalized to LF and Python trailing whitespace removed; static verifier compares all parsed CSV fields."
+}

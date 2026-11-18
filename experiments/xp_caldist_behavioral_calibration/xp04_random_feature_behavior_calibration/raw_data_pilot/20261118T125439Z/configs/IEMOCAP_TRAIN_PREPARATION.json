@@ -1,0 +1,66 @@
+{
+  "dataset": "IEMOCAP",
+  "seed": 1475,
+  "total_train_rows": 5283,
+  "total_train_dialogues": 108,
+  "fit_rows": 4747,
+  "inner_dev_rows": 536,
+  "fit_dialogues": 97,
+  "inner_dev_dialogues": 11,
+  "inner_split_seed": 1475,
+  "inner_split_algorithm": "sort dialogue IDs, Python random.Random(seed).shuffle; first ceil(10%) held out",
+  "split_has_no_shared_dialogues": true,
+  "target_shape": [
+    5283,
+    4,
+    1024
+  ],
+  "target_dtype": "float32",
+  "targets_all_finite": true,
+  "layer_order": [
+    -1,
+    -2,
+    -3,
+    -4
+  ],
+  "pkl_feature_slots": [
+    2,
+    3,
+    4,
+    5
+  ],
+  "max_untruncated_tokens": 112,
+  "token_length_quantiles": {
+    "0": 3.0,
+    "0.5": 14.0,
+    "0.9": 37.0,
+    "0.95": 44.0,
+    "0.99": 62.0,
+    "1": 112.0
+  },
+  "labels_indexed": false,
+  "official_validation_values_indexed": false,
+  "test_values_indexed": false,
+  "shared_container_note": "Unpickling shared official package materializes dictionaries; only effective Train text and four target feature dictionaries are indexed",
+  "prepared_train_path": "experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/local_only/IEMOCAP/train_prepared.pt",
+  "prepared_train_sha256": "2ddaa4317a85e4f061130881f8b33c194e2d68f271efa6896834f8cc2d33e3ff",
+  "config_path": "/LOCAL/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/configs/effective/IEMOCAP_cmerc_validation_seed1475.json",
+  "config_sha256": "59e40ae7b7d63bb5f56806eedefb2f70c6797095455f63c083917b1141275369",
+  "official_pkl_path": "/LOCAL/05_reproduction/external_repos/CMERC/data/iemocap_features_roberta.pkl",
+  "official_pkl_sha256": "4bd60c581a5b7c70e217e18439f741b191605fbd6f2cf4dc1a6dcb7fcaa18f06",
+  "target_layer_mean": [
+    -0.03123067133128643,
+    -0.030907288193702698,
+    -0.04158123582601547,
+    -0.03324934467673302
+  ],
+  "target_layer_std": [
+    0.9904261827468872,
+    1.0031239986419678,
+    1.0047937631607056,
+    0.9831998944282532
+  ],
+  "truncated_rows_count": 0,
+  "nonascii_changed_rows_count": 0,
+  "empty_processed_text_rows_count": 0
+}

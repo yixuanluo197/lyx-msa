@@ -1,0 +1,66 @@
+{
+  "dataset": "MELD",
+  "seed": 67137,
+  "total_train_rows": 9989,
+  "total_train_dialogues": 1038,
+  "fit_rows": 8989,
+  "inner_dev_rows": 1000,
+  "fit_dialogues": 934,
+  "inner_dev_dialogues": 104,
+  "inner_split_seed": 67137,
+  "inner_split_algorithm": "sort dialogue IDs, Python random.Random(seed).shuffle; first ceil(10%) held out",
+  "split_has_no_shared_dialogues": true,
+  "target_shape": [
+    9989,
+    4,
+    1024
+  ],
+  "target_dtype": "float32",
+  "targets_all_finite": true,
+  "layer_order": [
+    -1,
+    -2,
+    -3,
+    -4
+  ],
+  "pkl_feature_slots": [
+    3,
+    4,
+    5,
+    6
+  ],
+  "max_untruncated_tokens": 92,
+  "token_length_quantiles": {
+    "0": 3.0,
+    "0.5": 11.0,
+    "0.9": 24.0,
+    "0.95": 28.0,
+    "0.99": 36.0,
+    "1": 92.0
+  },
+  "labels_indexed": false,
+  "official_validation_values_indexed": false,
+  "test_values_indexed": false,
+  "shared_container_note": "Unpickling shared official package materializes dictionaries; only effective Train text and four target feature dictionaries are indexed",
+  "prepared_train_path": "experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/local_only/MELD/train_prepared.pt",
+  "prepared_train_sha256": "d4bccdf9b877bf16bfe3ce3dc4d8d42f143a67862c6d1da7fd63c1f025ff634c",
+  "config_path": "/LOCAL/lyx-msa/CMERC/experiments/xp_mainline_validation/20261016T050823Z/configs/effective/MELD_cmerc_validation_seed67137.json",
+  "config_sha256": "5d6271460c882dc34bf55bbcdec96afd09bb6b963c238745e04a54fb20515f68",
+  "official_pkl_path": "/LOCAL/05_reproduction/external_repos/CMERC/data/meld_features_roberta.pkl",
+  "official_pkl_sha256": "58b2bdadc2eaec6abb40ac0cb3ffa3f31e929d636ece8197aecf1ca373a92951",
+  "target_layer_mean": [
+    -0.031170237809419632,
+    -0.03073791414499283,
+    -0.041586074978113174,
+    -0.03319137543439865
+  ],
+  "target_layer_std": [
+    0.9919920563697815,
+    0.9951167106628418,
+    1.0032035112380981,
+    0.9835245013237
+  ],
+  "truncated_rows_count": 0,
+  "nonascii_changed_rows_count": 2742,
+  "empty_processed_text_rows_count": 0
+}

@@ -1,0 +1,42 @@
+{
+  "implementation": "transformers.RobertaTokenizer (slow byte-level BPE)",
+  "pretrained_snapshot": "/LOCAL_HOME/.cache/huggingface/hub/models--roberta-large/snapshots/722cf37b1afa9454edce342e7895e588b6ff1d59",
+  "reference_implementation": "/LOCAL/05_reproduction/external_repos/code_references/erc_task_modules/conv-emotion/COSMIC/feature-extraction",
+  "all_cosmic_byte_bpe_token_ids_match_hf": true,
+  "compared_byte_bpe_token_count": 50257,
+  "cosmic_dictionary_special_token_offset": 4,
+  "merges_identical_sha256": "1ce1664773c50f3e0cc8842619a93edc4624525b728b188a9e0be33b7726adc5",
+  "add_prefix_space": false,
+  "strip_whitespace": false,
+  "iemocap_text_preprocessing": "Stored original text unchanged",
+  "meld_text_preprocessing": "text.encode('ascii', errors='ignore').decode('utf-8')",
+  "add_special_tokens": true,
+  "bos_id": 0,
+  "eos_id": 2,
+  "pad_id": 1,
+  "max_total_tokens": 512,
+  "truncation": "right; preserve BOS and EOS",
+  "padding": "dynamic right padding per minibatch",
+  "layer_order": [
+    -1,
+    -2,
+    -3,
+    -4
+  ],
+  "pooling": "BOS at token position 0",
+  "normalization": null,
+  "emotion_labels_read": false,
+  "official_validation_read": false,
+  "test_values_read": false,
+  "reference_note": "Matching reference BPE assets and processing; no claim of original CMERC encoder recovery",
+  "source_files": {
+    "/LOCAL/05_reproduction/external_repos/code_references/erc_task_modules/conv-emotion/COSMIC/feature-extraction/encoder.json": "196139668be63f3b5d6574427317ae82f612a97c5d1cdaf36ed2256dbf636783",
+    "/LOCAL/05_reproduction/external_repos/code_references/erc_task_modules/conv-emotion/COSMIC/feature-extraction/dict.txt": "2c31c5b236661067fe8626775eb995ef5fe808ac87d2ad4a6ddbef68550f5cc6",
+    "/LOCAL/05_reproduction/external_repos/code_references/erc_task_modules/conv-emotion/COSMIC/feature-extraction/vocab.bpe": "1ce1664773c50f3e0cc8842619a93edc4624525b728b188a9e0be33b7726adc5",
+    "/LOCAL/05_reproduction/external_repos/code_references/erc_task_modules/conv-emotion/COSMIC/feature-extraction/roberta_feature_extract_iemocap.py": "f995e79b32182416330903056354a9a73ece111cd2c88c285800abda33d08481",
+    "/LOCAL/05_reproduction/external_repos/code_references/erc_task_modules/conv-emotion/COSMIC/feature-extraction/roberta_feature_extract_meld.py": "733e109e72ed22b7ca34a8ca488b30229c8e17d6c3f95b3828646f2469f5f5d4",
+    "/LOCAL_HOME/.cache/huggingface/hub/models--roberta-large/snapshots/722cf37b1afa9454edce342e7895e588b6ff1d59/vocab.json": "9e7f63c2d15d666b52e21d250d2e513b87c9b713cfa6987a82ed89e5e6e50655",
+    "/LOCAL_HOME/.cache/huggingface/hub/models--roberta-large/snapshots/722cf37b1afa9454edce342e7895e588b6ff1d59/merges.txt": "1ce1664773c50f3e0cc8842619a93edc4624525b728b188a9e0be33b7726adc5",
+    "/LOCAL_HOME/.cache/huggingface/hub/models--roberta-large/snapshots/722cf37b1afa9454edce342e7895e588b6ff1d59/tokenizer_config.json": "994f46754c5bf4014f1aa92d34b1374319c3a6b3f702105cd5b742beaecd18ce"
+  }
+}

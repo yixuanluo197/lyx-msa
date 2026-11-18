@@ -1,0 +1,99 @@
+{
+  "created_at": "2026-11-17T05:54:18.490985+00:00",
+  "status": "FROZEN_BEFORE_ANY_CURRENT_VALIDATION_TARGET_ACCESS",
+  "datasets": {
+    "IEMOCAP": {
+      "seed": 1475,
+      "expected_validation_rows": 527,
+      "expected_dialogues": 12,
+      "reference_file": "iemocap_features_roberta.pkl",
+      "pickle_text_slots": [
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    "MELD": {
+      "seed": 67137,
+      "expected_validation_rows": 1109,
+      "expected_dialogues": 114,
+      "reference_file": "meld_features_roberta.pkl",
+      "pickle_text_slots": [
+        3,
+        4,
+        5,
+        6
+      ]
+    }
+  },
+  "encoder_gate": {
+    "actual_producer_weights_required": true,
+    "alternative_pretrained_route_requires_explicit_paper_support": true,
+    "cosmic_reference_not_proof_of_cmerc_actual_run": true,
+    "unknown_or_other_task_weights_forbidden": true,
+    "no_new_finetuning": true
+  },
+  "reference_code_semantics": {
+    "status": "REFERENCE_NOT_CONFIRMED_ACTUAL_PRODUCER",
+    "hidden_offsets_in_saved_slot_order": [
+      -1,
+      -2,
+      -3,
+      -4
+    ],
+    "width_per_layer": 1024,
+    "pooling": "BOS token index0 for each utterance independently",
+    "pad_token_id": 1,
+    "MELD_reference_cleaning": "ASCII encode errors=ignore then decode utf8; cannot silently apply to actual XP04 text without source confirmation",
+    "IEMOCAP_reference_cleaning": "pass stored utterance strings directly to roberta.encode",
+    "train_max_positions": 512,
+    "extraction_truncation": "not explicit in reference extraction; must establish before extraction rather than invent",
+    "output_normalization": "none in COSMIC extraction script; original XP04 model norm is a separate downstream operation"
+  },
+  "feature_gate_all_four_layers": {
+    "complete_validation_coverage": true,
+    "all_finite": true,
+    "all_elements_allclose": {
+      "atol": 0.0001,
+      "rtol": 0.0001
+    },
+    "MAE_max": 1e-05,
+    "RMSE_max": 0.0001,
+    "mean_nonzero_row_cosine_min": 0.99999,
+    "min_nonzero_row_cosine_min": 0.9999,
+    "all_target_nonconstant_correlations_defined": true,
+    "target_nonconstant_dimension_correlation_p05_min": 0.999,
+    "standard_deviation_floor_for_constant_detection": 1e-08,
+    "shape_each_layer": "[dataset_validation_rows,1024]",
+    "no_affine_or_learned_converter": true
+  },
+  "metrics_definition": {
+    "MAE": "mean absolute elementwise difference per layer",
+    "RMSE": "sqrt(mean squared elementwise difference) per layer",
+    "cosine": "per utterance; zero-vector cases separately counted, never fill with1",
+    "correlation": "Pearson per coordinate over corresponding Validation utterances; constants/undefined counted separately",
+    "distribution": "per-coordinate mean/std difference and first Wasserstein distance; no Validation-derived transformation"
+  },
+  "probability_gate": {
+    "only_after_all_four_feature_gates": true,
+    "preserve_other_modalities_and_dialogue_structure": true,
+    "frozen_checkpoint_only": true,
+    "max_abs_probability_error_max": 0.0001,
+    "mean_abs_probability_error_max": 1e-05,
+    "class_agreement_required": 1.0,
+    "max_abs_confidence_error_max": 0.0001
+  },
+  "validation_policy": "One final locked extraction/evaluation only, no feedback into encoder/parameters/tokenization; if prerequisites missing, all numerical results null and no extraction",
+  "scope_excludes": [
+    "CMERC training",
+    "any new RoBERTa fine-tuning",
+    "text perturbation",
+    "audio/visual processing",
+    "Test labels",
+    "other seeds",
+    "regression or affine parity conversion",
+    "Git commit/push"
+  ],
+  "historical_exposure": "Prior audits saw package structure and some summaries. Independent means no current Validation feedback selection, not never-seen data."
+}
