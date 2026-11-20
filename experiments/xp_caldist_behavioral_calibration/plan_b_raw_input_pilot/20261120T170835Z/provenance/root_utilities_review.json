@@ -1,0 +1,116 @@
+{
+  "reviewed_at_utc": "2026-11-20T17:27:26.647420+00:00",
+  "status": "PASS_STATIC_ROOT_UTILITIES_REVIEW_ALL_THREE_FINDINGS_RESOLVED",
+  "scope": "Static read-only review of root utility source. No formal utility execution, new predictions/generated text access, model load, or existing review overwrite.",
+  "checks": {
+    "launcher_exact_two_encoder_consumer_environments": true,
+    "launcher_validates_cohort_and_text_input_locks_before_each_stage": true,
+    "launcher_persistent_status_PIDs_exit_codes_logs_and_no_auto_retry": true,
+    "launcher_existing_execution_and_logs_not_overwritten": true,
+    "assembler_all1452_new_versions_and_review_overlays_required": true,
+    "assembler_preserves_172_historical_rows_exactly": true,
+    "assembler_has1624_matched_and1932_blind_rows": true,
+    "assembler_original_template_metadata_context_immutable": true,
+    "second_AI_QA_bound_by_processed_text_hash_and_distinct_reviewer": true,
+    "second_AI_QA_cannot_upgrade_rejected_or_uncertain_version": true,
+    "assembler_exact_parent_AI_CONTEXT_SEMANTIC_REVIEW_method": true,
+    "blind_randomIDs_hide_source_labels_confidence_predictions_pairs_AI": true,
+    "blind_human_sections_blank_and_PENDING": true,
+    "private_review_key_separate_local_only": true,
+    "verifier_no_import_analysis_engine": true,
+    "verifier_independent_mu_delta_JS_flip_from_probability_vectors": true,
+    "verifier_2000x80_master_draws_seed_and_duplicate_cluster_counts": true,
+    "verifier_independent_equalDialogue_equalpair_count_matrix_replicates": true,
+    "verifier_95_and_priority975_percentile_formulas_correct_for_supported_scopes": true,
+    "verifier_original_historical_failure_uncertainty_rows_unchanged": true,
+    "verifier_checks_full_blind_context_schema_and_no_human_fabrication": true,
+    "empty_priority_quantile_guard_and_NA_check": true,
+    "pair_endpoints_scope_direction_ranking_independent_linkage": true,
+    "engine_feature_prediction_dialogue_artifact_output_sha_checks": true,
+    "analysis_output_sha_map_and_prediction_source_sha_checked": true
+  },
+  "check_count": 25,
+  "findings": [
+    {
+      "id": "VERIFY_EMPTY_PRIORITY",
+      "severity": "LOW",
+      "location": "scripts/verify_followup.py verify_stat priority_two_family_js branch",
+      "issue": "If the AI-reviewed primary JS scope has no eligible pairs, the code still calls np.quantile on zero finite bootstrap values. The analyzer correctly emits NA; verifier would fail despite honest empty-scope output.",
+      "recommended_fix": "For zero finite priority replicates require empty adjusted CI fields and zero bootstrap_valid; only compute quantiles for nonempty supported scopes.",
+      "root_notified": true,
+      "resolved": true,
+      "resolution": "Root owner updated verifier; independent follow-up static read confirms requested guard/linkage/output hash checks. No formal actual-result verifier execution was performed by reviewer."
+    },
+    {
+      "id": "VERIFY_PAIR_LINKAGE",
+      "severity": "MEDIUM",
+      "location": "scripts/verify_followup.py pairrows read and verify_stat selection",
+      "issue": "Independent bootstrap uses exported pair *_difference, concordance and eligible fields without first deriving/checking them from independently checked target rows and frozen correct/error endpoint IDs. An upstream sign, ranking or eligibility bug could therefore be faithfully reproduced and pass this verifier.",
+      "recommended_fix": "Independently bind every pairrow to frozen pair endpoints; check e-c differences, behavior concordance ties, 1-confidence baseline, paired concordance difference, scope gates, and complete condition counts before resampling.",
+      "root_notified": true,
+      "resolved": true,
+      "resolution": "Root owner updated verifier; independent follow-up static read confirms requested guard/linkage/output hash checks. No formal actual-result verifier execution was performed by reviewer."
+    },
+    {
+      "id": "VERIFY_OUTPUT_HASH_BINDING",
+      "severity": "MEDIUM",
+      "location": "scripts/verify_followup.py encode/infer provenance loop",
+      "issue": "Engine input bindings are checked, but recorded encode feature_file_sha256, infer encoder_feature_sha256, output_sha256 and dialogue_artifact_sha256 are not compared to actual output/cache files. Analysis exported output hashes are also not checked. The final source_and_artifact_hashes_verified=True claim would be broader than the checks performed.",
+      "recommended_fix": "Stream-hash actual encoder cache, perturbed CSV and dialogue predictions against engine recorded SHAs; verify analysis_verification output SHA map. No feature/model load is needed.",
+      "root_notified": true,
+      "resolved": true,
+      "resolution": "Root owner updated verifier; independent follow-up static read confirms requested guard/linkage/output hash checks. No formal actual-result verifier execution was performed by reviewer."
+    }
+  ],
+  "launch_assessment": "Launcher and corrected assembler ready. Independent count-matrix verifier now includes empty-priority NA guard, frozen pair-target linkage/direction/ranking checks and actual engine/cache/analysis output hashes. Actual artifacts must still pass formal verification after inference/analysis.",
+  "input_sha256": {
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T170835Z/scripts/run_frozen_followup.py": "8819d05e79f636bbdb3c75792e62d62291ed54e3d9e6c7437409aaad7a0a1757",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T170835Z/scripts/assemble_review_package.py": "0bf84d9f7587bb8e9a57540f1fd46977887d8d4207e3bb3b834f4f553b50491b",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T170835Z/scripts/verify_followup.py": "07e1cbe8e37a1e9342dcd5801a02f8c54b54a008532153b97719262f20a970e6"
+  },
+  "synthetic_suites_rerun": false,
+  "formal_utility_run": false,
+  "models_loaded": false,
+  "new_predictions_read": false,
+  "generated_texts_read": false,
+  "engine_or_utility_modified": false,
+  "modified_files": [
+    "provenance/root_utilities_review.json"
+  ],
+  "git_commit_push": false,
+  "initial_review_sha256": "058762f04410250a676c0b46ad3d0b77b0a875269242d522ff5f09637a5aeaa2",
+  "followup_reviewed_at_utc": "2026-11-20T17:27:56.656851+00:00",
+  "review_history": [
+    {
+      "phase": "initial",
+      "status": "INFERENCE_UTILITIES_READY_FINAL_VERIFIER_NEEDS_HARDENING",
+      "findings": [
+        {
+          "id": "VERIFY_EMPTY_PRIORITY",
+          "severity": "LOW",
+          "location": "scripts/verify_followup.py verify_stat priority_two_family_js branch",
+          "issue": "If the AI-reviewed primary JS scope has no eligible pairs, the code still calls np.quantile on zero finite bootstrap values. The analyzer correctly emits NA; verifier would fail despite honest empty-scope output.",
+          "recommended_fix": "For zero finite priority replicates require empty adjusted CI fields and zero bootstrap_valid; only compute quantiles for nonempty supported scopes.",
+          "root_notified": true
+        },
+        {
+          "id": "VERIFY_PAIR_LINKAGE",
+          "severity": "MEDIUM",
+          "location": "scripts/verify_followup.py pairrows read and verify_stat selection",
+          "issue": "Independent bootstrap uses exported pair *_difference, concordance and eligible fields without first deriving/checking them from independently checked target rows and frozen correct/error endpoint IDs. An upstream sign, ranking or eligibility bug could therefore be faithfully reproduced and pass this verifier.",
+          "recommended_fix": "Independently bind every pairrow to frozen pair endpoints; check e-c differences, behavior concordance ties, 1-confidence baseline, paired concordance difference, scope gates, and complete condition counts before resampling.",
+          "root_notified": true
+        },
+        {
+          "id": "VERIFY_OUTPUT_HASH_BINDING",
+          "severity": "MEDIUM",
+          "location": "scripts/verify_followup.py encode/infer provenance loop",
+          "issue": "Engine input bindings are checked, but recorded encode feature_file_sha256, infer encoder_feature_sha256, output_sha256 and dialogue_artifact_sha256 are not compared to actual output/cache files. Analysis exported output hashes are also not checked. The final source_and_artifact_hashes_verified=True claim would be broader than the checks performed.",
+          "recommended_fix": "Stream-hash actual encoder cache, perturbed CSV and dialogue predictions against engine recorded SHAs; verify analysis_verification output SHA map. No feature/model load is needed.",
+          "root_notified": true
+        }
+      ]
+    }
+  ],
+  "remaining_blocking_findings": []
+}

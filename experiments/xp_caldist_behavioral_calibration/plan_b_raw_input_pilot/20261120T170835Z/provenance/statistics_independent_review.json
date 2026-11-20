@@ -1,0 +1,110 @@
+{
+  "status": "PASS_NUMERICAL_IMPLEMENTATION_AND_RESOLVED_INTEGRATION",
+  "reviewed_at_utc": "2026-11-20T17:24:51.738074+00:00",
+  "reviewer": "Codex independent aps_local_audit agent",
+  "scope": "Read-only static statistical-code/protocol review, synthetic tests only, parent helper and blind-package AST interface review. No real new prediction, generated source text, model, or embedding data was opened.",
+  "checks": {
+    "formal_mu_mean_flip_times_perturbed_max_confidence": true,
+    "formal_delta_abs_clean_confidence_minus_mean_perturbed_confidence": true,
+    "JS_natural_log_zero_probability_safe": true,
+    "flip_rate_separate_from_mu": true,
+    "K_exactly_two_per_family_failures_do_not_reduce_K": true,
+    "correct_error_direction_error_minus_correct": true,
+    "cohort_same_Dialogue_bin_disjoint_correct_error_validated": true,
+    "original_probabilities_confidence_source_identity_validated": true,
+    "203_pairs_406_targets_80_dialogues_1624_conditions_guarded": true,
+    "shared_master_2000_by80_draws_seed20261120": true,
+    "cluster_multiplicity_counts_full_repeated_Dialogue_not_unique_set": true,
+    "equal_Dialogue_primary_and_equal_pair_secondary_distinguished": true,
+    "empty_scope_estimate_and_CI_None_not_zero": true,
+    "valid_bootstrap_counts_reported_and_1900_warning": true,
+    "percentile95_CIs_and_exactly_two_priority_JS97point5_CIs": true,
+    "all_scopes_metrics_calipers_rankings_reuse_same_master_draws": true,
+    "confidence_calipers_frozen002001_no_rematching": true,
+    "residual_continuous_confidence_gap_strata_retained": true,
+    "AI_REVIEWED_EXPLORATORY_does_not_claim_all_versions_double_review": true,
+    "human_scope_requires_two_distinct_nonblank_reviewerIDs_PASS_each_variant": true,
+    "no_human_fields_defaults_to_genuine_NA_human_scope": true,
+    "conditional_concordance_higher_behavior_means_error_ties_point5": true,
+    "baseline_same_pair_1_minus_confidence_direction_correct": true,
+    "ranking_difference_CI_bootstraps_paired_difference_directly": true,
+    "no_score_or_calibration_or_regression_model_fit": true,
+    "support_floor30pairs20dialogues_descriptive_not_power_claim": true,
+    "frozen_protocol_and_cohort_SHA_validated": true,
+    "negative_null_failure_uncertain_records_retained": true,
+    "blind_package_explicit_whitelist_hides_labels_correctness_confidence_pairs_AI": true,
+    "blind_full_context_constructor_only_utteranceIndex_speaker_text": true,
+    "blind_two_human_review_sections_blank_consensus_PENDING": true,
+    "assembler_parent_method_eligibility_interface_repaired_and_synthetic_checked": true
+  },
+  "check_count": 32,
+  "failed_checks": [],
+  "synthetic_tests": [
+    {
+      "environment": "TEXT_repro",
+      "command": "scripts/test_analyze_matched_synthetic.py",
+      "tests": 22,
+      "exit_code": 0,
+      "result": "OK"
+    },
+    {
+      "environment": "multimodalerc310",
+      "command": "scripts/test_analyze_matched_synthetic.py",
+      "tests": 22,
+      "exit_code": 0,
+      "result": "OK"
+    }
+  ],
+  "independent_numeric_tests": {
+    "random_behavior_arithmetic_cases": 40,
+    "probability_seed": 4317,
+    "atol": 1e-14,
+    "rtol": 1e-14,
+    "bootstrap_shape": [
+      2000,
+      80
+    ],
+    "bootstrap_independent_bruteforce_equal_Dialogue": "PASS",
+    "bootstrap_independent_bruteforce_equal_pair": "PASS",
+    "empty_clusters_and_cluster_multiplicity_included": true
+  },
+  "resolved_findings": [
+    {
+      "severity_when_found": "BLOCKING_INTEGRATION",
+      "location": "assemble_review_package.py review_method versus frozen parent raw_pilot.review_pass whitelist",
+      "initial_issue": "The new AI_CONTEXT_SEMANTIC_REVIEW_WITH_INDEPENDENT_AI_QA method name was not accepted by frozen parent review_pass; new PASS candidates would all lose main eligibility.",
+      "resolution_by_root": "Assembler now retains parent exact AI_CONTEXT_SEMANTIC_REVIEW method; independent QA attribution retained separately in nested record, reviewer and notes. Parent and frozen engine unchanged.",
+      "independent_synthetic_resolution_check": "AST extracted exact assigned method; synthetic PASS accepted by parent review_pass, FAIL/UNCERTAIN/PENDING rejected."
+    },
+    {
+      "severity_when_found": "MISLEADING_SCOPE_NAME",
+      "initial_issue": "AI_DOUBLE_REVIEW_EXPLORATORY name could overstate follow-up review count for inherited historical versions.",
+      "resolution_by_statistics_owner": "Renamed AI_REVIEWED_EXPLORATORY and eligibility field, with explicit inheritance docstring. Numerical statistics/gates/protocol unchanged.",
+      "verified_new_analyzer_sha256": "4e7df0726d200816fa3b78ce76a9d646dff5fe263e291ab58197868262cbc8fd"
+    }
+  ],
+  "limitations": [
+    "This approves mathematical implementation and input accounting, not scientific success or statistical power.",
+    "Same bin and fixed small calipers approximate continuous confidence control; semantic/class confounding remains.",
+    "Conditional pair concordance difference is not incremental gain from a fitted confidence-plus-behavior predictor or OOF calibration gain.",
+    "Only two priority equal-Dialogue AI-reviewed JS contrasts receive 97.5% Bonferroni intervals; other intervals remain exploratory.",
+    "Human-confirmed scope remains unavailable until actual two-human reviews are supplied; empty scope must be reported NA."
+  ],
+  "input_sha256": {
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T170835Z/scripts/analyze_matched.py": "4e7df0726d200816fa3b78ce76a9d646dff5fe263e291ab58197868262cbc8fd",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T170835Z/scripts/test_analyze_matched_synthetic.py": "af5a20a2d05b7fac693d4e331eeece77ade64dcae721a95745f19b6e142d6541",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T170835Z/scripts/assemble_review_package.py": "0bf84d9f7587bb8e9a57540f1fd46977887d8d4207e3bb3b834f4f553b50491b",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T170835Z/scripts/run_matched_text.py": "b96c7cdbe4d28724800aa1b7bb9c3116ce3cf54aeb872529368b2d428e805062",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T170835Z/configs/EXPLORATORY_PROTOCOL.json": "5d2fc9a1b5927fb2cabaeffa4c4ddd1320f143f689ba1bad0331995c23dad96c",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/scripts/raw_pilot.py": "b2bf7da730f562efb094db38b88ead0dd5a7f544b573d897dc9f09ff47c5972b"
+  },
+  "new_predictions_read": false,
+  "generated_texts_read": false,
+  "models_loaded": false,
+  "real_features_loaded": false,
+  "files_modified": [
+    "provenance/statistics_independent_review.json"
+  ],
+  "training_or_inference_executed": false,
+  "git_commit_push": false
+}

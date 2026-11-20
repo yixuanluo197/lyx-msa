@@ -1,0 +1,129 @@
+{
+  "name": "Plan B MELD matched text reliability exploration",
+  "created_at": "2026-11-20T17:12:30.813863+00:00",
+  "parent_run": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z",
+  "dataset": "MELD",
+  "model_seed": 67137,
+  "scope": "Exploratory reused Validation; no independent-confirmation claim",
+  "frozen_model": true,
+  "baseline_retraining": false,
+  "new_seed": false,
+  "test_access": false,
+  "reliability_score_fitting": false,
+  "matching": {
+    "pool": "All 1109 frozen MELD Validation records; no perturbed outcome used",
+    "cell": "Exact Dialogue ID x min(9,floor(10*original_softmax_confidence))",
+    "confidence_bin_width": 0.1,
+    "algorithm": "Maximum-cardinality 1:1 disjoint correct/error matching within each cell, then minimum total absolute confidence distance via scipy.linear_sum_assignment; stable sample-ID sort before solver",
+    "tie": "Deterministic scipy solver on ID-sorted FP64 cost matrix; preserve chosen pairs and hash",
+    "sample_cap": null,
+    "expected_pairs": 203,
+    "expected_targets": 406,
+    "expected_dialogues": 80,
+    "replacement": false,
+    "rematch_after_qc": false,
+    "predeclared_caliper_sensitivities": [
+      0.02,
+      0.01
+    ],
+    "near_zero_confidence_gap": 1e-06
+  },
+  "perturbations": {
+    "neutral_append": [
+      "neutral_a",
+      "neutral_b"
+    ],
+    "semantic_paraphrase": [
+      "paraphrase_a",
+      "paraphrase_b"
+    ],
+    "k_per_family": 2,
+    "neutral_token_budget": "min(24,max(4,floor(0.5*(original_tokens_including_specials-2))))",
+    "unchanged_parent_intensity": true,
+    "prior_target_candidates": "Reuse exact all prior four strings/reviews for overlapping targets, retain FAIL/UNCERTAIN; do not regenerate",
+    "new_candidates": "Single input-only generation plus independent AI semantic QA before inference; all fixed versions retained, no response-based repair",
+    "other_modalities_and_utterance_features": "Bit-exact unchanged; target-only text replacement and entire Dialogue inference"
+  },
+  "review": {
+    "package": "All previous MELD 480 variants plus four per newly matched target; deduplicate same target/variant; preserve complete context",
+    "blind_fields_hidden": [
+      "true_label",
+      "original_correct",
+      "confidence",
+      "probabilities",
+      "pair_id",
+      "prior_AI_status",
+      "prior_AI_notes"
+    ],
+    "human_review": "Two blank independent reviewer sections; PENDING until actual humans review, never fill from AI",
+    "ai_records": "Preserved original AI records and attributed new generation/second-review, separately mapped",
+    "human_confirmed_scope": "Both reviewers PASS for each fixed variant, complete family for both members; unavailable if no human reviews",
+    "computational_primary_scope": "AI-reviewed exploratory complete pairs, never called human-confirmed",
+    "diagnostic_scope": "All complete automatic input-QC pairs; FAIL/UNCERTAIN semantic versions retained separately"
+  },
+  "features": {
+    "text_encoder": "Exact same frozen MELD best RoBERTa Large and tokenizer in TEXT_repro",
+    "layers": [
+      -1,
+      -2,
+      -3,
+      -4
+    ],
+    "pooling": "BOS",
+    "normalization": "None beyond parent fixed preprocessing",
+    "melD_preprocess": "Same parent ASCII removal",
+    "text_runtime": [
+      "torch2.2.0+cu118",
+      "transformers4.42.3"
+    ],
+    "cmerc_runtime": [
+      "torch2.2.2+cu121",
+      "transformers4.45.1"
+    ],
+    "model": "Exact frozen CMERC67137, unchanged audio/visual/context",
+    "negative_control": "Parent pilot gates: feature atol=rtol=1e-4, probability atol=rtol=1e-4, prediction unchanged"
+  },
+  "behavior": {
+    "mu": "mean_k(flip_k*max(p_prime_k))",
+    "delta": "abs(max(p_clean)-mean_k(max(p_prime_k)))",
+    "js": "Mean natural-log JS(p_clean,p_prime_k), 0log0=0",
+    "flip": "mean_k(flip_k)",
+    "aggregation": "Per family K2; never combine types or drop a failed version"
+  },
+  "statistics": {
+    "bootstrap_repetitions": 2000,
+    "bootstrap_seed": 20261120,
+    "bootstrap_unit": "Dialogue; same 80-cohort-Dialogue draws shared across types/metrics/scopes/calipers",
+    "primary_estimand": "Mean within-Dialogue pair difference (error minus correct), then equal weight over eligible Dialogues",
+    "secondary_estimand": "Equal weight over eligible matched pairs, with Dialogue cluster resampling",
+    "priority_metrics": [
+      "JS error-correct contrast for each of two families"
+    ],
+    "intervals": "95% percentile exploratory CIs; also 97.5% Bonferroni intervals for the two priority JS contrasts",
+    "secondary_metrics": [
+      "mu",
+      "delta",
+      "flip_rate"
+    ],
+    "calipers": "Primary all frozen pairs; fixed absolute gap<=0.02 and<=0.01 sensitivities, never rematch",
+    "minimum_interpretable_support": {
+      "pairs": 30,
+      "dialogues": 20,
+      "note": "Predeclared descriptive interpretation floor, not formal power proof"
+    },
+    "minimum_valid_bootstrap": 1900,
+    "ranking": "No fit: pair concordance higher behavior=error, ties0.5; compare against error-score 1-confidence on same pairs, equal-Dialogue aggregation and shared bootstrap",
+    "confounding": "Bins approximate continuous confidence; fixed calipers reduce residual imbalance but do not eliminate semantic/class confounding",
+    "incremental_value": "Conditional association/ranking only. No fitted confidence+behavior score, no independent/OOF gain, no calibration benefit claim"
+  },
+  "boundaries": [
+    "No training or weight updates",
+    "No Test",
+    "No added model seeds",
+    "No original data/model writes",
+    "No changing old failed/uncertain versions",
+    "No response-based cohort,bin,caliper,condition tuning",
+    "No automatic experiment expansion",
+    "Full-text review package local only; no public upload"
+  ]
+}

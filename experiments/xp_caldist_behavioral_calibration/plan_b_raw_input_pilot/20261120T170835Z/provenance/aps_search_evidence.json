@@ -1,0 +1,305 @@
+{
+  "audit_time_utc": "2026-11-20T17:11:45.584489+00:00",
+  "repository": "/data2/yb/paper/lyx-msa/CMERC",
+  "network_used": false,
+  "model_or_dataset_binary_loaded": false,
+  "test_dataset_or_labels_loaded": false,
+  "training_or_inference_executed": false,
+  "scope": "Current workspace documentation/code and local reachable Git text history. Excluded .git binary content, local_only private artifacts, model/data pickle contents. No external literature used to invent definitions. Absence is bounded to searched assets, not a universal claim.",
+  "searches": [
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "cwd": "/data2/yb/paper/lyx-msa/CMERC",
+      "returncode": 0,
+      "stdout": "b856df71e628781d341a458edbd48d645e7a3836\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "rev-list",
+        "--all",
+        "--count"
+      ],
+      "cwd": "/data2/yb/paper/lyx-msa/CMERC",
+      "returncode": 0,
+      "stdout": "71\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "log",
+        "--all",
+        "--format=%H %cs %s",
+        "-G",
+        "\\bAssertion\\b|Sample[ _-]?Corruption",
+        "--",
+        "*.md",
+        "*.txt",
+        "*.py",
+        "*.json",
+        "*.csv",
+        "*.yaml",
+        "*.yml"
+      ],
+      "cwd": "/data2/yb/paper/lyx-msa/CMERC",
+      "returncode": 0,
+      "stdout": "93ee01a4879b2e1ebc7802cd5c450f9ca36eafd8 2026-11-10 Preserve the XP04 provenance boundary before behavioral perturbation\na284d1f3f5aca869f125314348ba4daf4798facf 2026-11-08 使单模态行为鲁棒性结论能够由冻结预测独立复核\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "log",
+        "--all",
+        "--format=%H %cs %s",
+        "-G",
+        "\\bProbe\\b",
+        "--",
+        "*.md",
+        "*.txt",
+        "*.yaml",
+        "*.yml"
+      ],
+      "cwd": "/data2/yb/paper/lyx-msa/CMERC",
+      "returncode": 0,
+      "stdout": "93ee01a4879b2e1ebc7802cd5c450f9ca36eafd8 2026-11-10 Preserve the XP04 provenance boundary before behavioral perturbation\na284d1f3f5aca869f125314348ba4daf4798facf 2026-11-08 使单模态行为鲁棒性结论能够由冻结预测独立复核\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "log",
+        "--all",
+        "--oneline",
+        "--follow",
+        "--",
+        "experiments/xp04_calidist_behavioral_confidence_calibration/data_provenance_audit/20261110T055604Z/PERTURBATION_FEASIBILITY_MATRIX.md"
+      ],
+      "cwd": "/data2/yb/paper/lyx-msa/CMERC",
+      "returncode": 0,
+      "stdout": "93ee01a Preserve the XP04 provenance boundary before behavioral perturbation\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "rg",
+        "-n",
+        "-i",
+        "-uuu",
+        "--max-columns",
+        "500",
+        "--glob",
+        "*.md",
+        "--glob",
+        "*.txt",
+        "--glob",
+        "*.py",
+        "--glob",
+        "*.yaml",
+        "--glob",
+        "*.yml",
+        "--glob",
+        "!**/.git/**",
+        "--glob",
+        "!**/local_only/**",
+        "\\bAssertion\\b|Sample[ _-]?Corruption|\\bProbe\\b",
+        "experiments",
+        "sources",
+        ".omx",
+        "CMERC/docs"
+      ],
+      "cwd": "/data2/yb/paper/lyx-msa",
+      "returncode": 0,
+      "stdout": "experiments/xp04_calidist_behavioral_confidence_calibration/data_provenance_audit/20261110T055604Z/RAW_TEXT_AUDIT.md:35:Yes at the raw-text level for both datasets because the full strings are retained, but modified strings **must be re-encoded**. Existing T1–T4 cannot represent an added question, Assertion, Probe, or Sample Corruption. Before running such perturbations, pin the exact/final replacement encoder, tokenizer assets, checkpoint hash, ASCII policy for MELD, ID manifest, and output schema. The exact historical encoder binary is currently UNVERIFIED.\nexperiments/xp04_calidist_behavioral_confidence_calibration/data_provenance_audit/20261110T055604Z/PERTURBATION_FEASIBILITY_MATRIX.md:6:| Assertion | raw/full text + pinned encoder | text yes; exact historical encoder no | text before re-encoding | CONDITIONAL |\nexperiments/xp04_calidist_behavioral_confidence_calibration/data_provenance_audit/20261110T055604Z/PERTURBATION_FEASIBILITY_MATRIX.md:7:| Probe | raw/full text + pinned encoder | text yes; exact historical encoder no | text before re-encoding | CONDITIONAL |\nexperiments/xp04_calidist_behavioral_confidence_calibration/data_provenance_audit/20261110T055604Z/PERTURBATION_FEASIBILITY_MATRIX.md:8:| Sample Corruption | raw/full text + pinned encoder | text yes; exact historical encoder no | text before re-encoding | CONDITIONAL |\nexperiments/xp_caldist_behavioral_calibration/20261107T172302Z/reports/SINGLE_MODAL_PILOT_REPORT.md:5:三种模态均为特征空间扰动。Text Representation 不等同于文本语义 Assertion/Probe，音视频扰动不等同于物理干扰。\nexperiments/xp_caldist_behavioral_calibration/20261107T172302Z/scripts/analyze_pilot.py:258:             '三种模态均为特征空间扰动。Text Representation 不等同于文本语义 Assertion/Probe，音视频扰动不等同于物理干扰。', '',\nexperiments/xp_caldist_behavioral_calibration/evidence_sensitivity/20261108T095843Z/scripts/verify_evidence.py:386:            acceleration['fp32'] and not acceleration['gradients'], 'Acceleration probe protocol')\nexperiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/pilot/20261113T025053Z/build_reports.py:128:          ' The only source edit during IEMOCAP execution widened the permitted local device assertion from GPU 3 to GPU 0/3'\nexperiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/pilot/20261113T025053Z/PILOT_REPORT.md:22:[Omitted long matching line]\nexperiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261117T014409Z/scripts/verify_audio_recovery.py:65:    probe = read('local_only/validation_audio_probe.json')\nexperiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261117T014409Z/scripts/verify_audio_recovery.py:66:    check('probe_uses_verified_existing_binary', sha256(probe['binary']) == probe['binary_sha256'])\nexperiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261117T014409Z/scripts/verify_audio_recovery.py:67:    check('all_30_metadata_probes_passed', len(probe['records']) == 30\nexperiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261117T014409Z/scripts/verify_audio_recovery.py:68:          and all(r['returncode'] == 0 and len(r['streams']['streams']) == 1 for r in probe['records']))\nexperiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261117T014409Z/scripts/verify_audio_recovery.py:69:    for r in probe['records']:\nexperiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/scripts/train_student.py:354:                    probe = model.encoder.layer[-1].attention.self.query.weight\nexperiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/scripts/train_student.py:355:                    before = probe.detach().float().clone()\nexperiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/scripts/train_student.py:356:                    probe_grad = probe.grad\nexperiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/scripts/train_student.py:367:                    diagnostic['maximum_parameter_update'] = float((probe.detach().float() - before).abs().max())\nexperiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261117T053929Z/scripts/verify_text_recovery_delivery.py:71:[Omitted long matching line]\nexperiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/provenance/code_versions/train_student.py:354:                    probe = model.encoder.layer[-1].attention.self.query.weight\nexperiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/provenance/code_versions/train_student.py:355:                    before = probe.detach().float().clone()\nexperiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/provenance/code_versions/train_student.py:356:                    probe_grad = probe.grad\nexperiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/provenance/code_versions/train_student.py:367:                    diagnostic['maximum_parameter_update'] = float((probe.detach().float() - before).abs().max())\nexperiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261117T053929Z/scripts/inspect_cosmic_archive_directory.py:7: probe=json.loads((OUT/'provenance/public_resource_probe.json').read_text())['checks'][1]\nexperiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261117T053929Z/scripts/inspect_cosmic_archive_directory.py:8: assert probe['status']==206\nexperiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261117T053929Z/scripts/inspect_cosmic_archive_directory.py:9: total=int(probe['content_range'].rsplit('/',1)[1]);start=int(probe['content_range'].split()[1].split('-')[0])\nexperiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261117T053929Z/scripts/inspect_cosmic_archive_directory.py:25:[Omitted long matching line]\nexperiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261116T174410Z/ROBERTA_PIPELINE_AUDIT.md:77:- 公开接口查询只读；三个 tokenizer 文件之外没有模型/语料大下载。完整文件/请求状态、404、HTTP probe 和哈希留档在 `sources/roberta/` 与 `provenance/roberta_sources.json`；HTTP 响应只保留内容类型/长度/ETag/修改时间等必要字段，未保留 cookie。\nexperiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261117T053929Z/scripts/probe_public_weight_resources.py:15:    if len(tail)>131072:raise ValueError('Range larger than permitted probe')\nexperiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/diagnostics/20261118T171911Z/20261120T090108Z/scripts/extend_overfit.py:340:            probe=model.encoder.layer[-1].attention.self.query.weight\nexperiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/diagnostics/20261118T171911Z/20261120T090108Z/scripts/extend_overfit.py:341:            before=probe.detach().clone() if diagnostics is None else None\nexperiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/diagnostics/20261118T171911Z/20261120T090108Z/scripts/extend_overfit.py:343:                diagnostics=dict(gradient_present=probe.grad is not None,\nexperiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/diagnostics/20261118T171911Z/20261120T090108Z/scripts/extend_overfit.py:344:                     gradient_finite=bool(torch.isfinite(probe.grad).all()),\nexperiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/diagnostics/20261118T171911Z/20261120T090108Z/scripts/extend_overfit.py:345:                     gradient_l2=float(probe.grad.norm()),\nexperiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/diagnostics/20261118T171911Z/20261120T090108Z/scripts/extend_overfit.py:347:                     probe='encoder.layer.23.attention.self.query.weight')\nexperiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/diagnostics/20261118T171911Z/20261120T090108Z/scripts/extend_overfit.py:350:                diagnostics['maximum_parameter_update']=float((probe.detach()-before).abs().max())\nexperiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261117T024213Z/provenance/run_converter_cv_v1_shutdown_failure.py:242:                raise RuntimeError(\"MELD probe rows mismatch\")\nexperiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261117T024213Z/provenance/run_converter_cv_v1_shutdown_failure.py:243:            candidate_paths = sorted(candidates_dir.glob(\"*/probe.npy\"))\nexperiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/diagnostics/20261118T171911Z/scripts/verify_diagnostic_delivery.py:234:                          'Probe gradient confirms an update, not that every parameter has a nonzero gradient.',\nexperiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/diagnostics/20261118T171911Z/scripts/small_sample_overfit.py:263:            probe = model.encoder.layer[-1].attention.self.query.weight\nexperiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/diagnostics/20261118T171911Z/scripts/small_sample_overfit.py:264:            before = probe.detach().clone() if diagnostics is None else None\nexperiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/diagnostics/20261118T171911Z/scripts/small_sample_overfit.py:266:                diagnostics = dict(gradient_present=probe.grad is not None,\nexperiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/diagnostics/20261118T171911Z/scripts/small_sample_overfit.py:267:                                   gradient_all_finite=bool(torch.isfinite(probe.grad).all()),\nexperiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/diagnostics/20261118T171911Z/scripts/small_sample_overfit.py:268:                                   gradient_l2=float(probe.grad.norm()),\nexperiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/diagnostics/20261118T171911Z/scripts/small_sample_overfit.py:269:                                   probe='encoder.layer.23.attention.self.query.weight',\nexperiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/diagnostics/20261118T171911Z/scripts/small_sample_overfit.py:273:                diagnostics['maximum_parameter_update'] = float((probe.detach() - before).abs().max())\nexperiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261117T024213Z/provenance/codeversions/evaluate_clean_reconstruction.before_corr_guard.a62fa3b1d98af5e1d2311eaf9795b71ddcf7e6c5e361a3502c42aa8b0090c313.py:249:    probe = np.array([-4., -2.5, -1., 0., 1., 2.5, 4.], np.float32)\nexperiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261117T024213Z/provenance/codeversions/evaluate_clean_reconstruction.before_corr_guard.a62fa3b1d98af5e1d2311eaf9795b71ddcf7e6c5e361a3502c42aa8b0090c313.py:250:    require(np.array_equal(keras.activations.hard_sigmoid(tf.constant(probe)).numpy(), np.clip(.2 * probe + .5, 0, 1)), 'Legacy hard sigmoid differs')\nexperiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261117T024213Z/CONVERTER_METHOD_COMPARISON.md:16:[Omitted long matching line]\nexperiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261117T024213Z/CONVERTER_METHOD_COMPARISON.md:35:相同阶段内的所有条件使用相同公共有限值掩码和相同 GroupKFold(3) Dialogue 分组；任何 Dialogue 都不会同时出现在该折拟合和留出部分。模型阶段与全秩扩展阶段复用相同折定义和 `cvfoldhash`。MELD probe 与完整 Train 的 CV 使用不同样本范围，二者分数不能直接视作同一个固定评测集合上的提升。\nexperiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261117T024213Z/CONVERTER_METHOD_COMPARISON.md:52:[Omitted long matching line]\nexperiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261117T024213Z/scripts/verify_delivery.py:129:                              'Initial MELD probe launch hash gap retained and repaired by independent bitwise recheck']}\nexperiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261117T024213Z/scripts/extract_iemocap_candidates.py:2:\"\"\"Candidate acoustic extraction, never an assertion of original provenance.\nexperiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261117T024213Z/scripts/recheck_meld_probe.py:2:\"\"\"Independently repeat the fixed Train probe with code/config frozen before launch.\nexperiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261117T024213Z/scripts/recheck_meld_probe.py:60:    sys.argv = [str(frozen),'--stage','probe','--manifest',str(OUT/'local_only/MELD/manifest_train.csv'),'--workers','6']\nexperiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261117T024213Z/scripts/recheck_meld_probe.py:67:        a,b = original_root/cond/'probe.npy', new_root/cond/'probe.npy'\nexperiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261117T024213Z/scripts/evaluate_clean_reconstruction.py:273:    probe = np.array([-4., -2.5, -1., 0., 1., 2.5, 4.], np.float32)\nexperiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261117T024213Z/scripts/evaluate_clean_reconstruction.py:274:    require(np.array_equal(keras.activations.hard_sigmoid(tf.constant(probe)).numpy(), np.clip(.2 * probe + .5, 0, 1)), 'Legacy hard sigmoid differs')\nexperiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261117T024213Z/scripts/extract_meld_candidates.py:4:Frozen 8-condition probe is selected without labels or Validation features.\nexperiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261117T024213Z/scripts/extract_meld_candidates.py:173:        raise ValueError('Fewer dialogues than frozen probe sample count')\nexperiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261117T024213Z/scripts/extract_meld_candidates.py:218:    parser.add_argument('--stage', choices=['smoke', 'probe', 'train', 'validation'], required=True)\nexperiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261117T024213Z/scripts/extract_meld_candidates.py:232:        raise ValueError('Only Train manifests allowed for fitting/probe')\nexperiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261117T024213Z/scripts/extract_meld_candidates.py:248:    selected = subset[:3] if args.stage == 'smoke' else subset if args.stage == 'probe' else np.arange(len(rows))\nexperiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261117T024213Z/scripts/run_converter_cv.py:242:                raise RuntimeError(\"MELD probe rows mismatch\")\nexperiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261117T024213Z/scripts/run_converter_cv.py:243:            candidate_paths = sorted(candidates_dir.glob(\"*/probe.npy\"))\nexperiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261117T024213Z/configs/code_versions/run_converter_cv_v1.py:242:                raise RuntimeError(\"MELD probe rows mismatch\")\nexperiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261117T024213Z/configs/code_versions/run_converter_cv_v1.py:243:            candidate_paths = sorted(candidates_dir.glob(\"*/probe.npy\"))\nexperiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261117T024213Z/configs/code_versions/run_converter_cv_v2.py:242:                raise RuntimeError(\"MELD probe rows mismatch\")\nexperiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261117T024213Z/configs/code_versions/run_converter_cv_v2.py:243:            candidate_paths = sorted(candidates_dir.glob(\"*/probe.npy\"))\nexperiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261117T024213Z/configs/iemocap/code_versions/extract_iemocap_candidates.train_v1.py:2:\"\"\"Candidate acoustic extraction, never an assertion of original provenance.\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "log",
+        "--all",
+        "--regexp-ignore-case",
+        "--format=%H %cs %s",
+        "-G",
+        "\\bassertion\\b|sample[ _-]?corruption",
+        "--",
+        "*.md",
+        "*.txt",
+        "*.py",
+        "*.json",
+        "*.csv",
+        "*.yaml",
+        "*.yml"
+      ],
+      "cwd": "/data2/yb/paper/lyx-msa/CMERC",
+      "returncode": 0,
+      "stdout": "9849fc9f6654f37a23b798b8741c0c5cfc7307f8 2026-11-17 Preserve text encoder provenance gaps before permitting XP04 perturbations\nd7f3ca2d3c8989e472afc8bf616fcbf06d0375f8 2026-11-17 Preserve failed XP04 audio reconstruction evidence for review\nc3621384d208f11c9bcf1676e9ee3f98fc975095 2026-11-16 Determine whether stronger perturbations add reliability beyond confidence\nbb0d966727303ce65f0231e1e36fed8347d38b5c 2026-11-13 Preserve the validated XP04 CaliDist pilot for research review\n93ee01a4879b2e1ebc7802cd5c450f9ca36eafd8 2026-11-10 Preserve the XP04 provenance boundary before behavioral perturbation\na284d1f3f5aca869f125314348ba4daf4798facf 2026-11-08 使单模态行为鲁棒性结论能够由冻结预测独立复核\nbbc486d6c21cf93a377ce0ee8171d3da181449fc 2026-10-16 让因果 CMERC 的验证证据与恢复约束可独立复查\n",
+      "stderr": ""
+    }
+  ],
+  "source_files": [
+    {
+      "path": "/data2/yb/paper/lyx-msa/experiments/xp04_calidist_behavioral_confidence_calibration/data_provenance_audit/20261110T055604Z/PERTURBATION_FEASIBILITY_MATRIX.md",
+      "relative_to_workspace": "experiments/xp04_calidist_behavioral_confidence_calibration/data_provenance_audit/20261110T055604Z/PERTURBATION_FEASIBILITY_MATRIX.md",
+      "sha256": "bfc34ba6732449121e3648244edff72f2620f0d88c115a47e89b3948acd275e1",
+      "bytes": 2300,
+      "published_copy_sha256": "bfc34ba6732449121e3648244edff72f2620f0d88c115a47e89b3948acd275e1",
+      "published_copy_matches": true
+    },
+    {
+      "path": "/data2/yb/paper/lyx-msa/experiments/xp04_calidist_behavioral_confidence_calibration/data_provenance_audit/20261110T055604Z/RAW_TEXT_AUDIT.md",
+      "relative_to_workspace": "experiments/xp04_calidist_behavioral_confidence_calibration/data_provenance_audit/20261110T055604Z/RAW_TEXT_AUDIT.md",
+      "sha256": "8cc885a10984fc8de48ce6e1363af675685aecb0797b54b5863d33db67fb1477",
+      "bytes": 2635,
+      "published_copy_sha256": "8cc885a10984fc8de48ce6e1363af675685aecb0797b54b5863d33db67fb1477",
+      "published_copy_matches": true
+    },
+    {
+      "path": "/data2/yb/paper/lyx-msa/experiments/xp04_calidist_behavioral_confidence_calibration/data_provenance_audit/20261110T055604Z/perturbation_feasibility.csv",
+      "relative_to_workspace": "experiments/xp04_calidist_behavioral_confidence_calibration/data_provenance_audit/20261110T055604Z/perturbation_feasibility.csv",
+      "sha256": "03d28eb455488a2323498a5bacd74c0c1e0698de1ee911789f2a65f10f2d4f80",
+      "bytes": 1681,
+      "published_copy_sha256": "03d28eb455488a2323498a5bacd74c0c1e0698de1ee911789f2a65f10f2d4f80",
+      "published_copy_matches": true
+    },
+    {
+      "path": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/20261107T172302Z/reports/SINGLE_MODAL_PILOT_REPORT.md",
+      "relative_to_workspace": "experiments/xp_caldist_behavioral_calibration/20261107T172302Z/reports/SINGLE_MODAL_PILOT_REPORT.md",
+      "sha256": "176c3532615dfb152cd27a4dd9f9246a9e063306add3fe8d7deadee6ded626be",
+      "bytes": 16203,
+      "published_copy_sha256": "176c3532615dfb152cd27a4dd9f9246a9e063306add3fe8d7deadee6ded626be",
+      "published_copy_matches": true
+    },
+    {
+      "path": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/20261107T172302Z/scripts/analyze_pilot.py",
+      "relative_to_workspace": "experiments/xp_caldist_behavioral_calibration/20261107T172302Z/scripts/analyze_pilot.py",
+      "sha256": "590c98ff4b1256b8c0f7b4a071f13684301aaf6c67062c0b8b49122cdc9e0b6e",
+      "bytes": 19086,
+      "published_copy_sha256": "590c98ff4b1256b8c0f7b4a071f13684301aaf6c67062c0b8b49122cdc9e0b6e",
+      "published_copy_matches": true
+    },
+    {
+      "path": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/configs/PLAN_B_PROTOCOL.json",
+      "relative_to_workspace": "experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/configs/PLAN_B_PROTOCOL.json",
+      "sha256": "5fdc385c679d86776ae89825f61854f94ac665905f471d63d3264e2439abd475",
+      "bytes": 6634,
+      "published_copy_sha256": "5fdc385c679d86776ae89825f61854f94ac665905f471d63d3264e2439abd475",
+      "published_copy_matches": true
+    },
+    {
+      "path": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/configs/RAW_PILOT_SCHEMA.json",
+      "relative_to_workspace": "experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/configs/RAW_PILOT_SCHEMA.json",
+      "sha256": "22116c4a367ce3f7d1a01a8e80e7550214e4402aea2c0b9f278bbd607038b79a",
+      "bytes": 10531,
+      "published_copy_sha256": "22116c4a367ce3f7d1a01a8e80e7550214e4402aea2c0b9f278bbd607038b79a",
+      "published_copy_matches": true
+    },
+    {
+      "path": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/scripts/raw_pilot.py",
+      "relative_to_workspace": "experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/scripts/raw_pilot.py",
+      "sha256": "b2bf7da730f562efb094db38b88ead0dd5a7f544b573d897dc9f09ff47c5972b",
+      "bytes": 46006,
+      "published_copy_sha256": "b2bf7da730f562efb094db38b88ead0dd5a7f544b573d897dc9f09ff47c5972b",
+      "published_copy_matches": true
+    },
+    {
+      "path": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/results/pilot/IEMOCAP/transformation_manifest_both.csv",
+      "relative_to_workspace": "experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/results/pilot/IEMOCAP/transformation_manifest_both.csv",
+      "sha256": "8006886cd80a810112319b2411992bc07e28f7d2ce1aeb54f4d3cb5885161bbc",
+      "bytes": 1806904,
+      "published_copy_sha256": "8006886cd80a810112319b2411992bc07e28f7d2ce1aeb54f4d3cb5885161bbc",
+      "published_copy_matches": true
+    },
+    {
+      "path": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/results/pilot/MELD/transformation_manifest_both.csv",
+      "relative_to_workspace": "experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/results/pilot/MELD/transformation_manifest_both.csv",
+      "sha256": "45989aad2f1e215eb6d5de07f9e9c1d9fb0b298a89a14b4def7a97719fa4cd2e",
+      "bytes": 1758968,
+      "published_copy_sha256": "45989aad2f1e215eb6d5de07f9e9c1d9fb0b298a89a14b4def7a97719fa4cd2e",
+      "published_copy_matches": true
+    }
+  ],
+  "plan_b_registered_execution_counts": {
+    "IEMOCAP": {
+      "total_rows": 1200,
+      "family_counts": {
+        "neutral_append": 240,
+        "semantic_paraphrase": 240,
+        "pitch_shift": 480,
+        "timbre_tilt": 240
+      },
+      "status_counts": {
+        "SUCCESS": 1189,
+        "FAILED": 11
+      },
+      "aps_named_rows": 0
+    },
+    "MELD": {
+      "total_rows": 1200,
+      "family_counts": {
+        "neutral_append": 240,
+        "semantic_paraphrase": 240,
+        "pitch_shift": 480,
+        "timbre_tilt": 240
+      },
+      "status_counts": {
+        "SUCCESS": 1182,
+        "FAILED": 18
+      },
+      "aps_named_rows": 0
+    }
+  },
+  "decisions": {
+    "Assertion": {
+      "definition": "UNRESOLVED",
+      "protocol": "NOT_FOUND",
+      "dedicated_code": "NOT_FOUND",
+      "run_manifest": "NOT_FOUND",
+      "result_files": "NOT_FOUND",
+      "execution_status": "NOT_ESTABLISHED_IN_SEARCHED_ASSETS",
+      "action": "PENDING_PROTOCOL_CONFIRMATION_NO_EXECUTION"
+    },
+    "Probe": {
+      "definition": "UNRESOLVED",
+      "protocol": "NOT_FOUND",
+      "dedicated_code": "NOT_FOUND",
+      "run_manifest": "NOT_FOUND",
+      "result_files": "NOT_FOUND",
+      "execution_status": "NOT_ESTABLISHED_IN_SEARCHED_ASSETS",
+      "action": "PENDING_PROTOCOL_CONFIRMATION_NO_EXECUTION"
+    },
+    "Sample (historical label: Sample Corruption)": {
+      "definition": "UNRESOLVED",
+      "protocol": "NOT_FOUND",
+      "dedicated_code": "NOT_FOUND",
+      "run_manifest": "NOT_FOUND",
+      "result_files": "NOT_FOUND",
+      "execution_status": "NOT_ESTABLISHED_IN_SEARCHED_ASSETS",
+      "action": "PENDING_PROTOCOL_CONFIRMATION_NO_EXECUTION"
+    }
+  },
+  "historical_commits_with_research_terms": [
+    "a284d1f3f5aca869f125314348ba4daf4798facf",
+    "93ee01a4879b2e1ebc7802cd5c450f9ca36eafd8"
+  ],
+  "excluded_false_positives": [
+    "GPU/throughput/runtime preflight probes",
+    "audio conversion candidate Train probes and probe.npy",
+    "HTTP public-resource probes",
+    "parameter gradient probes",
+    "Python assertion checks / AssertionError"
+  ],
+  "case_insensitive_history_false_positive_disposition": {
+    "9849fc9": "ZIP directory count assertion engineering failure log",
+    "d7f3ca2": "Candidate acoustic extraction docstring: never an assertion of original provenance",
+    "c362138": "torch.equal replay assertion engineering smoke failure",
+    "bb0d966": "GPU device assertion engineering runtime rule",
+    "bbc486d": "causal provenance engineering assertion failure; unrelated to text perturbations"
+  }
+}

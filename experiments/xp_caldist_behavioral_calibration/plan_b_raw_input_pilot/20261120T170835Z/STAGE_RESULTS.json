@@ -1,0 +1,35 @@
+{
+  "stage": "COMPLETE_PENDING_RESEARCHER_REVIEW",
+  "scientific_status": "EXPLORATORY_NOT_INDEPENDENT_CONFIRMATION",
+  "dataset": "MELD",
+  "seed": 67137,
+  "matched_pairs": 203,
+  "targets": 406,
+  "dialogues": 80,
+  "planned_conditions": 1624,
+  "success": 1544,
+  "failed_input_qc": 80,
+  "clean_controls_passed": 406,
+  "blind_review_rows": 1932,
+  "human_completed_rows": 0,
+  "ai_scope": {
+    "neutral_append": {
+      "pairs": 68,
+      "dialogues": 48
+    },
+    "semantic_paraphrase": {
+      "pairs": 86,
+      "dialogues": 57
+    }
+  },
+  "priority_js_both_intervals_include_zero": true,
+  "incremental_predictive_gain_established": false,
+  "reliability_score_training_recommended_now": false,
+  "candidate_for_review": "semantic_paraphrase",
+  "additional_seed_recommended_after_human_review": true,
+  "aps_protocols": "UNRESOLVED",
+  "no_training": true,
+  "no_test": true,
+  "no_new_seeds": true,
+  "verification_checks": 61791
+}

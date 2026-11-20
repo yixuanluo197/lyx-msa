@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "checked_at": "2026-11-20T17:46:45.894219+00:00",
+  "required_files": 15,
+  "csv_row_counts": {
+    "TEXT_REVIEW_PACKAGE.csv": 1932,
+    "results/matched_pair_manifest.csv": 203,
+    "results/matched_sample_manifest.csv": 406,
+    "results/all_validation_matching_status.csv": 1109,
+    "results/perturbed_predictions.csv": 1624,
+    "results/matched_analysis/target_behavior.csv": 812,
+    "results/matched_analysis/paired_metric_contrasts.csv": 288,
+    "results/matched_analysis/conditional_pair_ranking.csv": 432,
+    "results/correct_wrong_summary.csv": 24,
+    "results/prediction_flips_and_confidence_changes.csv": 1624
+  },
+  "numerical_verification_checks": 61791,
+  "all_frozen_code_hashes_unchanged": true,
+  "all_stage_processes_completed": true,
+  "python_compile": true,
+  "git_head": "b856df71e628781d341a458edbd48d645e7a3836",
+  "git_status_unchanged": true,
+  "no_commit_or_push": true,
+  "full_text_review_package_local_only": true,
+  "report_review": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T170835Z/provenance/final_report_review.json"
+}

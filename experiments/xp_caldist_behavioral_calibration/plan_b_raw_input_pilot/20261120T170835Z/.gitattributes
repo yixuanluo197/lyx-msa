@@ -1,0 +1,4 @@
+# Preserve scientific source and CSV bytes; arrays contain bootstrap statistics only.
+*.csv -text whitespace=cr-at-eol,-blank-at-eof
+*.json -text
+*.npz binary

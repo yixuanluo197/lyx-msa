@@ -1,0 +1,91 @@
+{
+  "status": "PASS_PUBLICATION_SCOPE_AND_PRIVACY_REVIEW",
+  "reviewed_at_utc": "2026-11-20T18:02:50.574014+00:00",
+  "reviewer": "Codex independent aps_local_audit agent",
+  "repository": "https://github.com/yixuanluo197/lyx-msa",
+  "public_directory": "experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T170835Z",
+  "scope": "Independent read-only review of 62 publishable files before this review: 57 byte-identical source artifacts and 5 publication wrappers. Ten compiler cache files are separately confirmed ignored by Git. Private source experiment was not modified.",
+  "checks": {
+    "57_source_files_byte_identical_and_SHA256_verified": true,
+    "copied_bytes9153914_match": true,
+    "private_local_only_directory_absent": true,
+    "full_TEXT_REVIEW_PACKAGE_absent": true,
+    "public_review_schema_header_only_zero_data_rows": true,
+    "public_CSV_no_raw_text_context_token_sequences_embeddings": true,
+    "24_JSON_recursive_review_no_raw_utterance_or_actual_token_payload": true,
+    "protocol_features_section_descriptive_not_embedding_tensor": true,
+    "no_published_models_weights_pickles_or_media": true,
+    "no_raw_feature_vectors_or_embedding_arrays": true,
+    "no_private_generated_JSONL_or_raw_text_generation_scripts": true,
+    "source_scripts_have_logic_and_explicit_synthetic_fixtures_not_transcripts": true,
+    "credentials_regex_scan_no_tokens_private_keys_or_bearer_values": true,
+    "no_symlinks_to_private_assets": true,
+    "bootstrap_indices2000x80_int16_and80_DialogueIDs_only": true,
+    "bootstrap_replicates720_float64_arrays_length2000_only": true,
+    "NPZ_loaded_allow_pickleFalse_no_object_arrays": true,
+    "NPZ_names_only_metric_estimand_bootstrap_statistics": true,
+    "10_pycompile_caches_confirmed_git_ignored_not_published": true,
+    "README_explains_raw_text_weights_and_features_excluded": true,
+    "provenance_paths_and_hashes_are_references_not_uploaded_assets": true,
+    "published_reports_exploratory_reusedValidation_singleSeed": true,
+    "human_review_PENDING_zero_confirmed_not_AI_as_human": true,
+    "no_stable_incremental_value_or_calibration_success_claim": true,
+    "failure_uncertainty_and80_QC_failures_retained": true,
+    "no_ReliabilityScore_training_extraSeeds_orTest": true,
+    "user_upload_authorization_recorded": true,
+    "reviewer_no_model_load_scientific_rerun_source_modification_or_git_push": true
+  },
+  "check_count": 28,
+  "failed_checks": [],
+  "findings": [],
+  "copied_source_files": 57,
+  "copied_source_bytes": 9153914,
+  "publishable_files_before_review": 62,
+  "publishable_files_including_review": 63,
+  "ignored_compiler_cache_files": 10,
+  "csv_review": "Header-only schema has zero data rows. Other CSVs contain IDs, labels, seven-class prediction probabilities, QC/review status and behavior/statistical results, with no raw text/context/token sequences or feature vectors.",
+  "npz_review": [
+    {
+      "path": "results/matched_analysis/bootstrap_draw_indices.npz",
+      "sha256": "a9f3af5d0ddcfd3d83f62e06c891810cd8cd80be9ffea8ec429e36ea93b3e0d3",
+      "arrays": 2,
+      "shape_dtype_counts": {
+        "((2000, 80), 'int16')": 1,
+        "((80,), '<U64')": 1
+      }
+    },
+    {
+      "path": "results/matched_analysis/bootstrap_replicates.npz",
+      "sha256": "95cceea509949517a0fdd3f332510b32a67e928d441a074c80c9637e9949ca7e",
+      "arrays": 720,
+      "shape_dtype_counts": {
+        "((2000,), 'float64')": 720
+      }
+    }
+  ],
+  "json_review": "24 JSON artifacts parsed recursively. Encoder/model state records contain hashes rather than tensors; token digests are hashes rather than token sequences. Feature protocol section is descriptive configuration.",
+  "credential_review": "No matching GitHub/HF/OpenAI-style token, AWS access-key ID, private-key marker or Authorization Bearer payload in current text snapshot.",
+  "root_additional_evidence": {
+    "attributed_to": "Root preparation check reported to reviewer",
+    "long_raw_string_candidates": 1951,
+    "minimum_characters": 30,
+    "minimum_words": 5,
+    "exact_matches": 0,
+    "independently_repeated_by_reviewer": false
+  },
+  "scientific_interpretation": "Exploratory reused Validation, one frozen MELD seed. Human review remains PENDING/NA. Local paraphrase signals do not establish stable extra value beyond original confidence. No calibration/reliability module or extra seed was run.",
+  "limitations": "Approval applies to this inspected publishable snapshot. Full model/raw-input verification needs private local assets. IDs, hashes, prediction probabilities and local provenance paths are retained intentionally.",
+  "publication_wrapper_sha256": {
+    "README.md": "f920ef32c2f57c9048d1bdac9470699d4820f451ff1459b309111c2b499cf67f",
+    ".gitignore": "e5e40f6b18097f84028128ebc48d1f14a982e169a342c4d0d02de7a7b7c02dde",
+    ".gitattributes": "b8dc9dfd07da3a656a209dcd779dedf86a21191fea2dc9a5a29af2df6bebf9f7",
+    "TEXT_REVIEW_PACKAGE_SCHEMA.csv": "6c89d3c1da46f8f0ff947293608bce886590a9a749581653129e93bd867c8990",
+    "PUBLICATION_MANIFEST.json": "5e7bfaf6c3f0863ce0f6bd4b8d97cd521ac78d64f29a89c460d46c04a440330e"
+  },
+  "models_loaded": false,
+  "test_data_access": false,
+  "scientific_experiments_rerun": false,
+  "source_run_modified": false,
+  "git_commit_push_executed_by_reviewer": false,
+  "reviewer_owned_file": "PUBLICATION_REVIEW.json"
+}

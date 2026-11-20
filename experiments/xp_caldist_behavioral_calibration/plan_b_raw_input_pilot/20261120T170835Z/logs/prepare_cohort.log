@@ -1,0 +1,46 @@
+/home/yangbin/miniconda3/envs/TEXT_repro/lib/python3.10/site-packages/torch/cuda/__init__.py:54: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+{
+  "status": "FROZEN_BEFORE_NEW_PERTURBED_INFERENCE",
+  "frozen_at": "2026-11-20T17:14:57.055258+00:00",
+  "pairs": 203,
+  "targets": 406,
+  "dialogues": 80,
+  "validation_rows": 1109,
+  "validation_dialogues": 114,
+  "eligible_cells": 164,
+  "all_cells": 465,
+  "target_coverage": 0.36609558160504957,
+  "pair_capacity": 203,
+  "previous_pilot_overlap": 43,
+  "new_targets": 363,
+  "reused_variants": 172,
+  "new_variants": 1452,
+  "matched_text_variants": 1624,
+  "total_blind_package_variants": 1932,
+  "confidence_gap": {
+    "mean": 0.022158647185475954,
+    "median": 0.01607590913772583,
+    "q90": 0.05038979053497315,
+    "maximum": 0.07806342840194702
+  },
+  "calipers": {
+    "0.02": {
+      "pairs": 114,
+      "dialogues": 58
+    },
+    "0.01": {
+      "pairs": 75,
+      "dialogues": 44
+    }
+  },
+  "no_test": true,
+  "no_training": true,
+  "no_new_perturbed_outputs_inspected": true,
+  "matching_engine": {
+    "numpy": "1.24.4",
+    "scipy": "1.15.3"
+  },
+  "tiny_exhaustive_matching_test": true,
+  "input_order_invariance": true
+}

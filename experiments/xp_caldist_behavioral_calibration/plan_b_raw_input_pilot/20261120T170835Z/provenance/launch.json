@@ -1,0 +1,11 @@
+{
+  "created_at": "2026-11-20T17:36:13.789664+00:00",
+  "server": "user23",
+  "host_gpu": 0,
+  "gpu_uuid": "GPU-7ff18ebb-100e-98fe-038b-a98bd4f94248",
+  "prelaunch_nvidia_smi": "0, GPU-7ff18ebb-100e-98fe-038b-a98bd4f94248, NVIDIA TITAN Xp, 3 MiB, 12288 MiB, 0 %\n1, GPU-eed2f34f-b4c0-7b7a-498e-71a026e30c5a, NVIDIA TITAN Xp, 3 MiB, 12288 MiB, 0 %\n2, GPU-d17e4326-9d3b-2025-fbf8-c9b0d16623a0, NVIDIA TITAN Xp, 3 MiB, 12288 MiB, 0 %\n3, GPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456, NVIDIA TITAN Xp, 3 MiB, 12288 MiB, 0 %\n",
+  "tmux_session": "planb_matched_20261120T170835Z",
+  "command": "env CUDA_VISIBLE_DEVICES=0 HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 OMP_NUM_THREADS=2 OPENBLAS_NUM_THREADS=1 /home/yangbin/miniconda3/envs/TEXT_repro/bin/python /data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T170835Z/scripts/run_frozen_followup.py > /data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T170835Z/logs/supervisor.log 2>&1",
+  "scientific_protocol_sha256": "5d2fc9a1b5927fb2cabaeffa4c4ddd1320f143f689ba1bad0331995c23dad96c",
+  "code_lock_verified": true
+}

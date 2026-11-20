@@ -1,0 +1,97 @@
+{
+  "reviewed_at_utc": "2026-11-20T17:21:39.564333+00:00",
+  "reviewer": "Codex independent aps_local_audit agent",
+  "status": "PASS_WITH_NONBLOCKING_HARDENING_NOTE",
+  "launch_decision": "Current reviewed code and frozen cohort are ready for encoder extraction. Before formal infer, require actual 406 clean controls pass; no claim of real-model parity from synthetic tests.",
+  "scope": "Static code/parent helper review, protocol and matched metadata CSV review, two runtime synthetic tests, independent pair and lock hash checks. No generated raw text review, model load, real-feature load or GPU/model forward.",
+  "changed_files": [
+    "provenance/engine_independent_review.json"
+  ],
+  "checks": {
+    "cohort_406_distinct_targets_203_correct_203_error_80_dialogues": true,
+    "pairs_203_disjoint_correct_error_same_dialogue_same_bin": true,
+    "cohort_and_pair_and_protocol_sha_match_predeclared_cohort_lock": true,
+    "caliper_002_114_pairs_58_dialogues": true,
+    "caliper_001_75_pairs_44_dialogues": true,
+    "four_fixed_text_variants_per_target_validated_1624_total": true,
+    "all_406_clean_reextraction_controls_before_perturbed_inference": true,
+    "baseline_data_checkpoint_text_audio_hashes_match_parent_lock_before_loading": true,
+    "same_parent_roberta_weight_and_tokenizer_identity_required": true,
+    "same_parent_ASCII_BPE_512_special_tokens_last_four_BOS_raw_FP32": true,
+    "encoder_eval_requires_grad_false_with_no_grad_shared_extractor": true,
+    "cmerc_eval_requires_grad_false_with_no_grad_shared_inference": true,
+    "runtime_exact_TEXT_repro_encoder_multimodalerc310_consumer": true,
+    "model_and_BN_fingerprint_before_after_bound": true,
+    "target_row_text_cloned_only_other_rows_and_audio_bit_exact": true,
+    "whole_dialogue_forward_visual_speaker_labels_ids_order_unchanged": true,
+    "original_all_validation_source_snapshot_before_after_unchanged": true,
+    "failed_QC_rows_preserved_no_K_reduction_or_regeneration": true,
+    "FAIL_UNCERTAIN_semantics_not_dropped_from_fixed_predictions": true,
+    "cache_file_sidecar_input_code_state_hash_bindings_checked": true,
+    "full_seven_class_softmax_checked_finite_normalized_and_saved": true,
+    "target_original_class_label_probabilities_saved": true,
+    "condition_count_complete_and_no_output_overwrites": true,
+    "no_training_Test_extra_seed_path_exists": true,
+    "synthetic_nine_tests_pass_in_encoder_runtime": true,
+    "synthetic_nine_tests_pass_in_cmerc_runtime": true
+  },
+  "check_count": 26,
+  "failed_checks": [],
+  "cohort": {
+    "targets": 406,
+    "pairs": 203,
+    "dialogues": 80,
+    "correct": 203,
+    "error": 203,
+    "clean_controls_expected": 406,
+    "fixed_variants_expected": 1624
+  },
+  "synthetic_execution": [
+    {
+      "python": "/home/yangbin/miniconda3/envs/TEXT_repro/bin/python",
+      "command": "scripts/test_matched_text_synthetic.py",
+      "tests": 9,
+      "exit_code": 0,
+      "result": "OK"
+    },
+    {
+      "python": "/home/yangbin/miniconda3/envs/multimodalerc310/bin/python",
+      "command": "scripts/test_matched_text_synthetic.py",
+      "tests": 9,
+      "exit_code": 0,
+      "result": "OK"
+    }
+  ],
+  "findings": [
+    {
+      "severity": "LOW",
+      "blocking": false,
+      "location": "scripts/run_matched_text.py:90-100,140-152",
+      "issue": "Runtime bindings capture the current cohort/protocol but do not automatically validate COHORT_LOCK.json or bind matched_pair_manifest.csv. Current files were independently confirmed byte-identical to the predeclared lock; no current cohort drift was found.",
+      "recommendation": "Optional owner hardening: validate predeclared cohort/pair/protocol digests from COHORT_LOCK at startup and include lock/pair manifest in encode/infer bindings. Alternatively retain explicit prelaunch independent lock validation as currently done. No scientific matching-rule change needed."
+    }
+  ],
+  "input_sha256": {
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T170835Z/scripts/run_matched_text.py": "b96c7cdbe4d28724800aa1b7bb9c3116ce3cf54aeb872529368b2d428e805062",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T170835Z/scripts/test_matched_text_synthetic.py": "d3242fec775e3e2b60fb866e14f6f20c89dcad3708b5a923706156c7b24e346c",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T170835Z/configs/EXPLORATORY_PROTOCOL.json": "5d2fc9a1b5927fb2cabaeffa4c4ddd1320f143f689ba1bad0331995c23dad96c",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T170835Z/configs/COHORT_LOCK.json": "a9d4914725fffb63b446623dfc9302277ccd53a3dedde974f00e83bba62b1bba",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T170835Z/results/matched_sample_manifest.csv": "4c1032a1fc99b0800740ed86c393885102fa326e5ec49b41d7d8e82264d3b055",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T170835Z/results/matched_pair_manifest.csv": "3c835c4c5c24938ca99c00278297c664d51a25b13250ccfe48b60cb95fb4d853",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/scripts/raw_pilot.py": "b2bf7da730f562efb094db38b88ead0dd5a7f544b573d897dc9f09ff47c5972b",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/scripts/text_encoder.py": "a8e87cb16064e3e54d52d63c1f6ccf62c2dd2eee4e600da2a0b80604f23adc34",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/scripts/downstream.py": "40632d490388f52c4c4ab99d96d1fced047782e3bf6ba782c9048add14bcc249"
+  },
+  "remaining_gates": [
+    "Review-package merge and frozen review attribution must be completed before encoding.",
+    "Actual encoder reextraction and clean feature/probability negative controls must pass before perturbed inference.",
+    "FAIL/UNCERTAIN and automatic-QC failures must stay in manifests; main analysis needs complete pairs/families.",
+    "AI review cannot be interpreted as human confirmation."
+  ],
+  "models_loaded": false,
+  "real_features_loaded": false,
+  "raw_generated_texts_read": false,
+  "gpu_forward_executed": false,
+  "engine_modified": false,
+  "git_commit_push": false
+}

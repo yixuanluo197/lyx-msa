@@ -1,0 +1,40 @@
+{
+  "recorded_at": "2026-11-20T17:43:47.953944+00:00",
+  "runtime": "TEXT_repro",
+  "successful_commands": [
+    [
+      "env",
+      "OPENBLAS_NUM_THREADS=1",
+      "OMP_NUM_THREADS=2",
+      "/home/yangbin/miniconda3/envs/TEXT_repro/bin/python",
+      "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T170835Z/scripts/analyze_matched.py",
+      "--run-dir",
+      "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T170835Z"
+    ],
+    [
+      "env",
+      "OPENBLAS_NUM_THREADS=1",
+      "OMP_NUM_THREADS=2",
+      "/home/yangbin/miniconda3/envs/TEXT_repro/bin/python",
+      "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T170835Z/scripts/verify_followup.py"
+    ],
+    [
+      "/home/yangbin/miniconda3/envs/TEXT_repro/bin/python",
+      "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T170835Z/scripts/write_reports.py"
+    ]
+  ],
+  "successful_exit_codes": [
+    0,
+    0,
+    0
+  ],
+  "failed_cli_attempt": {
+    "script": "analyze_matched.py",
+    "missing_argument": "--run-dir",
+    "exit_code": 2,
+    "failed_before_data_loading": true,
+    "outputs_written": false
+  },
+  "formal_analysis_runs": 1,
+  "protocol_changed_after_results": false
+}

@@ -1,0 +1,54 @@
+{
+  "status": "FROZEN_BEFORE_NEW_MODEL_INFERENCE",
+  "created_at": "2026-11-20T17:35:57.252082+00:00",
+  "matched_rows": 1624,
+  "blind_rows": 1932,
+  "human_completed_rows": 0,
+  "matched_ai_status_counts": {
+    "PASS": 1037,
+    "UNCERTAIN": 489,
+    "FAIL": 98
+  },
+  "new_generation_status_counts": {
+    "PASS": 945,
+    "UNCERTAIN": 420,
+    "FAIL": 87
+  },
+  "new_final_ai_status_counts": {
+    "PASS": 897,
+    "UNCERTAIN": 464,
+    "FAIL": 91
+  },
+  "unchanged_previous_rows": 172,
+  "previous_blind_rows": 480,
+  "new_rows": 1452,
+  "sources_sha256": {
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T170835Z/local_only/generated_parts/part_000_091.jsonl": "dc08d806f3433243b93786dd241394a0a8847adc7ccce5ea21f56f0e54b33842",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T170835Z/local_only/generated_parts/part_000_091.second_review.jsonl": "dcde46613a6d74b4365be3ed37e57379868548f5774253471a07b60d7e5fcfe0",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T170835Z/local_only/generated_parts/part_091_182.jsonl": "924c9600fd61936fcc5badb0813765f53bdb083a5e54ae2c2bea0f45f0cb0554",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T170835Z/local_only/generated_parts/part_091_182.second_review.jsonl": "161e1ae1aea2d911f3a7845625f9bbdbf773e8813ec4615fc59fe6c4fd777ea2",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T170835Z/local_only/generated_parts/part_182_273.jsonl": "d986ac3ac04539b9606153e897195cb561478f380755a9c4f5f762749759ded4",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T170835Z/local_only/generated_parts/part_182_273.second_review.jsonl": "00dd2a271ddef523bedab59c41ff1898b4c79200cca2c29f9d4742c8cf671f53",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T170835Z/local_only/generated_parts/part_273_363.jsonl": "4d1ca8704d8b6ef06576439eac51a799735e857d575c5283553e84ef84fefcd7",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T170835Z/local_only/generated_parts/part_273_363.second_review.jsonl": "f4dd36b99c6a1d816917f62ef05b80ac88398c62ae59869f4415b02270e9f0fb",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T170835Z/local_only/new_text_template.jsonl": "6120bf8d041a36c8bd4c24fac40b0e06c7efb1e2b14cb7fe242641d2009b343d",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T170835Z/local_only/reused_matched_text.jsonl": "2c5338b9021424b807620a804a44c2e9588d16b89365a3d8b7e40916b93cfbc6",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/local_only/pilot/MELD/text_reviewed.jsonl": "a45e030f2de8609bda3ebd3f8c4595c8b9a85e113113925711e6b5a2b2c46a03",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T170835Z/scripts/assemble_review_package.py": "ab7fcc768d156bbd5ffcb05f232418d6b2144adb10d3b03b16f497845c6f6ca7"
+  },
+  "outputs_sha256": {
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T170835Z/local_only/matched_text_reviewed.jsonl": "fcea6cc5b72c47cab4b28073cac00e7f17d4e97828ee40e1b747aa9ea383e42d",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T170835Z/local_only/ai_review_records.jsonl": "886dbbd5a42b5b53daf477c2bf8004b2a9818fc7092380a6af23853ebceed9f1",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T170835Z/TEXT_REVIEW_PACKAGE.csv": "f49892e3cd465de921fbe33b8e8749d690bd65e7c7d505fac10ab0574a5d10cb",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T170835Z/local_only/review_key.csv": "f8f28a553523428fe0f39c8e4a783afd9adc3c44e79b7c697ce97b97bbd051c9"
+  },
+  "blind_hidden_fields": [
+    "true_label",
+    "original_correct",
+    "confidence",
+    "probabilities",
+    "pair_id",
+    "AI review status/notes"
+  ],
+  "warning": "Full raw dialogue text: LOCAL ONLY. AI reviews do not constitute human label validation."
+}

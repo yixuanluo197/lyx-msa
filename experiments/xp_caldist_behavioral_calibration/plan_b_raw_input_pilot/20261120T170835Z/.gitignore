@@ -1,0 +1,16 @@
+/local_only/
+/TEXT_REVIEW_PACKAGE.csv
+__pycache__/
+*.pyc
+*.pt
+*.pth
+*.ckpt
+*.pkl
+*.npy
+*.safetensors
+*.bin
+*.wav
+*.mp4
+*.npz
+!/results/matched_analysis/bootstrap_draw_indices.npz
+!/results/matched_analysis/bootstrap_replicates.npz

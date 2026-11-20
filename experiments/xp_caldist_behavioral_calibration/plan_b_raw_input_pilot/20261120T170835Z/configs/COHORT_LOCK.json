@@ -1,0 +1,63 @@
+{
+  "status": "FROZEN_BEFORE_NEW_PERTURBED_INFERENCE",
+  "frozen_at": "2026-11-20T17:14:57.055258+00:00",
+  "pairs": 203,
+  "targets": 406,
+  "dialogues": 80,
+  "validation_rows": 1109,
+  "validation_dialogues": 114,
+  "eligible_cells": 164,
+  "all_cells": 465,
+  "target_coverage": 0.36609558160504957,
+  "pair_capacity": 203,
+  "previous_pilot_overlap": 43,
+  "new_targets": 363,
+  "reused_variants": 172,
+  "new_variants": 1452,
+  "matched_text_variants": 1624,
+  "total_blind_package_variants": 1932,
+  "confidence_gap": {
+    "mean": 0.022158647185475954,
+    "median": 0.01607590913772583,
+    "q90": 0.05038979053497315,
+    "maximum": 0.07806342840194702
+  },
+  "calipers": {
+    "0.02": {
+      "pairs": 114,
+      "dialogues": 58
+    },
+    "0.01": {
+      "pairs": 75,
+      "dialogues": 44
+    }
+  },
+  "no_test": true,
+  "no_training": true,
+  "no_new_perturbed_outputs_inspected": true,
+  "sources_sha256": {
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T170835Z/configs/EXPLORATORY_PROTOCOL.json": "5d2fc9a1b5927fb2cabaeffa4c4ddd1320f143f689ba1bad0331995c23dad96c",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/configs/BASELINE_LOCK_MELD.json": "4b99fe3561272d0f0af581f5cd50b13163af8f0633f0344c50e71167ea71fc71",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/results/pilot/MELD/original_predictions.csv": "0960095511f0f1424e50d30bc4c60bb180ccb3be3a3a3dde85d4257fb645d94e",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/results/pilot/MELD/sample_manifest.csv": "f9aa8d22ba0765a6bffb244911a44d7cadd926835038b07e08711a013d4c30dc",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/local_only/pilot/MELD/text_reviewed.jsonl": "a45e030f2de8609bda3ebd3f8c4595c8b9a85e113113925711e6b5a2b2c46a03",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T170835Z/scripts/prepare_cohort.py": "b05e8964e209927b6107160dbb5acff460fc240e8d06d4a91a3cccfccecf0c41",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/local_only/data/MELD/dataset.pt": "e8a438e7b36380f112dfd3850a2fb58c28084b6fba8aa9597d1dfb6c0231746b",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/local_only/features/MELD/text_features.pt": "284e90b3261e0cac4bf56884ca5aea99ffad1b236bbcbac588d82b742a1dc83f",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/local_only/features/MELD/audio_features.pt": "62f55bed2c99d15db134da521acf64579d80946c7291299df9cf12e1a96e7b22",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/local_only/data/MELD/runs/cmerc/best.pt": "8dfccc19a4c0c8ea218e16336b4985b6f937ea62978584fe4efc9a2acb4fab19"
+  },
+  "outputs_sha256": {
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T170835Z/results/matched_pair_manifest.csv": "3c835c4c5c24938ca99c00278297c664d51a25b13250ccfe48b60cb95fb4d853",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T170835Z/results/matched_sample_manifest.csv": "4c1032a1fc99b0800740ed86c393885102fa326e5ec49b41d7d8e82264d3b055",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T170835Z/results/all_validation_matching_status.csv": "e6f31651ffb25f152895939b1465c3b9d6294988193c75e4c6461511ceb0ee16",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T170835Z/local_only/new_text_template.jsonl": "6120bf8d041a36c8bd4c24fac40b0e06c7efb1e2b14cb7fe242641d2009b343d",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T170835Z/local_only/reused_matched_text.jsonl": "2c5338b9021424b807620a804a44c2e9588d16b89365a3d8b7e40916b93cfbc6"
+  },
+  "matching_engine": {
+    "numpy": "1.24.4",
+    "scipy": "1.15.3"
+  },
+  "tiny_exhaustive_matching_test": true,
+  "input_order_invariance": true
+}
