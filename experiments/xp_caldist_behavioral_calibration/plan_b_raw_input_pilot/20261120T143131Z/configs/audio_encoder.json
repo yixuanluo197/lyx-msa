@@ -1,0 +1,21 @@
+{
+  "model": "facebook/wav2vec2-base",
+  "revision": "0b5b8e868dd84f03fd87d01f9c4ff0f080fecfe8",
+  "feature": "last_hidden_state",
+  "dimension": 768,
+  "sample_rate": 16000,
+  "channels": 1,
+  "decode_dtype": "float32le",
+  "decode": "ffmpeg full source audio stream0, no trimming, mono average, resample16000",
+  "window_samples": 480000,
+  "window_overlap": 0,
+  "short_final_window": "merge residual<400samples into preceding window",
+  "waveform_normalization": "official Wav2Vec2FeatureExtractor over complete utterance before windowing",
+  "pooling": "sum last hidden valid frames across nonoverlapping windows divided by total real output frames",
+  "batch_size": 1,
+  "precision": "float32",
+  "mode": "eval_inference_all_parameters_frozen",
+  "silence_or_missing": "zero768 plus audio_missing_mask=True",
+  "missing_criteria": "None/nonexistent, decode failure/timeout, <400 samples, nonfinite, exact zero RMS or variance",
+  "padding": "none; no attention mask for group-norm pretrained base on single unpadded example"
+}

@@ -1,0 +1,59 @@
+{
+  "status": "PASS_WITH_EXPLICIT_LEGACY_METADATA_EXCEPTION",
+  "datasets": {
+    "IEMOCAP": {
+      "shape_and_dtype_verified": true,
+      "exact_schema_verified": true,
+      "train_validation_dialogue_disjoint": true,
+      "fit_dev_dialogue_disjoint": true,
+      "counts": {
+        "train": 5283,
+        "validation": 527
+      },
+      "fit_rows": 4747,
+      "dev_rows": 536,
+      "audio_missing": [],
+      "dataset_sha256": "48df0871aaed72d32ed39d71b2701c03b80c70943ed3eaa3455d1c728ffc5f8a"
+    },
+    "MELD": {
+      "shape_and_dtype_verified": true,
+      "exact_schema_verified": true,
+      "train_validation_dialogue_disjoint": true,
+      "fit_dev_dialogue_disjoint": true,
+      "counts": {
+        "train": 9989,
+        "validation": 1109
+      },
+      "fit_rows": 8989,
+      "dev_rows": 1000,
+      "audio_missing": [
+        [
+          "train",
+          "125",
+          "3"
+        ],
+        [
+          "validation",
+          "1149",
+          "7"
+        ]
+      ],
+      "dataset_sha256": "e8a438e7b36380f112dfd3850a2fb58c28084b6fba8aa9597d1dfb6c0231746b",
+      "all_raw_csv_texts_and_emotion_labels_exact": true,
+      "within_dialogue_csv_speaker_legacy_slot_conflicts": [
+        {
+          "split": "train",
+          "dialogue_id": "556",
+          "speaker_name": "Ross",
+          "legacy_slots": [
+            0,
+            1
+          ]
+        }
+      ]
+    }
+  },
+  "test_indexed": false,
+  "prepare_code_sha256": "8080f30bfe1ee217e5a560c4b83d26c584e0fe8fd5531cb634e6520d6d822f55",
+  "frozen_metadata_decision": "CSV text and unchanged official pkl Speaker ID at unique Train556/utt6 conflict"
+}

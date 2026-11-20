@@ -1,0 +1,31 @@
+{
+  "loader_materializes_full_epoch_list": true,
+  "modified_loader": false,
+  "rows": [
+    {
+      "dataset": "IEMOCAP",
+      "Fit_dialogues": 97,
+      "Fit_utterances": 4747,
+      "max_real_length": 110,
+      "visual_dim": 342,
+      "speaker_dim": 2,
+      "upper_bound_input_tensor_bytes": 222405480,
+      "upper_bound_MiB": 212.1023941040039,
+      "formula": "FitDialogues*maxFitLength*(4*(4*1024+768+visual_dim+speaker_dim)+4(mask)+8(label))",
+      "scope": "padded GPU input payload only; excludes parameters/Adam/activations/allocator fragmentation"
+    },
+    {
+      "dataset": "MELD",
+      "Fit_dialogues": 934,
+      "Fit_utterances": 8989,
+      "max_real_length": 24,
+      "visual_dim": 342,
+      "speaker_dim": 9,
+      "upper_bound_input_tensor_bytes": 467866752,
+      "upper_bound_MiB": 446.1925048828125,
+      "formula": "FitDialogues*maxFitLength*(4*(4*1024+768+visual_dim+speaker_dim)+4(mask)+8(label))",
+      "scope": "padded GPU input payload only; excludes parameters/Adam/activations/allocator fragmentation"
+    }
+  ],
+  "risk": "Input-only bound below 0.5 GiB per dataset; reserve this margin for concurrency. Does not certify total training peak; real smoke/resource inspection remains necessary."
+}

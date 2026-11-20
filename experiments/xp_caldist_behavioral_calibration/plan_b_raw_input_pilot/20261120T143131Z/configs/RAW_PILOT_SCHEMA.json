@@ -1,0 +1,247 @@
+{
+  "status": "RUNTIME_V2_FROZEN_BEFORE_ANY_PILOT_VALIDATION_ACCESS",
+  "created_utc": "2026-11-20T15:00:31.073413+00:00",
+  "script_hashes": {
+    "raw_pilot.py": "b2bf7da730f562efb094db38b88ead0dd5a7f544b573d897dc9f09ff47c5972b",
+    "pilot_analysis.py": "75cdb58f06851b72072087ab046077b9b24952ff8f7bb986dd6294119196522c",
+    "raw_path_smoke.py": "b47bd8786efabcce1f594cc276dacea40acc9a0c9428797d303b8a8beefad386",
+    "extract_pilot_features.py": "80c68f663002fd75c0be2b2742e7f7367a81b0618641ccd4d38111cd10e74d2e"
+  },
+  "plan_b_protocol_sha256": "5fdc385c679d86776ae89825f61854f94ac665905f471d63d3264e2439abd475",
+  "baseline_lock_required": {
+    "baseline_frozen": true,
+    "dataset": "IEMOCAP or MELD",
+    "dataset_sha256": "dataset.pt SHA256",
+    "checkpoint_sha256": "frozen new CMERC best.pt SHA256",
+    "text_features_sha256": "new text_features.pt SHA256",
+    "audio_features_sha256": "new audio_features.pt SHA256"
+  },
+  "data": {
+    "dataset_pt": "dataset,seed,class_names,splits(train/validation),fit_dialogue_ids,inner_dev_dialogue_ids",
+    "dialogue": "dialogue_id,utterance_ids,speaker,labels,texts,audio_paths,visual",
+    "text_features": "train/validation -> str DialogueID -> FloatTensor[N,4,1024]",
+    "audio_features": "train/validation -> str DialogueID -> FloatTensor[N,768], plus metadata/audio_missing_mask/utterance_metadata"
+  },
+  "cli_stages": [
+    "select",
+    "text-template",
+    "validate-text",
+    "audio-transform",
+    "infer"
+  ],
+  "paths": "All dataset/features/checkpoint/output/local_dir/model/review paths explicit CLI arguments; raw text/media stay under --local-dir",
+  "sampling": {
+    "count": 120,
+    "seeds": {
+      "IEMOCAP": 1475,
+      "MELD": 67137
+    },
+    "audio_available_only": true,
+    "same_text_audio_manifest": true,
+    "no_effectiveness_filtering": true,
+    "algorithm": "Lexicographic minimum selected Dialogue count, selected true class count, selected(class,clean correctness,confidence bin) count, seeded tie rank",
+    "confidence_bins": [
+      0.0,
+      0.1,
+      0.2,
+      0.3,
+      0.4,
+      0.5,
+      0.6,
+      0.7,
+      0.8,
+      0.9,
+      1.0
+    ]
+  },
+  "perturbations": {
+    "fixed_variants": {
+      "neutral_append": [
+        "neutral_a",
+        "neutral_b"
+      ],
+      "semantic_paraphrase": [
+        "paraphrase_a",
+        "paraphrase_b"
+      ],
+      "pitch_shift": [
+        "pitch_plus_0.5",
+        "pitch_minus_0.5",
+        "pitch_plus_1",
+        "pitch_minus_1"
+      ],
+      "timbre_tilt": [
+        "timbre_light",
+        "timbre_moderate"
+      ]
+    },
+    "pitch_semitones": {
+      "pitch_plus_0.5": 0.5,
+      "pitch_minus_0.5": -0.5,
+      "pitch_plus_1": 1.0,
+      "pitch_minus_1": -1.0
+    },
+    "timbre_parameters": {
+      "timbre_light": [
+        0.75,
+        3.0
+      ],
+      "timbre_moderate": [
+        1.5,
+        6.0
+      ]
+    },
+    "text_addition_max_tokens": "min(24,max(4,floor(.5*original_non_special_token_count)))",
+    "all_failed_and_unconfirmed_variants_retained": true,
+    "no_combined_modality": true
+  },
+  "text_review": {
+    "format": "Local JSONL one row per sample x neutral_a/neutral_b/paraphrase_a/paraphrase_b; all480 rows per dataset must remain",
+    "required_context": [
+      "original_text",
+      "original_text_sha256",
+      "original_true_label",
+      "original_emotion_name",
+      "dialogue_context"
+    ],
+    "fields": [
+      "processed_text",
+      "review_status",
+      "review_method",
+      "reviewer",
+      "review_notes"
+    ],
+    "statuses": [
+      "PASS",
+      "FAIL",
+      "UNCERTAIN",
+      "PENDING"
+    ],
+    "accepted_methods": [
+      "AI_CONTEXT_SEMANTIC_REVIEW",
+      "HUMAN_CONTEXT_REVIEW"
+    ],
+    "ai_review_never_described_as_human": true,
+    "strict_main_requires": "PASS + attributed reviewer/method/reason + token/content QC + all planned K",
+    "qc": [
+      "changed text AND changed token IDs",
+      "different token IDs within each 2-variant family",
+      "no 512-token truncation",
+      "neutral exact original text prefix and no original token deletion",
+      "fixed short-addition budget"
+    ]
+  },
+  "audio_review": {
+    "format": "Local audio_label_review.csv with clean/processed paths and original text for listening; PENDING default",
+    "accepted_methods": [
+      "HUMAN_LISTENING_REVIEW",
+      "EXPERT_AUDIO_REVIEW"
+    ],
+    "automatic_signal_qc_does_not_confirm_emotion_label": true,
+    "unconfirmed_audio_scope": "Separate AUDIO_SIGNAL_QC_ONLY_NOT_LABEL_CONFIRMED exploration; clean correctness only; no perturbed accuracy/calibration/C-to-W/W-to-C"
+  },
+  "audio_dsp": {
+    "pitch": "FFmpeg asetrate(round(16000*2^(semitones/12))), aresample16000, atempo reciprocal actual ratio; exact sample count restore, RMS restore then peak attenuation if needed",
+    "timbre": "Whole-utterance rFFT gain clip(slope*log2(max(freq,80)/1000),-cap,+cap) dB, inverse FFT and RMS restore",
+    "signal_qc": {
+      "rate": 16000,
+      "channels": 1,
+      "exact_samples": true,
+      "maximum_rms_change_db": 0.5,
+      "maximum_unrestored_duration_error": 0.05,
+      "no_output_clipping": true
+    },
+    "ffmpeg_sources": [
+      "https://ffmpeg.org/ffmpeg-filters.html#asetrate",
+      "https://ffmpeg.org/doxygen/6.1/af__atempo_8c_source.html"
+    ]
+  },
+  "inference": {
+    "target_only_bit_exact_assertion": true,
+    "full_dialogue_forward": true,
+    "clean_target_reextraction_control": {
+      "atol": 0.0001,
+      "rtol": 0.0001,
+      "feature_allclose": true,
+      "probability_allclose": true,
+      "prediction_unchanged": true
+    },
+    "same_text_weights_and_tokenizer_as_clean_cache": true,
+    "same_audio_source_weights_code_protocol_as_clean_cache": true,
+    "failed_controls_retained_without_resampling": true,
+    "precomputed_features_required": true,
+    "encoder_state_verification": "All encoder parameters and buffers compared bitwise in producer; complete before/after state hashes bound in cache. CMERC consumer verifies provenance and its own state unchanged."
+  },
+  "statistics": {
+    "mu": "mean_k(1[argmaxp_k!=argmaxp]*maxp_k)",
+    "delta": "abs(maxp-mean_k(maxp_k))",
+    "flip": "unweighted mean class flip indicator",
+    "JS": "natural-log Jensen-Shannon, zero terms0",
+    "K_separate_per_type": true,
+    "bootstrap": 2000,
+    "shared_draws": "Full selected-cohort Dialogue universe, common seed(dataset,confidence bin) across types/modalities/metrics/scopes",
+    "within_Dialogue_confidence": "Only cells with both clean-correct and clean-error; fixed equal cell weights; shared Dialogue bootstrap; support fractions/effective cells/NA reported",
+    "cluster_CI_does_not_eliminate_Dialogue_confounding": true,
+    "no_reliability_or_calibration_fitting": true,
+    "no_population_claim_from_stratified120": true
+  },
+  "original_media_features_checkpoint_not_modified": true,
+  "test_accessed": false,
+  "runtime_amendment_utc": "2026-11-20T15:42:17.406467+00:00",
+  "runtime_split": {
+    "reason": "Pinned encoder runtime lacks torch_geometric; CMERC runtime has a different transformers version. Encoder generation and CMERC inference are explicit independent processes.",
+    "science_protocol_unchanged": true,
+    "v1_archive": "provenance/runtime_split_v1/ARCHIVE_MANIFEST.json",
+    "encoder": {
+      "environment": "TEXT_repro",
+      "python": "/home/yangbin/miniconda3/envs/TEXT_repro/bin/python",
+      "torch": "2.2.0+cu118",
+      "transformers": "4.42.3",
+      "stages": [
+        "text-template",
+        "validate-text",
+        "audio-transform",
+        "extract_pilot_features.py --mode smoke|pilot"
+      ]
+    },
+    "cmerc": {
+      "environment": "multimodalerc310",
+      "python": "/home/yangbin/miniconda3/envs/multimodalerc310/bin/python",
+      "torch": "2.2.2+cu121",
+      "transformers": "4.45.1",
+      "stages": [
+        "select",
+        "infer --precomputed-features CACHE.pt",
+        "raw_path_smoke.py --precomputed-features CACHE.pt"
+      ],
+      "encoder_models_instantiated": false
+    },
+    "no_inline_encoder_fallback": true,
+    "no_new_dependencies": true
+  },
+  "precomputed_feature_schema": {
+    "format": "PLAN_B_PRECOMPUTED_FEATURES_V2",
+    "top_keys": [
+      "metadata",
+      "clean_controls",
+      "variants",
+      "selection (smoke only)"
+    ],
+    "metadata": "format,mode,dataset,status,runtime,scientific_protocol_sha256,input_sha256,encoder_provenance,encoder_states_before/after,encoder_states_unchanged,input_files_unchanged; pilot also baseline_lock_sha256/sample_manifest_sha256",
+    "clean_controls": "sample_id -> {text:record,audio:record}, including retained FAILED records",
+    "variant_record": "sample_id,dialogue_id,utterance_index,modality,perturbation_type,variant_id,planned_k,status,original_feature_sha256,QC/review fields; EXTRACTED adds CPU FP32 feature,target_feature_sha256; text also actual_token_ids + array_hash(int64 IDs), audio transformation/source/waveform hashes",
+    "sidecar": "CACHE.manifest.json with format/mode/dataset/status, complete metadata exactly equal to bundle, cache_sha256",
+    "input_sha256": "Absolute resolved file paths and actual bytes hashes: dataset, feature caches, frozen CMERC checkpoint, protocol, encoder/producer/consumer source, selected encoder weights/tokenizer, raw media/review/variant assets",
+    "validation": "Strict unknown modality/status/family/shape/token rejection; same source files, matching before/after encoder states; target/clean-control identity hashes; full planned variant matrix preserved"
+  },
+  "encoder_producer_cli": "TEXT_repro/bin/python scripts/extract_pilot_features.py --mode pilot --dataset DS --dataset-dir DATA --text-features TEXT.pt --audio-features AUDIO.pt --checkpoint best.pt --text-model TEXT_MODEL --output CACHE.pt --local-dir LOCAL_MEDIA --pilot-output SELECT_DIR --baseline-lock LOCK.json --text-review REVIEW.jsonl --audio-review REVIEW.csv --device cuda:0",
+  "io_only_amendment": {
+    "created_utc": "2026-11-20T15:57:23.261711+00:00",
+    "physical_LF_JSONL_boundaries": "Unicode U+0085/U+2028/U+2029 inside raw strings are preserved exactly; no source text changed",
+    "completion_provenance": "Return actual completion.json path/hash; former variable shadowing corrected",
+    "history_retained": "provenance/jsonl_lf_io_fix_v2/",
+    "historical_smoke_erratum": "provenance/SMOKE_COMPLETION_PROVENANCE_ERRATA.json",
+    "scientific_protocol_and_statistical_code_unchanged": true,
+    "new_pilot_must_use_current_source_hashes": true
+  }
+}

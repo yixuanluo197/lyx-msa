@@ -1,0 +1,10 @@
+{
+  "archived_utc": "2026-11-20T15:55:00.698740+00:00",
+  "source": "scripts/raw_pilot.py",
+  "sha256": "5ce9dcd8ddf66d8ffc2b3803a28dd2ab768f423bf157c74c3933970051635717",
+  "reason": "Archive before IO-only physical-LF JSONL fix; U+0085/U+2028/U+2029 are legal string content, not record separators.",
+  "raw_path_smoke.py": {
+    "sha256": "973570a549a416f6c7dc96a67dbda56d128d19dd24cd30fe38b535608fe34e40",
+    "reason": "Archive before provenance variable-shadowing fix: completion record must point to completion.json rather than last input file."
+  }
+}

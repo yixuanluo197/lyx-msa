@@ -1,0 +1,120 @@
+{
+  "quality": [
+    {
+      "dataset": "IEMOCAP",
+      "targets": 120,
+      "dialogues": 12,
+      "correct": 59,
+      "error": 61,
+      "text_review_counts": {
+        "UNCERTAIN": 129,
+        "PASS": 348,
+        "FAIL": 3
+      },
+      "audio_signal_qc_pass": 712,
+      "audio_signal_qc_fail": 8,
+      "clean_controls": 239,
+      "clean_feature_max_abs": 8.869171142578125e-05,
+      "clean_probability_max_abs": 1.3113021850585938e-06
+    },
+    {
+      "dataset": "MELD",
+      "targets": 120,
+      "dialogues": 114,
+      "correct": 59,
+      "error": 61,
+      "text_review_counts": {
+        "PASS": 357,
+        "UNCERTAIN": 112,
+        "FAIL": 11
+      },
+      "audio_signal_qc_pass": 702,
+      "audio_signal_qc_fail": 18,
+      "clean_controls": 239,
+      "clean_feature_max_abs": 7.343292236328125e-05,
+      "clean_probability_max_abs": 1.996755599975586e-06
+    }
+  ],
+  "behavior": [
+    {
+      "dataset": "IEMOCAP",
+      "perturbation_type": "neutral_append",
+      "analysis_scope": "STRICT_ATTRIBUTED_LABEL_REVIEW_MAIN",
+      "n": 78,
+      "mu_zero_fraction": 0.8717948717948718,
+      "delta_median": 0.014334172010421753,
+      "js_median": 0.0005998186132959518,
+      "high_confidence_error_n": 2
+    },
+    {
+      "dataset": "IEMOCAP",
+      "perturbation_type": "semantic_paraphrase",
+      "analysis_scope": "STRICT_ATTRIBUTED_LABEL_REVIEW_MAIN",
+      "n": 94,
+      "mu_zero_fraction": 0.9361702127659575,
+      "delta_median": 0.00781947374343872,
+      "js_median": 0.00026088464076218676,
+      "high_confidence_error_n": 3
+    },
+    {
+      "dataset": "IEMOCAP",
+      "perturbation_type": "pitch_shift",
+      "analysis_scope": "AUDIO_SIGNAL_QC_ONLY_NOT_LABEL_CONFIRMED",
+      "n": 119,
+      "mu_zero_fraction": 0.9747899159663865,
+      "delta_median": 0.0008169114589691162,
+      "js_median": 2.6950968243366695e-06,
+      "high_confidence_error_n": 5
+    },
+    {
+      "dataset": "IEMOCAP",
+      "perturbation_type": "timbre_tilt",
+      "analysis_scope": "AUDIO_SIGNAL_QC_ONLY_NOT_LABEL_CONFIRMED",
+      "n": 118,
+      "mu_zero_fraction": 1.0,
+      "delta_median": 0.0006585195660591125,
+      "js_median": 7.659846295351808e-07,
+      "high_confidence_error_n": 5
+    },
+    {
+      "dataset": "MELD",
+      "perturbation_type": "neutral_append",
+      "analysis_scope": "STRICT_ATTRIBUTED_LABEL_REVIEW_MAIN",
+      "n": 98,
+      "mu_zero_fraction": 0.7142857142857143,
+      "delta_median": 0.07943527400493622,
+      "js_median": 0.01303472386876882,
+      "high_confidence_error_n": 0
+    },
+    {
+      "dataset": "MELD",
+      "perturbation_type": "semantic_paraphrase",
+      "analysis_scope": "STRICT_ATTRIBUTED_LABEL_REVIEW_MAIN",
+      "n": 74,
+      "mu_zero_fraction": 0.6486486486486487,
+      "delta_median": 0.043962568044662476,
+      "js_median": 0.009376342232970847,
+      "high_confidence_error_n": 0
+    },
+    {
+      "dataset": "MELD",
+      "perturbation_type": "pitch_shift",
+      "analysis_scope": "AUDIO_SIGNAL_QC_ONLY_NOT_LABEL_CONFIRMED",
+      "n": 117,
+      "mu_zero_fraction": 0.9914529914529915,
+      "delta_median": 0.0012260973453521729,
+      "js_median": 8.960218241775172e-06,
+      "high_confidence_error_n": 0
+    },
+    {
+      "dataset": "MELD",
+      "perturbation_type": "timbre_tilt",
+      "analysis_scope": "AUDIO_SIGNAL_QC_ONLY_NOT_LABEL_CONFIRMED",
+      "n": 114,
+      "mu_zero_fraction": 1.0,
+      "delta_median": 0.0007127150893211365,
+      "js_median": 1.95113968137066e-06,
+      "high_confidence_error_n": 0
+    }
+  ]
+}

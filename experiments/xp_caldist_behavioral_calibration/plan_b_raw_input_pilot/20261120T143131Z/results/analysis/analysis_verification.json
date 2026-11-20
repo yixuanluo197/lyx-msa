@@ -1,0 +1,48 @@
+{
+  "status": "COMPLETE",
+  "input_records": 2400,
+  "successful_records": 2371,
+  "failed_records": 29,
+  "complete_sample_families": 946,
+  "main_eligible_sample_families": 344,
+  "incomplete_sample_families": 14,
+  "audio_signal_qc_only_exploratory_families": 468,
+  "failed_qc_records": 29,
+  "unconfirmed_audio_not_used_for_perturbed_accuracy_or_calibration": true,
+  "formal_definitions": {
+    "mu": "mean(1[argmax(p_prime_k)!=argmax(p)] * max(p_prime_k))",
+    "delta": "abs(max(p) - mean(max(p_prime_k)))",
+    "flip_rate": "mean(argmax(p_prime_k)!=argmax(p))",
+    "js": "0.5*KL(p||m)+0.5*KL(p_prime||m), m=(p+p_prime)/2, natural log, 0log0=0"
+  },
+  "formal_source": "xp04_random_feature_behavior_calibration/mainline_mu_delta/20261115T165025Z/scripts/build_inputs.py:34-42",
+  "repetitions": 2000,
+  "seed": 20261120,
+  "bootstrap_unit": "Dialogue, paired draws for correct and error",
+  "shared_bootstrap": "Full-cohort Dialogue universe; identical seed by dataset and confidence bin across types/modalities/metrics/scopes",
+  "dialogue_effect_adjustment": "Separate exact Dialogue x width0.1 confidence-bin cells with both clean-correct/error; fixed equal cell weights; full-cohort Dialogue bootstrap",
+  "cluster_ci_alone_does_not_remove_dialogue_confounding": true,
+  "no_mixed_k": true,
+  "no_fitted_reliability_or_calibration": true,
+  "test_accessed": false,
+  "confidence_bins": [
+    0.0,
+    0.1,
+    0.2,
+    0.3,
+    0.4,
+    0.5,
+    0.6,
+    0.7,
+    0.8,
+    0.9,
+    1.0
+  ],
+  "selected_sample_population_metrics": false,
+  "selection_bias_and_limited_confidence_overlap_require_cautious_interpretation": true,
+  "input_sha256": {
+    "experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/results/pilot/IEMOCAP/perturbed_predictions_both.csv": "14c82fa80f82f5a1557a164751af84a236a3269b3135c655ac4ba5f15e855c56",
+    "experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/results/pilot/MELD/perturbed_predictions_both.csv": "3bd7a67dd47a6d15b33e6ecdff2761c5c07bead4b520d5225aa11ef14d58ec1e"
+  },
+  "code_sha256": "75cdb58f06851b72072087ab046077b9b24952ff8f7bb986dd6294119196522c"
+}

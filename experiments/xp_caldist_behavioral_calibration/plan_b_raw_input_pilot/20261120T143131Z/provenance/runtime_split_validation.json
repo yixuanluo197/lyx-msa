@@ -1,0 +1,54 @@
+{
+  "status": "PASS_SYNTHETIC_ONLY",
+  "completed_utc": "2026-11-20T15:42:17.406467+00:00",
+  "runtime_split_only": true,
+  "scientific_protocol_sha256": "5fdc385c679d86776ae89825f61854f94ac665905f471d63d3264e2439abd475",
+  "v1_archive": "runtime_split_v1/ARCHIVE_MANIFEST.json",
+  "new_dependencies": false,
+  "true_validation_accessed": false,
+  "real_models_loaded": false,
+  "real_model_smoke_executed": false,
+  "cross_environment_roundtrip": {
+    "producer": {
+      "environment": "TEXT_repro",
+      "torch": "2.2.0+cu118",
+      "transformers": "4.42.3"
+    },
+    "consumer": {
+      "environment": "multimodalerc310",
+      "torch": "2.2.2+cu121",
+      "transformers": "4.45.1"
+    },
+    "status": "PASS"
+  },
+  "negative_checks_passed": [
+    "unknown_modality",
+    "family_modality_mismatch",
+    "unknown_status",
+    "token_hash_mismatch",
+    "feature_shape_mismatch",
+    "control_shape_mismatch",
+    "target_identity_mismatch",
+    "encoder_runtime_mismatch",
+    "encoder_state_mutation",
+    "sidecar_metadata_mismatch",
+    "source_file_mutation"
+  ],
+  "other_checks": [
+    "py_compile all three runtime scripts",
+    "producer and consumer --help in intended real environments without model loading",
+    "TEXT_repro imports producer/smoke helpers without downstream/torch_geometric imports",
+    "AST verifies both CMERC consumer functions contain no encoder load/extract calls"
+  ],
+  "validation_script_sha256": "4cab1eae7a202aae6ddec31a9e1e88642098209cfaf37e2e573c199a08b4edc1",
+  "post_amendment_hashes": {
+    "scripts/raw_pilot.py": "5ce9dcd8ddf66d8ffc2b3803a28dd2ab768f423bf157c74c3933970051635717",
+    "scripts/raw_path_smoke.py": "973570a549a416f6c7dc96a67dbda56d128d19dd24cd30fe38b535608fe34e40",
+    "scripts/extract_pilot_features.py": "80c68f663002fd75c0be2b2742e7f7367a81b0618641ccd4d38111cd10e74d2e",
+    "scripts/pilot_analysis.py": "75cdb58f06851b72072087ab046077b9b24952ff8f7bb986dd6294119196522c",
+    "configs/RAW_PILOT_SCHEMA.json": "91ae42d295f47f504d54233983e0993c2ca87e0cc5d41595673d9112aae8b34d",
+    "configs/RAW_PATH_SMOKE_SCHEMA.json": "c8443823ca6bf45836f8213ac8f50307aaeea6da726fe738d3559be7f114c0a4"
+  },
+  "remaining": "Real fixed Train smoke remains required after both baselines complete. No 120-target pilot authorized by these synthetic checks.",
+  "read_only_review": "converter_protocol_review independently reviewed strict consumer entry and producer; no additional required fixes"
+}

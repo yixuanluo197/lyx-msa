@@ -1,0 +1,65 @@
+{
+  "status": "PROVENANCE_ERRATUM_ONLY",
+  "created_utc": "2026-11-20T15:57:23.261711+00:00",
+  "reason": "verify_baseline_complete reused path for completion.json and input loop. Model/checkpoint/input checks were applied to the correct completion object; only returned provenance path/hash referred to the final audio feature input.",
+  "fix": "Use separate completion_path and input_path variables; new Pilot producer binds the actual completion.json path/hash.",
+  "historical_scope": "Both Train-only engineering smoke reports/caches retained exactly. No repeated training, inference or Validation access for this correction.",
+  "archived_buggy_sources": "provenance/jsonl_lf_io_fix_v2/ARCHIVE_MANIFEST.json",
+  "corrected_raw_path_smoke_sha256": "b47bd8786efabcce1f594cc276dacea40acc9a0c9428797d303b8a8beefad386",
+  "datasets": {
+    "IEMOCAP": {
+      "historical_smoke_report": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/provenance/raw_path_smoke_IEMOCAP.json",
+      "historical_smoke_report_sha256": "600900cc3da20c437a26e89086c994aca9c93872a9bba6fe13030511d6fa20a3",
+      "incorrect_historical_baseline_completion": {
+        "path": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/local_only/features/IEMOCAP/audio_features.pt",
+        "sha256": "b02cf9e7e0a5323010c25841fe92bd4d10549cfc862aaedcd0856ee35aaf20ca",
+        "completed_at": "2026-11-20T15:41:49.652391+00:00"
+      },
+      "correct_baseline_completion": {
+        "path": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/local_only/data/IEMOCAP/runs/cmerc/completion.json",
+        "sha256": "834745de3807d07c8cf7db30efdea7fe6b43d69a810b322e9ec634f311533e79",
+        "completed_at": "2026-11-20T15:41:49.652391+00:00"
+      },
+      "actual_completion_status": "COMPLETE",
+      "actual_completion_stage": "cmerc",
+      "best_checkpoint_sha256": "3e28c4227d441b10b3f65c9eabee819949a7252571de6f236a045e9691e2cf84",
+      "baseline_lock_path": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/configs/BASELINE_LOCK_IEMOCAP.json",
+      "baseline_lock_sha256": "5d07b90697091997d041dc427782f82deb910969bd57b8acb2bb0d3120525144",
+      "completion_inputs_match_original_smoke_inputs": {
+        "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/local_only/data/IEMOCAP/dataset.pt": true,
+        "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/local_only/features/IEMOCAP/text_features.pt": true,
+        "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/local_only/features/IEMOCAP/audio_features.pt": true
+      },
+      "historical_precomputed_features_sha256": "19364ed9547e64a26fadfc6f43834c34e42ff9248cde596cc1b00262685408bf",
+      "historical_reports_and_caches_modified": false,
+      "feature_or_probability_results_changed": false
+    },
+    "MELD": {
+      "historical_smoke_report": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/provenance/raw_path_smoke_MELD.json",
+      "historical_smoke_report_sha256": "1fd65bc6858cdc8679b9cf7931c111a0d71bf06aaa03e25fd2c22df58b1c8f4c",
+      "incorrect_historical_baseline_completion": {
+        "path": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/local_only/features/MELD/audio_features.pt",
+        "sha256": "62f55bed2c99d15db134da521acf64579d80946c7291299df9cf12e1a96e7b22",
+        "completed_at": "2026-11-20T15:44:11.675440+00:00"
+      },
+      "correct_baseline_completion": {
+        "path": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/local_only/data/MELD/runs/cmerc/completion.json",
+        "sha256": "ba7d1ec80771b816ca370f100d66c78ae1f9bb10db92ec64379711b3d7052489",
+        "completed_at": "2026-11-20T15:44:11.675440+00:00"
+      },
+      "actual_completion_status": "COMPLETE",
+      "actual_completion_stage": "cmerc",
+      "best_checkpoint_sha256": "8dfccc19a4c0c8ea218e16336b4985b6f937ea62978584fe4efc9a2acb4fab19",
+      "baseline_lock_path": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/configs/BASELINE_LOCK_MELD.json",
+      "baseline_lock_sha256": "4b99fe3561272d0f0af581f5cd50b13163af8f0633f0344c50e71167ea71fc71",
+      "completion_inputs_match_original_smoke_inputs": {
+        "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/local_only/data/MELD/dataset.pt": true,
+        "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/local_only/features/MELD/text_features.pt": true,
+        "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/local_only/features/MELD/audio_features.pt": true
+      },
+      "historical_precomputed_features_sha256": "0df32d124ab2f7cac571dc5eea656d9ee50b7e93d3d9f705dd0ed1fbd456aed7",
+      "historical_reports_and_caches_modified": false,
+      "feature_or_probability_results_changed": false
+    }
+  }
+}

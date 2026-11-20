@@ -1,0 +1,498 @@
+{
+  "status": "PASS",
+  "started_utc": "2026-11-20T15:45:01.236866+00:00",
+  "dataset": "IEMOCAP",
+  "scope": "ONE_TRAIN_FIT_TARGET_ENGINEERING_CHECK_ONLY",
+  "selection": {
+    "first_fit_dialogue_id": "Ses01M_impro03",
+    "utterance_index": 0,
+    "utterance_id": "Ses01M_impro03_M000",
+    "earlier_rows_skipped": [],
+    "selection_rule": "First fit_dialogue_ids entry, first row with declared nonmissing and present original audio; never skip an eligible row based on responses"
+  },
+  "official_validation_indexed": false,
+  "test_indexed": false,
+  "inner_dev_indexed": false,
+  "shared_container_note": "New dataset/features Train+Validation containers deserialize; only Train values are indexed",
+  "labels_used_for_training_or_accuracy": false,
+  "no_training_or_weight_updates": true,
+  "no_emotion_preservation_pass_claim": true,
+  "no_pilot120_executed": true,
+  "thresholds": {
+    "feature_max_abs": 0.0001,
+    "probability_max_abs": 1e-06,
+    "rtol": 0,
+    "threshold_scope": "Plan B exact-extractor repeatability engineering gate, not old XP04 feature compatibility"
+  },
+  "fixed_variants": {
+    "neutral_suffix": " Page two.",
+    "pitch_semitones": 0.5
+  },
+  "environment": {
+    "host": "user23",
+    "python": "3.10.20",
+    "torch": "2.2.2+cu121",
+    "numpy": "1.24.3",
+    "device": "cuda:0",
+    "CUDA_VISIBLE_DEVICES": "0",
+    "host_gpu_inventory": [
+      "0, GPU-7ff18ebb-100e-98fe-038b-a98bd4f94248, NVIDIA TITAN Xp",
+      "1, GPU-eed2f34f-b4c0-7b7a-498e-71a026e30c5a, NVIDIA TITAN Xp",
+      "2, GPU-d17e4326-9d3b-2025-fbf8-c9b0d16623a0, NVIDIA TITAN Xp",
+      "3, GPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456, NVIDIA TITAN Xp"
+    ],
+    "CUDA_DEVICE_ORDER": null
+  },
+  "script_sha256": "973570a549a416f6c7dc96a67dbda56d128d19dd24cd30fe38b535608fe34e40",
+  "inference_runtime": {
+    "stage": "cmerc",
+    "environment": "multimodalerc310",
+    "torch": "2.2.2+cu121",
+    "transformers": "4.45.1",
+    "python": "3.10.20",
+    "executable": "/home/yangbin/miniconda3/envs/multimodalerc310/bin/python"
+  },
+  "encoder_models_instantiated_in_this_process": false,
+  "input_hashes": {
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/local_only/data/IEMOCAP/dataset.pt": "48df0871aaed72d32ed39d71b2701c03b80c70943ed3eaa3455d1c728ffc5f8a",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/local_only/features/IEMOCAP/text_features.pt": "15b0a6ee71bf48ecac7f22be0469d4b0c983511fae5e0de0538d19362022b183",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/local_only/features/IEMOCAP/audio_features.pt": "b02cf9e7e0a5323010c25841fe92bd4d10549cfc862aaedcd0856ee35aaf20ca",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/local_only/data/IEMOCAP/runs/cmerc/best.pt": "3e28c4227d441b10b3f65c9eabee819949a7252571de6f236a045e9691e2cf84",
+    "/data2/yb/paper/IEMOCAP_extract/IEMOCAP_full_release/Session1/sentences/wav/Ses01M_impro03/Ses01M_impro03_M000.wav": "b71b8ccb6cf003ce339bbbfbed85d9b531323f68381d1863917c55b8497b580c"
+  },
+  "baseline_completion": {
+    "path": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/local_only/features/IEMOCAP/audio_features.pt",
+    "sha256": "b02cf9e7e0a5323010c25841fe92bd4d10549cfc862aaedcd0856ee35aaf20ca",
+    "completed_at": "2026-11-20T15:41:49.652391+00:00"
+  },
+  "code_hashes": {
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/scripts/downstream.py": "40632d490388f52c4c4ab99d96d1fced047782e3bf6ba782c9048add14bcc249"
+  },
+  "encoder_stage_runtime": {
+    "stage": "encoder",
+    "environment": "TEXT_repro",
+    "torch": "2.2.0+cu118",
+    "transformers": "4.42.3",
+    "python": "3.10.14",
+    "executable": "/home/yangbin/miniconda3/envs/TEXT_repro/bin/python"
+  },
+  "encoder_stage_provenance": {
+    "text": {
+      "weights_sha256": "4b1227dde6aab184700890fe4d063469a7213e977c516699f0e34d103e6f24fe",
+      "encoder_code_sha256": "a8e87cb16064e3e54d52d63c1f6ccf62c2dd2eee4e600da2a0b80604f23adc34",
+      "clean_manifest_sha256": "9b1f85ce4c943419cd8740ff2b8fa2c53a2a6a570a0557aad527678d761d0eec",
+      "tokenizer_files": {
+        "vocab.json": "32b29acf82d3333462eb4b13416760f2aef956052e8fea1749fe5b20f866a4bf",
+        "merges.txt": "1ce1664773c50f3e0cc8842619a93edc4624525b728b188a9e0be33b7726adc5",
+        "special_tokens_map.json": "f23c8e6099631c233c16d9bf8dab198f610826cdd1b358f270f6d55c1863e857",
+        "tokenizer_config.json": "8be1efe88d0815235241e648facaba7826449636b1d311697631ecf7f6479e9a"
+      },
+      "normalization": "none",
+      "layer_order": [
+        -1,
+        -2,
+        -3,
+        -4
+      ],
+      "precision": "FP32 eval",
+      "all_parameters_frozen": true
+    },
+    "audio": {
+      "protocol": {
+        "model": "facebook/wav2vec2-base",
+        "revision": "0b5b8e868dd84f03fd87d01f9c4ff0f080fecfe8",
+        "feature": "last_hidden_state",
+        "dimension": 768,
+        "sample_rate": 16000,
+        "channels": 1,
+        "decode_dtype": "float32le",
+        "decode": "ffmpeg full source audio stream0, no trimming, mono average, resample16000",
+        "window_samples": 480000,
+        "window_overlap": 0,
+        "short_final_window": "merge residual<400samples into preceding window",
+        "waveform_normalization": "official Wav2Vec2FeatureExtractor over complete utterance before windowing",
+        "pooling": "sum last hidden valid frames across nonoverlapping windows divided by total real output frames",
+        "batch_size": 1,
+        "precision": "float32",
+        "mode": "eval_inference_all_parameters_frozen",
+        "silence_or_missing": "zero768 plus audio_missing_mask=True",
+        "missing_criteria": "None/nonexistent, decode failure/timeout, <400 samples, nonfinite, exact zero RMS or variance",
+        "padding": "none; no attention mask for group-norm pretrained base on single unpadded example"
+      },
+      "protocol_hash": "1394e92fc8b0b04349fa5da72b80495bbc650faa7f2427114c4cb36aacb4d137",
+      "checkpoint_manifest": {
+        "repo": "facebook/wav2vec2-base",
+        "revision": "0b5b8e868dd84f03fd87d01f9c4ff0f080fecfe8",
+        "model_dir": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/local_only/models/facebook_wav2vec2_base",
+        "files": [
+          {
+            "name": "config.json",
+            "url": "https://huggingface.co/facebook/wav2vec2-base/resolve/0b5b8e868dd84f03fd87d01f9c4ff0f080fecfe8/config.json",
+            "size": 1842,
+            "sha256": "4937977e24d12d1bba70cdce8709c3c04807a8e4ae8ddac4229c48c436ae99ae",
+            "etag": "W/\"47d7dc533f6d412e1c021eb181615d006e403bed\""
+          },
+          {
+            "name": "preprocessor_config.json",
+            "url": "https://huggingface.co/facebook/wav2vec2-base/resolve/0b5b8e868dd84f03fd87d01f9c4ff0f080fecfe8/preprocessor_config.json",
+            "size": 159,
+            "sha256": "b225d617c025463b9e157e06afea8b90dc7078fc70b013c533328423e0486b4a",
+            "etag": "\"3f24dc078fcba55ee1d417a413847ead40c093a3\""
+          },
+          {
+            "name": "README.md",
+            "url": "https://huggingface.co/facebook/wav2vec2-base/resolve/0b5b8e868dd84f03fd87d01f9c4ff0f080fecfe8/README.md",
+            "size": 1997,
+            "sha256": "d633aeaaec1046af8cbacd21039f819304017e1ab6a369c5aff8668f3c35a127",
+            "etag": "W/\"4610c70900836897504863c6b96268d319718af9\""
+          },
+          {
+            "name": "pytorch_model.bin",
+            "url": "https://huggingface.co/facebook/wav2vec2-base/resolve/0b5b8e868dd84f03fd87d01f9c4ff0f080fecfe8/pytorch_model.bin",
+            "size": 380267417,
+            "sha256": "3249fe98bfc62fcbc26067f724716a6ec49d12c4728a2af1df659013905dff21",
+            "verified_against_official_lfs": true,
+            "download_method": "HTTP206_ranges_resumed_at_actual_body_end_then_full_sha256"
+          }
+        ]
+      },
+      "processor": {
+        "feature_size": 1,
+        "sampling_rate": 16000,
+        "padding_value": 0.0,
+        "padding_side": "right",
+        "return_attention_mask": false,
+        "_processor_class": null,
+        "do_normalize": true,
+        "feature_extractor_type": "Wav2Vec2FeatureExtractor"
+      },
+      "encoder_code_sha256": "bbcdde2ee133290eac5dfdffd7f45f4bd2a204605e32bc0c213b0eca1171ca11",
+      "torch": "2.2.0+cu118",
+      "transformers": "4.42.3",
+      "device": "cuda:0",
+      "loading_info": {
+        "missing_keys": [],
+        "mismatched_keys": [],
+        "error_msgs": [],
+        "excluded_pretraining_head_keys": [
+          "project_hid.bias",
+          "project_hid.weight",
+          "project_q.bias",
+          "project_q.weight",
+          "quantizer.codevectors",
+          "quantizer.weight_proj.bias",
+          "quantizer.weight_proj.weight"
+        ],
+        "state_key_mapping_only": {
+          "encoder.pos_conv_embed.conv.weight_g": "encoder.pos_conv_embed.conv.parametrizations.weight.original0",
+          "encoder.pos_conv_embed.conv.weight_v": "encoder.pos_conv_embed.conv.parametrizations.weight.original1"
+        },
+        "base_state_tensors": 211,
+        "all_base_state_tensors_exact": true,
+        "legacy_weight_norm_dim": 2,
+        "weight_norm_kernel_max_abs_error": 0.0
+      },
+      "cuda_visible_devices": "0",
+      "gpu_name": "NVIDIA TITAN Xp",
+      "trainable_parameters": 0
+    }
+  },
+  "precomputed_features_sha256": "19364ed9547e64a26fadfc6f43834c34e42ff9248cde596cc1b00262685408bf",
+  "encoder_stage_weights_unchanged": true,
+  "original_dialogue_hashes": {
+    "dialogue_id": "Ses01M_impro03",
+    "utterance_ids": "326c2125fbcccfb847568e22ce8fa412381eabf9bca969886df41f8a755d4652",
+    "speaker": "da62e08e89da8ce40cee6365d72c4b6c40ccc7a0850b528b8591e0f18ab35dd0",
+    "labels": "9a6c52fdef4f02ef3ca38430895597ba218f83aa838cbd0975bbdf02168980b4",
+    "visual": "34f61857d5baa810f485e828ed4fee1ff65ff33c8190ce50fae4c569ffe4023c",
+    "texts": "b766e4b7e36c2705ad02f918c7870cb41bb24ab6c6e4a826ac8f8b9211bb52f9",
+    "audio_paths": "e31563ee787375f6110ec50492cc417cd1c88fd6a6ba9f17b1cd053cee0e31db"
+  },
+  "model_state_before": {
+    "cmerc": {
+      "sha256": "b806a5f768a6087ae1c186047019a2ac7816e7eba4bf360ba4304c5059b5a5fb",
+      "tensor_count": 85
+    }
+  },
+  "bn_before": {
+    "cmerc": {
+      "sha256": "967448b538dab78601d3262ad5097d97e442bb48f010853303aaa6e766af5eba",
+      "buffers": {
+        "normBNa.running_mean": "149788efab2fb72df4b1f338256443c743be1abcb2d45faa6197de66e50ecef5",
+        "normBNa.running_var": "a16b77da0398795e658cc0725c0f34b85c516ceeb1e484ee4ebf95fce669dd1d",
+        "normBNa.num_batches_tracked": "d8beac464e15ef5ea447043c7e01fd827f06743468cbc45e4a591aa4c6ed285d",
+        "normBNb.running_mean": "00bf66e2ff77b554a270e04b1e0ff2d102d3300697fdf774a4961fd8d1efaf7b",
+        "normBNb.running_var": "1eefb93188faa511070c591a695baecba96925573f669c1ddc218f32fc0f59e7",
+        "normBNb.num_batches_tracked": "d8beac464e15ef5ea447043c7e01fd827f06743468cbc45e4a591aa4c6ed285d",
+        "normBNc.running_mean": "f4f4b69c4acf084e4e892cf76b03683d287fa9dd35b9547e02264e6be4cccae0",
+        "normBNc.running_var": "4ef6a015ba1887207b4a68e8e813d9e29e216735b20b5fe3929e93e1245b0cba",
+        "normBNc.num_batches_tracked": "d8beac464e15ef5ea447043c7e01fd827f06743468cbc45e4a591aa4c6ed285d",
+        "normBNd.running_mean": "9ad69b1c13346dbc03ebb9e50b03fbd93d6cc8b223dcd0851284dc7bd792c6c6",
+        "normBNd.running_var": "81bea48079e59bbe7161bea02905ea99cefea4b9a39178a88fdd6e82f6cf8e6c",
+        "normBNd.num_batches_tracked": "d8beac464e15ef5ea447043c7e01fd827f06743468cbc45e4a591aa4c6ed285d"
+      }
+    }
+  },
+  "models_all_eval_and_frozen": true,
+  "models_fp32": true,
+  "baseline_repeat": {
+    "shape": [
+      49,
+      6
+    ],
+    "finite_normalized": true,
+    "max_abs_error": 1.1920928955078125e-07,
+    "mean_abs_error": 5.363816154651901e-09,
+    "class_agreement": 1.0,
+    "confidence_max_abs_error": 1.1920928955078125e-07,
+    "atol": 1e-06,
+    "rtol": 0.0,
+    "pass_gate": true
+  },
+  "cases": {
+    "clean_text": {
+      "full_dialogue_shape": [
+        49,
+        6
+      ],
+      "finite_normalized": true,
+      "only_target_feature_row_changed": true,
+      "other_modality_bit_exact": true,
+      "other_utterances_bit_exact": true,
+      "visual_speaker_labels_ids_order_bit_exact": true,
+      "original_target_feature_sha256": "5a0148b81fbcd459a1eb508595ad4c9c88eb5737e39d40dfd03b1ef2f167704a",
+      "replaced_target_feature_sha256": "a388721c8fde6034096a2abbd1635ae8204f8141f90c317334984954a25c989c",
+      "emotion_label_preservation": "NOT_ASSESSED_ENGINEERING_ONLY",
+      "actual_token_ids_sha256": "733831694704088e26dd2db2735524b791d6b11731c878ebb12dd2ffa9617f28",
+      "original_input_sha256": "0dcec61ea777e37b71e46b8cf097ffdf2d7b1c6631850725832b237ad58d1f0a",
+      "processed_input_sha256": "0dcec61ea777e37b71e46b8cf097ffdf2d7b1c6631850725832b237ad58d1f0a",
+      "feature_comparison": {
+        "original_shape": [
+          4,
+          1024
+        ],
+        "rebuilt_shape": [
+          4,
+          1024
+        ],
+        "original_dtype": "torch.float32",
+        "rebuilt_dtype": "torch.float32",
+        "shape_pass": true,
+        "fp32_pass": true,
+        "atol": 0.0001,
+        "rtol": 0.0,
+        "finite": true,
+        "max_abs_error": 3.7670135498046875e-05,
+        "mae": 1.0817885289782225e-06,
+        "rmse": 1.4924611736362185e-06,
+        "pass_gate": true,
+        "layers": [
+          {
+            "layer_from_end": 1,
+            "max_abs_error": 3.7670135498046875e-05,
+            "mae": 1.2659745607379591e-06,
+            "rmse": 1.9473932063087807e-06
+          },
+          {
+            "layer_from_end": 2,
+            "max_abs_error": 7.62939453125e-06,
+            "mae": 1.2074158348696074e-06,
+            "rmse": 1.5188484194367583e-06
+          },
+          {
+            "layer_from_end": 3,
+            "max_abs_error": 4.649162292480469e-06,
+            "mae": 1.0291301038023448e-06,
+            "rmse": 1.3172465556291192e-06
+          },
+          {
+            "layer_from_end": 4,
+            "max_abs_error": 3.3974647521972656e-06,
+            "mae": 8.246336165029788e-07,
+            "rmse": 1.0370063209674688e-06
+          }
+        ]
+      },
+      "probability_comparison": {
+        "shape": [
+          49,
+          6
+        ],
+        "finite_normalized": true,
+        "max_abs_error": 1.7881393432617188e-07,
+        "mean_abs_error": 9.518932411763943e-09,
+        "class_agreement": 1.0,
+        "confidence_max_abs_error": 1.7881393432617188e-07,
+        "atol": 1e-06,
+        "rtol": 0.0,
+        "pass_gate": true
+      },
+      "pass_gate": true,
+      "status": "PASS"
+    },
+    "clean_audio": {
+      "full_dialogue_shape": [
+        49,
+        6
+      ],
+      "finite_normalized": true,
+      "only_target_feature_row_changed": true,
+      "other_modality_bit_exact": true,
+      "other_utterances_bit_exact": true,
+      "visual_speaker_labels_ids_order_bit_exact": true,
+      "original_target_feature_sha256": "ced7faefe5d317c5825391482af62e274490d8f8be5080283f5b39d8b1e88dba",
+      "replaced_target_feature_sha256": "ced7faefe5d317c5825391482af62e274490d8f8be5080283f5b39d8b1e88dba",
+      "emotion_label_preservation": "NOT_ASSESSED_ENGINEERING_ONLY",
+      "original_input_sha256": "b71b8ccb6cf003ce339bbbfbed85d9b531323f68381d1863917c55b8497b580c",
+      "processed_input_sha256": "b71b8ccb6cf003ce339bbbfbed85d9b531323f68381d1863917c55b8497b580c",
+      "feature_comparison": {
+        "original_shape": [
+          768
+        ],
+        "rebuilt_shape": [
+          768
+        ],
+        "original_dtype": "torch.float32",
+        "rebuilt_dtype": "torch.float32",
+        "shape_pass": true,
+        "fp32_pass": true,
+        "atol": 0.0001,
+        "rtol": 0.0,
+        "finite": true,
+        "max_abs_error": 0.0,
+        "mae": 0.0,
+        "rmse": 0.0,
+        "pass_gate": true
+      },
+      "probability_comparison": {
+        "shape": [
+          49,
+          6
+        ],
+        "finite_normalized": true,
+        "max_abs_error": 1.1920928955078125e-07,
+        "mean_abs_error": 7.470379121044056e-09,
+        "class_agreement": 1.0,
+        "confidence_max_abs_error": 1.1920928955078125e-07,
+        "atol": 1e-06,
+        "rtol": 0.0,
+        "pass_gate": true
+      },
+      "pass_gate": true,
+      "status": "PASS"
+    },
+    "neutral_append": {
+      "full_dialogue_shape": [
+        49,
+        6
+      ],
+      "finite_normalized": true,
+      "only_target_feature_row_changed": true,
+      "other_modality_bit_exact": true,
+      "other_utterances_bit_exact": true,
+      "visual_speaker_labels_ids_order_bit_exact": true,
+      "original_target_feature_sha256": "5a0148b81fbcd459a1eb508595ad4c9c88eb5737e39d40dfd03b1ef2f167704a",
+      "replaced_target_feature_sha256": "9417f9030001e9462042301bf84b5459bbe8c84a0e2a4136874a6b73cff63318",
+      "emotion_label_preservation": "NOT_ASSESSED_ENGINEERING_ONLY",
+      "actual_token_ids_sha256": "c3198dcd8778ad8bd343a3ff6feac6de7d59fdf93a62eb0d06fb35d9bd4af1e9",
+      "original_input_sha256": "0dcec61ea777e37b71e46b8cf097ffdf2d7b1c6631850725832b237ad58d1f0a",
+      "processed_input_sha256": "7370633273fe8cfcba3b05d21904ac0e8b3d84e83a00cfbd89901f30844b7620",
+      "input_qc": {
+        "nonempty": true,
+        "changed": true,
+        "token_ids_changed": true,
+        "original_token_count": 11,
+        "changed_token_count": 14,
+        "no_truncation": true,
+        "original_text_preserved": true,
+        "added_token_count": 3,
+        "maximum_added_tokens": 4,
+        "controlled_addition_length": true,
+        "automatic_text_qc_pass": true
+      },
+      "pass_gate": true,
+      "not_required_to_flip_prediction": true,
+      "status": "PASS"
+    },
+    "pitch_plus_0.5": {
+      "full_dialogue_shape": [
+        49,
+        6
+      ],
+      "finite_normalized": true,
+      "only_target_feature_row_changed": true,
+      "other_modality_bit_exact": true,
+      "other_utterances_bit_exact": true,
+      "visual_speaker_labels_ids_order_bit_exact": true,
+      "original_target_feature_sha256": "ced7faefe5d317c5825391482af62e274490d8f8be5080283f5b39d8b1e88dba",
+      "replaced_target_feature_sha256": "e521c799d1c5201b49c6bab3e2b0b84f981fc88ad76976a9739a8ed8d2dfb9fd",
+      "emotion_label_preservation": "NOT_ASSESSED_ENGINEERING_ONLY",
+      "original_input_sha256": "b71b8ccb6cf003ce339bbbfbed85d9b531323f68381d1863917c55b8497b580c",
+      "processed_input_sha256": "6c2a997ee7af106f9cc11242426e7a0780637ff06ded2d3725f39d4d27556dc0",
+      "input_qc": {
+        "sample_rate": 16000,
+        "channels": 1,
+        "clean_samples": 42239,
+        "raw_transformed_samples": 42113,
+        "final_samples": 42239,
+        "duration_seconds": 2.6399375,
+        "raw_length_relative_difference": 0.0029830251663154903,
+        "clean_rms": 0.017326653655471085,
+        "transformed_rms": 0.01732665397494525,
+        "rms_change_db": 1.6015310106464724e-07,
+        "clean_peak": 0.136444091796875,
+        "clean_clipping_fraction": 0.0,
+        "peak_before_attenuation": 0.13251589238643646,
+        "rms_restore_gain": 0.9810136975546053,
+        "peak_attenuation": 1.0,
+        "peak": 0.13251589238643646,
+        "finite": true,
+        "clipping_fraction": 0.0,
+        "emotion_label_preservation": "UNCONFIRMED_REQUIRES_REVIEW",
+        "automatic_signal_qc_pass": true
+      },
+      "pass_gate": true,
+      "not_required_to_flip_prediction": true,
+      "parameters": {
+        "algorithm": "FFmpeg asetrate + resampling + reciprocal WSOLA atempo",
+        "semitones": 0.5,
+        "requested_ratio": 1.029302236643492,
+        "shifted_sample_clock": 16469,
+        "actual_semitones": 0.500172623579617,
+        "actual_ratio": 1.0293125,
+        "filter": "asetrate=16469,aresample=16000,atempo=0.971522253932",
+        "ffmpeg_sha256": "d669a18935a469e150a3ac35cd1180abbfee09fe2c8e5079282aa4aa9b778895",
+        "ffmpeg_version": "ffmpeg version 8.0.1 Copyright (c) 2000-2025 the FFmpeg developers"
+      },
+      "status": "PASS"
+    }
+  },
+  "invariants": {
+    "model_state_bit_exact": {
+      "cmerc": true,
+      "encoders_verified_in_producer": true
+    },
+    "bn_buffers_bit_exact": {
+      "cmerc": true
+    },
+    "clean_feature_cache_bit_exact": true,
+    "dialogue_context_bit_exact": true,
+    "input_files_unchanged": {
+      "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/local_only/data/IEMOCAP/dataset.pt": true,
+      "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/local_only/features/IEMOCAP/text_features.pt": true,
+      "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/local_only/features/IEMOCAP/audio_features.pt": true,
+      "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/local_only/data/IEMOCAP/runs/cmerc/best.pt": true,
+      "/data2/yb/paper/IEMOCAP_extract/IEMOCAP_full_release/Session1/sentences/wav/Ses01M_impro03/Ses01M_impro03_M000.wav": true
+    },
+    "precomputed_file_unchanged": true,
+    "models_remain_eval": true
+  },
+  "local_artifacts_sha256": {
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/local_only/raw_smoke/IEMOCAP/cmerc_stage/clean_text.pt": "80866f789050ab4f488ff0eb429b4ed3be7386574d8d268e078aad04aab034c0",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/local_only/raw_smoke/IEMOCAP/cmerc_stage/clean_audio.pt": "ccb36cf4919f299b4387e11289ebf37d72355876c829ea74c29c5699fd10c37c",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/local_only/raw_smoke/IEMOCAP/cmerc_stage/neutral_append.pt": "c98a8a02fd9aa61d27191016c4feae62e0a09dd346b3695ce116fd532bd2d162",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/local_only/raw_smoke/IEMOCAP/cmerc_stage/pitch_plus_0.5.pt": "cd5594a9388b89643ede3fdc80fd0213ef58e4125561b5956230addc1566f9b0"
+  },
+  "pass_gate": true,
+  "completed_utc": "2026-11-20T15:45:11.963193+00:00"
+}

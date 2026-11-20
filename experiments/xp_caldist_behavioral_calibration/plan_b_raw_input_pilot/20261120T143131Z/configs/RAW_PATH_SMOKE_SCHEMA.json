@@ -1,0 +1,76 @@
+{
+  "status": "RUNTIME_V2_IMPLEMENTED_NOT_EXECUTED_ON_REAL_MODELS",
+  "script": "scripts/raw_path_smoke.py",
+  "script_sha256": "b47bd8786efabcce1f594cc276dacea40acc9a0c9428797d303b8a8beefad386",
+  "created_utc": "2026-11-20T15:10:55.598017+00:00",
+  "cli": "CUDA_VISIBLE_DEVICES=<healthy GPU UUID> /home/yangbin/miniconda3/envs/multimodalerc310/bin/python scripts/raw_path_smoke.py --dataset DS --dataset-dir DATA --text-features TEXT.pt --audio-features AUDIO.pt --checkpoint best.pt --text-model TEXT_MODEL --precomputed-features D/local_only/raw_smoke/DS/encoder_stage/features.pt --device cuda:0",
+  "preconditions": [
+    "Run only after final audio loader and feature-cache protocol are frozen",
+    "Corresponding CMERC completion.json status COMPLETE/stage cmerc, best checkpoint SHA matches, new dataset/features hashes match training inputs",
+    "Text actual encoder/tokenizer/code hashes equal clean cache metadata",
+    "Audio actual source bytes/utterance ID/dataset/encoder/protocol hashes equal clean cache metadata",
+    "Producer cache format PLAN_B_PRECOMPUTED_FEATURES_V2 and sidecar hash verified; metadata and encoder state before/after hashes identical",
+    "No encoder initialization or re-extraction in the CMERC process"
+  ],
+  "selection": "fit_dialogue_ids[0], then first existing audio row with train missing-mask false; fail if none; never search another Dialogue or outcomes",
+  "data_boundary": {
+    "train_values_only": true,
+    "official_validation_indexed": false,
+    "test_indexed": false,
+    "inner_dev_values_indexed": false,
+    "shared_new_Train_Validation_container_deserialization_disclosed": true
+  },
+  "cases": [
+    "Repeated cached-feature full-Dialogue baseline inference",
+    "Clean text target re-extraction versus cached target and independent full-Dialogue replacement",
+    "Clean audio target re-extraction versus cached target and independent full-Dialogue replacement",
+    "One fixed short neutral suffix: Page two. (no semantic PASS claim)",
+    "Pitch +0.5 semitones via same frozen raw_pilot.transform_waveform"
+  ],
+  "gates": {
+    "fp32": true,
+    "clean_feature_absolute_atol": 0.0001,
+    "clean_probability_absolute_atol": 1e-06,
+    "rtol": 0,
+    "finite_normalized_full_dialogue_probs": true,
+    "other_modalities_and_utterances_bit_exact": true,
+    "visual_labels_speaker_ids_and_order_bit_exact": true,
+    "all_three_model_states_bit_exact": true,
+    "batchnorm_buffers_bit_exact": true,
+    "disk_inputs_unchanged": true,
+    "perturbed_prediction_flip_not_required": true
+  },
+  "interpretation": "Engineering path/negative-control reproducibility only; thresholds are Plan B repeatability gates, not XP04 feature compatibility; no emotion-preservation approval and no behavior-effectiveness claim",
+  "outputs": [
+    "local_only/raw_smoke/{DS}/encoder_stage/ (raw/processed text, clean/pitch WAV, CPU features, exact token IDs, manifest)",
+    "local_only/raw_smoke/{DS}/cmerc_stage/ (target vectors/full-Dialogue predictions)",
+    "provenance/raw_path_smoke_{DS}.json"
+  ],
+  "failure_policy": "Save all collected errors/metrics, exit2, keep original thresholds and all original assets; never overwrite an existing smoke attempt",
+  "component_tests": [
+    "py_compile",
+    "--help without loading data/models",
+    "synthetic Train selector with inaccessible Validation sentinel",
+    "state/BN fingerprint catches training-mode BN buffer mutation while eval is stable",
+    "feature1e-4 and probability1e-6 absolute threshold pass/fail boundary checks",
+    "all existing raw_pilot/pilot_analysis frozen script hashes unchanged",
+    "Actual TEXT_repro->multimodalerc310 synthetic CPU tensor serialization roundtrip",
+    "Strict modality/family/status/token/feature/control/target/runtime/state/sidecar/source rejection checks"
+  ],
+  "real_model_smoke_executed": false,
+  "real_validation_accessed": false,
+  "runtime_amendment_utc": "2026-11-20T15:42:17.406467+00:00",
+  "producer_script_sha256": "80c68f663002fd75c0be2b2742e7f7367a81b0618641ccd4d38111cd10e74d2e",
+  "shared_consumer_script_sha256": "b2bf7da730f562efb094db38b88ead0dd5a7f544b573d897dc9f09ff47c5972b",
+  "runtime_split": "Encoder-only TEXT_repro process creates CPU FP32 cache+sidecar; CMERC-only multimodalerc310 process consumes it; same fixed Train target, gates, cases and scientific protocol.",
+  "encoder_cli": "CUDA_VISIBLE_DEVICES=<healthy GPU UUID> /home/yangbin/miniconda3/envs/TEXT_repro/bin/python scripts/extract_pilot_features.py --mode smoke --dataset DS --dataset-dir DATA --text-features TEXT.pt --audio-features AUDIO.pt --checkpoint best.pt --text-model TEXT_MODEL --output D/local_only/raw_smoke/DS/encoder_stage/features.pt --local-dir D/local_only/raw_smoke/DS/encoder_stage --device cuda:0",
+  "io_only_amendment": {
+    "created_utc": "2026-11-20T15:57:23.261711+00:00",
+    "physical_LF_JSONL_boundaries": "Unicode U+0085/U+2028/U+2029 inside raw strings are preserved exactly; no source text changed",
+    "completion_provenance": "Return actual completion.json path/hash; former variable shadowing corrected",
+    "history_retained": "provenance/jsonl_lf_io_fix_v2/",
+    "historical_smoke_erratum": "provenance/SMOKE_COMPLETION_PROVENANCE_ERRATA.json",
+    "scientific_protocol_and_statistical_code_unchanged": true,
+    "new_pilot_must_use_current_source_hashes": true
+  }
+}

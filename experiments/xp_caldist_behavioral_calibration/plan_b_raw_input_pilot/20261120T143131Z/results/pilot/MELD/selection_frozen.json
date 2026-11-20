@@ -1,0 +1,38 @@
+{
+  "dataset": "MELD",
+  "seed": 67137,
+  "samples": 120,
+  "algorithm": "Lexicographic minimum selected Dialogue count, selected true-class count, selected (class,correct,confidence-bin) count, seeded random tie rank",
+  "true_validation_rows": 1109,
+  "selected_dialogues": 114,
+  "eligible_audio_available_rows": 1108,
+  "excluded_missing_audio_targets": 1,
+  "target_pool_rule": "Predeclared audio_available only; unchanged full Dialogue contexts retain all missing rows; no effectiveness filtering",
+  "class_counts": {
+    "1": 17,
+    "6": 16,
+    "3": 18,
+    "0": 24,
+    "4": 17,
+    "5": 14,
+    "2": 14
+  },
+  "correct_counts": {
+    "0": 61,
+    "1": 59
+  },
+  "confidence_bin_counts": {
+    "0.2-0.3": 16,
+    "0.5-0.6": 19,
+    "0.6-0.7": 18,
+    "0.7-0.8": 17,
+    "0.3-0.4": 28,
+    "0.4-0.5": 22
+  },
+  "baseline_lock_sha256": "4b99fe3561272d0f0af581f5cd50b13163af8f0633f0344c50e71167ea71fc71",
+  "sample_manifest_sha256": "f9aa8d22ba0765a6bffb244911a44d7cadd926835038b07e08711a013d4c30dc",
+  "sampling_is_stratified": true,
+  "overall_sample_metrics_are_not_dataset_population_metrics": true,
+  "text_audio_share_exact_same_manifest": true,
+  "test_accessed": false
+}

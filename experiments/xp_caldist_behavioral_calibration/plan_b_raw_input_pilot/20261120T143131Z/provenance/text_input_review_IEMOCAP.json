@@ -1,0 +1,39 @@
+{
+  "dataset": "IEMOCAP",
+  "status": "INPUT_REVIEW_FROZEN",
+  "frozen_at": "2026-11-20T16:08:44.660814+00:00",
+  "variants": 480,
+  "unique_targets": 120,
+  "semantic_status_counts": {
+    "UNCERTAIN": 129,
+    "PASS": 348,
+    "FAIL": 3
+  },
+  "by_family": {
+    "neutral_append": {
+      "UNCERTAIN": 84,
+      "PASS": 156
+    },
+    "semantic_paraphrase": {
+      "UNCERTAIN": 45,
+      "PASS": 192,
+      "FAIL": 3
+    }
+  },
+  "attributed_ai_review": true,
+  "human_review": false,
+  "independent_ai_second_review": true,
+  "downgraded_pass_candidates": 37,
+  "no_perturbed_predictions_examined": true,
+  "not_eligible_until_independent_automatic_token_qc": true,
+  "all_uncertain_failed_candidates_retained": true,
+  "immutable_template_fields_preserved": true,
+  "source_sha256": {
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/local_only/pilot/IEMOCAP/text_review_template.jsonl": "305e22153db10ff788386035b90257ce69374d7e14cac33d6ce280b3fda885b6",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/local_only/pilot/IEMOCAP/generated_parts/part_000_060.jsonl": "9e0c53ceadc7dff1251dbdb915eca7e3f9bb7f121a04ffcf00e62ca07c28dc3a",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/local_only/pilot/IEMOCAP/generated_parts/part_060_120.jsonl": "af63b8a663eba6d3f43d45f1d26d44b0ddd6f9de76c8cd51fc29d75e50cdc9f4",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/local_only/pilot/IEMOCAP/independent_semantic_review.json": "1437f89768019d7cf0f5648cf69c75a490d9547abf13f136b7b1ae73e2b26014",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/scripts/merge_text_reviews.py": "3406d8e01bb2c29ec7a60978ad9ecd5f4ed10f02bc8aac852e361677d9610fc1"
+  },
+  "final_sha256": "3a6e27c848dbfb3acb4a5ec797d532cb2173e929c3b4e31ad7fae26a6a469edb"
+}

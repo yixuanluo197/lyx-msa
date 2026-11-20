@@ -1,0 +1,82 @@
+{
+  "IEMOCAP": {
+    "fixed_targets": 120,
+    "dialogues": 12,
+    "clean_correct": 59,
+    "clean_error": 61,
+    "confidence_bins": {
+      "0.2-0.3": {
+        "correct": 1,
+        "error": 0
+      },
+      "0.3-0.4": {
+        "correct": 4,
+        "error": 6
+      },
+      "0.4-0.5": {
+        "correct": 11,
+        "error": 14
+      },
+      "0.5-0.6": {
+        "correct": 13,
+        "error": 14
+      },
+      "0.6-0.7": {
+        "correct": 5,
+        "error": 7
+      },
+      "0.7-0.8": {
+        "correct": 8,
+        "error": 8
+      },
+      "0.8-0.9": {
+        "correct": 10,
+        "error": 7
+      },
+      "0.9-1.0": {
+        "correct": 7,
+        "error": 5
+      }
+    },
+    "pre_qc_matched_dialogue_confidence_cells": 21,
+    "pre_qc_matched_dialogues": 12,
+    "pre_qc_matched_samples": 88,
+    "interpretation": "Frozen selected-cohort support before semantic/signal QC, not a population estimate; no sample reselection"
+  },
+  "MELD": {
+    "fixed_targets": 120,
+    "dialogues": 114,
+    "clean_correct": 59,
+    "clean_error": 61,
+    "confidence_bins": {
+      "0.2-0.3": {
+        "correct": 5,
+        "error": 11
+      },
+      "0.3-0.4": {
+        "correct": 12,
+        "error": 16
+      },
+      "0.4-0.5": {
+        "correct": 10,
+        "error": 12
+      },
+      "0.5-0.6": {
+        "correct": 9,
+        "error": 10
+      },
+      "0.6-0.7": {
+        "correct": 10,
+        "error": 8
+      },
+      "0.7-0.8": {
+        "correct": 13,
+        "error": 4
+      }
+    },
+    "pre_qc_matched_dialogue_confidence_cells": 0,
+    "pre_qc_matched_dialogues": 0,
+    "pre_qc_matched_samples": 0,
+    "interpretation": "Frozen selected-cohort support before semantic/signal QC, not a population estimate; no sample reselection"
+  }
+}

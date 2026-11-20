@@ -1,0 +1,57 @@
+{
+  "status": "IMPLEMENTED_NOT_EXECUTED_ON_REAL_MODELS",
+  "script": "scripts/raw_path_smoke.py",
+  "script_sha256": "fbde48ed005d57e8a888f3e1ab42f0d5592ca2a2ba08ea393b9b8f46ceec0b05",
+  "created_utc": "2026-11-20T15:10:55.598017+00:00",
+  "cli": "CUDA_VISIBLE_DEVICES=<healthy GPU UUID> /home/yangbin/miniconda3/envs/TEXT_repro/bin/python scripts/raw_path_smoke.py --dataset IEMOCAP|MELD --dataset-dir <D/local_only/data/DS> --text-features <new text_features.pt> --audio-features <new audio_features.pt> --checkpoint <frozen CMERC best.pt> --text-model <selected text output or best_classifier> --device cuda:0",
+  "preconditions": [
+    "Run only after final audio loader and feature-cache protocol are frozen",
+    "Corresponding CMERC completion.json status COMPLETE/stage cmerc, best checkpoint SHA matches, new dataset/features hashes match training inputs",
+    "Text actual encoder/tokenizer/code hashes equal clean cache metadata",
+    "Audio actual source bytes/utterance ID/dataset/encoder/protocol hashes equal clean cache metadata"
+  ],
+  "selection": "fit_dialogue_ids[0], then first existing audio row with train missing-mask false; fail if none; never search another Dialogue or outcomes",
+  "data_boundary": {
+    "train_values_only": true,
+    "official_validation_indexed": false,
+    "test_indexed": false,
+    "inner_dev_values_indexed": false,
+    "shared_new_Train_Validation_container_deserialization_disclosed": true
+  },
+  "cases": [
+    "Repeated cached-feature full-Dialogue baseline inference",
+    "Clean text target re-extraction versus cached target and independent full-Dialogue replacement",
+    "Clean audio target re-extraction versus cached target and independent full-Dialogue replacement",
+    "One fixed short neutral suffix: Page two. (no semantic PASS claim)",
+    "Pitch +0.5 semitones via same frozen raw_pilot.transform_waveform"
+  ],
+  "gates": {
+    "fp32": true,
+    "clean_feature_absolute_atol": 0.0001,
+    "clean_probability_absolute_atol": 1e-06,
+    "rtol": 0,
+    "finite_normalized_full_dialogue_probs": true,
+    "other_modalities_and_utterances_bit_exact": true,
+    "visual_labels_speaker_ids_and_order_bit_exact": true,
+    "all_three_model_states_bit_exact": true,
+    "batchnorm_buffers_bit_exact": true,
+    "disk_inputs_unchanged": true,
+    "perturbed_prediction_flip_not_required": true
+  },
+  "interpretation": "Engineering path/negative-control reproducibility only; thresholds are Plan B repeatability gates, not XP04 feature compatibility; no emotion-preservation approval and no behavior-effectiveness claim",
+  "outputs": [
+    "local_only/raw_smoke/{DS}/ (local raw/processed text, clean/pitch WAV, target features, full-Dialogue probabilities)",
+    "provenance/raw_path_smoke_{DS}.json"
+  ],
+  "failure_policy": "Save all collected errors/metrics, exit2, keep original thresholds and all original assets; never overwrite an existing smoke attempt",
+  "component_tests": [
+    "py_compile",
+    "--help without loading data/models",
+    "synthetic Train selector with inaccessible Validation sentinel",
+    "state/BN fingerprint catches training-mode BN buffer mutation while eval is stable",
+    "feature1e-4 and probability1e-6 absolute threshold pass/fail boundary checks",
+    "all existing raw_pilot/pilot_analysis frozen script hashes unchanged"
+  ],
+  "real_model_smoke_executed": false,
+  "real_validation_accessed": false
+}

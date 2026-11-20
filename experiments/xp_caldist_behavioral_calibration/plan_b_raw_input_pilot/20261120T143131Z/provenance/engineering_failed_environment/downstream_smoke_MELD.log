@@ -1,0 +1,10 @@
+/home/yangbin/miniconda3/envs/TEXT_repro/lib/python3.10/site-packages/torch/cuda/__init__.py:54: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+Traceback (most recent call last):
+  File "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/scripts/downstream.py", line 28, in <module>
+    import train_cm as official
+  File "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/scripts/core_snapshot/train_cm.py", line 17, in <module>
+    from model_cm import MaskedNLLLoss, LSTMModel, GRUModel, Model, MaskedMSELoss, FocalLoss, Model_Inter, Model_Intra
+  File "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/scripts/core_snapshot/model_cm.py", line 6, in <module>
+    from torch_geometric.nn import  GraphConv
+ModuleNotFoundError: No module named 'torch_geometric'

@@ -1,0 +1,26 @@
+{
+  "results": [
+    {
+      "dataset": "IEMOCAP",
+      "reference_second_step_loss": 1.6715624332427979,
+      "resumed_second_step_loss": 1.6715624332427979,
+      "model_state_maxabs": 1.4901161193847656e-08,
+      "tolerance": 1e-05,
+      "pass": true,
+      "scope": "synthetic 2-step model+Adam+allRNG roundtrip; no formal training/Val/Test"
+    },
+    {
+      "dataset": "MELD",
+      "reference_second_step_loss": 1.692950963973999,
+      "resumed_second_step_loss": 1.692950963973999,
+      "model_state_maxabs": 1.1920928955078125e-07,
+      "tolerance": 1e-05,
+      "pass": true,
+      "scope": "synthetic 2-step model+Adam+allRNG roundtrip; no formal training/Val/Test"
+    }
+  ],
+  "adapter_sha256": "5962b343c87aba24d915b34dd2bb71a90d3a37f52dfdf6bb7f2e1526f64013bf",
+  "gpu_uuid": "GPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456",
+  "visible_devices": "3",
+  "formal_training": false
+}

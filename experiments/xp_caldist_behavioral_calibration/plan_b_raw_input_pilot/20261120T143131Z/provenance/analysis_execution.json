@@ -1,0 +1,24 @@
+{
+  "status": "COMPLETE",
+  "command": [
+    "/home/yangbin/miniconda3/envs/multimodalerc310/bin/python",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/scripts/pilot_analysis.py",
+    "--predictions",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/results/pilot/IEMOCAP/perturbed_predictions_both.csv",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/results/pilot/MELD/perturbed_predictions_both.csv",
+    "--output",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/results/analysis",
+    "--bootstrap",
+    "2000",
+    "--seed",
+    "20261120"
+  ],
+  "exit_code": 0,
+  "execution_session": 91162,
+  "analysis_sha256": "75cdb58f06851b72072087ab046077b9b24952ff8f7bb986dd6294119196522c",
+  "log": "logs/pilot_analysis.log",
+  "analysis_verification_sha256": "77b01446f5e4c9a662127af86d3252d9c5760a150ea2d0e3d5a82de643a39a44",
+  "post_hoc_description_script": "scripts/describe_feature_response.py",
+  "post_hoc_description_scope": "Already saved features only; no fitting or forward; separate from planned inferential analyses",
+  "closed_at": "2026-11-20T16:18:53.617581+00:00"
+}

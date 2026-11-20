@@ -1,0 +1,322 @@
+[
+  {
+    "dataset": "IEMOCAP",
+    "text": {
+      "status": "COMPLETE",
+      "dataset": "IEMOCAP",
+      "best_epoch": 8,
+      "best_internal_macro_f1": 0.5472652526120941,
+      "completed_epochs": 10,
+      "global_step": 2970,
+      "model_sha256": "4b1227dde6aab184700890fe4d063469a7213e977c516699f0e34d103e6f24fe",
+      "protocol_sha256": "2d7851dc51d50737282a451111e5ba5e910ff76b28ae8f951b8e59298f32f0d3",
+      "latest_training_sha256": "d5593262f67c066622dc5b5c57a027786557c5dcdddbc52aa6c20cec2a5b03e3",
+      "refit_full_train": false,
+      "official_validation_used_for_selection": false,
+      "test_accessed": false
+    },
+    "training_completion": {
+      "m3net": {
+        "status": "COMPLETE",
+        "stage": "m3net",
+        "termination_reason": "early_stopping_patience",
+        "best_epoch": 3,
+        "best_metric": 0.588863490566277,
+        "last_epoch": 13,
+        "best_checkpoint_sha256": "60dbf81aa098062ede4999041d3e53083c7a83000e8ddf5923382e9d3866d123",
+        "last_checkpoint_sha256": "24de0367e4de77989d7f347813a0a1eba7eee488a62bfe4376622428cf13b9c1",
+        "adapter_sha256": "40632d490388f52c4c4ab99d96d1fced047782e3bf6ba782c9048add14bcc249",
+        "input_hashes": {
+          "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/local_only/data/IEMOCAP/dataset.pt": "48df0871aaed72d32ed39d71b2701c03b80c70943ed3eaa3455d1c728ffc5f8a",
+          "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/local_only/data/IEMOCAP/features/text_features.pt": "15b0a6ee71bf48ecac7f22be0469d4b0c983511fae5e0de0538d19362022b183",
+          "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/local_only/data/IEMOCAP/features/audio_features.pt": "b02cf9e7e0a5323010c25841fe92bd4d10549cfc862aaedcd0856ee35aaf20ca",
+          "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/local_only/data/IEMOCAP/features/text_features.manifest.json": "9b1f85ce4c943419cd8740ff2b8fa2c53a2a6a570a0557aad527678d761d0eec"
+        },
+        "protocol_sha256": "5fdc385c679d86776ae89825f61854f94ac665905f471d63d3264e2439abd475",
+        "class_weight_amendment_sha256": "407305ca272ed60c8c4410c0609d42ba6a8e38b63dfe441806db4f8728eee72e",
+        "completed_at_utc": "2026-11-20T15:29:23.892202+00:00"
+      },
+      "cmerc": {
+        "status": "COMPLETE",
+        "stage": "cmerc",
+        "termination_reason": "early_stopping_patience",
+        "best_epoch": 11,
+        "best_metric": 0.6573317513505866,
+        "last_epoch": 21,
+        "best_checkpoint_sha256": "3e28c4227d441b10b3f65c9eabee819949a7252571de6f236a045e9691e2cf84",
+        "last_checkpoint_sha256": "d68849ff6bee4f823f14f8966f8172c14699d3f248f67b60c6010ba2da07e54f",
+        "adapter_sha256": "40632d490388f52c4c4ab99d96d1fced047782e3bf6ba782c9048add14bcc249",
+        "input_hashes": {
+          "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/local_only/data/IEMOCAP/dataset.pt": "48df0871aaed72d32ed39d71b2701c03b80c70943ed3eaa3455d1c728ffc5f8a",
+          "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/local_only/data/IEMOCAP/features/text_features.pt": "15b0a6ee71bf48ecac7f22be0469d4b0c983511fae5e0de0538d19362022b183",
+          "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/local_only/data/IEMOCAP/features/audio_features.pt": "b02cf9e7e0a5323010c25841fe92bd4d10549cfc862aaedcd0856ee35aaf20ca",
+          "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/local_only/data/IEMOCAP/features/text_features.manifest.json": "9b1f85ce4c943419cd8740ff2b8fa2c53a2a6a570a0557aad527678d761d0eec"
+        },
+        "protocol_sha256": "5fdc385c679d86776ae89825f61854f94ac665905f471d63d3264e2439abd475",
+        "class_weight_amendment_sha256": "407305ca272ed60c8c4410c0609d42ba6a8e38b63dfe441806db4f8728eee72e",
+        "completed_at_utc": "2026-11-20T15:41:49.652391+00:00"
+      }
+    },
+    "baseline_metrics": {
+      "n": 527,
+      "accuracy": 0.5806451612903226,
+      "macro_f1": 0.5522327698121455,
+      "weighted_f1": 0.5514125066896782,
+      "ece15": 0.09959182239347893,
+      "brier_sum_classes": 0.5874237382350176,
+      "nll": 1.123134027152037,
+      "bins": [
+        {
+          "bin": 0,
+          "n": 0,
+          "accuracy": null,
+          "confidence": null
+        },
+        {
+          "bin": 1,
+          "n": 0,
+          "accuracy": null,
+          "confidence": null
+        },
+        {
+          "bin": 2,
+          "n": 0,
+          "accuracy": null,
+          "confidence": null
+        },
+        {
+          "bin": 3,
+          "n": 0,
+          "accuracy": null,
+          "confidence": null
+        },
+        {
+          "bin": 4,
+          "n": 3,
+          "accuracy": 0.3333333333333333,
+          "confidence": 0.3050474226474762
+        },
+        {
+          "bin": 5,
+          "n": 22,
+          "accuracy": 0.3181818181818182,
+          "confidence": 0.3645102788101543
+        },
+        {
+          "bin": 6,
+          "n": 42,
+          "accuracy": 0.4523809523809524,
+          "confidence": 0.44030624273277463
+        },
+        {
+          "bin": 7,
+          "n": 105,
+          "accuracy": 0.3904761904761905,
+          "confidence": 0.5011358647119432
+        },
+        {
+          "bin": 8,
+          "n": 61,
+          "accuracy": 0.5573770491803278,
+          "confidence": 0.5622296010861632
+        },
+        {
+          "bin": 9,
+          "n": 22,
+          "accuracy": 0.6363636363636364,
+          "confidence": 0.6275034330107949
+        },
+        {
+          "bin": 10,
+          "n": 26,
+          "accuracy": 0.5384615384615384,
+          "confidence": 0.6893721543825589
+        },
+        {
+          "bin": 11,
+          "n": 58,
+          "accuracy": 0.7068965517241379,
+          "confidence": 0.7734414462385506
+        },
+        {
+          "bin": 12,
+          "n": 74,
+          "accuracy": 0.7432432432432432,
+          "confidence": 0.8298625736623197
+        },
+        {
+          "bin": 13,
+          "n": 76,
+          "accuracy": 0.7631578947368421,
+          "confidence": 0.8921345652718293
+        },
+        {
+          "bin": 14,
+          "n": 38,
+          "accuracy": 0.5789473684210527,
+          "confidence": 0.9675825128429815
+        }
+      ]
+    }
+  },
+  {
+    "dataset": "MELD",
+    "text": {
+      "status": "COMPLETE",
+      "dataset": "MELD",
+      "best_epoch": 3,
+      "best_internal_macro_f1": 0.4788862154382049,
+      "completed_epochs": 5,
+      "global_step": 2810,
+      "model_sha256": "306402e9a6787ce7fccdfd935d08c13e5a01dc5b6f04cf94a5a22a685a0e1a2f",
+      "protocol_sha256": "a9eff721f3beef3204d32c07f475a98c9703d60e03f09a212f06c4c412cc1dcb",
+      "latest_training_sha256": "b5a8ce33ab7cfeb3a5695c4aa886c7d48b0a12fe56455795761e51de26349d62",
+      "refit_full_train": false,
+      "official_validation_used_for_selection": false,
+      "test_accessed": false
+    },
+    "training_completion": {
+      "m3net": {
+        "status": "COMPLETE",
+        "stage": "m3net",
+        "termination_reason": "early_stopping_patience",
+        "best_epoch": 6,
+        "best_metric": 0.5012652840555994,
+        "last_epoch": 16,
+        "best_checkpoint_sha256": "bb992e56a1fc36d8b78220f784bfe82dc1aefe415d7f4ce01ee18acdc542e267",
+        "last_checkpoint_sha256": "396507aa5ed53a138b2d2d3af9a401a8a5fab90767fb058cc05836008c938609",
+        "adapter_sha256": "40632d490388f52c4c4ab99d96d1fced047782e3bf6ba782c9048add14bcc249",
+        "input_hashes": {
+          "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/local_only/data/MELD/dataset.pt": "e8a438e7b36380f112dfd3850a2fb58c28084b6fba8aa9597d1dfb6c0231746b",
+          "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/local_only/data/MELD/features/text_features.pt": "284e90b3261e0cac4bf56884ca5aea99ffad1b236bbcbac588d82b742a1dc83f",
+          "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/local_only/data/MELD/features/audio_features.pt": "62f55bed2c99d15db134da521acf64579d80946c7291299df9cf12e1a96e7b22",
+          "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/local_only/data/MELD/features/text_features.manifest.json": "ac9c24ff8ebaea87c8c322434cbb3fd8468057a79409df554781680eb7c3b3b7"
+        },
+        "protocol_sha256": "5fdc385c679d86776ae89825f61854f94ac665905f471d63d3264e2439abd475",
+        "class_weight_amendment_sha256": null,
+        "completed_at_utc": "2026-11-20T15:28:57.372906+00:00"
+      },
+      "cmerc": {
+        "status": "COMPLETE",
+        "stage": "cmerc",
+        "termination_reason": "early_stopping_patience",
+        "best_epoch": 12,
+        "best_metric": 0.5174638860935639,
+        "last_epoch": 22,
+        "best_checkpoint_sha256": "8dfccc19a4c0c8ea218e16336b4985b6f937ea62978584fe4efc9a2acb4fab19",
+        "last_checkpoint_sha256": "83661e21b7e1ecc87801cb5d29a1929085eeaf16d1120cf54de5030674374d80",
+        "adapter_sha256": "40632d490388f52c4c4ab99d96d1fced047782e3bf6ba782c9048add14bcc249",
+        "input_hashes": {
+          "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/local_only/data/MELD/dataset.pt": "e8a438e7b36380f112dfd3850a2fb58c28084b6fba8aa9597d1dfb6c0231746b",
+          "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/local_only/data/MELD/features/text_features.pt": "284e90b3261e0cac4bf56884ca5aea99ffad1b236bbcbac588d82b742a1dc83f",
+          "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/local_only/data/MELD/features/audio_features.pt": "62f55bed2c99d15db134da521acf64579d80946c7291299df9cf12e1a96e7b22",
+          "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/local_only/data/MELD/features/text_features.manifest.json": "ac9c24ff8ebaea87c8c322434cbb3fd8468057a79409df554781680eb7c3b3b7"
+        },
+        "protocol_sha256": "5fdc385c679d86776ae89825f61854f94ac665905f471d63d3264e2439abd475",
+        "class_weight_amendment_sha256": null,
+        "completed_at_utc": "2026-11-20T15:44:11.675440+00:00"
+      }
+    },
+    "baseline_metrics": {
+      "n": 1109,
+      "accuracy": 0.6284941388638413,
+      "macro_f1": 0.5119856838583093,
+      "weighted_f1": 0.619290199824665,
+      "ece15": 0.10025349022892814,
+      "brier_sum_classes": 0.5278903556679324,
+      "nll": 1.1437486531576846,
+      "bins": [
+        {
+          "bin": 0,
+          "n": 0,
+          "accuracy": null,
+          "confidence": null
+        },
+        {
+          "bin": 1,
+          "n": 0,
+          "accuracy": null,
+          "confidence": null
+        },
+        {
+          "bin": 2,
+          "n": 1,
+          "accuracy": 1.0,
+          "confidence": 0.18979978561401367
+        },
+        {
+          "bin": 3,
+          "n": 38,
+          "accuracy": 0.23684210526315788,
+          "confidence": 0.24508573193299144
+        },
+        {
+          "bin": 4,
+          "n": 87,
+          "accuracy": 0.3103448275862069,
+          "confidence": 0.3031055961532154
+        },
+        {
+          "bin": 5,
+          "n": 141,
+          "accuracy": 0.44680851063829785,
+          "confidence": 0.36857449797028347
+        },
+        {
+          "bin": 6,
+          "n": 123,
+          "accuracy": 0.4878048780487805,
+          "confidence": 0.4307450349253368
+        },
+        {
+          "bin": 7,
+          "n": 126,
+          "accuracy": 0.5555555555555556,
+          "confidence": 0.5001295270427825
+        },
+        {
+          "bin": 8,
+          "n": 165,
+          "accuracy": 0.7393939393939394,
+          "confidence": 0.5678342548283664
+        },
+        {
+          "bin": 9,
+          "n": 208,
+          "accuracy": 0.7788461538461539,
+          "confidence": 0.6348526899058086
+        },
+        {
+          "bin": 10,
+          "n": 162,
+          "accuracy": 0.7962962962962963,
+          "confidence": 0.6968531983870047
+        },
+        {
+          "bin": 11,
+          "n": 55,
+          "accuracy": 0.9272727272727272,
+          "confidence": 0.7545387333089655
+        },
+        {
+          "bin": 12,
+          "n": 3,
+          "accuracy": 1.0,
+          "confidence": 0.824442187945048
+        },
+        {
+          "bin": 13,
+          "n": 0,
+          "accuracy": null,
+          "confidence": null
+        },
+        {
+          "bin": 14,
+          "n": 0,
+          "accuracy": null,
+          "confidence": null
+        }
+      ]
+    }
+  }
+]

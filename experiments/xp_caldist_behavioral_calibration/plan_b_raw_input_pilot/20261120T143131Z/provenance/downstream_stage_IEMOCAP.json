@@ -1,0 +1,89 @@
+{
+  "dataset": "IEMOCAP",
+  "status": "COMPLETE",
+  "server": "user23",
+  "pid": 641847,
+  "gpu_host_index": "3",
+  "gpu_inventory_at_start": "3, GPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456, NVIDIA TITAN Xp, 9921 MiB",
+  "started_at": 1795188467.1475582,
+  "hashes": {
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/local_only/data/IEMOCAP/dataset.pt": "48df0871aaed72d32ed39d71b2701c03b80c70943ed3eaa3455d1c728ffc5f8a",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/local_only/features/IEMOCAP/text_features.pt": "15b0a6ee71bf48ecac7f22be0469d4b0c983511fae5e0de0538d19362022b183",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/local_only/features/IEMOCAP/audio_features.pt": "b02cf9e7e0a5323010c25841fe92bd4d10549cfc862aaedcd0856ee35aaf20ca",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/configs/PLAN_B_PROTOCOL.json": "5fdc385c679d86776ae89825f61854f94ac665905f471d63d3264e2439abd475",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/configs/DOWNSTREAM_CLASS_WEIGHT_AMENDMENT.json": "407305ca272ed60c8c4410c0609d42ba6a8e38b63dfe441806db4f8728eee72e",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/scripts/downstream.py": "40632d490388f52c4c4ab99d96d1fced047782e3bf6ba782c9048add14bcc249",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/scripts/core_snapshot/HypergraphConv.py": "9297a572e1763a74c7984eb75dfb15fa8143bf131a44cf50433c307ef7f3b5d2",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/scripts/core_snapshot/cal_diff_reference.py": "7e024fbe7748d90d0f40636c72796a2d46578007fd0e80bdf828b49478dc4d47",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/scripts/core_snapshot/causal_graph.py": "3dd761b05cca95afa7b2f7b70e4640ee3ccfbb5726c3d705c0808468f7181da3",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/scripts/core_snapshot/clloss.py": "012c5d08f51eaaa99bdbd10d61e3d108275bf3dd44e42767b2e186e5be72ec3f",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/scripts/core_snapshot/dataloader.py": "337a7dc92d9e69e4f8854a8031197085ffca84cdc08b070b6ef5b05ebb6f3390",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/scripts/core_snapshot/high_fre_conv.py": "f4414c019ca7f656a662698bb9615bf15ac6325a73caa06ff487e158f58f39df",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/scripts/core_snapshot/model_GCN.py": "830d401ff3e4b30298199b927a0bad3a9056400429506abcc2d66a7db8b76f9f",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/scripts/core_snapshot/model_cm.py": "94acf11e2e9edd1bcd98049eb12d85b3604f8d71d46f64f0c3b8b9837fa12625",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/scripts/core_snapshot/model_hyper.py": "fb9ef2ee268afa697474c9199d2136a7519b5226adb4abeec4a9cf1aea678aba",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/scripts/core_snapshot/train_cm.py": "67fa7e48a3ecfda9f011d1df3344b68cc9eaa3fdb105a23a117684b1a669a3a0"
+  },
+  "commands": [
+    [
+      "/home/yangbin/miniconda3/envs/multimodalerc310/bin/python",
+      "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/scripts/downstream.py",
+      "smoke",
+      "--dataset",
+      "IEMOCAP",
+      "--data-dir",
+      "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/local_only/data/IEMOCAP",
+      "--device",
+      "cuda:0"
+    ],
+    [
+      "/home/yangbin/miniconda3/envs/multimodalerc310/bin/python",
+      "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/scripts/downstream.py",
+      "train_m3net",
+      "--dataset",
+      "IEMOCAP",
+      "--data-dir",
+      "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/local_only/data/IEMOCAP",
+      "--device",
+      "cuda:0"
+    ],
+    [
+      "/home/yangbin/miniconda3/envs/multimodalerc310/bin/python",
+      "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/scripts/downstream.py",
+      "build_difficulty",
+      "--dataset",
+      "IEMOCAP",
+      "--data-dir",
+      "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/local_only/data/IEMOCAP",
+      "--device",
+      "cuda:0"
+    ],
+    [
+      "/home/yangbin/miniconda3/envs/multimodalerc310/bin/python",
+      "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/scripts/downstream.py",
+      "train_cmerc",
+      "--dataset",
+      "IEMOCAP",
+      "--data-dir",
+      "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/local_only/data/IEMOCAP",
+      "--device",
+      "cuda:0"
+    ],
+    [
+      "/home/yangbin/miniconda3/envs/multimodalerc310/bin/python",
+      "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/scripts/downstream.py",
+      "evaluate",
+      "--dataset",
+      "IEMOCAP",
+      "--data-dir",
+      "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/local_only/data/IEMOCAP",
+      "--device",
+      "cuda:0"
+    ]
+  ],
+  "supervisor_sha256": "bd3a1f3b6ab861a7561f8e1227343ac8bb54c462df2416c7abde67426ea16777",
+  "stage": "evaluate",
+  "child_pid": 667152,
+  "completed_at": 1795189316.9822927,
+  "baseline_checkpoint_sha256": "3e28c4227d441b10b3f65c9eabee819949a7252571de6f236a045e9691e2cf84"
+}

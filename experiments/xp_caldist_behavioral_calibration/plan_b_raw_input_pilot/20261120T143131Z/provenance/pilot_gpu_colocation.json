@@ -1,0 +1,13 @@
+{
+  "utc": "2026-11-20T16:08:44.854259+00:00",
+  "server": "user23",
+  "host_gpu": 0,
+  "gpu_uuid": "GPU-7ff18ebb-100e-98fe-038b-a98bd4f94248",
+  "jobs": [
+    "MELD raw pilot",
+    "IEMOCAP raw pilot"
+  ],
+  "gpu_inventory_before_second_start": "index, uuid, memory.used [MiB], memory.total [MiB], utilization.gpu [%]\n0, GPU-7ff18ebb-100e-98fe-038b-a98bd4f94248, 301 MiB, 12288 MiB, 15 %\n1, GPU-eed2f34f-b4c0-7b7a-498e-71a026e30c5a, 3 MiB, 12288 MiB, 0 %\n2, GPU-d17e4326-9d3b-2025-fbf8-c9b0d16623a0, 3 MiB, 12288 MiB, 0 %\n3, GPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456, 3 MiB, 12288 MiB, 0 %\n",
+  "reason": "Observed MELD encoder process ~2.4GiB with low GPU utilization; two frozen encoder inference jobs fit on one 12GiB GPU with margin. Independent CPU preprocessing/output paths. No batch/protocol change; monitor actual occupancy.",
+  "source_runtime": "TEXT_repro encoder -> multimodalerc310 CMERC, separate processes"
+}

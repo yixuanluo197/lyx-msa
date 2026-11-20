@@ -1,0 +1,39 @@
+{
+  "dataset": "IEMOCAP",
+  "seed": 1475,
+  "samples": 120,
+  "algorithm": "Lexicographic minimum selected Dialogue count, selected true-class count, selected (class,correct,confidence-bin) count, seeded random tie rank",
+  "true_validation_rows": 527,
+  "selected_dialogues": 12,
+  "eligible_audio_available_rows": 527,
+  "excluded_missing_audio_targets": 0,
+  "target_pool_rule": "Predeclared audio_available only; unchanged full Dialogue contexts retain all missing rows; no effectiveness filtering",
+  "class_counts": {
+    "3": 19,
+    "4": 20,
+    "1": 20,
+    "2": 20,
+    "5": 20,
+    "0": 21
+  },
+  "correct_counts": {
+    "1": 59,
+    "0": 61
+  },
+  "confidence_bin_counts": {
+    "0.5-0.6": 27,
+    "0.9-1.0": 12,
+    "0.8-0.9": 17,
+    "0.7-0.8": 16,
+    "0.4-0.5": 25,
+    "0.6-0.7": 12,
+    "0.3-0.4": 10,
+    "0.2-0.3": 1
+  },
+  "baseline_lock_sha256": "5d07b90697091997d041dc427782f82deb910969bd57b8acb2bb0d3120525144",
+  "sample_manifest_sha256": "30d698430a0e79448eac90a4fe2cf62923f448380d7aaf15a8c2705603e329b9",
+  "sampling_is_stratified": true,
+  "overall_sample_metrics_are_not_dataset_population_metrics": true,
+  "text_audio_share_exact_same_manifest": true,
+  "test_accessed": false
+}

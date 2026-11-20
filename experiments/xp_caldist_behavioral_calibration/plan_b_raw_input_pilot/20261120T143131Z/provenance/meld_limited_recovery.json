@@ -1,0 +1,24 @@
+[
+  {
+    "split": "train",
+    "tar_path": "/data2/yb/OpenDataLab___MELD/raw/MELD/MELD.Raw/train.tar.gz",
+    "basename": "dia125_utt3.mp4",
+    "matching_members": [
+      {
+        "member": "train_splits/dia125_utt3.mp4",
+        "size": 1938321,
+        "sha256": "53f3c4070bc947084a18de66df329d66b98f64140183e82d3e64564d8136004c",
+        "candidate_path": "experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/local_only/recovery_candidates/train/dia125_utt3.mp4",
+        "decode_rc": 183,
+        "decoded_float32_bytes": 0,
+        "decode_stderr": "[mov,mp4,m4a,3gp,3g2,mj2 @ 0x5b718be14a80] moov atom not found\n[in#0 @ 0x5b718be09cc0] Error opening input: Invalid data found when processing input\nError opening input file experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/local_only/recovery_candidates/train/dia125_utt3.mp4.\nError opening input files: Invalid data found when processing input\n"
+      }
+    ]
+  },
+  {
+    "split": "dev",
+    "tar_path": "/data2/yb/OpenDataLab___MELD/raw/MELD/MELD.Raw/dev.tar.gz",
+    "basename": "dia110_utt7.mp4",
+    "matching_members": []
+  }
+]

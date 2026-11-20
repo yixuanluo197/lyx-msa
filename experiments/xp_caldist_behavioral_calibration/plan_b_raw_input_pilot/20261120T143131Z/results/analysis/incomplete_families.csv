@@ -1,0 +1,15 @@
+dataset,sample_id,dialogue_id,utterance_index,modality,perturbation_type,planned_k,successful_k,original_correct,true_label,original_confidence,confidence_bin,complete_planned_family,all_variants_automatic_qc_pass,label_review_statuses,all_variants_label_preserving,exclusion_reason
+IEMOCAP,IEMOCAP_0c8e62581c4d8b76,Ses03F_script03_1,0,text,semantic_paraphrase,2,0,0,2,0.4705214500427246,0.4-0.5,False,False,FAIL,False,One or more fixed variants missing/failed; do not change K or hide this family
+IEMOCAP,IEMOCAP_784bdc3983828f26,Ses03M_script01_2,17,text,semantic_paraphrase,2,1,1,5,0.7441791296005249,0.7-0.8,False,False,FAIL|UNCERTAIN,False,One or more fixed variants missing/failed; do not change K or hide this family
+IEMOCAP,IEMOCAP_63e252396ded0388,Ses01M_script03_1,31,audio,pitch_shift,4,0,1,4,0.5454080700874329,0.5-0.6,False,False,PENDING,False,One or more fixed variants missing/failed; do not change K or hide this family
+IEMOCAP,IEMOCAP_63e252396ded0388,Ses01M_script03_1,31,audio,timbre_tilt,2,0,1,4,0.5454080700874329,0.5-0.6,False,False,PENDING,False,One or more fixed variants missing/failed; do not change K or hide this family
+IEMOCAP,IEMOCAP_68def76528723d68,Ses01M_script03_1,35,audio,timbre_tilt,2,0,1,0,0.5275983214378357,0.5-0.6,False,False,PENDING,False,One or more fixed variants missing/failed; do not change K or hide this family
+MELD,MELD_cb14dd00ab9008d6,1088,1,audio,pitch_shift,4,2,0,1,0.4665444791316986,0.4-0.5,False,False,PENDING,False,One or more fixed variants missing/failed; do not change K or hide this family
+MELD,MELD_ece6b936818dad41,1076,1,audio,timbre_tilt,2,0,0,2,0.3596261143684387,0.3-0.4,False,False,PENDING,False,One or more fixed variants missing/failed; do not change K or hide this family
+MELD,MELD_3786b1697cee6584,1122,7,audio,timbre_tilt,2,1,1,4,0.5943614840507507,0.5-0.6,False,False,PENDING,False,One or more fixed variants missing/failed; do not change K or hide this family
+MELD,MELD_1fa37828fda73517,1097,1,audio,timbre_tilt,2,0,1,5,0.2601862847805023,0.2-0.3,False,False,PENDING,False,One or more fixed variants missing/failed; do not change K or hide this family
+MELD,MELD_da5ea39b1cd6d1de,1064,3,audio,timbre_tilt,2,0,0,6,0.41986358165740967,0.4-0.5,False,False,PENDING,False,One or more fixed variants missing/failed; do not change K or hide this family
+MELD,MELD_61a05a161f71de2b,1098,4,audio,timbre_tilt,2,1,1,0,0.3624993860721588,0.3-0.4,False,False,PENDING,False,One or more fixed variants missing/failed; do not change K or hide this family
+MELD,MELD_2f818142597afb6e,1140,0,audio,pitch_shift,4,2,0,3,0.6943438649177551,0.6-0.7,False,False,PENDING,False,One or more fixed variants missing/failed; do not change K or hide this family
+MELD,MELD_dd2a22bce174a179,1128,2,audio,pitch_shift,4,0,0,2,0.271821528673172,0.2-0.3,False,False,PENDING,False,One or more fixed variants missing/failed; do not change K or hide this family
+MELD,MELD_dd2a22bce174a179,1128,2,audio,timbre_tilt,2,0,0,2,0.271821528673172,0.2-0.3,False,False,PENDING,False,One or more fixed variants missing/failed; do not change K or hide this family

@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "created_utc": "2026-11-20T15:57:23.261711+00:00",
+  "reason": "Two IO/provenance bugs only, no scientific behavior changes",
+  "checks": [
+    "Four JSONL cases: ensure_ascii true/false x LF/CRLF preserve U+0085/U+2028/U+2029 and escaped newline with exact 2-record content",
+    "Old splitlines bug reproduced",
+    "Input raw bytes unchanged",
+    "Completion provenance returns actual completion.json path/hash; input guard still rejects changed source hash"
+  ],
+  "environments": [
+    "TEXT_repro",
+    "multimodalerc310"
+  ],
+  "official_validation_accessed": false,
+  "models_loaded": false,
+  "new_hashes": {
+    "scripts/raw_pilot.py": "b2bf7da730f562efb094db38b88ead0dd5a7f544b573d897dc9f09ff47c5972b",
+    "scripts/raw_path_smoke.py": "b47bd8786efabcce1f594cc276dacea40acc9a0c9428797d303b8a8beefad386",
+    "scripts/pilot_analysis.py": "75cdb58f06851b72072087ab046077b9b24952ff8f7bb986dd6294119196522c",
+    "configs/PLAN_B_PROTOCOL.json": "5fdc385c679d86776ae89825f61854f94ac665905f471d63d3264e2439abd475",
+    "provenance/jsonl_lf_io_regression.py": "221243ca5aeb40568a2156924ee42586b063c45ca200d219dcdd609646263653"
+  },
+  "archive": "provenance/jsonl_lf_io_fix_v2/ARCHIVE_MANIFEST.json",
+  "historical_smoke_erratum": "provenance/SMOKE_COMPLETION_PROVENANCE_ERRATA.json"
+}

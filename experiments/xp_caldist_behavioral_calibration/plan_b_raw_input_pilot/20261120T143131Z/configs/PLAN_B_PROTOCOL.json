@@ -1,0 +1,134 @@
+{
+  "name": "Plan B autonomous feature extraction / single-seed CMERC / raw-input pilot",
+  "created_at": "2026-11-20T14:42:35.100656+00:00",
+  "source_commit": "f2c0a1dda0fd806db83061c65f02ac5585b95bb1",
+  "server": "user23",
+  "datasets": {
+    "IEMOCAP": {
+      "seed": 1475,
+      "train": 5283,
+      "validation": 527,
+      "fit": 4747,
+      "inner_dev": 536,
+      "data_sha256": "48df0871aaed72d32ed39d71b2701c03b80c70943ed3eaa3455d1c728ffc5f8a",
+      "text_gpu": 0,
+      "downstream_max_epochs": 80
+    },
+    "MELD": {
+      "seed": 67137,
+      "train": 9989,
+      "validation": 1109,
+      "fit": 8989,
+      "inner_dev": 1000,
+      "data_sha256": "e8a438e7b36380f112dfd3850a2fb58c28084b6fba8aa9597d1dfb6c0231746b",
+      "text_gpu": 2,
+      "downstream_max_epochs": 40
+    }
+  },
+  "data_policy": {
+    "train_fit_only_gradient": true,
+    "inner_dev": "fixed previous Train Dialogue grouped holdout used for checkpoint selection; no gradient/refit",
+    "official_validation": "only frozen-baseline final metrics and same120 raw-input pilot; no tuning",
+    "test": "not indexed, trained, inferred, or evaluated; legacy shared containers may deserialize but permitted fields only are indexed",
+    "speaker_ids": "retain official IDs including disclosed single historical MELD Train556/utt6 inconsistency",
+    "MELD_text": "raw CSV exact DialogueID/UtteranceID; one legacy pkl text mismatch explicitly recorded",
+    "missing_audio": "MELD Train125/utt3 damaged, Val110/utt7 absent; retain rows; zero768 embedding and separate missing mask; no legacy-audio imputation"
+  },
+  "text": {
+    "initial_model": "public roberta-large snapshot722cf37b1afa9454edce342e7895e588b6ff1d59",
+    "initial_weights_sha256": "047c85f0b96269cd62e6f732644f067004eebd95af5b5d35965ae2528f13bf38",
+    "independent_per_dataset": true,
+    "loss": "supervised CE on Train Fit labels; original native classification head",
+    "optimizer": "AdamW",
+    "lr": 1e-05,
+    "weight_decay": 0.01,
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "eps": 1e-08,
+    "max_epochs": 10,
+    "early_stop_patience": 2,
+    "selection": "maximum inner-dev macro-F1, strict improvement",
+    "scheduler": "10% warmup then linear decay over fixed10epoch update budget",
+    "microbatch": 4,
+    "accumulation": 4,
+    "precision": "FP32 train/eval; no AMP/TF32",
+    "gradient_checkpointing": "nonreentrant",
+    "max_length": 512,
+    "tokenizer": "public slow RoBERTa byte BPE BOS0 PAD1 EOS2; right padding/truncation; add_prefix_space=False",
+    "preprocessing": "IEMOCAP unchanged; MELD ASCII removal following reference; no whitespace/case normalization",
+    "features": "last4 BOS[-1,-2,-3,-4] each1024, raw scale without extra norm",
+    "keep": "one best classifier plus one latest full resumable training state"
+  },
+  "audio": {
+    "model": "facebook/wav2vec2-base",
+    "revision": "0b5b8e868dd84f03fd87d01f9c4ff0f080fecfe8",
+    "frozen": true,
+    "sample_rate": 16000,
+    "channels": 1,
+    "decode": "fixed ffmpeg source entire utterance track, no crop",
+    "normalization": "official zero mean unit variance per entire utterance before chunking",
+    "chunking": "<=30s whole; >30s nonoverlap30s, tail shorter than400 samples merges into previous; no discarded content",
+    "pooling": "sum final hidden vectors over all real convolutional frames / total frames, 768d",
+    "precision": "FP32 eval",
+    "missing": "zero embedding + explicit metadata mask; retained all rows"
+  },
+  "visual": "official features unchanged; no visual perturbation",
+  "downstream": {
+    "core": "frozen XP04 core math, causal=False; audioinput768, text4x1024, officialvisual dims",
+    "M3Net": "fresh model; calibration/contrast/curriculum flags off",
+    "difficulty": "new M3Net on TrainFit only; five positive true-class logprob removal gaps plus speaker term, official formula",
+    "CMERC": "fresh random model; newdifficulty only; preserve original CC rank + MSCL + CSCL + curriculum and XP04 coefficients",
+    "old_assets": "no old checkpoint, old M3Net weights, old difficulty, old T/A features",
+    "selection": "maximum inner-dev macro-F1, patience10; no officialVal checkpoint selection",
+    "loss_class_weights": "source-pinned original XP04 fixed hyperparameters, disclosed as historical constants; no currentTest access or Val estimation",
+    "baseline_metrics": [
+      "accuracy",
+      "macro_f1",
+      "weighted_f1",
+      "ECE15_equal_width",
+      "Brier_sum_over_classes",
+      "NLL"
+    ],
+    "SCL_nonfinite": "record raw pre-fallback nonfinite and fail rather than silently replace"
+  },
+  "pilot": {
+    "samples_per_dataset": 120,
+    "same_cohort_text_audio": true,
+    "sampling": "fixedseed class/Dialogue/correctness/confidence stratification; audio-available target pool; keep entire contexts and missing rows elsewhere",
+    "mode": "frozen extractors and CMERC; targetutterance one modality only; complete Dialogue forward; all others bitwise unchanged",
+    "variants": {
+      "neutral_append": 2,
+      "semantic_paraphrase": 2,
+      "pitch_semitones": [
+        -1,
+        -0.5,
+        0.5,
+        1
+      ],
+      "timbre_db_per_octave": [
+        0.75,
+        1.5
+      ]
+    },
+    "audio_qc": "16000Hz, exact sample count, RMS preserved, clipping/distortion logged; emotion-preservation uncertainty separate, never claim automated objective QC proves label preservation",
+    "text_qc": "review original context/emotion, source unchanged, no original-content truncation, token-identical or uncertain variants flagged; preserve failures",
+    "mu": "mean_k[1(argmax p_k != argmax p_clean)*max(p_k)]",
+    "delta": "abs(max(p_clean)-mean_k max(p_k))",
+    "flip": "mean_k[1(argmax p_k != argmax p_clean)] separate frommu",
+    "JS": "mean natural-log Jensen-Shannon divergence between clean and each perturbed distribution",
+    "aggregation": "per perturbation type, K reported; do not treat different types as equivalent repeated draws",
+    "statistics": "correct/wrong separately; confidence bins width0.1 fixed; overlap strata comparisons with support/NA; shared paired Dialogue bootstrap2000; no fitted reliability/calibration model",
+    "interpretation": "stratified120 is not population performance; singleSeed exploratory; historical randomfeature comparison cannot isolate perturbation effect across different models"
+  },
+  "forbidden": [
+    "XP04 recovery/distillation",
+    "Test use",
+    "fiveSeed expansion",
+    "CaliDist/reliability-score fitting",
+    "combined-modal perturbation",
+    "automaticGit commit/push",
+    "public weights or full media/features upload"
+  ]
+}

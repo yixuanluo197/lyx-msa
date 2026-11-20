@@ -1,0 +1,48 @@
+{
+  "dataset": "MELD",
+  "server": "user23",
+  "pid": 459131,
+  "gpu_host_index": "2",
+  "started_at": 1795186127.1217067,
+  "status": "COMPLETE",
+  "stage": "extract",
+  "script_sha256": "a8e87cb16064e3e54d52d63c1f6ccf62c2dd2eee4e600da2a0b80604f23adc34",
+  "data_sha256": "e8a438e7b36380f112dfd3850a2fb58c28084b6fba8aa9597d1dfb6c0231746b",
+  "protocol_sha256": "5fdc385c679d86776ae89825f61854f94ac665905f471d63d3264e2439abd475",
+  "supervisor_sha256": "347ea89e356babfc57edfecd5b124aa97397274d08793e5b0aef3ecc258b74fa",
+  "commands": [
+    [
+      "/home/yangbin/miniconda3/envs/TEXT_repro/bin/python",
+      "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/scripts/text_encoder.py",
+      "--mode",
+      "train",
+      "--dataset",
+      "MELD",
+      "--data",
+      "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/local_only/data/MELD/dataset.pt",
+      "--output",
+      "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/local_only/text_models/MELD",
+      "--pretrained",
+      "/home/yangbin/.cache/huggingface/hub/models--roberta-large/snapshots/722cf37b1afa9454edce342e7895e588b6ff1d59"
+    ],
+    [
+      "/home/yangbin/miniconda3/envs/TEXT_repro/bin/python",
+      "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/scripts/text_encoder.py",
+      "--mode",
+      "extract",
+      "--dataset",
+      "MELD",
+      "--data",
+      "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/local_only/data/MELD/dataset.pt",
+      "--output",
+      "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/local_only/text_models/MELD",
+      "--pretrained",
+      "/home/yangbin/.cache/huggingface/hub/models--roberta-large/snapshots/722cf37b1afa9454edce342e7895e588b6ff1d59",
+      "--features",
+      "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/local_only/features/MELD/text_features.pt"
+    ]
+  ],
+  "child_pid": 631901,
+  "completed_at": 1795188213.5452564,
+  "feature_sha256": "284e90b3261e0cac4bf56884ca5aea99ffad1b236bbcbac588d82b742a1dc83f"
+}

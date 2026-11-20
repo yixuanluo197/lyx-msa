@@ -1,0 +1,1210 @@
+{
+  "status": "COMPLETE_WITH_RETAINED_MISSING_AUDIO",
+  "datasets": {
+    "IEMOCAP": {
+      "seed": 1475,
+      "class_names": [
+        "happy",
+        "sad",
+        "neutral",
+        "angry",
+        "excited",
+        "frustrated"
+      ],
+      "source_pickle_slots": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "shared_pickle_deserialized": true,
+      "legacy_text_feature_slot_indexed": false,
+      "legacy_audio_feature_slot_indexed": false,
+      "test_dictionary_values_indexed": false,
+      "previous_teacher_pt_loaded": false,
+      "train_inner_indices_from_csv_only": true,
+      "text_preprocessing": "none: preserve chosen original strings, including original Unicode/control characters",
+      "official_visual_dim": 342,
+      "speaker_dim": 2,
+      "splits": {
+        "train": {
+          "dialogues": 108,
+          "utterances": 5283,
+          "label_counts": {
+            "4": 684,
+            "0": 423,
+            "2": 1201,
+            "5": 1399,
+            "1": 773,
+            "3": 803
+          },
+          "audio_present": 5283,
+          "audio_missing": 0,
+          "raw_utterance_id_differs_from_array_index": 0
+        },
+        "validation": {
+          "dialogues": 12,
+          "utterances": 527,
+          "label_counts": {
+            "2": 123,
+            "1": 66,
+            "4": 58,
+            "0": 81,
+            "5": 69,
+            "3": 130
+          },
+          "audio_present": 527,
+          "audio_missing": 0,
+          "raw_utterance_id_differs_from_array_index": 0
+        }
+      },
+      "fit_utterances": 4747,
+      "inner_dev_utterances": 536,
+      "fit_dialogues": 97,
+      "inner_dev_dialogues": 11,
+      "raw_speaker_to_official_slot": {},
+      "text_source": "official base pkl slot 6"
+    },
+    "MELD": {
+      "seed": 67137,
+      "class_names": [
+        "neutral",
+        "surprise",
+        "fear",
+        "sadness",
+        "joy",
+        "disgust",
+        "anger"
+      ],
+      "source_pickle_slots": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "shared_pickle_deserialized": true,
+      "legacy_text_feature_slot_indexed": false,
+      "legacy_audio_feature_slot_indexed": false,
+      "test_dictionary_values_indexed": false,
+      "previous_teacher_pt_loaded": false,
+      "train_inner_indices_from_csv_only": true,
+      "text_preprocessing": "none: preserve chosen original strings, including original Unicode/control characters",
+      "official_visual_dim": 342,
+      "speaker_dim": 9,
+      "splits": {
+        "train": {
+          "dialogues": 1038,
+          "utterances": 9989,
+          "label_counts": {
+            "0": 4710,
+            "1": 1205,
+            "2": 268,
+            "3": 683,
+            "4": 1743,
+            "5": 271,
+            "6": 1109
+          },
+          "audio_present": 9988,
+          "audio_missing": 1,
+          "raw_utterance_id_differs_from_array_index": 441
+        },
+        "validation": {
+          "dialogues": 114,
+          "utterances": 1109,
+          "label_counts": {
+            "3": 111,
+            "1": 150,
+            "0": 470,
+            "4": 163,
+            "6": 153,
+            "5": 22,
+            "2": 40
+          },
+          "audio_present": 1108,
+          "audio_missing": 1,
+          "raw_utterance_id_differs_from_array_index": 10
+        }
+      },
+      "fit_utterances": 8989,
+      "inner_dev_utterances": 1000,
+      "fit_dialogues": 934,
+      "inner_dev_dialogues": 104,
+      "raw_speaker_to_official_slot": {
+        "Chandler": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "The Interviewer": [
+          1,
+          2
+        ],
+        "Joey": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "Rachel": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "Monica": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "Phoebe": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "Ross": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "Sergei": [
+          2
+        ],
+        "Customer": [
+          2,
+          6
+        ],
+        "Jade": [
+          1
+        ],
+        "Mona": [
+          0,
+          1,
+          2
+        ],
+        "Charlie": [
+          0,
+          1
+        ],
+        "Paleontologist": [
+          2
+        ],
+        "Professore Clerk": [
+          3
+        ],
+        "Caitlin": [
+          4
+        ],
+        "Nurse": [
+          0,
+          1,
+          2,
+          5
+        ],
+        "Mr. Treeger": [
+          0,
+          1,
+          2,
+          7
+        ],
+        "Carol": [
+          0,
+          1,
+          2,
+          6
+        ],
+        "The Casting Director": [
+          1,
+          3
+        ],
+        "Emily": [
+          0,
+          1,
+          2,
+          5
+        ],
+        "Elizabeth": [
+          0,
+          1
+        ],
+        "Paul": [
+          0,
+          1,
+          2
+        ],
+        "The Dry Cleaner": [
+          1,
+          2
+        ],
+        "Joey and Chandler": [
+          0
+        ],
+        "Kate": [
+          0,
+          1,
+          3
+        ],
+        "The Director": [
+          0,
+          1,
+          2
+        ],
+        "Mr. Tribbiani": [
+          0,
+          2,
+          3
+        ],
+        "Guru Saj": [
+          1
+        ],
+        "Wayne": [
+          1
+        ],
+        "Richard": [
+          0,
+          1,
+          2
+        ],
+        "Dina": [
+          2
+        ],
+        "Bobby": [
+          3
+        ],
+        "Danny": [
+          0,
+          1,
+          4
+        ],
+        "Krista": [
+          2,
+          3
+        ],
+        "Jill": [
+          0,
+          1,
+          2
+        ],
+        "Doug": [
+          0,
+          1,
+          3
+        ],
+        "Stevens": [
+          0
+        ],
+        "Bob": [
+          0,
+          1,
+          2
+        ],
+        "Mr. Franklin": [
+          0,
+          2
+        ],
+        "Director": [
+          0,
+          4
+        ],
+        "Janice": [
+          0,
+          1,
+          2,
+          3,
+          5
+        ],
+        "Tony": [
+          0
+        ],
+        "Peter": [
+          3
+        ],
+        "Ticket Counter Attendant": [
+          1
+        ],
+        "Dr. Long": [
+          0,
+          2
+        ],
+        "Charlton Heston": [
+          0
+        ],
+        "Joshua": [
+          0,
+          1,
+          3
+        ],
+        "Nancy": [
+          1
+        ],
+        "Kim": [
+          0,
+          2
+        ],
+        "Joanna": [
+          0,
+          1,
+          2
+        ],
+        "Cassie": [
+          0,
+          1,
+          2
+        ],
+        "Dr. Rhodes": [
+          0,
+          1
+        ],
+        "Dr. Johnson": [
+          1
+        ],
+        "Kristen": [
+          0
+        ],
+        "Jester": [
+          0
+        ],
+        "Sarah": [
+          0,
+          1
+        ],
+        "Pete": [
+          0,
+          1,
+          2
+        ],
+        "The Singing Man": [
+          0
+        ],
+        "Commercial": [
+          0
+        ],
+        "Mark": [
+          0,
+          1,
+          2
+        ],
+        "A Female Student": [
+          1
+        ],
+        "All": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "Cliff": [
+          0,
+          1,
+          2
+        ],
+        "Tag": [
+          0,
+          1,
+          2
+        ],
+        "Eric": [
+          1,
+          2
+        ],
+        "Dr. Green": [
+          0,
+          2
+        ],
+        "Mr. Heckles": [
+          0,
+          1,
+          3
+        ],
+        "Mr. Geller": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          8
+        ],
+        "Sophie": [
+          2
+        ],
+        "Singer": [
+          0
+        ],
+        "David": [
+          0,
+          1,
+          2
+        ],
+        "Hitchhiker": [
+          2
+        ],
+        "1st Customer": [
+          0
+        ],
+        "2nd Customer": [
+          2
+        ],
+        "3rd Customer": [
+          3
+        ],
+        "The Presenter": [
+          1
+        ],
+        "Policeman": [
+          0,
+          1
+        ],
+        "Duncan": [
+          1
+        ],
+        "Jane": [
+          0
+        ],
+        "Message": [
+          3
+        ],
+        "Gary": [
+          0,
+          1,
+          2
+        ],
+        "Bonnie": [
+          2
+        ],
+        "Woman": [
+          0,
+          1,
+          2,
+          4,
+          5
+        ],
+        "Leslie": [
+          0,
+          1
+        ],
+        "Isabella": [
+          1,
+          2
+        ],
+        "Joey's Hand Twin": [
+          0,
+          1
+        ],
+        "Kiki": [
+          1
+        ],
+        "Joanne": [
+          2
+        ],
+        "Fireman No. 3": [
+          0,
+          3
+        ],
+        "Susan": [
+          0,
+          1,
+          2,
+          3,
+          5
+        ],
+        "Mischa": [
+          1
+        ],
+        "The Assistant Director": [
+          3
+        ],
+        "Mrs. Geller": [
+          0,
+          1,
+          3,
+          6
+        ],
+        "Emeril": [
+          0
+        ],
+        "Man": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "Jake": [
+          2
+        ],
+        "Tom": [
+          3
+        ],
+        "Lecturer": [
+          0
+        ],
+        "The Woman": [
+          0
+        ],
+        "Monica and Ross": [
+          3
+        ],
+        "The Vendor": [
+          1
+        ],
+        "Julio": [
+          1
+        ],
+        "Janine": [
+          0,
+          1,
+          2
+        ],
+        "Julie": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "Dr. Baldhara": [
+          1
+        ],
+        "Young Ethan": [
+          1
+        ],
+        "Dr. Leedbetter": [
+          0
+        ],
+        "Phoebe Sr.": [
+          0,
+          1
+        ],
+        "Katie": [
+          0,
+          1
+        ],
+        "Gunther": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "Earl": [
+          0,
+          1
+        ],
+        "Barry": [
+          0,
+          1,
+          4
+        ],
+        "Robbie": [
+          5
+        ],
+        "Lydia": [
+          0,
+          1
+        ],
+        "Bernice": [
+          1,
+          2
+        ],
+        "Mindy": [
+          1,
+          3
+        ],
+        "Robert": [
+          2,
+          3
+        ],
+        "Issac": [
+          1,
+          2
+        ],
+        "Chloe": [
+          1,
+          3
+        ],
+        "Supervisor": [
+          0
+        ],
+        "Kathy": [
+          1,
+          2
+        ],
+        "Voice": [
+          2
+        ],
+        "Stu": [
+          1
+        ],
+        "Tour Guide": [
+          1,
+          4
+        ],
+        "Dr. Ledbetter": [
+          1
+        ],
+        "Mrs. Burgin": [
+          2
+        ],
+        "Mr. Burgin": [
+          0,
+          3
+        ],
+        "Annabelle": [
+          1
+        ],
+        "Flight Attendant": [
+          1
+        ],
+        "Roger": [
+          0
+        ],
+        "Front Desk Clerk": [
+          2
+        ],
+        "Mr. Zelner": [
+          0,
+          2
+        ],
+        "Student": [
+          0,
+          1
+        ],
+        "Jason": [
+          1
+        ],
+        "Guy": [
+          1,
+          2
+        ],
+        "Jim": [
+          0,
+          2
+        ],
+        "Liam": [
+          3
+        ],
+        "Phoebe Sr": [
+          0,
+          1
+        ],
+        "Stage Director": [
+          1,
+          2
+        ],
+        "PBS Volunteer": [
+          3
+        ],
+        "Gary Collins": [
+          4
+        ],
+        "Carl": [
+          0,
+          1,
+          3
+        ],
+        "Phoebe and Rachel": [
+          5
+        ],
+        "The Cigarette Guy": [
+          3
+        ],
+        "Lorraine": [
+          2
+        ],
+        "an": [
+          4
+        ],
+        "Richards Date": [
+          2
+        ],
+        "Frank": [
+          0,
+          2,
+          3
+        ],
+        "Rachel and Phoebe": [
+          3
+        ],
+        "Mona's Date": [
+          2
+        ],
+        "Ross and Joey": [
+          6
+        ],
+        "Mike": [
+          0,
+          1,
+          2
+        ],
+        "Dr. Miller": [
+          2
+        ],
+        "Both": [
+          2
+        ],
+        "Receptionist": [
+          0,
+          1,
+          3
+        ],
+        "Mrs. Green": [
+          1,
+          2
+        ],
+        "Marc": [
+          1,
+          2
+        ],
+        "Dana": [
+          1
+        ],
+        "The Fireman": [
+          1
+        ],
+        "Drunken Gambler": [
+          2
+        ],
+        "Raymond": [
+          2
+        ],
+        "Kristin": [
+          1
+        ],
+        "Monica and Phoebe": [
+          2
+        ],
+        "A Student": [
+          0
+        ],
+        "Hoshi": [
+          0
+        ],
+        "Ben": [
+          0,
+          1,
+          2
+        ],
+        "Teacher": [
+          3
+        ],
+        "Stephanie": [
+          4
+        ],
+        "Evil Bitch": [
+          1
+        ],
+        "Sick Bastard": [
+          2
+        ],
+        "Kyle": [
+          1,
+          4
+        ],
+        "Nurse #1": [
+          1
+        ],
+        "Nurse #2": [
+          2
+        ],
+        "Dr. Stryker Ramoray": [
+          3
+        ],
+        "Helena": [
+          0
+        ],
+        "Angela": [
+          1
+        ],
+        "Steve": [
+          1
+        ],
+        "Airline Employee": [
+          2
+        ],
+        "Janitor": [
+          3
+        ],
+        "Mr. Posner": [
+          0
+        ],
+        "Mrs. Lynch": [
+          3
+        ],
+        "Paolo": [
+          3
+        ],
+        "Megan": [
+          1
+        ],
+        "Joey and Ross": [
+          2
+        ],
+        "Hombre Man": [
+          2
+        ],
+        "Dr. Zane": [
+          0,
+          1
+        ],
+        "Alice": [
+          3,
+          4
+        ],
+        "Russell": [
+          0,
+          1
+        ],
+        "Chip": [
+          0,
+          2
+        ],
+        "The Lurker": [
+          1
+        ],
+        "The Security Guard": [
+          2
+        ],
+        "The Librarian": [
+          1
+        ],
+        "The Head Librarian": [
+          0,
+          2
+        ],
+        "Guy #1": [
+          0
+        ],
+        "Shelley": [
+          1
+        ],
+        "Girl": [
+          1,
+          2
+        ],
+        "Leader": [
+          2
+        ],
+        "Dr. Wesley": [
+          0
+        ],
+        "Dr. Drake Remoray": [
+          1
+        ],
+        "Hope": [
+          3
+        ],
+        "Stranger": [
+          1
+        ],
+        "Hold Voice": [
+          3
+        ],
+        "Rick": [
+          0
+        ],
+        "Vince": [
+          1
+        ],
+        "Phoebe/Waitress": [
+          1
+        ],
+        "Joey/Drake": [
+          0,
+          2
+        ],
+        "Rachel/actress": [
+          3
+        ],
+        "Mr. Waltham": [
+          1
+        ],
+        "Mrs. Waltham": [
+          2
+        ],
+        "Ms. McKenna": [
+          1
+        ],
+        "Fake Monica": [
+          1
+        ],
+        "Doctor": [
+          2,
+          3
+        ],
+        "Boy in the Cape": [
+          0
+        ],
+        "Mrs. Chatracus": [
+          2
+        ],
+        "Paula": [
+          1
+        ],
+        "Burt": [
+          2
+        ],
+        "Ursula": [
+          0,
+          1
+        ],
+        "Older Scientist": [
+          0
+        ],
+        "Another Tour Guide": [
+          3
+        ],
+        "Another Scientist": [
+          5
+        ],
+        "The Potential Roommate": [
+          1
+        ],
+        "Aunt Lillian": [
+          1
+        ],
+        "Ronni": [
+          0
+        ],
+        "Cecilia": [
+          0
+        ],
+        "Hotel Clerk": [
+          0
+        ],
+        "Casey": [
+          0
+        ],
+        "The Instructor": [
+          1
+        ],
+        "Jay Leno": [
+          5
+        ],
+        "The Smoking Woman": [
+          1
+        ],
+        "Trudie Styler": [
+          1
+        ],
+        "The Acting Teacher": [
+          2
+        ],
+        "Dr. Franzblau": [
+          4
+        ],
+        "Mrs. Tedlock": [
+          2
+        ],
+        "The Guys": [
+          0
+        ],
+        "The Museum Official": [
+          1,
+          2
+        ],
+        "The Croupier": [
+          2
+        ],
+        "Jeannine": [
+          0
+        ],
+        "The Conductor": [
+          0
+        ],
+        "Woman On Train": [
+          2
+        ],
+        "The Food Critic": [
+          1
+        ],
+        "The Cooking Teacher": [
+          1,
+          3
+        ],
+        "Waiter": [
+          2
+        ],
+        "Allesandro": [
+          1
+        ],
+        "Terry": [
+          2
+        ],
+        "Friend No. 2": [
+          2
+        ],
+        "Friend No. 1": [
+          3
+        ],
+        "Her-Friends": [
+          4
+        ],
+        "Estelle": [
+          1,
+          3
+        ],
+        "Mrs. Tribbiani": [
+          1
+        ],
+        "Larry": [
+          0
+        ],
+        "Fireman No. 1": [
+          0
+        ],
+        "Fireman No. 2": [
+          1
+        ],
+        "Dr. Oberman": [
+          2
+        ],
+        "Gerston": [
+          0
+        ],
+        "Santos": [
+          1
+        ],
+        "Petrie": [
+          2
+        ],
+        "Maitre d'": [
+          2
+        ],
+        "Melissa": [
+          0
+        ],
+        "Stanley": [
+          1
+        ],
+        "The Grip": [
+          2
+        ],
+        "Dr. Harad": [
+          0
+        ],
+        "Whitney": [
+          0
+        ],
+        "Passerby": [
+          1
+        ],
+        "Cookie": [
+          0
+        ],
+        "Kori": [
+          0
+        ],
+        "TV Announcer": [
+          0
+        ],
+        "The Hot Girl": [
+          0
+        ],
+        "Jen": [
+          2
+        ],
+        "Monica and Rachel": [
+          2
+        ],
+        "Waitress": [
+          0
+        ],
+        "Stage Manager": [
+          0
+        ],
+        "Lauren": [
+          2
+        ],
+        "Max": [
+          1
+        ],
+        "Ross and Rachel": [
+          1
+        ]
+      },
+      "text_source": "original Train/dev CSV, exact raw Dialogue ID+Utterance ID alignment",
+      "speaker_slots_are_dialogue_local": true,
+      "within_dialogue_csv_speaker_slot_conflicts": [
+        {
+          "split": "train",
+          "dialogue_id": "556",
+          "speaker_name": "Ross",
+          "official_slots": [
+            0,
+            1
+          ]
+        }
+      ],
+      "speaker_conflict_decision": "Keep original official Speaker ID; do not change slot0 to CSV-implied slot1 at Train556/utt6"
+    }
+  },
+  "source_sha256": {
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/provenance/meld_limited_recovery.json": "8e04a493595639b9afd322bf59320971a36c3da188c7a9d59fd36b700a1ca9f4",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/20261107T172302Z/runs/IEMOCAP/seed1475/xp04_effective_config.json": "59e40ae7b7d63bb5f56806eedefb2f70c6797095455f63c083917b1141275369",
+    "/data2/yb/paper/05_reproduction/external_repos/CMERC/data/IEMOCAP_features.pkl": "ceb5cc9a45d1792998438e27f86a12642320aa6315546e4425316140ea503fb3",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/local_only/IEMOCAP/train_manifest.csv": "bd29ceb09503faa0a1318c5d5ca6f515c39ade106920717d7b3d25104c9471c4",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261117T024213Z/local_only/IEMOCAP/manifest_train.csv": "9c9eb0337e4ec611a744562dc7821309261a2236e8fc190748acd695485ecf70",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261117T024213Z/local_only/IEMOCAP/manifest_validation.csv": "9f87f720d66ba916d4e5ee105bb326aa2867181b198ca2ebb4a7b4d4624c0080",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/20261107T172302Z/runs/MELD/seed67137/xp04_effective_config.json": "5d6271460c882dc34bf55bbcdec96afd09bb6b963c238745e04a54fb20515f68",
+    "/data2/yb/paper/05_reproduction/external_repos/CMERC/data/MELD_features_raw1.pkl": "d043b3ec1813c8917e2067af01e933ff0892d33d19d93595098aaf88c4b200b0",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/local_only/MELD/train_manifest.csv": "6cf2d1b9d17dba016257d72828f66d23320c88aae2752008e1cb9fc613c78899",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261117T024213Z/local_only/MELD/manifest_train.csv": "e26008114645a013e86bd54030efc0d15c65dd863f05a83e4887f20cb5cccbd0",
+    "/data2/yb/OpenDataLab___MELD/raw/MELD/MELD.Raw/train_sent_emo.csv": "4e3907e95e7ad4fd413a5a58d807dee79ebdb0c16b050cd33c3a3ac35ddb9ebf",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261117T024213Z/local_only/MELD/manifest_validation.csv": "61f666f7969665e20cae51f4886349d8ee0d9c1053e7bad3ffb2bbf84f0e610b",
+    "/data2/yb/OpenDataLab___MELD/raw/MELD/MELD.Raw/dev_sent_emo.csv": "7e306369c2d1625b063132310aa30bc6979fcf0f51c783e903edfcaa1c98b15c"
+  },
+  "artifacts_sha256": {
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/local_only/data/IEMOCAP/dataset.pt": "48df0871aaed72d32ed39d71b2701c03b80c70943ed3eaa3455d1c728ffc5f8a",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/local_only/data/IEMOCAP/manifest.csv": "d46f2d29aa2d34f18ea690690a816be1d661016f386d97aeb6f88f2a6d44ee45",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/local_only/data/IEMOCAP/dialogue_summary.csv": "9105374e9d9fe7d7b9ba017bfad4f3e11a370d86d780610344aaeea999113e43",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/local_only/data/MELD/dataset.pt": "e8a438e7b36380f112dfd3850a2fb58c28084b6fba8aa9597d1dfb6c0231746b",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/local_only/data/MELD/manifest.csv": "2be281620d248554ae938c1a7b0f914b03abbc444d2f675672535911fd417f40",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/local_only/data/MELD/dialogue_summary.csv": "f5b4a3b6f4b0a92f29b37e5d8c0578a94b637add61a714b0e71841d6b7c676d3",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/local_only/data/media_sha256.json": "5fd83cd1b927d0a0ab8c57b5b98925404731d77ae6018f9a74885da10da81c79",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/local_only/data/audio_missing.json": "be4b30b20f798b378a6b42770072e7e9ce941949deca007adc9525343a7e0ce0",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/local_only/data/text_source_conflicts.json": "d6ce6264704a66cd8697b775904a453de6ed88f408699a9f1e42fa6f7413d345"
+  },
+  "media_files_hashed": 16906,
+  "media_hashes": "local_only/data/media_sha256.json",
+  "audio_missing": "local_only/data/audio_missing.json",
+  "text_source_conflicts": "local_only/data/text_source_conflicts.json",
+  "text_source_conflict_count": 1,
+  "shared_official_pickle_materializes_test": true,
+  "test_ids_or_values_indexed": false,
+  "old_text_or_audio_features_used": false,
+  "emotion_labels_used_only_train_validation": true,
+  "previous_teacher_pt_loaded": false,
+  "original_sources_modified": false,
+  "environment": {
+    "python": "3.10.14",
+    "torch": "2.2.0+cu118",
+    "numpy": "1.24.4"
+  },
+  "code_sha256": "8080f30bfe1ee217e5a560c4b83d26c584e0fe8fd5531cb634e6520d6d822f55"
+}

@@ -1,0 +1,5 @@
+# Preserve frozen CSV bytes and original upstream snapshot source.
+*.csv -text whitespace=cr-at-eol,-blank-at-eof
+scripts/core_snapshot/** -text -whitespace
+provenance/m3net_source_equivalence/** -text -whitespace
+provenance/runtime_split_v1/** -text -whitespace

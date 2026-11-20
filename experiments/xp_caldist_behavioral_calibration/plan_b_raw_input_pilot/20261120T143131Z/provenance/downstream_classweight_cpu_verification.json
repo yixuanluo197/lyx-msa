@@ -1,0 +1,42 @@
+{
+  "synthetic_exact_counts_weights": true,
+  "excluded_inner_dev_labels_not_used": true,
+  "missing_class_fails": true,
+  "real_fit": {
+    "class_order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "fit_utterances": 4747,
+    "counts": [
+      392,
+      704,
+      1015,
+      750,
+      661,
+      1225
+    ],
+    "weights": [
+      12.109693877551019,
+      6.7428977272727275,
+      4.676847290640394,
+      6.3293333333333335,
+      7.181543116490166,
+      3.875102040816327
+    ],
+    "formula": "N / n_c; n_c counted only within current TrainFit",
+    "amendment_sha256": "407305ca272ed60c8c4410c0609d42ba6a8e38b63dfe441806db4f8728eee72e",
+    "amendment_path": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/configs/DOWNSTREAM_CLASS_WEIGHT_AMENDMENT.json"
+  },
+  "protocol_sha256_before": "5fdc385c679d86776ae89825f61854f94ac665905f471d63d3264e2439abd475",
+  "protocol_sha256_after": "5fdc385c679d86776ae89825f61854f94ac665905f471d63d3264e2439abd475",
+  "protocol_bytes_unchanged": true,
+  "adapter_sha256": "40632d490388f52c4c4ab99d96d1fced047782e3bf6ba782c9048add14bcc249",
+  "normal_completion_resume_boundary_checks": 3,
+  "formal_training": false,
+  "validation_labels_used": false
+}

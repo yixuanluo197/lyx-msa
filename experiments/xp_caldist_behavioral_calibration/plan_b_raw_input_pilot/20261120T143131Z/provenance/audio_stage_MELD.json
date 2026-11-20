@@ -1,0 +1,49 @@
+{
+  "dataset": "MELD",
+  "status": "COMPLETE",
+  "server": "user23",
+  "pid": 579015,
+  "gpu_host_index": "1",
+  "started_at": 1795187007.8551013,
+  "hashes": {
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/scripts/audio_encoder.py": "bbcdde2ee133290eac5dfdffd7f45f4bd2a204605e32bc0c213b0eca1171ca11",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/local_only/data/MELD/dataset.pt": "e8a438e7b36380f112dfd3850a2fb58c28084b6fba8aa9597d1dfb6c0231746b",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/provenance/audio_model_files.json": "ea87a4785d15df7e4a23d4a678bb33bbdde7a6d9b4560061704b8cdcc81bffdc",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/configs/PLAN_B_PROTOCOL.json": "5fdc385c679d86776ae89825f61854f94ac665905f471d63d3264e2439abd475"
+  },
+  "commands": [
+    [
+      "/home/yangbin/miniconda3/envs/TEXT_repro/bin/python",
+      "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/scripts/audio_encoder.py",
+      "smoke",
+      "--device",
+      "cuda:0",
+      "--audio",
+      "/data2/yb/OpenDataLab___MELD/raw/MELD/MELD.Raw/train_splits/dia0_utt0.mp4",
+      "--cache-dir",
+      "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/local_only/audio_cache",
+      "--report",
+      "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/provenance/audio_gpu_smoke_MELD.json"
+    ],
+    [
+      "/home/yangbin/miniconda3/envs/TEXT_repro/bin/python",
+      "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/scripts/audio_encoder.py",
+      "extract",
+      "--device",
+      "cuda:0",
+      "--dataset",
+      "meld",
+      "--data",
+      "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/local_only/data/MELD/dataset.pt",
+      "--output",
+      "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/local_only/features/MELD/audio_features.pt",
+      "--cache-dir",
+      "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/local_only/audio_cache"
+    ]
+  ],
+  "supervisor_sha256": "e5a8701660ff64df8280632fbebdb9f5d8f2d1a39cd48af26bb75f0669ffff83",
+  "stage": "extract",
+  "child_pid": 579450,
+  "completed_at": 1795187778.1986148,
+  "feature_sha256": "62f55bed2c99d15db134da521acf64579d80946c7291299df9cf12e1a96e7b22"
+}

@@ -1,0 +1,69 @@
+{
+  "dataset": "MELD",
+  "status": "COMPLETE",
+  "server": "user23",
+  "pid": 646781,
+  "gpu_host_index": "1",
+  "gpu_inventory_at_start": "1, GPU-eed2f34f-b4c0-7b7a-498e-71a026e30c5a, NVIDIA TITAN Xp, 12181 MiB",
+  "started_at": 1795188633.3451855,
+  "hashes": {
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/local_only/data/MELD/dataset.pt": "e8a438e7b36380f112dfd3850a2fb58c28084b6fba8aa9597d1dfb6c0231746b",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/local_only/features/MELD/text_features.pt": "284e90b3261e0cac4bf56884ca5aea99ffad1b236bbcbac588d82b742a1dc83f",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/local_only/features/MELD/audio_features.pt": "62f55bed2c99d15db134da521acf64579d80946c7291299df9cf12e1a96e7b22",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/configs/PLAN_B_PROTOCOL.json": "5fdc385c679d86776ae89825f61854f94ac665905f471d63d3264e2439abd475",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/configs/DOWNSTREAM_CLASS_WEIGHT_AMENDMENT.json": "407305ca272ed60c8c4410c0609d42ba6a8e38b63dfe441806db4f8728eee72e",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/scripts/downstream.py": "40632d490388f52c4c4ab99d96d1fced047782e3bf6ba782c9048add14bcc249",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/scripts/core_snapshot/HypergraphConv.py": "9297a572e1763a74c7984eb75dfb15fa8143bf131a44cf50433c307ef7f3b5d2",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/scripts/core_snapshot/cal_diff_reference.py": "7e024fbe7748d90d0f40636c72796a2d46578007fd0e80bdf828b49478dc4d47",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/scripts/core_snapshot/causal_graph.py": "3dd761b05cca95afa7b2f7b70e4640ee3ccfbb5726c3d705c0808468f7181da3",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/scripts/core_snapshot/clloss.py": "012c5d08f51eaaa99bdbd10d61e3d108275bf3dd44e42767b2e186e5be72ec3f",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/scripts/core_snapshot/dataloader.py": "337a7dc92d9e69e4f8854a8031197085ffca84cdc08b070b6ef5b05ebb6f3390",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/scripts/core_snapshot/high_fre_conv.py": "f4414c019ca7f656a662698bb9615bf15ac6325a73caa06ff487e158f58f39df",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/scripts/core_snapshot/model_GCN.py": "830d401ff3e4b30298199b927a0bad3a9056400429506abcc2d66a7db8b76f9f",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/scripts/core_snapshot/model_cm.py": "94acf11e2e9edd1bcd98049eb12d85b3604f8d71d46f64f0c3b8b9837fa12625",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/scripts/core_snapshot/model_hyper.py": "fb9ef2ee268afa697474c9199d2136a7519b5226adb4abeec4a9cf1aea678aba",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/scripts/core_snapshot/train_cm.py": "67fa7e48a3ecfda9f011d1df3344b68cc9eaa3fdb105a23a117684b1a669a3a0"
+  },
+  "commands": [
+    [
+      "/home/yangbin/miniconda3/envs/multimodalerc310/bin/python",
+      "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/scripts/downstream.py",
+      "build_difficulty",
+      "--dataset",
+      "MELD",
+      "--data-dir",
+      "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/local_only/data/MELD",
+      "--device",
+      "cuda:0"
+    ],
+    [
+      "/home/yangbin/miniconda3/envs/multimodalerc310/bin/python",
+      "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/scripts/downstream.py",
+      "train_cmerc",
+      "--dataset",
+      "MELD",
+      "--data-dir",
+      "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/local_only/data/MELD",
+      "--device",
+      "cuda:0"
+    ],
+    [
+      "/home/yangbin/miniconda3/envs/multimodalerc310/bin/python",
+      "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/scripts/downstream.py",
+      "evaluate",
+      "--dataset",
+      "MELD",
+      "--data-dir",
+      "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/local_only/data/MELD",
+      "--device",
+      "cuda:0"
+    ]
+  ],
+  "supervisor_sha256": "f1ba8887382d8be6a6d8284aec4750d4b54f06fca4bd9845dc0a99581c387a1c",
+  "recovery": "Completed M3Net reused unchanged; interrupted non-training difficulty recomputed on healthy GPU1 after observed GPU3 memory contention",
+  "prior_state": "provenance/resource_reallocation_attempt/downstream_stage_MELD.json",
+  "stage": "evaluate",
+  "child_pid": 671548,
+  "completed_at": 1795189461.4324913,
+  "baseline_checkpoint_sha256": "8dfccc19a4c0c8ea218e16336b4985b6f937ea62978584fe4efc9a2acb4fab19"
+}

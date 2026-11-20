@@ -1,0 +1,498 @@
+{
+  "status": "PASS",
+  "started_utc": "2026-11-20T15:47:02.977214+00:00",
+  "dataset": "MELD",
+  "scope": "ONE_TRAIN_FIT_TARGET_ENGINEERING_CHECK_ONLY",
+  "selection": {
+    "first_fit_dialogue_id": "1",
+    "utterance_index": 0,
+    "utterance_id": "0",
+    "earlier_rows_skipped": [],
+    "selection_rule": "First fit_dialogue_ids entry, first row with declared nonmissing and present original audio; never skip an eligible row based on responses"
+  },
+  "official_validation_indexed": false,
+  "test_indexed": false,
+  "inner_dev_indexed": false,
+  "shared_container_note": "New dataset/features Train+Validation containers deserialize; only Train values are indexed",
+  "labels_used_for_training_or_accuracy": false,
+  "no_training_or_weight_updates": true,
+  "no_emotion_preservation_pass_claim": true,
+  "no_pilot120_executed": true,
+  "thresholds": {
+    "feature_max_abs": 0.0001,
+    "probability_max_abs": 1e-06,
+    "rtol": 0,
+    "threshold_scope": "Plan B exact-extractor repeatability engineering gate, not old XP04 feature compatibility"
+  },
+  "fixed_variants": {
+    "neutral_suffix": " Page two.",
+    "pitch_semitones": 0.5
+  },
+  "environment": {
+    "host": "user23",
+    "python": "3.10.20",
+    "torch": "2.2.2+cu121",
+    "numpy": "1.24.3",
+    "device": "cuda:0",
+    "CUDA_VISIBLE_DEVICES": "0",
+    "host_gpu_inventory": [
+      "0, GPU-7ff18ebb-100e-98fe-038b-a98bd4f94248, NVIDIA TITAN Xp",
+      "1, GPU-eed2f34f-b4c0-7b7a-498e-71a026e30c5a, NVIDIA TITAN Xp",
+      "2, GPU-d17e4326-9d3b-2025-fbf8-c9b0d16623a0, NVIDIA TITAN Xp",
+      "3, GPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456, NVIDIA TITAN Xp"
+    ],
+    "CUDA_DEVICE_ORDER": null
+  },
+  "script_sha256": "973570a549a416f6c7dc96a67dbda56d128d19dd24cd30fe38b535608fe34e40",
+  "inference_runtime": {
+    "stage": "cmerc",
+    "environment": "multimodalerc310",
+    "torch": "2.2.2+cu121",
+    "transformers": "4.45.1",
+    "python": "3.10.20",
+    "executable": "/home/yangbin/miniconda3/envs/multimodalerc310/bin/python"
+  },
+  "encoder_models_instantiated_in_this_process": false,
+  "input_hashes": {
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/local_only/data/MELD/dataset.pt": "e8a438e7b36380f112dfd3850a2fb58c28084b6fba8aa9597d1dfb6c0231746b",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/local_only/features/MELD/text_features.pt": "284e90b3261e0cac4bf56884ca5aea99ffad1b236bbcbac588d82b742a1dc83f",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/local_only/features/MELD/audio_features.pt": "62f55bed2c99d15db134da521acf64579d80946c7291299df9cf12e1a96e7b22",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/local_only/data/MELD/runs/cmerc/best.pt": "8dfccc19a4c0c8ea218e16336b4985b6f937ea62978584fe4efc9a2acb4fab19",
+    "/data2/yb/OpenDataLab___MELD/raw/MELD/MELD.Raw/train_splits/dia1_utt0.mp4": "17d295e0dc4371d89b62c14d7e3f90b6a36249dbf3f30a97c80b5a1a9da619f8"
+  },
+  "baseline_completion": {
+    "path": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/local_only/features/MELD/audio_features.pt",
+    "sha256": "62f55bed2c99d15db134da521acf64579d80946c7291299df9cf12e1a96e7b22",
+    "completed_at": "2026-11-20T15:44:11.675440+00:00"
+  },
+  "code_hashes": {
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/scripts/downstream.py": "40632d490388f52c4c4ab99d96d1fced047782e3bf6ba782c9048add14bcc249"
+  },
+  "encoder_stage_runtime": {
+    "stage": "encoder",
+    "environment": "TEXT_repro",
+    "torch": "2.2.0+cu118",
+    "transformers": "4.42.3",
+    "python": "3.10.14",
+    "executable": "/home/yangbin/miniconda3/envs/TEXT_repro/bin/python"
+  },
+  "encoder_stage_provenance": {
+    "text": {
+      "weights_sha256": "306402e9a6787ce7fccdfd935d08c13e5a01dc5b6f04cf94a5a22a685a0e1a2f",
+      "encoder_code_sha256": "a8e87cb16064e3e54d52d63c1f6ccf62c2dd2eee4e600da2a0b80604f23adc34",
+      "clean_manifest_sha256": "ac9c24ff8ebaea87c8c322434cbb3fd8468057a79409df554781680eb7c3b3b7",
+      "tokenizer_files": {
+        "vocab.json": "32b29acf82d3333462eb4b13416760f2aef956052e8fea1749fe5b20f866a4bf",
+        "merges.txt": "1ce1664773c50f3e0cc8842619a93edc4624525b728b188a9e0be33b7726adc5",
+        "special_tokens_map.json": "f23c8e6099631c233c16d9bf8dab198f610826cdd1b358f270f6d55c1863e857",
+        "tokenizer_config.json": "8be1efe88d0815235241e648facaba7826449636b1d311697631ecf7f6479e9a"
+      },
+      "normalization": "none",
+      "layer_order": [
+        -1,
+        -2,
+        -3,
+        -4
+      ],
+      "precision": "FP32 eval",
+      "all_parameters_frozen": true
+    },
+    "audio": {
+      "protocol": {
+        "model": "facebook/wav2vec2-base",
+        "revision": "0b5b8e868dd84f03fd87d01f9c4ff0f080fecfe8",
+        "feature": "last_hidden_state",
+        "dimension": 768,
+        "sample_rate": 16000,
+        "channels": 1,
+        "decode_dtype": "float32le",
+        "decode": "ffmpeg full source audio stream0, no trimming, mono average, resample16000",
+        "window_samples": 480000,
+        "window_overlap": 0,
+        "short_final_window": "merge residual<400samples into preceding window",
+        "waveform_normalization": "official Wav2Vec2FeatureExtractor over complete utterance before windowing",
+        "pooling": "sum last hidden valid frames across nonoverlapping windows divided by total real output frames",
+        "batch_size": 1,
+        "precision": "float32",
+        "mode": "eval_inference_all_parameters_frozen",
+        "silence_or_missing": "zero768 plus audio_missing_mask=True",
+        "missing_criteria": "None/nonexistent, decode failure/timeout, <400 samples, nonfinite, exact zero RMS or variance",
+        "padding": "none; no attention mask for group-norm pretrained base on single unpadded example"
+      },
+      "protocol_hash": "1394e92fc8b0b04349fa5da72b80495bbc650faa7f2427114c4cb36aacb4d137",
+      "checkpoint_manifest": {
+        "repo": "facebook/wav2vec2-base",
+        "revision": "0b5b8e868dd84f03fd87d01f9c4ff0f080fecfe8",
+        "model_dir": "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/local_only/models/facebook_wav2vec2_base",
+        "files": [
+          {
+            "name": "config.json",
+            "url": "https://huggingface.co/facebook/wav2vec2-base/resolve/0b5b8e868dd84f03fd87d01f9c4ff0f080fecfe8/config.json",
+            "size": 1842,
+            "sha256": "4937977e24d12d1bba70cdce8709c3c04807a8e4ae8ddac4229c48c436ae99ae",
+            "etag": "W/\"47d7dc533f6d412e1c021eb181615d006e403bed\""
+          },
+          {
+            "name": "preprocessor_config.json",
+            "url": "https://huggingface.co/facebook/wav2vec2-base/resolve/0b5b8e868dd84f03fd87d01f9c4ff0f080fecfe8/preprocessor_config.json",
+            "size": 159,
+            "sha256": "b225d617c025463b9e157e06afea8b90dc7078fc70b013c533328423e0486b4a",
+            "etag": "\"3f24dc078fcba55ee1d417a413847ead40c093a3\""
+          },
+          {
+            "name": "README.md",
+            "url": "https://huggingface.co/facebook/wav2vec2-base/resolve/0b5b8e868dd84f03fd87d01f9c4ff0f080fecfe8/README.md",
+            "size": 1997,
+            "sha256": "d633aeaaec1046af8cbacd21039f819304017e1ab6a369c5aff8668f3c35a127",
+            "etag": "W/\"4610c70900836897504863c6b96268d319718af9\""
+          },
+          {
+            "name": "pytorch_model.bin",
+            "url": "https://huggingface.co/facebook/wav2vec2-base/resolve/0b5b8e868dd84f03fd87d01f9c4ff0f080fecfe8/pytorch_model.bin",
+            "size": 380267417,
+            "sha256": "3249fe98bfc62fcbc26067f724716a6ec49d12c4728a2af1df659013905dff21",
+            "verified_against_official_lfs": true,
+            "download_method": "HTTP206_ranges_resumed_at_actual_body_end_then_full_sha256"
+          }
+        ]
+      },
+      "processor": {
+        "feature_size": 1,
+        "sampling_rate": 16000,
+        "padding_value": 0.0,
+        "padding_side": "right",
+        "return_attention_mask": false,
+        "_processor_class": null,
+        "do_normalize": true,
+        "feature_extractor_type": "Wav2Vec2FeatureExtractor"
+      },
+      "encoder_code_sha256": "bbcdde2ee133290eac5dfdffd7f45f4bd2a204605e32bc0c213b0eca1171ca11",
+      "torch": "2.2.0+cu118",
+      "transformers": "4.42.3",
+      "device": "cuda:0",
+      "loading_info": {
+        "missing_keys": [],
+        "mismatched_keys": [],
+        "error_msgs": [],
+        "excluded_pretraining_head_keys": [
+          "project_hid.bias",
+          "project_hid.weight",
+          "project_q.bias",
+          "project_q.weight",
+          "quantizer.codevectors",
+          "quantizer.weight_proj.bias",
+          "quantizer.weight_proj.weight"
+        ],
+        "state_key_mapping_only": {
+          "encoder.pos_conv_embed.conv.weight_g": "encoder.pos_conv_embed.conv.parametrizations.weight.original0",
+          "encoder.pos_conv_embed.conv.weight_v": "encoder.pos_conv_embed.conv.parametrizations.weight.original1"
+        },
+        "base_state_tensors": 211,
+        "all_base_state_tensors_exact": true,
+        "legacy_weight_norm_dim": 2,
+        "weight_norm_kernel_max_abs_error": 0.0
+      },
+      "cuda_visible_devices": "2",
+      "gpu_name": "NVIDIA TITAN Xp",
+      "trainable_parameters": 0
+    }
+  },
+  "precomputed_features_sha256": "0df32d124ab2f7cac571dc5eea656d9ee50b7e93d3d9f705dd0ed1fbd456aed7",
+  "encoder_stage_weights_unchanged": true,
+  "original_dialogue_hashes": {
+    "dialogue_id": "1",
+    "utterance_ids": "6a473b8a1ebe1b1ee76d557072bbbd104f3c32a8c0dcc24c2680b3956c13a6d5",
+    "speaker": "3d7f40082265412c505f51749c707a6398fb9643bca2e8e255c133b7ea2227ea",
+    "labels": "c3649cf4b11db907ab7ac475178d117068b74de3dc8bd9d83f8c4aee06efd3a8",
+    "visual": "a6978e62bdbc01a403e49a86a0c1c3282a52707018c3bda8d256e21f9d8cb133",
+    "texts": "bf757ae0c4b9ff9f0d9e25adc46490499c8e631159cbdc15236f9da656b23fec",
+    "audio_paths": "8865991d89d2048a00d1901fd2d493fe07e4202c721bd8b8dee53c53b26f6815"
+  },
+  "model_state_before": {
+    "cmerc": {
+      "sha256": "b76d1bfa3b483fd9d30cede396d84cc3e53f62084fe8a73fd0e183d9b401a9d7",
+      "tensor_count": 83
+    }
+  },
+  "bn_before": {
+    "cmerc": {
+      "sha256": "ccd91b0311d1d63241b3dab1d3ba38f767e97834dc17486090ab255e2976afb2",
+      "buffers": {
+        "normBNa.running_mean": "36bca2bd9a11335140e83a956a6682af6c7cc36762ab010ad3ea56a1901339bb",
+        "normBNa.running_var": "4a642b8fe29ff0b9efd3e288fd25619612c42f069ed681ab394fc9da335148ab",
+        "normBNa.num_batches_tracked": "3d9d9c76443a4f4c238acfa01ce151af5f5d039a1bdf8a4482d282d726abedc8",
+        "normBNb.running_mean": "1cc4dfa804c28658449d3c3233ab1fd4ded1151c229e0e5c963e13889e78b40c",
+        "normBNb.running_var": "4b694ab85eb8d1f8af8dc110bad11062e09b1455af6a7eec2f91b71d44637efe",
+        "normBNb.num_batches_tracked": "3d9d9c76443a4f4c238acfa01ce151af5f5d039a1bdf8a4482d282d726abedc8",
+        "normBNc.running_mean": "9ae3ebee1d19de049a7b68e9f1e6d735294899c82d5968a29104f9f271c02b9e",
+        "normBNc.running_var": "8171095a74baccf1758c4031619344f134f75415587bde63eaca89b453c72937",
+        "normBNc.num_batches_tracked": "3d9d9c76443a4f4c238acfa01ce151af5f5d039a1bdf8a4482d282d726abedc8",
+        "normBNd.running_mean": "799518cdb8a329b982358d7c35c4f2ce9bc9cc788236fa3bcfc54184e3b3c492",
+        "normBNd.running_var": "2e857508aeafedcd6c6a4bb6ddfb868b2520021d60716d2509efffe8992071f8",
+        "normBNd.num_batches_tracked": "3d9d9c76443a4f4c238acfa01ce151af5f5d039a1bdf8a4482d282d726abedc8"
+      }
+    }
+  },
+  "models_all_eval_and_frozen": true,
+  "models_fp32": true,
+  "baseline_repeat": {
+    "shape": [
+      7,
+      7
+    ],
+    "finite_normalized": true,
+    "max_abs_error": 1.1920928955078125e-07,
+    "mean_abs_error": 1.0871765564899055e-08,
+    "class_agreement": 1.0,
+    "confidence_max_abs_error": 1.1920928955078125e-07,
+    "atol": 1e-06,
+    "rtol": 0.0,
+    "pass_gate": true
+  },
+  "cases": {
+    "clean_text": {
+      "full_dialogue_shape": [
+        7,
+        7
+      ],
+      "finite_normalized": true,
+      "only_target_feature_row_changed": true,
+      "other_modality_bit_exact": true,
+      "other_utterances_bit_exact": true,
+      "visual_speaker_labels_ids_order_bit_exact": true,
+      "original_target_feature_sha256": "7186c98879d8e70cafa75d5654fdc526dc7c1cfa6f78678a9b9dc2cf2939faaa",
+      "replaced_target_feature_sha256": "45c51fe21951df2bb07026a62b26d7c8175ae0b5b6cb73cd0600a2be10ee9abe",
+      "emotion_label_preservation": "NOT_ASSESSED_ENGINEERING_ONLY",
+      "actual_token_ids_sha256": "113fae95caef80e58d1dd07443847abf1d7f573226f21b20c0d8512f6bafc876",
+      "original_input_sha256": "c9af05bf7c77644c2c8639b39babd95275e01e4459d08c5540ea0d5a738b793b",
+      "processed_input_sha256": "c9af05bf7c77644c2c8639b39babd95275e01e4459d08c5540ea0d5a738b793b",
+      "feature_comparison": {
+        "original_shape": [
+          4,
+          1024
+        ],
+        "rebuilt_shape": [
+          4,
+          1024
+        ],
+        "original_dtype": "torch.float32",
+        "rebuilt_dtype": "torch.float32",
+        "shape_pass": true,
+        "fp32_pass": true,
+        "atol": 0.0001,
+        "rtol": 0.0,
+        "finite": true,
+        "max_abs_error": 5.7220458984375e-06,
+        "mae": 6.296714296638584e-07,
+        "rmse": 8.298009055400267e-07,
+        "pass_gate": true,
+        "layers": [
+          {
+            "layer_from_end": 1,
+            "max_abs_error": 5.7220458984375e-06,
+            "mae": 8.025056104088435e-07,
+            "rmse": 1.0298235471593161e-06
+          },
+          {
+            "layer_from_end": 2,
+            "max_abs_error": 3.2782554626464844e-06,
+            "mae": 7.086317737048375e-07,
+            "rmse": 8.985066243868492e-07
+          },
+          {
+            "layer_from_end": 3,
+            "max_abs_error": 3.814697265625e-06,
+            "mae": 6.595789514562966e-07,
+            "rmse": 8.2786418969675e-07
+          },
+          {
+            "layer_from_end": 4,
+            "max_abs_error": 1.9073486328125e-06,
+            "mae": 3.479693830854558e-07,
+            "rmse": 4.4840647007719454e-07
+          }
+        ]
+      },
+      "probability_comparison": {
+        "shape": [
+          7,
+          7
+        ],
+        "finite_normalized": true,
+        "max_abs_error": 2.2351741790771484e-07,
+        "mean_abs_error": 2.4632531769421637e-08,
+        "class_agreement": 1.0,
+        "confidence_max_abs_error": 1.4901161193847656e-07,
+        "atol": 1e-06,
+        "rtol": 0.0,
+        "pass_gate": true
+      },
+      "pass_gate": true,
+      "status": "PASS"
+    },
+    "clean_audio": {
+      "full_dialogue_shape": [
+        7,
+        7
+      ],
+      "finite_normalized": true,
+      "only_target_feature_row_changed": true,
+      "other_modality_bit_exact": true,
+      "other_utterances_bit_exact": true,
+      "visual_speaker_labels_ids_order_bit_exact": true,
+      "original_target_feature_sha256": "5c3c90ec4c49f3570261fe303cde5d2ed845eef4247fb781938ba9af0da6094c",
+      "replaced_target_feature_sha256": "5c3c90ec4c49f3570261fe303cde5d2ed845eef4247fb781938ba9af0da6094c",
+      "emotion_label_preservation": "NOT_ASSESSED_ENGINEERING_ONLY",
+      "original_input_sha256": "17d295e0dc4371d89b62c14d7e3f90b6a36249dbf3f30a97c80b5a1a9da619f8",
+      "processed_input_sha256": "17d295e0dc4371d89b62c14d7e3f90b6a36249dbf3f30a97c80b5a1a9da619f8",
+      "feature_comparison": {
+        "original_shape": [
+          768
+        ],
+        "rebuilt_shape": [
+          768
+        ],
+        "original_dtype": "torch.float32",
+        "rebuilt_dtype": "torch.float32",
+        "shape_pass": true,
+        "fp32_pass": true,
+        "atol": 0.0001,
+        "rtol": 0.0,
+        "finite": true,
+        "max_abs_error": 0.0,
+        "mae": 0.0,
+        "rmse": 0.0,
+        "pass_gate": true
+      },
+      "probability_comparison": {
+        "shape": [
+          7,
+          7
+        ],
+        "finite_normalized": true,
+        "max_abs_error": 1.7881393432617188e-07,
+        "mean_abs_error": 1.2544344882575833e-08,
+        "class_agreement": 1.0,
+        "confidence_max_abs_error": 1.7881393432617188e-07,
+        "atol": 1e-06,
+        "rtol": 0.0,
+        "pass_gate": true
+      },
+      "pass_gate": true,
+      "status": "PASS"
+    },
+    "neutral_append": {
+      "full_dialogue_shape": [
+        7,
+        7
+      ],
+      "finite_normalized": true,
+      "only_target_feature_row_changed": true,
+      "other_modality_bit_exact": true,
+      "other_utterances_bit_exact": true,
+      "visual_speaker_labels_ids_order_bit_exact": true,
+      "original_target_feature_sha256": "7186c98879d8e70cafa75d5654fdc526dc7c1cfa6f78678a9b9dc2cf2939faaa",
+      "replaced_target_feature_sha256": "8e35b03a2933b002248da983f3b3ed43983c81af7bdf5c426544645e21747dec",
+      "emotion_label_preservation": "NOT_ASSESSED_ENGINEERING_ONLY",
+      "actual_token_ids_sha256": "542dce3fae3b5f0cac91f29614e38a6940b83b7019c01774b8fafe42746c27ba",
+      "original_input_sha256": "c9af05bf7c77644c2c8639b39babd95275e01e4459d08c5540ea0d5a738b793b",
+      "processed_input_sha256": "df1e65d493c75c4c5666d59b47018b4af34aab65c95206291d1ab63648c62240",
+      "input_qc": {
+        "nonempty": true,
+        "changed": true,
+        "token_ids_changed": true,
+        "original_token_count": 15,
+        "changed_token_count": 18,
+        "no_truncation": true,
+        "original_text_preserved": true,
+        "added_token_count": 3,
+        "maximum_added_tokens": 6,
+        "controlled_addition_length": true,
+        "automatic_text_qc_pass": true
+      },
+      "pass_gate": true,
+      "not_required_to_flip_prediction": true,
+      "status": "PASS"
+    },
+    "pitch_plus_0.5": {
+      "full_dialogue_shape": [
+        7,
+        7
+      ],
+      "finite_normalized": true,
+      "only_target_feature_row_changed": true,
+      "other_modality_bit_exact": true,
+      "other_utterances_bit_exact": true,
+      "visual_speaker_labels_ids_order_bit_exact": true,
+      "original_target_feature_sha256": "5c3c90ec4c49f3570261fe303cde5d2ed845eef4247fb781938ba9af0da6094c",
+      "replaced_target_feature_sha256": "2a7e801146c32a1c2f2cf4d78adec44804522fe9fee8418e8b41df4e964c8602",
+      "emotion_label_preservation": "NOT_ASSESSED_ENGINEERING_ONLY",
+      "original_input_sha256": "17d295e0dc4371d89b62c14d7e3f90b6a36249dbf3f30a97c80b5a1a9da619f8",
+      "processed_input_sha256": "9739df82bf522927cbb5c25c29849d44222970e64a72e6dd736090ea163b221d",
+      "input_qc": {
+        "sample_rate": 16000,
+        "channels": 1,
+        "clean_samples": 39595,
+        "raw_transformed_samples": 39327,
+        "final_samples": 39595,
+        "duration_seconds": 2.4746875,
+        "raw_length_relative_difference": 0.006768531380224776,
+        "clean_rms": 0.09543641577597207,
+        "transformed_rms": 0.09543641298914071,
+        "rms_change_db": -2.536359925373623e-07,
+        "clean_peak": 0.6406689286231995,
+        "clean_clipping_fraction": 0.0,
+        "peak_before_attenuation": 0.6419909596443176,
+        "rms_restore_gain": 1.0032055670518756,
+        "peak_attenuation": 1.0,
+        "peak": 0.6419909596443176,
+        "finite": true,
+        "clipping_fraction": 0.0,
+        "emotion_label_preservation": "UNCONFIRMED_REQUIRES_REVIEW",
+        "automatic_signal_qc_pass": true
+      },
+      "pass_gate": true,
+      "not_required_to_flip_prediction": true,
+      "parameters": {
+        "algorithm": "FFmpeg asetrate + resampling + reciprocal WSOLA atempo",
+        "semitones": 0.5,
+        "requested_ratio": 1.029302236643492,
+        "shifted_sample_clock": 16469,
+        "actual_semitones": 0.500172623579617,
+        "actual_ratio": 1.0293125,
+        "filter": "asetrate=16469,aresample=16000,atempo=0.971522253932",
+        "ffmpeg_sha256": "d669a18935a469e150a3ac35cd1180abbfee09fe2c8e5079282aa4aa9b778895",
+        "ffmpeg_version": "ffmpeg version 8.0.1 Copyright (c) 2000-2025 the FFmpeg developers"
+      },
+      "status": "PASS"
+    }
+  },
+  "invariants": {
+    "model_state_bit_exact": {
+      "cmerc": true,
+      "encoders_verified_in_producer": true
+    },
+    "bn_buffers_bit_exact": {
+      "cmerc": true
+    },
+    "clean_feature_cache_bit_exact": true,
+    "dialogue_context_bit_exact": true,
+    "input_files_unchanged": {
+      "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/local_only/data/MELD/dataset.pt": true,
+      "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/local_only/features/MELD/text_features.pt": true,
+      "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/local_only/features/MELD/audio_features.pt": true,
+      "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/local_only/data/MELD/runs/cmerc/best.pt": true,
+      "/data2/yb/OpenDataLab___MELD/raw/MELD/MELD.Raw/train_splits/dia1_utt0.mp4": true
+    },
+    "precomputed_file_unchanged": true,
+    "models_remain_eval": true
+  },
+  "local_artifacts_sha256": {
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/local_only/raw_smoke/MELD/cmerc_stage/clean_text.pt": "d020ed9e7a7f04e0882b6522b26f281a1386a0e19bc229d02ede73108d573cd0",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/local_only/raw_smoke/MELD/cmerc_stage/clean_audio.pt": "c324e55a265c6436fd1160767122b89a33a8cc88059a444c2da7b055b55ea5ab",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/local_only/raw_smoke/MELD/cmerc_stage/neutral_append.pt": "df9c889ab2df7a95f842c781789c59a52ac7dbb046a766a236be4e991caf144c",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/local_only/raw_smoke/MELD/cmerc_stage/pitch_plus_0.5.pt": "fcab9613018e1c07894ae3c87969e6c3659d4253a9b1974ce1c9722c07938fbe"
+  },
+  "pass_gate": true,
+  "completed_utc": "2026-11-20T15:47:15.594542+00:00"
+}

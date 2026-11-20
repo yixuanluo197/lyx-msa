@@ -1,0 +1,31 @@
+{
+  "official_repository": "https://github.com/feiyuchen7/M3NET",
+  "pinned_commit": "4d0fa88cd4f92c72b053527e877763f54e29ccb2",
+  "official_model_sha256": "ee84329b800e37a8ac652b58aa6f0fc3dee47cb2cf38feda14f5c0de26ec9a82",
+  "xp04_model_py_byte_identical_to_official": true,
+  "official_train_imports_model_py": "from model import ... Model ...",
+  "bound": "GRU,hyper,concat_DHT,BN,causal=False fixed adapters; both use identical frozen shared HyperGCN dependencies. CMERC extra hidden return does not affect main log-prob. Does not claim arbitrary Transformer/causal branches or full optimizer/training-history equivalence.",
+  "numeric_checks": [
+    {
+      "dataset": "IEMOCAP",
+      "parameter_keys_and_shapes_identical": true,
+      "strict_state_load": true,
+      "num_state_entries": 85,
+      "softmax_maxabs": 2.9802322387695312e-08,
+      "pass_atol_rtol_1e6": true,
+      "synthetic_readonly_forward": true
+    },
+    {
+      "dataset": "MELD",
+      "parameter_keys_and_shapes_identical": true,
+      "strict_state_load": true,
+      "num_state_entries": 83,
+      "softmax_maxabs": 2.9802322387695312e-08,
+      "pass_atol_rtol_1e6": true,
+      "synthetic_readonly_forward": true
+    }
+  ],
+  "formal_training": false,
+  "validation_used": false,
+  "adapter_sha256": "40632d490388f52c4c4ab99d96d1fced047782e3bf6ba782c9048add14bcc249"
+}

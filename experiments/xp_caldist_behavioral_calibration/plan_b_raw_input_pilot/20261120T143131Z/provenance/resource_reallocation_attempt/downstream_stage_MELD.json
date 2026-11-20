@@ -1,0 +1,67 @@
+{
+  "dataset": "MELD",
+  "status": "FAILED",
+  "server": "user23",
+  "pid": 640160,
+  "gpu_host_index": "3",
+  "gpu_inventory_at_start": "3, GPU-e53c5e2b-cabd-d4e7-ab11-b12f94557456, NVIDIA TITAN Xp, 12181 MiB",
+  "started_at": 1795188410.9841855,
+  "hashes": {
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/local_only/data/MELD/dataset.pt": "e8a438e7b36380f112dfd3850a2fb58c28084b6fba8aa9597d1dfb6c0231746b",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/local_only/features/MELD/text_features.pt": "284e90b3261e0cac4bf56884ca5aea99ffad1b236bbcbac588d82b742a1dc83f",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/local_only/features/MELD/audio_features.pt": "62f55bed2c99d15db134da521acf64579d80946c7291299df9cf12e1a96e7b22",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/configs/PLAN_B_PROTOCOL.json": "5fdc385c679d86776ae89825f61854f94ac665905f471d63d3264e2439abd475",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/configs/DOWNSTREAM_CLASS_WEIGHT_AMENDMENT.json": "407305ca272ed60c8c4410c0609d42ba6a8e38b63dfe441806db4f8728eee72e",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/scripts/downstream.py": "40632d490388f52c4c4ab99d96d1fced047782e3bf6ba782c9048add14bcc249",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/scripts/core_snapshot/HypergraphConv.py": "9297a572e1763a74c7984eb75dfb15fa8143bf131a44cf50433c307ef7f3b5d2",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/scripts/core_snapshot/cal_diff_reference.py": "7e024fbe7748d90d0f40636c72796a2d46578007fd0e80bdf828b49478dc4d47",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/scripts/core_snapshot/causal_graph.py": "3dd761b05cca95afa7b2f7b70e4640ee3ccfbb5726c3d705c0808468f7181da3",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/scripts/core_snapshot/clloss.py": "012c5d08f51eaaa99bdbd10d61e3d108275bf3dd44e42767b2e186e5be72ec3f",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/scripts/core_snapshot/dataloader.py": "337a7dc92d9e69e4f8854a8031197085ffca84cdc08b070b6ef5b05ebb6f3390",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/scripts/core_snapshot/high_fre_conv.py": "f4414c019ca7f656a662698bb9615bf15ac6325a73caa06ff487e158f58f39df",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/scripts/core_snapshot/model_GCN.py": "830d401ff3e4b30298199b927a0bad3a9056400429506abcc2d66a7db8b76f9f",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/scripts/core_snapshot/model_cm.py": "94acf11e2e9edd1bcd98049eb12d85b3604f8d71d46f64f0c3b8b9837fa12625",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/scripts/core_snapshot/model_hyper.py": "fb9ef2ee268afa697474c9199d2136a7519b5226adb4abeec4a9cf1aea678aba",
+    "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/scripts/core_snapshot/train_cm.py": "67fa7e48a3ecfda9f011d1df3344b68cc9eaa3fdb105a23a117684b1a669a3a0"
+  },
+  "commands": [
+    [
+      "/home/yangbin/miniconda3/envs/multimodalerc310/bin/python",
+      "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/scripts/downstream.py",
+      "smoke",
+      "--dataset",
+      "MELD",
+      "--data-dir",
+      "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/local_only/data/MELD",
+      "--device",
+      "cuda:0"
+    ],
+    [
+      "/home/yangbin/miniconda3/envs/multimodalerc310/bin/python",
+      "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/scripts/downstream.py",
+      "train_m3net",
+      "--dataset",
+      "MELD",
+      "--data-dir",
+      "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/local_only/data/MELD",
+      "--device",
+      "cuda:0"
+    ],
+    [
+      "/home/yangbin/miniconda3/envs/multimodalerc310/bin/python",
+      "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/scripts/downstream.py",
+      "build_difficulty",
+      "--dataset",
+      "MELD",
+      "--data-dir",
+      "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/local_only/data/MELD",
+      "--device",
+      "cuda:0"
+    ]
+  ],
+  "supervisor_sha256": "bd3a1f3b6ab861a7561f8e1227343ac8bb54c462df2416c7abde67426ea16777",
+  "stage": "build_difficulty",
+  "child_pid": 644001,
+  "failed_at": 1795188594.6563456,
+  "traceback": "Traceback (most recent call last):\n  File \"/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T143131Z/scripts/run_downstream_stage.py\", line 38, in main\n    if code:raise RuntimeError(f'{action} failed exit {code}; retained log, no automatic repeated launch')\nRuntimeError: build_difficulty failed exit -15; retained log, no automatic repeated launch\n"
+}
