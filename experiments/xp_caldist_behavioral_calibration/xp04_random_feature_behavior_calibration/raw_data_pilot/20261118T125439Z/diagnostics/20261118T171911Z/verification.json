@@ -1,0 +1,4457 @@
+{
+  "status": "PASS",
+  "delivery_complete": true,
+  "verified_at": "2026-11-18T17:32:32.360676+00:00",
+  "checks_passed": 855,
+  "checks": [
+    {
+      "name": "original_input_manifest_has_26_files",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "original_input_allowlisted:train_prepared.pt",
+      "pass": true,
+      "detail": "/LOCAL/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/local_only/IEMOCAP/train_prepared.pt"
+    },
+    {
+      "name": "original_input_unchanged:/LOCAL/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/local_only/IEMOCAP/train_prepared.pt",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "original_input_allowlisted:training_config.json",
+      "pass": true,
+      "detail": "/LOCAL/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/local_only/IEMOCAP/training/training_config.json"
+    },
+    {
+      "name": "original_input_unchanged:/LOCAL/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/local_only/IEMOCAP/training/training_config.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "original_input_allowlisted:training_summary.json",
+      "pass": true,
+      "detail": "/LOCAL/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/local_only/IEMOCAP/training/training_summary.json"
+    },
+    {
+      "name": "original_input_unchanged:/LOCAL/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/local_only/IEMOCAP/training/training_summary.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "original_input_allowlisted:best_model_lock.json",
+      "pass": true,
+      "detail": "/LOCAL/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/local_only/IEMOCAP/training/best_model_lock.json"
+    },
+    {
+      "name": "original_input_unchanged:/LOCAL/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/local_only/IEMOCAP/training/best_model_lock.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "original_input_allowlisted:vocab.json",
+      "pass": true,
+      "detail": "/LOCAL/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/local_only/IEMOCAP/training/best_student/vocab.json"
+    },
+    {
+      "name": "original_input_unchanged:/LOCAL/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/local_only/IEMOCAP/training/best_student/vocab.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "original_input_allowlisted:merges.txt",
+      "pass": true,
+      "detail": "/LOCAL/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/local_only/IEMOCAP/training/best_student/merges.txt"
+    },
+    {
+      "name": "original_input_unchanged:/LOCAL/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/local_only/IEMOCAP/training/best_student/merges.txt",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "original_input_allowlisted:model.safetensors",
+      "pass": true,
+      "detail": "/LOCAL/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/local_only/IEMOCAP/training/best_student/model.safetensors"
+    },
+    {
+      "name": "original_input_unchanged:/LOCAL/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/local_only/IEMOCAP/training/best_student/model.safetensors",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "original_input_allowlisted:special_tokens_map.json",
+      "pass": true,
+      "detail": "/LOCAL/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/local_only/IEMOCAP/training/best_student/special_tokens_map.json"
+    },
+    {
+      "name": "original_input_unchanged:/LOCAL/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/local_only/IEMOCAP/training/best_student/special_tokens_map.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "original_input_allowlisted:tokenizer_config.json",
+      "pass": true,
+      "detail": "/LOCAL/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/local_only/IEMOCAP/training/best_student/tokenizer_config.json"
+    },
+    {
+      "name": "original_input_unchanged:/LOCAL/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/local_only/IEMOCAP/training/best_student/tokenizer_config.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "original_input_allowlisted:config.json",
+      "pass": true,
+      "detail": "/LOCAL/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/local_only/IEMOCAP/training/best_student/config.json"
+    },
+    {
+      "name": "original_input_unchanged:/LOCAL/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/local_only/IEMOCAP/training/best_student/config.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "original_input_allowlisted:train_prepared.pt",
+      "pass": true,
+      "detail": "/LOCAL/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/local_only/MELD/train_prepared.pt"
+    },
+    {
+      "name": "original_input_unchanged:/LOCAL/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/local_only/MELD/train_prepared.pt",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "original_input_allowlisted:training_config.json",
+      "pass": true,
+      "detail": "/LOCAL/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/local_only/MELD/training/training_config.json"
+    },
+    {
+      "name": "original_input_unchanged:/LOCAL/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/local_only/MELD/training/training_config.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "original_input_allowlisted:training_summary.json",
+      "pass": true,
+      "detail": "/LOCAL/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/local_only/MELD/training/training_summary.json"
+    },
+    {
+      "name": "original_input_unchanged:/LOCAL/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/local_only/MELD/training/training_summary.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "original_input_allowlisted:best_model_lock.json",
+      "pass": true,
+      "detail": "/LOCAL/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/local_only/MELD/training/best_model_lock.json"
+    },
+    {
+      "name": "original_input_unchanged:/LOCAL/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/local_only/MELD/training/best_model_lock.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "original_input_allowlisted:vocab.json",
+      "pass": true,
+      "detail": "/LOCAL/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/local_only/MELD/training/best_student/vocab.json"
+    },
+    {
+      "name": "original_input_unchanged:/LOCAL/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/local_only/MELD/training/best_student/vocab.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "original_input_allowlisted:merges.txt",
+      "pass": true,
+      "detail": "/LOCAL/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/local_only/MELD/training/best_student/merges.txt"
+    },
+    {
+      "name": "original_input_unchanged:/LOCAL/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/local_only/MELD/training/best_student/merges.txt",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "original_input_allowlisted:model.safetensors",
+      "pass": true,
+      "detail": "/LOCAL/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/local_only/MELD/training/best_student/model.safetensors"
+    },
+    {
+      "name": "original_input_unchanged:/LOCAL/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/local_only/MELD/training/best_student/model.safetensors",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "original_input_allowlisted:special_tokens_map.json",
+      "pass": true,
+      "detail": "/LOCAL/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/local_only/MELD/training/best_student/special_tokens_map.json"
+    },
+    {
+      "name": "original_input_unchanged:/LOCAL/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/local_only/MELD/training/best_student/special_tokens_map.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "original_input_allowlisted:tokenizer_config.json",
+      "pass": true,
+      "detail": "/LOCAL/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/local_only/MELD/training/best_student/tokenizer_config.json"
+    },
+    {
+      "name": "original_input_unchanged:/LOCAL/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/local_only/MELD/training/best_student/tokenizer_config.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "original_input_allowlisted:config.json",
+      "pass": true,
+      "detail": "/LOCAL/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/local_only/MELD/training/best_student/config.json"
+    },
+    {
+      "name": "original_input_unchanged:/LOCAL/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/local_only/MELD/training/best_student/config.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "original_input_allowlisted:vocab.json",
+      "pass": true,
+      "detail": "/LOCAL_HOME/.cache/huggingface/hub/models--roberta-large/snapshots/722cf37b1afa9454edce342e7895e588b6ff1d59/vocab.json"
+    },
+    {
+      "name": "original_input_unchanged:/LOCAL_HOME/.cache/huggingface/hub/models--roberta-large/snapshots/722cf37b1afa9454edce342e7895e588b6ff1d59/vocab.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "original_input_allowlisted:config.json",
+      "pass": true,
+      "detail": "/LOCAL_HOME/.cache/huggingface/hub/models--roberta-large/snapshots/722cf37b1afa9454edce342e7895e588b6ff1d59/config.json"
+    },
+    {
+      "name": "original_input_unchanged:/LOCAL_HOME/.cache/huggingface/hub/models--roberta-large/snapshots/722cf37b1afa9454edce342e7895e588b6ff1d59/config.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "original_input_allowlisted:merges.txt",
+      "pass": true,
+      "detail": "/LOCAL_HOME/.cache/huggingface/hub/models--roberta-large/snapshots/722cf37b1afa9454edce342e7895e588b6ff1d59/merges.txt"
+    },
+    {
+      "name": "original_input_unchanged:/LOCAL_HOME/.cache/huggingface/hub/models--roberta-large/snapshots/722cf37b1afa9454edce342e7895e588b6ff1d59/merges.txt",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "original_input_allowlisted:tokenizer_config.json",
+      "pass": true,
+      "detail": "/LOCAL_HOME/.cache/huggingface/hub/models--roberta-large/snapshots/722cf37b1afa9454edce342e7895e588b6ff1d59/tokenizer_config.json"
+    },
+    {
+      "name": "original_input_unchanged:/LOCAL_HOME/.cache/huggingface/hub/models--roberta-large/snapshots/722cf37b1afa9454edce342e7895e588b6ff1d59/tokenizer_config.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "original_input_allowlisted:tokenizer.json",
+      "pass": true,
+      "detail": "/LOCAL_HOME/.cache/huggingface/hub/models--roberta-large/snapshots/722cf37b1afa9454edce342e7895e588b6ff1d59/tokenizer.json"
+    },
+    {
+      "name": "original_input_unchanged:/LOCAL_HOME/.cache/huggingface/hub/models--roberta-large/snapshots/722cf37b1afa9454edce342e7895e588b6ff1d59/tokenizer.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "original_input_allowlisted:model.safetensors",
+      "pass": true,
+      "detail": "/LOCAL_HOME/.cache/huggingface/hub/models--roberta-large/snapshots/722cf37b1afa9454edce342e7895e588b6ff1d59/model.safetensors"
+    },
+    {
+      "name": "original_input_unchanged:/LOCAL_HOME/.cache/huggingface/hub/models--roberta-large/snapshots/722cf37b1afa9454edce342e7895e588b6ff1d59/model.safetensors",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:original_train_partition",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:dialogue_groups_disjoint",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:original_best_epoch8",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:fixed_overfit_protocol",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:overfit_source_frozen",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:overfit_train_input_frozen",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:same_public_initializer",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:all_backbone_parameters_trainable",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:nonzero_finite_gradient_and_parameter_update",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:128_distinct_fit_indices",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:selected_row_alignment:1455",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:selected_row_alignment:5050",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:selected_row_alignment:4253",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:selected_row_alignment:3220",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:selected_row_alignment:2342",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:selected_row_alignment:4130",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:selected_row_alignment:1464",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:selected_row_alignment:2707",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:selected_row_alignment:997",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:selected_row_alignment:897",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:selected_row_alignment:2659",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:selected_row_alignment:152",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:selected_row_alignment:235",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:selected_row_alignment:77",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:selected_row_alignment:2126",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:selected_row_alignment:1660",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:selected_row_alignment:4784",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:selected_row_alignment:1621",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:selected_row_alignment:2679",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:selected_row_alignment:1581",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:selected_row_alignment:1125",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:selected_row_alignment:4471",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:selected_row_alignment:1004",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:selected_row_alignment:4680",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:selected_row_alignment:203",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:selected_row_alignment:774",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:selected_row_alignment:2693",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:selected_row_alignment:1610",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:selected_row_alignment:410",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:selected_row_alignment:3685",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:selected_row_alignment:2806",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:selected_row_alignment:4527",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:selected_row_alignment:1349",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:selected_row_alignment:942",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:selected_row_alignment:3910",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:selected_row_alignment:7",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:selected_row_alignment:1986",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:selected_row_alignment:3072",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:selected_row_alignment:1745",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:selected_row_alignment:1969",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:selected_row_alignment:372",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:selected_row_alignment:2724",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:selected_row_alignment:2002",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:selected_row_alignment:2740",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:selected_row_alignment:2942",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:selected_row_alignment:4820",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:selected_row_alignment:4642",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:selected_row_alignment:1722",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:selected_row_alignment:1406",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:selected_row_alignment:4831",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:selected_row_alignment:2251",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:selected_row_alignment:367",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:selected_row_alignment:3324",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:selected_row_alignment:3573",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:selected_row_alignment:4152",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:selected_row_alignment:285",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:selected_row_alignment:1200",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:selected_row_alignment:328",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:selected_row_alignment:4659",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:selected_row_alignment:4335",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:selected_row_alignment:3727",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:selected_row_alignment:3474",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:selected_row_alignment:2628",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:selected_row_alignment:525",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:selected_row_alignment:3167",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:selected_row_alignment:5254",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:selected_row_alignment:1651",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:selected_row_alignment:3752",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:selected_row_alignment:3901",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:selected_row_alignment:909",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:selected_row_alignment:412",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:selected_row_alignment:199",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:selected_row_alignment:301",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:selected_row_alignment:4293",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:selected_row_alignment:5027",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:selected_row_alignment:900",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:selected_row_alignment:2141",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:selected_row_alignment:4865",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:selected_row_alignment:2624",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:selected_row_alignment:1585",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:selected_row_alignment:2752",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:selected_row_alignment:902",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:selected_row_alignment:211",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:selected_row_alignment:4773",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:selected_row_alignment:2414",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:selected_row_alignment:2041",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:selected_row_alignment:621",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:selected_row_alignment:1985",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:selected_row_alignment:1823",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:selected_row_alignment:35",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:selected_row_alignment:2525",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:selected_row_alignment:869",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:selected_row_alignment:4529",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:selected_row_alignment:624",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:selected_row_alignment:2431",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:selected_row_alignment:2541",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:selected_row_alignment:262",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:selected_row_alignment:1595",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:selected_row_alignment:3518",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:selected_row_alignment:4449",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:selected_row_alignment:4093",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:selected_row_alignment:1017",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:selected_row_alignment:1765",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:selected_row_alignment:5064",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:selected_row_alignment:4824",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:selected_row_alignment:2376",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:selected_row_alignment:407",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:selected_row_alignment:1354",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:selected_row_alignment:4508",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:selected_row_alignment:4632",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:selected_row_alignment:2434",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:selected_row_alignment:2470",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:selected_row_alignment:1241",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:selected_row_alignment:3475",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:selected_row_alignment:1151",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:selected_row_alignment:4573",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:selected_row_alignment:3241",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:selected_row_alignment:3945",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:selected_row_alignment:39",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:selected_row_alignment:2703",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:selected_row_alignment:4159",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:selected_row_alignment:4775",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:selected_row_alignment:3582",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:selected_row_alignment:776",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:selected_row_alignment:580",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:selected_row_alignment:71",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:selected_row_alignment:1554",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:selected_row_alignment:1843",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:128_unique_texts_and_token_sequences",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:all_500_optimizer_steps_retained",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:optimizer_losses_and_gradients_finite",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:all_evaluation_checkpoints_retained",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:four_layer_eval_loss:0",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:four_layer_eval_loss:25",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:four_layer_eval_loss:50",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:four_layer_eval_loss:100",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:four_layer_eval_loss:200",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:four_layer_eval_loss:300",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:four_layer_eval_loss:400",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:four_layer_eval_loss:500",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:actual_500_step_completion",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:completion_losses_consistent",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:diagnostic_final_model_saved_and_hashed",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:gap_complete_fp32_train_only",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:gap_source_frozen",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:gap_exact_four_model_subset_results",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:gap_layer_values:public_initial:fit",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:gap_layer_values:public_initial:inner_dev",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:gap_layer_values:best_epoch8:fit",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:gap_layer_values:best_epoch8:inner_dev",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:gap_arithmetic:public_initial",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:gap_arithmetic:best_epoch8",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:original_train_partition",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:dialogue_groups_disjoint",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:original_best_epoch8",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:fixed_overfit_protocol",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:overfit_source_frozen",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:overfit_train_input_frozen",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:same_public_initializer",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:all_backbone_parameters_trainable",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:nonzero_finite_gradient_and_parameter_update",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:128_distinct_fit_indices",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:selected_row_alignment:7595",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:selected_row_alignment:3795",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:selected_row_alignment:4270",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:selected_row_alignment:1573",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:selected_row_alignment:7692",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:selected_row_alignment:7098",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:selected_row_alignment:7517",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:selected_row_alignment:1019",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:selected_row_alignment:9983",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:selected_row_alignment:9176",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:selected_row_alignment:6150",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:selected_row_alignment:6928",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:selected_row_alignment:8278",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:selected_row_alignment:4547",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:selected_row_alignment:4145",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:selected_row_alignment:2242",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:selected_row_alignment:4771",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:selected_row_alignment:165",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:selected_row_alignment:7130",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:selected_row_alignment:8853",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:selected_row_alignment:1097",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:selected_row_alignment:3265",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:selected_row_alignment:5960",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:selected_row_alignment:8945",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:selected_row_alignment:877",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:selected_row_alignment:8388",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:selected_row_alignment:3908",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:selected_row_alignment:6763",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:selected_row_alignment:9686",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:selected_row_alignment:8427",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:selected_row_alignment:2688",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:selected_row_alignment:7495",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:selected_row_alignment:7332",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:selected_row_alignment:3156",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:selected_row_alignment:4058",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:selected_row_alignment:4316",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:selected_row_alignment:9160",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:selected_row_alignment:3671",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:selected_row_alignment:2955",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:selected_row_alignment:7251",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:selected_row_alignment:8665",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:selected_row_alignment:5986",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:selected_row_alignment:3743",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:selected_row_alignment:7071",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:selected_row_alignment:6596",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:selected_row_alignment:2837",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:selected_row_alignment:6370",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:selected_row_alignment:2253",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:selected_row_alignment:4685",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:selected_row_alignment:219",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:selected_row_alignment:6278",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:selected_row_alignment:1732",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:selected_row_alignment:4602",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:selected_row_alignment:7010",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:selected_row_alignment:20",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:selected_row_alignment:9185",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:selected_row_alignment:15",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:selected_row_alignment:2561",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:selected_row_alignment:399",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:selected_row_alignment:8715",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:selected_row_alignment:3734",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:selected_row_alignment:9835",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:selected_row_alignment:7879",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:selected_row_alignment:9306",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:selected_row_alignment:2728",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:selected_row_alignment:6540",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:selected_row_alignment:2924",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:selected_row_alignment:6779",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:selected_row_alignment:9932",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:selected_row_alignment:8304",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:selected_row_alignment:5519",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:selected_row_alignment:558",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:selected_row_alignment:1043",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:selected_row_alignment:2345",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:selected_row_alignment:7622",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:selected_row_alignment:9480",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:selected_row_alignment:9105",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:selected_row_alignment:2134",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:selected_row_alignment:8736",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:selected_row_alignment:3956",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:selected_row_alignment:3906",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:selected_row_alignment:8249",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:selected_row_alignment:4603",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:selected_row_alignment:8826",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:selected_row_alignment:6304",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:selected_row_alignment:6414",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:selected_row_alignment:6796",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:selected_row_alignment:7915",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:selected_row_alignment:9960",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:selected_row_alignment:30",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:selected_row_alignment:5061",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:selected_row_alignment:2404",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:selected_row_alignment:1899",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:selected_row_alignment:4232",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:selected_row_alignment:9005",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:selected_row_alignment:1451",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:selected_row_alignment:1574",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:selected_row_alignment:433",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:selected_row_alignment:5626",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:selected_row_alignment:3927",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:selected_row_alignment:6863",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:selected_row_alignment:3409",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:selected_row_alignment:8515",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:selected_row_alignment:5084",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:selected_row_alignment:7034",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:selected_row_alignment:4175",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:selected_row_alignment:5423",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:selected_row_alignment:5447",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:selected_row_alignment:497",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:selected_row_alignment:2892",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:selected_row_alignment:8417",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:selected_row_alignment:7894",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:selected_row_alignment:87",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:selected_row_alignment:8647",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:selected_row_alignment:955",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:selected_row_alignment:5558",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:selected_row_alignment:5337",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:selected_row_alignment:3733",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:selected_row_alignment:4952",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:selected_row_alignment:5134",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:selected_row_alignment:3489",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:selected_row_alignment:3537",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:selected_row_alignment:7142",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:selected_row_alignment:8255",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:selected_row_alignment:6514",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:selected_row_alignment:3796",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:selected_row_alignment:420",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:selected_row_alignment:4079",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:128_unique_texts_and_token_sequences",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:all_500_optimizer_steps_retained",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:optimizer_losses_and_gradients_finite",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:all_evaluation_checkpoints_retained",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:four_layer_eval_loss:0",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:four_layer_eval_loss:25",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:four_layer_eval_loss:50",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:four_layer_eval_loss:100",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:four_layer_eval_loss:200",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:four_layer_eval_loss:300",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:four_layer_eval_loss:400",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:four_layer_eval_loss:500",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:actual_500_step_completion",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:completion_losses_consistent",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:diagnostic_final_model_saved_and_hashed",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:gap_complete_fp32_train_only",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:gap_source_frozen",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:gap_exact_four_model_subset_results",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:gap_layer_values:public_initial:fit",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:gap_layer_values:public_initial:inner_dev",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:gap_layer_values:best_epoch8:fit",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:gap_layer_values:best_epoch8:inner_dev",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:gap_arithmetic:public_initial",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:gap_arithmetic:best_epoch8",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_honest_status",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_same_actual_weights_proven",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_fixed_fp32_eval_protocol",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:embeddings.word_embeddings.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:embeddings.position_embeddings.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:embeddings.LayerNorm.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:embeddings.LayerNorm.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.0.attention.self.query.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.0.attention.self.query.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.0.attention.self.key.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.0.attention.self.key.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.0.attention.self.value.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.0.attention.self.value.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.0.attention.output.dense.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.0.attention.output.dense.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.0.attention.output.LayerNorm.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.0.attention.output.LayerNorm.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.0.intermediate.dense.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.0.intermediate.dense.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.0.output.dense.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.0.output.dense.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.0.output.LayerNorm.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.0.output.LayerNorm.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.1.attention.self.query.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.1.attention.self.query.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.1.attention.self.key.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.1.attention.self.key.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.1.attention.self.value.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.1.attention.self.value.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.1.attention.output.dense.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.1.attention.output.dense.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.1.attention.output.LayerNorm.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.1.attention.output.LayerNorm.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.1.intermediate.dense.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.1.intermediate.dense.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.1.output.dense.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.1.output.dense.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.1.output.LayerNorm.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.1.output.LayerNorm.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.2.attention.self.query.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.2.attention.self.query.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.2.attention.self.key.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.2.attention.self.key.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.2.attention.self.value.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.2.attention.self.value.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.2.attention.output.dense.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.2.attention.output.dense.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.2.attention.output.LayerNorm.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.2.attention.output.LayerNorm.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.2.intermediate.dense.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.2.intermediate.dense.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.2.output.dense.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.2.output.dense.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.2.output.LayerNorm.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.2.output.LayerNorm.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.3.attention.self.query.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.3.attention.self.query.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.3.attention.self.key.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.3.attention.self.key.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.3.attention.self.value.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.3.attention.self.value.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.3.attention.output.dense.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.3.attention.output.dense.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.3.attention.output.LayerNorm.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.3.attention.output.LayerNorm.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.3.intermediate.dense.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.3.intermediate.dense.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.3.output.dense.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.3.output.dense.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.3.output.LayerNorm.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.3.output.LayerNorm.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.4.attention.self.query.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.4.attention.self.query.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.4.attention.self.key.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.4.attention.self.key.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.4.attention.self.value.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.4.attention.self.value.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.4.attention.output.dense.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.4.attention.output.dense.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.4.attention.output.LayerNorm.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.4.attention.output.LayerNorm.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.4.intermediate.dense.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.4.intermediate.dense.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.4.output.dense.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.4.output.dense.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.4.output.LayerNorm.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.4.output.LayerNorm.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.5.attention.self.query.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.5.attention.self.query.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.5.attention.self.key.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.5.attention.self.key.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.5.attention.self.value.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.5.attention.self.value.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.5.attention.output.dense.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.5.attention.output.dense.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.5.attention.output.LayerNorm.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.5.attention.output.LayerNorm.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.5.intermediate.dense.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.5.intermediate.dense.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.5.output.dense.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.5.output.dense.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.5.output.LayerNorm.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.5.output.LayerNorm.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.6.attention.self.query.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.6.attention.self.query.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.6.attention.self.key.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.6.attention.self.key.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.6.attention.self.value.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.6.attention.self.value.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.6.attention.output.dense.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.6.attention.output.dense.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.6.attention.output.LayerNorm.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.6.attention.output.LayerNorm.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.6.intermediate.dense.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.6.intermediate.dense.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.6.output.dense.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.6.output.dense.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.6.output.LayerNorm.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.6.output.LayerNorm.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.7.attention.self.query.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.7.attention.self.query.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.7.attention.self.key.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.7.attention.self.key.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.7.attention.self.value.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.7.attention.self.value.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.7.attention.output.dense.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.7.attention.output.dense.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.7.attention.output.LayerNorm.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.7.attention.output.LayerNorm.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.7.intermediate.dense.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.7.intermediate.dense.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.7.output.dense.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.7.output.dense.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.7.output.LayerNorm.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.7.output.LayerNorm.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.8.attention.self.query.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.8.attention.self.query.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.8.attention.self.key.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.8.attention.self.key.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.8.attention.self.value.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.8.attention.self.value.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.8.attention.output.dense.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.8.attention.output.dense.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.8.attention.output.LayerNorm.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.8.attention.output.LayerNorm.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.8.intermediate.dense.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.8.intermediate.dense.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.8.output.dense.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.8.output.dense.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.8.output.LayerNorm.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.8.output.LayerNorm.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.9.attention.self.query.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.9.attention.self.query.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.9.attention.self.key.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.9.attention.self.key.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.9.attention.self.value.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.9.attention.self.value.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.9.attention.output.dense.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.9.attention.output.dense.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.9.attention.output.LayerNorm.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.9.attention.output.LayerNorm.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.9.intermediate.dense.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.9.intermediate.dense.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.9.output.dense.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.9.output.dense.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.9.output.LayerNorm.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.9.output.LayerNorm.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.10.attention.self.query.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.10.attention.self.query.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.10.attention.self.key.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.10.attention.self.key.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.10.attention.self.value.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.10.attention.self.value.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.10.attention.output.dense.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.10.attention.output.dense.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.10.attention.output.LayerNorm.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.10.attention.output.LayerNorm.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.10.intermediate.dense.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.10.intermediate.dense.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.10.output.dense.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.10.output.dense.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.10.output.LayerNorm.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.10.output.LayerNorm.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.11.attention.self.query.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.11.attention.self.query.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.11.attention.self.key.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.11.attention.self.key.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.11.attention.self.value.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.11.attention.self.value.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.11.attention.output.dense.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.11.attention.output.dense.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.11.attention.output.LayerNorm.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.11.attention.output.LayerNorm.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.11.intermediate.dense.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.11.intermediate.dense.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.11.output.dense.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.11.output.dense.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.11.output.LayerNorm.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.11.output.LayerNorm.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.12.attention.self.query.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.12.attention.self.query.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.12.attention.self.key.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.12.attention.self.key.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.12.attention.self.value.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.12.attention.self.value.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.12.attention.output.dense.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.12.attention.output.dense.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.12.attention.output.LayerNorm.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.12.attention.output.LayerNorm.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.12.intermediate.dense.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.12.intermediate.dense.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.12.output.dense.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.12.output.dense.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.12.output.LayerNorm.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.12.output.LayerNorm.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.13.attention.self.query.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.13.attention.self.query.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.13.attention.self.key.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.13.attention.self.key.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.13.attention.self.value.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.13.attention.self.value.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.13.attention.output.dense.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.13.attention.output.dense.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.13.attention.output.LayerNorm.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.13.attention.output.LayerNorm.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.13.intermediate.dense.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.13.intermediate.dense.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.13.output.dense.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.13.output.dense.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.13.output.LayerNorm.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.13.output.LayerNorm.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.14.attention.self.query.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.14.attention.self.query.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.14.attention.self.key.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.14.attention.self.key.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.14.attention.self.value.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.14.attention.self.value.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.14.attention.output.dense.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.14.attention.output.dense.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.14.attention.output.LayerNorm.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.14.attention.output.LayerNorm.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.14.intermediate.dense.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.14.intermediate.dense.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.14.output.dense.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.14.output.dense.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.14.output.LayerNorm.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.14.output.LayerNorm.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.15.attention.self.query.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.15.attention.self.query.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.15.attention.self.key.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.15.attention.self.key.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.15.attention.self.value.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.15.attention.self.value.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.15.attention.output.dense.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.15.attention.output.dense.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.15.attention.output.LayerNorm.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.15.attention.output.LayerNorm.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.15.intermediate.dense.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.15.intermediate.dense.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.15.output.dense.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.15.output.dense.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.15.output.LayerNorm.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.15.output.LayerNorm.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.16.attention.self.query.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.16.attention.self.query.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.16.attention.self.key.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.16.attention.self.key.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.16.attention.self.value.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.16.attention.self.value.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.16.attention.output.dense.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.16.attention.output.dense.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.16.attention.output.LayerNorm.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.16.attention.output.LayerNorm.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.16.intermediate.dense.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.16.intermediate.dense.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.16.output.dense.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.16.output.dense.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.16.output.LayerNorm.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.16.output.LayerNorm.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.17.attention.self.query.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.17.attention.self.query.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.17.attention.self.key.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.17.attention.self.key.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.17.attention.self.value.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.17.attention.self.value.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.17.attention.output.dense.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.17.attention.output.dense.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.17.attention.output.LayerNorm.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.17.attention.output.LayerNorm.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.17.intermediate.dense.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.17.intermediate.dense.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.17.output.dense.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.17.output.dense.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.17.output.LayerNorm.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.17.output.LayerNorm.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.18.attention.self.query.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.18.attention.self.query.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.18.attention.self.key.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.18.attention.self.key.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.18.attention.self.value.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.18.attention.self.value.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.18.attention.output.dense.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.18.attention.output.dense.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.18.attention.output.LayerNorm.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.18.attention.output.LayerNorm.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.18.intermediate.dense.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.18.intermediate.dense.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.18.output.dense.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.18.output.dense.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.18.output.LayerNorm.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.18.output.LayerNorm.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.19.attention.self.query.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.19.attention.self.query.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.19.attention.self.key.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.19.attention.self.key.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.19.attention.self.value.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.19.attention.self.value.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.19.attention.output.dense.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.19.attention.output.dense.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.19.attention.output.LayerNorm.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.19.attention.output.LayerNorm.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.19.intermediate.dense.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.19.intermediate.dense.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.19.output.dense.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.19.output.dense.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.19.output.LayerNorm.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.19.output.LayerNorm.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.20.attention.self.query.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.20.attention.self.query.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.20.attention.self.key.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.20.attention.self.key.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.20.attention.self.value.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.20.attention.self.value.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.20.attention.output.dense.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.20.attention.output.dense.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.20.attention.output.LayerNorm.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.20.attention.output.LayerNorm.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.20.intermediate.dense.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.20.intermediate.dense.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.20.output.dense.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.20.output.dense.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.20.output.LayerNorm.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.20.output.LayerNorm.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.21.attention.self.query.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.21.attention.self.query.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.21.attention.self.key.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.21.attention.self.key.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.21.attention.self.value.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.21.attention.self.value.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.21.attention.output.dense.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.21.attention.output.dense.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.21.attention.output.LayerNorm.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.21.attention.output.LayerNorm.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.21.intermediate.dense.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.21.intermediate.dense.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.21.output.dense.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.21.output.dense.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.21.output.LayerNorm.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.21.output.LayerNorm.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.22.attention.self.query.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.22.attention.self.query.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.22.attention.self.key.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.22.attention.self.key.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.22.attention.self.value.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.22.attention.self.value.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.22.attention.output.dense.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.22.attention.output.dense.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.22.attention.output.LayerNorm.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.22.attention.output.LayerNorm.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.22.intermediate.dense.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.22.intermediate.dense.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.22.output.dense.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.22.output.dense.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.22.output.LayerNorm.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.22.output.LayerNorm.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.23.attention.self.query.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.23.attention.self.query.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.23.attention.self.key.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.23.attention.self.key.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.23.attention.self.value.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.23.attention.self.value.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.23.attention.output.dense.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.23.attention.output.dense.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.23.attention.output.LayerNorm.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.23.attention.output.LayerNorm.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.23.intermediate.dense.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.23.intermediate.dense.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.23.output.dense.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.23.output.dense.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.23.output.LayerNorm.weight",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_mapping_original_tensor:encoder.layer.23.output.LayerNorm.bias",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_hf_only_embedding_really_zero",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_protocol_mapping_source_hashes",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "native_fairseq_source_unchanged:fairseq/models/roberta/model.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "native_fairseq_source_unchanged:fairseq/modules/transformer_sentence_encoder.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "native_fairseq_source_unchanged:fairseq/modules/transformer_sentence_encoder_layer.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "native_fairseq_source_unchanged:fairseq/modules/multihead_attention.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "native_fairseq_source_unchanged:fairseq/modules/layer_norm.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "native_fairseq_source_unchanged:fairseq/modules/gelu.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_all_eight_comparisons_retained",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:framework_32_fit_samples",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:framework_identical_cached_token_hash:0",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:framework_identical_cached_token_hash:1",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:framework_identical_cached_token_hash:2",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:framework_identical_cached_token_hash:3",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:framework_identical_cached_token_hash:4",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:framework_identical_cached_token_hash:5",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:framework_identical_cached_token_hash:6",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:framework_identical_cached_token_hash:7",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:framework_identical_cached_token_hash:8",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:framework_identical_cached_token_hash:9",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:framework_identical_cached_token_hash:10",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:framework_identical_cached_token_hash:11",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:framework_identical_cached_token_hash:12",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:framework_identical_cached_token_hash:13",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:framework_identical_cached_token_hash:14",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:framework_identical_cached_token_hash:15",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:framework_identical_cached_token_hash:16",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:framework_identical_cached_token_hash:17",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:framework_identical_cached_token_hash:18",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:framework_identical_cached_token_hash:19",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:framework_identical_cached_token_hash:20",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:framework_identical_cached_token_hash:21",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:framework_identical_cached_token_hash:22",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:framework_identical_cached_token_hash:23",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:framework_identical_cached_token_hash:24",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:framework_identical_cached_token_hash:25",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:framework_identical_cached_token_hash:26",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:framework_identical_cached_token_hash:27",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:framework_identical_cached_token_hash:28",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:framework_identical_cached_token_hash:29",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:framework_identical_cached_token_hash:30",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:framework_identical_cached_token_hash:31",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:framework_saved_output_shapes",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:framework_metrics_recomputed:1",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:framework_metrics_recomputed:2",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:framework_metrics_recomputed:3",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "IEMOCAP:framework_metrics_recomputed:4",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:framework_32_fit_samples",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:framework_identical_cached_token_hash:14",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:framework_identical_cached_token_hash:15",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:framework_identical_cached_token_hash:16",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:framework_identical_cached_token_hash:17",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:framework_identical_cached_token_hash:18",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:framework_identical_cached_token_hash:19",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:framework_identical_cached_token_hash:20",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:framework_identical_cached_token_hash:21",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:framework_identical_cached_token_hash:22",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:framework_identical_cached_token_hash:23",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:framework_identical_cached_token_hash:24",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:framework_identical_cached_token_hash:25",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:framework_identical_cached_token_hash:26",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:framework_identical_cached_token_hash:27",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:framework_identical_cached_token_hash:28",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:framework_identical_cached_token_hash:29",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:framework_identical_cached_token_hash:30",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:framework_identical_cached_token_hash:31",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:framework_identical_cached_token_hash:32",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:framework_identical_cached_token_hash:33",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:framework_identical_cached_token_hash:34",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:framework_identical_cached_token_hash:35",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:framework_identical_cached_token_hash:36",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:framework_identical_cached_token_hash:37",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:framework_identical_cached_token_hash:38",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:framework_identical_cached_token_hash:39",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:framework_identical_cached_token_hash:40",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:framework_identical_cached_token_hash:41",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:framework_identical_cached_token_hash:42",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:framework_identical_cached_token_hash:43",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:framework_identical_cached_token_hash:44",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:framework_identical_cached_token_hash:45",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:framework_saved_output_shapes",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:framework_metrics_recomputed:1",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:framework_metrics_recomputed:2",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:framework_metrics_recomputed:3",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "MELD:framework_metrics_recomputed:4",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "framework_scope_train_only",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "all_diagnostic_python_sources_parse",
+      "pass": true,
+      "detail": null
+    }
+  ],
+  "overfit_summary": {
+    "IEMOCAP": {
+      "actual_optimizer_steps": 500,
+      "initial_mse": 0.7630134029097196,
+      "final_mse": 0.0013196793178955962,
+      "reduction_fraction": 0.9982704375665447,
+      "final_layer_mse": [
+        0.002215922827911181,
+        0.001541455934315892,
+        0.000864200216907543,
+        0.0006571382924477693
+      ],
+      "final_model_sha256": "4cfbb347b41bee38030a7ba58ece84c30e5f4ea0322bd324e43a3d5577aa9fd0"
+    },
+    "MELD": {
+      "actual_optimizer_steps": 500,
+      "initial_mse": 1.0437255568692994,
+      "final_mse": 0.0010621090172198665,
+      "reduction_fraction": 0.9989823866913773,
+      "final_layer_mse": [
+        0.0018935048743677285,
+        0.0011563087878398905,
+        0.0007081221613753537,
+        0.0004905002452964939
+      ],
+      "final_model_sha256": "1062d3e0bdcb93fafc1d8fa915faa989905882cbcdec6a997da791800b1e762f"
+    }
+  },
+  "original_input_file_count": 26,
+  "all_original_allowed_inputs_unchanged": true,
+  "original_input_hashes_after": {
+    "/LOCAL/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/local_only/IEMOCAP/train_prepared.pt": {
+      "sha256": "2ddaa4317a85e4f061130881f8b33c194e2d68f271efa6896834f8cc2d33e3ff",
+      "bytes": 88110597
+    },
+    "/LOCAL/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/local_only/IEMOCAP/training/training_config.json": {
+      "sha256": "235eaf6d661c23e6f493eb1320b954924f2c305b2f431d350802a42a1c3b25ff",
+      "bytes": 2225
+    },
+    "/LOCAL/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/local_only/IEMOCAP/training/training_summary.json": {
+      "sha256": "2e236f37eb9654e2a9cbadec8edc8fa44bce32f2170d32b742f5c17b069d3ab3",
+      "bytes": 1098
+    },
+    "/LOCAL/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/local_only/IEMOCAP/training/best_model_lock.json": {
+      "sha256": "0d915efbe9d16a10bdd2f5fde32d0c1664300ec770675bd9b1934ed36b5ca984",
+      "bytes": 5654
+    },
+    "/LOCAL/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/local_only/IEMOCAP/training/best_student/vocab.json": {
+      "sha256": "32b29acf82d3333462eb4b13416760f2aef956052e8fea1749fe5b20f866a4bf",
+      "bytes": 999355
+    },
+    "/LOCAL/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/local_only/IEMOCAP/training/best_student/merges.txt": {
+      "sha256": "1ce1664773c50f3e0cc8842619a93edc4624525b728b188a9e0be33b7726adc5",
+      "bytes": 456318
+    },
+    "/LOCAL/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/local_only/IEMOCAP/training/best_student/model.safetensors": {
+      "sha256": "d3b70d427b40d6c6039f568e5c554036eaaa0e3edf394b988d020497305244c7",
+      "bytes": 1417285320
+    },
+    "/LOCAL/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/local_only/IEMOCAP/training/best_student/special_tokens_map.json": {
+      "sha256": "f23c8e6099631c233c16d9bf8dab198f610826cdd1b358f270f6d55c1863e857",
+      "bytes": 958
+    },
+    "/LOCAL/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/local_only/IEMOCAP/training/best_student/tokenizer_config.json": {
+      "sha256": "8be1efe88d0815235241e648facaba7826449636b1d311697631ecf7f6479e9a",
+      "bytes": 1191
+    },
+    "/LOCAL/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/local_only/IEMOCAP/training/best_student/config.json": {
+      "sha256": "fd5acc222308e0bd35572d27878db07a8d5ea2846e054f49fad4dac3e463d0e6",
+      "bytes": 765
+    },
+    "/LOCAL/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/local_only/MELD/train_prepared.pt": {
+      "sha256": "d4bccdf9b877bf16bfe3ce3dc4d8d42f143a67862c6d1da7fd63c1f025ff634c",
+      "bytes": 166457349
+    },
+    "/LOCAL/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/local_only/MELD/training/training_config.json": {
+      "sha256": "c6d613609e7dcc7852174a6bf32543d0bd12a96d39637ebdddff037f3e011fa2",
+      "bytes": 2218
+    },
+    "/LOCAL/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/local_only/MELD/training/training_summary.json": {
+      "sha256": "13a5888a21b2b560e02317f79e4974041ccf4a84f7c2ade9922d1e1ee4edd3be",
+      "bytes": 1101
+    },
+    "/LOCAL/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/local_only/MELD/training/best_model_lock.json": {
+      "sha256": "775300d511b7bbbd5a77006d3f5ab5a3c618de1c46af98a7f6f2711551e9c552",
+      "bytes": 5629
+    },
+    "/LOCAL/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/local_only/MELD/training/best_student/vocab.json": {
+      "sha256": "32b29acf82d3333462eb4b13416760f2aef956052e8fea1749fe5b20f866a4bf",
+      "bytes": 999355
+    },
+    "/LOCAL/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/local_only/MELD/training/best_student/merges.txt": {
+      "sha256": "1ce1664773c50f3e0cc8842619a93edc4624525b728b188a9e0be33b7726adc5",
+      "bytes": 456318
+    },
+    "/LOCAL/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/local_only/MELD/training/best_student/model.safetensors": {
+      "sha256": "980b1a5cecb4d085eb990d15bcd0475eb603ee3d1312c15be70e95ad093026cc",
+      "bytes": 1417285320
+    },
+    "/LOCAL/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/local_only/MELD/training/best_student/special_tokens_map.json": {
+      "sha256": "f23c8e6099631c233c16d9bf8dab198f610826cdd1b358f270f6d55c1863e857",
+      "bytes": 958
+    },
+    "/LOCAL/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/local_only/MELD/training/best_student/tokenizer_config.json": {
+      "sha256": "8be1efe88d0815235241e648facaba7826449636b1d311697631ecf7f6479e9a",
+      "bytes": 1191
+    },
+    "/LOCAL/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/local_only/MELD/training/best_student/config.json": {
+      "sha256": "fd5acc222308e0bd35572d27878db07a8d5ea2846e054f49fad4dac3e463d0e6",
+      "bytes": 765
+    },
+    "/LOCAL_HOME/.cache/huggingface/hub/models--roberta-large/snapshots/722cf37b1afa9454edce342e7895e588b6ff1d59/vocab.json": {
+      "sha256": "9e7f63c2d15d666b52e21d250d2e513b87c9b713cfa6987a82ed89e5e6e50655",
+      "bytes": 898823
+    },
+    "/LOCAL_HOME/.cache/huggingface/hub/models--roberta-large/snapshots/722cf37b1afa9454edce342e7895e588b6ff1d59/config.json": {
+      "sha256": "82ba49810e6441735e696033ac2512ee09da555507b2917ac3865b202d592cc3",
+      "bytes": 482
+    },
+    "/LOCAL_HOME/.cache/huggingface/hub/models--roberta-large/snapshots/722cf37b1afa9454edce342e7895e588b6ff1d59/merges.txt": {
+      "sha256": "1ce1664773c50f3e0cc8842619a93edc4624525b728b188a9e0be33b7726adc5",
+      "bytes": 456318
+    },
+    "/LOCAL_HOME/.cache/huggingface/hub/models--roberta-large/snapshots/722cf37b1afa9454edce342e7895e588b6ff1d59/tokenizer_config.json": {
+      "sha256": "994f46754c5bf4014f1aa92d34b1374319c3a6b3f702105cd5b742beaecd18ce",
+      "bytes": 25
+    },
+    "/LOCAL_HOME/.cache/huggingface/hub/models--roberta-large/snapshots/722cf37b1afa9454edce342e7895e588b6ff1d59/tokenizer.json": {
+      "sha256": "847bbeab6174d66a88898f729d52fa8d355fafe1bea101cf960dd404581df70e",
+      "bytes": 1355863
+    },
+    "/LOCAL_HOME/.cache/huggingface/hub/models--roberta-large/snapshots/722cf37b1afa9454edce342e7895e588b6ff1d59/model.safetensors": {
+      "sha256": "047c85f0b96269cd62e6f732644f067004eebd95af5b5d35965ae2528f13bf38",
+      "bytes": 1421700479
+    }
+  },
+  "artifact_hashes": {
+    "scripts/evaluate_train_dev_gap.py": "57dc6169a836500344b973949c8c067797f7c5202dac77bb3dc5197f180cd586",
+    "scripts/framework_parity.py": "d99871c57add4839e3e01581f4c4caedcf61c4fec446c2dc126f25eb5b7f84fb",
+    "scripts/plot_diagnostics.py": "611e2f8e221d77ae10fce199b35549bb72de548d667ed591b91f0038b502b7fc",
+    "scripts/run_overfit_jobs.py": "9d654b9b19fd5e779abc50a97fd4c8ce6c6d6675ec0fd40ed1c45628f99c7d89",
+    "scripts/small_sample_overfit.py": "617ee874d859564c6a9f9ff90f056bca966cdfe2b6f8bf7f49d52926393ad2af",
+    "scripts/verify_diagnostic_delivery.py": "3aab9f5ee380d8aedd6733d3195b4a1174851c6e77cc1dc2fbcbdac2e51cbec9",
+    "SMALL_SAMPLE_OVERFIT.md": "190ece7e54c46ee8ca6357c795d9a6dda9ad4bbc444c5b81dd98dc3ee5c1261c",
+    "FRAMEWORK_PARITY.md": "22b700ed3bfff39f4b7ba2865f344c130cd661f87f92cb839980369ff158741f",
+    "TRAIN_DEV_GAP.md": "70f45e5eb8ca912a76a79b138fd531f96221de5804b03d869609e8579ba0161d",
+    "DIAGNOSTIC_SUMMARY.md": "7e904adb7ea486ea355bc54d0fb481d1a13a6e19758f81ccd01e1478a8c96f78",
+    "local_only/overfit/IEMOCAP/completion.json": "ed075c45ea122b5160209c8f8c7ea1ff15d632783c1f8ef2675578e7e99b0ce7",
+    "local_only/overfit/MELD/completion.json": "8ed7d14a9ce6c37135f5a2a3c8869290d29594dc43381899da02bb60d5faf75d",
+    "results/framework_metrics.csv": "db262856870292dfaba46185da7e5fbc382341023ec8b21ffb83df12ff904193",
+    "results/framework_sample_manifest.csv": "440fa3ea7d5287ca4c3f36877b1baf29bd1f5dbb02b54791f4808e2c9e306ef2",
+    "results/framework_summary.json": "34e63caa84ff546ba11be7989676d0a1833a844c42d9efd3c8f96f2390a2c880",
+    "results/framework_verification.json": "606bd4d5341eb9324cee1ca807d48799cc3799185cdd2b33fb59e2cdcfb2d773",
+    "results/overfit_curve.csv": "b1116caad57bb3c36b42cd18ef39e6bbce24fb3a67843853ee8974d9f948a5b3",
+    "results/overfit_execution.json": "34a167eaced6bd0b81c987d84a3521f1f9aa7f4c04c8210d2e81ae3ba16b6b72",
+    "results/overfit_summary.csv": "dcc064a018cc0b225211002f66da5533ae7e150675c994af527a7b8dbe2ab4ed",
+    "results/train_dev_gap_IEMOCAP.csv": "0c9923ca54bda526be13a6e0e745e8bbe84b1d0f139304448c37f08e7ab46895",
+    "results/train_dev_gap_IEMOCAP.json": "bf8193924b4637f7442d29e28294fec76d918ec77e98ed4000c1f735669af831",
+    "results/train_dev_gap_MELD.csv": "1fbb318254359100303e129ae1947f13adae5d276922fba5c0662a6a5b6dc725",
+    "results/train_dev_gap_MELD.json": "05a57b98bc109d853ea685a09aecb19244d8649a58d2b79ea2d1e522cf3b09ba",
+    "results/train_dev_gap_all.csv": "0076a17ffae993ea9f679ac99f2221747dffab9ca732be43380cb8363c6822e1",
+    "results/train_dev_gap_comparison.csv": "104985ad21a433e558e666c220194ef0db215894bbcbb9d5d7e982cfaa866aa1",
+    "configs/DIAGNOSTIC_PROTOCOL.json": "b5ef20818bb2c24cc43cbe4d02e1e417b88fa7bfeceeb7446866e3409ed7b6fe"
+  },
+  "official_validation_accessed_by_verifier": false,
+  "test_accessed_by_verifier": false,
+  "original_pkl_opened_by_verifier": false,
+  "gpu_inference_by_verifier": false,
+  "research_interpretation": "Delivery PASS is not feature compatibility PASS; bounded Train-only diagnostics do not authorize text perturbation or a new full run.",
+  "limits": [
+    "Runtime access claims are checked from code and recorded protocol; this is not an operating-system file-access trace.",
+    "Probe gradient confirms an update, not that every parameter has a nonzero gradient.",
+    "Native Fairseq v0.9.0 comparison does not establish the unknown historical COSMIC runtime version."
+  ]
+}

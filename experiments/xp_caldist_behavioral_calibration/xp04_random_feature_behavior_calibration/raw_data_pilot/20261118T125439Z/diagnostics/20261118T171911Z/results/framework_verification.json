@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "framework_same_weights_pass": true,
+  "complete_mapping_tensor_count": 388,
+  "all_eight_layers_allclose": true,
+  "source_forward_files_unchanged": {
+    "fairseq/models/roberta/model.py": true,
+    "fairseq/modules/transformer_sentence_encoder.py": true,
+    "fairseq/modules/transformer_sentence_encoder_layer.py": true,
+    "fairseq/modules/multihead_attention.py": true,
+    "fairseq/modules/layer_norm.py": true,
+    "fairseq/modules/gelu.py": true
+  },
+  "official_validation_accessed": false,
+  "test_accessed": false,
+  "original_pkl_opened": false,
+  "trained_any_model": false,
+  "artifacts_sha256": {
+    "scripts/framework_parity.py": "d99871c57add4839e3e01581f4c4caedcf61c4fec446c2dc126f25eb5b7f84fb",
+    "FRAMEWORK_PARITY.md": "22b700ed3bfff39f4b7ba2865f344c130cd661f87f92cb839980369ff158741f",
+    "results/framework_summary.json": "34e63caa84ff546ba11be7989676d0a1833a844c42d9efd3c8f96f2390a2c880",
+    "results/framework_metrics.csv": "db262856870292dfaba46185da7e5fbc382341023ec8b21ffb83df12ff904193",
+    "provenance/framework_protocol.json": "2e789075030200a1baf06035237755fe73d3facf8bb2c326484e891d2513c086",
+    "provenance/framework_weight_mapping.json": "ed7b73627cbf738f93b3a9fb078f72e93cd6a8589e55e41398ca6ef010c28bb2",
+    "provenance/framework_runtime.json": "6cbed8e41b15f7a5cf93f9a9d0e7144d262811271272fa438aed1f1271e0cde9",
+    "results/framework_sample_manifest.csv": "440fa3ea7d5287ca4c3f36877b1baf29bd1f5dbb02b54791f4808e2c9e306ef2",
+    "logs/framework_parity.log": "aecf93387ebfe48cc067eb45218eb7da7a020926a35ddb00bc917c365edbfa83"
+  }
+}

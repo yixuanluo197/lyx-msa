@@ -1,0 +1,62 @@
+{
+  "status": "FROZEN_BEFORE_OUTPUTS",
+  "samples_per_dataset": 32,
+  "sample_rule": "First unique token-ID sequences in existing fit_indices order; no target-based selection",
+  "dataset_parts": [
+    "IEMOCAP Train Fit",
+    "MELD Train Fit"
+  ],
+  "official_validation_accessed": false,
+  "test_accessed": false,
+  "labels_accessed": false,
+  "allclose_atol": 0.0001,
+  "allclose_rtol": 0.0001,
+  "dtype": "float32",
+  "mode": "eval",
+  "layers": [
+    -1,
+    -2,
+    -3,
+    -4
+  ],
+  "pooling": "BOS position 0",
+  "batch_size": 4,
+  "architecture": {
+    "layers": 24,
+    "hidden": 1024,
+    "ffn": 4096,
+    "heads": 16,
+    "layernorm_eps": 1e-05,
+    "activation": "exact GELU",
+    "max_total_tokens": 512,
+    "position_embedding_rows": 514,
+    "position_ids": "padding_idx + cumulative non-padding token count",
+    "pad_id": 1,
+    "bos_id": 0,
+    "eos_id": 2,
+    "attention_mask": "Identical token-ID tensor; HF nonpad mask; native Fairseq derives pad mask from token ID 1",
+    "dropout": "All disabled by eval mode",
+    "hf_attention_implementation": "eager"
+  },
+  "fairseq_tag": "v0.9.0",
+  "fairseq_commit": "df2f84ce619edddb80e720a56abc74d5490fed99",
+  "framework_scope": "Native official Fairseq reference version; historical COSMIC runtime version unconfirmed",
+  "source_url": "https://github.com/facebookresearch/fairseq/tree/v0.9.0",
+  "source_tar_sha256": "04d2009a522b9a4d8f9e4aa1724f78b38e488edbe3047b9c7d09ca60a8e2c697",
+  "import_only_compatibility": "Restore NumPy float/int/bool aliases at runtime; no source edits",
+  "pretrained": "/LOCAL_HOME/.cache/huggingface/hub/models--roberta-large/snapshots/722cf37b1afa9454edce342e7895e588b6ff1d59",
+  "pretrained_sha256": "047c85f0b96269cd62e6f732644f067004eebd95af5b5d35965ae2528f13bf38",
+  "same_weights_method": "Exact HF backbone state tensors copied without numerical conversion to native Fairseq encoder; all pairs checked torch.equal after load",
+  "cpu_or_gpu": "cuda:0",
+  "torch_version": "2.2.0+cu118",
+  "numpy_version": "1.24.4",
+  "fairseq_import_path": "/LOCAL/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/diagnostics/20261118T171911Z/local_only/framework_vendor/fairseq-0.9.0/fairseq/__init__.py",
+  "source_files": {
+    "fairseq/models/roberta/model.py": "19c4f69d6917feb99d5c00747ac664ad4851d47919f2df4f6538c414c5a7538e",
+    "fairseq/modules/transformer_sentence_encoder.py": "512539e9a17b1f4709f7096f7f39ad6e7d8b5ddfd0ee58b2f2c72be6df12f2d5",
+    "fairseq/modules/transformer_sentence_encoder_layer.py": "1423d42a8d26ad8eec62e1f42ff1fbbd7721ec654f23ced51aeb829cb64d5850",
+    "fairseq/modules/multihead_attention.py": "64dd3df7c0e7844ee13ad6925605286ed33303f3e3babe3211725601c8d20379",
+    "fairseq/modules/layer_norm.py": "a932a9c27e0e656a82fbfe02fa3601047c04a9e808dd1c53a9ff0e1a033d20f1",
+    "fairseq/modules/gelu.py": "accb6a194a7a30f00fca15adf43131541d92d12f926d330297b7fecdb1abea08"
+  }
+}

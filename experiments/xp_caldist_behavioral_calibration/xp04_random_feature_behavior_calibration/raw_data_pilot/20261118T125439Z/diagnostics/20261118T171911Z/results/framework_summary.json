@@ -1,0 +1,113 @@
+{
+  "status": "PASS",
+  "all_eight_layer_comparisons_pass": true,
+  "actual_same_weights_verified": true,
+  "metrics": [
+    {
+      "dataset": "IEMOCAP",
+      "layer_from_end": 1,
+      "samples": 32,
+      "mae": 4.0645352938906143e-07,
+      "rmse": 5.745699308494253e-07,
+      "max_abs_error": 1.33514404296875e-05,
+      "mean_cosine": 0.9999999999998336,
+      "min_cosine": 0.9999999999991646,
+      "allclose": true
+    },
+    {
+      "dataset": "IEMOCAP",
+      "layer_from_end": 2,
+      "samples": 32,
+      "mae": 5.093231673636289e-07,
+      "rmse": 6.817174839352713e-07,
+      "max_abs_error": 7.62939453125e-06,
+      "mean_cosine": 0.9999999999997743,
+      "min_cosine": 0.9999999999995305,
+      "allclose": true
+    },
+    {
+      "dataset": "IEMOCAP",
+      "layer_from_end": 3,
+      "samples": 32,
+      "mae": 3.6523915031283494e-07,
+      "rmse": 4.871761782776133e-07,
+      "max_abs_error": 3.814697265625e-06,
+      "mean_cosine": 0.9999999999998856,
+      "min_cosine": 0.9999999999997631,
+      "allclose": true
+    },
+    {
+      "dataset": "IEMOCAP",
+      "layer_from_end": 4,
+      "samples": 32,
+      "mae": 2.9706920384731106e-07,
+      "rmse": 3.9503065129152406e-07,
+      "max_abs_error": 4.76837158203125e-06,
+      "mean_cosine": 0.999999999999921,
+      "min_cosine": 0.9999999999998578,
+      "allclose": true
+    },
+    {
+      "dataset": "MELD",
+      "layer_from_end": 1,
+      "samples": 32,
+      "mae": 1.863075627384081e-07,
+      "rmse": 2.951090600011634e-07,
+      "max_abs_error": 6.67572021484375e-06,
+      "mean_cosine": 0.9999999999999577,
+      "min_cosine": 0.9999999999997417,
+      "allclose": true
+    },
+    {
+      "dataset": "MELD",
+      "layer_from_end": 2,
+      "samples": 32,
+      "mae": 2.3553651670726872e-07,
+      "rmse": 4.4412956575691034e-07,
+      "max_abs_error": 7.62939453125e-06,
+      "mean_cosine": 0.9999999999999061,
+      "min_cosine": 0.9999999999993664,
+      "allclose": true
+    },
+    {
+      "dataset": "MELD",
+      "layer_from_end": 3,
+      "samples": 32,
+      "mae": 1.746723589102217e-07,
+      "rmse": 3.160237407423043e-07,
+      "max_abs_error": 3.814697265625e-06,
+      "mean_cosine": 0.999999999999952,
+      "min_cosine": 0.9999999999996612,
+      "allclose": true
+    },
+    {
+      "dataset": "MELD",
+      "layer_from_end": 4,
+      "samples": 32,
+      "mae": 1.5585217588709455e-07,
+      "rmse": 2.7165643691194656e-07,
+      "max_abs_error": 4.231929779052734e-06,
+      "mean_cosine": 0.9999999999999635,
+      "min_cosine": 0.9999999999996908,
+      "allclose": true
+    }
+  ],
+  "prepared_inputs": {
+    "IEMOCAP": {
+      "path": "/LOCAL/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/local_only/IEMOCAP/train_prepared.pt",
+      "sha256": "2ddaa4317a85e4f061130881f8b33c194e2d68f271efa6896834f8cc2d33e3ff",
+      "samples": 32
+    },
+    "MELD": {
+      "path": "/LOCAL/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/local_only/MELD/train_prepared.pt",
+      "sha256": "d4bccdf9b877bf16bfe3ce3dc4d8d42f143a67862c6d1da7fd63c1f025ff634c",
+      "samples": 32
+    }
+  },
+  "protocol_sha256": "2e789075030200a1baf06035237755fe73d3facf8bb2c326484e891d2513c086",
+  "weight_mapping_sha256": "ed7b73627cbf738f93b3a9fb078f72e93cd6a8589e55e41398ca6ef010c28bb2",
+  "script_sha256": "d99871c57add4839e3e01581f4c4caedcf61c4fec446c2dc126f25eb5b7f84fb",
+  "original_pkl_opened": false,
+  "official_validation_accessed": false,
+  "test_accessed": false
+}

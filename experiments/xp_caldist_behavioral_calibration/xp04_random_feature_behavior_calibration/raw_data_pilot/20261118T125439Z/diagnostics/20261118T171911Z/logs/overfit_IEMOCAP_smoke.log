@@ -1,0 +1,6 @@
+/LOCAL_HOME/miniconda3/envs/TEXT_repro/lib/python3.10/site-packages/torch/cuda/__init__.py:54: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+{"event": "selected_fit_evaluation", "layer_mse": [1.7788293050902106, 0.8017453026866609, 0.33188457280040834, 0.13959443106159883], "mse": 0.7630134029097196, "count": 128, "step": 0, "elapsed_seconds": 0.8402052379678935, "peak_memory_gib": 1.3718843460083008}
+{"event": "optimizer_step", "step": 1, "mse": 0.7010266333818436, "gradient_norm": 2.1918821334838867, "elapsed_seconds": 1.5388200799934566, "peak_memory_gib": 5.683032989501953}
+{"event": "optimizer_step", "step": 2, "mse": 0.6758535206317902, "gradient_norm": 3.580960988998413, "elapsed_seconds": 2.110764468088746, "peak_memory_gib": 5.683032989501953}
+{"event": "selected_fit_evaluation", "layer_mse": [1.509076642832321, 0.7047793356897003, 0.2719164142243616, 0.11319472982545907], "mse": 0.6497417806429605, "count": 128, "step": 2, "elapsed_seconds": 2.8576592470053583, "peak_memory_gib": 5.683032989501953}

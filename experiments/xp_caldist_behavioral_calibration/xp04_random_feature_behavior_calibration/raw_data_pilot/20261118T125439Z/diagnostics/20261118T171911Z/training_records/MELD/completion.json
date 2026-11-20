@@ -1,0 +1,25 @@
+{
+  "status": "complete",
+  "actual_optimizer_steps": 500,
+  "initial_mse": 1.0437255568692994,
+  "final_mse": 0.0010621090172198665,
+  "reduction_fraction": 0.9989823866913773,
+  "final_layer_mse": [
+    0.0018935048743677285,
+    0.0011563087878398905,
+    0.0007081221613753537,
+    0.0004905002452964939
+  ],
+  "seconds": 300.9100897980388,
+  "final_model_sha256": "1062d3e0bdcb93fafc1d8fa915faa989905882cbcdec6a997da791800b1e762f",
+  "gradient_update": {
+    "gradient_present": true,
+    "gradient_all_finite": true,
+    "gradient_l2": 0.03469667583703995,
+    "probe": "encoder.layer.23.attention.self.query.weight",
+    "all_encoder_parameters_trainable": true,
+    "maximum_parameter_update": 1.0013580322265625e-05
+  },
+  "official_validation_accessed": false,
+  "test_accessed": false
+}

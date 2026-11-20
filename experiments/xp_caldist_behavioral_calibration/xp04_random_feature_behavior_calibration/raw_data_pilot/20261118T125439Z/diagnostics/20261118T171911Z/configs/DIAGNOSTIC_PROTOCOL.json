@@ -1,0 +1,91 @@
+{
+  "created_at": "2026-11-18T17:22:19.750188+00:00",
+  "source_commit": "13389ee89abe5f105a4c194659b2c5235a30bcc8",
+  "server": "LOCAL_HOST",
+  "scope": "three bounded Train-only diagnostics; no full retraining, no official Validation/Test, no perturbation, no publication",
+  "datasets": {
+    "IEMOCAP": {
+      "seed": 1475,
+      "fit_rows": 4747,
+      "inner_dev_rows": 536,
+      "overfit_gpu": 0,
+      "gap_gpu": 1
+    },
+    "MELD": {
+      "seed": 67137,
+      "fit_rows": 8989,
+      "inner_dev_rows": 1000,
+      "overfit_gpu": 2,
+      "gap_gpu": 3
+    }
+  },
+  "input_policy": "Only previous Train-prepared.pt and saved students; original shared PKLs, official Validation artifacts and Test are not opened. No emotion labels.",
+  "overfit": {
+    "count_unique_token_sequences": 128,
+    "selection": "seeded selection exclusively from existing fit_indices, no target-based selection",
+    "initializer": "same public roberta-large snapshot722cf37b1afa9454edce342e7895e588b6ff1d59",
+    "optimizer": "AdamW",
+    "lr": 1e-05,
+    "weight_decay": 0,
+    "dropout": 0,
+    "steps": 500,
+    "micro_batch": 4,
+    "accumulation": 4,
+    "effective_batch": 16,
+    "precision": "FP32 training and evaluation",
+    "gradient_checkpointing": "nonreentrant",
+    "loss": "mean four original-scale 1024d BOS layer MSE, all backbone layers trainable",
+    "evaluation_steps": [
+      0,
+      25,
+      50,
+      100,
+      200,
+      300,
+      400,
+      500
+    ],
+    "reason_for_no_regularization": "Capacity diagnostic: remove dropout noise and parameter shrinkage; differs from original formal training and is not a causal dropout ablation.",
+    "interpretation": "Report continuous reduction and residuals. Failure to reach zero in 500 steps alone cannot prove architectural incapacity. Tiny-set success cannot imply strict full-dataset compatibility."
+  },
+  "framework": {
+    "weights": "same actual tensors from public HF checkpoint, mapped to native Fairseq only if all functional backbone tensors accounted for; verify exact values afterload",
+    "samples_per_dataset": 32,
+    "split": "Fit only",
+    "precision": "FP32",
+    "mode": "eval",
+    "identical_cached_token_ids": true,
+    "last_four_offsets": [
+      -1,
+      -2,
+      -3,
+      -4
+    ],
+    "pooling": "BOS index0",
+    "same_implementation_tolerance": {
+      "atol": 0.0001,
+      "rtol": 0.0001
+    },
+    "block_if_weights_or_native_runtime_not_verified": true
+  },
+  "fit_dev_gap": {
+    "models": [
+      "initial_public_roberta",
+      "saved_best_epoch8_student"
+    ],
+    "precision": "FP32 eval",
+    "loss": "per-layer total squared error / (N*1024), overall average4",
+    "full_existing_fit_and_inner_dev": true,
+    "no_retraining": true
+  },
+  "forbidden": [
+    "original PKL deserialization",
+    "official Validation/Test access",
+    "change previous student/checkpoints",
+    "new affine/classification heads",
+    "hyperparameter sweeps or iterative adjustment for better result",
+    "CMERC training",
+    "text perturbation",
+    "automatic git commit or push"
+  ]
+}

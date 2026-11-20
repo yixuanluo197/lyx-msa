@@ -1,0 +1,17 @@
+{
+  "status": "COMPLETED",
+  "physical_gpu_index": 1,
+  "gpu_info": "1, GPU-REDACTED, NVIDIA TITAN Xp",
+  "CUDA_VISIBLE_DEVICES": "1",
+  "process_device": "cuda:0",
+  "python": "/LOCAL_HOME/miniconda3/envs/TEXT_repro/bin/python",
+  "transformers": "4.42.3",
+  "torch": "2.2.0+cu118",
+  "numpy": "1.24.4",
+  "original_run_hf_attention_note": "Installed transformers/models/roberta/modeling_roberta.py ROBERTA_SELF_ATTENTION_CLASSES contains only eager; original train_student.py passes no attention override",
+  "original_train_source_sha256": "9a8caa913816d63747e1b79d440a401efa78081134b91c23994929f70a681092",
+  "framework_run_log_sha256": "aecf93387ebfe48cc067eb45218eb7da7a020926a35ddb00bc917c365edbfa83",
+  "no_encoder_source_edits": true,
+  "no_environment_package_installs": true,
+  "no_new_model_download": true
+}

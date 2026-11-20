@@ -1,0 +1,145 @@
+{
+  "status": "COMPLETE",
+  "dataset": "MELD",
+  "launch": {
+    "dataset": "MELD",
+    "start_utc": "2026-11-18T17:22:37.850480+00:00",
+    "hostname": "LOCAL_HOST",
+    "pid": 3968240,
+    "cuda_visible_devices": "3",
+    "gpu_inventory": "0, GPU-REDACTED, NVIDIA TITAN Xp, 3 MiB, 0 %\n1, GPU-REDACTED, NVIDIA TITAN Xp, 5 MiB, 0 %\n2, GPU-REDACTED, NVIDIA TITAN Xp, 3 MiB, 0 %\n3, GPU-REDACTED, NVIDIA TITAN Xp, 5 MiB, 0 %\n",
+    "torch_version": "2.2.0+cu118",
+    "arguments": {
+      "parent_run": "/LOCAL/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z",
+      "diagnostic_dir": "/LOCAL/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/diagnostics/20261118T171911Z",
+      "dataset": "MELD",
+      "pretrained": "/LOCAL_HOME/.cache/huggingface/hub/models--roberta-large/snapshots/722cf37b1afa9454edce342e7895e588b6ff1d59",
+      "batch_size": 4
+    },
+    "script_sha256": "57dc6169a836500344b973949c8c067797f7c5202dac77bb3dc5197f180cd586",
+    "train_cache_sha256": "d4bccdf9b877bf16bfe3ce3dc4d8d42f143a67862c6d1da7fd63c1f025ff634c",
+    "best_lock_sha256": "775300d511b7bbbd5a77006d3f5ab5a3c618de1c46af98a7f6f2711551e9c552",
+    "locked_original_inputs": {
+      "/LOCAL/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/local_only/MELD/training/best_student/model.safetensors": "980b1a5cecb4d085eb990d15bcd0475eb603ee3d1312c15be70e95ad093026cc",
+      "/LOCAL/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/local_only/MELD/training/best_student/config.json": "fd5acc222308e0bd35572d27878db07a8d5ea2846e054f49fad4dac3e463d0e6",
+      "/LOCAL/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/scripts/train_student.py": "9a8caa913816d63747e1b79d440a401efa78081134b91c23994929f70a681092",
+      "/LOCAL/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/local_only/MELD/training/training_config.json": "c6d613609e7dcc7852174a6bf32543d0bd12a96d39637ebdddff037f3e011fa2"
+    },
+    "pretrained_sha256": "047c85f0b96269cd62e6f732644f067004eebd95af5b5d35965ae2528f13bf38",
+    "fit_count": 8989,
+    "inner_dev_count": 1000,
+    "official_validation_accessed": false,
+    "test_accessed": false,
+    "model_precision": "FP32",
+    "eval_mode": true,
+    "autocast_enabled": false,
+    "layer_order": [
+      -1,
+      -2,
+      -3,
+      -4
+    ],
+    "loss": "mean of four BOS MSE; float32 squared differences, float64 sum / N / 1024",
+    "original_loss_helper_reused": "/LOCAL/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/scripts/train_student.py"
+  },
+  "results": [
+    {
+      "dataset": "MELD",
+      "model": "public_initial",
+      "subset": "fit",
+      "n": 8989,
+      "overall_mse": 1.0377084604065472,
+      "layer1_mse": 2.098042533803612,
+      "layer2_mse": 1.3676664812902184,
+      "layer3_mse": 0.48150983435567907,
+      "layer4_mse": 0.20361499217667864,
+      "seconds": 60.374320117989555,
+      "peak_memory_allocated_bytes": 1477571584,
+      "precision": "FP32",
+      "mode": "eval",
+      "batch_size": 4
+    },
+    {
+      "dataset": "MELD",
+      "model": "public_initial",
+      "subset": "inner_dev",
+      "n": 1000,
+      "overall_mse": 1.0397974415713598,
+      "layer1_mse": 2.105896394552403,
+      "layer2_mse": 1.3680875712354041,
+      "layer3_mse": 0.4806446214654481,
+      "layer4_mse": 0.2045611790321833,
+      "seconds": 6.754068123875186,
+      "peak_memory_allocated_bytes": 1477571584,
+      "precision": "FP32",
+      "mode": "eval",
+      "batch_size": 4
+    },
+    {
+      "dataset": "MELD",
+      "model": "best_epoch8",
+      "subset": "fit",
+      "n": 8989,
+      "overall_mse": 0.02294220629521748,
+      "layer1_mse": 0.03912158789004071,
+      "layer2_mse": 0.03091381236650702,
+      "layer3_mse": 0.014810905358254066,
+      "layer4_mse": 0.006922519566068125,
+      "seconds": 59.586767117958516,
+      "peak_memory_allocated_bytes": 1477243904,
+      "precision": "FP32",
+      "mode": "eval",
+      "batch_size": 4
+    },
+    {
+      "dataset": "MELD",
+      "model": "best_epoch8",
+      "subset": "inner_dev",
+      "n": 1000,
+      "overall_mse": 0.03522558789666562,
+      "layer1_mse": 0.0612274803971118,
+      "layer2_mse": 0.048437643964516636,
+      "layer3_mse": 0.021510878853134865,
+      "layer4_mse": 0.009726348371899167,
+      "seconds": 6.693769949954003,
+      "peak_memory_allocated_bytes": 1477243904,
+      "precision": "FP32",
+      "mode": "eval",
+      "batch_size": 4
+    }
+  ],
+  "gaps": [
+    {
+      "dataset": "MELD",
+      "model": "public_initial",
+      "fit_mse": 1.0377084604065472,
+      "inner_dev_mse": 1.0397974415713598,
+      "dev_minus_fit_mse": 0.0020889811648125978,
+      "dev_to_fit_mse_ratio": 1.0020130713437512,
+      "layer_dev_minus_fit_mse": [
+        0.007853860748791242,
+        0.0004210899451857486,
+        -0.0008652128902309486,
+        0.0009461868555046549
+      ]
+    },
+    {
+      "dataset": "MELD",
+      "model": "best_epoch8",
+      "fit_mse": 0.02294220629521748,
+      "inner_dev_mse": 0.03522558789666562,
+      "dev_minus_fit_mse": 0.01228338160144814,
+      "dev_to_fit_mse_ratio": 1.5354054201844016,
+      "layer_dev_minus_fit_mse": [
+        0.022105892507071095,
+        0.017523831598009614,
+        0.006699973494880799,
+        0.002803828805831042
+      ]
+    }
+  ],
+  "source_inputs_unchanged": true,
+  "completed_utc": "2026-11-18T17:24:57.886513+00:00",
+  "old_best_inner_dev_mse": 0.035225588153864805,
+  "warning": "FP32 eval Fit loss is descriptive; stochastic train-mode AMP logs are not directly comparable."
+}

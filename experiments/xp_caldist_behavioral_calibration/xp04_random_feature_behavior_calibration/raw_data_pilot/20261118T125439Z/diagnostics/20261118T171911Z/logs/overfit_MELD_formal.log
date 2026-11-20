@@ -1,0 +1,60 @@
+/LOCAL_HOME/miniconda3/envs/TEXT_repro/lib/python3.10/site-packages/torch/cuda/__init__.py:54: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+{"event": "selected_fit_evaluation", "layer_mse": [2.1052017864465955, 1.3486345162761797, 0.4942591256197498, 0.2268067991346723], "mse": 1.0437255568692994, "count": 128, "step": 0, "elapsed_seconds": 0.9960742390248924, "peak_memory_gib": 1.3461050987243652}
+{"event": "optimizer_step", "step": 10, "mse": 0.7237494736909866, "gradient_norm": 4.4528279304504395, "elapsed_seconds": 6.960005570901558, "peak_memory_gib": 5.683032989501953}
+{"event": "optimizer_step", "step": 20, "mse": 0.28356964886188507, "gradient_norm": 3.4173104763031006, "elapsed_seconds": 12.830534324981272, "peak_memory_gib": 5.683032989501953}
+{"event": "selected_fit_evaluation", "layer_mse": [0.3488010449697052, 0.2479608107930599, 0.1020741969998414, 0.04875616250888773], "mse": 0.18689805381787356, "count": 128, "step": 25, "elapsed_seconds": 16.737807049881667, "peak_memory_gib": 5.683032989501953}
+{"event": "optimizer_step", "step": 30, "mse": 0.14360245876014233, "gradient_norm": 2.676877498626709, "elapsed_seconds": 19.879705358063802, "peak_memory_gib": 5.683032989501953}
+{"event": "optimizer_step", "step": 40, "mse": 0.06844350695610046, "gradient_norm": 2.236335277557373, "elapsed_seconds": 25.451918076956645, "peak_memory_gib": 5.683032989501953}
+{"event": "optimizer_step", "step": 50, "mse": 0.04216309171169996, "gradient_norm": 1.8098783493041992, "elapsed_seconds": 30.860485835932195, "peak_memory_gib": 5.683032989501953}
+{"event": "selected_fit_evaluation", "layer_mse": [0.06313594348584928, 0.0430698280493972, 0.0199014594879281, 0.010162662096344883], "mse": 0.03406747327987987, "count": 128, "step": 50, "elapsed_seconds": 31.55012976191938, "peak_memory_gib": 5.683032989501953}
+{"event": "optimizer_step", "step": 60, "mse": 0.0306435520760715, "gradient_norm": 1.9131017923355103, "elapsed_seconds": 36.99735688092187, "peak_memory_gib": 5.683032989501953}
+{"event": "optimizer_step", "step": 70, "mse": 0.01645123236812651, "gradient_norm": 0.8724508881568909, "elapsed_seconds": 42.43002114398405, "peak_memory_gib": 5.683032989501953}
+{"event": "optimizer_step", "step": 80, "mse": 0.01645677722990513, "gradient_norm": 1.1110707521438599, "elapsed_seconds": 47.87769630597904, "peak_memory_gib": 5.683032989501953}
+{"event": "optimizer_step", "step": 90, "mse": 0.010836097178980708, "gradient_norm": 0.8180959820747375, "elapsed_seconds": 53.65814177901484, "peak_memory_gib": 5.683032989501953}
+{"event": "optimizer_step", "step": 100, "mse": 0.011522285407409072, "gradient_norm": 0.9787480235099792, "elapsed_seconds": 59.44481915188953, "peak_memory_gib": 5.683032989501953}
+{"event": "selected_fit_evaluation", "layer_mse": [0.019327002296555977, 0.011671185281314089, 0.005973813201820371, 0.0032748912927921658], "mse": 0.010061723018120652, "count": 128, "step": 100, "elapsed_seconds": 60.312348135979846, "peak_memory_gib": 5.683032989501953}
+{"event": "optimizer_step", "step": 110, "mse": 0.01221205061301589, "gradient_norm": 1.1250431537628174, "elapsed_seconds": 66.1035416610539, "peak_memory_gib": 5.683032989501953}
+{"event": "optimizer_step", "step": 120, "mse": 0.008397221216000617, "gradient_norm": 0.6380302309989929, "elapsed_seconds": 71.85705350805074, "peak_memory_gib": 5.683032989501953}
+{"event": "optimizer_step", "step": 130, "mse": 0.006788684753701091, "gradient_norm": 0.6666296124458313, "elapsed_seconds": 77.67869009706192, "peak_memory_gib": 5.683032989501953}
+{"event": "optimizer_step", "step": 140, "mse": 0.005547055508941412, "gradient_norm": 0.5153232216835022, "elapsed_seconds": 83.47851922200061, "peak_memory_gib": 5.683032989501953}
+{"event": "optimizer_step", "step": 150, "mse": 0.004753892950247973, "gradient_norm": 0.5426964163780212, "elapsed_seconds": 89.27672896487638, "peak_memory_gib": 5.683032989501953}
+{"event": "optimizer_step", "step": 160, "mse": 0.004324631416238844, "gradient_norm": 0.4970892369747162, "elapsed_seconds": 95.06461855908856, "peak_memory_gib": 5.683032989501953}
+{"event": "optimizer_step", "step": 170, "mse": 0.004129323293454945, "gradient_norm": 0.6684193015098572, "elapsed_seconds": 100.83300718897954, "peak_memory_gib": 5.683032989501953}
+{"event": "optimizer_step", "step": 180, "mse": 0.0029392018914222717, "gradient_norm": 0.32279762625694275, "elapsed_seconds": 106.59778427891433, "peak_memory_gib": 5.683032989501953}
+{"event": "optimizer_step", "step": 190, "mse": 0.0032326593063771725, "gradient_norm": 0.44198352098464966, "elapsed_seconds": 112.3485588838812, "peak_memory_gib": 5.683032989501953}
+{"event": "optimizer_step", "step": 200, "mse": 0.005510040035005659, "gradient_norm": 0.6314241886138916, "elapsed_seconds": 118.09912087395787, "peak_memory_gib": 5.683032989501953}
+{"event": "selected_fit_evaluation", "layer_mse": [0.004668558460435046, 0.003046557908221495, 0.001767078365396294, 0.0011224742646735696], "mse": 0.002651167249681601, "count": 128, "step": 200, "elapsed_seconds": 118.95653427299112, "peak_memory_gib": 5.683032989501953}
+{"event": "optimizer_step", "step": 210, "mse": 0.004281720030121505, "gradient_norm": 0.5610140562057495, "elapsed_seconds": 124.70640130806714, "peak_memory_gib": 5.683032989501953}
+{"event": "optimizer_step", "step": 220, "mse": 0.002035362645983696, "gradient_norm": 0.30295896530151367, "elapsed_seconds": 130.46528883487917, "peak_memory_gib": 5.683032989501953}
+{"event": "optimizer_step", "step": 230, "mse": 0.003439262101892382, "gradient_norm": 0.6225888133049011, "elapsed_seconds": 136.18181041209027, "peak_memory_gib": 5.683032989501953}
+{"event": "optimizer_step", "step": 240, "mse": 0.0034065142390318215, "gradient_norm": 0.5866203308105469, "elapsed_seconds": 141.93304275209084, "peak_memory_gib": 5.683032989501953}
+{"event": "optimizer_step", "step": 250, "mse": 0.0031485971994698048, "gradient_norm": 0.5091503262519836, "elapsed_seconds": 147.70135850599036, "peak_memory_gib": 5.683032989501953}
+{"event": "optimizer_step", "step": 260, "mse": 0.005723310401663184, "gradient_norm": 0.7709141969680786, "elapsed_seconds": 153.38467237190343, "peak_memory_gib": 5.683032989501953}
+{"event": "optimizer_step", "step": 270, "mse": 0.005758026498369873, "gradient_norm": 0.7686896324157715, "elapsed_seconds": 159.16596148791723, "peak_memory_gib": 5.683032989501953}
+{"event": "optimizer_step", "step": 280, "mse": 0.004716529278084636, "gradient_norm": 0.5718684196472168, "elapsed_seconds": 164.92840171488933, "peak_memory_gib": 5.683032989501953}
+{"event": "optimizer_step", "step": 290, "mse": 0.0031904299394227564, "gradient_norm": 0.49102896451950073, "elapsed_seconds": 170.7304447919596, "peak_memory_gib": 5.683032989501953}
+{"event": "optimizer_step", "step": 300, "mse": 0.005499898106791079, "gradient_norm": 0.6990312933921814, "elapsed_seconds": 176.5379952469375, "peak_memory_gib": 5.683032989501953}
+{"event": "selected_fit_evaluation", "layer_mse": [0.008181492785726508, 0.004754430523025116, 0.0022984153326715017, 0.001216971458529057], "mse": 0.0041128275249880455, "count": 128, "step": 300, "elapsed_seconds": 177.40242899092846, "peak_memory_gib": 5.683032989501953}
+{"event": "optimizer_step", "step": 310, "mse": 0.003984559210948646, "gradient_norm": 0.5406848192214966, "elapsed_seconds": 183.19686319609173, "peak_memory_gib": 5.683032989501953}
+{"event": "optimizer_step", "step": 320, "mse": 0.004191785817965865, "gradient_norm": 0.5489059686660767, "elapsed_seconds": 189.00631854403764, "peak_memory_gib": 5.683032989501953}
+{"event": "optimizer_step", "step": 330, "mse": 0.0027972606476396322, "gradient_norm": 0.5098372101783752, "elapsed_seconds": 194.76104575791396, "peak_memory_gib": 5.683032989501953}
+{"event": "optimizer_step", "step": 340, "mse": 0.002516644075512886, "gradient_norm": 0.4695679247379303, "elapsed_seconds": 200.57160150702111, "peak_memory_gib": 5.683032989501953}
+{"event": "optimizer_step", "step": 350, "mse": 0.0030728966230526567, "gradient_norm": 0.48210054636001587, "elapsed_seconds": 206.3738143008668, "peak_memory_gib": 5.683032989501953}
+{"event": "optimizer_step", "step": 360, "mse": 0.0030439054826274514, "gradient_norm": 0.46044647693634033, "elapsed_seconds": 212.16062543704174, "peak_memory_gib": 5.683032989501953}
+{"event": "optimizer_step", "step": 370, "mse": 0.002806616830639541, "gradient_norm": 0.42264553904533386, "elapsed_seconds": 217.94563465705141, "peak_memory_gib": 5.683032989501953}
+{"event": "optimizer_step", "step": 380, "mse": 0.0026100455434061587, "gradient_norm": 0.417776495218277, "elapsed_seconds": 223.71301928604953, "peak_memory_gib": 5.683032989501953}
+{"event": "optimizer_step", "step": 390, "mse": 0.0024625984369777143, "gradient_norm": 0.36298638582229614, "elapsed_seconds": 229.4878494690638, "peak_memory_gib": 5.683032989501953}
+{"event": "optimizer_step", "step": 400, "mse": 0.0032518082880415022, "gradient_norm": 0.564159095287323, "elapsed_seconds": 235.26952394796535, "peak_memory_gib": 5.683032989501953}
+{"event": "selected_fit_evaluation", "layer_mse": [0.00394635689470418, 0.0024747025228778435, 0.0013598852629482098, 0.0008336050454414655], "mse": 0.002153637431492925, "count": 128, "step": 400, "elapsed_seconds": 236.13942749495618, "peak_memory_gib": 5.683032989501953}
+{"event": "optimizer_step", "step": 410, "mse": 0.0019577873463276774, "gradient_norm": 0.35355812311172485, "elapsed_seconds": 241.9504344689194, "peak_memory_gib": 5.683032989501953}
+{"event": "optimizer_step", "step": 420, "mse": 0.001939093868713826, "gradient_norm": 0.31128764152526855, "elapsed_seconds": 247.7492827179376, "peak_memory_gib": 5.683032989501953}
+{"event": "optimizer_step", "step": 430, "mse": 0.0017583426088094711, "gradient_norm": 0.2631235718727112, "elapsed_seconds": 253.53380506602116, "peak_memory_gib": 5.683032989501953}
+{"event": "optimizer_step", "step": 440, "mse": 0.0020997524552512914, "gradient_norm": 0.29381728172302246, "elapsed_seconds": 259.3185667160433, "peak_memory_gib": 5.683032989501953}
+{"event": "optimizer_step", "step": 450, "mse": 0.0018500326841603965, "gradient_norm": 0.32180723547935486, "elapsed_seconds": 265.09943329100497, "peak_memory_gib": 5.683032989501953}
+{"event": "optimizer_step", "step": 460, "mse": 0.0011887421715073287, "gradient_norm": 0.22942490875720978, "elapsed_seconds": 270.87653611507267, "peak_memory_gib": 5.683032989501953}
+{"event": "optimizer_step", "step": 470, "mse": 0.0012750232708640397, "gradient_norm": 0.29791325330734253, "elapsed_seconds": 276.63289584894665, "peak_memory_gib": 5.683032989501953}
+{"event": "optimizer_step", "step": 480, "mse": 0.0013971713779028505, "gradient_norm": 0.26344993710517883, "elapsed_seconds": 282.4085870520212, "peak_memory_gib": 5.683032989501953}
+{"event": "optimizer_step", "step": 490, "mse": 0.001369362260447815, "gradient_norm": 0.31254222989082336, "elapsed_seconds": 288.17592091602273, "peak_memory_gib": 5.683032989501953}
+{"event": "optimizer_step", "step": 500, "mse": 0.0010171524190809578, "gradient_norm": 0.26115480065345764, "elapsed_seconds": 294.04789375606924, "peak_memory_gib": 5.683032989501953}
+{"event": "selected_fit_evaluation", "layer_mse": [0.0018935048743677285, 0.0011563087878398905, 0.0007081221613753537, 0.0004905002452964939], "mse": 0.0010621090172198665, "count": 128, "step": 500, "elapsed_seconds": 294.9270510270726, "peak_memory_gib": 5.683032989501953}

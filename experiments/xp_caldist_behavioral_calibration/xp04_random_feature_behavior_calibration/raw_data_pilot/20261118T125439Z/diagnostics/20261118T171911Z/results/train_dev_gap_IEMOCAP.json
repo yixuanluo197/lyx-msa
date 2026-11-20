@@ -1,0 +1,145 @@
+{
+  "status": "COMPLETE",
+  "dataset": "IEMOCAP",
+  "launch": {
+    "dataset": "IEMOCAP",
+    "start_utc": "2026-11-18T17:22:37.523048+00:00",
+    "hostname": "LOCAL_HOST",
+    "pid": 3968239,
+    "cuda_visible_devices": "1",
+    "gpu_inventory": "0, GPU-REDACTED, NVIDIA TITAN Xp, 3 MiB, 0 %\n1, GPU-REDACTED, NVIDIA TITAN Xp, 5 MiB, 0 %\n2, GPU-REDACTED, NVIDIA TITAN Xp, 3 MiB, 0 %\n3, GPU-REDACTED, NVIDIA TITAN Xp, 5 MiB, 0 %\n",
+    "torch_version": "2.2.0+cu118",
+    "arguments": {
+      "parent_run": "/LOCAL/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z",
+      "diagnostic_dir": "/LOCAL/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/diagnostics/20261118T171911Z",
+      "dataset": "IEMOCAP",
+      "pretrained": "/LOCAL_HOME/.cache/huggingface/hub/models--roberta-large/snapshots/722cf37b1afa9454edce342e7895e588b6ff1d59",
+      "batch_size": 4
+    },
+    "script_sha256": "57dc6169a836500344b973949c8c067797f7c5202dac77bb3dc5197f180cd586",
+    "train_cache_sha256": "2ddaa4317a85e4f061130881f8b33c194e2d68f271efa6896834f8cc2d33e3ff",
+    "best_lock_sha256": "0d915efbe9d16a10bdd2f5fde32d0c1664300ec770675bd9b1934ed36b5ca984",
+    "locked_original_inputs": {
+      "/LOCAL/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/local_only/IEMOCAP/training/best_student/model.safetensors": "d3b70d427b40d6c6039f568e5c554036eaaa0e3edf394b988d020497305244c7",
+      "/LOCAL/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/local_only/IEMOCAP/training/best_student/config.json": "fd5acc222308e0bd35572d27878db07a8d5ea2846e054f49fad4dac3e463d0e6",
+      "/LOCAL/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/scripts/train_student.py": "9a8caa913816d63747e1b79d440a401efa78081134b91c23994929f70a681092",
+      "/LOCAL/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/local_only/IEMOCAP/training/training_config.json": "235eaf6d661c23e6f493eb1320b954924f2c305b2f431d350802a42a1c3b25ff"
+    },
+    "pretrained_sha256": "047c85f0b96269cd62e6f732644f067004eebd95af5b5d35965ae2528f13bf38",
+    "fit_count": 4747,
+    "inner_dev_count": 536,
+    "official_validation_accessed": false,
+    "test_accessed": false,
+    "model_precision": "FP32",
+    "eval_mode": true,
+    "autocast_enabled": false,
+    "layer_order": [
+      -1,
+      -2,
+      -3,
+      -4
+    ],
+    "loss": "mean of four BOS MSE; float32 squared differences, float64 sum / N / 1024",
+    "original_loss_helper_reused": "/LOCAL/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/scripts/train_student.py"
+  },
+  "results": [
+    {
+      "dataset": "IEMOCAP",
+      "model": "public_initial",
+      "subset": "fit",
+      "n": 4747,
+      "overall_mse": 0.7706037057820198,
+      "layer1_mse": 1.8172497445091673,
+      "layer2_mse": 0.7974580687323928,
+      "layer3_mse": 0.32932543651245505,
+      "layer4_mse": 0.13838157337406393,
+      "seconds": 28.028091388987377,
+      "peak_memory_allocated_bytes": 1488751104,
+      "precision": "FP32",
+      "mode": "eval",
+      "batch_size": 4
+    },
+    {
+      "dataset": "IEMOCAP",
+      "model": "public_initial",
+      "subset": "inner_dev",
+      "n": 536,
+      "overall_mse": 0.7388904026309994,
+      "layer1_mse": 1.7389119487490607,
+      "layer2_mse": 0.7670157362976491,
+      "layer3_mse": 0.31660030401163053,
+      "layer4_mse": 0.13303362146565717,
+      "seconds": 3.0483096530660987,
+      "peak_memory_allocated_bytes": 1488751104,
+      "precision": "FP32",
+      "mode": "eval",
+      "batch_size": 4
+    },
+    {
+      "dataset": "IEMOCAP",
+      "model": "best_epoch8",
+      "subset": "fit",
+      "n": 4747,
+      "overall_mse": 0.02825136727219531,
+      "layer1_mse": 0.061606013792156925,
+      "layer2_mse": 0.03214317852308265,
+      "layer3_mse": 0.012989912276963778,
+      "layer4_mse": 0.006266364496577899,
+      "seconds": 27.51411860389635,
+      "peak_memory_allocated_bytes": 1489275392,
+      "precision": "FP32",
+      "mode": "eval",
+      "batch_size": 4
+    },
+    {
+      "dataset": "IEMOCAP",
+      "model": "best_epoch8",
+      "subset": "inner_dev",
+      "n": 536,
+      "overall_mse": 0.042795572903233076,
+      "layer1_mse": 0.09909898637316136,
+      "layer2_mse": 0.04691411971153029,
+      "layer3_mse": 0.017613456823303886,
+      "layer4_mse": 0.007555728704936752,
+      "seconds": 3.0944128120318055,
+      "peak_memory_allocated_bytes": 1489275392,
+      "precision": "FP32",
+      "mode": "eval",
+      "batch_size": 4
+    }
+  ],
+  "gaps": [
+    {
+      "dataset": "IEMOCAP",
+      "model": "public_initial",
+      "fit_mse": 0.7706037057820198,
+      "inner_dev_mse": 0.7388904026309994,
+      "dev_minus_fit_mse": -0.03171330315102039,
+      "dev_to_fit_mse_ratio": 0.9588461580017484,
+      "layer_dev_minus_fit_mse": [
+        -0.07833779576010658,
+        -0.030442332434743702,
+        -0.01272513250082452,
+        -0.005347951908406756
+      ]
+    },
+    {
+      "dataset": "IEMOCAP",
+      "model": "best_epoch8",
+      "fit_mse": 0.02825136727219531,
+      "inner_dev_mse": 0.042795572903233076,
+      "dev_minus_fit_mse": 0.014544205631037765,
+      "dev_to_fit_mse_ratio": 1.5148142208802762,
+      "layer_dev_minus_fit_mse": [
+        0.03749297258100444,
+        0.014770941188447642,
+        0.004623544546340109,
+        0.0012893642083588522
+      ]
+    }
+  ],
+  "source_inputs_unchanged": true,
+  "completed_utc": "2026-11-18T17:23:46.068051+00:00",
+  "old_best_inner_dev_mse": 0.0427955728079771,
+  "warning": "FP32 eval Fit loss is descriptive; stochastic train-mode AMP logs are not directly comparable."
+}

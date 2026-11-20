@@ -1,0 +1,133 @@
+{
+  "started_at": "2026-11-18T17:24:51.020323+00:00",
+  "supervisor_pid": 3972576,
+  "status": "COMPLETED",
+  "phases": {
+    "smoke": {
+      "IEMOCAP": {
+        "pid": 3972578,
+        "command": [
+          "/LOCAL_HOME/miniconda3/envs/TEXT_repro/bin/python",
+          "/LOCAL/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/diagnostics/20261118T171911Z/scripts/small_sample_overfit.py",
+          "--dataset",
+          "IEMOCAP",
+          "--data",
+          "/LOCAL/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/local_only/IEMOCAP/train_prepared.pt",
+          "--pretrained",
+          "/LOCAL_HOME/.cache/huggingface/hub/models--roberta-large/snapshots/722cf37b1afa9454edce342e7895e588b6ff1d59",
+          "--output",
+          "/LOCAL/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/diagnostics/20261118T171911Z/local_only/overfit_smoke/IEMOCAP",
+          "--seed",
+          "1475",
+          "--steps",
+          "2",
+          "--count",
+          "128",
+          "--micro-batch-size",
+          "4",
+          "--accumulation",
+          "4"
+        ],
+        "gpu": "0",
+        "log": "/LOCAL/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/diagnostics/20261118T171911Z/logs/overfit_IEMOCAP_smoke.log",
+        "status": "COMPLETED",
+        "exit_code": 0,
+        "finished_at": "2026-11-18T17:25:05.037980+00:00"
+      },
+      "MELD": {
+        "pid": 3972672,
+        "command": [
+          "/LOCAL_HOME/miniconda3/envs/TEXT_repro/bin/python",
+          "/LOCAL/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/diagnostics/20261118T171911Z/scripts/small_sample_overfit.py",
+          "--dataset",
+          "MELD",
+          "--data",
+          "/LOCAL/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/local_only/MELD/train_prepared.pt",
+          "--pretrained",
+          "/LOCAL_HOME/.cache/huggingface/hub/models--roberta-large/snapshots/722cf37b1afa9454edce342e7895e588b6ff1d59",
+          "--output",
+          "/LOCAL/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/diagnostics/20261118T171911Z/local_only/overfit_smoke/MELD",
+          "--seed",
+          "67137",
+          "--steps",
+          "2",
+          "--count",
+          "128",
+          "--micro-batch-size",
+          "4",
+          "--accumulation",
+          "4"
+        ],
+        "gpu": "2",
+        "log": "/LOCAL/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/diagnostics/20261118T171911Z/logs/overfit_MELD_smoke.log",
+        "status": "COMPLETED",
+        "exit_code": 0,
+        "finished_at": "2026-11-18T17:25:05.039175+00:00"
+      }
+    },
+    "formal": {
+      "IEMOCAP": {
+        "pid": 3973070,
+        "command": [
+          "/LOCAL_HOME/miniconda3/envs/TEXT_repro/bin/python",
+          "/LOCAL/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/diagnostics/20261118T171911Z/scripts/small_sample_overfit.py",
+          "--dataset",
+          "IEMOCAP",
+          "--data",
+          "/LOCAL/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/local_only/IEMOCAP/train_prepared.pt",
+          "--pretrained",
+          "/LOCAL_HOME/.cache/huggingface/hub/models--roberta-large/snapshots/722cf37b1afa9454edce342e7895e588b6ff1d59",
+          "--output",
+          "/LOCAL/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/diagnostics/20261118T171911Z/local_only/overfit/IEMOCAP",
+          "--seed",
+          "1475",
+          "--steps",
+          "500",
+          "--count",
+          "128",
+          "--micro-batch-size",
+          "4",
+          "--accumulation",
+          "4"
+        ],
+        "gpu": "0",
+        "log": "/LOCAL/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/diagnostics/20261118T171911Z/logs/overfit_IEMOCAP_formal.log",
+        "status": "COMPLETED",
+        "exit_code": 0,
+        "finished_at": "2026-11-18T17:30:19.369844+00:00"
+      },
+      "MELD": {
+        "pid": 3973173,
+        "command": [
+          "/LOCAL_HOME/miniconda3/envs/TEXT_repro/bin/python",
+          "/LOCAL/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/diagnostics/20261118T171911Z/scripts/small_sample_overfit.py",
+          "--dataset",
+          "MELD",
+          "--data",
+          "/LOCAL/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/local_only/MELD/train_prepared.pt",
+          "--pretrained",
+          "/LOCAL_HOME/.cache/huggingface/hub/models--roberta-large/snapshots/722cf37b1afa9454edce342e7895e588b6ff1d59",
+          "--output",
+          "/LOCAL/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/diagnostics/20261118T171911Z/local_only/overfit/MELD",
+          "--seed",
+          "67137",
+          "--steps",
+          "500",
+          "--count",
+          "128",
+          "--micro-batch-size",
+          "4",
+          "--accumulation",
+          "4"
+        ],
+        "gpu": "2",
+        "log": "/LOCAL/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/diagnostics/20261118T171911Z/logs/overfit_MELD_formal.log",
+        "status": "COMPLETED",
+        "exit_code": 0,
+        "finished_at": "2026-11-18T17:30:19.371121+00:00"
+      }
+    }
+  },
+  "phase": "formal",
+  "finished_at": "2026-11-18T17:30:19.379419+00:00"
+}

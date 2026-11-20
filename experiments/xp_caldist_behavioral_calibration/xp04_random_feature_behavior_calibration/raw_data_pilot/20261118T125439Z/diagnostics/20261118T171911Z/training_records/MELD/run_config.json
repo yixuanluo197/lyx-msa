@@ -1,0 +1,62 @@
+{
+  "dataset": "MELD",
+  "data": "/LOCAL/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/local_only/MELD/train_prepared.pt",
+  "pretrained": "/LOCAL_HOME/.cache/huggingface/hub/models--roberta-large/snapshots/722cf37b1afa9454edce342e7895e588b6ff1d59",
+  "output": "/LOCAL/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/diagnostics/20261118T171911Z/local_only/overfit/MELD",
+  "seed": 67137,
+  "count": 128,
+  "steps": 500,
+  "micro_batch_size": 4,
+  "accumulation": 4,
+  "threads": 2,
+  "prepared_sha256": "d4bccdf9b877bf16bfe3ce3dc4d8d42f143a67862c6d1da7fd63c1f025ff634c",
+  "public_weight_sha256": "047c85f0b96269cd62e6f732644f067004eebd95af5b5d35965ae2528f13bf38",
+  "script_sha256": "617ee874d859564c6a9f9ff90f056bca966cdfe2b6f8bf7f49d52926393ad2af",
+  "hostname": "LOCAL_HOST",
+  "visible_gpu": "2",
+  "gpu_name": "NVIDIA TITAN Xp",
+  "torch_version": "2.2.0+cu118",
+  "precision": "FP32 parameters, activations, loss, AdamW; no AMP/TF32",
+  "dropout": {
+    "hidden": 0.0,
+    "attention": 0.0
+  },
+  "weight_decay": 0.0,
+  "learning_rate": 1e-05,
+  "scheduler": null,
+  "gradient_clip": 1.0,
+  "effective_batch_size": 16,
+  "layer_order": [
+    -1,
+    -2,
+    -3,
+    -4
+  ],
+  "encoder_parameters": 354310144,
+  "trainable_parameters": 354310144,
+  "input_split": "effective Train Fit only",
+  "target_normalization": null,
+  "initial_loading_info": {
+    "missing_keys": [],
+    "unexpected_keys": [
+      "lm_head.bias",
+      "lm_head.dense.bias",
+      "lm_head.dense.weight",
+      "lm_head.layer_norm.bias",
+      "lm_head.layer_norm.weight"
+    ],
+    "mismatched_keys": [],
+    "error_msgs": []
+  },
+  "evaluation_steps": [
+    0,
+    25,
+    50,
+    100,
+    200,
+    300,
+    400,
+    500
+  ],
+  "capacity_test_changes": "dropout and weight decay removed; no hyperparameter search"
+}

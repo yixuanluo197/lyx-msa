@@ -1,0 +1,468 @@
+{
+  "source_run": "20261118T125439Z/diagnostics/20261118T171911Z",
+  "source_commit": "13389ee89abe5f105a4c194659b2c5235a30bcc8",
+  "created_at": "2026-11-20T02:30:58.778160+00:00",
+  "files": [
+    {
+      "file": "DIAGNOSTIC_SUMMARY.md",
+      "local_source": "DIAGNOSTIC_SUMMARY.md",
+      "local_source_sha256": "7e904adb7ea486ea355bc54d0fb481d1a13a6e19758f81ccd01e1478a8c96f78",
+      "public_sha256": "1fc3a345605b470e98d18a518a9f021933e824668173a51292ba292e16ea874a",
+      "bytes": 6613,
+      "transformation": "local_identity_redaction"
+    },
+    {
+      "file": "SMALL_SAMPLE_OVERFIT.md",
+      "local_source": "SMALL_SAMPLE_OVERFIT.md",
+      "local_source_sha256": "190ece7e54c46ee8ca6357c795d9a6dda9ad4bbc444c5b81dd98dc3ee5c1261c",
+      "public_sha256": "54fcd75dc7de56e5b8a6dd7129ea353426b5cccf11e51cfcf5125078ae40e8b5",
+      "bytes": 5606,
+      "transformation": "local_identity_redaction"
+    },
+    {
+      "file": "FRAMEWORK_PARITY.md",
+      "local_source": "FRAMEWORK_PARITY.md",
+      "local_source_sha256": "22b700ed3bfff39f4b7ba2865f344c130cd661f87f92cb839980369ff158741f",
+      "public_sha256": "a6737540f575b338a4ff46b39a0c3b0bd4a849fe9686466c46e16725d6404a21",
+      "bytes": 5661,
+      "transformation": "local_identity_redaction"
+    },
+    {
+      "file": "TRAIN_DEV_GAP.md",
+      "local_source": "TRAIN_DEV_GAP.md",
+      "local_source_sha256": "70f45e5eb8ca912a76a79b138fd531f96221de5804b03d869609e8579ba0161d",
+      "public_sha256": "70f45e5eb8ca912a76a79b138fd531f96221de5804b03d869609e8579ba0161d",
+      "bytes": 6020,
+      "transformation": "identity"
+    },
+    {
+      "file": "verification.json",
+      "local_source": "verification.json",
+      "local_source_sha256": "9aec5082a93e0a8cbd2c04bdcb41d4c2f3c4a0628368fc739baa0f636958278c",
+      "public_sha256": "a79c92a7e5a49da4493dde7bfaea5a1752885b0ac03d7ea308f5e60942a4ae11",
+      "bytes": 128649,
+      "transformation": "local_identity_redaction"
+    },
+    {
+      "file": "scripts/evaluate_train_dev_gap.py",
+      "local_source": "scripts/evaluate_train_dev_gap.py",
+      "local_source_sha256": "57dc6169a836500344b973949c8c067797f7c5202dac77bb3dc5197f180cd586",
+      "public_sha256": "57dc6169a836500344b973949c8c067797f7c5202dac77bb3dc5197f180cd586",
+      "bytes": 9190,
+      "transformation": "identity"
+    },
+    {
+      "file": "scripts/framework_parity.py",
+      "local_source": "scripts/framework_parity.py",
+      "local_source_sha256": "d99871c57add4839e3e01581f4c4caedcf61c4fec446c2dc126f25eb5b7f84fb",
+      "public_sha256": "d99871c57add4839e3e01581f4c4caedcf61c4fec446c2dc126f25eb5b7f84fb",
+      "bytes": 12588,
+      "transformation": "identity"
+    },
+    {
+      "file": "scripts/plot_diagnostics.py",
+      "local_source": "scripts/plot_diagnostics.py",
+      "local_source_sha256": "611e2f8e221d77ae10fce199b35549bb72de548d667ed591b91f0038b502b7fc",
+      "public_sha256": "611e2f8e221d77ae10fce199b35549bb72de548d667ed591b91f0038b502b7fc",
+      "bytes": 2622,
+      "transformation": "identity"
+    },
+    {
+      "file": "scripts/run_overfit_jobs.py",
+      "local_source": "scripts/run_overfit_jobs.py",
+      "local_source_sha256": "9d654b9b19fd5e779abc50a97fd4c8ce6c6d6675ec0fd40ed1c45628f99c7d89",
+      "public_sha256": "a76624e7697725cf3d5e2cea432dd3dd9985b79dbd3396b5713c8337d53092b4",
+      "bytes": 2500,
+      "transformation": "local_identity_redaction"
+    },
+    {
+      "file": "scripts/small_sample_overfit.py",
+      "local_source": "scripts/small_sample_overfit.py",
+      "local_source_sha256": "617ee874d859564c6a9f9ff90f056bca966cdfe2b6f8bf7f49d52926393ad2af",
+      "public_sha256": "617ee874d859564c6a9f9ff90f056bca966cdfe2b6f8bf7f49d52926393ad2af",
+      "bytes": 15457,
+      "transformation": "identity"
+    },
+    {
+      "file": "scripts/verify_diagnostic_delivery.py",
+      "local_source": "scripts/verify_diagnostic_delivery.py",
+      "local_source_sha256": "3aab9f5ee380d8aedd6733d3195b4a1174851c6e77cc1dc2fbcbdac2e51cbec9",
+      "public_sha256": "3aab9f5ee380d8aedd6733d3195b4a1174851c6e77cc1dc2fbcbdac2e51cbec9",
+      "bytes": 17078,
+      "transformation": "identity"
+    },
+    {
+      "file": "configs/DIAGNOSTIC_PROTOCOL.json",
+      "local_source": "configs/DIAGNOSTIC_PROTOCOL.json",
+      "local_source_sha256": "b5ef20818bb2c24cc43cbe4d02e1e417b88fa7bfeceeb7446866e3409ed7b6fe",
+      "public_sha256": "af84751dfd70da1cfb16b7d894a081e331974ee2fd4cbb5f4a698256d0776bd5",
+      "bytes": 3084,
+      "transformation": "local_identity_redaction"
+    },
+    {
+      "file": "results/figures/small_sample_overfit.pdf",
+      "local_source": "results/figures/small_sample_overfit.pdf",
+      "local_source_sha256": "fcb0a0da4fa19a3afc20279877f9b69dfe14a1b219a169be99e37385a9db93e7",
+      "public_sha256": "fcb0a0da4fa19a3afc20279877f9b69dfe14a1b219a169be99e37385a9db93e7",
+      "bytes": 24043,
+      "transformation": "identity"
+    },
+    {
+      "file": "results/figures/small_sample_overfit.png",
+      "local_source": "results/figures/small_sample_overfit.png",
+      "local_source_sha256": "e444edc5f272ba8c609f6bd806330c358211ebdceddf775b28e0adb81dd316df",
+      "public_sha256": "e444edc5f272ba8c609f6bd806330c358211ebdceddf775b28e0adb81dd316df",
+      "bytes": 182610,
+      "transformation": "identity"
+    },
+    {
+      "file": "results/figures/train_dev_gap.pdf",
+      "local_source": "results/figures/train_dev_gap.pdf",
+      "local_source_sha256": "f5543aaee2c4d06a9e10a87607bd6824bc300de99561571cda8da4d653047d9b",
+      "public_sha256": "f5543aaee2c4d06a9e10a87607bd6824bc300de99561571cda8da4d653047d9b",
+      "bytes": 15394,
+      "transformation": "identity"
+    },
+    {
+      "file": "results/figures/train_dev_gap.png",
+      "local_source": "results/figures/train_dev_gap.png",
+      "local_source_sha256": "4fd4309b98b318614600f358bfd9c761c19a99e0b8817057e5cdc91352db28ca",
+      "public_sha256": "4fd4309b98b318614600f358bfd9c761c19a99e0b8817057e5cdc91352db28ca",
+      "bytes": 31862,
+      "transformation": "identity"
+    },
+    {
+      "file": "results/framework_metrics.csv",
+      "local_source": "results/framework_metrics.csv",
+      "local_source_sha256": "db262856870292dfaba46185da7e5fbc382341023ec8b21ffb83df12ff904193",
+      "public_sha256": "5cfb5409727540c0f49864756624acf32e72b80d8c73610290b5df5534e00151",
+      "bytes": 1039,
+      "transformation": "local_identity_redaction"
+    },
+    {
+      "file": "results/framework_summary.json",
+      "local_source": "results/framework_summary.json",
+      "local_source_sha256": "34e63caa84ff546ba11be7989676d0a1833a844c42d9efd3c8f96f2390a2c880",
+      "public_sha256": "423179f9ce8a88d43c27b6ce40c271a5ba3aef9f77d515c56ebcf17df2f7b2b2",
+      "bytes": 3622,
+      "transformation": "local_identity_redaction"
+    },
+    {
+      "file": "results/framework_verification.json",
+      "local_source": "results/framework_verification.json",
+      "local_source_sha256": "606bd4d5341eb9324cee1ca807d48799cc3799185cdd2b33fb59e2cdcfb2d773",
+      "public_sha256": "606bd4d5341eb9324cee1ca807d48799cc3799185cdd2b33fb59e2cdcfb2d773",
+      "bytes": 1601,
+      "transformation": "identity"
+    },
+    {
+      "file": "results/overfit_curve.csv",
+      "local_source": "results/overfit_curve.csv",
+      "local_source_sha256": "b1116caad57bb3c36b42cd18ef39e6bbce24fb3a67843853ee8974d9f948a5b3",
+      "public_sha256": "f13a62a6bfbc2b4a6f220511fc075d19da1c1588a0d998e25ab723fd4a1fa41a",
+      "bytes": 2519,
+      "transformation": "local_identity_redaction"
+    },
+    {
+      "file": "results/overfit_execution.json",
+      "local_source": "results/overfit_execution.json",
+      "local_source_sha256": "34a167eaced6bd0b81c987d84a3521f1f9aa7f4c04c8210d2e81ae3ba16b6b72",
+      "public_sha256": "3a5f2f68c69685ece8b0908064f11d231dfe99fdf36297a5ea1c83d0fd3fdbcf",
+      "bytes": 6318,
+      "transformation": "local_identity_redaction"
+    },
+    {
+      "file": "results/overfit_summary.csv",
+      "local_source": "results/overfit_summary.csv",
+      "local_source_sha256": "dcc064a018cc0b225211002f66da5533ae7e150675c994af527a7b8dbe2ab4ed",
+      "public_sha256": "24459b346f3a604be2a85ac79b19b7db5ea09d017973165cdde1dda5be19e77d",
+      "bytes": 1792,
+      "transformation": "local_identity_redaction"
+    },
+    {
+      "file": "results/train_dev_gap_IEMOCAP.csv",
+      "local_source": "results/train_dev_gap_IEMOCAP.csv",
+      "local_source_sha256": "0c9923ca54bda526be13a6e0e745e8bbe84b1d0f139304448c37f08e7ab46895",
+      "public_sha256": "52c86ec4b964adbfc9f4d5ac16de73eef0e70cda50ba09c08ad74fcb06d1f712",
+      "bytes": 840,
+      "transformation": "local_identity_redaction"
+    },
+    {
+      "file": "results/train_dev_gap_IEMOCAP.json",
+      "local_source": "results/train_dev_gap_IEMOCAP.json",
+      "local_source_sha256": "bf8193924b4637f7442d29e28294fec76d918ec77e98ed4000c1f735669af831",
+      "public_sha256": "d7916f0489317682945ab962225c7b1e6716a74f134991cf82ca871049bb34e8",
+      "bytes": 6053,
+      "transformation": "local_identity_redaction"
+    },
+    {
+      "file": "results/train_dev_gap_MELD.csv",
+      "local_source": "results/train_dev_gap_MELD.csv",
+      "local_source_sha256": "1fbb318254359100303e129ae1947f13adae5d276922fba5c0662a6a5b6dc725",
+      "public_sha256": "21da857fe3d3b12d25a0f15ae23751340d9ae79729e79624fdb82ec33d04cc31",
+      "bytes": 823,
+      "transformation": "local_identity_redaction"
+    },
+    {
+      "file": "results/train_dev_gap_MELD.json",
+      "local_source": "results/train_dev_gap_MELD.json",
+      "local_source_sha256": "05a57b98bc109d853ea685a09aecb19244d8649a58d2b79ea2d1e522cf3b09ba",
+      "public_sha256": "3ea97bbbae8e2268e49289414b5345d1fc7edcdd9dbf8cc0dbb90c524e3a6ec7",
+      "bytes": 6016,
+      "transformation": "local_identity_redaction"
+    },
+    {
+      "file": "results/train_dev_gap_all.csv",
+      "local_source": "results/train_dev_gap_all.csv",
+      "local_source_sha256": "0076a17ffae993ea9f679ac99f2221747dffab9ca732be43380cb8363c6822e1",
+      "public_sha256": "997541aeed5a61d0a65476b4ea407e5c1ade36aabf781af36ea7472472da6aa6",
+      "bytes": 1522,
+      "transformation": "local_identity_redaction"
+    },
+    {
+      "file": "results/train_dev_gap_comparison.csv",
+      "local_source": "results/train_dev_gap_comparison.csv",
+      "local_source_sha256": "104985ad21a433e558e666c220194ef0db215894bbcbb9d5d7e982cfaa866aa1",
+      "public_sha256": "a89091111f6d52ade76ea87190c6bc53ae436832cb7e53dd6b7c96723a518423",
+      "bytes": 472,
+      "transformation": "local_identity_redaction"
+    },
+    {
+      "file": "logs/framework_parity.log",
+      "local_source": "logs/framework_parity.log",
+      "local_source_sha256": "aecf93387ebfe48cc067eb45218eb7da7a020926a35ddb00bc917c365edbfa83",
+      "public_sha256": "aa7cf759457dc87a407ae712fe45a5d7c601573820f1e5939f8b2d3bbb226862",
+      "bytes": 2375,
+      "transformation": "local_identity_redaction"
+    },
+    {
+      "file": "logs/overfit_IEMOCAP_formal.log",
+      "local_source": "logs/overfit_IEMOCAP_formal.log",
+      "local_source_sha256": "91499a7f20c1a0ab66e85ba34230862d2c3553613d0ad8e378c982694b538166",
+      "public_sha256": "756ed3c8aee393a6007cda503980be6b4cb36a4dc56608f0e329400eff256b9d",
+      "bytes": 11654,
+      "transformation": "local_identity_redaction"
+    },
+    {
+      "file": "logs/overfit_IEMOCAP_smoke.log",
+      "local_source": "logs/overfit_IEMOCAP_smoke.log",
+      "local_source_sha256": "6642116bf264600ce33e8bd68231bf6b075c219722735e16ef8dee50c79adae4",
+      "public_sha256": "44533b22b93f071412869532d649373d7c0dc542138f44152f4a883db57eceff",
+      "bytes": 1228,
+      "transformation": "local_identity_redaction"
+    },
+    {
+      "file": "logs/overfit_MELD_formal.log",
+      "local_source": "logs/overfit_MELD_formal.log",
+      "local_source_sha256": "f9bfa7e8017500a02c4d8bbcd8ce2f35a016aaca37e8dbe0e093fc7407519793",
+      "public_sha256": "fc72c5137e5e82f459c1ea9ebcdecb4d479b8bbaa02d1d6ffa5aeae85b14140f",
+      "bytes": 11701,
+      "transformation": "local_identity_redaction"
+    },
+    {
+      "file": "logs/overfit_MELD_smoke.log",
+      "local_source": "logs/overfit_MELD_smoke.log",
+      "local_source_sha256": "6bcf58eea3c7a30e4e0fab05ea0198677cb9f6f2327b51929e0ab4cc662fd329",
+      "public_sha256": "d71727d19f03a65fde2ac7059d63e77a4c82dab932b746b0b00b756381595951",
+      "bytes": 1226,
+      "transformation": "local_identity_redaction"
+    },
+    {
+      "file": "logs/train_dev_gap_IEMOCAP.log",
+      "local_source": "logs/train_dev_gap_IEMOCAP.log",
+      "local_source_sha256": "e875be3a103d0d93792477f4e424be3552ab746ff99c3630701a5427f6e9387b",
+      "public_sha256": "ad3a945e0d0faa9c022f9520285da34ce8e3679b1978a0f7d68c844f1a1631a4",
+      "bytes": 2777,
+      "transformation": "local_identity_redaction"
+    },
+    {
+      "file": "logs/train_dev_gap_MELD.log",
+      "local_source": "logs/train_dev_gap_MELD.log",
+      "local_source_sha256": "efbf327f19cee5291481388b46e99240d61343fa10eacef789d7bbf26c35bb7a",
+      "public_sha256": "1ec38256c6fe642da2e24dfa407dd7acf1f24d6e0822f170bde433e193e1082b",
+      "bytes": 2750,
+      "transformation": "local_identity_redaction"
+    },
+    {
+      "file": "provenance/environment.txt",
+      "local_source": "provenance/environment.txt",
+      "local_source_sha256": "e9c2a4918ed1dd1a4fee963268d1ce8c1b7b7c701fbc6af42f2cdd8e9a8f3513",
+      "public_sha256": "bef92478e449412d838da686bd2bb5717f1df1018433c98c6680f6cd5ea91892",
+      "bytes": 1028,
+      "transformation": "local_identity_redaction"
+    },
+    {
+      "file": "provenance/framework_protocol.json",
+      "local_source": "provenance/framework_protocol.json",
+      "local_source_sha256": "2e789075030200a1baf06035237755fe73d3facf8bb2c326484e891d2513c086",
+      "public_sha256": "2839988b28dcd318de057f9827fa417ace963b32b159fe3f7fb6650536ff8a81",
+      "bytes": 2981,
+      "transformation": "local_identity_redaction"
+    },
+    {
+      "file": "provenance/framework_runtime.json",
+      "local_source": "provenance/framework_runtime.json",
+      "local_source_sha256": "6cbed8e41b15f7a5cf93f9a9d0e7144d262811271272fa438aed1f1271e0cde9",
+      "public_sha256": "b9993275528efffb3a8ed27ce9e94ae13f620fd18e4969f4b2f46c526487a00d",
+      "bytes": 821,
+      "transformation": "local_identity_redaction"
+    },
+    {
+      "file": "provenance/framework_weight_mapping.json",
+      "local_source": "provenance/framework_weight_mapping.json",
+      "local_source_sha256": "ed7b73627cbf738f93b3a9fb078f72e93cd6a8589e55e41398ca6ef010c28bb2",
+      "public_sha256": "ed7b73627cbf738f93b3a9fb078f72e93cd6a8589e55e41398ca6ef010c28bb2",
+      "bytes": 134383,
+      "transformation": "identity"
+    },
+    {
+      "file": "provenance/git_head.txt",
+      "local_source": "provenance/git_head.txt",
+      "local_source_sha256": "1053144975558b9cdd9e16afeb839d2f5743fce1ebb728e7ca5430bc258c045b",
+      "public_sha256": "1053144975558b9cdd9e16afeb839d2f5743fce1ebb728e7ca5430bc258c045b",
+      "bytes": 41,
+      "transformation": "identity"
+    },
+    {
+      "file": "provenance/gpu_inventory.csv",
+      "local_source": "provenance/gpu_inventory.csv",
+      "local_source_sha256": "e2a64507b9bb84b8f22139f966771f1177891c3419195c2069aeaed190839ec4",
+      "public_sha256": "62f1c61fcc8e85486f73b6c72b057a3592853e48782cd055e13284050499cb44",
+      "bytes": 302,
+      "transformation": "local_identity_redaction"
+    },
+    {
+      "file": "provenance/independent_diagnostic_review.json",
+      "local_source": "provenance/independent_diagnostic_review.json",
+      "local_source_sha256": "9aec5082a93e0a8cbd2c04bdcb41d4c2f3c4a0628368fc739baa0f636958278c",
+      "public_sha256": "a79c92a7e5a49da4493dde7bfaea5a1752885b0ac03d7ea308f5e60942a4ae11",
+      "bytes": 128649,
+      "transformation": "local_identity_redaction"
+    },
+    {
+      "file": "provenance/input_hashes_before.json",
+      "local_source": "provenance/input_hashes_before.json",
+      "local_source_sha256": "2e1309c206bf82e7b1768b9da07c900403a47b3d086d9bee53574a5e0826d476",
+      "public_sha256": "1f31c0eabd54890a86a6437afc9d919e8464a6802ce826b67de3db928f657126",
+      "bytes": 7395,
+      "transformation": "local_identity_redaction"
+    },
+    {
+      "file": "training_records/IEMOCAP/completion.json",
+      "local_source": "local_only/overfit/IEMOCAP/completion.json",
+      "local_source_sha256": "ed075c45ea122b5160209c8f8c7ea1ff15d632783c1f8ef2675578e7e99b0ce7",
+      "public_sha256": "ed075c45ea122b5160209c8f8c7ea1ff15d632783c1f8ef2675578e7e99b0ce7",
+      "bytes": 795,
+      "transformation": "local_identity_redaction"
+    },
+    {
+      "file": "training_records/IEMOCAP/evaluation_curve.csv",
+      "local_source": "local_only/overfit/IEMOCAP/evaluation_curve.csv",
+      "local_source_sha256": "ff9867cd258eb44a6459d61a691fb0400055084d3801118aa6826fe93acf8f2e",
+      "public_sha256": "932f23caecc75b4cee0c754708386f8befdf204dd835d310d5224cc6f64073c2",
+      "bytes": 1249,
+      "transformation": "local_identity_redaction"
+    },
+    {
+      "file": "training_records/IEMOCAP/evaluations.json",
+      "local_source": "local_only/overfit/IEMOCAP/evaluations.json",
+      "local_source_sha256": "8b129eb0e295a35faebd8ba87300729f1ffe8ec920496c651ee24f05f6668af6",
+      "public_sha256": "8b129eb0e295a35faebd8ba87300729f1ffe8ec920496c651ee24f05f6668af6",
+      "bytes": 2371,
+      "transformation": "local_identity_redaction"
+    },
+    {
+      "file": "training_records/IEMOCAP/gradient_update_verification.json",
+      "local_source": "local_only/overfit/IEMOCAP/gradient_update_verification.json",
+      "local_source_sha256": "71f85cab2d4b6872857d22c9f06d6cbea3bf9b14dff5546e11872dc108949190",
+      "public_sha256": "71f85cab2d4b6872857d22c9f06d6cbea3bf9b14dff5546e11872dc108949190",
+      "bytes": 257,
+      "transformation": "local_identity_redaction"
+    },
+    {
+      "file": "training_records/IEMOCAP/run_config.json",
+      "local_source": "local_only/overfit/IEMOCAP/run_config.json",
+      "local_source_sha256": "ea184ac6e5ce69110f616c06e4b42fabfaad7450501034030686c17bbe9a7874",
+      "public_sha256": "1a3da182c134ec7f12b8a1a4dbbecb8b8f2befd20bf40aac247993ddce973709",
+      "bytes": 1970,
+      "transformation": "local_identity_redaction"
+    },
+    {
+      "file": "training_records/IEMOCAP/optimizer_steps.csv",
+      "local_source": "local_only/overfit/IEMOCAP/optimizer_steps.csv",
+      "local_source_sha256": "e2d2ca1d8ef0c888ee5cb7a303e57b5a9aa120283e1dcad649a367247e318339",
+      "public_sha256": "e49739fa82a5a98f90ba0226bab4dbc0530365dbfb612dba8ca887f54cf197bd",
+      "bytes": 40003,
+      "transformation": "local_identity_redaction"
+    },
+    {
+      "file": "training_records/MELD/completion.json",
+      "local_source": "local_only/overfit/MELD/completion.json",
+      "local_source_sha256": "8ed7d14a9ce6c37135f5a2a3c8869290d29594dc43381899da02bb60d5faf75d",
+      "public_sha256": "8ed7d14a9ce6c37135f5a2a3c8869290d29594dc43381899da02bb60d5faf75d",
+      "bytes": 798,
+      "transformation": "local_identity_redaction"
+    },
+    {
+      "file": "training_records/MELD/evaluation_curve.csv",
+      "local_source": "local_only/overfit/MELD/evaluation_curve.csv",
+      "local_source_sha256": "08ae4d206cb9b42a9d36cd5ae96bd970d05540f294c8908a496f2cadb1af838b",
+      "public_sha256": "24782f475fa6d7e8c0217fce6e4b1d62f8876c1f6fb4c7a229c61707f3d13d67",
+      "bytes": 1247,
+      "transformation": "local_identity_redaction"
+    },
+    {
+      "file": "training_records/MELD/evaluations.json",
+      "local_source": "local_only/overfit/MELD/evaluations.json",
+      "local_source_sha256": "ed1e5656ee803450628ec1192dab8dfebefaeb81160cea2d29f40d9d526b6389",
+      "public_sha256": "ed1e5656ee803450628ec1192dab8dfebefaeb81160cea2d29f40d9d526b6389",
+      "bytes": 2369,
+      "transformation": "local_identity_redaction"
+    },
+    {
+      "file": "training_records/MELD/gradient_update_verification.json",
+      "local_source": "local_only/overfit/MELD/gradient_update_verification.json",
+      "local_source_sha256": "5498db7b542cb196e4ea0ccbcf427343f2c4858a9d43e5e9d286bf7564d520b7",
+      "public_sha256": "5498db7b542cb196e4ea0ccbcf427343f2c4858a9d43e5e9d286bf7564d520b7",
+      "bytes": 257,
+      "transformation": "local_identity_redaction"
+    },
+    {
+      "file": "training_records/MELD/run_config.json",
+      "local_source": "local_only/overfit/MELD/run_config.json",
+      "local_source_sha256": "bd106d4e96874ff255e0d8db1cc2a2601718222dc01d633f9ade9a34b4e1c6f2",
+      "public_sha256": "712a8fac7882b14dedf90b4770303d46caf94cd5f9a782375ac65bad2a3ec5a3",
+      "bytes": 1962,
+      "transformation": "local_identity_redaction"
+    },
+    {
+      "file": "training_records/MELD/optimizer_steps.csv",
+      "local_source": "local_only/overfit/MELD/optimizer_steps.csv",
+      "local_source_sha256": "1ae03d50bdfee829c1a36c104d9cfc8b1007c6c14ea5500198c816c02e3e35c8",
+      "public_sha256": "466a5826f92a91a57a12261e5e2dbe1461703cd5b5726c5898ce6e60a71d1745",
+      "bytes": 40291,
+      "transformation": "local_identity_redaction"
+    }
+  ],
+  "generated_files": [
+    {
+      "file": "README.md",
+      "public_sha256": "d04f64849f6e60ee3bd96636d70bee1d6f7b4a2f1d2a168ad41d778ea948e3d2",
+      "bytes": 2193
+    },
+    {
+      "file": "publication_tools/verify_publication.py",
+      "public_sha256": "d303f12c720b56d455c49d557e62dc1ae0dce0f7c54baab6718f12615daeb756",
+      "bytes": 6196
+    }
+  ],
+  "excluded": [
+    "models and weights",
+    "original and prepared data",
+    "raw text and token IDs",
+    "per-utterance sample manifests",
+    "paired framework outputs and vendor source",
+    "empty logs and local git status"
+  ],
+  "scientific_values_changed": false
+}
