@@ -1,0 +1,12 @@
+{
+  "status": "DECIDED",
+  "rule": "continue iff (mse1500-mse2000)/mse1500 > 0.05",
+  "threshold": 0.05,
+  "rule_frozen_before_training": true,
+  "smoke": false,
+  "mse1500": 0.0008273972946378026,
+  "mse2000": 0.0011599934939202949,
+  "relative_decrease": -0.40197883343102786,
+  "continue_to_5000": false,
+  "final_authorized_global_step": 2000
+}

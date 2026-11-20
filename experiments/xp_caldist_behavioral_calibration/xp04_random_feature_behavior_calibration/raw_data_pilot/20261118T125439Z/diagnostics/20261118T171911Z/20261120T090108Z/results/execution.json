@@ -1,0 +1,91 @@
+{
+  "status": "COMPLETED",
+  "started_at": "2026-11-20T09:06:23.172162+00:00",
+  "supervisor_pid": 3778241,
+  "phases": {
+    "smoke": {
+      "IEMOCAP": {
+        "pid": 3778245,
+        "command": [
+          "/LOCAL_HOME/miniconda3/envs/TEXT_repro/bin/python",
+          "/LOCAL/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/diagnostics/20261118T171911Z/20261120T090108Z/scripts/extend_overfit.py",
+          "--dataset",
+          "IEMOCAP",
+          "--old-diagnostic",
+          "/LOCAL/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/diagnostics/20261118T171911Z",
+          "--output",
+          "/LOCAL/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/diagnostics/20261118T171911Z/20261120T090108Z/local_only/smoke/IEMOCAP",
+          "--smoke"
+        ],
+        "gpu": "0",
+        "gpu_uuid": "GPU-REDACTED",
+        "log": "/LOCAL/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/diagnostics/20261118T171911Z/20261120T090108Z/logs/smoke_IEMOCAP.log",
+        "status": "COMPLETED",
+        "exit_code": 0,
+        "finished_at": "2026-11-20T09:06:42.250725+00:00"
+      },
+      "MELD": {
+        "pid": 3778309,
+        "command": [
+          "/LOCAL_HOME/miniconda3/envs/TEXT_repro/bin/python",
+          "/LOCAL/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/diagnostics/20261118T171911Z/20261120T090108Z/scripts/extend_overfit.py",
+          "--dataset",
+          "MELD",
+          "--old-diagnostic",
+          "/LOCAL/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/diagnostics/20261118T171911Z",
+          "--output",
+          "/LOCAL/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/diagnostics/20261118T171911Z/20261120T090108Z/local_only/smoke/MELD",
+          "--smoke"
+        ],
+        "gpu": "2",
+        "gpu_uuid": "GPU-REDACTED",
+        "log": "/LOCAL/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/diagnostics/20261118T171911Z/20261120T090108Z/logs/smoke_MELD.log",
+        "status": "COMPLETED",
+        "exit_code": 0,
+        "finished_at": "2026-11-20T09:06:42.251904+00:00"
+      }
+    },
+    "formal": {
+      "IEMOCAP": {
+        "pid": 3778886,
+        "command": [
+          "/LOCAL_HOME/miniconda3/envs/TEXT_repro/bin/python",
+          "/LOCAL/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/diagnostics/20261118T171911Z/20261120T090108Z/scripts/extend_overfit.py",
+          "--dataset",
+          "IEMOCAP",
+          "--old-diagnostic",
+          "/LOCAL/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/diagnostics/20261118T171911Z",
+          "--output",
+          "/LOCAL/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/diagnostics/20261118T171911Z/20261120T090108Z/local_only/formal/IEMOCAP"
+        ],
+        "gpu": "0",
+        "gpu_uuid": "GPU-REDACTED",
+        "log": "/LOCAL/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/diagnostics/20261118T171911Z/20261120T090108Z/logs/formal_IEMOCAP.log",
+        "status": "COMPLETED",
+        "exit_code": 0,
+        "finished_at": "2026-11-20T09:50:38.938768+00:00"
+      },
+      "MELD": {
+        "pid": 3778942,
+        "command": [
+          "/LOCAL_HOME/miniconda3/envs/TEXT_repro/bin/python",
+          "/LOCAL/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/diagnostics/20261118T171911Z/20261120T090108Z/scripts/extend_overfit.py",
+          "--dataset",
+          "MELD",
+          "--old-diagnostic",
+          "/LOCAL/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/diagnostics/20261118T171911Z",
+          "--output",
+          "/LOCAL/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/diagnostics/20261118T171911Z/20261120T090108Z/local_only/formal/MELD"
+        ],
+        "gpu": "2",
+        "gpu_uuid": "GPU-REDACTED",
+        "log": "/LOCAL/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/diagnostics/20261118T171911Z/20261120T090108Z/logs/formal_MELD.log",
+        "status": "COMPLETED",
+        "exit_code": 0,
+        "finished_at": "2026-11-20T09:50:39.020451+00:00"
+      }
+    }
+  },
+  "phase": "formal",
+  "finished_at": "2026-11-20T09:50:39.227723+00:00"
+}

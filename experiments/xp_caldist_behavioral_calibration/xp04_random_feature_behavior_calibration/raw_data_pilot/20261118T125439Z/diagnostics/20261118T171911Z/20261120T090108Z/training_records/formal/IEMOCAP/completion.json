@@ -1,0 +1,38 @@
+{
+  "status": "COMPLETE",
+  "global_step": 2000,
+  "new_optimizer_steps": 1500,
+  "final_layer_mse": [
+    0.002584640392101185,
+    0.0011515685898212205,
+    0.0005153419953910152,
+    0.0003884229983677585
+  ],
+  "final_mse": 0.0011599934939202949,
+  "final_layer_rmse": [
+    0.05083935869089209,
+    0.033934769629706055,
+    0.022701145244040336,
+    0.019708449923009127
+  ],
+  "elapsed_seconds": 884.7671824980062,
+  "source_model_sha256": "4cfbb347b41bee38030a7ba58ece84c30e5f4ea0322bd324e43a3d5577aa9fd0",
+  "final_model_sha256": "88681387c9e1f774497b195442bae86cc1f0c2a542533c0d811a7c6f48ba3b31",
+  "final_training_checkpoint": "stage_2000_checkpoint.pt",
+  "protocol_sha256": "156a22dc135d0e82d323e812e33d86197e2ce9187d4fac1f3c1b0c9384a7b3d3",
+  "smoke": false,
+  "decision": {
+    "status": "DECIDED",
+    "rule": "continue iff (mse1500-mse2000)/mse1500 > 0.05",
+    "threshold": 0.05,
+    "rule_frozen_before_training": true,
+    "smoke": false,
+    "mse1500": 0.0008273972946378026,
+    "mse2000": 0.0011599934939202949,
+    "relative_decrease": -0.40197883343102786,
+    "continue_to_5000": false,
+    "final_authorized_global_step": 2000
+  },
+  "official_validation_accessed": false,
+  "test_accessed": false
+}

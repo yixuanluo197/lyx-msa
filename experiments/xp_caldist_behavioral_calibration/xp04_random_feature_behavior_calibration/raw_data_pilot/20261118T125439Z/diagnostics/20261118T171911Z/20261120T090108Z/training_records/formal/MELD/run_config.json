@@ -1,0 +1,66 @@
+{
+  "protocol": {
+    "dataset": "MELD",
+    "seed": 67137,
+    "sample_count": 128,
+    "effective_batch": 16,
+    "micro_batch": 4,
+    "accumulation": 4,
+    "initial_global_step": 500,
+    "first_stage_end": 2000,
+    "maximum_global_step": 5000,
+    "first_eval_steps": [
+      500,
+      750,
+      1000,
+      1250,
+      1500,
+      1750,
+      2000
+    ],
+    "extension_eval_steps": [
+      2500,
+      3000,
+      3500,
+      4000,
+      4500,
+      5000
+    ],
+    "extension_rule": "continue iff (mse1500-mse2000)/mse1500 > 0.05",
+    "extension_threshold": 0.05,
+    "precision": "FP32; AMP/TF32 disabled",
+    "dropout": 0.0,
+    "weight_decay": 0.0,
+    "learning_rate": 1e-05,
+    "adam_betas": [
+      0.9,
+      0.999
+    ],
+    "adam_eps": 1e-08,
+    "gradient_clip": 1.0,
+    "gradient_checkpointing": "nonreentrant",
+    "loss": "mean four original-scale BOS MSE",
+    "layer_order": [
+      -1,
+      -2,
+      -3,
+      -4
+    ],
+    "smoke": false,
+    "threads": 2,
+    "initialization": "old step500 weights only; NEW AdamW state from zero; sampler RNG reset seed+10000",
+    "resume_semantics": "--resume restores THIS run stage2000 model, optimizer, RNG and sampler exactly",
+    "target_hash_anchor": "old prepared file SHA anchors target content; selected FP32 byte hashes recorded here",
+    "script_sha256": "c5a684dbe4fe60fc2c69313c27134ed918d7b695d0d1599a6db1250f7d2da783",
+    "helper_sha256": "617ee874d859564c6a9f9ff90f056bca966cdfe2b6f8bf7f49d52926393ad2af",
+    "prepared_sha256": "d4bccdf9b877bf16bfe3ce3dc4d8d42f143a67862c6d1da7fd63c1f025ff634c",
+    "source_model_sha256": "1062d3e0bdcb93fafc1d8fa915faa989905882cbcdec6a997da791800b1e762f",
+    "selected_manifest_sha256": "25d3e0945bd753becff97ac2e5991d05f37502c8b765013c94550f23ae9a45bf",
+    "selected_targets_sha256": "83419f56ce8f6371e4ec720c319642b136f25ed196ff88102a494555fa4bd057"
+  },
+  "protocol_sha256": "672fc533d0011a105749c5ed1037fe092c69ee3e4c38655f2e6a24e311836dd2",
+  "hostname": "LOCAL_HOST",
+  "gpu": "2",
+  "torch_version": "2.2.0+cu118",
+  "threads": 2
+}

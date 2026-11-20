@@ -1,0 +1,93 @@
+{
+  "created_at": "2026-11-20T09:02:22.184438+00:00",
+  "source_commit": "5957f296ea7a0c27da1e647670717efd1f19fa9a",
+  "source_diagnostic": "/LOCAL/lyx-msa/experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/diagnostics/20261118T171911Z",
+  "server": "LOCAL_HOST",
+  "scope": "two independent extensions of original fixed128 Train Fit capacity experiments only",
+  "datasets": {
+    "IEMOCAP": {
+      "seed": 1475,
+      "gpu": 0,
+      "old_mse": 0.0013196793178955962
+    },
+    "MELD": {
+      "seed": 67137,
+      "gpu": 2,
+      "old_mse": 0.0010621090172198665
+    }
+  },
+  "initialization": {
+    "old_final_student_step": 500,
+    "optimizer_state_available": false,
+    "mode": "weight continuation with newly initialized AdamW; NOT exact optimizer/sampler resume",
+    "sampler": "same fixed128 selection order; deterministic RNG reset using dataset seed+10000"
+  },
+  "training": {
+    "learning_rate": 1e-05,
+    "optimizer": "AdamW",
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "eps": 1e-08,
+    "weight_decay": 0,
+    "hidden_dropout": 0,
+    "attention_dropout": 0,
+    "precision": "FP32; AMP and TF32 disabled",
+    "microbatch": 4,
+    "accumulation": 4,
+    "effective_batch": 16,
+    "gradient_clip": 1,
+    "gradient_checkpointing": "nonreentrant",
+    "scheduler": null,
+    "loss": "original-scale average four layer BOS MSE; layer offsets[-1,-2,-3,-4]; 1024 dimensions each"
+  },
+  "selection": "exact128 indices and order in original selected_fit_manifest.csv; no new text, tokenization or targets",
+  "evaluation": {
+    "initial_step": 500,
+    "initial_mse_parity_atol": 1e-07,
+    "initial_mse_parity_rtol": 1e-05,
+    "mandatory_steps": [
+      1000,
+      1500,
+      2000
+    ],
+    "additional_fixed_steps": [
+      750,
+      1250,
+      1750
+    ],
+    "conditional_steps": [
+      2500,
+      3000,
+      3500,
+      4000,
+      4500,
+      5000
+    ],
+    "aggregation": "FP32 element squared error accumulated FP64 / (128*1024), mean four layers",
+    "feature_compatibility_necessary_condition": "each layer RMSE <= 1e-4; unchanged; not sufficient to claim original full parity or XP04 probability parity"
+  },
+  "stop_rule": {
+    "at_step": 2000,
+    "relative_decrease": "(MSE_1500 - MSE_2000)/MSE_1500",
+    "extend_to_5000_iff_strictly_greater_than": 0.05,
+    "otherwise": "stop at2000, describe operational plateau/no sufficient improvement in this window",
+    "maximum_total_steps": 5000,
+    "final_plateau_description": "at5000 report4500->5000 relative decrease; descriptive only; no further extension",
+    "no_other_early_stop": "except numerical/resource/program failure, retain failure evidence"
+  },
+  "checkpointing": "save new model+optimizer/RNG/sampler at2000 and final; do not write original500 model; no old optimizer/RNG state exists",
+  "smoke": "two newly added steps501-502 in isolated smoke dir, then formal reloads original500 weights, not smoke weights",
+  "resource_rationale": "old perrun peak5.683GiB and sustained compute; two on one12GiB card leaves about0.63GiB headroom and likely contention; use two idle TITAN Xp cards preserving batch and precision",
+  "forbidden": [
+    "official Validation/Test access",
+    "original source pkl access",
+    "old500 model or diagnostic modifications",
+    "full dataset distillation",
+    "new tokenizer/targets",
+    "CMERC training or text perturbation",
+    "hyperparameter changes driven by results",
+    "automatic Git commit/push"
+  ]
+}

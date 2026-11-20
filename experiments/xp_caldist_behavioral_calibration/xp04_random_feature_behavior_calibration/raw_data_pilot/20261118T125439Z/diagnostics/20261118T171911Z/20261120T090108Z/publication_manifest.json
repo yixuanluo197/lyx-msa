@@ -1,0 +1,538 @@
+{
+  "source_run": "experiments/xp_caldist_behavioral_calibration/xp04_random_feature_behavior_calibration/raw_data_pilot/20261118T125439Z/diagnostics/20261118T171911Z/20261120T090108Z",
+  "source_commit": "5957f296ea7a0c27da1e647670717efd1f19fa9a",
+  "created_at": "2026-11-20T10:41:36.481665+00:00",
+  "files": [
+    {
+      "file": "TRAINING_EXTENSION_REPORT.md",
+      "local_source": "TRAINING_EXTENSION_REPORT.md",
+      "local_source_sha256": "a6a84bdc169758efe9f5e68b2cb85a437407f6ce0049cae128a12c2e9c6593b5",
+      "public_sha256": "a6a84bdc169758efe9f5e68b2cb85a437407f6ce0049cae128a12c2e9c6593b5",
+      "bytes": 7675,
+      "transformation": "identity"
+    },
+    {
+      "file": "FINAL_EXTENSION_DECISION.md",
+      "local_source": "FINAL_EXTENSION_DECISION.md",
+      "local_source_sha256": "f09f393a7bb0905960e6671e95e7b85f5180844eccfde6ca49782204916a3850",
+      "public_sha256": "f09f393a7bb0905960e6671e95e7b85f5180844eccfde6ca49782204916a3850",
+      "bytes": 1869,
+      "transformation": "identity"
+    },
+    {
+      "file": "verification.json",
+      "local_source": "verification.json",
+      "local_source_sha256": "51bc1f25fc8b0fddb6e151083eca5771eb7b65ac5619cb433a83d2531a99cdc6",
+      "public_sha256": "c135eecaf62d24407e7d577de7e1f608b383fcfca79726e11d6d4b92444afb10",
+      "bytes": 635647,
+      "transformation": "local_identity_redaction"
+    },
+    {
+      "file": "configs/EXTENSION_PROTOCOL.json",
+      "local_source": "configs/EXTENSION_PROTOCOL.json",
+      "local_source_sha256": "b440cdc842c140e84cb8dec913ed2816456bb2c8d1a78b289808851043210e8a",
+      "public_sha256": "3a8640310d68a176d8bad1a86043836f478ed8b1851d68902ccd0370d94a3c93",
+      "bytes": 3532,
+      "transformation": "local_identity_redaction"
+    },
+    {
+      "file": "logs/formal_IEMOCAP.log",
+      "local_source": "logs/formal_IEMOCAP.log",
+      "local_source_sha256": "9493c117f4c67c789d4d823c6e72c72dd1e6d844c59fbe353553216a38b6f249",
+      "public_sha256": "1f761600c8d161003bf19e6a6a1b3afeb7ba892ef9cbed1bafb55dc5d20fb8ad",
+      "bytes": 14229,
+      "transformation": "local_identity_redaction"
+    },
+    {
+      "file": "logs/formal_MELD.log",
+      "local_source": "logs/formal_MELD.log",
+      "local_source_sha256": "98f8e77140c5699c6c7c3a440c1e1af95d7902be2720fcf3619c9e3c6588f754",
+      "public_sha256": "48c5e6cb072ea27cd097901ca2296d0feebd7204aae37ef03e2a2446cbcfae7b",
+      "bytes": 38881,
+      "transformation": "local_identity_redaction"
+    },
+    {
+      "file": "logs/smoke_IEMOCAP.log",
+      "local_source": "logs/smoke_IEMOCAP.log",
+      "local_source_sha256": "958eee852bfce4cd70798adace3af3d05ec84e2ae86a48fa6a64cac0c65b6e8b",
+      "public_sha256": "1833d5edb426a9d225cdf207685a1b3bfc7a0816aadd98777d14fbb8412f4dca",
+      "bytes": 1542,
+      "transformation": "local_identity_redaction"
+    },
+    {
+      "file": "logs/smoke_MELD.log",
+      "local_source": "logs/smoke_MELD.log",
+      "local_source_sha256": "3496b804867e79477f89986219749be2ee16cf042ebd8bfd5cad97083217c9ab",
+      "public_sha256": "48a70c60783eb71b55df72d9b77d8848efc2bdd69ca3de237b2e09e35ed67de4",
+      "bytes": 1542,
+      "transformation": "local_identity_redaction"
+    },
+    {
+      "file": "provenance/environment.txt",
+      "local_source": "provenance/environment.txt",
+      "local_source_sha256": "e9c2a4918ed1dd1a4fee963268d1ce8c1b7b7c701fbc6af42f2cdd8e9a8f3513",
+      "public_sha256": "bef92478e449412d838da686bd2bb5717f1df1018433c98c6680f6cd5ea91892",
+      "bytes": 1028,
+      "transformation": "local_identity_redaction"
+    },
+    {
+      "file": "provenance/git_head.txt",
+      "local_source": "provenance/git_head.txt",
+      "local_source_sha256": "2c555e8145233900590b09c90fb40ab44264dbec84a32909479bdc67dfbd43b7",
+      "public_sha256": "2c555e8145233900590b09c90fb40ab44264dbec84a32909479bdc67dfbd43b7",
+      "bytes": 41,
+      "transformation": "identity"
+    },
+    {
+      "file": "provenance/gpu_inventory.csv",
+      "local_source": "provenance/gpu_inventory.csv",
+      "local_source_sha256": "1d2d421108e200a0552d1bb42b0e1d69422e58ec877c6b67ee52a8917dc186a8",
+      "public_sha256": "d9639c7c5d3e030d19acf54e057282c265d792cc5f0e05d07febe53d2e7df41d",
+      "bytes": 302,
+      "transformation": "local_identity_redaction"
+    },
+    {
+      "file": "provenance/launch_code_lock.json",
+      "local_source": "provenance/launch_code_lock.json",
+      "local_source_sha256": "c4daf290c0aff139094cb64f3126dcd6a01c0304066793752e0cdfc73f8d224a",
+      "public_sha256": "59d2292f8a4a83fab954b6b574d99c0aeef009a6fd4089c98aae611dc1595606",
+      "bytes": 357,
+      "transformation": "local_identity_redaction"
+    },
+    {
+      "file": "provenance/original_input_hashes_before.json",
+      "local_source": "provenance/original_input_hashes_before.json",
+      "local_source_sha256": "fe4e2e81a06b2d6c008142ece0ae0cad4776c30516b2c7d26f5f9c34c39ee969",
+      "public_sha256": "ba7d3cecc03f3a2991138ad1fa333793c83b0b146f7fa912ff6b27d701efbbb8",
+      "bytes": 160683,
+      "transformation": "local_identity_redaction"
+    },
+    {
+      "file": "results/execution.json",
+      "local_source": "results/execution.json",
+      "local_source_sha256": "ce9651702fa6c5e77587c0d3f06f1e16ab6c108a04adcff7309e77295a909509",
+      "public_sha256": "aed648c3781ed35838e6ad3aedb01beb2bc68708b18c9e9d4e716d6cba5398f2",
+      "bytes": 5246,
+      "transformation": "local_identity_redaction"
+    },
+    {
+      "file": "results/extension_summary.json",
+      "local_source": "results/extension_summary.json",
+      "local_source_sha256": "631f0d821d70ef3fa4dc8967a629ef8af353097f55fcd1a462369f86f0d6d539",
+      "public_sha256": "631f0d821d70ef3fa4dc8967a629ef8af353097f55fcd1a462369f86f0d6d539",
+      "bytes": 2592,
+      "transformation": "identity"
+    },
+    {
+      "file": "results/per_layer_comparison.csv",
+      "local_source": "results/per_layer_comparison.csv",
+      "local_source_sha256": "f0addb705e5368f7a56d3c36e6b2ac75d8f12339723a582d4f4c06e6b56ee95a",
+      "public_sha256": "25bb528113de0671504ec21f6f4503a283d51ec9fabf61d8bfe9e4e8ad619d9c",
+      "bytes": 9993,
+      "transformation": "local_identity_redaction"
+    },
+    {
+      "file": "results/stage_comparison.csv",
+      "local_source": "results/stage_comparison.csv",
+      "local_source_sha256": "94449e28968585fc209b890cff296295069789b43d7a55aaa4369263f2a30c52",
+      "public_sha256": "98323f5c0b031cb1dbe08fac091ccd9a7ba5e694549f64c665fc8d940cc70cb3",
+      "bytes": 2000,
+      "transformation": "local_identity_redaction"
+    },
+    {
+      "file": "results/training_extension.pdf",
+      "local_source": "results/training_extension.pdf",
+      "local_source_sha256": "85c2ade92889bb26cc2d8c8d29b9de0f8a4c31924d809e28c8f34cba362e2d3b",
+      "public_sha256": "85c2ade92889bb26cc2d8c8d29b9de0f8a4c31924d809e28c8f34cba362e2d3b",
+      "bytes": 92563,
+      "transformation": "identity"
+    },
+    {
+      "file": "results/training_extension.png",
+      "local_source": "results/training_extension.png",
+      "local_source_sha256": "0892d38c336fd8dc23ebca80af34c579588fbf1277dab7b389cff4ae7b041234",
+      "public_sha256": "0892d38c336fd8dc23ebca80af34c579588fbf1277dab7b389cff4ae7b041234",
+      "bytes": 471379,
+      "transformation": "identity"
+    },
+    {
+      "file": "scripts/analyze_extension.py",
+      "local_source": "scripts/analyze_extension.py",
+      "local_source_sha256": "6d3de7135e21e30e2a7798abe11a030c475de4fb19f55732fc85d4eebbcd4a3b",
+      "public_sha256": "6d3de7135e21e30e2a7798abe11a030c475de4fb19f55732fc85d4eebbcd4a3b",
+      "bytes": 3310,
+      "transformation": "identity"
+    },
+    {
+      "file": "scripts/extend_overfit.py",
+      "local_source": "scripts/extend_overfit.py",
+      "local_source_sha256": "c5a684dbe4fe60fc2c69313c27134ed918d7b695d0d1599a6db1250f7d2da783",
+      "public_sha256": "c5a684dbe4fe60fc2c69313c27134ed918d7b695d0d1599a6db1250f7d2da783",
+      "bytes": 23388,
+      "transformation": "identity"
+    },
+    {
+      "file": "scripts/plot_extension.py",
+      "local_source": "scripts/plot_extension.py",
+      "local_source_sha256": "5a612467769d036cecd4eaf0ea16c42aa3b6cb573c20945ddef95f926acfb4bb",
+      "public_sha256": "5a612467769d036cecd4eaf0ea16c42aa3b6cb573c20945ddef95f926acfb4bb",
+      "bytes": 2439,
+      "transformation": "identity"
+    },
+    {
+      "file": "scripts/run_extension_jobs.py",
+      "local_source": "scripts/run_extension_jobs.py",
+      "local_source_sha256": "9a35e0225f58725ec9ff5de39a01412f730c0893da720ecc519dbb5b51eb49c7",
+      "public_sha256": "36601d7422591c4334acb060ebfb391120437cbe011df6488544a7bba9bff833",
+      "bytes": 3653,
+      "transformation": "local_identity_redaction"
+    },
+    {
+      "file": "scripts/verify_extension.py",
+      "local_source": "scripts/verify_extension.py",
+      "local_source_sha256": "d66b68f0c71626bcabd0dab5b4614ed765f0f2eb24b25ec223ef43611207a132",
+      "public_sha256": "d66b68f0c71626bcabd0dab5b4614ed765f0f2eb24b25ec223ef43611207a132",
+      "bytes": 20147,
+      "transformation": "identity"
+    },
+    {
+      "file": "scripts/write_extension_reports.py",
+      "local_source": "scripts/write_extension_reports.py",
+      "local_source_sha256": "464ee9c263215766940fc87f6f04cb408cde2cd64b3c9506149932a392d0d4be",
+      "public_sha256": "464ee9c263215766940fc87f6f04cb408cde2cd64b3c9506149932a392d0d4be",
+      "bytes": 10369,
+      "transformation": "identity"
+    },
+    {
+      "file": "training_records/smoke/IEMOCAP/completion.json",
+      "local_source": "local_only/smoke/IEMOCAP/completion.json",
+      "local_source_sha256": "39541e280aa98aa535ba8f585bced2144cb2309defcccb029f7e40ac9a25c585",
+      "public_sha256": "39541e280aa98aa535ba8f585bced2144cb2309defcccb029f7e40ac9a25c585",
+      "bytes": 1050,
+      "transformation": "identity"
+    },
+    {
+      "file": "training_records/smoke/IEMOCAP/decision.json",
+      "local_source": "local_only/smoke/IEMOCAP/decision.json",
+      "local_source_sha256": "9197c899f6e0fd1dbb7ed3fea4f1a3781a5310ffc871f66ea17b337bde2fd292",
+      "public_sha256": "9197c899f6e0fd1dbb7ed3fea4f1a3781a5310ffc871f66ea17b337bde2fd292",
+      "bytes": 267,
+      "transformation": "identity"
+    },
+    {
+      "file": "training_records/smoke/IEMOCAP/evaluation_curve.csv",
+      "local_source": "local_only/smoke/IEMOCAP/evaluation_curve.csv",
+      "local_source_sha256": "8ae730e9640fb3acb7b9a863319ad8354a3a0aae066b7459630b7ad2b41412dc",
+      "public_sha256": "cfa7697f1c9003838cc8f3f1aa5b14eaf226f261a9d8036ef6f5dca30d7971f7",
+      "bytes": 685,
+      "transformation": "local_identity_redaction"
+    },
+    {
+      "file": "training_records/smoke/IEMOCAP/evaluations.json",
+      "local_source": "local_only/smoke/IEMOCAP/evaluations.json",
+      "local_source_sha256": "3c515ab2249e582b6d39d6b671c11cf763a1dcbce971fb5231d05f519c20f998",
+      "public_sha256": "3c515ab2249e582b6d39d6b671c11cf763a1dcbce971fb5231d05f519c20f998",
+      "bytes": 996,
+      "transformation": "identity"
+    },
+    {
+      "file": "training_records/smoke/IEMOCAP/gradient_update_verification.json",
+      "local_source": "local_only/smoke/IEMOCAP/gradient_update_verification.json",
+      "local_source_sha256": "bea04301dc8c1642c34f18d9e113f2b57a3370afe3497f678ed949e823fc3797",
+      "public_sha256": "bea04301dc8c1642c34f18d9e113f2b57a3370afe3497f678ed949e823fc3797",
+      "bytes": 286,
+      "transformation": "identity"
+    },
+    {
+      "file": "training_records/smoke/IEMOCAP/optimizer_steps.csv",
+      "local_source": "local_only/smoke/IEMOCAP/optimizer_steps.csv",
+      "local_source_sha256": "bf50fc0cd5e67df8606c962b15f9d5d802657b29b6979bb0ca7a4cbb617485da",
+      "public_sha256": "7874040b3000048bf54e216213417f081b96032e9c621c363da68786094c35ae",
+      "bytes": 275,
+      "transformation": "local_identity_redaction"
+    },
+    {
+      "file": "training_records/smoke/IEMOCAP/progress.json",
+      "local_source": "local_only/smoke/IEMOCAP/progress.json",
+      "local_source_sha256": "28e429d2485554cfdcde44f41d62eaea1603e67f11169746ef57e8abbc94915f",
+      "public_sha256": "28e429d2485554cfdcde44f41d62eaea1603e67f11169746ef57e8abbc94915f",
+      "bytes": 166,
+      "transformation": "identity"
+    },
+    {
+      "file": "training_records/smoke/IEMOCAP/run_config.json",
+      "local_source": "local_only/smoke/IEMOCAP/run_config.json",
+      "local_source_sha256": "2c9da9769581adba7c4f2bbadae0452dfe6aa32c023f19bceeaba5ae36893049",
+      "public_sha256": "4dfc493c823f2d29732547473f455f18ad3a9d8c5d836f041dcb606ae334cfe7",
+      "bytes": 2070,
+      "transformation": "local_identity_redaction"
+    },
+    {
+      "file": "training_records/smoke/IEMOCAP/step500_reproduction.json",
+      "local_source": "local_only/smoke/IEMOCAP/step500_reproduction.json",
+      "local_source_sha256": "176ad90b23cfb13dfab733a387bce5d5a824b5f3a20968b0a3632f26bca3399b",
+      "public_sha256": "176ad90b23cfb13dfab733a387bce5d5a824b5f3a20968b0a3632f26bca3399b",
+      "bytes": 403,
+      "transformation": "identity"
+    },
+    {
+      "file": "training_records/smoke/MELD/completion.json",
+      "local_source": "local_only/smoke/MELD/completion.json",
+      "local_source_sha256": "69d01bc915c5a6d3765c594d411bfd12c970315c422c314d34f26ef726ecb521",
+      "public_sha256": "69d01bc915c5a6d3765c594d411bfd12c970315c422c314d34f26ef726ecb521",
+      "bytes": 1046,
+      "transformation": "identity"
+    },
+    {
+      "file": "training_records/smoke/MELD/decision.json",
+      "local_source": "local_only/smoke/MELD/decision.json",
+      "local_source_sha256": "9197c899f6e0fd1dbb7ed3fea4f1a3781a5310ffc871f66ea17b337bde2fd292",
+      "public_sha256": "9197c899f6e0fd1dbb7ed3fea4f1a3781a5310ffc871f66ea17b337bde2fd292",
+      "bytes": 267,
+      "transformation": "identity"
+    },
+    {
+      "file": "training_records/smoke/MELD/evaluation_curve.csv",
+      "local_source": "local_only/smoke/MELD/evaluation_curve.csv",
+      "local_source_sha256": "b49874d05ab4ca2ee428817ad335b5bfcf114a432d3e41a986450ff382502317",
+      "public_sha256": "940bdca3580934c586344b0265f24dd1637c3f41ea2e9b3e8f2ebe877c328762",
+      "bytes": 685,
+      "transformation": "local_identity_redaction"
+    },
+    {
+      "file": "training_records/smoke/MELD/evaluations.json",
+      "local_source": "local_only/smoke/MELD/evaluations.json",
+      "local_source_sha256": "2971238b48fbbb8a6a6efe772ca2e6530406eac32c2032c1242823739601af68",
+      "public_sha256": "2971238b48fbbb8a6a6efe772ca2e6530406eac32c2032c1242823739601af68",
+      "bytes": 996,
+      "transformation": "identity"
+    },
+    {
+      "file": "training_records/smoke/MELD/gradient_update_verification.json",
+      "local_source": "local_only/smoke/MELD/gradient_update_verification.json",
+      "local_source_sha256": "5c8f13f6b8b81736e22140d1063f39aee08dfbe1a725baca2ee05f990042eca7",
+      "public_sha256": "5c8f13f6b8b81736e22140d1063f39aee08dfbe1a725baca2ee05f990042eca7",
+      "bytes": 287,
+      "transformation": "identity"
+    },
+    {
+      "file": "training_records/smoke/MELD/optimizer_steps.csv",
+      "local_source": "local_only/smoke/MELD/optimizer_steps.csv",
+      "local_source_sha256": "b1ff344bf60010eeac4255e8d3a93cfc7a3dec6733a1064056849e808161377a",
+      "public_sha256": "893e89d358a4f6c98de539acac346356d0b720a1227aff5a69a91e4855c2d379",
+      "bytes": 275,
+      "transformation": "local_identity_redaction"
+    },
+    {
+      "file": "training_records/smoke/MELD/progress.json",
+      "local_source": "local_only/smoke/MELD/progress.json",
+      "local_source_sha256": "8cc53bd76eb5eba1e400c1abb0c43043f528746b4f7f097d3594c6a0ba8c5833",
+      "public_sha256": "8cc53bd76eb5eba1e400c1abb0c43043f528746b4f7f097d3594c6a0ba8c5833",
+      "bytes": 165,
+      "transformation": "identity"
+    },
+    {
+      "file": "training_records/smoke/MELD/run_config.json",
+      "local_source": "local_only/smoke/MELD/run_config.json",
+      "local_source_sha256": "13766f964122869e807a4cf7d9da2ca73892450b84e72c8e659204fdd8443c0d",
+      "public_sha256": "05cbabdcf549d749abe4ac94c451510f297b5ccef1e73c8d52b0644cf752ff92",
+      "bytes": 2068,
+      "transformation": "local_identity_redaction"
+    },
+    {
+      "file": "training_records/smoke/MELD/step500_reproduction.json",
+      "local_source": "local_only/smoke/MELD/step500_reproduction.json",
+      "local_source_sha256": "41875a9d18ffb2a0b4a991e1cd3d0df02f28acbe0c6e899b7c6a498bd56d8e79",
+      "public_sha256": "41875a9d18ffb2a0b4a991e1cd3d0df02f28acbe0c6e899b7c6a498bd56d8e79",
+      "bytes": 409,
+      "transformation": "identity"
+    },
+    {
+      "file": "training_records/formal/IEMOCAP/completion.json",
+      "local_source": "local_only/formal/IEMOCAP/completion.json",
+      "local_source_sha256": "15d7b1ad5f13cdd6c584b2f4e9f61dc8f4ded83a3d132931abaabcaff5c3cbc4",
+      "public_sha256": "15d7b1ad5f13cdd6c584b2f4e9f61dc8f4ded83a3d132931abaabcaff5c3cbc4",
+      "bytes": 1228,
+      "transformation": "identity"
+    },
+    {
+      "file": "training_records/formal/IEMOCAP/decision.json",
+      "local_source": "local_only/formal/IEMOCAP/decision.json",
+      "local_source_sha256": "d240759d3a61d53b69fda7a041646bc93bdfa7ae6da1cc7a57c3beb595eb5c2d",
+      "public_sha256": "d240759d3a61d53b69fda7a041646bc93bdfa7ae6da1cc7a57c3beb595eb5c2d",
+      "bytes": 349,
+      "transformation": "identity"
+    },
+    {
+      "file": "training_records/formal/IEMOCAP/evaluation_curve.csv",
+      "local_source": "local_only/formal/IEMOCAP/evaluation_curve.csv",
+      "local_source_sha256": "3847ccc36320af5d6de0f821728a9ea2eeeec58f608ba15a8094c99d79236ac1",
+      "public_sha256": "974344e08a471768ee6996024f72ac7e2584af78285a39105bbe5c80baf4e026",
+      "bytes": 1961,
+      "transformation": "local_identity_redaction"
+    },
+    {
+      "file": "training_records/formal/IEMOCAP/evaluations.json",
+      "local_source": "local_only/formal/IEMOCAP/evaluations.json",
+      "local_source_sha256": "5cf87b37d4e8c780263dd5d27c0289139b5552fd85bf61554d324878dc22cbb6",
+      "public_sha256": "5cf87b37d4e8c780263dd5d27c0289139b5552fd85bf61554d324878dc22cbb6",
+      "bytes": 3547,
+      "transformation": "identity"
+    },
+    {
+      "file": "training_records/formal/IEMOCAP/gradient_update_verification.json",
+      "local_source": "local_only/formal/IEMOCAP/gradient_update_verification.json",
+      "local_source_sha256": "bea04301dc8c1642c34f18d9e113f2b57a3370afe3497f678ed949e823fc3797",
+      "public_sha256": "bea04301dc8c1642c34f18d9e113f2b57a3370afe3497f678ed949e823fc3797",
+      "bytes": 286,
+      "transformation": "identity"
+    },
+    {
+      "file": "training_records/formal/IEMOCAP/optimizer_steps.csv",
+      "local_source": "local_only/formal/IEMOCAP/optimizer_steps.csv",
+      "local_source_sha256": "09b83b72ecf1f4a74a45513546285fe88cc0123f9324af070a2cf0fff76c1376",
+      "public_sha256": "b63eba79ddd42a09a54b4f5e85634873830ab6553e0dbe579752c90cc19011b4",
+      "bytes": 129198,
+      "transformation": "local_identity_redaction"
+    },
+    {
+      "file": "training_records/formal/IEMOCAP/progress.json",
+      "local_source": "local_only/formal/IEMOCAP/progress.json",
+      "local_source_sha256": "061f4c5c33492d85c50439a759d0e09434edcc29a40a44b9e6900cd5e7805097",
+      "public_sha256": "061f4c5c33492d85c50439a759d0e09434edcc29a40a44b9e6900cd5e7805097",
+      "bytes": 168,
+      "transformation": "identity"
+    },
+    {
+      "file": "training_records/formal/IEMOCAP/run_config.json",
+      "local_source": "local_only/formal/IEMOCAP/run_config.json",
+      "local_source_sha256": "6d7215db1a8fd0eccefd202bf68907a8712ff453e83c49288fb7dfd1cc2f3f93",
+      "public_sha256": "4f17cf3141ddd8e72d3cbd8ab2d3c21d320fa208a870e8aaadc49dca39c7c039",
+      "bytes": 2071,
+      "transformation": "local_identity_redaction"
+    },
+    {
+      "file": "training_records/formal/IEMOCAP/step500_reproduction.json",
+      "local_source": "local_only/formal/IEMOCAP/step500_reproduction.json",
+      "local_source_sha256": "176ad90b23cfb13dfab733a387bce5d5a824b5f3a20968b0a3632f26bca3399b",
+      "public_sha256": "176ad90b23cfb13dfab733a387bce5d5a824b5f3a20968b0a3632f26bca3399b",
+      "bytes": 403,
+      "transformation": "identity"
+    },
+    {
+      "file": "training_records/formal/IEMOCAP/stage_2000_checkpoint_manifest.json",
+      "local_source": "local_only/formal/IEMOCAP/stage_2000_checkpoint_manifest.json",
+      "local_source_sha256": "5a167a34dcf163a4f0c955ec433ce47aa5893e7be16e4f8c01166b8870aa9677",
+      "public_sha256": "5a167a34dcf163a4f0c955ec433ce47aa5893e7be16e4f8c01166b8870aa9677",
+      "bytes": 298,
+      "transformation": "identity"
+    },
+    {
+      "file": "training_records/formal/MELD/completion.json",
+      "local_source": "local_only/formal/MELD/completion.json",
+      "local_source_sha256": "1ea94e5d4c7ff6f48d21a0c38e92686bd467f753d9997aaf46bde8ffb5366271",
+      "public_sha256": "1ea94e5d4c7ff6f48d21a0c38e92686bd467f753d9997aaf46bde8ffb5366271",
+      "bytes": 1228,
+      "transformation": "identity"
+    },
+    {
+      "file": "training_records/formal/MELD/decision.json",
+      "local_source": "local_only/formal/MELD/decision.json",
+      "local_source_sha256": "4df59065745008e1f31a6ce696b27cadfebf281437d58bd1e261a6fb674260f6",
+      "public_sha256": "4df59065745008e1f31a6ce696b27cadfebf281437d58bd1e261a6fb674260f6",
+      "bytes": 345,
+      "transformation": "identity"
+    },
+    {
+      "file": "training_records/formal/MELD/evaluation_curve.csv",
+      "local_source": "local_only/formal/MELD/evaluation_curve.csv",
+      "local_source_sha256": "f1d73a1535faf01f8a0a2d7a5aae0814e2f1edfd74319eaece9b37f0d3791fbd",
+      "public_sha256": "9ea17f550e0f22d3844b9bc3c9aa3651f05895d8c5658d646b4ca4d730d19b3a",
+      "bytes": 3508,
+      "transformation": "local_identity_redaction"
+    },
+    {
+      "file": "training_records/formal/MELD/evaluations.json",
+      "local_source": "local_only/formal/MELD/evaluations.json",
+      "local_source_sha256": "f48d5081fce5e9d436a8b8f581e1429c0a49d6743360185d1da1e989e0481fb7",
+      "public_sha256": "f48d5081fce5e9d436a8b8f581e1429c0a49d6743360185d1da1e989e0481fb7",
+      "bytes": 6624,
+      "transformation": "identity"
+    },
+    {
+      "file": "training_records/formal/MELD/gradient_update_verification.json",
+      "local_source": "local_only/formal/MELD/gradient_update_verification.json",
+      "local_source_sha256": "5c8f13f6b8b81736e22140d1063f39aee08dfbe1a725baca2ee05f990042eca7",
+      "public_sha256": "5c8f13f6b8b81736e22140d1063f39aee08dfbe1a725baca2ee05f990042eca7",
+      "bytes": 287,
+      "transformation": "identity"
+    },
+    {
+      "file": "training_records/formal/MELD/optimizer_steps.csv",
+      "local_source": "local_only/formal/MELD/optimizer_steps.csv",
+      "local_source_sha256": "11d6dbec6847b59413879671036b12a914c5d57ae7efeb9ad35528cefc624f9c",
+      "public_sha256": "6aa89093a6866fca9d65a4d36fd3037bd8c36588875de5c06eb5e100db3cce5b",
+      "bytes": 394787,
+      "transformation": "local_identity_redaction"
+    },
+    {
+      "file": "training_records/formal/MELD/progress.json",
+      "local_source": "local_only/formal/MELD/progress.json",
+      "local_source_sha256": "2cc3373e2c7edefabbde5862db2063bd6511ec06b4ac59713c60a8a238256cee",
+      "public_sha256": "2cc3373e2c7edefabbde5862db2063bd6511ec06b4ac59713c60a8a238256cee",
+      "bytes": 169,
+      "transformation": "identity"
+    },
+    {
+      "file": "training_records/formal/MELD/run_config.json",
+      "local_source": "local_only/formal/MELD/run_config.json",
+      "local_source_sha256": "092cdb0f6c38094d7c4cefa8185ff3060f7009d3548742fb3ba70b48a50bd8b0",
+      "public_sha256": "0d90f383635d7baa3a1a4b5495989ff2e784bac03a2cc9a9b989ea5947b30638",
+      "bytes": 2069,
+      "transformation": "local_identity_redaction"
+    },
+    {
+      "file": "training_records/formal/MELD/step500_reproduction.json",
+      "local_source": "local_only/formal/MELD/step500_reproduction.json",
+      "local_source_sha256": "41875a9d18ffb2a0b4a991e1cd3d0df02f28acbe0c6e899b7c6a498bd56d8e79",
+      "public_sha256": "41875a9d18ffb2a0b4a991e1cd3d0df02f28acbe0c6e899b7c6a498bd56d8e79",
+      "bytes": 409,
+      "transformation": "identity"
+    },
+    {
+      "file": "training_records/formal/MELD/stage_2000_checkpoint_manifest.json",
+      "local_source": "local_only/formal/MELD/stage_2000_checkpoint_manifest.json",
+      "local_source_sha256": "8a84e2157af59bdbfb6112c927b19454c82fb26205f16ba6bbbcbc70b9d796a1",
+      "public_sha256": "8a84e2157af59bdbfb6112c927b19454c82fb26205f16ba6bbbcbc70b9d796a1",
+      "bytes": 298,
+      "transformation": "identity"
+    },
+    {
+      "file": "training_records/formal/MELD/final_training_checkpoint_manifest.json",
+      "local_source": "local_only/formal/MELD/final_training_checkpoint_manifest.json",
+      "local_source_sha256": "1ed3f8cc25a5142278b73b8c22d1989d08b188507fd7ba69775f8cd29fe10902",
+      "public_sha256": "1ed3f8cc25a5142278b73b8c22d1989d08b188507fd7ba69775f8cd29fe10902",
+      "bytes": 298,
+      "transformation": "identity"
+    }
+  ],
+  "generated_files": [
+    {
+      "file": "README.md",
+      "public_sha256": "5b1b920fc7fa50398721d5f3244eb7456389298efb8e9b0639a6e6633442f8c2",
+      "bytes": 2168
+    },
+    {
+      "file": "publication_tools/verify_publication.py",
+      "public_sha256": "831a96b6b923026eb6a78ad7bd74566e15a3e101752f87af3dcf7ebe92048f4e",
+      "bytes": 5906
+    }
+  ],
+  "scientific_values_changed": false,
+  "excluded": [
+    "all model and optimizer tensors",
+    "raw and prepared datasets",
+    "sample/token/teacher vectors and per-utterance manifests",
+    "empty logs and private git status"
+  ]
+}

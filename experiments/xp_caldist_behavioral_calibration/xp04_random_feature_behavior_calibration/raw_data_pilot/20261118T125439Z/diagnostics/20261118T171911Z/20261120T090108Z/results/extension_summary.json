@@ -1,0 +1,76 @@
+{
+  "IEMOCAP": {
+    "final_global_step": 2000,
+    "initial_mse": 0.0013196793178955962,
+    "final_mse": 0.0011599934939202949,
+    "final_overall_rmse": 0.03405867721918006,
+    "relative_reduction_from_step500": 0.12100350578346686,
+    "final_window_start": 1500,
+    "final_window_relative_decrease": -0.4019788334310279,
+    "final_window_plateau_by_5percent_rule": true,
+    "final_layer_mse": [
+      0.002584640392101185,
+      0.0011515685898212205,
+      0.0005153419953910152,
+      0.0003884229983677585
+    ],
+    "final_layer_rmse": [
+      0.05083935869089209,
+      0.033934769629706055,
+      0.022701145244040336,
+      0.019708449923009127
+    ],
+    "rmse_necessary_condition_pass": false,
+    "decision": {
+      "status": "DECIDED",
+      "rule": "continue iff (mse1500-mse2000)/mse1500 > 0.05",
+      "threshold": 0.05,
+      "rule_frozen_before_training": true,
+      "smoke": false,
+      "mse1500": 0.0008273972946378026,
+      "mse2000": 0.0011599934939202949,
+      "relative_decrease": -0.40197883343102786,
+      "continue_to_5000": false,
+      "final_authorized_global_step": 2000
+    },
+    "optimizer_reset": true,
+    "interpretation_limit": "Train-only point estimates; endpoint window can be noisy; no held-out compatibility or XP04 probability inference"
+  },
+  "MELD": {
+    "final_global_step": 5000,
+    "initial_mse": 0.0010621090172198665,
+    "final_mse": 0.0004271034581449999,
+    "final_overall_rmse": 0.020666481513431353,
+    "relative_reduction_from_step500": 0.597872298210057,
+    "final_window_start": 4500,
+    "final_window_relative_decrease": 0.6175492807168006,
+    "final_window_plateau_by_5percent_rule": false,
+    "final_layer_mse": [
+      0.0007578091299687679,
+      0.0005630996847573955,
+      0.00024469500137649653,
+      0.0001428100164773397
+    ],
+    "final_layer_rmse": [
+      0.02752833322176931,
+      0.023729721548248213,
+      0.01564272998477237,
+      0.011950314492821504
+    ],
+    "rmse_necessary_condition_pass": false,
+    "decision": {
+      "status": "DECIDED",
+      "rule": "continue iff (mse1500-mse2000)/mse1500 > 0.05",
+      "threshold": 0.05,
+      "rule_frozen_before_training": true,
+      "smoke": false,
+      "mse1500": 0.001595568435664252,
+      "mse2000": 0.0006898863634263455,
+      "relative_decrease": 0.5676234575678739,
+      "continue_to_5000": true,
+      "final_authorized_global_step": 5000
+    },
+    "optimizer_reset": true,
+    "interpretation_limit": "Train-only point estimates; endpoint window can be noisy; no held-out compatibility or XP04 probability inference"
+  }
+}
