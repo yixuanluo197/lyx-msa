@@ -1,0 +1,3 @@
+# Preserve the exact bytes recorded in verification.json.
+*.csv -text whitespace=cr-at-eol,-blank-at-eof
+*.json -text
