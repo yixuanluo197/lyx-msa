@@ -1,0 +1,17 @@
+{
+  "status": "CONFIRMATION_PAUSED",
+  "reasons": [
+    "Every available Train Dialogue is used by frozen model fitting, selection or prior scoring analysis."
+  ],
+  "prior_train_dialogue_roles": {
+    "base_fit": 656,
+    "base_inner_dev": 72,
+    "score_fit": 155,
+    "score_eval": 155
+  },
+  "untouched_train_dialogues": 0,
+  "independent_evaluation": false,
+  "allowed_scope": "TRAIN_ONLY_EXPLORATORY_PILOT_HISTORICAL_SCOREFIT_ONLY",
+  "test_accessed": false,
+  "official_validation_accessed": false
+}

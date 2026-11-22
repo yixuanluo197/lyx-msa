@@ -1,0 +1,5 @@
+# Preserve source and evidence bytes.
+*.csv -text whitespace=cr-at-eol,-blank-at-eof
+*.json -text
+*.py -text
+*.md -text

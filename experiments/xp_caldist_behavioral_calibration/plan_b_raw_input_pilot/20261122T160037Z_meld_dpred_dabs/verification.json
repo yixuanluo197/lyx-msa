@@ -1,0 +1,37 @@
+{
+  "status": "COMPLETE_TRAIN_ONLY_EXPLORATORY_PILOT",
+  "new_independent_evaluation": false,
+  "confirmatory_scoring_paused": true,
+  "test_accessed": false,
+  "official_validation_accessed": false,
+  "inference_checks": {
+    "all_clean_rows": 1412,
+    "planned_variants": 270,
+    "complete_K2": {
+      "pilot_fit": 34,
+      "pilot_eval": 29
+    },
+    "opposite_sign_K2": {
+      "pilot_fit": 9,
+      "pilot_eval": 9
+    },
+    "absolute_formula_max_error": 0
+  },
+  "scoring_checks": {
+    "primary_status": "INDEPENDENT_NUMERIC_REPLAY",
+    "shared_eligible_n": 29,
+    "exact_fallback": {
+      "E1": 642,
+      "E2": 642,
+      "E3": 642
+    },
+    "primary_nll_improvement": -0.043977163539045794,
+    "interval": [
+      -0.08766360127518158,
+      0.007530825213946287
+    ],
+    "valid_draws": 2000
+  },
+  "delivery_files": 355,
+  "sha256_manifest": "a6b1b07d734351e41285c02728af6f17b2e4da3ad2a6e5db027c28c9c2c07446"
+}

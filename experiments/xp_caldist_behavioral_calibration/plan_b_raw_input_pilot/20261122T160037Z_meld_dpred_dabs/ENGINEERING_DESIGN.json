@@ -1,0 +1,33 @@
+{
+  "source_commit": "2bf3720750d4251195b973e780ea1b6c8a277f75",
+  "dataset": "MELD",
+  "model_seed": 67137,
+  "split_seed": 202611221600,
+  "engineering_dialogues": 20,
+  "pilot_fit_dialogues": 75,
+  "pilot_eval_dialogues": 60,
+  "source_role": "score_fit",
+  "split_rule": "Sort all old score_fit Dialogue IDs by SHA-256 of seed|dialogue|id; first 20 engineering, next 75 pilot_fit, final 60 pilot_eval. Frozen before candidate inspection.",
+  "target_rule": "Use one utterance per Pilot Dialogue by SHA-256 of seed|target|Dialogue ID|Utterance ID. No confidence, outcome, label or eligibility stratification.",
+  "old_rule": "Previous fixed lowercase allowlist and minimum length five, one interior adjacent swap, evaluation on engineering text only.",
+  "new_rule": "Expand the fixed neutral allowlist to common function and discourse words and admit eligible four-letter forms. Recognize sentence-initial capitalization on allowlisted words only. Retain whole token, first and last letter, and exactly one interior adjacent swap in each variant. Exclude contractions, compounds, and Unicode apostrophe/dash boundaries.",
+  "allowlist_additions": [
+    "also", "another", "answer", "anything", "away", "back", "based", "both", "bring", "came", "case", "come",
+    "days", "done", "down", "each", "else", "endings", "even", "every", "fact", "find", "first", "from", "gave",
+    "give", "goes", "hand", "have", "having", "here", "hers", "himself", "house", "into", "keep", "kind", "knew",
+    "know", "large", "last", "left", "less", "list", "long", "look", "made", "make", "many", "mean", "means",
+    "mention", "might", "mine", "more", "most", "name", "next", "number", "once", "only", "open", "other",
+    "over", "part", "parts", "passed", "place", "point", "read", "right", "room", "said", "same", "says",
+    "second", "seen", "send", "short", "show", "since", "sits", "some", "sort", "stand", "start", "started",
+    "state", "step", "stop", "such", "take", "taken", "talk", "tell", "than", "that", "their", "them", "then",
+    "there", "they", "this", "three", "time", "times", "told", "took", "toward", "turn", "used", "very",
+    "want", "went", "were", "what", "when", "where", "will", "with", "words", "worked", "year", "your"
+  ],
+  "protected_even_if_listed": ["only", "very", "want", "kind", "right", "stop", "sure", "quite", "really", "never", "none", "without", "always", "hardly", "barely", "dont", "cant", "wont", "isnt", "wasnt", "didnt", "shouldnt", "couldnt", "wouldnt"],
+  "collision_guard": "Reject edited words already observed as ASCII word types in engineering Dialogue text, or as a fixed allowlisted, protected or extra known collision word. This guard leaves AI review necessary for contextual real-word collisions.",
+  "extra_collision_words": ["form", "froth", "fist", "firs", "tree", "tier", "thrice", "trail", "trial", "grit", "girt", "brat", "brag", "teat", "taut", "then", "than", "slat", "salt", "silt", "slit", "slop", "soul", "teas", "tens", "tear", "tare", "ten", "thank", "scat", "scar", "tire", "trie", "cost", "cots", "mast", "mats", "cast", "cats", "fate", "feat", "pale", "plea", "pint", "pit", "loin", "lion", "tale", "late", "fowl", "flow", "word", "wrod"],
+  "engineering_evaluation": "Compare candidate K2 coverage on all engineering utterances and on one independently hash-selected utterance per engineering Dialogue. Candidate counts only; do not use labels, prediction scores or inference. Keep exactly one candidate rule and no reselection after review.",
+  "candidate_seed": 202611221601,
+  "scorer_seed": 20261121,
+  "independent_confirmation": "PAUSED_NO_UNTOUCHED_DIALOGUES"
+}

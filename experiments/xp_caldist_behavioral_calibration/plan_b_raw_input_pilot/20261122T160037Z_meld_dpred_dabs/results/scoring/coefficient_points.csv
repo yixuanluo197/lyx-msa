@@ -1,0 +1,9 @@
+model,feature,status,standardized_coefficient,raw_coefficient,direction
+E0,logit_confidence,FITTED,0.5078671971449846,0.8738724457791135,higher feature increases R(correct)
+E1,logit_confidence,FITTED,0.5331342146988127,0.9173486745086571,higher feature increases R(correct)
+E1,D_pred,FITTED,0.6314186458978925,7.94495387951259,higher feature increases R(correct)
+E2,logit_confidence,FITTED,0.5117412961548795,0.8805384962663254,higher feature increases R(correct)
+E2,D_abs,FITTED,0.013170817582988293,0.20926841483947925,higher feature increases R(correct)
+E3,logit_confidence,FITTED,0.4578903894288857,0.7878787934294185,higher feature increases R(correct)
+E3,D_pred,FITTED,0.7651104128563369,9.627157801515791,higher feature increases R(correct)
+E3,D_abs,FITTED,-0.40111408833951534,-6.373219347067153,"higher feature decreases R(correct), increases error risk"
