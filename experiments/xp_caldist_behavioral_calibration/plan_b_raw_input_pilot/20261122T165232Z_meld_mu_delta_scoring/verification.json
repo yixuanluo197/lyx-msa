@@ -1,0 +1,20 @@
+{
+  "status": "COMPLETE_VERIFIED_EXPLORATORY_OFFLINE_SCORING",
+  "checks": {
+    "formula_K2_rows": 141,
+    "per_row_score_replay": 846,
+    "verified_metric_points": 35,
+    "verified_paired_intervals": 40,
+    "independently_verified_bootstrap_draws": 2000
+  },
+  "no_model_inference": true,
+  "no_test_access": true,
+  "confirmatory": false,
+  "files": 18,
+  "sha256_manifest": "82cab3d490115a71ec8f2335ccb6eaa1eddf13c3ecd708aed0fd1e0af88d65ed",
+  "versions": {
+    "python": "3.10.14 | packaged by conda-forge | (main, Mar 20 2024, 12:45:18) [GCC 12.3.0]",
+    "numpy": "1.24.4",
+    "sklearn": "1.2.2"
+  }
+}

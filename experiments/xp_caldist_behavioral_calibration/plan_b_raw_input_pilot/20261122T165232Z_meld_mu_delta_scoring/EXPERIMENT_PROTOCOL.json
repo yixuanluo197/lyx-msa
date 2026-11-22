@@ -1,0 +1,53 @@
+{
+  "study": "MELD K2 semantic paraphrase mu/delta correctness scoring",
+  "source_run": "20261122T041838Z_meld_real_scoring",
+  "source_publication_commit": "8d11f14a2c248b5fb91108f190faf580ed66d4ab",
+  "dataset": "MELD",
+  "seed": 67137,
+  "scope": "EXPLORATORY_REUSED_TRAIN_SCORE_GROUPS",
+  "confirmatory": false,
+  "test_access": false,
+  "official_validation_access": false,
+  "new_text_or_model_inference": false,
+  "eligibility": {
+    "fit_n": 72,
+    "eval_n": 69,
+    "K": 2,
+    "variants": ["paraphrase_a", "paraphrase_b"],
+    "policy": "Exact existing Train utterance and Dialogue manifests. Preserve previous role order and complete-K2 eligibility: both historical reviewed variants with successful encode and prediction; no additions, substitutions, or imputation.",
+    "review_kind": "Historical AI contextual review, no human confirmation"
+  },
+  "features": {
+    "mu": "mean_k(1[argmax(p_k)!=argmax(p_clean)] * max(p_k))",
+    "delta": "abs(max(p_clean)-mean_k(max(p_k)))",
+    "confidence": "logit(max(p_clean)), clipping probability to [1e-6,1-1e-6]",
+    "margin": "clean top-1 minus clean top-2 probability",
+    "entropy": "negative sum of clean probabilities times natural logs"
+  },
+  "arms": {
+    "E0": ["logit_confidence"],
+    "E1": ["logit_confidence", "clean_margin", "clean_entropy"],
+    "E2": ["logit_confidence", "mu"],
+    "E3": ["logit_confidence", "delta"],
+    "E4": ["logit_confidence", "mu", "delta"],
+    "E5": ["logit_confidence", "clean_margin", "clean_entropy", "mu", "delta"]
+  },
+  "raw_confidence_reference": "Use uncalibrated max(p_clean) as R for reference; this adds no fitted model.",
+  "scoring": {
+    "target": "R=P(original predicted label is correct); outcome original_correct=1",
+    "logistic": {"C":1.0,"penalty":"l2","solver":"lbfgs","max_iter":2000,"tol":1e-10,"random_state":20261121,"class_weight":null,"fit_intercept":true},
+    "standardization": "Population mean and variance (ddof=0), fit only on the same 72 Score Fit rows for every model. Constant feature scale=1.",
+    "primary_metric": "binary_nll",
+    "secondary_metrics": ["brier","auroc_error","auprc_error","ece15"],
+    "error_ranking": "Error is positive, ranking score=1-R; AUPRC is average precision.",
+    "ece": "Binary correctness ECE on R with 15 equal-width bins, [left,right) except final bin includes 1. Sum over bins of |sum(weight*(correct-R))| divided by total weight. Empty bins contribute zero.",
+    "comparisons": [["RAW_C","E0"],["E0","E2"],["E0","E3"],["E2","E3"],["E0","E4"],["E2","E4"],["E3","E4"],["E1","E5"]],
+    "bootstrap": {"draws":2000,"seed":20261121,"unit":"evaluation Dialogue cluster","interval":"95% percentile","scope":"same held-out draws for every method, fixed Fit-fitted parameters; pointwise unadjusted intervals"},
+    "decision": "Interpret E2/E3 versus E0 for individual increment, E4 versus both for complementarity, and E5 versus E1 for value beyond stronger clean features. Primary NLL is the progression endpoint. Favorable point estimates or secondary intervals in this reused low-coverage cohort are exploratory. Without fresh independent evidence, do not promote directly to five-fold five-seed formal confirmation.",
+    "old_scorer_sha256": "22acb70db16cd1013fbc5b60dccc707d7382653a39cfedbd7d442b51aa8d9049"
+  },
+  "formula_source_sha256": {
+    "mainline_build_inputs.py":"343b2f92509b3d7d0bf90138058380d18abc1377b8554515a8c974089b8cd1f5",
+    "plan_b_pilot_analysis.py":"75cdb58f06851b72072087ab046077b9b24952ff8f7bb986dd6294119196522c"
+  }
+}

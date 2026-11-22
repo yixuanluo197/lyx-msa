@@ -1,0 +1,33 @@
+{
+  "status": "COMPLETE_OFFLINE_EXPLORATORY_SCORING",
+  "roles": {
+    "score_fit": {
+      "n": 72,
+      "dialogues": 72,
+      "correct": 51,
+      "errors": 21
+    },
+    "score_eval": {
+      "n": 69,
+      "dialogues": 69,
+      "correct": 44,
+      "errors": 25
+    }
+  },
+  "baseline_parameter_replay_max_absolute_errors": {
+    "E0": 0.0,
+    "E1": 0.0
+  },
+  "bootstrap": {
+    "seed": 20261121,
+    "requested": 2000,
+    "resampling_unit": "Dialogue, paired predictions and shared draws across models/scopes",
+    "rng": "numpy RandomState MT19937; sorted Dialogue universe",
+    "interval": "95% percentile [2.5%,97.5%], NumPy linear quantiles",
+    "draw_indices_sha256": "14deab0883ff28d5b60a5c83e1b90ba8afebfc4d468efedc03de315a54644717",
+    "dialogue_universe_count": 69
+  },
+  "positive_improvement_is_better": true,
+  "pointwise_unadjusted": true,
+  "confirmatory": false
+}
