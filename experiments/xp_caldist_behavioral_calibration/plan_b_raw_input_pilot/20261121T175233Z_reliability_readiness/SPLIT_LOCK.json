@@ -1,0 +1,100 @@
+{
+  "status": "FROZEN_PRE_MODEL_OUTPUT",
+  "frozen_at": "2026-11-21T17:56:07.707489+00:00",
+  "dataset": "MELD",
+  "source_split": "Train",
+  "branch_seed": 67137,
+  "git_head": "10a805a12ae331e43064f0440919d0d93bf13b03",
+  "policy": "SHA256-sorted Dialogue IDs. First floor(15%) score_fit, next floor(15%) score_eval, remaining base with first floor(10%) inner_dev.",
+  "train_dialogues": 1038,
+  "train_utterances": 9989,
+  "counts": {
+    "base_fit": {
+      "dialogues": 656,
+      "utterances": 6313,
+      "historical_train_role_utterances": {
+        "fit": 5701,
+        "inner_dev": 612
+      },
+      "emotion_labels": {
+        "surprise": 776,
+        "sadness": 428,
+        "fear": 183,
+        "neutral": 2961,
+        "joy": 1066,
+        "anger": 725,
+        "disgust": 174
+      }
+    },
+    "base_inner_dev": {
+      "dialogues": 72,
+      "utterances": 700,
+      "historical_train_role_utterances": {
+        "fit": 650,
+        "inner_dev": 50
+      },
+      "emotion_labels": {
+        "fear": 21,
+        "joy": 127,
+        "neutral": 313,
+        "surprise": 85,
+        "disgust": 17,
+        "anger": 92,
+        "sadness": 45
+      }
+    },
+    "score_fit": {
+      "dialogues": 155,
+      "utterances": 1569,
+      "historical_train_role_utterances": {
+        "inner_dev": 226,
+        "fit": 1343
+      },
+      "emotion_labels": {
+        "neutral": 765,
+        "surprise": 178,
+        "fear": 31,
+        "joy": 262,
+        "sadness": 125,
+        "disgust": 43,
+        "anger": 165
+      }
+    },
+    "score_eval": {
+      "dialogues": 155,
+      "utterances": 1407,
+      "historical_train_role_utterances": {
+        "fit": 1295,
+        "inner_dev": 112
+      },
+      "emotion_labels": {
+        "joy": 288,
+        "neutral": 671,
+        "surprise": 166,
+        "sadness": 85,
+        "anger": 127,
+        "fear": 33,
+        "disgust": 37
+      }
+    }
+  },
+  "labels_present_in_all_roles": [
+    "neutral",
+    "surprise",
+    "fear",
+    "sadness",
+    "joy",
+    "disgust",
+    "anger"
+  ],
+  "no_test_data": true,
+  "official_validation_rows_used": 0,
+  "raw_texts_read": false,
+  "possible_roles_of_existing_model": "Existing baseline used Train fit or inner_dev categories; a new independent training chain is required for these heldouts.",
+  "source_manifest_sha256": "2be281620d248554ae938c1a7b0f914b03abbc444d2f675672535911fd417f40",
+  "hashes": {
+    "SPLIT_DIALOGUES.csv": "929802f2ae13678bd23c404041a58c27359076465a13bef6f5823a4126259643",
+    "SPLIT_UTTERANCES.csv": "77fc5f3cba1d25a791d0e1326ce3b9baf72d1cf30aeff01df2c12a9947b44474",
+    "freeze_split.py": "1fc205589b6a00a863f0762aa355906326abc47eb3183fde528cf2375a161f87"
+  }
+}
