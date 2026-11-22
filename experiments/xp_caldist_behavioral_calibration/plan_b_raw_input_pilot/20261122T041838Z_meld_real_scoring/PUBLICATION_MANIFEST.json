@@ -1,0 +1,38 @@
+{
+  "experiment": "20261122T041838Z_meld_real_scoring",
+  "dataset": "MELD",
+  "seed": 67137,
+  "source_run_status": "COMPLETE_VERIFIED",
+  "results_release": "Aggregate report and metrics, untouched experiment scripts and frozen reference helpers",
+  "local_artifacts": [
+    "raw utterances and full dialogues",
+    "paraphrases and AI review records",
+    "row-level predictions and fit identifiers",
+    "media, complete features and model weights"
+  ],
+  "sha256": {
+    "experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261122T041838Z_meld_real_scoring/.gitattributes": "8559de6508235333005d80959c02144742813dc4025224a48f16d3cb36cd8628",
+    "experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261122T041838Z_meld_real_scoring/.gitignore": "02b745965eb578ad5904e542ee5704a4bebbc0d69da29a9a2778db4833307c1b",
+    "experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261122T041838Z_meld_real_scoring/README.md": "3a0f99ddacc94563f7d5d386aa9202365038c137384eaa86d0b4c97b43bae550",
+    "experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261122T041838Z_meld_real_scoring/REAL_SCORING_REPORT.md": "cc8eae80f0349081f2b8f0457e299352db0453269b881ad694d832daa2db3dbd",
+    "experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261122T041838Z_meld_real_scoring/SPLIT_LOCK.json": "2a565534dc57fa50e42853549ce9590e43eea28557c929eb4e4e08f65c94cfb7",
+    "experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261122T041838Z_meld_real_scoring/configs/REAL_SCORING_PROTOCOL.json": "815d8b6a929aab7bc54d83f2b8769c75c10c1dda9a823b0ea7e48eaac16a01df",
+    "experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261122T041838Z_meld_real_scoring/provenance/ai_token_preflight.json": "56a94180eaf496d08c8c8e81059a69f0556b4e9fe82ec7edfb175e4633d78fd5",
+    "experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261122T041838Z_meld_real_scoring/results/scoring_summary.json": "9053ccc3bcb85c574ddfd6aed8441388351e55221791830c9289fac7c536e71b",
+    "experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261122T041838Z_meld_real_scoring/verification.json": "c4bc618b42c38f96349ae3959061dece699a90dc50a8dec84a37b1a0b58f04ef",
+    "experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261122T041838Z_meld_real_scoring/scripts/assemble_ai_reviews.py": "5b7038db6dcbed9759bf87b6c6886316287d228adf0a1a3668e0cc2b59ee9011",
+    "experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261122T041838Z_meld_real_scoring/scripts/downstream_branch.py": "32587eedd7db0172d2b205d10ebb6a951a8c3e2a5676324fcf068ef52c3edb76",
+    "experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261122T041838Z_meld_real_scoring/scripts/prepare_ai_roster.py": "17e81d5bfbd3e34f38320ebb19f735761c00cef3c0b6c76de2fcf5d80b6366a2",
+    "experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261122T041838Z_meld_real_scoring/scripts/prepare_data.py": "e1c7cd14849f2757a00e8b3982563462221ce044816ff6947997a0b17bd49b97",
+    "experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261122T041838Z_meld_real_scoring/scripts/run_downstream.py": "c0df1542ad2716202379901c5c6c8d9aebae205f19a2fbfacae958de79a7c948",
+    "experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261122T041838Z_meld_real_scoring/scripts/run_score_branch.py": "e2e2eb12113070f65fa605c66076ddb91589f867e1d9e52efc016f5b38ec5ec2",
+    "experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261122T041838Z_meld_real_scoring/scripts/run_score_predictions.py": "f149eb881f67310fdeb156bfb1001b5a0f5619f6d320955ca0b843a9b8c0cbf0",
+    "experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261122T041838Z_meld_real_scoring/scripts/summarize_scoring.py": "3ebecf700bc93a4ba5661ed56d475800f375202c40708fbbcacc3c0ba5e7248b",
+    "experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261122T041838Z_meld_real_scoring/scripts/test_downstream_branch.py": "3470e0aefcb47b8b4f9862376142b1527c79c5abb2521d3e212c10ed222bbc41",
+    "experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261122T041838Z_meld_real_scoring/scripts/test_run_score_predictions.py": "84437050f3d4064ba7f6cb56465c89af5e6cd2e71162932f5c396d59edd0bebb",
+    "experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261122T041838Z_meld_real_scoring/scripts/train_text_branch.py": "1fb9fb70a240adc9a513c108ffc466780a375311c6c0cafd2b3a53c9a090a8be",
+    "experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261122T041838Z_meld_real_scoring/scripts/verify_score_inputs.py": "4d741045d8ed7049ef3b5c54a2a097d52a08dca851921c994a4b43ef595e53cb",
+    "experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261121T175233Z_reliability_readiness/scripts/freeze_split.py": "1fc205589b6a00a863f0762aa355906326abc47eb3183fde528cf2375a161f87",
+    "experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261121T175233Z_reliability_readiness/scripts/score_heldout.py": "22acb70db16cd1013fbc5b60dccc707d7382653a39cfedbd7d442b51aa8d9049"
+  }
+}

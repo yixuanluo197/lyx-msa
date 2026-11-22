@@ -1,0 +1,60 @@
+{
+  "status": "COMPLETE_VERIFIED",
+  "scoring": "COMPLETE",
+  "dataset": "MELD",
+  "seed": 67137,
+  "ai_review_only": true,
+  "k": 2,
+  "official_validation_used": false,
+  "test_used": false,
+  "evaluation_scope": {
+    "score_fit": {
+      "clean": 1569,
+      "clean_correct": 1026,
+      "attempted": 96,
+      "predicted_versions": 154,
+      "covered": 72,
+      "covered_correct": 51
+    },
+    "score_eval": {
+      "clean": 1407,
+      "clean_correct": 929,
+      "attempted": 96,
+      "predicted_versions": 154,
+      "covered": 69,
+      "covered_correct": 44
+    }
+  },
+  "review_counts": {
+    "score_eval/FAIL": 14,
+    "score_eval/PASS": 154,
+    "score_eval/UNCERTAIN": 24,
+    "score_fit/FAIL": 18,
+    "score_fit/PASS": 154,
+    "score_fit/UNCERTAIN": 20
+  },
+  "primary_binary_nll_improvement": {
+    "improvement": -0.025924564363171143,
+    "improvement_ci_low": -0.05834252500078059,
+    "improvement_ci_high": 0.0035161703703965115,
+    "valid_draws": 2000,
+    "requested_draws": 2000,
+    "positive_means": "augmentation improves",
+    "status": "DESCRIPTIVE"
+  },
+  "replay": {
+    "max_score_replay_absolute_error": 2.220446049250313e-16,
+    "complete_eval_count": 1407,
+    "fallback_count": 1338
+  },
+  "artifacts": {
+    "REAL_SCORING_REPORT.md": "cc8eae80f0349081f2b8f0457e299352db0453269b881ad694d832daa2db3dbd",
+    "results/score_inputs.csv": "a331edcccdcd709a45ef0f0d7aa73f6ffc9649cf8fe19d9af25b3c4fdf6ee154",
+    "results/scoring/evaluation_predictions.csv": "147bd71291b1b1241422edeefec5ad2ad095ae9ba6f0c3828f89383e41866028",
+    "results/scoring/scoring_report.json": "e31e56d85df0bc1b297d4a85f85d372bb3e250299e9ef50c35da06093835f684",
+    "results/scoring/fitted_parameters.json": "98bd0272784287984442c8c4a9b5479ede7201f400661e7133e4785fe30b3d89",
+    "provenance/ai_review_lock.json": "2884d467b5d79ef38a2e348660c2d10c93cd1898cc84f2df4433f7f55127fa3e",
+    "provenance/scoring_execution.json": "8bc96e4e904d61d03f1cc1128c8707954ae5257b989277ef4172b7bf0f2f50d5",
+    "scripts/summarize_scoring.py": "3ebecf700bc93a4ba5661ed56d475800f375202c40708fbbcacc3c0ba5e7248b"
+  }
+}

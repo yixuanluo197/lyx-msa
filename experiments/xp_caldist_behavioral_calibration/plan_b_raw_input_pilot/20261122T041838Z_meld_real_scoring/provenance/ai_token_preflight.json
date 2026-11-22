@@ -1,0 +1,16 @@
+{
+  "status": "PASS_REVIEW_IDENTITY_AND_TOKEN_PREFLIGHT",
+  "clean_cohort": 2976,
+  "counts": {
+    "score_eval/attempted": 96,
+    "score_eval/both_token_qc_pass": 69,
+    "score_eval/token_qc_eligible_versions": 154,
+    "score_eval/two_review_pass": 69,
+    "score_fit/attempted": 96,
+    "score_fit/both_token_qc_pass": 72,
+    "score_fit/token_qc_eligible_versions": 154,
+    "score_fit/two_review_pass": 72
+  },
+  "model_weights_loaded": false,
+  "note": "Scoring still requires frozen-model re-encoding and success on both versions."
+}

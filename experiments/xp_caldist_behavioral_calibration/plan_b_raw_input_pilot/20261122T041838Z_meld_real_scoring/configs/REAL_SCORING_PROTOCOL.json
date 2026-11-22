@@ -1,0 +1,59 @@
+{
+  "dataset": "MELD",
+  "seed": 67137,
+  "model_seed": 67137,
+  "no_Test": true,
+  "test_access": false,
+  "train_only_roles": true,
+  "created_at": "2026-11-22T04:24:21.937163+00:00",
+  "base": {
+    "fit_dialogues": 656,
+    "dev_dialogues": 72,
+    "fit_utterances": 6313,
+    "dev_utterances": 700,
+    "supervision": "fresh public RoBERTa-Large, original M3Net\u2192base-fit difficulty\u2192CMERC pipeline",
+    "permitted_feature_reuse": [
+      "frozen public Wav2Vec2 audio",
+      "fixed official vision"
+    ],
+    "existing_supervised_weights_reused": false,
+    "early_stop": "base_inner_dev only",
+    "no_official_validation": true
+  },
+  "scoring": {
+    "score_fit_dialogues": 155,
+    "score_eval_dialogues": 155,
+    "score_fit_utterances": 1569,
+    "score_eval_utterances": 1407,
+    "text_intervention": "semantic_paraphrase",
+    "K": 2,
+    "D_pred": "p_clean(clean argmax)-mean(p_perturbed(clean argmax))",
+    "policy": "All 2976 get clean predictions. Before any clean scores, select 96 dialogues per score role by fixed SHA order and one fixed-rank utterance per selected dialogue. Blind AI authors+different AI reviewers. Single pass, no replacements; missing D_pred returns to clean score.",
+    "limited_coverage_reason": "No locally available validated instruction paraphraser for complete cohort; this is first small audited real scoring pilot.",
+    "selection_seed": 20261122,
+    "expected_attempted_targets_per_role": 96,
+    "result_scope": "Natural full held-out evaluation with predeclared limited perturbation coverage and matched-covered comparison reported separately",
+    "human_confirmation": false,
+    "clean_features": [
+      "logit(original_confidence)",
+      "clean_margin",
+      "clean_entropy"
+    ],
+    "estimand_primary": "Strong clean vs strong+D_pred, same covered train and eval rows, with exact fallback on full queue reported separately.",
+    "endpoint_primary": "Binary NLL",
+    "secondary": [
+      "Binary Brier",
+      "AUROC of error",
+      "AUPRC of error",
+      "coverage"
+    ],
+    "bootstrap_draws": 2000,
+    "bootstrap_unit": "Dialogue",
+    "fixed_regularization": "L2 C=1, no tuning",
+    "correct_probability": "R=P(clean predicted class is correct)",
+    "multi_class_remap": false
+  },
+  "split_lock_sha256": "2a565534dc57fa50e42853549ce9590e43eea28557c929eb4e4e08f65c94cfb7",
+  "scorer_sha256": "22acb70db16cd1013fbc5b60dccc707d7382653a39cfedbd7d442b51aa8d9049",
+  "git_head": "330289ba38bb014ed9819dac6bb6d2f3ab79ce6e"
+}

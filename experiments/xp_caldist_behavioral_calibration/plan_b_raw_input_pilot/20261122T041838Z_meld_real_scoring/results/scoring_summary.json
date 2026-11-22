@@ -1,0 +1,448 @@
+{
+  "status": "COMPLETE_CPU_SCORING",
+  "data_provenance": {
+    "data_kind": "declared_real",
+    "declaration_validation": "Attributed declarations and file hashes only; not independent human-review evidence",
+    "genuine_blind_review_verified_by_this_script": false,
+    "strict_natural_cohort_review_gate": "Must be independently supplied and enforced by root before real execution"
+  },
+  "scalar_validation": {
+    "confidence_scalar_range_validated": true,
+    "confidence_definition_requires_source_provenance": true,
+    "optional_clean_probability_vectors_checked": 2976,
+    "max_softmax_definition_numerically_verified_for_all_rows": true,
+    "dialogue_role_manifest_verified": true,
+    "utterance_role_manifest_verified": true
+  },
+  "outcome": "original correct=1; model R=P(correct)",
+  "ranking": "error positive; score=1-R",
+  "primary_metric": "binary_nll",
+  "secondary_metrics": [
+    "brier",
+    "auroc_error",
+    "auprc_error"
+  ],
+  "average_precision_definition": "Stepwise average precision, not trapezoidal PR-AUC; requires both error/correct support",
+  "point_estimator": "Utterance-weighted natural-cohort mean; clusters resampled for uncertainty, no Dialogue equalization of point metrics",
+  "settings": {
+    "logistic": {
+      "C": 1.0,
+      "penalty": "l2",
+      "solver": "lbfgs",
+      "max_iter": 2000,
+      "tol": 1e-10,
+      "random_state": 20261121,
+      "class_weight": null,
+      "fit_intercept": true
+    },
+    "scaler": "StandardScaler score_fit rows only, ddof=0; constant scale=1",
+    "logit_confidence_clip": 1e-06,
+    "binary_nll_probability_clip": 1e-15,
+    "no_hyperparameter_selection": true,
+    "device": "CPU"
+  },
+  "fit_rows": 1569,
+  "eval_rows": 1407,
+  "fit_dialogues": 155,
+  "eval_dialogues": 155,
+  "covered_fit_rows": 72,
+  "covered_eval_rows": 69,
+  "uncovered_eval_rows": 1338,
+  "D_pred_eval_coverage": 0.04904051172707889,
+  "augmentation_available": true,
+  "augmentation_unavailable_reason": null,
+  "missing_policy": "No D_pred imputation. Fit augmentations only on covered score_fit; missing eval rows use exact all-fit baseline predictions.",
+  "matched_fit_control": "Clean-only and +D_pred models share the exact covered score_fit rows; compare only covered score_eval",
+  "bootstrap": {
+    "seed": 20261121,
+    "requested": 2000,
+    "resampling_unit": "Dialogue, paired predictions and shared draws across models/scopes",
+    "rng": "numpy RandomState MT19937; sorted Dialogue universe",
+    "interval": "95% percentile [2.5%,97.5%], NumPy linear quantiles",
+    "draw_indices_sha256": "c571fe732defd3427ad756ae382dd637e301eb1df2bfc5874fa1deb7eb357ce7",
+    "dialogue_universe_count": 155
+  },
+  "comparisons": {
+    "weak_matched_fit_covered_eval": {
+      "n": 69,
+      "correct": 44,
+      "errors": 25,
+      "baseline": {
+        "binary_nll": 0.5905098850503734,
+        "brier": 0.20243914415912254,
+        "auroc_error": 0.7181818181818181,
+        "auprc_error": 0.5890459829071952
+      },
+      "augmented": {
+        "binary_nll": 0.6204148852077623,
+        "brier": 0.21429015433611054,
+        "auroc_error": 0.6981818181818182,
+        "auprc_error": 0.5751218129625069
+      },
+      "paired_dialogue_improvement": {
+        "binary_nll": {
+          "improvement": -0.02990500015738895,
+          "improvement_ci_low": -0.06668808309713035,
+          "improvement_ci_high": 0.00239150979294859,
+          "valid_draws": 2000,
+          "requested_draws": 2000,
+          "positive_means": "augmentation improves",
+          "status": "DESCRIPTIVE"
+        },
+        "brier": {
+          "improvement": -0.011851010176988003,
+          "improvement_ci_low": -0.026488246616935204,
+          "improvement_ci_high": 0.0014828480589749813,
+          "valid_draws": 2000,
+          "requested_draws": 2000,
+          "positive_means": "augmentation improves",
+          "status": "DESCRIPTIVE"
+        },
+        "auroc_error": {
+          "improvement": -0.019999999999999907,
+          "improvement_ci_low": -0.06730939716312055,
+          "improvement_ci_high": 0.0207646208461425,
+          "valid_draws": 2000,
+          "requested_draws": 2000,
+          "positive_means": "augmentation improves",
+          "status": "DESCRIPTIVE"
+        },
+        "auprc_error": {
+          "improvement": -0.01392416994468837,
+          "improvement_ci_low": -0.07320787307369735,
+          "improvement_ci_high": 0.04141741971503021,
+          "valid_draws": 2000,
+          "requested_draws": 2000,
+          "positive_means": "augmentation improves",
+          "status": "DESCRIPTIVE"
+        }
+      },
+      "comparison_kind": "MATCHED_FIT_COVERAGE_FEATURE_INCREMENT",
+      "fit_rows": 72,
+      "status": "COMPUTED"
+    },
+    "weak_all_eval": {
+      "n": 1407,
+      "correct": 929,
+      "errors": 478,
+      "baseline": {
+        "binary_nll": 0.558154015955097,
+        "brier": 0.1890346413582347,
+        "auroc_error": 0.7443645256743427,
+        "auprc_error": 0.5611888342129867
+      },
+      "augmented": {
+        "binary_nll": 0.5600796147902346,
+        "brier": 0.18976988981076628,
+        "auroc_error": 0.741948196423022,
+        "auprc_error": 0.5594253754845362
+      },
+      "paired_dialogue_improvement": {
+        "binary_nll": {
+          "improvement": -0.001925598835137654,
+          "improvement_ci_low": -0.004164053372864523,
+          "improvement_ci_high": -4.51274460183395e-06,
+          "valid_draws": 2000,
+          "requested_draws": 2000,
+          "positive_means": "augmentation improves",
+          "status": "DESCRIPTIVE"
+        },
+        "brier": {
+          "improvement": -0.0007352484525315894,
+          "improvement_ci_low": -0.001576432482910059,
+          "improvement_ci_high": -4.817777775514872e-06,
+          "valid_draws": 2000,
+          "requested_draws": 2000,
+          "positive_means": "augmentation improves",
+          "status": "DESCRIPTIVE"
+        },
+        "auroc_error": {
+          "improvement": -0.002416329251320737,
+          "improvement_ci_low": -0.005628846034176724,
+          "improvement_ci_high": 0.00010403887762909194,
+          "valid_draws": 2000,
+          "requested_draws": 2000,
+          "positive_means": "augmentation improves",
+          "status": "DESCRIPTIVE"
+        },
+        "auprc_error": {
+          "improvement": -0.0017634587284505177,
+          "improvement_ci_low": -0.005064644404888088,
+          "improvement_ci_high": 0.0015515344417988235,
+          "valid_draws": 2000,
+          "requested_draws": 2000,
+          "positive_means": "augmentation improves",
+          "status": "DESCRIPTIVE"
+        }
+      },
+      "comparison_kind": "DEPLOYMENT_POLICY_ALL_FIT_BASELINE",
+      "status": "COMPUTED",
+      "baseline_fit_rows": 1569,
+      "augmented_fit_rows": 72,
+      "fit_cohort_confounding": "Deployment comparison changes training coverage; use matched-fit comparison for feature increment"
+    },
+    "weak_covered_eval": {
+      "n": 69,
+      "correct": 44,
+      "errors": 25,
+      "baseline": {
+        "binary_nll": 0.581149413308653,
+        "brier": 0.19929747936927164,
+        "auroc_error": 0.7181818181818181,
+        "auprc_error": 0.5890459829071952
+      },
+      "augmented": {
+        "binary_nll": 0.6204148852077623,
+        "brier": 0.21429015433611054,
+        "auroc_error": 0.6981818181818182,
+        "auprc_error": 0.5751218129625069
+      },
+      "paired_dialogue_improvement": {
+        "binary_nll": {
+          "improvement": -0.03926547189910934,
+          "improvement_ci_low": -0.08173941529521163,
+          "improvement_ci_high": -0.00010818149811785972,
+          "valid_draws": 2000,
+          "requested_draws": 2000,
+          "positive_means": "augmentation improves",
+          "status": "DESCRIPTIVE"
+        },
+        "brier": {
+          "improvement": -0.014992674966838898,
+          "improvement_ci_low": -0.03162138206810281,
+          "improvement_ci_high": -0.00010310448113126041,
+          "valid_draws": 2000,
+          "requested_draws": 2000,
+          "positive_means": "augmentation improves",
+          "status": "DESCRIPTIVE"
+        },
+        "auroc_error": {
+          "improvement": -0.019999999999999907,
+          "improvement_ci_low": -0.06730939716312055,
+          "improvement_ci_high": 0.0207646208461425,
+          "valid_draws": 2000,
+          "requested_draws": 2000,
+          "positive_means": "augmentation improves",
+          "status": "DESCRIPTIVE"
+        },
+        "auprc_error": {
+          "improvement": -0.01392416994468837,
+          "improvement_ci_low": -0.07320787307369735,
+          "improvement_ci_high": 0.04141741971503021,
+          "valid_draws": 2000,
+          "requested_draws": 2000,
+          "positive_means": "augmentation improves",
+          "status": "DESCRIPTIVE"
+        }
+      },
+      "comparison_kind": "DEPLOYMENT_POLICY_ALL_FIT_BASELINE",
+      "status": "COMPUTED",
+      "baseline_fit_rows": 1569,
+      "augmented_fit_rows": 72,
+      "fit_cohort_confounding": "Deployment comparison changes training coverage; use matched-fit comparison for feature increment"
+    },
+    "strong_matched_fit_covered_eval": {
+      "n": 69,
+      "correct": 44,
+      "errors": 25,
+      "baseline": {
+        "binary_nll": 0.5834620180590395,
+        "brier": 0.19789337413783983,
+        "auroc_error": 0.7372727272727273,
+        "auprc_error": 0.6331147439037786
+      },
+      "augmented": {
+        "binary_nll": 0.6093865824222107,
+        "brier": 0.2082428942379354,
+        "auroc_error": 0.7154545454545455,
+        "auprc_error": 0.5922223013610528
+      },
+      "paired_dialogue_improvement": {
+        "binary_nll": {
+          "improvement": -0.025924564363171143,
+          "improvement_ci_low": -0.05834252500078059,
+          "improvement_ci_high": 0.0035161703703965115,
+          "valid_draws": 2000,
+          "requested_draws": 2000,
+          "positive_means": "augmentation improves",
+          "status": "DESCRIPTIVE"
+        },
+        "brier": {
+          "improvement": -0.010349520100095572,
+          "improvement_ci_low": -0.023410099458012232,
+          "improvement_ci_high": 0.001440787938633174,
+          "valid_draws": 2000,
+          "requested_draws": 2000,
+          "positive_means": "augmentation improves",
+          "status": "DESCRIPTIVE"
+        },
+        "auroc_error": {
+          "improvement": -0.021818181818181848,
+          "improvement_ci_low": -0.05595318532818535,
+          "improvement_ci_high": 0.007128654970760248,
+          "valid_draws": 2000,
+          "requested_draws": 2000,
+          "positive_means": "augmentation improves",
+          "status": "DESCRIPTIVE"
+        },
+        "auprc_error": {
+          "improvement": -0.04089244254272584,
+          "improvement_ci_low": -0.10273289512664578,
+          "improvement_ci_high": 0.0050742487536824775,
+          "valid_draws": 2000,
+          "requested_draws": 2000,
+          "positive_means": "augmentation improves",
+          "status": "DESCRIPTIVE"
+        }
+      },
+      "comparison_kind": "MATCHED_FIT_COVERAGE_FEATURE_INCREMENT",
+      "fit_rows": 72,
+      "status": "COMPUTED"
+    },
+    "strong_all_eval": {
+      "n": 1407,
+      "correct": 929,
+      "errors": 478,
+      "baseline": {
+        "binary_nll": 0.5574180915072898,
+        "brier": 0.1886846028125086,
+        "auroc_error": 0.7451436961505375,
+        "auprc_error": 0.5616319603177579
+      },
+      "augmented": {
+        "binary_nll": 0.558879282126033,
+        "brier": 0.18915981273136237,
+        "auroc_error": 0.7432498164670699,
+        "auprc_error": 0.5605968027327145
+      },
+      "paired_dialogue_improvement": {
+        "binary_nll": {
+          "improvement": -0.001461190618743169,
+          "improvement_ci_low": -0.003631439848321305,
+          "improvement_ci_high": 0.00045994921077648564,
+          "valid_draws": 2000,
+          "requested_draws": 2000,
+          "positive_means": "augmentation improves",
+          "status": "DESCRIPTIVE"
+        },
+        "brier": {
+          "improvement": -0.00047520991885377506,
+          "improvement_ci_low": -0.0012324615570726873,
+          "improvement_ci_high": 0.00019896548329260058,
+          "valid_draws": 2000,
+          "requested_draws": 2000,
+          "positive_means": "augmentation improves",
+          "status": "DESCRIPTIVE"
+        },
+        "auroc_error": {
+          "improvement": -0.0018938796834676586,
+          "improvement_ci_low": -0.0050889436256283,
+          "improvement_ci_high": 0.0007453628708088337,
+          "valid_draws": 2000,
+          "requested_draws": 2000,
+          "positive_means": "augmentation improves",
+          "status": "DESCRIPTIVE"
+        },
+        "auprc_error": {
+          "improvement": -0.0010351575850433559,
+          "improvement_ci_low": -0.0042636233756116835,
+          "improvement_ci_high": 0.0021308862046771305,
+          "valid_draws": 2000,
+          "requested_draws": 2000,
+          "positive_means": "augmentation improves",
+          "status": "DESCRIPTIVE"
+        }
+      },
+      "comparison_kind": "DEPLOYMENT_POLICY_ALL_FIT_BASELINE",
+      "status": "COMPUTED",
+      "baseline_fit_rows": 1569,
+      "augmented_fit_rows": 72,
+      "fit_cohort_confounding": "Deployment comparison changes training coverage; use matched-fit comparison for feature increment"
+    },
+    "strong_covered_eval": {
+      "n": 69,
+      "correct": 44,
+      "errors": 25,
+      "baseline": {
+        "binary_nll": 0.5795909998052295,
+        "brier": 0.1985527441534835,
+        "auroc_error": 0.7209090909090909,
+        "auprc_error": 0.5917786892689338
+      },
+      "augmented": {
+        "binary_nll": 0.6093865824222107,
+        "brier": 0.2082428942379354,
+        "auroc_error": 0.7154545454545455,
+        "auprc_error": 0.5922223013610528
+      },
+      "paired_dialogue_improvement": {
+        "binary_nll": {
+          "improvement": -0.02979558261698112,
+          "improvement_ci_low": -0.07069466398014736,
+          "improvement_ci_high": 0.008982221992460526,
+          "valid_draws": 2000,
+          "requested_draws": 2000,
+          "positive_means": "augmentation improves",
+          "status": "DESCRIPTIVE"
+        },
+        "brier": {
+          "improvement": -0.009690150084451898,
+          "improvement_ci_low": -0.024742159706694244,
+          "improvement_ci_high": 0.00416353718993951,
+          "valid_draws": 2000,
+          "requested_draws": 2000,
+          "positive_means": "augmentation improves",
+          "status": "DESCRIPTIVE"
+        },
+        "auroc_error": {
+          "improvement": -0.00545454545454549,
+          "improvement_ci_low": -0.04167165071770332,
+          "improvement_ci_high": 0.02359210526315782,
+          "valid_draws": 2000,
+          "requested_draws": 2000,
+          "positive_means": "augmentation improves",
+          "status": "DESCRIPTIVE"
+        },
+        "auprc_error": {
+          "improvement": 0.00044361209211896124,
+          "improvement_ci_low": -0.03392224385682476,
+          "improvement_ci_high": 0.0394338241750751,
+          "valid_draws": 2000,
+          "requested_draws": 2000,
+          "positive_means": "augmentation improves",
+          "status": "DESCRIPTIVE"
+        }
+      },
+      "comparison_kind": "DEPLOYMENT_POLICY_ALL_FIT_BASELINE",
+      "status": "COMPUTED",
+      "baseline_fit_rows": 1569,
+      "augmented_fit_rows": 72,
+      "fit_cohort_confounding": "Deployment comparison changes training coverage; use matched-fit comparison for feature increment"
+    }
+  },
+  "raw_original_confidence_reference": {
+    "all_eval": {
+      "binary_nll": 0.6092194827976396,
+      "brier": 0.20944281350498514,
+      "auroc_error": 0.7443645256743427,
+      "auprc_error": 0.5611888342129867
+    },
+    "covered_eval": {
+      "binary_nll": 0.605969945994474,
+      "brier": 0.20878497170279461,
+      "auroc_error": 0.7181818181818181,
+      "auprc_error": 0.5890459829071952
+    }
+  },
+  "versions": {
+    "numpy": "1.24.4",
+    "sklearn": "1.2.2"
+  },
+  "limitations": [
+    "Manifest coverage/hash verification is not independent proof of human blind reviews or a natural cohort.",
+    "Bootstrap intervals are descriptive and not multiplicity-corrected; no scalar score calibration gain is assumed.",
+    "No evaluation labels/features are used for fitting, scaling, tuning or model selection."
+  ],
+  "script_sha256": "22acb70db16cd1013fbc5b60dccc707d7382653a39cfedbd7d442b51aa8d9049",
+  "source_report_sha256": "e31e56d85df0bc1b297d4a85f85d372bb3e250299e9ef50c35da06093835f684"
+}
