@@ -1,0 +1,14 @@
+/home/yangbin/miniconda3/envs/TEXT_repro/lib/python3.10/site-packages/torch/cuda/__init__.py:54: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+Traceback (most recent call last):
+  File "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261122T031312Z_meld_k5/scripts/run_k5.py", line 512, in <module>
+    main()
+  File "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261122T031312Z_meld_k5/scripts/run_k5.py", line 506, in main
+    encode(args.run_dir.resolve(),args.device)
+  File "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261122T031312Z_meld_k5/scripts/run_k5.py", line 267, in encode
+    args, data, dialogues, text, audio, samples, rows, lookup, frozen = prepare(run)
+  File "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261122T031312Z_meld_k5/scripts/run_k5.py", line 224, in prepare
+    validate_cohort(samples)
+  File "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261122T031312Z_meld_k5/scripts/run_k5.py", line 189, in validate_cohort
+    raise ValueError('Pair must contain original correct/error targets within one Dialogue')
+ValueError: Pair must contain original correct/error targets within one Dialogue

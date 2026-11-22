@@ -1,0 +1,31 @@
+{
+  "status": "PASS_AI_ONLY_EXPLORATORY",
+  "planned_conditions": 240,
+  "targets": 48,
+  "pairs": 24,
+  "inference_status": {
+    "SUCCESS": 240
+  },
+  "ai_status": {
+    "PASS": 231,
+    "UNCERTAIN": 9
+  },
+  "new_ai_status": {
+    "PASS": 135,
+    "UNCERTAIN": 9
+  },
+  "clean_controls_passed": 48,
+  "original_version_replays": 96,
+  "parent_ab_max_probability_abs_difference": 1.6093254089355469e-06,
+  "parent_ab_max_top_probability_abs_difference": 1.6093254089355469e-06,
+  "full_AI_K5_pairs": 15,
+  "full_QC_K5_pairs": 24,
+  "common_study_scope": "Reused MELD Validation; feasibility and version sensitivity only; no independent confirmation or score fitting",
+  "bootstrap_seed": 20261122,
+  "bootstrap_repetitions": 2000,
+  "bootstrap_indices_sha256": "24761fd33c107b611b1f1bb14aec3d6e816e37735f1d6873ed32d00e9e3a5764",
+  "human_review_used": false,
+  "new_score_fit": false,
+  "no_training": true,
+  "no_Test": true
+}

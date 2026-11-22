@@ -1,0 +1,42 @@
+{
+  "session": "meld_k5_20261122T031312Z",
+  "host": "user23",
+  "pid": 4165999,
+  "gpu": [
+    "0",
+    "GPU-7ff18ebb-100e-98fe-038b-a98bd4f94248",
+    "3",
+    "12288",
+    "0"
+  ],
+  "started_at": "2026-11-22T03:22:41.991951+00:00",
+  "status": "FAILED",
+  "source_script_hashes": {
+    "run_k5.py": "7bb908a5681b810fb369b8a9f67f452c926a9b33cf8d08a42fe7f22a383fe5c4",
+    "analyze_k5.py": "ec6401bb4f67de2a5125f32ea7214870bd569a0fb27bfd73a79e61b4889cae71",
+    "test_k5_engine.py": "f80e394a8c495a9f30f2b019d3959580115559cd1138d2b37af3e8ed63dc8edb",
+    "assemble_inputs.py": "80f34fb5ce59c3382bffa8c77080af601b17e7d153e85ab83210ab2424427687",
+    "run_pipeline.py": "a8374c02857e8668176f78987ce080204d962b0df48d1d3fcabe9443d99c02ad"
+  },
+  "stages": [
+    {
+      "name": "encode",
+      "command": [
+        "/home/yangbin/miniconda3/envs/TEXT_repro/bin/python",
+        "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261122T031312Z_meld_k5/scripts/run_k5.py",
+        "--mode",
+        "encode",
+        "--run-dir",
+        "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261122T031312Z_meld_k5",
+        "--device",
+        "cuda:0"
+      ],
+      "started_at": "2026-11-22T03:22:41.997734+00:00",
+      "pid": 4166003,
+      "exit_code": 1,
+      "ended_at": "2026-11-22T03:23:06.193354+00:00"
+    }
+  ],
+  "error": "encode exited 1; see local log",
+  "completed_at": "2026-11-22T03:23:06.193869+00:00"
+}

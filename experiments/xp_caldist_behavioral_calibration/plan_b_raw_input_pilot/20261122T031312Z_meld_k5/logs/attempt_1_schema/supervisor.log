@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261122T031312Z_meld_k5/scripts/run_pipeline.py", line 89, in <module>
+    main()
+    ~~~~^^
+  File "/data2/yb/paper/lyx-msa/experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261122T031312Z_meld_k5/scripts/run_pipeline.py", line 78, in main
+    raise RuntimeError(f"{stage} exited {status['exit_code']}; see local log")
+RuntimeError: encode exited 1; see local log

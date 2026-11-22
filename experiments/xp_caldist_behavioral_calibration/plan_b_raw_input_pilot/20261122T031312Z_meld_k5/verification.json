@@ -1,0 +1,69 @@
+{
+  "status": "PASS_AI_ONLY_EXPLORATORY",
+  "planned_conditions": 240,
+  "targets": 48,
+  "pairs": 24,
+  "inference_status": {
+    "SUCCESS": 240
+  },
+  "ai_status": {
+    "PASS": 231,
+    "UNCERTAIN": 9
+  },
+  "new_ai_status": {
+    "PASS": 135,
+    "UNCERTAIN": 9
+  },
+  "clean_controls_passed": 48,
+  "original_version_replays": 96,
+  "parent_ab_max_probability_abs_difference": 1.6093254089355469e-06,
+  "parent_ab_max_top_probability_abs_difference": 1.6093254089355469e-06,
+  "full_AI_K5_pairs": 15,
+  "full_QC_K5_pairs": 24,
+  "common_study_scope": "Reused MELD Validation; feasibility and version sensitivity only; no independent confirmation or score fitting",
+  "bootstrap_dialogues": [
+    "1045",
+    "1048",
+    "1049",
+    "1050",
+    "1055",
+    "1057",
+    "1064",
+    "1067",
+    "1069",
+    "1070",
+    "1075",
+    "1079",
+    "1084",
+    "1087",
+    "1102",
+    "1105",
+    "1108",
+    "1111",
+    "1121",
+    "1129",
+    "1130",
+    "1132",
+    "1134",
+    "1148"
+  ],
+  "bootstrap_seed": 20261122,
+  "bootstrap_repetitions": 2000,
+  "bootstrap_indices_sha256": "24761fd33c107b611b1f1bb14aec3d6e816e37735f1d6873ed32d00e9e3a5764",
+  "human_review_used": false,
+  "new_score_fit": false,
+  "no_training": true,
+  "no_Test": true,
+  "outputs_sha256": {
+    "clean_controls.csv": "324e6491757585ccc8f882c73ff746a1ecfd0eefec6336dd47c6a50b922588c2",
+    "matched_pair_manifest.csv": "47ee3e8f296166fc2017cc450794196816a215222e9102cb61fc7a1b603ae7a7",
+    "matched_sample_manifest.csv": "311e1eebd99f036f058fa72fbdfbabdb5d24ea429b2d43141d48080e21f34913",
+    "pair_eligibility.csv": "87d32d8d1f27b107b2954131826fd5a01e9f9d506e1c819d7f81473dc9df1662",
+    "paired_comparison.csv": "ee9fee137b01f3a71d8f29fa66fc4f6b6108dfed4e18a5ea067e3b87910337d1",
+    "perturbed_predictions.csv": "39727996633486aabe1165d071a7a56c6cf53c2dd229e7aaacbbedccf97da875",
+    "repeatability.csv": "960c9f93e267f234b1c84b2488bbd80a92aab6933b3e05f4a364af3689a0ede3",
+    "subset_D_pred.csv": "078ef635407764ce6be4b9cc4cd127b9bab5111374c79ff7c8353d8a4ece32bc",
+    "subset_dispersion.csv": "f44ffb17ca6f3d15ab857abf630646029b2d9061b945a806ec3893eed8d8a2a7",
+    "target_metrics.csv": "3ac41607d35f249b060b821fdf0f321ad0cdf02a641eaa23658f1978754e5753"
+  }
+}

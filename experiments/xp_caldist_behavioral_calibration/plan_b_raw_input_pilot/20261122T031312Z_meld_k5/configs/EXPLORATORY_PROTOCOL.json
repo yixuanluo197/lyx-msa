@@ -1,0 +1,64 @@
+{
+  "name": "MELD K2 versus K5 semantic-paraphrase AI-only exploratory pilot",
+  "dataset": "MELD",
+  "model_seed": 67137,
+  "created_at": "2026-11-22T03:15:05.442795+00:00",
+  "test_access": false,
+  "no_training": true,
+  "human_review_required": false,
+  "review": "One input-only AI author + independent input-only AI reviewer. Both PASS required; uncertainty/FAIL retained.",
+  "matching": {
+    "expected_pairs": 24,
+    "expected_targets": 48,
+    "expected_dialogues": 24,
+    "source_pairs": 203,
+    "source_eligible_ai_pairs": 86,
+    "eligible_dialogues": 57,
+    "cap_rule": "Seeded SHA sort of eligible Dialogue IDs; then one seeded SHA-minimal existing pair per Dialogue, 24 distinct Dialogue. No response-based selection or replacement."
+  },
+  "perturbations": {
+    "semantic_paraphrase": [
+      "paraphrase_a",
+      "paraphrase_b",
+      "paraphrase_c",
+      "paraphrase_d",
+      "paraphrase_e"
+    ],
+    "k_per_family": 5,
+    "original_variants": "Frozen a/b text and original AI review unchanged; new c/d/e generated once and kept even when they fail",
+    "controls": "Same frozen CMERC/RoBERTa, target-only re-encode; clean feature+probability check for every target before variant inference.",
+    "missing": "Separate K2 and complete K5 scope; primary paired comparison requires both matched endpoints with all five PASS and input QC; no rematch or K shrink."
+  },
+  "analysis": {
+    "primary": [
+      "D_pred",
+      "disjoint K2=(a,b) vs (c,d) reliability",
+      "common-cohort K2 vs K5 error-minus-correct"
+    ],
+    "diagnostics": [
+      "all K2/K3/K4 subsets as dependent combinations",
+      "Flip Rate",
+      "JS",
+      "D_C",
+      "mu",
+      "delta",
+      "V_C",
+      "D_margin"
+    ],
+    "bootstrap": {
+      "draws": 2000,
+      "unit": "Dialogue",
+      "seed": 20261122
+    },
+    "scope": "Reused MELD Validation; feasibility and version sensitivity only; no independent confirmation or score fitting",
+    "note": "K2/K5 agreement shares two variants. K5 is not an independent truth nor directly replicated; report disjoint repeat variability and subset sensitivity."
+  },
+  "frozen_input_sha256": {
+    "experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T170835Z/results/matched_pair_manifest.csv": "3c835c4c5c24938ca99c00278297c664d51a25b13250ccfe48b60cb95fb4d853",
+    "experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T170835Z/results/matched_sample_manifest.csv": "4c1032a1fc99b0800740ed86c393885102fa326e5ec49b41d7d8e82264d3b055",
+    "experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T170835Z/results/perturbed_predictions.csv": "2a20cc41ff490b2cfedc3bd679989a2e071f7709dd3e5ccf30ec4437d3ec6593",
+    "experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T170835Z/results/matched_analysis/pair_behavior_and_eligibility.csv": "94b3786d3cf67a092cc0bfa67ec118c8f29f5de8e4b81d55d8bf2d987c93be92",
+    "experiments/xp_caldist_behavioral_calibration/plan_b_raw_input_pilot/20261120T170835Z/local_only/matched_text_reviewed.jsonl": "fcea6cc5b72c47cab4b28073cac00e7f17d4e97828ee40e1b747aa9ea383e42d"
+  },
+  "git_head": "9b73ed70cba36c0cbc80f46227f7d05e24a760fa"
+}

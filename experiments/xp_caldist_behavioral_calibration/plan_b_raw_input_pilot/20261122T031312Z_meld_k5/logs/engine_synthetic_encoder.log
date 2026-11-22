@@ -1,0 +1,21 @@
+/home/yangbin/miniconda3/envs/TEXT_repro/lib/python3.10/site-packages/torch/cuda/__init__.py:54: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+test_24_pairs_each_contain_correct_error_in_one_distinct_dialogue (__main__.K5Contracts) ... ok
+test_ai_pass_requires_attribution_and_allows_no_human_substitution (__main__.K5Contracts) ... ok
+test_all_48_clean_controls_gate_required (__main__.K5Contracts) ... ok
+test_all_colliding_new_versions_fail (__main__.K5Contracts) ... ok
+test_binding_detects_frozen_input_change (__main__.K5Contracts) ... ok
+test_cached_feature_shape_and_hash_are_enforced (__main__.K5Contracts) ... ok
+test_five_distinct_tokens_pass (__main__.K5Contracts) ... ok
+test_frozen_ab_collision_fails_both_and_new_collision (__main__.K5Contracts) ... ok
+test_new_collision_preserves_frozen_a (__main__.K5Contracts) ... ok
+test_new_collision_with_failed_old_still_fails_new (__main__.K5Contracts) ... ok
+test_other_target_equal_tokens_are_independent (__main__.K5Contracts) ... ok
+test_protocol_requires_fixed_24_pairs_48_targets_semantic_five (__main__.K5Contracts) ... ok
+test_review_menu_retains_failed_candidates_and_rejects_lost_conditions (__main__.K5Contracts) ... ok
+test_target_only_feature_replacement_checks_other_rows_and_modalities (__main__.K5Contracts) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 0.063s
+
+OK
