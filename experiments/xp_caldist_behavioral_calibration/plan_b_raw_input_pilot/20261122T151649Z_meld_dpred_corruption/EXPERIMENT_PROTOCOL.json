@@ -1,0 +1,49 @@
+{
+  "study": "MELD D_pred diagnosis and orthographic corruption",
+  "source_commit": "8d11f14a2c248b5fb91108f190faf580ed66d4ab",
+  "dataset": "MELD",
+  "seed": 67137,
+  "pilot_scope": "Train-only exploratory; score_eval has previously been viewed. No independent confirmation.",
+  "official_validation_new_inference": false,
+  "test_access": false,
+  "historical_audio": "Offline analysis only of already-emitted Plan B Validation pilot records, separately by dataset and family.",
+  "weights": "Original independent scoring branch RoBERTa, M3Net-derived CMERC and caches stay frozen. No replacement or retraining.",
+  "cohort": {
+    "source": "20261122T041838Z_meld_real_scoring",
+    "estimate_on_roles": ["score_fit", "score_eval"],
+    "score_fit_utterances": 1569,
+    "score_eval_utterances": 1407,
+    "score_fit_dialogues": 155,
+    "score_eval_dialogues": 155,
+    "text_attempts_per_role": 96,
+    "target_rule": "Exactly the previous frozen 192 targets, including semantic failures. One target in each selected Dialogue. No replacement, extension or selection based on any prior metrics."
+  },
+  "text": {
+    "k": 2,
+    "semantic": "Reuse both saved original semantic_paraphrase results with the same checkpoints, full Dialogue and exact target alignment. Reuse prior failures as recorded.",
+    "corruption": {
+      "variants": ["corruption_a", "corruption_b"],
+      "rng": "SHA-256 rank of seed, blind_id, code-point edit position and edited text, lexicographic tie-break",
+      "seed": 20261122,
+      "operation": "Exactly one adjacent-ASCII-letter transposition inside one eligible full lowercase ASCII word of at least five letters, keeping the first and last character. Only an explicit fixed neutral-word allowlist is eligible. Exclude contractions, hyphenated tokens, all-uppercase and first-letter-uppercase forms. Pick first two distinct candidates in frozen rank order. No retry after review, token QC or model outputs.",
+      "allowlist": ["about","across","actually","after","again","already","along","around","asking","because","before","behind","between","bringing","calling","carrying","certain","changing","cleaning","coming","could","during","either","exactly","finally","finding","following","getting","giving","going","having","inside","instead","keeping","later","leaving","looking","making","matter","maybe","meeting","moving","number","outside","people","person","places","putting","reading","saying","sending","showing","sitting","someone","something","sometimes","speaking","standing","still","supposed","taking","talking","telling","their","there","these","thing","things","thinking","those","through","together","tomorrow","tonight","trying","turning","under","until","using","usually","waiting","walking","watching","whenever","where","which","while","working","would","writing"],
+      "semantic_blind_ai_review": "Context-only AI judgment, hidden dataset IDs, roles, labels, probabilities, prior results and counterpart verdicts. PASS requires the typo remains readable and preserves negation, affect, intensity, stance, entities and contextual intent. UNCERTAIN and FAIL retained. Automatic edit and token gates are distinct from AI review; no human review.",
+      "missing": "Persist both planned rows even if zero or one eligible edit. No replacement samples. K2 only if both contextual AI PASS, both real nontruncated changed token variants are mutually distinct, and both predict."
+    },
+    "probability_response": "signed d_k=p_clean(c)-p_k(c), c=clean argmax. D_pred=mean(d_k); D_abs=mean(abs(d_k)); cancellation=D_abs-abs(D_pred).",
+    "execution": "Only edit target text and infer in the complete original Dialogue. Old clean/semantic rows are reused. Check a fixed inference parity control before scoring.",
+    "audio_vision": "Frozen features and context unchanged during text inference."
+  },
+  "scoring": {
+    "comparison": {"E0": ["logit_confidence"], "E1": ["logit_confidence","D_pred"], "E2": ["logit_confidence","corruption_d_pred"], "E3": ["logit_confidence","D_pred","corruption_d_pred"]},
+    "primary": "E2 vs E1 Binary NLL on identical jointly eligible fit and eval samples. E1 vs E0 and E2 vs E0 show each increment; E3 secondary.",
+    "class_score": "R = sigmoid of L2 logistic linear predictor, P(original prediction correct), error positive for AUROC and average precision",
+    "C": 1,
+    "preprocessing": "StandardScaler fitted on fitting rows only; original confidence clipped to [1e-6,1-1e-6] before logit",
+    "deployment": "E0 refit on complete score_fit. E1/E2/E3 common-fit scores used only where required feature(s) exist; otherwise exact E0 full-fit fallback. Fit-coverage changes in this secondary contrast.",
+    "bootstrap": {"replicates": 2000, "seed": 20261121, "unit": "Paired Dialogue cluster", "interval": "95% percentile"},
+    "scorer_sha256": "22acb70db16cd1013fbc5b60dccc707d7382653a39cfedbd7d442b51aa8d9049",
+    "new_independent_evaluation": false,
+    "confirmatory_scoring": "PAUSED"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "status": "COMPLETE_EXPLORATORY_PILOT",
+  "new_independent_evaluation": false,
+  "test_accessed": false,
+  "official_validation_new_inference": false,
+  "evidence": {
+    "E1_exact_fallback_rows": 1338,
+    "E2_exact_fallback_rows": 1389,
+    "E3_exact_fallback_rows": 1395,
+    "primary_binary_nll_independent_replay": {
+      "estimate": 0.0018863185314689605,
+      "interval": [
+        -0.015230049284664739,
+        0.018610212436703563
+      ],
+      "n_draws": 2000
+    },
+    "original_inputs_unchanged": 71,
+    "summary_files": [
+      "AUDIO_RESPONSE_DIAGNOSTIC.md",
+      "D_PRED_OFFLINE_DIAGNOSTIC.md",
+      "FINAL_DECISION.md",
+      "SCORING_COMPARISON.md",
+      "TEXT_PERTURBATION_COMPARISON.md"
+    ]
+  },
+  "sha256_manifest": "a77e9e8cd733a6b3d805e2f9746c74f03ab1a438f122097becb20dd72569412d",
+  "files_by_top_level": {
+    "AUDIO_RESPONSE_DIAGNOSTIC.md": 1,
+    "D_PRED_OFFLINE_DIAGNOSTIC.md": 1,
+    "EXPERIMENT_PROTOCOL.json": 1,
+    "FINAL_DECISION.md": 1,
+    "SCORING_COMPARISON.md": 1,
+    "TEXT_PERTURBATION_COMPARISON.md": 1,
+    "local_only": 304,
+    "logs": 15,
+    "provenance": 6,
+    "results": 35,
+    "scripts": 12
+  }
+}
