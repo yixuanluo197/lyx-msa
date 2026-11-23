@@ -1,0 +1,38 @@
+{
+  "IEMOCAP": {
+    "evaluation_union_dialogues": 151,
+    "calibration_union_dialogues": 151,
+    "eval_union_in_any_calibration": 151,
+    "eval_original_split_counts": {
+      "train": 108,
+      "test": 31,
+      "validation": 12
+    },
+    "lineage_exposure_true_dialogue_counts": {
+      "used_for_original_model_training": 108,
+      "used_for_checkpoint_selection": 12,
+      "used_for_calibration_development": 43,
+      "previously_evaluated_as_test": 31,
+      "not_previously_evaluated": 108
+    },
+    "lineage_mapping_unverified": 0
+  },
+  "MELD": {
+    "evaluation_union_dialogues": 1432,
+    "calibration_union_dialogues": 726,
+    "eval_union_in_any_calibration": 726,
+    "eval_original_split_counts": {
+      "validation": 114,
+      "test": 280,
+      "train": 1038
+    },
+    "lineage_exposure_true_dialogue_counts": {
+      "used_for_original_model_training": 1038,
+      "used_for_checkpoint_selection": 114,
+      "used_for_calibration_development": 394,
+      "previously_evaluated_as_test": 280,
+      "not_previously_evaluated": 1038
+    },
+    "lineage_mapping_unverified": 0
+  }
+}

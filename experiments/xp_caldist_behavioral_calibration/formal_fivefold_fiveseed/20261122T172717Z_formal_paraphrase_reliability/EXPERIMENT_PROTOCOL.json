@@ -1,0 +1,61 @@
+{
+  "study": "Protocol B five-fold five-seed semantic-paraphrase reliability scoring",
+  "source_run": "20261109T174024Z",
+  "status": "STOPPED_AT_PREFLIGHT",
+  "formal_inference_authorized_by_this_record": false,
+  "manifest_sha256": "6d43928865915fe22a913c98b1165a05ba6e3e8f21d4d4c896cf51eb9c9b62be",
+  "datasets": ["MELD","IEMOCAP"],
+  "folds": [1,2,3,4,5],
+  "seeds": [1475,67137,2024,3407,42],
+  "gates": {
+    "compatible_original_text_feature_producer": "BLOCKED",
+    "checkpoint_and_frozen_group_integrity": "See results/asset_audit_summary.json",
+    "evaluation_activation_and_legacy_test_scope": "REQUIRES_EXPLICIT_SCOPE_CHECK",
+    "independent_confirmation": "UNESTABLISHED",
+    "audit_boundary_deviation": "An overbroad mixed-manifest read exposed item-level IEMOCAP unknown-label mask fields in tool output. Standalone Evaluation/Test feature and label artifacts remained unopened. No statistics used those fields."
+  },
+  "planned_condition": {
+    "family": "Semantic Paraphrase",
+    "main_k": 2,
+    "sensitivity_k": 5,
+    "sensitivity_subset": "Not sampled while blocked. Predeclare before inference and keep out of score selection.",
+    "eligible": "Both predeclared reviewed versions pass semantic-label preservation and input QC and predict successfully. Preserve all failed versions with reasons.",
+    "review": "Explicitly attributed AI and human review states and separately recorded automated QC.",
+    "context": "Change only target text via the matching frozen RoBERTa. Retain audio, vision, Speaker, non-target rows, ordering, label mask and full Dialogue.",
+    "fit_or_infer_completed": false
+  },
+  "behavior_definitions": {
+    "C": "max(p0)",
+    "margin": "top1(p0)-top2(p0)",
+    "entropy": "-sum p0*ln(p0), with zero terms contributing zero",
+    "mu": "mean_k(1[argmax(pk)!=argmax(p0)]*max(pk))",
+    "delta": "abs(max(p0)-mean_k(max(pk)))",
+    "D_pred": "mean_k(p0(c)-pk(c)), c=argmax(p0)",
+    "D_abs": "mean_k(abs(p0(c)-pk(c))), c=argmax(p0)",
+    "JS": "mean_k of Jensen-Shannon divergence between p0 and pk using the natural logarithm",
+    "flip_rate": "mean_k(1[argmax(pk)!=argmax(p0)])"
+  },
+  "planned_scoring": {
+    "target": "Original prediction is correct, original label mask applied",
+    "arm_features": {
+      "S0": ["C"],
+      "S1": ["C","margin","entropy"],
+      "S2": ["C","margin","entropy","mu"],
+      "S3": ["C","margin","entropy","delta"],
+      "S4": ["C","margin","entropy","mu","delta"],
+      "S5": ["C","margin","entropy","D_pred"],
+      "S6": ["C","margin","entropy","D_abs"]
+    },
+    "fit_scope": "Corresponding frozen Calibration only. Compare all arms on the same eligible rows; use the existing Fit-only standardization and fixed L2 regularization protocol.",
+    "confidence_input_transform": "logit(C) with C clipped to [1e-6,1-1e-6], matching the prior logistic scoring runs",
+    "logistic_l2_C": 1.0,
+    "standardization": "Fit population mean and standard deviation on the corresponding shared eligible Calibration rows only",
+    "evaluation_scope": "Corresponding frozen Evaluation only in an authorized completed run, no fitting or model selection.",
+    "primary_metric": "Binary NLL",
+    "secondary_metrics": ["Binary Brier","AUROC with errors positive","AUPRC with errors positive","ECE15 for correctness","effective K2 coverage"],
+    "paired_bootstrap": "Draw Dialogue clusters with paired scores across arms; carry all Seed records for a sampled Dialogue together within dataset. Record Fold and Seed summaries.",
+    "bootstrap_draws": 2000,
+    "bootstrap_seed": 20261121,
+    "performed": false
+  }
+}

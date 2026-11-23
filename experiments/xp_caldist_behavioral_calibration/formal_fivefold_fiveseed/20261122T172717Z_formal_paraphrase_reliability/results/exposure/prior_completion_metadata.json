@@ -1,0 +1,29 @@
+{
+  "cmerc_rows": 50,
+  "dataset_cmerc_run_counts": {
+    "IEMOCAP": 25,
+    "MELD": 25
+  },
+  "distinct_dataset_fold_seed": 50,
+  "cmerc_strict_reload_values": {
+    "True": 50
+  },
+  "calibration_rows": 400,
+  "calibration_scopes": {
+    "fit": 200,
+    "grouped_oof": 200
+  },
+  "calibration_unique_runs": 50,
+  "original_split_utterances": {
+    "IEMOCAP": {
+      "train": 5283,
+      "validation": 527,
+      "test": 1623
+    },
+    "MELD": {
+      "train": 9989,
+      "validation": 1109,
+      "test": 2610
+    }
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "status": "INTEGRITY_PASS_AUDIT_ONLY",
+  "approved_manifest_sha256": "6d43928865915fe22a913c98b1165a05ba6e3e8f21d4d4c896cf51eb9c9b62be",
+  "checkpoint_files_checked": 50,
+  "checkpoint_hash_matches": 50,
+  "checkpoint_bytes_checked": 5044275662,
+  "per_dataset_checkpoint_hash_matches": {
+    "IEMOCAP": 25,
+    "MELD": 25
+  },
+  "non_evaluation_role_indexes_checked": 32,
+  "role_artifacts_deserialized": false,
+  "checkpoint_deserialized": false,
+  "evaluation_role_artifact_built": false,
+  "evaluation_or_test_standalone_label_files_opened": false,
+  "this_script_metadata_projection_only": true,
+  "evaluation": {
+    "IEMOCAP": {
+      "evaluation_dialogues": 151,
+      "exact_once": true,
+      "evaluation_original_split_aliases": {}
+    },
+    "MELD": {
+      "evaluation_dialogues": 1432,
+      "exact_once": true,
+      "evaluation_original_split_aliases": {
+        "train": 1038,
+        "test": 280,
+        "validation": 114
+      }
+    }
+  },
+  "input_sha256": {
+    "experiments/xp_caldist_behavioral_calibration/formal_fivefold_fiveseed/20261109T174024Z/configs/approved_split_manifests.json": "6d43928865915fe22a913c98b1165a05ba6e3e8f21d4d4c896cf51eb9c9b62be",
+    "experiments/xp_caldist_behavioral_calibration/formal_fivefold_fiveseed/20261109T174024Z/configs/formal_protocol.json": "736d713aa5a1f8b404264a7840c4e23259e5cfa163cd8a12ccc18bfec4093a54",
+    "experiments/xp_caldist_behavioral_calibration/formal_fivefold_fiveseed/20261109T174024Z/results/final_verification/evaluation_readiness_manifest.json": "c54f1529a282dcf78d090568e42caa8644b447f0d2236c728f0e7c759bef43a1",
+    "experiments/xp_caldist_behavioral_calibration/formal_fivefold_fiveseed/20261109T174024Z/verification.json": "d467300fcb04c4fe122d06f3a5a1be7de2884cf924c0eeb9652b0e747558266a",
+    "experiments/xp_caldist_behavioral_calibration/formal_fivefold_fiveseed/20261109T174024Z/provenance/source_hashes.json": "22e224b989ffe1b93fb11c3ef9677d4f4a2ee1d9552a44a32c7da688114f2604",
+    "experiments/xp_caldist_behavioral_calibration/formal_fivefold_fiveseed/20261109T174024Z/APPROVED_PROTOCOL.md": "49c994625213ecf916a38e7a89a4280f968f82e33be2cc6f9a67fa94e9445cf0",
+    "experiments/xp_caldist_behavioral_calibration/formal_fivefold_fiveseed/20261109T174024Z/results/cmerc_runs.csv": "e3dbde0e4ed0eee610ee72790dda08a70c07acb2d44186e7cf178ddc4dec6364",
+    "experiments/xp_caldist_behavioral_calibration/formal_fivefold_fiveseed/20261109T174024Z/results/shared_role_artifacts.csv": "c5d7c3b1d5dc43e906b362c95fd5e53723a3d9cae131cc665423c77f0f133a83",
+    "experiments/xp_caldist_behavioral_calibration/formal_fivefold_fiveseed/20261109T174024Z/scripts/build_role_artifact.py": "0625c3b255edd7aa605796f080bc29d18ae9b975b57df8b7a5f2928e08741cb1"
+  }
+}

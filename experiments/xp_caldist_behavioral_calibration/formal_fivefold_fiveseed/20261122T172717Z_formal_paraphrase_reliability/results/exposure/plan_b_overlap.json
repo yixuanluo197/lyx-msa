@@ -1,0 +1,153 @@
+[
+  {
+    "dataset": "IEMOCAP",
+    "fold": "fold1",
+    "evaluation_dialogues": 28,
+    "older_plan_b_baseline_exposure_counts": {
+      "prior_train_inner_dev": 6,
+      "prior_train_fit": 20,
+      "prior_full_validation": 2
+    },
+    "older_plan_b_validation_pilot_target_dialogues": 2,
+    "newer_meld_plan_b_role_counts": {},
+    "non_test_mapping_unverified": 0
+  },
+  {
+    "dataset": "IEMOCAP",
+    "fold": "fold2",
+    "evaluation_dialogues": 30,
+    "older_plan_b_baseline_exposure_counts": {
+      "prior_train_fit": 24,
+      "prior_train_inner_dev": 1,
+      "prior_full_validation": 5
+    },
+    "older_plan_b_validation_pilot_target_dialogues": 5,
+    "newer_meld_plan_b_role_counts": {},
+    "non_test_mapping_unverified": 0
+  },
+  {
+    "dataset": "IEMOCAP",
+    "fold": "fold3",
+    "evaluation_dialogues": 32,
+    "older_plan_b_baseline_exposure_counts": {
+      "prior_train_fit": 27,
+      "prior_full_validation": 4,
+      "prior_train_inner_dev": 1
+    },
+    "older_plan_b_validation_pilot_target_dialogues": 4,
+    "newer_meld_plan_b_role_counts": {},
+    "non_test_mapping_unverified": 0
+  },
+  {
+    "dataset": "IEMOCAP",
+    "fold": "fold4",
+    "evaluation_dialogues": 30,
+    "older_plan_b_baseline_exposure_counts": {
+      "prior_train_inner_dev": 3,
+      "prior_train_fit": 26,
+      "prior_full_validation": 1
+    },
+    "older_plan_b_validation_pilot_target_dialogues": 1,
+    "newer_meld_plan_b_role_counts": {},
+    "non_test_mapping_unverified": 0
+  },
+  {
+    "dataset": "IEMOCAP",
+    "fold": "fold5",
+    "evaluation_dialogues": 31,
+    "older_plan_b_baseline_exposure_counts": {},
+    "older_plan_b_validation_pilot_target_dialogues": 0,
+    "newer_meld_plan_b_role_counts": {},
+    "non_test_mapping_unverified": 0
+  },
+  {
+    "dataset": "MELD",
+    "fold": "fold1",
+    "evaluation_dialogues": 286,
+    "older_plan_b_baseline_exposure_counts": {
+      "prior_train_fit": 185,
+      "prior_full_validation": 24,
+      "prior_train_inner_dev": 20
+    },
+    "older_plan_b_validation_pilot_target_dialogues": 24,
+    "newer_meld_plan_b_role_counts": {
+      "base_fit": 138,
+      "base_inner_dev": 16,
+      "score_eval": 28,
+      "score_fit": 23
+    },
+    "non_test_mapping_unverified": 0
+  },
+  {
+    "dataset": "MELD",
+    "fold": "fold2",
+    "evaluation_dialogues": 294,
+    "older_plan_b_baseline_exposure_counts": {
+      "prior_train_fit": 197,
+      "prior_full_validation": 27,
+      "prior_train_inner_dev": 22
+    },
+    "older_plan_b_validation_pilot_target_dialogues": 27,
+    "newer_meld_plan_b_role_counts": {
+      "score_fit": 38,
+      "base_fit": 129,
+      "score_eval": 34,
+      "base_inner_dev": 18
+    },
+    "non_test_mapping_unverified": 0
+  },
+  {
+    "dataset": "MELD",
+    "fold": "fold3",
+    "evaluation_dialogues": 296,
+    "older_plan_b_baseline_exposure_counts": {
+      "prior_train_fit": 196,
+      "prior_full_validation": 20,
+      "prior_train_inner_dev": 26
+    },
+    "older_plan_b_validation_pilot_target_dialogues": 20,
+    "newer_meld_plan_b_role_counts": {
+      "score_fit": 29,
+      "base_fit": 150,
+      "base_inner_dev": 13,
+      "score_eval": 30
+    },
+    "non_test_mapping_unverified": 0
+  },
+  {
+    "dataset": "MELD",
+    "fold": "fold4",
+    "evaluation_dialogues": 281,
+    "older_plan_b_baseline_exposure_counts": {
+      "prior_train_fit": 178,
+      "prior_full_validation": 21,
+      "prior_train_inner_dev": 17
+    },
+    "older_plan_b_validation_pilot_target_dialogues": 21,
+    "newer_meld_plan_b_role_counts": {
+      "base_fit": 122,
+      "score_eval": 32,
+      "score_fit": 34,
+      "base_inner_dev": 7
+    },
+    "non_test_mapping_unverified": 0
+  },
+  {
+    "dataset": "MELD",
+    "fold": "fold5",
+    "evaluation_dialogues": 275,
+    "older_plan_b_baseline_exposure_counts": {
+      "prior_train_fit": 178,
+      "prior_train_inner_dev": 19,
+      "prior_full_validation": 22
+    },
+    "older_plan_b_validation_pilot_target_dialogues": 22,
+    "newer_meld_plan_b_role_counts": {
+      "base_fit": 117,
+      "score_eval": 31,
+      "score_fit": 31,
+      "base_inner_dev": 18
+    },
+    "non_test_mapping_unverified": 0
+  }
+]

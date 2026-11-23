@@ -1,0 +1,18 @@
+{
+  "status": "MIXED_METADATA_OVERREAD_DISCLOSED",
+  "unfiltered_mixed_manifest_output_occurred": true,
+  "exposed_field_categories": [
+    "unknown-label mask per-record label-related fields",
+    "possible legacy-test-session mask entries",
+    "readiness/calibration optimization metadata"
+  ],
+  "values_or_ids_repeated_in_report": false,
+  "overread_fields_used_for_statistics_selection_or_mapping": false,
+  "subsequent_processing": "Strict streaming JSON whitelist for role IDs/counts and CSV field whitelist for lineage/coverage metadata; unselected subtrees/fields skipped.",
+  "standalone_eval_or_test_label_arrays_opened": false,
+  "evaluation_pkl_or_tensor_opened": false,
+  "raw_eval_or_test_text_opened": false,
+  "new_model_inference": false,
+  "new_evaluation_metrics_generated": false,
+  "claim_entire_audit_never_saw_any_label_field": false
+}
